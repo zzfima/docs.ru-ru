@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972409"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545244"
 ---
 # <a name="typography-in-wpf"></a>Оформление в WPF
-В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти возможности включают в себя повышение качества и производительности отрисовки текста, типографическую поддержку [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], расширенный международный текст, улучшенную поддержку шрифтов и новые текстовые API.  
+В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти функции включают повышение качества и производительности отрисовки текста, поддержку типографских шрифтов OpenType, расширенный международный текст, расширенную поддержку шрифта и новые интерфейсы программирования текстовых приложений (API).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Улучшенное качество и производительность работы с текстом  
@@ -29,9 +29,9 @@ ms.locfileid: "68972409"
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Типография с широкими возможностями  
- Формат шрифта [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] является расширением формата [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]. Формат шрифта [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] был разработан совместно корпорацией [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe и предоставляет широкий набор дополнительных типографических возможностей. Объект предоставляет множество дополнительных [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] возможностей шрифтов, таких как стилистические варианты и глифы. <xref:System.Windows.Documents.Typography> Windows SDK предоставляет набор образцов [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] шрифтов, разработанных с широкими возможностями, такими как шрифты Pericles и Pescadero. Дополнительные сведения см. в разделе [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md).  
+ Формат шрифта OpenType является расширением [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] формата шрифта. Формат шрифтов OpenType был разработан совместно с [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] корпорацией Adobe и предоставляет широкий спектр расширенных типографских функций. <xref:System.Windows.Documents.Typography> Объект предоставляет множество дополнительных возможностей шрифтов OpenType, таких как стилистические варианты и глифы. Windows SDK предоставляет набор образцов шрифтов OpenType, разработанных с широкими возможностями, такими как шрифты Pericles и Pescadero. Дополнительные сведения см. в разделе [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md).  
   
- Шрифт [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Pericles содержит дополнительные глифы, поддерживающие изменение стилей для стандартных наборов глифов. Приведенный ниже текст отображает глифы с изменением стиля.  
+ Шрифт OpenType Pericles содержит дополнительные глифы, предоставляющие стилистические варианты для стандартного набора глифов. Приведенный ниже текст отображает глифы с изменением стиля.  
   
  ![Текст, использующий стилистические альтернативные глифы OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Текст, использующий стилистические альтернативные глифы OpenType")  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68972409"
   
  ![Текст, использующий стандартные и swash глифы OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Текст, использующий стандартные и swash глифы OpenType")  
   
- Дополнительные сведения о возможностях [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] см. в разделе [Возможности шрифта OpenType](opentype-font-features.md).  
+ Дополнительные сведения о функциях OpenType см. в разделе [функции шрифтов OpenType](opentype-font-features.md).  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Расширенная многоязыковая поддержка текста  

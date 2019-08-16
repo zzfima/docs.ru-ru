@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401278"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545267"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel>элементы — это компоненты, управляющие отрисовкой элементов (их размер и размеры, их расположение и расположение их дочернего содержимого). Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементов, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -118,7 +118,7 @@ ms.locfileid: "68401278"
 ### <a name="dockpanel"></a>DockPanel  
  <xref:System.Windows.Controls.DockPanel> Элемент<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> использует присоединенное свойство как установленное в дочерних элементах содержимого для размещения содержимого вдоль краев контейнера. Если <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> параметр имеет <xref:System.Windows.Controls.Dock.Top> значение или <xref:System.Windows.Controls.Dock.Bottom>, то он размещает дочерние элементы выше или ниже. Если <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> параметр имеет <xref:System.Windows.Controls.Dock.Left> значение или <xref:System.Windows.Controls.Dock.Right>, то он размещает дочерние элементы слева или справа друг от друга. Свойство определяет расположение последнего элемента, добавленного в качестве дочернего элемента <xref:System.Windows.Controls.DockPanel>для. <xref:System.Windows.Controls.DockPanel.LastChildFill%2A>  
   
- Можно использовать <xref:System.Windows.Controls.DockPanel> для размещения группы связанных элементов управления, например набора кнопок. Кроме того, можно использовать его для создания разделенного на панели [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], похожего на интерфейс [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)].  
+ Можно использовать <xref:System.Windows.Controls.DockPanel> для размещения группы связанных элементов управления, например набора кнопок. Кроме того, его можно использовать для создания панели [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], аналогичной той, которая находится в Microsoft Outlook.  
   
 #### <a name="sizing-to-content"></a>Изменение размеров в зависимости от содержимого  
  Если его <xref:System.Windows.FrameworkElement.Height%2A> свойства <xref:System.Windows.FrameworkElement.Width%2A> и не указаны, <xref:System.Windows.Controls.DockPanel> размеры содержимого. Размер может увеличиваться или уменьшаться, чтобы вместить его дочерние элементы. Однако если эти свойства заданы и больше не хватает для следующего указанного дочернего элемента, <xref:System.Windows.Controls.DockPanel> не отображает этот дочерний элемент или последующие дочерние элементы и не измеряет последующие дочерние элементы.  

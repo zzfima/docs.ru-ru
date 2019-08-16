@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629925"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545254"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определяются в [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] в `System.Globalization`.
@@ -123,9 +123,9 @@ ms.locfileid: "68629925"
 
 - Сингальский
 
- Все обработчики системы записи поддерживают [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]шрифты могут включать [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Макетные таблицы, позволяющие создателям шрифтов разрабатывать более удобные и типографские шрифты. Таблицы [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] макетов шрифтов содержат сведения о подстановке глифов, позиционировании глифов, обоснованиях и расположении базовых показателей, что позволяет приложениям обработки текста улучшать макет текста.
+ Все обработчики системы записи поддерживают шрифты OpenType. Шрифты OpenType могут включать Макетные таблицы OpenType, позволяющие авторам шрифтов разрабатывать более удобные и типографские шрифты. Таблицы макетов шрифтов OpenType содержат сведения о подстановке глифов, позиционировании глифов, обоснованиях и расположении базовых показателей, что позволяет приложениям обработки текста улучшить макет текста.
 
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]шрифты позволяют обрабатывать крупные наборы глифов с помощью [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] кодирования. Такая кодировка обеспечивает широкую международную поддержку и возможность использования типографских вариантов глифов.
+ Шрифты OpenType позволяют обрабатывать крупные наборы глифов с помощью [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] кодирования. Такая кодировка обеспечивает широкую международную поддержку и возможность использования типографских вариантов глифов.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]отрисовка текста реализована в виде вспомогательной точки Microsoft ClearType, которая поддерживает независимость от разрешения. Это значительно улучшает читаемость и предоставляет возможность поддержки качественных документов журнального стиля для всех скриптов.
 

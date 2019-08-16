@@ -6,19 +6,19 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053474"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545222"
 ---
 # <a name="sample-opentype-font-pack"></a>Образец пакета шрифтов OpenType
-В этом разделе рассматриваются образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые распространяются вместе с [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Образцы шрифтов поддерживают расширенные функции [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые могут использоваться приложениями [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+В этом разделе приводятся общие сведения о примерах шрифтов OpenType, распространяемых вместе с [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Образцы шрифтов поддерживают расширенные функции OpenType, которые могут использоваться [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложениями.  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>Шрифты в пакете шрифтов OpenType  
- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] предоставляет набор образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые можно использовать при создании приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Образцы шрифтов предоставляются по лицензии от Ascender Corporation. Эти шрифты реализуют только подмножество общих функций, определенных в формате [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]. В следующей таблице приведены названия образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ Предоставляет набор образцов шрифтов OpenType, которые можно использовать при создании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений. [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Образцы шрифтов предоставляются по лицензии от Ascender Corporation. Эти шрифты реализуют только подмножество всех функций, определенных в формате OpenType. В следующей таблице перечислены имена образцов шрифтов OpenType.  
   
 |**Name**|**Файл**|  
 |--------------|--------------|  
@@ -31,7 +31,7 @@ ms.locfileid: "62053474"
 |Pescadero|Pesca.ttf|  
 |Pescadero Bold|Pescab.ttf|  
   
- На следующем рисунке показано, как выглядят образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ На следующем рисунке показано, как выглядят примеры шрифтов OpenType.  
   
  ![Список имен шрифтов в примере пакета шрифтов](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62053474"
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>Установка шрифтов  
- Можно установить образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] в каталог шрифтов по умолчанию [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], **\WINDOWS\Fonts**. Для установки шрифтов используйте панель управления Fonts. После установки шрифтов на вашем компьютере они будут доступны для всех приложений, которые ссылаются на шрифты [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] по умолчанию. Можно отобразить характерный набор символов в нескольких размерах шрифта, дважды нажав файл шрифта. На следующем снимке экрана показан файл шрифта Lindsey, Linds.ttf.  
+ Вы можете установить пример шрифтов OpenType в каталог шрифтов по умолчанию [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] **\виндовс\фонтс**. Для установки шрифтов используйте панель управления Fonts. После установки шрифтов на вашем компьютере они будут доступны для всех приложений, которые ссылаются на шрифты [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] по умолчанию. Можно отобразить характерный набор символов в нескольких размерах шрифта, дважды нажав файл шрифта. На следующем снимке экрана показан файл шрифта Lindsey, Linds.ttf.  
   
- ![Шрифта Lindsey &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Шрифт &#40;Lindsey OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Отображение шрифта Lindsey  
   
 <a name="using_the_fonts"></a>   

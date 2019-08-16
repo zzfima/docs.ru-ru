@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971949"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545368"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
@@ -38,7 +38,7 @@ ms.locfileid: "68971949"
   
 - Модель расширяемости для новых или собственных форматов изображений.  
   
-- Улучшена производительность и безопасность в собственных форматах образов, включая точечные рисунки (BMP), группу экспертов по печати [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]JPEG [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]),,,, формат GIF и значок (ICO-файл).  
+- Улучшенная производительность и безопасность в собственных форматах образов, включая точечные рисунки (BMP), группу экспертов по образам (JPEG), PNG [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,, формат GIF и значок (ICO).  
   
 - Сохранение изображений с большой глубиной цвета — до 8 бит на канал (32 бита на пиксель).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68971949"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Форматы изображений в WPF  
- Для кодирования и декодирования конкретного формата мультимедиа используются кодеки. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]включает кодек для форматов изображений BMP, JPEG [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)],,, GIF и Icon. Каждый из этих кодеков позволяет приложениям декодировать и, за исключением формата ICON, кодировать изображения соответствующих форматов.  
+ Для кодирования и декодирования конкретного формата мультимедиа используются кодеки. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]включает кодек для форматов изображений BMP, JPEG, PNG [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF и Icon. Каждый из этих кодеков позволяет приложениям декодировать и, за исключением формата ICON, кодировать изображения соответствующих форматов.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>является важным классом, используемым при декодировании и кодировании образов. Это основной строительный блок конвейера [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]. Он представляет отдельный постоянный набор точек определенного размера и разрешения. Может быть отдельным кадром изображения в нескольких кадрах или результатом преобразования, выполненного <xref:System.Windows.Media.Imaging.BitmapSource>в. <xref:System.Windows.Media.Imaging.BitmapSource> Он является родительским для многих основных классов, используемых в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] создании образов, таких как. <xref:System.Windows.Media.Imaging.BitmapFrame>  
   

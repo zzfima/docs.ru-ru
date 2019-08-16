@@ -6,22 +6,22 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: b90cbb052df01bfbd4124b601df38dca7d03d7fe
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 26e8ae7d0c560d8539b17e29d47545894cb4bb0f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910656"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545196"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Реализация шаблона элемента управления MultipleView модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, включая сведения о событиях и свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
  Шаблон элемента управления <xref:System.Windows.Automation.MultipleViewPattern> используется для поддержки элементов управления, которые предоставляют несколько представлений одного набора сведений или дочерних элементов управления и способны переключаться между ними.  
   
- В качестве примеров элементов управления, которые могут предоставлять несколько представлений, можно назвать представление списка (которое может отображать свое содержимое в виде эскизов, плиток, значков или сведений), диаграммы [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] (круговую диаграмму, график, линейчатую диаграмму, диаграмму значений ячеек с формулой), документы [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (обычный, веб-документ, разметку страницы, макет для чтения, структуру), календарь [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] (год, месяц, неделя, день) и обложки [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] . Поддерживаемые представления определяются разработчиками элементов управления и относятся к конкретному элементу управления.  
+ Примеры элементов управления, которые могут представлять несколько представлений, включают представление списка (которое может отображать его содержимое как эскизы, плитки, значки или сведения), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] диаграммы (круговые, линейные, линейчатые, значения ячеек с формулой), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] документы (обычные, веб-макеты, макет печати, макет для чтения, структура), календарь Microsoft Outlook (год, месяц, неделя, день) и [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] обложки. Поддерживаемые представления определяются разработчиками элементов управления и относятся к конкретному элементу управления.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -41,10 +41,10 @@ ms.locfileid: "64910656"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Метод|Отсутствуют|  
   
  Отсутствуют события, связанные с этим шаблоном элемента управления.  
   

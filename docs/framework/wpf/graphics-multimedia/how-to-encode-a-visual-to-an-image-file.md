@@ -9,23 +9,23 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193b6a14e404d32bb49d6e0ef3cbd513166bcce2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947580"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545291"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>Практическое руководство. Кодирование визуального элемента в файл изображения
-В этом примере показаны способы кодирования <xref:System.Windows.Media.Visual> объекта в файл изображения с помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap> и <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
+В этом примере показано, как кодировать <xref:System.Windows.Media.Visual> объект в файл изображения <xref:System.Windows.Media.Imaging.RenderTargetBitmap> с помощью и <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Windows.Media.DrawingVisual> Создается с помощью <xref:System.Windows.Media.Imaging.BitmapImage> и <xref:System.Windows.Media.FormattedText> который отображается <xref:System.Windows.Media.Imaging.RenderTargetBitmap>. Визуализированный точечный рисунок затем используется для создания <xref:System.Windows.Media.Imaging.BitmapFrame> добавляемым к <xref:System.Windows.Media.Imaging.PngBitmapEncoder> для создания нового [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] файл.  
+ Объект <xref:System.Windows.Media.DrawingVisual> создается <xref:System.Windows.Media.FormattedText> <xref:System.Windows.Media.Imaging.RenderTargetBitmap>с помощью и, который подготавливается к просмотру в. <xref:System.Windows.Media.Imaging.BitmapImage> Затем отображаемый точечный рисунок используется для создания <xref:System.Windows.Media.Imaging.BitmapFrame> элемента, который добавляется <xref:System.Windows.Media.Imaging.PngBitmapEncoder> в, чтобы создать новый PNG-файл.  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
   
- Объект <xref:System.Windows.Media.Imaging.PngBitmapEncoder> использовался в этом примере, но содержит производного <xref:System.Windows.Media.Imaging.BitmapEncoder> объекты можно было бы для создания файла образа.  
+ В этом примере использовался любой из производных <xref:System.Windows.Media.Imaging.BitmapEncoder> объектов, который мог бы быть использован для создания файла изображения. <xref:System.Windows.Media.Imaging.PngBitmapEncoder>  
   
 ## <a name="see-also"></a>См. также
 

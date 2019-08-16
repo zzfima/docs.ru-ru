@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 5bcd2ccd99940a3ce22f0894a1706eccf8627158
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972395"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545214"
 ---
 # <a name="fonts-wpf"></a>Шрифты (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]включает поддержку расширенного представления текста с помощью [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифтов. В Windows SDK входит пример [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] пакета шрифтов.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]включает поддержку расширенного представления текста с использованием шрифтов OpenType. В Windows SDK включен образец пакета шрифтов OpenType.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Возможности шрифта OpenType](opentype-font-features.md)  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bbefaba4491fca1b21b6a214048d9db1394c4bc7
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629611"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545334"
 ---
 # <a name="typography"></a>Оформление
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]включает поддержку расширенного представления текстового содержимого. Текст в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображается с помощью технологии Microsoft ClearType, что повышает четкость и удобочитаемость текста. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]также поддерживает [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты, которые предоставляют дополнительные возможности, помимо тех, которые [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] определены в формате.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]включает поддержку расширенного представления текстового содержимого. Текст в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображается с помощью технологии Microsoft ClearType, что повышает четкость и удобочитаемость текста. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]также поддерживает шрифты OpenType, которые предоставляют дополнительные возможности, помимо тех, которые [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] определены в формате.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Оформление в WPF](typography-in-wpf.md)  
