@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400697"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567517"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы могут быть привязаны к данным из различных источников данных в форме объектов среды CLR и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, такие <xref:System.Windows.Controls.ListBox> как<xref:System.Windows.Controls.ListView> и, имеют встроенные функции для обеспечения гибкого стиля отдельных элементов данных или коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -70,7 +70,7 @@ ms.locfileid: "68400697"
   
 - Хотя это и не указано на рисунке, следует отметить, что объект источника привязки не может быть пользовательским объектом CLR. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Привязка данных поддерживает данные в виде объектов CLR и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Чтобы предоставить несколько примеров, источником привязки может быть <xref:System.Windows.UIElement>, любой объект списка, объект CLR, связанный с ADO.NET данными или веб-службами, или XmlNode, содержащий ваши [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данные. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
   
- В процессе чтения других разделов [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] важно помнить, что при связывании цель привязки *привязывается к* источнику привязки. Например, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] при отображении некоторых базовых данных <xref:System.Windows.Controls.ListBox> в с помощью привязки данных вы привязываете <xref:System.Windows.Controls.ListBox> к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данным.  
+ По мере прочтения в других разделах SDK важно помнить, что при создании привязки целевой объект привязки привязывается *к* источнику привязки. Например, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] при отображении некоторых базовых данных <xref:System.Windows.Controls.ListBox> в с помощью привязки данных вы привязываете <xref:System.Windows.Controls.ListBox> к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данным.  
   
  Чтобы установить привязку, используйте <xref:System.Windows.Data.Binding> объект. В оставшейся части этого раздела обсуждаются многие из концепций, связанных с, а также некоторые свойства и использование <xref:System.Windows.Data.Binding> объекта.  
   
@@ -371,7 +371,7 @@ ms.locfileid: "68400697"
  [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
  [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
- *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> использует этот *футуредатеруле*, как показано в следующем примере:  
+ StartDateEntryForm<xref:System.Windows.Controls.TextBox> использует этот *футуредатеруле*, как показано в следующем примере:  
   
  [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   

@@ -5,18 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: f6c1580d3f596c638969e668a87ee70d75e6d9bf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626385"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038027"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Модульное тестирование кода C# с использованием MSTest и .NET Core
 
 Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="create-the-source-project"></a>Создание исходного проекта
+## <a name="create-the-source-project"></a>Создание исходного проекта
 
 Откройте окно оболочки. Создайте каталог с именем *unit-testing-using-mstest* для хранения решения. В этом каталоге выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать файл решения для библиотеки классов и тестового проекта. Затем создайте каталог *PrimeService*. Ниже приведена актуальная структура каталогов и файлов:
 
@@ -45,7 +45,7 @@ namespace Prime.Services
 
 Вернитесь в каталог *unit-testing-using-mstest*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md). 
 
-### <a name="create-the-test-project"></a>Создание тестового проекта
+## <a name="create-the-test-project"></a>Создание тестового проекта
 
 Затем создайте каталог *PrimeService.Tests*. Ниже представлена структура каталогов:
 

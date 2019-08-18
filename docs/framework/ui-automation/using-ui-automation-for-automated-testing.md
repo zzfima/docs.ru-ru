@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 47cba2344071ecf9b85f4b0235e02ea88deb6498
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710236"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566945"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.locfileid: "68710236"
 ## <a name="related-tools-and-technologies"></a>Связанные инструменты и технологии  
  Существует множество связанных инструментов и технологий, которые поддерживают автоматическое тестирование с помощью [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-- Средство проверки. exe — это приложение графического пользовательского интерфейса, которое можно использовать для сбора [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] информации о разработке и отладке поставщика и клиента. Программа проверки. exe включена в [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
+- Средство проверки. exe — это приложение графического пользовательского интерфейса, которое можно использовать для сбора [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] информации о разработке и отладке поставщика и клиента. Программа проверки. exe включена в Windows SDK.  
   
 - Мсаабридже предоставляет [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сведения для Active Accessibility клиентов. Основная цель моста [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с Active Accessibility — разрешить существующим клиентам Active Accessibility возможность взаимодействия с любой реализуемой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]платформой.  
   

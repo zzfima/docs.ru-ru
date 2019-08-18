@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f046341b1b02c3552ecf8db7d38d2a0c7bc74fba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306371"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567045"
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
 
@@ -39,15 +39,15 @@ ms.locfileid: "67306371"
   
 ### <a name="typeof-used-in-the-constructor"></a>TypeOf используется в конструкторе
 
- Если вызвать конструктор этих классов сериализации и включить C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) оператор в вызове метода, **не нужно прикладывать дополнительные усилия**. Например, в каждом из следующих вызовов конструктора класса сериализации ключевое слово `typeof`используется как часть выражения, переданного в конструктор.  
+ Если вызвать конструктор этих классов сериализации и включить C# оператор [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) в вызов метода, нет необходимости **выполнять дополнительную работу**. Например, в каждом из следующих вызовов конструктора класса сериализации ключевое слово `typeof`используется как часть выражения, переданного в конструктор.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- Компилятор .NET Native автоматически будет обрабатывать этот код.  
+ Компилятор .NET Native будет автоматически выполнять этот код.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>TypeOf, использованный за пределами конструктора
 
- Если вызвать конструктор этих классов сериализации и использовать C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) оператором за пределами выражения, предоставленного в конструктор <xref:System.Type> параметра, как в следующем коде, компилятор .NET Native не удается разрешить тип:  
+ Если вызвать конструктор этих классов сериализации и использовать C# оператор [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) за пределами выражения, переданного в <xref:System.Type> параметр конструктора, как показано в следующем коде, компилятору .NET Native не удается разрешить тип:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67306371"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Аналогично Если вызвать конструктор, такие как <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> и предоставить массив дополнительных <xref:System.Type> объектов для сериализации, так как в следующем коде, компилятор .NET Native не может разрешить эти типы.  
+ Аналогичным образом, если вызвать конструктор, например <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> , и предоставить массив дополнительных <xref:System.Type> объектов для сериализации, как показано в следующем коде, компилятор .NET Native не может разрешить эти типы.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -73,5 +73,5 @@ ms.locfileid: "67306371"
 
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)
+- [\<Элемент > типа](../../../docs/framework/net-native/type-element-net-native.md)
 - [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)

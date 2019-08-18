@@ -1,5 +1,5 @@
 ---
-title: Объект My.Response (Visual Basic)
+title: Объект My. Response (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Response
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a50701998011c25c600c2a3763459c1aba3cc59a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881964"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567456"
 ---
 # <a name="myresponse-object"></a>Объект My.Response
-Получает <xref:System.Web.HttpResponse> объект, связанный с <xref:System.Web.UI.Page>. Этот объект позволяет отправлять клиенту данные HTTP-ответа и содержит сведения об этом ответе.  
+Возвращает объект, <xref:System.Web.UI.Page>связанный с объектом. <xref:System.Web.HttpResponse> Этот объект позволяет отправлять клиенту данные HTTP-ответа и содержит сведения об этом ответе.  
   
 ## <a name="remarks"></a>Примечания  
- `My.Response` Объект содержит текущий <xref:System.Web.HttpResponse> объект, связанный со страницей.  
+ Объект содержит текущий <xref:System.Web.HttpResponse> объект, связанный со страницей. `My.Response`  
   
  `My.Response` Объект доступен только для приложений ASP.NET.  
   
 ## <a name="example"></a>Пример  
- Следующий пример получает коллекцию заголовков из `My.Request` и использует `My.Response` объект для записи его на страницу ASP.NET.  
+ Следующий пример получает коллекцию заголовков из `My.Request` объекта и `My.Response` использует объект для записи на страницу ASP.NET.  
   
- [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
+ [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>См. также
 
