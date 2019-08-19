@@ -2,21 +2,21 @@
 title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585800"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012944"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
 В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле. Приведенные в примере принципы могут применяться к другим типам структурированного текста.  
   
-### <a name="to-create-the-source-file"></a>Создание исходного файла  
+## <a name="to-create-the-source-file"></a>Создание исходного файла  
   
 1. Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта. Предположим, что первый столбец представляет идентификатор учащегося, а последующие столбцы — результаты четырех экзаменов.  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  

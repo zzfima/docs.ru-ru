@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: f11137b3c13bb9e8670c4df25fedf3251724a088
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610065"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566900"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -22,7 +22,7 @@ ms.locfileid: "67610065"
 - В сигнатуре и вызове метода для передачи аргумента в метод по ссылке. Дополнительные сведения см. в статье о [передаче аргументов по ссылке](#passing-an-argument-by-reference).
 - В сигнатуре метода для возврата значения вызывающему объекту по ссылке. Дополнительные сведения см. в разделе [Значения, возвращаемые по ссылке](#reference-return-values).
 - В теле элемента для указания на то, что возвращаемые ссылочные значения хранятся локально в виде ссылки, которая может быть изменена вызывающим объектом, или, в общем случае, что локальная переменная обращается к другому значению по ссылке. Дополнительные сведения см. в статье о [ссылочных локальных переменных](#ref-locals).
-- В объявлении `struct`, чтобы объявить `ref struct` или `ref readonly struct`. Дополнительные сведения см. в статье о [типах ссылочных структур](#ref-struct-types).
+- В объявлении `struct`, чтобы объявить `ref struct` или `readonly ref struct`. Дополнительные сведения см. в статье о [типах ссылочных структур](#ref-struct-types).
 
 ## <a name="passing-an-argument-by-reference"></a>Передача аргументов по ссылке
 

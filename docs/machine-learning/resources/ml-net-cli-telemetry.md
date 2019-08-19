@@ -4,12 +4,12 @@ description: Узнайте о функциях телеметрии в инте
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433796"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567490"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Сбор данных телеметрии интерфейсом командной строки ML.NET
 
@@ -36,7 +36,7 @@ ms.locfileid: "68433796"
 
 Функция телеметрии в интерфейсе командной строки ML.NET по умолчанию включена.
 
-Чтобы отключить ее, присвойте переменной среды `DOTNET_CLI_TELEMETRY_OPTOUT` значение `1` или `true`. Эта переменная среды применяется к средству командной строки .NET глобально.
+Чтобы отключить ее, присвойте переменной среды `MLDOTNET_CLI_TELEMETRY_OPTOUT` значение `1` или `true`. Эта переменная среды применяется к средству командной строки .NET глобально.
 
 ## <a name="data-points-collected"></a>Собираемые точки данных
 

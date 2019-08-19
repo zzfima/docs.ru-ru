@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724717"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038462"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -242,7 +242,7 @@ Windows Registry Editor Version 5.00
 Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения:
 
 - [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
-- [SCHANNEL_CRED structure](/windows/desktop/api/schannel/ns-schannel-_schannel_cred) (Структура SCHANNEL_CRED)
+- [SCHANNEL_CRED structure](/windows/win32/api/schannel/ns-schannel-schannel_cred) (Структура SCHANNEL_CRED)
 
 Флаг `SCH_USE_STRONG_CRYPTO` также передается `Schannel`, если для <xref:System.Net.SecurityProtocolType> или <xref:System.Security.Authentication.SslProtocols> явно используются перечисляемые значения `Tls` (TLS 1.0), `Tls11` или `Tls12`.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751817"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545325"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Учебник. Создание приложения службы Windows
 
@@ -26,7 +26,7 @@ ms.locfileid: "64751817"
 
 1. В Visual Studio в меню **Файл** последовательно выберите пункты **Создать** > **Проект** (или нажмите клавиши **CTRL**+**SHIFT**+**N**), чтобы открыть окно **Новый проект**.
 
-2. Найдите и выберите шаблон проекта **Служба Windows (.NET Framework)**. Чтобы найти его, разверните узел **Установленные**, затем узел **Visual C#** или **Visual Basic** и выберите **Рабочий стол Windows**. Можно также ввести запрос *Служба Windows* в поле поиска в правом верхнем углу и нажать клавишу **ВВОД**.
+2. Найдите и выберите шаблон проекта **Служба Windows (.NET Framework)** . Чтобы найти его, разверните узел **Установленные**, затем узел **Visual C#** или **Visual Basic** и выберите **Рабочий стол Windows**. Можно также ввести запрос *Служба Windows* в поле поиска в правом верхнем углу и нажать клавишу **ВВОД**.
 
    ![Шаблон приложения Windows в диалоговом окне нового проекта Visual Studio](media/new-project-dialog.png)
 
@@ -37,7 +37,7 @@ ms.locfileid: "64751817"
 
 3. В поле **Имя** введите *MyNewService*, а затем нажмите кнопку **ОК**.
 
-   Откроется вкладка **Проект** (**Service1.cs [Проект]** или **Service1.vb [Проект]**).
+   Откроется вкладка **Проект** (**Service1.cs [Проект]** или **Service1.vb [Проект]** ).
 
    Этот шаблон проекта содержит класс компонента с именем `Service1`, наследуемый от <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. В нем собран основной служебный код, в том числе код для запуска службы.
 
@@ -67,7 +67,7 @@ ms.locfileid: "64751817"
 
 1. В **обозревателе решений** в контекстном меню для файла **MyNewService.cs** или **MyNewService.vb** выберите пункт **Показать конструктор**.
 
-2. На **панели элементов** разверните раздел **Компоненты** и перетащите компонент **EventLog** на вкладку **Service1.cs [Проект]** или **Service1.vb [Проект]**.
+2. На **панели элементов** разверните раздел **Компоненты** и перетащите компонент **EventLog** на вкладку **Service1.cs [Проект]** или **Service1.vb [Проект]** .
 
 3. В **обозревателе решений** в контекстном меню для файла **MyNewService.cs** или **MyNewService.vb** выберите пункт **Просмотреть код**.
 
@@ -162,7 +162,7 @@ ms.locfileid: "64751817"
    Private eventId As Integer = 1
    ```
 
-Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Для получения дополнительной информации см. <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Дополнительные сведения можно найти по адресу: <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Определение действий при остановке службы
 
@@ -249,7 +249,7 @@ ms.locfileid: "64751817"
     ```
 
     > [!NOTE]
-    > Диспетчер служб использует члены `dwWaitHint` и `dwCheckpoint` [структуры SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status), чтобы определить время, в течение которого нужно ожидать запуска или завершения работы службы Windows. Если методы `OnStart` и `OnStop` выполняются долго, служба может запросить больше времени, повторно вызвав функцию `SetServiceStatus` с увеличенным значением `dwCheckPoint`.
+    > Диспетчер служб использует члены `dwWaitHint` и `dwCheckpoint` [структуры SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status), чтобы определить время, в течение которого нужно ожидать запуска или завершения работы службы Windows. Если методы `OnStart` и `OnStop` выполняются долго, служба может запросить больше времени, повторно вызвав функцию `SetServiceStatus` с увеличенным значением `dwCheckPoint`.
 
 3. В классе `MyNewService` объявите функцию [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) с помощью [вызова неуправляемого кода](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -482,7 +482,7 @@ ms.locfileid: "64751817"
 
     Если служба установлена успешно, команда сообщит об успешном выполнении.
 
-    Если система не может найти файл *installutil.exe*, убедитесь в том, что он есть на вашем компьютере. Это средство устанавливается вместе с платформой .NET Framework в папке *%windir%\Microsoft.NET\Framework[64]\\&lt;версия платформы&gt;*. Например, для 64-разрядной версии по умолчанию используется путь *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Если система не может найти файл *installutil.exe*, убедитесь в том, что он есть на вашем компьютере. Это средство устанавливается вместе с платформой .NET Framework в папке *%windir%\Microsoft.NET\Framework[64]\\&lt;версия платформы&gt;* . Например, для 64-разрядной версии по умолчанию используется путь *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     Если процесс **installutil.exe** завершается сбоем, найдите причину в журнале установки. По умолчанию журнал находится в той же папке, что и исполняемый файл службы. Установка может завершиться сбоем по указанным ниже причинам.
     - Класс <xref:System.ComponentModel.RunInstallerAttribute> отсутствует в классе `ProjectInstaller`.
@@ -538,11 +538,11 @@ ms.locfileid: "64751817"
 
 Теперь, после создания службы, можно выполнить указанные ниже действия.
 
-- Создайте автономную программу установки, с помощью которой другие пользователи могут устанавливать вашу службу Windows. Создать установщик для службы Windows можно с помощью [набора инструментов WiX](http://wixtoolset.org/). Другие идеи можно почерпнуть в статье [о создании пакета установщика](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+- Создайте автономную программу установки, с помощью которой другие пользователи могут устанавливать вашу службу Windows. Создать установщик для службы Windows можно с помощью [набора инструментов WiX](https://wixtoolset.org/). Другие идеи можно почерпнуть в статье [о создании пакета установщика](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 - Изучите возможности компонента <xref:System.ServiceProcess.ServiceController>, который позволяет отправлять команды в установленную службу.
 
-- Для создания журнала событий при установке приложения, а не во время его запуска, можно воспользоваться установщиком. В этом случае журнал событий удаляется установщиком при удалении приложения. Для получения дополнительной информации см. <xref:System.Diagnostics.EventLogInstaller>.
+- Для создания журнала событий при установке приложения, а не во время его запуска, можно воспользоваться установщиком. В этом случае журнал событий удаляется установщиком при удалении приложения. Дополнительные сведения можно найти по адресу: <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>См. также
 

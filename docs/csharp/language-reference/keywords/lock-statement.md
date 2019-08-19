@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7ae19e48467bf5feca115c993c2299c1ecbaadc7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796458"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566330"
 ---
 # <a name="lock-statement-c-reference"></a>Инструкция lock. (Справочник по C#)
 
@@ -54,7 +54,7 @@ finally
 При синхронизации доступа потоков к общему ресурсу блокируйте выделенный экземпляр объекта (например, `private readonly object balanceLock = new object();`) или другой экземпляр, который, скорее всего, не будет использоваться как объект блокировки другими частями кода. Не используйте один и тот же экземпляр объекта блокировки для разных общих ресурсов: это может привести к взаимоблокировке или состязанию при блокировке. В особенности избегайте использования следующих объектов в качестве объектов блокировки:
 
 - `this`, так как он может использоваться вызывающими объектами как блокировка;
-- экземпляров <xref:System.Type>, так как их может получать оператор [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) или отражение;
+- экземпляров <xref:System.Type>, так как их может получать оператор [typeof](../operators/type-testing-and-cast.md#typeof-operator) или отражение;
 - строковых экземпляров, включая строковые литералы, так как они могут быть [интернированы](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Пример

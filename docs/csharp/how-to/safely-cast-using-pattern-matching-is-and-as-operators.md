@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306354"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566289"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as
 
-В связи с полиморфизмом объектов переменная типа базового класса может содержать производный [тип](../programming-guide/types/index.md). Для доступа к членам экземпляра производного типа необходимо [привести](../programming-guide/types/casting-and-type-conversions.md) значение обратно к производному типу. Однако приведение создает риск возникновения исключения <xref:System.InvalidCastException>. C# предоставляет операторы [сопоставления шаблонов](../pattern-matching.md), которые выполняют приведение условно только в случае успеха. C# также предоставляет операторы [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) и [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) для проверки определенного типа значения.
+В связи с полиморфизмом объектов переменная типа базового класса может содержать производный [тип](../programming-guide/types/index.md). Для доступа к членам экземпляра производного типа необходимо [привести](../programming-guide/types/casting-and-type-conversions.md) значение обратно к производному типу. Однако приведение создает риск возникновения исключения <xref:System.InvalidCastException>. C# предоставляет операторы [сопоставления шаблонов](../pattern-matching.md), которые выполняют приведение условно только в случае успеха. C# также предоставляет операторы [is](../language-reference/operators/type-testing-and-cast.md#is-operator) и [as](../language-reference/operators/type-testing-and-cast.md#as-operator) для проверки определенного типа значения.
 
 В следующем коде показан оператор сопоставления шаблонов `is`. Он содержит методы, которые проверяют аргумент метода, чтобы определить, является ли он одним из возможных наборов производных типов.
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401475"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566831"
 ---
 # <a name="member-access-operators-c-reference"></a>Операторы доступа к членам (справочник по C#)
 
@@ -147,7 +147,7 @@ if (handler != null)
 
 Кроме того, с помощью круглых скобок можно указывать порядок выполнения операций в выражении. Дополнительные сведения см. в разделе [Добавление скобок](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) руководства по использованию [операторов](../../programming-guide/statements-expressions-operators/operators.md). Список операторов, упорядоченных по уровню приоритета, см. в статье [Операторы в C#](index.md).
 
-В [выражениях приведения](type-testing-and-conversion-operators.md#cast-operator-), которые выполняют явные преобразования типов, также используйте круглые скобки.
+В [выражениях приведения](type-testing-and-cast.md#cast-operator-), которые выполняют явные преобразования типов, также используйте круглые скобки.
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
@@ -167,3 +167,4 @@ if (handler != null)
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Оператор ?? (оператор объединения со значением NULL)](null-coalescing-operator.md)
+- [Оператор ::](namespace-alias-qualifier.md)

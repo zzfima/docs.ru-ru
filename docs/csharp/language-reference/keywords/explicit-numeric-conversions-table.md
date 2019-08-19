@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: d1533872850a953a38800aaeac85b9e6e565d374
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4dee46d075ea3d45d53ac0f64b539231188cf867
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661370"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566316"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Таблица явных числовых преобразований (Справочник по C#)
 
@@ -68,7 +68,7 @@ ms.locfileid: "67661370"
 
 - [справочник по C#](../index.md)
 - [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)
-- [Оператор ()](../operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [Оператор ()](../operators/type-testing-and-cast.md#cast-operator-)
 - [Целочисленные типы](../builtin-types/integral-numeric-types.md)
 - [Таблица типов с плавающей запятой](../builtin-types/floating-point-numeric-types.md)
 - [Таблица встроенных типов](built-in-types-table.md)
