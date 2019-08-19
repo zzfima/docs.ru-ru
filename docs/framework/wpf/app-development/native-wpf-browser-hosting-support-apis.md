@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864470"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817941"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Интерфейсы API для поддержки размещения в собственном браузере WPF
-Размещение [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] приложений в веб-браузерах упрощается с помощью сервера активных документов (также известного как DocObject), зарегистрированного из ведущего приложения WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] напрямую можно активировать и интегрировать в активный документ. Для размещения приложений XBAP и Свободный XAML документов в браузерах Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] предоставляет подключаемый модуль NPAPI, который предоставляет аналогичную среду размещения для [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] сервера активных документов как [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Однако самый простой удобный для размещения приложений XBAP и XAML документов в других браузерах и автономных приложениях является использование элемента управления веб-обозревателя Internet Explorer. Элемент управления веб-браузер предоставляет сложные среда размещения сервера активных документов, а также включает собственную узла настроить и расширить эту среду и напрямую взаимодействовать с объект текущего активного документа.  
+[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Размещение приложений в веб-браузерах упрощается с помощью активного сервера документов (также известного как DocObject), зарегистрированного из узла WPF. Internet Explorer может напрямую активировать и интегрироваться с активным документом. Для размещения XBAP и свободных документов XAML в браузерах [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Mozilla предоставляет подключаемый модуль NPAPI, который обеспечивает аналогичную среду размещения для сервера активного документа, как это [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] делает Internet Explorer. Однако самый простой способ размещения XBAP и документов XAML в других браузерах и автономных приложениях — с помощью элемента управления веб-обозревателя Internet Explorer. Элемент управления "веб-браузер" предоставляет сложную среду размещения сервера Active Document, но она позволяет собственному узлу настраивать и расширять эту среду и напрямую взаимодействовать с текущим объектом активного документа.  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Сервера активных документов реализует несколько общих интерфейсов размещения, включая [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). При размещении в элементе управления веб-браузер, эти интерфейсы могут выступать запросы из объекта, возвращаемого [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048) свойство.  
+ Сервер активных документов [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] реализует несколько распространенных интерфейсов размещения, включая [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). При размещении в элементе управления веб-браузера эти интерфейсы могут быть запросами из объекта, возвращаемого свойством [IWebBrowser2::D окумент](https://go.microsoft.com/fwlink/?LinkId=162048) .  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Реализация сервера активных документов WPF [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) поддерживает множество связанных с навигацией и обозревателем команд из стандартной группы команды OLE (с пустым GUID группы команд). Кроме того он распознает группу пользовательской команды с именем CGID_PresentationHost. В настоящее время имеется только одна команда, определенная в этой группе.  
+ Реализация [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) сервера WPF Active Document Server поддерживает многочисленные команды, связанные с навигацией и конкретными обозревателями стандартной группы команд OLE (с идентификатором GUID группы команд null). Кроме того, он распознает пользовательскую группу команд с именем CGID_PresentationHost. Сейчас в этой группе определена только одна команда.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO указывает, что процесс PresentationHost, чтобы перенести фокус на первую или последнюю, способному получать фокус элемент в его содержимое в зависимости от состояния клавиши Shift.  
+ PHCMDID_TABINTO инструктирует PresentationHost перейти к первому или последнему фокусному элементу в его содержимом в зависимости от состояния клавиши Shift.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
