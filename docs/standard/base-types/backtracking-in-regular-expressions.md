@@ -21,10 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "66378170"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Поиск с возвратом в регулярных выражениях
@@ -164,7 +164,7 @@ ms.locfileid: "66378170"
   
  Первый шаблон регулярного выражения `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`^`|Совпадение с началом строки.|  
 |`[0-9A-Z]`|Совпадение с алфавитно-цифровым символом. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , сравнение не зависит от регистра символов.|  
@@ -175,7 +175,7 @@ ms.locfileid: "66378170"
   
  Второй шаблон регулярного выражения `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`использует утверждение положительного просмотра назад. Определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`^`|Совпадение с началом строки.|  
 |`[0-9A-Z]`|Совпадение с алфавитно-цифровым символом. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , сравнение не зависит от регистра символов.|  
@@ -196,7 +196,7 @@ ms.locfileid: "66378170"
   
  Первый шаблон регулярного выражения `^(([A-Z]\w*)+\.)*[A-Z]\w*$`определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`^`|Совпадение с началом строки.|  
 |`([A-Z]\w*)+\.`|Совпадение с алфавитным символом (A-Z), за которым следует ноль и более символов слова, повторенных ноль и более раз, за которыми следует точка. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , сравнение не зависит от регистра символов.|  
@@ -206,7 +206,7 @@ ms.locfileid: "66378170"
   
  Второй шаблон регулярного выражения `^((?=[A-Z])\w+\.)*[A-Z]\w*$`использует утверждение положительного просмотра вперед. Определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`^`|Совпадение с началом строки.|  
 |`(?=[A-Z])`|Выполняется просмотр вперед к следующему символу; если он является алфавитным (A-Z), продолжается поиск совпадения. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , сравнение не зависит от регистра символов.|  
