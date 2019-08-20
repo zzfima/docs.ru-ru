@@ -882,33 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6f5a76e5d90a8d3b1cf6284af2e753f56494af74
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052759"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597366"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>К сожалению, конкретные сведения об этой ошибке C# отсутствуют.
-Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Или вы можете попросить другими разработчиками, используя один из следующих форумов:  
+Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Кроме того, вы можете попросить других разработчиков использовать один из следующих форумов:  
   
  [Язык Visual C#](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
- Форум для вопросов и общих обсуждений визуального элемента C# компилятором и синтаксисом языка.  
+ Содержит форум для вопросов и общих дискуссий по синтаксису и C# компилятору визуального языка.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  Форум для вопросов о работе в среде Visual Studio.  
   
  [Общие сведения о Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- Форум для вопросов о и проблемы, связанные с Visual C# , которые не обсуждаются на других форумах.  
+ Форум для вопросов и проблем с визуальным C# элементами, которые не обсуждаются на других форумах.  
   
  [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
- Форум для вопросов о и проблемы, связанные с Visual C#.  
+ Форум для вопросов и проблем, связанных с визуальным C#описанием.  
   
  См. также:  
- [Дополнительные ресурсы для программистов Visual C#](../../csharp/getting-started/additional-resources.md)  
+ [Дополнительные ресурсы для программистов Visual C#](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)
-- [Справочник по C#](../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../programming-guide/index.md)
+- [Справочник по C#](../language-reference/index.md)
 - [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
