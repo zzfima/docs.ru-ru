@@ -8,23 +8,23 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 130cc68906be433afc906cfb22759f4ae3dba447
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596127"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589457"
 ---
 # <a name="indexers-c-programming-guide"></a>Индексаторы (Руководство по программированию в C#)
 
-Индексаторы позволяют индексировать экземпляры класса или структуры точно так же, как и массивы. Индексированное значение можно задавать или получать без явного указания типа или экземпляра элемента. Индексаторы действуют как [свойства](../../../csharp/programming-guide/classes-and-structs/properties.md), за исключением того, что их акцессоры принимают параметры.  
+Индексаторы позволяют индексировать экземпляры класса или структуры точно так же, как и массивы. Индексированное значение можно задавать или получать без явного указания типа или экземпляра элемента. Индексаторы действуют как [свойства](../classes-and-structs/properties.md), за исключением того, что их акцессоры принимают параметры.  
  
- В следующем примере определяется универсальный класс с простыми акцессорами [get](../../../csharp/language-reference/keywords/get.md) и [set](../../../csharp/language-reference/keywords/set.md) для назначения и получения значений. Класс `Program` создает экземпляр этого класса для хранения строк.  
+ В следующем примере определяется универсальный класс с простыми акцессорами [get](../../language-reference/keywords/get.md) и [set](../../language-reference/keywords/set.md) для назначения и получения значений. Класс `Program` создает экземпляр этого класса для хранения строк.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
->  Дополнительные примеры см. в разделе [Связанные разделы](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
+>  Дополнительные примеры см. в разделе [Связанные разделы](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>Определения текста выражений  
  
@@ -44,9 +44,9 @@ ms.locfileid: "64596127"
   
 - Метод доступа `get` возвращает значение. Метод доступа `set` назначает значение.  
   
-- Ключевое слово [this](../../../csharp/language-reference/keywords/this.md) используется для определения индексаторов.  
+- Ключевое слово [this](../../language-reference/keywords/this.md) используется для определения индексаторов.  
   
-- Ключевое слово [value`set` используется для определения значения, присваиваемого индексатором ](../../../csharp/language-reference/keywords/value.md).  
+- Ключевое слово [value`set` используется для определения значения, присваиваемого индексатором ](../../language-reference/keywords/value.md).  
   
 - Индексаторы не нужно индексировать по целому значению; пользователь может определить конкретный механизм поиска на свое усмотрение.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "64596127"
   
 ## <a name="BKMK_RelatedSections"></a> Связанные разделы  
   
-- [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Использование индексаторов](./using-indexers.md)  
   
-- [Индексаторы в интерфейсах](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Индексаторы в интерфейсах](./indexers-in-interfaces.md)  
   
-- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Сравнение свойств и индексаторов](./comparison-between-properties-and-indexers.md)  
   
-- [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Ограничение доступности методов доступа](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
@@ -70,5 +70,5 @@ ms.locfileid: "64596127"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Руководство по программированию на C#](../index.md)
+- [Свойства](../classes-and-structs/properties.md)

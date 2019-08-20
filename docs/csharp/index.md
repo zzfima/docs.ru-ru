@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744252"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608294"
 ---
 # <a name="c-guide"></a>Руководство по языку C#
 
@@ -52,16 +52,16 @@ ms.locfileid: "67744252"
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [Руководство по программированию на C#](../csharp/programming-guide/index.md)
+* [Руководство по программированию на C#](./programming-guide/index.md)
   * Сведения и практические примеры способов использования конструкций языка C#.
 
-* [Пошаговые руководства](../csharp/walkthroughs.md)
+* [Пошаговые руководства](./walkthroughs.md)
   * Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.
 
 * [Справочник по языку](language-reference/index.md)
   * Этот раздел содержит справочные материалы по языку C#. Они помогут составить представление о синтаксисе и семантике C#. Здесь также приведены справочные сведения о типах, операторах, атрибутах, директивах препроцессора, а также о параметрах, ошибках и предупреждениях компилятора.
 
-* [Спецификация языка C#](../csharp/language-reference/language-specification/index.md)
+* [Спецификация языка C#](./language-reference/language-specification/index.md)
   * Ссылки на последнюю версию спецификации C#.
 
 ## <a name="see-also"></a>См. также

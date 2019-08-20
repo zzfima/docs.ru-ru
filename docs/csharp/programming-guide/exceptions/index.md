@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2b991a45a53ce4a8295d6181da11cb09fda6ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595404"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590192"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Исключения и обработка исключений (Руководство по программированию в C#)
 Функции обработки исключений в языке C# помогают вам справиться с непредвиденными или исключительными проблемами, которые возникают при выполнении программы. Обработка исключений использует ключевые слова `try`, `catch` и `finally` для действий, которые могут оказаться неудачными. Это позволяет обрабатывать ошибки так, как кажется разумным, а также правильно высвобождать ресурсы. Исключения могут создаваться средой выполнения (CLR), платформой .NET Framework, библиотеками сторонних поставщиков или кодом самого приложения. Чтобы создать исключение, используйте ключевое слово `throw`.  
@@ -49,17 +49,17 @@ ms.locfileid: "64595404"
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения об исключениях и обработке исключений вы найдете в следующих статьях:  
   
-- [Использование исключений](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [Использование исключений](./using-exceptions.md)  
   
-- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [Обработка исключений](./exception-handling.md)  
   
-- [Создание и порождение исключений](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [Создание и порождение исключений](./creating-and-throwing-exceptions.md)  
   
-- [Исключения, создаваемые компилятором](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [Исключения, создаваемые компилятором](./compiler-generated-exceptions.md)  
   
-- [Практическое руководство. Руководство по программированию на C#. Обработка исключений с помощью блока try-catch](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [Практическое руководство. Руководство по программированию на C#. Обработка исключений с помощью блока try-catch](./how-to-handle-an-exception-using-try-catch.md)  
   
-- [Практическое руководство. Выполнение кода очистки с использованием блока finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [Практическое руководство. Выполнение кода очистки с использованием блока finally](./how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
@@ -68,10 +68,10 @@ ms.locfileid: "64595404"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.SystemException>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [throw](../../../csharp/language-reference/keywords/throw.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Руководство по программированию на C#](../index.md)
+- [Ключевые слова в C#](../../language-reference/keywords/index.md)
+- [throw](../../language-reference/keywords/throw.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [Исключения](../../../standard/exceptions/index.md)

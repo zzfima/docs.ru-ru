@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802315"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588478"
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>Сравнение строки и System.String  
- В C# ключевое слово `string` является псевдонимом для <xref:System.String>. Таким образом, `String` и `string` эквивалентны, их можно использовать независимо от используемого соглашения об именовании. Класс `String` предоставляет множество методов для безопасного создания, обработки и сравнения строк. Кроме того, язык C# перегружает некоторые операторы для упрощения типичных операций со строками. Дополнительные сведения о ключевых словах см. в статье, посвященной [строкам](../../../csharp/language-reference/keywords/string.md). Дополнительные сведения о типе и его методах см. здесь: <xref:System.String>.  
+ В C# ключевое слово `string` является псевдонимом для <xref:System.String>. Таким образом, `String` и `string` эквивалентны, их можно использовать независимо от используемого соглашения об именовании. Класс `String` предоставляет множество методов для безопасного создания, обработки и сравнения строк. Кроме того, язык C# перегружает некоторые операторы для упрощения типичных операций со строками. Дополнительные сведения о ключевых словах см. в статье, посвященной [строкам](../../language-reference/keywords/string.md). Дополнительные сведения о типе и его методах см. здесь: <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Объявление и инициализация строк  
  Вы можете объявлять и инициализировать строки различными способами, как показано в следующем примере:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Обратите внимание, что вы не используете оператор [new](../../../csharp/language-reference/operators/new-operator.md) для создания объекта строки, за исключением случаев инициализации строки с помощью массива символов.  
+ Обратите внимание, что вы не используете оператор [new](../../language-reference/operators/new-operator.md) для создания объекта строки, за исключением случаев инициализации строки с помощью массива символов.  
   
- Инициализируйте строку с константным значением <xref:System.String.Empty> для создания нового объекта <xref:System.String>, строка которого имеет нулевую длину. Представлением строкового литерала строки с нулевой длиной является "". Если вы инициализируете строки со значением <xref:System.String.Empty> вместо [NULL](../../../csharp/language-reference/keywords/null.md), вы снизите вероятность появления исключения <xref:System.NullReferenceException>. Используйте статический метод <xref:System.String.IsNullOrEmpty%28System.String%29>, чтобы проверить значение строки, прежде чем пытаться получить к ней доступ.  
+ Инициализируйте строку с константным значением <xref:System.String.Empty> для создания нового объекта <xref:System.String>, строка которого имеет нулевую длину. Представлением строкового литерала строки с нулевой длиной является "". Если вы инициализируете строки со значением <xref:System.String.Empty> вместо [NULL](../../language-reference/keywords/null.md), вы снизите вероятность появления исключения <xref:System.NullReferenceException>. Используйте статический метод <xref:System.String.IsNullOrEmpty%28System.String%29>, чтобы проверить значение строки, прежде чем пытаться получить к ней доступ.  
   
 ## <a name="immutability-of-string-objects"></a>Неизменность строковых объектов  
  Строковые объекты являются *неизменяемыми*: их нельзя изменить после создания. Может показаться, что все методы <xref:System.String> и операторы C# изменяют строку, но в действительности они возвращают результаты в новый строковый объект. Когда содержимое `s1` и `s2` объединяется для формирования одной строки, две исходные строки не изменяются, как показано в следующем примере. Оператор `+=` создает новую строку, которая содержит объединенное содержимое. Этот новый объект присваивается переменной `s1`, а исходный объект, который был присвоен `s1`, освобождается для сборки мусора, так как ни одна переменная не ссылается на него.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Строки, методы расширения и LINQ  
- Так как тип <xref:System.String> использует <xref:System.Collections.Generic.IEnumerable%601>, вы можете применять методы расширения, определенные для строк в классе <xref:System.Linq.Enumerable>. Чтобы избежать визуального загромождения, эти методы исключены из IntelliSense для типа <xref:System.String>, но все равно доступны. Можно также использовать выражения запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в строках. Дополнительные сведения см. в документации по [LINQ и строкам](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
+ Так как тип <xref:System.String> использует <xref:System.Collections.Generic.IEnumerable%601>, вы можете применять методы расширения, определенные для строк в классе <xref:System.Linq.Enumerable>. Чтобы избежать визуального загромождения, эти методы исключены из IntelliSense для типа <xref:System.String>, но все равно доступны. Можно также использовать выражения запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в строках. Дополнительные сведения см. в документации по [LINQ и строкам](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>См. также  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)|Демонстрирует разные способы соединения нескольких строк в одну.|
 |[Практическое руководство. Анализ строк с помощью метода String.Split](../../how-to/parse-strings-using-split.md)|Содержит примеры кода, демонстрирующие использование метода `String.Split` для анализа строк.|  
 |[Практическое руководство. Поиск по строкам](../../how-to/search-strings.md)|Описание использования поиска для нахождения в строках определенных шаблонов или текста.|  
-|[Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
+|[Практическое руководство. Определение представления числового значения в строке](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
 |[Интерполяция строк](../../language-reference/tokens/interpolated.md)|Описывает функцию интерполяции строк, которая предоставляет удобный синтаксис для форматирования строк.|
-|[Базовые операции со строками в .NET Framework](../../../../docs/standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  
+|[Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  
 |[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Описывает, как преобразовать строковые представления базовых типов .NET в экземпляры соответствующих типов.|  
 |[Синтаксический анализ строк даты и времени в .NET](../../../standard/base-types/parsing-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
-|[Сравнение строк в .NET Framework](../../../../docs/standard/base-types/comparing.md)|Объясняет, как сравнивать строки, и содержит примеры на языках C# и Visual Basic.|  
+|[Сравнение строк в .NET Framework](../../../standard/base-types/comparing.md)|Объясняет, как сравнивать строки, и содержит примеры на языках C# и Visual Basic.|  
 |[Using the StringBuilder class](../../../standard/base-types/stringbuilder.md) (Использование класса StringBuilder)|Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.|  
-|[LINQ и строки](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Содержит инструкции по выполнению различных операций со строками с помощью запросов LINQ.|  
-|[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)|Содержит ссылки на статьи с конструкциями программирования на C#.|  
+|[LINQ и строки](../concepts/linq/linq-and-strings.md)|Содержит инструкции по выполнению различных операций со строками с помощью запросов LINQ.|  
+|[Руководство по программированию на C#](../index.md)|Содержит ссылки на статьи с конструкциями программирования на C#.|  

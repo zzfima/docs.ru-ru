@@ -8,33 +8,33 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 96fd360342a3bc0f82df37761abb372bdcaa8d7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833235"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606126"
 ---
 # <a name="c-reference"></a>Справочник по C#
 Этот раздел содержит подробные справочные сведения о ключевых словах, операторах, специальных символах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Ключевые слова в C#](../../csharp/language-reference/keywords/index.md)  
+ [Ключевые слова в C#](./keywords/index.md)  
  Ссылки на сведения о ключевых словах и синтаксисе языка C#.  
   
- [Операторы в C#](../../csharp/language-reference/operators/index.md)  
+ [Операторы в C#](./operators/index.md)  
  Ссылки на сведения об операторах и синтаксисе языка C#.  
 
- [Специальные символы в C#](../../csharp/language-reference/tokens/index.md)  
+ [Специальные символы в C#](./tokens/index.md)  
  Предоставляет ссылки на сведения о специальных контекстные символов в C# и их использовании.  
 
- [Директивы препроцессора C#](../../csharp/language-reference/preprocessor-directives/index.md)  
+ [Директивы препроцессора C#](./preprocessor-directives/index.md)  
  Ссылки на сведения о командах компилятора для внедрения в исходном коде C#.  
   
- [Параметры компилятора C# ](../../csharp/language-reference/compiler-options/index.md)  
+ [Параметры компилятора C# ](./compiler-options/index.md)  
  Сведения о параметрах компилятора и их использовании.  
   
- [Ошибки компилятора C#](../../csharp/language-reference/compiler-messages/index.md)  
+ [Ошибки компилятора C#](./compiler-messages/index.md)  
  Фрагменты кода, демонстрирующие причины и способы исправления ошибок и предупреждений компилятора C#.  
   
  [Спецификация языка C#](../../../_csharplang/spec/introduction.md)  
@@ -58,11 +58,11 @@ ms.locfileid: "66833235"
   
 ## <a name="related-sections"></a>Связанные разделы  
 
- [Руководство по языку C#](../../csharp/index.md)  
+ [Руководство по языку C#](../index.md)  
  Портал для документации по Visual C#.  
   
  [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Ссылки на концептуальные разделы и разделы задач, описывающие интегрированную среду разработки и редактор.  
   
- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  
+ [Руководство по программированию на C#](../programming-guide/index.md)  
  Сведения об использовании языка программирования C#.

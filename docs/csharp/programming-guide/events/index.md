@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 0373d9150349dc24653270600a317b0d41b945b1
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 7a8a8e6b6a393f151d69d1879f475e04f44df5fa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859641"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590378"
 ---
 # <a name="events-c-programming-guide"></a>События (Руководство по программированию в C#)
-События позволяют [классу](../../../csharp/language-reference/keywords/class.md) или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или *порождающий*) событие, называется *издателем* , а классы, принимающие (или *обрабатывающие*) событие, называются *подписчиками*.  
+События позволяют [классу](../../language-reference/keywords/class.md) или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или *порождающий*) событие, называется *издателем* , а классы, принимающие (или *обрабатывающие*) событие, называются *подписчиками*.  
   
- В типичном веб-приложении или приложении Windows Forms на C# вы подписываетесь на события, вызываемые элементами управления, такими как кнопки и списки. Вы можете использовать интегрированную среду разработки (IDE) Visual C#, чтобы просмотреть события, публикуемые элементом управления, и выбрать те из них, которые необходимо обрабатывать. IDE позволяет автоматически добавлять пустой метод обработчика событий и код для подписки на событие. Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+ В типичном веб-приложении или приложении Windows Forms на C# вы подписываетесь на события, вызываемые элементами управления, такими как кнопки и списки. Вы можете использовать интегрированную среду разработки (IDE) Visual C#, чтобы просмотреть события, публикуемые элементом управления, и выбрать те из них, которые необходимо обрабатывать. IDE позволяет автоматически добавлять пустой метод обработчика событий и код для подписки на событие. Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](./how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
 ## <a name="events-overview"></a>Общие сведения о событиях  
  События имеют следующие свойства:  
@@ -30,22 +30,22 @@ ms.locfileid: "67859641"
   
 - Обычно события используются для оповещения о действиях пользователя, например нажатиях кнопок или выборе пунктов меню в графических пользовательских интерфейсах.  
   
-- Если событие имеет несколько подписчиков, при возникновении события обработчики событий вызываются синхронно. Сведения об асинхронном вызове событий см. в разделе [Calling Synchronous Methods Asynchronously](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+- Если событие имеет несколько подписчиков, при возникновении события обработчики событий вызываются синхронно. Сведения об асинхронном вызове событий см. в разделе [Calling Synchronous Methods Asynchronously](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
 - В библиотеке классов .NET Framework события основываются на делегате <xref:System.EventHandler> и базовом классе <xref:System.EventArgs>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- Дополнительные сведения можно найти в разделе  
+ Дополнительные сведения:  
   
-- [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
+- [Практическое руководство. Подписка и отмена подписки на события](./how-to-subscribe-to-and-unsubscribe-from-events.md)  
   
-- [Практическое руководство. Публикация событий в соответствии с руководствами по .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Практическое руководство. Публикация событий в соответствии с руководствами по .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
   
-- [Практическое руководство. Создание событий базового класса в производных классах](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
+- [Практическое руководство. Создание событий базового класса в производных классах](./how-to-raise-base-class-events-in-derived-classes.md)  
   
-- [Практическое руководство.  Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
+- [Практическое руководство.  Реализация событий интерфейса](./how-to-implement-interface-events.md)  
   
-- [How to: Реализация пользовательских методов доступа к событиям](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
+- [Практическое руководство. Реализация пользовательских методов доступа к событиям](./how-to-implement-custom-event-accessors.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
@@ -59,6 +59,6 @@ ms.locfileid: "67859641"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.EventHandler>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
-- [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Руководство по программированию на C#](../index.md)
+- [Делегаты](../delegates/index.md)
+- [Создание обработчиков событий в Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)

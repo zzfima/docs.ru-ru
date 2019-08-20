@@ -2,12 +2,12 @@
 title: LINQ (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 1f2cbab6295fd9a2c2b3458f520dbf231d9b5413
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484546"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592162"
 ---
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
 
@@ -58,4 +58,4 @@ ms.locfileid: "66484546"
 
 ## <a name="see-also"></a>См. также
 
-- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (C#)](./index.md)

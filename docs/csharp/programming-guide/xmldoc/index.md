@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 85d75d6420404f278c4a8b16eb9bf30aff958f7c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 46dd947ac6ff5a45c7d952acaa55e25c3a46969c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645782"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588056"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Комментарии XML-документации (Руководство по программированию на C#)
 В Visual C# можно создавать документацию для кода путем включения XML-элементов в специальные поля комментариев (начинающиеся с трех символов косой черты) в исходном коде непосредственно перед блоком кода, к которому относятся комментарии. Например:  
@@ -29,7 +29,7 @@ ms.locfileid: "65645782"
 public class MyClass {}  
 ```  
   
- При выполнении компиляции с параметром [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) компилятор осуществляет поиск всех тегов XML в исходном коде и создает XML-файл документации. Для создания окончательной документации на основе сгенерированного компилятором файла можно создать пользовательское средство или применить такие средства, как [DocFX](https://dotnet.github.io/docfx/) или [Sandcastle](https://github.com/EWSoftware/SHFB).  
+ При выполнении компиляции с параметром [/doc](../../language-reference/compiler-options/doc-compiler-option.md) компилятор осуществляет поиск всех тегов XML в исходном коде и создает XML-файл документации. Для создания окончательной документации на основе сгенерированного компилятором файла можно создать пользовательское средство или применить такие средства, как [DocFX](https://dotnet.github.io/docfx/) или [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
  Для ссылки на XML-элементы (например, если функция обрабатывает определенные XML-элементы, которые требуется включить в комментарии XML-документации) можно использовать стандартный механизм заключения в скобки (`<` и `>`).  Для ссылки на универсальные идентификаторы в элементах ссылок кода (`cref`) можно использовать escape-символы (например, `cref="List&lt;T&gt;"`) или фигурные скобки (`cref="List{T}"`).  В особом случае компилятор анализирует фигурные скобки, как угловые, чтобы при ссылке на универсальные идентификаторы сделать комментарий документации менее громоздким.  
   
@@ -38,22 +38,22 @@ public class MyClass {}
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+- [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)  
   
-- [Обработка XML-файла](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+- [Обработка XML-файла](./processing-the-xml-file.md)  
   
-- [Разделители для тегов документации](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+- [Разделители для тегов документации](./delimiters-for-documentation-tags.md)  
   
-- [Практическое руководство. Использование XML-документации](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+- [Практическое руководство. Использование XML-документации](./how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
-- [/doc (обработка комментариев документации)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [/doc (обработка комментариев документации)](../../language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Руководство по программированию на C#](../index.md)

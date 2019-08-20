@@ -3,16 +3,16 @@ title: Обзор пакета SDK для .NET Core
 description: Сведения о пакете SDK для .NET Core, который является набором библиотек и средств, используемых для создания проектов .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733393"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566245"
 ---
 # <a name="net-core-sdk-overview"></a>Обзор пакета SDK для .NET Core
 
-Пакет средств разработки (SDK) для .NET Core — это набор библиотек и средств, которые позволяют разработчикам создавать приложения и библиотеки .NET Core. Он содержит следующие компоненты, которые используются для сборки и запуска приложений:
+Пакет SDK для .NET Core — это набор библиотек и средств, с помощью которых разработчики могут создавать приложения и библиотеки .NET Core. Он содержит следующие компоненты, которые используются для сборки и запуска приложений:
 
 - Средства .NET Core CLI.
 - Библиотеки .NET Core и среда выполнения.

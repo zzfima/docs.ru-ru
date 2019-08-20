@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: e32eb7c60e01ca72824ffb3a1e1269cf34650f5a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7d212aeaa7d7a8c3f152f8610a7ef3fe5de0fe23
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423397"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589602"
 ---
 # <a name="generics-c-programming-guide"></a>Универсальные шаблоны (Руководство по программированию на C#)
 Универсальные шаблоны были добавлены в язык C# и общеязыковую среду выполнения (CLR) в версии 2.0. Универсальные шаблоны вводят на платформе .NET Framework концепцию параметров универсального типа. Благодаря им вы можете создавать классы и методы с типами, спецификация которых отложена до момента объявления и создания экземпляров в клиентском коде. Как пример, ниже показан класс с параметром T универсального типа. Этот класс может использоваться в другом клиентском коде, не требуя ресурсов и не создавая рисков, связанных с операциями приведения и упаковки-преобразования в среде выполнения.  
@@ -53,23 +53,23 @@ ms.locfileid: "66423397"
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
-- [Параметры универсального типа](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+- [Параметры универсального типа](./generic-type-parameters.md)  
   
-- [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [Ограничения параметров типа](./constraints-on-type-parameters.md)  
   
-- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Универсальные классы](./generic-classes.md)  
   
-- [Универсальные интерфейсы](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [Универсальные интерфейсы](./generic-interfaces.md)  
   
-- [Универсальные методы](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [Универсальные методы](./generic-methods.md)  
   
-- [Универсальные делегаты](../../../csharp/programming-guide/generics/generic-delegates.md)  
+- [Универсальные делегаты](./generic-delegates.md)  
   
-- [Различия между шаблонами языка C++ и универсальными шаблонами языка C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+- [Различия между шаблонами языка C++ и универсальными шаблонами языка C#](./differences-between-cpp-templates-and-csharp-generics.md)  
   
-- [Универсальные типы и отражение](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+- [Универсальные типы и отражение](./generics-and-reflection.md)  
   
-- [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+- [Универсальные типы во время выполнения](./generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  Дополнительные сведения см. в [спецификации языка C#](~/_csharplang/spec/types.md#constructed-types).  
@@ -77,8 +77,8 @@ ms.locfileid: "66423397"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Collections.Generic>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Типы](../../../csharp/programming-guide/types/index.md)
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [Руководство по программированию на C#](../index.md)
+- [Типы](../types/index.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [Универсальные шаблоны в .NET](../../../standard/generics/index.md)

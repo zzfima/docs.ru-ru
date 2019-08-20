@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062953"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604224"
 ---
 # <a name="get-started-with-c"></a>Начало работы с C\#
 
@@ -43,15 +43,15 @@ ms.locfileid: "65062953"
 
 ## <a name="related-sections"></a>Связанные разделы
 
-* [Руководство по программированию на C#](../../csharp/programming-guide/index.md)
+* [Руководство по программированию на C#](../programming-guide/index.md)
 
     Содержит сведения о понятиях программирования C# и описание выполнения различных задач на C#.
 
-* [Справочник по C#](../../csharp/language-reference/index.md)
+* [Справочник по C#](../language-reference/index.md)
 
     Содержит подробные справочные сведения о ключевых словах, операторах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.
 
-* [Пошаговые руководства](../../csharp/walkthroughs.md)
+* [Пошаговые руководства](../walkthroughs.md)
 
     Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.
 

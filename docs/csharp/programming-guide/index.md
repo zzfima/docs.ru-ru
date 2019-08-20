@@ -9,83 +9,83 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: a31b1dc01fe1f9d9dd97775ae3c65f762b167079
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635267"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589475"
 ---
 # <a name="c-programming-guide"></a>Руководство по программированию на C#
 Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.  
   
  В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы раньше никогда не программировали или не работали с языком C#, рекомендуем посмотреть руководства [Знакомство с C#](../tutorials/intro-to-csharp/index.md) или интерактивное руководство [Начало работы с C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), которые не требуют знаний программирования.  
   
- Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../../csharp/language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](../../csharp/language-reference/language-specification/index.md).  
+ Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](../language-reference/language-specification/index.md).  
   
 ## <a name="program-sections"></a>Разделы о программе
 
-[Структура программы C#](../../csharp/programming-guide/inside-a-program/index.md)  
+[Структура программы C#](./inside-a-program/index.md)  
   
-[Main() и аргументы командной строки](../../csharp/programming-guide/main-and-command-args/index.md)  
+[Main() и аргументы командной строки](./main-and-command-args/index.md)  
  
 ## <a name="language-sections"></a>Разделы о языке  
-[Инструкции, выражения и операторы](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[Инструкции, выражения и операторы](./statements-expressions-operators/index.md)  
 
- [Типы](../../csharp/programming-guide/types/index.md)  
+ [Типы](./types/index.md)  
 
- [Классы и структуры](../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Классы и структуры](./classes-and-structs/index.md)  
   
- [Интерфейсы](../../csharp/programming-guide/interfaces/index.md)  
+ [Интерфейсы](./interfaces/index.md)  
 
- [Типы перечисления](../../csharp/programming-guide/enumeration-types.md)  
+ [Типы перечисления](./enumeration-types.md)  
   
- [Делегаты](../../csharp/programming-guide/delegates/index.md)  
+ [Делегаты](./delegates/index.md)  
  
- [Массивы](../../csharp/programming-guide/arrays/index.md)  
+ [Массивы](./arrays/index.md)  
   
- [Строки](../../csharp/programming-guide/strings/index.md)  
+ [Строки](./strings/index.md)  
   
- [Свойства](../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Свойства](./classes-and-structs/properties.md)  
   
- [Индексаторы](../../csharp/programming-guide/indexers/index.md)  
+ [Индексаторы](./indexers/index.md)  
   
- [События](../../csharp/programming-guide/events/index.md)  
+ [События](./events/index.md)  
   
- [Универсальные шаблоны](../../csharp/programming-guide/generics/index.md)  
+ [Универсальные шаблоны](./generics/index.md)  
   
- [Итераторы](../../csharp/programming-guide/concepts/iterators.md)
+ [Итераторы](./concepts/iterators.md)
   
- [Выражения запросов LINQ](../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [Выражения запросов LINQ](./linq-query-expressions/index.md)  
   
- [Лямбда-выражения](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Лямбда-выражения](./statements-expressions-operators/lambda-expressions.md)  
   
- [Пространства имен](../../csharp/programming-guide/namespaces/index.md)  
+ [Пространства имен](./namespaces/index.md)  
   
- [Типы, допускающие значения NULL](../../csharp/programming-guide/nullable-types/index.md)  
+ [Типы, допускающие значения NULL](./nullable-types/index.md)  
   
- [Небезопасный код и указатели](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Небезопасный код и указатели](./unsafe-code-pointers/index.md)  
   
- [Комментарии XML-документации](../../csharp/programming-guide/xmldoc/index.md)  
+ [Комментарии XML-документации](./xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Разделы о платформе  
  [Домены приложений](../../framework/app-domains/application-domains.md)  
   
  [Сборки в .NET](../../standard/assembly/index.md)  
   
- [Атрибуты](../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Атрибуты](./concepts/attributes/index.md)  
   
- [Коллекции](../../csharp/programming-guide/concepts/collections.md)  
+ [Коллекции](./concepts/collections.md)  
   
- [Исключения и обработка исключений](../../csharp/programming-guide/exceptions/index.md)  
+ [Исключения и обработка исключений](./exceptions/index.md)  
   
- [Файловая система и реестр (руководство по программированию на C#)](../../csharp/programming-guide/file-system/index.md)  
+ [Файловая система и реестр (руководство по программированию на C#)](./file-system/index.md)  
   
- [Взаимодействие](../../csharp/programming-guide/interop/index.md)  
+ [Взаимодействие](./interop/index.md)  
   
- [Отражение](../../csharp/programming-guide/concepts/reflection.md)  
+ [Отражение](./concepts/reflection.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../csharp/language-reference/index.md)
-- [C#](../../csharp/index.md)
+- [Справочник по C#](../language-reference/index.md)
+- [C#](../index.md)
