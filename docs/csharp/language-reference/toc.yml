@@ -297,9 +297,9 @@
     - name: Операторы доступа к членам
       href: operators/member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
-    - name: Операторы тестирования и преобразования типов
-      href: operators/type-testing-and-conversion-operators.md
-      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+    - name: Операторы приведения и тестирования типов
+      href: operators/type-testing-and-cast.md
+      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
     - name: Операторы пользовательского преобразования
       href: operators/user-defined-conversion-operators.md
       displayName: 'implicit, explicit'
