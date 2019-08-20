@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972229"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611470"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972229"
 |Манифест приложения (.MANIFEST)|Содержит метаданные, связанные с приложением, и имеет расширение MANIFEST.|  
 |Манифест развертывания (.XBAP)|Этот файл содержит сведения, используемые технологией ClickOnce для развертывания приложения и имеющего расширение XBAP.|  
   
- XBAP развертывается на веб-сервере, например [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или более поздней версии. Вам не нужно устанавливать .NET Framework на веб-сервере, но необходимо зарегистрировать [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] типы MIME и расширения имен файлов для многоцелевого доступа к Интернету. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Приложения XBAP развертываются на веб-сервере, например Microsoft службы IIS (IIS) 5,0 или более поздней версии. Вам не нужно устанавливать .NET Framework на веб-сервере, но необходимо зарегистрировать [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] типы MIME и расширения имен файлов для многоцелевого доступа к Интернету. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Чтобы подготовить XBAP для развертывания, скопируйте файл EXE и связанные с ним манифесты на веб-сервер. Создайте HTML-страницу, содержащую гиперссылку, чтобы открыть манифест развертывания, который является файлом с расширением XBAP. Когда пользователь щелкает ссылку на XBAP файл, ClickOnce автоматически обрабатывает механизм загрузки и запуска приложения. В следующем примере кода показана HTML-страница, которая содержит гиперссылку, указывающую на XBAP.  
   

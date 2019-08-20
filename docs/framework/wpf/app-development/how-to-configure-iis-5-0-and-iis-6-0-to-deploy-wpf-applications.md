@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3179679abcf32e40374c7f02e64466a326a73195
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69013021"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611502"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Приложение можно развернуть с большинства веб-серверов, если они настроены с использованием соответствующих типов MIME. По умолчанию [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] настраивается с этими типами MIME [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] , а [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] не с помощью.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Приложение можно развернуть с большинства веб-серверов, если они настроены с использованием соответствующих типов MIME. По умолчанию Microsoft службы IIS (IIS) 7,0 настроены с этими типами MIME, но Microsoft службы IIS (IIS) 5,0 и Microsoft службы IIS (IIS) 6,0.
 
-В этом разделе описывается настройка [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] и [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] для развертывания приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+В этом разделе описано, как настроить Microsoft службы IIS (IIS) 5,0 и Microsoft службы IIS (IIS) 6,0 для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] развертывания приложений.
 
 > [!NOTE]
 > Вы можете проверить строку *UserAgent* в реестре, чтобы определить, установлена ли в системе .NET Framework. Дополнительные сведения и сценарий, проверяющий строку *UserAgent* для определения того, установлена ли .NET Framework в системе, см. в разделе [обнаружение установки .NET Framework 3,0](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -33,11 +33,11 @@ ms.locfileid: "69013021"
 
 ## <a name="adjust-the-content-expiration-setting"></a>Настройка параметра срока действия содержимого
 
-Следует установить параметр срока действия содержимого на 1 минуту. В следующей процедуре показано, как это сделать с помощью [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)].
+Следует установить параметр срока действия содержимого на 1 минуту. В следующей процедуре показано, как это сделать с IIS.
 
 1. Выберите в меню **Пуск** пункт **Администрирование** и щелкните строку **Диспетчер служб IIS**. Кроме этого, приложение можно запустить, набрав в командной строке "%SystemRoot%\system32\inetsrv\iis.msc".
 
-2. Разворачивайте дерево [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)], пока не найдете узел **Веб-сайт по умолчанию**.
+2. Разверните дерево IIS, пока не найдете узел **веб-сайта по умолчанию** .
 
 3. Щелкните правой кнопкой мыши **Веб-сайт по умолчанию** и выберите в контекстном меню пункт **Свойства**.
 
@@ -63,7 +63,7 @@ ms.locfileid: "69013021"
 > [!NOTE]
 > Не нужно регистрировать типы MIME или расширения файлов в клиентских системах. Они регистрируются автоматически при установке Microsoft .NET Framework.
 
-Следующий пример Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые типы MIME в [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+Следующий пример Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые типы MIME в IIS. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> Многократное выполнение этого сценария создает несколько записей сопоставлений MIME [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] в [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] метабазе или.
+> При многократном выполнении этого сценария создается несколько записей сопоставлений MIME в метабазе Microsoft службы IIS (IIS) 5,0 или Microsoft службы IIS (IIS) 6,0.
 
-После выполнения этого скрипта могут не отображаться дополнительные типы MIME из [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] консоли управления или [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] MMC. Однако эти типы MIME были добавлены в [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] метабазу или. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] В следующем скрипте будут показаны все типы MIME в [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] метабазе или. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]
+После выполнения этого скрипта могут не отображаться дополнительные типы MIME из консоли управления Microsoft службы IIS (IIS) 5,0 или Microsoft службы IIS (IIS) 6,0. Однако эти типы MIME были добавлены в метабазу Microsoft службы IIS (IIS) 5,0 или Microsoft службы IIS (IIS) 6,0. В следующем скрипте будут показаны все типы MIME в метабазе Microsoft службы IIS (IIS) 5,0 или Microsoft службы IIS (IIS) 6,0.
 
 ```vb
 ' This script lists the MIME types for an IIS Server.
