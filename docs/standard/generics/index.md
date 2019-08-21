@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766820"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666438"
 ---
 # <a name="generics-in-net"></a>Универсальные шаблоны в .NET
 
@@ -148,7 +148,7 @@ ms.locfileid: "67766820"
   
  Среда CLR предоставляет новые коды операций и префиксы для поддержки универсальных типов в языке MSIL, включая <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>и <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/index.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
+ В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](../../csharp/programming-guide/generics/index.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [К началу](#top)  
   
@@ -170,12 +170,12 @@ ms.locfileid: "67766820"
 |[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Предоставление сводных данных о характеристиках и сценариях использования типов коллекций в составе .NET, включая универсальные типы.|  
 |[Когда следует использовать универсальные коллекции](../../../docs/standard/collections/when-to-use-generic-collections.md)|Описание общих правил для определения ситуаций, когда следует использовать универсальные типы коллекций.|  
 |[Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Описание способов создания динамических сборок, содержащих универсальные типы и методы.|  
-|[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
-|[Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/index.md)|Общие сведения об определении и использовании универсальных типов для пользователей C#.|  
+|[Универсальные типы в Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
+|[Введение в универсальные шаблоны](../../csharp/programming-guide/generics/index.md)|Общие сведения об определении и использовании универсальных типов для пользователей C#.|  
 |[Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Описание универсальных шаблонов для пользователей C++, включая описание различий между шаблонами и универсальными шаблонами.|  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Справочники  
+## <a name="reference"></a>Справочник  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

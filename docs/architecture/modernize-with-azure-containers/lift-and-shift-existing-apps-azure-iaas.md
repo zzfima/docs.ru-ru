@@ -2,12 +2,12 @@
 title: Пренимайте и перенесите существующие приложения .NET в Azure IaaS (готовность к облачной инфраструктуре)
 description: Модернизировать существующие приложения .NET с помощью Azure Cloud и контейнеров Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578397"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660742"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Пренимайте и перенесите существующие приложения .NET в Azure IaaS (готовность к облачной инфраструктуре)
 
@@ -107,4 +107,4 @@ Site Recovery также предназначен специально для г
 
 >[!div class="step-by-step"]
 >[Назад](index.md)
->[Вперед](migrate-your-relational-databases-to-azure.md)
+>[Вперед](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

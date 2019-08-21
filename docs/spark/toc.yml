@@ -15,7 +15,11 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Развертывание в Databricks
       href: tutorials/databricks-deployment.md
-- name: Ссылка
+- name: Практические руководства
+  items:
+    - name: Отладка приложения
+      href: how-to-guides/debug.md
+- name: Справочники
   items:
     - name: Справочник по интерфейсам API
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
