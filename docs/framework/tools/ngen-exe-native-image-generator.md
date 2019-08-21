@@ -20,16 +20,19 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832829"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971477"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (генератор образов в машинном коде)
 
 Генератор образов в машинном коде (Ngen.exe) — это средство повышения быстродействия управляемых приложений. Программа Ngen.exe создает образы в машинном коде, представляющие собой файлы, содержащие компилированный, специфический для процессора машинный код, и устанавливает их в кэш образов в машинном коде на локальном компьютере. Среда выполнения может использовать образы в машинном коде, находящиеся в кэше, вместо использования JIT-компилятора для компиляции исходной сборки.
+
+> [!NOTE]
+> Ngen.exe компилирует образы в машинном коде для сборок, предназначенных только для .NET Framework. Аналогичным генератором образов в машинном коде для .NET Core является [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
 
 Изменения в программе NGen.exe для .NET Framework 4:
 
@@ -62,11 +65,11 @@ ms.locfileid: "66832829"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
@@ -429,7 +432,7 @@ using namespace System::Runtime::CompilerServices;
 
 Следующая команда создает образ в машинном коде для приложения `ClientApp.exe`, расположенного в текущем каталоге, и устанавливает образ в кэш образов в машинном коде. Если для сборки существует файл конфигурации, программа Ngen.exe использует его. Кроме того, образы в машинном коде создаются для всех DLL-файлов, на которые ссылается программа `ClientApp.exe`.
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
@@ -437,7 +440,7 @@ ngen install ClientApp.exe
 
 Следующая команда создает образ в машинном коде для `MyAssembly.exe` с указанным путем.
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
@@ -448,7 +451,7 @@ ngen install c:\myfiles\MyAssembly.exe
 
 Сборка может использовать зависимость без ссылки, например, если она загружает DLL-файл с помощью метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. С помощью параметра `/ExeConfig` для такого DLL-файла можно создать образ в машинном коде, используя сведения о конфигурации для сборки приложения. Следующая команда создает образ в машинном коде для `MyLib.dll,`, используя сведения о конфигурации из `MyApp.exe`.
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
@@ -456,20 +459,20 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 
 Чтобы удалить зависимость, следует использовать те же параметры командной строки, которые использовались при ее установке. Следующая команда удаляет `MyLib.dll` из предыдущего примера.
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 Чтобы создать образ в машинном коде для сборки в глобальном кэше сборок, следует использовать отображаемое имя сборки. Например:
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 Программа NGen.exe создает отдельный набор образов для каждого устанавливаемого сценария. Например, следующие команды устанавливают полный набор образов в машинном коде для обычной работы, другой полный набор для отладки, а третий — для профилирования.
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,7 +482,7 @@ ngen install MyApp.exe /profile
 
 Образы в машинном коде, установленные в кэш, можно отобразить с помощью программы Ngen.exe. Следующая команда отображает все образы в машинном коде, находящиеся в кэше образов в машинном коде.
 
-```
+```console
 ngen display
 ```
 
@@ -487,7 +490,7 @@ ngen display
 
 Чтобы отобразить сведения только об этой сборке, можно использовать простое имя сборки. Следующая команда выводит все образы в кэше образов в машинном коде, соответствующие неполному имени `MyAssembly`, их зависимости и все корни с зависимостями от `MyAssembly`:
 
-```
+```console
 ngen display MyAssembly
 ```
 
@@ -495,13 +498,13 @@ ngen display MyAssembly
 
 Если задано расширение файла сборки, необходимо либо указать путь, либо выполнить программу Ngen.exe из каталога, в котором находится сборка.
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
 Следующая команда выводит все образы в машинном коде с именем `MyAssembly` и версией 1.0.0.0, содержащиеся в кэше образов в машинном коде.
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
@@ -509,13 +512,13 @@ ngen display "myAssembly, version=1.0.0.0"
 
 Образы обычно обновляются после обновления общего компонента. Для обновления всех образов в машинном коде, которые были изменены или для которых были изменены зависимости, используется действие `update` без аргументов.
 
-```
+```console
 ngen update
 ```
 
 Обновление всех образов может занять длительное время. С помощью параметра `/queue` можно поставить обновления в очередь выполнения службы образов в машинном коде. Подробнее о параметре `/queue` и приоритетах установки см. в разделе [Служба образов в машинном коде](#native-image-service).
 
-```
+```console
 ngen update /queue
 ```
 
@@ -525,13 +528,13 @@ ngen update /queue
 
 Следующая команда удаляет все сценарии для корня `ClientApp.exe`:
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
 Удалить конкретные сценарии можно с помощью действия `uninstall`. Следующая команда удаляет все сценарии отладки для `ClientApp.exe`:
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
@@ -540,13 +543,13 @@ ngen uninstall ClientApp /debug
 
 Следующая команда удаляет все сценарии для конкретной версии `ClientApp.exe`:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
 Следующая команда удаляет все сценарии для `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` или только сценарий отладки для этой сборки.
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -591,19 +594,19 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 Перед началом установки или обновления рекомендуется приостановить службу. Это позволит заблокировать ее на время, пока установщик будет копировать файлы или помещать сборки в глобальный кэш сборок. Для приостановки службы используется следующая командная строка Ngen.exe:
 
-```
+```console
 ngen queue pause
 ```
 
 После того как все отложенные операции поставлены в очередь, работу службы можно возобновить с помощью следующей команды:
 
-```
+```console
 ngen queue continue
 ```
 
 Чтобы отложить создание образов в машинном коде при установке нового приложения или обновлении общего компонента, используйте параметр `/queue` с действием `install` или `update`. Следующие командные строки Ngen.exe позволяют установить образ общего компонента в машинном коде и выполнить обновление всех корней, которых это может касаться:
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
@@ -612,7 +615,7 @@ ngen update /queue
 
 Если в приложении слишком много корней, можно учитывать приоритеты отложенных действий. Приведенные ниже команды создают очередь для установки трех корней. Первой устанавливается сборка `Assembly1`, не дожидаясь периода бездействия. Сборка `Assembly2` также устанавливается без ожидания бездействия, но после завершения всех действий с приоритетом 1. Сборка `Assembly3` устанавливается, когда служба обнаруживает, что компьютер бездействует.
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
@@ -620,7 +623,7 @@ ngen install Assembly3 /queue:3
 
 Вы можете задать синхронное выполнение действий, находящихся в очереди, с помощью действия `executeQueuedItems`. Если задать необязательный приоритет, это действие затронет только те действия в очереди, которые имеют такой же или более низкий приоритет. По умолчанию подразумевается приоритет 3, поэтому следующая команда Ngen.exe обработает все действия в очереди немедленно и не вернет управление, пока они не закончатся:
 
-```
+```console
 ngen executeQueuedItems
 ```
 

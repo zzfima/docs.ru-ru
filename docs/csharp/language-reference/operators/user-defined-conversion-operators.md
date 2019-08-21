@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 5d1882048b2af12c29a3771055cbeba9565b7dab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67787400"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566672"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Операторы пользовательского преобразования (справочник по C#)
 
@@ -23,7 +23,7 @@ ms.locfileid: "67787400"
 
 Неявные преобразования не требуют специального синтаксиса для вызова и могут происходить в различных ситуациях, например при вызовах методов и в назначениях. Предопределенные неявные преобразования на C# всегда завершаются успешно и никогда не вызывают исключение или потерю данных. Неявные пользовательские преобразования должны вести себя таким же образом. Если пользовательское преобразование может вызвать исключение или привести к потере данных, определите его как явное преобразование.
 
-Пользовательские преобразования не рассматриваются операторами [is](type-testing-and-conversion-operators.md#is-operator) и [as](type-testing-and-conversion-operators.md#as-operator). Используйте [оператор приведения ()](type-testing-and-conversion-operators.md#cast-operator-) для вызова явного пользовательского преобразования.
+Пользовательские преобразования не рассматриваются операторами [is](type-testing-and-cast.md#is-operator) и [as](type-testing-and-cast.md#as-operator). Используйте [оператор приведения ()](type-testing-and-cast.md#cast-operator-) для вызова явного пользовательского преобразования.
 
 Используйте ключевые слова `operator` и `implicit` или `explicit` для определения явного или неявного преобразования соответственно. Тип, который определяет преобразование, должен быть типом источника или целевого объекта этого преобразования. Преобразование между двумя пользовательскими типами можно определить одним из двух типов.
 
@@ -47,6 +47,6 @@ ms.locfileid: "67787400"
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Перегрузка операторов](operator-overloading.md)
-- [Операторы тестирования и преобразования типов](type-testing-and-conversion-operators.md)
+- [Операторы приведения и тестирования типов](type-testing-and-cast.md)
 - [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)
 - [Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796632"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039469"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен. (Руководство по программированию в C#)
 
@@ -69,7 +69,7 @@ ms.locfileid: "68796632"
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
- В общем случае следует использовать `::` для ссылки на псевдоним пространства имен или `global::` для ссылки на глобальное пространство имен, а также `.` для определения типов или элементов.  
+ В общем случае следует использовать [квалификатор псевдонима пространства имен `::`](../../language-reference/operators/namespace-alias-qualifier.md) для ссылки на псевдоним пространства имен или `global::` для ссылки на глобальное пространство имен, а также `.` для определения типов или элементов.  
   
  Использование `::` с псевдонимом, ссылающимся на тип вместо пространства имен, будет ошибкой. Например:  
   
@@ -90,9 +90,7 @@ ms.locfileid: "68796632"
  [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
  Этот код будет работать, однако если впоследствии определить тип с именем `Alias`, выражение `Alias.` будет связываться с этим типом. Используя выражение `Alias::Exception`, вы гарантируете, что `Alias` будет обрабатываться как псевдоним пространства имен и не будет ошибочно связываться с типом.  
-  
- В разделе [Использование псевдонима глобального пространства имен. Использование псевдонима глобального пространства имен](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) приводятся дополнительные сведения об использовании псевдонима `global`.  
-  
+
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

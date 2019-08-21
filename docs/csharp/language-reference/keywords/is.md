@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306595"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566305"
 ---
 # <a name="is-c-reference"></a>is (Справочник по C#)
 
-Оператор `is` проверяет совместимость результата выражения с заданным типом или (начиная с C# 7.0) проверяет выражение на соответствие шаблону. Сведения об операторе `is` для тестирования типов см. в разделе [is operator](../operators/type-testing-and-conversion-operators.md#is-operator) (Оператор is) статьи [Type-testing and conversion operators](../operators/type-testing-and-conversion-operators.md) (Операторы тестирования и преобразования типов).
+Оператор `is` проверяет совместимость результата выражения с заданным типом или (начиная с C# 7.0) проверяет выражение на соответствие шаблону. Сведения об операторе тестирования типов `is` см. в соответствующем [разделе](../operators/type-testing-and-cast.md#is-operator) статьи об [операторах приведения и тестирования типов](../operators/type-testing-and-cast.md).
 
 ## <a name="pattern-matching-with-is"></a>Сопоставление шаблонов с `is`
 
@@ -128,4 +128,4 @@ ms.locfileid: "67306595"
 
 - [справочник по C#](../index.md)
 - [Ключевые слова C#](index.md)
-- [Операторы тестирования и преобразования типов](../operators/type-testing-and-conversion-operators.md)
+- [Операторы приведения и тестирования типов](../operators/type-testing-and-cast.md)

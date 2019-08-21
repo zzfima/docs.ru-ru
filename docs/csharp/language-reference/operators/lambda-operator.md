@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025024"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971222"
 ---
 # <a name="-operator-c-reference"></a>Оператор => (справочник по C#)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67025024"
 member => expression;
 ```
 
-здесь *expression* является допустимым выражением. Обратите внимание, что *выражение* может быть *выражением оператора* только в том случае, если для элемента возвращается значение типа `void`, либо если элемент является конструктором, методом завершения или методом доступа свойства `set`.
+где `expression` — любое допустимое выражение. Тип возвращаемого значения `expression` должен быть неявно преобразуемым в тип возвращаемого значения элемента. Если для элемента возвращается значение типа `void`, либо если элемент является конструктором, методом завершения или методом доступа свойства `set`, значение `expression` должно быть [*выражением оператора*](~/_csharplang/spec/statements.md#expression-statements). В этом случае оно может быть любого типа.
 
 В следующем примере приводится определение тела выражения для метода `Person.ToString`:
 

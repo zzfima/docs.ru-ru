@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4472adf2c309803d4d5ac57f3522cc260782d85
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833672"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567277"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Предоставление клиентам .NET Framework доступа к COM-компонентам
 В этом разделе описывается процесс, в рамках которого существующий COM-компонент предоставляется управляемому коду. Сведения о разработке COM-серверов, которые тесно интегрируются с платформой .NET Framework, см. в разделе [Вопросы разработки для взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -32,7 +32,7 @@ ms.locfileid: "66833672"
   
 3. [Компиляция проекта, использующего взаимодействие](compiling-an-interop-project.md).  
   
-     Пакет средств разработки программного обеспечения (SDK) Windows предоставляет компиляторы для нескольких языков, соответствующих требованиям спецификации общеязыковой среды выполнения (CLS), включая Visual Basic, C# и C++.  
+     Windows SDK предоставляет компиляторы для нескольких языков, соответствующих требованиям спецификации общеязыковой среды выполнения (CLS), включая Visual Basic, C# и C++.  
   
 4. [Развертывание приложения взаимодействия](deploying-an-interop-application.md).  
   

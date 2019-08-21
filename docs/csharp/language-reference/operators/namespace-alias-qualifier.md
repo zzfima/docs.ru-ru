@@ -1,51 +1,70 @@
 ---
 title: Оператор ::. Справочник по C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631368"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971245"
 ---
 # <a name="-operator-c-reference"></a>Оператор :: (справочник по C#)
 
-Квалификатор псевдонима пространства имен (`::`) служит для поиска идентификаторов. Он всегда размещается между двумя идентификаторами, как показано в следующем примере.
+Используйте квалификатор псевдонима пространства имен `::` для доступа к элементам пространства имен, обозначенного псевдонимом. Квалификатор `::` используется между двумя идентификаторами. Левый идентификатор может быть любым из следующих псевдонимов:
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- Псевдоним пространства имен, созданный с помощью [директивы псевдонима using](../keywords/using-directive.md):
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-Оператор `::` также может использоваться с *директивой псевдонима using*:
+- [Псевдоним extern](../keywords/extern-alias.md).
+- Псевдоним `global`, который является псевдонимом глобального пространства имен. Глобальное пространство имен — это пространство имен, которое содержит пространства имен и типы, не объявленные в именованном пространстве имен. При использовании с квалификатором `::` псевдоним `global` всегда ссылается на глобальное пространство имен, даже если существует определяемый пользователем псевдоним пространства имен `global`.
+  
+  В следующем примере используется псевдоним `global` для доступа к пространству имен .NET <xref:System>, которое является элементом глобального пространства имен. Без псевдонима `global` доступ к определяемому пользователем пространству имен `System`, которое является элементом пространства имен `MyCompany.MyProduct`, будет осуществляться следующим образом:
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > Ключевое слово `global` является псевдонимом глобального пространства имен, только если оно является левым идентификатором квалификатора `::`.
 
-## <a name="remarks"></a>Примечания
-
-Квалификатор псевдонима пространства имен может быть `global`. Он вызывает поиск в глобальном пространстве имен, а не в пространстве имен с псевдонимом.
-
-## <a name="for-more-information"></a>Дополнительные сведения
-
-Пример использования оператора `::` см. в следующем разделе:
-
-- [Практическое руководство. Использование псевдонима глобального пространства имен](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+Можно также использовать [оператор доступа к элементам `.`](member-access-operators.md#member-access-operator-) для доступа к элементам пространства имен, обозначенного псевдонимом. Но оператор `.` также используется для доступа к элементам типа. Квалификатор `::` гарантирует, что его левый идентификатор всегда ссылается на псевдоним пространства имен, даже если существует тип или пространство имен с таким же именем.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в описании [квалификаторов псевдонимов пространства имен](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
-- [Оператор .](member-access-operators.md#member-access-operator-)
-- [Псевдоним extern](../keywords/extern-alias.md)
+- [Использование пространств имен](../../programming-guide/namespaces/using-namespaces.md)

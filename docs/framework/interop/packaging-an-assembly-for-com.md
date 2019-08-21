@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629323"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567234"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Упаковка сборки .NET Framework для COM
 
@@ -49,7 +49,7 @@ ms.locfileid: "68629323"
 
 - Включение библиотеки типов
 
-  Для использования большинства типов в COM-приложении требуется библиотека типов. Вы можете создать библиотеку типов самостоятельно или поручить эту задачу разработчикам COM-приложений. Пакет средств разработки программного обеспечения (SDK) Windows предоставляет следующие возможности для создания библиотеки типов:
+  Для использования большинства типов в COM-приложении требуется библиотека типов. Вы можете создать библиотеку типов самостоятельно или поручить эту задачу разработчикам COM-приложений. Windows SDK предоставляет следующие возможности для создания библиотеки типов:
 
   - [Программа экспорта библиотек типов](#cpconpackagingassemblyforcomanchor1)
 

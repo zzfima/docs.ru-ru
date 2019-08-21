@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832871"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566814"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Создание и использование сборок со строгими именами
 
@@ -38,7 +38,7 @@ ms.locfileid: "66832871"
 
     - Использование среды разработки, поддерживающей создание строгих имен, например Visual Studio.
 
-    - Создание пары ключей шифрования с использованием [Программы строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) и назначение этой пары ключей сборке с использованием компилятора командной строки или [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Пакет средств разработки Windows SDK предоставляет оба инструмента: Sn.exe и Al.exe.
+    - Создание пары ключей шифрования с использованием [Программы строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) и назначение этой пары ключей сборке с использованием компилятора командной строки или [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows SDK содержит оба инструмента: Sn.exe и Al.exe.
 
 2. Среда разработки или средство подписывает хэш файла, содержащего манифест сборки, закрытым ключом разработчика. Эта цифровая подпись хранится в переносимом исполняемом файле (PE), который содержит манифест сборки А.
 
