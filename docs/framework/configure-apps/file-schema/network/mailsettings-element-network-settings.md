@@ -8,21 +8,21 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8ea08cbd76e60a3665703bc50924dd94500cd87
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674510"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659322"
 ---
-# <a name="mailsettings-element-network-settings"></a><span data-ttu-id="01050-102">\<mailSettings > (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="01050-102">\<mailSettings> Element (Network Settings)</span></span>
-<span data-ttu-id="01050-103">Настраивает параметры отправки сообщений.</span><span class="sxs-lookup"><span data-stu-id="01050-103">Configures mail sending options.</span></span>  
+# <a name="mailsettings-element-network-settings"></a><span data-ttu-id="0b1ad-102">\<Элемент > Маилсеттингс (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="0b1ad-102">\<mailSettings> Element (Network Settings)</span></span>
+<span data-ttu-id="0b1ad-103">Настраивает параметры отправки почты.</span><span class="sxs-lookup"><span data-stu-id="0b1ad-103">Configures mail sending options.</span></span>  
 
-<span data-ttu-id="01050-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="01050-104">\<configuration></span></span>  
-<span data-ttu-id="01050-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="01050-105">\<system.net></span></span>  
-<span data-ttu-id="01050-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="01050-106">\<mailSettings></span></span>  
+<span data-ttu-id="0b1ad-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0b1ad-104">\<configuration></span></span>  
+<span data-ttu-id="0b1ad-105">\<> System. NET</span><span class="sxs-lookup"><span data-stu-id="0b1ad-105">\<system.net></span></span>  
+<span data-ttu-id="0b1ad-106">\<Маилсеттингс ></span><span class="sxs-lookup"><span data-stu-id="0b1ad-106">\<mailSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01050-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="01050-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b1ad-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0b1ad-107">Syntax</span></span>  
   
 ```xml  
 <mailSettings>
@@ -30,26 +30,26 @@ ms.locfileid: "61674510"
 </mailSettings>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="01050-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="01050-108">Attributes and Elements</span></span>  
- <span data-ttu-id="01050-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="01050-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0b1ad-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0b1ad-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="0b1ad-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0b1ad-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="01050-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="01050-110">Attributes</span></span>  
- <span data-ttu-id="01050-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="01050-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0b1ad-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0b1ad-110">Attributes</span></span>  
+ <span data-ttu-id="0b1ad-111">Нет.</span><span class="sxs-lookup"><span data-stu-id="0b1ad-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="01050-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="01050-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0b1ad-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0b1ad-112">Child Elements</span></span>  
   
-|<span data-ttu-id="01050-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="01050-113">Attribute</span></span>|<span data-ttu-id="01050-114">Описание</span><span class="sxs-lookup"><span data-stu-id="01050-114">Description</span></span>|  
+|<span data-ttu-id="0b1ad-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0b1ad-113">Attribute</span></span>|<span data-ttu-id="0b1ad-114">Описание</span><span class="sxs-lookup"><span data-stu-id="0b1ad-114">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="01050-115">\<SMTP > (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="01050-115">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="01050-116">Служит для настройки параметров простой протокол транспорта почты.</span><span class="sxs-lookup"><span data-stu-id="01050-116">Configures Simple Mail Transport Protocol options.</span></span>|  
+|[<span data-ttu-id="0b1ad-115">\<Элемент > SMTP (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="0b1ad-115">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="0b1ad-116">Настраивает параметры протокола простого почтового транспорта.</span><span class="sxs-lookup"><span data-stu-id="0b1ad-116">Configures Simple Mail Transport Protocol options.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="01050-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="01050-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0b1ad-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0b1ad-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="01050-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="01050-118">**Element**</span></span>|<span data-ttu-id="01050-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="01050-119">**Description**</span></span>|  
+|<span data-ttu-id="0b1ad-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="0b1ad-118">**Element**</span></span>|<span data-ttu-id="0b1ad-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="0b1ad-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="01050-120">Элемент \<system.Net> (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="01050-120">\<system.Net> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="01050-121">Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.</span><span class="sxs-lookup"><span data-stu-id="01050-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="0b1ad-120">Элемент \<system.Net> (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="0b1ad-120">\<system.Net> Element (Network Settings)</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="0b1ad-121">Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.</span><span class="sxs-lookup"><span data-stu-id="0b1ad-121">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="01050-122">Пример</span><span class="sxs-lookup"><span data-stu-id="01050-122">Example</span></span>  
- <span data-ttu-id="01050-123">Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="01050-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b1ad-122">Пример</span><span class="sxs-lookup"><span data-stu-id="0b1ad-122">Example</span></span>  
+ <span data-ttu-id="0b1ad-123">В следующем примере задаются соответствующие параметры SMTP для отправки электронной почты с использованием сетевых учетных данных по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0b1ad-123">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ ms.locfileid: "61674510"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="01050-124">См. также</span><span class="sxs-lookup"><span data-stu-id="01050-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b1ad-124">См. также</span><span class="sxs-lookup"><span data-stu-id="0b1ad-124">See also</span></span>
 
 - <xref:System.Net.Mail.SmtpClient>
-- [<span data-ttu-id="01050-125">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="01050-125">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="0b1ad-125">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="0b1ad-125">Network Settings Schema</span></span>](index.md)
