@@ -19,7 +19,7 @@
   items:
     - name: Отладка приложения
       href: how-to-guides/debug.md
-- name: Справочники
+- name: Справочник
   items:
     - name: Справочник по интерфейсам API
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
