@@ -13,17 +13,16 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039916"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658573"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пошаговое руководство. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 
 Одним из преимуществ Visual Studio является возможность создания профессионально оформленных Windows Forms приложений в течение короткого промежутка времени. Распространенным сценарием является создание пользовательского интерфейса с <xref:System.Windows.Forms.ListView> элементами управления и <xref:System.Windows.Forms.TreeView> , которые похожи на проводник Windows в операционных системах Windows. Проводник Windows отображает иерархическую структуру файлов и папок на компьютере пользователя.
-
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Создание формы, содержащей элемент управления ListView и TreeView
 

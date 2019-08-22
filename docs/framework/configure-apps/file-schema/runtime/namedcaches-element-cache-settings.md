@@ -6,20 +6,20 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cedd462aa539745ddab844dff158912914cb024
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704873"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663583"
 ---
-# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > (параметры кэша)
-Определяет коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> Свойство ссылается на коллекцию параметров конфигурации из одного или нескольких `namedCaches` элементов файла конфигурации.  
+# <a name="namedcaches-element-cache-settings"></a>\<Элемент > Намедкачес (параметры кэша)
+Задает коллекцию параметров конфигурации для именованных <xref:System.Runtime.Caching.MemoryCache> экземпляров. Свойство ссылается на коллекцию параметров конфигурации из одного или нескольких `namedCaches` элементов файла конфигурации. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>  
   
  \<configuration>  
-\< System.Runtime.Caching >  
-\<memoryCache>  
-\<namedCaches>  
+\<System. Runtime. Caching >  
+\<memoryCache >  
+\<Намедкачес >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,36 +39,36 @@ ms.locfileid: "61704873"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`cacheMemoryLimitMegabytes`|Целочисленное значение, указывающее максимально допустимый размер в мегабайтах, который экземпляр <xref:System.Runtime.Caching.MemoryCache> может увеличиться. Значение по умолчанию — 0, это означает, что эвристика из <xref:System.Runtime.Caching.MemoryCache> класс используются по умолчанию.|  
+|`cacheMemoryLimitMegabytes`|Целочисленное значение, указывающее максимально допустимый размер (в мегабайтах), до которого <xref:System.Runtime.Caching.MemoryCache> может увеличиваться экземпляр. Значение по умолчанию — 0. Это означает, что по умолчанию используется эвристика <xref:System.Runtime.Caching.MemoryCache> автоподбора размера класса.|  
 |`name`|Имя кэша.|  
-|`physicalMemoryLimitPercentage`|Целочисленное значение от 0 до 100, указывающее максимальную долю физической памяти, который может использоваться кэшем. Значение по умолчанию — 0, это означает, что эвристика из <xref:System.Runtime.Caching.MemoryCache> класс используются по умолчанию.|  
-|`pollingInterval`|Значение, указывающее интервал, по истечении которого реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями по памяти, заданными для данного экземпляра кэша. Это значение вводится в формате «Чч: мм:».|  
+|`physicalMemoryLimitPercentage`|Целочисленное значение от 0 до 100, которое указывает максимальный процент физической памяти компьютера, который может потребляться кэшем. Значение по умолчанию — 0. Это означает, что по умолчанию используется эвристика <xref:System.Runtime.Caching.MemoryCache> автоподбора размера класса.|  
+|`pollingInterval`|Значение, указывающее интервал, по истечении которого реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями по памяти, заданными для данного экземпляра кэша. Это значение указывается в формате "чч: мм: СС".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|Добавляет именованный кэш к коллекции `namedCaches` для кэша памяти.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|Очищает коллекцию `namedCaches` для кэша памяти.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|Удаляет элемент именованного кэша из коллекции `namedCaches` для кэша памяти.|  
+|[\<add>](add-element-for-namedcaches.md)|Добавляет именованный кэш к коллекции `namedCaches` для кэша памяти.|  
+|[\<clear>](clear-element-for-namedcaches.md)|Очищает коллекцию `namedCaches` для кэша памяти.|  
+|[\<remove>](remove-element-for-namedcaches.md)|Удаляет элемент именованного кэша из коллекции `namedCaches` для кэша памяти.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|  
+|[\<memoryCache>](memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|  
   
 ## <a name="remarks"></a>Примечания  
- Раздел конфигурации кэша памяти файла Web.config может содержать `add`, `remove`, и `clear` атрибуты для `namedCaches` коллекции. Каждый `namedCaches` запись однозначно идентифицируется по `name` атрибута.  
+ Раздел конфигурации кэша памяти файла Web. `add`config может содержать атрибуты, `remove`и `clear` для `namedCaches` коллекции. Каждая `namedCaches` запись уникально идентифицируется `name` атрибутом.  
   
- Экземпляры записей кэша памяти можно получить путем ссылки на сведения в файлах конфигурации приложения. По умолчанию экземпляр кэша по умолчанию присутствует в файле конфигурации. Экземпляр кэша по умолчанию — экземпляр, который возвращается из <xref:System.Runtime.Caching.MemoryCache.Default%2A> свойство.  
+ Экземпляры записей кэша памяти можно получить, обратившись к сведениям в файлах конфигурации приложения. По умолчанию в файле конфигурации содержится запись только для экземпляра кэша по умолчанию. Экземпляром кэша по умолчанию является экземпляр, который возвращается из <xref:System.Runtime.Caching.MemoryCache.Default%2A> свойства.  
   
- Если задать атрибут "name" to «default», элемент использует экземпляр по умолчанию для кэша памяти.  
+ Если для атрибута name задано значение Default, то элемент использует экземпляр кэша памяти по умолчанию.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как присвоено имя записи кэша по умолчанию имя кэша, установив `name` атрибута значение «default».  
+ В следующем примере показано, как задать имя кэша в качестве имени записи кэша по умолчанию, задав `name` для атрибута значение Default.  
   
- Атрибутам `cacheMemoryLimitMegabytes` и `physicalMemoryPercentage` присваивается нулевое значение. Установка этих атрибутов в ноль означает, что эвристика из <xref:System.Runtime.Caching.MemoryCache> класс используются. Реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями памяти каждые две минуты.  
+ Атрибутам `cacheMemoryLimitMegabytes` и `physicalMemoryPercentage` присваивается нулевое значение. Установка этих атрибутов равным нулю означает, что используется эвристический <xref:System.Runtime.Caching.MemoryCache> подход автоподбора размера класса. Реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями памяти каждые две минуты.  
   
 ```xml  
 <configuration>  
@@ -89,4 +89,4 @@ ms.locfileid: "61704873"
   
 ## <a name="see-also"></a>См. также
 
-- [\<memoryCache > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+- [\<Элемент > memoryCache (параметры кэша)](memorycache-element-cache-settings.md)

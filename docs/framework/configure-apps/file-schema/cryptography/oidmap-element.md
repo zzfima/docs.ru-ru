@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705172"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664259"
 ---
-# <a name="oidmap-element"></a>\<oidMap > элемент
-Содержит сопоставления идентификатора объекта ASN.1 с классами.  
+# <a name="oidmap-element"></a>\<Элемент > Оидмап
+Содержит сопоставления идентификатора объекта (OID) ASN. 1 для классов.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<oidMap>  
+\<> mscorlib  
+\<Криптографисеттингс >  
+\<Оидмап >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ ms.locfileid: "61705172"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Сопоставление идентификатора объекта ASN.1 с понятным именем.|  
+|[\<Оидентри >](oidentry-element.md)|Сопоставляет идентификатор объекта ASN. 1 с понятным именем.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -48,10 +48,10 @@ ms.locfileid: "61705172"
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
-|`mscorlib`|Содержит `cryptographySettings` элемент.|  
+|`mscorlib`|`cryptographySettings` Содержит элемент.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<oidMap >** элемент для сопоставления идентификатора объекта хэш-алгоритма RIPEMD-160 с реализацией этого алгоритма.  
+ В следующем примере показано, как использовать  **\<элемент оидмап >** для включения сопоставления OID для алгоритма хэширования RIPEMD-160 к реализации этого хэш-алгоритма.  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "61705172"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Схема файла конфигурации](../index.md)
+- [Схема параметров шифрования](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Отображение идентификаторов объектов на криптографические алгоритмы](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Настройка криптографических классов](../../configure-cryptography-classes.md)
+- [Отображение идентификаторов объектов на криптографические алгоритмы](../../map-object-identifiers-to-cryptography-algorithms.md)

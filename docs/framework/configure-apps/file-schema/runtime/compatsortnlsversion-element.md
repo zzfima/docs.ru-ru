@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689908"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663852"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > элемент
+# <a name="compatsortnlsversion-element"></a>\<Элемент > Компатсортнлсверсион
 Указывает, что при операциях сравнения строк среда выполнения должна использовать устаревший порядок сортировки.  
   
  \<configuration>  
-\<Среда выполнения >  
-\<CompatSortNLSVersion > элемент  
+\<> среды выполнения  
+\<Элемент > Компатсортнлсверсион  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,10 +44,10 @@ ms.locfileid: "66689908"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|4096|Код языка, представляющий альтернативный порядок сортировки. В этом случае 4096 представляет порядок сортировки для .NET Framework 3.5 и более ранних версий.|  
+|4096|Код языка, представляющий альтернативный порядок сортировки. В этом случае 4096 представляет порядок сортировки .NET Framework 3,5 и более ранних версий.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66689908"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Поскольку сравнения строк, сортировки и операций регистр выполняется с <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> классов в платформе .NET Framework 4 соответствуют стандарту Unicode 5.1, результаты методы сравнения строк такие как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> может отличаться от предыдущих версий платформы .NET Framework. Если ваше приложение зависит от устаревшее поведение, вы можете восстановить, сравнение и сортировка строк правил, используемых в .NET Framework 3.5 и более ранних версий, включая `<CompatSortNLSVersion>` элемент в файле конфигурации приложения.  
+ Поскольку операции сравнения строк, сортировки и учета регистра, выполняемые <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> классом в .NET Framework 4, соответствуют стандарту Unicode 5,1, результаты методов сравнения строк, таких как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и, <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> могут отличаться от предыдущие версии .NET Framework. Если приложение зависит от устаревшего поведения, можно восстановить правила сравнения строк и сортировки, используемые в .NET Framework 3,5 и более ранних версиях, включив `<CompatSortNLSVersion>` элемент в файл конфигурации приложения.  
   
 > [!IMPORTANT]
 >  Для восстановления устаревших правил сравнения и сортировки строк также требуется, чтобы в локальной системе была доступна библиотека динамической компоновки sort00001000.dll.  
@@ -70,19 +70,19 @@ ms.locfileid: "66689908"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- При запуске примера в .NET Framework 4, отображается следующий результат.  
+ При запуске примера на .NET Framework 4 отображаются следующие выходные данные.  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- Это полностью отличаются от выходных данных, которое отображается при запуске примера в .NET Framework 3.5.  
+ Он совершенно отличается от выходных данных, отображаемых при выполнении примера на .NET Framework 3,5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Тем не менее если добавить следующий файл конфигурации в каталог примеров и затем запустить пример в .NET Framework 4, выходные данные идентичны данным, созданным примером при его запуске в .NET Framework 3.5.  
+ Однако если добавить в каталог примера следующий файл конфигурации, а затем запустить пример на .NET Framework 4, то выходные данные идентичны тому, что были созданы в примере при его запуске на .NET Framework 3,5.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -95,5 +95,5 @@ sta equals a in the sort order.
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)

@@ -11,31 +11,31 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4900c391ae94447cdf4be331a27f6f3398e9129a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675277"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659716"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Схема параметров поставщиков языков и компиляторов
 Параметры поставщиков языков и компиляторов определяют элементы конфигурации компиляторов для доступных поставщиков языков. Каждый элемент конфигурации компилятора определяет имя типа поставщика кода, параметры компилятора, названия поддерживаемых языков и поддерживаемые расширения имен файлов.  
   
  В .NET Framework начальные параметры компилятора определены файле конфигурации компьютера (Machine.config). Разработчики и поставщики компиляторов могут добавлять параметры конфигурации для новой реализации <xref:System.CodeDom.Compiler.CodeDomProvider>. С помощью метода <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> можно осуществлять программное перечисление параметров конфигурации для поставщиков языков и компиляторов на компьютере.  
   
- [Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [Элемент \<configuration>](../configuration-element.md)  
   
- [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
+ [\<system.codedom>](system-codedom-element.md)  
   
- [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [\<compilers>](compilers-element.md)  
   
- [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
+ [\<compiler>](compiler-element.md)  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Задает параметры конфигурации компилятора для доступных поставщиков языков.|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Контейнер для элементов конфигурации компилятора; содержит ноль элементов [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) или несколько.|  
-|[\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Задает атрибуты конфигурации компилятора для поставщика языка.|  
+|[\<system.codedom>](system-codedom-element.md)|Задает параметры конфигурации компилятора для доступных поставщиков языков.|  
+|[\<compilers>](compilers-element.md)|Контейнер для элементов конфигурации компилятора; содержит ноль элементов [\<compiler>](compiler-element.md) или несколько.|  
+|[\<compiler>](compiler-element.md)|Задает атрибуты конфигурации компилятора для поставщика языка.|  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере показан типичный элемент конфигурации компилятора.  
@@ -60,5 +60,5 @@ ms.locfileid: "61675277"
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Элемент \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Схема файла конфигурации](../index.md)
+- [Элемент \<compiler>](compiler-element.md)

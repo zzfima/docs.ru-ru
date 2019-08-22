@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704613"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663526"
 ---
-# <a name="probing-element"></a>\<probing > элемент
-Задает базовые вложенные папки приложения для поиска при загрузке сборки среда CLR.  
+# <a name="probing-element"></a>\<Элемент > проверки
+Задает базовые подкаталоги приложения для поиска средой CLR при загрузке сборок.  
   
  \<configuration>  
-\<Среда выполнения >  
+\<> среды выполнения  
 \<assemblyBinding >  
-\<probing >  
+\<Проверка >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,10 +39,10 @@ ms.locfileid: "61704613"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`privatePath`|Обязательный атрибут.<br /><br /> Задает вложенные папки базовой папки приложения, которые могут содержать сборки. Каждая вложенная папка точкой с запятой.|  
+|`privatePath`|Обязательный атрибут.<br /><br /> Указывает подкаталоги базового каталога приложения, которые могут содержать сборки. Для каждого подкаталога следует выделить точку с запятой.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -53,7 +53,7 @@ ms.locfileid: "61704613"
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как указать базовых вложенных папок приложения, в которых среда выполнения должна искать сборки.  
+ В следующем примере показано, как задать базовые подкаталоги приложения, которые среда выполнения должна использовать для поиска сборок.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ ms.locfileid: "61704613"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Указание расположения сборки](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Обнаружение сборок в среде выполнения](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
+- [Указание расположения сборки](../../specify-assembly-location.md)
+- [Обнаружение сборок в среде выполнения](../../../deployment/how-the-runtime-locates-assemblies.md)

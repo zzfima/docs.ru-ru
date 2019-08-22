@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705042"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664041"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Удалить > элемент для authenticationModules (параметры сети)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Удаление элемента > для authenticationModules (параметры сети)
 Удаляет модуль проверки подлинности из приложения.  
   
  \<configuration>  
-\<system.net>  
-\<authenticationModules>  
+\<> System. NET  
+\<authenticationModules >  
 \<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,27 +40,27 @@ ms.locfileid: "61705042"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|**type**|Имя модуля проверки подлинности для удаления.|  
+|**type**|Имя удаляемого модуля проверки подлинности.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности сетевых запросов.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Указывает модули, используемые для проверки подлинности сетевых запросов.|  
   
 ## <a name="remarks"></a>Примечания  
- `remove` Элемент удаляет модули проверки подлинности, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+ `remove` Элемент удаляет модули проверки подлинности, которые были определены ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
   
- Значение для `type` атрибут должен быть допустимым именем класса.  
+ Значение `type` атрибута должно быть допустимым именем класса.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляется модуля проверки подлинности.  
+ В следующем примере удаляется модуль проверки подлинности.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61705042"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

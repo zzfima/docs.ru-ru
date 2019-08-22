@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674601"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659425"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Очистить > элемент для webRequestModules (параметры сети)
-Удаляет все зарегистрированные модули веб-запросов из приложения.  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Очистка элемента > для webRequestModules (параметры сети)
+Удаляет из приложения все зарегистрированные модули веб-запросов.  
   
  \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<Очистить >  
+\<> System. NET  
+\<webRequestModules >  
+\<очистить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,25 +35,25 @@ ms.locfileid: "61674601"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса сведений от сетевых узлов.|  
   
 ## <a name="remarks"></a>Примечания  
- `clear` Элемент удаляет все зарегистрированные модули веб-запросов, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+ `clear` Элемент удаляет все зарегистрированные модули веб-запросов, определенные ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляет все модули веб-запросов и затем регистрирует модуль веб-запросов для HTTP.  
+ В следующем примере очищаются все модули веб-запросов, а затем выполняется регистрация модуля веб-запросов для HTTP.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61674601"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebRequest>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

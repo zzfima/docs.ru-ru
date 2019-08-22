@@ -8,20 +8,20 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 851a63b41dfb5d3b4058e1373148f48d47d9d6ae
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674494"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664070"
 ---
-# <a name="module-element-network-settings"></a>\<модуль > (сетевые параметры)
+# <a name="module-element-network-settings"></a>\<Элемент > модуля (параметры сети)
 Добавляет в приложение новый модуль прокси-сервера.  
   
  \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<модуль >  
+\<> System. NET  
+\<defaultProxy >  
+\<> модуля  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ ms.locfileid: "61674494"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойство), разделенные запятыми, который реализует прокси-сервер.|  
+|`type`|Полное имя типа (обозначенное <xref:System.Type.FullName%2A> свойством) и имя сборки (указывается <xref:System.Reflection.Assembly.FullName%2A> свойством), разделенные запятыми, которые реализуют прокси-сервер.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
 ## <a name="remarks"></a>Примечания  
- `module` Элемент регистрирует прокси-классы, реализующие <xref:System.Net.IWebProxy> интерфейс. После регистрации прокси-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
+ Элемент регистрирует прокси-классы, <xref:System.Net.IWebProxy> реализующие интерфейс. `module` После регистрации прокси-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
   
- Значение для `type` атрибут должен иметь имя класса, модуля и имя из его соответствующие динамические ссылки библиотеки (DLL).  
+ Значение `type` атрибута должно быть именем класса модуля и именем соответствующей библиотеки динамической компоновки (DLL).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
@@ -75,4 +75,4 @@ ms.locfileid: "61674494"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

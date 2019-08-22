@@ -1,18 +1,18 @@
 ---
-title: Использование вариативности в делегаты Func и Action универсальных методах-делегатах (Visual Basic)
+title: Использование вариативности для универсальных делегатов Func и Action (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce560f6246469620032ececa4afeeffe69baf407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787274"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664359"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Использование вариативности в делегаты Func и Action универсальных методах-делегатах (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Использование вариативности для универсальных делегатов Func и Action (Visual Basic)
 Эти примеры показывают, как обеспечить возможность многократного использования методов и сделать код более гибким, используя ковариацию и контравариацию в универсальных методах-делегатах `Func` и `Action`.  
   
- Дополнительные сведения о ковариации и контрвариации см. в разделе [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Дополнительные сведения о ковариации и контрвариация см. [в разделе вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Использование методов-делегатов с параметрами ковариантного типа  
  Следующий пример иллюстрирует преимущества поддержки ковариации в универсальных методах-делегатах `Func`. Метод `FindByTitle` принимает параметр типа `String` и возвращает объект типа `Employee`. При этом данный метод можно назначить методу-делегату `Func(Of String, Person)`, поскольку `Employee` наследует `Person`.  
@@ -92,4 +92,4 @@ End Class
 ## <a name="see-also"></a>См. также
 
 - [Covariance and Contravariance (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md) (Ковариантность и контрвариантность (Visual Basic))
-- [Универсальные шаблоны](~/docs/standard/generics/index.md)
+- [Универсальные шаблоны](../../../../standard/generics/index.md)

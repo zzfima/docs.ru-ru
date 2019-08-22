@@ -2,12 +2,12 @@
 title: Универсальные шаблоны
 description: Узнайте, как использовать F# универсальные функции и типы, которые позволяют писать код, работающий с различными типами, без повторения кода.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630609"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666693"
 ---
 # <a name="generics"></a>Универсальные шаблоны
 
@@ -97,6 +97,6 @@ type type-name<type-parameters> type-definition
 - [Справочник по языку](../index.md)
 - [Типы](../fsharp-types.md)
 - [Статически разрешаемые параметры типов](statically-resolved-type-parameters.md)
-- [Универсальные шаблоны в платформе .NET Framework](~/docs/standard/generics/index.md)
+- [Универсальные шаблоны](../../../standard/generics/index.md)
 - [Автоматическое обобщение](automatic-generalization.md)
 - [Ограничения](constraints.md)

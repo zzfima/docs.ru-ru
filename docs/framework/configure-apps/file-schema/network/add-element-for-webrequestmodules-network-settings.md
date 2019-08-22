@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705146"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664221"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Добавить > элемент для webRequestModules (параметры сети)
-Добавляет пользовательский модуль веб-запросов к приложению.  
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Добавление элемента > для webRequestModules (параметры сети)
+Добавляет пользовательский модуль веб-запросов в приложение.  
   
  \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+\<> System. NET  
+\<webRequestModules >  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,32 +41,32 @@ ms.locfileid: "61705146"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`prefix`|Префикс URI для запросов, обрабатываемых этот модуль веб-запросов.|  
-|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойство), разделенные запятыми, который реализует этот модуль веб-запросов.|  
+|`prefix`|Префикс URI для запросов, обрабатываемых этим модулем веб-запросов.|  
+|`type`|Полное имя типа (обозначенное <xref:System.Type.FullName%2A> свойством) и имя сборки (обозначенное <xref:System.Reflection.Assembly.FullName%2A> свойством), разделенные запятыми, которые реализуют этот модуль веб-запросов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса сведений от сетевых узлов.|  
   
 ## <a name="remarks"></a>Примечания  
- `prefix` Атрибут определяет префикс URI, который использует указанный модуль веб-запросов. Модули веб-запросов обычно регистрируются для обработки конкретного протокола, например HTTP или FTP, но могут быть зарегистрированы для обработки запросов к конкретному серверу или пути на сервере.  
+ `prefix` Атрибут определяет префикс URI, который использует указанный модуль веб-запросов. Модули веб-запросов обычно регистрируются для работы с конкретным протоколом, например HTTP или FTP, но могут быть зарегистрированы, чтобы обрабатывать запросы к определенному серверу или пути на сервере.  
   
- Модуль веб-запросов создается в том случае, если соответствующий префикс URI передается на <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> метод.  
+ Модуль веб-запросов создается, когда в <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> метод передается соответствующий префикс URI.  
   
- Значение для `prefix` атрибут должен быть из ведущих символов является допустимым URI. Например, `http` или `http://www.contoso.com`.
+ Значение `prefix` атрибута должно быть начальными символами допустимого URI. Например, `http` или `http://www.contoso.com`.
   
- Значение для `type` атрибут должен быть допустимым именем типа и соответствующее имя сборки, разделенных запятыми.
+ Значением `type` атрибута должно быть допустимое имя типа и соответствующее имя сборки, разделенные запятыми.
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере регистрируется пользовательский модуль веб-запросов для HTTP. Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.  
+ В следующем примере регистрируется пользовательский модуль веб-запросов для HTTP. Необходимо заменить значения для Version и PublicKeyToken правильными значениями для указанного модуля.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ ms.locfileid: "61705146"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebRequest>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629666"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666767"
 ---
 # <a name="layout"></a>Макет
-В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
+В этом разделе описывается система макета Windows Presentation Foundation (WPF). Понимание того, как и когда происходят вычисления макета, важно для создания пользовательских интерфейсов в WPF.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68629666"
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Ограничивающие прямоугольники элемента  
- При планировании макета в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимать принцип функционирования ограничивающих прямоугольников, которые окружают все элементы. Каждый <xref:System.Windows.FrameworkElement> , который используется системой макета, можно рассматривать как прямоугольник, размещенный в макете. <xref:System.Windows.Controls.Primitives.LayoutInformation> Класс возвращает границы распределения макета элемента или области. Размер прямоугольника определяется путем вычисления доступного пространства на экране, размера любых ограничений, свойств макета (таких как поля и заполнение) и индивидуального поведения родительского <xref:System.Windows.Controls.Panel> элемента. Обрабатывая эти данные, система макета может вычислить положение всех дочерних элементов определенного <xref:System.Windows.Controls.Panel>объекта. Важно помнить, что характеристики размера, определенные для родительского элемента, например <xref:System.Windows.Controls.Border>, влияют на его дочерние элементы.  
+ При обдумывании макета в WPF важно понимать ограничивающий прямоугольник, который окружает все элементы. Каждый <xref:System.Windows.FrameworkElement> , который используется системой макета, можно рассматривать как прямоугольник, размещенный в макете. <xref:System.Windows.Controls.Primitives.LayoutInformation> Класс возвращает границы распределения макета элемента или области. Размер прямоугольника определяется путем вычисления доступного пространства на экране, размера любых ограничений, свойств макета (таких как поля и заполнение) и индивидуального поведения родительского <xref:System.Windows.Controls.Panel> элемента. Обрабатывая эти данные, система макета может вычислить положение всех дочерних элементов определенного <xref:System.Windows.Controls.Panel>объекта. Важно помнить, что характеристики размера, определенные для родительского элемента, например <xref:System.Windows.Controls.Border>, влияют на его дочерние элементы.  
   
  На рисунке ниже представлен простой макет.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68629666"
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Элементы панели и пользовательские расширения функциональности макета  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]включает группу элементов, производных от <xref:System.Windows.Controls.Panel>. Эти <xref:System.Windows.Controls.Panel> элементы позволяют использовать множество сложных макетов. Например, элементы с накоплением можно легко достичь с помощью <xref:System.Windows.Controls.StackPanel> элемента, в то время как более сложные и свободные макеты можно <xref:System.Windows.Controls.Canvas>использовать с помощью.  
+WPF включает группу элементов, которые являются производными от <xref:System.Windows.Controls.Panel>. Эти <xref:System.Windows.Controls.Panel> элементы позволяют использовать множество сложных макетов. Например, элементы с накоплением можно легко достичь с помощью <xref:System.Windows.Controls.StackPanel> элемента, в то время как более сложные и свободные макеты можно <xref:System.Windows.Controls.Canvas>использовать с помощью.  
   
  В следующей таблице перечислены доступные элементы макета <xref:System.Windows.Controls.Panel> .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68629666"
 |<xref:System.Windows.Controls.VirtualizingPanel>|Предоставляет платформу для <xref:System.Windows.Controls.Panel> элементов, которые виртуализировать их дочерние коллекции данных. Этот класс является абстрактным.|  
 |<xref:System.Windows.Controls.WrapPanel>|Размещает дочерние элементы последовательно слева направо, перенося содержимое на следующую строку на краю содержащего поля. Последующее упорядочение выполняется последовательно сверху вниз или справа налево в зависимости от значения <xref:System.Windows.Controls.WrapPanel.Orientation%2A> свойства.|  
   
- Для приложений, для которых требуется макет, недоступный <xref:System.Windows.Controls.Panel> с помощью предопределенных элементов, пользовательские поведения макета можно получить, наследуя от <xref:System.Windows.Controls.Panel> переопределения <xref:System.Windows.FrameworkElement.MeasureOverride%2A> методов и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> . Пример см. на странице [Пример Custom Radial Panel](https://go.microsoft.com/fwlink/?LinkID=159982).  
+ Для приложений, для которых требуется макет, недоступный <xref:System.Windows.Controls.Panel> с помощью предопределенных элементов, пользовательские поведения макета можно получить, наследуя от <xref:System.Windows.Controls.Panel> переопределения <xref:System.Windows.FrameworkElement.MeasureOverride%2A> методов и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> .  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>Вопросы производительности макета  
@@ -138,7 +138,7 @@ ms.locfileid: "68629666"
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>Субпиксельная отрисовка и округление макета  
- Графическая система [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует аппаратно-независимые модули для обеспечения независимости от разрешения и устройства. Каждое устройство, независимое от устройства, автоматически масштабируется с помощью параметра системы в точках на дюйм (DPI). Это обеспечивает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] правильное масштабирование приложений для различных параметров dpi и позволяет приложению автоматически учитывать dpi.  
+ Графическая система WPF использует аппаратно-независимые единицы, чтобы обеспечить независимость от разрешения и устройства. Каждое устройство, независимое от устройства, автоматически масштабируется с помощью параметра системы в точках на дюйм (DPI). Это обеспечивает правильное масштабирование приложений WPF для различных параметров dpi и позволяет приложению автоматически учитывать dpi.  
   
  Однако эта независимость от dpi может создать неравномерный рендеринг краев из-за сглаживания. Эти эффекты, обычно выглядящие как смазанные или полупрозрачные границы, могут появиться, когда положение границы попадает в середину пикселя устройства, а не между пикселями. В системе макета имеется способ настройки границ с помощью округления макета. Округление макета заключается в том, что система макета округляет все нецелочисленные значения пикселей во время прохода макета.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68629666"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Что дальше?  
- Понимание механизма измерения и упорядочивания элементов — это первый шаг к пониманию макета. Дополнительные сведения о доступных <xref:System.Windows.Controls.Panel> элементах см. в разделе [Общие сведения о панелях](../controls/panels-overview.md). Чтобы лучше понять различные свойства размещения, которые могут повлиять на макет, см. раздел [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md). Пример настраиваемого <xref:System.Windows.Controls.Panel> элемента см. в разделе [пример настраиваемой радиальной панели](https://go.microsoft.com/fwlink/?LinkID=159982). Когда все будет готово к объединению в упрощенное приложение, см [. Пошаговое руководство. Мое первое приложение](../getting-started/walkthrough-my-first-wpf-desktop-application.md)WPF для настольных систем.  
+ Понимание механизма измерения и упорядочивания элементов — это первый шаг к пониманию макета. Дополнительные сведения о доступных <xref:System.Windows.Controls.Panel> элементах см. в разделе [Общие сведения о панелях](../controls/panels-overview.md). Чтобы лучше понять различные свойства размещения, которые могут повлиять на макет, см. раздел [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md). Когда все будет готово к объединению в упрощенное приложение, см [. Пошаговое руководство. Мое первое приложение](../getting-started/walkthrough-my-first-wpf-desktop-application.md)WPF для настольных систем.  
   
 ## <a name="see-also"></a>См. также
 

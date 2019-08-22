@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6488bfcd97e27a184b4a8cd1498d1c60f32babda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674718"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659487"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > (сетевые параметры)
-Задает модули, используемые для проверки подлинности сетевых запросов.  
+# <a name="authenticationmodules-element-network-settings"></a>\<Элемент > authenticationModules (параметры сети)
+Указывает модули, используемые для проверки подлинности сетевых запросов.  
   
  \<configuration>  
-\<system.net>  
-\<authenticationModules>  
+\<> System. NET  
+\<authenticationModules >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,30 +33,30 @@ ms.locfileid: "61674718"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Добавляет модуль проверки подлинности в приложение.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Удаляет все модули проверки подлинности из приложения.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Удаляет модуль проверки подлинности из приложения.|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|Добавляет модуль проверки подлинности в приложение.|  
+|[clear](clear-element-for-authenticationmodules-network-settings.md)|Удаляет из приложения все модули проверки подлинности.|  
+|[remove](remove-element-for-authenticationmodules-network-settings.md)|Удаляет модуль проверки подлинности из приложения.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="remarks"></a>Примечания  
- `authenticationModule` Элемент определяет модули проверки подлинности, которые выполняют процесс проверки подлинности с сервером. Модуль проверки подлинности должны реализовывать <xref:System.Net.IAuthenticationModule> интерфейс.  
+ `authenticationModule` Элемент указывает модули проверки подлинности, которые выполняют процесс проверки подлинности с сервером. Модуль проверки подлинности должен <xref:System.Net.IAuthenticationModule> реализовывать интерфейс.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере включается модуля проверки подлинности. Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.  
+ В следующем примере включается модуль проверки подлинности. Необходимо заменить значения для Version и PublicKeyToken правильными значениями для указанного модуля.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "61674718"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704808"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663736"
 ---
-# <a name="etwenable-element"></a>\<etwEnable > элемент
+# <a name="etwenable-element"></a>\<Элемент > Етвенабле
 Указывает, следует ли включить трассировку событий Windows для событий среды CLR.  
   
- \<Конфигурация > элемент  
-\<Среда выполнения > элемент  
-\<etwEnabled>  
+ \<Элемент Configuration >  
+\<Элемент > среды выполнения  
+\<Етвенаблед >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,17 +34,17 @@ ms.locfileid: "61704808"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|enabled|Обязательный атрибут.<br /><br /> Указывает, должна ли быть включена трассировка событий Windows.|  
+|enabled|Обязательный атрибут.<br /><br /> Указывает, включена ли трассировка событий Windows.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|true|Включение трассировки событий Windows. Это значение по умолчанию для версий Windows, начиная с операционными системами Windows Vista и Windows Server 2008.|  
-|False|Отключение трассировки событий Windows. Это значение по умолчанию для более ранних версий Windows.|  
+|true|Включите ETW. Это значение по умолчанию для версий Windows, начинающихся с операционных систем Windows Vista и Windows Server 2008.|  
+|false|Отключите трассировку событий Windows. Это значение по умолчанию для более ранних версий Windows.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -54,13 +54,13 @@ ms.locfileid: "61704808"
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- Начиная с Windows Vista, ETW включена по умолчанию. Этот элемент используется для отключения трассировки событий Windows для приложения. В более ранних версиях Windows этот элемент используется для включения трассировки событий Windows для приложения.  
+ Начиная с Windows Vista трассировка событий Windows включена по умолчанию. Используйте этот элемент, чтобы отключить ETW для приложения. В более ранних версиях Windows этот элемент используется для включения ETW для приложения.  
   
 > [!NOTE]
->  Трассировки событий Windows может быть включен или отключен глобально на сервере с помощью параметра реестра. См. в разделе [контроль ведения журнала .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).  
+>  Трассировку событий Windows можно включить или отключить глобально на сервере с помощью параметра реестра. См. раздел [Управление ведением журнала .NET Framework](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как включить отслеживание ETW для приложения.  
+ В следующем примере показано, как включить трассировку ETW для приложения.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "61704808"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Контроль ведения журнала .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
+- [Контроль ведения журнала .NET Framework](../../../performance/controlling-logging.md)

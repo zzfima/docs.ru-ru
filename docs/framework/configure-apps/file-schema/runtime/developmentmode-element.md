@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704769"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663809"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > элемент
+# <a name="developmentmode-element"></a>\<Элемент > developmentMode
 Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.  
   
  \<configuration>  
-\<Среда выполнения >  
+\<> среды выполнения  
 \<developmentMode >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,17 +38,17 @@ ms.locfileid: "61704769"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**developerInstallation**|Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.|  
+|**девелоперинсталлатион**|Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.|  
   
-## <a name="developerinstallation-attribute"></a>developerInstallation атрибут  
+## <a name="developerinstallation-attribute"></a>Атрибут Девелоперинсталлатион  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**true**|Поиск сборок в каталогах, указанных в переменной среды DEVPATH.|  
-|**false**|Не выполняет поиск сборок в каталогах, указанных в переменной среды DEVPATH. Это значение по умолчанию|  
+|**true**|Выполняет поиск сборок в каталогах, заданных переменной среды DEVPATH.|  
+|**false**|Не выполняет поиск сборок в каталогах, заданных переменной среды DEVPATH. Это значение по умолчанию|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -58,10 +58,10 @@ ms.locfileid: "61704769"
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте этот параметр только во время разработки. Среда выполнения не проверяет версии на в DEVPATH сборок со строгим именем. Он просто использует первый найденную сборку.  
+ Используйте этот параметр только во время разработки. Среда выполнения не проверяет версии сборок со строгими именами, найденных в DEVPATH. Он просто использует первую найденную сборку.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как среда выполнения для поиска сборок в каталогах, указанных в переменной среды DEVPATH.  
+ В следующем примере показано, как заставить среду выполнения искать сборки в каталогах, заданных переменной среды DEVPATH.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "61704769"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Практическое руководство. Поиск сборок с помощью DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
+- [Практическое руководство. Обнаружение сборок с помощью функции DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

@@ -7,31 +7,32 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892761ae52b8b3546c86a849d2d2eecc7442be53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013014"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666139"
 ---
-# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms
-Элементы управления, добавляемые в Windows Forms, обладают свойствами и методами, которые позволяют производить более тонкую настройку пользовательского интерфейса. Для хорошо спроектированного приложения Windows очень важна настройка пользовательского интерфейса, удовлетворяющая требованиям пользователя.  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- Описывается, как назначить метку элементу управления.  
-  
- [Практическое руководство. Задайте изображения, отображаемого элементом управления форм Windows](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- Описывается, как настроить элемент управления для вывода изображений.  
-  
- [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)  
- Информация о создании предварительно определенных сочетаний клавиш.  
-  
- [Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms](providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Информация о включении поддержки специальных возможностей элементами управления.  
-  
-## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления Windows Forms](index.md)  
- Ссылки на другие основные возможности работы с элементами управления.  
-  
- Также см. раздел [Как Определение клавиш доступа для Windows Forms с помощью конструктора элементов управления](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [как: Задать текст, отображаемый элементом управления, с помощью конструктора форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [как: Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).
+# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a>Пометка отдельных элементов управления Windows Forms и предоставление сочетаний клавиш
+
+Элементы управления, добавляемые в Windows Forms, обладают свойствами и методами, которые позволяют производить более тонкую настройку пользовательского интерфейса. Для хорошо спроектированного приложения Windows очень важна настройка пользовательского интерфейса, удовлетворяющая требованиям пользователя.
+
+## <a name="in-this-section"></a>Содержание раздела
+
+[Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
+Описывается, как назначить метку элементу управления.
+
+[Практическое руководство. Задание изображения, отображаемого элементом управления Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md)\
+Описывается, как настроить элемент управления для вывода изображений.
+
+[Практическое руководство. Создание ключей доступа для элементов управления Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)\
+Информация о создании предварительно определенных сочетаний клавиш.
+
+[Предоставление сведений о специальных возможностях для элементов управления в форме Windows Forms](providing-accessibility-information-for-controls-on-a-windows-form.md)\
+Информация о включении поддержки специальных возможностей элементами управления.
+
+## <a name="related-sections"></a>Связанные разделы
+
+[Элементы управления Windows Forms](index.md)\
+Ссылки на другие основные возможности работы с элементами управления.

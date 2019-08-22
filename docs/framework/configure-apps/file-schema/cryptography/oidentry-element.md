@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674757"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659592"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > элемент
+# <a name="oidentry-element"></a>\<Элемент > Оидентри
 Сопоставляет идентификатор объекта (OID) ASN.1 с понятным именем.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<oidMap>  
-\<oidEntry >  
+\<> mscorlib  
+\<Криптографисеттингс >  
+\<Оидмап >  
+\<Оидентри >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,11 +37,11 @@ ms.locfileid: "61674757"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**ИДЕНТИФИКАТОР ОБЪЕКТА**|Обязательный атрибут.<br /><br /> Указывает идентификатор Объекта ASN.1, соответствующий алгоритм, реализованный класс.|  
-|**name**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) тега.|  
+|**КОДА**|Обязательный атрибут.<br /><br /> Указывает идентификатор объекта ASN. 1, соответствующий алгоритму, реализуемому вашим классом.|  
+|**name**|Обязательный атрибут.<br /><br /> Задает значение для атрибута **Name** в [ \<теге элементе nameentry >](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,14 +49,14 @@ ms.locfileid: "61674757"
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
-|`mscorlib`|Содержит `cryptographySettings` элемент.|  
-|`oidMap`|Содержит сопоставления идентификатора объекта ASN.1 с классами.|  
+|`mscorlib`|`cryptographySettings` Содержит элемент.|  
+|`oidMap`|Содержит сопоставления идентификатора объекта (OID) ASN. 1 для классов.|  
   
 ## <a name="remarks"></a>Примечания  
- Идентификаторы объектов ASN.1 определяют алгоритмы в некоторых криптографических форматах. Понятные имена алгоритмов, которые вы хотите определить сопоставления идентификаторов объектов.  
+ Идентификаторы объектов ASN. 1 обозначают алгоритмы в некоторых криптографических форматах. Сопоставьте идентификаторы объектов с понятными именами для алгоритмов, которые необходимо опознать.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<oidEntry >** элемент для сопоставления идентификатора объекта хэш-алгоритма RIPEMD-160 с реализацией этого алгоритма.  
+ В следующем примере показано,  **\<** как использовать элемент оидентри >, чтобы связать идентификатор объекта для алгоритма хэширования RIPEMD-160 с реализацией этого хэш-алгоритма.  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ ms.locfileid: "61674757"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Схема файла конфигурации](../index.md)
+- [Схема параметров шифрования](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Отображение идентификаторов объектов на криптографические алгоритмы](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Настройка криптографических классов](../../configure-cryptography-classes.md)
+- [Отображение идентификаторов объектов на криптографические алгоритмы](../../map-object-identifiers-to-cryptography-algorithms.md)

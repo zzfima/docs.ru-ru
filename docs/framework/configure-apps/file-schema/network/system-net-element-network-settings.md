@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674341"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663960"
 ---
 # <a name="systemnet-element-network-settings"></a>Элемент \<system.Net> (сетевые параметры)
 Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.  
   
  \<configuration>  
-\<system.net>  
+\<> System. NET  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,31 +32,31 @@ ms.locfileid: "61674341"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности Интернет-запросов.|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Указывает максимальное число подключений к Интернет-узле.|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Определяет механизм кэширования для сетевых запросов.|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для классов в <xref:System.Net> и связанные с ней дочерние пространства имен.|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных из Интернет-узлов.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Указывает модули, используемые для проверки подлинности интернет запросов.|  
+|[Элемент connectionManagement](connectionmanagement-element-network-settings.md)|Указывает максимальное число подключений к узлу в Интернете.|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
+|[маилсеттингс](mailsettings-element-network-settings.md)|Настраивает параметры отправки почты по протоколу SMTP.|  
+|[Элемент requestcaching](requestcaching-element-network-settings.md)|Управляет механизмом кэширования для сетевых запросов.|  
+|[Параметры](settings-element-network-settings.md)|Настраивает основные сетевые параметры для классов в <xref:System.Net> и связанных дочерних пространствах имен.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса информации от узлов Интернета.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[Конфигурации](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Содержит параметры для всех пространств имен.|  
+|[Настройка](../configuration-element.md)|Содержит параметры для всех пространств имен.|  
   
 ## <a name="remarks"></a>Примечания  
- [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) элемент содержит параметры для классов в <xref:System.Net> и связанные с ней дочерние пространства имен. Параметры настройки модулей проверки подлинности, управление подключениями, параметры электронной почты, прокси-сервера и модулей Интернет-запросов на получение информации от Интернет-узлов.  
+ <xref:System.Net> [ ЭлементSystem.NET>содержитпараметрыдляклассоввсвязанных\<](system-net-element-network-settings.md) дочерних пространствах имен. Параметры настройки модулей проверки подлинности, управления подключениями, параметров почты, прокси-сервера и модулей запросов Интернета для получения данных от узлов Интернета.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано Типовая конфигурация, используемая с <xref:System.Net> классы.  
+ В следующем примере показана типичная конфигурация, <xref:System.Net> используемая классами.  
   
 ```xml  
 <configuration>  
@@ -94,4 +94,4 @@ ms.locfileid: "61674341"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

@@ -6,24 +6,19 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012957"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658486"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Пошаговое руководство. Стиль содержимого WPF
 
-В этом пошаговом руководстве показано, как применить стили к элементу управления Windows Presentation Foundation (WPF), размещенному на форме Windows Forms.
-
- В руководстве выполняются следующие задачи:
-
-- Создание проекта.
-
-- создание элемента управления WPF;
-
-- применение стиля к элементу управления WPF.
+В этой статье показано, как применять стили к элементу управления Windows Presentation Foundation (WPF), размещенному в форме Windows Forms.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -42,9 +37,9 @@ ms.locfileid: "69012957"
 
 1. Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF на Windows Forms во время](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)разработки.
 
-2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Практическое руководство. Выберите и переместите элементы в область конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования.
 
-3. В окне **Свойства** задайте для <xref:System.Windows.FrameworkElement.Width%2A> `200`свойств и <xref:System.Windows.FrameworkElement.Height%2A> значение.
+3. В окне **Свойства** задайте для свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение **200**.
 
 4. Добавьте элемент управления <xref:System.Windows.Controls.UserControl> в и <xref:System.Windows.Controls.ContentControl.Content%2A> присвойте свойству значение **Cancel.** <xref:System.Windows.Controls.Button?displayProperty=nameWithType>
 
@@ -60,15 +55,13 @@ ms.locfileid: "69012957"
 
 1. На **панели элементов**дважды щелкните `UserControl1` , чтобы `UserControl1` создать экземпляр в форме.
 
-     Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.
+   Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.
 
 1. На панели `elementHost1`смарт-тегов нажмите кнопку **Изменить размещенное содержимое** из раскрывающегося списка.
 
-     `UserControl1` откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+   `UserControl1`открывается в конструкторе WPF.
 
-1. В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` .
-
-     Этот код XAML создает градиент с контрастной градиентной границей. При нажатии на элемент управления градиенты изменяются, формируя образ нажатой кнопки. Более подробную информацию см. в разделе [Стилизация и использование шаблонов](../../wpf/controls/styling-and-templating.md).
+1. В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` . Этот код XAML создает градиент с контрастной градиентной границей. При нажатии на элемент управления градиенты изменяются, формируя образ нажатой кнопки. Более подробную информацию см. в разделе [Стилизация и использование шаблонов](../../wpf/controls/styling-and-templating.md).
 
    ```xaml
    <UserControl.Resources>
@@ -118,7 +111,7 @@ ms.locfileid: "69012957"
    </UserControl.Resources>
    ```
 
-1. Примените стиль `SimpleButton`, определенный на предыдущем шаге, к кнопке "Отмена", вставив следующий код XAML в `<Button>` тег кнопки "Отмена".
+1. Примените `<Button>` стиль, определенный на предыдущем шаге, к кнопке Отмена, вставив следующий код XAML в тег кнопки **Отмена.** `SimpleButton`
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -139,7 +132,7 @@ ms.locfileid: "69012957"
 
 1. В меню **Отладка** выберите команду **начать отладку** , чтобы запустить приложение.
 
-1. Нажмите кнопки OK и Отмена и просмотрите  различия.
+1. Нажмите кнопки **ОК** и **Отмена** и просмотрите различия.
 
 ## <a name="see-also"></a>См. также
 

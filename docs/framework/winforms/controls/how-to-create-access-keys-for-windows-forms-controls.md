@@ -1,6 +1,6 @@
 ---
 title: Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms
-ms.date: 03/30/2017
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -20,41 +20,48 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccec8bba9e01cbaa7bfef841af68a0fcaa720b90
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746854"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658376"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms
-*Ключ доступа* , подчеркивается в тексте элемента меню, пункт меню или метка элемента управления, такого как кнопка. С помощью ключа доступа пользователь может «щелкните» кнопки с помощью клавиши ALT и клавишу с буквой. Например, если кнопка запускает процесс печати формы и поэтому его `Text` свойство имеет значение «Print», добавив амперсанд перед буквой «P» приводит к буква «P» будет подчеркнут в тексте кнопки во время выполнения. Пользователь может выполнять команда, связанная с кнопкой, нажав клавиши ALT + P. Не может иметь ключ доступа для элемента управления, который не может получить фокус.  
-  
-### <a name="to-create-an-access-key-for-a-control"></a>Чтобы создать ключ доступа для элемента управления  
-  
-1. Задайте `Text` свойство на строку, которая включает знак амперсанда (&) перед буквой, которая будет использоваться в сочетании клавиш.  
-  
-    ```vb  
-    ' Set the letter "P" as an access key.  
-    Button1.Text = "&Print"  
-    ```  
-  
-    ```csharp  
-    // Set the letter "P" as an access key.  
-    button1.Text = "&Print";  
-    ```  
-  
-    ```cpp  
-    // Set the letter "P" as an access key.  
-    button1->Text = "&Print";  
-    ```  
-  
-    > [!NOTE]
-    >  Чтобы включить знак амперсанда в захвате без создания ключа доступа, добавьте два амперсанда (& &). Один знак амперсанда отображается в заголовке, и никакие символы не будут подчеркнуты.  
-  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Практическое руководство. Создание ключей доступа для элементов управления Windows Forms
+
+*Клавиша доступа* — это подчеркнутый символ в тексте меню, пункте меню или метка элемента управления, например кнопка. С помощью ключа доступа пользователь может «нажать» кнопку, нажав клавишу Alt в сочетании с предопределенной клавишей доступа. Например, если кнопка запускает процедуру печати формы, и, следовательно, ее `Text` свойство имеет значение "Print", добавление амперсанда перед буквой "p" приводит к тому, что буква "p" будет подчеркнута в тексте кнопки во время выполнения. Пользователь может выполнить команду, связанную с кнопкой, нажав клавиши ALT + P.
+
+Элементы управления, которые не могут получать фокус, не могут иметь ключи доступа.
+
+## <a name="programmatic"></a>Программный
+
+Задайте для `Text` свойства строку, содержащую амперсанд (&) перед буквой, которая будет ярлыком.
+
+```vb
+' Set the letter "P" as an access key.
+Button1.Text = "&Print"
+```
+
+```csharp
+// Set the letter "P" as an access key.
+button1.Text = "&Print";
+```
+
+```cpp
+// Set the letter "P" as an access key.
+button1->Text = "&Print";
+```
+
+> [!NOTE]
+> Чтобы использовать амперсанд в заголовке без создания ключа доступа, включите два амперсанда (& &). В заголовке отображается один амперсанд, а символы не подчеркиваются.
+
+## <a name="designer"></a>Designer
+
+В окне **Свойства** Visual Studio присвойте свойству **Text** значение String, включающее амперсанд (' & ') перед буквой, которая будет клавишей доступа. Например, чтобы задать букву "P" в качестве клавиши доступа, введите **& Print**.
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Button>
-- [Практическое руководство. Ответ на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Практическое руководство. Реакция на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

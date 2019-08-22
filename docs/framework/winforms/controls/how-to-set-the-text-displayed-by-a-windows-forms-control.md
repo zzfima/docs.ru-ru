@@ -1,6 +1,6 @@
 ---
 title: Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms
-ms.date: 03/30/2017
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -21,58 +21,69 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013092"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666155"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms
-В элементах управления Windows Forms обычно отображается текст, связанный с их основной функцией. Например, в элементе управления <xref:System.Windows.Forms.Button> обычно отображается заголовок, указывающий, какое действие выполняется при нажатии кнопки. С помощью свойства <xref:System.Windows.Forms.Control.Text%2A> можно задавать или получать текст для всех элементов управления. Шрифт можно менять с помощью свойства <xref:System.Windows.Forms.Control.Font%2A>. Также с помощью конструктора можно задавать текст.  Также см. раздел [Как Определение клавиш доступа для Windows Forms с помощью конструктора элементов управления](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [как: Задать текст, отображаемый элементом управления, с помощью конструктора форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [как: Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
-  
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Программное задание текста, отображаемого элементом управления  
-  
-1. Присвойте свойству <xref:System.Windows.Forms.Control.Text%2A> строку.  
-  
-     Чтобы создать подчеркнутую клавишу доступа, поставьте амперсанд (&) перед буквой, которая будет использоваться ключ доступа.  
-  
-2. Присвойте свойству <xref:System.Windows.Forms.Control.Font%2A> объект типа <xref:System.Drawing.Font>.  
-  
-    ```vb  
-    Button1.Text = "Click here to save changes"  
-    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)  
-    ```  
-  
-    ```csharp  
-    button1.Text = "Click here to save changes";  
-    button1.Font = new Font("Arial", 10, FontStyle.Bold,  
-       GraphicsUnit.Point);  
-    ```  
-  
-    ```cpp  
-    button1->Text = "Click here to save changes";  
-    button1->Font = new System::Drawing::Font("Arial",  
-       10, FontStyle::Bold, GraphicsUnit::Point);  
-    ```  
-  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms
+
+Windows Forms элементы управления обычно отображают некоторый текст, связанный с основной функцией элемента управления. Например, <xref:System.Windows.Forms.Button> элемент управления обычно отображает заголовок, указывающий, какое действие будет выполнено при нажатии кнопки. С помощью свойства <xref:System.Windows.Forms.Control.Text%2A> можно задавать или получать текст для всех элементов управления. Шрифт можно менять с помощью свойства <xref:System.Windows.Forms.Control.Font%2A>.
+
+Можно также задать текст с помощью [конструктора](#designer).
+
+## <a name="programmatic"></a>Программный
+
+1. Присвойте свойству <xref:System.Windows.Forms.Control.Text%2A> строку.
+
+   Чтобы создать подчеркнутый ключ доступа, включает амперсанд (&) перед буквой, которая будет клавишей доступа.
+
+2. Присвойте свойству <xref:System.Windows.Forms.Control.Font%2A> объект типа <xref:System.Drawing.Font>.
+
+    ```vb
+    Button1.Text = "Click here to save changes"
+    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)
+    ```
+
+    ```csharp
+    button1.Text = "Click here to save changes";
+    button1.Font = new Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point);
+    ```
+
+    ```cpp
+    button1->Text = "Click here to save changes";
+    button1->Font = new System::Drawing::Font("Arial", 10, FontStyle::Bold, GraphicsUnit::Point);
+    ```
+
     > [!NOTE]
-    >  Для отображения в элементах пользовательского интерфейса, например пунктах меню, специальных символов, которые обычно интерпретируются в них по-другому, можно использовать escape-символ. Например, следующая строка кода задает текст пункта меню для чтения «и что-то совершенно другим»:  
-  
-    ```vb  
-    MPMenuItem.Text = "&& Now For Something Completely Different"  
-    ```  
-  
-    ```csharp  
-    mpMenuItem.Text = "&& Now For Something Completely Different";  
-    ```  
-  
-    ```cpp  
-    mpMenuItem->Text = "&& Now For Something Completely Different";  
-    ```  
-  
+    > Для отображения в элементах пользовательского интерфейса, например пунктах меню, специальных символов, которые обычно интерпретируются в них по-другому, можно использовать escape-символ. Например, следующая строка кода задает текст пункта меню для чтения "& теперь для чего-то совершенно другого":
+
+    ```vb
+    MPMenuItem.Text = "&& Now For Something Completely Different"
+    ```
+
+    ```csharp
+    mpMenuItem.Text = "&& Now For Something Completely Different";
+    ```
+
+    ```cpp
+    mpMenuItem->Text = "&& Now For Something Completely Different";
+    ```
+
+## <a name="designer"></a>Designer
+
+1. В окне **Свойства** в Visual Studio задайте для свойства **Text** элемента управления соответствующую строку.
+
+   Чтобы создать подчеркнутую клавишу, она включает амперсанд (&) перед буквой, которая будет клавишей быстрого вызова.
+
+2. В окне **Свойства** нажмите кнопку с многоточием (![кнопку с многоточием (...) в окно свойств Visual Studio](./media/visual-studio-ellipsis-button.png)) рядом со свойством **Font** .
+
+   В диалоговом окне стандартный шрифт выберите шрифт, стиль шрифта, размер, эффекты (например, зачеркивание или подчеркивание) и нужный сценарий.
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Практическое руководство. Ответ на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Практическое руководство. Создание ключей доступа для элементов управления Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Практическое руководство. Реакция на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 312db8ea5ae4b66fd00faad1b788eac0356aeaa7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674750"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659603"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > элемент для параметров криптографии
-Содержит [ \<cryptographySettings > элемент](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<Элемент > mscorlib для параметров шифрования
+Содержит [элемент > криптографисеттингс.\<](cryptographysettings-element.md)  
   
  \<configuration>  
-\<mscorlib >  
+\<> mscorlib  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ ms.locfileid: "61674750"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61674750"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<mscorlib >** элемент для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать  **\<элемент mscorlib >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "61674750"
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Схема файла конфигурации](../index.md)
+- [Схема параметров шифрования](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Настройка криптографических классов](../../configure-cryptography-classes.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705244"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664064"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > (сетевые параметры)
+# <a name="performancecounter-element-network-settings"></a>\<Элемент performanceCounter > (параметры сети)
 Включает или отключает счетчики производительности сети.  
   
  \<configuration>  
-\<system.net>  
-\<Параметры >  
-\<performanceCounters >  
+\<> System. NET  
+\<> параметров  
+\<Счетчики производительности >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,25 +41,25 @@ ms.locfileid: "61705244"
 |`enabled`|Указывает, включены ли счетчики производительности сети. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
- Счетчики производительности сети необходимо включить для использования в файле конфигурации. Все счетчики производительности сети включаются и отключаются с помощью одного параметра в файле конфигурации. Включить или отключить отдельные счетчики производительности сети невозможно. Дополнительные сведения о конкретных счетчики производительности сети, см. в разделе [счетчики производительности сети](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
+ Счетчики производительности сети необходимо включить для использования в файле конфигурации. Все счетчики производительности сети включаются и отключаются с помощью одного параметра в файле конфигурации. Включить или отключить отдельные счетчики производительности сети невозможно. Дополнительные сведения о конкретных счетчиках производительности сети см. в разделе [Сетевые счетчики производительности](../../../debug-trace-profile/performance-counters.md#networking).  
   
- Значение по умолчанию — что сетевой производительности счетчики отключены.  
+ Значение по умолчанию — сетевые счетчики производительности отключены.  
   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> Свойство может использоваться для получения текущего значения **включена** атрибут из применимые файлы конфигурации.  
+ Свойство можно использовать для получения текущего значения атрибута enabled из применимых файлов конфигурации. <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как настроить <xref:System.Net> и соответствующие пространства имен, чтобы включить счетчики производительности сети.  
+ В следующем примере показано, как настроить <xref:System.Net> и связанные пространства имен для включения сетевых счетчиков производительности.  
   
 ```xml  
 <configuration>  
@@ -77,5 +77,5 @@ ms.locfileid: "61705244"
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [Счетчики производительности сети](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [Схема параметров сети](index.md)
+- [Счетчики производительности сети](../../../debug-trace-profile/performance-counters.md#networking)

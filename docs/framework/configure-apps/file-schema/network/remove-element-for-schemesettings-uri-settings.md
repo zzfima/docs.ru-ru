@@ -2,18 +2,18 @@
 title: Элемент <remove> для schemeSettings (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a891eb8a2fd2d66b6435e2ae774ecd4a157c0f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674445"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659222"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>\<Удалить > элемент для schemeSettings (параметры Uri)
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<Удаление элемента > для schemeSettings (Параметры URI)
 Удаляет параметр схемы для имени схемы.  
   
  \<configuration>  
-\<URI >  
+\<> URI  
 \<schemeSettings >  
 \<Удалить >  
   
@@ -32,37 +32,37 @@ ms.locfileid: "61674445"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|имя|Имя схемы, к которому применяется этот параметр. Только поддерживаемые значения: имя = «http» и имя = «https».|  
+|имя|Имя схемы, к которой применяется этот параметр. Поддерживаются только значения Name = "http" и Name = "HTTPS".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
+|[Элемент \<schemeSettings> (параметры URI)](schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию <xref:System.Uri?displayProperty=nameWithType> знаком процента Отмена переходов класс разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак, следующим образом:  
+ По умолчанию класс <xref:System.Uri?displayProperty=nameWithType> отменяет escape-символы в процентах, закодированные разделителями, перед выполнением сжатия пути. Это было реализовано в качестве механизма безопасности для атак, подобных следующим:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Если этот URI передается вниз, чтобы модули не обрабатывает процентов символы в кодировке неправильно, это может привести в следующей команде, выполняемой на сервере:  
+ Если этот URI передается в модули, которые неправильно обрабатывают закодированные символы процента, это может привести к выполнению следующей команды на сервере:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине <xref:System.Uri?displayProperty=nameWithType> класса первый разделители пути Отмена переходов, а затем применяет сжатие пути. Результат передачи вредоносных URL-адрес выше <xref:System.Uri?displayProperty=nameWithType> класса конструктор результаты в следующий URI:  
+ По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Можно изменить это поведение по умолчанию для не разделители отмены escape процента закодированный путь, с помощью параметра конфигурации schemeSettings для определенной схемы.  
+ Это поведение по умолчанию можно изменить, чтобы не отменять escape-символы в процентах с помощью параметра конфигурации schemeSettings для определенной схемы.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс, который удаляет все параметры схемы для схемы http.  
+ В следующем примере показана конфигурация, используемая <xref:System.Uri> классом, который удаляет все параметры схемы для схемы HTTP.  
   
 ```xml  
 <configuration>  
@@ -82,4 +82,4 @@ ms.locfileid: "61674445"
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

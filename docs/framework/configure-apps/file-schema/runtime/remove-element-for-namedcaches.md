@@ -5,19 +5,19 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704730"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663475"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<Удалить > элемент для \<namedCaches >
+# <a name="remove-element-for-namedcaches"></a>\<Удаление элемента > для \<намедкачес >
 Удаляет элемент именованного кэша из коллекции `namedCaches` для кэша памяти.  
   
- \<system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
+ \<System. Runtime. Caching >  
+\<memoryCache >  
+\<Намедкачес >  
 \<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,11 +45,11 @@ ms.locfileid: "61704730"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованных <xref:System.Runtime.Caching.MemoryCache> экземпляров.|  
   
 ## <a name="remarks"></a>Примечания  
- `remove` Приводит к удалению `namedCache` запись из коллекции именованных кэшей для кэша памяти.  
+ `remove` Элемент`namedCache` удаляет запись из именованной коллекции кэша для кэша памяти.  
   
 ## <a name="see-also"></a>См. также
 
-- [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<Элемент > Намедкачес (параметры кэша)](namedcaches-element-cache-settings.md)

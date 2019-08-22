@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040378"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666248"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Создание нового содержимого WPF на Windows Forms во время разработки
 
 В этой статье показано, как создать элемент управления Windows Presentation Foundation (WPF) для использования в приложениях на основе Windows Forms.
 
-В руководстве выполняются следующие задачи:
-
-- Создание проекта.
-
-- создание элемента управления WPF;
-
-- добавление нового элемента управления WPF в форму Windows Forms. Элемент управления WPF размещается в элементе управления <xref:System.Windows.Forms.Integration.ElementHost>.
-
 ## <a name="prerequisites"></a>Предварительные требования
 
-Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
-
-- Visual Studio
+Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
 ## <a name="create-the-project"></a>Создание проекта
 
@@ -51,17 +44,17 @@ ms.locfileid: "69040378"
 
 1. В **Обозреватель решений**добавьте в решение новый проект **библиотеки пользовательских элементов управления WPF (.NET Framework)** . Используйте имя по умолчанию для библиотеки элементов управления (`WpfControlLibrary1`). Имя элемента управления по умолчанию — `UserControl1.xaml`.
 
-     Добавление нового элемента управления имеет следующие последствия.
+   Добавление нового элемента управления имеет следующие последствия.
 
-    - Добавляется файл UserControl1.xaml.
+   - Добавляется файл UserControl1.xaml.
 
-    - Добавляется файл UserControl1.xaml.cs или UserControl1.xaml.vb. Этот файл содержит код программной части для обработчиков событий и иных реализованных компонентов.
+   - Добавлен файл UserControl1.xaml.cs (или UserControl1. XAML. vb). Этот файл содержит код программной части для обработчиков событий и иных реализованных компонентов.
 
-    - Добавляются ссылки на сборки WPF.
+   - Добавляются ссылки на сборки WPF.
 
-    - Файл UserControl1.xaml открывается в [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
+   - Файл UserControl1. XAML откроется в конструкторе WPF для Visual Studio.
 
-2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Практическое руководство. Выберите и переместите элементы в область конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования.
 
 3. В окне **Свойства** задайте для свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение **200**.
 
@@ -69,8 +62,8 @@ ms.locfileid: "69040378"
 
 5. В окне **Свойства** присвойте <xref:System.Windows.Controls.TextBox.Text%2A> свойству значение **размещенное содержимое**.
 
-    > [!NOTE]
-    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
+   > [!NOTE]
+   > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
 
 6. Выполните построение проекта.
 

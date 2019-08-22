@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3a293af73fde5ee72ba02c7e6613e9c57eae1b9b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487774"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658944"
 ---
-# <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > элемент
+# <a name="appdomainmanagerassembly-element"></a>\<Элемент > Аппдомаинманажерассембли
 Указывает сборку, предоставляющую диспетчер домена приложения для домена приложения, по умолчанию используемого в процессе.  
   
  \<configuration>  
-\<Среда выполнения >  
-\<appDomainManagerAssembly>  
+\<> среды выполнения  
+\<Аппдомаинманажерассембли >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ ms.locfileid: "66487774"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`value`|Обязательный атрибут. Указывает отображаемое имя сборки, предоставляющей диспетчер домена приложения для домена приложения по умолчанию в процессе.|  
+|`value`|Обязательный атрибут. Указывает отображаемое имя сборки, предоставляющей Диспетчер доменов приложений для домена приложения по умолчанию в процессе.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -48,20 +48,20 @@ ms.locfileid: "66487774"
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы задать тип диспетчера доменов приложений, необходимо задать как этот элемент и [ \<appDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) элемент. Если один из этих элементов не указан, то другое обрабатывается.  
+ Чтобы указать тип диспетчера домена приложения, необходимо указать и этот элемент, и [ \<элемент > аппдомаинманажертипе](appdomainmanagertype-element.md) . Если один из этих элементов не указан, другой игнорируется.  
   
- При загрузке домена приложения по умолчанию <xref:System.TypeLoadException> возникает исключение, если указанная сборка не существует или если сборка не содержит типа, заданного параметром [ \<appDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) элемент; и не удается запустить процесс. Если сборка найдена, но сведения о версии не соответствует, <xref:System.IO.FileLoadException> возникает исключение.  
+ Когда загружается домен приложения по умолчанию, создается исключение, <xref:System.TypeLoadException> если указанная сборка не существует или сборка не содержит тип, указанный [ \<элементом аппдомаинманажертипе >](appdomainmanagertype-element.md) ; и процесс не может запустить. Если сборка найдена, но сведения о версии не совпадают, <xref:System.IO.FileLoadException> создается исключение.  
   
- Если указать тип диспетчера домена приложения для домена приложения по умолчанию, других доменов приложений, созданных из домена приложения по умолчанию наследуют тип диспетчера домена приложения. Используйте <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> и <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> свойства для указания типа диспетчера домена приложения в новом домене приложения.  
+ При указании типа диспетчера домена приложения для домена приложения по умолчанию другие домены приложений, созданные из домена приложения по умолчанию, наследуют тип диспетчера домена приложения. Используйте свойства <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> и, чтобы указать другой тип диспетчера домена приложения для нового домена приложения. <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
   
- Требуется указать тип диспетчера домена приложения, приложение полного доверия. (Например, приложения, работающего на рабочем столе имеет полное доверие). Если приложение не имеет полного доверия, <xref:System.TypeLoadException> возникает исключение.  
+ Чтобы указать тип диспетчера доменов приложений, приложение должно иметь полное доверие. (Например, приложение, работающее на рабочем столе, имеет полное доверие.) Если приложение не имеет полного доверия, <xref:System.TypeLoadException> создается исключение.  
   
- Формат отображаемого имени сборки, см. в разделе <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> свойство.  
+ Сведения о формате отображаемого имени сборки см. в <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> описании свойства.  
   
- Этот элемент конфигурации, доступны только в .NET Framework 4 и более поздних версий.  
+ Этот элемент конфигурации доступен только в .NET Framework 4 и более поздних версиях.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как указать, что диспетчер домена приложения для домена приложения по умолчанию процесса `MyMgr` введите `AdMgrExample` сборки.  
+ В следующем примере показано, как указать, что диспетчер домена приложения для домена приложения по умолчанию процесса — это `MyMgr` тип `AdMgrExample` в сборке.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "66487774"
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Метод SetAppDomainManagerType](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [\<Элемент > Аппдомаинманажертипе](appdomainmanagertype-element.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
+- [Метод SetAppDomainManagerType](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

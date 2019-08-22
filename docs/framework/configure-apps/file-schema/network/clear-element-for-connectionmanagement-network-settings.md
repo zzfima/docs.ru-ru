@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705250"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659446"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Очистить > элемент для connectionManagement (параметры сети)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Очистка элемента > для элемент connectionManagement (параметры сети)
 Очищает список управления подключениями.  
   
  \<configuration>  
-\<system.net>  
-\<connectionManagement >  
-\<Очистить >  
+\<> System. NET  
+\<Элемент connectionManagement >  
+\<очистить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,16 +35,16 @@ ms.locfileid: "61705250"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
+|[Элемент connectionManagement](connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
   
 ## <a name="remarks"></a>Примечания  
  `clear` Элемент удаляет все записи из списка управления подключениями.  
@@ -53,7 +53,7 @@ ms.locfileid: "61705250"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример очищает список управления подключениями и добавляет новые записи управления подключением для сервера `www.contoso.com` и всем другим узлам сети.  
+ В следующем примере очищается список управления подключениями, а затем добавляются новые записи управления подключениями `www.contoso.com` для сервера и всех остальных сетевых узлов.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ ms.locfileid: "61705250"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

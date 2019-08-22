@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674627"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664208"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > (сетевые параметры)
+# <a name="bypasslist-element-network-settings"></a>\<Элемент > бипасслист (параметры сети)
 Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.  
   
  \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
+\<> System. NET  
+\<defaultProxy >  
+\<бипасслист >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,34 +34,34 @@ ms.locfileid: "61674627"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Очищает список вариантов обхода.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.|  
+|[add](add-element-for-bypasslist-network-settings.md)|Добавление в список обхода прокси IP-адреса или DNS-имени.|  
+|[clear](clear-element-for-bypasslist-network-settings.md)|Очищает список обхода.|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
 ## <a name="remarks"></a>Примечания  
- В списке пропускаемых адресов содержит регулярных выражений, описывающих URI, <xref:System.Net.WebRequest> экземпляры доступ напрямую вместо того, через прокси-сервер.  
+ Список обхода содержит регулярные выражения, описывающие URI, <xref:System.Net.WebRequest> которые обращаются к экземплярам напрямую, а не через прокси-сервер.  
   
- Будьте внимательны при указании регулярное выражение для этого элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадений, любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы сопоставить только на узле в домене contoso.com, используйте привязку («$»): «[a-z] +\\.contoso\\.com$».  
+ При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
   
- Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример добавляет два адреса в списке пропускаемых адресов. Первый обходит прокси-сервер для всех серверов в домене contoso.com. второй обходит прокси-сервер для всех серверов, IP-адреса начинается с 192.168.  
+ В следующем примере в список обхода добавляется два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com; во втором случае прокси-сервер обходится для всех серверов, IP-адреса которых начинаются с 192,168.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61674627"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

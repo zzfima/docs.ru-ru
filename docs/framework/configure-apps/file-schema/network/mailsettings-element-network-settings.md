@@ -8,19 +8,19 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8ea08cbd76e60a3665703bc50924dd94500cd87
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674510"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659322"
 ---
-# <a name="mailsettings-element-network-settings"></a>\<mailSettings > (сетевые параметры)
-Настраивает параметры отправки сообщений.  
+# <a name="mailsettings-element-network-settings"></a>\<Элемент > Маилсеттингс (параметры сети)
+Настраивает параметры отправки почты.  
 
 \<configuration>  
-\<system.net>  
-\<mailSettings >  
+\<> System. NET  
+\<Маилсеттингс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,22 +34,22 @@ ms.locfileid: "61674510"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|[\<SMTP > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Служит для настройки параметров простой протокол транспорта почты.|  
+|[\<Элемент > SMTP (параметры сети)](smtp-element-network-settings.md)|Настраивает параметры протокола простого почтового транспорта.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[Элемент \<system.Net> (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[Элемент \<system.Net> (сетевые параметры)](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="example"></a>Пример  
- Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.  
+ В следующем примере задаются соответствующие параметры SMTP для отправки электронной почты с использованием сетевых учетных данных по умолчанию.  
   
 ```xml  
 <configuration>  
@@ -70,4 +70,4 @@ ms.locfileid: "61674510"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

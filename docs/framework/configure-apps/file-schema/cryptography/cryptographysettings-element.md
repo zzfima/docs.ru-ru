@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705224"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664286"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > элемент
+# <a name="cryptographysettings-element"></a>\<Элемент > Криптографисеттингс
 Содержит параметры шифрования.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
+\<> mscorlib  
+\<Криптографисеттингс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,24 +33,24 @@ ms.locfileid: "61705224"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Содержит сопоставления классов с понятными именами.|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Содержит сопоставления идентификатора объекта ASN.1 с классами.|  
+|[\<Криптонамемаппинг >](cryptonamemapping-element.md)|Содержит сопоставления классов с понятными именами.|  
+|[\<Оидмап >](oidmap-element.md)|Содержит сопоставления идентификатора объекта (OID) ASN. 1 для классов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
-|`mscorlib`|Содержит `cryptographySettings` элемент.|  
+|`mscorlib`|`cryptographySettings` Содержит элемент.|  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже, показано, как использовать  **\<cryptographySettings >** элемент сопоставления имен криптографии и сопоставления идентификатора Объекта. В этом примере настраивается среда выполнения, чтобы <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> возвращает `MyHashClass` объекта и `MyCryptoClass` класса сопоставляется 1.3.36.2.1 идентификатор объекта.  
+ В следующем примере показано,  **\<** как использовать элемент криптографисеттингс >, чтобы содержать сопоставления имен криптографии и сопоставления OID. В этом примере среда выполнения настраивается <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> таким образом `MyHashClass` , что возвращает `MyCryptoClass` объект, а класс сопоставляется с идентификатором объекта 1.3.36.2.1.  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ ms.locfileid: "61705224"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Схема файла конфигурации](../index.md)
+- [Схема параметров шифрования](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

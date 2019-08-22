@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a183c4160c4cd55b05c5c23f7a10e3a1d1c74ea4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674503"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659293"
 ---
-# <a name="proxy-element-network-settings"></a>\<прокси-сервер > (сетевые параметры)
+# <a name="proxy-element-network-settings"></a>\<Элемент > прокси-сервера (параметры сети)
 Определяет прокси-сервер.  
   
  \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<прокси-сервера >  
+\<> System. NET  
+\<defaultProxy >  
+\<прокси->  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,38 +43,38 @@ ms.locfileid: "61674503"
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
 |`autoDetect`|Указывает, обнаруживается ли прокси-сервер автоматически. Значение по умолчанию — `unspecified`.|  
-|`bypassonlocal`|Указывает, пропускает ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер (`http://localhost`, `http://loopback`, или `http://127.0.0.1`) и URI без точки (`http://webserver`). Значение по умолчанию — `unspecified`.|  
-|`proxyaddress`|Указывает URI, используемый прокси-сервер.|  
-|`scriptLocation`|Указывает расположение скрипта конфигурации. Не используйте `bypassonlocal` атрибута с этим атрибутом. |  
-|`usesystemdefault`|Указывает, следует ли использовать параметры прокси-сервера Internet Explorer. Если значение `true`, следующие атрибуты переопределят параметры прокси-сервера Internet Explorer. Значение по умолчанию — `unspecified`.|  
+|`bypassonlocal`|Указывает, пропускается ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер`http://localhost`(, `http://loopback`или `http://127.0.0.1`) и URI без точки (`http://webserver`). Значение по умолчанию — `unspecified`.|  
+|`proxyaddress`|Указывает используемый URI прокси-сервера.|  
+|`scriptLocation`|Указывает расположение скрипта конфигурации. Не используйте `bypassonlocal` атрибут с этим атрибутом. |  
+|`usesystemdefault`|Указывает, следует ли использовать параметры прокси-сервера Internet Explorer. Если задано `true`значение, последующие атрибуты будут переопределять параметры прокси-сервера Internet Explorer. Значение по умолчанию — `unspecified`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
 ## <a name="text-value"></a>Текстовое значение  
   
 ## <a name="remarks"></a>Примечания  
- `proxy` Элемент определяет прокси-сервер для приложения. Если этот элемент отсутствует в файле конфигурации, то платформа .NET Framework будет использовать параметры прокси-сервера в Internet Explorer.  
+ `proxy` Элемент определяет прокси-сервер для приложения. Если этот элемент отсутствует в файле конфигурации, .NET Framework будет использовать параметры прокси-сервера в Internet Explorer.  
   
- Значение для `proxyaddress` атрибут должен иметь правильный формат универсального кода ресурса (URI).  
+ Значение `proxyaddress` атрибута должно представлять собой универсальный код ресурса (URI) правильного формата.  
   
- `scriptLocation` Атрибут ссылается на автоматическое обнаружение сценариев настройки прокси-сервера. <xref:System.Net.WebProxy> Класс будет пытаться обнаружить сценарий конфигурации (обычно именованный Wpad.dat) при **использовать сценарий автоматической настройки** установлен флажок в Internet Explorer. Если `bypassonlocal` присвоено любое значение `scriptLocation` учитывается.
+ `scriptLocation` Атрибут относится к автоматическому обнаружению скриптов конфигурации прокси-сервера. Класс будет пытаться разместить скрипт конфигурации (обычно с именем WPAD. dat), если в Internet Explorer выбран параметр **использовать скрипт автоматической настройки.** <xref:System.Net.WebProxy> Если `bypassonlocal` для задано любое значение, `scriptLocation` то параметр игнорируется.
   
- Используйте `usesystemdefault` атрибут для приложений .NET Framework версии 1.1, которые переносят до версии 2.0.  
+ `usesystemdefault` Используйте атрибут для приложений .NET Framework версии 1,1, которые переносятся на версию 2,0.  
   
- Исключение возникает в том случае, если `proxyaddress` атрибут указывает на недопустимое значение по умолчанию прокси-сервер. Свойство <xref:System.Exception.InnerException%2A> исключения должно иметь дополнительные сведения о первопричине ошибки.  
+ Если `proxyaddress` атрибут указывает на недопустимый прокси-сервер по умолчанию, возникает исключение. Свойство <xref:System.Exception.InnerException%2A> исключения должно иметь дополнительные сведения о первопричине ошибки.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используются значения по умолчанию от прокси-сервера Internet Explorer, указывает адрес прокси-сервера и обходит прокси-сервера для локального доступа.  
+ В следующем примере используются значения по умолчанию из прокси-сервера Internet Explorer, указывается адрес прокси-сервера и выполняется обход прокси-сервера для локального доступа.  
   
 ```xml  
 <configuration>  
@@ -93,4 +93,4 @@ ms.locfileid: "61674503"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

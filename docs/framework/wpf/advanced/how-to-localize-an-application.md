@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629869"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666791"
 ---
 # <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
 В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
@@ -36,7 +36,7 @@ ms.locfileid: "68629869"
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Создание примера приложения  
- На этом шаге вы будете выполнять подготовку приложения к локализации. В примерах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляется приложение HelloApp, которое будет использоваться для примеров кода в этом разделе. Если вы хотите использовать этот пример, скачайте [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлы из [примера средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+ На этом шаге вы будете выполнять подготовку приложения к локализации. В примерах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляется приложение HelloApp, которое будет использоваться для примеров кода в этом разделе. Если вы хотите использовать этот пример, скачайте [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлы из [примера средства LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 1. Разработайте свое приложение до точки, в которой хотите начать локализацию.  
   
@@ -151,9 +151,9 @@ ms.locfileid: "68629869"
   
    |Имя BAML|Ключ ресурса|Категория|Удобочитаемость|Изменяемость|Комментарии|Значение|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Пропустить|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Пропустить|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Отсутствуют|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Отсутствуют|TRUE|TRUE||Goodbye World|
   
    Обратите внимание, что все значения поля Comments не содержат значений. Если поле не имеет значения, оно пустое. Также обратите внимание, что элемент в первой строке не является ни читаемым, ни изменяемым, а параметр **Category** имеет значение "ignore", а все это означает, что значение не локализуется.  
   

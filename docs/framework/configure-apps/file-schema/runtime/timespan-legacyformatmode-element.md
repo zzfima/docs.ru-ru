@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e265fd1de6047cd53b0f8d1c20c8a9e87b3e813
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689666"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663391"
 ---
-# <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > элемент
+# <a name="timespan_legacyformatmode-element"></a>\<Элемент > TimeSpan_LegacyFormatMode
 
-Определяет, сохраняет ли среда выполнения устаревшее поведение в операциях с форматирования <xref:System.TimeSpan?displayProperty=nameWithType> значения.
+Определяет, сохраняет ли среда выполнения устаревшее поведение в операциях <xref:System.TimeSpan?displayProperty=nameWithType> форматирования со значениями.
 
-\<Конфигурация > \
-\<Среда выполнения > \
+\<> конфигурации \
+\<> среды выполнения \
 \<TimeSpan_LegacyFormatMode >
 
 ## <a name="syntax"></a>Синтаксис
@@ -40,7 +40,7 @@ ms.locfileid: "66689666"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли среда выполнения устаревшее поведение форматирования с <xref:System.TimeSpan?displayProperty=nameWithType> значения.|
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли среда выполнения устаревшее поведение <xref:System.TimeSpan?displayProperty=nameWithType> форматирования со значениями.|
 
 ## <a name="enabled-attribute"></a>Атрибут enabled
 
@@ -51,7 +51,7 @@ ms.locfileid: "66689666"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -62,32 +62,32 @@ ms.locfileid: "66689666"
 
 ## <a name="remarks"></a>Примечания
 
-Начиная с .NET Framework 4, <xref:System.TimeSpan?displayProperty=nameWithType> структура реализует <xref:System.IFormattable> интерфейс и поддерживает операций со строками формата стандартные и настраиваемые форматирования. Если метод синтаксического анализа встречается описатель неподдерживаемый формат или строка формата, он выдает <xref:System.FormatException>.
+Начиная с .NET Framework 4 <xref:System.TimeSpan?displayProperty=nameWithType> структура <xref:System.IFormattable> реализует интерфейс и поддерживает операции форматирования со стандартными и пользовательскими строками формата. Если метод синтаксического анализа обнаруживает неподдерживаемый описатель формата или строку формата, он создает исключение <xref:System.FormatException>.
 
-В предыдущих версиях .NET Framework <xref:System.TimeSpan> структуры не реализовал <xref:System.IFormattable> и не поддерживает строки формата. Тем не менее, многие разработчики ошибочно полагают, что <xref:System.TimeSpan> поддерживали набор строк формата, которые использовались в [составного форматирования операций](../../../../../docs/standard/base-types/composite-formatting.md) с помощью методов, таких как <xref:System.String.Format%2A?displayProperty=nameWithType>. Как правило если тип реализует <xref:System.IFormattable> и поддерживает формат строки, вызовы методов форматирования с неподдерживаемый формат строки обычно throw <xref:System.FormatException>. Тем не менее так как <xref:System.TimeSpan> не реализовал <xref:System.IFormattable>, среда выполнения, игнорируется строка форматирования и вместо этого вызов <xref:System.TimeSpan.ToString?displayProperty=nameWithType> метод. Это означает, что, несмотря на то, что строки формата не оказывает никакого влияния на операции форматирования, их наличие не привели к <xref:System.FormatException>.
+В предыдущих версиях .NET Framework <xref:System.TimeSpan> структура не реализовала <xref:System.IFormattable> и не поддерживала строки формата. Однако многие разработчики ошибочно предполагали, <xref:System.TimeSpan> что поддерживало набор строк формата и использовали их в [операциях составного форматирования](../../../../../docs/standard/base-types/composite-formatting.md) с помощью таких <xref:System.String.Format%2A?displayProperty=nameWithType>методов, как. Обычно, если тип реализует <xref:System.IFormattable> и поддерживает строки формата, вызовы методов форматирования с неподдерживаемыми строками формата обычно <xref:System.FormatException>создают исключение. Однако, поскольку <xref:System.TimeSpan> не реализуется <xref:System.IFormattable>, среда выполнения игнорирует <xref:System.TimeSpan.ToString?displayProperty=nameWithType> строку формата и вызывает метод. Это означает, что, хотя строки формата не оказывают влияния на операцию форматирования, их присутствие не привело к <xref:System.FormatException>созданию.
 
-Для случаев, в которых устаревший код передает составного форматирования метода и Недопустимая строка форматирования, а не удается заново скомпилировать этот код, можно использовать `<TimeSpan_LegacyFormatMode>` элемента для восстановления предыдущих версий <xref:System.TimeSpan> поведение. При задании `enabled` атрибут этого элемента к `true`, составного форматирования результаты метода в вызове <xref:System.TimeSpan.ToString?displayProperty=nameWithType> вместо <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>и <xref:System.FormatException> не создается.
+Для случаев, когда устаревший код передает метод составного форматирования и недопустимую строку формата, и этот код нельзя перекомпилировать, можно использовать `<TimeSpan_LegacyFormatMode>` элемент для восстановления прежнего <xref:System.TimeSpan> поведения. Если `enabled` атрибуту этого `true`элемента присвоить значение, метод составного форматирования приводит к <xref:System.TimeSpan.ToString?displayProperty=nameWithType> вызову <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, а не, а <xref:System.FormatException> исключение не создается.
 
 ## <a name="example"></a>Пример
 
-В следующем примере создается <xref:System.TimeSpan> объекта и предпринимает попытку отформатировать его с <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> метод с использованием строки стандартного формата, не поддерживается.
+Следующий пример создает экземпляр <xref:System.TimeSpan> объекта и пытается отформатировать его <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> с помощью метода, используя неподдерживаемую строку стандартного формата.
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]
 
-При выполнении примера на .NET Framework 3.5 или более ранней версии, отображается следующий результат:
+При запуске примера на .NET Framework 3,5 или более ранней версии отображаются следующие выходные данные:
 
 ```
 12:30:45
 ```
 
-Они сильно отличаются от выходных данных при выполнении примера на .NET Framework 4 или более поздней версии:
+При выполнении примера на .NET Framework 4 или более поздней версии это отличает его от выходных данных.
 
 ```
 Invalid Format
 ```
 
-Тем не менее если добавить следующий файл конфигурации в каталог примеров и затем запустить пример в .NET Framework 4 или более поздней версии, выходные данные идентичны данным, созданным примером при его запуске в .NET Framework 3.5.
+Однако, если добавить в каталог примера следующий файл конфигурации, а затем запустить пример на .NET Framework 4 или более поздней версии, то выходные данные идентичны тому, что был создан в примере, когда он выполняется в .NET Framework 3,5.
 
 ```xml
 <?xml version ="1.0"?>
@@ -100,5 +100,5 @@ Invalid Format
 
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)

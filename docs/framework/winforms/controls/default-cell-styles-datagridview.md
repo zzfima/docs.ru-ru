@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039674"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658503"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Установка стилей для ячейки по умолчанию и форматов данных в элементе управления DataGridView формы Windows Forms с помощью конструктора
 
@@ -23,7 +23,6 @@ ms.locfileid: "69039674"
 Можно также задать стили с помощью <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> свойства, чтобы повлиять на все строки, которые будут добавлены в элемент управления. Дополнительные сведения о шаблоне строк см. в [разделе как Используйте шаблон строки для настройки строк в элементе управления](use-the-row-template-to-customize-rows-in-the-datagrid.md)Windows Forms DataGridView.
 
 Для следующих процедур требуется проект **приложения Windows** с формой, содержащей <xref:System.Windows.Forms.DataGridView> элемент управления. Сведения о настройке такого проекта см. в разделе [как Создайте проект](/visualstudio/ide/step-1-create-a-windows-forms-application-project) приложения Windows Forms и [выполните следующие действия. Добавьте элементы управления в](how-to-add-controls-to-windows-forms.md)Windows Forms.
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Установка стилей по умолчанию для всех ячеек в элементе управления
 

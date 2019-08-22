@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038239"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666206"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
 
@@ -24,7 +24,6 @@ ms.locfileid: "69038239"
 <xref:System.Windows.Forms.ToolBar>кнопки могут отображать значки в них для простоты идентификации пользователями. Это достигается путем добавления изображений в <xref:System.Windows.Forms.ImageList> компонент и их связывания <xref:System.Windows.Forms.ToolBar> с элементом управления.
 
 Для следующей процедуры требуется проект **приложения Windows** с формой, содержащей <xref:System.Windows.Forms.ToolBar> элемент управления и <xref:System.Windows.Forms.ImageList> компонент. Сведения о настройке такого проекта см. в разделе [как Создайте проект](/visualstudio/ide/step-1-create-a-windows-forms-application-project) приложения Windows Forms и [выполните следующие действия. Добавьте элементы управления в](how-to-add-controls-to-windows-forms.md)Windows Forms.
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Задание значка для кнопки панели инструментов во время разработки
 

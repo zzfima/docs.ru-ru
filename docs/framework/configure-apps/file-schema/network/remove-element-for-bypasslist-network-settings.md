@@ -10,21 +10,21 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674471"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659236"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<Удалить > элемент для bypasslist (параметры сети)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<Удаление элемента > для бипасслист (параметры сети)
 
 Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.
 
-\<Конфигурация > \
-\<System.NET > \
+\<> конфигурации \
+\<System. NET > \
 \<defaultProxy > \
-\<bypasslist > \
+\<бипасслист > \
 \<Удалить >
 
 ## <a name="syntax"></a>Синтаксис
@@ -47,21 +47,21 @@ ms.locfileid: "61674471"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |**Элемент**|**Описание**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|
+|[бипасслист](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|
 
 ## <a name="remarks"></a>Примечания
 
-`remove` Приводит к удалению регулярное выражение, описывающее IP-адреса или имена DNS-серверов в списке адресов, которые обходят прокси-сервер. Эти адреса были заданы ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.
+`remove` Элемент удаляет регулярные выражения, описывающие IP-адреса или имена DNS-серверов, из списка адресов, которые обходят прокси-сервер. Адреса были определены ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.
 
-Значение для `address` атрибут должен быть регулярное выражение, которое описывает набор IP-адресов или имен узлов.
+Значение `address` атрибута должно быть регулярным выражением, описывающим набор IP-адресов или имен узлов.
 
-Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).
+Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../../docs/standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Файлы конфигурации
 
@@ -69,7 +69,7 @@ ms.locfileid: "61674471"
 
 ## <a name="example"></a>Пример
 
-Следующий пример отменяет любые предыдущие определения для домена adventure-works.com и затем добавляется в список пропускаемых домен contoso.com.
+В следующем примере удаляется предыдущее определение для домена adventure-works.com, а затем домен contoso.com добавляется в список обхода.
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ ms.locfileid: "61674471"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

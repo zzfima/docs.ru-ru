@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674672"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659573"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Добавить > элемент для bypasslist (параметры сети)
-Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<Добавление элемента > для бипасслист (параметры сети)
+Добавление в список обхода прокси IP-адреса или DNS-имени.  
   
  \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
+\<> System. NET  
+\<defaultProxy >  
+\<бипасслист >  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,28 +44,28 @@ ms.locfileid: "61674672"
 |**address**|Регулярное выражение, описывающее IP-адрес или DNS-имя.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
+|[бипасслист](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
 ## <a name="remarks"></a>Примечания  
- `add` Элемент вставляет регулярное выражение, описывающее IP-адреса или имена DNS-серверов в список адресов, которые обходят прокси-сервер.  
+ `add` Элемент вставляет регулярные выражения, описывающие IP-адреса или имена DNS-серверов, в список адресов, которые обходят прокси-сервер.  
   
- Значение `address` атрибут должен быть регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
+ Значение `address` атрибута должно быть регулярным выражением, описывающим набор IP-адресов или имен узлов.  
   
- Будьте внимательны при указании регулярное выражение для этого элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадений, любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы сопоставить только на узле в домене contoso.com, используйте привязку («$»): «[a-z] +\\.contoso\\.com$».  
+ При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
   
- Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример добавляет два адреса в списке пропускаемых адресов. Первый обходит прокси-сервер для всех серверов в домене contoso.com. второй обходит прокси-сервер для всех серверов, IP-адрес начинается с 192.168.  
+ В следующем примере в список обхода добавляется два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com; во втором пропускается прокси-сервер для всех серверов, IP-адрес которых начинается с 192,168.  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ ms.locfileid: "61674672"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

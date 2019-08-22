@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 5e8ec13a0bb991accff080db502552e46913c66d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa455945b839ada4100138d5bdf9fc239376e5cb
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607510"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663983"
 ---
-# <a name="socket-element-network-settings"></a>\<сокет > (сетевые параметры)
+# <a name="socket-element-network-settings"></a>\<Элемент > сокета (параметры сети)
 Указывает, используют ли операции сокета порты завершения.  
   
  \<configuration>  
-\<system.net>  
-\<Параметры >  
-\<сокет >  
+\<> System. NET  
+\<> параметров  
+\<> сокета  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,54 +40,54 @@ ms.locfileid: "64607510"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`alwaysUseCompletionPortsForAccept`|Указывает, всегда ли сокет использует порты завершения для вызовы метода приема. Значение по умолчанию — `false`.|  
-|`alwaysUseCompletionPortsForConnect`|Указывает, всегда ли сокет использует порты завершения для вызовов метода Connect. Значение по умолчанию — `false`.|  
-|`ipProtectionLevel`|Указывает значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> для сокета. Значение по умолчанию зависит от версии Windows.|  
+|`alwaysUseCompletionPortsForAccept`|Указывает, должен ли сокет всегда использовать порты завершения для вызовов метода Accept. Значение по умолчанию — `false`.|  
+|`alwaysUseCompletionPortsForConnect`|Указывает, должен ли сокет всегда использовать порты завершения для вызовов метода Connect. Значение по умолчанию — `false`.|  
+|`ipProtectionLevel`|Указывает значение по <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> умолчанию, используемое для сокета. Значение по умолчанию зависит от версии Windows.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
- Атрибуты `alwaysUseCompletionPortsForAccept` и `alwaysUseCompletionPortsForConnect` используются для задания поведения по умолчанию в отношении использования портов завершения классами в пространстве имен <xref:System.Net.Sockets?displayProperty=nameWithType>. Порты завершения рекомендуется использовать для высокопроизводительных серверных приложений.  
+ Атрибуты `alwaysUseCompletionPortsForAccept` и `alwaysUseCompletionPortsForConnect` используются для задания поведения по умолчанию в отношении использования портов завершения классами в пространстве имен <xref:System.Net.Sockets?displayProperty=nameWithType>. Порты завершения рекомендуются для высокопроизводительных серверных приложений.  
   
- Значение по умолчанию для `alwaysUseCompletionPortsForAccept` и `alwaysUseCompletionPortsForConnect` атрибутов **false**.  
+ По умолчанию для `alwaysUseCompletionPortsForAccept` атрибутов и `alwaysUseCompletionPortsForConnect` задано значение **false**.  
   
- <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> Можно использовать для получения текущего значения `alwaysUseCompletionPortsForAccept` атрибут из применимые файлы конфигурации. <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> Можно использовать для получения текущего значения `alwaysUseCompletionPortsForConnect` атрибут из применимые файлы конфигурации.  
+ Можно использовать для получения текущего значения `alwaysUseCompletionPortsForAccept` атрибута из применимых файлов конфигурации. <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> Можно использовать для получения текущего значения `alwaysUseCompletionPortsForConnect` атрибута из применимых файлов конфигурации. <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A>  
   
- `ipProtectionLevel` Атрибут указывает значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> для сокета. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Свойство позволяет настроить ограничение для сокет IPv6 указанным диапазоном, такие как адреса, с тем же связи, локальных или локальным префиксом сайта. Этот параметр позволяет приложениям устанавливать ограничения доступа к сокетам IPv6. Такие ограничения позволяют приложению, работающему в частной локальной сети, просто и надежно защититься от внешних атак. Этот параметр расширяет или сужает диапазон прослушивающего сокета, включение неограниченный доступ со стороны открытых и закрытых пользователей, когда это необходимо, или ограничить доступ только для одного сайта и при необходимости.  
+ Атрибут указывает значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> , используемое для сокета. `ipProtectionLevel` <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Свойство позволяет настроить ограничение сокета IPv6 на указанную область, например адреса с одинаковой локальной ссылкой или локальным префиксом сайта. Этот параметр позволяет приложениям размещать ограничения доступа к сокетам IPv6. Такие ограничения позволяют приложению, работающему в частной локальной сети, просто и надежно защититься от внешних атак. Этот параметр расширяет или ограничивает область действия прослушивающего сокета, обеспечивая неограниченный доступ от общедоступных и частных пользователей при необходимости или ограничивающий доступ только для того же сайта, если это необходимо.  
   
- Это `ipProtectionLevel` атрибут влияет только начального входящего трафика:  
+ Этот `ipProtectionLevel` параметр атрибута влияет только на первоначальный входящий трафик.  
   
-- TCP-сервер, прослушивание входящих подключений через сокет.  
+- TCP-сервер, прослушивающий входящие подключения на сокете.  
   
-- Приложение UDP, получения пакета на сокете.  
+- Приложение UDP, получающее пакет на сокете.  
   
- Этот параметр конфигурации не влияет на уже установленные TCP-соединения, (трафик не ограничен в обоих направлениях) и не влияет на приложения, отправляющие пакеты UDP.  
+ Этот параметр конфигурации не влияет на уже установленные TCP-подключения (трафик в обоих направлениях не ограничен) и не влияет на приложение, отправляющее пакеты UDP.  
   
- Возможные значения `ipProtectionLevel` соответствуют параметры атрибутов с уровнями защиты определенных, указанный в <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> перечисления следующим образом:  
+ Возможные значения для `ipProtectionLevel` параметра атрибута соответствуют определенным уровням защиты, указанным <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> в перечислении, следующим образом:  
   
 |**Значение атрибута**|**Описание**|  
 |-|-|  
-|EdgeRestricted|Уровень защиты IP — предельно ограничено. Это значение используется приложениями, разработанными для работы в Интернете. Этот параметр не допуская сетевых адресов (NAT) с помощью реализации Windows Teredo. Эти приложения могут обходить брандмауэры протокола IPv4, поэтому они должны быть защищены от Интернет-атак, направленных на открытый порт. В Windows Server 2003 и Windows XP значение по умолчанию для уровня защиты IP сокета — предельно ограничено.|  
-|Ограничено|Уровень защиты IP — ограниченным доступом. Это значение будет использоваться приложениями интрасети, не работающих в Интернете. Эти приложения обычно не протестированы и не защищаются против атак из Интернета. Этот параметр ограничивает получаемый трафик локальным.|  
-|Без ограничений|Уровень защиты IP — неограниченно. Это значение будет использоваться приложениями, разработанными для работы в Интернете, включая приложения, использующие возможности обхода IPv6 NAT в Windows (например, Teredo). Эти приложения могут обходить брандмауэры протокола IPv4, поэтому они должны быть защищены от Интернет-атак, направленных на открытый порт. В Windows Server 2008 R2 и Windows Vista значение по умолчанию для уровня защиты IP сокета — неограниченно.|  
-|Не указан|Уровень защиты IP не определен. В Windows 7 и Windows Server 2008 R2 значение по умолчанию для уровня защиты IP сокета не определен.|  
+|еджерестриктед|Уровень защиты IP ограничен границей. Это значение будет использоваться приложениями, предназначенными для взаимодействия через Интернет. Этот параметр не разрешает обход преобразования сетевых адресов (NAT) с помощью реализации Windows Teredo. Эти приложения могут обходить брандмауэры IPv4, поэтому приложения должны быть защищены от Интернет-атак, направленных на открытый порт. В Windows Server 2003 и Windows XP значение по умолчанию для уровня защиты IP на сокете ограничено границей.|  
+|Ограничено|Уровень защиты IP-адресов ограничен. Это значение будет использоваться приложениями интрасети, которые не реализуют сценарии Интернета. Обычно эти приложения не тестируются и не защищаются от атак в стиле Интернета. Этот параметр ограничит полученный трафик только локальным каналом.|  
+|Без ограничений|Уровень защиты IP-адресов не ограничен. Это значение будет использоваться приложениями, предназначенными для работы через Интернет, включая приложения, использующие возможности просмотра NAT IPv6, встроенные в Windows (например, Teredo). Эти приложения могут обходить брандмауэры IPv4, поэтому приложения должны быть защищены от Интернет-атак, направленных на открытый порт. В Windows Server 2008 R2 и Windows Vista значение по умолчанию для уровня защиты IP-адресов на сокете не ограничено.|  
+|Не указан|Уровень защиты IP-адресов не указан. В Windows 7 и Windows Server 2008 R2 значение по умолчанию для уровня защиты IP-адресов на сокете не указано.|  
   
- Значение по умолчанию для `ipProtectionLevel` атрибут **Unspecified**.  
+ Значение по умолчанию для `ipProtectionLevel` атрибута не **указано**.  
   
- <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Свойство может использоваться для получения текущего значения `ipProtectionLevel` атрибут из применимые файлы конфигурации.  
+ Свойство можно использовать для получения текущего значения `ipProtectionLevel` атрибута из применимых файлов конфигурации. <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как указать, что следует использовать порты завершения и, по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> должно быть не ограничено.  
+ В следующем примере показано, как указать, что порты завершения должны использоваться и что значение по <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> умолчанию должно быть неограниченным.  
   
 ```xml  
 <configuration>  
@@ -110,4 +110,4 @@ ms.locfileid: "64607510"
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

@@ -6,17 +6,16 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 63692a797ad49f0adc3a0c5b0bfff1aebbc65257
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: be17d5e6a12824c1c9edc867c99e77a6a1437a36
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038265"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658582"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора
 
 К <xref:System.Windows.Forms.ImageList> компоненту можно добавлять изображения несколькими разными способами. Вы можете быстро добавлять изображения с помощью смарт-тега <xref:System.Windows.Forms.ImageList>, связанного с, или если вы устанавливаете несколько других свойств <xref:System.Windows.Forms.ImageList>в, может оказаться удобнее добавлять изображения с окно свойств. Можно также добавлять образы с помощью кода. Дополнительные сведения о добавлении изображений с помощью кода см. в разделе [как Добавление или удаление изображений с помощью компонента](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)Windows Forms ImageList. Обычно <xref:System.Windows.Forms.ImageList> компонент заполняется образами, прежде чем он связан с элементом управления, но это не является обязательным.
-
 
 ### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>Добавление или удаление образов с помощью окно свойств
 

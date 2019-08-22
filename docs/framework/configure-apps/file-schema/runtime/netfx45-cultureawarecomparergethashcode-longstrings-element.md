@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23917977add2343732957eaa8dad5d2176315acf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: bd59d1bcc489f248cbeb397afffb638071df17b6
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689863"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663590"
 ---
-# <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > элемент
+# <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<Элемент > NetFx45_CultureAwareComparerGetHashCode_LongStrings
 
 Определяет, использует ли среда выполнения постоянный объем памяти для вычисления хэш-кодов методом <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .
 
-\<Конфигурация > \
-\<Среда выполнения > \
-\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>
+\<> конфигурации \
+\<> среды выполнения \
+\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,7 +49,7 @@ ms.locfileid: "66689863"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -68,5 +68,5 @@ ms.locfileid: "66689863"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378039"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663686"
 ---
-# <a name="gcserver-element"></a>\<gcServer > элемент
+# <a name="gcserver-element"></a>\<Элемент > gcServer
 Указывает, выполняет ли среда CLR сборку мусора сервера.  
   
  \<configuration>  
-\<Среда выполнения >  
+\<> среды выполнения  
 \<gcServer >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,7 +48,7 @@ ms.locfileid: "66378039"
 |`true`|Выполняет сборку мусора сервера.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66378039"
  Этот элемент может использоваться только в файле конфигурации приложения; в файле конфигурации компьютера он игнорируется.  
   
 > [!NOTE]
->  В платформе .NET Framework версии 4 и более ранних версиях параллельная сборка мусора недоступна, если включена серверная сборка мусора. С версии .NET Framework 4.5 серверная сборка мусора является параллельной. Чтобы использовать непараллельной серверной сборки мусора, задайте `<gcServer>` элемент `true` и [ \<gcConcurrent > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) для `false`.  
+>  В платформе .NET Framework версии 4 и более ранних версиях параллельная сборка мусора недоступна, если включена серверная сборка мусора. С версии .NET Framework 4.5 серверная сборка мусора является параллельной. Чтобы использовать непараллельную сборку мусора сервера, `<gcServer>` установите для `true` элемента значение, а `false` [ \<для элемента gcConcurrent >](gcconcurrent-element.md) значение.  
   
 ## <a name="example"></a>Пример  
  В следующем примере включается параллельная сборка мусора сервера.  
@@ -81,6 +81,6 @@ ms.locfileid: "66378039"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
 - [Отключение параллельной сборки мусора](gcconcurrent-element.md#to-disable-background-garbage-collection)

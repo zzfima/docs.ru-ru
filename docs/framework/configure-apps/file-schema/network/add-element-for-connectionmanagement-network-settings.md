@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705276"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664231"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Добавить > элемент для connectionManagement (параметры сети)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Добавление элемента > для элемент connectionManagement (параметры сети)
 Добавляет IP-адрес или DNS-имя в список управления подключениями.  
   
  \<configuration>  
-\<system.net>  
-\<connectionManagement >  
+\<> System. NET  
+\<Элемент connectionManagement >  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,13 +45,13 @@ ms.locfileid: "61705276"
 |`maxconnection`|Максимальное число разрешенных подключений к серверу. Если значение не предоставлено, используется значение по умолчанию 2.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
+|[Элемент connectionManagement](connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
   
 ## <a name="remarks"></a>Примечания  
  В качестве значения атрибута `address` должна быть задана либо звездочка, указывающая все подключения, либо строка в форме `<schema>://<idn_hostname>[:<port>]`.  
@@ -62,7 +62,7 @@ ms.locfileid: "61705276"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере настраивается приложение для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
+ В следующем примере приложение настраивается для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ ms.locfileid: "61705276"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

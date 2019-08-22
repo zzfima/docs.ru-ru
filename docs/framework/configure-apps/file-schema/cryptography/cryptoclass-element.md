@@ -8,21 +8,21 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8076fba1ebae693aa5e4c80e822b9ae840ff1c5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705263"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664327"
 ---
-# <a name="cryptoclass-element"></a>\<cryptoClass > элемент
-Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
+# <a name="cryptoclass-element"></a>\<Элемент > cryptoClass
+Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе [\<nameEntry>](nameentry-element.md).  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<cryptoClasses >  
+\<> mscorlib  
+\<Криптографисеттингс >  
+\<Криптонамемаппинг >  
+\<Криптоклассес >  
 \<cryptoClass >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,23 +38,23 @@ ms.locfileid: "61705263"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`customClassName`|Обязательный атрибут.<br /><br /> Содержит сведения для класса шифрования. Этот атрибут используется для предоставления краткого имени класса. Необходимо указать строку, которая соответствует требованиям, перечисленным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`customClassName`|Обязательный атрибут.<br /><br /> Содержит сведения о классе шифрования. Используйте этот атрибут, чтобы указать короткое имя для класса. Необходимо указать строку, которая соответствует требованиям, указанным в [указании полных имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
-|`cryptoClasses`|Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).|  
+|`cryptoClasses`|Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе [\<nameEntry>](nameentry-element.md).|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
 |`cryptoNameMapping`|Содержит сопоставления классов с понятными именами.|  
-|`mscorlib`|Содержит элемент [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).|  
+|`mscorlib`|Содержит элемент [\<cryptographySettings>](cryptographysettings-element.md).|  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже, показано, как использовать  **\<cryptoClass >** элемент для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать  **\<элемент cryptoClass >** для ссылки на криптографический класс и для настройки среды выполнения. Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705263"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Схема файла конфигурации](../index.md)
+- [Схема параметров шифрования](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Настройка криптографических классов](../../configure-cryptography-classes.md)

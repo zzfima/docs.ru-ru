@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12ac146926103b40073d34f48895b0645c8a8ed2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674614"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659467"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Очистить > элемент для authenticationModules (параметры сети)
-Удаляет все модули проверки подлинности из приложения.  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Очистка элемента > для authenticationModules (параметры сети)
+Удаляет из приложения все модули проверки подлинности.  
   
  \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<Очистить >  
+\<> System. NET  
+\<authenticationModules >  
+\<очистить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,25 +35,25 @@ ms.locfileid: "61674614"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности сетевых запросов.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Указывает модули, используемые для проверки подлинности сетевых запросов.|  
   
 ## <a name="remarks"></a>Примечания  
- `clear` Приводит к удалению всех модулей проверки подлинности, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+ `clear` Элемент удаляет все модули проверки подлинности, определенные ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляется все настроенные модули проверки подлинности.  
+ В следующем примере удаляются все настроенные модули проверки подлинности.  
   
 ```xml  
 <configuration>  
@@ -69,4 +69,4 @@ ms.locfileid: "61674614"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

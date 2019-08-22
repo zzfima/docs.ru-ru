@@ -8,19 +8,19 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674419"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663999"
 ---
-# <a name="settings-element-network-settings"></a>\<Параметры > (сетевые параметры)
+# <a name="settings-element-network-settings"></a>\<Элемент параметров > (параметры сети)
 Настраивает основные параметры сети для пространства имен <xref:System.Net?displayProperty=nameWithType>.  
   
  \<configuration>  
-\<system.net>  
-\<Параметры >  
+\<> System. NET  
+\<> параметров  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +40,25 @@ ms.locfileid: "61674419"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Настраивает параметры, используемые <xref:System.Net.HttpListener> класса.|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Настраивает параметры веб-запроса.|  
-|[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Включает протокол IP версии 6 (IPv6) поддержки.|  
-|[\<performanceCounter > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Включает счетчики производительности сети.|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Настраивает подключения к сетевым ресурсам.|  
-|[сокет](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Указывает, используют ли операции сокета порты завершения.|  
-|[\<webProxyScript > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Настраивает характеристики сценария, используемого для обнаружения веб-прокси.|  
+|[httpListener](httplistener-element-network-settings.md)|Настраивает параметры, используемые <xref:System.Net.HttpListener> классом.|  
+|[httpWebRequest](httpwebrequest-element-network-settings.md)|Настраивает параметры веб-запроса.|  
+|[Протокол](ipv6-element-network-settings.md)|Включает поддержку протокола IP версии 6 (IPv6).|  
+|[\<Элемент performanceCounter > (параметры сети)](performancecounter-element-network-settings.md)|Включает счетчики производительности сети.|  
+|[servicePointManager](servicepointmanager-element-network-settings.md)|Настраивает подключения к сетевым ресурсам.|  
+|[фиксатор](socket-element-network-settings.md)|Указывает, используют ли операции сокета порты завершения.|  
+|[\<Элемент > Вебпроксискрипт (параметры сети)](webproxyscript-element-network-settings.md)|Настраивает характеристики сценария, используемого для обнаружения веб-прокси.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -68,4 +68,4 @@ ms.locfileid: "61674419"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

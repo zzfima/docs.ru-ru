@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4d7a49633599aabc96153e4793e50c1a4d6d092d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038208"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666221"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar с помощью конструктора
 
@@ -23,7 +23,6 @@ ms.locfileid: "69038208"
 Неотъемлемой частью <xref:System.Windows.Forms.ToolBar> элемента управления являются кнопки, добавленные в него. Они могут использоваться для предоставления простого доступа к командам меню или, Кроме того, можно поместить в другую область пользовательского интерфейса приложения, чтобы предоставить пользователям команды, недоступные в структуре меню.
 
 Для следующей процедуры требуется проект **приложения Windows** с формой, содержащей <xref:System.Windows.Forms.ToolBar> элемент управления. Сведения о настройке такого проекта см. в разделе [как Создайте проект](/visualstudio/ide/step-1-create-a-windows-forms-application-project) приложения Windows Forms и [выполните следующие действия. Добавьте элементы управления в](how-to-add-controls-to-windows-forms.md)Windows Forms.
-
 
 ### <a name="to-add-buttons-at-design-time"></a>Добавление кнопок во время разработки
 

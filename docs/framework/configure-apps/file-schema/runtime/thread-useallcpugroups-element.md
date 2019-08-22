@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9758e009e012c8af5f5f7bd19dcd21f34b8c7d96
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689738"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663427"
 ---
-# <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > элемент
+# <a name="thread_useallcpugroups-element"></a>\<Элемент > Thread_UseAllCpuGroups
 
 Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.
 
-\<Конфигурация > \
-\<Среда выполнения > \
-\<Thread_UseAllCpuGroups>
+\<> конфигурации \
+\<> среды выполнения \
+\<Thread_UseAllCpuGroups >
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,12 +40,12 @@ ms.locfileid: "66689738"
 
 |Значение|Описание|
 |-----------|-----------------|
-|`false`|Среда выполнения не распространяет управляемые потоки по нескольким группам ЦП. Это значение по умолчанию.|
-|`true`|Среда выполнения распространяет управляемые потоки по нескольким группам ЦП, если компьютер имеет несколько групп ЦП и [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) включен элемент.|
+|`false`|Среда выполнения не распределяет управляемые потоки между несколькими группами ЦП. Это значение по умолчанию.|
+|`true`|Среда выполнения распределяет управляемые потоки между несколькими группами ЦП, если компьютер имеет несколько групп ЦП, а [ \<элемент гккпуграуп >](gccpugroup-element.md) включен.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -56,11 +56,11 @@ ms.locfileid: "66689738"
 
 ## <a name="remarks"></a>Примечания
 
-Если компьютер имеет несколько групп ЦП, позволяя причины этого элемента выполнение распределенного управляемые потоки во всех группах ЦП. Чтобы использовать эту функцию, необходимо также включить [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) элемент, который учитывает все ядра во время создания и распределения куч и расширяет их возможности сбора мусора для всех групп ЦП. Включение [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) элемент требует включения [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) элемент. Если эти элементы не включены, включение `<Thread_UseAllCpuGroups>` элемент не оказывает влияния.
+Если компьютер имеет несколько групп ЦП, включение этого элемента приводит к тому, что среда выполнения распределяет управляемые потоки по всем группам ЦП. Чтобы использовать эту функцию, необходимо также включить [ \<элемент гккпуграуп >](gccpugroup-element.md) , который расширяет сборку мусора на все группы ЦП и учитывает все ядра при создании и балансировке куч. Чтобы включить элемент [> гккпуграуп,необходимовключитьэлемент>gcServer.\<](gccpugroup-element.md) [ \<](gcserver-element.md) Если эти элементы не включены, включение `<Thread_UseAllCpuGroups>` элемента не оказывает никакого влияния.
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как включить поддержку нескольких групп ЦП.
+В следующем примере показано, как включить поддержку нескольких групп ЦП.
 
 ```xml
 <configuration>
@@ -74,6 +74,6 @@ ms.locfileid: "66689738"
 
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<GCCpuGroup > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
+- [\<Элемент > Гккпуграуп](gccpugroup-element.md)

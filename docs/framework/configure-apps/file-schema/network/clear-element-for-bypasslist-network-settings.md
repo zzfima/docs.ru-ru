@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674640"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664188"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Очистить > элемент для bypasslist (параметры сети)
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<Очистка элемента > для бипасслист (параметры сети)
 Очищает список обхода прокси-сервера.  
   
  \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-\<Очистить >  
+\<> System. NET  
+\<defaultProxy >  
+\<бипасслист >  
+\<очистить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,16 +36,16 @@ ms.locfileid: "61674640"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
+|[бипасслист](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
 ## <a name="remarks"></a>Примечания  
  `clear` Элемент удаляет все записи из списка обхода.  
@@ -54,7 +54,7 @@ ms.locfileid: "61674640"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере очищает список обхода и затем добавляются два адреса в списке пропускаемых адресов. Первый обходит прокси-сервер для всех серверов в домене contoso.com. второй обходит прокси-сервер для всех серверов, IP-адрес начинается с 192.168.  
+ В следующем примере очищается список обхода, а затем два адреса добавляются в список обхода. Первый обход прокси-сервера для всех серверов в домене contoso.com; во втором пропускается прокси-сервер для всех серверов, IP-адрес которых начинается с 192,168.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "61674640"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

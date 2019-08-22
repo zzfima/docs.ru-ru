@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489445"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663674"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > элемент
-Указывает, является ли среда выполнения создает <xref:System.Security.Policy.Publisher> свидетельство для Управление доступом для кода (CAS).  
+# <a name="generatepublisherevidence-element"></a>\<Элемент > generatePublisherEvidence
+Указывает, создает <xref:System.Security.Policy.Publisher> ли среда выполнения свидетельство для управления доступом для кода (CAS).  
   
  \<configuration>  
-\<Среда выполнения >  
-\<generatePublisherEvidence>  
+\<> среды выполнения  
+\<generatePublisherEvidence >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ ms.locfileid: "66489445"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, является ли среда выполнения создает <xref:System.Security.Policy.Publisher> свидетельства.|  
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, создает <xref:System.Security.Policy.Publisher> ли среда выполнения свидетельство.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|`false`|Не создает <xref:System.Security.Policy.Publisher> свидетельства.|  
-|`true`|Создает <xref:System.Security.Policy.Publisher> свидетельства. Это значение по умолчанию.|  
+|`false`|Не создает <xref:System.Security.Policy.Publisher> свидетельство.|  
+|`true`|Создает <xref:System.Security.Policy.Publisher> свидетельство. Это значение по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,18 +57,18 @@ ms.locfileid: "66489445"
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  В .NET Framework 4 и более поздних версиях этот элемент не влияет на время загрузки сборки. Дополнительные сведения см. в разделе «Упрощение политики безопасности» в [изменения системы безопасности](../../../../../docs/framework/security/security-changes.md).  
+>  В .NET Framework 4 и более поздних версиях этот элемент не влияет на время загрузки сборки. Дополнительные сведения см. в разделе "упрощение политики безопасности" раздела [изменения в системе безопасности](../../../security/security-changes.md).  
   
- Среда CLR (CLR) пытается проверить подпись Authenticode во время загрузки, чтобы создать <xref:System.Security.Policy.Publisher> свидетельство для сборки. Тем не менее, по умолчанию, большинство приложений не обязательно <xref:System.Security.Policy.Publisher> свидетельства. Стандартная политика CAS не зависит от <xref:System.Security.Policy.PublisherMembershipCondition>. Следует избегать при запуске затраты, связанные с проверкой подписи издателя, если приложение выполняет на компьютере с нестандартной политики CAS, или собирается для <xref:System.Security.Permissions.PublisherIdentityPermission> в среде с частичным доверием. (Для разрешения идентификаторов всегда удовлетворяются в среде с полным доверием.)  
+ Среда CLR пытается проверить подпись Authenticode во время загрузки, чтобы создать <xref:System.Security.Policy.Publisher> свидетельство для сборки. Однако по умолчанию большинству приложений не требуется <xref:System.Security.Policy.Publisher> свидетельство. Стандартная политика CAS не зависит от <xref:System.Security.Policy.PublisherMembershipCondition>. Следует избегать ненужных затрат на запуск, связанных с проверкой подписи издателя, если приложение не выполняется на компьютере с настраиваемой политикой CAS или планирует удовлетворить требования <xref:System.Security.Permissions.PublisherIdentityPermission> к в среде с частичным доверием. (Требования для разрешений идентификации всегда выполняются в среде с полным доверием.)  
   
 > [!NOTE]
->  Мы рекомендуем, службы используют `<generatePublisherEvidence>` элемент для повышения производительности запуска.  С помощью этого элемента также может помочь избежать задержек, которые могут вызвать тайм-аута и отмене запуска службы.  
+>  Рекомендуется, чтобы службы использовали `<generatePublisherEvidence>` элемент для повышения производительности при запуске.  Использование этого элемента также может помочь избежать задержек, которые могут привести к превышению времени ожидания и отмене запуска службы.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
  Этот элемент может использоваться только в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<generatePublisherEvidence>` элемент, чтобы отключить проверку для издателя политику CAS для приложения.  
+ В следующем примере показано, как использовать `<generatePublisherEvidence>` элемент, чтобы отключить проверку политики издателя CAS для приложения.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ ms.locfileid: "66489445"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)

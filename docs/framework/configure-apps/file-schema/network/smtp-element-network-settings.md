@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac9405fdc6123a5a1352de06f94fefb6d7d4014b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674406"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659123"
 ---
-# <a name="smtp-element-network-settings"></a>\<SMTP > (сетевые параметры)
-Настраивает формат и способ доставки и адрес отправителя для отправки сообщений электронной почты.  
+# <a name="smtp-element-network-settings"></a>\<Элемент > SMTP (параметры сети)
+Настраивает формат доставки, метод доставки и адрес отправителя для отправки сообщений электронной почты.  
   
  \<configuration>  
-\<system.net>  
-\<mailSettings >  
-\<SMTP >  
+\<> System. NET  
+\<Маилсеттингс >  
+\<> SMTP  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,25 +42,25 @@ ms.locfileid: "61674406"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`deliveryFormat`|Задает формат доставки для исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
-|`deliveryMethod`|Задает метод доставки для сообщений электронной почты. Допустимые значения: сети, PickupDirectoryFromIis и SpecifiedPickupDirectory.|  
-|`from`|Указывает адрес отправителя для исходящих сообщений электронной почты.|  
+|`deliveryFormat`|Указывает формат доставки исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
+|`deliveryMethod`|Указывает метод доставки сообщений электронной почты. Допустимые значения: Network, Пиккупдиректорифромиис и СпеЦифиедпиккупдиректори.|  
+|`from`|Указывает адрес отсылаемых сообщений электронной почты.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Настраивает локальный каталог для сервера транспортного протокола SMTP (Simple Mail).|  
-|`network`|Настройка сетевых параметров для внешнего сервера SMTP.|  
+|`specifiedPickupDirectory`|Настраивает локальный каталог для SMTP-сервера.|  
+|`network`|Настраивает параметры сети для внешнего SMTP-сервера.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[Элемент \<mailSettings> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки сообщений.|  
+|[Элемент \<mailSettings> (параметры сети)](mailsettings-element-network-settings.md)|Настраивает параметры отправки почты.|  
   
 ## <a name="example"></a>Пример  
- Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.  
+ В следующем примере задаются соответствующие параметры SMTP для отправки электронной почты с использованием сетевых учетных данных по умолчанию.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ ms.locfileid: "61674406"
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704951"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663947"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > (сетевые параметры)
-Задает модули, используемые для запроса данных от сетевых узлов.  
+# <a name="webrequestmodules-element-network-settings"></a>\<Элемент > webRequestModules (параметры сети)
+Указывает модули, используемые для запроса сведений от сетевых узлов.  
   
  \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+\<> System. NET  
+\<webRequestModules >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,32 +33,32 @@ ms.locfileid: "61704951"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Добавляет пользовательский модуль веб-запросов к приложению.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Удаляет все зарегистрированные модули веб-запросов из приложения.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Удаляет пользовательский модуль веб-запросов из приложения.|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|Добавляет пользовательский модуль веб-запросов в приложение.|  
+|[clear](clear-element-for-webrequestmodules-network-settings.md)|Удаляет из приложения все зарегистрированные модули веб-запросов.|  
+|[remove](remove-element-for-webrequestmodules-network-settings.md)|Удаляет пользовательский модуль веб-запросов из приложения.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов необходимо реализовать <xref:System.Net.IWebRequestCreate> интерфейс.  
+ Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов должны реализовывать <xref:System.Net.IWebRequestCreate> интерфейс.  
   
- .NET Framework включает модули веб-запросов для URI, которые начинаются с `http://`, `https://`, и `file://`. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
+ .NET Framework включает модули веб-запросов для URI, которые начинаются `http://`с `https://`, и `file://`. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере регистрируется модуль HTTP по умолчанию. Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.  
+ В следующем примере регистрируется HTTP-модуль по умолчанию. Необходимо заменить значения для Version и PublicKeyToken правильными значениями для указанного модуля.  
   
 ```xml  
 <configuration>  
@@ -77,4 +77,4 @@ ms.locfileid: "61704951"
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

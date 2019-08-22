@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704782"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663826"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > элемент
-Инкапсулирует политику привязки и расположение каждой сборки. Используйте один `dependentAssembly` элемент для каждой сборки.  
+# <a name="dependentassembly-element"></a>\<Элемент dependentAssembly >
+Инкапсулирует политику привязки и расположение каждой сборки. Для каждой `dependentAssembly` сборки используется один элемент.  
   
  \<configuration>  
-\<Среда выполнения >  
+\<> среды выполнения  
 \<assemblyBinding >  
 \<dependentAssembly >  
   
@@ -37,14 +37,14 @@ ms.locfileid: "61704782"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Содержит идентификационные сведения о сборке. Этот элемент должен быть включен в каждом `dependentAssembly` элемент.|  
-|`codeBase`|Указывает, где среда выполнения можно найти общей сборки, если он не установлен на компьютере.|  
+|`assemblyIdentity`|Содержит идентифицирующие сведения о сборке. Этот элемент должен включаться в каждый `dependentAssembly` элемент.|  
+|`codeBase`|Указывает, где среда выполнения может найти общую сборку, если она не установлена на компьютере.|  
 |`bindingRedirect`|Перенаправляет одну версию сборки на другую.|  
 |`publisherPolicy`|Указывает, применяет ли среда выполнения политику издателя для этой сборки.|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61704782"
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как для инкапсуляции сведений о сборке для двух сборок.  
+ В следующем примере показано, как инкапсулировать сведения о сборке для двух сборок.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ ms.locfileid: "61704782"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Схема параметров среды выполнения](index.md)
+- [Схема файла конфигурации](../index.md)
+- [Перенаправление версий сборки](../../redirect-assembly-versions.md)

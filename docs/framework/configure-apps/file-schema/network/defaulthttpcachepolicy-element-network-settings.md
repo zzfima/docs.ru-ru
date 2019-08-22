@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705133"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664156"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > (сетевые параметры)
-Описывает указывает, активна ли HTTP-кэширования и описывает политику кэширования по умолчанию.  
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<Элемент > Дефаулсттпкачеполици (параметры сети)
+Описывает, активно ли кэширование HTTP и описывает политику кэширования по умолчанию.  
   
  \<configuration>  
-\<system.net>  
-\<requestCaching>  
+\<> System. NET  
+\<Элемент requestcaching >  
 \<defaultHttpCachePolicy>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,30 +41,30 @@ ms.locfileid: "61705133"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`maximumAge`|Указывает максимальный интервал времени, кэшированный объект будет помечена как просроченная.|  
-|`maximumStale`|Указывает максимальное время после запрограммированного обновления срока действия кэшированного объекта будет помечена как просроченная.|  
-|`minimumFresh`|Указывает минимальное время актуальности кэшированного объекта.|  
-|`policyLevel`|Указывает, является ли политика кэширования автоматической или кэш пропускается. Значение по умолчанию — `BypassCache`.|  
+|`maximumAge`|Указывает максимальный интервал времени, по истечении которого кэшированный объект помечается как истекший.|  
+|`maximumStale`|Указывает максимальное время после истечения срока действия вычисленного объекта до пометки времени, когда кэшированный объект помечается как истекший.|  
+|`minimumFresh`|Указывает минимальное время, в течение которого кэшированный объект будет считаться актуальным.|  
+|`policyLevel`|Указывает, является ли политика кэширования автоматическим, или же кэш будет пропущен. Значение по умолчанию — `BypassCache`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Определяет механизм кэширования для сетевых запросов.|  
+|[Элемент requestcaching](requestcaching-element-network-settings.md)|Управляет механизмом кэширования для сетевых запросов.|  
   
 ## <a name="remarks"></a>Примечания  
- Значение для `policyLevel` атрибут является либо `BypassCache` или `Default`.  
+ Значение `policyLevel` атрибута может быть `BypassCache` или `Default`.  
   
- Значения для `maximumAge`, `maximumStale`, и `minimumFresh` элементы, либо как явные временные интервалы в формате *d*. *hh*:*мм*:*ss* (дни, часы, минуты и секунды), либо как константы `minValue` или `maxValue`, соответствующим образом.  
+ Значения для `maximumAge`элементов, `maximumStale`и `minimumFresh` являются либо явным временным интервалом с форматом *d*. *чч*:*мм*:*СС* (дни, часы, минуты и секунды), константы `minValue` или `maxValue`(при необходимости).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как указать минимальное время актуальности шести часов, максимальный срок жизни за два дня и максимальное время устаревания четыре часа.  
+ В следующем примере показано, как задать минимальное новое время в 6 часов, максимальное время существования, равное двум дням, и максимальное устаревшее время, равное четырем часам.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ ms.locfileid: "61705133"
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Схема параметров сети](index.md)

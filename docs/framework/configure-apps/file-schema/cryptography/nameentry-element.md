@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705185"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664270"
 ---
-# <a name="nameentry-element"></a>\<nameEntry > элемент
+# <a name="nameentry-element"></a>\<Элемент > элементе nameentry
 Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<> mscorlib  
+\<Криптографисеттингс >  
+\<Криптонамемаппинг >  
+\<Элементе nameentry >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,11 +37,11 @@ ms.locfileid: "61705185"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, который реализует криптографический класс.|  
-|**class**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемент.|  
+|**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, реализуемого криптографическим классом.|  
+|**class**|Обязательный атрибут.<br /><br /> Задает значение для атрибута **Name** в [ \<элементе > cryptoClass](cryptoclass-element.md) .|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -51,10 +51,10 @@ ms.locfileid: "61705185"
 |`system.web`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
   
 ## <a name="remarks"></a>Примечания  
- **Имя** атрибут может быть имя одного из абстрактных классов <xref:System.Security.Cryptography> пространства имен. При вызове **создать** метода класса абстрактный криптографии, передается имя абстрактного класса <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> метод. **CreateFromName** возвращает экземпляр типа, указанного **класс** атрибута. Если **имя** атрибут — это краткое имя, например RSA, можно использовать это имя при вызове **CreateFromName** метод.  
+ Атрибут **Name** может быть именем одного из абстрактных классов, <xref:System.Security.Cryptography> найденных в пространстве имен. При вызове метода **CREATE** для абстрактного криптографического класса имя абстрактного класса передается <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> в метод. **CreateFromName** возвращает экземпляр типа, указанного атрибутом **класса** . Если атрибут **Name** имеет короткое имя, например RSA, это имя можно использовать при вызове метода **CreateFromName** .  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<nameEntry >** элемент для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать  **\<элемент элементе nameentry >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,7 @@ ms.locfileid: "61705185"
   
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Схема файла конфигурации](../index.md)
+- [Схема параметров шифрования](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Настройка криптографических классов](../../configure-cryptography-classes.md)
