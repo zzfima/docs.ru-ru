@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a0e6cbbd8972f58f9eedcfeb8aff1f93694064
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5fcadb708638efb0b7946426c538e01661505dfa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765668"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912243"
 ---
-# <a name="iclrruntimehoststop-method"></a><span data-ttu-id="2ae70-102">Метод ICLRRuntimeHost::Stop</span><span class="sxs-lookup"><span data-stu-id="2ae70-102">ICLRRuntimeHost::Stop Method</span></span>
-<span data-ttu-id="2ae70-103">Прекращает выполнение кода, общеязыковая среда выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="2ae70-103">Stops the execution of code by the common language runtime (CLR).</span></span>  
+# <a name="iclrruntimehoststop-method"></a><span data-ttu-id="fdc97-102">Метод ICLRRuntimeHost::Stop</span><span class="sxs-lookup"><span data-stu-id="fdc97-102">ICLRRuntimeHost::Stop Method</span></span>
+<span data-ttu-id="fdc97-103">Останавливает выполнение кода средой CLR.</span><span class="sxs-lookup"><span data-stu-id="fdc97-103">Stops the execution of code by the common language runtime (CLR).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="2ae70-104">Этот метод не освобождать ресурсы на узле выгрузки доменов приложений и уничтожение потоков.</span><span class="sxs-lookup"><span data-stu-id="2ae70-104">This method does not release resources to the host, unload application domains, or destroy threads.</span></span> <span data-ttu-id="2ae70-105">Необходимо завершить процесс, чтобы освободить эти ресурсы.</span><span class="sxs-lookup"><span data-stu-id="2ae70-105">You must terminate the process to release these resources.</span></span>  
+> <span data-ttu-id="fdc97-104">Этот метод не освобождает ресурсы для узла, выгружает домены приложений или уничтожает потоки.</span><span class="sxs-lookup"><span data-stu-id="fdc97-104">This method does not release resources to the host, unload application domains, or destroy threads.</span></span> <span data-ttu-id="fdc97-105">Необходимо завершить процесс, чтобы освободить эти ресурсы.</span><span class="sxs-lookup"><span data-stu-id="fdc97-105">You must terminate the process to release these resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ae70-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2ae70-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdc97-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fdc97-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT Stop();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="2ae70-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2ae70-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fdc97-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="fdc97-107">Return Value</span></span>  
   
-|<span data-ttu-id="2ae70-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2ae70-108">HRESULT</span></span>|<span data-ttu-id="2ae70-109">Описание</span><span class="sxs-lookup"><span data-stu-id="2ae70-109">Description</span></span>|  
+|<span data-ttu-id="fdc97-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fdc97-108">HRESULT</span></span>|<span data-ttu-id="fdc97-109">Описание</span><span class="sxs-lookup"><span data-stu-id="fdc97-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2ae70-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="2ae70-110">S_OK</span></span>|<span data-ttu-id="2ae70-111">`Stop` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="2ae70-111">`Stop` returned successfully.</span></span>|  
-|<span data-ttu-id="2ae70-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2ae70-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2ae70-113">Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="2ae70-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="2ae70-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2ae70-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2ae70-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="2ae70-115">The call timed out.</span></span>|  
-|<span data-ttu-id="2ae70-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2ae70-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2ae70-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="2ae70-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="2ae70-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2ae70-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2ae70-119">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="2ae70-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="2ae70-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2ae70-120">E_FAIL</span></span>|<span data-ttu-id="2ae70-121">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="2ae70-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2ae70-122">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="2ae70-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2ae70-123">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="2ae70-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="fdc97-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="fdc97-110">S_OK</span></span>|<span data-ttu-id="fdc97-111">`Stop`успешно возвращено.</span><span class="sxs-lookup"><span data-stu-id="fdc97-111">`Stop` returned successfully.</span></span>|  
+|<span data-ttu-id="fdc97-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="fdc97-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="fdc97-113">Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="fdc97-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="fdc97-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="fdc97-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="fdc97-115">Время ожидания вызова истекло.</span><span class="sxs-lookup"><span data-stu-id="fdc97-115">The call timed out.</span></span>|  
+|<span data-ttu-id="fdc97-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="fdc97-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="fdc97-117">Вызывающий объект не владеет блокировкой.</span><span class="sxs-lookup"><span data-stu-id="fdc97-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="fdc97-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="fdc97-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="fdc97-119">Событие было отменено, пока заблокированный поток или волокно ожидают его.</span><span class="sxs-lookup"><span data-stu-id="fdc97-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="fdc97-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fdc97-120">E_FAIL</span></span>|<span data-ttu-id="fdc97-121">Произошла неизвестная фатальная ошибка.</span><span class="sxs-lookup"><span data-stu-id="fdc97-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="fdc97-122">Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="fdc97-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="fdc97-123">Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="fdc97-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2ae70-124">Требования</span><span class="sxs-lookup"><span data-stu-id="2ae70-124">Requirements</span></span>  
- <span data-ttu-id="2ae70-125">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ae70-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdc97-124">Требования</span><span class="sxs-lookup"><span data-stu-id="fdc97-124">Requirements</span></span>  
+ <span data-ttu-id="fdc97-125">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fdc97-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ae70-126">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2ae70-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="fdc97-126">**Заголовок.** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="fdc97-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2ae70-127">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2ae70-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fdc97-127">**Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="fdc97-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2ae70-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ae70-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fdc97-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fdc97-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ae70-129">См. также</span><span class="sxs-lookup"><span data-stu-id="2ae70-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fdc97-129">См. также</span><span class="sxs-lookup"><span data-stu-id="fdc97-129">See also</span></span>
 
-- [<span data-ttu-id="2ae70-130">Интерфейс ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="2ae70-130">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="fdc97-130">Интерфейс ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="fdc97-130">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

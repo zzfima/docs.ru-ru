@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1b088d138948ed7e9ae5514fb62e37c324427dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ceb1d22500f73a29ffdfa6f16907478628358c3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969395"
 ---
-# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="e0221-102">Метод ICorProfilerInfo3::EnumJITedFunctions</span><span class="sxs-lookup"><span data-stu-id="e0221-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
-<span data-ttu-id="e0221-103">Возвращает перечислитель для всех функций, которые были ранее JIT-компиляции.</span><span class="sxs-lookup"><span data-stu-id="e0221-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
+# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="bed07-102">Метод ICorProfilerInfo3::EnumJITedFunctions</span><span class="sxs-lookup"><span data-stu-id="bed07-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
+<span data-ttu-id="bed07-103">Возвращает перечислитель для всех функций, которые были ранее скомпилированы JIT-компилятором.</span><span class="sxs-lookup"><span data-stu-id="bed07-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0221-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e0221-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bed07-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bed07-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0221-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e0221-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bed07-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bed07-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="e0221-106">[out] Указатель на [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) перечислителя.</span><span class="sxs-lookup"><span data-stu-id="e0221-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
+ <span data-ttu-id="bed07-106">заполняет Указатель на перечислитель [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="bed07-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e0221-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="e0221-107">Remarks</span></span>  
- <span data-ttu-id="e0221-108">Этот метод может перекрываться с `JITCompilation` обратные вызовы, такие как [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="e0221-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="e0221-109">Перечислитель, который возвращается этим методом не включает функции, загруженные из собственных образов, созданных с помощью Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="e0221-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bed07-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="bed07-107">Remarks</span></span>  
+ <span data-ttu-id="bed07-108">Этот метод может пересекаться с `JITCompilation` обратными вызовами, такими как метод [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) .</span><span class="sxs-lookup"><span data-stu-id="bed07-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="bed07-109">Перечислитель, возвращаемый этим методом, не включает функции, загруженные из образов в машинном кодах, созданных с помощью Ngen. exe.</span><span class="sxs-lookup"><span data-stu-id="bed07-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e0221-110">Включает только «0» для значение возвращенного перечисления `COR_PRF_FUNCTION::reJitId` поля.</span><span class="sxs-lookup"><span data-stu-id="e0221-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="e0221-111">Если требуется допустимый `COR_PRF_FUNCTION::reJitId` значения, используйте [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="e0221-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
+> <span data-ttu-id="bed07-110">Возвращаемое перечисление содержит только значение "0" для значения `COR_PRF_FUNCTION::reJitId` поля.</span><span class="sxs-lookup"><span data-stu-id="bed07-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="bed07-111">Если требуются допустимые `COR_PRF_FUNCTION::reJitId` значения, используйте метод [метод icorprofilerinfo4:: EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) .</span><span class="sxs-lookup"><span data-stu-id="bed07-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0221-112">Требования</span><span class="sxs-lookup"><span data-stu-id="e0221-112">Requirements</span></span>  
- <span data-ttu-id="e0221-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0221-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bed07-112">Требования</span><span class="sxs-lookup"><span data-stu-id="bed07-112">Requirements</span></span>  
+ <span data-ttu-id="bed07-113">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bed07-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0221-114">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e0221-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="bed07-114">**Заголовок.** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="bed07-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e0221-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0221-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bed07-115">**Библиотечная** Коргуидс. lib</span><span class="sxs-lookup"><span data-stu-id="bed07-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e0221-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0221-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="bed07-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bed07-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0221-117">См. также</span><span class="sxs-lookup"><span data-stu-id="e0221-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bed07-117">См. также</span><span class="sxs-lookup"><span data-stu-id="bed07-117">See also</span></span>
 
-- [<span data-ttu-id="e0221-118">Интерфейс ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="e0221-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="e0221-119">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="e0221-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="e0221-120">Профилирование</span><span class="sxs-lookup"><span data-stu-id="e0221-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="bed07-118">Интерфейс ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="bed07-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="bed07-119">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="bed07-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="bed07-120">Профилирование</span><span class="sxs-lookup"><span data-stu-id="bed07-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

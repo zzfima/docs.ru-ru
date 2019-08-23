@@ -11,21 +11,21 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701220"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926984"
 ---
-# <a name="sharedlisteners-element"></a><span data-ttu-id="fc160-102">\<sharedListeners > элемент</span><span class="sxs-lookup"><span data-stu-id="fc160-102">\<sharedListeners> Element</span></span>
-<span data-ttu-id="fc160-103">Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.</span><span class="sxs-lookup"><span data-stu-id="fc160-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="fc160-104">Эти прослушиватели не получают все трассировки по умолчанию, и невозможно извлечь эти прослушиватели во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="fc160-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="fc160-105">Прослушиватели, определенные как общие могут добавляться к источникам и трассировки по имени.</span><span class="sxs-lookup"><span data-stu-id="fc160-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
+# <a name="sharedlisteners-element"></a><span data-ttu-id="0b569-102">\<Элемент > Шаредлистенерс</span><span class="sxs-lookup"><span data-stu-id="0b569-102">\<sharedListeners> Element</span></span>
+<span data-ttu-id="0b569-103">Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.</span><span class="sxs-lookup"><span data-stu-id="0b569-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="0b569-104">По умолчанию эти прослушиватели не получают никаких трассировок, поэтому невозможно получить эти прослушиватели во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="0b569-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="0b569-105">Прослушиватели, идентифицированные как общие прослушиватели, можно добавлять в источники или трассировки по имени.</span><span class="sxs-lookup"><span data-stu-id="0b569-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
   
- <span data-ttu-id="fc160-106">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fc160-106">\<configuration></span></span>  
-<span data-ttu-id="fc160-107">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="fc160-107">\<system.diagnostics></span></span>  
-<span data-ttu-id="fc160-108">\<sharedListeners ></span><span class="sxs-lookup"><span data-stu-id="fc160-108">\<sharedListeners></span></span>  
+ <span data-ttu-id="0b569-106">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0b569-106">\<configuration></span></span>  
+<span data-ttu-id="0b569-107">\<> System. Diagnostics</span><span class="sxs-lookup"><span data-stu-id="0b569-107">\<system.diagnostics></span></span>  
+<span data-ttu-id="0b569-108">\<Шаредлистенерс ></span><span class="sxs-lookup"><span data-stu-id="0b569-108">\<sharedListeners></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc160-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fc160-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b569-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0b569-109">Syntax</span></span>  
   
 ```xml  
 <sharedListeners>   
@@ -33,32 +33,32 @@ ms.locfileid: "61701220"
 </sharedListeners>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fc160-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="fc160-110">Attributes and Elements</span></span>  
- <span data-ttu-id="fc160-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="fc160-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0b569-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0b569-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="0b569-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0b569-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fc160-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="fc160-112">Attributes</span></span>  
- <span data-ttu-id="fc160-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fc160-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0b569-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0b569-112">Attributes</span></span>  
+ <span data-ttu-id="0b569-113">Нет.</span><span class="sxs-lookup"><span data-stu-id="0b569-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fc160-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fc160-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0b569-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0b569-114">Child Elements</span></span>  
   
-|<span data-ttu-id="fc160-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="fc160-115">Element</span></span>|<span data-ttu-id="fc160-116">Описание</span><span class="sxs-lookup"><span data-stu-id="fc160-116">Description</span></span>|  
+|<span data-ttu-id="0b569-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="0b569-115">Element</span></span>|<span data-ttu-id="0b569-116">Описание</span><span class="sxs-lookup"><span data-stu-id="0b569-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fc160-117">\<add></span><span class="sxs-lookup"><span data-stu-id="fc160-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="fc160-118">Добавляет прослушиватель в коллекцию `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="fc160-118">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="0b569-117">\<add></span><span class="sxs-lookup"><span data-stu-id="0b569-117">\<add></span></span>](add-element-for-listeners-for-trace.md)|<span data-ttu-id="0b569-118">Добавляет прослушиватель в коллекцию `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="0b569-118">Adds a listener to the `sharedListeners` collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fc160-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="fc160-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0b569-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0b569-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="fc160-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="fc160-120">Element</span></span>|<span data-ttu-id="fc160-121">Описание</span><span class="sxs-lookup"><span data-stu-id="fc160-121">Description</span></span>|  
+|<span data-ttu-id="0b569-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="0b569-120">Element</span></span>|<span data-ttu-id="0b569-121">Описание</span><span class="sxs-lookup"><span data-stu-id="0b569-121">Description</span></span>|  
 |-------------|-----------------|  
-|`Configuration`|<span data-ttu-id="fc160-122">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fc160-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="fc160-123">Задает корневой элемент для раздела конфигурации ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="fc160-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`Configuration`|<span data-ttu-id="0b569-122">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0b569-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="0b569-123">Задает корневой элемент для раздела конфигурации ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="0b569-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fc160-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="fc160-124">Remarks</span></span>  
- <span data-ttu-id="fc160-125">Добавление прослушивателя к общей коллекции прослушивателей не делает его активным.</span><span class="sxs-lookup"><span data-stu-id="fc160-125">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="fc160-126">Оно по-прежнему добавлено к источнику трассировки или трассировки путем добавления его в `Listeners` коллекции для этого элемента трассировки.</span><span class="sxs-lookup"><span data-stu-id="fc160-126">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="fc160-127">Классы прослушивателя в .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.</span><span class="sxs-lookup"><span data-stu-id="fc160-127">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b569-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="0b569-124">Remarks</span></span>  
+ <span data-ttu-id="0b569-125">Добавление прослушивателя в коллекцию общих прослушивателей не сделает его активным прослушивателем.</span><span class="sxs-lookup"><span data-stu-id="0b569-125">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="0b569-126">Он по-прежнему должен быть добавлен в источник трассировки или в трассировку путем добавления в `Listeners` коллекцию для этого элемента Trace.</span><span class="sxs-lookup"><span data-stu-id="0b569-126">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="0b569-127">Классы прослушивателей в .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.</span><span class="sxs-lookup"><span data-stu-id="0b569-127">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
- <span data-ttu-id="fc160-128">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="fc160-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="0b569-128">Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="0b569-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fc160-129">Пример</span><span class="sxs-lookup"><span data-stu-id="fc160-129">Example</span></span>  
- <span data-ttu-id="fc160-130">В следующем примере показано, как использовать `<sharedListeners>` элемент, чтобы добавить прослушиватель `console` для `Listeners` коллекции для обоих <xref:System.Diagnostics.TraceSource> и <xref:System.Diagnostics.Trace> классы.</span><span class="sxs-lookup"><span data-stu-id="fc160-130">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="fc160-131">Прослушиватель трассировки консоли записывает сведения трассировки на консоль, через вызовы к либо <xref:System.Diagnostics.TraceSource> или <xref:System.Diagnostics.Trace>.</span><span class="sxs-lookup"><span data-stu-id="fc160-131">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b569-129">Пример</span><span class="sxs-lookup"><span data-stu-id="0b569-129">Example</span></span>  
+ <span data-ttu-id="0b569-130">В следующем примере показано, как использовать `<sharedListeners>` элемент для добавления прослушивателя `console` в `Listeners` коллекцию для <xref:System.Diagnostics.TraceSource> классов и <xref:System.Diagnostics.Trace> .</span><span class="sxs-lookup"><span data-stu-id="0b569-130">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="0b569-131">Прослушиватель трассировки консоли записывает данные трассировки в консоль с помощью вызовов либо <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>к, либо к.</span><span class="sxs-lookup"><span data-stu-id="0b569-131">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
   
 ```xml  
 <configuration>  
@@ -88,8 +88,8 @@ ms.locfileid: "61701220"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fc160-132">См. также</span><span class="sxs-lookup"><span data-stu-id="fc160-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b569-132">См. также</span><span class="sxs-lookup"><span data-stu-id="0b569-132">See also</span></span>
 
 - <xref:System.Diagnostics.TraceListener>
-- [<span data-ttu-id="fc160-133">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="fc160-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [<span data-ttu-id="fc160-134">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="fc160-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="0b569-133">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="0b569-133">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="0b569-134">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="0b569-134">Trace Listeners</span></span>](../../../debug-trace-profile/trace-listeners.md)
