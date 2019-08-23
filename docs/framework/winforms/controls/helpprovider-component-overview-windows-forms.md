@@ -10,31 +10,31 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 9e8dc2ee2773b26a7bfef1da209399a8b49de9ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cefc590bb3011b282392504a78ac5c393c58493e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624121"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965696"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Общие сведения о компоненте HelpProvider (Windows Forms)
-Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) компонент используется для связывания файл HTML Help 1.x справки (CHM-файл, созданный с помощью HTML Help Workshop, или HTM-файл) с приложением Windows. Можно предоставить справку в различными способами:  
+Компонент Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) используется для связывания файла справки HTML Help 1. x (либо файла. chm, созданного с помощью справки HTML или файла. htm) с приложением Windows. Получить справку можно различными способами:  
   
-- Укажите контекстной справки для элементов управления в формах Windows Forms.  
+- Предоставьте контекстную справку для элементов управления на Windows Forms.  
   
-- Предоставить контекстную справку для определенного диалогового или конкретных элементов управления в диалоговом окне.  
+- Предоставить контекстную справку по конкретному диалоговому окну или определенным элементам управления в диалоговом окне.  
   
-- Откройте файл справки для конкретной области, например на главной странице оглавление, индекс или функция поиска.  
+- Открытие файла справки для конкретных областей, например главной страницы оглавления, индекса или функции поиска.  
   
-## <a name="using-the-help-provider"></a>С помощью поставщика по справке  
- Добавление <xref:System.Windows.Forms.HelpProvider> компонента в форму Windows позволяет других элементов управления в форме для предоставления справки свойства <xref:System.Windows.Forms.HelpProvider> компонента. Это позволяет предоставить справку для элементов управления в форме Windows. Можно связать файл справки с <xref:System.Windows.Forms.HelpProvider> компонента с помощью <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойство. Укажите тип справки, получен с помощью вызова <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> и указав значение от <xref:System.Windows.Forms.HelpNavigator> перечисления для указанного элемента управления. Укажите ключевое слово или раздел для справки, вызвав <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> метод.  
+## <a name="using-the-help-provider"></a>Использование поставщика справки  
+ Добавление компонента в форму Windows позволяет другим элементам управления формы предоставлять свойства <xref:System.Windows.Forms.HelpProvider> справки компонента. <xref:System.Windows.Forms.HelpProvider> Это позволяет предоставить справку для элементов управления в форме Windows Forms. Файл справки можно связать с <xref:System.Windows.Forms.HelpProvider> компонентом <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> с помощью свойства. Вы указываете тип справки, предоставляемый вызовом <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> , и предоставляя значение <xref:System.Windows.Forms.HelpNavigator> из перечисления для указанного элемента управления. Вы предоставляете ключевое слово или раздел для справки, <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> вызывая метод.  
   
- При необходимости, чтобы связать определенную строку справки с другим элементом управления, используйте <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> метод. Строка, которая будет связана с элементом управления, с помощью этого метода отображается во всплывающем окне, когда пользователь нажимает клавишу F1, элемент управления имеет фокус.  
+ Кроме того, чтобы связать определенную строку справки с другим элементом управления, используйте <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> метод. Строка, связываемая с элементом управления с помощью этого метода, отображается во всплывающем окне, когда пользователь нажимает клавишу F1, когда элемент управления находится в фокусе.  
   
- Если <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> не был задан, необходимо использовать <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> для предоставления текста справки. Если вы настроили оба <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> и строку справки на основе справки <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> будет иметь приоритет.  
+ Если <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> параметр не задан, необходимо использовать <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> для предоставления текста справки. Если заданы <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> и, и строка справки, то Справка, основанная на <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> , будет иметь приоритет.  
   
 > [!NOTE]
->  Могут возникать проблемы, с помощью относительного пути, при задании пути к файлу справки, в <xref:System.Windows.Forms.Help.ShowHelp%2A> метод или <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойство <xref:System.Windows.Forms.HelpProvider> элемента управления. Таким образом не забудьте указать абсолютный путь к файлу справки.  
+> При указании пути к файлу справки в <xref:System.Windows.Forms.Help.ShowHelp%2A> методе или <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойстве <xref:System.Windows.Forms.HelpProvider> элемента управления могут возникнуть проблемы с использованием относительного пути. Поэтому для указания файла справки следует использовать абсолютный путь к файлу.  
   
 ## <a name="see-also"></a>См. также
 

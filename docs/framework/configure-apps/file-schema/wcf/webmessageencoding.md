@@ -2,21 +2,21 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1d776730053cd6af3c930a33e13582a8906c4d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769763"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940401"
 ---
-# <a name="webmessageencoding"></a>\<webMessageEncoding >
+# <a name="webmessageencoding"></a>\<Вебмессажеенкодинг >
 Обеспечивает чтение и запись сообщений в виде обычного текста XML, сообщений в кодировке JSON (нотация объектов JavaScript), а также необработанного двоичного содержимого, используемого в привязке Windows Communication Foundation (WCF).  
   
- \<system.serviceModel>  
+ \<> System. serviceModel  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<webMessageEncoding >  
+\<Вебмессажеенкодинг >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,19 +35,19 @@ ms.locfileid: "61769763"
 |---------------|-----------------|  
 |`maxReadPoolSize`|Количество сообщений, которые можно читать одновременно, не выделяя памяти для новых обработчиков чтения. Пул больших размеров повышает устойчивость системы при всплесках активности за счет большего рабочего набора. Значение по умолчанию - 64 обработчика чтения для каждого из внутренних кодировщиков (простой текст, JSON, двоичное содержимое).<br /><br /> Увеличение этого числа увеличивает объем используемой памяти, однако подготавливает кодировщик к резким увеличениям количества входящих сообщений, позволяя использовать уже созданные обработчики чтения из пула, а не создавать новые.|  
 |`maxWritePoolSize`|Количество сообщений, которые можно отправить одновременно, не выделяя памяти для новых обработчиков записи. Пул больших размеров повышает устойчивость системы при всплесках активности за счет большего рабочего набора. Значение по умолчанию - 16 обработчиков записи для каждого из внутренних кодировщиков (простой текст, JSON, двоичное содержимое).<br /><br /> Увеличение этого числа увеличивает объем используемой памяти, однако подготавливает кодировщик к резким увеличениям количества исходящих сообщений, позволяя использовать уже созданные обработчики записи из пула, а не создавать новые.|  
-|`writeEncoding`|Задает кодировку, используемую при отправке сообщений через привязку. Допустимые значения:<br /><br /> -   UnicodeFffeTextEncoding: Обратный порядок байтов кодировка Юникод.<br />-   Utf16TextEncoding: Кодировка Юникод.<br />-   Utf8TextEncoding: 8-разрядная кодировка.<br /><br /> Значение по умолчанию - Utf8TextEncoding. Это атрибут типа <xref:System.Text.Encoding>.|  
+|`writeEncoding`|Задает кодировку, используемую при отправке сообщений через привязку. Допустимые значения:<br /><br /> -Уникодефффетекстенкодинг: Кодировка Юникода с обратным порядком байтов.<br />- Utf16TextEncoding: Кодировка Юникода.<br />- Utf8TextEncoding: 8-разрядная кодировка.<br /><br /> Значение по умолчанию - Utf8TextEncoding. Это атрибут типа <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<Реадеркуотас >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
  Кодирование — это процесс преобразования сообщения в последовательность байтов. Декодирование представляет собой обратный процесс. Эти процессы требуют определения кодировки символов.  
@@ -60,7 +60,7 @@ ms.locfileid: "61769763"
   
  Атрибуты `maxReadPoolSize` и `maxWritePoolSize` также могут использоваться для установки максимального количества выделяемых обработчиков чтения и записи соответственно. По умолчанию выделяется 64 обработчика чтения и 16 обработчиков записи.  
   
- По умолчанию ограничения по сложности также задаются [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) элемент, чтобы обеспечить защиту от класса отказ в обслуживании (DOS), направленных на сложность сообщения используется для перегрузки обработки конечной точки ресурсы.  
+ Ограничения сложности по умолчанию также устанавливаются с помощью [ \<элемента реадеркуотас >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) для защиты от атак типа "отказ в обслуживании" (DOS), которые пытаются использовать сложность сообщения для привязки ресурсов обработки конечных точек.  
   
 ## <a name="example"></a>Пример  
   
@@ -77,9 +77,9 @@ ms.locfileid: "61769763"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [Кодирование сообщений](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [Выбор кодировщика сообщений](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Кодирование сообщений](message-encoding.md)
+- [Выбор кодировщика сообщений](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Расширение привязок](../../../wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

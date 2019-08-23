@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750073"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964371"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>Метод ICorDebugController::Terminate
-Завершает процесс с помощью указанного кода выхода.  
+Завершает процесс с указанным кодом выхода.  
   
 > [!NOTE]
->  Этот метод является оболочкой для Win32 `TerminateProcess` функции. Таким образом `Terminate` использует код выхода в том же образом, как Win32 `TerminateProcess` функция использует его.  
+> Этот метод является оболочкой для функции Win32 `TerminateProcess` . Таким образом `Terminate` , использует код выхода точно так же, как функция Win32 `TerminateProcess` использует ее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,20 +40,20 @@ HRESULT Terminate (
   
 ## <a name="parameters"></a>Параметры  
  `exitCode`  
- [in] Числовое значение, — это код выхода. Допустимые числовые значения определяются в Winbase.h.  
+ окне Числовое значение, которое является кодом выхода. Допустимые числовые значения определяются в Винбасе. h.  
   
 ## <a name="remarks"></a>Примечания  
- Если процесс останавливается, когда `Terminate` является именем, процесс должен быть продолжено с помощью [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) метод таким образом, чтобы отладчик получает подтверждение о завершении через [ ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) или [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) обратного вызова.  
+ Если процесс останавливается при `Terminate` вызове, процесс должен быть продолжен с помощью метода [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , чтобы отладчик получал подтверждение завершения с помощью [ICorDebugManagedCallback:: ](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)Обратный вызов ExitProcess или [ICorDebugManagedCallback:: ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) .  
   
 > [!NOTE]
->  Этот метод не реализован доменом приложения. То есть оно не реализовано на <xref:System.AppDomain> уровень.  
+> Этот метод не реализуется доменом приложения. Это значит, что он не реализован на <xref:System.AppDomain> уровне.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

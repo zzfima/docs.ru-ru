@@ -5,29 +5,29 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020157"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933911"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Практическое руководство. Анимация объекта с помощью ключевых кадров
-В этом примере показано, как анимировать объект, который в этом примере является <xref:System.Windows.Controls.Page.Background%2A> свойство <xref:System.Windows.Controls.Page> элемента управления, с помощью ключевых кадров.  
+В этом примере показано, как анимировать объект, который в этом примере является <xref:System.Windows.Controls.Page.Background%2A> свойством <xref:System.Windows.Controls.Page> элемента управления, с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> изменения в класс анимация цвета <xref:System.Windows.Controls.Page.Background%2A> свойство <xref:System.Windows.Controls.Page> элемента управления. Пример изменяется цвет кисти фона с регулярными интервалами. Эта анимация использует <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> класс, чтобы создать три различных ключевых кадров. Анимация использует ключевых кадра следующим образом:  
+ В следующем примере <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> класс используется для анимации изменений цвета <xref:System.Windows.Controls.Page.Background%2A> для свойства <xref:System.Windows.Controls.Page> элемента управления. В примере анимация изменяется на другую фоновую кисть через регулярные интервалы. Эта анимация использует <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> класс для создания трех разных ключевых кадров. Анимация использует ключевые кадры следующим образом:  
   
-1. В конце первой секунды, анимирует экземпляр <xref:System.Windows.Media.LinearGradientBrush> класса. В этом разделе примере применяется линейный градиент к цвету фона, таким образом, чтобы переход цвета с желтого на оранжевый, красный.  
+1. В конце первой секунды анимируется экземпляр <xref:System.Windows.Media.LinearGradientBrush> класса. В этом разделе примера к цвету фона применяется линейный градиент, что позволяет цвету переходить от желтого к оранжевый к красному.  
   
-2. В конце следующей секунды, анимирует экземпляр <xref:System.Windows.Media.RadialGradientBrush> класса. Этот раздел примера относится радиального градиента к цвет фона, определяющий цвет переход от белого к синему на черный.  
+2. В конце следующей секунды анимируется экземпляр <xref:System.Windows.Media.RadialGradientBrush> класса. В этом разделе примера к цвету фона применяется радиальный градиент, чтобы цвет переменялся с белого на синий.  
   
-3. В конце третьей секунды, анимирует экземпляр <xref:System.Windows.Media.DrawingBrush> класса. В этом разделе примере применяется шахматной в фоновом режиме.  
+3. В конце третьей секунды анимируется экземпляр <xref:System.Windows.Media.DrawingBrush> класса. В этом разделе примера к фону применяется шаблон шахматной доски.  
   
-4. Анимация начинается снова и повторяется бесконечно.  
+4. Анимация начинается снова и повторяется неограниченное время.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> Это единственный тип ключевого кадра, который можно использовать с <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> класса. Опорные кадры, например <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> , создают резкие изменения значений, то есть, изменения цвета в этом примере происходит внезапное.  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>— единственный тип ключевого кадра, который можно использовать с <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> классом. Ключевые кадры, <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> такие как создание неожиданных изменений в значениях, то есть изменения цвета в этом примере происходят внезапно.  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

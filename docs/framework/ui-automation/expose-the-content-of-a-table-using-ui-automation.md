@@ -9,24 +9,24 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: a9867a07207f825f3f4a781f1c05607fc6b071b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c82041058bfa90079c5d1d0f4de4ff40faae699
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61983454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965189"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Представление содержимого таблицы с помощью автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
- В этом разделе показано, как [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] может использоваться для представления содержимого и внутренних свойств каждой ячейки табличного элемента управления.  
+ В этом разделе показано [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , как можно использовать для предоставления содержимого и внутренних свойств каждой ячейки в табличном элементе управления.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода демонстрируется получение <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы; также получаются свойства ячеек, например индексы строки и столбца, диапазонов строк и столбцов и строк и столбцов данных в заголовке. В этом примере используется обработчик событий изменения фокуса для имитации прохождения клавиатуры табличного элемента управления, реализующий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Сведения для каждого элемента таблицы предоставляются на событие изменения фокуса.  
+ В следующем примере кода показано, как получить объект <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы, такие свойства ячеек, как индексы строк и столбцов, диапазоны строк и столбцов, а также сведения о заголовке строк и столбцов. В этом примере используется обработчик событий изменения фокуса для имитации прохода клавиатуры табличного элемента управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], реализующего. Сведения для каждого элемента таблицы предоставляются в событии изменения фокуса.  
   
 > [!NOTE]
->  Так как изменения фокуса глобальные события рабочего стола, события изменения фокуса вне таблицы должны быть отфильтрованы. См. в разделе [реализации](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) для соответствующей реализации.  
+> Так как изменения фокуса являются глобальными событиями рабочего стола, события изменения фокуса за пределами таблицы должны быть отфильтрованы. См. [Пример траккфокус](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) для связанной реализации.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3d3ab62896f6b799cd38a8180b90f33125a9929b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505502"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964343"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание графических объектов для рисования
-Перед Рисование линий и фигур, отображения текста или отображения и управления ими с помощью GDI +, необходимо создать <xref:System.Drawing.Graphics> объекта. <xref:System.Drawing.Graphics> Объект представляет поверхность рисования GDI + и является объектом, который используется для создания графических изображений.  
+Прежде чем рисовать линии и фигуры, отображать текст или отображать изображения и управлять ими с помощью GDI+, необходимо создать <xref:System.Drawing.Graphics> объект. <xref:System.Drawing.Graphics> Объект представляет поверхность рисования GDI+, а — объект, используемый для создания графических изображений.  
   
  Работа с графикой состоит из двух этапов:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67505502"
   
      \- или -  
   
-- Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход полезен в тех случаях, когда нужно изменить уже существующий образ.  
+- Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход удобен, если требуется изменить уже существующий образ.  
   
      В следующих разделах приводятся сведения о каждом из этих процессов.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67505502"
   
 2. Присвойте переменной ссылку на объект <xref:System.Drawing.Graphics>, передаваемый как часть <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3. Вставьте код для рисования формы или элемента управления.  
+3. Вставка кода для заполнения формы или элемента управления.  
   
      В следующем примере показано, как ссылаться на объект <xref:System.Drawing.Graphics> из <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint>:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "67505502"
     ```  
   
 > [!NOTE]
->  Вы можете создавать объекты <xref:System.Drawing.Graphics> только из неиндексированных BMP-файлов, например, 16, 24 и 32-разрядных BMP-файлов. Каждый пиксель неиндексированного BMP-файла содержит сведения о цвете, в отличие от пикселей индексированного BMP-файла, содержащих указатели на таблицу цветов.  
+> Вы можете создавать объекты <xref:System.Drawing.Graphics> только из неиндексированных BMP-файлов, например, 16, 24 и 32-разрядных BMP-файлов. Каждый пиксель неиндексированного BMP-файла содержит сведения о цвете, в отличие от пикселей индексированного BMP-файла, содержащих указатели на таблицу цветов.  
   
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>Рисование и изменение фигур и изображений  
  После создания объект <xref:System.Drawing.Graphics> можно использовать для рисования линий и фигур, отрисовки текста, а также показа и изменения изображений. Основные объекты, которые используются с объектами <xref:System.Drawing.Graphics>:  
@@ -167,12 +167,12 @@ ms.locfileid: "67505502"
     |---------------|---------|  
     |Прямых линий|[Практическое руководство. Нарисовать линию в форме Windows](how-to-draw-a-line-on-a-windows-form.md)|  
     |Фигур|[Практическое руководство. Рисование контурной фигуры](how-to-draw-an-outlined-shape.md)|  
-    |Текста|[Практическое руководство. Рисование текста в форме Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Изображений|[Практическое руководство. Вывод изображений с использованием GDI +](how-to-render-images-with-gdi.md)|  
+    |Текст|[Практическое руководство. Рисование текста в форме Windows Forms](how-to-draw-text-on-a-windows-form.md)|  
+    |Изображений|[Практическое руководство. Отрисовка изображений с помощью GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>См. также
 
 - [Приступая к программированию графики](getting-started-with-graphics-programming.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Линии, кривые и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Вывод изображений с использованием GDI +](how-to-render-images-with-gdi.md)
+- [Практическое руководство. Отрисовка изображений с помощью GDI+](how-to-render-images-with-gdi.md)

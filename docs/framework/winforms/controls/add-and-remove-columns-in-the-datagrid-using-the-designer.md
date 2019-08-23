@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: d88d658b31c87e7ae89bfb4a11fe794bfbb0e848
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7a3029192ab0da4a954dfd7d3d258a00b154924e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040096"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957115"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Добавление и удаление столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 Для вывода <xref:System.Windows.Forms.DataGridView> данных элемент управления Windows Forms должен содержать столбцы. Если планируется Ручное заполнение элемента управления, необходимо вручную добавить столбцы. Кроме того, можно привязать элемент управления к источнику данных, который автоматически создает и заполняет столбцы. Если источник данных содержит больше столбцов, чем требуется отобразить, можно удалить ненужные столбцы.
@@ -28,7 +28,7 @@ ms.locfileid: "69040096"
 3. Нажмите кнопку **Добавить** , чтобы добавить столбец, в результате чего он появится в конструкторе, если существующие столбцы еще не заполнили область отображения элемента управления.
 
     > [!NOTE]
-    >  Свойства столбцов можно изменить в диалоговом окне **Изменение столбцов** , доступ к которому можно получить из смарт-тега элемента управления.
+    > Свойства столбцов можно изменить в диалоговом окне **Изменение столбцов** , доступ к которому можно получить из смарт-тега элемента управления.
 
 ## <a name="to-remove-a-column-using-the-designer"></a>Удаление столбца с помощью конструктора
 

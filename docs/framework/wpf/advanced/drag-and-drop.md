@@ -8,15 +8,15 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964820"
 ---
 # <a name="drag-and-drop"></a>Перетаскивание
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет очень гибкую и drop инфраструктуру, поддерживающую перетаскивания данных в оба [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, а также другими [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] приложений.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет гибкую инфраструктуру перетаскивания, которая поддерживает перетаскивание данных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложениях, а также в другие приложения Windows.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о перетаскивании](drag-and-drop-overview.md)  

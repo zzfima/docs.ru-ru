@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f177ee397b0641645d55de9e805543a68fa75672
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952127"
 ---
 # <a name="mainmenu-component-windows-forms"></a>Компонент MainMenu (Windows Forms)
 > [!NOTE]
->  Несмотря на то что `MenuStrip` и `ContextMenuStrip` заменяют и расширяют функциональные возможности для `MainMenu` и <xref:System.Windows.Forms.ContextMenu> элементы управления из предыдущих версий `MainMenu` и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем, если выбран.  
+> Хотя `MenuStrip` и <xref:System.Windows.Forms.ContextMenu> `MainMenu` `MainMenu` <xref:System.Windows.Forms.ContextMenu> заменяют и добавляют функции к элементам управления и предыдущих версий и сохраняются для обратной совместимости и использования в будущем при выборе. `ContextMenuStrip`  
   
- Windows Forms `MainMenu` компонент отображает меню во время выполнения.  
+ Компонент Windows Forms `MainMenu` отображает меню во время выполнения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте MainMenu](mainmenu-component-overview-windows-forms.md)  
- Описание данного элемента и его основные возможности и свойства.  
+ Объясняет, что такое компонент, а также его основные возможности и свойства.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MainMenu>  

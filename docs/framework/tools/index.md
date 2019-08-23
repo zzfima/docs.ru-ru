@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47d6fe1d4c99adaf3313c87e0b3411049e3b2452
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489648"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933636"
 ---
 # <a name="net-framework-tools"></a>Инструменты .NET Framework
 Назначение средств .NET Framework состоит в том, чтобы облегчить создание, развертывание и администрирование приложений и компонентов, предназначенных для .NET Framework.  
@@ -26,7 +26,7 @@ ms.locfileid: "66489648"
  Для запуска этих программ командной строки рекомендуется использовать командную строку разработчика для Visual Studio. Эти служебные программы позволяют запустить средства легко, без перемещения в папку установки. Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  Некоторые средства относятся либо к 32-разрядным компьютерам, либо к 64-разрядным компьютерам. Обязательно проверьте, подходит ли запускаемая версия программы для локального компьютера.  
+> Некоторые средства относятся либо к 32-разрядным компьютерам, либо к 64-разрядным компьютерам. Обязательно проверьте, подходит ли запускаемая версия программы для локального компьютера.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

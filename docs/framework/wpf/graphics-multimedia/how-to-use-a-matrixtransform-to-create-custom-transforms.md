@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
-ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1971d5fe9422c5138f140517e6fd4c9f9b2cf48b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769269"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913919"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Практическое руководство. Использование MatrixTransform для создания пользовательских преобразований
-В этом примере показано, как использовать <xref:System.Windows.Media.MatrixTransform> для переноса (перемещения) положение, растяжения и отклонение по <xref:System.Windows.Controls.Button>.  
+В этом примере показано, как использовать <xref:System.Windows.Media.MatrixTransform> для перевода (перемещения) положения, растяжения и наклона. <xref:System.Windows.Controls.Button>  
   
 > [!NOTE]
->  Используйте <xref:System.Windows.Media.MatrixTransform> класса для создания пользовательских преобразований, которые не предоставляются службой <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.SkewTransform>, <xref:System.Windows.Media.ScaleTransform>, или <xref:System.Windows.Media.TranslateTransform> классы.  
+> <xref:System.Windows.Media.TranslateTransform> <xref:System.Windows.Media.ScaleTransform> <xref:System.Windows.Media.SkewTransform> <xref:System.Windows.Media.RotateTransform>Используйте класс для создания пользовательских преобразований, не предоставляемых классами,, или. <xref:System.Windows.Media.MatrixTransform>  
   
 ## <a name="example"></a>Пример  
  [!code-xaml[Transforms_snip#MatrixTransform](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MatrixTransformExample.xaml#matrixtransform)]  

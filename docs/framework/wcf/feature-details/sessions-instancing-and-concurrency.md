@@ -2,12 +2,12 @@
 title: Сеансы, экземпляры и параллелизм
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d780488f7bb0bd46a22ef205b3954b6b4614cae0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877330"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969213"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Сеансы, экземпляры и параллелизм
 Под *сеансом* понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками. *Создание экземпляров* означает управление временем жизни определенных пользователем объектов службы и связанных с ними объектов <xref:System.ServiceModel.InstanceContext> . Термин*параллелизм* означает управление количеством потоков, одновременно выполняющихся в некотором контексте <xref:System.ServiceModel.InstanceContext> .  
@@ -17,7 +17,7 @@ ms.locfileid: "65877330"
 ## <a name="sessions"></a>Сеансы  
  Если в контракте службы для свойства <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> задано значение <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, такой контракт означает, что все вызовы (т. е. обмен сообщениями, на котором основана поддержка вызовов) должны быть частью одного диалога. Если в контракте указано, что сеансы для него разрешены, но не требуются, клиенты могут подключаться, создавая сеанс или не создавая его. Если сеанс завершен, но по этому же основанному на сеансе каналу отправляется сообщение, выдается исключение.  
   
- WCF сеансы имеют следующие основные особенности:  
+ Сеансы WCF имеют следующие основные концептуальные функции:  
   
 - Они явным образом инициируются и завершаются вызвавшим приложением.  
   
@@ -27,13 +27,13 @@ ms.locfileid: "65877330"
   
 - Нет общего хранилища данных, связанного с сеансом WCF.  
   
- Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> класс в приложениях ASP.NET и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
+ Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> классом в приложениях ASP.NET и предоставляемыми им функциями, вы можете заметить следующие различия между этим видом сеанса и сеансами WCF:  
   
-- Сеансы ASP.NET являются всегда инициированного сервером.  
+- Сеансы ASP.NET всегда инициируются сервером.  
   
-- Сеансы ASP.NET явным образом неупорядочены.  
+- Сеансы ASP.NET неявно неупорядочены.  
   
-- Сеансы ASP.NET обеспечивают общий механизм хранения данных для запросов.  
+- Сеансы ASP.NET предоставляют общий механизм хранения данных для запросов.  
   
  Клиентские приложения и приложения служб взаимодействуют с сеансами разными способами. Клиентское приложение инициирует сеансы, а затем получает и обрабатывает сообщения, передаваемые в рамках этого сеанса. Приложения служб могут использовать сеансы как точки расширяемости для добавления дополнительного поведения. Это можно сделать, работая непосредственно с контекстом <xref:System.ServiceModel.InstanceContext> , или реализовав пользовательский поставщик контекста экземпляров.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "65877330"
   
  Доступны следующие режимы создания экземпляров:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Новый <xref:System.ServiceModel.InstanceContext> (и поэтому объект службы) создается для каждого запроса клиента.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Для каждого <xref:System.ServiceModel.InstanceContext> клиентского запроса создается новый (и, следовательно, объект службы).  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Новый <xref:System.ServiceModel.InstanceContext> (и поэтому объект службы) создается для каждого нового сеанса клиента и сохраняется в течение времени существования этого сеанса (для этого требуется привязка, поддерживающая сеансы).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Новый <xref:System.ServiceModel.InstanceContext> (и, следовательно, объект службы) создается для каждого нового сеанса клиента и сохраняется в течение времени существования этого сеанса (для этого требуется привязка, поддерживающая сеансы).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Один <xref:System.ServiceModel.InstanceContext> (и поэтому объект службы) обрабатывает все запросы клиентов в течение времени существования приложения.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Один <xref:System.ServiceModel.InstanceContext> (и, следовательно, объект службы) обрабатывает все клиентские запросы на время существования приложения.  
   
  В следующем примере кода показано явное задание для режима <xref:System.ServiceModel.InstanceContextMode> значения <xref:System.ServiceModel.InstanceContextMode.PerSession> в классе службы.  
   
@@ -65,7 +65,7 @@ public class CalculatorService : ICalculatorInstance
   
  Для создания такой службы используйте конструктор <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> . Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> , если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор (например, если он не реализует открытый конструктор по умолчанию без параметров).  
   
- Обратите внимание на то, что когда объект передается этот конструктор, некоторые функции, относящиеся к Windows Communication Foundation (WCF) поведения при создании экземпляров работают по-разному. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр одноэлементного объекта. Аналогичным образом пропускаются все другие механизмы освобождения экземпляров. Приложение <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
+ Обратите внимание, что при указании объекта для этого конструктора некоторые функции, связанные с поведением создания экземпляров Windows Communication Foundation (WCF), работают по-разному. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр одноэлементного объекта. Аналогичным образом пропускаются все другие механизмы освобождения экземпляров. Приложение <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
   
 ### <a name="sharing-instancecontext-objects"></a>Совместное использование объектов InstanceContext  
  Также для каждого сеансового канала или вызова можно задать объект <xref:System.ServiceModel.InstanceContext> , с которым он будет ассоциирован, самостоятельно назначив ассоциацию.  
@@ -75,16 +75,16 @@ public class CalculatorService : ICalculatorInstance
   
  Доступны следующие три режима параллелизма:  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Single>: В каждом контексте экземпляра может иметь не более одного потока, обработка сообщений в контексте экземпляра одновременно. Другие потоки, которым требуется использовать этот же контекст экземпляра, должны оставаться блокированными, пока исходный поток не выйдет из контекста экземпляра.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: Каждый контекст экземпляра может иметь максимум один поток, обрабатывающий сообщения в контексте экземпляра за раз. Другие потоки, которым требуется использовать этот же контекст экземпляра, должны оставаться блокированными, пока исходный поток не выйдет из контекста экземпляра.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Каждый экземпляр службы может иметь несколько потоков, параллельно обрабатывающих сообщения. Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Каждый экземпляр службы может одновременно обрабатывать сообщения несколькими потоками. Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Каждый экземпляр службы одновременно обрабатывает одно сообщение, но принимает вызовы операций с повторным входом. Служба принимает такие вызовы только в том случае, при его вызове через объект клиента WCF.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Каждый экземпляр службы обрабатывает одно сообщение за раз, но принимает вызовы повторного выполнения операций. Служба принимает эти вызовы только при вызове через клиентский объект WCF.  
   
 > [!NOTE]
->  Проектирование и разработка кода, который может безопасно использовать несколько потоков, может оказаться непростым делом. Перед использованием значения <xref:System.ServiceModel.ConcurrencyMode.Multiple> или <xref:System.ServiceModel.ConcurrencyMode.Reentrant> убедитесь, что служба должным образом разработана для поддержки этих режимов. Дополнительные сведения см. в разделе <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
+> Проектирование и разработка кода, который может безопасно использовать несколько потоков, может оказаться непростым делом. Перед использованием значения <xref:System.ServiceModel.ConcurrencyMode.Multiple> или <xref:System.ServiceModel.ConcurrencyMode.Reentrant> убедитесь, что служба должным образом разработана для поддержки этих режимов. Дополнительные сведения см. в разделе <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  
   
- Использование параллелизма связано с режимом создания экземпляров. В <xref:System.ServiceModel.InstanceContextMode.PerCall> создание экземпляров, параллелизм не имеет значения, так как каждое сообщение обрабатывается новым <xref:System.ServiceModel.InstanceContext> и, таким образом, никогда не более чем один поток активен в <xref:System.ServiceModel.InstanceContext>.  
+ Использование параллелизма связано с режимом создания экземпляров. В <xref:System.ServiceModel.InstanceContextMode.PerCall> создании экземпляров параллелизм не имеет значения, так как каждое сообщение обрабатывается новым <xref:System.ServiceModel.InstanceContext> и, следовательно, не является активным для одного <xref:System.ServiceModel.InstanceContext>потока в.  
   
  В приведенном ниже коде представлен пример задания для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> значения <xref:System.ServiceModel.ConcurrencyMode.Multiple>.  
   
@@ -103,15 +103,15 @@ public class CalculatorService : ICalculatorConcurrency
   
 |Значение InstanceContextMode|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|PerCall|-Поведение с сеансовым каналом: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого вызова.<br />-Поведение с каналом: Возникает исключение.|-Поведение с сеансовым каналом: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого вызова.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|-Поведение с сеансовым каналом: Возникает исключение.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|  
-|PerSession|-Поведение с сеансовым каналом: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого канала.<br />-Поведение с каналом: Возникает исключение.|-Поведение с сеансовым каналом: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого канала.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|-Поведение с сеансовым каналом: Возникает исключение.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|  
-|Single|-Поведение с сеансовым каналом: Сеанс и один <xref:System.ServiceModel.InstanceContext> для всех вызовов.<br />-Поведение с каналом: Возникает исключение.|-Поведение с сеансовым каналом: Сеанс и <xref:System.ServiceModel.InstanceContext> для созданной или указанной пользователем одноэлементной.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для созданной или указанной пользователем одноэлементной.|-Поведение с сеансовым каналом: Возникает исключение.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для каждой созданной или указанной пользователем одноэлементной.|  
+|PerCall|— Поведение с каналом сеанса: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого вызова.<br />-Поведение с каналом без сеанса: Возникает исключение.|— Поведение с каналом сеанса: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого вызова.<br />-Поведение с каналом без сеанса: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|— Поведение с каналом сеанса: Возникает исключение.<br />-Поведение с каналом без сеанса: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|  
+|PerSession|— Поведение с каналом сеанса: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого канала.<br />-Поведение с каналом без сеанса: Возникает исключение.|— Поведение с каналом сеанса: Сеанс и <xref:System.ServiceModel.InstanceContext> для каждого канала.<br />-Поведение с каналом без сеанса: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|— Поведение с каналом сеанса: Возникает исключение.<br />-Поведение с каналом без сеанса: <xref:System.ServiceModel.InstanceContext> Для каждого вызова.|  
+|Single|— Поведение с каналом сеанса: Сеанс и один <xref:System.ServiceModel.InstanceContext> для всех вызовов.<br />-Поведение с каналом без сеанса: Возникает исключение.|— Поведение с каналом сеанса: Сеанс и <xref:System.ServiceModel.InstanceContext> для созданного или заданного пользователем единственного элемента.<br />-Поведение с каналом без сеанса: Объект <xref:System.ServiceModel.InstanceContext> для созданного или заданного пользователем Singleton.|— Поведение с каналом сеанса: Возникает исключение.<br />-Поведение с каналом без сеанса: Объект <xref:System.ServiceModel.InstanceContext> для каждого созданного одноэлементного экземпляра или для заданного пользователем одноэлементного множества.|  
   
 ## <a name="see-also"></a>См. также
 
 - [Использование сеансов](../../../../docs/framework/wcf/using-sessions.md)
-- [Практическое руководство. Создание службы, которой требуются сеансы](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Практическое руководство. Управление созданием экземпляров служб](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Практическое руководство. Создание службы, требующей сеансов](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Практическое руководство. Управление созданием экземпляров службы](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Параллелизм](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Создание экземпляров](../../../../docs/framework/wcf/samples/instancing.md)
 - [Session](../../../../docs/framework/wcf/samples/session.md)

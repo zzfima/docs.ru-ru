@@ -2,15 +2,15 @@
 title: 'Транспорт: TCP-взаимодействие WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 5ad1f2e55bf0dab2736bbc95933d12be43dddd76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b73f9ef93ebfabf2b1c39363bd64785e2892956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941037"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
-В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в качестве пользовательского транспорта Windows Communication Foundation (WCF). Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Ниже показано, как построить этот пользовательский транспорт WCF:  
+В примере транспорта TCP-взаимодействия WSE 3,0 показано, как реализовать дуплексный сеанс TCP в качестве настраиваемого транспорта Windows Communication Foundation (WCF). Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Ниже показано, как создать этот настраиваемый транспорт WCF.  
   
 1. Начиная с сокета TCP, создайте клиентские и серверные реализации интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, использующие кадрирование DIME для разграничения границ сообщений.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64617350"
 5. Добавьте элемент привязки, добавляющий пользовательский транспорт в стек каналов. Дополнительные сведения см. в разделе [Добавление элемента привязки].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Создание IDuplexSessionChannel  
- Первый этап создания транспорта взаимодействия TCP WSE 3.0 - это реализация интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel> на основе класса <xref:System.Net.Sockets.Socket>. Интерфейс `WseTcpDuplexSessionChannel` является производным от интерфейса <xref:System.ServiceModel.Channels.ChannelBase>. Логика передачи сообщения состоит из двух основных частей: (1) кодирование сообщения в байтах и (2) Кадрирование этих байтов и отправки их по сети.  
+ Первый этап создания транспорта взаимодействия TCP WSE 3.0 - это реализация интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel> на основе класса <xref:System.Net.Sockets.Socket>. Интерфейс `WseTcpDuplexSessionChannel` является производным от интерфейса <xref:System.ServiceModel.Channels.ChannelBase>. Логика отправки сообщения состоит из двух основных частей: (1) кодирование сообщения в байты и (2) Кадрирование этих байтов и их отправка по сети.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -37,7 +37,7 @@ ms.locfileid: "64617350"
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- После того как сообщение <xref:System.ServiceModel.Channels.Message> закодировано в байты, оно должно быть передано по сети. Для этого требуется система определения границ сообщения. WSE 3.0 использует версию [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) качестве протокола кадрирования. `WriteData` инкапсулирует логику кадрирования для заключения массива byte[] в набор записей DIME.  
+ После того как сообщение <xref:System.ServiceModel.Channels.Message> закодировано в байты, оно должно быть передано по сети. Для этого требуется система определения границ сообщения. WSE 3,0 использует версию [Dime](https://go.microsoft.com/fwlink/?LinkId=94999) в качестве протокола кадрирования. `WriteData` инкапсулирует логику кадрирования для заключения массива byte[] в набор записей DIME.  
   
  Логика приема сообщений очень похожа. Основная сложность заключается в учете ситуаций, когда операция чтения сокета может вернуть меньше байтов, чем было запрошено. Чтобы принять сообщение, `WseTcpDuplexSessionChannel` считывает байты из сети, декодирует кадрирование DIME, затем использует <xref:System.ServiceModel.Channels.MessageEncoder> для преобразования массива byte[] в сообщение <xref:System.ServiceModel.Channels.Message>.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64617350"
 ## <a name="channel-factory"></a>Фабрика каналов  
  Следующий этап создания транспорта TCP - реализация <xref:System.ServiceModel.Channels.IChannelFactory> для каналов клиентов.  
   
-- `WseTcpChannelFactory` является производным от <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Это фабрика, которая переопределяет `OnCreateChannel` для создания каналов клиентов.  
+- `WseTcpChannelFactory`является производным <xref:System.ServiceModel.Channels.ChannelFactoryBase>от \<идуплекссессиончаннел >. Это фабрика, которая переопределяет `OnCreateChannel` для создания каналов клиентов.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64617350"
   
  `}`  
   
-- `ClientWseTcpDuplexSessionChannel` Добавляет логику в базовый `WseTcpDuplexSessionChannel` для подключения к серверу TCP в `channel.Open` времени. Сначала имя узла разрешается в IP-адрес, как показано в следующем коде.  
+- `ClientWseTcpDuplexSessionChannel`Добавляет логику к базе `WseTcpDuplexSessionChannel` для подключения к TCP-серверу в `channel.Open` момент времени. Сначала имя узла разрешается в IP-адрес, как показано в следующем коде.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64617350"
 ## <a name="channel-listener"></a>Прослушиватель канала  
  Следующий этап создания транспорта TCP - реализация <xref:System.ServiceModel.Channels.IChannelListener> для приема каналов сервера.  
   
-- `WseTcpChannelListener` является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > и переопределяет On [Begin] Open и On [Begin] Close для управления временем существования его прослушивающих сокетов. В OnOpen создается сокет для прослушивания по IP_ANY. Более сложные реализации могут создавать второй сокет для прослушивания также и по IPv6. Они могут также допускать задание IP-адреса в имени узла.  
+- `WseTcpChannelListener`является производным <xref:System.ServiceModel.Channels.ChannelListenerBase>от \<идуплекссессиончаннел > и переопределений [begin] Open и on [begin] Close для управления временем существования прослушивающего сокета. В OnOpen создается сокет для прослушивания по IP_ANY. Более сложные реализации могут создавать второй сокет для прослушивания также и по IPv6. Они могут также допускать задание IP-адреса в имени узла.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -129,7 +129,7 @@ ms.locfileid: "64617350"
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- Он состоит из двух тестов - один тест настраивает типизированного клиента с помощью кода, созданного из WSE 3.0 WSDL. Второй тест использует WCF как клиент и сервер, отправляя сообщения непосредственно по интерфейсам API канала.  
+ Он состоит из двух тестов - один тест настраивает типизированного клиента с помощью кода, созданного из WSE 3.0 WSDL. Второй тест использует WCF как клиент и сервер, отправляя сообщения непосредственно через интерфейсы API канала.  
   
  При выполнении этого образца ожидаются следующие выходные данные.  
   
@@ -172,10 +172,10 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Для выполнения этого примера необходимо, чтобы были установлены WSE 3.0 и пример WSE `TcpSyncStockService`. Вы можете скачать [WSE 3.0 из MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
+1. Для выполнения этого примера необходимо, чтобы были установлены WSE 3.0 и пример WSE `TcpSyncStockService`. Вы можете скачать [WSE 3,0 с сайта MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
->  Так как WSE 3.0 не поддерживается в [!INCLUDE[lserver](../../../../includes/lserver-md.md)], пример `TcpSyncStockService` невозможно установить или выполнить в этой операционной системе.  
+> Так как WSE 3.0 не поддерживается в [!INCLUDE[lserver](../../../../includes/lserver-md.md)], пример `TcpSyncStockService` невозможно установить или выполнить в этой операционной системе.  
   
 1. После установки примера `TcpSyncStockService` выполните следующие операции.  
   
@@ -183,7 +183,7 @@ Symbols:
   
     2. Установите проект StockService в качестве проекта для запуска.  
   
-    3. Откройте файл StockService.cs в проекте StockService и закомментируйте атрибут [Policy] класса `StockService`. Таким образом в примере отключается безопасность. Хотя WCF могут взаимодействовать с WSE 3.0 защищенные конечные точки, чтобы сфокусировать данный пример на пользовательском транспорте TCP отключен безопасности.  
+    3. Откройте файл StockService.cs в проекте StockService и закомментируйте атрибут [Policy] класса `StockService`. Таким образом в примере отключается безопасность. Несмотря на то, что WCF может взаимодействовать с защищенными конечными точками WSE 3,0, Безопасность отключена, чтобы не усложнять этот пример на настраиваемом TCP-транспорте.  
   
     4. Нажмите клавишу F5, чтобы запустить `TcpSyncStockService`. Служба запускается в новом окне консоли.  
   

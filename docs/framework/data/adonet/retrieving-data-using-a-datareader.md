@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963167"
 ---
-# <a name="retrieve-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
+# <a name="retrieve-data-using-a-datareader"></a>Получение данных с помощью DataReader
 Для получения данных с помощью **DataReader** создайте экземпляр объекта **Command**, а затем создайте **DataReader** путем вызова **Command.ExecuteReader** для получения строк из источника данных. **DataReader** предоставляет небуферизованный поток данных, позволяющий эффективно реализовать процедурную логику последовательной обработки результатов из источника данных. **DataReader** хорошо подходит для извлечения больших объемов данных, поскольку данные не кэшируются в памяти.
 
-В следующем примере демонстрируется использование **DataReader**, где `reader` представляет допустимый DataReader и `command` представляет допустимый объект Command.  
+В следующем примере показано использование **DataReader**, где `reader` представляет допустимый DataReader и `command` представляет допустимый объект команды.  
 
 ```csharp
 reader = command.ExecuteReader();  
@@ -40,22 +40,22 @@ reader = command.ExecuteReader()
  Когда **DataReader** открыт, объект **Connection** монопольно используется этим объектом **DataReader**. До тех пор, пока исходный объект **DataReader** не закрыт, для объекта **Connection** невозможно выполнение команд, в том числе создание еще одного **DataReader**.  
   
 > [!NOTE]
->  Не вызывайте **Close** или **Dispose** для объектов **Connection**, **DataReader** или любого другого управляемого объекта в методе **Finalize**  класса. В методе завершения следует освобождать только неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если ваш класс не владеет неуправляемыми ресурсами, не включайте в определение класс метод **Finalize**. Дополнительные сведения см. в разделе [Сборка мусора](../../../../docs/standard/garbage-collection/index.md).  
+> Не вызывайте **Close** или **Dispose** для объектов **Connection**, **DataReader** или любого другого управляемого объекта в методе **Finalize**  класса. В методе завершения следует освобождать только неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если ваш класс не владеет неуправляемыми ресурсами, не включайте в определение класс метод **Finalize**. Дополнительные сведения см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).  
   
-## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Извлечение нескольких результирующих наборов с помощью NextResult  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Получение нескольких результирующих наборов с помощью Некстресулт  
  Если **DataReader** возвращает несколько результирующих наборов, используйте метод **NextResult** для последовательного прохода по ним. В следующем примере показана обработка результатов двух инструкций SELECT в <xref:System.Data.SqlClient.SqlDataReader> с помощью метода <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>Получение сведений о схеме из DataReader  
- Пока **DataReader** открыт, можно получить сведения о схеме для текущего результирующего набора с помощью метода **GetSchemaTable**. **GetSchemaTable** возвращает объект <xref:System.Data.DataTable>, заполненный строками и столбцами, содержащими сведения о схеме для текущего результирующего набора. **DataTable** содержит по одной строке для каждого столбца результирующего набора. Каждый столбец в таблице схемы соответствует свойству столбца, возвращаемого в строках результирующего набора, где **ColumnName** — это имя свойства, а значением столбца является значение свойства. Следующий пример выводит сведения о схеме для **DataReader**.  
+ Пока **DataReader** открыт, можно получить сведения о схеме для текущего результирующего набора с помощью метода **GetSchemaTable**. **GetSchemaTable** возвращает объект <xref:System.Data.DataTable>, заполненный строками и столбцами, содержащими сведения о схеме для текущего результирующего набора. Объект **DataTable** содержит по одной строке для каждого столбца результирующего набора. Каждый столбец в таблице схемы соответствует свойству столбца, возвращаемого в строках результирующего набора, где **ColumnName** — это имя свойства, а значением столбца является значение свойства. Следующий пример выводит сведения о схеме для **DataReader**.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
 ## <a name="working-with-ole-db-chapters"></a>Работа с разделами OLE DB  
- Иерархические наборы строк, или разделы (тип OLE DB **DBTYPE_HCHAPTER**, тип ADO **adChapter**), можно получить с помощью <xref:System.Data.OleDb.OleDbDataReader>. Когда для возврата результатов запроса, содержащего раздел, используется **DataReader**, раздел возвращается в виде столбца в этом **DataReader** и представляется в виде объекта **DataReader**.  
+ Иерархические наборы строк или главы (OLE DB Type **DBTYPE_HCHAPTER**, ADO Type **адчаптер**) можно <xref:System.Data.OleDb.OleDbDataReader>получить с помощью. Когда для возврата результатов запроса, содержащего раздел, используется **DataReader**, раздел возвращается в виде столбца в этом **DataReader** и представляется в виде объекта **DataReader**.  
   
  **DataSet** из ADO.NET также может использоваться для представления иерархических наборов строк с использованием отношений "родитель — потомок" между таблицами. Дополнительные сведения см. в разделе [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
   
@@ -255,7 +255,7 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
->  Чтобы избежать **OverflowException**, рекомендуется также производить преобразование из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в <xref:System.Data.DataRow>. Чтобы отследить возникновение **OverflowException**, можно использовать событие <xref:System.Data.Common.DataAdapter.FillError>. Дополнительные сведения о событии <xref:System.Data.Common.DataAdapter.FillError> см. в разделе [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Чтобы избежать **OverflowException**, рекомендуется также производить преобразование из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в <xref:System.Data.DataRow>. Чтобы отследить возникновение **OverflowException**, можно использовать событие <xref:System.Data.Common.DataAdapter.FillError>. Дополнительные сведения о событии <xref:System.Data.Common.DataAdapter.FillError> см. в разделе [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>См. также
 

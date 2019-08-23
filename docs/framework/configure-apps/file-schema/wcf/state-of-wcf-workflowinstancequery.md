@@ -1,28 +1,28 @@
 ---
-title: <state> WCF, <workflowInstanceQuery>
+title: <state>WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99387a8f60e96beb2ec7706d9abf4bb6ae84b868
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757967"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938212"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<Состояние > WCF, \<workflowInstanceQuery >
+# <a name="state-of-wcf-workflowinstancequery"></a>\<> состояния WCF, \<workflowInstanceQuery >
 Представляет коллекцию состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.  
   
- Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
-\<профили >  
+\<Профили >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<workflowInstanceQueries >  
+\<> рабочего процесса  
+\<Воркфловинстанцекуериес >  
 \<workflowInstanceQuery >  
 \<состояния >  
-\<Состояние >  
+\<> состояния  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,7 +56,7 @@ ms.locfileid: "61757967"
   
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -68,9 +68,9 @@ ms.locfileid: "61757967"
 
 Возвращаемые записи фильтруются по состояниям в этой коллекции.  
   
-В следующей таблице описаны допустимые значения состояния:
+Возможные значения состояния описаны в следующей таблице.
   
-|Регион|Описание|  
+|Область|Описание|  
 |-----------|-----------------|  
 |Прерывание|Экземпляр рабочего процесса прерван.|  
 |Завершено|Выполнение экземпляра рабочего процесса завершено.|  
@@ -105,5 +105,5 @@ ms.locfileid: "61757967"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

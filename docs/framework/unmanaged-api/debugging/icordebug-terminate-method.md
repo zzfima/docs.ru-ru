@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738075"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963131"
 ---
 # <a name="icordebugterminate-method"></a>Метод ICorDebug::Terminate
-Завершает `ICorDebug` объекта.  
+`ICorDebug` Завершает объект.  
   
 > [!NOTE]
->  `Terminate` не следует вызывать до [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) получено обратного вызова для всех отлаживаемых процессов.  
+> `Terminate`не следует вызывать, пока не получен обратный вызов [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) для всех отлаживаемых процессов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +37,14 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `Terminate` должен вызываться при `ICorDebug` объект больше не нужен.  
+ `Terminate`должен вызываться, `ICorDebug` когда объект больше не нужен.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

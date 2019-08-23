@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965769"
 ---
 # <a name="imaptoken-interface"></a>Интерфейс IMapToken
 Предоставляет возможности сопоставления между сборками.  
   
 > [!NOTE]
->  `IMapToken` Интерфейс должен быть реализован с помощью клиента.  
+> `IMapToken` Интерфейс должен быть реализован клиентом.  
   
 ## <a name="methods"></a>Методы  
   
@@ -36,11 +36,11 @@ ms.locfileid: "59111674"
 |[Метод Map](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Сопоставляет связь между двумя сборками, используя подписи метаданных.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок.** COR. h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Библиотечная** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

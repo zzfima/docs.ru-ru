@@ -10,30 +10,30 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: b24fbefac0dcfb666e25ad1d1726ef2cf8a5d84e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968279"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Отрисовка элементов управления Windows Forms
-Визуализации — это процесс создания визуального представления на экране пользователя. Windows Forms использует GDI (новая Windows графическая библиотека) для подготовки к просмотру. Управляемые классы, обеспечивающие доступ к GDI находятся в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства имен.  
+Отрисовка обозначает процесс создания визуального представления на экране пользователя. Для отрисовки Windows Forms использует GDI (Новая библиотека графики Windows). Управляемые классы, предоставляющие доступ к GDI, находятся в <xref:System.Drawing?displayProperty=nameWithType> пространстве имен и его подпространствах имен.  
   
- Следующие элементы участвуют в отрисовке элемента управления.  
+ При отрисовке элемента управления участвуют следующие элементы:  
   
-- Рисования функциональных возможностях, предоставляемых базовым классом <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Функциональные возможности рисования, предоставляемые базовым <xref:System.Windows.Forms.Control?displayProperty=nameWithType>классом.  
   
-- Реквизиты графической библиотеки GDI.  
+- Неотъемлемые элементы библиотеки графических интерфейсов GDI.  
   
 - Геометрия области рисования.  
   
-- Процедура освобождения графических ресурсов.  
+- Процедура высвобождения графических ресурсов.  
   
-## <a name="drawing-functionality-provided-by-control"></a>Функции рисования, обеспечиваемые элементом управления  
- Базовый класс <xref:System.Windows.Forms.Control> предоставляет функциональные возможности рисования посредством его <xref:System.Windows.Forms.Control.Paint> событий. Элемент управления вызывает <xref:System.Windows.Forms.Control.Paint> событие при каждой попытке обновления его отображения. Дополнительные сведения о событиях в .NET Framework, см. в разделе [обработка и вызов событий](../../../standard/events/index.md).  
+## <a name="drawing-functionality-provided-by-control"></a>Функциональные возможности рисования, предоставляемые элементом управления  
+ Базовый класс <xref:System.Windows.Forms.Control> предоставляет функциональные возможности рисования через его <xref:System.Windows.Forms.Control.Paint> событие. Элемент управления вызывает событие <xref:System.Windows.Forms.Control.Paint> каждый раз, когда ему требуется обновить его отображение. Дополнительные сведения о событиях в .NET Framework см. в разделе [обработка и вызов событий](../../../standard/events/index.md).  
   
- Класс данных события для <xref:System.Windows.Forms.Control.Paint> событий, <xref:System.Windows.Forms.PaintEventArgs>, содержащий данные, необходимые для рисования элемента управления — дескриптора графический объект и объект прямоугольник, представляющий область для рисования. Эти объекты отображаются в полужирным шрифтом в следующем фрагменте кода.  
+ Класс данных событий для <xref:System.Windows.Forms.Control.Paint> события, <xref:System.Windows.Forms.PaintEventArgs>содержит данные, необходимые для рисования элемента управления — маркер графического объекта и прямоугольника, представляющий регион для рисования. Эти объекты показаны жирным шрифтом в следующем фрагменте кода.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -61,9 +61,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> — управляемый класс, инкапсулирующий функциональность рисования, как описано в разделе GDI, далее в этом разделе. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Является экземпляром класса <xref:System.Drawing.Rectangle> структурировать и определяет доступные области, в котором можно нарисовать элемент управления. Разработчик элемента управления можно рассчитать <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> с помощью <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства элемента управления, как описано в описании геометрии далее в этом разделе.  
+ <xref:System.Drawing.Graphics>— Это управляемый класс, который инкапсулирует функциональные возможности рисования, как описано в разделе о GDI далее в этой статье. Является экземпляром <xref:System.Drawing.Rectangle> структуры и определяет доступную область, в которой может нарисоваться элемент управления. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Разработчик элемента управления может вычислить <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> значение <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> с помощью свойства элемента управления, как описано в обсуждении геометрии далее в этом разделе.  
   
- Элемент управления должен предоставить логику отрисовки путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод, который наследует от <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Получает доступ к графический объект и прямоугольника для рисования с помощью <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства <xref:System.Windows.Forms.PaintEventArgs> переданным ему экземпляром.  
+ Элемент управления должен предоставлять логику отрисовки путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метода, от <xref:System.Windows.Forms.Control>которого он наследуется. <xref:System.Windows.Forms.Control.OnPaint%2A>Получает доступ к графическому объекту и прямоугольнику для рисования с помощью <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> и свойств экземпляра, <xref:System.Windows.Forms.PaintEventArgs> переданного в него.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -73,12 +73,12 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Метод базового <xref:System.Windows.Forms.Control> класс не реализует какой-либо функциональности, но просто вызывает делегаты событий, зарегистрированные в <xref:System.Windows.Forms.Control.Paint> событий. При переопределении <xref:System.Windows.Forms.Control.OnPaint%2A>, как правило, следует вызвать <xref:System.Windows.Forms.Control.OnPaint%2A> получать метод базового класса, чтобы зарегистрированные делегаты <xref:System.Windows.Forms.Control.Paint> событий. Тем не менее, элементы управления, их всю поверхность рисования не следует вызывать базовый класс <xref:System.Windows.Forms.Control.OnPaint%2A>, как это вызовет мерцание. Пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> событий, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Метод базового <xref:System.Windows.Forms.Control> класса не реализует какие бы то ни было функции рисования <xref:System.Windows.Forms.Control.Paint> , но вызывает делегаты событий, зарегистрированные в событии. <xref:System.Windows.Forms.Control.OnPaint%2A> При переопределении <xref:System.Windows.Forms.Control.OnPaint%2A>следует, как правило, <xref:System.Windows.Forms.Control.OnPaint%2A> вызывать метод базового класса <xref:System.Windows.Forms.Control.Paint> , чтобы зарегистрированные делегаты получили событие. Однако элементы управления, которые закрашены всю поверхность, не должны вызывать базовый <xref:System.Windows.Forms.Control.OnPaint%2A>класс, так как это приводит к мерцанию. Пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> события см. в [разделе как Создайте элемент управления Windows Forms, отображающий](how-to-create-a-windows-forms-control-that-shows-progress.md)ход выполнения.  
   
 > [!NOTE]
->  Они не вызывают <xref:System.Windows.Forms.Control.OnPaint%2A> непосредственно из вашего элемента управления; вместо этого вызовите <xref:System.Windows.Forms.Control.Invalidate%2A> метод (наследуется от <xref:System.Windows.Forms.Control>) или другим методом, который вызывает <xref:System.Windows.Forms.Control.Invalidate%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> В свою очередь вызывает метод <xref:System.Windows.Forms.Control.OnPaint%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Метод перегружен, и, в зависимости от аргументов предоставляемое <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, перерисовывает элемент управления, некоторые или все его области экрана.  
+> Не вызывайте <xref:System.Windows.Forms.Control.OnPaint%2A> непосредственно из элемента управления; вместо этого <xref:System.Windows.Forms.Control.Invalidate%2A> вызовите метод (наследуется от <xref:System.Windows.Forms.Control> <xref:System.Windows.Forms.Control.Invalidate%2A>) или другой метод, который вызывает. Метод <xref:System.Windows.Forms.Control.Invalidate%2A> , в свою очередь, <xref:System.Windows.Forms.Control.OnPaint%2A>вызывает. Метод перегружен, и, в зависимости от аргументов <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, перерисовок, элемент управления перерисовывает часть его экранной области. <xref:System.Windows.Forms.Control.Invalidate%2A>  
   
- Базовый <xref:System.Windows.Forms.Control> класс определяет другой метод, который используется для рисования — <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метод.  
+ Базовый <xref:System.Windows.Forms.Control> класс определяет другой метод, который удобен для рисования <xref:System.Windows.Forms.Control.OnPaintBackground%2A> — метод.  
   
 ```vb  
 Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)  
@@ -88,25 +88,25 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Закрашивает фон (и тем самым фигуры) окна и гарантированно будет выполняться быстро, при <xref:System.Windows.Forms.Control.OnPaint%2A> рисует детали и могут работать медленнее, так как индивидуальные запросы на рисование объединены в один <xref:System.Windows.Forms.Control.Paint> событие, которое охватывает все области, которые должны быть перерисовки. Может возникнуть необходимость вызвать <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Если, к примеру, требуется нарисовать градиентной заливкой фон для элемента управления.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A>Закрашивает фон (и, таким образом, форму) окна и гарантированно ускоряется, при <xref:System.Windows.Forms.Control.OnPaint%2A> этом данные записываются быстрее, поскольку отдельные запросы на рисование объединяются в одно <xref:System.Windows.Forms.Control.Paint> событие, охватывающее все области, которые должны быть перерисовке. Например, вы можете вызвать метод <xref:System.Windows.Forms.Control.OnPaintBackground%2A> if, если нужно нарисовать градиентный цвет фона для элемента управления.  
   
- Хотя <xref:System.Windows.Forms.Control.OnPaintBackground%2A> имеет аналогичное номенклатуру и принимает того же аргумента как `OnPaint` метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> не является методом значение true, событие. Существует не `PaintBackground` событий и <xref:System.Windows.Forms.Control.OnPaintBackground%2A> вызывает делегаты событий. При переопределении метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метода производного класса не требуется для вызова <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метод базового класса.  
+ Хотя <xref:System.Windows.Forms.Control.OnPaintBackground%2A> имеет элемент, подобный событиям, и принимает тот же аргумент `OnPaint` , что <xref:System.Windows.Forms.Control.OnPaintBackground%2A> и метод, не является истинным методом события. `PaintBackground` События и<xref:System.Windows.Forms.Control.OnPaintBackground%2A> не вызывают делегаты событий. При переопределении <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метода производный класс не требуется для <xref:System.Windows.Forms.Control.OnPaintBackground%2A> вызова метода своего базового класса.  
   
-## <a name="gdi-basics"></a>Основные сведения о GDI +  
- <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования различных фигур, таких как круги, треугольники, дуги и эллипсы, а также методы для отображения текста. <xref:System.Drawing?displayProperty=nameWithType> Пространство имен и его подпространства имен содержат классы, инкапсулирующие графические элементы, такие как фигуры (круги, прямоугольники, дуги и другие), цвета, шрифты, кистей и т. д. Дополнительные сведения о GDI см. в разделе [использование управляемых графических классов](../advanced/using-managed-graphics-classes.md). Основы GDI также описаны в [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+## <a name="gdi-basics"></a>Основы GDI+  
+ <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования различных фигур, таких как круги, треугольники, дуги и эллипсы, а также методы для отображения текста. <xref:System.Drawing?displayProperty=nameWithType> Пространство имен и его подпространства имен содержат классы, инкапсулирующие графические элементы, такие как фигуры (круги, прямоугольники, дуги и др.), цвета, шрифты, кисти и т. д. Дополнительные сведения о GDI см. [в разделе Использование управляемых графических классов](../advanced/using-managed-graphics-classes.md). Основные [сведения о GDI также описаны в разделе как: Создайте элемент управления Windows Forms, отображающий](how-to-create-a-windows-forms-control-that-shows-progress.md)ход выполнения.  
   
 ## <a name="geometry-of-the-drawing-region"></a>Геометрия области рисования  
- <xref:System.Windows.Forms.Control.ClientRectangle%2A> Свойства элемента управления задает прямоугольную область, доступную для элемента управления на экране пользователя, хотя <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство <xref:System.Windows.Forms.PaintEventArgs> задает область, которая фактически закрашивается. (Помните, что рисование выполняется в <xref:System.Windows.Forms.Control.Paint> событие метода, принимающего <xref:System.Windows.Forms.PaintEventArgs> экземпляр в качестве аргумента). Элемент управления может потребоваться рисовать только часть ее доступной области, как в случае изменения отображения элемента управления при небольшом разделе. В этих случаях разработчик элемента управления следует вычислять фактическое прямоугольника для рисования и передать его <xref:System.Windows.Forms.Control.Invalidate%2A>. Перегруженные версии <xref:System.Windows.Forms.Control.Invalidate%2A> , принимающих <xref:System.Drawing.Rectangle> или <xref:System.Drawing.Region> в качестве аргумента, используют этот аргумент для создания <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство <xref:System.Windows.Forms.PaintEventArgs>.  
+ Свойство элемента управления указывает прямоугольную область, доступную для элемента управления на экране пользователя, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> а свойство объекта <xref:System.Windows.Forms.PaintEventArgs> — область, которая на самом деле окрашена. <xref:System.Windows.Forms.Control.ClientRectangle%2A> (Помните, что рисование выполняется в <xref:System.Windows.Forms.Control.Paint> методе события, который <xref:System.Windows.Forms.PaintEventArgs> принимает экземпляр в качестве аргумента). Элементу управления может потребоваться закрасить только часть его доступной области, как в случае, когда изменяется небольшой раздел экрана элемента управления. В таких ситуациях разработчик элемента управления должен вычислить фактический прямоугольник для рисования и передать <xref:System.Windows.Forms.Control.Invalidate%2A>его в. Перегруженные <xref:System.Windows.Forms.Control.Invalidate%2A> версии, которые <xref:System.Drawing.Region> <xref:System.Drawing.Rectangle> принимают или в качестве аргумента, <xref:System.Windows.Forms.PaintEventArgs>используют этот аргумент для создания <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства.  
   
- В следующем фрагменте кода показано как `FlashTrackBar` прямоугольную область для рисования вычисляет пользовательского элемента управления. `client` Обозначает переменную <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство. Полный пример см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ В следующем фрагменте кода показано, `FlashTrackBar` как пользовательский элемент управления выполняет вычисление прямоугольной области для рисования. `client` Переменная обозначает свойство. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Полный пример см. в разделе [как Создайте элемент управления Windows Forms, отображающий](how-to-create-a-windows-forms-control-that-shows-progress.md)ход выполнения.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
-## <a name="freeing-graphics-resources"></a>Освобождение ресурсов графики  
- Графические объекты ресурсоемки, потому что они используют системные ресурсы. Такие объекты содержат экземпляры <xref:System.Drawing.Graphics?displayProperty=nameWithType> класса, а также экземпляры <xref:System.Drawing.Brush?displayProperty=nameWithType>, <xref:System.Drawing.Pen?displayProperty=nameWithType>и другие графические классы. Очень важно, создания ресурса графики, только в том случае, когда она необходима и отпустите его сразу после его использования. Если вы создаете тип, реализующий <xref:System.IDisposable> интерфейс, вызовите его <xref:System.IDisposable.Dispose%2A> метод, когда вы закончите с ним для освобождения ресурсов.  
+## <a name="freeing-graphics-resources"></a>Освобождение графических ресурсов  
+ Объекты Graphics являются ресурсоемкими, так как они используют системные ресурсы. К <xref:System.Drawing.Graphics?displayProperty=nameWithType> таким объектам относятся экземпляры класса <xref:System.Drawing.Brush?displayProperty=nameWithType>, а также экземпляры, <xref:System.Drawing.Pen?displayProperty=nameWithType>и другие графические классы. Очень важно создать графический ресурс только в том случае, если он вам нужен, и сразу выпустить его, как только вы завершите его использование. При создании типа, реализующего <xref:System.IDisposable> интерфейс, вызовите его <xref:System.IDisposable.Dispose%2A> метод, когда завершите работу с ним, чтобы освободить ресурсы.  
   
- В следующем фрагменте кода показано как `FlashTrackBar` пользовательский элемент управления создает и освобождает <xref:System.Drawing.Brush> ресурсов. Полный исходный код, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ В следующем фрагменте кода показано, `FlashTrackBar` как пользовательский элемент управления создает и <xref:System.Drawing.Brush> освобождает ресурс. Полный исходный код см. в разделе [как Создайте элемент управления Windows Forms, отображающий](how-to-create-a-windows-forms-control-that-shows-progress.md)ход выполнения.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
@@ -119,4 +119,4 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Практическое руководство. Создание элемента управления Windows Forms, отображающего ход выполнения](how-to-create-a-windows-forms-control-that-shows-progress.md)

@@ -3,21 +3,21 @@ title: <workflowInstanceManagement>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 63ac89ba-c844-4ae2-96ae-cd752a90a109
-ms.openlocfilehash: 98bc1b24da6e65a11a39d133057c1bb55b003a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a22c72b7a683e3ecab4344c92e7d835a184a58d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947150"
 ---
-# <a name="workflowinstancemanagement"></a>\<workflowInstanceManagement >
+# <a name="workflowinstancemanagement"></a>\<Воркфловинстанцеманажемент >
 Поведение службы, которое позволяет указать параметры, управляющие выполнением экземпляров рабочего процесса, включая сохраняемость, необработанное поведение исключения и неактивное поведение.  
   
-\<system.ServiceModel>  
-\<варианты поведения >  
+\<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
-\<workflowInstanceManagement >  
+\<> поведения  
+\<Воркфловинстанцеманажемент >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,13 +41,13 @@ ms.locfileid: "61613467"
 |authorizedWindowsGroup||  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение > из \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|[\<> поведения > \<serviceBehaviors](behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
   
 ## <a name="see-also"></a>См. также
 

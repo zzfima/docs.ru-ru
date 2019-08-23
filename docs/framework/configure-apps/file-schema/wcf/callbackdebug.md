@@ -2,21 +2,21 @@
 title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: a1190eb1c015ba07488ff5a5952f2f5f1b10974c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91e7bd63bf496f2c38776d88173ed2ac12a3b888
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926307"
 ---
-# <a name="callbackdebug"></a>\<callbackDebug >
-Задает отладку службы для объекта обратного вызова Windows Communication Foundation (WCF).  
+# <a name="callbackdebug"></a>\<Каллбаккдебуг >
+Указывает отладку службы для объекта обратного вызова Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
-\<endpointBehaviors>  
-\<поведение >  
-\<callbackDebug >  
+ \<системой. > ServiceModel  
+\<> поведения  
+\<endpointBehaviors >  
+\<> поведения  
+\<Каллбаккдебуг >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +37,13 @@ ms.locfileid: "61704522"
 |`includeExceptionDetailInFaults`|Значение, которое указывает, возвращают ли объекты обратного вызова клиента сведения об управляемом исключении в ошибках SOAP назад в службу.<br /><br /> Если программным способом задать этому атрибуту значение `true`, в объекте обратного вызова клиента можно включить поток сведений об управляемом исключении назад в службу для отладки. **Внимание!**  Возвращение клиентам сведений об управляемых исключениях может представлять риск с точки зрения безопасности. Это связано с тем, что подробные данные об исключении содержат сведения о внутренней реализации службы, которые могут использоваться неавторизованными клиентами.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|  
+|[\<> поведения](behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|  
   
 ## <a name="see-also"></a>См. также
 

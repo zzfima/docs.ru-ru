@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 593e3e97ad7e5ae65447d8618caacf22f762f9b4
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 57bd650caef831f3ee886c0422e13cc4149d3416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960064"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968809"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
-По умолчанию Если имя пользователя и пароль используется для проверки подлинности, Windows Communication Foundation (WCF) использует Windows для проверки имени пользователя и пароля. Тем не менее, WCF позволяет пользовательского имени и пароля схем проверки подлинности, также известный как *проверяющие элементы управления*. Чтобы внедрить пользовательский проверяющий элемент управления для проверки подлинности имени пользователя и пароля, необходимо создать класс, унаследованный от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, и настроить его.  
+По умолчанию, если для проверки подлинности используется имя пользователя и пароль, Windows Communication Foundation (WCF) использует Windows для проверки имени пользователя и пароля. Однако WCF позволяет создавать пользовательские схемы проверки подлинности имени пользователя и пароля, которыетакже называются проверяющими. Чтобы внедрить пользовательский проверяющий элемент управления для проверки подлинности имени пользователя и пароля, необходимо создать класс, унаследованный от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, и настроить его.  
   
- Образец приложения, см. в разделе [проверяющего элемента управления пароля имя пользователя](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
+ Пример приложения см. в разделе [средство проверки пароля для имени пользователя](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>Создание пользовательского проверяющего элемента управления для имени пользователя и пароля  
   
@@ -39,32 +39,32 @@ ms.locfileid: "65960064"
   
 1. Настройте привязку, использующую безопасность сообщений с любым транспортом или безопасность на уровне транспорта по HTTP(S).  
   
-     При использовании безопасности сообщений добавьте одну из привязок, предоставляемых системой, такие как [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), или [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) , поддерживающих безопасность сообщений и `UserName` тип учетных данных.  
+     При использовании безопасности сообщений добавьте одну из предоставляемых системой привязок, например [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), или `UserName` [ \<> CustomBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) , который поддерживает безопасность сообщений и тип учетных данных.  
   
-     При использовании безопасности на уровне транспорта по HTTP (S) добавьте либо [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \< netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) или [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) , использующий HTTP (S) и `Basic` схему проверки подлинности.  
+     При использовании безопасности на транспортном уровне через HTTP (S) добавьте [ \<> WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) [ \<BasicHttpBinding >, NetTcpBinding > или CustomBinding > ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md), использующий HTTP (S) `Basic` и схему проверки подлинности.  
   
     > [!NOTE]
-    >  Если используется платформа [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] или более поздняя версия, на уровне безопасности сообщений и транспорта можно применять пользовательский модуль проверки имени пользователя и пароля. С помощью WinFX пользовательский модуль проверки имени пользователя и пароля может использоваться только с помощью безопасности сообщений.  
+    > Если используется платформа [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] или более поздняя версия, на уровне безопасности сообщений и транспорта можно применять пользовательский модуль проверки имени пользователя и пароля. С помощью WinFX пользовательское средство проверки имени пользователя и пароля может использоваться только с защитой сообщений.  
   
     > [!TIP]
-    >  Дополнительные сведения об использовании \<netTcpBinding > в этом контексте, см. в разделе [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+    >  Дополнительные сведения об использовании \<> NetTcpBinding в этом контексте см. в разделе [ \<безопасность >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
   
-    1. В файле конфигурации в разделе [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемент.  
+    1. В файле [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) конфигурации [ в\<](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элементе System. ServiceModel > Добавьте привязки > элемент.  
   
-    2. Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент в раздел привязок. Дополнительные сведения о создании элемента привязки WCF, см. в разделе [как: Указание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2. Добавьте элемент привязки [ \<WSHttpBinding > или BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) в раздел привязок. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Дополнительные сведения о создании элемента привязки WCF см. в разделе [как Укажите привязку службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-    3. Задайте `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) или [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) для `Message`, `Transport`, или `TransportWithMessageCredential`.  
+    3. Задайтедля`Message` [атрибута > \<безопасности](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) или [ \<> безопасности](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) значение, `Transport`или .`TransportWithMessageCredential` `mode`  
   
-    4. Задайте `clientCredentialType` атрибут [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) или [ \<транспорта >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).  
+    4. `clientCredentialType` Задайте атрибут [ >сообщенияилитранспортного>.\<](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)  
   
-         При использовании безопасности сообщений, задайте `clientCredentialType` атрибут [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) для `UserName`.  
+         При использовании безопасности сообщений задайте `clientCredentialType` атрибуту [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md) `UserName`значение.  
   
-         При использовании безопасности на уровне транспорта по HTTP (S) задайте `clientCredentialType` атрибут [ \<транспорта >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) или [ \<транспорта >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) для `Basic`.  
+         При использовании безопасности на транспортном уровне через HTTP (S) задайте `clientCredentialType` для `Basic`атрибута [ \<> транспорта](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md) или [ \<транспортного >](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md) значение.  
   
         > [!NOTE]
-        >  Когда служба WCF размещается в Internet Information Services (IIS) с использованием безопасности уровня транспорта и <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> свойству <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, пользовательскую схему проверки подлинности используется подмножество возможностей проверки подлинности Windows. Том, что в этом случае IIS выполняет проверку подлинности Windows, до вызова пользовательской структуры проверки подлинности WCF.  
+        >  Если служба WCF размещается в службы IIS (IIS) с использованием безопасности на транспортном <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> уровне <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, а свойство имеет значение, настраиваемая схема проверки подлинности использует подмножество проверки подлинности Windows. Это связано с тем, что в этом случае IIS выполняет проверку подлинности Windows перед тем, как WCF вызовет настраиваемую проверку подлинности.  
   
-     Дополнительные сведения о создании элемента привязки WCF, см. в разделе [как: Указание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Дополнительные сведения о создании элемента привязки WCF см. в разделе [как Укажите привязку службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      В следующем примере показан код конфигурации для привязки.  
   
@@ -84,20 +84,20 @@ ms.locfileid: "65960064"
   
 2. Настройте поведение, которое будет указывать, что для проверки пар имени пользователя и пароля для входящих маркеров безопасности <xref:System.IdentityModel.Tokens.UserNameSecurityToken> будет использоваться пользовательский проверяющий элемент управления.  
   
-    1. Дочерний элемент [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент.  
+    1. В качестве [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) дочернего [ \<элемента System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) добавьте элемент Behaviors >.  
   
-    2. Добавить [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) для [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент.  
+    2. Добавьте > serviceBehaviors в элемент [ Behaviors>\<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)  
   
-    3. Добавить [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) и присвойте `name` атрибут соответствующее значение.  
+    3. Добавьте элемент [Behavior > и присвойте атрибуту соответствующее значение. \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) `name`  
   
-    4. Добавить [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) для [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) элемент.  
+    4. Добавьте > ServiceCredentials в элемент > [ поведения.\<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
   
-    5. Добавить [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) для [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+    5. Добавьте [> усернамеаусентикатион в > ServiceCredentials. \<](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)  
   
     6. Присвойте свойству `userNamePasswordValidationMode` значение `Custom`.  
   
         > [!IMPORTANT]
-        >  Если `userNamePasswordValidationMode` значение не задано, WCF использует проверку подлинности Windows вместо пользовательского имени и пароля проверяющего элемента управления.  
+        >  `userNamePasswordValidationMode` Если значение не задано, WCF использует проверку подлинности Windows вместо настраиваемого средства проверки имени пользователя и пароля.  
   
     7. Присвойте атрибуту `customUserNamePasswordValidatorType` значение типа вашего пользовательского проверяющего элемента управления для проверки имени пользователя и пароля.  
   

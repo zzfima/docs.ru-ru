@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931755"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Реализация методов в специализированных элементах управления
 Метод применяется в элементе управления точно так же, как и в любом другом компоненте.  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  Если вы хотите разрешить пользователям элемента управления задавать для метода комбинации параметров, подготовьте несколько перегрузок метода с использованием явных типов данных. Не создавайте параметры, которые объявляются как `As Object` и могут содержать любые типы данных, — это может привести к ошибкам, которые не будут обнаружены во время тестирования.  
   
 > [!NOTE]
->  Универсальный тип данных в среде CLR — это `Object`, а не `Variant`. Тип `Variant` был исключен из языка.  
+> Универсальный тип данных в среде CLR — это `Object`, а не `Variant`. Тип `Variant` был исключен из языка.  
   
  Например, метод `Spin` гипотетического элемента управления `Widget` позволяет либо прямо определить направление и скорость вращения, либо определить другой объект `Widget`, вращательный момент которого поглощается.  
   

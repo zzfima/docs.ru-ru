@@ -2,21 +2,21 @@
 title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
-ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf512c427637ca65a7271ec8300a373a38632108
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761680"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913522"
 ---
-# <a name="issuermetadata"></a>\<issuerMetadata>
-\<system.serviceModel>  
+# <a name="issuermetadata"></a>\<issuerMetadata >
+\<> System. serviceModel  
 \<привязки >  
 \<wsFederationHttpBinding >  
 \<Привязка >  
-\<Безопасность >  
-\<сообщение >  
-\<issuerMetadata>  
+\<> безопасности  
+\<> сообщения  
+\<issuerMetadata >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,20 +54,20 @@ ms.locfileid: "61761680"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Коллекция заголовков адреса.|  
-|[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Удостоверение, обеспечивающее проверку подлинности конечной точки другими конечными точками, которые обмениваются с ней сообщениями.|  
+|[\<заголовки >](headers-element.md)|Коллекция заголовков адреса.|  
+|[\<> удостоверений](identity.md)|Удостоверение, обеспечивающее проверку подлинности конечной точки другими конечными точками, которые обмениваются с ней сообщениями.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Определяет параметры безопасности уровня сообщений для [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) элемент.|  
+|[\<> сообщения](message-element-of-wsfederationhttpbinding.md)|Определяет параметры безопасности на уровне сообщений для [ \<элемента WSFederationHttpBinding >](wsfederationhttpbinding.md) .|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
-- [Идентификация и проверка подлинности службы](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Возможности безопасности при использовании пользовательских привязок](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Идентификация и проверка подлинности службы](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Федерация и выданные маркеры](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Возможности безопасности при использовании пользовательских привязок](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Федерация и выданные маркеры](../../../wcf/feature-details/federation-and-issued-tokens.md)

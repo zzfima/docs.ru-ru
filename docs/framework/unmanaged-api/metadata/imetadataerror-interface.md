@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966344"
 ---
 # <a name="imetadataerror-interface"></a>Интерфейс IMetaDataError
-Предоставляет механизм обратного вызова для сообщений об ошибках во время слияния метаданных.  
+Предоставляет механизм обратного вызова для сообщения об ошибках во время слияния метаданных.  
   
 > [!NOTE]
->  `IMetaDataError` Интерфейс должен быть реализован с помощью клиента.  
+> `IMetaDataError` Интерфейс должен быть реализован клиентом.  
   
 ## <a name="methods"></a>Методы  
   
@@ -36,11 +36,11 @@ ms.locfileid: "61663757"
 |[Метод OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Предоставляет уведомление об ошибках, возникающих во время слияния метаданных.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок.** COR. h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Библиотечная** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

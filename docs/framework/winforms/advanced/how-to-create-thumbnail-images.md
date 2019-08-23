@@ -8,47 +8,47 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 786a92d99f5e7a0c27f502efa9a5fe617ac4d4d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063776"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923760"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Практическое руководство. Создание эскизов изображений
-Эскиз — это компактная версия образа. Можно создать изображение эскиза путем вызова <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  
+Эскиз изображения — это небольшая версия изображения. Можно создать эскиз изображения, вызвав <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается <xref:System.Drawing.Image> объект из JPG-файла. Исходное изображение имеет 640 пикселей в ширину и высоту 479 пикселей. Код создает эскиз с 100 пикселей в ширину и высоту 100 пикселей.  
+ В следующем примере создается <xref:System.Drawing.Image> объект из JPG-файла. Исходное изображение имеет ширину 640 пикселей и высоту 479 пикселей. Код создает эскиз эскиза с шириной 100 пикселей и высотой 100 пикселей.  
   
- На следующем рисунке показан эскиз:  
+ На следующем рисунке показан эскиз изображения:  
   
- ![Снимок экрана, показывающий эскиз выходных данных.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
+ ![Снимок экрана, на котором показан эскиз выходных данных.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
->  В этом примере метод обратного вызова является объявлен, но никогда не используется. Это поддерживается всеми версиями GDI +.  
+> В этом примере метод обратного вызова объявляется, но не используется. Поддерживает все версии GDI+.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Чтобы запустить пример, выполните следующие действия.  
+ Предыдущий пример предназначен для использования с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, что <xref:System.Windows.Forms.Control.Paint> является параметром обработчика событий. Чтобы запустить пример, выполните следующие действия.  
   
 1. Создайте новое приложение Windows Forms.  
   
-2. В примере кода добавьте в форму.  
+2. Добавьте пример кода в форму.  
   
-3. Создайте обработчик для формы <xref:System.Windows.Forms.Control.Paint> событий  
+3. Создание обработчика для <xref:System.Windows.Forms.Control.Paint> события формы  
   
-4. В <xref:System.Windows.Forms.Control.Paint> обработчик, вызов `GetThumbnail` метод и передать `e` для <xref:System.Windows.Forms.PaintEventArgs>.  
+4. В обработчике `GetThumbnail` вызовите метод и передайте `e` для <xref:System.Windows.Forms.PaintEventArgs>. <xref:System.Windows.Forms.Control.Paint>  
   
-5. Найдите файл изображения, который требуется создать эскиз.  
+5. Найдите файл изображения, эскиз которого нужно создать.  
   
-6. В `GetThumbnail` метод, укажите путь и имя файла для изображения.  
+6. `GetThumbnail` В методе укажите путь и имя файла для образа.  
   
-7. Нажмите клавишу F5 для запуска примера.  
+7. Нажмите клавишу F5, чтобы запустить пример.  
   
-     В форме появится эскиз 100 на 100.  
+     На форме появится эскиз с 100 по 100.  
   
 ## <a name="see-also"></a>См. также
 

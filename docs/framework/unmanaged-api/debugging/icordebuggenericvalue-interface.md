@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988680"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910231"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Интерфейс ICorDebugGenericValue
 
-Подкласс «ICorDebugValue», которая применяется ко всем значениям. Этот интерфейс предоставляет для значения методы Get и Set.  
+Подкласс "ICorDebugValue", который применяется ко всем значениям. Этот интерфейс предоставляет для значения методы Get и Set.  
   
 ## <a name="methods"></a>Методы  
   
@@ -35,21 +35,21 @@ ms.locfileid: "61988680"
 |[Метод SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Копирует новое значение из указанного буфера.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugGenericValue` — Это интерфейс, так как это не поддерживающее удаленное взаимодействие.  
+ `ICorDebugGenericValue`является подинтерфейсом, так как он не является удаленным.  
   
- Для ссылочных типов значение является ссылкой, а не ссылки на содержимое.  
+ Для ссылочных типов значение является ссылкой, а не содержимым ссылки.  
   
  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

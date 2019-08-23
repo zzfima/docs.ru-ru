@@ -5,25 +5,25 @@ helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a941189eb8ca00de6fb2ef75cada5762c0bcc973
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012520"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968303"
 ---
 # <a name="progressbar-control-windows-forms"></a>Элемент управления ProgressBar (Windows Forms)
 > [!IMPORTANT]
->  Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления <xref:System.Windows.Forms.ProgressBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ProgressBar> можно сохранить для обратной совместимости и использования в будущем.  
+> Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления <xref:System.Windows.Forms.ProgressBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ProgressBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- Windows Forms <xref:System.Windows.Forms.ProgressBar> элемент управления показывает ход выполнения действия, отображение на соответствующее число прямоугольников, расположенных на горизонтальной полосе. По завершении действия панели будет заполнено. Индикаторы выполнения обычно используются для предоставления пользователю Индикация того, как долго ждать до завершения длительного действия — например, при загрузке большого файла.  
+ Элемент управления <xref:System.Windows.Forms.ProgressBar> Windows Forms показывает ход выполнения действия, отображая соответствующее количество прямоугольников, расположенных на горизонтальной полосе. После завершения действия Панель заполняется. Индикаторы выполнения обычно используются, чтобы дать пользователю указание о том, как долго ожидать завершения завершенного действия — например, при загрузке большого файла.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления ProgressBar](progressbar-control-overview-windows-forms.md)  
- Основные понятия <xref:System.Windows.Forms.ProgressBar> элемент управления, который позволяет графически отобразить ход выполнения операции.  
+ Содержит общие понятия <xref:System.Windows.Forms.ProgressBar> элемента управления, позволяющие графически отображать ход выполнения операции.  
   
- [Практическое руководство. Установка значения, отображаемого в элементе управления Windows Forms ProgressBar](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- Обсуждается целый ряд различных способов увеличения значения, отображаемого в <xref:System.Windows.Forms.ProgressBar> элемента управления.  
+ [Практическое руководство. Задание значения, отображаемого элементом управления Windows Forms ProgressBar](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ Описывает ряд различных способов увеличения значения, отображаемого <xref:System.Windows.Forms.ProgressBar> элементом управления.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.ProgressBar>  

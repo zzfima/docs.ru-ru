@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941093"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966545"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
-Иногда полезно изучить каждый узел в формах Windows <xref:System.Windows.Forms.TreeView> управления для выполнения определенных расчетов со значениями узлов. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  
+Иногда бывает полезно изучить каждый узел в элементе управления Windows Forms <xref:System.Windows.Forms.TreeView> , чтобы выполнить некоторые вычисления по значениям узла. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  
   
- Каждый <xref:System.Windows.Forms.TreeNode> объекта в виде дерева имеет свойства, которые можно использовать для перемещения по дереву: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, и <xref:System.Windows.Forms.TreeNode.Parent%2A>. Значение <xref:System.Windows.Forms.TreeNode.Parent%2A> свойства служит родительским узлом текущего узла. Дочерние узлы текущего узла, если таковые имеются, перечисляются в его <xref:System.Windows.Forms.TreeNode.Nodes%2A> свойство. <xref:System.Windows.Forms.TreeView> Сам элемент управления имеет <xref:System.Windows.Forms.TreeView.TopNode%2A> свойство, которое является корневым узлом для всего дерева.  
+ Каждый <xref:System.Windows.Forms.TreeNode> объект в представлении в виде дерева имеет свойства, которые можно использовать для навигации по древовидному <xref:System.Windows.Forms.TreeNode.FirstNode%2A>представлению <xref:System.Windows.Forms.TreeNode.NextNode%2A>: <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.Parent%2A>, и. Значением <xref:System.Windows.Forms.TreeNode.Parent%2A> свойства является родительский узел текущего узла. Дочерние узлы текущего узла, если таковые имеются, перечислены в его <xref:System.Windows.Forms.TreeNode.Nodes%2A> свойстве. Сам элемент управления <xref:System.Windows.Forms.TreeView.TopNode%2A> имеет свойство, которое является корневым узлом всего представления в виде дерева. <xref:System.Windows.Forms.TreeView>  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Перебор всех узлов элемента управления в представлении в виде дерева  
   
@@ -28,7 +28,7 @@ ms.locfileid: "61941093"
   
 2. Вызовите процедуру.  
   
-     Следующий пример описывает печать каждый <xref:System.Windows.Forms.TreeNode> объекта <xref:System.Windows.Forms.TreeNode.Text%2A> свойство:  
+     В следующем примере показано, как вывести <xref:System.Windows.Forms.TreeNode> <xref:System.Windows.Forms.TreeNode.Text%2A> свойство каждого объекта:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ ms.locfileid: "61941093"
 ## <a name="see-also"></a>См. также
 
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
-- [Рекурсивные процедуры](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Рекурсивные процедуры](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

@@ -8,31 +8,31 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: 2cdcebd4e47996841ad58213d9c6252a6a3dd7b6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6010d52750b20c07db51917621f8643e9d9b47d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968600"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Практическое руководство. Управление буферизацией графики вручную
-Для более сложных сценариях буферизации можно использовать классы .NET Framework для реализации собственной логики двойной буферизации. Класс, отвечающий за выделение и управление ими отдельных буферов графики является <xref:System.Drawing.BufferedGraphicsContext> класса. Каждое приложение имеет свои собственные значения по умолчанию <xref:System.Drawing.BufferedGraphicsContext> , управляет всеми двойную буферизацию для этого приложения. Ссылка на этот экземпляр можно получить, вызвав <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
+Для более сложных сценариев двойного буферизации можно использовать классы .NET Framework для реализации собственной логики двойной буферизации. Класс, ответственный за выделение отдельных графических буферов и управление ими <xref:System.Drawing.BufferedGraphicsContext> , является классом. Каждое приложение имеет собственное значение по <xref:System.Drawing.BufferedGraphicsContext> умолчанию, которое управляет всей двойной буферизацией приложения по умолчанию. Ссылку на этот экземпляр можно получить, вызвав метод <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
   
-### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Для получения ссылки на значение по умолчанию BufferedGraphicsContext  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Получение ссылки на BufferedGraphicsContext по умолчанию  
   
-- Задать <xref:System.Drawing.BufferedGraphicsManager.Current%2A> свойства, как показано в следующем примере кода.  
+- <xref:System.Drawing.BufferedGraphicsManager.Current%2A> Задайте свойство, как показано в следующем примере кода.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  Необходимо вызвать `Dispose` метод <xref:System.Drawing.BufferedGraphicsContext> ссылку, полученное от <xref:System.Drawing.BufferedGraphicsManager> класса. <xref:System.Drawing.BufferedGraphicsManager> Обрабатывает все выделения памяти и распространения по умолчанию <xref:System.Drawing.BufferedGraphicsContext> экземпляров.  
+    > Вам не нужно вызывать `Dispose` метод <xref:System.Drawing.BufferedGraphicsContext> для ссылки <xref:System.Drawing.BufferedGraphicsManager> , полученной из класса. Обработчик обрабатывает все операции выделения и распределения памяти для экземпляров по умолчанию <xref:System.Drawing.BufferedGraphicsContext>. <xref:System.Drawing.BufferedGraphicsManager>  
   
-     Для насыщенных графикой приложений, таких как анимации, может иногда повысить производительность с помощью специальной <xref:System.Drawing.BufferedGraphicsContext> вместо <xref:System.Drawing.BufferedGraphicsContext> предоставляемые <xref:System.Drawing.BufferedGraphicsManager>. Это позволяет создавать и управлять ими буферы графики по отдельности, без несения издержек производительности управления все другие буферизованной графики для вашего приложения на то, что память, занятая приложения будет больше.  
+     Для ресурсоемких графических приложений, таких как анимация, иногда можно повысить производительность, используя выделенный <xref:System.Drawing.BufferedGraphicsContext> вместо, <xref:System.Drawing.BufferedGraphicsContext> предоставленный <xref:System.Drawing.BufferedGraphicsManager>. Это позволяет создавать графические буферы и управлять ими по отдельности без снижения производительности при управлении всеми другими буферизованными графиками, связанными с приложением, хотя объем памяти, потребляемый приложением, будет больше.  
   
-### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>Чтобы создать выделенный BufferedGraphicsContext  
+### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>Создание выделенного BufferedGraphicsContext  
   
-- Объявите и создайте новый экземпляр класса <xref:System.Drawing.BufferedGraphicsContext> класса, как показано в следующем примере кода.  
+- Объявите и создайте новый экземпляр <xref:System.Drawing.BufferedGraphicsContext> класса, как показано в следующем примере кода.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
@@ -41,4 +41,4 @@ ms.locfileid: "65591838"
 
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [Двойная буферизация графики](double-buffered-graphics.md)
-- [Практическое руководство. Визуализация буферизированной графики вручную](how-to-manually-render-buffered-graphics.md)
+- [Практическое руководство. Ручная прорисовка буферизованной графики](how-to-manually-render-buffered-graphics.md)

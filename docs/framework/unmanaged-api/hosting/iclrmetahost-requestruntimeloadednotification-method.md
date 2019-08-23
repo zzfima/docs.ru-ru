@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776545"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965003"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Метод ICLRMetaHost::RequestRuntimeLoadedNotification
-Предоставляет функцию обратного вызова, которая гарантированно вызывается при первой загрузке версия CLR (CLR), но еще не запущен. Этот метод заменяет [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) функции.  
+Предоставляет функцию обратного вызова, которая гарантированно будет вызываться при первой загрузке версии среды CLR, но еще не запущена. Этот метод заменяет функцию [локкклрверсион](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 ## <a name="parameters"></a>Параметры  
  `pCallbackFunction`  
- [in] Функция обратного вызова, который вызывается при загрузке новой среды выполнения.  
+ окне Функция обратного вызова, которая вызывается при загрузке новой среды выполнения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -47,13 +47,13 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|Параметр `pCallbackFunction` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
- Функция обратного вызова работает следующим образом:  
+ Обратный вызов работает следующим образом:  
   
-- Функция обратного вызова вызывается только в том случае, когда среда выполнения загружается в первый раз.  
+- Обратный вызов вызывается, только если среда выполнения загружается в первый раз.  
   
-- Функция обратного вызова не вызывается для реентерабельных загрузок ту же среду выполнения.  
+- Обратный вызов не вызывается для повторных загрузок одной и той же среды выполнения.  
   
-- Для загрузки среды выполнения не допускающий повторные входы сериализуются вызовы функции обратного вызова.  
+- Для невходных загрузок среды выполнения вызовы функции обратного вызова сериализуются.  
   
  Функция обратного вызова имеет следующий прототип:  
   
@@ -64,7 +64,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
                      CallbackThreadUnsetFnPtr pfnCallbackThreadUnset);  
 ```  
   
- Прототипы функции обратного вызова, следующим образом:  
+ Прототипы функций обратного вызова имеют следующий вид:  
   
 - `pfnCallbackThreadSet`:  
   
@@ -78,23 +78,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Если основное приложение намеревается загрузить или вызывать другой среды выполнения должен быть загружен в виде реентерабельным, `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` параметры, предоставляемые в обратном вызове, необходимо использовать функцию следующим образом:  
+ Если узел намеревается загрузить или вызвать повторную загрузку другой среды выполнения, `pfnCallbackThreadSet` параметры и `pfnCallbackThreadUnset` , предоставленные в функции обратного вызова, должны использоваться следующим образом:  
   
-- `pfnCallbackThreadSet` должен вызываться потоком, который может вызвать загрузку среды выполнения, до попытки такой загрузки.  
+- `pfnCallbackThreadSet`должен вызываться потоком, который может вызвать загрузку среды выполнения до того, как будет предпринята такая нагрузка.  
   
-- `pfnCallbackThreadUnset` должен вызываться, когда поток больше не вызывает загрузку среды выполнения (и перед возвратом из начальной обратного вызова).  
+- `pfnCallbackThreadUnset`должен вызываться, когда поток больше не будет вызывать такую нагрузку во время выполнения (и до возврата из начального обратного вызова).  
   
-- `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` оба являются не допускающий повторные входы.  
+- `pfnCallbackThreadSet`и `pfnCallbackThreadUnset` не являются недопустимыми для повторного входа.  
   
 > [!NOTE]
->  Ведущие приложения не должны вызывать `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` выходит за рамки `pCallbackFunction` параметра.  
+> Ведущие приложения не должны вызывать `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` `pCallbackFunction` вне области действия параметра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок.** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

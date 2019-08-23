@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967879"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Исключения среды выполнения в собственных приложениях .NET
 Очень важно выполнять тестирование сборок выпуска приложения универсальной платформы Windows на их целевых платформах, поскольку конфигурации отладки и выпуска совершенно различны. По умолчанию конфигурация отладки использует для компиляции приложения среду выполнения .NET Core, но конфигурация выпуска использует для компиляции приложения в машинный код среду выполнения .NET Native.  
   
 > [!IMPORTANT]
->  Сведения о работе с [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), и [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) исключения, которые могут вас возникает при тестировании версий для выпуска приложения, см. в разделе «шаг 4: Вручную разрешите отсутствующие метаданные: в [Приступая к работе](../../../docs/framework/net-native/getting-started-with-net-native.md) раздела, а также [отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) и [директив среды выполнения (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> Сведения о работе с исключениями [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)и [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) , которые могут возникнуть при тестировании версий выпуска приложения, см. в разделе Шаг 4. Вручную разрешить отсутствующие метаданные: в [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md) разделе, а также в ссылке на файл конфигурации [отражения и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) и [директив среды выполнения (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Отладочные и выпускные сборки  
  Когда отладочная сборка выполняется в среде выполнения .NET Core, она не компилируется в машинный код. Это делает все службы, обычно предоставляемые средой выполнения, доступными вашему приложению.  
@@ -31,7 +31,7 @@ ms.locfileid: "64650353"
 - Код сильно оптимизируется. Это означает, что везде, где это возможно, используется встраивание. (Встраивание перемещает код из внешних подпрограмм в вызывающую программу.)   То, что .NET Native предоставляет специализированную среду выполнения и реализует агрессивное встраивание, влияет на стек вызовов, который отображается при отладке.  Дополнительные сведения см. в разделе [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
->  Вы можете управлять тем, будут ли отладочные и выпускные сборки компилироваться с помощью цепочки инструментов .NET Native, устанавливая или снимая флажок **Компилировать с использованием цепочки инструментов машинного кода .NET** .   Однако обратите внимание, что Магазин Windows всегда будет компилировать рабочую версию вашего приложения с помощью цепочки инструментов .NET Native.  
+> Вы можете управлять тем, будут ли отладочные и выпускные сборки компилироваться с помощью цепочки инструментов .NET Native, устанавливая или снимая флажок **Компилировать с использованием цепочки инструментов машинного кода .NET** .   Однако обратите внимание, что Магазин Windows всегда будет компилировать рабочую версию вашего приложения с помощью цепочки инструментов .NET Native.  
   
 <a name="Messages"></a>   
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
@@ -61,5 +61,5 @@ Additional information: Value does not fall within the expected range.
   
 ## <a name="see-also"></a>См. также
 
-- [Отладка универсальных приложений .NET Native Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Отладка .NET Native универсальных приложениях Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)

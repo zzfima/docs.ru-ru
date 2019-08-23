@@ -8,32 +8,32 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd7b06030e0fb2bba74590ee80c07c34047c5b47
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950612"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Практическое руководство. Вызов диалогового окна печати
-Чтобы обеспечить возможность печати из приложения, вы можете создать и открыть <xref:System.Windows.Controls.PrintDialog> объекта.  
+Чтобы обеспечить возможность печати из приложения, можно просто создать и открыть <xref:System.Windows.Controls.PrintDialog> объект.  
   
 ## <a name="example"></a>Пример  
- Элемент управления <xref:System.Windows.Controls.PrintDialog> предоставляет единую точку входа для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], конфигурации и отправки задания [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Элемент управления является простой в использовании и может быть создан с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] разметки или кода. Ниже приведен пример, как создать и открыть элемент управления в коде и способ печати из него. Также показано, как убедиться, что диалоговое окно предоставит пользователям возможность установки конкретного диапазона страниц. В примере кода предполагается, что имеется файл FixedDocumentSequence.xps в корне диска C:.  
+ Элемент управления <xref:System.Windows.Controls.PrintDialog> предоставляет единую точку входа для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], конфигурации и отправки задания [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Элемент управления легко использовать, и его можно создать с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] разметки или кода. В следующем примере показано, как создать и открыть элемент управления в коде и как выполнить печать из него. В нем также показано, как убедиться, что в диалоговом окне пользователь может задать конкретный диапазон страниц. В примере кода предполагается, что в корне диска C: имеется файл FixedDocumentSequence. XPS.  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- Когда откроется диалоговое окно, пользователи будут доступны для выбора принтеров, установленных на компьютере. Они также получат возможность выбрать [средство записи документов XPS Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319) для создания [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файла вместо печати.  
+ После открытия диалогового окна пользователи смогут выбрать принтеры, установленные на компьютере. Они также смогут выбрать [средство записи документов XPS Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319) для создания [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файла вместо печати.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Управления [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], как описано в этом разделе, не следует путать с <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> компонент Windows Forms.  
+> Элемент управления, который рассматривается в этом разделе, <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> не следует путать с компонентом Windows Forms. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>  
   
- Строго говоря, можно использовать <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> метода, не открывая диалоговое окно. В этом смысле элемент управления может использоваться как невидимого компонента печати. Но из соображений производительности было бы лучше использовать <xref:System.Printing.PrintQueue.AddJob%2A> метода или один из многих <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> методы <xref:System.Windows.Xps.XpsDocumentWriter>. Дополнительные сведения об этом см. в разделе [печатать файлы XPS программным способом](how-to-programmatically-print-xps-files.md) и.  
+ Строго говоря, <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> метод можно использовать без открытия диалогового окна. В этом смысле элемент управления можно использовать как незамеченный компонент печати. Но по соображениям <xref:System.Printing.PrintQueue.AddJob%2A> производительности лучше использовать либо метод, либо один из множества <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> методов <xref:System.Windows.Xps.XpsDocumentWriter>и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> . Дополнительные сведения см. в разделе [Программная печать XPS-файлов](how-to-programmatically-print-xps-files.md) и.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Controls.PrintDialog>
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)
-- [Средство записи документов Microsoft XPS](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Средство записи документов XPS (Майкрософт)](https://go.microsoft.com/fwlink/?LinkId=147319)

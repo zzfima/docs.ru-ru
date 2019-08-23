@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f1d94ffde71962c848bece808bf2d982093896a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c57b13b05522614ff066b93cb9f6a437cb340576
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652168"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962685"
 ---
 # <a name="icordebugstepper-interface"></a>Интерфейс ICorDebugStepper
 Представляет предпринимаемый отладчиком шаг при выполнении кода, служащий идентификатором на промежутке между подачей команды и ее завершением, а также предоставляет возможность отмены шага.  
@@ -30,37 +30,37 @@ ms.locfileid: "64652168"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|В результате `ICorDebugStepper` для отмены последней команды шага, оно получено.|  
-|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Получает значение, указывающее, является ли это `ICorDebugStepper` в данный момент выполняет этап.|  
-|[Метод SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Задает CorDebugIntercept значение, указывающее типы кода, который осуществляется пошаговое.|  
-|[Метод SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Задает значение, указывающее, является ли вызовы [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) значения аргументов, машинному коду или код на промежуточном языке (MSIL) метода, который является в настоящее время шаг.|  
-|[Метод SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Задает CorDebugUnmappedStop значение, указывающее тип кода, в котором выполнение будет остановлено.|  
-|[Метод Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|В результате `ICorDebugStepper` на один шаг через содержащую и при необходимости, чтобы продолжить, при пошаговом выполнении функций, которые вызываются в потоке.|  
-|[Метод StepOut](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|В результате `ICorDebugStepper` один шаг через содержащую и завершенной, если текущий кадр возвращает управление в вызывающий кадр.|  
-|[Метод StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|В результате `ICorDebugStepper` на один шаг через содержащую и возвратить при достижении кода за последним из указанных диапазонов.|  
+|[Метод Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|`ICorDebugStepper` Приводит к отмене полученной команды последнего шага.|  
+|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Возвращает значение, указывающее, выполняется ли `ICorDebugStepper` в данный момент шаг.|  
+|[Метод SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Задает значение CorDebugIntercept, указывающее типы кода, в который выполняется пошаговое выполнение.|  
+|[Метод SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Задает значение, указывающее, должны ли вызовы метода [ICorDebugStepper:: степранже](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) передавать значения аргументов, относящихся к машинному коду или коду кода на языке MSIL, который проходит через шаг.|  
+|[Метод SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Задает значение Кордебугунмаппедстоп, указывающее тип несопоставленного кода, в котором выполнение будет остановлено.|  
+|[Метод Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|`ICorDebugStepper` Приводит к пошаговому вызову содержащего его потока и, при необходимости, для продолжения единого пошагового выполнения функций, которые вызываются в потоке.|  
+|[Метод StepOut](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|`ICorDebugStepper` Приводит к пошаговому вызову содержащего его потока и выполнению, когда текущий кадр возвращает управление вызывающему кадру.|  
+|[Метод StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|`ICorDebugStepper` Приводит к пошаговому вызову содержащего его потока и возврату при достижении кода, находящегося за последним из указанных диапазонов.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugStepper` Интерфейс выполняет следующие функции:  
+ `ICorDebugStepper` Интерфейс выполняет следующие задачи:  
   
-- Он выступает в качестве идентификатора между командой шага, выданный и выполнении этой команды.  
+- Он выступает в качестве идентификатора между выдаваемыми командой Step и завершением этой команды.  
   
-- Он обеспечивает центральный интерфейс для инкапсуляции всех пошагового выполнения, которое может быть выполнено.  
+- Он предоставляет центральный интерфейс для инкапсуляции всех шагов, которые можно выполнить.  
   
-- Она позволяет преждевременно отменить были выполнены вышеуказанные операции.  
+- Он позволяет преждевременно отменить операцию пошагового выполнения.  
   
- Может существовать несколько шагов на поток. Например могут быть точки останова при шаг с обходом функции и пользователь может потребоваться начать новую операцию пошагового выполнения внутри этой функции. Это отладчик для определения способа обработки такой ситуации. Отладчик может потребоваться отменить пошагового выполнения исходной операции или вложить две операции. `ICorDebugStepper` Интерфейс поддерживает две возможности.  
+ Для каждого потока может существовать несколько шагов. Например, при пошаговом выполнении функции может быть достигнута точка останова, и пользователю может потребоваться начать новую операцию пошагового выполнения внутри этой функции. Для определения способа решения этой проблемы отладчику необходимо присвоить значение. Отладчик может захотеть отменить исходную операцию пошагового выполнения или вложить две операции. `ICorDebugStepper` Интерфейс поддерживает оба варианта.  
   
- Шаг может мигрировать между потоками, если среда CLR (CLR) делает вызов нескольких потоков, маршалируется.  
+ Средство организации пошагового выполнения может переноситься между потоками, если среда CLR выполняет перекрестный потоковый вызов.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

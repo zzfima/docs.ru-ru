@@ -6,17 +6,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: d1e598831954f17bdf3bc03ab880c344ca36aa5a
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 3962b671176ad158b338889140181834e05bbeee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929723"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Создание списков основных сведений с использованием элемента управления DataGrid в формах Windows Forms с помощью конструктора
 
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
  Если содержит ряд связанных таблиц, можно использовать два <xref:System.Windows.Forms.DataGrid> элемента управления для отображения данных в формате «основной/подробности». <xref:System.Data.DataSet> Один <xref:System.Windows.Forms.DataGrid> из них обозначен как Главная сетка, а второй — сеткой сведений. При выборе записи в главном списке все связанные дочерние записи отображаются в списке подробностей. Например, если <xref:System.Data.DataSet> содержит таблицу Customers и связанную таблицу Orders, можно указать таблицу Customers, которая будет главной сеткой, а таблица Orders — сетку сведений. При выборе клиента из главной сетки все заказы, связанные с этим клиентом в таблице Orders, будут отображаться в сетке сведений.
 
@@ -27,7 +27,7 @@ ms.locfileid: "69039943"
 1. Добавьте в <xref:System.Windows.Forms.DataGrid> форму два элемента управления. Дополнительные сведения см. в разделе [Практическое руководство. Добавьте элементы управления в](how-to-add-controls-to-windows-forms.md)Windows Forms. В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления не находится на **панели элементов** по умолчанию. Дополнительные сведения см. в разделе [Практическое руководство. Добавление элементов на панель элементов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).
 
     > [!NOTE]
-    >  Следующие шаги неприменимы к Visual Studio 2005, в котором для привязки данных времени разработки используется окно **Источники данных** . Дополнительные сведения см. в статьях [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) и [выполнение следующих действий. Отображение связанных данных в приложении](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))Windows Forms.
+    > Следующие шаги неприменимы к Visual Studio 2005, в котором для привязки данных времени разработки используется окно **Источники данных** . Дополнительные сведения см. в статьях [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) и [выполнение следующих действий. Отображение связанных данных в приложении](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))Windows Forms.
 
 2. Перетащите несколько таблиц из **Обозреватель сервера** в форму.
 

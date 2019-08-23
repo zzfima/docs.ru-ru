@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916403"
 ---
-# <a name="corprfjitcache-enumeration"></a>Перечисление COR_PRF_JIT_CACHE
+# <a name="cor_prf_jit_cache-enumeration"></a>Перечисление COR_PRF_JIT_CACHE
 Указывает результат кэшированной функции поиска.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` имеет нулевое значение, поэтому `COR_PRF_JIT_CACHE` нельзя использовать в качестве логического суррогат.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`имеет нулевое значение, поэтому `COR_PRF_JIT_CACHE` не может использоваться в качестве логического суррогата.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,15 +42,15 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|Найденное функции.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Поиск не удалось найти функцию.|  
+|`COR_PRF_FUNCTION_FOUND`|Поиск обнаружил функцию.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Поиск не нашел функцию.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf. idl, CorProf. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

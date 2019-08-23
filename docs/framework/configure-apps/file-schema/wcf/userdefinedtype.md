@@ -2,20 +2,20 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769841"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940585"
 ---
-# <a name="userdefinedtype"></a>\<userDefinedType>
+# <a name="userdefinedtype"></a>\<userDefinedType >
 Представляет определяемый пользователем тип (UDT), подлежащий включению в контракт службы.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<comContracts >  
-\<comContract >  
-\<userDefinedTypes>  
+\<Комконтракт >  
+\<Усердефинедтипес >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ ms.locfileid: "61769841"
 |`TypeLibVersion`|Срока, которая является идентификатором версии библиотеки типов, определяющей тип.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61769841"
   
  Для решения этой проблемы можно добавить пользовательские типы в файл конфигурации, чтобы их можно было включить как известные типы в соответствующий контракт службы. Для этого необходимо однозначно определить пользовательский тип и контракты, то есть исходные интерфейсы СОМ, которые его используют.  
   
- В следующем примере показано добавление два конкретных пользовательских типа <`userDefinedTypes`> раздел файла конфигурации для этой цели.  
+ В следующем примере показано добавление двух специальных определяемых пользователем типов`userDefinedTypes`в раздел < > файла конфигурации для этой цели.  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ ms.locfileid: "61769841"
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Интеграция с приложениями COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Практическое руководство. Настройка параметров службы COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts >](comcontracts.md)
+- [Интеграция с приложениями COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Практическое руководство. Настройка параметров службы COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

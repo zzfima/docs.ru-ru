@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971786"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946781"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Пошаговое руководство. Простая модель объекта и запрос (Visual Basic)
 
@@ -121,7 +121,7 @@ ms.locfileid: "68971786"
 
 ## <a name="creating-a-simple-query"></a>Создание простого запроса
 
-На этом этапе создается запрос для поиска клиентов из таблицы Customers базы данных, находящихся в Лондоне. Код запроса, создаваемый на этом шаге, только описывает запрос. но не выполняет его. Этот подход называется отложенным *выполнением*. Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+На этом этапе создается запрос для поиска клиентов из таблицы Customers базы данных, находящихся в Лондоне. Код запроса, создаваемый на этом шаге, только описывает запрос. но не выполняет его. Этот подход называется отложенным *выполнением*. Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 Можно также записать выходные данные в журнал, чтобы продемонстрировать команды SQL, создаваемые технологией [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Возможность ведения журнала (которая использует метод <xref:System.Data.Linq.DataContext.Log%2A>) очень полезна при отладке, а также при проверке того, что команды, отправляемые в базу данных, точно соответствуют запросу.
 

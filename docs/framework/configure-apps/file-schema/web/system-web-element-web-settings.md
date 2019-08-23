@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941381"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System.Web > элемент (веб-параметры)
-Содержит сведения об управлении поведению процессов, используемые уровнем размещения ASP.NET.  
+# <a name="systemweb-element-web-settings"></a>\<Элемент System. Web > (веб-параметры)
+Содержит сведения о том, как уровень размещения ASP.NET управляет поведением всего процесса.  
   
  \<configuration>  
-\<System.Web > элемент (веб-параметры)  
+\<Элемент System. Web > (веб-параметры)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,25 +32,25 @@ ms.locfileid: "67486683"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Задает параметры конфигурации для пулов приложений IIS в файле aspnet.config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Задает параметры конфигурации для пулов приложений IIS в файле aspnet. config.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Указывает корневой элемент в любом файле конфигурации, который используется среда CLR и приложениями .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|Указывает корневой элемент в каждом файле конфигурации, который используется средой CLR и .NET Framework приложениями.|  
   
 ## <a name="remarks"></a>Примечания  
- `system.web` Элемента и его дочерних `applicationPool` элемента были добавлены в .NET Framework, начиная с .NET Framework 3.5 SP1. При работе в режиме интеграции с IIS 7.0 или более поздних версий это сочетание элементов позволяет настроить, как ASP.NET управляет потоками и как помещает запросы в очередь, когда ASP.NET размещен в пуле приложений IIS. При запуске IIS 7.0 или более поздних версий в классическом режиме или режиме ISAPI эти параметры игнорируются.  
+ Элемент и его дочерний `applicationPool` элемент были добавлены в .NET Framework в .NET Framework 3,5 с пакетом обновления 1 (SP1). `system.web` При запуске IIS 7,0 или более поздних версий в интегрированном режиме эта комбинация элементов позволяет настроить, как ASP.NET управляет потоками и как она помещает запросы в очередь, когда ASP.NET размещается в пуле приложений IIS. При запуске IIS 7,0 или более поздних версий в классическом или режиме ISAPI эти параметры игнорируются.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config, когда ASP.NET размещен в пуле приложений IIS. В примере предполагается, что службы IIS выполняются в интегрированном режиме, и что приложение использует .NET Framework 3.5 SP1 или более поздней версии. Это происходит в версиях .NET Framework более ранней, чем .NET Framework 3.5 SP1. В примере значения являются значениями по умолчанию.  
+ В следующем примере показано, как настроить поведение ASP.NET на уровне процесса в файле aspnet. config, если ASP.NET размещается в пуле приложений IIS. В примере предполагается, что службы IIS работают в режиме интеграции и что приложение использует .NET Framework 3,5 с пакетом обновления 1 (SP1) или более поздней версии. Такое поведение не происходит в версиях .NET Framework более ранних, чем .NET Framework 3,5 с пакетом обновления 1 (SP1). Значения в примере являются значениями по умолчанию.  
   
 ```xml  
 <configuration>  
@@ -74,4 +74,4 @@ ms.locfileid: "67486683"
   
 ## <a name="see-also"></a>См. также
 
-- [Элемент \<applicationPool> (веб-параметры)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [Элемент \<applicationPool> (веб-параметры)](applicationpool-element-web-settings.md)

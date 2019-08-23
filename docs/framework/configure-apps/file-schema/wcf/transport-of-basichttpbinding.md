@@ -2,22 +2,22 @@
 title: <transport> из <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af5852c3c7850f91686d50294c8846f85574e909
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788392"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918637"
 ---
-# <a name="transport-of-basichttpbinding"></a>\<Транспорт > из \<basicHttpBinding >
+# <a name="transport-of-basichttpbinding"></a>\<> передачи для \<BasicHttpBinding >
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<привязки >  
-\<basicHttpBinding >  
+\<> basicHttpBinding  
 \<Привязка >  
-\<Безопасность >  
-\<Транспорт >  
+\<> безопасности  
+\<> транспорта  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,9 +46,9 @@ ms.locfileid: "61788392"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientCredentialType|— Указывает тип учетных данных, используемых при проверке подлинности клиента с проверкой подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|— Указывает тип учетных данных, используемых при проверке подлинности клиента из домена с использованием прокси-сервер по протоколу HTTP. Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|realm|Строка, указывающая область, используемую схемой проверки подлинности HTTP для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию - пустая строка.|  
+|clientCredentialType|— Указывает тип учетных данных, используемых при проверке подлинности клиента с помощью проверки подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|— Указывает тип учетных данных, используемых при выполнении проверки подлинности клиента в домене с использованием прокси-сервера через HTTP. Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|realm|Строка, указывающая область, используемую схемой проверки подлинности HTTP для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию — пустая строка.|  
 |policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
 |protectionScenario|Это перечисление указывает сценарий защиты, регламентированный политикой.|  
   
@@ -56,8 +56,8 @@ ms.locfileid: "61788392"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Нет|Во время передачи сообщения не защищены.|  
-|Basic|Задает обычную проверку подлинности.|  
+|Отсутствуют|Во время передачи сообщения не защищены.|  
+|Стандартная|Задает обычную проверку подлинности.|  
 |Digest|Задает дайджест-проверку подлинности.|  
 |Ntlm|Задает проверку подлинности NTLM, если это возможно и если не удается выполнить проверку подлинности Windows.|  
 |Windows|Задает встроенную проверку подлинности Windows.|  
@@ -66,21 +66,21 @@ ms.locfileid: "61788392"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Нет|-Сообщения не защищены во время передачи.|  
-|Basic|Задает обычную проверку подлинности, как определено документом RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверка подлинности.|  
-|Digest|Задает дайджест-проверки подлинности, как определено документом RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверка подлинности.|  
+|Отсутствуют|— Сообщения не защищаются во время перемещения.|  
+|Стандартная|Указывает обычную проверку подлинности, определенную в стандарте RFC 2617 — проверка подлинности HTTP: Обычная и дайджест-проверка подлинности.|  
+|Digest|Указывает дайджест-проверку подлинности, как определено в RFC 2617 — проверка подлинности HTTP: Обычная и дайджест-проверка подлинности.|  
 |Ntlm|Задает проверку подлинности NTLM, если это возможно и если не удается выполнить проверку подлинности Windows.|  
 |Windows|Задает встроенную проверку подлинности Windows.|  
 |Сертификат|Выполняет проверку подлинности клиента с использованием сертификата. Такая возможность действует, только если атрибут `Mode` родительского элемента `security` имеет значение Transport, и не действует, если этот атрибут имеет значение TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Определяет возможности безопасности для [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|[\<> безопасности](security-of-basichttpbinding.md)|Определяет возможности безопасности для [ \<> BasicHttpBinding](basichttpbinding.md).|  
   
 ## <a name="example"></a>Пример  
  В следующем примере демонстрируется использование безопасности транспорта SSL с использованием основной привязки. По умолчанию основная привязка поддерживает взаимодействие по протоколу HTTP.  
@@ -123,8 +123,8 @@ ms.locfileid: "61788392"
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../misc/binding.md)

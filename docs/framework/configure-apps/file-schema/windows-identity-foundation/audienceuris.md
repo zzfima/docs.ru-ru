@@ -3,21 +3,21 @@ title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 003221ed4dc7f4ccf72d2e0d3a91265e13172813
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941958"
 ---
-# <a name="audienceuris"></a>\<audienceUris>
-Задает набор URI, — это допустимые идентификаторы проверяющей стороны (RP). Маркеры не будет принят, если только они относятся к одному из разрешенных URI аудитории.  
+# <a name="audienceuris"></a>\<audienceUris >
+Указывает набор универсальных кодов ресурса (URI), которые являются допустимыми идентификаторами проверяющей стороны (RP). Токены не принимаются, если для одного из допустимых URI аудитории не задана область действия.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
-\<securityTokenHandlerConfiguration>  
-\<audienceUris>  
+\<Секурититокенхандлерконфигуратион >  
+\<audienceUris >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,32 +44,32 @@ ms.locfileid: "61750752"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|<xref:System.IdentityModel.Selectors.AudienceUriMode> Значение, указывающее, должна ли применяться ограничение аудитории на входящий токен. Возможные значения: «Всегда», «Никогда» и «BearerKeyOnly». По умолчанию используется «Всегда». Необязательный параметр.|  
+|режим|Значение <xref:System.IdentityModel.Selectors.AudienceUriMode> типа, указывающее, следует ли применять ограничение аудитории к входящему токену. Возможные значения: "всегда", "Never" и "Беареркэйонли". Значение по умолчанию — Always. Необязательный параметр.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|`<add value=xs:string>`|Добавляет URI, указанный параметром `value` атрибут в коллекцию audienceUris. Атрибут `value` является обязательным. URI с учетом регистра.|  
-|`<clear>`|Очищает коллекцию audienceUris. Все идентификаторы будут удалены из коллекции.|  
-|`<remove value=xs:string>`|Удаляет URI, указанный параметром `value` атрибут из коллекции audienceUris. Атрибут `value` является обязательным. URI с учетом регистра.|  
+|`<add value=xs:string>`|Добавляет URI, указанный `value` атрибутом, в коллекцию audienceUris. Атрибут `value` является обязательным. В URI учитывается регистр.|  
+|`<clear>`|Очищает коллекцию audienceUris. Все идентификаторы удаляются из коллекции.|  
+|`<remove value=xs:string>`|Удаляет URI, указанный `value` атрибутом из коллекции audienceUris. Атрибут `value` является обязательным. В URI учитывается регистр.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
+|[\<Секурититокенхандлерконфигуратион >](securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции обработчиков маркеров безопасности.|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию коллекция пуста; Используйте `<add>`, `<clear>`, и `<remove>` элементы для изменения коллекции. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> и <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> объектам используются значения в коллекцию URI аудитории для настройки любых допускается audience URI ограничения в <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектов.  
+ По умолчанию коллекция пуста; Используйте `<add>`элементы `<clear>`, и`<remove>` для изменения коллекции. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>объекты <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> и используют значения в коллекции URI аудитории для настройки любых допустимых ограничений URI аудитории в <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектах.  
   
- `<audienceUris>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> класса. Представлен отдельным URI, добавляемый в коллекцию <xref:System.IdentityModel.Configuration.AudienceUriElement> класса.  
+ `<audienceUris>` Элемент представлен<xref:System.IdentityModel.Configuration.AudienceUriElementCollection> классом. Отдельный URI, добавленный в коллекцию, представлен <xref:System.IdentityModel.Configuration.AudienceUriElement> классом.  
   
 > [!NOTE]
->  Использование `<audienceUris>` элемент как дочерний элемент элемента [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по-прежнему поддерживается для обеспечения обратной совместимости. Параметры на `<securityTokenHandlerConfiguration>` элемент переопределяют на `<identityConfiguration>` элемент.  
+> Использование `<audienceUris>` элемента в качестве дочернего элемента [ \<элемента > identityConfiguration](identityconfiguration.md) является устаревшим, но по-прежнему поддерживается для обратной совместимости. Параметры элемента переопределяют их `<identityConfiguration>` для элемента. `<securityTokenHandlerConfiguration>`  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показано, как настроить допустимые URI аудитории для приложения. В этом примере настраивается один URI. Токены, заданные для данного универсального кода Ресурса будут приняты, все остальные будут отклонены.  
+ В следующем коде XML показано, как настроить допустимые URI аудитории для приложения. В этом примере настраивается один универсальный код ресурса (URI). Маркеры, областью которых является этот URI, будут приняты, все остальные будут отклонены.  
   
 ```xml  
 <audienceUris>  

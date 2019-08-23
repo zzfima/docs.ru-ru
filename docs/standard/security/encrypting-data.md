@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968702"
 ---
 # <a name="encrypting-data"></a>Шифрование данных
 Симметричное и асимметричное шифрования выполняются с использованием различных процессов. Симметричное шифрование выполняется в рамках потоков, поэтому его удобно применять для шифрования больших объемов данных. Асимметричное шифрование выполняется в рамках небольшого числа байтов, поэтому его удобно применять для шифрования только небольших объемов данных.  
@@ -43,7 +43,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor()
  В следующем примере показан весь процесс создания потока, шифрования потока, чтения из потока и закрытия потока. Этот пример создает сетевой поток, который шифруется при помощи класса **CryptoStream** и класса **RijndaelManaged** . Сообщение записывается в зашифрованный поток при помощи класса <xref:System.IO.StreamWriter> .  
   
 > [!NOTE]
->  Этот пример также можно использовать для записи в файл. Чтобы сделать это, удалите ссылку <xref:System.Net.Sockets.TcpClient> и замените <xref:System.Net.Sockets.NetworkStream> на <xref:System.IO.FileStream>.  
+> Этот пример также можно использовать для записи в файл. Чтобы сделать это, удалите ссылку <xref:System.Net.Sockets.TcpClient> и замените <xref:System.Net.Sockets.NetworkStream> на <xref:System.IO.FileStream>.  
   
 ```vb  
 Imports System  

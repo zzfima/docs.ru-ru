@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039984"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962762"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Процедура Main в Visual Basic
 Каждое приложение Visual Basic должно содержать процедуру с именем `Main`. Эта процедура выступает в качестве начальной точки и общего управления для приложения. .NET Framework вызывает `Main` процедуру, когда она загрузила приложение и готова передать ему управление. Если вы не создаете Windows Forms приложение, необходимо написать `Main` процедуру для приложений, выполняемых самостоятельно.
@@ -33,7 +33,7 @@ ms.locfileid: "69039984"
  Существует четыре способа объявления `Main` процедуры. Он может принимать аргументы, а также не может возвращать значение.
 
 > [!NOTE]
->  При объявлении `Main` в классе необходимо `Shared` использовать ключевое слово. В модуле `Main` не обязательно должен быть `Shared`.
+> При объявлении `Main` в классе необходимо `Shared` использовать ключевое слово. В модуле `Main` не обязательно должен быть `Shared`.
 
 - Самый простой способ — объявить `Sub` процедуру, которая не принимает аргументы или не возвращает значение.
 

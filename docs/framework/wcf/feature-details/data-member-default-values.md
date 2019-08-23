@@ -8,20 +8,20 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 17e73ab2aa777ae53f31596fa364a4feac297842
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962919"
 ---
 # <a name="data-member-default-values"></a>Значения членов данных по умолчанию
-В .NET Framework типы имеют концепцию *значения по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  
+В .NET Framework типы имеют концепцию *значений по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  
   
  Чтобы исключить член из сериализованных данных, задайте для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> значение `false` (по умолчанию задано значение `true`).  
   
 > [!NOTE]
->  Присваивать значение <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> свойству `false` следует только при конкретной необходимости, например для обеспечения взаимодействия или для уменьшения объема данных.  
+> Присваивать значение <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> свойству `false` следует только при конкретной необходимости, например для обеспечения взаимодействия или для уменьшения объема данных.  
   
 ## <a name="example"></a>Пример  
  В следующем коде у нескольких членов для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> задано значение `false`.  
@@ -45,16 +45,16 @@ ms.locfileid: "65881265"
  Атрибут `xsi:nil` является специальным атрибутом в пространстве имен экземпляров схемы XML интернет-консорциума (W3C), который обеспечивает совместимый способ явного указания значения "null". Обратите внимание, что в XML полностью отсутствует информация о членах данных со сведениями о должности, окладе и бонусах. Получатель может интерпретировать их как значения `null`, ноль и `null` соответственно. Не гарантируется, что десериализатор независимого разработчика выполнит правильную интерпретацию, поэтому не рекомендуется использовать такую схему. Класс <xref:System.Runtime.Serialization.DataContractSerializer> всегда выбирает правильную интерпретацию для отсутствующих значений.  
   
 ### <a name="interaction-with-isrequired"></a>Взаимодействие со свойством IsRequired  
- Как уже говорилось в [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> атрибут имеет <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> свойства (значение по умолчанию — `false`). Это свойство указывает, должен ли определенный член данных присутствовать в сериализованных данных при десериализации. Если для свойства `IsRequired` задано значение `true` (означающее, что значение должно присутствовать), а для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> задано значение `false` (указывающее, что если значение равно значению по умолчанию, то оно может отсутствовать), сериализация значений по умолчанию для этого члена данных невозможна, так как результат будет противоречивым. Если для такого члена данных задано значение по умолчанию (обычно `null` или ноль) и производится попытка сериализации, возникает исключение <xref:System.Runtime.Serialization.SerializationException>.  
+ Как обсуждалось в разделе [Управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> атрибут имеет <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> свойство (значение по умолчанию — `false`). Это свойство указывает, должен ли определенный член данных присутствовать в сериализованных данных при десериализации. Если для свойства `IsRequired` задано значение `true` (означающее, что значение должно присутствовать), а для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> задано значение `false` (указывающее, что если значение равно значению по умолчанию, то оно может отсутствовать), сериализация значений по умолчанию для этого члена данных невозможна, так как результат будет противоречивым. Если для такого члена данных задано значение по умолчанию (обычно `null` или ноль) и производится попытка сериализации, возникает исключение <xref:System.Runtime.Serialization.SerializationException>.  
   
 ### <a name="schema-representation"></a>Представление схемы  
- Сведения о представления схемы языка определения схемы XML элементов данных при `EmitDefaultValue` свойству `false` рассматриваются в [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Тем не менее ниже приводятся краткие общие сведения:  
+ Сведения о представлении схемы языка определения схемы XML (XSD) для элементов данных, если `EmitDefaultValue` свойство имеет `false` значение, обсуждаются в справочнике по [схеме контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Тем не менее ниже приводятся краткие общие сведения:  
   
-- Когда <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> присваивается `false`, она представляется в схеме как заметка, специфичная для Windows Communication Foundation (WCF). Не существует совместимого способа представления этой информации. В частности, атрибут "default" в схеме не используется для этой цели, на атрибут `minOccurs` влияет только параметр <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, а на атрибут `nillable` влияет только тип члена данных.  
+- Если параметр `false`имеет значение, то он представлен в схеме в виде аннотации, относящейся к Windows Communication Foundation (WCF). <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> Не существует совместимого способа представления этой информации. В частности, атрибут "default" в схеме не используется для этой цели, на атрибут `minOccurs` влияет только параметр <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, а на атрибут `nillable` влияет только тип члена данных.  
   
 - Фактическое значение по умолчанию, которое требуется использовать, в этой схеме отсутствует. Правильная интерпретация отсутствующего элемента зависит только от принимающей конечной точки.  
   
- При импорте схемы <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> свойству автоматически присваивается `false` каждый раз, когда упомянутая заметка относящиеся конкретно к WCF обнаруживается ранее. Он также имеет значение `false` для ссылочных типов, имеющих `nillable` свойство значение `false` для поддержки определенных сценариев взаимодействия, которые часто возникают при использовании веб-служб ASP.NET.  
+ При импорте <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> схемы свойство автоматически устанавливается в `false` каждый раз, когда обнаруживается заметка, упомянутая ранее для WCF. Он также имеет значение `false` для ссылочных типов, для которых `nillable` свойство имеет значение `false` , чтобы обеспечить поддержку конкретных сценариев взаимодействия, которые обычно возникают при использовании веб-служб ASP.NET.  
   
 ## <a name="see-also"></a>См. также
 

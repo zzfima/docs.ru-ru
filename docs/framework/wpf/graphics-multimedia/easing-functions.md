@@ -15,41 +15,41 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: a74142b8d8ee3a68daa9966e3f20f3b8e3becb72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 72118711dfd40ad8c665157e09f01c60085db903
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615403"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965734"
 ---
 # <a name="easing-functions"></a>Функции плавности
 Функции плавности позволяют применять к анимациям настраиваемые математические формулы. Например, требуется реалистичный отскок объекта или его поведение так, словно он подвешен на пружине. Для приблизительного воспроизведения этих эффектов можно использовать анимацию по ключевым кадрам или даже анимацию From/To/By, но это потребует значительного объема работы, и анимация будет менее точна, чем при использовании математических формул.  
   
- Помимо создания собственной функции плавности путем наследования от <xref:System.Windows.Media.Animation.EasingFunctionBase>, можно использовать один из функций плавности, предоставляемых средой выполнения для создания распространенных эффектов.  
+ Помимо создания собственной пользовательской функции плавности путем наследования от <xref:System.Windows.Media.Animation.EasingFunctionBase>, можно использовать одну из нескольких функций плавности, предоставляемых средой выполнения для создания распространенных эффектов.  
   
-- <xref:System.Windows.Media.Animation.BackEase>: Возвращающую движение анимации немного, прежде чем она начнет выполняться по заданному пути.  
+- <xref:System.Windows.Media.Animation.BackEase>: Отменяет движение анимации немного перед началом анимации по указанному пути.  
   
-- <xref:System.Windows.Media.Animation.BounceEase>: Создает эффект отскока.  
+- <xref:System.Windows.Media.Animation.BounceEase>: Создает эффекты отскока.  
   
-- <xref:System.Windows.Media.Animation.CircleEase>: Создает анимацию, которая ускоряется и замедляется с помощью тригонометрической функции.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью циклической функции.  
   
-- <xref:System.Windows.Media.Animation.CubicEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>3</sup>.  
+- <xref:System.Windows.Media.Animation.CubicEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью формулы *f*(*t*) = *t*<sup>3</sup>.  
   
-- <xref:System.Windows.Media.Animation.ElasticEase>: Создает анимацию, которая напоминает пружину, и обратно до до полного успокоения.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Создает анимацию, напоминающую пружинный осЦиллатинг назад и вперед, пока не поступает на оставшуюся.  
   
-- <xref:System.Windows.Media.Animation.ExponentialEase>: Создает анимацию, которая ускоряется и замедляется с помощью экспоненциальной формулы.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью экспоненциальной формулы.  
   
-- <xref:System.Windows.Media.Animation.PowerEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>p</sup> где p равно значению <xref:System.Windows.Media.Animation.PowerEase.Power%2A>свойство.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью формулы *f*(*t*) = *t*<sup>p</sup> , где p равно <xref:System.Windows.Media.Animation.PowerEase.Power%2A> свойству.  
   
-- <xref:System.Windows.Media.Animation.QuadraticEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>2</sup>.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью формулы *f*(*t*) = *t*<sup>2</sup>.  
   
-- <xref:System.Windows.Media.Animation.QuarticEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>4</sup>.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью формулы *f*(*t*) = *t*<sup>4</sup>.  
   
-- <xref:System.Windows.Media.Animation.QuinticEase>: Создать анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>5</sup>.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Создайте анимацию, которая ускоряется и/или замедляется с помощью формулы *f*(*t*) = *t*<sup>5</sup>.  
   
-- <xref:System.Windows.Media.Animation.SineEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле синуса.  
+- <xref:System.Windows.Media.Animation.SineEase>: Создает анимацию, которая ускоряется и/или замедляется с помощью формулы синуса.  
   
- Для применения функции плавности к анимации, используйте `EasingFunction` свойства анимации указания функции плавности для применения к анимации. В следующем примере применяется <xref:System.Windows.Media.Animation.BounceEase> функцию для реалистичной анимации <xref:System.Windows.Media.Animation.DoubleAnimation> для создания эффекта отскока.  
+ Чтобы применить функцию плавности к анимации, используйте `EasingFunction` свойство анимации. Укажите функцию плавности, которая будет применяться к анимации. В следующем примере функция <xref:System.Windows.Media.Animation.BounceEase> плавности применяется к элементу <xref:System.Windows.Media.Animation.DoubleAnimation> для создания отскока.  
   
  [!code-xaml[BounceEase_snippet#BounceEase](~/samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
@@ -57,15 +57,15 @@ ms.locfileid: "64615403"
   
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](~/samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- Можно использовать <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> свойство для изменения, как функция плавности ведет себя, то есть изменить способ интерполяции анимации. Существует три возможных значения, можно задать для <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> Свойство можно использовать, чтобы изменить принцип работы функции плавности, то есть изменить способ интерполяции анимации. Существует три возможных значения, которые можно задать для <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
 - <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Интерполяция следует математической формуле, связанной с функцией плавности.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Интерполяция следует 100-процентную интерполяцию за вычетом выходного значения формулы, связанной с функцией плавности.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Интерполяция следует за 100% интерполяции за вычетом выходных данных формулы, связанной с функцией плавности.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Интерполяция использует <xref:System.Windows.Media.Animation.EasingMode.EaseIn> для первой половины анимации и <xref:System.Windows.Media.Animation.EasingMode.EaseOut> во второй половине.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Интерполяция использует <xref:System.Windows.Media.Animation.EasingMode.EaseIn> для первой половины анимации и <xref:System.Windows.Media.Animation.EasingMode.EaseOut> для второй половины.  
   
- На следующих диаграммах показаны различные значения <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> где *f*(*x*) обозначает ход анимации и *t* представляет время.  
+ На приведенных ниже диаграммах показаны различные <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> значения, где *f*(*x*) представляет ход выполнения анимации, а *t* представляет время.  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
@@ -112,9 +112,9 @@ ms.locfileid: "64615403"
  ![Схемы SineEase для различных значений EasingMode.](./media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  Можно использовать <xref:System.Windows.Media.Animation.PowerEase> создать то же поведение, что <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, и <xref:System.Windows.Media.Animation.QuinticEase> с помощью <xref:System.Windows.Media.Animation.PowerEase.Power%2A> свойство. Например, если вы хотите использовать <xref:System.Windows.Media.Animation.PowerEase> для замены <xref:System.Windows.Media.Animation.CubicEase>, укажите <xref:System.Windows.Media.Animation.PowerEase.Power%2A> значение 3.  
+> Можно <xref:System.Windows.Media.Animation.PowerEase> использовать для создания такого же поведения, как <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase> <xref:System.Windows.Media.Animation.QuinticEase> и с помощью <xref:System.Windows.Media.Animation.PowerEase.Power%2A> свойства. Например, если вы хотите использовать <xref:System.Windows.Media.Animation.PowerEase> для <xref:System.Windows.Media.Animation.CubicEase>замены, укажите <xref:System.Windows.Media.Animation.PowerEase.Power%2A> значение 3.  
   
- Помимо использования функций плавности, входящих в среду выполнения, можно создать собственные функции плавности путем наследования от <xref:System.Windows.Media.Animation.EasingFunctionBase>. В следующем примере показано создание простой пользовательской функции плавности. Можно добавить свою собственную математическую логику для поведение функции плавности путем переопределения <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> метод.   
+ Помимо использования функций плавности, входящих в время выполнения, можно создавать собственные пользовательские функции плавности, наследуя от <xref:System.Windows.Media.Animation.EasingFunctionBase>. В следующем примере показано создание простой пользовательской функции плавности. Можно добавить собственную математическую логику, определяющую поведение функции плавности, переопределив <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> метод.   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

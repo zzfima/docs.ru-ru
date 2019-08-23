@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4724e6264c0108924629055525e46d84e86a6e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953421"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Улучшение производительности приложений WPF
-Этот раздел предназначен в качестве справочника по [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработчикам приложений, которым нужны дополнительные способы повышения производительности своих приложений. Если вы являетесь разработчиком, даже новичок в Microsoft .NET Framework и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], следует сначала ознакомиться с обеими платформами. В этом разделе, предполагает оба и написан для программистов, которые уже знают достаточно, чтобы приступить к работе своих приложений.  
+Этот раздел предназначен для [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработчиков приложений, которые ищут способы улучшения производительности приложений. Если вы являетесь разработчиком, который впервые работает с Microsoft .NET Framework и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], сначала ознакомьтесь с обеими платформами. В этом разделе предполагается работа с базами знаний и написана для программистов, которые уже знакомы, чтобы заставить их работать.  
   
 > [!NOTE]
->  Данные о производительности в этом разделе основаны на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, выполняющихся на 2,8 ГГц ПК с 512, ОЗУ и ATI Radeon 9700 видеокарте.  
+> Данные о производительности, приведенные в этом разделе, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] основаны на приложениях, работающих на ПК с частотой 2,8 ГГц и 512 ОЗУ и графической карте ATI Radeon 9700.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Планирование производительности приложения](planning-for-application-performance.md)  
@@ -62,4 +62,4 @@ ms.locfileid: "61772987"
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
 - [Общие сведения о переходах](../app-development/navigation-overview.md)
 - [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Пошаговое руководство: Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: Кэширование данных приложения в приложении WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

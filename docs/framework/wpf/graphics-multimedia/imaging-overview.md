@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545368"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914104"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
@@ -99,7 +99,7 @@ ms.locfileid: "69545368"
  В следующем примере показано, как построить изображение шириной 200 пикселей с использованием кода.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.ComponentModel.ISupportInitialize> реализует интерфейс для оптимизации инициализации нескольких свойств. Изменения свойств происходят только во время инициализации объекта. Вызовите метод <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> , чтобы сообщить, что <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> инициализация началась, и сообщить о завершении инициализации. После инициализации изменения свойств игнорируются.  
+> <xref:System.Windows.Media.Imaging.BitmapImage><xref:System.ComponentModel.ISupportInitialize> реализует интерфейс для оптимизации инициализации нескольких свойств. Изменения свойств происходят только во время инициализации объекта. Вызовите метод <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> , чтобы сообщить, что <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> инициализация началась, и сообщить о завершении инициализации. После инициализации изменения свойств игнорируются.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ ms.locfileid: "69545368"
  Пример API расширяемости см. в [примере кодека Win32](https://go.microsoft.com/fwlink/?LinkID=160052). В этом примере показано создание декодера и кодировщика для пользовательского формата изображения.  
   
 > [!NOTE]
->  Чтобы система могла распознать кодек, он должен иметь цифровую подпись.  
+> Чтобы система могла распознать кодек, он должен иметь цифровую подпись.  
   
 ## <a name="see-also"></a>См. также
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: a8e4fc9b83e11aef4347ab4765f6a2e75c526387
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963838"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Извлечение объектов из кэша идентификации
 В этом разделе описаны типы запросов LINQ to SQL, которые возвращают объект из кэша идентификаторов, управляемого <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ ms.locfileid: "64910755"
  Обычно, чтобы запрос LINQ to SQL мог вернуть объект из кэша идентификаторов, запрос должен быть основан на первичном ключе объекта и должен возвращать одиночный объект. В частности, запрос должен иметь одну из общих форм, представленных далее.  
   
 > [!NOTE]
->  Предварительно скомпилированные запросы не возвращают объекты из кэша идентификаторов. Дополнительные сведения о предварительно скомпилированных запросах см. в разделе <xref:System.Data.Linq.CompiledQuery> и [как: Store и повторное использование запросов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+> Предварительно скомпилированные запросы не возвращают объекты из кэша идентификаторов. Дополнительные сведения о предварительно скомпилированных запросах см <xref:System.Data.Linq.CompiledQuery> . [в разделе и инструкции. Хранение и повторное](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)использование запросов.  
   
  Чтобы получить объект из кэша идентификаторов, запрос должен иметь одну из следующих общих форм.  
   

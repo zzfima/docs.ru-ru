@@ -5,59 +5,59 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: a8695e94797c297154db9597c6e9938ed9aecfef
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 5080efdf10a8e3b1f6815e836f9fffe968a8e4e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939250"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Общие сведения о LINQ to XML в Visual Basic
-Visual Basic предоставляет поддержку для [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] через литералы XML и свойства оси XML. Это позволяет использовать знакомый и удобный синтаксис для работы с XML в коде Visual Basic. *XML-литералов* позволяют включать XML непосредственно в коде. *Свойства оси XML* позволяют осуществлять доступ дочерних узлов, узлов-потомков и атрибуты XML-литерала. Дополнительные сведения см. в разделе [Общие сведения о литералах XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) и [доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
+Visual Basic обеспечивает поддержку [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] через литералы XML и свойства осей XML. Это позволяет использовать знакомый, удобный синтаксис для работы с XML в коде Visual Basic. *XML-литералы* позволяют включать XML непосредственно в код. *Свойства оси XML* позволяют получать доступ к дочерним узлам, узлам-потомкам и атрибутам XML. Дополнительные сведения см. в статьях [Общие сведения о XML-литералах](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) и [доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-Интерфейс специально для того, чтобы воспользоваться преимуществами программирования XML в памяти [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Несмотря на то, что вы можете вызвать [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] напрямую интерфейсы API, только Visual Basic позволяет объявить XML-литералы и напрямую обращаться к свойства оси XML.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]— это API программирования XML в памяти, предназначенный специально для использования преимуществ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Хотя [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] интерфейсы API можно вызывать напрямую, только Visual Basic позволяет объявлять литералы XML и напрямую обращаться к свойствам осей XML.  
   
 > [!NOTE]
->  Литералы XML и свойства оси XML не поддерживаются в декларативном коде страницы ASP.NET. Для использования функций XML в Visual Basic поместите код в страницы с выделенным кодом в приложении ASP.NET.  
+> XML-литералы и свойства осей XML не поддерживаются в декларативном коде на странице ASP.NET. Чтобы использовать функции Visual Basic XML, разместите код на странице кода программной части в приложении ASP.NET.  
   
- [Кнопка "Воспроизвести"](./media/overview-of-linq-to-xml/play-video-icon-example.gif) связанные демонстрационные видеоролики см. в разделе [инструкции начать работу с LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) и [инструкции создания таблицы Excel, с помощью LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
+ [Кнопка "Воспроизвести"](./media/overview-of-linq-to-xml/play-video-icon-example.gif) Связанные демонстрационные видеоролики см [. в разделе как начать работу с LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) и [как создать электронные таблицы Excel с помощью LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>Создание XML  
- Существует два способа создания деревьев XML в Visual Basic. Можно объявить XML-литерал непосредственно в коде, или воспользоваться [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] API-интерфейсы для создания дерева. Оба процесса включить код в соответствии с окончательная структура XML-дерева. Например в следующем примере кода создается элемент XML:  
+ Существует два способа создания деревьев XML в Visual Basic. Вы можете объявить XML-литерал непосредственно в коде или использовать [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] API для создания дерева. Оба процесса позволяют коду отражать окончательную структуру XML-дерева. Например, в следующем примере кода создается XML-элемент:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- Дополнительные сведения см. в разделе [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
+ Дополнительные сведения см. [в разделе Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
-## <a name="accessing-and-navigating-xml"></a>Доступ и переходы в XML  
- Visual Basic предоставляет свойства оси XML для доступа и перемещения по XML-структур. Эти свойства позволяют получить доступ к XML-элементов и атрибутов, указав имена дочерних элементов XML. Кроме того, можно явно вызывать [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] методы для навигации и поиска элементов и атрибутов. Например в следующем примере кода используются свойства оси XML для ссылки на атрибуты и дочерние элементы элемента XML. В примере кода используется [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запрос для получения дочерних элементов и вывода их в виде XML-элементов, фактически выполняет преобразование.  
+## <a name="accessing-and-navigating-xml"></a>Доступ и Навигация по XML  
+ Visual Basic предоставляет свойства осей XML для доступа и навигации по XML-структурам. Эти свойства позволяют получить доступ к XML-элементам и атрибутам, указывая имена дочерних XML-элементов. Кроме того, можно явно вызывать [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] методы для навигации и поиска элементов и атрибутов. Например, в следующем примере кода свойства оси XML используются для ссылки на атрибуты и дочерние элементы XML-элемента. В примере кода используется [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запрос для получения дочерних элементов и их вывода в виде XML-элементов с фактическим выполнением преобразования.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- Дополнительные сведения см. в разделе [доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
+ Дополнительные сведения см. [в разделе доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## <a name="xml-namespaces"></a>Пространства имен XML  
- Visual Basic позволяет указать псевдоним для глобального пространства имен XML с помощью `Imports` инструкции. В следующем примере показано, как использовать `Imports` инструкцию, чтобы импортировать пространство имен XML:  
+ Visual Basic позволяет указать псевдоним для глобального пространства имен XML с помощью `Imports` инструкции. В следующем примере показано, как использовать `Imports` инструкцию для импорта пространства имен XML:  
   
  [!code-vb[VbXMLSamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#1)]  
   
- При доступе к свойствам оси XML и объявить литералы XML для XML-документов и элементов можно использовать псевдоним пространства имен XML.  
+ При доступе к свойствам осей XML и объявлении XML-литералов для XML-документов и элементов можно использовать псевдоним пространства имен XML.  
   
- Вы можете получить <xref:System.Xml.Linq.XNamespace> объект для определенного префикса с помощью [оператор GetXmlNamespace](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md).  
+ <xref:System.Xml.Linq.XNamespace> Объект для определенного префикса пространства имен можно получить с помощью [оператора GetXmlNamespace](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md).  
   
  Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ### <a name="using-xml-namespaces-in-xml-literals"></a>Использование пространств имен XML в XML-литералах  
- В следующем примере показано, как создать <xref:System.Xml.Linq.XElement> объект, который использует глобальное пространство имен `ns`:  
+ В следующем примере показано, как создать <xref:System.Xml.Linq.XElement> объект, использующий глобальное пространство имен: `ns`  
   
  [!code-vb[VbXMLSamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#2)]  
   
- Компилятор Visual Basic преобразует XML-литералы, содержащие псевдонимы пространств имен XML, в эквивалентный код, содержащий XML-представление для использования пространства имен XML, с помощью `xmlns` атрибута. При компиляции кода в примере в предыдущем разделе создается по сути тот же исполнимый код в приведенном ниже примере:  
+ Компилятор Visual Basic преобразует литералы XML, содержащие псевдонимы пространства имен XML, в эквивалентный код, использующий XML-нотацию для использования пространств имен `xmlns` XML с атрибутом. При компиляции код в примере предыдущего раздела создает фактически тот же исполняемый код, что и в следующем примере:  
   
  [!code-vb[VbXMLSamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#3)]  
   
-### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Использование пространств имен XML в свойства оси XML  
- Пространства имен XML, объявленные в XML-литералах для использования в свойства оси XML недоступны. Тем не менее глобальные пространства имен можно использовать со свойствами оси XML. Для разделения префикс пространства имен XML от имени локального элемента, используйте двоеточия. Ниже представлен пример.  
+### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Использование пространств имен XML в свойствах оси XML  
+ Пространства имен XML, объявленные в XML-литералах, недоступны для использования в свойствах осей XML. Однако глобальные пространства имен можно использовать со свойствами осей XML. Используйте двоеточие для отделения префикса пространства имен XML от имени локального элемента. Ниже представлен пример.  
   
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   

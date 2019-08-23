@@ -2,21 +2,21 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 273bd0d5e68a661c639b82264b440b83d8127427
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783192"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933795"
 ---
-# <a name="policyimporter"></a>\<policyImporter >
+# <a name="policyimporter"></a>\<Полициимпортер >
 Задает средство импорта политики, контролирующее импорт положений пользовательской политики о привязках.  
   
- \<system.ServiceModel>  
-\<Клиент >  
-\<метаданные >  
-\<policyImporters >  
-\<policyImporter >  
+ \<системой. > ServiceModel  
+\<> клиента  
+\<> метаданных  
+\<Полициимпортерс >  
+\<Полициимпортер >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,13 +38,13 @@ ms.locfileid: "61783192"
 |`type`|Тип этого элемента.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Задает все средства импорта политики, контролирующие импорт утверждений пользовательской политики о привязках.|  
+|[\<Полициимпортерс >](policyimporters.md)|Задает все средства импорта политики, контролирующие импорт утверждений пользовательской политики о привязках.|  
   
 ## <a name="remarks"></a>Примечания  
  Средство импорта политики используется для поиска утверждений пользовательской политики о свойствах привязки, а также для подключения пользовательского элемента привязки, реализующего свойства, необходимые для утверждения.  
@@ -55,5 +55,5 @@ ms.locfileid: "61783192"
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Клиенты](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Конфигурация клиента WCF](../../../wcf/feature-details/client-configuration.md)
+- [Клиенты](../../../wcf/feature-details/clients.md)

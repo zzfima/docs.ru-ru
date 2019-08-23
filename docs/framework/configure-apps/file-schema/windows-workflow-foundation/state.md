@@ -3,26 +3,26 @@ title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 6f1a9474f3f12005df364a6fb84dc63aa1b68e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ffe9f9f69f68b6f47cbc3a75200b2867aae2384
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796166"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947440"
 ---
-# <a name="state"></a>\<Состояние >
+# <a name="state"></a>\<> состояния
 Представляет коллекцию состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.  
   
- Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<workflowInstanceQueries >  
+\<> рабочего процесса  
+\<Воркфловинстанцекуериес >  
 \<workflowInstanceQuery >  
 \<состояния >  
-\<Состояние >  
+\<> состояния  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,20 +52,20 @@ ms.locfileid: "61796166"
 |имя|Строка, указывающая состояние подписки отслеживаемого экземпляра рабочего потока в момент создания записи отслеживания.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<состояния >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Коллекция состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.|  
+|[\<состояния >](states.md)|Коллекция состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.|  
   
 ## <a name="remarks"></a>Примечания  
  Возвращаемые записи фильтруются по состояниям в этой коллекции.  
   
  Допустимые значения состояния описаны в следующей таблице.  
   
-|Регион|Описание|  
+|Область|Описание|  
 |-----------|-----------------|  
 |Прерывание|Экземпляр рабочего процесса прерван.|  
 |Завершено|Выполнение экземпляра рабочего процесса завершено.|  
@@ -99,5 +99,5 @@ ms.locfileid: "61796166"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

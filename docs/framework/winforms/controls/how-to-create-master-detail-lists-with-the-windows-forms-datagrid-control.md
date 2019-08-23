@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание списков «основной-подробности» с помощью элемента управления DataGrid в Windows Forms
+title: Практическое руководство. Создание списков «основной/подробности» с помощью элемента управления Windows Forms DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0fd95cf0cd66e9a5105c0b8ff77d8c536a5822d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052174"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914755"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Практическое руководство. Создание основных или подробных списков с помощью элемента управления DataGrid в Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Если ваш <xref:System.Data.DataSet> содержит ряд связанных таблиц, можно использовать два <xref:System.Windows.Forms.DataGrid> элементы управления для отображения данных в формате "основной/подробности". Один <xref:System.Windows.Forms.DataGrid> назначен в качестве основной сеткой, а второй для сетки сведений. При выборе записи в главном списке все связанные дочерние записи отображаются в списке сведений. Например если ваш <xref:System.Data.DataSet> содержит таблицу "Клиенты" и связанную таблицу Orders, нужно указать таблицы клиентов на основной сетки и таблицу Orders, чтобы быть в таблице сведений. При выборе клиента в основной сетке все заказы, связанные с клиентом в таблице Orders будет отображаться в таблице сведений.  
+ Если содержит ряд связанных таблиц, можно использовать два <xref:System.Windows.Forms.DataGrid> элемента управления для отображения данных в формате "основной/подробности". <xref:System.Data.DataSet> Один <xref:System.Windows.Forms.DataGrid> из них обозначен как Главная сетка, а второй — сеткой сведений. При выборе записи в главном списке все связанные дочерние записи отображаются в списке подробностей. Например, если <xref:System.Data.DataSet> содержит таблицу Customers и связанную таблицу Orders, можно указать таблицу Customers, которая будет главной сеткой, а таблица Orders — сетку сведений. При выборе клиента из главной сетки все заказы, связанные с этим клиентом в таблице Orders, будут отображаться в сетке сведений.  
   
-### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Чтобы установить отношение «основной/подробности» программными средствами  
+### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Настройка связи «основной/подробности» программным способом  
   
-1. Создайте два новых <xref:System.Windows.Forms.DataGrid> элементы управления и задавать их свойства.  
+1. Создайте два новых <xref:System.Windows.Forms.DataGrid> элемента управления и задайте их свойства.  
   
-2. Добавление таблиц в наборе данных.  
+2. Добавьте таблицы в набор данных.  
   
-3. Объявите переменную типа <xref:System.Data.DataRelation> для представления связи, вы хотите создать.  
+3. Объявите переменную типа <xref:System.Data.DataRelation> для представления отношения, которое необходимо создать.  
   
-4. Создайте экземпляр связи, указав имя для связи и указав таблицу, столбец и элемент, который будет связывать две таблицы.  
+4. Создайте экземпляр связи, указав имя связи и указав таблицу, столбец и элемент, которые будут связывать две таблицы.  
   
-5. Добавить связь с <xref:System.Data.DataSet> объекта <xref:System.Data.DataSet.Relations%2A> коллекции.  
+5. Добавьте связь в <xref:System.Data.DataSet> <xref:System.Data.DataSet.Relations%2A> коллекцию объекта.  
   
-6. Используйте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод <xref:System.Windows.Forms.DataGrid> для каждой сетки для привязки <xref:System.Data.DataSet>.  
+6. Используйте метод класса, <xref:System.Windows.Forms.DataGrid> чтобы привязать каждую сетку к <xref:System.Data.DataSet>. <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>  
   
-     В следующем примере демонстрируется задание отношение «основной/подробности» между таблицами Customers и Orders в ранее созданный <xref:System.Data.DataSet> (`ds`).  
+     В следующем примере показано, как задать связь «основной/подробности» между таблицами Customers и Orders в <xref:System.Data.DataSet> ранее`ds`созданной ().  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -74,4 +74,4 @@ ms.locfileid: "62052174"
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)
-- [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Практическое руководство. Привязка Windows Forms элемента управления DataGrid к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

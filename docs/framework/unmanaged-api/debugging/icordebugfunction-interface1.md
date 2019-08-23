@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae65c59efe1d925b5e058e8664d1e093fdfec875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621500"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917207"
 ---
 # <a name="icordebugfunction-interface"></a>Интерфейс ICorDebugFunction
 
@@ -32,32 +32,32 @@ ms.locfileid: "64621500"
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Создает точку останова в начале этой функции.|  
-|[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Возвращает объект, представляющий класс, членом которых является эта функция ICorDebugClass.|  
-|[Метод GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Получает номер версии последней правки этой функции.|  
-|[Метод GetILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Получает код на промежуточном языке (MSIL) для этой функции.|  
-|[Метод GetLocalVarSigToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Получает токен метаданных для подписи локальной переменной функции, представленный этим `ICorDebugFunction` экземпляра.|  
+|[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Возвращает объект ICorDebugClass, представляющий класс, членом которого является эта функция.|  
+|[Метод GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Возвращает номер версии последнего изменения, внесенного в эту функцию.|  
+|[Метод GetILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Возвращает код MSIL для этой функции.|  
+|[Метод GetLocalVarSigToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Возвращает маркер метаданных для сигнатуры локальной переменной функции, представленной этим `ICorDebugFunction` экземпляром.|  
 |[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Возвращает модуль, в котором определена эта функция.|  
 |[Метод GetNativeCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Получает машинный код для этой функции.|  
-|[Метод GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Получает маркер метаданных для этой функции.|  
+|[Метод GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Возвращает маркер метаданных для этой функции.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugFunction` Интерфейса не представляет функцию с параметрами универсального типа. Например `ICorDebugFunction` представляет экземпляр `Func<T>` , но не `Func<string>`. Вызовите [ICorDebugILFrame2::EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) для получения параметров универсального типа.  
+ `ICorDebugFunction` Интерфейс не представляет функцию с параметрами универсального типа. Например, `ICorDebugFunction` экземпляр будет представлять `Func<T>` , но не `Func<string>`. Вызовите метод [ICorDebugILFrame2:: енумератетипепараметерс](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) , чтобы получить параметры универсального типа.  
   
- Связь между токен метаданных метода, `mdMethodDef`, а также метод `ICorDebugFunction` зависит изменить и продолжить разрешена ли функция объект:  
+ Связь между маркером `mdMethodDef`метаданных метода, и `ICorDebugFunction` объектом метода зависит от того, разрешена ли функция "изменить и продолжить" для функции:  
   
-- Если изменить и продолжить не допускается в функции, взаимно-однозначной связи межу `ICorDebugFunction` объекта и `mdMethodDef` маркеров. То есть функция имеет один `ICorDebugFunction` объекта и один `mdMethodDef` токена.  
+- Если функция "изменить и продолжить" не разрешена для функции, между `ICorDebugFunction` объектом `mdMethodDef` и токеном существует связь "один к одному". То есть функция имеет один `ICorDebugFunction` объект и один `mdMethodDef` токен.  
   
-- Если на функцию может изменить и продолжить, существует связь многие к одному между `ICorDebugFunction` объекта и `mdMethodDef` маркеров. То есть функция может иметь несколько экземпляров `ICorDebugFunction`, один для каждой версии функции, но только один `mdMethodDef` токена.  
+- Если для функции разрешен режим "изменить и продолжить", между `ICorDebugFunction` объектом `mdMethodDef` и токеном существует связь "многие к одному". Это значит, что функция может иметь много экземпляров `ICorDebugFunction`, по одной для каждой версии функции, но только один `mdMethodDef` токен.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:**  CorGuids.lib  
+ **Библиотечная**  Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

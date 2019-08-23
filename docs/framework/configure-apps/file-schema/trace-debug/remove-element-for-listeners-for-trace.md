@@ -1,5 +1,5 @@
 ---
-title: <remove> Элемент для <listeners> для <trace>
+title: <remove>Элемент для <listeners> для<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920475"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<Удалить > элемент для \<прослушиватели > для \<трассировки >
-Удаляет прослушиватель из **прослушиватели** коллекции.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<Удаление > элемента для \<прослушивателей, \<> для трассировки >
+Удаляет прослушиватель из коллекции **Listeners** .  
   
  \<configuration>  
-\<system.diagnostics>  
-\<трассировки >  
+\<> System. Diagnostics  
+\<> трассировки  
 \<прослушиватели >  
 \<Удалить >  
   
@@ -36,27 +36,27 @@ ms.locfileid: "61673684"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**name**|Обязательный атрибут.<br /><br /> Имя прослушивателя для удаления из **прослушиватели** коллекции.|  
+|**name**|Обязательный атрибут.<br /><br /> Имя прослушивателя, удаляемого из коллекции **прослушивателей** .|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
-|`listeners`|Указывает прослушиватель, который собирает, хранилищ и направляет сообщения. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.|  
+|`listeners`|Указывает прослушиватель, который собирает, хранит и маршрутизирует сообщения. Прослушиватели направляют выходные данные трассировки в соответствующий целевой объект.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
-|`trace`|Настройка службы трассировки ASP.NET.|  
+|`trace`|Настраивает службу трассировки ASP.NET.|  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Удаление <xref:System.Diagnostics.DefaultTraceListener> из `Listeners` коллекции изменяет поведение <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, и <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> методы. Вызов `Assert` или `Fail` метод, обычно в результате Отображение окна сообщения, но окно сообщения не отображается, если <xref:System.Diagnostics.DefaultTraceListener> не находится в `Listeners` коллекции.  
+> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>При удалении <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>из коллекции изменяется поведение методов,, и<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . `Listeners` Вызов метода `Fail` `Listeners` или обычно приводит к отображению окна сообщения, однако окно сообщения не отображается, если объект <xref:System.Diagnostics.DefaultTraceListener> отсутствует в коллекции. `Assert`  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как удалить прослушиватель трассировки по умолчанию из трассировки **прослушиватели** коллекции.  
+ В следующем примере показано, как удалить прослушиватель трассировки по умолчанию из коллекции прослушивателей трассировки.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "61673684"
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Схема параметров трассировки и отладки](index.md)

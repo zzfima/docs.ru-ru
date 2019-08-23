@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: 69452f24e5c485ce0aba454648b59c50fb0ce1e3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 77233517203989f188a2b3ddf436656bc8da82a6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966566"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Практическое руководство. Наследование класса UserControl
 Чтобы объединить функциональные возможности одного или нескольких элементов управления Windows Forms с пользовательским кодом, можно создать *пользовательский элемент управления*. В пользовательских элементах управления объединяются быстрая разработка, стандартные функции элементов управления Windows Forms и универсальность пользовательских методов и свойств. При создании пользовательских элементов управления используется визуальный конструктор, в котором можно размещать стандартные элементы управления Windows Forms. Все эти элементы управления сохраняют все унаследованные функции, а также внешний вид и поведение (оформление) стандартных элементов управления. Однако после того, как эти элементы управления будут встроены в пользовательский элемент управления, получить к ним доступ через код станет невозможно. Пользовательский элемент управления имеет собственное оформление и обрабатывает все основные функции, связанные с элементами управления.
@@ -37,5 +37,5 @@ ms.locfileid: "69037755"
 - [Практическое руководство. Наследование от класса Control](how-to-inherit-from-the-control-class.md)
 - [Практическое руководство. Наследовать от существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
 - [Практическое руководство. Создание элементов управления для Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Практическое руководство. Проверка поведения элемента управления UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

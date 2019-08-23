@@ -3,20 +3,20 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667344"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941896"
 ---
-# <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
-Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Default» или шифрование «фрагментированной».  
+# <a name="chunkedcookiehandler"></a>\<Чункедкукиехандлер >
+Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Этот элемент может присутствовать только в `mode` том случае, если атрибут `<cookieHandler>` элемента имеет значение "default" или "фрагментированный".  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<cookieHandler >  
-\<chunkedCookieHandler>  
+ \<> System. identityModel. Services  
+\<federationConfiguration >  
+\<Кукиехандлер >  
+\<Чункедкукиехандлер >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,24 +38,24 @@ ms.locfileid: "61667344"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|размер фрагмента данных|Максимальный размер в символах данные файла cookie HTTP для любого отдельного файла cookie HTTP. Будьте внимательны, настраивая размер фрагмента данных. Веб-браузеры имеют различные ограничения на размер файлов cookie и номер, приходящихся на каждый домен. Например исходная спецификация Netscape оговорено эти ограничения: Общее 300 файлы cookie, 4096 байт в заголовок файла cookie (включая метаданные, не только значение файла cookie) и 20 файлов cookies для каждого домена. Значение по умолчанию — 2000. Обязательный.|  
+|chunkSize|Максимальный размер (в символах) данных cookie HTTP для одного файла cookie HTTP. При изменении размера фрагмента данных необходимо соблюдать осторожность. Веб-браузеры имеют разные ограничения на размер файлов cookie и число допустимых для каждого домена. Например, исходная спецификация Netscape заменяет эти ограничения: 300 файлов cookie Total, 4096 байт на каждый заголовок файла cookie (включая метаданные, а не только значение cookie) и 20 файлов cookie на домен. Значение по умолчанию — 2000. Обязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) используется для чтения и записи файлов cookie.|  
+|[\<Кукиехандлер >](cookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> , что (SAM) использует для чтения и записи файлов cookie.|  
   
 ## <a name="remarks"></a>Примечания  
- При указании <xref:System.IdentityModel.Services.ChunkedCookieHandler> , задав `mode` атрибут `<cookieHandler>` элемент «Default» или «Chunked» можно указать размер фрагмента данных, который использует обработчик файлов cookie для чтения и записи файлов cookie, включив `<chunkedCookieHandler>` дочерний элемент и Установка его `chunkSize` атрибута. Если `<chunkedCookieHandler>` элемент отсутствует, используется размер блока по умолчанию 2000 байтов. Этот элемент не может быть указан при `mode` атрибут имеет значение «Custom».  
+ При указании <xref:System.IdentityModel.Services.ChunkedCookieHandler> с помощью `mode` присвоения атрибуту `<cookieHandler>` элемента значения "по умолчанию" или "фрагментированного" можно указать размер фрагмента, используемый обработчиком файлов cookie `<chunkedCookieHandler>` для чтения и записи файлов cookie, включая дочерний элемент и `chunkSize` задание атрибута. `<chunkedCookieHandler>` Если элемент отсутствует, используется размер фрагмента по умолчанию (2000 байт). Этот элемент не может быть указан, `mode` если для атрибута задано значение Custom.  
   
- `<chunkedCookieHandler>` Элемент, представленный объектом <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> класса.  
+ `<chunkedCookieHandler>` Элемент представлен<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> классом.  
   
 ## <a name="example"></a>Пример  
- В следующем примере настраивается фрагментированный обработчик файлов cookie, записывает файлы cookie в виде фрагментов 3000 байтов.  
+ В следующем примере настраивается обработчик фрагментированных файлов cookie, который записывает файлы cookie в фрагменты 3000 байт.  
   
 ```xml  
 <cookieHandler mode="Chunked">  

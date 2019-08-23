@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 458769355521c8a3653e3bc80a6ab8a0d0f7c6dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622820"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966030"
 ---
 # <a name="how-to-navigate-to-a-page"></a>Практическое руководство. Переход к странице
-В этом примере показано несколько способов, в которых страницу можно перейти из <xref:System.Windows.Navigation.NavigationWindow>.  
+Этот пример иллюстрирует несколько способов перехода на страницу из <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Пример  
- Существует возможность <xref:System.Windows.Navigation.NavigationWindow> для перехода к странице, с помощью одного из следующих:  
+ Для перехода на страницу можно <xref:System.Windows.Navigation.NavigationWindow> использовать один из следующих вариантов.  
   
 - Свойство <xref:System.Windows.Navigation.NavigationWindow.Source%2A>.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64622820"
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] может быть либо относительным или абсолютным. Дополнительные сведения см. в разделе [URI типа "pack" в WPF](pack-uris-in-wpf.md).  
+> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]может быть либо относительным, либо абсолютным. Дополнительные сведения см. в разделе [URI типа "pack" в WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>См. также
 

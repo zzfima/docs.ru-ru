@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 382dcc6571aa06ecdfc32bf43080c4b7a36eb1f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961305"
 ---
 # <a name="-win32resource"></a>-win32resource
 Вставляет файл ресурсов Win32 в выходной файл.  
@@ -27,20 +27,20 @@ ms.locfileid: "65593071"
   
 ## <a name="arguments"></a>Аргументы  
  `filename`  
- Имя файла ресурсов для добавления в выходной файл. Заключите имя файла в кавычки (» «), если он содержит пробел.  
+ Имя файла ресурсов, добавляемого в выходной файл. Заключите имя файла в кавычки (""), если оно содержит пробел.  
   
 ## <a name="remarks"></a>Примечания  
- Файл ресурсов Win32 можно создать с помощью компилятора ресурсов Microsoft Windows (RC).  
+ Вы можете создать файл ресурсов Win32 с помощью компилятора ресурсов Microsoft Windows (RC).  
   
- Ресурс Win32 может содержать версии или точечный рисунок (значок) информацию о идентификации приложения в **проводнике**. Если вы не укажете `-win32resource`, компилятор создает сведения о версии, на основе версии сборки. `-win32resource` И `-win32icon` параметры являются взаимно исключающими.  
+ Ресурс Win32 может содержать сведения о версии или битовой карте (значок), которые помогают в определении приложения в **проводнике**. Если не указать `-win32resource`, компилятор создает сведения о версии на основе версии сборки. Параметры `-win32resource` и`-win32icon` являются взаимоисключающими.  
   
- См. в разделе [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) для ссылки на файл ресурсов .NET Framework или [-ресурсов (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) вложить файл ресурсов .NET Framework.  
+ Чтобы присоединить файл ресурсов .NET Framework, см. раздел [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) для ссылки на файл ресурсов .NET Framework или [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) .  
   
 > [!NOTE]
->  `-win32resource` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+> Этот `-win32resource` параметр недоступен в среде разработки Visual Studio; он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `In.vb` и присоединяет файл ресурсов Win32 `Rf.res`:  
+ Следующий код компилирует `In.vb` и присоединяет `Rf.res`файл ресурсов Win32:  
   
 ```console  
 vbc -win32resource:rf.res in.vb  

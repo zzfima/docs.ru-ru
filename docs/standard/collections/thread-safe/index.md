@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962993"
 ---
 # <a name="thread-safe-collections"></a>Потокобезопасные коллекции
 В .NET Framework 4 введено пространство имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>, включающее несколько потокобезопасных и масштабируемых классов коллекций. Несколько потоков могут безопасно и эффективно добавлять и удалять элементы из таких коллекций, не требуя при этом дополнительной синхронизации в пользовательском коде. При написании нового кода пользуйтесь классами параллельных коллекций, когда множество потоков будет вести в коллекцию запись параллельно. Если выполняется только чтение из общей коллекции, вы можете использовать классы в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType>. Мы рекомендуем использовать классы коллекций версии 1.0 только в том случае, если вам нужна среда выполнения .NET Framework до версии 1.1 включительно.  
@@ -30,11 +30,11 @@ ms.locfileid: "66816208"
  Классы <xref:System.Collections.Concurrent.ConcurrentQueue%601> и <xref:System.Collections.Concurrent.ConcurrentStack%601> не используют блокировку. Вместо этого они используют операции класса <xref:System.Threading.Interlocked> для обеспечения потокобезопасности.  
   
 > [!NOTE]
->  Так как классы многопоточных коллекций поддерживают интерфейс <xref:System.Collections.ICollection>, они включают реализации для свойств <xref:System.Collections.ICollection.IsSynchronized%2A> и <xref:System.Collections.ICollection.SyncRoot%2A>, даже хотя эти свойства никак не используются. `IsSynchronized` всегда возвращает `false`, а `SyncRoot` всегда имеет значение `null` (`Nothing` в Visual Basic).  
+> Так как классы многопоточных коллекций поддерживают интерфейс <xref:System.Collections.ICollection>, они включают реализации для свойств <xref:System.Collections.ICollection.IsSynchronized%2A> и <xref:System.Collections.ICollection.SyncRoot%2A>, даже хотя эти свойства никак не используются. `IsSynchronized` всегда возвращает `false`, а `SyncRoot` всегда имеет значение `null` (`Nothing` в Visual Basic).  
   
  В следующей таблице перечислены типы коллекций в пространстве имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Тип|Описание|  
+|Тип|ОПИСАНИЕ|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Предоставляет возможности блокировки и ограничения для всех типов, реализующих интерфейс <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Дополнительные сведения см. в разделе [Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Потокобезопасная реализация словаря пар "ключ-значение".|  
@@ -45,7 +45,7 @@ ms.locfileid: "66816208"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Приводится описание функциональных возможностей, которые предоставляются типом <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
 |[Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Приводится описание добавления и удаления элементов в классе <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
@@ -55,5 +55,5 @@ ms.locfileid: "66816208"
 |[Практическое руководство. Использование массивов для блокировки коллекций в конвейере](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Приводится описание порядка одновременного использования нескольких заблокированных коллекций для реализации конвейера.|  
 |[Практическое руководство. Создание пула объектов с помощью класса ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Показано, как применить параллельный контейнер для повышения производительности в сценариях, где можно повторно использовать объекты вместо постоянного создания новых.|  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

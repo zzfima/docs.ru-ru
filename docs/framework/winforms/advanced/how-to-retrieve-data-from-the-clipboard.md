@@ -8,48 +8,48 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 88c2f2d872ae32b2cb3f0df13ce4816400695385
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963784"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Практическое руководство. Извлечение данных из буфера обмена
-<xref:System.Windows.Forms.Clipboard> Класс предоставляет методы, которые можно использовать для взаимодействия с функцией буфер обмена операционной системы Windows. Многие приложения используют буфер обмена в качестве временного хранилища данных. Например текстовые редакторы использовать буфер обмена во время операций вырезания и вставки. Буфер обмена также полезен для передачи данных из одного приложения в другое.  
+<xref:System.Windows.Forms.Clipboard> Класс предоставляет методы, которые можно использовать для взаимодействия с функцией буфера обмена операционной системы Windows. Многие приложения используют буфер обмена в качестве временного репозитория для данных. Например, текстовые редакторы используют буфер обмена во время операций вырезания и вставки. Буфер обмена также полезен для передачи информации из одного приложения в другое.  
   
- Некоторые приложения сохраняют данные в буфер обмена в нескольких форматах, чтобы увеличить количество других приложений, которые потенциально могут использовать данные. Формат буфера обмена является строкой, которая определяет формат. Приложение, использующее указанный формат можно получить связанные данные в буфере обмена. <xref:System.Windows.Forms.DataFormats> Класс предоставляет имена стандартных форматов для использования. Можно также использовать собственные имена форматов или использовать тип объекта в качестве его формата. Сведения о добавлении данных в буфер обмена, см. в разделе [как: Добавление данных в буфер обмена](how-to-add-data-to-the-clipboard.md).  
+ Некоторые приложения хранят данные в буфере обмена в нескольких форматах, чтобы увеличить количество других приложений, которые потенциально могут использовать данные. Формат буфера обмена — это строка, идентифицирующая формат. Приложение, использующее идентифицированный формат, может извлекать связанные данные из буфера обмена. <xref:System.Windows.Forms.DataFormats> Класс предоставляет стандартные имена форматов для использования. Можно также использовать собственные имена форматов или использовать тип объекта в качестве своего формата. Сведения о добавлении данных в буфер обмена см. в [разделе как Добавление данных в буфер обмена](how-to-add-data-to-the-clipboard.md).  
   
- Чтобы определить, содержит ли буфер данных в определенном формате, используйте один из `Contains` *формат* методы или <xref:System.Windows.Forms.Clipboard.GetData%2A> метод. Чтобы извлечь данные из буфера обмена, используйте один из `Get` *формат* методы или <xref:System.Windows.Forms.Clipboard.GetData%2A> метод. Эти методы являются новыми в .NET Framework 2.0.  
+ Чтобы определить, содержит ли буфер обмена данные в определенном формате, используйте один из `Contains`методов *Format* или <xref:System.Windows.Forms.Clipboard.GetData%2A> метод. Чтобы получить данные из буфера обмена, используйте один из `Get`методов *Format* или <xref:System.Windows.Forms.Clipboard.GetData%2A> метод. Эти методы являются новыми в .NET Framework 2,0.  
   
- Для доступа к данным из буфера обмена с помощью версий более ранних, чем .NET Framework 2.0, используйте <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> метод и вызывать методы возвращаемого <xref:System.Windows.Forms.IDataObject>. Чтобы определить, доступен ли определенный формат в возвращенном объекте, к примеру, вызовите <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> метод.  
+ Чтобы получить доступ к данным из буфера обмена с использованием более ранних версий, чем <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> .NET Framework 2,0, используйте метод и вызовите <xref:System.Windows.Forms.IDataObject>методы возвращаемого объекта. Чтобы определить, доступен ли определенный формат в возвращаемом объекте, например, вызовите <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> метод.  
   
 > [!NOTE]
->  Все приложения Windows используют системного буфера обмена. Таким образом содержимое могут меняться при переходе в другое приложение.  
+> Все приложения на базе Windows совместно используют буфер обмена системы. Поэтому содержимое может измениться при переключении на другое приложение.  
 >   
->  <xref:System.Windows.Forms.Clipboard> Класс может использоваться только в потоках в однопотоковое подразделение (STA) режиме. Чтобы использовать этот класс, убедитесь, что ваш `Main` метод помечен атрибутом <xref:System.STAThreadAttribute> атрибута.  
+>  <xref:System.Windows.Forms.Clipboard> Класс может использоваться только в потоках, для которых установлен режим апартамента однопотокового подразделения (STA). Чтобы использовать этот класс, убедитесь, что `Main` ваш метод помечен <xref:System.STAThreadAttribute> атрибутом.  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Для получения данных из буфера обмена в виде единого  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Получение данных из буфера обмена в одном общем формате  
   
-1. Используйте <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, или <xref:System.Windows.Forms.Clipboard.GetText%2A> метод. При необходимости используйте соответствующий `Contains` *формат* методы, чтобы определить, доступен ли данные в определенном формате. Эти методы доступны только в .NET Framework 2.0.  
+1. Используйте метод <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A> ,,<xref:System.Windows.Forms.Clipboard.GetImage%2A>или .<xref:System.Windows.Forms.Clipboard.GetText%2A> <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> При необходимости сначала используйте соответствующие `Contains`методы *форматирования* , чтобы определить, доступны ли данные в определенном формате. Эти методы доступны только в .NET Framework 2,0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Для получения данных из буфера обмена в пользовательском формате  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Извлечение данных из буфера обмена в пользовательском формате  
   
-1. Используйте <xref:System.Windows.Forms.Clipboard.GetData%2A> метод с именем пользовательского формата. Этот метод доступен только в .NET Framework 2.0.  
+1. <xref:System.Windows.Forms.Clipboard.GetData%2A> Используйте метод с именем пользовательского формата. Этот метод доступен только в .NET Framework 2,0.  
   
-     Можно также использовать имена стандартных форматов с <xref:System.Windows.Forms.Clipboard.SetData%2A> метод. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DataFormats>.  
+     Можно также использовать предопределенные имена форматов с <xref:System.Windows.Forms.Clipboard.SetData%2A> помощью метода. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Для получения данных из буфера обмена в нескольких форматах  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Извлечение данных из буфера обмена в нескольких форматах  
   
-1. Воспользуйтесь методом <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Этот метод необходимо использовать для получения данных из буфера обмена в версиях до .NET Framework 2.0.  
+1. Воспользуйтесь методом <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Этот метод необходимо использовать для получения данных из буфера обмена в версиях, предшествующих .NET Framework 2,0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

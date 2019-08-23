@@ -9,50 +9,50 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 1cf09b945a21ca51f73c3948ffdf86da4225ac22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951011"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
-Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Работающий пример см. в разделе [авторизации доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Рабочий пример см. в разделе [авторизация доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  Эта задача состоит из двух отдельных процедур. Первая создает группу и заносит в нее пользователей. Вторая применяет класс <xref:System.Security.Permissions.PrincipalPermissionAttribute>, чтобы задать группу.  
   
 ### <a name="to-create-a-windows-group"></a>Создание группы Windows  
   
-1. Откройте **Управление компьютером** консоли.  
+1. Откройте консоль **управления компьютером** .  
   
-2. На панели слева щелкните **локальные пользователи и группы**.  
+2. На панели слева щелкните **Локальные пользователи и группы**.  
   
-3. Щелкните правой кнопкой мыши **группы**и нажмите кнопку **новая группа**.  
+3. Щелкните правой кнопкой мыши элемент **группы**и выберите команду **создать группу**.  
   
-4. В **имя группы** введите имя для новой группы.  
+4. В поле **имя группы** введите имя новой группы.  
   
-5. В **описание** введите описание новой группы.  
+5. В поле **Описание** введите описание новой группы.  
   
-6. Нажмите кнопку **добавить** кнопку, чтобы добавить новых участников в группу.  
+6. Нажмите кнопку **Добавить** , чтобы добавить новых членов в группу.  
   
 7. Если вы добавили себя в группу и хотите протестировать приведенный ниже код, необходимо выйти из системы и снова войти в нее, чтобы быть включенным в группу.  
   
 ### <a name="to-demand-user-membership"></a>Требование членства пользователя  
   
-1. Откройте файл кода Windows Communication Foundation (WCF), содержащий реализованный код контракта службы. Дополнительные сведения о реализации контракта см. в разделе [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Откройте файл кода Windows Communication Foundation (WCF), содержащий реализованный код контракта службы. Дополнительные сведения о реализации контракта см. в разделе [реализация контрактов служб](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-2. Примените атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к каждому методу, доступ к которому необходимо ограничить определенной группой. Задайте для свойства <xref:System.Security.Permissions.SecurityAttribute.Action%2A> значение <xref:System.Security.Permissions.SecurityAction.Demand>, а для свойства <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> задайте имя группы. Пример:  
+2. Примените атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к каждому методу, доступ к которому необходимо ограничить определенной группой. Задайте для свойства <xref:System.Security.Permissions.SecurityAttribute.Action%2A> значение <xref:System.Security.Permissions.SecurityAction.Demand>, а для свойства <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> задайте имя группы. Например:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
   
     > [!NOTE]
-    >  Если применить атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к контракту, возникает исключение <xref:System.Security.SecurityException>. Этот атрибут может применяться только на уровне метода.  
+    > Если применить атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к контракту, возникает исключение <xref:System.Security.SecurityException>. Этот атрибут может применяться только на уровне метода.  
   
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Использование сертификата для управления доступом к методу  
  Для управления доступом к методу можно также использовать класс `PrincipalPermissionAttribute`, если типом учетных данных клиента является сертификат. Для этого необходимо иметь субъект и отпечаток сертификата.  
   
- Чтобы просмотреть свойства сертификата, см. в разделе [как: Просмотр сертификатов с помощью оснастки MMC](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Чтобы найти значение отпечатка, см. в разделе [как: Извлечение отпечатка сертификата](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+ Сведения о проверке сертификата для его свойств см. [в разделе как Просмотр сертификатов с помощью оснастки](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC. Чтобы найти значение отпечатка, [см. раздел как Получение отпечатка сертификата](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 #### <a name="to-control-access-using-a-certificate"></a>Управление доступом с помощью сертификата  
   
@@ -77,7 +77,7 @@ ms.locfileid: "64751229"
     </behaviors>  
     ```  
   
-     Задание для этого параметра значения `UseAspNetRoles` означает, что свойство `Name` атрибута `PrincipalPermissionAttribute` будет использоваться для строкового сравнения. Если сертификат используется в качестве учетных данных клиента, по умолчанию WCF Сцепляет общее имя сертификата и отпечатка точкой с запятой для создания уникального значения для первичной идентификации клиента. Если в службе для режима `UseAspNetRoles` задано значение `PrincipalPermissionMode`, для определения прав доступа пользователя это значение первичной идентификации сравнивается со значением свойства `Name`.  
+     Задание для этого параметра значения `UseAspNetRoles` означает, что свойство `Name` атрибута `PrincipalPermissionAttribute` будет использоваться для строкового сравнения. Если сертификат используется в качестве учетных данных клиента, по умолчанию WCF объединяет общее имя сертификата и отпечаток с точкой с запятой, чтобы создать уникальное значение для первичного удостоверения клиента. Если в службе для режима `UseAspNetRoles` задано значение `PrincipalPermissionMode`, для определения прав доступа пользователя это значение первичной идентификации сравнивается со значением свойства `Name`.  
   
      При создании резидентной службы можно также задать свойство <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> в коде, как показано в следующем коде:  
   

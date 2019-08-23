@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 1f6312f9ac8520b2131e1d2d7a7fb996aee6060e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dba318e6aa35761f4e9471fdb13b65644747b57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651592"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966495"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Применение шаблонов строк для настройки отображения строк элемента управления DataGridView в Windows Forms
-<xref:System.Windows.Forms.DataGridView> Элемент управления использует шаблон строки в качестве основы для всех строк, которые он добавляет в элемент управления путем привязки данных или при вызове <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> метода без указания существующей строки для использования.  
+Элемент управления использует шаблон строк в качестве основания для всех строк, добавляемых в элемент управления с помощью привязки данных, или при <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> вызове метода без указания существующей строки для использования. <xref:System.Windows.Forms.DataGridView>  
   
- Шаблон строк обеспечивает больший контроль над внешний вид и поведение строк, чем <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> предоставляет свойство. С помощью шаблонов строк, можно задать любой <xref:System.Windows.Forms.DataGridViewRow> свойств, включая <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
+ Шаблон строки обеспечивает больший контроль над внешним видом и поведением строк, чем <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> предоставляет свойство. С помощью шаблона строки можно задать любые <xref:System.Windows.Forms.DataGridViewRow> свойства, включая. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>  
   
- Существуют ситуации, когда необходимо использовать шаблон строки для получения определенного результата. Например, информацию о высоте строки не могут храниться в <xref:System.Windows.Forms.DataGridViewCellStyle>, поэтому необходимо использовать шаблон строки для изменения высоты по умолчанию, используемые во всех строках. Шаблон строки удобно использовать при создании собственных классов, производным от <xref:System.Windows.Forms.DataGridViewRow> и нужно, чтобы пользовательского типа используется при добавлении новых строк к элементу управления.  
+ Существует несколько ситуаций, в которых для достижения определенного результата необходимо использовать шаблон строки. Например, сведения о высоте строки не могут храниться в <xref:System.Windows.Forms.DataGridViewCellStyle>, поэтому для изменения высоты по умолчанию, используемой всеми строками, необходимо использовать шаблон строк. Шаблон строки также полезен при создании собственных классов, производных от <xref:System.Windows.Forms.DataGridViewRow> , и необходимости использовать пользовательский тип при добавлении новых строк к элементу управления.  
   
 > [!NOTE]
->  Шаблон строки используется только в том случае, если добавляются строки. Существующие строки невозможно изменить, изменив шаблон строки.  
+> Шаблон строки используется только при добавлении строк. Нельзя изменить существующие строки, изменив шаблон строки.  
   
-### <a name="to-use-the-row-template"></a>Использование шаблонов строк  
+### <a name="to-use-the-row-template"></a>Использование шаблона строки  
   
-- Задать свойства объекта, полученного из <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> свойство.  
+- Задайте свойства объекта, полученного из <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> свойства.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]

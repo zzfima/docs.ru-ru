@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951870"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Метод IMetaDataImport::ResolveTypeRef
-Разрешает <xref:System.Type> ссылку, представленный указанный токен TypeRef.  
+Разрешает <xref:System.Type> ссылку, представленную указанным токеном TypeRef.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,32 +40,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Параметры  
  `tr`  
- [in] Токен метаданных TypeRef для возврата сведений о типе, на которую указывает ссылка.  
+ окне Токен метаданных TypeRef для возврата сведений о типе, на который указывает ссылка.  
   
  `riid`  
- [in] Идентификатор IID интерфейса, возвращаемый в `ppIScope`. Как правило это будет IID_IMetaDataImport.  
+ окне IID интерфейса, в `ppIScope`котором возвращается. Как правило, это IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] Интерфейс для области модуля, в котором определен тип, на который указывает ссылка.  
+ заполняет Интерфейс к области модуля, в которой определен ссылочный тип.  
   
  `ptd`  
- [out] Указатель на токен TypeDef, представляющий ссылочного типа.  
+ заполняет Указатель на маркер TypeDef, представляющий ссылочный тип.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
->  Не используйте этот метод, если загружено несколько доменов приложений. Метод не учитывает границы домена приложения. Если несколько версий сборки загружаются, и они содержат один и тот же тип того же пространства имен, метод возвращает области модуля, найденную первого типа.  
+> Не используйте этот метод, если загружено несколько доменов приложений. Метод не учитывает границы домена приложения. Если загружено несколько версий сборки и они содержат один и тот же тип с одним и тем же пространством имен, метод возвращает область действия модуля первого найденного типа.  
   
- `ResolveTypeRef` Поиска методов для определения типа в других модулях. Если определение типа обнаруживается, `ResolveTypeRef` возвращает интерфейс для области модуля, а также маркер TypeDef для типа.  
+ `ResolveTypeRef` Метод выполняет поиск определения типа в других модулях. Если обнаружено определение типа, `ResolveTypeRef` возвращает интерфейс для этой области модуля, а также маркер TypeDef для типа.  
   
- Если необходимо разрешить ссылку на тип получит разрешение область AssemblyRef, `ResolveTypeRef` метод осуществляет поиск совпадения только в области метаданных, которые уже было открыто с вызовами либо [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)метод или [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) метод. Это обусловлено `ResolveTypeRef` не может определить только в области AssemblyRef, где на диске или в глобальном кэше сборок сборки хранятся.  
+ Если разрешенная ссылка на тип имеет область определения AssemblyRef, `ResolveTypeRef` метод выполняет поиск совпадения только в областях метаданных, которые уже открыты с вызовами метода [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) или [ Метод IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Это связано с `ResolveTypeRef` тем, что не может определить только из области AssemblyRef, в которой хранится сборка на диске или в глобальном кэше сборок.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок.** COR. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

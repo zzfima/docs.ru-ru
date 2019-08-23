@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c06fca8b83638fb47bedb21863cb9b200cd211f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927730"
 ---
-# <a name="clear-element-for-configsections"></a>\<Очистить > элемент для \<configSections >
+# <a name="clear-element-for-configsections"></a>\<Очистка элемента > для \<> configSections
 
 Удаляет все ранее определенные разделы и группы разделов.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Очистить >**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<очистить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,13 +34,13 @@ ms.locfileid: "66300806"
 
 |           | Описание |
 | --------- | ----------- |
-| **name**  | Обязательный атрибут.<br><br>Задает имя раздела или группы разделов. |
+| **name**  | Обязательный атрибут.<br><br>Указывает имя раздела или группы разделов, которые нужно удалить. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configSections >** элемент](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Содержит раздел конфигурации и пространства имен объявления. |
+| [элемент  **>\<configSections**](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -54,7 +54,7 @@ None
 
 В этом примере определяются в файле конфигурации компьютера и файл конфигурации приложения и показано, как использовать **\<снимите>** элемент в файле конфигурации приложения для очистки разделов, определенных ранее в файл конфигурации компьютера.
 
-В коде следующего файла конфигурации компьютера объявляются два раздела,  **\<sampleSection >** и  **\<anotherSampleSection >** , которые считываются перед приложения файл конфигурации:
+В следующем коде файла конфигурации компьютера объявляются два раздела,  **\<самплесектион >** и  **\<аносерсамплесектион >** , которые считываются перед файлом конфигурации приложения:
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ None
 </configuration>
 ```
 
-В коде следующего файла конфигурации приложения Очистка всех ранее определенных разделов. Приложение не может использовать или получить параметры в одном из разделов, которые были объявлены в файле конфигурации компьютера. Тем не менее, его можно использовать параметры из **\<anotherSection>** потому, что он следует после **\<снимите>** элемент.
+В следующем коде файла конфигурации приложения очищаются все ранее объявленные разделы. Приложение не может использовать или извлекать параметры в одном из разделов, объявленных в файле конфигурации компьютера. Тем не менее, его можно использовать параметры из **\<anotherSection>** потому, что он следует после **\<снимите>** элемент.
 
 ```xml
 <!-- Application configuration file -->
@@ -89,8 +89,8 @@ None
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
+Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](index.md)
