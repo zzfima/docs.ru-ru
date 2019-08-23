@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: ccc36d51201e63584c0345d7afaab558649adf53
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c7bf70a67729744f4cf96318f6b270a5ea81b812
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917728"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- После создания формы Windows <xref:System.Windows.Forms.DataGrid> с помощью функций времени разработки, также можно динамически изменять элементы <xref:System.Data.DataSet> объект сетки во время выполнения. Это может быть изменение как отдельных значений таблицы или источника данных, привязанного к <xref:System.Windows.Forms.DataGrid> элемента управления. Изменение отдельных значений выполняются с помощью <xref:System.Data.DataSet> объекта, не <xref:System.Windows.Forms.DataGrid> элемента управления.  
+ После создания Windows Forms <xref:System.Windows.Forms.DataGrid> с помощью функций времени разработки может также потребоваться динамическое изменение элементов <xref:System.Data.DataSet> объекта Grid во время выполнения. Это может быть изменение либо отдельных значений таблицы, либо изменение источника данных, привязанного к <xref:System.Windows.Forms.DataGrid> элементу управления. Изменения отдельных значений выполняются через <xref:System.Data.DataSet> объект, а не в <xref:System.Windows.Forms.DataGrid> элемент управления.  
   
-### <a name="to-change-data-programmatically"></a>Изменение данных программными средствами  
+### <a name="to-change-data-programmatically"></a>Программное изменение данных  
   
-1. Выберите требуемую таблицу из <xref:System.Data.DataSet> объекта и требуемыми строк и поле в таблице и укажите в ячейке новое значение.  
+1. Укажите нужную таблицу из <xref:System.Data.DataSet> объекта и нужную строку и поле из таблицы и установите ячейку, равную новому значению.  
   
     > [!NOTE]
-    >  Для указания первой таблицы <xref:System.Data.DataSet> или первую строку таблицы, укажите 0.  
+    > Чтобы указать первую таблицу <xref:System.Data.DataSet> или первую строку таблицы, используйте значение 0.  
   
-     В следующем примере показано, как изменить вторую запись первой строки первой таблицы набора данных, щелкнув `Button1`. <xref:System.Data.DataSet> (`ds`) И таблиц (`0` и `1`) были созданы ранее.  
+     В следующем примере показано, как изменить вторую запись первой строки первой таблицы набора данных, нажав кнопку `Button1`. () И`0` таблицы (и `1`) были созданы ранее.`ds` <xref:System.Data.DataSet>  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -53,7 +53,7 @@ ms.locfileid: "66053437"
        }  
     ```  
   
-     (Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C#элемент C++, визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -64,13 +64,13 @@ ms.locfileid: "66053437"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     Во время, можно использовать выполнения <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод для привязки <xref:System.Windows.Forms.DataGrid> элемента управления к другому источнику данных. Например имеется несколько элементов управления данных ADO.NET, каждый из которых подключен к другой базе данных.  
+     Во время выполнения можно использовать <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод для <xref:System.Windows.Forms.DataGrid> привязки элемента управления к другому источнику данных. Например, у вас может быть несколько элементов управления данными ADO.NET, каждый из которых подключен к другой базе данных.  
   
-### <a name="to-change-the-datasource-programmatically"></a>Чтобы изменить источник данных программными средствами  
+### <a name="to-change-the-datasource-programmatically"></a>Изменение источника данных программным способом  
   
-1. Задайте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод имя источника данных и вы хотите выполнить привязку к таблице.  
+1. <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Задайте методу имя источника данных и таблицы, к которым необходимо выполнить привязку.  
   
-     Приведенный ниже показано, как изменить дату источника с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метода к элементу управления данных ADO.NET (adoPubsAuthors), который подключен к таблицы Authors базы данных Pubs.  
+     В следующем примере показано, как изменить источник даты с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метода для элемента управления данными ADO.NET (адопубсаусорс), который подключен к таблице authors в базе данных Pubs.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -96,6 +96,6 @@ ms.locfileid: "66053437"
 ## <a name="see-also"></a>См. также
 
 - [DataSets в ADO.NET](../../data/adonet/ado-net-datasets.md)
-- [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Практическое руководство. Добавление таблиц и столбцов элемента управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Практическое руководство. Удаление или скрытие столбцов в элементе управления Windows Forms DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Добавление таблиц и столбцов в элемент управления Windows Forms DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Привязка Windows Forms элемента управления DataGrid к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
