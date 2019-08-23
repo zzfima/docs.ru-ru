@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6709b14ce8e7bc131f9feb7a277fb41851ee4352
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957431"
 ---
-# <a name="icordebugstringvalue-interface"></a><span data-ttu-id="20847-102">Интерфейс ICorDebugStringValue</span><span class="sxs-lookup"><span data-stu-id="20847-102">ICorDebugStringValue Interface</span></span>
-<span data-ttu-id="20847-103">Подкласс ICorDebugHeapValue, применяемый к строковым значениям.</span><span class="sxs-lookup"><span data-stu-id="20847-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
+# <a name="icordebugstringvalue-interface"></a><span data-ttu-id="96983-102">Интерфейс ICorDebugStringValue</span><span class="sxs-lookup"><span data-stu-id="96983-102">ICorDebugStringValue Interface</span></span>
+<span data-ttu-id="96983-103">Подкласс ICorDebugHeapValue, который применяется к строковым значениям.</span><span class="sxs-lookup"><span data-stu-id="96983-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="20847-104">Методы</span><span class="sxs-lookup"><span data-stu-id="20847-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="96983-104">Методы</span><span class="sxs-lookup"><span data-stu-id="96983-104">Methods</span></span>  
   
-|<span data-ttu-id="20847-105">Метод</span><span class="sxs-lookup"><span data-stu-id="20847-105">Method</span></span>|<span data-ttu-id="20847-106">Описание</span><span class="sxs-lookup"><span data-stu-id="20847-106">Description</span></span>|  
+|<span data-ttu-id="96983-105">Метод</span><span class="sxs-lookup"><span data-stu-id="96983-105">Method</span></span>|<span data-ttu-id="96983-106">Описание</span><span class="sxs-lookup"><span data-stu-id="96983-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="20847-107">Метод GetLength</span><span class="sxs-lookup"><span data-stu-id="20847-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="20847-108">Возвращает число символов в строке, который ссылается этот `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="20847-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
-|[<span data-ttu-id="20847-109">Метод GetString</span><span class="sxs-lookup"><span data-stu-id="20847-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="20847-110">Получает строку, на которое указывает данный `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="20847-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="96983-107">Метод GetLength</span><span class="sxs-lookup"><span data-stu-id="96983-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="96983-108">Возвращает число символов в строке, на которую ссылается this `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="96983-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="96983-109">Метод GetString</span><span class="sxs-lookup"><span data-stu-id="96983-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="96983-110">Возвращает строку, на которую ссылается `ICorDebugStringValue`this.</span><span class="sxs-lookup"><span data-stu-id="96983-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="20847-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="20847-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96983-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="96983-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="20847-112">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="20847-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="96983-112">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="96983-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20847-113">Требования</span><span class="sxs-lookup"><span data-stu-id="20847-113">Requirements</span></span>  
- <span data-ttu-id="20847-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20847-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96983-113">Требования</span><span class="sxs-lookup"><span data-stu-id="96983-113">Requirements</span></span>  
+ <span data-ttu-id="96983-114">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96983-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20847-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="20847-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="96983-115">**Заголовок.** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="96983-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="20847-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20847-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96983-116">**Библиотечная** Коргуидс. lib</span><span class="sxs-lookup"><span data-stu-id="96983-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="20847-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20847-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="96983-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96983-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20847-118">См. также</span><span class="sxs-lookup"><span data-stu-id="20847-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96983-118">См. также</span><span class="sxs-lookup"><span data-stu-id="96983-118">See also</span></span>
 
-- [<span data-ttu-id="20847-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="20847-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="96983-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="96983-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
