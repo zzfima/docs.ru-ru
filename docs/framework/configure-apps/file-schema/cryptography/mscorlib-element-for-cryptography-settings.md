@@ -8,46 +8,46 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 312db8ea5ae4b66fd00faad1b788eac0356aeaa7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659603"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921066"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a><span data-ttu-id="87515-102">\<Элемент > mscorlib для параметров шифрования</span><span class="sxs-lookup"><span data-stu-id="87515-102">\<mscorlib> Element for Cryptography Settings</span></span>
-<span data-ttu-id="87515-103">Содержит [элемент > криптографисеттингс.\<](cryptographysettings-element.md)</span><span class="sxs-lookup"><span data-stu-id="87515-103">Contains the [\<cryptographySettings> element](cryptographysettings-element.md).</span></span>  
+# <a name="mscorlib-element-for-cryptography-settings"></a><span data-ttu-id="dc806-102">\<Элемент > mscorlib для параметров шифрования</span><span class="sxs-lookup"><span data-stu-id="dc806-102">\<mscorlib> Element for Cryptography Settings</span></span>
+<span data-ttu-id="dc806-103">Содержит [элемент > криптографисеттингс.\<](cryptographysettings-element.md)</span><span class="sxs-lookup"><span data-stu-id="dc806-103">Contains the [\<cryptographySettings> element](cryptographysettings-element.md).</span></span>  
   
- <span data-ttu-id="87515-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="87515-104">\<configuration></span></span>  
-<span data-ttu-id="87515-105">\<> mscorlib</span><span class="sxs-lookup"><span data-stu-id="87515-105">\<mscorlib></span></span>  
+ <span data-ttu-id="dc806-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dc806-104">\<configuration></span></span>  
+<span data-ttu-id="dc806-105">\<> mscorlib</span><span class="sxs-lookup"><span data-stu-id="dc806-105">\<mscorlib></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87515-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="87515-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc806-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dc806-106">Syntax</span></span>  
   
 ```xml  
       <mscorlib>   
 </mscorlib>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="87515-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="87515-107">Attributes and Elements</span></span>  
- <span data-ttu-id="87515-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="87515-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dc806-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="dc806-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="dc806-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="dc806-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="87515-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="87515-109">Attributes</span></span>  
- <span data-ttu-id="87515-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="87515-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dc806-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="dc806-109">Attributes</span></span>  
+ <span data-ttu-id="dc806-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="dc806-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="87515-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="87515-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dc806-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="dc806-111">Child Elements</span></span>  
   
-|<span data-ttu-id="87515-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="87515-112">Element</span></span>|<span data-ttu-id="87515-113">Описание</span><span class="sxs-lookup"><span data-stu-id="87515-113">Description</span></span>|  
+|<span data-ttu-id="dc806-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="dc806-112">Element</span></span>|<span data-ttu-id="dc806-113">Описание</span><span class="sxs-lookup"><span data-stu-id="dc806-113">Description</span></span>|  
 |-------------|-----------------|  
-|`cryptographySettings`|<span data-ttu-id="87515-114">Содержит параметры шифрования.</span><span class="sxs-lookup"><span data-stu-id="87515-114">Contains cryptography settings.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="dc806-114">Содержит параметры шифрования.</span><span class="sxs-lookup"><span data-stu-id="dc806-114">Contains cryptography settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="87515-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="87515-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dc806-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="dc806-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="87515-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="87515-116">Element</span></span>|<span data-ttu-id="87515-117">Описание</span><span class="sxs-lookup"><span data-stu-id="87515-117">Description</span></span>|  
+|<span data-ttu-id="dc806-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="dc806-116">Element</span></span>|<span data-ttu-id="dc806-117">Описание</span><span class="sxs-lookup"><span data-stu-id="dc806-117">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="87515-118">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="87515-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`configuration`|<span data-ttu-id="dc806-118">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dc806-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="87515-119">Пример</span><span class="sxs-lookup"><span data-stu-id="87515-119">Example</span></span>  
- <span data-ttu-id="87515-120">В следующем примере показано, как использовать  **\<элемент mscorlib >** для ссылки на криптографический класс и настройки среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="87515-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="87515-121">Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.</span><span class="sxs-lookup"><span data-stu-id="87515-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="dc806-119">Пример</span><span class="sxs-lookup"><span data-stu-id="dc806-119">Example</span></span>  
+ <span data-ttu-id="dc806-120">В следующем примере показано, как использовать  **\<элемент mscorlib >** для ссылки на криптографический класс и настройки среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="dc806-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="dc806-121">Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.</span><span class="sxs-lookup"><span data-stu-id="dc806-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -68,11 +68,11 @@ ms.locfileid: "69659603"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="87515-122">См. также</span><span class="sxs-lookup"><span data-stu-id="87515-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc806-122">См. также</span><span class="sxs-lookup"><span data-stu-id="dc806-122">See also</span></span>
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [<span data-ttu-id="87515-123">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="87515-123">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="87515-124">Схема параметров шифрования</span><span class="sxs-lookup"><span data-stu-id="87515-124">Cryptography Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="87515-125">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="87515-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
-- [<span data-ttu-id="87515-126">Настройка криптографических классов</span><span class="sxs-lookup"><span data-stu-id="87515-126">Configuring Cryptography Classes</span></span>](../../configure-cryptography-classes.md)
+- [<span data-ttu-id="dc806-123">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="dc806-123">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="dc806-124">Схема параметров шифрования</span><span class="sxs-lookup"><span data-stu-id="dc806-124">Cryptography Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="dc806-125">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="dc806-125">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)
+- [<span data-ttu-id="dc806-126">Настройка криптографических классов</span><span class="sxs-lookup"><span data-stu-id="dc806-126">Configuring Cryptography Classes</span></span>](../../configure-cryptography-classes.md)

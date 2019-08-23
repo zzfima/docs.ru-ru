@@ -2,24 +2,24 @@
 title: <transport> из <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915564"
 ---
-# <a name="transport-of-netpeertcpbinding"></a><span data-ttu-id="42b61-102">\<Транспорт > из \<netPeerTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="42b61-102">\<transport> of \<netPeerTcpBinding></span></span>
-<span data-ttu-id="42b61-103">Указывает параметры безопасности уровня транспорта при использовании [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="42b61-103">Specifies settings for transport level security when using the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>  
+# <a name="transport-of-netpeertcpbinding"></a><span data-ttu-id="95017-102">\<транспортное \<> из netPeerTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="95017-102">\<transport> of \<netPeerTcpBinding></span></span>
+<span data-ttu-id="95017-103">Задает параметры безопасности на транспортном уровне при использовании [ \<> netPeerTcpBinding](netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="95017-103">Specifies settings for transport level security when using the [\<netPeerTcpBinding>](netpeertcpbinding.md).</span></span>  
   
- <span data-ttu-id="42b61-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="42b61-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="42b61-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="42b61-105">\<bindings></span></span>  
-<span data-ttu-id="42b61-106">\<netPeerTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="42b61-106">\<netPeerTcpBinding></span></span>  
-<span data-ttu-id="42b61-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="42b61-107">\<binding></span></span>  
-<span data-ttu-id="42b61-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="42b61-108">\<security></span></span>  
-<span data-ttu-id="42b61-109">\<Транспорт ></span><span class="sxs-lookup"><span data-stu-id="42b61-109">\<transport></span></span>  
+ <span data-ttu-id="95017-104">\<системой. > ServiceModel</span><span class="sxs-lookup"><span data-stu-id="95017-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="95017-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="95017-105">\<bindings></span></span>  
+<span data-ttu-id="95017-106">\<netPeerTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="95017-106">\<netPeerTcpBinding></span></span>  
+<span data-ttu-id="95017-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="95017-107">\<binding></span></span>  
+<span data-ttu-id="95017-108">\<> безопасности</span><span class="sxs-lookup"><span data-stu-id="95017-108">\<security></span></span>  
+<span data-ttu-id="95017-109">\<> транспорта</span><span class="sxs-lookup"><span data-stu-id="95017-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42b61-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="42b61-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95017-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="95017-110">Syntax</span></span>  
   
 ```xml  
 <netPeerTcpBinding>
@@ -31,39 +31,39 @@ ms.locfileid: "61788327"
 </netPeerTcpBinding>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="42b61-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="42b61-111">Attributes and Elements</span></span>  
- <span data-ttu-id="42b61-112">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="42b61-112">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="95017-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="95017-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="95017-112">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="95017-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="42b61-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="42b61-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="95017-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="95017-113">Attributes</span></span>  
   
-|<span data-ttu-id="42b61-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="42b61-114">Attribute</span></span>|<span data-ttu-id="42b61-115">Описание</span><span class="sxs-lookup"><span data-stu-id="42b61-115">Description</span></span>|  
+|<span data-ttu-id="95017-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="95017-114">Attribute</span></span>|<span data-ttu-id="95017-115">Описание</span><span class="sxs-lookup"><span data-stu-id="95017-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="42b61-116">credentialType</span><span class="sxs-lookup"><span data-stu-id="42b61-116">credentialType</span></span>|<span data-ttu-id="42b61-117">Необязательный параметр.</span><span class="sxs-lookup"><span data-stu-id="42b61-117">Optional.</span></span> <span data-ttu-id="42b61-118">Задает тип учетных данных, используемых для проверки сообщений, отправляемых с помощью однорангового транспорта.</span><span class="sxs-lookup"><span data-stu-id="42b61-118">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="42b61-119">Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="42b61-119">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
+|<span data-ttu-id="95017-116">credentialType</span><span class="sxs-lookup"><span data-stu-id="95017-116">credentialType</span></span>|<span data-ttu-id="95017-117">Необязательный параметр.</span><span class="sxs-lookup"><span data-stu-id="95017-117">Optional.</span></span> <span data-ttu-id="95017-118">Задает тип учетных данных, используемых для проверки сообщений, отправляемых с помощью однорангового транспорта.</span><span class="sxs-lookup"><span data-stu-id="95017-118">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="95017-119">Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="95017-119">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
   
-## <a name="credentialtype-attribute"></a><span data-ttu-id="42b61-120">Атрибут credentialType</span><span class="sxs-lookup"><span data-stu-id="42b61-120">credentialType Attribute</span></span>  
+## <a name="credentialtype-attribute"></a><span data-ttu-id="95017-120">Атрибут credentialType</span><span class="sxs-lookup"><span data-stu-id="95017-120">credentialType Attribute</span></span>  
   
-|<span data-ttu-id="42b61-121">Значение</span><span class="sxs-lookup"><span data-stu-id="42b61-121">Value</span></span>|<span data-ttu-id="42b61-122">Описание</span><span class="sxs-lookup"><span data-stu-id="42b61-122">Description</span></span>|  
+|<span data-ttu-id="95017-121">Значение</span><span class="sxs-lookup"><span data-stu-id="95017-121">Value</span></span>|<span data-ttu-id="95017-122">Описание</span><span class="sxs-lookup"><span data-stu-id="95017-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="42b61-123">Сертификат</span><span class="sxs-lookup"><span data-stu-id="42b61-123">Certificate</span></span>|<span data-ttu-id="42b61-124">Для проверки подлинности однорангового транспорта канала необходим сертификат X.509.</span><span class="sxs-lookup"><span data-stu-id="42b61-124">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
-|<span data-ttu-id="42b61-125">Пароль</span><span class="sxs-lookup"><span data-stu-id="42b61-125">Password</span></span>|<span data-ttu-id="42b61-126">Для проверки подлинности однорангового транспорта канала необходим правильный пароль.</span><span class="sxs-lookup"><span data-stu-id="42b61-126">Authentication of the peer channel transport requires a correct password.</span></span>|  
+|<span data-ttu-id="95017-123">Сертификат</span><span class="sxs-lookup"><span data-stu-id="95017-123">Certificate</span></span>|<span data-ttu-id="95017-124">Для проверки подлинности однорангового транспорта канала необходим сертификат X.509.</span><span class="sxs-lookup"><span data-stu-id="95017-124">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
+|<span data-ttu-id="95017-125">Пароль</span><span class="sxs-lookup"><span data-stu-id="95017-125">Password</span></span>|<span data-ttu-id="95017-126">Для проверки подлинности однорангового транспорта канала необходим правильный пароль.</span><span class="sxs-lookup"><span data-stu-id="95017-126">Authentication of the peer channel transport requires a correct password.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="42b61-127">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="42b61-127">Child Elements</span></span>  
- <span data-ttu-id="42b61-128">Нет</span><span class="sxs-lookup"><span data-stu-id="42b61-128">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="95017-127">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="95017-127">Child Elements</span></span>  
+ <span data-ttu-id="95017-128">Отсутствуют</span><span class="sxs-lookup"><span data-stu-id="95017-128">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="42b61-129">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="42b61-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="95017-129">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="95017-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="42b61-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="42b61-130">Element</span></span>|<span data-ttu-id="42b61-131">Описание</span><span class="sxs-lookup"><span data-stu-id="42b61-131">Description</span></span>|  
+|<span data-ttu-id="95017-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="95017-130">Element</span></span>|<span data-ttu-id="95017-131">Описание</span><span class="sxs-lookup"><span data-stu-id="95017-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="42b61-132">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="42b61-132">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|<span data-ttu-id="42b61-133">Определяет параметры безопасности для [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="42b61-133">Defines the security settings for the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="95017-132">\<> безопасности</span><span class="sxs-lookup"><span data-stu-id="95017-132">\<security></span></span>](security-of-netpeerbinding.md)|<span data-ttu-id="95017-133">Определяет параметры безопасности для [ \<> netPeerTcpBinding](netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="95017-133">Defines the security settings for the [\<netPeerTcpBinding>](netpeertcpbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="42b61-134">См. также</span><span class="sxs-lookup"><span data-stu-id="42b61-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95017-134">См. также</span><span class="sxs-lookup"><span data-stu-id="95017-134">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
-- [<span data-ttu-id="42b61-135">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="42b61-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="42b61-136">Привязки</span><span class="sxs-lookup"><span data-stu-id="42b61-136">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="42b61-137">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="42b61-137">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="42b61-138">Использование привязок для настройки служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="42b61-138">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="42b61-139">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="42b61-139">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+- [<span data-ttu-id="95017-135">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="95017-135">Securing Services and Clients</span></span>](../../../wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="95017-136">Привязки</span><span class="sxs-lookup"><span data-stu-id="95017-136">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="95017-137">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="95017-137">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="95017-138">Использование привязок для настройки служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="95017-138">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="95017-139">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="95017-139">\<binding></span></span>](../../../misc/binding.md)
