@@ -9,52 +9,52 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300677"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927459"
 ---
-# <a name="remove-element-for-configsections"></a><span data-ttu-id="922c6-102">\<Удалить > элемент для \<configSections ></span><span class="sxs-lookup"><span data-stu-id="922c6-102">\<remove> element for \<configSections></span></span>
+# <a name="remove-element-for-configsections"></a><span data-ttu-id="b4238-102">\<Удаление элемента > для \<configSections ></span><span class="sxs-lookup"><span data-stu-id="b4238-102">\<remove> element for \<configSections></span></span>
 
-<span data-ttu-id="922c6-103">Удаляет предварительно определенный раздел или группу разделов.</span><span class="sxs-lookup"><span data-stu-id="922c6-103">Removes a predefined section or section group.</span></span>
+<span data-ttu-id="b4238-103">Удаляет предопределенный раздел или группу разделов.</span><span class="sxs-lookup"><span data-stu-id="b4238-103">Removes a predefined section or section group.</span></span>
 
-<span data-ttu-id="922c6-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="922c6-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="922c6-105">&nbsp;&nbsp;[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="922c6-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="922c6-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Удалить >**</span><span class="sxs-lookup"><span data-stu-id="922c6-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="b4238-104">[ **\<configuration>** ](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="b4238-104">[**\<configuration>**](configuration-element.md) </span></span>  
+<span data-ttu-id="b4238-105">&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="b4238-105">&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="b4238-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Удалить >**</span><span class="sxs-lookup"><span data-stu-id="b4238-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="922c6-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="922c6-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b4238-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b4238-107">Syntax</span></span>
 
 ```xml
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="922c6-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="922c6-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="b4238-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="b4238-108">Attribute</span></span>
 
-|           | <span data-ttu-id="922c6-109">Описание</span><span class="sxs-lookup"><span data-stu-id="922c6-109">Description</span></span> |
+|           | <span data-ttu-id="b4238-109">Описание</span><span class="sxs-lookup"><span data-stu-id="b4238-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="922c6-110">**name**</span><span class="sxs-lookup"><span data-stu-id="922c6-110">**name**</span></span>  | <span data-ttu-id="922c6-111">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="922c6-111">Required attribute.</span></span><br><br><span data-ttu-id="922c6-112">Задает имя раздела или группы разделов.</span><span class="sxs-lookup"><span data-stu-id="922c6-112">Specifies the name of the section or section group to remove.</span></span> |
+| <span data-ttu-id="b4238-110">**name**</span><span class="sxs-lookup"><span data-stu-id="b4238-110">**name**</span></span>  | <span data-ttu-id="b4238-111">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b4238-111">Required attribute.</span></span><br><br><span data-ttu-id="b4238-112">Указывает имя раздела или группы разделов, которые нужно удалить.</span><span class="sxs-lookup"><span data-stu-id="b4238-112">Specifies the name of the section or section group to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="922c6-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="922c6-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="b4238-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="b4238-113">Parent element</span></span>
 
-|     | <span data-ttu-id="922c6-114">Описание</span><span class="sxs-lookup"><span data-stu-id="922c6-114">Description</span></span> |
+|     | <span data-ttu-id="b4238-114">Описание</span><span class="sxs-lookup"><span data-stu-id="b4238-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="922c6-115"> *\*\<configSections >** элемент</span><span class="sxs-lookup"><span data-stu-id="922c6-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="922c6-116">Содержит раздел конфигурации и пространства имен объявления.</span><span class="sxs-lookup"><span data-stu-id="922c6-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="b4238-115">элемент  **>\<configSections**</span><span class="sxs-lookup"><span data-stu-id="b4238-115">**\<configSections>** Element</span></span>](configsections-element-for-configuration.md) | <span data-ttu-id="b4238-116">Содержит раздел конфигурации и объявления пространств имен.</span><span class="sxs-lookup"><span data-stu-id="b4238-116">Contains configuration section and namespace declarations.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="922c6-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="922c6-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="b4238-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b4238-117">Child elements</span></span>
 
-<span data-ttu-id="922c6-118">None</span><span class="sxs-lookup"><span data-stu-id="922c6-118">None</span></span>
+<span data-ttu-id="b4238-118">None</span><span class="sxs-lookup"><span data-stu-id="b4238-118">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="922c6-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="922c6-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b4238-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="b4238-119">Remarks</span></span>
 
-<span data-ttu-id="922c6-120">Можно использовать  **\<удалить >** элемент нужно удалить разделы и группы разделов из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="922c6-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="b4238-120">Элемент  **\<Remove >** можно использовать для удаления разделов и групп разделов из приложения, которые были определены на более высоком уровне в иерархии файлов конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b4238-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="922c6-121">Пример</span><span class="sxs-lookup"><span data-stu-id="922c6-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b4238-121">Пример</span><span class="sxs-lookup"><span data-stu-id="b4238-121">Example</span></span>
 
-<span data-ttu-id="922c6-122">В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления раздела, ранее определенные в файле конфигурации компьютера.</span><span class="sxs-lookup"><span data-stu-id="922c6-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="b4238-122">В следующем примере показано,  **\<** как использовать элемент remove > в файле конфигурации приложения для удаления раздела, ранее определенного в файле конфигурации компьютера.</span><span class="sxs-lookup"><span data-stu-id="b4238-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="922c6-123">В коде следующего файла конфигурации компьютера объявляет разделе  **\<sampleSection >** :</span><span class="sxs-lookup"><span data-stu-id="922c6-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
+<span data-ttu-id="b4238-123">Следующий код файла конфигурации компьютера объявляет раздел  **\<самплесектион >** :</span><span class="sxs-lookup"><span data-stu-id="b4238-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "66300677"
 </configuration>
 ```
 
-<span data-ttu-id="922c6-124">В коде следующего файла конфигурации приложения удаляет  **\<sampleSection >** раздел.</span><span class="sxs-lookup"><span data-stu-id="922c6-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="922c6-125">После удаления приложения не удается получить параметры в  **\<sampleSection >** .</span><span class="sxs-lookup"><span data-stu-id="922c6-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
+<span data-ttu-id="b4238-124">В следующем коде файла конфигурации приложения удаляется  **\<раздел > самплесектион** .</span><span class="sxs-lookup"><span data-stu-id="b4238-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="b4238-125">После удаления приложение не сможет получить параметры в  **\<самплесектион >** .</span><span class="sxs-lookup"><span data-stu-id="b4238-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
 
 ```xml
 <!-- Application configuration file -->
@@ -80,10 +80,10 @@ ms.locfileid: "66300677"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="922c6-126">файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="922c6-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="b4238-126">файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="b4238-126">Configuration file</span></span>
 
-<span data-ttu-id="922c6-127">Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.</span><span class="sxs-lookup"><span data-stu-id="922c6-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="b4238-127">Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.</span><span class="sxs-lookup"><span data-stu-id="b4238-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="922c6-128">См. также</span><span class="sxs-lookup"><span data-stu-id="922c6-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4238-128">См. также</span><span class="sxs-lookup"><span data-stu-id="b4238-128">See also</span></span>
 
-- [<span data-ttu-id="922c6-129">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="922c6-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="b4238-129">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b4238-129">Configuration file schema for the .NET Framework</span></span>](index.md)

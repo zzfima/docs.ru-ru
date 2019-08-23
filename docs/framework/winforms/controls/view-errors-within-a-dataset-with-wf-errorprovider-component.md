@@ -9,22 +9,22 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950086"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="8caec-102">Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8caec-102">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>
-<span data-ttu-id="8caec-103">Можно использовать в Windows Forms <xref:System.Windows.Forms.ErrorProvider> компонента для просмотра ошибок в столбцах набора данных или другом источнике данных.</span><span class="sxs-lookup"><span data-stu-id="8caec-103">You can use the Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to view column errors within a dataset or other data source.</span></span> <span data-ttu-id="8caec-104">Для <xref:System.Windows.Forms.ErrorProvider> компонент для отображения ошибок данных в форме, оно не обязательно должно непосредственно связаны с элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8caec-104">For an <xref:System.Windows.Forms.ErrorProvider> component to display data errors on a form, it does not have to be directly associated with a control.</span></span> <span data-ttu-id="8caec-105">После привязки к источнику данных, она может отображать значок ошибки рядом с любой элемент управления, привязанный к тому же источнику данных.</span><span class="sxs-lookup"><span data-stu-id="8caec-105">Once it is bound to a data source, it can display an error icon next to any control that is bound to the same data source.</span></span>  
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="3ac81-102">Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ac81-102">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>
+<span data-ttu-id="3ac81-103">Можно использовать компонент Windows Forms <xref:System.Windows.Forms.ErrorProvider> для просмотра ошибок столбцов в наборе данных или другом источнике.</span><span class="sxs-lookup"><span data-stu-id="3ac81-103">You can use the Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to view column errors within a dataset or other data source.</span></span> <span data-ttu-id="3ac81-104"><xref:System.Windows.Forms.ErrorProvider> Чтобы компонент отображал ошибки данных в форме, ему не нужно напрямую связываться с элементом управления.</span><span class="sxs-lookup"><span data-stu-id="3ac81-104">For an <xref:System.Windows.Forms.ErrorProvider> component to display data errors on a form, it does not have to be directly associated with a control.</span></span> <span data-ttu-id="3ac81-105">После привязки к источнику данных он может отобразить значок ошибки рядом с любым элементом управления, привязанным к тому же источнику данных.</span><span class="sxs-lookup"><span data-stu-id="3ac81-105">Once it is bound to a data source, it can display an error icon next to any control that is bound to the same data source.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8caec-106">Если изменить поставщик ошибок <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> и <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> свойства во время выполнения, следует использовать <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> метод во избежание конфликтов.</span><span class="sxs-lookup"><span data-stu-id="8caec-106">If you change the error provider's <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> and <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> properties at run time, you should use the <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> method to avoid conflicts.</span></span>  
+> <span data-ttu-id="3ac81-106">Если во время выполнения изменить свойства <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> и <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> поставщика ошибок <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> , следует использовать метод, чтобы избежать конфликтов.</span><span class="sxs-lookup"><span data-stu-id="3ac81-106">If you change the error provider's <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> and <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> properties at run time, you should use the <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> method to avoid conflicts.</span></span>  
   
-### <a name="to-display-data-errors"></a><span data-ttu-id="8caec-107">Для отображения ошибок в данных</span><span class="sxs-lookup"><span data-stu-id="8caec-107">To display data errors</span></span>  
+### <a name="to-display-data-errors"></a><span data-ttu-id="3ac81-107">Отображение ошибок данных</span><span class="sxs-lookup"><span data-stu-id="3ac81-107">To display data errors</span></span>  
   
-1. <span data-ttu-id="8caec-108">Компонент привязки к определенному столбцу в таблице данных.</span><span class="sxs-lookup"><span data-stu-id="8caec-108">Bind the component to a specific column within a data table.</span></span>  
+1. <span data-ttu-id="3ac81-108">Привязка компонента к определенному столбцу в таблице данных.</span><span class="sxs-lookup"><span data-stu-id="3ac81-108">Bind the component to a specific column within a data table.</span></span>  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "61962582"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. <span data-ttu-id="8caec-109">Задайте <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> в форму свойство.</span><span class="sxs-lookup"><span data-stu-id="8caec-109">Set the <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> property to the form.</span></span>  
+2. <span data-ttu-id="3ac81-109">Задайте для <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> свойства значение форма.</span><span class="sxs-lookup"><span data-stu-id="3ac81-109">Set the <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> property to the form.</span></span>  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "61962582"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3. <span data-ttu-id="8caec-110">Установка для позиции текущей записи в строку, содержащую ошибку столбца.</span><span class="sxs-lookup"><span data-stu-id="8caec-110">Set the position of the current record to a row that contains a column error.</span></span>  
+3. <span data-ttu-id="3ac81-110">Установка в качестве расположения текущей записи строки, содержащей ошибку столбца.</span><span class="sxs-lookup"><span data-stu-id="3ac81-110">Set the position of the current record to a row that contains a column error.</span></span>  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -62,7 +62,7 @@ ms.locfileid: "61962582"
     this.BindingContext [DataTable1].Position = 5;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8caec-111">См. также</span><span class="sxs-lookup"><span data-stu-id="8caec-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ac81-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3ac81-111">See also</span></span>
 
-- [<span data-ttu-id="8caec-112">Общие сведения о компоненте ErrorProvider</span><span class="sxs-lookup"><span data-stu-id="8caec-112">ErrorProvider Component Overview</span></span>](errorprovider-component-overview-windows-forms.md)
-- [<span data-ttu-id="8caec-113">Практическое руководство. Отображение значков ошибок для проверки формы с помощью компонента ErrorProvider в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8caec-113">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [<span data-ttu-id="3ac81-112">Общие сведения о компоненте ErrorProvider</span><span class="sxs-lookup"><span data-stu-id="3ac81-112">ErrorProvider Component Overview</span></span>](errorprovider-component-overview-windows-forms.md)
+- [<span data-ttu-id="3ac81-113">Практическое руководство. Отображение значков ошибок для проверки формы с помощью компонента Windows Forms ErrorProvider</span><span class="sxs-lookup"><span data-stu-id="3ac81-113">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](display-error-icons-for-form-validation-with-wf-errorprovider.md)
