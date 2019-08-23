@@ -12,21 +12,21 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: fafd3fc7345f94d3907163ff9dcf0ab293f85f3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e8b69167f470afd5e3049a717978a41078db575
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609963"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969005"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
- В этом разделе показано, как последовательный поиск и выделение каждого вхождения строки в содержимое элемента управления текста с помощью [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ В этом разделе показано, как последовательно искать и выделять каждое вхождение строки в содержимом элемента управления "текст" с помощью [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="example"></a>Пример  
- Следующий пример получает <xref:System.Windows.Automation.TextPattern> объект из текстового элемента управления. Объект <xref:System.Windows.Automation.Text.TextPatternRange> объект, представляющий текстовое содержимое всего документа, создается с помощью <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> свойства данного объекта <xref:System.Windows.Automation.TextPattern>. Два дополнительных <xref:System.Windows.Automation.Text.TextPatternRange> объекты создаются для последовательного поиска и выделения.  
+ В следующем примере получается <xref:System.Windows.Automation.TextPattern> объект из текстового элемента управления. Затем объект, представляющий текстовое содержимое всего документа, создается <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> с помощью свойства этого <xref:System.Windows.Automation.TextPattern>объекта. <xref:System.Windows.Automation.Text.TextPatternRange> Затем создаются <xref:System.Windows.Automation.Text.TextPatternRange> два дополнительных объекта для последовательного поиска и выделения.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  

@@ -1,5 +1,5 @@
 ---
-title: <add> Элемент для <listeners> для <source>
+title: <add>Элемент для <listeners> для<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 4d2952e29b09fcf9f81624317e30caf301a61a51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96bfde3ec425f6f77d1d655808d155eb0e6fcd0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927195"
 ---
-# <a name="add-element-for-listeners-for-source"></a>\<Добавить > элемент для \<прослушиватели > для \<источника >
+# <a name="add-element-for-listeners-for-source"></a>\<Добавление элемента > для \<прослушивателей, \<> для исходного >
 Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.  
   
  \<configuration>  
-\<system.diagnostics>  
+\<> System. Diagnostics  
 \<источники >  
-\<Источник >  
+\<исходный >  
 \<прослушиватели >  
 \<add>  
   
@@ -40,17 +40,17 @@ ms.locfileid: "61701493"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`type`|Необходимый атрибут, в том случае, если не обращаются к прослушивателю в `sharedListeners` коллекции, в котором случае необходима только для ссылки на него по имени (см. в разделе [пример](#example)).<br /><br /> Указывает тип прослушивателя. Необходимо использовать строку, которая соответствует требованиям, перечисленным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса. Объект <xref:System.Configuration.ConfigurationException> создается, если класс имеет конструктор, принимающий строку.|  
-|`name`|Необязательный атрибут.<br /><br /> Имя прослушивателя.|  
-|`traceOutputOptions`|Необязательный атрибут.<br /><br /> Указывает <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> значение свойства для прослушивателя трассировки.|  
-|[настраиваемые атрибуты]|Необязательные атрибуты.<br /><br /> Указывает значение для прослушивателя атрибутов, идентифицируемых <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> метод для этого прослушивателя. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> является примером дополнительный атрибут, уникальные для <xref:System.Diagnostics.DelimitedListTraceListener> класса.|  
+|`type`|Обязательный атрибут, если вы не ссылаетесь на прослушиватель в `sharedListeners` коллекции. в этом случае необходимо ссылаться на него по имени (см. [Пример](#example)).<br /><br /> Указывает тип прослушивателя. Необходимо использовать строку, которая соответствует требованиям, указанным в указании [полных имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая конструктору для указанного класса. <xref:System.Configuration.ConfigurationException> Исключение создается, если класс не имеет конструктора, принимающего строку.|  
+|`name`|Необязательный атрибут.<br /><br /> Указывает имя прослушивателя.|  
+|`traceOutputOptions`|Необязательный атрибут.<br /><br /> Указывает значение <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> свойства для прослушивателя трассировки.|  
+|[настраиваемые атрибуты]|Необязательные атрибуты.<br /><br /> Задает значение для атрибутов <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> прослушивателя, определенных методом для этого прослушивателя. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>Пример дополнительного атрибута, уникального для <xref:System.Diagnostics.DelimitedListTraceListener> класса.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.|  
+|[\<filter>](filter-element-for-add-for-listeners-for-source.md)|Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -60,37 +60,37 @@ ms.locfileid: "61701493"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
 |`sources`|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
 |`source`|Содержит источник трассировки, который инициирует сообщения трассировки.|  
-|`listeners`|Задает прослушиватели для сбора, хранения и маршрутизации сообщений.|  
+|`listeners`|Указывает прослушиватели, собирающие, хранящие и направляющие сообщения.|  
   
 ## <a name="remarks"></a>Примечания  
- Классы прослушивателя, поставлявшихся с .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.  
+ Классы прослушивателей, поставляемые с .NET Framework, являются производными от <xref:System.Diagnostics.TraceListener> класса.  
   
- Если вы не укажете `name` атрибут прослушивателя трассировки, <xref:System.Diagnostics.TraceListener.Name%2A> свойства прослушивателя трассировки по умолчанию используется пустая строка (»»). Если у приложения имеется только один прослушиватель, его можно добавить без указания имени и его можно удалить, указав пустую строку для имени. Тем не менее, если приложение имеет несколько прослушивателей, следует указать уникальное имя для каждого прослушивателя трассировки, для идентификации и управления ими в прослушиватели трассировки в отдельных <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> коллекции.  
-  
-> [!NOTE]
->  Добавление более одного прослушивателя трассировки, того же типа и с тем же присвойте приводит только одного прослушивателя этого типа имя, а, добавляемый `Listeners` коллекции. Тем не менее, можно программно добавить несколько идентичных прослушивателей для `Listeners` коллекции.  
-  
- Значение для `initializeData` атрибута зависит от типа создании прослушивателя. Не все прослушиватели трассировки необходимо указать `initializeData`.  
+ Если `name` атрибут прослушивателя трассировки не указан <xref:System.Diagnostics.TraceListener.Name%2A> , свойство прослушивателя трассировки по умолчанию имеет пустую строку (""). Если у приложения есть только один прослушиватель, его можно добавить без указания имени, и его можно удалить, указав в качестве имени пустую строку. Однако если приложение имеет несколько прослушивателей, необходимо указать уникальное имя для каждого прослушивателя трассировки, что позволяет определять отдельные прослушиватели трассировки в <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> коллекции и управлять ими.  
   
 > [!NOTE]
->  При использовании `initializeData` атрибут, может появиться предупреждение «атрибут «initializeData» не объявлен.» компилятора Это предупреждение возникает, так как параметры конфигурации проверяются на соответствие абстрактный базовый класс <xref:System.Diagnostics.TraceListener>, который не распознает `initializeData` атрибута. Как правило можно игнорировать это предупреждение для реализации прослушивателя трассировки, имеющих конструктор, принимающий параметр.  
+> Добавление нескольких прослушивателей трассировки одного и того же типа и с одним и тем же именем приводит к тому, что только один прослушиватель трассировки этого типа и `Listeners` имя добавляются в коллекцию. Тем не менее можно программно добавить несколько идентичных прослушивателей в `Listeners` коллекцию.  
   
- В следующей таблице перечислены прослушиватели трассировки, которые входят в состав .NET Framework и описаны значения их `initializeData` атрибуты.  
+ Значение `initializeData` атрибута зависит от типа создаваемого прослушивателя. Не все прослушиватели трассировки нуждаются в указании `initializeData`.  
+  
+> [!NOTE]
+> При использовании `initializeData` атрибута может появиться предупреждение компилятора "атрибут initializeData не объявлен". Это предупреждение возникает из-за того, что параметры конфигурации проверяются <xref:System.Diagnostics.TraceListener>по абстрактному базовому классу, который не `initializeData` распознает атрибут. Как правило, это предупреждение можно игнорировать для реализаций прослушивателя трассировки, имеющих конструктор, принимающий параметр.  
+  
+ В следующей таблице показаны прослушиватели трассировки, которые включены в состав .NET Framework и описываются значения их `initializeData` атрибутов.  
   
 |Класс прослушивателя трассировки|значение атрибута initializeData|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|`useErrorStream` Значение <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> конструктор.  Задайте `initializeData` для атрибута "`true`«для записи выходных данных трассировки и отладки в стандартный поток ошибок; ему присвоено»`false`" для записи в стандартный выходной поток.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Имя файла <xref:System.Diagnostics.DelimitedListTraceListener> записывает.|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|`useErrorStream` Значение<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> для конструктора.  Задайте для`true``false`атрибута значение "", чтобы записывать выходные данные трассировки и отладки в стандартный поток ошибок; задайте для него значение "", чтобы выполнить запись в стандартный выходной поток. `initializeData`|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Имя файла, <xref:System.Diagnostics.DelimitedListTraceListener> в который производится запись.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Имя существующего источника журнала событий.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Имя файла, <xref:System.Diagnostics.EventSchemaTraceListener> записывает.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Имя файла, <xref:System.Diagnostics.TextWriterTraceListener> записывает.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Имя файла, <xref:System.Diagnostics.XmlWriterTraceListener> записывает.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Имя файла, в который <xref:System.Diagnostics.EventSchemaTraceListener> производится запись.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Имя файла, в который <xref:System.Diagnostics.TextWriterTraceListener> производится запись.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Имя файла, в который <xref:System.Diagnostics.XmlWriterTraceListener> производится запись.|  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<add>` элементы для добавления прослушивателей `console` и `textListener` для `Listeners` коллекции для источника трассировки `TraceSourceApp`. `textListener` Прослушиватель записывает выходные данные трассировки в файл myListener.log.  
+ В следующем примере показано, как использовать `<add>` элементы для добавления прослушивателей `console` и `textListener` в `Listeners` коллекцию для источника `TraceSourceApp`трассировки. `textListener` Прослушиватель записывает выходные данные трассировки в файл myListener. log.  
   
 ```xml  
 <configuration>  
@@ -122,5 +122,5 @@ ms.locfileid: "61701493"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Схема параметров трассировки и отладки](index.md)
+- [Прослушиватели трассировки](../../../debug-trace-profile/trace-listeners.md)

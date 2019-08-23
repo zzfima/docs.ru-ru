@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916286"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Пошаговое руководство. Создание криптографического приложения
 В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое. Пример кода предназначен для приложения Windows Forms. Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт. Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.  
@@ -29,7 +29,7 @@ ms.locfileid: "64602513"
 - Используйте <xref:System.Security.Cryptography.RSACryptoServiceProvider> с асимметричным алгоритмом для шифрования и расшифровки ключа для данных, зашифрованных при помощи <xref:System.Security.Cryptography.RijndaelManaged>. Асимметричные алгоритмы лучше подходят для небольших объемов данных, таких как ключ.  
   
     > [!NOTE]
-    >  Если вы хотите защитить данные на компьютере, а не обмениваться зашифрованным содержимым с другими людьми, рекомендуется использовать классы <xref:System.Security.Cryptography.ProtectedData> или <xref:System.Security.Cryptography.ProtectedMemory>.  
+    > Если вы хотите защитить данные на компьютере, а не обмениваться зашифрованным содержимым с другими людьми, рекомендуется использовать классы <xref:System.Security.Cryptography.ProtectedData> или <xref:System.Security.Cryptography.ProtectedMemory>.  
   
  В следующей таблице указаны задачи шифрования из этого раздела.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "64602513"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Шифрование файла  
- Эта задача включает в себя два метода: метод обработчика событий для `Encrypt File` кнопки (`buttonEncryptFile_Click`) и `EncryptFile` метод. Первый метод отображает диалоговое окно для выбора файла и передает имя этого файла во второй метод, который выполняет шифрование.  
+ Эта задача включает два метода: метод обработчика событий для `Encrypt File` кнопки (`buttonEncryptFile_Click`) и `EncryptFile` метод. Первый метод отображает диалоговое окно для выбора файла и передает имя этого файла во второй метод, который выполняет шифрование.  
   
  Зашифрованное содержимое, ключ и вектор инициализации сохраняются в один <xref:System.IO.FileStream>, который называется пакетом шифрования.  
   

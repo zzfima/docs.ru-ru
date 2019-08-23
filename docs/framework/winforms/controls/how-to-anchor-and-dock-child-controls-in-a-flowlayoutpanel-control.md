@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922904"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
 Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
@@ -21,16 +21,16 @@ ms.locfileid: "65592951"
   
 1. Создание элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> в форме.  
   
-2. Задайте <xref:System.Windows.Forms.Control.Width%2A> из <xref:System.Windows.Forms.FlowLayoutPanel> управления **300**и задайте его <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> для <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> <xref:System.Windows.Forms.FlowDirection.TopDown>Установите для элементауправлениязначение300изадайтедлянегозначение.<xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.Control.Width%2A>  
   
 3. Создайте два элемента управления <xref:System.Windows.Forms.Button> и поместите их в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-4. Задайте <xref:System.Windows.Forms.Control.Width%2A> первой кнопки значение **200**.  
+4. Присвойте первой кнопке значение **200.** <xref:System.Windows.Forms.Control.Width%2A>  
   
 5. Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
-    >  Вторая кнопка принимает ту же ширину, что и первая кнопка. Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
+    > Вторая кнопка принимает ту же ширину, что и первая кнопка. Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
 6. Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение `None`. При этом кнопка примет исходную ширину.  
   

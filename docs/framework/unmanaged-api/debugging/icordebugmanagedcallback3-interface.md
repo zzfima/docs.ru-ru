@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acab49097059081540ec364d7f134d31432988a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 138ac80a9abb64d4c004e83e53ed1eea2b124ff2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909897"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>Интерфейс ICorDebugManagedCallback3
 Предоставляет метод обратного вызова, указывающий, что создано включенное пользовательское уведомление отладчика.  
@@ -30,20 +30,20 @@ ms.locfileid: "61723268"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|Указывает, что было создано включенное пользовательское уведомление отладчика.|  
+|[Метод CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|Указывает, что создано включенное пользовательское уведомление отладчика.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс является логическим расширением [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) и [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) интерфейсов.  
+ Этот интерфейс является логическим расширением интерфейсов [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) и [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

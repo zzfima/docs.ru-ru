@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925319"
 ---
 # <a name="corexitprocess-function"></a>Функция CorExitProcess
-Завершает работу текущего неуправляемого процесса.  
+Завершает текущий неуправляемый процесс.  
   
- Эта функция является устаревшим в .NET Framework 4. Используйте [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) метод вместо этого.  
+ Эта функция является устаревшей в .NET Framework 4. Используйте вместо этого метод [ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,19 +42,19 @@ void STDMETHODCALLTYPE CorExitProcess (
   
 ## <a name="parameters"></a>Параметры  
  `exitCode`  
- Целое число, определяющее код завершения процесса.  
+ Целое число, указывающее код завершения процесса.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Начиная с .NET Framework 4, `CorExitProcess` выходит из каждой запущенной среды выполнения в процессе, а не только среды выполнения, к которому привязан интерфейсов API прежних версий.  
+> Начиная с .NET Framework 4, `CorExitProcess` завершает каждую запущенную среду выполнения в процессе, а не только среду выполнения, к которой привязаны API прежних версий.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотечная** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

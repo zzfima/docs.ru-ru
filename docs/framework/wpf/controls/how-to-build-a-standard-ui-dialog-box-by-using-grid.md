@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923420"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Практическое руководство. Создание стандартного диалогового окна пользовательского интерфейса с помощью сетки
-В этом примере показано, как создать стандартную [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] диалоговое окно с помощью <xref:System.Windows.Controls.Grid> элемент.  
+В этом примере показано, как создать стандартное [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] диалоговое окно с <xref:System.Windows.Controls.Grid> помощью элемента.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается диалоговое окно, похожее **запуска** диалогового окна в [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] операционной системы.  
+ В следующем примере создается диалоговое окно, такое как диалоговое окно « **Запуск** » в операционной системе Windows.  
   
- В примере создается <xref:System.Windows.Controls.Grid> и использует <xref:System.Windows.Controls.ColumnDefinition> и <xref:System.Windows.Controls.RowDefinition> классам определять пятью столбцами и четырьмя строками.  
+ В примере создается <xref:System.Windows.Controls.Grid> и <xref:System.Windows.Controls.ColumnDefinition> используются классы и <xref:System.Windows.Controls.RowDefinition> для определения пяти столбцов и четырех строк.  
   
- Затем добавляет и помещает <xref:System.Windows.Controls.Image>, `RunIcon.png`, чтобы представить образ, который находится в диалоговом окне. Изображение размещается в первом столбце и строке <xref:System.Windows.Controls.Grid> (в левом верхнем углу).  
+ Затем в примере добавляются и размещается объект <xref:System.Windows.Controls.Image>, `RunIcon.png`, который представляет изображение, найденное в диалоговом окне. Изображение помещается в первый столбец и строку <xref:System.Windows.Controls.Grid> (верхний левый угол).  
   
- Затем в примере добавляется <xref:System.Windows.Controls.TextBlock> элемент в первый столбец, который охватывает оставшиеся столбцы первой строки. Он добавляет другой <xref:System.Windows.Controls.TextBlock> элемент второй строки в первом столбце, для представления **откройте** текстовое поле. Объект <xref:System.Windows.Controls.TextBlock> с помощью которой представляет область ввода данных.  
+ Далее в примере добавляется <xref:System.Windows.Controls.TextBlock> элемент в первый столбец, который охватывает оставшиеся столбцы первой строки. Он добавляет еще <xref:System.Windows.Controls.TextBlock> один элемент во вторую строку в первом столбце для представления **открытого** текстового поля. Следующий <xref:System.Windows.Controls.TextBlock> объект представляет область ввода данных.  
   
- Наконец, в примере добавляется три <xref:System.Windows.Controls.Button> элементов в последнюю строку, которые представляют **ОК**, **отменить**, и **Обзор** события.  
+ Наконец, в примере в последнюю <xref:System.Windows.Controls.Button> строку добавляются три элемента, которые представляют события **ОК**, **Отмена**и **Обзор** .  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

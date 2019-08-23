@@ -1,27 +1,27 @@
 ---
-title: <cancelRequestedQuery> для WCF
+title: <cancelRequestedQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7952520edbf799e5fab6864e50962c6ec2860928
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673367"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919651"
 ---
-# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery> of WCF
+# <a name="cancelrequestedquery-of-wcf"></a>\<Канцелрекуестедкуери > WCF
 
 Представляет запрос, используемый для отслеживания запросов по отмене дочернего действия родительским. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.  
   
-Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md).
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
-\<профили >  
+\<Профили >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<cancelRequestedQueries>  
-\<cancelRequestedQuery>  
+\<> рабочего процесса  
+\<Канцелрекуестедкуериес >  
+\<Канцелрекуестедкуери >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ ms.locfileid: "61673367"
   
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
   
 ### <a name="parent-elements"></a>Родительские элементы
   
@@ -65,5 +65,5 @@ ms.locfileid: "61673367"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

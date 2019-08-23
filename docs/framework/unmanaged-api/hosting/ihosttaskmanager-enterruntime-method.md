@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a01779e6203ddfea32e72838b7e02996fd868c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa756c98dc082774f7a8a6e050209525420b359f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913728"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>Метод IHostTaskManager::EnterRuntime
-Уведомляет основное приложение, что вызов неуправляемого метода, такие как неуправляемого метода, возвращается управление выполнением к общеязыковой среды выполнения (CLR).  
+Уведомляет узел о том, что вызов неуправляемого метода, например метода вызова платформы, возвращает управление выполнением среде CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,26 +37,26 @@ HRESULT EnterRuntime ();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Не хватает памяти была доступна для выполнения запрошенного выделения.|  
+|S_OK|`EnterRuntime`успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Недостаточно памяти для завершения запрошенного выделения.|  
   
 ## <a name="remarks"></a>Примечания  
- `EnterRuntime` вызывается для уведомления узла, неуправляемой функции, для которого предыдущими вызовами [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) метода был сделан, завершения выполнения и возвращает управление выполнением в среду выполнения.  
+ `EnterRuntime`вызывается для уведомления узла о том, что неуправляемая функция, для которой был выполнен предыдущий вызов метода [леаверунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) , завершила выполнение, и возвращает управление выполнением среде выполнения.  
   
 > [!NOTE]
->  [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md) вызывается для уведомления узла, неуправляемой функции, для которого предыдущими вызовами `LeaveRuntime` был сделан, осуществляет вызов управляемого кода.  
+> [Реверсинтеррунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md) вызывается для уведомления узла о том, что неуправляемая функция, для которой `LeaveRuntime` был выполнен предыдущий вызов, делает вызов управляемого кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

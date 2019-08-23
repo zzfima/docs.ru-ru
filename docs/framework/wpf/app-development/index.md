@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817984"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964803"
 ---
 # <a name="application-development"></a>Разработка приложений
 <a name="introduction"></a>Windows Presentation Foundation (WPF) — это структура представления, которую можно использовать для разработки приложений следующих типов:  
   
-- автономные приложения (традиционные приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера);  
+- Автономные приложения (традиционные приложения Windows, созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера).  
   
 - [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](приложения, состоящие из страниц навигации, построенных как исполняемые сборки и размещенные в веб-браузерах, таких как Microsoft Internet Explorer или Mozilla Firefox).  
   
@@ -24,7 +24,7 @@ ms.locfileid: "68817984"
 - библиотеки классов (неисполняемые сборки, содержащие многократно используемые классы).  
   
 > [!NOTE]
->  Использование типов WPF в службе Windows настоятельно не рекомендуется. При попытке использовать эти возможности в службе Windows они могут не работать должным образом.  
+> Использование типов WPF в службе Windows настоятельно не рекомендуется. При попытке использовать эти возможности в службе Windows они могут не работать должным образом.  
   
  Для создания этого набора приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует множество служб. Этот раздел предоставляет обзор этих служб и место, где искать дополнительные сведения.  
 

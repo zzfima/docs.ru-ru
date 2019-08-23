@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5fcd8c17c4006714fa9d11aece5cccc57c97087
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb130f11975eb95db7807126d6f163425439b0c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914901"
 ---
 # <a name="icordebugheapvalue-interface"></a>Интерфейс ICorDebugHeapValue
 
-Подкласс «ICorDebugValue», который представляет объект, собранных сборщиком мусора среды выполнения (CLR).  
+Подкласс "ICorDebugValue", представляющий объект, собранный сборщиком мусора среды CLR.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод CreateRelocBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Не реализовано.|  
-|[Метод IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Получает значение, указывающее, является ли объект, представленный это `ICorDebugHeapValue` является допустимым, или он был удален сборщиком мусора. Этот метод был объявлен устаревшим в .NET Framework версии 2.0.|  
+|[Метод IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Возвращает значение, указывающее, является ли объект, представленный `ICorDebugHeapValue` этим объектом, допустимым или освобожденным сборщиком мусора. Этот метод не рекомендуется к использованию в .NET Framework версии 2,0.|  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

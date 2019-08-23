@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 638ce7933ededf2ff7b03b1c5aed7f6bdbfebc6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987848"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912795"
 ---
 # <a name="icordebugnativeframe2-interface"></a>Интерфейс ICorDebugNativeFrame2
 Предоставляет методы, проверяющие для кадров наличие взаимоотношений типа "дочерний-родительский".  
@@ -30,22 +30,22 @@ ms.locfileid: "61987848"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод IsChild](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Определяет, является ли текущий кадр дочерним.|  
-|[Метод IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Определяет, является ли указанный кадр родительским для текущего кадра.|  
-|[Метод GetStackParameterSize](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Возвращает общий размер параметров в стеке в x86 операционных систем.|  
+|[Метод IsChild](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Определяет, является ли текущий кадр дочерним кадром.|  
+|[Метод IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Определяет, является ли указанный кадр родительским по отношению к текущему кадру.|  
+|[Метод GetStackParameterSize](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Возвращает совокупный размер параметров в стеке в операционных системах x86.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс логически расширяет интерфейс «ICorDebugNativeFrame».  
+ Этот интерфейс логически расширяет интерфейс "ICorDebugNativeFrame".  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

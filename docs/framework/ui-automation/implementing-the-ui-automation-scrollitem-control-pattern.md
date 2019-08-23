@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 377b383cb6dc583ab5b3ad9479f03eb552c5babe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4883184d75a21efbc08947008baddf31346d7951
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935760"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Реализация шаблона элемента управления ScrollItem модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IScrollItemProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64651867"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Method|Отсутствуют|  
   
  Этот шаблон элемента управления не имеет связанных свойств или событий.  
   

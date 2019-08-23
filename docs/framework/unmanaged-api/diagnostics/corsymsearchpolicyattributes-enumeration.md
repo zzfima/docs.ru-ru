@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29766636cd151744d25cf66deb60cd2e066e1b32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913741"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>Перечисление CorSymSearchPolicyAttributes
-Указывает политику, используемую при выполнении поиска для средства чтения символов. Эти константы используются [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) и [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) методы.  
+Указывает политику, используемую при поиске средства чтения символов. Эти константы используются методами [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) и [ISymUnmanagedBinder3:: жетреадерфромкаллбакк](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) .  
   
 > [!IMPORTANT]
->  Он представляет угрозу безопасности, чтобы открыть файл базы данных (PDB) программы из ненадежного источника.  
+> При открытии файла базы данных программы (PDB) из ненадежного источника возникает угроза безопасности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,13 +45,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Член|Описание|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Запрашивает в реестре для пути поиска символов.|  
+|`AllowRegistryAccess`|Запрашивает пути поиска символов в реестре.|  
 |`AllowSymbolServerAccess`|Обращается к серверу символов.|  
-|`AllowOriginalPathAccess`|Выполняет поиск путь, указанный в каталоге отладки.|  
-|`AllowReferencePathAccess`|Выполняет поиск PDB-ФАЙЛ в месте расположения файла .exe.|  
+|`AllowOriginalPathAccess`|Выполняет поиск по пути, указанному в каталоге отладки.|  
+|`AllowReferencePathAccess`|Выполняет поиск PDB в месте, где находится EXE-файл.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок.** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

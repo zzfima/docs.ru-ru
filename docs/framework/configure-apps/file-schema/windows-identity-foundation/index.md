@@ -3,15 +3,15 @@ title: Схема конфигурации Windows Identity Foundation
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fddff8428da7efad2823f068e89c6f621283183f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791673"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942682"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Схема конфигурации Windows Identity Foundation
-В представленных в этом разделе статьях приводятся сведения о схеме конфигурации Windows Identity Foundation (WIF). Можно также настроить приложение для использования посредством классов, предоставляемых платформой WIF. Эти классы указываются в разделах, посвященных соответствующим элементам схемы. Ниже показана базовая структура тегов XML, предоставляемая схемой конфигурации WIF. Атрибуты не приводятся. Выделенные комментарии указывают на основные компоненты схемы.  
+В представленных в этом разделе статьях приводятся сведения о схеме конфигурации Windows Identity Foundation (WIF). Вы также можете настроить приложение для использования WIF через классы, предоставляемые платформой. Эти классы указываются в разделах, посвященных соответствующим элементам схемы. Ниже показана базовая структура тегов XML, предоставляемая схемой конфигурации WIF. Атрибуты не приводятся. Выделенные комментарии указывают на основные компоненты схемы.  
   
 ```xml  
 <system.identityModel>  
@@ -107,6 +107,6 @@ ms.locfileid: "61791673"
 ```  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Предоставляет конфигурацию для включения параметров WIF в приложениях.  
+ [\<system.identityModel>](system-identitymodel.md) Предоставляет конфигурацию для включения параметров WIF в приложениях.  
   
- [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Предоставляет конфигурацию пассивной федерации посредством WIF. Настраивает модуль проверки подлинности сеансов (SAM) и модуль федеративной проверки подлинности (WSFAM).
+ [\<system.identityModel.services>](system-identitymodel-services.md) Предоставляет конфигурацию пассивной федерации посредством WIF. Настраивает модуль проверки подлинности сеансов (SAM) и модуль федеративной проверки подлинности (WSFAM).

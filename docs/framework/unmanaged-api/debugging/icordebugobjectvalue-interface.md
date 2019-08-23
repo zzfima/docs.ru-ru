@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0ac91681313b60ebfcaf725dcc2e0d6547e3c1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4ca59aac075a42294026ad54c5d5dd4dbf7fda4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943338"
 ---
 # <a name="icordebugobjectvalue-interface"></a>Интерфейс ICorDebugObjectValue
 
-Подкласс «ICorDebugValue», который представляет значение, которое содержит объект.  
+Подкласс "ICorDebugValue", представляющий значение, которое содержит объект.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|Получает указатель интерфейса для общеязыковой среды выполнения (CLR) <xref:System.Type> объекта, `ICorDebugObjectValue` ссылки.|  
+|[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|Возвращает указатель интерфейса на общеязыковую среду выполнения (CLR) <xref:System.Type> объекта, на который ссылается `ICorDebugObjectValue` эта ссылка.|  
 |[Метод GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getcontext-method.md)|Не реализовано.|  
-|[Метод GetFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getfieldvalue-method.md)|Получает указатель интерфейса на [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-interface.md) , представляющий значение заданного поля указанного класса.|  
-|[Метод GetManagedCopy](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getmanagedcopy-method.md)|Является устаревшей. Этот метод не вызывается.|  
+|[Метод GetFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getfieldvalue-method.md)|Возвращает указатель интерфейса на объект [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-interface.md) , представляющий значение указанного поля указанного класса.|  
+|[Метод GetManagedCopy](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getmanagedcopy-method.md)|Является устаревшей. Не вызывайте этот метод.|  
 |[Метод GetVirtualMethod](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getvirtualmethod-method.md)|Не реализовано.|  
-|[Метод IsValueClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|Получает значение, указывающее, является ли объект ссылается этот `ICorDebugObjectValue` является типом значения.|  
-|[Метод SetFromManagedCopy](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-setfrommanagedcopy-method.md)|Является устаревшей. Этот метод не вызывается.|  
+|[Метод IsValueClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|Возвращает значение, указывающее, является ли объект, на который `ICorDebugObjectValue` ссылается это, типом значения.|  
+|[Метод SetFromManagedCopy](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-setfrommanagedcopy-method.md)|Является устаревшей. Не вызывайте этот метод.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugObjectValue` Остается действительным, пока продолжается отлаживаемого процесса.  
+ `ICorDebugObjectValue` Остается действительным до тех пор, пока отлаживаемый процесс не будет продолжен.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

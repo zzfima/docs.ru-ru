@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d0a85607586a8cdf0a319f2e43d9815d24be21b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772922"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966282"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>Метод ICLRErrorReportingManager::BeginCustomDump
-Указывает конфигурацию пользовательских дампов кучи для отчетов об ошибках.  
+Задает конфигурацию дампов пользовательской кучи для отчетов об ошибках.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,40 +40,40 @@ HRESULT BeginCustomDump (
   
 ## <a name="parameters"></a>Параметры  
  `dwFlavor`  
- [in] Объект [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) значение, указывающее тип дампа кучи, на которых можно создать дамп пользовательской кучи.  
+ окне Значение [екустомдумпфлавор](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) , указывающее тип дампа кучи, на основе которого создается дамп пользовательской кучи.  
   
  `dwNumItems`  
- [in] Длина `items` массива. Если `dwFlavor` не DUMP_FLAVOR_Mini, `dwNumItems` должно быть равно нулю.  
+ окне Длина `items` массива. Если `dwFlavor` значение не DUMP_FLAVOR_Mini, `dwNumItems` должно быть равно нулю.  
   
  `items`  
- [in] Массив [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) экземпляров, указав элементы для добавления мини-дампа. Если `dwFlavor` не DUMP_FLAVOR_Mini, `items` должен иметь значение null.  
+ окне Массив экземпляров [кустомдумпитем](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , указывающий элементы для добавления в мини-дамп. Если `dwFlavor` значение не DUMP_FLAVOR_Mini, `items` должно быть равно null.  
   
  `dwReserved`  
- [in] Зарезервировано для будущего использования.  
+ окне Зарезервировано для будущего использования.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Метод возвратился успешно.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|Метод успешно возвращен.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `BeginCustomDump` Метод задает конфигурацию пользовательского дампа кучи. [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) метод очищает конфигурации дампов пользовательской кучи и освобождает все связанные состояния. Он должен вызываться после завершения пользовательской кучи дампа.  
+ `BeginCustomDump` Метод задает конфигурацию дампа пользовательской кучи. Метод [ендкустомдумп](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) очищает конфигурацию дампа пользовательской кучи и освобождает любое связанное состояние. Он должен вызываться после завершения создания дампа пользовательской кучи.  
   
 > [!IMPORTANT]
->  Сбой при вызове `EndCustomDump` приводит к утечке памяти.  
+> Сбой вызова `EndCustomDump` приводит к утечке памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

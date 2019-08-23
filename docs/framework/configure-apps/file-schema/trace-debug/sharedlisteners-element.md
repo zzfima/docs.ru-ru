@@ -11,19 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701220"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926984"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners > элемент
-Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  Эти прослушиватели не получают все трассировки по умолчанию, и невозможно извлечь эти прослушиватели во время выполнения. Прослушиватели, определенные как общие могут добавляться к источникам и трассировки по имени.  
+# <a name="sharedlisteners-element"></a>\<Элемент > Шаредлистенерс
+Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  По умолчанию эти прослушиватели не получают никаких трассировок, поэтому невозможно получить эти прослушиватели во время выполнения. Прослушиватели, идентифицированные как общие прослушиватели, можно добавлять в источники или трассировки по имени.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<sharedListeners >  
+\<> System. Diagnostics  
+\<Шаредлистенерс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +37,13 @@ ms.locfileid: "61701220"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `sharedListeners`.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -53,12 +53,12 @@ ms.locfileid: "61701220"
 |`system.diagnostics`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
   
 ## <a name="remarks"></a>Примечания  
- Добавление прослушивателя к общей коллекции прослушивателей не делает его активным. Оно по-прежнему добавлено к источнику трассировки или трассировки путем добавления его в `Listeners` коллекции для этого элемента трассировки. Классы прослушивателя в .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.  
+ Добавление прослушивателя в коллекцию общих прослушивателей не сделает его активным прослушивателем. Он по-прежнему должен быть добавлен в источник трассировки или в трассировку путем добавления в `Listeners` коллекцию для этого элемента Trace. Классы прослушивателей в .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.  
   
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<sharedListeners>` элемент, чтобы добавить прослушиватель `console` для `Listeners` коллекции для обоих <xref:System.Diagnostics.TraceSource> и <xref:System.Diagnostics.Trace> классы. Прослушиватель трассировки консоли записывает сведения трассировки на консоль, через вызовы к либо <xref:System.Diagnostics.TraceSource> или <xref:System.Diagnostics.Trace>.  
+ В следующем примере показано, как использовать `<sharedListeners>` элемент для добавления прослушивателя `console` в `Listeners` коллекцию для <xref:System.Diagnostics.TraceSource> классов и <xref:System.Diagnostics.Trace> . Прослушиватель трассировки консоли записывает данные трассировки в консоль с помощью вызовов либо <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>к, либо к.  
   
 ```xml  
 <configuration>  
@@ -91,5 +91,5 @@ ms.locfileid: "61701220"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Diagnostics.TraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Схема параметров трассировки и отладки](index.md)
+- [Прослушиватели трассировки](../../../debug-trace-profile/trace-listeners.md)

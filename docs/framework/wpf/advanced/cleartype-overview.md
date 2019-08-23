@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672048"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964929"
 ---
 # <a name="cleartype-overview"></a>Общие сведения о технологии ClearType
 В этом разделе содержится обзор технологии Microsoft ClearType, которая находится в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "68672048"
 ## <a name="hardware-acceleration"></a>Аппаратное ускорение  
  Технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в может использовать преимущества аппаратного ускорения для повышения производительности и снижения требований к нагрузке на ЦП и системной памяти. С помощью шейдеров пикселей и видеопамяти графической карты технология ClearType обеспечивает более быструю визуализацию текста, особенно при использовании анимации.  
   
- Технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в не изменяет параметры ClearType на уровне системы. Отключение технологии ClearType [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] устанавливает сглаживание в режим градаций серого. Кроме того, технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в не изменяет параметры средства PowerToy для [тюнера ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ Технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в не изменяет параметры ClearType на уровне системы. Отключение ClearType в Windows устанавливает [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] сглаживание в режиме градаций серого. Кроме того, технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в не изменяет параметры средства PowerToy для [тюнера ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Одно из архитектурных решений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предполагает наличие независимого от разрешения макета, который обеспечивает более эффективную поддержку мониторов с высоким разрешением, получающих все большее распространение. Вследствие этого [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не поддерживает отрисовку сглаженного текста или точечных рисунков в некоторых восточно-азиатских шрифтах, поскольку они являются зависимыми от разрешения.  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: 07e1bb4bcdcaa99635db293f23e5ecb689b6063e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931793"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms
 В приложениях Windows очень часто используется печать текста. Класс <xref:System.Drawing.Graphics> предоставляет методы для рисования объектов (графических или текстовых) на таких устройствах, как экран или принтер.  
   
 > [!NOTE]
->  Методы <xref:System.Windows.Forms.TextRenderer.DrawText%2A> класса <xref:System.Windows.Forms.TextRenderer> не поддерживаются для печати. Для рисования текста в целях печати следует всегда использовать методы <xref:System.Drawing.Graphics.DrawString%2A> класса <xref:System.Drawing.Graphics>, как показано в примере кода ниже.  
+> Методы <xref:System.Windows.Forms.TextRenderer.DrawText%2A> класса <xref:System.Windows.Forms.TextRenderer> не поддерживаются для печати. Для рисования текста в целях печати следует всегда использовать методы <xref:System.Drawing.Graphics.DrawString%2A> класса <xref:System.Drawing.Graphics>, как показано в примере кода ниже.  
   
 ### <a name="to-print-text"></a>Печать текста  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64621336"
   
 - ссылки на сборки System, System.Windows.Forms и System.Drawing.  
   
-- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
+- Сведения о создании этого примера из командной строки для Visual Basic или визуального элемента C#см. в разделе [Сборка из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Сборка из командной строки с помощью csc. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Этот пример можно также построить в Visual Studio, вставляя код в новый проект.  
   
 ## <a name="see-also"></a>См. также
 

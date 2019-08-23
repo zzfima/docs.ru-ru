@@ -2,22 +2,22 @@
 title: <message> из <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 746acd91074863029211a1ca2584743c464c9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 320aca16bde9fc27aa35cad27286d402745e4710
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931574"
 ---
-# <a name="message-of-basichttpbinding"></a>\<сообщение > из \<basicHttpBinding >
-Определяет параметры безопасности уровня сообщений для [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="message-of-basichttpbinding"></a>\<> сообщений от \<BasicHttpBinding >
+Определяет параметры безопасности на [ \<](basichttpbinding.md)уровне сообщений для > BasicHttpBinding.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<привязки >  
-\<basicHttpBinding >  
+\<> basicHttpBinding  
 \<Привязка >  
-\<Безопасность >  
-\<сообщение >  
+\<> безопасности  
+\<> сообщения  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,23 +34,23 @@ ms.locfileid: "61768983"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |algorithmSuite|Задает алгоритмы шифрования сообщений и ключей. Этот атрибут имеет тип <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, который задает алгоритмы и размеры ключей. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> Значение по умолчанию — `Basic256`.|  
-|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности на уровне сообщений. Значение по умолчанию — `UserName`.|  
+|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности на уровне сообщений. Значение по умолчанию — `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|UserName|— Требует проверки подлинности клиента на сервер с помощью имени пользователя. Эти учетные данные должны быть определены с помощью [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-WCF не поддерживает передачу хэш-кода пароля или получение ключей с помощью паролей и использование таких ключей для обеспечения безопасности сообщений. Таким образом WCF обеспечивает, что безопасность транспорта при использовании учетных данных UserName. Для `basicHttpBinding` это требует настройки канала SSL.|  
-|Сертификат|Требует, чтобы при подключении к серверу проверка подлинности клиента проводилась с помощью сертификата. Учетные данные клиента в этом случае должны быть определены с помощью [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) и [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md). Кроме того, при использовании режима безопасности сообщений клиенту должен быть предоставлен сертификат службы. Учетные данные службы в этом случае должны быть определены с помощью <xref:System.ServiceModel.Description.ClientCredentials> класса или `ClientCredentials` элемент поведения и указав службы сертификат, с помощью [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
+|UserName|— Требует, чтобы клиент прошел проверку подлинности на сервере с учетными данными пользователя. Эти учетные данные необходимо указать с помощью [ \<> ClientCredentials](clientcredentials.md).<br />— WCF не поддерживает отправку дайджеста пароля или получение ключей с помощью паролей и использование таких ключей для обеспечения безопасности сообщений. Поэтому WCF обеспечивает защиту транспорта при использовании учетных данных имени пользователя. Для `basicHttpBinding` это требует настройки канала SSL.|  
+|Сертификат|Требует, чтобы при подключении к серверу проверка подлинности клиента проводилась с помощью сертификата. Учетные данные клиента в этом случае необходимо указать с помощью [ \<](clientcredentials.md) [ \<](clientcertificate-of-servicecredentials.md)> ClientCredentials и > clientCertificate. Кроме того, при использовании режима безопасности сообщений клиенту должен быть предоставлен сертификат службы. Учетные данные службы в этом случае необходимо указать с помощью <xref:System.ServiceModel.Description.ClientCredentials> класса или `ClientCredentials` элемента Behavior, указав сертификат службы с помощью [ \<> serviceCertificate](servicecertificate-of-servicecredentials.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Определяет возможности безопасности для [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|[\<> безопасности](security-of-basichttpbinding.md)|Определяет возможности безопасности для [ \<> BasicHttpBinding](basichttpbinding.md).|  
   
 ## <a name="example"></a>Пример  
  В образце демонстрируется реализация приложения, которое использует basicHttpBinding и безопасность сообщений. В следующем примере конфигурации для службы в определении конечной точки задаются привязка basicHttpBinding и ссылки на конфигурацию привязки с именем `Binding1`. Сертификат, используемый службой для своей проверки подлинности при подключении к клиенту, установлен в разделе `behaviors` файла конфигурации в элементе `serviceCredentials`. Режим проверки, применяемый к сертификату, который клиент использует для своей проверки подлинности при подключении к службе, также установлен в разделе `behaviors` в элементе `clientCertificate`.  
@@ -125,8 +125,8 @@ ms.locfileid: "61768983"
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../misc/binding.md)

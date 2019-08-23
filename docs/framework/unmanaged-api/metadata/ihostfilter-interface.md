@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc22de2d30d0f928653206ab9e356577a84c572c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044932"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965787"
 ---
 # <a name="ihostfilter-interface"></a>Интерфейс IHostFilter
-Предоставляет метод, который указывает, что указанный токен будет обрабатываться.  
+Предоставляет метод, указывающий, что заданный маркер будет обработан.  
   
 > [!NOTE]
->  `IHostFilter` Интерфейс должен быть реализован с помощью клиента.  
+> `IHostFilter` Интерфейс должен быть реализован клиентом.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод MarkToken](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Указывает, что будет обрабатываться заданным токеном метаданных.|  
+|[Метод MarkToken](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Указывает, что заданный маркер метаданных будет обработан.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок.** COR. h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Библиотечная** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

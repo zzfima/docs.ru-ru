@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6ed7d25593f9dd5d5d01f8c06024dcf8acfcfea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739643"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916476"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Перечисление CorDebugRecordFormat
 Описывает формат данных в массиве байтов, который содержит информацию о событии отладки собственного исключения.  
@@ -39,17 +39,17 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Данные представляют собой 64-разрядную запись Windows-исключения.|  
   
 ## <a name="remarks"></a>Примечания  
- Является членом `CorDebugRecordFormat` передается перечисление [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) метод для указания формата массива байтов в его `pRecord` аргумент.  
+ Член `CorDebugRecordFormat` перечисления передается в метод [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) для указания формата массива байтов в его `pRecord` аргументе.  
   
 > [!NOTE]
->  Это перечисление предназначено для использования только в сценариях отладки .NET Native.  
+> Это перечисление предназначено для использования только в сценариях отладки .NET Native.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

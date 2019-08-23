@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913035"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Практическое руководство. Включение и отключение автоматического перенаправления привязки
 
@@ -91,15 +91,15 @@ ms.locfileid: "68733439"
 
 1. В Visual Studio скомпилируйте приложение и проверьте его на наличие предупреждений сборки.
 
-   ![Предупреждение сборки для конфликтов ссылок на сборки](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Предупреждение сборки для конфликтов ссылок на сборки](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. При наличии конфликтов привязки сборок выводится предупреждение. Дважды щелкните предупреждение или выберите предупреждение и нажмите клавишу **Ввод**.
 
    Откроется диалоговое окно, которое позволяет автоматически добавлять необходимые перенаправления привязок в исходный файл **Web. config** .
 
-   ![Диалоговое окно разрешения перенаправления привязки](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Диалоговое окно разрешения перенаправления привязки](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>См. также
 
-- [\<Элемент bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<Элемент bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)
+- [Перенаправление версий сборки](redirect-assembly-versions.md)

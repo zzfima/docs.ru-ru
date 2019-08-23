@@ -5,118 +5,118 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 6bccff6bf3bb061a430a9105d99f2fee3511c7fd
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e34b61e14db1e7839173658d71a70240d63c5f8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859904"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917584"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Общие сведения о глобализации и локализации WPF
 
 Если доступность продукта ограничена только одним языком, то таким образом ограничивается потенциальная база клиентов до некоторой части всего 6,5-миллиардного мирового населения. Чтобы созданные приложения были доступны мировой аудитории, одним из лучших и наиболее экономичных способов охватить большее количество клиентов является экономически эффективная локализация продукта.
 
-В этом обзоре представлена глобализации и локализации в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Глобализация — это проектирование и разработка приложений, которые выполняются в нескольких расположениях. Например, глобализация поддерживает локализованные пользовательские интерфейсы и региональные данные для пользователей на различных языках. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет глобализованные функциональные возможности проектирования, включая автоматический макет, вспомогательные сборки и локализованные атрибуты и комментарии.
+В этом обзоре рассматривается глобализация и [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]локализация в. Глобализация — это проектирование и разработка приложений, которые выполняются в нескольких расположениях. Например, глобализация поддерживает локализованные пользовательские интерфейсы и региональные данные для пользователей на различных языках. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет глобализованные функции проектирования, включая автоматический макет, вспомогательные сборки, локализованные атрибуты и комментарии.
 
-Локализация — это перевод ресурсов приложения в локализованные версии для конкретных языков и региональных параметров, которые поддерживает приложение. При локализации в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], используйте API-интерфейсы в <xref:System.Windows.Markup.Localizer> пространства имен. Эти API-интерфейсов power [средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) средство командной строки. Сведения о том, как создавать и использовать LocBaml, см. в разделе [локализация приложения](how-to-localize-an-application.md).
+Локализация — это перевод ресурсов приложения в локализованные версии для конкретных языков и региональных параметров, которые поддерживает приложение. При локализации в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]вы используете API-интерфейсы <xref:System.Windows.Markup.Localizer> в пространстве имен. Эти API-интерфейсы. Пример средства командной строки для [средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) . Сведения о том, как создать и использовать LocBaml, см. в разделе [Локализация приложения](how-to-localize-an-application.md).
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Рекомендации по глобализации и локализации в WPF
 
-Вы можете максимально эффективно использовать функциональные возможности глобализации и локализации, встроенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , выполнив Дизайн пользовательского интерфейса, а также советы, относящиеся к локализации, которые в этом разделе содержатся.
+Большинство возможностей глобализации и локализации, встроенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , можно сделать, следуя советам по проектированию пользовательского интерфейса и локализации, которые предоставляет этот раздел.
 
 ### <a name="best-practices-for-wpf-ui-design"></a>Оптимальные методы разработки пользовательского интерфейса WPF
 
-При проектировании [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— на основе [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], рассмотрите возможность реализации этих рекомендаций:
+При проектировании [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]на основе [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]рекомендуется реализовать следующие рекомендации:
 
-- Запись вашего [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; Избегайте создания [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в коде. При создании вашей [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], он предоставляется через встроенные интерфейсы API локализации.
+- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Напишите в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], не создавайте [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] код. При создании [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]вы предоставляете его через встроенные API-интерфейсы локализации.
 
-- Избегайте использования абсолютных положений и фиксированных размеров для размещения содержимого; Вместо этого используйте относительное или автоматическое изменение размеров.
+- Старайтесь не использовать абсолютные позиции и фиксированные размеры для размещения содержимого; Вместо этого используйте относительное или автоматическое изменение размера.
 
-  - Используйте <xref:System.Windows.Window.SizeToContent%2A> ширины и высоты значение `Auto`.
+  - Используйте <xref:System.Windows.Window.SizeToContent%2A> и установите для `Auto`ширины и высоты значение.
 
-  - Избегайте использования <xref:System.Windows.Controls.Canvas> для размещения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s.
+  - Избегайте использования <xref:System.Windows.Controls.Canvas> для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]размещения s.
 
-  - Используйте <xref:System.Windows.Controls.Grid> и функции общего размера.
+  - Используйте <xref:System.Windows.Controls.Grid> и его функцию совместного использования размера.
 
 - Необходимо предусмотреть дополнительное пространство в полях, так как локализованный текст часто занимает больше места. Дополнительное пространство позволит использовать выступающие символы, возможно, присутствующие в конкретном языке.
 
-- Включить <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> на <xref:System.Windows.Controls.TextBlock> во избежание обрезки.
+- Включите <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> On<xref:System.Windows.Controls.TextBlock> , чтобы избежать обрезки.
 
-- Задайте атрибут `xml:lang` . Этот атрибут описывает язык и региональные параметры конкретного элемента и его дочерних элементов. Значение этого свойства изменяет поведение некоторых функциональных возможностей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Например, изменяется процесс переноса по слогам, проверки орфографии, подстановки чисел, формирования сложных скриптов и подмены шрифта. См. в разделе [Глобализация для WPF](globalization-for-wpf.md) Дополнительные сведения о параметре [XML: lang в XAML обработки](../../xaml-services/xml-lang-handling-in-xaml.md).
+- Задайте атрибут `xml:lang` . Этот атрибут описывает язык и региональные параметры определенного элемента и его дочерних элементов. Значение этого свойства изменяет поведение нескольких функций в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Например, изменяется процесс переноса по слогам, проверки орфографии, подстановки чисел, формирования сложных скриптов и подмены шрифта. Дополнительные сведения о настройке [обработки XML: lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md)см. в разделе [глобализация для WPF](globalization-for-wpf.md) .
 
-- Создание настраиваемого составного шрифта, чтобы получить лучшее управление шрифтами, которые используются для различных языков. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует шрифт globaluserinterface.Composite из папки в папке Windows\Fonts.
+- Создайте настраиваемый составной шрифт, чтобы улучшить управление шрифтами, используемыми для разных языков. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует шрифт глобалусеринтерфаце. Composite в каталоге Windows\Fonts.
 
-- При создании приложений навигации, которые могут быть локализованы в языке, использующем представление текста в формате справа налево, необходимо явно установить <xref:System.Windows.FlowDirection> части каждой страницы, чтобы обеспечить страницы не наследует <xref:System.Windows.FlowDirection> из <xref:System.Windows.Navigation.NavigationWindow>.
+- При создании приложений навигации, которые могут быть локализованы в языке и региональных параметрах, представляющих текст в формате справа налево, необходимо <xref:System.Windows.FlowDirection> явно задать для каждой страницы, чтобы страница не наследовалась <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.FlowDirection> от класса.
 
-- При создании автономных приложений навигации, размещенных вне браузера, задайте <xref:System.Windows.Application.StartupUri%2A> для начального приложения <xref:System.Windows.Navigation.NavigationWindow> вместо на страницу (например, `<Application StartupUri="NavigationWindow.xaml">`). Такой подход позволяет изменять <xref:System.Windows.FlowDirection> окна и панели навигации. Дополнительные сведения и пример см. в разделе [пример Globalization Homepage](https://go.microsoft.com/fwlink/?LinkID=159990).
+- При создании автономных приложений навигации, размещенных за пределами браузера, задайте <xref:System.Windows.Application.StartupUri%2A> для начального приложения <xref:System.Windows.Navigation.NavigationWindow> вместо страницы (например, `<Application StartupUri="NavigationWindow.xaml">`). Такая схема позволяет изменять <xref:System.Windows.FlowDirection> окно и панель навигации. Дополнительные сведения и пример см. в разделе [Пример домашней страницы глобализации](https://go.microsoft.com/fwlink/?LinkID=159990).
 
 ### <a name="best-practices-for-wpf-localization"></a>Оптимальные методы локализации приложений WPF
 
-При локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— приложений, рассмотрите возможность реализации этих рекомендаций:
+При локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложений на основе рекомендуется реализовать следующие рекомендации:
 
-- Используйте комментарии локализации для обеспечения дополнительного контекста для локализаторов.
+- Используйте комментарии локализации, чтобы предоставить дополнительный контекст для локализаторов.
 
-- Используйте атрибуты локализации для управления локализацией вместо выборочного пропуска <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства элементов. См. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md) Дополнительные сведения.
+- Используйте атрибуты локализации для управления локализацией вместо выборочного пропуска <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойств элементов. Дополнительные сведения см. в статье [атрибуты и комментарии локализации](localization-attributes-and-comments.md) .
 
-- Используйте `msbuild -t:updateuid` и `-t:checkuid` для добавления и проверки <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойств в вашей [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Используйте <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства для отслеживания изменений между разработкой и локализацией. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства помогают локализовать новые изменения в разработке. Если вручную добавить <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], задача является трудоемкой и менее точным.
+- Используйте `msbuild -t:updateuid` и <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> длядобавления[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]и проверки свойств в. `-t:checkuid` Используйте <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства для контроля изменений между разработкой и локализацией. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>свойства помогают локализовать новые изменения в разработке. Если вручную добавить <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]в, задача обычно утомительна и менее точная.
 
-  - Не следует редактировать или изменять <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства после начала локализации.
+  - Не изменяйте и <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> не изменяйте свойства после начала локализации.
 
-  - Не используйте дубликат <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства (помните этот совет при использовании команды копирования и вставки).
+  - Не используйте дублирующиеся <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства (Помните, что этот Совет следует использовать при использовании команды копирования и вставки).
 
-  - Задайте `UltimateResourceFallback` расположение в AssemblyInfo.*, чтобы указать соответствующий язык для резервной проверки подлинности (например, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
+  - Задайте расположение в AssemblyInfo. *, чтобы указать соответствующий язык для отката (например, `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`). `UltimateResourceFallback`
 
-    Если вы решили включить исходный язык в основную сборку путем пропуска `<UICulture>` тег в файле проекта, задайте `UltimateResourceFallback` расположении, что и основной сборки вместо вспомогательной (например, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
+    Если вы решили включить исходный язык в основную сборку, опустив `<UICulture>` тег в файле проекта, `UltimateResourceFallback` задайте расположение в качестве основной сборки, а не вспомогательной (например, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).
 
 ## <a name="localize-a-wpf-application"></a>Локализация приложения WPF
 
-При локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения можно несколькими способами. Например, можно привязать локализованные ресурсы в приложении [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] файл, хранить локализуемый текст в resx-таблицах или же указать локализатору использовать [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлов. В этом разделе рассматривается рабочий процесс локализации, использующий BAML-формы XAML, который предоставляет несколько преимуществ:
+При локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения у вас есть несколько вариантов. Например, можно привязать локализуемые ресурсы в приложении к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] файлу, сохранить локализуемый текст в таблицах RESX или использовать [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлы локализатора. В этом разделе описывается рабочий процесс локализации, в котором используется форма BAML языка XAML, которая предоставляет несколько преимуществ.
 
-- Вы можете локализовать после построения.
+- Вы можете локализовать после сборки.
 
-- Можно обновить до более новой версии BAML-формы XAML с локализациями из более старой версии BAML-формы XAML таким образом, вы можете локализовать, в то же время, которое разрабатывается.
+- Можно выполнить обновление до более новой версии формы BAML XAML с локализацией из старой версии XAML-формы, чтобы можно было локализовать в то же время, в котором вы разрабатываете.
 
-- Можно проверить исходные исходные элементы и семантику во время компиляции, так как форма BAML кода XAML является скомпилированной формой [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+- Можно проверить исходные элементы и семантику во время компиляции, поскольку формат BAML XAML является скомпилированной формой [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ### <a name="localization-build-process"></a>Процесс построения локализации
 
-При разработке [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, процесс построения локализации выглядит следующим образом:
+При разработке [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения процесс сборки для локализации выглядит следующим образом:
 
-- Разработчик создает и глобализует [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. В файле проекта разработчик задает `<UICulture>en-US</UICulture>` таким образом, чтобы при компиляции приложения, не зависящий от языка основная сборка. Эта сборка имеет вспомогательный файл .resources.dll, содержащий все локализуемые ресурсы. При необходимости можно оставить исходный язык в основную сборку, поскольку наши интерфейсы API локализации поддерживают извлечение из основной сборки.
+- Разработчик создает и глобализация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. В файле проекта разработчик устанавливает `<UICulture>en-US</UICulture>` , что при компиляции приложения создается основная сборка, не зависящая от языка. Эта сборка имеет вспомогательный файл .resources.dll, содержащий все локализуемые ресурсы. При необходимости можно разместить исходный язык в основной сборке, так как наши API-интерфейсы локализации поддерживают извлечение из основной сборки.
 
-- Когда файл компилируется в сборку, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] преобразуется в BAML-форму XAML. Независимый от языка `MyDialog.exe` и языку и региональным параметрам зависимые (на английском языке) `MyDialog.resources.dll` файлы выпущены для англоговорящего клиента.
+- При компиляции файла в сборку [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] преобразуется в форму BAML XAML. Язык и региональные стандарты, зависящие от культуры (на английском `MyDialog.resources.dll` языке), выводятся на английском языке. `MyDialog.exe`
 
 ### <a name="localization-workflow"></a>Рабочий процесс локализации
 
-Процесс локализации начинается после сборки нелокализованного `MyDialog.resources.dll` файла. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Элементы и свойства в исходном [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] извлекаются из BAML-формы XAML в пары "ключ значение" с помощью интерфейсов API, в разделе <xref:System.Windows.Markup.Localizer>. Локализаторы используют пары "ключ —значение" для локализации приложения. После завершения локализации можно создать файл .resource.dll на основе новых значений.
+Процесс локализации начинается после сборки нелокализованного `MyDialog.resources.dll` файла. Элементы и свойства в исходном [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] коде извлекаются из формы BAML XAML в пары "ключ-значение" с помощью API в разделе <xref:System.Windows.Markup.Localizer>. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Локализаторы используют пары "ключ —значение" для локализации приложения. После завершения локализации можно создать файл .resource.dll на основе новых значений.
 
-Ключи пар "ключ значение" `x:Uid` значения, которые помещаются разработчиком в исходный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Эти `x:Uid` значения включить API для отслеживания и объединения изменений, разработчик и локализатором во время локализации. Например, если разработчик изменяет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] после начала локализации, можно слить изменения с уже выполненной работой по локализации, так что теряется минимум работы по переводу.
+Ключи пар «ключ-значение» — `x:Uid` это значения, помещаемые разработчиком в исходном [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]виде. Эти `x:Uid` значения позволяют API отслеживанию и слиянию изменений, происходящих между разработчиком и локализаторам во время локализации. Например, если разработчик изменяет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] после начала локализации, можно объединить изменение в разработку с уже завершенной работой по локализации, чтобы при этом было потеряно минимальное количество операций перевода.
 
-На приведенном ниже рисунке показан типичный рабочий процесс локализации на основе BAML-формы XAML. Эта диаграмма предполагает, что разработчик создает приложение на английском языке. Разработчик создает и глобализует приложение WPF. В файле проекта разработчик задает `<UICulture>en-US</UICulture>` , чтобы на сборки, от основного языка сборка получает созданный вспомогательной. resources.dll, содержащий все локализуемые ресурсы. Кроме того, можно сохранить исходный язык в основной сборке, так как интерфейсы API локализации WPF поддерживают извлечение из основной сборки. По завершении процесса сборки XAML компилируется в BAML. Независимый от языка и региональных параметров файл MyDialog.exe.resources.dll поставляется англоязычному пользователю.
+На приведенном ниже рисунке показан типичный рабочий процесс локализации на основе BAML-формы XAML. На этой схеме предполагается, что разработчик пишет приложение на английском языке. Разработчик создает и глобализует приложение WPF. В файле проекта разработчик устанавливает `<UICulture>en-US</UICulture>` , что при сборке не зависящая от языка основная сборка создается с помощью вспомогательного файла Resources. dll, содержащего все локализуемые ресурсы. Кроме того, можно сохранить исходный язык в основной сборке, так как интерфейсы API локализации WPF поддерживают извлечение из основной сборки. По завершении процесса сборки XAML компилируется в BAML. Независимый от языка и региональных параметров файл MyDialog.exe.resources.dll поставляется англоязычному пользователю.
 
 ![Схема, показывающая рабочий процесс локализации.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)
 
-![Схема, показывающая нелокализованный рабочий процесс.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)
+![Схема, на которой показан нелокализованный рабочий процесс.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)
 
 ## <a name="examples-of-wpf-localization"></a>Примеры локализации WPF
 
-Этот раздел содержит примеры локализованных приложений, которые помогут понять, как сборки и локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.
+В этом разделе содержатся примеры локализованных приложений, которые помогут вам понять, как создавать и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] локализовать приложения.
 
 #### <a name="run-dialog-box-example"></a>Пример диалогового окна "Выполнить"
 
-На следующем рисунке показаны выходные данные **запуска** пример диалогового окна.
+На следующих рисунках показаны выходные данные образца диалогового окна **выполнить** .
 
 **Английский.**
 
-![Снимок экрана, показывающий в диалоговом окне запуска на английском языке.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)
+![Снимок экрана, показывающий диалоговое окно запуска на английском языке.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)
 
 **Немецкий.**
 
-![Снимок экрана: диалоговое окно запуска немецкий.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)
+![Снимок экрана, показывающий диалоговое окно запуска на немецком языке.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)
 
 **Разработка глобального диалогового окна "Выполнить"**
 
-Этот пример выводит **запуска** диалоговое окно с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Это диалоговое окно эквивалентно **запуска** диалоговое окно, которое доступно из [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] меню "Пуск".
+В этом примере создается диалоговое окно **выполнить** с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]и. Это диалоговое окно эквивалентно диалоговому окну **выполнить** , которое доступно в меню [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] «Пуск».
 
 Некоторые замечания по созданию глобальных диалоговых окон
 
@@ -130,35 +130,35 @@ ms.locfileid: "67859904"
 
 `<Grid x:Uid="Grid_1">`
 
-<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> для того, требуются свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API-интерфейсы для правильной работы локализации.
+<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] правильной работы API локализации требуются свойства.
 
-Они используются [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] интерфейсы API для отслеживания изменений между разработкой и локализацией локализации [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства позволяют выполнить слияние более новой версии [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] со старой локализацией [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Добавляемые <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства, выполнив `msbuild -t:updateuid RunDialog.csproj` в командной строке. Это рекомендуемый способ добавления <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойства тем, что добавление их вручную обычно требует много времени и менее точным. Можно убедиться, что <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> правильно заданы свойства, выполнив `msbuild -t:checkuid RunDialog.csproj`.
+Они используются [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API локализации для контроля изменений между разработкой и локализацией [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>свойства позволяют выполнить слияние более новой версии [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] с более старой локализацией. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Чтобы добавить <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойство, запустите `msbuild -t:updateuid RunDialog.csproj` в командной оболочке. Это рекомендуемый метод добавления <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> свойств, поскольку их добавление вручную обычно занимает много времени и менее точно. Чтобы проверить, <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> правильно ли установлены свойства, запустите `msbuild -t:checkuid RunDialog.csproj`.
 
-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Структурирован с помощью <xref:System.Windows.Controls.Grid> управления, который является полезным управления преимуществами автоматического макета в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Обратите внимание, что диалоговое окно разделено на три строки и пять столбцов. Не в одном из определений строк и столбцов имеет фиксированный размер; Таким образом [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы, которые располагаются в каждой ячейке могут адаптироваться к увеличению и уменьшению размеров во время локализации.
+Структурирован с помощью элемента управления, который является полезным элементом управления для использования преимуществ автоматического макета в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Controls.Grid> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Обратите внимание, что диалоговое окно разделено на три строки и пять столбцов. Не одно из определений строк и столбцов имеет фиксированный размер. Таким образом, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы, расположенные в каждой ячейке, могут адаптироваться к увеличению и уменьшению размера во время локализации.
 
 [!code-xaml[GlobalizationRunDialog#GridColumnDef](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef)]
 
-Первые два столбца где **откройте:** метки и <xref:System.Windows.Controls.ComboBox> помещаются использует 10 процентов [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] всей ширины.
+Первые два столбца, в которых размещены метки **Open:** и <xref:System.Windows.Controls.ComboBox> , используют [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 10 процентов от общей ширины.
 
 [!code-xaml[GlobalizationRunDialog#GridColumnDef2](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationRunDialog/CS/Window1.xaml#gridcolumndef2)]
 
-Обратите внимание, что в примере используется функция общего изменения размера <xref:System.Windows.Controls.Grid>. Последние три столбца используют это преимущество, размещаясь в том же <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Как следует из имени свойства, это позволяет столбцам использовать один и тот же размер. Поэтому при «Обзор...» получает локализации в более длинную строку «Durchsuchen …», всех кнопок увеличивается ширина маленькую кнопку «ОК» и непропорционально большой кнопкой «Durchsuchen …».
+Обратите внимание, что в примере используется функция <xref:System.Windows.Controls.Grid>общего изменения размера. Последние три столбца используют преимущества этого метода, помещая себя в один и <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>тот же. Как следует из имени свойства, это позволяет столбцам использовать один и тот же размер. Итак, когда «Browse...» локализовано для более длинной строки "Durchsuchen...", все кнопки увеличиваются по ширине вместо небольшой кнопки "ОК" и непропорционального большого размера "Durchsuchen..." переключатель.
 
-**xml:lang**
+**XML: lang**
 
 `xml:lang="en-US"`
 
-Обратите внимание, что [XML: lang в XAML обработки](../../xaml-services/xml-lang-handling-in-xaml.md) размещается в корневом элементе [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Это свойство описывает язык и региональные параметры конкретного элемента и его потомков. Это значение используется несколькими функциональными возможностями в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и должно быть соответствующим образом изменено во время локализации. Это значение изменяется в зависимости от того, какой языковой словарь используется для расстановки переносов и проверки орфографии слов. Оно также влияет на отображение цифр и на то, как система подмены шрифтов выбирает шрифт для использования. Наконец, это свойство влияет на способ отображения чисел и на способ написания текста в сложных скриптах. По умолчанию используется значение en-US.
+Обратите внимание на [обработку XML: lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md) , помещенную в корневой элемент [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Это свойство описывает язык и региональные параметры конкретного элемента и его потомков. Это значение используется несколькими компонентами в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и должно быть соответствующим образом изменено во время локализации. Это значение изменяется в зависимости от того, какой языковой словарь используется для расстановки переносов и проверки орфографии слов. Оно также влияет на отображение цифр и на то, как система подмены шрифтов выбирает шрифт для использования. Наконец, это свойство влияет на способ отображения чисел и на способ написания текста в сложных скриптах. По умолчанию используется значение en-US.
 
 **Создание вспомогательной сборки ресурсов**
 
 *В файле .csproj*
 
-Изменить `.csproj` и добавьте следующий тег безусловной операции `<PropertyGroup>`:
+Измените файл и добавьте следующий тег в `<PropertyGroup>`безусловную: `.csproj`
 
 `<UICulture>en-US</UICulture>`
 
-Обратите внимание на добавленную `UICulture` значение. Если присвоено значение на допустимый <xref:System.Globalization.CultureInfo> значение, например en US, построение проекта будет создана вспомогательная сборка со всеми локализуемыми ресурсами в нем.
+Обратите внимание на добавление `UICulture` значения. Если для этого параметра задано допустимое <xref:System.Globalization.CultureInfo> значение, например en-US, сборка проекта создаст вспомогательную сборку со всеми локализованными ресурсами.
 
 `<Resource Include="RunIcon.JPG">`
 
@@ -166,13 +166,13 @@ ms.locfileid: "67859904"
 
 `</Resource>`
 
-`RunIcon.JPG` Необходимо локализовать, потому что он должен быть одинаков для всех языков и региональных параметров. `Localizable` имеет значение `false` так что он остается в независимой от языка основной сборке, вместо вспомогательной сборки. Значение по умолчанию для всех некомпилируемых ресурсов — `Localizable` присвоено `true`.
+`RunIcon.JPG` Локализация не требуется, так как она должна отображаться одинаково для всех языков и региональных параметров. `Localizable`имеет значение `false` , чтобы оно оставалось в независимой от языка основной сборке, а не в вспомогательной сборке. Значение по умолчанию для всех некомпилируемых ресурсов `Localizable` равно `true`.
 
 **Локализация диалогового окна "Выполнить"**
 
 **Анализ**
 
-После сборки приложения первым шагом в локализации является анализ локализуемых ресурсов из вспомогательной сборки. В целях этого раздела используется демонстрационное средство LocBaml, которую можно найти в [средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Обратите внимание, что LocBaml ― только демонстрационное средство, предназначенное помочь начать работу по созданию средства локализации, встраиваемого в процесс локализации. С помощью LocBaml выполните следующую команду, чтобы проанализировать: **LocBaml/parse RunDialog.resources.dll/out:** создать файл «Команду».
+После сборки приложения первым шагом в локализации является анализ локализуемых ресурсов из вспомогательной сборки. Для целей этого раздела используйте образец средства LocBaml, который можно найти в [примере средства LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016). Обратите внимание, что LocBaml ― только демонстрационное средство, предназначенное помочь начать работу по созданию средства локализации, встраиваемого в процесс локализации. С помощью LocBaml выполните следующую команду, чтобы выполнить синтаксический анализ: **LocBaml/Парсе RunDialog. Resources. dll/out:** для создания файла "RunDialog. Resources. dll. csv".
 
 **Локализация**
 
@@ -197,7 +197,7 @@ ms.locfileid: "67859904"
 |Button_3:System.Windows.Controls.Button.$Content|Кнопка|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Текст|Öffnen:|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Текст|Öффнен:|
 |Window_1:System.Windows.Window.Title|Заголовок|Выполнить|
 
 **Создание**
@@ -206,7 +206,7 @@ ms.locfileid: "67859904"
 
 **LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**
 
-В немецкой [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], если файл resources.dll размещен в папке de-DE главной сборки, этот ресурс будет автоматически загружаться вместо того, в папке en US. Если у вас используется немецкая версия [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Чтобы проверить это, установите язык и региональные параметры региональные [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] вы используете (например, `en-US`) и заменить исходные ресурсы библиотеки DLL.
+В Windows на немецком языке, если файл Resources. dll помещен в папку de-DE рядом с основной сборкой, этот ресурс будет автоматически загружаться, а не в папку en-US. Если у вас нет немецкой версии Windows для тестирования, задайте для языка и региональных параметров используемые вами язык и региональные параметры Windows (например, `en-US`), а затем замените исходную библиотеку ресурсов.
 
 **Загрузка вспомогательных ресурсов**
 
@@ -215,7 +215,7 @@ ms.locfileid: "67859904"
 |Код|Исходный английский BAML|Локализованный BAML|
 |Ресурсы, не зависящие от языка и региональных параметров|Другие ресурсы на английском языке|Другие ресурсы, локализованные для немецкого языка|
 
-Платформа .NET framework автоматически выбирает вспомогательную сборку ресурсов для загрузки в зависимости от приложения `Thread.CurrentThread.CurrentUICulture`. По умолчанию используется язык и региональные параметры вашего [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] операционной системы. Таким образом, если вы используете немецкий [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], загружается de-DE\MyDialog.resources.dll, если используется английский [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], загружается en-US\MyDialog.resources.dll. Можно задать для приложения резервный ресурс, указав NeutralResourcesLanguage в AssemblyInfo.* проекта. Например, если будет указано:
+Платформа .NET Framework автоматически выбирает вспомогательную сборку ресурсов для загрузки в зависимости от приложения `Thread.CurrentThread.CurrentUICulture`. По умолчанию используется язык и региональные параметры операционной системы Windows. Поэтому, если вы используете Windows на немецком языке, de-DE\MyDialog.resources.dll загружается, если вы используете англоязычные окна, EN-us\mydialog.Resources.dll. загружает. Можно задать для приложения резервный ресурс, указав NeutralResourcesLanguage в AssemblyInfo.* проекта. Например, если будет указано:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,19 +223,19 @@ ms.locfileid: "67859904"
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Домашняя страница сайта Майкрософт для Саудовской Аравии
 
-На рисунке ниже показаны английская и арабская домашние страницы. Полный пример создания такой графики см. в разделе [пример Globalization Homepage](https://go.microsoft.com/fwlink/?LinkID=159990).
+На рисунке ниже показаны английская и арабская домашние страницы. Полный пример, в котором создаются эти графические элементы, см. в разделе [Пример домашней страницы глобализации](https://go.microsoft.com/fwlink/?LinkID=159990).
 
 **Английский.**
 
-![Снимок экрана домашней страницы, на английском языке.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)
+![Снимок экрана, на котором показана домашняя страница английского языка.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)
 
 **Арабский:**
 
-![Снимок экрана, показывающий Арабская страница home.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)
+![Снимок экрана, показывающий домашнюю страницу для арабского языка.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)
 
-### <a name="designing-a-global-microsoft-home-page"></a>Разработка Microsoft глобальной домашней страницы
+### <a name="designing-a-global-microsoft-home-page"></a>Разработка глобальной домашней страницы Майкрософт
 
-Этот макет веб-сайта Майкрософт для Саудовской Аравии показывает функциональные возможности глобализации, предоставляемые для языков с порядком чтения справа налево (RightToLeft). Языки, такие как иврит и арабский имеют порядок чтения справа налево, поэтому макет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] необходимо часто надо компоновать совершенно иначе, нежели было бы на языках слева направо, например в английском языке. Локализация с языка с направлением письма слева направо на язык с направлением письма справа налево или наоборот может быть достаточно сложной. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработан так, чтобы значительно упростить подобные локализации.
+Этот макет веб-сайта Майкрософт для Саудовской Аравии показывает функциональные возможности глобализации, предоставляемые для языков с порядком чтения справа налево (RightToLeft). Такие языки, как иврит и арабский, имеют порядок чтения справа налево, поэтому компоновка [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] должна быть размещена совершенно иначе, чем в языках с направлением письма слева направо, например на английском языке. Локализация с языка с направлением письма слева направо на язык с направлением письма справа налево или наоборот может быть достаточно сложной. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработан так, чтобы значительно упростить подобные локализации.
 
 **FlowDirection**
 
@@ -243,21 +243,21 @@ ms.locfileid: "67859904"
 
 [!code-xaml[GlobalizationHomepage#Homepage](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#homepage)]
 
-Обратите внимание, что <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство <xref:System.Windows.Controls.Page>. Изменение этого свойства для <xref:System.Windows.FlowDirection.RightToLeft> приведет к изменению <xref:System.Windows.FrameworkElement.FlowDirection%2A> из <xref:System.Windows.Controls.Page> и ее дочерних элементов, чтобы макет этого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] зеркально отразится справа налево, как и ожидает Арабский пользователь. Поведение наследования можно переопределить, указав явный <xref:System.Windows.FrameworkElement.FlowDirection%2A> для любого элемента. <xref:System.Windows.FrameworkElement.FlowDirection%2A> Свойство доступно на любом <xref:System.Windows.FrameworkElement> или документа связанного элемента, и имеет неявное значение <xref:System.Windows.FlowDirection.LeftToRight>.
+Обратите внимание на <xref:System.Windows.Controls.Page> свойствов.<xref:System.Windows.FrameworkElement.FlowDirection%2A> Изменение этого свойства на <xref:System.Windows.FlowDirection.RightToLeft> изменит <xref:System.Windows.FrameworkElement.FlowDirection%2A> <xref:System.Windows.Controls.Page> свойство и его дочерние элементы таким образом, чтобы макет этого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемента перестал быть справа налево, как и хотелось бы для арабского пользователя. Один из них может переопределить поведение наследования, указав <xref:System.Windows.FrameworkElement.FlowDirection%2A> явный для любого элемента. Свойство доступно в любом <xref:System.Windows.FrameworkElement> элементе, связанном с документом, и <xref:System.Windows.FlowDirection.LeftToRight>имеет неявное значение. <xref:System.Windows.FrameworkElement.FlowDirection%2A>
 
-Обратите внимание, что даже фоновые градиентные кисти соответствующим образом при корневой <xref:System.Windows.FrameworkElement.FlowDirection%2A> изменяется:
+Обратите внимание, что даже фоновые градиентные кисти перевернуты <xref:System.Windows.FrameworkElement.FlowDirection%2A> правильно при изменении корня:
 
 **FlowDirection="LeftToRight"**
 
-![Снимок экрана градиента потока слева направо.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
+![Снимок экрана, показывающий поток градиента слева направо.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
 
 **FlowDirection="RightToLeft"**
 
-![Снимок экрана градиента потока справа налево.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
+![Снимок экрана, показывающий поток градиента справа налево.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 
 **Избегайте использования фиксированных размеров для панелей и элементов управления**
 
-Посмотрите на Homepage.xaml, обратите внимание, что помимо фиксированной ширины и высоты, заданной для всего [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] вверху <xref:System.Windows.Controls.DockPanel>, существуют другие фиксированные размеры. Не следует использовать фиксированные размеры, чтобы предотвратить отсечение локализованного текста, который может быть больше, чем исходный текст. Панели и элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будут автоматически изменяться в размерах в зависимости от находящегося в них содержимого. Большинство элементов управления также имеют минимальные и максимальные размеры, которые можно задать для большего контроля (например, MinWidth = «20»). С помощью <xref:System.Windows.Controls.Grid>, также можно задать относительную ширину и высоту с помощью "\*" (например, `Width="0.25*"`) или использования функции совместного использования размера ячейки.
+Взгляните на homepage. XAML, обратите внимание на то, что помимо фиксированной ширины и высоты, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] заданной для <xref:System.Windows.Controls.DockPanel>всей верхней части, нет других фиксированных измерений. Не следует использовать фиксированные размеры, чтобы предотвратить отсечение локализованного текста, который может быть больше, чем исходный текст. Панели и элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будут автоматически изменяться в размерах в зависимости от находящегося в них содержимого. Большинство элементов управления также имеют минимальные и максимальные размеры, которые можно задать для большего контроля (например, MinWidth = "20"). С <xref:System.Windows.Controls.Grid>помощью можно также задать относительную ширину и высоту, используя "\*" (например, `Width="0.25*"`) или функцию совместного использования размера ячейки.
 
 **Комментарии о локализации**
 
@@ -265,11 +265,11 @@ ms.locfileid: "67859904"
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Этот комментарий становится связанным с содержимым TextBlock_1 и средство LocBaml (см. в разделе [локализация приложения](how-to-localize-an-application.md)), его можно увидеть в шестом столбце строки TextBlock_1 в выходном CSV-файле:
+Этот комментарий связан с содержимым TextBlock_1's и в случае средства LocBaml (см. раздел локализация [приложения](how-to-localize-an-application.md)) оно может отображаться в шестом столбце строки TextBlock_1 в файле Output. csv:
 
 |Ключ ресурса|Категория|Доступен для чтения|Изменяемый|Комментарий|Значение|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|true|true|Этот символ используется в качестве декоративного правила.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|TRUE|TRUE|Этот символ используется в качестве декоративного правила.|&#124;|
 
 Комментарии могут быть помещены в содержимое или в свойство любого элемента посредством следующего синтаксиса.
 
@@ -277,15 +277,15 @@ ms.locfileid: "67859904"
 
 **Атрибуты локализации**
 
-Разработчику или менеджеру локализации часто бывает необходимо управлять тем, что локализаторы могут читать и изменять. Например, может быть нежелательно, чтобы локализатор переводил название компании или юридическую формулировку. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеются атрибуты, позволяющие задать возможность чтения, возможность изменения, а также категорию содержимого или свойства элемента. Эти атрибуты можно использовать в средстве локализации для блокировки, скрытия или сортировки элементов. Дополнительные сведения см. в разделе <xref:System.Windows.Localization.Attributes%2A>. В этом примере средство LocBaml только выводит значения этих атрибутов. Во всех элементах управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эти атрибуты имеют значения по умолчанию, но их можно переопределять. Например, в приведенном ниже примере переопределяются атрибуты локализации по умолчанию для `TextBlock_1` и задает невозможность изменения содержимого на чтение для локализаторов.
+Разработчику или менеджеру локализации часто бывает необходимо управлять тем, что локализаторы могут читать и изменять. Например, может быть нежелательно, чтобы локализатор переводил название компании или юридическую формулировку. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеются атрибуты, позволяющие задать возможность чтения, возможность изменения, а также категорию содержимого или свойства элемента. Эти атрибуты можно использовать в средстве локализации для блокировки, скрытия или сортировки элементов. Дополнительные сведения см. в разделе <xref:System.Windows.Localization.Attributes%2A>. В этом примере средство LocBaml только выводит значения этих атрибутов. Во всех элементах управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эти атрибуты имеют значения по умолчанию, но их можно переопределять. Например, в следующем примере переопределяются атрибуты локализации по умолчанию для `TextBlock_1` и задается, что содержимое будет доступно для чтения, но не может быть изменено для локализаторов.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
-В дополнение к читаемость и атрибуты Изменяемости [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет перечисление общих категорий пользовательского интерфейса (<xref:System.Windows.LocalizationCategory>), может использоваться для предоставления локализаторам дополнительного контекста. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Категории по умолчанию для элементов управления платформы могут переопределяться в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] также:
+Помимо атрибутов чтения и изменения, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет перечисление общих категорий пользовательского интерфейса (<xref:System.Windows.LocalizationCategory>), которые можно использовать для предоставления локализаторам большего контекста. Категории по умолчанию для элементов управления платформы можно также переопределить [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]в. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-Атрибуты локализации по умолчанию, который [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет также могут быть переопределены в коде, так что можно корректно установить правильные значения по умолчанию для пользовательских элементов управления. Например:
+Атрибуты локализации по умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , предоставляемые, можно также переопределять с помощью кода, поэтому можно правильно задать значения по умолчанию для пользовательских элементов управления. Например:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]
@@ -295,14 +295,14 @@ public class CorporateLogo : TextBlock
 }
 ```
 
-Каждый набор атрибутов экземпляра [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] будет иметь приоритет над значениями, заданными в коде для пользовательских элементов управления. Дополнительные сведения об атрибутах и комментариях см. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md).
+Атрибуты каждого экземпляра, заданные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в, будут иметь приоритет над значениями, заданными в коде для пользовательских элементов управления. Дополнительные сведения об атрибутах и комментариях см. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md).
 
 **Подмена шрифтов и составные шрифты**
 
-Если задан шрифт, который не поддерживает данный диапазон кодовых точек, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет автоматически использовать его с помощью шрифта Global User Interface.compositefont, расположенного в папке Windows\Fonts. Составные шрифты работают так же как и любой другой шрифт и может использоваться явным образом задав элемента `FontFamily` (например, `FontFamily="Global User Interface"`). Вы можете задавать собственные предпочтения для подмены шрифта путем создания собственного составного шрифта и указания его использования для конкретных языков и диапазонов кодовых точек.
+Если указать шрифт, который не поддерживает заданный диапазон codepoint, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] автоматически вернется к нему, который выполняется с помощью глобального пользовательского интерфейса. компоситефонт, расположенного в каталоге Windows\Fonts. Составные шрифты работают так же, как любой другой шрифт, и могут использоваться явно путем установки `FontFamily` элемента (например, `FontFamily="Global User Interface"`). Вы можете задавать собственные предпочтения для подмены шрифта путем создания собственного составного шрифта и указания его использования для конкретных языков и диапазонов кодовых точек.
 
-Дополнительные сведения о составных шрифтах см. в разделе <xref:System.Windows.Media.FontFamily>.
+Дополнительные сведения о составных шрифтах <xref:System.Windows.Media.FontFamily>см. в разделе.
 
 **Локализация домашней страницы Майкрософт**
 
-Для локализации этого приложения можно выполнить те же действия, что и в примере локализации диалогового окна "Выполнить". Локализованный CSV-файл для арабского языка доступен для вас в [пример Globalization Homepage](https://go.microsoft.com/fwlink/?LinkID=159990).
+Для локализации этого приложения можно выполнить те же действия, что и в примере локализации диалогового окна "Выполнить". Локализованный CSV-файл для арабского языка доступен в образце [домашней страницы глобализации](https://go.microsoft.com/fwlink/?LinkID=159990).

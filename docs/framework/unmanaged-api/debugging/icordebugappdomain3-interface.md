@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256fd900fa73948b4ca42ac6b6f21f145effc461
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: c3676cb32ceaf6f241672751f0feafbd3cb83e05
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025893"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968875"
 ---
 # <a name="icordebugappdomain3-interface"></a>Интерфейс ICorDebugAppDomain3
-Предоставляет методы для получения сведений об управляемых представления типов среды выполнения Windows, загруженные в домен приложения. Этот интерфейс является расширением ICorDebugAppDomain и ICorDebugAppDomain2 интерфейсов.  
+Предоставляет методы для получения сведений об управляемых представлениях среда выполнения Windows типов, которые в настоящее время загружены в домене приложения. Этот интерфейс является расширением интерфейсов ICorDebugAppDomain и ICorDebugAppDomain2.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Получает перечислитель для всех кэшированных типов среды выполнения Windows.|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Возвращает перечислитель для кэшированных типов среды выполнения Windows в домене приложения, на основе их идентификаторов интерфейса.|  
+|[ICorDebugAppDomain3:: GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Возвращает перечислитель для всех кэшированных среда выполнения Windowsных типов.|  
+|[ICorDebugAppDomain3:: GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Возвращает перечислитель для кэшированных среда выполнения Windowsных типов в домене приложения на основе их идентификаторов интерфейсов.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс предназначен для использования с помощью отладчика в сочетании с вызовом функции оценки `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Когда этот метод извлекает идентификаторы интерфейса, поддерживаемого объектом среды выполнения Windows server, отладчик может использовать методы, определенные в этом интерфейсе для сопоставления их с управляемых типов, которые соответствуют эти интерфейсы.  
+ Этот интерфейс предназначен для использования отладчиком в сочетании с вызовом `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`вычисления функции. Когда метод получает идентификаторы интерфейса, поддерживаемые объектом среда выполнения Windows Server, отладчик может использовать методы, определенные в этом интерфейсе, чтобы сопоставлять их с управляемыми типами, которые соответствуют этим интерфейсам.  
   
- Чтобы получить экземпляр этого интерфейса, выполните `QueryInterface` на экземпляр интерфейса ICorDebugAppDomain или ICorDebugAppDomain2.  
+ Чтобы получить экземпляр этого интерфейса, выполните `QueryInterface` команду на экземпляре интерфейса ICorDebugAppDomain или ICorDebugAppDomain2.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** Среда выполнения Windows  
+ **Платформ** Среда выполнения Windows  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

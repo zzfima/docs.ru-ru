@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a71c2b87d0bcb488e4e8fa4de928a103a8e9dabd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c79c76717acf7ff309375313b30534dd0aff9399
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663544"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920694"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<Элемент > Преферкоминстеадофманажедремотинг
 Указывает, будет ли среда выполнения использовать COM-взаимодействие вместо удаленного взаимодействия для всех вызовов через границы домена приложения.  
@@ -56,9 +56,9 @@ ms.locfileid: "69663544"
 ## <a name="remarks"></a>Примечания  
  Если для `enabled` `true`атрибута задано значение, среда выполнения ведет себя следующим образом:  
   
-- Среда выполнения не вызывает [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) для интерфейса [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) , когда интерфейс [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) входит в домен через интерфейс COM. Вместо этого он формирует вызываемую [оболочку времени выполнения](../../../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW) вокруг объекта.  
+- Среда выполнения не вызывает [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) для интерфейса [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) , когда интерфейс [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) входит в домен через интерфейс COM. Вместо этого он формирует вызываемую [оболочку времени выполнения](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) вокруг объекта.  
   
-- Среда выполнения возвращает E_NOINTERFACE при получении `QueryInterface` вызова для интерфейса [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) для любой вызываемой [оболочки COM](../../../../../docs/standard/native-interop/com-callable-wrapper.md) (CCW), созданной в этом домене.  
+- Среда выполнения возвращает E_NOINTERFACE при получении `QueryInterface` вызова для интерфейса [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) для любой вызываемой [оболочки COM](../../../../standard/native-interop/com-callable-wrapper.md) (CCW), созданной в этом домене.  
   
  Эти два поведения гарантируют, что все вызовы через COM-интерфейсы между управляемыми объектами в границах доменов приложений используют COM и COM-взаимодействие вместо удаленного взаимодействия.  
   

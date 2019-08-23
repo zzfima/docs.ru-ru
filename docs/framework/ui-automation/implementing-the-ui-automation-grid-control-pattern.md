@@ -6,16 +6,16 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 9d38d7db33b44f22cf9e8f714581cce1d271ce96
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eceafee4d02478c9e011a473ee1d036df91075d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932183"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Реализация шаблона элемента управления сеткой автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IGridProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64622979"
   
 - Если ячейка пуста, элемент модели автоматизации пользовательского интерфейса по-прежнему должен возвращаться для поддержки свойства <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> для этой ячейки. Это возможно, когда макет дочерних элементов сетки подобен массиву с переменной длиной (см. пример ниже).  
   
- ![Отображающий неровную структуру представление проводника Windows. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Представление проводника Windows, в котором отображается неоднородный макет.](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Пример элемента управления "Сетка" с пустыми координатами  
   
 - Сетка с единственным элементом по-прежнему должна реализовывать <xref:System.Windows.Automation.Provider.IGridProvider> , если она логически считается сеткой. Количество дочерних элементов в сетке не имеет значения.  
@@ -48,9 +48,9 @@ ms.locfileid: "64622979"
   
 |Обязательные члены|Тип|Примечания|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Метод|Отсутствуют|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "64622979"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Если запрошенная координата строки больше, чем <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> или координата столбца больше, чем <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Если Запрошенная строка или столбца координаты меньше нуля.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Если запрошенная координата строки больше, <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> чем, или значение координаты столбца больше, <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>чем.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Если любая из запрошенных координат строки или столбца меньше нуля.|  
   
 ## <a name="see-also"></a>См. также
 

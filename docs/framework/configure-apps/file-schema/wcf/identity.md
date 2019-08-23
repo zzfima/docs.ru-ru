@@ -2,19 +2,19 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: d5d06953c67b90e8367f2c0d01a670a46f487526
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756693"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925416"
 ---
-# <a name="identity"></a>\<удостоверение >
-Элемент identity позволяет разработчику клиента указать во время разработки ожидаемое удостоверение службы. Во время процесса подтверждения между клиентом и службой инфраструктуре Windows Communication Foundation (WCF) гарантирует, что удостоверение соответствует ожидаемой службы значения этого элемента и таким образом могут проходить проверку подлинности. Дополнительные сведения см. в разделе [службы идентификации и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+# <a name="identity"></a>\<> удостоверений
+Элемент identity позволяет разработчику клиента указать во время разработки ожидаемое удостоверение службы. В процессе подтверждения между клиентом и службой инфраструктура Windows Communication Foundation (WCF) обеспечит соответствие идентификатора ожидаемой службы значениям этого элемента и, таким образом, может пройти проверку подлинности. Дополнительные сведения см. в статье [удостоверение службы и проверка](../../../wcf/feature-details/service-identity-and-authentication.md)подлинности.  
   
- \<system.ServiceModel>  
-\<Клиент >  
-\<endpoint>  
+ \<системой. > ServiceModel  
+\<> клиента  
+\<> конечной точки  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ ms.locfileid: "61756693"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -48,24 +48,24 @@ ms.locfileid: "61756693"
 |dns|Задает службу DNS-сертификата X.509, используемого для проверки подлинности службы. Этот элемент содержит атрибут `value`, являющийся строкой, и содержит фактическое удостоверение.|  
 |rsa|Задает значение поля RSA сертификата X.509, используемое для проверки подлинности службы для клиента. Этот элемент содержит атрибут `value`, являющийся строкой, и содержит фактическое удостоверение.|  
 |servicePrincipalName|Задает удостоверение имени участника-сервера, являющегося именем участника, используемым клиентом для уникальной идентификации экземпляра службы. Этот элемент содержит атрибут `value`, являющийся строкой, и содержит фактическое имя участника. Это элемент типа <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Задает удостоверение имени участника-пользователя, являющегося именем входа пользователя в сеть. Имя участника-пользователя состоит из имени объекта пользователя, используемого в Active Directory, за которым следует символ at (\@) и затем, как правило, доменных имен родительского домена. Например, у Джефа в дереве домена Fabrikam.com может быть имя участника-пользователя [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Этот элемент содержит атрибут `value`, являющийся строкой, и содержит фактическое имя участника. Это элемент типа <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|userPrincipalName|Задает удостоверение имени участника-пользователя, являющегося именем входа пользователя в сеть. Имя участника-пользователя состоит из имени объекта пользователя, используемого в Active Directory, за которым следует символ (\@) и, как правило, родительский домен системы доменных имен. Например, Джефф в дереве доменов Fabrikam.com может иметь имя [jeff@fabrikam.com](mailto:jeffsmith@fabrikam.com)участника-пользователя.  Этот элемент содержит атрибут `value`, являющийся строкой, и содержит фактическое имя участника. Это элемент типа <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Задает настраиваемый одноранговый распознаватель для netPeerTcpBinding.|  
-|[\<Конечная точка >](endpoint-element.md)|Настраивает конечные точки службы.|  
-|[\<Конечная точка > из \<клиента >](endpoint-of-client.md)|Настраивает конечными точками канала.|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Задает службу маркеров безопасности для федеративной службы.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Задает конечную точку метаданных для службы маркеров безопасности федеративной службы.|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Задает параметры для выданного маркера в настраиваемой привязке.|  
-|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Задает локальную службу маркеров безопасности.|  
+|[\<custom>](custom.md)|Задает настраиваемый одноранговый распознаватель для netPeerTcpBinding.|  
+|[\<> конечной точки](endpoint-element.md)|Настраивает конечные точки службы.|  
+|[\<Конечная точка \<> клиента >](endpoint-of-client.md)|Настраивает конечные точки канала.|  
+|[\<issuer>](issuer.md)|Задает службу маркеров безопасности для федеративной службы.|  
+|[\<issuerMetadata >](issuermetadata.md)|Задает конечную точку метаданных для службы маркеров безопасности федеративной службы.|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|Задает параметры для выданного маркера в настраиваемой привязке.|  
+|[\<Локалиссуер >](localissuer.md)|Задает локальную службу маркеров безопасности.|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
-- [Идентификация и проверка подлинности службы](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Конечные точки: Адреса, привязки и контракты](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Идентификация и проверка подлинности службы](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Конеч Адреса, привязки и контракты](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

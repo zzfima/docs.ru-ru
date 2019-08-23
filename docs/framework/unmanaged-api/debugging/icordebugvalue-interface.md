@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc889dd6b2854654bfe43b24afbe4cc19863c80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bb2f6333f306c8a19c8b2f67986b23819b74ee0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993698"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966864"
 ---
 # <a name="icordebugvalue-interface"></a>Интерфейс ICorDebugValue
-Представляет значение в отлаживаемом процессе. Значение может быть чтения или записи.  
+Представляет значение в отлаживаемом процессе. Значением может быть значение Read или Write.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|В настоящее время этот метод не реализован.|  
-|[Метод GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Возвращает адрес это `ICorDebugValue` объект, который находится в отлаживаемом процессе.|  
-|[Метод GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Получает размер в байтах, это `ICorDebugValue` объекта.|  
-|[Метод GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Получает тип-примитив это `ICorDebugValue` объекта.|  
+|[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Этот метод в настоящее время не реализован.|  
+|[Метод GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Возвращает адрес этого `ICorDebugValue` объекта, который находится в процессе отладки.|  
+|[Метод GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Возвращает размер данного `ICorDebugValue` объекта в байтах.|  
+|[Метод GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Возвращает тип примитива этого `ICorDebugValue` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- Как правило владение объектом значение передается при возврате. Получатель отвечает за удаление ссылки из объекта при его завершении с объектом.  
+ В общем случае владение объектом значения передается при его возврате. Получатель отвечает за удаление ссылки из объекта после завершения работы с объектом.  
   
- В зависимости от того, где значение было получено путем значение может не остаются действительными после возобновления процесса. Таким образом, как правило, значение не должно храниться во время вызова из [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) метод.  
+ В зависимости от того, откуда было получено значение, оно может остаться недействительным после возобновления процесса. Поэтому в общем случае значение не должно удерживаться в вызове метода [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) .  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

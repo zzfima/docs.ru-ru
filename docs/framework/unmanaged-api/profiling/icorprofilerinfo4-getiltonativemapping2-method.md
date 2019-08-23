@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad83c376816c2203cd78a83b8664fa90b0e109fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8ffdb04bdf3fd2f605e2dffc5065a0d786bbaf7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780826"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967915"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>Метод ICorProfilerInfo4::GetILToNativeMapping2
 Получает сопоставление из смещений MSIL в собственные смещения для кода, содержащегося в версии указанной функции, перекомпилированной с помощью JIT-компилятора.  
@@ -44,35 +44,35 @@ HRESULT GetILToNativeMapping(
  [in] Идентификатор функции, которая содержит код.  
   
  `pReJitId`  
- [in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора. Удостоверение должно равняться нулю в .NET Framework 4.5.  
+ [in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора. Удостоверение должно быть равно нулю в .NET Framework 4,5.  
   
  `cMap`  
  [in] Максимальный размер массива `map`.  
   
  `pcMap`  
- [out] Общее число доступных структур COR_DEBUG_IL_TO_NATIVE_MAP.  
+ заполняет Общее число доступных структур COR_DEBUG_IL_TO_NATIVE_MAP.  
   
  `map`  
  [out] Массив структур `COR_DEBUG_IL_TO_NATIVE_MAP`, каждая из которых задает смещения. После возврата метода `GetILToNativeMapping2` параметр `map` будет содержать все или некоторые из структур `COR_DEBUG_IL_TO_NATIVE_MAP`.  
   
 ## <a name="remarks"></a>Примечания  
- `GetILToNativeMapping2` аналогичен [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) метода, за исключением того, что он позволяет профилировщику указывать идентификатор перекомпилированной функции в будущих выпусках.  
+ `GetILToNativeMapping2`аналогичен методу [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , за исключением того, что он позволяет профилировщику указать идентификатор перекомпилированной функции в будущих выпусках.  
   
 > [!NOTE]
->  [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) метод не реализуется в .NET Framework 4.5, поэтому функции, которые были перекомпиляции JIT не могут иметь сопоставление IL-машинный код, который отличается от изначально скомпилирована функция. Таким образом `GetILToNativeMapping2` не может вызываться с ненулевым Идентификатором перекомпиляции JIT в .NET Framework 4.5.  
+> Метод [икорпрофилерфунктионконтрол:: сетилинструментедкодемап](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) не реализован в .NET Framework 4,5, поэтому функции, которые были JIT-скомпилированы, не могут иметь сопоставление с IL-кодом, которое отличается от первоначально скомпилированной функции. Таким образом, `GetILToNativeMapping2` не может вызываться с ненулевым JIT-перекомпилированным идентификатором в .NET Framework 4,5.  
   
- Метод `GetILToNativeMapping2` возвращает массив структур `COR_DEBUG_IL_TO_NATIVE_MAP`. Для передачи, что определенные диапазоны собственных инструкций соответствуют специальным областям кода (например, прологу), запись в массиве может иметь его `ilOffset` полю присвоено значение [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) перечисление.  
+ Метод `GetILToNativeMapping2` возвращает массив структур `COR_DEBUG_IL_TO_NATIVE_MAP`. Чтобы убедиться, что определенные диапазоны машинных инструкций соответствуют специальным областям кода (например, прологу), в качестве `ilOffset` поля в массиве можно задать значение перечисления [кордебугилтонативемаппингтипес](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) .  
   
  После возврата метода `GetILToNativeMapping2` необходимо убедиться, что буфер `map` был достаточно велик, чтобы вместить в себя все структуры `COR_DEBUG_IL_TO_NATIVE_MAP`. Для этого сравните значение параметра `cMap` со значением параметра `pcMap`. Если значение `pcMap`, умноженное на размер структуры `COR_DEBUG_IL_TO_NATIVE_MAP`COR_PRF_CODE_INFO, больше значения `cMap`, выделите буфер `map` большего размера, обновите параметр `cMap`, задав новый, больший размер, и вызовите метод `GetILToNativeMapping2` снова.  
   
  Кроме того, сначала можно вызвать метод `GetILToNativeMapping2` с буфером `map` нулевой длины для получения правильного размера буфера. Затем можно задать размер буфера равным значению, возвращенному в параметре `pcMap`, и вызвать метод `GetILToNativeMapping2` снова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf. idl, CorProf. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

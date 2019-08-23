@@ -2,20 +2,20 @@
 title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 1f34486296465b3ea0b5b05bd9492062c85ad8c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13c9400874f1e02fac3ce0c3010153ad7806288c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915192"
 ---
 # <a name="wsdlimporter"></a>\<wsdlImporter >
 Задает все средства импорта WSDL, импортирующие метаданные на языке WSDL 1.1 с вложениями WS-Policy.  
   
-\<system.ServiceModel>  
-\<Клиент >  
-\<метаданные >  
-\<wsdlImporters >  
+\<системой. > ServiceModel  
+\<> клиента  
+\<> метаданных  
+\<Всдлимпортерс >  
 \<wsdlImporter >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,13 +38,13 @@ ms.locfileid: "61670252"
 |`type`|Тип этого элемента.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Задает все средства импорта WSDL, импортирующие метаданные на языке WSDL 1.1 с вложениями WS-Policy.|  
+|[\<Всдлимпортерс >](wsdlimporters.md)|Задает все средства импорта WSDL, импортирующие метаданные на языке WSDL 1.1 с вложениями WS-Policy.|  
   
 ## <a name="remarks"></a>Примечания  
  Средство импорта WSDL используется для импорта метаданных, а также для их преобразования в различные классы, представляющие данные контракта и конечной точки. Он может выборочно импортировать сведения контракта и конечной точки, а также свойства, предоставляющие сведения об ошибках и принимающие сведения о типах, относящиеся к процессу импорта и преобразования. Оно также поддерживает импорт данных привязки и свойств, предоставляющих доступ к каким-либо документам политики, документам WSDL, расширениям WSDL и документам схемы XML.  
@@ -56,5 +56,5 @@ ms.locfileid: "61670252"
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Клиенты](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Конфигурация клиента WCF](../../../wcf/feature-details/client-configuration.md)
+- [Клиенты](../../../wcf/feature-details/clients.md)

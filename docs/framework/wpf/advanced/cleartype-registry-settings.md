@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964881"
 ---
 # <a name="cleartype-registry-settings"></a>Параметры реестра ClearType
 В этом разделе приводятся общие сведения о параметрах реестра Microsoft ClearType, используемых приложениями WPF.  
@@ -36,12 +36,12 @@ ms.locfileid: "68629939"
 |Структура пикселей|Описывает расположение пикселей для устройства отображения.|  
 |Уровень контрастности текста|Описывает уровень контрастности отображаемого текста.|  
   
- Доступ к этим параметрам можно получить с помощью программы внешней настройки, которая знает, как [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ссылаться на указанные параметры реестра ClearType. Эти параметры также можно создать или изменить через прямой доступ к значениям с использованием редактора реестра [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ Доступ к этим параметрам можно получить с помощью программы внешней настройки, которая знает, как [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ссылаться на указанные параметры реестра ClearType. Эти параметры также можно создавать или изменять, обращаясь к значениям напрямую с помощью редактора реестра Windows.  
   
- Если параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType не заданы (состояние по умолчанию), приложение запрашивает сведения о системных параметрах для параметров сглаживания шрифтов. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ Если параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearTypeнезаданы(состояниепоумолчанию),приложениезапрашиваетсведенияосистемныхпараметрахWindowsдля[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]настройки сглаживания шрифтов.  
   
 > [!NOTE]
->  Сведения о перечислении имен отображаемых устройств см. `SystemParametersInfo` в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] описании функции.  
+> Сведения о перечислении имен отображаемых устройств см. `SystemParametersInfo` в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] описании функции.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Уровень ClearType  
@@ -59,7 +59,7 @@ ms.locfileid: "68629939"
  ![Параметры ClearType в редакторе реестра.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения визуализируют текст в одном из двух режимов с использованием технологии ClearType и без нее. Если текст отображается без ClearType, он называется отрисовкой в оттенках серого.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения визуализируют текст в одном из двух режимов с использованием технологии ClearType и без нее. Если текст отображается без ClearType, он называется отрисовкой в оттенках серого.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Гамма-уровень  
@@ -89,7 +89,7 @@ ms.locfileid: "68629939"
  Структура пикселей соответствует целочисленному значению в диапазоне от 0 до 2. Значение по умолчанию — 0, представляющее плоскую структуру пикселей.  
   
 > [!NOTE]
->  Сведения о перечислении имен отображаемых устройств см. `EnumDisplayDevices` в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] описании функции.  
+> Сведения о перечислении имен отображаемых устройств см. `EnumDisplayDevices` в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] описании функции.  
   
 ### <a name="registry-setting"></a>Параметр реестра  
  Расположение параметра реестра для структуры пикселей — параметр локальной машины, соответствующий имени определенного устройства отображения.  

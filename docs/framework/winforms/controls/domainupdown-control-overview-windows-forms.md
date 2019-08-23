@@ -7,25 +7,25 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fda542204e2b41dd1d729d2b940c6f38a5812ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972072"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965302"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>Общие сведения об элементе управления DomainUpDown (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемент управления является набором текстового поля и пары кнопок для перемещения вверх или вниз по списку. Он выводит и задает строку текста из списка вариантов. Пользователь может выбрать строки, щелкнув кнопок со стрелками вверх по списку, клавиши со стрелками вверх и вниз или введя строку, совпадающую с элементом в списке. Один из возможных способов использования для этого элемента управления можно выбрать элементы в алфавитном порядке отсортированный список имен.  
+Элемент управления <xref:System.Windows.Forms.DomainUpDown> Windows Forms представляет собой сочетание текстового поля и пары кнопок для перемещения вверх или вниз по списку. Элемент управления отображает и задает текстовую строку из списка вариантов. Пользователь может выбрать строку, нажимая кнопки вверх и вниз для перемещения по списку, нажимая клавиши со СТРЕЛКАми вверх и вниз или вводя строку, совпадающую с элементом в списке. Одним из возможных способов использования этого элемента управления является выбор элементов из списка имен, отсортированного по алфавиту.  
   
 > [!NOTE]
->  Чтобы отсортировать список, установите <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> свойства `true`.  
+> Чтобы отсортировать список, присвойте <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> `true`свойству значение.  
   
- Функция этого элемента управления является очень похожа на поле со списком или поле со списком, но занимает очень мало места.  
+ Функция этого элемента управления очень похожа на список или поле со списком, но занимает немного пространства.  
   
 ## <a name="key-properties"></a>Ключевые свойства  
- Ключевые свойства элемента управления являются <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, и <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Свойство содержит список объектов, текстовые значения отображаются в элементе управления. Если <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> присваивается `false`, элемент управления автоматически завершает текст, пользователь и сопоставляет его значение в списке. Если <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> присваивается `true`, прокрутка пройден последний элемент, можно перейти первый элемент в списке и наоборот. Основные методы элемента управления являются <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> и <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ Ключевыми свойствами элемента управления являются <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>и <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. <xref:System.Windows.Forms.DomainUpDown.Items%2A> Свойство содержит список объектов, текстовые значения которых отображаются в элементе управления. Если <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> параметр имеет `false`значение, элемент управления автоматически завершает текст, который пользователь вводит и сопоставляет со значением в списке. <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> Если`true`задано значение, прокрутка после последнего элемента приведет к первому элементу в списке и наоборот. Ключевыми методами элемента управления являются <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> и <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
   
- Этот элемент управления отображает только текстовые строки. Элемент управления, отображающий числовые значения, используйте <xref:System.Windows.Forms.NumericUpDown> элемента управления. Дополнительные сведения см. в разделе [Обзор элемента управления NumericUpDown](numericupdown-control-overview-windows-forms.md).  
+ Этот элемент управления отображает только текстовые строки. Если требуется элемент управления, отображающий числовые значения, используйте <xref:System.Windows.Forms.NumericUpDown> элемент управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>См. также
 

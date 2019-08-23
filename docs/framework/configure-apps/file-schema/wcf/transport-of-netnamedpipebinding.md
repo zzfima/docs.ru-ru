@@ -2,22 +2,22 @@
 title: <transport> из <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e76d0962ea7b4714ef6ca1f9d4c4c3e23df5b6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934676"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>\<Транспорт > из \<netNamedPipeBinding >
+# <a name="transport-of-netnamedpipebinding"></a>\<транспортное \<> из NetNamedPipeBinding >
 Определяет параметры безопасности транспорта для именованного канала.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<привязки >  
 \<netNamedPipeBinding >  
 \<Привязка >  
-\<Безопасность >  
-\<Транспорт >  
+\<> безопасности  
+\<> транспорта  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +38,16 @@ ms.locfileid: "61788353"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|protectionLevel|Определяет уровень защиты именованного канала. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки. Допустимы следующие значения:<br /><br /> -None: Нет защиты.<br />-Входа: Сообщения подписываются.<br />-EncryptAndSign: Сообщения шифруются и подписываются.<br /><br /> Значение по умолчанию - EncryptAndSign.|  
+|protectionLevel|Определяет уровень защиты именованного канала. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки. Допустимы следующие значения:<br /><br /> None Нет защиты.<br />Писать Сообщения подписываются.<br />EncryptAndSign Сообщения шифруются и подписываются.<br /><br /> Значение по умолчанию - EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Определяет параметры безопасности для привязки.|  
+|[\<> безопасности](security-of-netnamedpipebinding.md)|Определяет параметры безопасности для привязки.|  
   
 ## <a name="see-also"></a>См. также
 
@@ -55,8 +55,8 @@ ms.locfileid: "61788353"
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../misc/binding.md)

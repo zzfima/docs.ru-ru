@@ -2,21 +2,21 @@
 title: Элемент <localClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7331105582a4a48b7edd8cd4f6a691771b0b8ff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765782"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930800"
 ---
-# <a name="localclientsettings-element"></a>\<localClientSettings > элемент
+# <a name="localclientsettings-element"></a>\<Элемент > Локалклиентсеттингс
 Задает параметры безопасности локального клиента для этой привязки.  
   
- \<system.serviceModel>  
+ \<> System. serviceModel  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<Безопасность >  
+\<> безопасности  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,9 +43,9 @@ ms.locfileid: "61765782"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`cacheCookies`|Логическое значение, указывающее, включено ли кэширование файлов cookie. Значение по умолчанию — `false`.|  
+|`cacheCookies`|Логическое значение, указывающее, включено ли кэширование файлов cookie. Значение по умолчанию — `false`.|  
 |`cookieRenewalThresholdPercentage`|Целое число, задающее максимальный процент файлов cookie, которые могут обновляться. Это значение должно быть в диапазоне от 0 до 100 включительно. Значение по умолчанию — 90.|  
-|`detectReplays`|Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически. Значение по умолчанию — `false`.|  
+|`detectReplays`|Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически. Значение по умолчанию — `false`.|  
 |`maxClockSkew`|Значение типа <xref:System.TimeSpan>, указывающее максимальный разброс времени между системными часами взаимодействующих сторон. Значение по умолчанию - 00:05:00.<br /><br /> Если задано значение по умолчанию, получатель принимает сообщения с отметками времени отправки, которое на пять минут раньше или позже времени получения сообщения. Сообщения, которые не прошли проверку времени отправки, отклоняются. Данная настройка используется в сочетании с атрибутом `replayWindow`.|  
 |`maxCookieCachingTime`|Значение <xref:System.TimeSpan>, которое задает максимальное время существования файлов cookie. Значение по умолчанию - 10675199.02:48:05.4775807.|  
 |`reconnectTransportOnFailure`|Логическое значение, указывающее, будет ли после транспортных сбоев выполняться попытка восстановления подключений, использующих режим обмена сообщениями WS-Reliable. По умолчанию используется значение `true`, что означает бесконечное число попыток повторного подключения. Цикл нарушается при возникновении тайм-аута бездействия, в результате чего канал вызывает исключение при невозможности повторного подключения.|  
@@ -56,14 +56,14 @@ ms.locfileid: "61765782"
 |`timestampValidityDuration`|Положительное значение типа <xref:System.TimeSpan>, указывающее срок действия отметки времени. Значение по умолчанию - 00:15:00.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
+|[\<> безопасности](security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
+|[\<Секуреконверсатионбутстрап >](secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
   
 ## <a name="remarks"></a>Примечания  
  Параметры являются локальными, в том смысле, что они не наследуются от политики безопасности службы.  
@@ -75,9 +75,9 @@ ms.locfileid: "61765782"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Безопасность пользовательской привязки](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Расширение привязок](../../../wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)
+- [Практическое руководство. Создание пользовательской привязки с помощью SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Безопасность пользовательской привязки](../../../wcf/samples/custom-binding-security.md)

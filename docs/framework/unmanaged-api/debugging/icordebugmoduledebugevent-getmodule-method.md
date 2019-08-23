@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debf2e9dd08f6a35801932b22fbd985e7299b79f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e68fab11a881854ae4c3fe073f73150694d31ae5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764360"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965111"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>Метод ICorDebugModuleDebugEvent::GetModule
 Возвращает объединенный модуль, который только что был загружен или выгружен.  
@@ -24,20 +24,20 @@ HRESULT GetModule(
   
 ## <a name="parameters"></a>Параметры  
  `ppModule`  
- [out] Указатель на адрес ICorDebugModule объект, представляющий объединенный модуль, который был только что загружен или выгружен.  
+ заполняет Указатель на адрес объекта ICorDebugModule, который представляет объединенный модуль, который был только что загружен или выгружен.  
   
 ## <a name="remarks"></a>Примечания  
- Можно вызвать [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) метод, чтобы определить, был ли модуль загрузке или выгрузке.  
+ Можно вызвать метод [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) , чтобы определить, был ли модуль загружен или выгружен.  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+> Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

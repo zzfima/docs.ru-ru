@@ -2,23 +2,23 @@
 title: Безопасность транспорта с проверкой подлинности с использованием сертификатов
 ms.date: 03/30/2017
 dev_langs:
-- vb
+- csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f94be530fb680320813a93e256e8e411234f2e40
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050744"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968652"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Безопасность транспорта с проверкой подлинности с использованием сертификатов
-В этом разделе рассматривается проверка подлинности сервера и клиента при использовании безопасности транспорта с помощью сертификатов X.509. Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Сертификаты должны выдаваться центром сертификации, который часто является сторонним издателем сертификатов. В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory. Дополнительные сведения см. в разделе [служб сертификатов Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). В этом сценарии служба размещена в службах IIS, которые используют протокол SSL. В службе задано использование сертификата SSL (X.509), чтобы клиенты могли проверять подлинность сервера. В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента. Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента. Фактический механизм проверки подлинности друг друга службой и клиентом в данном разделе не обсуждается. Дополнительные сведения см. в разделе [цифровая подпись в Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  
+В этом разделе рассматривается проверка подлинности сервера и клиента при использовании безопасности транспорта с помощью сертификатов X.509. Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Сертификаты должны выдаваться центром сертификации, который часто является сторонним издателем сертификатов. В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory. Дополнительные сведения см. в статье [Windows 2008 R2 Certificate Services](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). В этом сценарии служба размещена в службах IIS, которые используют протокол SSL. В службе задано использование сертификата SSL (X.509), чтобы клиенты могли проверять подлинность сервера. В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента. Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента. Фактический механизм проверки подлинности друг друга службой и клиентом в данном разделе не обсуждается. Дополнительные сведения см. [в статье цифровая подпись в Википедии](https://go.microsoft.com/fwlink/?LinkId=253157).  
   
  В этом сценарии реализуется шаблон обмена сообщениями «запрос-ответ», показанный на следующей схеме.  
   
- ![Безопасная передача с помощью сертификатов](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
+ ![Безопасная перенаправление с помощью сертификатов](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- Дополнительные сведения об использовании сертификата со службой, см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [как: Настройка порта SSL-сертификат](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). В следующей таблице описываются различные особенности этого сценария.  
+ Дополнительные сведения об использовании сертификата со службой см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [инструкции. Настройте порт с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). В следующей таблице описываются различные особенности этого сценария.  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -64,9 +64,9 @@ ms.locfileid: "62050744"
 ## <a name="configure-the-client"></a>Настройка клиента  
  Настроить клиент можно в коде или в файле app.config. В следующем примере показано, как настроить клиент в коде.  
   
-```vb  
+```csharp
 // Create the binding.  
-WSHttpBinding myBinding = new WSHttpBinding();  
+var myBinding = new WSHttpBinding();  
 myBinding.Security.Mode = SecurityMode.Transport;  
 myBinding.Security.Transport.ClientCredentialType =  
    HttpClientCredentialType.Certificate;  
@@ -74,13 +74,13 @@ myBinding.Security.Transport.ClientCredentialType =
 // Create the endpoint address. Note that the machine name   
 // must match the subject or DNS field of the X.509 certificate  
 // used to authenticate the service.   
-EndpointAddress ea = new  
+var ea = new  
    EndpointAddress("https://localhost/CalculatorService/service.svc");  
   
 // Create the client. The code for the calculator   
 // client is not shown here. See the sample applications  
 // for examples of the calculator code.  
-CalculatorClient cc =  
+var cc =  
    new CalculatorClient(myBinding, ea);  
   
 // The client must specify a certificate trusted by the server.  

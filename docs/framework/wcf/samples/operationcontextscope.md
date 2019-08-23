@@ -2,18 +2,18 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 18dfcbbd84d04088026ca1016600fb0f6a4ce6c6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 89c0fc9cabc544a6a71333b7c6c78e2657cc6610
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424996"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965582"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-В образце OperationContextScope показано, как способ отправки дополнительной информации при вызове функции Windows Communication Foundation (WCF) с помощью заголовков. В этом образце сервер и клиент являются консольными приложениями.  
+В примере OperationContextScope показано, как отправить дополнительные сведения о вызове Windows Communication Foundation (WCF) с помощью заголовков. В этом образце сервер и клиент являются консольными приложениями.  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+> Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
  В образце показано, как клиент может отправлять дополнительную информацию в виде <xref:System.ServiceModel.Channels.MessageHeader>, используя для этого <xref:System.ServiceModel.OperationContextScope>. Создается объект <xref:System.ServiceModel.OperationContextScope> с областью, соответствующей каналу. В коллекцию <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> можно добавлять заголовки, которые нужно передать удаленной службе. Добавляемые в эту коллекцию заголовки можно извлекать на стороне службы через свойство <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Вызовы осуществляются через различные каналы, но добавляемые к клиенту заголовки применяются только к каналу, с помощью которого был создан объект <xref:System.ServiceModel.OperationContextScope>.  
   
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Это реализация клиента, который использует прокси, созданного [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для взаимодействия с удаленной службой. Сначала создается два прокси-объекта `MessageHeaderReaderClient`.  
+ Это реализация клиента, использующая прокси-сервер, созданный с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для взаимодействия с удаленной службой. Сначала создается два прокси-объекта `MessageHeaderReaderClient`.  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- Затем клиент создает область OperationContextScope, связанную с `client1`. Он добавляет заголовок <xref:System.ServiceModel.Channels.MessageHeader> в свойство <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> и осуществляет вызов на обоих клиентах. Это гарантирует, что заголовок передается только на `client1` и не на `client2` путем проверки возвращаемого значения из `RetrieveHeader` вызова.  
+ Затем клиент создает область OperationContextScope, связанную с `client1`. Он добавляет заголовок <xref:System.ServiceModel.Channels.MessageHeader> в свойство <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> и осуществляет вызов на обоих клиентах. Это гарантирует, что заголовок отправляется только в `client1` , а не `client2` в, путем проверки возвращаемого значения `RetrieveHeader` из вызова.  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -115,17 +115,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

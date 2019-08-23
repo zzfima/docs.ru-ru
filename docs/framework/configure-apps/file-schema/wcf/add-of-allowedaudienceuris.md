@@ -2,24 +2,24 @@
 title: <add> из <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: a18305d2981b1a1c8cf56a9dfcbb14ab3ce1ff92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 64f0dd5c97ddfcd2fffd8ff4820d02af8c1ced54
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926883"
 ---
-# <a name="add-of-allowedaudienceuris"></a>\<Добавить > из \<allowedAudienceUris >
+# <a name="add-of-allowedaudienceuris"></a>\<Добавление > \<> алловедаудиенцеурис
 Добавляет целевой универсальный код ресурса, для которого может быть задан маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы считаться допустимым для экземпляра <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
+ \<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
+\<> поведения  
 \<serviceCredentials >  
-\<issuedTokenAuthentication>  
-\<allowedAudienceUris>  
-\<Добавить > элемент для \<allowedAudienceUris >  
+\<Иссуедтокенаусентикатион >  
+\<Алловедаудиенцеурис >  
+\<Добавление элемента > для \<алловедаудиенцеурис >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,13 +39,13 @@ ms.locfileid: "64607226"
 |allowedAudienceUri|Строка, содержащая целевой универсальный код ресурса, для которого может быть задан маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы считаться допустимым в экземпляре <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<allowedAudienceUris >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|Представляет коллекцию целевых универсальных кодов ресурса (URI), для которых может быть задан маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы они считались допустимыми для экземпляра <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.|  
+|[\<Алловедаудиенцеурис >](allowedaudienceuris.md)|Представляет коллекцию целевых универсальных кодов ресурса (URI), для которых может быть задан маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы они считались допустимыми для экземпляра <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.|  
   
 ## <a name="remarks"></a>Примечания  
  Данную коллекцию следует использовать в федеративном приложении, которое использует службу маркеров безопасности (STS), выдающую маркеры безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>. При выпуске маркера безопасности служба STS также может указать универсальный код ресурса (URI) веб-служб, для которых предназначен маркер безопасности, добавив выражение <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> к маркеру безопасности. Это позволяет коду <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> для веб-службы получателя проверить, что выданный маркер безопасности предназначен для данной службы, указав на необходимость выполнения соответствующей проверки. Для этого выполните следующие действия.  
@@ -56,7 +56,7 @@ ms.locfileid: "64607226"
   
  Дополнительные сведения см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Дополнительные сведения об использовании данного элемента конфигурации см. в разделе [как: Настройка учетных данных службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Дополнительные сведения об использовании этого элемента конфигурации см. в [разделе как Настройте учетные данные на](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)служба Федерации.  
   
 ## <a name="see-also"></a>См. также
 
@@ -67,8 +67,8 @@ ms.locfileid: "64607226"
 - <xref:System.ServiceModel.Configuration.AllowedAudienceUriElementCollection>
 - <xref:System.ServiceModel.Configuration.AllowedAudienceUriElement>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowedAudienceUris%2A>
-- [\<allowedAudienceUris >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)
-- [\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)
-- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Практическое руководство. Настройка учетных данных службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [\<Алловедаудиенцеурис >](allowedaudienceuris.md)
+- [\<Иссуедтокенаусентикатион >](issuedtokenauthentication-of-servicecredentials.md)
+- [Поведения безопасности](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Практическое руководство. Настройка учетных данных на служба федерации](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

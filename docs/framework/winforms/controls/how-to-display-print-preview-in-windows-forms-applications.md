@@ -10,30 +10,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8252906de9a574f49617609a4cb08a1e8aa6a992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929008"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms
-Можно использовать <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления, чтобы пользователи могли отображение документа, часто, прежде чем он станет для печати.  
+<xref:System.Windows.Forms.PrintPreviewDialog> Элемент управления можно использовать для предоставления пользователям возможности отображать документ, часто перед его печатью.  
   
- Чтобы сделать это, необходимо указать экземпляр <xref:System.Drawing.Printing.PrintDocument> класса; это документа на печать. Дополнительные сведения об использовании предварительного просмотра с <xref:System.Drawing.Printing.PrintDocument> компонента, см. в разделе [как: В Windows Forms с использованием предварительного просмотра печати](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ Для этого необходимо указать экземпляр <xref:System.Drawing.Printing.PrintDocument> класса; это документ для печати. Дополнительные сведения об использовании предварительного просмотра с <xref:System.Drawing.Printing.PrintDocument> компонентом см. в разделе как [ Печать в Windows Forms с помощью предварительного](../advanced/how-to-print-in-windows-forms-using-print-preview.md)просмотра.  
   
 > [!NOTE]
->  Чтобы использовать <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления во время выполнения, пользователи должны иметь установленный на компьютере, локально или через сеть, принтер, как это отчасти как <xref:System.Windows.Forms.PrintPreviewDialog> компонент определяет, как будет выглядеть при печати документа.  
+> Чтобы использовать <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления во время выполнения, на компьютере пользователя должен быть установлен принтер (локально или через сеть), поскольку он частично определяет, <xref:System.Windows.Forms.PrintPreviewDialog> как именно этот документ будет выглядеть при печати.  
   
- <xref:System.Windows.Forms.PrintPreviewDialog> Управления использует <xref:System.Drawing.Printing.PrinterSettings> класса. Кроме того <xref:System.Windows.Forms.PrintPreviewDialog> управления использует <xref:System.Drawing.Printing.PageSettings> класса, так же, как <xref:System.Windows.Forms.PrintPreviewDialog> компонент. Печать документа, указанного в <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> свойство ссылается на обоих экземпляров <xref:System.Drawing.Printing.PrinterSettings> и <xref:System.Drawing.Printing.PageSettings> классы, которые используются для отображения документа в окне предварительного просмотра.  
+ <xref:System.Windows.Forms.PrintPreviewDialog> Элемент управления<xref:System.Drawing.Printing.PrinterSettings> использует класс. Кроме того, <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления <xref:System.Drawing.Printing.PageSettings> использует класс так же, как <xref:System.Windows.Forms.PrintPreviewDialog> и компонент. Документ <xref:System.Windows.Forms.PrintPreviewDialog> печати, указанный в <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> свойстве элемента управления, относится <xref:System.Drawing.Printing.PrinterSettings> к экземплярам классов и <xref:System.Drawing.Printing.PageSettings> и используется для отрисовки документа в окне предварительного просмотра.  
   
-### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Для просмотра страниц, используя элемент управления PrintPreviewDialog  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Просмотр страниц с помощью элемента управления PrintPreviewDialog  
   
 - Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна, указав используемый <xref:System.Drawing.Printing.PrintDocument> .  
   
-     В следующем примере кода <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает экземпляр <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления. Печать документа указывается в <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство. В следующем примере указывается не печать документа.  
+     В следующем примере <xref:System.Windows.Forms.Button> кода обработчик <xref:System.Windows.Forms.Control.Click> событий элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> открывает экземпляр элемента управления. Документ печати задается в <xref:System.Windows.Forms.PrintDialog.Document%2A> свойстве. В приведенном ниже примере не указан документ Print.  
   
-     В этом примере предполагается, что форма содержит <xref:System.Windows.Forms.Button> управления <xref:System.Drawing.Printing.PrintDocument> компонент с именем `myDocument`и <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления.  
+     В примере требуется <xref:System.Windows.Forms.Button> , чтобы форма соработала элемент управления <xref:System.Drawing.Printing.PrintDocument> , <xref:System.Windows.Forms.PrintPreviewDialog> компонент `myDocument`с именем и элемент управления.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -70,7 +70,7 @@ ms.locfileid: "66053606"
        }  
     ```  
   
-     (Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C#элемент C++, визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
