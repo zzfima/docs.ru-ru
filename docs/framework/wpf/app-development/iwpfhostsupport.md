@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 97a120c57624ada32e6661bd8a613c4ea1d01b2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 994e5146e9cf49a9b31396d0b51e7be83bbb3cfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591396"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964785"
 ---
 # <a name="iwpfhostsupport"></a>Интерфейс IWpfHostSupport
-Приложения, размещающие [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержимым при помощи PresentationHost.exe Реализуйте этот интерфейс для предоставления точки интеграции между узлом и PresentationHost.exe.  
+Приложения, на [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] которых размещается содержимое с помощью PresentationHost. exe, реализуют этот интерфейс для обеспечения точки интеграции между узлом и PresentationHost. exe.  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] можно размещать приложения, такие как веб-браузеры [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимого, включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и Свободный XAML. Узел [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимое, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] приложения создают экземпляр [элемент управления WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Для размещения [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] создает экземпляр класса PresentationHost.exe, который предоставляет размещаемый [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимого на узле для отображения в [элемент управления WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
+ [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]такие приложения, как веб-браузеры, могут [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] размещать [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимое, включая и свободный код XAML. Для размещения [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] содержимого приложения создают экземпляр [элемента управления WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Для размещения [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] служб создает экземпляр PresentationHost. exe, который предоставляет размещенное [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимое на узле для показа в [элементе управления WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
   
- Интеграция включаемые `IWpfHostSupport` позволяет PresentationHost.exe для:  
+ Интеграция, включенная `IWpfHostSupport` в, позволяет PresentationHost. exe:  
   
-- Определить и зарегистрировать устройства необработанного ввода (HID-устройств), которые интересуют ведущее приложение.  
+- Обнаружение и регистрация с помощью необработанных устройств ввода (устройств с HID-интерфейсом), в которых заинтересован ведущее приложение.  
   
-- Получите входящие сообщения от зарегистрированного устройства необработанного ввода и переслать соответствующие сообщения ведущему приложению.  
+- Получение входных сообщений с зарегистрированных устройств ввода необработанных данных и пересылка соответствующих сообщений ведущему приложению.  
   
-- Запрос ведущим приложением для настраиваемых пользовательских интерфейсов хода выполнения и ошибки.  
+- Запросите ведущее приложение для пользовательского пользовательского интерфейса хода выполнения и ошибок.  
   
 > [!NOTE]
->  Этот API предназначен и поддерживается только для использования на локальном клиентском компьютере  
+> Этот API предназначен и поддерживается только для использования на локальном клиентском компьютере  
   
 ## <a name="members"></a>Участники  
   
@@ -34,4 +34,4 @@ ms.locfileid: "64591396"
 |------------|-----------------|  
 |[GetRawInputDevices](getrawinputdevices.md)|Позволяет программе PresentationHost.exe обнаруживать устройства необработанного ввода (устройства HID), которые интересуют ведущее приложение.|  
 |[FilterInputMessage](filterinputmessage.md)|Вызывается программой PresentationHost.exe всякий раз при получении сообщения, пока не будет возвращено E_NOTIMPL.|  
-|[GetCustomUI](getcustomui.md)|По умолчанию PresentationHost.exe время от времени предоставляет свой собственный ход выполнения развертывания и ошибка развертывания при пользовательские интерфейсы, которые отображаются при развертывании содержимого WPF.|
+|[GetCustomUI](getcustomui.md)|По умолчанию PresentationHost. exe предоставляет собственный ход развертывания и пользовательские интерфейсы ошибок развертывания, отображаемые при развертывании содержимого WPF.|

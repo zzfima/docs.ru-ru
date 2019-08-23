@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: c2652ac73c1d55f09a1f8511603003dc6d7291f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87b24595f5013ad3b981256fd97bc758863c600b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659640"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921102"
 ---
 # <a name="cryptonamemapping-element"></a>\<Элемент > Криптонамемаппинг
 Содержит сопоставления классов с понятными именами.  
@@ -78,5 +78,5 @@ ms.locfileid: "69659640"
 
 - [Схема файла конфигурации](../index.md)
 - [Схема параметров шифрования](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [Настройка криптографических классов](../../configure-cryptography-classes.md)

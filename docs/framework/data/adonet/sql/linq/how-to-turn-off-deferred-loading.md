@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: f82e347ecdb3c69cee3749855d1e4cb457a460f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f68db5a5a0092fc4cf37746f2a4dc81e40ee4a9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033622"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938678"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>Практическое руководство. Как отключить отложенную загрузку
-Чтобы отключить отложенную загрузку, свойству <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> следует задать значение `false`. Дополнительные сведения см. в разделе [отложенное или немедленное Загрузка](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+Чтобы отключить отложенную загрузку, свойству <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> следует задать значение `false`. Дополнительные сведения см. в разделе [Отложенная и немедленная загрузка](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
 > [!NOTE]
->  Отложенная загрузка отключается при отключении отслеживания объекта. Дополнительные сведения см. в разделе [Как Получение сведений как доступных только для чтения](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).  
+> Отложенная загрузка отключается при отключении отслеживания объекта. Дополнительные сведения см. в разделе [Практическое руководство. Получение сведений только](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)для чтения.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано отключение отложенной загрузки путем установки свойству <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> значения `false`.  

@@ -3,18 +3,18 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 6e8267f170dbb26381564be7b66df5f617156885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2851820460a34d62175929b48ad57914df557059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945183"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement >
-Предоставляет вариант конфигурации <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> классом или производными классами.  
+Предоставляет необязательную конфигурацию для <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> класса или производных классов.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
 \<add>  
 \<x509SecurityTokenHandlerRequirement >  
@@ -46,20 +46,20 @@ ms.locfileid: "61790446"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Значение, определяющее режим проверки для сертификата X.509. Значение по умолчанию — «PeerOrChainTrust».|  
-|mapToWindows|Указывает ли обработчик токенов следует сопоставить маркер проверки в учетную запись Windows с помощью входящего утверждения имени участника-пользователя. Значение по умолчанию — «false».|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Значение, определяющее режим отзыва для сертификата X.509. Значение по умолчанию — «В сети».|  
-|trustedStoreLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, которое указывает хранилище сертификатов X.509. Значение по умолчанию — «LocalMachine».|  
-|certificateValidator|Пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Если `certificateValidationMode` атрибут «Custom», экземпляр этого типа используется для проверки сертификата издателя.|  
+|certificateValidationMode|Значение <xref:System.ServiceModel.Security.X509CertificateValidationMode> типа, указывающее режим проверки, используемый для сертификата X. 509. Значение по умолчанию — "PeerOrChainTrust".|  
+|mapToWindows|Указывает, должен ли обработчик маркера сопоставлять проверяющий токен с учетной записью Windows, используя входящее утверждение имени участника-пользователя. Значение по умолчанию — false.|  
+|revocationMode|Значение <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> типа, указывающее режим отзыва, используемый для сертификата X. 509. Значение по умолчанию — "Online".|  
+|trustedStoreLocation|Значение <xref:System.Security.Cryptography.X509Certificates.StoreLocation> типа, указывающее хранилище сертификатов X. 509. Значение по умолчанию — LocalMachine.|  
+|цертификатевалидатор|Пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator>. `certificateValidationMode` Если атрибут имеет значение Custom, для проверки сертификата издателя используется экземпляр этого типа.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
+|[\<add>](add.md)|Добавляет указанный обработчик маркеров безопасности в коллекцию обработчиков маркеров.|  
   
 ## <a name="example"></a>Пример  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623868"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940083"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Практическое руководство. Как динамически создать базу данных
 В LINQ to SQL модель объектов сопоставляется с реляционной базой данных. Сопоставление обеспечивается применением для описания структуры реляционной базы данных сопоставления на основе атрибутов или внешнего файла сопоставления. В обоих случаях имеется достаточно сведений о реляционной базе данных, позволяющих создать новый экземпляр базы данных с помощью метода <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -26,7 +26,7 @@ ms.locfileid: "64623868"
  Можно также вызвать с SQL Server метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>, указав имя MDF-файла или каталога, в зависимости от строки соединения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку соединения исходя из создаваемой базы данных и сервера, на котором она должна быть создана.  
   
 > [!NOTE]
->  При любой возможности применяйте встроенную безопасность Windows для соединения с базой данных, чтобы не требовались пароли в строке соединения.  
+> При любой возможности применяйте встроенную безопасность Windows для соединения с базой данных, чтобы не требовались пароли в строке соединения.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже коде дан пример того, как создать новую базу данных с именем MyDVDs.mdf.  

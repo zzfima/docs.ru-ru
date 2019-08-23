@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937710"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определяются в [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] в `System.Globalization`.
@@ -152,7 +152,7 @@ ms.locfileid: "69545254"
  С точки зрения ресурсов, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл, предназначенный для описания зависимого от [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] языка элемента, является элементом ресурса, поэтому его окончательный формат распространения должен быть локализован для поддержки международных языков. Поскольку [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не может управлять событиями, многие [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] приложения содержат блоки кода для выполнения этой задачи. Дополнительные сведения см. в разделе [Общие сведения о XAML (WPF)](xaml-overview-wpf.md). Код вырезается и компилируется в разные двоичные файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , когда файл разбивается на форму BAML XAML. Форма BAML файлов XAML, изображения и другие типы управляемых объектов ресурсов внедряются во вспомогательную сборку ресурсов, которая может быть локализована на другие языки, или в основную сборку, если локализация не требуется.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения поддерживают все [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]ресурсы CLR, включая таблицы строк, изображения и т. д.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения поддерживают все [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]ресурсы CLR, включая таблицы строк, изображения и т. д.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Разработка локализуемых приложений

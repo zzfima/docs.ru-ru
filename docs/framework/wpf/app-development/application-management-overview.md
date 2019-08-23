@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818017"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958737"
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. В этом разделе приводятся общие сведения о функциональных <xref:System.Windows.Application> возможностях класса для создания приложений и управления ими.  
@@ -74,7 +74,7 @@ ms.locfileid: "68818017"
 - В коде программной части класс должен быть `partial` классом с тем же именем, которое задано `x:Class` атрибутом в разметке и должен быть производным от <xref:System.Windows.Application>. Это позволяет связать файл кода программной части с `partial` классом, созданным для файла разметки при сборке приложения (см. раздел [Создание приложения WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  При создании нового проекта приложения WPF или проекта приложения браузера WPF с помощью Visual Studio определение приложения включается по умолчанию и определяется с помощью разметки и кода программной части.  
+> При создании нового проекта приложения WPF или проекта приложения браузера WPF с помощью Visual Studio определение приложения включается по умолчанию и определяется с помощью разметки и кода программной части.  
   
  Этот код является минимумом, необходимым для реализации определения приложения. Однако перед сборкой и запуском приложения необходимо внести в определение приложения дополнительную конфигурацию MSBuild.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68818017"
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  Первый <xref:System.Windows.Window> экземпляр, создаваемый в автономном приложении, по умолчанию превращается в основное окно приложения. На <xref:System.Windows.Window> этот объект ссылается <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> свойство. Значение <xref:System.Windows.Application.MainWindow%2A> свойства может быть изменено программным образом, если другое окно, отличное от первого <xref:System.Windows.Window> экземпляра, должно быть основным окном.  
+> Первый <xref:System.Windows.Window> экземпляр, создаваемый в автономном приложении, по умолчанию превращается в основное окно приложения. На <xref:System.Windows.Window> этот объект ссылается <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> свойство. Значение <xref:System.Windows.Application.MainWindow%2A> свойства может быть изменено программным образом, если другое окно, отличное от первого <xref:System.Windows.Window> экземпляра, должно быть основным окном.  
   
  При первом запуске XBAP, скорее всего, будет выполнен переход к <xref:System.Windows.Controls.Page>. Это показано в приведенном ниже коде.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68818017"
  Эта разметка действует так же, как и предыдущий код для открытия окна.  
   
 > [!NOTE]
->  Дополнительные сведения о навигации см. в разделе [Общие сведения о навигации](navigation-overview.md).  
+> Дополнительные сведения о навигации см. в разделе [Общие сведения о навигации](navigation-overview.md).  
   
  Необходимо обработать <xref:System.Windows.Application.Startup> событие, чтобы открыть, <xref:System.Windows.Window> если необходимо создать его экземпляр с помощью конструктора без параметров, или необходимо задать его свойства или подписываться на его события перед отображением, или же необходимо обработать аргументы командной строки. которые были предоставлены при запуске приложения.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68818017"
  <xref:System.Windows.Window> Можно также активировать и деактивировать. Дополнительные сведения см. в разделах <xref:System.Windows.Window.Activated?displayProperty=nameWithType> и <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Для XBAP <xref:System.Windows.Application.Activated?displayProperty=nameWithType>невызываетсяни, ни.<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>  
+> Для XBAP <xref:System.Windows.Application.Activated?displayProperty=nameWithType>невызываетсяни, ни.<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Завершение работы приложения  
@@ -236,7 +236,7 @@ ms.locfileid: "68818017"
  Чтобы упростить управление завершением работы приложения <xref:System.Windows.Application> , <xref:System.Windows.Application.Shutdown%2A> предоставляет метод, <xref:System.Windows.Application.ShutdownMode%2A> свойство и <xref:System.Windows.Application.SessionEnding> события и <xref:System.Windows.Application.Exit> .  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>может вызываться только из приложений, имеющих <xref:System.Security.Permissions.UIPermission>. Это разрешение всегда имеет автономные приложения WPF. Однако XBAP, работающие в изолированной среде безопасности с частичным доверием зоны Интернета, не имеют.  
+> <xref:System.Windows.Application.Shutdown%2A>может вызываться только из приложений, имеющих <xref:System.Security.Permissions.UIPermission>. Это разрешение всегда имеет автономные приложения WPF. Однако XBAP, работающие в изолированной среде безопасности с частичным доверием зоны Интернета, не имеют.  
   
 #### <a name="shutdown-mode"></a>Режим завершения работы  
  Большинство приложений завершают работу при закрытии главного окна или всех окон. Иногда, однако, другие условия конкретного приложения могут определить, когда приложение завершает работу. Можно указать условия, при которых приложение будет закрыто, задав <xref:System.Windows.Application.ShutdownMode%2A> одно из следующих <xref:System.Windows.ShutdownMode> значений перечисления:  
@@ -254,7 +254,7 @@ ms.locfileid: "68818017"
  При наличии условий завершения работы, зависящих от приложения, устанавливается <xref:System.Windows.Application.ShutdownMode%2A> значение <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. В этом случае вы отвечаете за завершение работы приложения путем явного вызова <xref:System.Windows.Application.Shutdown%2A> метода. в противном случае приложение продолжит работать, даже если все окна закрыты. Обратите <xref:System.Windows.Application.Shutdown%2A> внимание, что вызывается неявно <xref:System.Windows.Application.ShutdownMode%2A> , если <xref:System.Windows.ShutdownMode.OnLastWindowClose> имеет <xref:System.Windows.ShutdownMode.OnMainWindowClose>значение или.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>может быть задано из XBAP, но игнорируется; XBAP всегда завершает работу при переходе из в браузере или при закрытии браузера, на котором размещается XBAP. Дополнительные сведения см. в разделе [Общие сведения о переходах](navigation-overview.md).  
+> <xref:System.Windows.Application.ShutdownMode%2A>может быть задано из XBAP, но игнорируется; XBAP всегда завершает работу при переходе из в браузере или при закрытии браузера, на котором размещается XBAP. Дополнительные сведения см. в разделе [Общие сведения о переходах](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Завершение сеанса  
  Условия завершения работы, описанные <xref:System.Windows.Application.ShutdownMode%2A> свойством, относятся к приложению. Однако в некоторых случаях приложение может завершить работу в результате выполнения внешнего условия. Наиболее распространенное внешнее условие возникает, когда пользователь завершает сеанс Windows с помощью следующих действий:  
@@ -277,7 +277,7 @@ ms.locfileid: "68818017"
  В этом примере код проверяет <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> свойство, чтобы определить, как завершается сеанс Windows. Он использует это значение, чтобы отобразить сообщение подтверждения для пользователя. Если пользователь не хочет, чтобы сеанс закончится, код задает <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> для `true` значение, чтобы предотвратить завершение сеанса Windows.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>не вызывается для XBAP.
+> <xref:System.Windows.Application.SessionEnding>не вызывается для XBAP.
 
 #### <a name="exit"></a>Exit  
  При завершении работы приложения может возникнуть необходимость выполнить окончательную обработку, например сохранение состояния приложения. В таких ситуациях можно выполнить обработку <xref:System.Windows.Application.Exit> события, как это `App_Exit` делает обработчик событий в следующем примере. Он определяется как обработчик событий в файле *app. XAML* . Его реализация выделяется в файлах *app.XAML.CS* и *Application. XAML. vb* .
@@ -301,7 +301,7 @@ ms.locfileid: "68818017"
  Приложения, как правило, запускаются операционной системой в ответ на запрос пользователя. Однако приложение может быть запущено другим приложением для выполнения определенной задачи. При завершении работы запущенного приложения приложению, которое его запустило, может понадобиться выяснить условие, при котором запущенное приложение завершает работу. В таких ситуациях Windows позволяет приложениям возвращать код выхода приложения при завершении работы. По умолчанию приложения WPF возвращают значение кода выхода 0.  
   
 > [!NOTE]
->  При отладке из Visual Studio код завершения приложения отображается в окне **вывода** при завершении работы приложения в сообщении, которое выглядит следующим образом:  
+> При отладке из Visual Studio код завершения приложения отображается в окне **вывода** при завершении работы приложения в сообщении, которое выглядит следующим образом:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ ms.locfileid: "68818017"
  Можно определить значение кода выхода и изменить его, обрабатывая <xref:System.Windows.Application.Exit> событие. Обработчик событий передается, <xref:System.Windows.ExitEventArgs> который предоставляет доступ к коду выхода со <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> свойством. <xref:System.Windows.Application.Exit> Дополнительные сведения см. в разделе <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Код выхода можно задать как в автономных приложениях, так и в XBAP. Однако значение кода выхода игнорируется для XBAP.  
+> Код выхода можно задать как в автономных приложениях, так и в XBAP. Однако значение кода выхода игнорируется для XBAP.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>Необработанные исключения  

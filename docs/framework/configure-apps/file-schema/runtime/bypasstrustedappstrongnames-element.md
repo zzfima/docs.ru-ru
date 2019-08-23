@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aac7079d941e6774ca6c00fbece8ff72fbf3f0e1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920885"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>Элемент \<bypassTrustedAppStrongNames>
 Указывает, следует ли обходить проверку строгих имен в сборках с полным доверием, загружаемых в полное <xref:System.AppDomain>доверие.  
@@ -70,7 +70,7 @@ ms.locfileid: "69663872"
 - Подпись осуществлена без задержки.  
   
 > [!NOTE]
->  Если функция обхода отключена для всех приложений на компьютере с помощью раздела реестра, этот параметр файла конфигурации не действует. Дополнительные сведения см. в разделе [Практическое руководство. Отключение функции пропуска строгих имен](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+> Если функция обхода отключена для всех приложений на компьютере с помощью раздела реестра, этот параметр файла конфигурации не действует. Дополнительные сведения см. в разделе [Практическое руководство. Отключение функции пропуска строгих имен](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как задать поведение, которое проверяет подпись строгого имени в сборках с полным доверием.  

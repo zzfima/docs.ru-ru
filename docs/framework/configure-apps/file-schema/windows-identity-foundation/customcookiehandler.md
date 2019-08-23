@@ -3,20 +3,20 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf1f7f3de1b44dba63977bf524dea9af2690fb1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942782"
 ---
-# <a name="customcookiehandler"></a>\<customCookieHandler>
-Задает тип обработчика пользовательских файлов cookie. Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Custom». Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.  
+# <a name="customcookiehandler"></a>\<Кустомкукиехандлер >
+Задает тип обработчика пользовательских файлов cookie. Этот элемент может присутствовать только в `mode` том случае, если атрибут `<cookieHandler>` элемента имеет значение Custom. Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<cookieHandler >  
-\<customCookieHandler>  
+ \<> System. identityModel. Services  
+\<federationConfiguration >  
+\<Кукиехандлер >  
+\<Кустомкукиехандлер >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,24 +38,24 @@ ms.locfileid: "61791733"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Задает пользовательский тип, производный от <xref:System.IdentityModel.Services.CookieHandler> класса. Дополнительные сведения о способах указания `type` атрибут, см. в разделе [ссылок на пользовательские типы](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|type|Указывает пользовательский тип, производный от <xref:System.IdentityModel.Services.CookieHandler> класса. Дополнительные сведения об указании `type` атрибута см. в разделе [ссылки на пользовательские типы](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> используется для чтения и записи файлов cookie.|  
+|[\<Кукиехандлер >](cookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> , что использует для чтения и записи файлов cookie.|  
   
 ## <a name="remarks"></a>Примечания  
- При указании пользовательский обработчик файлов cookie, задав `mode` атрибут `<cookieHandler>` элемент на «Пользовательский», необходимо указать тип пользовательский обработчик файлов cookie, включив `<customCookieHandler>` дочерний элемент, ссылающийся на тип обработчика файлов cookie. Этот элемент не может быть указан при `mode` атрибут имеет значение «Chunked» или «Default». Обработчики пользовательских файлов cookie должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.  
+ При указании пользовательского обработчика файлов cookie путем присвоения `mode` атрибуту `<cookieHandler>` элемента значения "Custom" необходимо указать тип пользовательского обработчика `<customCookieHandler>` файлов cookie, добавив дочерний элемент, ссылающийся на тип обработчика файлов cookie. Этот элемент не может быть указан, `mode` если для атрибута задано значение "фрагментированный" или "по умолчанию". Пользовательские обработчики файлов cookie должны быть производными от <xref:System.IdentityModel.Services.CookieHandler> класса.  
   
- `<customCookieHandler>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.CustomTypeElement> класса.  
+ `<customCookieHandler>` Элемент представлен<xref:System.IdentityModel.Configuration.CustomTypeElement> классом.  
   
 ## <a name="example"></a>Пример  
- В следующем примере настраивается SAM, чтобы использовать пользовательский обработчик типа `MyNamespace.MyCustomCookieHandler`.  
+ В следующем примере SAM настраивается для использования пользовательского обработчика файлов cookie типа `MyNamespace.MyCustomCookieHandler`.  
   
 ```xml  
 <cookieHandler mode="Custom">  

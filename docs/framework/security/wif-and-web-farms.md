@@ -3,12 +3,12 @@ title: WIF и веб-фермы
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967190"
 ---
 # <a name="wif-and-web-farms"></a>WIF и веб-фермы
 Если вы используете Windows Identity Foundation (WIF) для защиты ресурсов приложения проверяющей стороны, развернутого в веб-ферме, необходимо выполнить определенные действия, чтобы платформа WIF могла обрабатывать токены от экземпляров этого приложения, работающих на разных компьютерах в ферме. Обработка включает в себя проверку подписей токенов сеансов, шифрование и расшифровку токенов сеансов, их кэширование, а также обнаружение повторно используемых маркеров безопасности.  
@@ -55,10 +55,10 @@ ms.locfileid: "64592275"
 - Если приложение обнаруживает воспроизводимые токены, необходимо использовать аналогичный подход, реализовав распределенное кэширование для кэша воспроизведения токенов. Для этого выполните наследование от класса <xref:System.IdentityModel.Tokens.TokenReplayCache> и укажите службу кэширования воспроизводимых токенов в элементе конфигурации [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Пример XML-кода и кода в этом разделе берется из [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) образца.  
+> Все примеры XML и код в этом разделе взяты из примера [клаимсаваревебфарм](https://go.microsoft.com/fwlink/?LinkID=248408) .  
   
 > [!IMPORTANT]
->  Примеры в этой статье предоставляются как есть и не предназначены для использования в рабочем коде без изменения.  
+> Примеры в этой статье предоставляются как есть и не предназначены для использования в рабочем коде без изменения.  
   
 <a name="BKMK_TheWCFCachingService"></a>   
 ## <a name="the-wcf-caching-service"></a>Служба кэширования WCF  

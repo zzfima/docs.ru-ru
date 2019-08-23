@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc02c1f69235403e2f5df28168e17a70f183682
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 626aa53740839df0b47a876b3e82814a63ffd82d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936857"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Метод ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 Возвращает токен открытого ключа сборки.  
@@ -38,14 +38,14 @@ HRESULT GetPublicKeyToken(
  Токен открытого ключа сборки — это последние восемь байтов хэша SHA1 ее открытого ключа.  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+> Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

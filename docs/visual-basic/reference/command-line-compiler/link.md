@@ -1,5 +1,5 @@
 ---
-title: -связь (Visual Basic)
+title: -Link (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929401"
 ---
-# <a name="-link-visual-basic"></a>-связь (Visual Basic)
+# <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,7 +43,7 @@ ms.locfileid: "65586527"
  Параметр `-link` внедряет только интерфейсы, структуры и делегаты. Внедрение COM-классов не поддерживается.  
   
 > [!NOTE]
->  Если в коде создается экземпляр внедренного COM-типа, его следует создавать, используя соответствующий интерфейс. При попытке создать экземпляр внедренного COM-типа с помощью компонентного класса возникнет ошибка.  
+> Если в коде создается экземпляр внедренного COM-типа, его следует создавать, используя соответствующий интерфейс. При попытке создать экземпляр внедренного COM-типа с помощью компонентного класса возникнет ошибка.  
   
  Чтобы задать параметр `-link` в Visual Studio, добавьте ссылку на сборку и задайте для свойства `Embed Interop Types` значение **true**. По умолчанию для свойства `Embed Interop Types` задается значение **false**.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "65586527"
   
 - Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
   
- Используйте [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) для указания каталога, в котором находится один или несколько ссылок на сборки.  
+ Используйте параметр [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) , чтобы указать каталог, в котором находится одна или несколько ссылок на сборки.  
   
- Как и [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора `-link` компилятор использует файл ответов Vbc.rsp, который ссылается на часто используемые сборки .NET Framework. Используйте [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) параметр компилятора, если требуется запретить компилятору использовать файл Vbc.rsp.  
+ Как и параметр компилятора [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) , `-link` параметр компилятора использует файл ответов Vbc. rsp, который ссылается на часто используемые .NET Framework сборки. Если вы не хотите, чтобы компилятор использовал файл Vbc. rsp, используйте параметр компилятора [-config](../../../visual-basic/reference/command-line-compiler/noconfig.md) .  
   
  Краткой формой `-link` является `-l`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65586527"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Пример  
- Следующая команда компилирует исходный файл `OfficeApp.vb` и ссылочные сборки из `COMData1.dll` и `COMData2.dll` для создания `OfficeApp.exe`.  
+ Следующая `OfficeApp.vb` Командная строка компилирует исходный файл и эталонные сборки из `COMData1.dll` и `COMData2.dll` для создания. `OfficeApp.exe`  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -89,7 +89,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Пошаговое руководство: внедрение типов из управляемых сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

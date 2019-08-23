@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eecb135e034c3565e805ea776115579488b2a4d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca77360c36ff2cdce7ee47d5c3883dd824c6cef8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959325"
 ---
 # <a name="icordebugassembly3-interface"></a>Интерфейс ICorDebugAssembly3
-Логически расширяет интерфейс ICorDebugAssembly для обеспечения поддержки контейнерных сборок и их вложенных сборок.  
+Логически расширяет интерфейс ICorDebugAssembly, чтобы обеспечить поддержку для сборок контейнеров и содержащихся в них сборок.  
   
 ## <a name="methods"></a>Методы  
   
@@ -24,14 +24,14 @@ ms.locfileid: "61645465"
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот интерфейс доступен только в машинном коде .NET. Попытка вызова метода `QueryInterface` для получения указателя интерфейса возвращает `E_NOINTERFACE` для сценариев ICorDebug вне .NET Native.  
+> Этот интерфейс доступен только в машинном коде .NET. Попытка вызова метода `QueryInterface` для получения указателя интерфейса возвращает `E_NOINTERFACE` для сценариев ICorDebug вне .NET Native.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

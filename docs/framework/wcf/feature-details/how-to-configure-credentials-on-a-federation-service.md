@@ -8,34 +8,34 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 792d2f1b113c0743bd91ccf2f7ff894d7f7d319f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487088"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912189"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Практическое руководство. Настройка учетных данных службы федерации
-В Windows Communication Foundation (WCF), создания федеративной службы состоит из следующих основных процедур:  
+В Windows Communication Foundation (WCF) Создание федеративной службы состоит из следующих основных процедур:  
   
-1. Настройка <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязки. Дополнительные сведения о создании соответствующей привязки см. в разделе [как: Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1. Настройка <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязки. Дополнительные сведения о создании подходящей привязки см. в [разделе как Создайте WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
 2. Настройка объекта <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>, который определяет порядок проверки подлинности выданных маркеров, которые предоставляются службе.  
   
- В этом разделе описывается второй этап. Дополнительные сведения о работе федеративной службы см. в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
+ В этом разделе описывается второй этап. Дополнительные сведения о работе федеративной службы см. в разделе [Федерация](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Задание свойств объекта IssuedTokenServiceCredential в коде  
   
 1. Свойство <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> класса <xref:System.ServiceModel.Description.ServiceCredentials> служит для возврата ссылки на экземпляр <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. Доступ к этому свойству осуществляется через свойство <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> класса <xref:System.ServiceModel.ServiceHostBase>.  
   
-2. Задайте <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> свойства `true` Если самостоятельно выданных маркеров, таких как карты CardSpace должны проходить аутентификацию. Значение по умолчанию — `false`.  
+2. `true` Задайте для <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> свойства значение, если для самостоятельно выдаваемых токенов, таких как карты CardSpace, требуется проверка подлинности. Значение по умолчанию — `false`.  
   
 3. Заполните коллекцию, возвращаемую свойством <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>, экземплярами класса <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Каждый экземпляр представляет издателя, для которого служба будет проверять подлинность маркеров.  
   
     > [!NOTE]
-    >  В отличие от клиентской коллекции, возвращаемой свойством <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>, коллекция известных сертификатов не является коллекцией с ключом. Служба принимает маркеры, выдаваемые заданным сертификатом, независимо от адреса клиента, который отправил сообщение с выданным маркером (на него накладываются дополнительные ограничения, описанные ниже в этом разделе).  
+    > В отличие от клиентской коллекции, возвращаемой свойством <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>, коллекция известных сертификатов не является коллекцией с ключом. Служба принимает маркеры, выдаваемые заданным сертификатом, независимо от адреса клиента, который отправил сообщение с выданным маркером (на него накладываются дополнительные ограничения, описанные ниже в этом разделе).  
   
-4. Присвойте свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> одно из значений перечисления <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Это можно сделать только в коде. Значение по умолчанию — <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
+4. Присвойте свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> одно из значений перечисления <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Это можно сделать только в коде. Значение по умолчанию — <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
   
 5. Если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, присвойте экземпляр пользовательского класса <xref:System.IdentityModel.Selectors.X509CertificateValidator> свойству <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "67487088"
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>Задание свойств объекта IssuedTokenServiceCredential в файле конфигурации  
   
-1. Создание `<issuedTokenAuthentication>` как дочерний элемент элемента <`serviceCredentials`> элемента.  
+1. Создайте элемент в качестве дочернего элемента для`serviceCredentials`элемента < >. `<issuedTokenAuthentication>`  
   
-2. Задайте `allowUntrustedRsaIssuers` атрибут `<issuedTokenAuthentication>` элемент `true` Если проверяет подлинность выданного самостоятельно маркера, например, карты CardSpace.  
+2. Присвойте `<issuedTokenAuthentication>`атрибуту элемента значение, `true` если проверка подлинности самостоятельно выданного маркера, например карты CardSpace. `allowUntrustedRsaIssuers`  
   
 3. Создайте элемент `<knownCertificates>`, являющийся дочерним для элемента `<issuedTokenAuthentication>`.  
   
 4. Создайте ноль или несколько элементов `<add>`, являющих дочерними для элемента `<knownCertificates>`, и с помощью атрибутов `storeLocation`, `storeName`, `x509FindType` и `findValue` укажите, каким образом обнаружить сертификат.  
   
-5. При необходимости задайте `samlSerializer` атрибут <`issuedTokenAuthentication`> элемент как имя типа пользовательского <xref:System.IdentityModel.Tokens.SamlSerializer> класса.  
+5. При необходимости присвойте `samlSerializer` атрибуту элемента <`issuedTokenAuthentication`> имя типа пользовательского <xref:System.IdentityModel.Tokens.SamlSerializer> класса.  
   
 ## <a name="example"></a>Пример  
  В следующем примере свойства объекта <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> задаются в коде.  
@@ -67,16 +67,16 @@ ms.locfileid: "67487088"
   
 - если в подписи выданного маркера используется серийный номер издателя X.509, идентификатор ключа субъекта X.509 или идентификатор безопасности отпечатка X.509, выданный маркер должен быть подписан сертификатом из коллекции, возвращаемой свойством <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> класса <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>;  
   
-- если выданный маркер подписан с помощью сертификата X.509, этот сертификат должен осуществлять проверку на основании семантики, определенной значением свойства <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>, независимо от того, был ли сертификат отправлен проверяющей стороне в качестве объекта <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> или же получен из свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>. Дополнительные сведения о проверки сертификата X.509, см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+- если выданный маркер подписан с помощью сертификата X.509, этот сертификат должен осуществлять проверку на основании семантики, определенной значением свойства <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>, независимо от того, был ли сертификат отправлен проверяющей стороне в качестве объекта <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> или же получен из свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>. Дополнительные сведения о проверке сертификата X. 509 см. [в разделе Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- Например, установка свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> равным <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> приведет к тому, что будет проверяться подлинность всех выданных маркеров, сертификаты которых принадлежат к хранилищу сертификатов `TrustedPeople`. В этом случае задайте для свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> значение <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> или <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Можно выбрать и другие режимы, в том числе режим <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Если выбран режим `Custom`, необходимо присвоить экземпляр класса <xref:System.IdentityModel.Selectors.X509CertificateValidator> свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>. Пользовательский проверяющий элемент управления может проверять сертификаты, используя любые условия. Дополнительные сведения см. в разделе [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Например, установка свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> равным <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> приведет к тому, что будет проверяться подлинность всех выданных маркеров, сертификаты которых принадлежат к хранилищу сертификатов `TrustedPeople`. В этом случае задайте для свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> значение <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> или <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Можно выбрать и другие режимы, в том числе режим <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Если выбран режим `Custom`, необходимо присвоить экземпляр класса <xref:System.IdentityModel.Selectors.X509CertificateValidator> свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>. Пользовательский проверяющий элемент управления может проверять сертификаты, используя любые условия. Дополнительные сведения см. в разделе [Практическое руководство. Создайте службу, которая использует пользовательский проверяющий элемент управления](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)для сертификатов.  
   
 ## <a name="see-also"></a>См. также
 
 - [Федерация](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Федерация и доверие](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
 - [Пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Практическое руководство. Отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Практическое руководство. Отключение безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Практическое руководство. Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

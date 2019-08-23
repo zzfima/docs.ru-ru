@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 0ff8a5002c82b274a95f7e1ae83bb23707d6cb39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968210"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> . Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -41,17 +41,17 @@ ms.locfileid: "68971822"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство.|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство.|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство.|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство.|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство.|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство.|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|Отсутствуют|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|Отсутствуют|  
 |<xref:System.Windows.Automation.WindowInteractionState>|событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666425"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914752"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox
-В этом примере показано пользовательское рисование текста в <xref:System.Windows.Forms.ComboBox> элемента управления. Если элемент удовлетворяет определенным критериям, он попадает более крупным шрифтом и красным.  
+В этом примере демонстрируется пользовательское рисование текста <xref:System.Windows.Forms.ComboBox> в элементе управления. Если элемент соответствует определенным критериям, он рисуется на более крупном шрифте и становится красным.  
   
 ## <a name="example"></a>Пример  
   
@@ -58,12 +58,12 @@ End Sub
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- Форма Windows.  
+- Форма Windows Forms.  
   
-- Объект <xref:System.Windows.Forms.ComboBox> управления с именем `ListBox1` с тремя элементами в <xref:System.Windows.Forms.ComboBox.Items%2A> свойство. В этом примере имена трех элементов `"One", Two", and Three"`. <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Свойство `ComboBox1` должно быть присвоено <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+- Элемент управления с именем `ListBox1` с тремя элементами в свойстве.<xref:System.Windows.Forms.ComboBox.Items%2A> <xref:System.Windows.Forms.ComboBox> В этом примере три элемента имеют имя `"One", Two", and Three"`. Свойство объекта `ComboBox1` должно иметь значение <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>. <xref:System.Windows.Forms.ComboBox.DrawMode%2A>  
   
     > [!NOTE]
-    >  Эта методика применяется также к <xref:System.Windows.Forms.ListBox> элемента управления, можно заменить <xref:System.Windows.Forms.ListBox> для <xref:System.Windows.Forms.ComboBox>.  
+    > Этот метод также применим к <xref:System.Windows.Forms.ListBox> элементу управления — вы можете <xref:System.Windows.Forms.ListBox> заменить для <xref:System.Windows.Forms.ComboBox>.  
   
 - Ссылки на пространства имен <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Drawing?displayProperty=nameWithType>.  
   

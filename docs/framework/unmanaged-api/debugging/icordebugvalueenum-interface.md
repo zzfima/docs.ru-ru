@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9484f211ff31c4fa71692db646ef3c556df0acad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aa7e5cfce67c2854f943f65909acb39cfc0d214
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986808"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913995"
 ---
 # <a name="icordebugvalueenum-interface"></a>Интерфейс ICorDebugValueEnum
-Реализует методы «ICorDebugEnum» и выполняет перечисление массивов «ICorDebugValue».  
+Реализует методы "ICorDebugEnum" и перечисляет массивы "ICorDebugValue".  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Возвращает заданное число `ICorDebugValue` экземпляров из перечисления, начиная с текущей позиции.|  
+|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Возвращает указанное количество `ICorDebugValue` экземпляров из перечисления, начиная с текущей позиции.|  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

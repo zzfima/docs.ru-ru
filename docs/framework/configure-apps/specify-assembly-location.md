@@ -6,26 +6,26 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 1bfa0ddbeba7546044a0d1ed15f4c2ff303b1491
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43cd1d0edbb607f69f27661aae3372e93564b3b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932334"
 ---
 # <a name="specifying-an-assemblys-location"></a>Указание расположения сборки
-Указание расположения сборки двумя способами:  
+Существует два способа указания расположения сборки:  
   
-- С помощью [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) элемент.  
+- С помощью элемента [ CodeBase>.\<](./file-schema/runtime/codebase-element.md)  
   
-- С помощью [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) элемент.  
+- С помощью элемента > проверки. [ \<](./file-schema/runtime/probing-element.md)  
   
- Можно также использовать [средством настройки .NET Framework (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) чтобы задавать расположение сборки или расположения для среда поиск сборок.  
+ Можно также использовать [средство настройки .NET Framework (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) , чтобы указать расположения сборок или указать расположения среды CLR для проверки сборок.  
   
-## <a name="using-the-codebase-element"></a>С помощью \<codeBase > элемент  
- Можно использовать  **\<codeBase >** элемент только в машине конфигурации или файле политики издателя, которые также предоставляют перенаправление версии сборки. Среда выполнения определяет, какие версии сборки, применяется параметр базы кода из файла, который определяет версию. Если база кода не указана, среда выполняет поиск сборки обычным способом. Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a>Использование элемента \<CodeBase >  
+ Элемент  **\<CodeBase >** можно использовать только в конфигурации компьютера или в файлах политики издателя, которые также перенаправляют версию сборки. Когда среда выполнения определяет используемую версию сборки, она применяет параметр базы кода из файла, который определяет версию. Если не указано ни одной базы кода, среда выполнения проверяет наличие сборки обычным способом. Дополнительные сведения см. [в разделе Обнаружение сборок в среде выполнения](../deployment/how-the-runtime-locates-assemblies.md).  
   
- В следующем примере показано, как указание расположения сборки.  
+ В следующем примере показано, как указать расположение сборки.  
   
 ```xml  
 <configuration>  
@@ -43,15 +43,15 @@ ms.locfileid: "64583632"
 </configuration>  
 ```  
   
- **Версии** атрибут является обязательным для всех сборок со строгими именами, но должен быть опущен для сборок, которые не имеют строгие имена. **\<CodeBase>** элемента требуется **href** атрибута. Нельзя указать диапазон версий в  **\<codeBase >** элемент.  
+ Атрибут **Version** необходим для всех сборок со строгими именами, но должен быть опущен для сборок, не имеющих строгих имен. **\<CodeBase>** элемента требуется **href** атрибута. В элементе CodeBase > нельзя указывать диапазоны версий.  **\<**  
   
 > [!NOTE]
->  Если вы указали подсказка базы кода для сборки, не является строгим именем, должна указывать на базовой папки приложения или ее подкаталог базового каталога приложения.  
+> Если вы предоставляете указание базы кода для сборки, не имеющей строгого имени, подсказка должна указывать на базу приложения или подкаталог базового каталога приложения.  
   
-## <a name="using-the-probing-element"></a>С помощью \<probing > элемент  
- Среда выполнения находит сборки, у которых нет базы кода при проверке. Дополнительные сведения о проверке см. в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a>\<Использование элемента > зондированием  
+ Среда выполнения находит сборки, не имеющие базы кода, путем проверки. Дополнительные сведения о проверке см. в разделе [как среда выполнения находит сборки](../deployment/how-the-runtime-locates-assemblies.md).  
   
- Можно использовать [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) элемент в файле конфигурации приложения для указания подкаталогов, среда выполнения должна использовать при определении расположения сборки. В следующем примере показано, как можно указать каталоги, которые среда выполнения должна выполнять поиск.  
+ Вы можете использовать [ \<](./file-schema/runtime/probing-element.md) элемент проверки > в файле конфигурации приложения, чтобы указать подкаталоги, которые среда выполнения должна искать при поиске сборки. В следующем примере показано, как указать каталоги, которые должна искать среда выполнения.  
   
 ```xml  
 <configuration>  
@@ -63,11 +63,11 @@ ms.locfileid: "64583632"
 </configuration>  
 ```  
   
- **PrivatePath** атрибут содержит каталоги, которые среда выполнения должна искать сборки. Если приложение находится в каталоге C:\Program Files\MyApp, среда выполнения ищет сборки, которые не указаны базы кода в C:\Program Files\MyApp\Bin C:\Program Files\MyApp\Bin2\Subbin и C:\Program Files\MyApp\Bin3. Каталоги, указанные в **privatePath** должны быть подкаталогами базового каталога приложения.  
+ Атрибут **privatePath** содержит каталоги, в которых среда выполнения должна искать сборки. Если приложение расположено в папке C:\Program Files\MyApp, среда выполнения будет искать сборки, не указывающие базу кода в C:\Program Филес\мяпп\бин, C:\Program Files\MyApp\Bin2\Subbin и C:\Program Files\MyApp\Bin3. Каталоги, указанные в параметре **privatePath** , должны быть подкаталогами базового каталога приложения.  
   
 ## <a name="see-also"></a>См. также
 
-- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
-- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Сборки в среде CLR](../app-domains/assemblies-in-the-common-language-runtime.md)
+- [Программирование с использованием сборок](../app-domains/programming-with-assemblies.md)
+- [Обнаружение сборок в среде выполнения](../deployment/how-the-runtime-locates-assemblies.md)
 - [Настройка приложений с помощью файлов конфигурации](index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13ed0e5268f8bcfe2a504040803f3f96909657eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964269"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Практическое руководство. Имитация событий мыши и клавиатуры в коде
 В Windows Forms предоставляется несколько возможностей для программной имитации ввода данных с помощью мыши и клавиатуры. В этом разделе приведен обзор этих возможностей.  
@@ -42,7 +42,7 @@ ms.locfileid: "65583400"
 >  Если приложение предназначено для международного использования с различными клавиатурами, применение метода <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> может иметь непредсказуемые результаты и его следует избегать.  
   
 > [!NOTE]
->  Класс <xref:System.Windows.Forms.SendKeys> был обновлен в .NET Framework 3.0, что позволило использовать его в приложениях, работающих в Windows Vista. Усиленная система безопасности Windows Vista (известная как контроль учетных записей или UAC) не позволяет предыдущей реализации работать должным образом.  
+> Класс <xref:System.Windows.Forms.SendKeys> был обновлен в .NET Framework 3.0, что позволило использовать его в приложениях, работающих в Windows Vista. Усиленная система безопасности Windows Vista (известная как контроль учетных записей или UAC) не позволяет предыдущей реализации работать должным образом.  
 >   
 >  Класс <xref:System.Windows.Forms.SendKeys> подвержен проблемам со временем, которые пришлось решать некоторым разработчикам. Обновленная реализация по-прежнему подвержена этим проблемам, но она работает немного быстрее, поэтому существующие решения может потребоваться переработать. Класс <xref:System.Windows.Forms.SendKeys> сначала пытается использовать предыдущую реализацию, и если это не удается, использует новую реализацию. В результате класс <xref:System.Windows.Forms.SendKeys> может работать по-разному в разных операционных системах. Кроме того, при использовании новой реализации класса <xref:System.Windows.Forms.SendKeys> метод <xref:System.Windows.Forms.SendKeys.SendWait%2A> не будет дожидаться обработки сообщений, если они отправляются другому процессу.  
 >   
@@ -69,7 +69,7 @@ ms.locfileid: "65583400"
 1. Активируйте окно приложения, которое будет получать нажатия клавиш, а затем вызовите метод <xref:System.Windows.Forms.SendKeys.Send%2A> или <xref:System.Windows.Forms.SendKeys.SendWait%2A> . Из-за отсутствия управляемого метода активации другого приложения необходимо использовать собственные методы Windows для принудительной установки фокуса на другие приложения. В примере кода ниже с помощью вызова неуправляемого кода вызываются методы `FindWindow` и `SetForegroundWindow` для активации окна приложения "Калькулятор", а затем вызывается метод <xref:System.Windows.Forms.SendKeys.SendWait%2A> для проведения ряда вычислений в этом приложении.  
   
     > [!NOTE]
-    >  Параметры вызова `FindWindow` для определения положения Калькулятора зависят от версии Windows.  Приведенный ниже код находит Калькулятор в [!INCLUDE[win7](../../../includes/win7-md.md)]. В [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]измените первый параметр на SciCalc. Для определения нужных параметров можно использовать средство Spy++, входящее в состав Visual Studio.  
+    > Параметры вызова `FindWindow` для определения положения Калькулятора зависят от версии Windows.  Приведенный ниже код находит Калькулятор в [!INCLUDE[win7](../../../includes/win7-md.md)]. В [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]измените первый параметр на SciCalc. Для определения нужных параметров можно использовать средство Spy++, входящее в состав Visual Studio.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

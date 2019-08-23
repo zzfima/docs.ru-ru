@@ -11,12 +11,12 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a72f88c05fb21c11864058ffbe81c1957525375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966507"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Практическое руководство. Воспроизведение сигнала в Windows Forms
 В этом примере воспроизводится звуковой сигнал во время выполнения.  
@@ -37,14 +37,14 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  Звук, воспроизводимый в C# пример кода определяется <xref:System.Media.SystemSounds.Beep%2A> параметр системы. Дополнительные сведения см. в разделе <xref:System.Media.SystemSounds>.  
+> Звук, воспроизводимый C# в образце кода, определяется <xref:System.Media.SystemSounds.Beep%2A> параметром системный звук. Дополнительные сведения см. в разделе <xref:System.Media.SystemSounds>.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Для C#, в этом примере требуется ссылка на <xref:System.Media?displayProperty=nameWithType> пространства имен.  
+ Для C#для этого примера требуется ссылка на <xref:System.Media?displayProperty=nameWithType> пространство имен.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [Практическое руководство. Воспроизведение системных звуков в Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)
-- [Практическое руководство. Воспроизведение звука в Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Практическое руководство. Воспроизводить системный звук из формы Windows](how-to-play-a-system-sound-from-a-windows-form.md)
+- [Практическое руководство. Воспроизведение звука из формы Windows](how-to-play-a-sound-from-a-windows-form.md)

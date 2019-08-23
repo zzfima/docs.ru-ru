@@ -2,18 +2,18 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918894"
 ---
-# <a name="filter"></a>\<Фильтр >
+# <a name="filter"></a>\<> фильтра
 
-Определяет фильтр маршрутизации, который определяет тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> для использования при вычислении входящих сообщений также все вспомогательные данные и параметры, необходимые для фильтра.
+Определяет фильтр маршрутизации, определяющий тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> , который будет использоваться при оценке входящих сообщений, а также любые вспомогательные данные или параметры, необходимые для фильтра.
 
-\<system.serviceModel> \<routing> \<filters> \<filter>
+\<\<> \< фильтровмаршрутизации>System.\<ServiceModel > фильтров >
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ ms.locfileid: "61704041"
 
 | Атрибут  | Описание |
 | ---------- | ----------- |
-| customType | Строка, содержащая полное имя для пользовательского типа, используемого в качестве фильтра. Если `filterType` присваивается `custom`, этот атрибут содержит имя полное имя типа создаваемого класса.  `filterData` также может содержать значения, используемые при оценке фильтра с пользовательским типом. |
+| customType | Строка, содержащая полное имя для пользовательского типа, используемого в качестве фильтра. Если `filterType` параметр имеет `custom`значение, этот атрибут содержит полное имя типа создаваемого класса.  `filterData`может также содержать значения, используемые при вычислении настраиваемого фильтра типов. |
 | filterData | Строка, содержащая данные фильтра. Дополнительные сведения об указании этого атрибута см. в разделе <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Строка, содержащая тип фильтра. Этот атрибут имеет тип <xref:System.ServiceModel.Routing.Configuration.FilterType>.  Дополнительные сведения о том, как это работает с атрибутом `filterData`, см. в разделе <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | имя       | Строка, содержащая уникальное имя этого элемента фильтра. |
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 | Элемент | Описание |
 | ------- | ----------- |
-| [\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Раздел конфигурации для определения набора фильтров маршрутизации, которые определяют тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> для использования при вычислении входящих сообщений. |
+| [\<> маршрутизации](routing.md) | Раздел конфигурации для определения набора фильтров маршрутизации, которые определяют тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> , используемый при оценке входящих сообщений. |
 
 ## <a name="see-also"></a>См. также
 

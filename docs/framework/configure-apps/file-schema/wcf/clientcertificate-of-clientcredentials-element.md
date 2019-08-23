@@ -2,22 +2,22 @@
 title: <clientCertificate> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3450df921da8c72a555c2faf424c51e0063cb235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926123"
 ---
-# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > элемента \<clientCredentials > элемент
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > \<>ного элемента ClientCredentials
 Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
-\<endpointBehaviors>  
-\<поведение >  
-\<clientCredentials>  
-\<clientCertificate>  
+ \<системой. > ServiceModel  
+\<> поведения  
+\<endpointBehaviors >  
+\<> поведения  
+\<> clientCredentials  
+\<clientCertificate >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,22 +35,22 @@ ms.locfileid: "61673320"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`findValue`|Строка, содержащая значение для поиска в хранилище сертификатов X.509. Тип, указанный в атрибуте, должен отвечать требованиям к значению атрибута `X509FindType`. Значение по умолчанию - пустая строка.|  
-|`storeLocation`|Указывает расположение сертификата X.509, который клиент использует для подтверждения подлинности при взаимодействии со службой. Допустимы следующие значения:<br /><br /> -LocalMachine: хранилище сертификатов, назначенное локальному компьютеру.<br />-CurrentUser: хранилище сертификатов, назначенное текущему пользователю.<br /><br /> Значение по умолчанию - LocalMachine. Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|`storeName`|Задает имя хранилища сертификатов X.509 для поиска. Допустимы следующие значения:<br /><br /> -AddressBook: Хранилище сертификатов для других пользователей.<br />-AuthRoot: Хранилище сертификатов для сторонних центров сертификации (ЦС).<br />-CertificateAuthority: Хранилище сертификатов для промежуточных центров сертификации (ЦС).<br />-Запрещается использовать следующее: Хранилище сертификатов для отозванных сертификатов.<br />— My: Хранилище сертификатов для личных сертификатов.<br />-Root: Хранилище сертификатов для доверенных корневых центров сертификации (ЦС).<br />-TrustedPeople: Хранилище сертификатов для непосредственно доверенных лиц и ресурсов.<br />-TrustedPublisher: Хранилище сертификатов для непосредственно доверенных издателей.<br /><br /> Значение по умолчанию - My. Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Определяет тип поиска сертификата X.509. Тип, указанный в атрибуте `findValue`, должен отвечать требованиям этого атрибута. Допустимы следующие значения:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Значение по умолчанию - FindBySubjectDistinguishedName. Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|`findValue`|Строка, содержащая значение для поиска в хранилище сертификатов X.509. Тип, указанный в атрибуте, должен отвечать требованиям к значению атрибута `X509FindType`. Значение по умолчанию — пустая строка.|  
+|`storeLocation`|Указывает расположение сертификата X.509, который клиент использует для подтверждения подлинности при взаимодействии со службой. Допустимы следующие значения:<br /><br /> -LocalMachine — хранилище сертификатов, назначенное локальному компьютеру.<br />-CurrentUser: хранилище сертификатов, назначенное текущему пользователю.<br /><br /> Значение по умолчанию - LocalMachine. Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|`storeName`|Задает имя хранилища сертификатов X.509 для поиска. Допустимы следующие значения:<br /><br /> AddressBook Хранилище сертификатов для других пользователей.<br />-Аусрут: Хранилище сертификатов для сторонних центров сертификации (ЦС).<br />CertificateAuthority Хранилище сертификатов для промежуточных центров сертификации (ЦС).<br />Запрещено Хранилище сертификатов для отозванных сертификатов.<br />Мне Хранилище сертификатов для личных сертификатов.<br />Корневой Хранилище сертификатов для доверенных корневых центров сертификации (CAs).<br />TrustedPeople Хранилище сертификатов для непосредственно доверенных лиц и ресурсов.<br />-Трустедпублишер: Хранилище сертификатов для непосредственно доверенных издателей.<br /><br /> Значение по умолчанию - My. Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
+|X509FindType|Определяет тип поиска сертификата X.509. Тип, указанный в атрибуте `findValue`, должен отвечать требованиям этого атрибута. Допустимы следующие значения:<br /><br /> -(FindByThumbprint<br />-FindBySubjectName<br />-Финдбисубжектдистингуишеднаме<br />-Финдбиссуернаме<br />-Финдбиссуердистингуишеднаме<br />-Финдбисериалнумбер<br />-Финдбитимевалид<br />-Финдбитименотетвалид<br />-Финдбитемплатенаме<br />-Финдбяппликатионполици<br />-Финдбицертификатеполици<br />-Финдбекстенсион<br />-Финдбикэйусаже<br />-Финдбисубжекткэйидентифиер<br /><br /> Значение по умолчанию - FindBySubjectDistinguishedName. Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
+|[\<> clientCredentials](clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент конфигурации указывает сертификат, используемый для проверки подлинности клиента с помощью этого элемента. Дополнительные сведения см. в разделе [Как Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Этот элемент конфигурации указывает сертификат, используемый для проверки подлинности клиента с помощью этого элемента. Дополнительные сведения см. в разделе [Практическое руководство. Укажите значения](../../../wcf/how-to-specify-client-credential-values.md)учетных данных клиента.  
   
 ## <a name="see-also"></a>См. также
 
@@ -60,8 +60,8 @@ ms.locfileid: "61673320"
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
-- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Практическое руководство. Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
-- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Поведения безопасности](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Практическое руководство. Укажите значения учетных данных клиента](../../../wcf/how-to-specify-client-credential-values.md)
+- [Защита клиентов](../../../wcf/securing-clients.md)
+- [Работа с сертификатами](../../../wcf/feature-details/working-with-certificates.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: d803c9bec180f45c80e362af49c8eaa12bb9d985
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 07137d03dd9a20d8eab564757618e48e25b45353
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592955"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931765"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра
 При программировании с использованием Windows Forms в качестве дополнения к службам печати часто предлагается возможность предварительного просмотра. Легким способом добавления предварительного просмотра в приложение является использование элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> в сочетании с логикой обработки событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> для печати файла.  
@@ -34,7 +34,7 @@ ms.locfileid: "65592955"
 3. Как и при печати документа, для расчета числа строк на странице и отрисовки содержимого документа в обработчике событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> используется свойство <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs> и содержимое файла. Нарисовав очередную страницу, проверьте, является ли она последней, и установите соответствующим образом свойство <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs> . Событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> возникает до тех пор, пока значение свойства <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> не станет равно `false`. После завершения отрисовки документа сбросьте строку, подлежащую отрисовке. Кроме того, убедитесь в том, что событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> связано со своим методом обработки событий.  
   
     > [!NOTE]
-    >  Если поддержка печати уже реализована в приложении, то, возможно, шаги 2 и 3 были выполнены ранее.  
+    > Если поддержка печати уже реализована в приложении, то, возможно, шаги 2 и 3 были выполнены ранее.  
   
      В примере кода ниже обработчик событий используется для печати файла testPage.txt тем шрифтом, который используется в форме.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "65592955"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Практическое руководство. Печать многостраничного текстового файла в Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Поддержка печати в Windows Forms](windows-forms-print-support.md)
 - [Более безопасная печать в Windows Forms](../more-secure-printing-in-windows-forms.md)

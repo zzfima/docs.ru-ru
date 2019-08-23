@@ -2,18 +2,18 @@
 title: Действия коллекции в WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945981"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935457"
 ---
 # <a name="collection-activities-in-wf"></a>Действия коллекции в WF
-Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection` и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.  
+Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection`и `RemoveFromCollection` имеюттип<xref:System.Boolean>,которыйуказываетрезультат. <xref:System.Activities.OutArgument%601>  
   
 > [!IMPORTANT]
->  Если действие коллекции выполняется до задания базового объекта коллекции, то формируется исключение <xref:System.InvalidOperationException> и действие завершается ошибкой.  
+> Если действие коллекции выполняется до задания базового объекта коллекции, то формируется исключение <xref:System.InvalidOperationException> и действие завершается ошибкой.  
   
 ## <a name="collection-activities"></a>Действия коллекции  
   

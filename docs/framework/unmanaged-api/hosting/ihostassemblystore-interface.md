@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4067c1fbcf99c903c892eaec58262d95569114b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f881440b2e93745723bd090cfbab0286dcd0a4e5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930043"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937874"
 ---
 # <a name="ihostassemblystore-interface"></a>Интерфейс IHostAssemblyStore
-Предоставляет методы, позволяющие основному приложению загружать сборки и модули независимо от общеязыковой среды выполнения (CLR).  
+Предоставляет методы, позволяющие узлу загружать сборки и модули независимо от общеязыковой среды выполнения (CLR).  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|Возвращает ссылку на сборку, которая не ссылается на [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) возвращается из вызова [IHostAssemblyManager::GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md).|  
-|[Метод ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Разрешает модуль в сборку или связанного файла ресурсов (не embedded).|  
+|[Метод ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|Возвращает ссылку на сборку, на которую не ссылается [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , возвращенную из вызова [IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md).|  
+|[Метод ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Разрешает модуль в сборке или в связанном (не внедренном) файле ресурсов.|  
   
 ## <a name="remarks"></a>Примечания  
- `IHostAssemblyStore` предоставляет способ для узла для загрузки сборок, эффективно исходя из удостоверения сборки. Сервер загружает сборки, возвращая `IStream` экземпляров, которые указывают непосредственно на байты.  
+ `IHostAssemblyStore`Предоставляет узлу способ эффективного загрузки сборок на основе удостоверения сборки. Узел загружает сборки, возвращая `IStream` экземпляры, которые указывают непосредственно в байтах.  
   
- Среда CLR определяет, реализован ли узел `IHostAssemblyStore` путем вызова `IHostAssemblyManager::GetNonHostAssemblyStores` при инициализации. Это позволяет узлу, например, для управления привязкой к пользовательским сборкам, но полагаются на среду выполнения для привязки к сборкам .NET Framework.  
-  
-> [!NOTE]
->  В реализацию, предоставляя `IHostAssemblyStore`, узел указывает его намерения разрешить все сборки, на которые не ссылается `ICLRAssemblyReferenceList` возвращаемые `IHostAssemblyManager::GetNonHostStoreAssemblies`.  
+ Среда CLR определяет, реализован `IHostAssemblyStore` ли узел путем вызова `IHostAssemblyManager::GetNonHostAssemblyStores` после инициализации. Это позволяет узлу, например, управлять привязкой к пользовательским сборкам, а также использовать среду выполнения для привязки к .NET Framework сборкам.  
   
 > [!NOTE]
->  В .NET Framework версии 2.0, не позволяют для узла для загрузки образа в машинном коде сборки, предоставленное [генератором машинных образов (Ngen.exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) служебной программы.  
+> При предоставлении реализации `IHostAssemblyStore`узел определяет его цель для разрешения всех сборок, на которые не ссылается объект `ICLRAssemblyReferenceList` , возвращенный из `IHostAssemblyManager::GetNonHostStoreAssemblies`.  
+  
+> [!NOTE]
+> .NET Framework версии 2,0 не позволяет узлу загружать машинный образ сборки, как это предоставляется служебной программой [генератора образов в машинном код (Ngen. exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

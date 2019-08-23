@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489957"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935815"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Преобразует выражение одного типа данных в другой.  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  Возвращает значение такого же типа, что и аргумент `data_type`.  
   
 ## <a name="remarks"></a>Примечания  
- Выражение cast имеет похожую семантику для Transact-SQL преобразовать выражение. Выражение явного приведения используется для преобразования значения одного типа в значение другого типа.  
+ Выражение приведения имеет аналогичную семантику выражения Transact-SQL CONVERT. Выражение явного приведения используется для преобразования значения одного типа в значение другого типа.  
   
 ```  
 CAST( e as T )  
@@ -48,12 +48,12 @@ CAST( e as T )
  Использование выражения явного приведения считается явным преобразованием. При явном преобразовании возможно усечение данных и потеря точности.  
   
 > [!NOTE]
->  Операция CAST может выполняться только над типами-примитивами и типами элементов перечисления.  
+> Операция CAST может выполняться только над типами-примитивами и типами элементов перечисления.  
   
 ## <a name="example"></a>Пример  
  В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор CAST используется для явного приведения выражения одного типа данных к другому. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   

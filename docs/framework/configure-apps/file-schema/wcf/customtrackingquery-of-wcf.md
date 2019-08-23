@@ -1,27 +1,27 @@
 ---
-title: <customTrackingQuery> для WCF
+title: <customTrackingQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b034727dc89b58794ec2834cb0ff39cd7e5f1dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919363"
 ---
-# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > из WCF
+# <a name="customtrackingquery-of-wcf"></a>\<Кустомтраккингкуери > WCF
 
-Представляет запрос, который используется для отслеживания событий, определенных в действиях кода. Запрос необходим, чтобы участник отслеживания подписался на пользовательские записи отслеживания.
+Представляет запрос, который используется для трассировки событий, определенных в действиях кода. Запрос необходим, чтобы участник отслеживания подписался на пользовательские записи отслеживания.
 
-Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
-\<профили >  
+\<Профили >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<customTrackingQueries >  
-\<customTrackingQuery>  
+\<> рабочего процесса  
+\<Кустомтраккингкуериес >  
+\<Кустомтраккингкуери >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,17 +53,17 @@ ms.locfileid: "61673177"
   
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<customTrackingQueries >](customtrackingqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания событий, определенных в действиях кода.|
+|[\<Кустомтраккингкуериес >](customtrackingqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания событий, определенных в действиях кода.|
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

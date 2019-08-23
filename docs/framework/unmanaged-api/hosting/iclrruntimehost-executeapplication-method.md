@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768813"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965361"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Метод ICLRRuntimeHost::ExecuteApplication
-Используется в сценариях развертывания служб на основе манифестов ClickOnce для указания приложения, которое будет активировать в новом домене. Дополнительные сведения об этих сценариях см. в разделе [развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+Используется в сценариях развертывания ClickOnce на основе манифеста для указания приложения, которое должно быть активировано в новом домене. Дополнительные сведения об этих сценариях см. в разделе [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,48 +42,48 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>Параметры  
  `pwzAppFullName`  
- [in] Полное имя приложения, как определено для <xref:System.ApplicationIdentity>.  
+ окне Полное имя приложения, определенное для <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- [in] Количество строк, содержащихся в `ppwzManifestPaths` массива.  
+ окне Число строк, `ppwzManifestPaths` содержащихся в массиве.  
   
  `ppwzManifestPaths`  
- [в] Необязательно. Массив строк, содержащий путей манифестов для приложения.  
+ [в] Необязательно. Массив строк, содержащий пути манифеста для приложения.  
   
  `dwActivationData`  
- [in] Количество строк, содержащихся в `ppwzActivationData` массива.  
+ окне Число строк, `ppwzActivationData` содержащихся в массиве.  
   
  `ppwzActivationData`  
- [в] Необязательно. Массив строк, содержащий данные активации приложения, такие как часть строки запроса URL-адрес приложения, развернутые через Интернет.  
+ [в] Необязательно. Массив строк, содержащий данные активации приложения, такие как часть строки запроса URL-адреса для приложений, развернутых через Интернет.  
   
  `pReturnValue`  
- [out] Значение, возвращенное из точки входа приложения.  
+ заполняет Значение, возвращаемое из точки входа приложения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`ExecuteApplication`успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `ExecuteApplication` используется для активации ClickOnce-приложений в домене только что созданное приложение.  
+ `ExecuteApplication`используется для активации приложений ClickOnce в только что созданном домене приложения.  
   
- `pReturnValue` Выходного параметра присваивается значение, возвращаемое для приложения. Если указать значение null для `pReturnValue`, `ExecuteApplication` не произойдет сбой, но он не возвращает значение.  
+ Параметру `pReturnValue` Output задается значение, возвращаемое приложением. Если для `pReturnValue` `ExecuteApplication` задано значение null, то не завершается ошибкой, но не возвращает значение.  
   
 > [!IMPORTANT]
->  Не вызывайте [метод Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) метод перед вызовом `ExecuteApplication` метод для активации приложения на основе манифеста. Если `Start` во-первых, вызывается метод `ExecuteApplication` вызов метода завершится ошибкой.  
+> Не вызывайте метод [метода Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) перед вызовом `ExecuteApplication` метода для активации приложения на основе манифеста. Если метод вызывается первым, вызов `ExecuteApplication` метода завершится ошибкой. `Start`  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

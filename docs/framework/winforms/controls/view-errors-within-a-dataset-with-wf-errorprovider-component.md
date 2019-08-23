@@ -9,22 +9,22 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950086"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms
-Можно использовать в Windows Forms <xref:System.Windows.Forms.ErrorProvider> компонента для просмотра ошибок в столбцах набора данных или другом источнике данных. Для <xref:System.Windows.Forms.ErrorProvider> компонент для отображения ошибок данных в форме, оно не обязательно должно непосредственно связаны с элементом управления. После привязки к источнику данных, она может отображать значок ошибки рядом с любой элемент управления, привязанный к тому же источнику данных.  
+Можно использовать компонент Windows Forms <xref:System.Windows.Forms.ErrorProvider> для просмотра ошибок столбцов в наборе данных или другом источнике. <xref:System.Windows.Forms.ErrorProvider> Чтобы компонент отображал ошибки данных в форме, ему не нужно напрямую связываться с элементом управления. После привязки к источнику данных он может отобразить значок ошибки рядом с любым элементом управления, привязанным к тому же источнику данных.  
   
 > [!NOTE]
->  Если изменить поставщик ошибок <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> и <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> свойства во время выполнения, следует использовать <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> метод во избежание конфликтов.  
+> Если во время выполнения изменить свойства <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> и <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> поставщика ошибок <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> , следует использовать метод, чтобы избежать конфликтов.  
   
-### <a name="to-display-data-errors"></a>Для отображения ошибок в данных  
+### <a name="to-display-data-errors"></a>Отображение ошибок данных  
   
-1. Компонент привязки к определенному столбцу в таблице данных.  
+1. Привязка компонента к определенному столбцу в таблице данных.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "61962582"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. Задайте <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> в форму свойство.  
+2. Задайте для <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> свойства значение форма.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "61962582"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3. Установка для позиции текущей записи в строку, содержащую ошибку столбца.  
+3. Установка в качестве расположения текущей записи строки, содержащей ошибку столбца.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -65,4 +65,4 @@ ms.locfileid: "61962582"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о компоненте ErrorProvider](errorprovider-component-overview-windows-forms.md)
-- [Практическое руководство. Отображение значков ошибок для проверки формы с помощью компонента ErrorProvider в Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Практическое руководство. Отображение значков ошибок для проверки формы с помощью компонента Windows Forms ErrorProvider](display-error-icons-for-form-validation-with-wf-errorprovider.md)

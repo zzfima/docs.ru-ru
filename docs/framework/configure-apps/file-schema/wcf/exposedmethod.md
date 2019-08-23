@@ -2,19 +2,19 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918999"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod >
 Представляет метод COM+, предоставляемый, когда интерфейс компонента COM+ предоставляется как веб-служба.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<comContracts >  
-\<comContract >  
+\<Комконтракт >  
 \<методы >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,13 +39,13 @@ ms.locfileid: "61644320"
 |имя|Строка, которая содержит метод COM+, предоставляемый, когда интерфейс компонента COM+ предоставляется как веб-служба.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<exposedMethods >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Коллекция [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элементов.|  
+|[\<Експоседмесодс >](exposedmethods.md)|[ Коллекция\<элементов > exposedMethod](exposedmethod.md) .|  
   
 ## <a name="remarks"></a>Примечания  
  Средство конфигурации интеграции COM+ (ComSvcConfig.exe) может применяться для добавления определенных методов COM-интерфейса для использования в созданном контракте службы.  
@@ -54,7 +54,7 @@ ms.locfileid: "61644320"
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- При запуске ComSvcConfig.exe также создается следующий контракт службы, в котором указанные выше методы как [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элементов.  
+ При запуске файла ComSvcConfig. exe он создает следующий контракт службы с перечнем упомянутых выше методов как [ \<exposedMethod >](exposedmethod.md) элементов.  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,12 +66,12 @@ ms.locfileid: "61644320"
 </comContract>
 ```  
   
- Во время инициализации службы среда выполнения пытается создать контракт службы, отображая и добавляя только те методы, которые включены в список [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элементов. Для каждого метода интерфейса, который не включен в контракт службы, создается трассировка.  
+ Во время инициализации службы среда выполнения пытается создать контракт службы, отражая и добавляя только методы, входящие в список [ \<элементов exposedMethod >](exposedmethod.md) . Для каждого метода интерфейса, который не включен в контракт службы, создается трассировка.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
-- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Интеграция с приложениями COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Практическое руководство. Настройка параметров службы COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts >](comcontracts.md)
+- [Интеграция с приложениями COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Практическое руководство. Настройка параметров службы COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

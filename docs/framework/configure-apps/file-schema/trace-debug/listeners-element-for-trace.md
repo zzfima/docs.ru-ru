@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927023"
 ---
-# <a name="listeners-element-for-trace"></a>\<прослушиватели > элемент для \<трассировки >
-Указывает прослушиватель, который собирает, хранилищ и направляет сообщения. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.  
+# <a name="listeners-element-for-trace"></a>\<Listeners > элемент \<для > трассировки
+Указывает прослушиватель, который собирает, хранит и маршрутизирует сообщения. Прослушиватели направляют выходные данные трассировки в соответствующий целевой объект.  
   
- \<Конфигурация > элемент  
-\<System.Diagnostics > элемент  
-\<трассировки > элемент  
-\<прослушиватели > элемент для \<трассировки >  
+ \<Элемент Configuration >  
+\<Элемент System. Diagnostics >  
+\<Элемент > трассировки  
+\<Listeners > элемент \<для > трассировки  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +36,15 @@ ms.locfileid: "61701350"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Очищает коллекцию `Listeners` для трассировки.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Удаляет прослушиватель из `Listeners` коллекции.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|Очищает коллекцию `Listeners` для трассировки.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Удаляет прослушиватель из `Listeners` коллекции.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,13 +55,13 @@ ms.locfileid: "61701350"
 |`trace`|Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- <xref:System.Diagnostics.Debug> И <xref:System.Diagnostics.Trace> классы одного и того же **прослушиватели** коллекции. Если добавить объект прослушивателя в коллекцию в одном из этих классов, другой класс использует этот же прослушиватель. Классы прослушивателя, поставлявшихся с .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.  
+ Классы <xref:System.Diagnostics.Debug> и <xref:System.Diagnostics.Trace> совместно используют одну и ту же коллекцию Listeners. При добавлении объекта прослушивателя в коллекцию в одном из этих классов другой класс использует тот же прослушиватель. Классы прослушивателей, поставляемые с .NET Framework, являются производными от <xref:System.Diagnostics.TraceListener> класса.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<прослушиватели >** элемент для добавления прослушивателей `MyListener` и `MyEventListener` для **прослушиватели** коллекции. `MyListener` Создает файл с именем `MyListener.log` и записывает выходные данные в файл. `MyEventListener` создает запись в журнале событий.  
+ В следующем примере показано, `MyListener` `MyEventListener`  **\<** как использовать элемент Listeners > для добавления прослушивателей и в коллекцию Listeners. `MyListener`создает файл с именем `MyListener.log` и записывает выходные данные в файл. `MyEventListener`создает запись в журнале событий.  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ ms.locfileid: "61701350"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Diagnostics.TraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Схема параметров трассировки и отладки](index.md)

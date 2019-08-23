@@ -2,22 +2,22 @@
 title: <secureConversationAuthentication> из <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61034c2c66a6d8e27a87ec5380aa7297247eb31e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670616"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935835"
 ---
-# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > из \<serviceCredential >
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<секуреконверсатионаусентикатион > \<сервицекредентиал >
 Задает параметры службы безопасного обмена данными.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
+ \<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
+\<> поведения  
 \<serviceCredentials >  
-\<secureConversationAuthentication>  
+\<Секуреконверсатионаусентикатион >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ ms.locfileid: "61670616"
 |`securityStateEncoderType`|Строка, указывающая используемый тип <xref:System.ServiceModel.Security.SecurityStateEncoder>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
+|[\<serviceCredentials >](servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
 ## <a name="remarks"></a>Примечания  
  Данный элемент конфигурации используется для указания списка известных типов утверждений для сериализации файлов cookie маркера контекста безопасности (SCT), а также в качестве кодировщика для шифрования и защиты данных файлов cookie. Дополнительные сведения о маркерах контекста безопасности см. в разделе <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  

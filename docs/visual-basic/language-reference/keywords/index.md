@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801569"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959955"
 ---
 # <a name="keywords-visual-basic"></a>Ключевые слова (Visual Basic)
 В следующих таблицах перечислены все ключевые слова языка Visual Basic.  
@@ -24,7 +24,7 @@ ms.locfileid: "61801569"
  Следующие ключевые слова являются *зарезервированными*, то есть их нельзя использовать в качестве имен программных элементов, таких как переменные или процедуры. Это ограничение можно обойти, заключив имя в квадратные скобки (`[]`). Дополнительные сведения см. в подразделе "Экранированные имена" раздела [Имена объявляемых элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 > [!NOTE]
->  Использовать экранированные имена не рекомендуется, так как это может затруднить чтение кода и привести к ошибкам, которые может быть трудно найти.  
+> Использовать экранированные имена не рекомендуется, так как это может затруднить чтение кода и привести к ошибкам, которые может быть трудно найти.  
   
 |||||  
 |---|---|---|---|  
@@ -77,7 +77,7 @@ ms.locfileid: "61801569"
 |[Оператор >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Оператор >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, и `Wend` сохраняются как зарезервированные ключевые слова, несмотря на то, что они больше не используются в Visual Basic. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md).  
+> `EndIf`, `GoSub`, `Variant` и`Wend` сохраняются как зарезервированные ключевые слова, хотя они больше не используются в Visual Basic. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Незарезервированные ключевые слова  
  Следующие ключевые слова не зарезервированы. Это означает, что их можно использовать в качестве имен для элементов программирования. Но делать так не рекомендуется, так как это может затруднить чтение кода и привести к ошибкам, которые может быть трудно найти.  

@@ -8,36 +8,36 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb5220082989a9d0a22c4998bb79c0a196067e7e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934961"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Практическое руководство. Рисование ломаной с помощью элемента Polyline
-В этом примере показано, как рисование ломаной, которая представляет собой последовательность соединенных линий, с помощью <xref:System.Windows.Shapes.Polyline> элемент.  
+В этом примере показано, как нарисовать ломаную линию, которая представляет собой ряд соединенных линий, с <xref:System.Windows.Shapes.Polyline> помощью элемента.  
   
- Чтобы Рисование ломаной, создайте <xref:System.Windows.Shapes.Polyline> элемента и использование его <xref:System.Windows.Shapes.Polyline.Points%2A> свойство, чтобы указать вершины фигуры. Наконец, используйте <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> свойств, описывающих ломаной линии структуры, так как в строку без штриха является невидимым.  
+ Чтобы нарисовать ломаную линию, <xref:System.Windows.Shapes.Polyline> создайте элемент и используйте <xref:System.Windows.Shapes.Polyline.Points%2A> его свойство, чтобы указать вершины фигур. Наконец, используйте <xref:System.Windows.Shapes.Shape.Stroke%2A> свойства и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> для описания контура ломаной линии, так как линия без штриха невидима.  
   
 > [!NOTE]
->  Так как <xref:System.Windows.Shapes.Polyline> элемент не является замкнутой фигуры, <xref:System.Windows.Shapes.Shape.Fill%2A> не оказывает никакого влияния, даже если намеренно закрыть контура фигуры. Для создания замкнутой фигуры с <xref:System.Windows.Shapes.Shape.Fill%2A>, использовать <xref:System.Windows.Shapes.Polygon> элемент.  
+> Поскольку элемент не является замкнутой фигурой <xref:System.Windows.Shapes.Shape.Fill%2A> , свойство не действует, даже если намеренно закрывается контур фигуры. <xref:System.Windows.Shapes.Polyline> Чтобы создать замкнутую фигуру с <xref:System.Windows.Shapes.Shape.Fill%2A>помощью, <xref:System.Windows.Shapes.Polygon> используйте элемент.  
   
- В следующем примере рисуется два <xref:System.Windows.Shapes.Polyline> элементов внутри <xref:System.Windows.Controls.Canvas>.  
+ В следующем примере рисуются <xref:System.Windows.Shapes.Polyline> два элемента <xref:System.Windows.Controls.Canvas>внутри.  
   
 ## <a name="example"></a>Пример  
- В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], допустимым синтаксисом для точек является список с разделителями запятыми координат x и y пар.  
+ В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]допустимый синтаксис для точек — это разделенный пробелами список пар координат x и y с разделителями-запятыми.  
   
  [!code-xaml[drawingwithshapeelements#PolylineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
- Несмотря на то, что в этом примере используется <xref:System.Windows.Controls.Canvas> должен содержать ломаные линии, можно использовать элементы polyline (и все остальные элементы фигуры) с любым <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control> , поддерживающий нетекстовое содержимое.  
+ Хотя в этом примере используется <xref:System.Windows.Controls.Canvas> объект для размещения ломаных линий, можно использовать элементы ломаной линии (и все остальные элементы Shape) <xref:System.Windows.Controls.Panel> с <xref:System.Windows.Controls.Control> любым или, поддерживающим нетекстовое содержимое.  
   
- Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Этот пример является частью более крупного примера; Полный пример см. в разделе [Пример элементов Shape](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>
-- [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Пример элементов Shape](https://go.microsoft.com/fwlink/?LinkID=160037)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)

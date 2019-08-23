@@ -2,21 +2,21 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e756f49b7054d6553eb6c3f1850f0fbce14943
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926116"
 ---
-# <a name="clientcredentials"></a>\<clientCredentials>
+# <a name="clientcredentials"></a>\<> clientCredentials
 Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
-\<endpointBehaviors>  
-\<поведение >  
-\<clientCredentials>  
+ \<системой. > ServiceModel  
+\<> поведения  
+\<endpointBehaviors >  
+\<> поведения  
+\<> clientCredentials  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,18 +52,18 @@ ms.locfileid: "61673385"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)|Задает сертификат, используемый для проверки подлинности клиента при подключении к службе. Это элемент типа <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
-|[\<httpDigest>](../../../../../docs/framework/configure-apps/file-schema/wcf/httpdigest-element.md)|Задает хэш-код, используемый для проверки подлинности клиента при подключении к службе. Это элемент типа <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Задает тип пользовательского маркера, используемого для проверки подлинности клиента при подключении к службе маркеров безопасности (STS). Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>.|  
-|[\<Одноранговый >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Задает учетные данные текущего однорангового узла. Это элемент типа <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Задает сертификат, используемый при проверки подлинности службы для клиента, и предоставляет структуру для настройки параметров сертификата. Данный сертификат должен быть предоставлен вне диапазона службой клиенту. Это элемент типа <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>.|  
-|[\<Windows >](../../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)|Задает учетные данные Windows. Значением по умолчанию являются учетные данные текущего потока. Это элемент типа <xref:System.ServiceModel.Configuration.WindowsClientElement>.|  
+|[\<clientCertificate >](clientcertificate-of-clientcredentials-element.md)|Задает сертификат, используемый для проверки подлинности клиента при подключении к службе. Это элемент типа <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
+|[\<Хттпдижест >](httpdigest-element.md)|Задает хэш-код, используемый для проверки подлинности клиента при подключении к службе. Это элемент типа <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  
+|[\<issuedToken >](issuedtoken.md)|Задает тип пользовательского маркера, используемого для проверки подлинности клиента при подключении к службе маркеров безопасности (STS). Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>.|  
+|[\<Одноранговые >](peer-of-clientcredentials-element.md)|Задает учетные данные текущего однорангового узла. Это элемент типа <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
+|[\<serviceCertificate >](servicecertificate-of-clientcredentials-element.md)|Задает сертификат, используемый при проверки подлинности службы для клиента, и предоставляет структуру для настройки параметров сертификата. Данный сертификат должен быть предоставлен вне диапазона службой клиенту. Это элемент типа <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>.|  
+|[\<> Windows](windows-of-clientcredentials-element.md)|Задает учетные данные Windows. Значением по умолчанию являются учетные данные текущего потока. Это элемент типа <xref:System.ServiceModel.Configuration.WindowsClientElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|  
+|[\<> поведения](behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|  
   
 ## <a name="remarks"></a>Примечания  
  Учетные данные клиента используются для проверки подлинности клиента при подключении к службам в случаях, когда требуется взаимная проверка подлинности. Данный раздел конфигурации также можно использовать для задания сертификатов служб для сценариев, где клиент должен обеспечить защиту сообщений, передаваемых службе, с помощью сертификатов службы.  
@@ -72,5 +72,5 @@ ms.locfileid: "61673385"
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
-- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Поведения безопасности](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Защита клиентов](../../../wcf/securing-clients.md)

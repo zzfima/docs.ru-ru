@@ -1,27 +1,27 @@
 ---
-title: <bookmarkResumptionQuery> для WCF
+title: <bookmarkResumptionQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee8457645a0b54e21ef27c2891ebea97d6cc547b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704392"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926360"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > из WCF
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<Букмаркресумптионкуери > WCF
 
 Представляет запрос, используемый для отслеживания возобновления закладки в экземпляре рабочего потока. Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.  
   
-Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
-\<профили >  
+\<Профили >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<> рабочего процесса  
+\<Букмаркресумптионкуериес >  
+\<Букмаркресумптионкуери >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,17 +51,17 @@ ms.locfileid: "61704392"
   
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQueries >](bookmarkresumptionqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса.|  
+|[\<Букмаркресумптионкуериес >](bookmarkresumptionqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса.|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

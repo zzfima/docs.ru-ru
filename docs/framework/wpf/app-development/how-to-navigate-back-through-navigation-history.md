@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969352"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Практическое руководство. Переход назад по журналу навигации
 В этом примере показано, как перейти к записям в журнале обратной навигации.  
@@ -29,4 +29,4 @@ ms.locfileid: "68817975"
  **CanGoBack** и **GoBack** реализуются с помощью <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>и <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  При вызове программы **GoBack**и отсутствии записей в журнале переходов назад создается исключение <xref:System.InvalidOperationException> .
+> При вызове программы **GoBack**и отсутствии записей в журнале переходов назад создается исключение <xref:System.InvalidOperationException> .

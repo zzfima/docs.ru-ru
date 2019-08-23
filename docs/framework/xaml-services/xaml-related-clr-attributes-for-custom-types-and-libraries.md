@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956415"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
 В этом разделе описываются атрибуты среды CLR, определяемые службами .NET Framework XAML. Здесь также описываются другие атрибуты среды CLR, определенные в .NET Framework с сценарием, связанным с XAML, для приложений в сборках или типах. При присвоении атрибутам сборок, типов или членов эти атрибуты среды CLR предоставляют сведения о системе типов XAML, связанные с типами. Информация предоставляется любому потребителю XAML, который использует службы .NET Framework XAML для обработки потока узлов XAML напрямую или через выделенные средства чтения и записи XAML.  
@@ -24,7 +24,7 @@ ms.locfileid: "68364229"
   
  **Применимо к:** Члены класса, свойства или `get` метода доступа, поддерживающие присоединяемые свойства.  
   
- **Даваемых** None  
+ **Даваемых** Отсутствуют  
   
  <xref:System.Windows.Markup.AmbientAttribute>Указывает, что свойство или все свойства, принимающие атрибут Type, должны интерпретироваться в концепции свойства окружения в XAML. Концепция окружения относится к тому, как обработчики XAML определяют владельцев типов членов. Внешнее свойство — это свойство, в котором значение должно быть доступно в контексте средства синтаксического анализа при создании графа объекта, но если типичный Поиск члена типа приостанавливается для немедленного создания набора узлов XAML.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68364229"
   
  **Применимо к:** Типы  
   
- **Даваемых** Отсутствует.  
+ **Даваемых** Нет.  
   
  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>применяется к конкретным типам, которые могут отображаться как дочерние элементы в значительном содержимом пустого пространства (содержимое, удерживаемое коллекцией <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>в основном относится к пути сохранения, но доступно в системе типов XAML в пути загрузки путем проверки <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Дополнительные сведения см. [в разделе Обработка пробелов в XAML](whitespace-processing-in-xaml.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "68364229"
   
  **Применимо к:** Класс, а именно типы коллекций, которые должны размещать смешанное содержимое, где пробелы вокруг элементов объекта могут быть значительными для представления пользовательского интерфейса.  
   
- **Даваемых** Отсутствует.  
+ **Даваемых** Нет.  
   
  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>Указывает, что тип коллекции должен обрабатываться обработчиком XAML как значащий пробел, что влияет на построение узлов значений потока узлов XAML в коллекции. Дополнительные сведения см. [в разделе Обработка пробелов в XAML](whitespace-processing-in-xaml.md).  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68364229"
 - Вы определяете поддержку языка XAML в сборке и обладаете <xref:System.Windows.Markup.XmlnsDefinitionAttribute> для `http://schemas.microsoft.com/winfx/2006/xaml`. В этом случае, как правило, следует повысить уровень `x`префикса.  
   
 > [!NOTE]
->  .NET Framework службы XAML также определяет атрибут <xref:System.Windows.Markup.RootNamespaceAttribute>, связанный с XAML. Этот атрибут является атрибутом уровня сборки для поддержки системы проектов и не имеет отношения к настраиваемым типам XAML.  
+> .NET Framework службы XAML также определяет атрибут <xref:System.Windows.Markup.RootNamespaceAttribute>, связанный с XAML. Этот атрибут является атрибутом уровня сборки для поддержки системы проектов и не имеет отношения к настраиваемым типам XAML.  
   
 ## <a name="see-also"></a>См. также
 

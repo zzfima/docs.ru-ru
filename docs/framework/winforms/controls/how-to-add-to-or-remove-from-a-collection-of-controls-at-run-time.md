@@ -12,18 +12,18 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: a868632d6868e6a82c4fa135444279b8ef4dc7af
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 87ad4c957ac5b99438684d398a0c5ad7d126c406
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925043"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
-Общие задачи при разработке приложений Добавление элементов управления и удаление элементов управления из любого контейнерного элемента управления в формах (например, <xref:System.Windows.Forms.Panel> или <xref:System.Windows.Forms.GroupBox> элемент управления или в саму форму). Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу. Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.  
+Распространенные задачи при разработке приложений — это добавление элементов управления и удаление элементов управления из любого контейнера в формах (например <xref:System.Windows.Forms.Panel> , или <xref:System.Windows.Forms.GroupBox> , или даже самой формы). Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу. Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.  
   
 > [!NOTE]
->  Следующий пример кода применяется к любому элементу управления, который поддерживает внутри себя коллекцию элементов управления.  
+> Следующий пример кода применяется к любому элементу управления, который поддерживает внутри себя коллекцию элементов управления.  
   
 ### <a name="to-add-a-control-to-a-collection-programmatically"></a>Программное добавление элемента управления в коллекцию  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66301411"
   
 3. Добавьте этот элемент управления в коллекцию `Controls` родительского элемента управления.  
   
-     В следующем примере кода показано, как создать экземпляр <xref:System.Windows.Forms.Button> элемента управления. Необходима форма с <xref:System.Windows.Forms.Panel> и создается метод обработки событий для кнопки, `NewPanelButton_Click`, уже существует.  
+     В следующем примере кода показано, как создать экземпляр <xref:System.Windows.Forms.Button> элемента управления. Для этого требуется форма с <xref:System.Windows.Forms.Panel> элементом управления и метод обработки событий для `NewPanelButton_Click`создаваемой кнопки, уже существует.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -66,7 +66,7 @@ ms.locfileid: "66301411"
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Программное удаление элементов управления из коллекции  
   
-1. Удалите обработчик событий из события. В Visual Basic, использовать [оператор RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) ключевое слово, в списке C#, использовать [-=-оператор](~/docs/csharp/language-reference/operators/subtraction-operator.md).  
+1. Удалите обработчик событий из события. В Visual Basic используйте ключевое слово [оператора RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) . в C#используйте [оператор-=](../../../csharp/language-reference/operators/subtraction-operator.md).  
   
 2. Используйте метод `Remove` для удаления требуемого элемента управления из коллекции `Controls` панели.  
   

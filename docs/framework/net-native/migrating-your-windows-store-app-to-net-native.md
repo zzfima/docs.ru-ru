@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364076"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941738"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Миграция приложения для магазина Windows в машинный код .NET
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364076"
 
 Например, привязка данных требует, чтобы приложение обеспечивало сопоставление имен свойств с функциями. В приложениях .NET для магазина Windows среда CLR автоматически использует отражение для обеспечения этой возможности для управляемых и общедоступных собственных типов. В .NET Native компилятор автоматически включает метаданные для типов, к которым привязываются данные.
 
-Компилятор .NET Native также может работать с часто используемыми универсальными типами <xref:System.Collections.Generic.List%601> , <xref:System.Collections.Generic.Dictionary%602>такими как и, которые работают без указания каких либо указаний или директив. Ключевое слово [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) также поддерживается в заданных пределах.
+Компилятор .NET Native также может работать с часто используемыми универсальными типами <xref:System.Collections.Generic.List%601> , <xref:System.Collections.Generic.Dictionary%602>такими как и, которые работают без указания каких либо указаний или директив. Ключевое слово [dynamic](../../csharp/language-reference/keywords/dynamic.md) также поддерживается в заданных пределах.
 
 > [!NOTE]
 > При переносе приложения в .NET Native необходимо тщательно протестировать все динамические пути к коду.
@@ -129,7 +129,7 @@ ms.locfileid: "68364076"
 
 - Динамическое создание многомерных массивов не поддерживается. Такие массивы обычно создаются путем вызова перегрузки метода <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> , который включает в себя параметр `lengths` , или же путем вызова метода <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .
 
-- Многомерные массивы, имеющие четыре или более измерений не поддерживаются; т.е. их значение свойства <xref:System.Array.Rank%2A?displayProperty=nameWithType> равно или больше четырех. Вместо этого используйте [ступенчатые массивы](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (массива массивов). Например `array[x,y,z]` является недопустимым, но `array[x][y][z]` нет.
+- Многомерные массивы, имеющие четыре или более измерений не поддерживаются; т.е. их значение свойства <xref:System.Array.Rank%2A?displayProperty=nameWithType> равно или больше четырех. Вместо этого используйте [ступенчатые массивы](../../csharp/programming-guide/arrays/jagged-arrays.md) (массива массивов). Например `array[x,y,z]` является недопустимым, но `array[x][y][z]` нет.
 
 - Вариативность для многомерных массивов не поддерживается и вызывает исключение <xref:System.InvalidCastException> во время выполнения.
 
@@ -668,4 +668,4 @@ Visual Basic в настоящее время не поддерживается 
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Общие сведения о приложениях .NET для Магазина Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -3,18 +3,18 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11aeed0277fc13cbd9a65232311bd575a4a81ff7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942585"
 ---
 # <a name="remove"></a>\<Удалить >
-Удаляет обработчик токенов безопасности из коллекции обработчиков токенов.  
+Удаляет указанный обработчик маркеров безопасности из коллекции обработчиков маркеров.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
 \<Удалить >  
   
@@ -38,19 +38,19 @@ ms.locfileid: "61793891"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Имя типа CLR обработчик токенов для удаления. Дополнительные сведения о способах указания `type` атрибут, см. в разделе [ссылок на пользовательские типы](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Обязательный.|  
+|type|Имя типа CLR удаляемого обработчика токенов. Дополнительные сведения об указании `type` атрибута см. в разделе [ссылки на пользовательские типы](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Обязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Задает коллекцию обработчиков токенов безопасности, которые зарегистрированы с конечной точкой.|  
+|[\<securityTokenHandlers >](securitytokenhandlers.md)|Указывает коллекцию обработчиков маркеров безопасности, зарегистрированных в конечной точке.|  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показывает использование `<add>` и `<remove>` элементов для замены маркера обработчик сеанса по умолчанию обработчик токенов пользовательского сеанса. XML-код взят из `ClaimsAwareWebFarm` образца.  
+ В следующем коде XML показано использование `<add>` элементов и `<remove>` для замены обработчика токена сеанса по умолчанию обработчиком пользовательского маркера сеанса. XML взят из `ClaimsAwareWebFarm` примера.  
   
 ```xml  
 <securityTokenHandlers>  

@@ -1,15 +1,15 @@
 ---
-title: Создание исходного документа Open XML Office (Visual Basic)
+title: Создание исходного документа Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965251"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание исходного документа Open XML Office (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание исходного документа Office Open XML (Visual Basic)
 В этом разделе показано создание документа Office Open XML WordprocessingML, который используется в примерах этого учебника. Если следовать приведенным ниже инструкциям, выходные данные будут соответствовать выходным данным каждого примера.  
   
  Тем не менее примеры в этом учебнике работают с любым допустимым документом WordprocessingML.  
@@ -44,14 +44,14 @@ ms.locfileid: "61923426"
   
 3. Отформатируйте первую строку стилем «Заголовок 1».  
   
-4. Выберите строки, содержащие код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — «End Class». Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
+4. Выберите строки, которые содержат код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — "конечный класс". Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
   
 5. Наконец, выделите всю строку, содержащую выходные данные, и отформатируйте ее стилем `Code`.  
   
 6. Сохраните документ с именем SampleDoc.docx.  
   
     > [!NOTE]
-    >  Если используется Microsoft Word 2003, в раскрывающемся списке **Тип файла** выберите **Документ Word 2007**.  
+    > Если используется Microsoft Word 2003, в раскрывающемся списке **Тип файла** выберите **Документ Word 2007**.  
   
 ## <a name="see-also"></a>См. также
 

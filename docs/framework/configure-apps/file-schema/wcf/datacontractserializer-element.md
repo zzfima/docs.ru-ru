@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: b635f03d1e4a6628a76d678f7366482717276376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e440810fee1dddb7025d1385b1edb4838d98a39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925911"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer >
 Содержит данные конфигурации для <xref:System.Runtime.Serialization.DataContractSerializer>. Этот элемент присутствует в двух разных иерархиях. Одна из них указана в следующем разделе «Иерархия схемы», а другая - в разделе «Примечания».  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
+ \<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
+\<> поведения  
 \<dataContractSerializer >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,21 +41,21 @@ ms.locfileid: "61704145"
 |maxItemsInObjectGraph|Целое число, указывающее максимальное количество элементов для сериализации или десериализации. Этот атрибут имеет значение 65 536.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|Коллекция параметров для поведения службы.|  
-|[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|Представляет корневой элемент для раздела пространства имен <xref:System.Runtime.Serialization> и содержит элементы для установки параметров <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<> поведения](behavior-of-servicebehaviors.md)|Коллекция параметров для поведения службы.|  
+|[\<system.runtime.serialization>](system-runtime-serialization.md)|Представляет корневой элемент для раздела пространства имен <xref:System.Runtime.Serialization> и содержит элементы для установки параметров <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Примечания  
- Как уже говорилось в начале этого раздела, это вторая иерархия, в которой \<X509Extension > происходит элемент.  
+ Как указано в этом разделе, это вторая иерархия, в которой \<происходит элемент > X509Extension.  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ [\<system.runtime.serialization>](system-runtime-serialization.md)  
   
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<dataContractSerializer >](datacontractserializer-element.md)  
   
  Дополнительные сведения об известных типах см. в разделе <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
@@ -64,5 +64,5 @@ ms.locfileid: "61704145"
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Передача данных и сериализация](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Известные типы контрактов данных](../../../wcf/feature-details/data-contract-known-types.md)
+- [Передача данных и сериализация](../../../wcf/feature-details/data-transfer-and-serialization.md)

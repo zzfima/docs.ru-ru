@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927694"
 ---
 # <a name="systemcodedom-element"></a>\<Элемент System. CodeDom >
 Задает параметры конфигурации компилятора для доступных поставщиков языков.  
@@ -56,7 +56,7 @@ ms.locfileid: "69659689"
  Разработчики и поставщики компиляторов могут добавлять параметры конфигурации в файл конфигурации компьютера (Machine. config) для новой <xref:System.CodeDom.Compiler.CodeDomProvider> реализации. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> Используйте метод для программного перечисления поставщиков языка по умолчанию и поставщиков языков, определенных параметрами конфигурации компилятора на компьютере.  
   
 > [!NOTE]
->  В .NET Framework версиях 1,0 и 1,1 поставщики языка по умолчанию, предоставляемые .NET Framework, определяются в [ \<элементе компиляторы >](compilers-element.md) . В .NET Framework версии 2,0 поставщики языка по умолчанию не определяются в [ \<>ном](compilers-element.md) элементе компиляторов, но их можно <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> перечислить с помощью метода.  
+> В .NET Framework версиях 1,0 и 1,1 поставщики языка по умолчанию, предоставляемые .NET Framework, определяются в [ \<элементе компиляторы >](compilers-element.md) . В .NET Framework версии 2,0 поставщики языка по умолчанию не определяются в [ \<>ном](compilers-element.md) элементе компиляторов, но их можно <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> перечислить с помощью метода.  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework версии 1,0 и 1,1  
  Элемент [System. CodeDom > содержит параметры конфигурации компилятора для поставщиков языков на компьютере. \<](system-codedom-element.md) Компилятор > элемент содержит ноль или больше [ \<элементов > компилятора](compiler-element.md) . [ \<](compilers-element.md) Каждый элемент > компилятора задает атрибуты конфигурации компилятора для конкретного поставщика языка. [ \<](compiler-element.md)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2084a1c0ee30478cdc9193cdfcb19476499ee93
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924869"
 ---
 # <a name="-keyfile"></a>-keyfile
 Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.  
@@ -24,25 +24,25 @@ ms.locfileid: "61793969"
   
 ## <a name="arguments"></a>Аргументы  
  `file`  
- Обязательный. Файл, содержащий ключ. Если имя файла содержит пробел, заключите имя в кавычки (» «).  
+ Обязательный. Файл, содержащий ключ. Если имя файла содержит пробел, заключите его в кавычки ("").  
   
 ## <a name="remarks"></a>Примечания  
- Компилятор вставляет открытый ключ в манифест сборки и затем подписывает окончательную сборку закрытым ключом. Чтобы создать файл ключа, в командной строке введите `sn -k file`. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Компилятор вставляет открытый ключ в манифест сборки, а затем подписывает окончательную сборку закрытым ключом. Чтобы создать файл ключа, в командной строке введите `sn -k file`. Дополнительные сведения см. в разделе [Sn. exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
- Если компиляция выполняется с `-target:module`, имя файла ключа сохраняется в модуле и включается в сборку, которая создается при компиляции с параметром [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ При компиляции с `-target:module`параметром имя файла ключа сохраняется в модуле и включается в сборку, созданную при компиляции сборки с помощью [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
  Также можно передать сведения о шифровании компилятору с помощью параметра [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Если требуется использовать частично подписанную сборку, применяйте параметр [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md).  
   
- Можно также указать этот параметр в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyFileAttribute>) в исходном коде любого модуля промежуточного языка Майкрософт.  
+ Этот параметр можно также указать в исходном коде любого модуля промежуточного языка Майкрософт в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyFileAttribute>).  
   
- Одновременно `-keyfile` и [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) указаны (в командной строке или с помощью настраиваемого атрибута) в одной компиляции, компилятор сначала пытается контейнер ключей. В случае успеха сборка подписывается данными контейнера ключей. Если компилятору не удается найти контейнер ключей, он пытается файл, заданный параметром `-keyfile`. Если эта команда выполняется успешно, сборка подписывается данными из файла ключа и данные ключа устанавливается в контейнер ключей (аналогично `sn -i`) таким образом, при следующей компиляции контейнер ключей будет допустимым.  
+ В случае, `-keyfile` если в той же компиляции заданы оба параметра и [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) (либо параметр командной строки, либо настраиваемый атрибут), компилятор сначала пытается попытаться контейнер ключей. В случае успеха сборка подписывается данными контейнера ключей. Если компилятор не находит контейнер ключей, он пытается выполнить файл, указанный в параметре `-keyfile`. В случае успешности сборка подписывается данными из файла ключа, а сведения о ключах устанавливаются в контейнер ключей (аналогично `sn -i`), поэтому при следующей компиляции контейнер ключей будет действительным.  
   
  Обратите внимание, что файл ключей может содержать только открытый ключ.  
   
- См. в разделе [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) Дополнительные сведения о подписи сборки.  
+ Дополнительные сведения о подписывании сборки см. в разделе [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) .  
   
 > [!NOTE]
->  `-keyfile` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+> Этот `-keyfile` параметр недоступен в среде разработки Visual Studio; он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
  Следующий код компилирует исходный файл `Input.vb` и задает файл ключа.  
@@ -55,5 +55,5 @@ vbc -keyfile:myfile.sn input.vb
 
 - [Сборки в .NET](../../../standard/assembly/index.md)
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

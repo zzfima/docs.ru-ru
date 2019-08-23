@@ -2,20 +2,20 @@
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: db5e1083c07d4e204eb19eaae9257ed44439132e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cd04f66cc4b73eb5f1c43bd6c8dc9189dfceff1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915218"
 ---
 # <a name="workflowruntime"></a>\<workflowRuntime >
-Задает параметры для экземпляра <xref:System.Workflow.Runtime.WorkflowRuntime> для размещения служб на основе рабочего процесса Windows Communication Foundation (WCF).  
+Задает параметры экземпляра <xref:System.Workflow.Runtime.WorkflowRuntime> для размещения служб Windows Communication Foundation (WCF) на основе рабочих процессов.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
+ \<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
+\<> поведения  
 \<workflowRuntime >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,7 +44,7 @@ ms.locfileid: "61673151"
 |---------------|-----------------|  
 |cachedInstanceExpiration|Необязательное значение <xref:System.TimeSpan>, определяющее максимальный период времени, в течение которого экземпляр рабочего процесса может оставаться в памяти в неактивном состоянии до принудительной выгрузки или прекращения. Если среда выполнения рабочего процесса имеет параметр `PersistenceService`, выполняющий unloadOnIdle, этот атрибут игнорируется.|  
 |enablePerformanceCounters|Необязательное логическое значение, определяющее, включены ли счетчики производительности. Счетчики производительности предоставляют статистические данные о различных рабочих процессах, но они могут вызывать снижение производительности при запуске подсистемы среды выполнения рабочего процесса и при выполнении экземпляров рабочего процесса. Значение по умолчанию — `true`.|  
-|имя|Строка, содержащая имя подсистемы среды выполнения рабочих процессов. Имя используется в выходных данных для различения данной среды выполнения от других сред выполнения, которые могут выполняться в системе, например в счетчиках производительности.<br /><br /> Значение по умолчанию - пустая строка.|  
+|имя|Строка, содержащая имя подсистемы среды выполнения рабочих процессов. Имя используется в выходных данных для различения данной среды выполнения от других сред выполнения, которые могут выполняться в системе, например в счетчиках производительности.<br /><br /> Значение по умолчанию — пустая строка.|  
 |validateOnCreate|Необязательное логическое значение, указывающее, будет ли выполняться проверка определения рабочего процесса при открытии WorkflowServiceHost.  Если этому атрибуту задано значение `true`, проверка рабочего процесса выполняется при каждом вызове `WorkflowServiceHost.Open`. В случае обнаружения ошибок проверки возникает ошибка <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException>.<br /><br /> Если это свойство имеет значение `false`, проверка определения рабочего процесса не выполняется.<br /><br /> Значение по умолчанию для этого свойства — `true`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -58,10 +58,10 @@ ms.locfileid: "61673151"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
+|[\<> поведения](behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения об использовании файла конфигурации для управления поведением <xref:System.Workflow.Runtime.WorkflowRuntime> объект ведущего приложения Windows Workflow Foundation, см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Дополнительные сведения об использовании файла конфигурации для управления поведением <xref:System.Workflow.Runtime.WorkflowRuntime> объекта Windows Workflow Foundation ведущего приложения см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Пример  
   

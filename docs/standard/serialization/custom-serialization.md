@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645300"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916246"
 ---
 # <a name="custom-serialization"></a>Пользовательская сериализация
 Пользовательской сериализацией называется процесс управления сериализацией и десериализацией типа. Управление сериализацией позволяет обеспечить совместимость сериализации, в результате чего становится возможной сериализация и десериализация между различными версиями типа без нарушения основных функциональных возможностей типа. Например, в первой версии типа может быть только два поля. В следующей версии типа добавлено еще несколько полей. Во второй версии приложения должна быть предусмотрена возможность сериализации и десериализации обоих типов. В следующих разделах объясняется, как управлять сериализацией.
@@ -30,7 +30,7 @@ ms.locfileid: "64645300"
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  В версиях ранее .NET Framework 4.0 сериализация пользовательских данных в сборке с частичным доверием выполнялась методом GetObjectData. Начиная с версии 4.0, этот метод помечен атрибутом <xref:System.Security.SecurityCriticalAttribute>, который запрещает выполнение в сборках с частичным доверием. Чтобы решить эту проблему, реализуйте интерфейс <xref:System.Runtime.Serialization.ISafeSerializationData>.  
+> В версиях ранее .NET Framework 4.0 сериализация пользовательских данных в сборке с частичным доверием выполнялась методом GetObjectData. Начиная с версии 4.0, этот метод помечен атрибутом <xref:System.Security.SecurityCriticalAttribute>, который запрещает выполнение в сборках с частичным доверием. Чтобы решить эту проблему, реализуйте интерфейс <xref:System.Runtime.Serialization.ISafeSerializationData>.  
   
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Использование пользовательских методов во время сериализации и после нее  
  Для исправления данных во время сериализации и после нее рекомендуется применять к методам следующие атрибуты (впервые представлено в платформе .NET Framework версии 2.0):  

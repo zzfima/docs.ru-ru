@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940842"
 ---
 # <a name="dependency-property-security"></a>Безопасность свойства зависимости
 Свойства зависимости, как правило, считаются открытыми. Суть системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] такова, что дать гарантии безопасности о значении свойства зависимости невозможно.  
@@ -29,7 +29,7 @@ ms.locfileid: "68400767"
  Для настраиваемого свойства зависимости можно зарегистрировать свойство как свойство зависимостей только для чтения, и это обеспечивает эффективное средство предотвращения установки свойства любым пользователем, который не хранит ссылку <xref:System.Windows.DependencyPropertyKey> на свойство для этого свойства. Дополнительные сведения см. в разделе [Свойства зависимостей "только для чтения"](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  Объявление поля идентификатора Private не запрещено, и его можно использовать для уменьшения немедленно предоставляемого пространства имен пользовательского класса, но такое свойство не должно рассматриваться как "Private" в том же смысле, что и общий язык. <xref:System.Windows.DependencyProperty> определения языка среды выполнения (среда CLR) определяют этот уровень доступа, по причинам, описанным в следующем разделе.  
+> Объявление поля идентификатора Private не запрещено, и его можно использовать для уменьшения немедленно предоставляемого пространства имен пользовательского класса, но такое свойство не должно рассматриваться как "Private" в том же смысле, что и общий язык. <xref:System.Windows.DependencyProperty> определения языка среды выполнения (среда CLR) определяют этот уровень доступа, по причинам, описанным в следующем разделе.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Предоставление системы свойств свойствам зависимости  

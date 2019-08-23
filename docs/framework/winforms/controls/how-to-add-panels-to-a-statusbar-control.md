@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27d65c07f0a6ec4a25d057e2c16a8b59933bb8fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925108"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Практическое руководство. Добавление панелей в элемент управления StatusBar
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> элементы управления заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления сохраняются для обеспечения обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Элементы управления <xref:System.Windows.Forms.ToolStripStatusLabel> и заменяют и добавляют функциональные возможности в элементы управления и, однако, элементы управления и сохраняются для обратной совместимости и использования в будущем, если <xref:System.Windows.Forms.StatusStrip> выбрали.  
   
- Программируемая область [элемента управления StatusBar](statusbar-control-windows-forms.md) управления состоит из экземпляров <xref:System.Windows.Forms.StatusBarPanel> класса. Они добавляются с помощью дополнения к <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> класса.  
+ Программируемая область в элементе управления [StatusBar](statusbar-control-windows-forms.md) состоит из экземпляров <xref:System.Windows.Forms.StatusBarPanel> класса. Они добавляются с помощью дополнений <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> к классу.  
   
-### <a name="to-add-panels-to-a-status-bar"></a>Чтобы добавить панели в строке состояния  
+### <a name="to-add-panels-to-a-status-bar"></a>Добавление панелей в строку состояния  
   
-1. В процедуре создания панелей строки состояния, добавив их в <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Задайте значения свойств для отдельных панелей с помощью его индекса, переданного через <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство.  
+1. В процедуре создайте панели строк состояния, добавив их в <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Укажите параметры свойств для отдельных панелей с помощью индекса, передаваемого через <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство.  
   
-     В следующем примере кода, задайте путь — расположение значка **Мои документы** папки. Это расположение используется в том случае, так как можно предположить, что большинство компьютеров под управлением ОС Windows будет включать эту папку. Эта папка также пользователи со систему с минимальным уровнем доступа могут безопасно запускать приложение. В следующем примере требуется форма с <xref:System.Windows.Forms.StatusBar> управления уже добавлен.  
+     В следующем примере кода путь, заданный для расположения значка, — это папка **Мои документы** . Это расположение используется, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут содержать эту папку. Выбор этого расположения также позволяет пользователям с минимальными уровнями доступа к системе безопасно запускать приложение. В следующем примере требуется форма с <xref:System.Windows.Forms.StatusBar> уже добавленным элементом управления.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Является коллекция (с нуля), поэтому код должен продолжаться соответствующим образом.  
+    > Объект <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> является коллекцией, начинающейся с нуля, поэтому код должен выполняться соответствующим образом.  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -124,8 +124,8 @@ ms.locfileid: "62011077"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Диалоговое окно редактора коллекции](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [Практическое руководство. Задать размер панели строки состояния](how-to-set-the-size-of-status-bar-panels.md)
-- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Диалоговое окно «Редактор коллекции»](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [Практическое руководство. Установка размера панелей строки состояния](how-to-set-the-size-of-status-bar-panels.md)
+- [Пошаговое руководство: Обновление сведений в строке состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Практическое руководство. Определите, какая панель элемента управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

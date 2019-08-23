@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935650"
 ---
 # <a name="imethodmalloc-interface"></a>Интерфейс IMethodMalloc
-Предоставляет метод для выделения памяти для нового тела функции промежуточного языка MSIL.  
+Предоставляет метод для выделения памяти для нового текста функции MSIL.  
   
 > [!NOTE]
->  `IMethodMalloc` Интерфейс является простым средством выделения памяти. Можно выделить память, но не освободит его.  
+> `IMethodMalloc` Интерфейс — это простой механизм выделения памяти. Она позволяет выделить память, но не освобождает ее.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Пытается выделить указанный объем памяти для нового тела функции MSIL.|  
+|[Метод Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Пытается выделить указанный объем памяти для нового текста функции MSIL.|  
   
 ## <a name="remarks"></a>Примечания  
- Каждый распределитель конкретного модуля и гарантирует, что тело функции будет использовать с положительным смещением от базового модуля. Память сверх базового модуля может быть драгоценное, поэтому распределителя должен использоваться для выделения памяти только для тела функции.  
+ Каждый распределитель зависит от конкретного модуля и гарантирует, что текст функции будет иметь положительное смещение от базового модуля. Память над базовым модулем может быть ценной, поэтому распределитель должен использоваться для выделения памяти только для тела функции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf. idl, CorProf. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

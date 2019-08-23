@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 6bdd561c863a461f43a5a7aac025fead1f971bb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 82be9d31ff6bb3f2f5dd8a55b4426103d466bdd6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039809"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952096"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Включение режима "только для чтения" для столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 По умолчанию пользователи могут изменять текст и числовые данные, отображаемые <xref:System.Windows.Forms.DataGridView> в элементе управления Windows Forms. Если требуется отобразить данные, не предназначенные для изменения, необходимо сделать столбцы, содержащие данные, только для чтения. Сведения о том, как сделать элемент управления доступным только для чтения, см [. в разделе как Предотвращение добавления и удаления строк в элементе управления Windows Forms DataGridView с помощью конструктора](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).
@@ -28,7 +28,7 @@ ms.locfileid: "69039809"
 3. В сетке **Свойства столбца** задайте <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> для `true`свойства значение.
 
     > [!NOTE]
-    >  Можно также сделать столбец только для чтения при его добавлении, установив флажок **только чтение** в диалоговом окне **Добавление столбца** .
+    > Можно также сделать столбец только для чтения при его добавлении, установив флажок **только чтение** в диалоговом окне **Добавление столбца** .
 
 ## <a name="see-also"></a>См. также
 

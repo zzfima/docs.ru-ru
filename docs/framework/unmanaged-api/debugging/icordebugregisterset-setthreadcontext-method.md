@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debb704900d852df1d66c7bac65ab385e0d72ec5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff1365ddb46ca28cbcaa4f1383b293681e6ec214
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769942"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956775"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>Метод ICorDebugRegisterSet::SetThreadContext
-`SetThreadContext` не реализуется в .NET Framework версии 2.0. Этот метод не вызывается.  
+`SetThreadContext`не реализован в .NET Framework версии 2,0. Не вызывайте этот метод.  
   
 > [!NOTE]
->  С помощью операции более высокого уровня [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) для задания контекста потока.  
+> Используйте операцию более высокого уровня [ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) , чтобы задать контекст потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,13 +41,13 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
- **Версии платформы .NET framework:** 1.1, 1.0  
+ **.NET Framework версии:** 1,1, 1,0  
   
 ## <a name="see-also"></a>См. также
 

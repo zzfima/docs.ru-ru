@@ -2,21 +2,21 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ad05fd9125ecc8b3d5797e0dd335adbf808db84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783355"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933840"
 ---
-# <a name="peertransport"></a>\<peerTransport >
+# <a name="peertransport"></a>\<Пиртранспорт >
 Определяет одноранговый транспорт для пользовательской привязки.  
   
- \<system.serviceModel>  
+ \<> System. serviceModel  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<peerTransport >  
+\<Пиртранспорт >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ ms.locfileid: "61783355"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|listenIpAddress|Строка, указывающая IP-адрес, на котором одноранговый узел будет ожидать TCP-сообщения. Значение по умолчанию — `null`.|  
+|listenIpAddress|Строка, указывающая IP-адрес, на котором одноранговый узел будет ожидать TCP-сообщения. Значение по умолчанию — `null`.|  
 |maxBufferPoolSize|Положительное целое число, указывающее максимальный размер буферного пула. Значение по умолчанию — 524288.<br /><br /> Многие элементы WCF используют буферы. При создании буферов и их уничтожении после каждого использования расходуется слишком много ресурсов; при сборке мусора для буферов также расходуется слишком много ресурсов. Буферные пулы позволяют брать буфер из пула, использовать его, а затем возвращать обратно, когда он больше не требуется. Это позволяет избежать излишней нагрузки, связанной с созданием и уничтожением буферов.|  
 |maxReceivedMessageSize|Положительное целое число, определяющее максимальный размер сообщения (в байтах), включая заголовки. Отправитель сообщения получает ошибку протокола SOAP, когда размер сообщения оказывается слишком большим для получателя. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию — 65536.|  
-|порт|Целое число, задающее порт сетевого интерфейса, на котором эта привязка будет обрабатывать TCP-сообщения однорангового канала. Это значение должно принадлежать диапазону от <xref:System.Net.IPEndPoint.MinPort> до <xref:System.Net.IPEndPoint.MaxPort>. Значение по умолчанию — 0.|  
+|порт|Целое число, задающее порт сетевого интерфейса, на котором эта привязка будет обрабатывать TCP-сообщения однорангового канала. Это значение должно принадлежать диапазону от <xref:System.Net.IPEndPoint.MinPort> до <xref:System.Net.IPEndPoint.MaxPort>. Значение по умолчанию — 0.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Определяет параметры безопасности для данного транспорта. Это элемент типа <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|[\<> безопасности](security-of-peertransport.md)|Определяет параметры безопасности для данного транспорта. Это элемент типа <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
  Данный транспорт нельзя использовать с контрактами, имеющими операции запроса-ответа.  
@@ -63,9 +63,9 @@ ms.locfileid: "61783355"
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Транспорты](../../../wcf/feature-details/transports.md)
+- [Выбор транспорта](../../../wcf/feature-details/choosing-a-transport.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Расширение привязок](../../../wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

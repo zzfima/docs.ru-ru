@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938458"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency в приложении ASP.NET
 В примере этого раздела показано, как косвенно использовать <xref:System.Data.SqlClient.SqlDependency>, используя объект ASP.NET <xref:System.Web.Caching.SqlCacheDependency>. Объект <xref:System.Web.Caching.SqlCacheDependency> использует <xref:System.Data.SqlClient.SqlDependency> для прослушивания уведомлений и правильного обновления кэша.  
   
 > [!NOTE]
->  Образец кода предполагает, что вы включили уведомления о запросах путем выполнения скриптов в [Включение уведомлений о запросах](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
+> В примере кода предполагается, что вы включили уведомления о запросах, выполняя скрипты, [включив уведомления о запросах](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>О примере приложения  
- Пример приложения использует одной страницы ASP.NET для отображения сведений о продукте из **AdventureWorks** базы данных SQL Server в <xref:System.Web.UI.WebControls.GridView> элемента управления. При загрузке страницы код записывает текущее время в элемент управления <xref:System.Web.UI.WebControls.Label>. Затем он определяет объект <xref:System.Web.Caching.SqlCacheDependency> и устанавливает свойства на объекте <xref:System.Web.Caching.Cache> для хранения данных кэша до трех минут. Затем код выполняет подключение к базе данных и получает данные. После того, как страница загружена и приложение выполняется, ASP.NET получает данные из кэша. Это можно проверить, убедившись, что время на странице не меняется. Если наблюдаемые данные изменяются, ASP.NET делает кэш недействительным и вновь заполняет элемент управления `GridView` свежими данными, обновляя время, отображаемое в элементе управления `Label`.  
+ Пример приложения использует одну веб-страницу ASP.NET для вывода сведений о продукте из базы данных **AdventureWorks** SQL Server в <xref:System.Web.UI.WebControls.GridView> элементе управления. При загрузке страницы код записывает текущее время в элемент управления <xref:System.Web.UI.WebControls.Label>. Затем он определяет объект <xref:System.Web.Caching.SqlCacheDependency> и устанавливает свойства на объекте <xref:System.Web.Caching.Cache> для хранения данных кэша до трех минут. Затем код выполняет подключение к базе данных и получает данные. После того, как страница загружена и приложение выполняется, ASP.NET получает данные из кэша. Это можно проверить, убедившись, что время на странице не меняется. Если наблюдаемые данные изменяются, ASP.NET делает кэш недействительным и вновь заполняет элемент управления `GridView` свежими данными, обновляя время, отображаемое в элементе управления `Label`.  
   
 ## <a name="creating-the-sample-application"></a>Создание примера приложения  
  Для создания и запуска примера приложения выполните следующие шаги.  
@@ -47,7 +47,7 @@ ms.locfileid: "61780293"
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5. Добавьте два вспомогательных метода, `GetConnectionString` и `GetSQL`. В заданной строке соединения используется интегрированная безопасность. Необходимо будет проверить наличие необходимых разрешений базы данных и что учетной записи, используемой базе данных, **AdventureWorks**, включены уведомления.
+5. Добавьте два вспомогательных метода, `GetConnectionString` и `GetSQL`. В заданной строке соединения используется интегрированная безопасность. Необходимо убедиться, что используемая учетная запись имеет необходимые разрешения базы данных и что образец базы данных, **AdventureWorks**, включает уведомления.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

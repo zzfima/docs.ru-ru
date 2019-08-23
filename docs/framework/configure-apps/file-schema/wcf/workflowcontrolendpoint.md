@@ -2,18 +2,18 @@
 title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: a9c16d1036a8177120cd152d4ac211ad084d588e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c9774217b835acdb9ebf7374b964d838497fc9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769646"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915333"
 ---
-# <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint >
+# <a name="workflowcontrolendpoint"></a>\<Воркфловконтролендпоинт >
 Этот элемент конфигурации определяет стандартную конечную точку для управления выполнением экземпляров рабочего процесса (создание, выполнение, приостановка, завершение и т. д.).  
   
-\<system.ServiceModel>  
-\<standardEndpoints >  
+\<системой. > ServiceModel  
+\<Стандардендпоинтс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +37,13 @@ ms.locfileid: "61769646"
 |имя|Строка, указывающая имя конфигурации стандартной конечной точки. Это имя используется в атрибуте `endpointConfiguration` конечной точки службы для связывания стандартной конечной точки с ее конфигурацией.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными.|  
+|[\<Стандардендпоинтс >](standardendpoints.md)|Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными.|  
   
 ## <a name="see-also"></a>См. также
 

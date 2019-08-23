@@ -2,20 +2,20 @@
 title: Практическое руководство. Задание учетных данных безопасности канала
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038874"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933451"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Практическое руководство. Задание учетных данных безопасности канала
-Моникер служб Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинство служб WCF потребовать от клиента указать учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF, можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM, можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+Моникер службы Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинству служб WCF требуется, чтобы клиент указал учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс для указания учетных данных. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> - это интерфейс, основанный на IDispatch, и получение функциональных возможностей IntelliSense в среде Visual Studio невозможно.  
+> <xref:System.ServiceModel.ComIntegration.IChannelCredentials> - это интерфейс, основанный на IDispatch, и получение функциональных возможностей IntelliSense в среде Visual Studio невозможно.  
   
- В этой статье будет использовать службу WCF, определенные в [пример безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ В этой статье будет использоваться служба WCF, определенная в [примере безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Задание сертификата клиента  
   
@@ -23,11 +23,11 @@ ms.locfileid: "62038874"
   
 2. Откройте проект безопасности сообщений.  
   
-3. Добавить `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` для `ICalculator` определение интерфейса.  
+3. `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` Добавьте`ICalculator` в определение интерфейса.  
   
-4. Добавить `bindingNamespace="http://Microsoft.ServiceModel.Samples"` в тег конечной точки в файле App.config для службы.  
+4. Добавьте `bindingNamespace="http://Microsoft.ServiceModel.Samples"` в тег Endpoint в файле App. config для службы.  
   
-5. Создайте образец безопасности сообщений и запустите файл Service.exe. Используйте Internet Explorer и перейдите к URI службы (http://localhost:8000/ServiceModelSamples/Service) чтобы убедиться, что служба работает.  
+5. Создайте образец безопасности сообщений и запустите файл Service.exe. Используйте Internet Explorer и перейдите к URI службы (http://localhost:8000/ServiceModelSamples/Service) чтобы убедиться, что служба работает).  
   
 6. Откройте Visual Basic 6.0 и создайте новый стандартный EXE-файл. Добавьте в форму кнопку и дважды щелкните ее, чтобы добавить следующий код в обработчик щелчка.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "62038874"
     ```  
   
 > [!NOTE]
->  Чтобы этот вызов работал, сертификат клиента должен быть доверенным на компьютере, на котором выполняется клиент.  
+> Чтобы этот вызов работал, сертификат клиента должен быть доверенным на компьютере, на котором выполняется клиент.  
   
 > [!NOTE]
->  Если моникер сформирован неправильно или служба недоступна, при вызове `GetObject` будет возвращена ошибка "Синтаксическая ошибка". При получении этой ошибки убедитесь, что используется правильный моникер, а служба доступна.  
+> Если моникер сформирован неправильно или служба недоступна, при вызове `GetObject` будет возвращена ошибка "Синтаксическая ошибка". При получении этой ошибки убедитесь, что используется правильный моникер, а служба доступна.  
   
 ### <a name="to-specify-user-name-and-password"></a>Задание имени пользователя и пароля  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62038874"
 4. Запустите приложение Visual Basic и проверьте результаты. Приложение Visual Basic отобразит окно сообщений с результатом вызова Add(3, 4).  
   
     > [!NOTE]
-    >  Привязка, заданная в моникере служб в этом примере, изменена на WSHttpBinding_ICalculator. Также обратите внимание, что необходимо предоставить действительные имя пользователя и пароль в вызове метода <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
+    > Привязка, заданная в моникере служб в этом примере, изменена на WSHttpBinding_ICalculator. Также обратите внимание, что необходимо предоставить действительные имя пользователя и пароль в вызове метода <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
   
 ### <a name="to-specify-windows-credentials"></a>Задание учетных данных Windows  
   
@@ -111,11 +111,11 @@ ms.locfileid: "62038874"
 3. Запустите приложение Visual Basic и проверьте результаты. Приложение Visual Basic отобразит окно сообщений с результатом вызова Add(3, 4).  
   
     > [!NOTE]
-    >  Необходимо заменить "domain", "userID" и "password" на действительные значения.  
+    > Необходимо заменить "domain", "userID" и "password" на действительные значения.  
   
 ### <a name="to-specify-an-issue-token"></a>Задание маркера вопроса  
   
-1. Маркеры вопроса используются только для приложений с федеративной безопасностью. Дополнительные сведения о федеративной безопасности, см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) и [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1. Маркеры вопроса используются только для приложений с федеративной безопасностью. Дополнительные сведения о федеративной безопасности см. в статье [Федерации и выданы токены](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) и [Пример Федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
      В следующем примере кода Visual Basic показано, как вызывать метод <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62038874"
 ## <a name="see-also"></a>См. также
 
 - [Федерация](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Практическое руководство. Настройка учетных данных на служба федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

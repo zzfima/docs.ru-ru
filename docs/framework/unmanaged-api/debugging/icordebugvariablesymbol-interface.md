@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0e58b85e-69bd-41ff-bedb-8cdc8be6a7a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c7cdababd1e4b5fae4f5e48a654f861b708a6e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fb2538894184c19bc107ce52cbef3ac86a97345
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930121"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967982"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>Интерфейс ICorDebugVariableSymbol
 Извлекает сведения символа отладки для статического поля.  
@@ -27,14 +27,14 @@ ms.locfileid: "61930121"
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот интерфейс доступен только в .NET Native. При реализации этого интерфейса для сценариев ICorDebug вне .NET Native среда CLR будет игнорировать этот интерфейс.  
+> Этот интерфейс доступен только в .NET Native. При реализации этого интерфейса для сценариев ICorDebug вне .NET Native среда CLR будет игнорировать этот интерфейс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

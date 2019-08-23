@@ -2,21 +2,21 @@
 title: <security> из <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 68d3aa4da793e0338c2b0b704335bafce7cc3e31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e627a63221d0013c89495d7ff81e02047a03df89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936511"
 ---
-# <a name="security-of-wshttpbinding"></a>\<Безопасность > из \<wsHttpBinding >
-Представляет возможности безопасности [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+# <a name="security-of-wshttpbinding"></a>\<> \<безопасности WSHttpBinding >
+Представляет возможности [ \<безопасности > WSHttpBinding](wshttpbinding.md).  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<привязки >  
-\<wsHttpBinding >  
+\<> wsHttpBinding  
 \<Привязка >  
-\<Безопасность >  
+\<> безопасности  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,14 +42,14 @@ ms.locfileid: "61670405"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|-Необязательно. Задает тип применяемого механизма обеспечения безопасности. Значение по умолчанию — `Message`.<br />— Этот атрибут имеет тип <xref:System.ServiceModel.SecurityMode>.|  
+|режим|Используемых. Задает тип применяемого механизма обеспечения безопасности. Значение по умолчанию — `Message`.<br />— Этот атрибут имеет тип <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Атрибут mode  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Нет|Режим безопасности отключен.|  
-|Transport|Безопасность обеспечивается с помощью протокола HTTPS. Необходимо настроить службу с использованием SSL-сертификата. Сообщение полностью защищено с помощью HTTPS, а проверка подлинности выполняется клиентом с помощью SSL-сертификата службы. Проверка подлинности клиента контролируется посредством атрибута `ClientCredentials`. из [ \<транспорта >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).|  
+|Отсутствуют|Режим безопасности отключен.|  
+|Transport|Безопасность обеспечивается с помощью протокола HTTPS. Необходимо настроить службу с использованием SSL-сертификата. Сообщение полностью защищено с помощью HTTPS, а проверка подлинности выполняется клиентом с помощью SSL-сертификата службы. Проверка подлинности клиента контролируется посредством атрибута `ClientCredentials`. > транспорта. [ \<](transport-of-wshttpbinding.md)|  
 |Сообщение|Безопасность обеспечивается с помощью средств безопасности сообщений SOAP. По умолчанию текст сообщений SOAP шифруется и подписывается. Этот режим предоставляет множество возможностей, например сведения о доступности учетных данных службы для клиентов на внештатных каналах, об используемом наборе алгоритмов и об уровне защиты, применяемом к тексту сообщения через свойство Security.Message. Проверка подлинности клиента выполняется один раз за сеанс, и результаты проверки сохраняются в кэше на протяжении всего сеанса.|  
 |TransportWithMessageCredential|В данном режиме HTTPS обеспечивает целостность, конфиденциальность и проверку подлинности сервера, а механизм безопасности сообщений SOAP обеспечивает проверку подлинности клиента. По умолчанию проверка подлинности клиента выполняется один раз за сеанс, и результаты проверки сохраняются в кэше на протяжении всего сеанса.|  
   
@@ -57,14 +57,14 @@ ms.locfileid: "61670405"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Определяет параметры безопасности транспорта. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
-|[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|Определяет параметры безопасности сообщения. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  
+|[\<> транспорта](transport-of-wshttpbinding.md)|Определяет параметры безопасности транспорта. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
+|[\<> сообщения](message-of-wshttpbinding.md)|Определяет параметры безопасности сообщения. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Привязка безопасности для приложений транспорта HTTP.|  
+|[\<wsHttpBinding>](wshttpbinding.md)|Привязка безопасности для приложений транспорта HTTP.|  
   
 ## <a name="remarks"></a>Примечания  
  Класс WSHttpBinding предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS.  
@@ -75,8 +75,8 @@ ms.locfileid: "61670405"
 - <xref:System.ServiceModel.WSHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../misc/binding.md)

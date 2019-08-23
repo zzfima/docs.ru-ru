@@ -2,12 +2,12 @@
 title: Пользовательская публикация WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 6b83f225c7c410c3f7dc86f39978b5fef32ae3f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0731276fcf9178403fd434e03a0666d11ac1f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953591"
 ---
 # <a name="custom-wsdl-publication"></a>Пользовательская публикация WSDL
 В данном образце демонстрируются указанные ниже возможности.  
@@ -18,10 +18,10 @@ ms.locfileid: "64650163"
   
 - Реализация <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> в пользовательском поведении контракта и пользовательском поведении операции соответственно для записи импортированных заметок в виде комментариев в CodeDom для импортированных контракта и операции.  
   
-- Используйте <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> для загрузки WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> для импорта WSDL с помощью пользовательского импортера WSDL и <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> для создания кода клиента Windows Communication Foundation (WCF) с заметками WSDL как / / / и ''' комментарии в C# и Visual Основные.  
+- Используйте для загрузки WSDL, a для импорта <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL-файла с помощью пользовательского средства <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> импорта WSDL и для создания клиентского кода Windows Communication Foundation (WCF) с аннотацией WSDL как///и комментариями "'" в и C# <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Visual Basic.  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+> Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 ## <a name="service"></a>Служба  
  В этом образце служба помечена двумя пользовательскими атрибутами. Первый атрибут, `WsdlDocumentationAttribute`, принимает строку в конструкторе и может применяться для предоставления интерфейса контракта или операции со строкой, описывающей их использование. Второй атрибут, `WsdlParamOrReturnDocumentationAttribute`, может применяться для возврата значений или параметров, описывающих эти значения в операции. В следующем примере показан контракт службы `ICalculator`, описанный с помощью этих атрибутов.  
@@ -231,7 +231,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- После указания пользовательского импортера система метаданных WCF загружает пользовательский импортер в любой <xref:System.ServiceModel.Description.WsdlImporter> создан для этой цели. В этом образце используется <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных, правильно настроенный <xref:System.ServiceModel.Description.WsdlImporter> для импорта метаданных с помощью создаваемого образецом пользовательского импортера и <xref:System.ServiceModel.Description.ServiceContractGenerator> для компиляции измененных сведений контракта в клиентский код Visual Basic и C#, который можно использовать в Visual Studio для поддержки Intellisense или скомпилировать в XML-документацию.  
+ После указания пользовательского средства импорта система метаданных WCF загружает пользовательский импортер в любой <xref:System.ServiceModel.Description.WsdlImporter> , созданный для этой цели. В этом образце используется <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных, правильно настроенный <xref:System.ServiceModel.Description.WsdlImporter> для импорта метаданных с помощью создаваемого образецом пользовательского импортера и <xref:System.ServiceModel.Description.ServiceContractGenerator> для компиляции измененных сведений контракта в клиентский код Visual Basic и C#, который можно использовать в Visual Studio для поддержки Intellisense или скомпилировать в XML-документацию.  
   
 ```  
 /// From WSDL Documentation:  
@@ -289,17 +289,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545267"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944810"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel>элементы — это компоненты, управляющие отрисовкой элементов (их размер и размеры, их расположение и расположение их дочернего содержимого). Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементов, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -149,7 +149,7 @@ ms.locfileid: "69545267"
  Столбцы и строки, определенные в <xref:System.Windows.Controls.Grid> , могут воспользоваться <xref:System.Windows.GridUnitType.Star> преимуществом размера для пропорционального распределения оставшегося пространства. Если <xref:System.Windows.GridUnitType.Star> в качестве высоты или ширины строки или столбца выбрано значение, то этот столбец или строка получает взвешенную долю оставшегося доступного пространства. Это отличается от <xref:System.Windows.GridUnitType.Auto>, что распределяет пространство равномерно в зависимости от размера содержимого в пределах столбца или строки. Это значение выражается как `*` или `2*` при использовании языка [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. В первом случае строка или столбец будет получать определенное доступное пространство, а во втором случае — в два раза больше. Комбинируя этот метод для пропорционального распределения пространства с помощью <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> значения `Stretch` и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> , можно секционировать пространство макета по проценту от пространства экрана. <xref:System.Windows.Controls.Grid>— Единственная панель макета, которая может распределять пространство таким образом.  
   
 #### <a name="defining-and-using-a-grid"></a>Определение и использование Grid  
- В следующем примере демонстрируется построение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] аналогичного используемому в диалоговом окне Run, доступном в меню "Пуск" [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ В следующем примере демонстрируется создание аналогичного [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемента, который находится в диалоговом окне Run, доступном в меню Пуск Windows.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

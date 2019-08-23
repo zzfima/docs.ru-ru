@@ -2,17 +2,17 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e79b3e1aeecc52bf41ae759dc15ebf1c8211beb2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704184"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926071"
 ---
 # <a name="compositeduplex"></a>\<compositeDuplex >
 Определяет элемент привязки, который используется, когда клиенту необходимо предоставить службе конечную точку для отправки сообщений обратно клиенту.  
   
- \<system.serviceModel>  
+ \<> System. serviceModel  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
@@ -31,16 +31,16 @@ ms.locfileid: "61704184"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientBaseAddress|Универсальный код ресурса (URI), который задает адрес обратного канала при работе в дуплексном режиме. Служба использует данный адрес для осуществления контакта и создания подключения к клиенту.<br /><br /> Если этот атрибут не установлен, адрес по умолчанию "`full qualified name+default port\TemporaryIndigoAddress\guid`" создается. Значение по умолчанию — `null`.|  
+|clientBaseAddress|Универсальный код ресурса (URI), который задает адрес обратного канала при работе в дуплексном режиме. Служба использует данный адрес для осуществления контакта и создания подключения к клиенту.<br /><br /> Если этот атрибут не задан, создается адрес`full qualified name+default port\TemporaryIndigoAddress\guid`по умолчанию. Значение по умолчанию — `null`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
  Данный элемент конфигурации используется с теми типами транспорта, которые не имеют встроенной поддержки дуплексной связи, например HTTP. Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.  
@@ -58,7 +58,7 @@ ms.locfileid: "61704184"
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Расширение привязок](../../../wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920548"
 ---
-# <a name="add-element-for-switches"></a>\<Добавить > элемент для \<коммутаторы >
+# <a name="add-element-for-switches"></a>\<Добавьте элемент > для \<переключателей >
 Задает уровень, на котором установлен ключ трассировки.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<Параметры >  
+\<> System. Diagnostics  
+\<переключатели >  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -36,11 +36,11 @@ ms.locfileid: "61673814"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**name**|Обязательный атрибут.<br /><br /> Указывает имя переключателя. Значение этого атрибута соответствует *displayName* параметр, передаваемый конструктору переключателя.|  
+|**name**|Обязательный атрибут.<br /><br /> Указывает имя переключателя. Значение этого атрибута соответствует параметру *DisplayName* , переданному в конструктор переключателя.|  
 |**value**|Обязательный атрибут.<br /><br /> Задает уровень переключателя.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -51,10 +51,10 @@ ms.locfileid: "61673814"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Уровень переключателя трассировки можно изменить, поместив его в файле конфигурации. Если значение параметра равно <xref:System.Diagnostics.BooleanSwitch>, вы можете включать и отключать. Если значение параметра равно <xref:System.Diagnostics.TraceSwitch>, можно назначать различные уровни для указания типов трассировки или отладки сообщений выходные данные приложения.  
+ Уровень переключателя трассировки можно изменить, поместив его в файл конфигурации. Если параметр имеет <xref:System.Diagnostics.BooleanSwitch>значение, его можно включить и отключить. Если параметр имеет <xref:System.Diagnostics.TraceSwitch>значение, можно назначить для него разные уровни, чтобы указать типы трассировки или сообщения отладки, выданные приложением.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<Добавить >** задаваемого элемента `General` для переключателя трассировки <xref:System.Diagnostics.TraceLevel> уровня и включить `Data` логический переключатель трассировки.  
+ В следующем примере показано <xref:System.Diagnostics.TraceLevel> использование `Data` `General`  **\<элемента Add >** для задания переключателя трассировки на уровне и включения логического переключателя трассировки.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61673814"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Схема параметров трассировки и отладки](index.md)

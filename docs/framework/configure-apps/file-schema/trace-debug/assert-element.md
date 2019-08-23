@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927186"
 ---
-# <a name="assert-element"></a>\<Assert > элемент
+# <a name="assert-element"></a>\<Assert >, элемент
 Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.  
   
  \<configuration>  
-\<system.diagnostics>  
-\<assert>  
+\<> System. Diagnostics  
+\<утверждение >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ ms.locfileid: "61701363"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`assertuienabled`|Необязательный атрибут.<br /><br /> Указывает, является ли чтобы отобразить окно сообщения при **Debug.Assert** метод, результатом которого является **false**.|  
-|`logfilename`|Необязательный атрибут.<br /><br /> Указывает имя файла для записи сообщения, если **Debug.Assert** принимает значение **false**.|  
+|`assertuienabled`|Необязательный атрибут.<br /><br /> Указывает, следует ли отображать окно сообщения, если метод **Debug. Assert** возвращает **значение false**.|  
+|`logfilename`|Необязательный атрибут.<br /><br /> Указывает имя файла, в который будет записано сообщение, если **Debug. Assert** имеет значение **false**.|  
   
-## <a name="assertuienabled-attribute"></a>assertuienabled атрибут  
+## <a name="assertuienabled-attribute"></a>Атрибут ассертуиенаблед  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "61701363"
 |`false`|Не отображает окно сообщения.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -56,10 +56,10 @@ ms.locfileid: "61701363"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Оба атрибута в  **\<assert >** являются необязательными. Вы можете отключить окон сообщений без указания файла для записи сообщений в, или можно указать файл для записи, что при этом не отключать окна сообщений.  
+ Оба атрибута в  **\<элементе Assert >** являются необязательными. Можно отключить окна сообщений, не указывая файл для записи в него, или указать файл для записи сообщений при включении входящих в него окон сообщений.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как отключить отображение окон сообщений при вызове **Debug.Assert** и записи сообщений `c:\log.txt`.  
+ В следующем примере показано, как отключить отображение окон сообщений при вызове **Debug. Assert** и записи сообщений в `c:\log.txt`.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ ms.locfileid: "61701363"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Diagnostics.Debug>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Схема параметров трассировки и отладки](index.md)

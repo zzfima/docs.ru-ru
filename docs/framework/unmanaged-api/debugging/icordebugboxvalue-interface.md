@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645413"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912926"
 ---
 # <a name="icordebugboxvalue-interface"></a>Интерфейс ICorDebugBoxValue
 
-Подкласс «ICorDebugHeapValue», представляющий упакованное значение объектов класса.  
+Подкласс "ICorDebugHeapValue", представляющий объект класса упакованного значения.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Получает указатель интерфейса на упакованный экземпляр «ICorDebugObjectValue».|  
+|[Метод GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Возвращает указатель интерфейса на упакованный экземпляр "ICorDebugObjectValue".|  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

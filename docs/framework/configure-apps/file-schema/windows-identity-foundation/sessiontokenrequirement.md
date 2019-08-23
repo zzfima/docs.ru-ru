@@ -3,21 +3,21 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 254d34149892abeaf31b9227f7567eb0a66ec0b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943668"
 ---
-# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> классом или производными классами.  
+# <a name="sessiontokenrequirement"></a>\<Сессионтокенрекуиремент >
+Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> класса или производных классов.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
 \<add>  
-\<sessionTokenRequirement>  
+\<Сессионтокенрекуиремент >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,16 +41,16 @@ ms.locfileid: "61793774"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|время существования|Задает время существования токенов сеансов.|  
+|время существования|Указывает время существования маркеров сеанса.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
+|[\<add>](add.md)|Добавляет указанный обработчик маркеров безопасности в коллекцию обработчиков маркеров.|  
   
 ## <a name="example"></a>Пример  
   

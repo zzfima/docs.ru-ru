@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afbf480d69e97662b5963706bb8c192aec0325a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786338"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966297"
 ---
 # <a name="icordebug-interface"></a>Интерфейс ICorDebug
-Предоставляет методы, позволяющие разработчикам отлаживать приложения в среде CLR (CLR).  
+Предоставляет методы, позволяющие разработчикам отлаживать приложения в среде среды CLR.  
   
 > [!NOTE]
->  Отладка в смешанном режиме (управляемый и машинный код) не поддерживается в Windows 95, Windows 98 или Windows ME или на платформах, отличных от — x86 (например, IA64 и AMD64).  
+> Отладка в смешанном режиме (управляемый и машинный код) не поддерживается в Windows 95, Windows 98 или Windows ME или на платформах, отличных от x86 (например, IA64 и AMD64).  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод CanLaunchOrAttach](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Определяет, возможна ли запуск нового процесса или вложение в данный процесс в контексте текущей конфигурации компьютера и среды выполнения.|  
-|[Метод CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Запускает процесс и основной поток под контролем отладчика.|  
+|[Метод CanLaunchOrAttach](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Определяет, возможен ли запуск нового процесса или присоединение к данному процессу в контексте текущей конфигурации компьютера и среды выполнения.|  
+|[Метод CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Запускает процесс и его основной поток под управлением отладчика.|  
 |[Метод DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Присоединяет отладчик к существующему процессу.|  
-|[Метод EnumerateProcesses](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Получает перечислитель для отлаживаемых процессов.|  
-|[Метод GetProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Возвращает объект «ICorDebugProcess» с идентификатором указанного процесса.|  
-|[Метод Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Инициализирует `ICorDebug` объекта.|  
+|[Метод EnumerateProcesses](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Возвращает перечислитель для отлаживаемых процессов.|  
+|[Метод GetProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Возвращает объект "ICorDebugProcess" с заданным ИДЕНТИФИКАТОРом процесса.|  
+|[Метод Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Инициализирует `ICorDebug` объект.|  
 |[Метод SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Указывает объект обработчика событий для управляемых событий.|  
 |[Метод SetUnmanagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Указывает объект обработчика событий для неуправляемых событий.|  
-|[Метод Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Завершает `ICorDebug` объекта.|  
+|[Метод Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|`ICorDebug` Завершает объект.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebug` представляет цикл обработки событий для процесса отладчика. Отладчик должен ожидать [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) обратного вызова от всех процессов, отлаживаемых перед тем как освободить этот интерфейс.  
+ `ICorDebug`представляет цикл обработки событий для процесса отладчика. Перед освобождением этого интерфейса отладчик должен ожидать обратного вызова [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) для всех отлаживаемых процессов.  
   
- `ICorDebug` Объект является исходный объект для управления все дополнительные управляемые отладки. В .NET Framework версий 1.0 и 1.1, этот объект был `CoClass` объект, созданный из COM. В .NET Framework версии 2.0, этот объект больше не `CoClass` объекта. Она должна быть создана путем [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) функцию, которая более следящее за версией. Эта новая функция создания позволяет клиентам получать реализации `ICorDebug`, которое также позволяет эмулировать определенную версию API отладки.  
+ `ICorDebug` Объект является начальным объектом для управления всеми дальнейшими управляемыми отладками. В .NET Framework версиях 1,0 и 1,1 этот объект был объектом, `CoClass` созданным из com. В .NET Framework версии 2,0 этот объект больше `CoClass` не является объектом. Она должна быть создана функцией [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) , которая поддерживает больше версий. Эта новая функция создания позволяет клиентам получить определенную реализацию `ICorDebug`, которая также эмулирует определенную версию API отладки.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

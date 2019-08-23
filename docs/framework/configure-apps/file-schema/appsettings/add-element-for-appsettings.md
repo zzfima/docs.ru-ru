@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: f8b426dc0e1e180afbfccce50d3b45774991a572
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927752"
 ---
-# <a name="add-element-for-appsettings"></a>\<Добавить > элемент для \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<Добавьте элемент > для \<appSettings >
 
 Добавляет пользовательский параметр приложения.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**
 
 ## <a name="syntax"></a>Синтаксис
@@ -36,22 +36,22 @@ ms.locfileid: "66301352"
 
 |           | Описание |
 | --------- | ----------- |
-| **key**   | Обязательный атрибут.<br><br>Указывает имя ключа. |
-| **value** | Обязательный атрибут.<br><br>Указывает значение ключа. |
+| **key**   | Обязательный атрибут.<br><br>Указывает имя добавляемого ключа. |
+| **value** | Обязательный атрибут.<br><br>Указывает значение добавляемого ключа. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб и другие сведения о пользовательской конфигурации приложения. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб и другие сведения о пользовательской конфигурации приложения. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+Отсутствуют
 
 ## <a name="example"></a>Пример
 
-Следующий пример показывает добавление настроек пользовательской конфигурации для имени приложения:
+В следующем примере показано, как добавить настраиваемый параметр конфигурации для имени приложения:
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ ms.locfileid: "66301352"
 </appSettings>
 ```
 
-В следующем примере используется `<add>` для определения двух параметров совместимости в приложении ASP.NET:
+В следующем примере `<add>` элемент используется для определения двух параметров совместимости в приложении ASP.NET:
 
 ```xml
 <appSettings>
@@ -70,4 +70,4 @@ ms.locfileid: "66301352"
 
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](../index.md)
