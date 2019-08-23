@@ -8,29 +8,29 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6655652a7c5dedb8e183356688972c07a705cbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931840"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Практическое руководство. Отрисовка буферизированной графики вручную
 При управлении собственной буферизованной графикой необходимо иметь возможность создавать буферы графики и визуализировать их. Чтобы создать экземпляр класса <xref:System.Drawing.BufferedGraphics>, связанный с поверхностью рисования на экране, можно вызвать метод <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Этот метод создает экземпляр <xref:System.Drawing.BufferedGraphics>, связанный с определенной поверхностью отрисовки, например формой или элементом управления. После создания экземпляра <xref:System.Drawing.BufferedGraphics> можно добавлять графические объекты в представляемый им буфер через свойство <xref:System.Drawing.BufferedGraphics.Graphics%2A>. После выполнения всех операций с графикой можно скопировать содержимое буфера на экран, вызвав метод <xref:System.Drawing.BufferedGraphics.Render%2A>.  
   
 > [!NOTE]
->  При выполнении собственной отрисовки потребление памяти увеличится, хотя это увеличение может быть и незначительным.  
+> При выполнении собственной отрисовки потребление памяти увеличится, хотя это увеличение может быть и незначительным.  
   
 ### <a name="to-manually-display-buffered-graphics"></a>Вывод буферизованной графики вручную  
   
-1. Получите ссылку на экземпляр класса <xref:System.Drawing.BufferedGraphicsContext>. Дополнительные сведения см. в разделе [Как Управление буферизацией графики](how-to-manually-manage-buffered-graphics.md).  
+1. Получите ссылку на экземпляр класса <xref:System.Drawing.BufferedGraphicsContext>. Дополнительные сведения см. в разделе [Практическое руководство. Управление буферизованными графиками](how-to-manually-manage-buffered-graphics.md)вручную.  
   
 2. Создайте экземпляр класса <xref:System.Drawing.BufferedGraphics>, вызвав метод <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>, как показано в примере ниже.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#21)]  
   
-3. С помощью свойства <xref:System.Drawing.BufferedGraphics.Graphics%2A> поместите в буфер графические объекты. Пример:  
+3. С помощью свойства <xref:System.Drawing.BufferedGraphics.Graphics%2A> поместите в буфер графические объекты. Например:  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#22)]  
@@ -50,4 +50,4 @@ ms.locfileid: "61756589"
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Двойная буферизация графики](double-buffered-graphics.md)
-- [Практическое руководство. Управление буферизацией графики](how-to-manually-manage-buffered-graphics.md)
+- [Практическое руководство. Управление буферизованными графиками вручную](how-to-manually-manage-buffered-graphics.md)

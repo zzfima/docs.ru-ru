@@ -1,27 +1,27 @@
 ---
-title: <activityScheduledQuery> для WCF
+title: <activityScheduledQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7787ada68210ff832ff3fd1ec93c9d346e4d2eaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926927"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > из WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<Активитисчедуледкуери > WCF
 
 Представляет коллекцию запросов, которые используются для отслеживания действия, выполнение которого запланировано родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на записи запланированных действий.  
   
-Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
-\<профили >  
+\<Профили >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<activityScheduledQueries >  
-\<activityScheduledQuery >  
+\<> рабочего процесса  
+\<Активитисчедуледкуериес >  
+\<Активитисчедуледкуери >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,17 +53,17 @@ ms.locfileid: "61704723"
   
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<activityScheduledQueries >](activityscheduledqueries-of-wcf.md)|Набор запросов, которые используются для отслеживания запланировать выполнение действия родительским действием.|  
+|[\<Активитисчедуледкуериес >](activityscheduledqueries-of-wcf.md)|Коллекция запросов, которая используется для трассировки действия, запланированного на выполнение родительским действием.|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

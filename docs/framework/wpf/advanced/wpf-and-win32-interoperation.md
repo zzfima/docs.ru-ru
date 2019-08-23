@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 47f27b71b282fad9d285143bf8306d7bdbb60da2
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: d13f4ce37dba45dc99f0481043d80640e73d833d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671928"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917476"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Взаимодействие WPF и Win32
 В этом разделе приводится общее описание метода обеспечения взаимодействия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если имеется сложный код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], возможно, более эффективным будет повторное использование части этого кода.  
@@ -44,7 +44,7 @@ ms.locfileid: "68671928"
  Используйте любой наиболее подходящий способ.  
   
 > [!NOTE]
->  Если вы раньше не работали C++с/CLI, вы можете заметить некоторые «новые» ключевые слова, `gcnew` например `nullptr` и, в примерах кода взаимодействия. Эти ключевые слова заменяют старый синтаксис двойного подчеркивания`__gc`() и предоставляют более естественный синтаксис для управляемого кода C++в.  Дополнительные сведения о функциях C++, управляемых с помощью/CLI, см. в разделе [расширения компонентов для платформ среды выполнения](/cpp/windows/component-extensions-for-runtime-platforms) и [Hello, C++/CLI](https://go.microsoft.com/fwlink/?LinkId=98739).  
+> Если вы раньше не работали C++с/CLI, вы можете заметить некоторые «новые» ключевые слова, `gcnew` например `nullptr` и, в примерах кода взаимодействия. Эти ключевые слова заменяют старый синтаксис двойного подчеркивания`__gc`() и предоставляют более естественный синтаксис для управляемого кода C++в.  Дополнительные сведения о функциях C++, управляемых с помощью/CLI, см. в разделе [расширения компонентов для платформ среды выполнения](/cpp/windows/component-extensions-for-runtime-platforms) и [Hello, C++/CLI](https://go.microsoft.com/fwlink/?LinkId=98739).  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>Как в WPF используются дескрипторы HWND  
@@ -83,7 +83,7 @@ ms.locfileid: "68671928"
 8. Для взаимодействия с объектом содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используйте ссылку, которую сохранили в статическом поле, чтобы задать свойства, методы вызова и т. д.  
   
 > [!NOTE]
->  Определить класс содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для шага 1 можно частично или полностью в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с помощью разделяемого класса по умолчанию класса содержимого. Для этого нужно создать отдельную сборку и сослаться на нее. <xref:System.Windows.Application> Хотя в процессе компиляции [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в сборку вы обычно включаете объект, вы <xref:System.Windows.Application> не используете его в качестве части взаимодействия. Вы просто используете один или несколько корневых классов для файлов, на [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] которые ссылаются в приложении и ссылаться на разделяемые классы. Оставшаяся часть процедуры практически аналогична описанной выше.  
+> Определить класс содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для шага 1 можно частично или полностью в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с помощью разделяемого класса по умолчанию класса содержимого. Для этого нужно создать отдельную сборку и сослаться на нее. <xref:System.Windows.Application> Хотя в процессе компиляции [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в сборку вы обычно включаете объект, вы <xref:System.Windows.Application> не используете его в качестве части взаимодействия. Вы просто используете один или несколько корневых классов для файлов, на [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] которые ссылаются в приложении и ссылаться на разделяемые классы. Оставшаяся часть процедуры практически аналогична описанной выше.  
 >   
 >  Каждое из этих действий проиллюстрировано с помощью кода в разделе [пошаговое руководство. Размещение содержимого WPF в Win32](walkthrough-hosting-wpf-content-in-win32.md).  
   

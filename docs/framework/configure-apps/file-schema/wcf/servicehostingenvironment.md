@@ -2,18 +2,18 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 16dacee89576b4ede0f2f80255ba8a0dcbc8c0dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936288"
 ---
-# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
+# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment >
 Этот элемент определяет тип, который среда размещения служб создает для определенного транспорта. Если этот элемент является пустым, используется тип, применяемый по умолчанию. Этот элемент может применяться только на уровне файлов конфигурации приложения или компьютера.  
   
- \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
+ \<системой. > ServiceModel  
+\<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,17 +42,17 @@ ms.locfileid: "64610177"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Логическое значение, указывающее, включен ли режим совместимости ASP.NET для текущего приложения. Значение по умолчанию — `false`.<br /><br /> Если этот атрибут имеет значение `true`, запросы к службам Windows Communication Foundation (WCF), проходят через конвейер ASP.NET HTTP, и обмен данными по протоколам, отличным от HTTP запрещена. Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Целое число, указывающее минимальный объем свободной памяти, который должен быть доступен системе перед активацией службы WCF. **Внимание!**  Указание этого атрибута вместе с частичным доверием в файле web.config службы WCF, приведет к <xref:System.Security.SecurityException> при запуске службы.|  
-|multipleSiteBindingsEnabled|Логическое значение, которое определяет, разрешается ли использование нескольких привязок IIS для одного узла.<br /><br /> Службы IIS состоят из веб-узлов, являющихся контейнерами виртуальных приложений, содержащих виртуальные каталоги. Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS. Привязка IIS предоставляет два блока данных: протокол привязки и данные привязки. Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к узлу. Примером протокола привязки является HTTP, в котором данные привязки могут содержать IP-адрес, порт, заголовок узла и т. п.<br /><br /> IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Тем не менее службы Windows Communication Foundation (WCF), размещенной на узле разрешает привязку только одному базовому адресу для каждой схемы.<br /><br /> Чтобы включить несколько привязок IIS для каждого узла для службы Windows Communication Foundation (WCF), установите значение `true`. Следует иметь в виду, что привязки к нескольким узлам поддерживаются только в протоколе HTTP. Адрес конечной точки в файле конфигурации должен быть полным URI.|  
+|aspNetCompatibilityEnabled|Логическое значение, указывающее, включен ли режим совместимости ASP.NET для текущего приложения. Значение по умолчанию — `false`.<br /><br /> Если этот атрибут имеет значение `true`, запросы к службам Windows Communication Foundation (WCF) проходят через конвейер HTTP ASP.NET, и связь по протоколам, отличным от HTTP, запрещена. Дополнительные сведения см. в разделе [WCF Services and ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Целое число, указывающее минимальный объем свободной памяти, который должен быть доступен системе, прежде чем служба WCF сможет быть активирована. **Внимание!**  <xref:System.Security.SecurityException> Если указать этот атрибут вместе с частичным доверием в файле Web. config службы WCF, то при запуске службы будет возникать исключение.|  
+|multipleSiteBindingsEnabled|Логическое значение, которое определяет, разрешается ли использование нескольких привязок IIS для одного узла.<br /><br /> Службы IIS состоят из веб-узлов, являющихся контейнерами виртуальных приложений, содержащих виртуальные каталоги. Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS. Привязка IIS предоставляет два блока данных: протокол привязки и данные привязки. Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к узлу. Примером протокола привязки является HTTP, в котором данные привязки могут содержать IP-адрес, порт, заголовок узла и т. п.<br /><br /> IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Однако служба Windows Communication Foundation (WCF), размещенная на сайте, позволяет привязать только к одному baseAddress на схему.<br /><br /> Чтобы включить несколько привязок IIS на сайт для службы Windows Communication Foundation (WCF), присвойте этому атрибуту `true`значение. Следует иметь в виду, что привязки к нескольким узлам поддерживаются только в протоколе HTTP. Адрес конечной точки в файле конфигурации должен быть полным URI.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.|  
-|[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Раздел конфигурации, в котором описываются параметры активации.|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Коллекция элементов конфигурации, которые определяют тип конкретного транспорта.|  
+|[\<baseAddressPrefixFilters >](baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.|  
+|[\<serviceActivations >](serviceactivations.md)|Раздел конфигурации, в котором описываются параметры активации.|  
+|[\<Транспортконфигуратионтипес >](transportconfigurationtypes.md)|Коллекция элементов конфигурации, которые определяют тип конкретного транспорта.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -96,5 +96,5 @@ ms.locfileid: "64610177"
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Размещение](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [Размещение](../../../wcf/feature-details/hosting.md)
+- [Службы WCF и ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)

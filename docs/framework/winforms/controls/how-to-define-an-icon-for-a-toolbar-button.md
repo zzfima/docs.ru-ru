@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929634"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
+> Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- <xref:System.Windows.Forms.ToolBar> кнопки, могут отображать значки для упрощения идентификации пользователей. Это достигается с помощью добавления изображений к [компонента ImageList](imagelist-component-windows-forms.md) компонента, а затем связать <xref:System.Windows.Forms.ImageList> компонент <xref:System.Windows.Forms.ToolBar> элемента управления.  
+ <xref:System.Windows.Forms.ToolBar>кнопки могут отображать значки в них для простоты идентификации пользователями. Это достигается путем добавления изображений в компонент [компонента ImageList](imagelist-component-windows-forms.md) и последующего связывания <xref:System.Windows.Forms.ImageList> компонента с <xref:System.Windows.Forms.ToolBar> элементом управления.  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Чтобы задать значок для кнопки панели инструментов программным способом  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Установка значка для кнопки панели инструментов программными средствами  
   
-1. В процедуре создания экземпляра <xref:System.Windows.Forms.ImageList> компонента и <xref:System.Windows.Forms.ToolBar> элемента управления.  
+1. В процедуре создайте экземпляр <xref:System.Windows.Forms.ImageList> компонента <xref:System.Windows.Forms.ToolBar> и элемент управления.  
   
-2. В той же процедуры, назначить изображение для <xref:System.Windows.Forms.ImageList> компонента.  
+2. В той же процедуре назначьте образ <xref:System.Windows.Forms.ImageList> компоненту.  
   
-3. В той же процедуры, назначить <xref:System.Windows.Forms.ImageList> управления <xref:System.Windows.Forms.ToolBar> управления и назначить <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойство из отдельных кнопок панели инструментов.  
+3. В той же процедуре назначьте <xref:System.Windows.Forms.ImageList> элемент <xref:System.Windows.Forms.ToolBar> управления элементу управления и назначьте <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойство отдельных кнопок панели инструментов.  
   
-     В следующем примере кода, задайте путь — расположение изображения **Мои документы** папки. Это делается, поскольку предполагается, что большинство компьютеров под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.PictureBox> управления уже добавлен.  
+     В следующем примере кода путь, заданный для расположения изображения, является папкой " **Мои документы** ". Это делается, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут включать этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, <xref:System.Windows.Forms.PictureBox> что форма с уже добавленным элементом управления.  
   
-     Следуя приведенным выше шагам получится код, аналогичный приведенному, показаны ниже.  
+     Выполнив приведенные выше действия, необходимо написать код, аналогичный показанному ниже.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -118,6 +118,6 @@ ms.locfileid: "62054280"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. События меню триггера для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

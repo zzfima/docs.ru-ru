@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039958"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930166"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Практическое руководство. Создание пользовательского интерфейса с несколькими областями с использованием форм Windows Forms с помощью конструктора
 В следующей процедуре будет создан пользовательский интерфейс с несколькими панелями, аналогичный тому, который используется в Microsoft Outlook, со списком **папок** , панелью **сообщений** и областью **просмотра** . Это достигается главным путем закрепления элементов управления в форме.
@@ -39,7 +39,7 @@ ms.locfileid: "69039958"
      На этом этапе, если нажать клавишу F5 для запуска приложения, в форме отобразится пользовательский интерфейс с тремя частями, аналогичный Microsoft Outlook.
 
     > [!NOTE]
-    >  При помещении указателя мыши на любую из разделителей внутри <xref:System.Windows.Forms.SplitContainer> элементов управления можно изменить размер внутренних измерений.
+    > При помещении указателя мыши на любую из разделителей внутри <xref:System.Windows.Forms.SplitContainer> элементов управления можно изменить размер внутренних измерений.
 
 На этом этапе разработки приложения был создан сложный пользовательский интерфейс. Следующий шаг продолжается в программировании самого приложения, возможно, путем подключения <xref:System.Windows.Forms.TreeView> элемента управления и <xref:System.Windows.Forms.ListView> элементов управления к определенному источнику данных. Дополнительные сведения о подключении элементов управления к данным см. в разделе [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md).
 

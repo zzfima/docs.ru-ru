@@ -2,21 +2,21 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670382"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936414"
 ---
-# <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
+# <a name="serviceauthenticationmanager"></a>\<Сервицеаусентикатионманажер >
 Обеспечивает элемент конфигурации рабочего процесса, который устанавливает на уровне службы действительность передачи, сообщения или инициатора.  
   
-\<system.ServiceModel>  
-\<варианты поведения >  
+\<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
-\<serviceAuthenticationManager>  
+\<> поведения  
+\<Сервицеаусентикатионманажер >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ ms.locfileid: "61670382"
 |serviceAuthenticationManagerType|Строка, в которой указан тип политики проверки подлинности для текущего поведения.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
+|[\<> поведения](behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
 ## <a name="see-also"></a>См. также
 

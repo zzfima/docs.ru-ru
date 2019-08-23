@@ -2,12 +2,12 @@
 title: События
 description: Узнайте, F# как события позволяют связывать вызовы функций с действиями пользователя, которые важны для программирования GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627577"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917280"
 ---
 # <a name="events"></a>События
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>См. также
 
 - [Члены](index.md)
-- [Обработка и вызов событий](../../../../docs/standard/events/index.md)
+- [Обработка и вызов событий](../../../standard/events/index.md)
 - [Лямбда-выражения: Ключевое слово `fun`](../functions/lambda-expressions-the-fun-keyword.md)
 - [Модуль Control. Event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [&#62; Класс Control. Event&#60;](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

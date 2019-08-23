@@ -2,22 +2,22 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758136"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918675"
 ---
-# <a name="transactedbatching"></a>\<transactedBatching >
+# <a name="transactedbatching"></a>\<Трансактедбатчинг >
 
 Указывает, поддерживается ли объединение транзакций для операций получения.
 
-\<system.ServiceModel>\
-\<варианты поведения > \
+\<системой. ServiceModel > \
+\<поведения > \
 \<endpointBehaviors > \
-\<поведение > \
-\<transactedBatching >
+\<> поведения \
+\<Трансактедбатчинг >
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,17 +33,17 @@ ms.locfileid: "61758136"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|`maxBatchSize`|Целое число, указывающее максимальное число операций получения, которые могут быть объединены в одну транзакцию. Значение по умолчанию — 0.|
+|`maxBatchSize`|Целое число, указывающее максимальное число операций получения, которые могут быть объединены в одну транзакцию. Значение по умолчанию — 0.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|
+|[\<> поведения](behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|
 
 ## <a name="remarks"></a>Примечания
 

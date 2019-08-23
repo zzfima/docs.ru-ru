@@ -2,23 +2,23 @@
 title: <clear> элемента <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: 35d0391951204bd352918d3004f0cc4f9480b0e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7e3bebd85decbaa4d216743f9bea9e135b87995
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926132"
 ---
-# <a name="clear-of-claimtyperequirements-element"></a>\<Очистить > из \<claimTypeRequirements > элемент
+# <a name="clear-of-claimtyperequirements-element"></a>\<Очистка > \<элемента > claimTypeRequirements
 Указывает, что все типы утверждений в федеративных учетных данных должны быть удалены. Это обеспечивает запуск пустой коллекции.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<привязки >  
-\<wsFederatedBinding >  
+\<Всфедератедбиндинг >  
 \<Привязка >  
-\<Безопасность >  
-\<сообщение >  
-\<claimTypeRequirements>  
+\<> безопасности  
+\<> сообщения  
+\<claimTypeRequirements >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,16 +32,16 @@ ms.locfileid: "61704275"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Задает коллекцию обязательных типов утверждений. Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> В федеративном сценарии службы предъявляют требования к входящим учетным данным. Например, входящие учетные данные должны обладать определенным набором типов утверждений. Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.|  
+|[\<claimTypeRequirements >](claimtyperequirements-for-message.md)|Задает коллекцию обязательных типов утверждений. Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> В федеративном сценарии службы предъявляют требования к входящим учетным данным. Например, входящие учетные данные должны обладать определенным набором типов утверждений. Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.|  
   
 ## <a name="see-also"></a>См. также
 

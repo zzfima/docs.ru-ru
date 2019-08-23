@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f79fd3e0678fc0bba0d3074904f9ce9460fc6c20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910929"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Опасные разрешения и администрирование политик
 Некоторые из защищенных операций, для которых .NET Framework предоставляет разрешения, потенциально могут позволить обойти систему безопасности. Эти небезопасные разрешения должны предоставляться только надежному коду и только в случае необходимости. Обычно невозможно защититься от вредоносного кода, который получил эти разрешения.  
   
 > [!NOTE]
->  В .NET Framework 4 были внесены важные изменения в терминологии и модели безопасности .NET Framework. Дополнительные сведения об этих изменениях см. в разделе [изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
+> В .NET Framework 4 были внесены важные изменения в модель и терминологию безопасности .NET Framework. Дополнительные сведения об этих изменениях см. в разделе [изменения в системе безопасности](../../../docs/framework/security/security-changes.md).  
   
  Небезопасные разрешения приведены в следующей таблице.  
   
@@ -40,4 +40,4 @@ ms.locfileid: "66489974"
   
 ## <a name="see-also"></a>См. также
 
-- [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

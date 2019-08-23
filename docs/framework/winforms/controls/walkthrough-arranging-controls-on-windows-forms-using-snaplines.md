@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040259"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950063"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. Конструктор Windows Forms предоставляет множество инструментов макета для решения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> функция.
@@ -87,7 +87,7 @@ ms.locfileid: "69040259"
 1. Выберите один из <xref:System.Windows.Forms.Button> элементов управления и переместите его ближе к правой границе формы, пока не появится линия привязки. Расстояние линии привязки от правой границы является сумма <xref:System.Windows.Forms.Control.Margin%2A> свойств элемента управления и значений <xref:System.Windows.Forms.Control.Padding%2A> свойств формы.
 
 > [!NOTE]
->  Если <xref:System.Windows.Forms.Control.Padding%2A> свойство формы имеет значение 0, 0, 0, 0, конструктор Windows Forms присваивает форме <xref:System.Windows.Forms.Control.Padding%2A> затененное значение 9, 9, 9, 9. Чтобы переопределить это поведение, присвойте значение, отличное от 0, 0, 0, 0.
+> Если <xref:System.Windows.Forms.Control.Padding%2A> свойство формы имеет значение 0, 0, 0, 0, конструктор Windows Forms присваивает форме <xref:System.Windows.Forms.Control.Padding%2A> затененное значение 9, 9, 9, 9. Чтобы переопределить это поведение, присвойте значение, отличное от 0, 0, 0, 0.
 
 1. Измените значение <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Margin%2A> свойства элемента управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в окне " **Свойства** " и установив для этого <xref:System.Windows.Forms.Padding.All%2A> свойства значение 0. Дополнительные сведения см. [в разделе Пошаговое руководство. Разметка элементов управления Windows Forms с заполнением, полями и свойством](windows-forms-controls-padding-autosize.md)AutoSize.
 

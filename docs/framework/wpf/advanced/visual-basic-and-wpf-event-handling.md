@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942119"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Обработка событий в Visual Basic и WPF
 В частности, для языка Microsoft Visual Basic .NET можно использовать ключевое слово для конкретного `Handles` языка, чтобы связать обработчики событий с экземплярами, а не присоединять обработчики событий <xref:System.Windows.UIElement.AddHandler%2A> с атрибутами или с помощью метода. Однако метод присоединения обработчиков к экземплярам `Handles` имеет некоторые ограничения, так как синтаксис `Handles` не поддерживает некоторые возможности перенаправленных событий системы событий [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -34,13 +34,13 @@ ms.locfileid: "68972322"
  `Handles` не может присоединить обработчики, вызывающиеся для событий, которые уже отмечены как обрабатываемые. Вместо этого необходимо использовать код и вызвать `handledEventsToo` <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>перегрузку.  
   
 > [!NOTE]
->  Не используйте `Handles` синтаксис в коде Visual Basic при указании обработчика событий для того же события в XAML. В таком случае обработчик событий вызывается дважды.  
+> Не используйте `Handles` синтаксис в коде Visual Basic при указании обработчика событий для того же события в XAML. В таком случае обработчик событий вызывается дважды.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Как в WPF реализуются функциональные возможности ключевого слова Handles  
  При компиляции страницы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] промежуточный файл объявляет ссылки `Friend` `WithEvents` на каждый элемент на странице, где имеется набор свойств <xref:System.Windows.FrameworkContentElement.Name%2A> (или объявленная [x:Name Directive](../../xaml-services/x-name-directive.md)). Каждый именованный экземпляр является потенциальным элементом, который можно присвоить обработчику с помощью `Handles`.  
   
 > [!NOTE]
->  В [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]технологиях IntelliSense может показывать завершение для тех элементов, которые доступны `Handles` для ссылки на странице. Но для того чтобы промежуточный файл смог заполнить все ссылки `Friends`, может потребоваться один проход компиляции.  
+> В [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]технологиях IntelliSense может показывать завершение для тех элементов, которые доступны `Handles` для ссылки на странице. Но для того чтобы промежуточный файл смог заполнить все ссылки `Friends`, может потребоваться один проход компиляции.  
   
 ## <a name="see-also"></a>См. также
 

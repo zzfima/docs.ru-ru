@@ -2,21 +2,21 @@
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 5c2f0ef7ad509eb5d6c686802c3fe5a75ea1a258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1792fec4f86c9ac31107c043b976cfafcfa4c13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937096"
 ---
-# <a name="servicetimeouts"></a>\<serviceTimeouts>
+# <a name="servicetimeouts"></a>\<Сервицетимеаутс >
 Задает время ожидания для службы.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
+ \<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
-\<serviceTimeouts>  
+\<> поведения  
+\<Сервицетимеаутс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,16 +34,16 @@ ms.locfileid: "61758097"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`transactionTimeout`|Значение <xref:System.TimeSpan>, задающее интервал времени, в течение которого транзакция должна дойти от клиента до сервера. Значение по умолчанию — «00: 00:00».|  
+|`transactionTimeout`|Значение <xref:System.TimeSpan>, задающее интервал времени, в течение которого транзакция должна дойти от клиента до сервера. Значение по умолчанию — "00:00:00".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
+|[\<> поведения](behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
 ## <a name="see-also"></a>См. также
 

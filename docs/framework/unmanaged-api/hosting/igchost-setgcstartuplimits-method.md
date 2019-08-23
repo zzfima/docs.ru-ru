@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9104550438a2a066cdf052b8d6592e86b831194
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749994"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928664"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Метод IGCHost::SetGCStartupLimits
 Задает размер сегмента и максимальный размер для поколения 0.  
   
 > [!IMPORTANT]
->  Начиная с .NET Framework 4.5, можно задать размер сегмента и максимально возможного поколения 0 размер значения больше, чем `DWORD` с помощью [IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) метод.  
+> Начиная с .NET Framework 4,5 можно задать размер сегмента и максимальный размер поколения 0 в значениях `DWORD` , превышающих использование метода [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,20 +41,20 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="parameters"></a>Параметры  
  `SegmentSize`  
- [in] Размер сегмента, используемой системой сбора мусора.  
+ окне Размер сегмента, используемого системой сборки мусора.  
   
  `MaxGen0Size`  
- [in] Максимальный размер поколения 0.  
+ окне Максимальный размер для поколения 0.  
   
 ## <a name="remarks"></a>Примечания  
- `SetGCStartupLimits` Метод может вызываться только один раз. Эти значения нельзя изменить позже.  
+ `SetGCStartupLimits` Метод может быть вызван только один раз. Эти значения нельзя изменить позже.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** GCHost.idl GCHost.h  
+ **Заголовок.** Гчост. idl, Гчост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

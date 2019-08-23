@@ -2,17 +2,17 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940319"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings >
+# <a name="websocketsettings"></a>\<Вебсоккетсеттингс >
 Элемент конфигурации, который служит для задания параметров веб-сокета.  
   
-\<system.ServiceModel>  
+\<системой. > ServiceModel  
 \<привязки >  
 \<netHttpBinding >  
   
@@ -58,7 +58,7 @@ ms.locfileid: "61769750"
 |Никогда|Никогда не использовать протокол веб-сокетов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -67,7 +67,7 @@ ms.locfileid: "61769750"
 |\<netHttpBinding >|Определяет привязку NetHttpBinding|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать \<webSocketSettings > элемента.  
+ В следующем примере показано, \<как использовать элемент > вебсоккетсеттингс.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ ms.locfileid: "61769750"
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../misc/binding.md)

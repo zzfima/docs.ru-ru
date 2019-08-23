@@ -9,18 +9,18 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926959"
 ---
-# <a name="sources-element"></a>\<источники > элемент
-Задает источники трассировки, которые инициируют сообщения трассировки.  
+# <a name="sources-element"></a>\<sources >, элемент
+Указывает источники трассировки, инициирующие сообщения трассировки.  
   
  \<configuration>  
-\<system.diagnostics>  
+\<> System. Diagnostics  
 \<источники >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -35,13 +35,13 @@ ms.locfileid: "61701272"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Обязательный элемент.<br /><br /> Содержит источник трассировки, который инициирует сообщения трассировки.|  
+|[\<source>](source-element.md)|Обязательный элемент.<br /><br /> Содержит источник трассировки, который инициирует сообщения трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -51,10 +51,10 @@ ms.locfileid: "61701272"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<sources>` элемент для добавления источника трассировки `mySource` и задать уровень для переключателя источника с именем `sourceSwitch`. Добавляется прослушиватель трассировки консоли, записывает сведения трассировки на консоль.  
+ В следующем примере показано, как с помощью `<sources>` элемента добавить источник `mySource` трассировки и задать уровень для коммутатора источника с именем `sourceSwitch`. Добавляется прослушиватель трассировки консоли, который записывает данные трассировки на консоль.  
   
 ```xml  
 <configuration>  
@@ -87,5 +87,5 @@ ms.locfileid: "61701272"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [Схема параметров трассировки и отладки](index.md)
+- [\<source>](source-element.md)

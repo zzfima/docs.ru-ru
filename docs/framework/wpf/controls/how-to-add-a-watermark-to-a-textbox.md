@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911627"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923579"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Практическое руководство. Добавление водяного знака в элемент TextBox
-В следующем примере показано, как расширение полезности элемента <xref:System.Windows.Controls.TextBox> , отображая пояснительного фонового изображение внутри <xref:System.Windows.Controls.TextBox> пока пользователь вводит текст, после чего соответствующий образ удаляется. Кроме того фоновое изображение восстанавливается, если пользователь удаляет входные данные. См. рисунок ниже.  
+В следующем примере показано, как обеспечить удобство использования <xref:System.Windows.Controls.TextBox> с помощью отображения пояснительного текста в области <xref:System.Windows.Controls.TextBox> до тех пор, пока не будет введен текст, после чего изображение будет удалено. Кроме того, фоновое изображение восстанавливается снова, если пользователь удаляет свои входные данные. См. рисунок ниже.  
   
- ![TextBox с фоновым изображением](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
+ ![Текстовое поле с фоновым изображением](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  Причина, фоновое изображение используется в этом примере вместо применения <xref:System.Windows.Controls.TextBox.Text%2A> свойство <xref:System.Windows.Controls.TextBox>, — что фоновое изображение не будет мешать привязки данных.  
+> Причина, по которой в этом примере используется фоновое изображение <xref:System.Windows.Controls.TextBox.Text%2A> <xref:System.Windows.Controls.TextBox>, вместо того, чтобы просто манипулировать свойством, заключается в том, что фоновое изображение не мешает привязке данных.  
   
 ## <a name="example"></a>Пример  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

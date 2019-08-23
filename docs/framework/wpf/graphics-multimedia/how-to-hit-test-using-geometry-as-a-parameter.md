@@ -9,33 +9,33 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bed7784b00f49178c9a87def74b62f7ce620ec7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923406"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Практическое руководство. Проверка нажатия с использованием геометрии в качестве параметра
-В этом примере показано, как выполнить проверку попадания для визуального объекта с помощью <xref:System.Windows.Media.Geometry> параметра проверки нажатия.  
+В этом примере показано, как выполнить проверку нажатия для визуального объекта, <xref:System.Windows.Media.Geometry> используя в качестве параметра проверки нажатия.  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как выполнить настройку проверки попадания с помощью <xref:System.Windows.Media.GeometryHitTestParameters> для <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> метод. <xref:System.Windows.Point> Значение, передаваемое `OnMouseDown` метод используется для создания <xref:System.Windows.Media.Geometry> объекта для расширения диапазона проверки попадания.  
+ В следующем примере показано, как настроить проверку нажатия с помощью <xref:System.Windows.Media.GeometryHitTestParameters> <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> метода. Значение, передаваемое `OnMouseDown` в метод <xref:System.Windows.Media.Geometry> , используется для создания объекта, чтобы расширить диапазон проверки нажатия. <xref:System.Windows.Point>  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
   
- <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Свойство <xref:System.Windows.Media.GeometryHitTestResult> предоставляет сведения о результатах проверки нажатия, который использует <xref:System.Windows.Media.Geometry> параметра проверки нажатия. На следующем рисунке показана связь между геометрическим объектом проверки нажатия (синий круг) и отображенным содержимым целевого визуального объекта (красный квадрат).  
+ Свойство объекта <xref:System.Windows.Media.GeometryHitTestResult> предоставляет сведения о результатах проверки попадания, которая использует в <xref:System.Windows.Media.Geometry> качестве параметра проверки нажатия. <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> На следующем рисунке показана связь между геометрическим объектом проверки нажатия (синий круг) и отображенным содержимым целевого визуального объекта (красный квадрат).  
   
- ![Схема, показывающая IntersectionDetail, используемая в проверке нажатия.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
+ ![Схема, на которой показаны IntersectionDetail, используемые при проверке попадания.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
- Приведенный ниже показано, как реализовать обратный вызов проверки нажатия при <xref:System.Windows.Media.Geometry> используется в качестве параметра проверки нажатия. `result` Параметр приводится к <xref:System.Windows.Media.GeometryHitTestResult> для извлечения значения <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> свойство. Это значение позволяет определить, если <xref:System.Windows.Media.Geometry> параметр проверки нажатия полностью или частично содержится в отображаемом содержимом целевого объекта проверки нажатия. В этом случае пример кода только добавляет результаты проверки попадания в список визуальных объектов, которые полностью содержатся в пределах границ целевого объекта.  
+ В следующем примере показано, как реализовать обратный вызов проверки попадания при <xref:System.Windows.Media.Geometry> использовании в качестве параметра проверки нажатия. Параметр приводится к типу, <xref:System.Windows.Media.GeometryHitTestResult> чтобы <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> получить значение свойства. `result` Значение свойства позволяет определить, является ли <xref:System.Windows.Media.Geometry> параметр проверки нажатия полностью или частично включен в отображаемое содержимое целевого объекта проверки попадания. В этом случае пример кода только добавляет результаты проверки попадания в список визуальных объектов, которые полностью содержатся в пределах границ целевого объекта.  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.HitTestResult> Обратного вызова не должен быть вызван, если пересечения — <xref:System.Windows.Media.IntersectionDetail.Empty>.  
+> Обратный вызов не должен вызываться, если сведения о пересечении имеют <xref:System.Windows.Media.IntersectionDetail.Empty>значение. <xref:System.Windows.Media.HitTestResult>  
   
 ## <a name="see-also"></a>См. также
 

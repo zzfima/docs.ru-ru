@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918296"
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета Windows Presentation Foundation (WPF). Понимание того, как и когда происходят вычисления макета, важно для создания пользовательских интерфейсов в WPF.  
@@ -89,7 +89,7 @@ ms.locfileid: "69666767"
  Во вторых, свойства платформы, определенные <xref:System.Windows.FrameworkElement> для, обрабатываются, что влияет `constraintSize`на значение. Эти свойства обычно описывают характеристики <xref:System.Windows.UIElement>размера базового объекта, такие <xref:System.Windows.FrameworkElement.Height%2A>как, <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Margin%2A>, и <xref:System.Windows.FrameworkElement.Style%2A>. Каждое из этих свойств может изменить пространство, необходимое для отображения элемента. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>Затем вызывается с `constraintSize` параметром в качестве параметра.  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkElement.Height%2A> Существуют различия между свойствами <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> и и.<xref:System.Windows.FrameworkElement.ActualWidth%2A> Например, <xref:System.Windows.FrameworkElement.ActualHeight%2A> свойство является вычисляемым значением на основе других входных значений высоты и системы макета. Значение задается самой системой макета в зависимости от фактического прохода отрисовки, и поэтому может немного отставать от набора значений свойств, таких как <xref:System.Windows.FrameworkElement.Height%2A>, которые являются основанием для изменения входных данных.  
+> <xref:System.Windows.FrameworkElement.Height%2A> Существуют различия между свойствами <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> и и.<xref:System.Windows.FrameworkElement.ActualWidth%2A> Например, <xref:System.Windows.FrameworkElement.ActualHeight%2A> свойство является вычисляемым значением на основе других входных значений высоты и системы макета. Значение задается самой системой макета в зависимости от фактического прохода отрисовки, и поэтому может немного отставать от набора значений свойств, таких как <xref:System.Windows.FrameworkElement.Height%2A>, которые являются основанием для изменения входных данных.  
 >   
 >  Поскольку <xref:System.Windows.FrameworkElement.ActualHeight%2A> — это вычисляемое значение, следует иметь в виду, что в результате выполнения различных операций в системе макета в нее могут быть внесены несколько или более добавочных отчетов. Система макета может вычислять требуемое место измерения для дочерних элементов, ограничения родительского элемента и т. д.  
   

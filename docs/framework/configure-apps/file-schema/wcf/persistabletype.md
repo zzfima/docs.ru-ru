@@ -2,19 +2,19 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 939a29e90ee21e94ccb78842d6f7224e9a6288d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcfd338e289b5151688724f0e84b6878707d32be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933825"
 ---
 # <a name="persistabletype"></a>\<persistableType >
 Задает все восстанавливаемые типы.  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<comContracts >  
-\<comContract >  
+\<Комконтракт >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,18 +44,18 @@ ms.locfileid: "61783322"
 |имя|Необязательный атрибут, содержащий строку, которая задает имя восстанавливаемого типа.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|Коллекция элементов `persistableType`.|  
+|[\<Персистаблетипес >](persistabletypes.md)|Коллекция элементов `persistableType`.|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>
-- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Интеграция с приложениями COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Практическое руководство. Настройка параметров службы COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts >](comcontracts.md)
+- [Интеграция с приложениями COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Практическое руководство. Настройка параметров службы COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

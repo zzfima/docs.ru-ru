@@ -2,20 +2,20 @@
 title: <certificate> для <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52d1fa31cebd949c91809464976739ef1334af29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673362"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919619"
 ---
-# <a name="certificate-for-identity"></a>\<сертификат > для \<identity >
+# <a name="certificate-for-identity"></a>\<> сертификатов для \<> удостоверений
 Задает сертификат X.509, используемый для проверки сервера при подключении к клиенту.  
   
- Дополнительные сведения о настройке значения элемента см. в разделе [службы идентификации и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Дополнительные сведения о задании значения элемента см. в разделе [удостоверение службы и проверка](../../../wcf/feature-details/service-identity-and-authentication.md)подлинности.  
   
- \<удостоверение >  
-\<сертификат >  
+ \<> удостоверений  
+\<> сертификата  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,13 +33,13 @@ ms.locfileid: "61673362"
 |encodedValue|Кодировка Base64 сертификата.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Задает удостоверение службы, подлинность которой должна быть проверена клиентом.|  
+|[\<> удостоверений](identity.md)|Задает удостоверение службы, подлинность которой должна быть проверена клиентом.|  
   
 ## <a name="example"></a>Пример  
  В следующем коде задается кодированное представление сертификата, используемого для проверки сервера при подключении к клиенту.  
@@ -56,5 +56,5 @@ ms.locfileid: "61673362"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [Идентификация и проверка подлинности службы](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Идентификация и проверка подлинности службы](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<> удостоверений](identity.md)

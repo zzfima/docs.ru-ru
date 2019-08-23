@@ -2,21 +2,21 @@
 title: <serviceCertificate> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3013d0f7efd3014892cf6400447d708809c5fcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670304"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936341"
 ---
-# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > элемента \<clientCredentials > элемент
+# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > \<>ного элемента ClientCredentials
 Задает сертификат для использования при проверке подлинности службы для клиента.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
-\<endpointBehaviors>  
-\<поведение >  
-\<clientCredentials>  
+ \<системой. > ServiceModel  
+\<> поведения  
+\<endpointBehaviors >  
+\<> поведения  
+\<> clientCredentials  
 \<serviceCertificate >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -29,26 +29,26 @@ ms.locfileid: "61670304"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<defaultCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|Задает сертификат X.509 для использования, когда служба или служба маркеров безопасности не предоставляет сертификат посредством протокола согласования.|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Представляет коллекцию сертификатов X.509, предоставленную конкретными службами (в области действия) для проверки подлинности. Эта коллекция обычно используется, чтобы задать сертификаты служб для служб маркеров безопасности в федеративной инфраструктуре.|  
-|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|Задает поведение проверки подлинности для сертификатов служб, используемых клиентом.|  
+|[\<Дефаултцертификате >](defaultcertificate-element.md)|Задает сертификат X.509 для использования, когда служба или служба маркеров безопасности не предоставляет сертификат посредством протокола согласования.|  
+|[\<Скопедцертификатес >](scopedcertificates-element.md)|Представляет коллекцию сертификатов X.509, предоставленную конкретными службами (в области действия) для проверки подлинности. Эта коллекция обычно используется, чтобы задать сертификаты служб для служб маркеров безопасности в федеративной инфраструктуре.|  
+|[\<authentication>](authentication-of-servicecertificate-element.md)|Задает поведение проверки подлинности для сертификатов служб, используемых клиентом.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые клиентом для подтверждения своей подлинности при подключении к службе.|  
+|[\<> clientCredentials](clientcredentials.md)|Задает учетные данные, используемые клиентом для подтверждения своей подлинности при подключении к службе.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент конфигурации содержит параметры, используемые клиентом для проверки сертификата, представленного службой с помощью проверки подлинности SSL. Он также содержит сертификат для службы, который явно задан в клиенте для шифрования сообщений для службы с помощью безопасности сообщений.  
   
- Атрибуты `serviceCertificate` идентичны атрибуты [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+ Атрибуты `serviceCertificate` элемента идентичны атрибутам [ \<> clientcertificate](clientcertificate-of-clientcredentials-element.md).  
   
 ## <a name="see-also"></a>См. также
 
@@ -58,7 +58,7 @@ ms.locfileid: "61670304"
 - <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
-- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
-- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Поведения безопасности](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Защита клиентов](../../../wcf/securing-clients.md)
+- [Работа с сертификатами](../../../wcf/feature-details/working-with-certificates.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)

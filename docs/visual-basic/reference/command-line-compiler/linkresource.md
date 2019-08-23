@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 637a1d4b7a523feb2fc8da10a0c18e68774c480a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d92b0d08daf660880b648875c67c3b78069143d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586693"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924863"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Создает ссылку на управляемый ресурс.  
@@ -29,27 +29,27 @@ ms.locfileid: "65586693"
   
 ## <a name="arguments"></a>Аргументы  
  `filename`  
- Обязательный. Файл ресурсов, ссылки на сборку. Если имя файла содержит пробел, заключите имя в кавычки (» «).  
+ Обязательный. Файл ресурсов, связываемый с сборкой. Если имя файла содержит пробел, заключите его в кавычки ("").  
   
  `identifier`  
- Необязательный параметр. Логическое имя ресурса. Имя, которое используется для загрузки ресурса. По умолчанию используется имя файла. При необходимости можно указать, является ли файл открытым или закрытым в манифесте сборки, например: `-linkres:filename.res,myname.res,public`. По умолчанию `filename` является открытым в сборке.  
+ Необязательный параметр. Логическое имя ресурса. Имя, используемое для загрузки ресурса. По умолчанию используется имя файла. При необходимости можно указать, является ли файл открытым или закрытым в манифесте сборки, например: `-linkres:filename.res,myname.res,public`. По умолчанию `filename` является общедоступным в сборке.  
   
 ## <a name="remarks"></a>Примечания  
- `-linkresource` Параметр не внедрить файл ресурсов в выходной файл; используйте `-resource` параметр, чтобы это сделать.  
+ Параметр не внедряет файл ресурсов в выходной файл. для этого `-resource` используйте параметр. `-linkresource`  
   
- `-linkresource` Параметр требует одного из `-target` параметры, отличные от `-target:module`.  
+ Для `-linkresource` параметра требуется один `-target` из параметров `-target:module`, кроме.  
   
- Если `filename` является файлом ресурсов .NET Framework, созданным, например, по [Resgen.exe (генератор файлов ресурсов)](../../../framework/tools/resgen-exe-resource-file-generator.md) или в среде разработки, он может осуществляться с помощью членов пространства <xref:System.Resources> пространства имен. (Дополнительные сведения см. в разделе <xref:System.Resources.ResourceManager>.) Чтобы получить доступ к всем остальным ресурсам во время выполнения, используйте методы, которые начинаются с `GetManifestResource` в <xref:System.Reflection.Assembly> класса.  
+ Если `filename` — это .NET Frameworkный файл ресурсов, например [Resgen. exe (генератор файлов ресурсов)](../../../framework/tools/resgen-exe-resource-file-generator.md) или в среде разработки, доступ к нему можно получить <xref:System.Resources> с помощью членов пространства имен. (Дополнительные сведения см. в разделе <xref:System.Resources.ResourceManager>.) Чтобы получить доступ ко всем остальным ресурсам во время выполнения, используйте методы, `GetManifestResource` начинающиеся <xref:System.Reflection.Assembly> с класса.  
   
- Имя файла может иметь любой формат файла. Например, может потребоваться сделать имеющуюся на компьютере библиотеку DLL частью сборки, поэтому ее можно разместить в глобальном кэше сборок и обеспечить к ней доступ из управляемого кода сборки.  
+ Имя файла может быть любым форматом файла. Например, может потребоваться сделать имеющуюся на компьютере библиотеку DLL частью сборки, поэтому ее можно разместить в глобальном кэше сборок и обеспечить к ней доступ из управляемого кода сборки.  
   
  Краткой формой `-linkresource` является `-linkres`.  
   
 > [!NOTE]
->  `-linkresource` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.  
+> Этот `-linkresource` параметр недоступен в среде разработки Visual Studio. он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `in.vb` и ссылки на файл ресурсов `rf.resource`.  
+ Следующий код компилирует `in.vb` и ссылается на файл `rf.resource`ресурсов.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -58,6 +58,6 @@ vbc -linkresource:rf.resource in.vb
 ## <a name="see-also"></a>См. также
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-ресурсов (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

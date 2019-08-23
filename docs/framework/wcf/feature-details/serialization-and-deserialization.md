@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591660"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949208"
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
-Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Преобразует между объектами .NET Framework и XML, в обоих направлениях. В данном разделе объясняется, как работает сериализатор.  
+Windows Communication Foundation (WCF) включает новый механизм <xref:System.Runtime.Serialization.DataContractSerializer>сериализации. <xref:System.Runtime.Serialization.DataContractSerializer> Преобразование между объектами .NET Framework и XML в обоих направлениях. В данном разделе объясняется, как работает сериализатор.  
   
- При сериализации объектов .NET Framework, сериализатор поддерживает различные модели программирования сериализации, включая новые *контракт данных* модели. Полный список поддерживаемых типов см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Вводные сведения о контрактах данных см. в разделе [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ При сериализации .NET Framework объектов сериализатор понимает различные модели программирования сериализации, включая новую модель *контракта данных* . Полный список поддерживаемых типов см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Вводные сведения о контрактах данных см. в разделе [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- При десериализации XML-кода сериализатор использует классы <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> . Она также поддерживает <xref:System.Xml.XmlDictionaryReader> и <xref:System.Xml.XmlDictionaryWriter> классы, чтобы включить может создавать оптимизированный XML-код в некоторых случаях, например когда форматирование с использованием двоичного XML WCF.  
+ При десериализации XML-кода сериализатор использует классы <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> . Он также поддерживает <xref:System.Xml.XmlDictionaryReader> классы и <xref:System.Xml.XmlDictionaryWriter> , позволяющие создавать оптимизированные XML-данные в некоторых случаях, например при использовании двоичного XML-формата WCF.  
   
- WCF также включает сопровождающий сериализатор <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Аналогичен <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> сериализаторы, так как он отображает имена типов .NET Framework как часть сериализованных данных. Он применяется при совместном использовании одних и тех же типов на концах сериализации и десериализации. Оба сериализатора ( <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer> ) являются производными от общего базового класса <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
+ В <xref:System.Runtime.Serialization.NetDataContractSerializer>состав WCF также входит вспомогательный сериализатор,. Объект <xref:System.Runtime.Serialization.NetDataContractSerializer> аналогичен <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> сериализаторам и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> , так как он также выдает имена типов .NET Framework как часть сериализованных данных. Он применяется при совместном использовании одних и тех же типов на концах сериализации и десериализации. Оба сериализатора ( <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer> ) являются производными от общего базового класса <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
->  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. Это может вызвать проблем с клиентом не WCF, при отправке таких данных к службе WCF.  
+>  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. Это может вызвать проблемы с клиентом, отличным от WCF, при отправке таких данных в службу WCF.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Создание экземпляра DataContractSerializer  
  Создание экземпляра <xref:System.Runtime.Serialization.DataContractSerializer> является важным этапом. После создания экземпляра невозможно менять какие-либо настройки.  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Задание известных типов  
- Если в сериализуемых типах, которые еще не были обработаны с помощью атрибута <xref:System.Runtime.Serialization.KnownTypeAttribute> или какого-либо другого механизма, применяется полиморфизм, то конструктору сериализатора с помощью параметра `knownTypes` необходимо передать список возможных известных типов. Дополнительные сведения об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Если в сериализуемых типах, которые еще не были обработаны с помощью атрибута <xref:System.Runtime.Serialization.KnownTypeAttribute> или какого-либо другого механизма, применяется полиморфизм, то конструктору сериализатора с помощью параметра `knownTypes` необходимо передать список возможных известных типов. Дополнительные сведения об известных типах см. в разделе [Data Contract известные типы](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  В следующем примере продемонстрирован класс `LibraryPatron`, который включает коллекцию указанного типа `LibraryItem`. Второй класс определяет тип `LibraryItem` . Третий и четвертый классы (`Book` и `Newspaper`) наследуются от класса `LibraryItem` .  
   
@@ -74,12 +74,12 @@ Windows Communication Foundation (WCF) включает новый модуль 
  Эти значения могут быть переданы в виде строк или экземпляров класса <xref:System.Xml.XmlDictionaryString> , что позволяет их оптимизировать с использованием двоичного XML-формата.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>Задание максимальной квоты объекта  
- Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `maxItemsInObjectGraph` . Этот параметр определяет максимальное число объектов, которые сериализатор сериализует или десериализует за один вызов метода <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . (Этот метод всегда считывает один корневой объект, но в элементах данных этого объекта могут иметься другие объекты. Эти объекты, в свою очередь, могут иметь в своем составе другие объекты и т. д.) Значение по умолчанию — 65536. Обратите внимание, что при сериализации или десериализации массивов каждая запись массива считается отдельным объектом. Также обратите внимание, что некоторые объекты могут иметь большое представление в памяти, поэтому одной этой квоты может быть недостаточно для предотвращения атак типа "отказ в обслуживании". Дополнительные сведения см. в разделе [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). При необходимости увеличить квоту по сравнению со значением по умолчанию следует увеличить ее как на стороне отправки (сериализации), так и на стороне получения (десериализации), так как квота действует как при считывании, так и при записи данных.  
+ Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `maxItemsInObjectGraph` . Этот параметр определяет максимальное число объектов, которые сериализатор сериализует или десериализует за один вызов метода <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . (Этот метод всегда считывает один корневой объект, но в элементах данных этого объекта могут иметься другие объекты. Эти объекты, в свою очередь, могут иметь в своем составе другие объекты и т. д.) Значение по умолчанию — 65536. Обратите внимание, что при сериализации или десериализации массивов каждая запись массива считается отдельным объектом. Также обратите внимание, что некоторые объекты могут иметь большое представление в памяти, поэтому одной этой квоты может быть недостаточно для предотвращения атак типа "отказ в обслуживании". Дополнительные сведения см. в разделе [вопросы безопасности данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). При необходимости увеличить квоту по сравнению со значением по умолчанию следует увеличить ее как на стороне отправки (сериализации), так и на стороне получения (десериализации), так как квота действует как при считывании, так и при записи данных.  
   
 ### <a name="round-trips"></a>Циклы обработки  
  *Цикл обработки* совершается, когда объект десериализуется и повторно сериализуется за одну операцию. Таким образом, он перемещается от XML-кода к экземпляру объекта, а затем возвращается в поток XML.  
   
- Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `ignoreExtensionDataObject` , для которого по умолчанию задано значение `false` . В этом режиме по умолчанию данные можно без потерь отправлять в цикл обработки от новой версии контракта данных через старую версию обратно к новой при условии, что контракт данных реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> . Предположим, например, что версия 1 контракта данных `Person` содержит члены данных `Name` и `PhoneNumber` , а версия 2 добавляет член `Nickname` . Если реализуется объект `IExtensibleDataObject` , то при отправке информации из версии 2 в версию 1 данные `Nickname` сохраняются, а затем снова выдаются при повторной сериализации данных, поэтому данные не теряются при прохождении цикла обработки. Дополнительные сведения см. в разделе [контракты данных обладает прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) и [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `ignoreExtensionDataObject` , для которого по умолчанию задано значение `false` . В этом режиме по умолчанию данные можно без потерь отправлять в цикл обработки от новой версии контракта данных через старую версию обратно к новой при условии, что контракт данных реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> . Предположим, например, что версия 1 контракта данных `Person` содержит члены данных `Name` и `PhoneNumber` , а версия 2 добавляет член `Nickname` . Если реализуется объект `IExtensibleDataObject` , то при отправке информации из версии 2 в версию 1 данные `Nickname` сохраняются, а затем снова выдаются при повторной сериализации данных, поэтому данные не теряются при прохождении цикла обработки. Дополнительные сведения см. в разделе [контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) с прямыми совместимостью и [Управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Проблемы безопасности и допустимости схемы в циклах обработки  
  Циклы обработки влияют на безопасность. Например, десериализация и сохранение больших объемов лишних данных могут представлять угрозу безопасности. Проблемы безопасности при повторной выдаче этих данных обусловлены невозможностью провести проверку, особенно если в процессе задействованы цифровые сигнатуры. Например, в вышеприведенном сценарии конечная точка версии 1 могла бы подписать значение `Nickname` , которое содержит вредоносные данные. Наконец, могут возникнуть проблемы с допустимостью схемы: конечная точка может всегда выдавать только данные, которые строго соответствуют ее заявленному контракту, и не поддерживать других значений. В предыдущем примере в контракте конечной точки версии 1 говорится, что точка выдает только данные `Name` и `PhoneNumber`, а при использовании проверки допустимости схемы выдача дополнительного значения `Nickname` приводит к сбою проверки.  
@@ -115,7 +115,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
 - Семантика. Иногда очень важно сохранить отнесение двух ссылок к одному и тому же объекту, а не к двум идентичным объектам.  
   
- По этим причинам некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `preserveObjectReferences` (по умолчанию ему задано значение `false`). Если этот параметр имеет значение `true`, используется специальный метод кодирования ссылок на объекты, которые понимает только WCF,. Если задано значение `true`, пример XML-кода выглядит следующим образом.  
+ По этим причинам некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `preserveObjectReferences` (по умолчанию ему задано значение `false`). Если для `true`этого параметра задано значение, то используется специальный метод кодирования ссылок на объекты, распознаваемый только WCF. Если задано значение `true`, пример XML-кода выглядит следующим образом.  
   
 ```xml  
 <PurchaseOrder ser:id="1">  
@@ -124,10 +124,10 @@ Windows Communication Foundation (WCF) включает новый модуль 
 </PurchaseOrder>  
 ```  
   
- Пространство имен «ser» относится к пространству имен стандартную сериализацию `http://schemas.microsoft.com/2003/10/Serialization/`. Каждый блок данных сериализуется только один раз, ему присваивается идентификационный номер, и при использовании этих блоков в будущем создается ссылка на уже сериализованные данные.  
+ Пространство имен "SER" относится к стандартному пространству имен `http://schemas.microsoft.com/2003/10/Serialization/`сериализации. Каждый блок данных сериализуется только один раз, ему присваивается идентификационный номер, и при использовании этих блоков в будущем создается ссылка на уже сериализованные данные.  
   
 > [!IMPORTANT]
->  Если в контракте данных `XMLElement`присутствует и атрибут "id", и атрибут "ref", используется атрибут "ref", а атрибут "id" игнорируется.  
+> Если в контракте данных `XMLElement`присутствует и атрибут "id", и атрибут "ref", используется атрибут "ref", а атрибут "id" игнорируется.  
   
  Важно понимать существующие в этом режиме ограничения.  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
 >  Если включен режим `preserveObjectReferences` , очень важно задать правильную квоту значению `maxItemsInObjectGraph` . Особенности обработки массивов в этом режиме позволяют злоумышленнику легко создавать небольшое вредоносное сообщение, которое приводит к расходованию больших объемов памяти, и препятствовать этому можно только заданием квоты `maxItemsInObjectGraph` .  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Задание суррогата контракта данных  
- Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `dataContractSurrogate` , для которого может быть задано значение `null`. В противном случае можно использовать этот параметр для задания *суррогата контракта данных*, представляющего собой тип, который реализует интерфейс <xref:System.Runtime.Serialization.IDataContractSurrogate> . Затем с помощью интерфейса можно настроить процесс сериализации и десериализации. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `dataContractSurrogate` , для которого может быть задано значение `null`. В противном случае можно использовать этот параметр для задания *суррогата контракта данных*, представляющего собой тип, который реализует интерфейс <xref:System.Runtime.Serialization.IDataContractSurrogate> . Затем с помощью интерфейса можно настроить процесс сериализации и десериализации. Дополнительные сведения см. в разделе [суррогаты контракта данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
 ## <a name="serialization"></a>Сериализация  
  Следующая информация применима к любому классу, наследуемому от сериализатора <xref:System.Runtime.Serialization.XmlObjectSerializer>, включая классы <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer>  
@@ -149,7 +149,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
 ### <a name="simple-serialization"></a>Простая сериализация  
  Основным способом сериализации объекта является его передача методу <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> . Существует три перегрузки, каждая из которых предназначена для записи в <xref:System.IO.Stream>, <xref:System.Xml.XmlWriter>или <xref:System.Xml.XmlDictionaryWriter>соответственно. При использовании перегрузки <xref:System.IO.Stream> на выходе получается XML-код в кодировке UTF-8. При использовании перегрузки <xref:System.Xml.XmlDictionaryWriter> сериализатор оптимизирует объекты на выходе для двоичного XML-формата.  
   
- При использовании <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> метод, сериализатор использует стандартное имя и пространство имен элемента программы-оболочки и записывает ее вместе с содержимым (см. в предыдущем разделе «Задание по умолчанию корневого имени и пространства имен»).  
+ При использовании <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> метода сериализатор использует имя и пространство имен по умолчанию для элемента-оболочки и записывает его вместе с содержимым (см. предыдущий раздел "Указание корневого имени и пространства имен по умолчанию").  
   
  Следующий пример демонстрирует запись с помощью <xref:System.Xml.XmlDictionaryWriter>.  
   
@@ -169,7 +169,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
  Для записи конечного элемента и содержимого объекта и закрытия программы-оболочки используйте методы <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A>, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>и <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> соответственно.  
   
 > [!NOTE]
->  Перегрузок этих методов <xref:System.IO.Stream> нет.  
+> Перегрузок этих методов <xref:System.IO.Stream> нет.  
   
  Описанная здесь пошаговая сериализация, как правило, используется в двух случаях. Во-первых, чтобы вставлять содержимое, такое как атрибуты или комментарии, между `WriteStartObject` и `WriteObjectContent`, как показано в следующем примере.  
   
@@ -200,7 +200,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
 ```  
   
 > [!NOTE]
->  Использование пошаговой сериализации может привести к созданию XML-кода с недействительной схемой.  
+> Использование пошаговой сериализации может привести к созданию XML-кода с недействительной схемой.  
   
 ## <a name="deserialization"></a>Десериализация  
  Следующая информация применима к любому классу, наследуемому от сериализатора <xref:System.Runtime.Serialization.XmlObjectSerializer>, включая классы <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer>  
@@ -221,12 +221,12 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Обратите внимание, что до передачи устройства чтения методу `ReadObject`в этой программе-оболочке можно прочитать атрибуты.  
   
- При использовании одной из простых `ReadObject` перегрузки, десериализатор ищет стандартное имя и пространство имен элемента программы-оболочки (см. предшествующий раздел «Задание по умолчанию корневого имени и пространства имен») и создает исключение, если он обнаруживает Неизвестный элемент. Предполагается, что в предыдущем примере используется программа-оболочка `<Person>` . Метод <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> вызывается, чтобы убедиться, что средство чтения размещено в элементе, именованном как ожидается.  
+ При использовании одной из простых `ReadObject` перегрузок десериализатор ищет имя и пространство имен по умолчанию в элементе-оболочке (см. предыдущий раздел "Указание корневого имени и пространства имен по умолчанию") и создает исключение, если обнаруживается неизвестный дерев. Предполагается, что в предыдущем примере используется программа-оболочка `<Person>` . Метод <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> вызывается, чтобы убедиться, что средство чтения размещено в элементе, именованном как ожидается.  
   
  Можно отключить такую проверку имени программы-оболочки; некоторые перегрузки метода `ReadObject` используют логический параметр `verifyObjectName`, которому по умолчанию задано значение `true` . Если параметру задано значение `false`, имя и пространство имен программы-оболочки игнорируются. Эта функция полезна при чтении XML-кода, который был создан с использованием механизма пошаговой сериализации, описанной ранее.  
   
 ## <a name="using-the-netdatacontractserializer"></a>Использование NetDataContractSerializer  
- Основное различие между `DataContractSerializer` и <xref:System.Runtime.Serialization.NetDataContractSerializer> является то, что `DataContractSerializer` использует имена контрактов данных, тогда как `NetDataContractSerializer` выводит полную .NET Framework сборки и имена типов в сериализованный XML. Это означает, что одни и те же типы должны совместно использоваться конечными точками сериализации и десериализации. Так как при использовании сериализатора `NetDataContractSerializer` всегда известны точные типы, которые должны быть десериализованы, механизм известных типов не требуется.  
+ Основное `DataContractSerializer` различие между <xref:System.Runtime.Serialization.NetDataContractSerializer> и состоит в том, что `DataContractSerializer` `NetDataContractSerializer` использует имена контрактов данных, а выходные данные полны .NET Framework сборки и имена типов в сериализованном XML. Это означает, что одни и те же типы должны совместно использоваться конечными точками сериализации и десериализации. Так как при использовании сериализатора `NetDataContractSerializer` всегда известны точные типы, которые должны быть десериализованы, механизм известных типов не требуется.  
   
  Однако в связи с этим могут возникнуть некоторые проблемы:  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
 - Управление версиями. Использование полных имен типов и сборок в XML-коде строго ограничивает возможности управления версиями типов. При этом невозможно изменить имена типов, пространства имен, имена и версии сборок. Задание свойству <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> или параметру конструктора значения <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> вместо значения по умолчанию <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> позволяет изменить версию сборки, но не универсальные типы параметров.  
   
-- Взаимодействие. Так как имена типов и сборок .NET Framework включены в XML, платформ, отличных от .NET Framework не может получить доступ к полученные данные.  
+- Взаимодействие. Поскольку тип .NET Framework и имена сборок включены в XML, платформы, отличные от .NET Framework, не могут получить доступ к результирующим данным.  
   
 - Производительность. Запись имен типов и сборок значительно увеличивает размер получаемого XML-кода.  
   
- Этот механизм аналогичен двоичной сериализации или сериализации SOAP, используемую при удаленном взаимодействии .NET Framework (в частности, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
+ Этот механизм похож на двоичную или SOAP-сериализацию, используемую .NET Framework удаленным взаимодействием ( <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>в <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> частности, и).  
   
  Сериализаторы `NetDataContractSerializer` и `DataContractSerializer`используются практически аналогично со следующими отличиями.  
   
@@ -254,16 +254,16 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
 - Методы <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> и <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> представляют собой псевдонимы для методов <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Они предоставляют более последовательную модель программирования с двоичной сериализацией или сериализацией SOAP.  
   
- Дополнительные сведения об этих функциях см. в разделе [двоичной сериализации](../../../../docs/standard/serialization/binary-serialization.md).  
+ Дополнительные сведения об этих функциях см. в разделе [двоичная сериализация](../../../standard/serialization/binary-serialization.md).  
   
  Форматы XML, используемые сериализаторами `NetDataContractSerializer` и `DataContractSerializer` , как правило, не совместимы. Следовательно, возможность сериализации с помощью одного из них и десериализации с помощью другого не поддерживается.  
   
- Кроме того, обратите внимание, что `NetDataContractSerializer` не выводит полную .NET Framework тип и имя сборки для каждого узла в графе объекта. Он выводит эту информацию, только если она неоднозначна. Таким образом, вывод данных осуществляется на уровне корневого объекта и для любых полиморфных случаев.  
+ Кроме того, обратите `NetDataContractSerializer` внимание, что параметр не выводит полный тип .NET Framework и имя сборки для каждого узла в графе объекта. Он выводит эту информацию, только если она неоднозначна. Таким образом, вывод данных осуществляется на уровне корневого объекта и для любых полиморфных случаев.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
-- [Двоичная сериализация](../../../../docs/standard/serialization/binary-serialization.md)
+- [Двоичная сериализация](../../../standard/serialization/binary-serialization.md)
 - [Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

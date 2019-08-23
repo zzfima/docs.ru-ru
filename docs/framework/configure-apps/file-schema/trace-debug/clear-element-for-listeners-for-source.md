@@ -1,5 +1,5 @@
 ---
-title: <clear> Элемент для <listeners> для <source>
+title: <clear>Элемент для <listeners> для<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673789"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920562"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<Очистить > элемент для \<прослушиватели > для \<источника >
+# <a name="clear-element-for-listeners-for-source"></a>\<Очистка элемента > для \<прослушивателей, \<> для исходного >
 Очищает коллекцию `Listeners` для источника трассировки.  
   
  \<configuration>  
-\<system.diagnostics>  
+\<> System. Diagnostics  
 \<источники >  
-\<Источник >  
+\<исходный >  
 \<прослушиватели >  
-\<Очистить >  
+\<очистить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ ms.locfileid: "61673789"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -47,16 +47,16 @@ ms.locfileid: "61673789"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
 |`sources`|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
 |`source`|Содержит источник трассировки, который инициирует сообщения трассировки.|  
-|`listeners`|Задает прослушиватели для сбора, хранения и маршрутизации сообщений.|  
+|`listeners`|Указывает прослушиватели, собирающие, хранящие и направляющие сообщения.|  
   
 ## <a name="remarks"></a>Примечания  
- `<clear>` Элемент удаляет все прослушиватели `Listeners` коллекции для источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>. Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.  
+ Элемент удаляет все прослушиватели `Listeners` из коллекции для источника <xref:System.Diagnostics.DefaultTraceListener>трассировки, включая. `<clear>` `<clear>` Элемент можно использовать перед `<add>` использованием элемента, чтобы убедиться в отсутствии других активных прослушивателей в коллекции.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элементы для добавления прослушивателей `console` и `textListener` для `Listeners` коллекции для источника трассировки `TraceSourceApp`.  
+ В следующем примере `<clear>` показано, как использовать элемент перед `<add>` использованием элементов для добавления прослушивателей `console` и `textListener` в `Listeners` коллекцию для источника `TraceSourceApp`трассировки.  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ ms.locfileid: "61673789"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Схема параметров трассировки и отладки](index.md)
+- [Прослушиватели трассировки](../../../debug-trace-profile/trace-listeners.md)

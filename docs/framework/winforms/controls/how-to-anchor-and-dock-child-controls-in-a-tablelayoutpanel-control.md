@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922826"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel
 Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
@@ -26,25 +26,25 @@ ms.locfileid: "65586171"
   
 1. Создание элемента управления <xref:System.Windows.Forms.TableLayoutPanel> в форме.  
   
-2. Установите для параметра <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> и <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> свойства **1**.  
+2. Присвойте свойствам <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> и <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> свойству элемента управления значение **1**.  
   
 3. Создайте элемент управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>. Элемент <xref:System.Windows.Forms.Button> расположен в левом верхнем углу ячейки.  
   
 4. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Left`. Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.  
   
     > [!NOTE]
-    >  Такое поведение отличается от поведения других контейнерных элементов управления. Когда свойству <xref:System.Windows.Forms.Control.Anchor%2A> присваивается значение<xref:System.Windows.Forms.Control.Anchor%2A>, дочерние элементы управления других контейнерных элементов управления не перемещаются, а расстояние между закрепленным элементом управления и границей родительского контейнера фиксируется.  
+    > Такое поведение отличается от поведения других контейнерных элементов управления. Когда свойству <xref:System.Windows.Forms.Control.Anchor%2A> присваивается значение<xref:System.Windows.Forms.Control.Anchor%2A>, дочерние элементы управления других контейнерных элементов управления не перемещаются, а расстояние между закрепленным элементом управления и границей родительского контейнера фиксируется.  
   
 5. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Top, Left`. Элемент управления <xref:System.Windows.Forms.Button> займет левый верхний угол ячейки.  
   
-6. Повторите шаг 5 со значением из `Top, Right` для перемещения <xref:System.Windows.Forms.Button> элемента управления в правом верхнем углу ячейки. Повторите процедуру, используя значения `Bottom, Left` и `Bottom, Right`.  
+6. Повторите шаг 5 со значением `Top, Right` , чтобы <xref:System.Windows.Forms.Button> переместить элемент управления в правый верхний угол ячейки. Повторите процедуру, используя значения `Bottom, Left` и `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Растяжение дочернего элемента управления в ячейке TableLayoutPanel  
   
 1. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Left, Right`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по ширине ячейки.  
   
     > [!NOTE]
-    >  Такое поведение отличается от поведения других контейнерных элементов управления. В других контейнерных элементов управления, дочерний элемент управления не изменяются, когда <xref:System.Windows.Forms.Control.Anchor%2A> свойству `Left, Right` или `Top, Bottom`.  
+    > Такое поведение отличается от поведения других контейнерных элементов управления. В других элементах управления контейнера размер дочернего элемента управления не изменяется, <xref:System.Windows.Forms.Control.Anchor%2A> если свойство имеет `Left, Right` значение или `Top, Bottom`.  
   
 2. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Top, Bottom`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по высоте ячейки.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65586171"
 5. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Dock%2A> на <xref:System.Windows.Forms.DockStyle.Left>. Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки. Ширина элемента управления <xref:System.Windows.Forms.Button> сохранится, а высота изменится для заполнения ячейки по вертикали.  
   
     > [!NOTE]
-    >  Другие контейнерные элементы управления обладают аналогичным поведением.  
+    > Другие контейнерные элементы управления обладают аналогичным поведением.  
   
 6. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Dock%2A> на <xref:System.Windows.Forms.DockStyle.Fill>. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.  
   
