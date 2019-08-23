@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956040"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="a4d38-102">Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar</span><span class="sxs-lookup"><span data-stu-id="a4d38-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="e145d-102">Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar</span><span class="sxs-lookup"><span data-stu-id="e145d-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]
->  <span data-ttu-id="a4d38-103">Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="a4d38-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+> <span data-ttu-id="e145d-103">Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="e145d-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="a4d38-104">Если ваши функции формы Windows <xref:System.Windows.Forms.ToolBar> элемента управления с кнопками панели инструментов, необходимо знать, какую кнопку пользователь нажимает кнопку.</span><span class="sxs-lookup"><span data-stu-id="a4d38-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
+ <span data-ttu-id="e145d-104">Если в форме Windows Forms <xref:System.Windows.Forms.ToolBar> есть элемент управления с кнопками панели инструментов, вам будет необходимо указать, какая кнопка была нажата пользователем.</span><span class="sxs-lookup"><span data-stu-id="e145d-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
   
- <span data-ttu-id="a4d38-105">На <xref:System.Windows.Forms.ToolBar.ButtonClick> событие <xref:System.Windows.Forms.ToolBar> элемента управления, вы можете оценить <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> свойство <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класса.</span><span class="sxs-lookup"><span data-stu-id="a4d38-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="a4d38-106">В следующем примере отображается окно сообщения, указывающее, какая кнопка была нажата.</span><span class="sxs-lookup"><span data-stu-id="a4d38-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="a4d38-107">Дополнительные сведения см. в разделе <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="a4d38-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="e145d-105">В случае события <xref:System.Windows.Forms.ToolBar> элемента управления можно <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> оценить свойство класса. <xref:System.Windows.Forms.ToolBar.ButtonClick></span><span class="sxs-lookup"><span data-stu-id="e145d-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="e145d-106">В следующем примере отображается окно сообщения, указывающее, какая кнопка была нажата.</span><span class="sxs-lookup"><span data-stu-id="e145d-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="e145d-107">Дополнительные сведения см. в разделе <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="e145d-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="a4d38-108">В приведенном ниже примере предполагается, что <xref:System.Windows.Forms.ToolBar> элемент управления добавлен в форму Windows.</span><span class="sxs-lookup"><span data-stu-id="a4d38-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
+ <span data-ttu-id="e145d-108">В приведенном ниже примере <xref:System.Windows.Forms.ToolBar> предполагается, что элемент управления был добавлен в форму Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="e145d-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="a4d38-109">Обработка события Click на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="a4d38-109">To handle the Click event on a toolbar</span></span>  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="e145d-109">Обработка события Click на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="e145d-109">To handle the Click event on a toolbar</span></span>  
   
-1. <span data-ttu-id="a4d38-110">В процедуре, добавив кнопки панели инструментов для <xref:System.Windows.Forms.ToolBar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a4d38-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1. <span data-ttu-id="e145d-110">В процедуре добавьте кнопки <xref:System.Windows.Forms.ToolBar> панели инструментов в элемент управления.</span><span class="sxs-lookup"><span data-stu-id="e145d-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +70,10 @@ ms.locfileid: "61785831"
        }  
     ```  
   
-2. <span data-ttu-id="a4d38-111">Добавьте обработчик событий для <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.ButtonClick> событий.</span><span class="sxs-lookup"><span data-stu-id="a4d38-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="a4d38-112">Используйте оператор переключения регистра и <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класс, чтобы определить кнопку панели инструментов, которая была нажата.</span><span class="sxs-lookup"><span data-stu-id="a4d38-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="a4d38-113">В зависимости от результатов отображается соответствующее окно сообщения.</span><span class="sxs-lookup"><span data-stu-id="a4d38-113">Based on this, show an appropriate message box.</span></span>  
+2. <span data-ttu-id="e145d-111">Добавьте обработчик событий для <xref:System.Windows.Forms.ToolBar> <xref:System.Windows.Forms.ToolBar.ButtonClick> события элемента управления.</span><span class="sxs-lookup"><span data-stu-id="e145d-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="e145d-112">Используйте оператор переключения регистра и <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класс для определения кнопки на панели инструментов, которая была нажата.</span><span class="sxs-lookup"><span data-stu-id="e145d-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="e145d-113">В зависимости от результатов отображается соответствующее окно сообщения.</span><span class="sxs-lookup"><span data-stu-id="e145d-113">Based on this, show an appropriate message box.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="a4d38-114">Окно сообщения в этом примере используется исключительно в качестве шаблона.</span><span class="sxs-lookup"><span data-stu-id="a4d38-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="a4d38-115">Вы можете добавить другой код, выполняемый при нажатии кнопки панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="a4d38-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
+    > <span data-ttu-id="e145d-114">Окно сообщения в этом примере используется исключительно в качестве шаблона.</span><span class="sxs-lookup"><span data-stu-id="e145d-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="e145d-115">Вы можете добавить другой код, выполняемый при нажатии кнопки панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="e145d-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,9 +134,9 @@ ms.locfileid: "61785831"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4d38-116">См. также</span><span class="sxs-lookup"><span data-stu-id="a4d38-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e145d-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e145d-116">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="a4d38-117">Практическое руководство. Добавление кнопок в элемент управления ToolBar</span><span class="sxs-lookup"><span data-stu-id="a4d38-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
-- [<span data-ttu-id="a4d38-118">Практическое руководство. Определение значка для кнопки панели инструментов</span><span class="sxs-lookup"><span data-stu-id="a4d38-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="a4d38-119">Элемент управления ToolBar</span><span class="sxs-lookup"><span data-stu-id="a4d38-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="e145d-117">Практическое руководство. Добавление кнопок в элемент управления ToolBar</span><span class="sxs-lookup"><span data-stu-id="e145d-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
+- [<span data-ttu-id="e145d-118">Практическое руководство. Определение значка для кнопки на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="e145d-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="e145d-119">Элемент управления ToolBar</span><span class="sxs-lookup"><span data-stu-id="e145d-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

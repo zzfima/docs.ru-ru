@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26efb3e43642b6d1fd10b084c2b321609c89d89b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 682fe190126d4f40013678d996804e9f3481bc02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965088"
 ---
-# <a name="icordebugmoduleenum-interface"></a><span data-ttu-id="05e7c-102">Интерфейс ICorDebugModuleEnum</span><span class="sxs-lookup"><span data-stu-id="05e7c-102">ICorDebugModuleEnum Interface</span></span>
+# <a name="icordebugmoduleenum-interface"></a><span data-ttu-id="ee994-102">Интерфейс ICorDebugModuleEnum</span><span class="sxs-lookup"><span data-stu-id="ee994-102">ICorDebugModuleEnum Interface</span></span>
 
-<span data-ttu-id="05e7c-103">Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugModule.</span><span class="sxs-lookup"><span data-stu-id="05e7c-103">Implements ICorDebugEnum methods, and enumerates ICorDebugModule arrays.</span></span>  
+<span data-ttu-id="ee994-103">Реализует методы ICorDebugEnum и перечисляет ICorDebugModule массивы.</span><span class="sxs-lookup"><span data-stu-id="ee994-103">Implements ICorDebugEnum methods, and enumerates ICorDebugModule arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="05e7c-104">Методы</span><span class="sxs-lookup"><span data-stu-id="05e7c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ee994-104">Методы</span><span class="sxs-lookup"><span data-stu-id="ee994-104">Methods</span></span>  
   
-|<span data-ttu-id="05e7c-105">Метод</span><span class="sxs-lookup"><span data-stu-id="05e7c-105">Method</span></span>|<span data-ttu-id="05e7c-106">Описание</span><span class="sxs-lookup"><span data-stu-id="05e7c-106">Description</span></span>|  
+|<span data-ttu-id="ee994-105">Метод</span><span class="sxs-lookup"><span data-stu-id="ee994-105">Method</span></span>|<span data-ttu-id="ee994-106">Описание</span><span class="sxs-lookup"><span data-stu-id="ee994-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="05e7c-107">Метод Next</span><span class="sxs-lookup"><span data-stu-id="05e7c-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|<span data-ttu-id="05e7c-108">Возвращает заданное число `ICorDebugModule` экземпляров из перечисления, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="05e7c-108">Gets the specified number of `ICorDebugModule` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="ee994-107">Метод Next</span><span class="sxs-lookup"><span data-stu-id="ee994-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|<span data-ttu-id="ee994-108">Возвращает указанное количество `ICorDebugModule` экземпляров из перечисления, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="ee994-108">Gets the specified number of `ICorDebugModule` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="05e7c-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="05e7c-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ee994-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="ee994-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="05e7c-110">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="05e7c-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="ee994-110">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="ee994-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05e7c-111">Требования</span><span class="sxs-lookup"><span data-stu-id="05e7c-111">Requirements</span></span>  
- <span data-ttu-id="05e7c-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05e7c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ee994-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ee994-111">Requirements</span></span>  
+ <span data-ttu-id="ee994-112">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee994-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05e7c-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05e7c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ee994-113">**Заголовок.** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="ee994-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="05e7c-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05e7c-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ee994-114">**Библиотечная** Коргуидс. lib</span><span class="sxs-lookup"><span data-stu-id="ee994-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05e7c-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05e7c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ee994-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee994-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05e7c-116">См. также</span><span class="sxs-lookup"><span data-stu-id="05e7c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee994-116">См. также</span><span class="sxs-lookup"><span data-stu-id="ee994-116">See also</span></span>
 
-- [<span data-ttu-id="05e7c-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="05e7c-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ee994-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="ee994-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
