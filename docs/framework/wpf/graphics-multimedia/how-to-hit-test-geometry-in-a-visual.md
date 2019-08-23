@@ -9,31 +9,31 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52b9b99b0af38d797e4a3c98dc0979211c930c1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923383"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Практическое руководство. Проверка попадания геометрического объекта в визуальный объект
-В этом примере показано, как выполнить проверку попадания для визуального объекта, который состоит из одного или нескольких <xref:System.Windows.Media.Geometry> объектов.  
+В этом примере показано, как выполнить проверку нажатия для визуального объекта, состоящего из одного или <xref:System.Windows.Media.Geometry> нескольких объектов.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как получить <xref:System.Windows.Media.DrawingGroup> из визуальный объект, который использует <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> метод. Затем выполняется попадания на отображаемом содержимом каждого рисунка в <xref:System.Windows.Media.DrawingGroup> для определения, какой геометрический объект произошло попадание.  
+ В следующем примере показано, <xref:System.Windows.Media.DrawingGroup> как получить из визуального объекта, <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> использующего метод. Затем выполняется проверка нажатия для отображаемого содержимого каждого рисунка в, <xref:System.Windows.Media.DrawingGroup> чтобы определить, какая геометрия была достигнута.  
   
 > [!NOTE]
->  В большинстве случаев можно использовать <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> метод для определения попадания курсора на любой из отображаемого содержимого визуального элемента.  
+> В большинстве случаев для определения того, пересекается ли точка с отображаемым содержимым визуального элемента, используется <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> метод.  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- <xref:System.Windows.Media.Geometry.FillContains%2A> Это перегруженный метод, позволяющий попадания с использованием указанного <xref:System.Windows.Point> или <xref:System.Windows.Media.Geometry>. Если линия геометрического объекта штрихованная, штрих может выходить за границы заполнения. В этом случае необходимо вызвать <xref:System.Windows.Media.Geometry.StrokeContains%2A> в дополнение к <xref:System.Windows.Media.Geometry.FillContains%2A>.  
+ Метод является перегруженным методом, который позволяет выполнять проверку попадания с помощью указанного <xref:System.Windows.Point> или <xref:System.Windows.Media.Geometry>. <xref:System.Windows.Media.Geometry.FillContains%2A> Если линия геометрического объекта штрихованная, штрих может выходить за границы заполнения. В этом случае может потребоваться вызов <xref:System.Windows.Media.Geometry.StrokeContains%2A> в дополнение к. <xref:System.Windows.Media.Geometry.FillContains%2A>  
   
- Вы также можете предоставить <xref:System.Windows.Media.ToleranceType> , используемый в целях спрямления кривой Безье.  
+ Можно также предоставить <xref:System.Windows.Media.ToleranceType> , который используется в целях спрямления Безье.  
   
 > [!NOTE]
->  В этом примере не учитываются преобразования или обрезка, которые могут быть применены к геометрическому объекту. Кроме того этот пример не будет работать с элементом управления со стилями, поскольку он не имеет никаких рисунков, непосредственно связанных с ним.  
+> В этом примере не учитываются преобразования или обрезка, которые могут быть применены к геометрическому объекту. Кроме того этот пример не будет работать с элементом управления со стилями, поскольку он не имеет никаких рисунков, непосредственно связанных с ним.  
   
 ## <a name="see-also"></a>См. также
 

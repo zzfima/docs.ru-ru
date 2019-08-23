@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: d83713a81e7675a68482890c2401f1a0a6803abc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802120"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914231"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] стандартных элементов управления в приложениях, разработанных для платформ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]и [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67802120"
 |SysLink|Hyperlink|  
 |Статические|Текст|  
 |Статические|Изображение|  
-|SysIPAddress32|Другой|  
+|SysIPAddress32|Настраиваемый|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Список|  
@@ -85,18 +85,18 @@ ms.locfileid: "67802120"
 |----------------|------------------|  
 |SysAnimate32|Изображение|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Другой|  
+|SysDateTimePick32|Настраиваемый|  
 |SysMonthCal32|Календарь|  
 |MS_WINNOTE|ToolTip|  
 |VBBubble|ToolTip|  
 |ScrollBar (при использовании в качестве отдельного элемента управления)|Slider|  
-|SuperGrid|Другой|  
+|SuperGrid|Настраиваемый|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Элементы управления Windows Forms  
- Элементы управления Windows Forms предоставляются в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] через поставщики на стороне клиента в UIAutomationClientsideProviders.dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
+ Windows Forms элементы управления предоставляются [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] через поставщики на стороне клиента в UIAutomationClientsideProviders. dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
   
- Как правило, элементы управления Windows Forms, которые являются управляемыми оболочками для [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] поддерживаются стандартные элементы управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поддерживаются следующие элементы управления.  
+ Как правило, элементы управления Windows Forms, являющиеся управляемыми [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] оболочками для стандартных элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]управления, поддерживаются. Поддерживаются следующие элементы управления.  
   
 |Имя класса|  
 |----------------|  
@@ -136,7 +136,7 @@ ms.locfileid: "67802120"
 |VscrollBar|  
 |Веб-браузер|  
   
- Следующие элементы управления имеют доступ к [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] только через их поддержку Microsoft Active Accessibility. Некоторые функциональные возможности могут оказаться недоступными.  
+ Следующие элементы управления [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] доступны только через поддержку Microsoft Active Accessibility. Некоторые функциональные возможности могут оказаться недоступными.  
   
 |Имя элемента|  
 |------------------|  

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: e687533d618cef3fcc59b3ecd2b205b80b13b97d
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914447"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Свойства автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом обзоре даются общие сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , предоставляемых клиентским приложениям модели автоматизации пользовательского интерфейса.  
   
@@ -29,13 +29,11 @@ ms.locfileid: "68796662"
   
  Для повышения производительности значения свойств и шаблоны элементов управления могут кэшироваться при получении объектов <xref:System.Windows.Automation.AutomationElement> . Дополнительные сведения см. [в разделе Кэширование в клиентах автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
-<a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>Идентификаторы свойств  
  Идентификаторы свойств (ID) являются уникальными, постоянными значениями, инкапсулированными <xref:System.Windows.Automation.AutomationProperty> в объектах. Клиентские приложения модели автоматизации пользовательского интерфейса получают эти <xref:System.Windows.Automation.AutomationElement> идентификаторы из класса или из соответствующего класса шаблона элемента управления <xref:System.Windows.Automation.ScrollPattern>, например. Поставщики автоматизации пользовательского интерфейса получают их из <xref:System.Windows.Automation.AutomationElementIdentifiers> или из одного из классов идентификаторов шаблонов элементов управления, такого как <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
  Числовой <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> объекта <xref:System.Windows.Automation.AutomationProperty> используется поставщиками для идентификации свойств, которые запрашиваются в методе <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> . В общем случае клиентским приложениям не требуется проверять <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> используется только для целей отладки и диагностики.  
   
-<a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Условия свойств  
  Идентификаторы свойств используются при построении <xref:System.Windows.Automation.PropertyCondition> объектов, используемых для поиска <xref:System.Windows.Automation.AutomationElement> объектов. Например, может потребоваться найти <xref:System.Windows.Automation.AutomationElement> с определенным именем или все включенные элементы управления. Каждое <xref:System.Windows.Automation.PropertyCondition> определяет идентификатор <xref:System.Windows.Automation.AutomationProperty> и значение, которому свойство должно соответствовать.  
   
@@ -47,7 +45,6 @@ ms.locfileid: "68796662"
   
 - <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
-<a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>Получение свойств  
  Некоторые свойства <xref:System.Windows.Automation.AutomationElement> и все свойства класса шаблонов элементов управления представляются как вложенные свойства `Current` или свойство `Cached` элемента <xref:System.Windows.Automation.AutomationElement> или объекта шаблона элемента управления.  
   
@@ -73,7 +70,6 @@ ms.locfileid: "68796662"
   
  Методы `Get` возвращают <xref:System.Object>. Прежде чем использовать это значение, приложение должно привести возвращенный объект к соответствующему типу.  
   
-<a name="_Default_Property_Values"></a>   
 ## <a name="default-property-values"></a>Значения свойств по умолчанию  
  Если поставщик автоматизации пользовательского интерфейса не реализует свойство, система [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] может предоставить значение по умолчанию. Например, если поставщик для элемента управления не поддерживает свойство, идентифицируемое <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, то [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] возвращает пустую строку. Аналогично, если поставщик не поддерживает свойство, идентифицируемое <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] возвращает значение `false`.  
   
@@ -86,13 +82,11 @@ ms.locfileid: "68796662"
   
  Чтобы определить, какие свойства поддерживаются элементом, используйте метод <xref:System.Windows.Automation.AutomationElement.GetSupportedProperties%2A>. Он возвращает массив идентификаторов <xref:System.Windows.Automation.AutomationProperty> .  
   
-<a name="Property_changed_Events"></a>   
 ## <a name="property-changed-events"></a>События изменения свойств  
  При изменении значения свойства в <xref:System.Windows.Automation.AutomationElement> или в шаблоне элемента управления вызывается событие. Приложения может подписаться на такие события путем вызова метода <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>, предоставив массив идентификаторов <xref:System.Windows.Automation.AutomationProperty> в качестве последнего параметра, чтобы указать интересующие свойства.  
   
  В <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>можно обнаружить свойство, которое было изменено, проверив член <xref:System.Windows.Automation.AutomationPropertyChangedEventArgs.Property%2A> аргументов события. Эти аргументы также содержат старое и новое значения измененного свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Эти значения имеют тип <xref:System.Object> , и перед использованием их необходимо привести к правильному типу.  
   
-<a name="Additional_AutomationElement_Properties"></a>   
 ## <a name="additional-automationelement-properties"></a>Дополнительные свойства AutomationElement  
  Помимо структур свойств <xref:System.Windows.Automation.AutomationElement.Current%2A> и <xref:System.Windows.Automation.AutomationElement.Cached%2A> , <xref:System.Windows.Automation.AutomationElement> имеет следующие свойства, которые можно получить с помощью простых методов доступа к свойствам.  
   

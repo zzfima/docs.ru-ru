@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923598"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Разрешение вопросов, связанных с созданием элементов управления и компонентов
 В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления. Дополнительные сведения см. в разделе [Программирование с использованием компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -96,7 +96,7 @@ ms.locfileid: "68364161"
  Дополнительные сведения об отладке см. [в разделе Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) и [пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)время разработки.  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Событие в производном элементе управления или компоненте вызывается дважды  
- Это может быть связано с дублированием предложения `Handles`. Дополнительные сведения см. в разделе [Устранение неполадок, связанных с унаследованными обработчиками событий в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Это может быть связано с дублированием предложения `Handles`. Дополнительные сведения см. в разделе [Устранение неполадок, связанных с унаследованными обработчиками событий в Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>Ошибка времени разработки: "Не удалось создать компонент" имя компонента ""  
  Компонент или элемент управления должен предоставлять конструктор без параметров без аргументов. Если в среде разработки создается экземпляр компонента или элемента управления, он не пытается предоставить какие-либо параметры для перегрузок конструктора, принимающих параметры.  

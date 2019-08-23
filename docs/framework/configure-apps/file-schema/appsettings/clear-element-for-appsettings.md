@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301300"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921312"
 ---
-# <a name="clear-element-for-appsettings"></a>\<Очистить > элемент для \<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<Очистка элемента > для \<appSettings >
 
 Удаляет пользовательские параметры приложения.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Очистить >**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<очистить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,21 +34,21 @@ ms.locfileid: "66301300"
 
 ## <a name="attributes"></a>Атрибуты
 
-Нет
+Отсутствуют
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб или любые другие пользовательские данные конфигурации приложения. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML или другие сведения о конфигурации пользовательских приложений. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+Отсутствуют
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как очистить настраиваемые параметры конфигурации:
+В следующем примере показано, как удалить настраиваемые параметры конфигурации.
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ ms.locfileid: "66301300"
 
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](../index.md)

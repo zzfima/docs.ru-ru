@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3245caa3b7f001ecd68f30b8d30437ec26074a1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053508"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914966"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Компонент позволяет пользователям просматривать файловую систему и выбирать файлы для сохранения. Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне. Тем не менее для фактического сохранения файла на диск необходимо написать специальный код.  
@@ -25,19 +25,19 @@ ms.locfileid: "66053508"
   
 - Выведите на экран диалоговое окно **Сохранить файл** и вызовите метод для сохранения файла, выбранного пользователем.  
   
-     Используйте <xref:System.Windows.Forms.SaveFileDialog> компонента <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> метод для сохранения файла. Этот метод обеспечивает <xref:System.IO.Stream> объект можно записать.  
+     Чтобы сохранить файл, <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> используйте метод компонента.<xref:System.Windows.Forms.SaveFileDialog> Этот метод предоставляет <xref:System.IO.Stream> объект, который можно записать в.  
   
-     В примере ниже используется <xref:System.Windows.Forms.DialogResult> свойство, чтобы получить имя файла и <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод для сохранения файла. <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Метод предоставляет поток для записи файла.  
+     В приведенном ниже примере <xref:System.Windows.Forms.DialogResult> свойство используется для получения имени файла, <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> а метод — для сохранения файла. <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Метод предоставляет поток для записи файла.  
   
-     В следующем примере имеется <xref:System.Windows.Forms.Button> элемента управления с изображением, назначенные ему. При нажатии кнопки, <xref:System.Windows.Forms.SaveFileDialog> создается экземпляр компонента с фильтром, допускающим файлов типа GIF, JPEG и BMP. При выборе файла такого типа в диалоговом окне "Сохранить файл" изображение кнопки сохраняется.  
+     В приведенном ниже <xref:System.Windows.Forms.Button> примере имеется элемент управления с назначенным ему изображением. При нажатии кнопки <xref:System.Windows.Forms.SaveFileDialog> создается экземпляр компонента с фильтром, который разрешает файлы типа. gif,. JPEG и. bmp. При выборе файла такого типа в диалоговом окне "Сохранить файл" изображение кнопки сохраняется.  
   
     > [!IMPORTANT]
-    >  Для получения или задания <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство, сборке требуется уровень привилегий предоставляются по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).  
+    >  Чтобы получить или задать <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство, сборке требуется уровень привилегий, предоставляемый <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> классом. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).  
   
-     В примере предполагается, в форме есть <xref:System.Windows.Forms.Button> управления с его <xref:System.Windows.Forms.ButtonBase.Image%2A> свойство в файл типа GIF, JPEG и BMP.  
+     В примере предполагается, что в <xref:System.Windows.Forms.Button> форме есть элемент <xref:System.Windows.Forms.ButtonBase.Image%2A> управления со свойством, для которого задано значение файла типа. gif,. JPEG или. bmp.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.FileDialog> Класса <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> свойство (который, из-за наследования, является частью <xref:System.Windows.Forms.SaveFileDialog> класс) использует отсчитываемый от единицы индекс. Это важно при написании кода для сохранения данных в определенном формате (например, в формате обычного текста или двоичном формате). Это свойство представлено в следующем примере.  
+    > Свойство класса (из-за наследования является частью <xref:System.Windows.Forms.SaveFileDialog> класса) использует индекс, отсчитываемый от единицы. <xref:System.Windows.Forms.FileDialog> <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> Это важно при написании кода для сохранения данных в определенном формате (например, в формате обычного текста или двоичном формате). Это свойство представлено в следующем примере.  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -161,7 +161,7 @@ ms.locfileid: "66053508"
        }  
     ```  
   
-     (Visual C# и визуальное C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C# элемент C++и визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
@@ -172,10 +172,10 @@ ms.locfileid: "66053508"
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     Дополнительные сведения о создании файловых потоков см. в разделе <xref:System.IO.FileStream.BeginWrite%2A> и <xref:System.IO.FileStream.Write%2A>.  
+     Дополнительные сведения о записи файловых потоков см <xref:System.IO.FileStream.BeginWrite%2A> . в статьях и. <xref:System.IO.FileStream.Write%2A>  
   
     > [!NOTE]
-    >  Определенные элементы управления, такие как <xref:System.Windows.Forms.RichTextBox> управления, иметь возможность сохранять файлы. Дополнительные сведения см. в разделе, посвященном компоненту SaveFileDialog, технической статьи [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) в библиотеке MSDN Online.  
+    > Некоторые элементы управления, такие как <xref:System.Windows.Forms.RichTextBox> элемент управления, имеют возможность сохранять файлы. Дополнительные сведения см. в разделе, посвященном компоненту SaveFileDialog, технической статьи [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) в библиотеке MSDN Online.  
   
 ## <a name="see-also"></a>См. также
 

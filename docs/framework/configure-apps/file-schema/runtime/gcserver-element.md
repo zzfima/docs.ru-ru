@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663686"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927385"
 ---
 # <a name="gcserver-element"></a>\<Элемент > gcServer
 Указывает, выполняет ли среда CLR сборку мусора сервера.  
@@ -65,7 +65,7 @@ ms.locfileid: "69663686"
  Этот элемент может использоваться только в файле конфигурации приложения; в файле конфигурации компьютера он игнорируется.  
   
 > [!NOTE]
->  В платформе .NET Framework версии 4 и более ранних версиях параллельная сборка мусора недоступна, если включена серверная сборка мусора. С версии .NET Framework 4.5 серверная сборка мусора является параллельной. Чтобы использовать непараллельную сборку мусора сервера, `<gcServer>` установите для `true` элемента значение, а `false` [ \<для элемента gcConcurrent >](gcconcurrent-element.md) значение.  
+> В платформе .NET Framework версии 4 и более ранних версиях параллельная сборка мусора недоступна, если включена серверная сборка мусора. С версии .NET Framework 4.5 серверная сборка мусора является параллельной. Чтобы использовать непараллельную сборку мусора сервера, `<gcServer>` установите для `true` элемента значение, а `false` [ \<для элемента gcConcurrent >](gcconcurrent-element.md) значение.  
   
 ## <a name="example"></a>Пример  
  В следующем примере включается параллельная сборка мусора сервера.  

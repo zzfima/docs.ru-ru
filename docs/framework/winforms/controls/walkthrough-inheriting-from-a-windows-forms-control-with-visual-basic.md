@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931007"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual Basic
 С помощью Visual Basic можно создавать эффективные настраиваемые элементы управления спомощью наследования. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартного элемента управления <xref:System.Windows.Forms.Button> Windows Forms и предоставит настраиваемое свойство с именем. `ButtonValue`
@@ -29,7 +29,7 @@ ms.locfileid: "69040215"
 
 2. Выберите шаблон проекта **Библиотека элементов управления Windows Forms** из списка проектов Visual Basic и введите `ValueButtonLib` в поле **имя** .
 
-     Имя проекта, `ValueButtonLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ValueButton`, можно указать компонент `ValueButton`, используя `ValueButtonLib.ValueButton`. Дополнительные сведения см. в разделе [Пространства имен в Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).
+     Имя проекта, `ValueButtonLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ValueButton`, можно указать компонент `ValueButton`, используя `ValueButtonLib.ValueButton`. Дополнительные сведения см. в разделе [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).
 
 3. В **обозревателе решений** щелкните правой кнопкой мыши **UserControl1.vb** и выберите в контекстном меню команду **Переименовать**. Измените имя файла на `ValueButton.vb`. Чтобы переименовать все ссылки на элемент кода UserControl1, в соответствующем запросе нажмите кнопку **Да**.
 
@@ -46,7 +46,7 @@ ms.locfileid: "69040215"
      Обратите внимание, что визуальный конструктор больше не доступен. <xref:System.Windows.Forms.Button> Поскольку элемент управления выполняет собственное рисование, изменить его внешний вид в конструкторе невозможно. Его визуальное представление будет точно таким же, как и у класса, от которого он наследуется ( <xref:System.Windows.Forms.Button>то есть), если только в коде не было изменено.
 
 > [!NOTE]
->  В область конструктора по-прежнему можно добавлять компоненты, не имеющие элементов пользовательского интерфейса.
+> В область конструктора по-прежнему можно добавлять компоненты, не имеющие элементов пользовательского интерфейса.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>Добавление свойства в наследуемый элемент управления
  Один из возможных способов использования наследуемых элементов управления форм Windows Forms — это создание элементов управления, имеющих такой же внешний вид и функции, как у стандартных элементов управления Windows Forms, но предоставляющих настраиваемые свойства. В этом разделе вы добавите в элемент управления свойство с именем `ButtonValue`.
@@ -148,4 +148,4 @@ ms.locfileid: "69040215"
 - [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Практическое руководство. Отображение элемента управления в диалоговом окне "Выбор элементов панели элементов"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
-- [Основы наследования (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Основы наследования (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

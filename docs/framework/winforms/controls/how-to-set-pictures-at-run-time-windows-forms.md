@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Установка изображений во время выполнения (Windows Forms)
+title: Практическое руководство. Задание изображений во время выполнения (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99d78a275c8ad8f55d9b0832a794545b65da7e20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609401"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917529"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Практическое руководство. Установка изображений во время выполнения (Windows Forms)
-Можно программно установить изображения, отображаемого в формах Windows <xref:System.Windows.Forms.PictureBox> элемента управления.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Практическое руководство. Задание изображений во время выполнения (Windows Forms)
+Можно программно задать изображение, отображаемое Windows Formsным <xref:System.Windows.Forms.PictureBox> элементом управления.  
   
-### <a name="to-set-a-picture-programmatically"></a>Задание рисунка программным образом  
+### <a name="to-set-a-picture-programmatically"></a>Установка рисунка программным способом  
   
-- Задайте <xref:System.Windows.Forms.PictureBox.Image%2A> свойства с помощью <xref:System.Drawing.Image.FromFile%2A> метод <xref:System.Drawing.Image> класса.  
+- Задайте свойство с помощью <xref:System.Drawing.Image>методакласса. <xref:System.Drawing.Image.FromFile%2A> <xref:System.Windows.Forms.PictureBox.Image%2A>  
   
-     В следующем примере в расположение образа выбрана папка «Мои документы». Это делается, поскольку предполагается, что большинство компьютеров под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.PictureBox> управления уже добавлен.  
+     В приведенном ниже примере путь, заданный для расположения изображения, является папкой "Мои документы". Это делается, поскольку можно предположить, что большинство компьютеров, работающих под управлением операционной системы Windows, будут включать этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, <xref:System.Windows.Forms.PictureBox> что форма с уже добавленным элементом управления.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -65,9 +65,9 @@ ms.locfileid: "64609401"
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>Чтобы очистить рисунок  
+### <a name="to-clear-a-graphic"></a>Очистка графического изображения  
   
-- Во-первых освободить память, используется образ, а затем снимите его. Сборка мусора, чтобы освободить занятую память позже Если управление памятью становится проблемой.  
+- Сначала освободите память, используемую изображением, а затем очистите изображение. Если управление памятью становится проблемой, сборка мусора освободит память позже.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,9 +93,9 @@ ms.locfileid: "64609401"
     ```  
   
     > [!NOTE]
-    >  Дополнительные сведения о том, почему следует использовать <xref:System.Drawing.Image.Dispose%2A> метод таким образом, см. в разделе [очистки неуправляемых ресурсов](../../../standard/garbage-collection/unmanaged.md).  
+    > Дополнительные сведения о том, почему следует использовать <xref:System.Drawing.Image.Dispose%2A> метод таким образом, см. в разделе Очистка неуправляемых [ресурсов](../../../standard/garbage-collection/unmanaged.md).  
   
-     Этот код удалит изображение, даже если рисунок был загружен в элемент управления во время разработки.  
+     Этот код очистит изображение, даже если изображение было загружено в элемент управления во время разработки.  
   
 ## <a name="see-also"></a>См. также
 
@@ -103,5 +103,5 @@ ms.locfileid: "64609401"
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)
 - [Практическое руководство. Загрузка изображения с помощью конструктора](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Практическое руководство. Изменение размера или размещения изображения во время выполнения](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Практическое руководство. Изменение размера или расположения изображения во время выполнения](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Элемент управления PictureBox](picturebox-control-windows-forms.md)

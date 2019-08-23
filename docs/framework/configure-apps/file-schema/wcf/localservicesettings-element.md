@@ -2,21 +2,21 @@
 title: Элемент <localServiceSettings>
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 91e9944de30a78b904d1679512f622bcc2955af4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36fcc9454a5762a4a375cc7f6eaee1c4cf0580e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610199"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931719"
 ---
-# <a name="localservicesettings-element"></a>\<localServiceSettings > элемент
+# <a name="localservicesettings-element"></a>\<Элемент > Локалсервицесеттингс
 Задает параметры безопасности локальной службы для этой привязки.  
   
- \<system.serviceModel>  
+ \<> System. serviceModel  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<Безопасность >  
+\<> безопасности  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64610199"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`detectReplays`|Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически. Значение по умолчанию — `false`.|  
+|`detectReplays`|Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически. Значение по умолчанию — `false`.|  
 |`inactivityTimeout`|Положительное значение типа <xref:System.TimeSpan>, в котором указывается время бездействия канала. Значение по умолчанию - 01:00:00.|  
 |`issuedCookieLifeTime`|Значение типа <xref:System.TimeSpan>, которое задает время существования для всех новых файлов безопасности cookie. Файлы cookie, время существования который превышает заданное время, используются повторно и снова должны быть согласованы. Значение по умолчанию - 10:00:00.|  
 |`maxCachedCookies`|Положительное целое число, указывающее максимальное количество файлов cookie, которые могут быть кэшированы. Значение по умолчанию — 1000.|  
@@ -62,14 +62,14 @@ ms.locfileid: "64610199"
 |`timestampValidityDuration`|Положительное значение типа <xref:System.TimeSpan>, указывающее срок действия отметки времени. Значение по умолчанию - 00:15:00.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
+|[\<> безопасности](security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
+|[\<Секуреконверсатионбутстрап >](secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
   
 ## <a name="remarks"></a>Примечания  
  Данные настройки являются локальными, поскольку они не публикуются как часть политики безопасности службы и не влияют на привязку клиента.  
@@ -93,9 +93,9 @@ ms.locfileid: "64610199"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Безопасность пользовательской привязки](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Расширение привязок](../../../wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)
+- [Практическое руководство. Создание пользовательской привязки с помощью SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Безопасность пользовательской привязки](../../../wcf/samples/custom-binding-security.md)

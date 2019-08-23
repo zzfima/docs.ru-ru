@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 60c4dac76b4a7868da9143cab1433ee93f97c7d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636811"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914993"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- После Windows Forms <xref:System.Windows.Forms.DataGrid> подключен к базе данных, вы можете отслеживать, который ячеек пользователем.  
+ После подключения Windows Forms <xref:System.Windows.Forms.DataGrid> к базе данных можно отслеживать ячейку, которую щелкнул пользователь.  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Чтобы определить, когда пользователь DataGrid выбирает другую ячейку  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Определение того, когда пользователь DataGrid выбирает другую ячейку  
   
-- В <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> обработчик событий, напишите код соответствующим образом отреагировать.  
+- В обработчике <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> событий напишите код, отвечающий соответствующим образом.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -47,18 +47,18 @@ ms.locfileid: "64636811"
     }  
     ```  
   
-     (Visual C#) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C#элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Чтобы определить, какая часть элемента управления DataGrid пользователь щелкнул  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Определение части элемента управления DataGrid, которую щелкнул пользователь  
   
-- Вызовите <xref:System.Windows.Forms.DataGrid.HitTest%2A> метод в соответствующем обработчике событий, таких как <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.Click> событий.  
+- Вызовите <xref:System.Windows.Forms.Control.MouseDown> <xref:System.Windows.Forms.Control.Click> метод в соответствующем обработчике событий, например, для события или. <xref:System.Windows.Forms.DataGrid.HitTest%2A>  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A> Возвращает метод <xref:System.Windows.Forms.DataGrid.HitTestInfo> , содержащий строки и столбца выбранной области.  
+     <xref:System.Windows.Forms.DataGrid.HitTest%2A> Метод<xref:System.Windows.Forms.DataGrid.HitTestInfo> возвращает объект, содержащий строку и столбец области с нажатием.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +132,7 @@ ms.locfileid: "64636811"
     }  
     ```  
   
-     (Visual C#) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C#элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -143,4 +143,4 @@ ms.locfileid: "64636811"
 ## <a name="see-also"></a>См. также
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
-- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Практическое руководство. Изменение отображаемых данных во время выполнения в элементе управления Windows Forms DataGrid](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e12b50e964ec470b843ae35c960f20c5675fd572
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77fa6b1a8c7a559b9d88c0173e389ec11a75ec8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955471"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914789"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>Интерфейс ICorDebugMemoryBuffer
 Представляет буфер в памяти.  
@@ -24,14 +24,14 @@ ms.locfileid: "61955471"
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот интерфейс доступен только в .NET Native. При реализации этого интерфейса для сценариев ICorDebug вне .NET Native среда CLR будет игнорировать этот интерфейс.  
+> Этот интерфейс доступен только в .NET Native. При реализации этого интерфейса для сценариев ICorDebug вне .NET Native среда CLR будет игнорировать этот интерфейс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

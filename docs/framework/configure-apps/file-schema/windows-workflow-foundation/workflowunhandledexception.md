@@ -3,21 +3,21 @@ title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c46d1fb9eb853e57c7ad1b97eb9a22556cdfb7d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613396"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913101"
 ---
-# <a name="workflowunhandledexception"></a>\<workflowUnhandledException >
+# <a name="workflowunhandledexception"></a>\<Воркфловунхандледексцептион >
 Поведение службы, позволяющее задать действие, которое будет выполнено при появлении необработанного исключения в службе рабочего процесса.  
   
-\<system.ServiceModel>  
-\<варианты поведения >  
+\<системой. > ServiceModel  
+\<> поведения  
 \<serviceBehaviors >  
-\<поведение >  
-\<workflowUnhandledException >  
+\<> поведения  
+\<Воркфловунхандледексцептион >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +38,16 @@ ms.locfileid: "61613396"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|action|Строка, указывающая действие, которое должно быть предпринято при возникновении необработанного исключения. Это атрибут типа <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>.|  
+|действие|Строка, указывающая действие, которое должно быть предпринято при возникновении необработанного исключения. Это атрибут типа <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<поведение > из \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|[\<> поведения > \<serviceBehaviors](behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
   
 ## <a name="see-also"></a>См. также
 
