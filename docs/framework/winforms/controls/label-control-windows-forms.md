@@ -6,28 +6,28 @@ helpviewer_keywords:
 - labels
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-ms.openlocfilehash: 0175a6551d7257d7d74df27ab4b927320b176dd7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a66eda1236a751daa87c67dae8311c9aaf71ae24
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962554"
 ---
 # <a name="label-control-windows-forms"></a>Элемент управления Label (Windows Forms)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripLabel> Управления заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.Label> элемента управления. Можно использовать <xref:System.Windows.Forms.ToolStripLabel> с другими новыми элементами управления, такие как <xref:System.Windows.Forms.ToolStripDropDown>. Тем не менее <xref:System.Windows.Forms.Label> элемент управления можно сохранить для обратной совместимости и использования в будущем, если выбран.  
+> Элемент управления заменяет и расширяет функциональные возможности <xref:System.Windows.Forms.Label> элемента управления. <xref:System.Windows.Forms.ToolStripLabel> Можно использовать <xref:System.Windows.Forms.ToolStripLabel> с другими новыми элементами управления, такими <xref:System.Windows.Forms.ToolStripDropDown>как. Однако этот <xref:System.Windows.Forms.Label> элемент управления сохраняется как для обратной совместимости, так и для использования в будущем, если вы решили.  
   
- Windows Forms <xref:System.Windows.Forms.Label> элементы управления используются для отображения текста или изображений, которые не может быть изменено пользователем. Они используются для идентификации объектов в форме, чтобы дать описание какие определенный элемент управления будет делать, если нажата, например или для отображения сведений в ответ на событие во время выполнения или процесс в приложении. Так как <xref:System.Windows.Forms.Label> элемент управления не может получать фокус, он может также использоваться для создания ключей доступа для других элементов управления.  
+ Элементы <xref:System.Windows.Forms.Label> управления Windows Forms используются для вывода текста или изображений, которые не могут быть изменены пользователем. Они используются для обнаружения объектов в форме — для предоставления описания того, что может делать определенный элемент управления, например, или для вывода сведений в ответ на событие или процесс во время выполнения в приложении. <xref:System.Windows.Forms.Label> Поскольку элемент управления не может получать фокус, он также может использоваться для создания ключей доступа для других элементов управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления Label](label-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Создание ключей доступа с помощью элементов управления Label в Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)  
- В этой статье описывается использование метку для определения ключа доступа для другого элемента управления.  
+ [Практическое руководство. Создание ключей доступа с помощью элементов управления "метка" Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ Описывает использование метки для определения ключа доступа для другого элемента управления.  
   
- [Практическое руководство. Размер элемента управления Windows Forms метка подгоняются под размеры его содержимого](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- Описывается изменение размера элемента управления label для его заголовка.  
+ [Практическое руководство. Размер элемента управления метки Windows Forms в соответствии с его содержимым](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ Объясняет, как настроить размер элемента управления Label для его заголовка.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.Label>  

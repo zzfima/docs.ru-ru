@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963796"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Метод ICorProfilerInfo2::GetStringLayout
-Получает сведения о структуре строкового объекта. Этот метод является устаревшим в .NET Framework 4 и заменяется [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) метод.  
+Получает сведения о структуре строкового объекта. Этот метод является устаревшим в .NET Framework 4 и заменяется методом [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,34 +38,34 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Параметры  
  `pBufferLengthOffset`  
- [out] Указатель на смещение расположения, относительно `ObjectID` указатель, который хранит длину строки. Длина хранится в виде `DWORD`.  
+ заполняет Указатель на смещение расположения относительно `ObjectID` указателя, в котором хранится длина строки. Длина хранится в виде `DWORD`.  
   
 > [!NOTE]
->  Этот параметр Возвращает длину самой строки, а не длину буфера. Длина буфера больше недоступен.  
+> Этот параметр возвращает длину самой строки, а не длину буфера. Длина буфера больше недоступна.  
   
  `PStringLengthOffset`  
- [out] Указатель на смещение расположения, относительно `ObjectID` указатель, который хранит длину строки, сам. Длина хранится в виде `DWORD`.  
+ заполняет Указатель на смещение расположения относительно `ObjectID` указателя, в котором хранится длина строки. Длина хранится в виде `DWORD`.  
   
  `pBufferOffset`  
- [out] Указатель на смещение буфера, относительно `ObjectID` указатель, в котором хранится строка расширенных символов.  
+ заполняет Указатель на смещение буфера относительно `ObjectID` указателя, в котором хранится строка расширенных символов.  
   
 ## <a name="remarks"></a>Примечания  
- `GetStringLayout` Метод получает смещения, относительно `ObjectID` указатель из расположений, в которых хранятся следующие:  
+ Метод получает смещения, относящиеся `ObjectID` к указателю, для расположений, в которых хранятся следующие значения: `GetStringLayout`  
   
 - Длина буфера строки.  
   
 - Длина самой строки.  
   
-- Буфер, содержащий фактический строку расширенных символов.  
+- Буфер, содержащий фактическую строку расширенных символов.  
   
- Строки могут представлять собой нулем.  
+ Строки могут завершаться нулем.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf. idl, CorProf. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

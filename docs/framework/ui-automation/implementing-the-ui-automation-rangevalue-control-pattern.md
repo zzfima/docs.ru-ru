@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: bb486dc210bc2d03be6400e9fe5c80b2a7c1de8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ee5009e2763348f7c69613a1776e02e82e0391
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659870"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932125"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Реализация шаблона элемента управления RangeValue автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IRangeValueProvider>, включая сведения о событиях и свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64659870"
   
 - Элементы управления, имеющие неоднозначные значения диапазона, такие как индикаторы выполнения или ползунки, должны нормализовать эти значения.  
   
- ![Индикатор хода выполнения. ](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ Индикатор ![выполнения.](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Пример индикатора выполнения, где значение имеет тип Integer, а минимальное и максимальное значения свойства нормализованы до 0 и 100 соответственно  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
@@ -37,13 +37,13 @@ ms.locfileid: "64659870"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Методы|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Методы|Отсутствуют|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   

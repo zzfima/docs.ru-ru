@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950164"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>Метод ICLRAppDomainResourceMonitor::GetCurrentSurvived
-Получает количество байтов, оставшихся после последнего полного блокирующего сбора мусора и которые ссылается текущий домен приложения.  
+Возвращает число байтов, сохранившихся последней полной блокирующей сборки мусора, на которые ссылается текущий домен приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,13 +38,13 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 ## <a name="parameters"></a>Параметры  
  `dwAppDomainId`  
- [in] Идентификатор домена запрошенное приложение.  
+ окне ИДЕНТИФИКАТОР запрошенного домена приложения.  
   
  `pAppDomainBytesSurvived`  
- [out] Указатель на число байтов, оставшихся после последней сборки мусора, содержащихся в этом домене приложения. После полной сборки мусора это число является точным и полным. После эфемерной сборки это число является потенциально неполным. Этот параметр может иметь значение `null`.  
+ заполняет Указатель на число байтов, сохранившихся после последней сборки мусора, удерживаемых этим доменом приложения. После полного сбора это число является точным и полным. После эфемерной коллекции это число может быть неполным. Этот параметр может иметь значение `null`.  
   
  `pRuntimeBytesSurvived`  
- [out] Указатель на общее число байтов, сохранившихся после последней сборки мусора. После полной сборки мусора это количество представляет собой число байтов, которые хранятся в управляемых кучах. После эфемерной сборки это количество представляет собой число байтов, которые хранятся в эфемерных поколениях. Этот параметр может иметь значение `null`.  
+ заполняет Указатель на общее число байтов, сохранившихся из последней сборки мусора. После полной сборки мусора это число представляет число байтов, хранящихся в управляемых кучах. После эфемерной коллекции это число представляет число байтов, которые удерживаются в режиме эфемерного поколения. Этот параметр может иметь значение `null`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -55,22 +55,22 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |COR_E_APPDOMAINUNLOADED|Домен приложения был выгружен или не существует.|  
   
 ## <a name="remarks"></a>Примечания  
- Статистические данные обновляются только после полной блокирующей сборки мусора; то есть происходит коллекции, включающий в себя все поколения и который останавливает приложение при коллекции. Например <xref:System.GC.Collect?displayProperty=nameWithType> перегрузку метода выполняет полного блокирующего сбора. Параллельная сборка мусора происходит в фоновом режиме и не блокирует приложение.  
+ Статистика обновляется только после полной блокированной сборки мусора; то есть коллекция, включающая все поколения и останавливающая работу приложения во время сбора. Например, <xref:System.GC.Collect?displayProperty=nameWithType> перегрузка метода выполняет полную блокированную коллекцию. Параллельная сборка мусора выполняется в фоновом режиме и не блокирует приложение.  
   
- `GetCurrentSurvived` Метод эквивалентен неуправляемых управляемых <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> свойство.  
+ Метод является неуправляемым эквивалентом управляемого <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> свойства. `GetCurrentSurvived`  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок.** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
 - [Интерфейс ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Отслеживание ресурсов домена приложения](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Отслеживание ресурсов домена приложения](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

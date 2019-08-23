@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 356678afb537ab5e5e1653c4f71140ce704e55ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d881c71d4725e1a73d743aa098aecc053182947
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918609"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Метод ICLRGCManager2::SetGCStartupLimitsEx
-Задает размер сегмент сборки мусора и максимальный размер в систему сбора мусора поколения 0.  
+Задает размер сегмента сборки мусора и максимальный размер поколения 0 для системы сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,43 +38,43 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Параметры  
  `SegmentSize`  
- [in] Указанный размер сегмент сборки мусора.  
+ окне Указанный размер сегмента сборки мусора.  
   
- Минимальный размер сегмента составляет 4 МБ. Сегменты можно увеличить с шагом 1 МБ или больше.  
+ Минимальный размер сегмента — 4 МБ. Размер сегментов можно увеличить с шагом в 1 МБ или больше.  
   
  `MaxGen0Size`  
- [in] Заданный максимальный размер поколения 0.  
+ окне Указанный максимальный размер для поколения 0.  
   
- Минимальное поколения 0 размер составляет 64 КБ.  
+ Минимальный размер поколения 0 — 64 КБ.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetGCStartupLimitsEx`успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Значения, `SetGCStartupLimitsEx` множества могут быть заданы только в том случае, перед запуском узла. Последующие вызовы `SetGCStartupLimitsEx` игнорируются.  
+ Значения, которые `SetGCStartupLimitsEx` задаются, можно указать только перед запуском узла. Последующие вызовы метода `SetGCStartupLimitsEx` игнорируются.  
   
- Чтобы задать один из параметров без влияния на другую, укажите 0 (ноль) для параметра, который вы не хотите изменить.  
+ Чтобы задать любой параметр, не влияя на другой, укажите 0 (нуль) для параметра, который не нужно изменять.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Автоматическое управление памятью](../../../../docs/standard/automatic-memory-management.md)
-- [Сборка мусора](../../../../docs/standard/garbage-collection/index.md)
+- [Автоматическое управление памятью](../../../standard/automatic-memory-management.md)
+- [Сборка мусора](../../../standard/garbage-collection/index.md)
 - [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Интерфейс ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

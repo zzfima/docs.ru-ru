@@ -3,21 +3,21 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0a1f8dd0c29aaee56c2ca1162cc70cc1e5ed106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791650"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942665"
 ---
-# <a name="issuernameregistry"></a>\<issuerNameRegistry>
-Настраивает реестр имен издателей, используемый обработчиками в коллекцию обработчиков токенов.  
+# <a name="issuernameregistry"></a>\<issuerNameRegistry >
+Настраивает реестр имен издателя, используемый обработчиками в коллекции обработчиков маркеров.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
-\<securityTokenHandlerConfiguration>  
-\<issuerNameRegistry>  
+\<Секурититокенхандлерконфигуратион >  
+\<issuerNameRegistry >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,32 +42,32 @@ ms.locfileid: "61791650"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Тип, который является производным от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса. Дополнительные сведения о том, как задать пользовательский `type`, см. в разделе [ссылки на пользовательские типы].|  
+|type|Тип, производный от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса. Дополнительные сведения о том, как указать пользовательский `type`параметр, см. в разделе [ссылки на пользовательские типы].|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Когда `type` атрибут задает реестр имен издателей на основе конфигурации ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класс), [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) элемент должен быть указан. [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) элемент может занять `<add>`, `<clear>`, или `<remove>` элементы как дочерние элементы.|  
+|[\<Трустедиссуерс >](trustedissuers.md)|Если атрибут указывает реестр имен издателя на основе конфигурации <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (класс), [ \<](trustedissuers.md) необходимо указать элемент > трустедиссуерс. `type` Элемент > `<add>` `<clear>`трустедиссуерс может принимать элементы, или `<remove>` в качестве дочерних элементов. [ \<](trustedissuers.md)|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
+|[\<Секурититокенхандлерконфигуратион >](securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции обработчиков маркеров безопасности.|  
   
 ## <a name="remarks"></a>Примечания  
- Все маркеры издателей проверяются с помощью реестра имен издателей. Это объект, который является производным от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса. Реестр имен издателей используется для сопоставления мнемонического имени с криптографическим материалом, необходимым для проверки подписи токенов, выдаваемых соответствующим издателем. Реестр имен издателей ведет список издателей, которым доверяет приложение проверяющей стороны (RP). Тип реестр имен издателей задается с помощью `type` атрибута. `<issuerNameRegistry>` Элемент может иметь один или несколько дочерних элементов, обеспечивающие конфигурацию для указанного типа. Обеспечивают логику, которая обрабатывает эти дочерние элементы, переопределив <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> метод.  
+ Все маркеры издателя проверяются с помощью реестра имени издателя. Это объект, производный от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса. Реестр имен издателей используется для связывания назначенного имени с криптографическим материалом, необходимым для проверки подписей маркеров, созданных соответствующим издателем. В реестре имен издателей хранится список издателей, которым доверяет приложение проверяющей стороны (RP). Тип реестра имени издателя указывается с помощью `type` атрибута. `<issuerNameRegistry>` Элемент может иметь один или несколько дочерних элементов, которые предоставляют конфигурацию для указанного типа. Вы предоставляете логику, которая обрабатывает эти дочерние элементы <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> , переопределяя метод.  
   
- WIF предоставляет единый издателя тип реестра имя по умолчанию, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса. Этот класс использует набор доверенных сертификатов издателей, которые указаны в конфигурации. Он требуется дочерний элемент конфигурации, `<trustedIssuers>`, в которой настроено коллекции доверенных сертификатов издателей. Доверенные сертификаты указываются с помощью ASN.1 отпечатка сертификата в кодировке и добавляются или удаляются из коллекции с помощью `<add>`, `<clear>`, или `<remove>` элементов.  
+ WIF предоставляет один тип реестра имени поставщика из поля, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класс. Этот класс использует набор сертификатов доверенных издателей, указанных в конфигурации. Для этого требуется дочерний элемент `<trustedIssuers>`конфигурации, в котором настроена Коллекция сертификатов доверенных издателей. Доверенные сертификаты указываются с помощью формы отпечатка сертификата в кодировке ASN. 1, которые добавляются или удаляются из `<add>`коллекции `<clear>`с помощью `<remove>` элементов, или.  
   
- `<issuerNameRegistry>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> класса.  
+ `<issuerNameRegistry>` Элемент представлен<xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> классом.  
   
 > [!NOTE]
->  Указание `<issuerNameRegistry>` элемент как дочерний элемент элемента [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по-прежнему поддерживается для обеспечения обратной совместимости. Параметры на `<securityTokenHandlerConfiguration>` элемент переопределяют на `<identityConfiguration>` элемент.  
+> Указание элемента в качестве дочернего элемента [ \<элемента > identityConfiguration](identityconfiguration.md) является устаревшим, но по-прежнему поддерживается для обратной совместимости. `<issuerNameRegistry>` Параметры элемента переопределяют их `<identityConfiguration>` для элемента. `<securityTokenHandlerConfiguration>`  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показано, как указать поставщика конфигурации на основе реестра имен.  
+ В следующем коде XML показано, как указать реестр имен поставщиков на основе конфигурации.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

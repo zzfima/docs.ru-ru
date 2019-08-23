@@ -3,20 +3,20 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: df52212305e0865b8c03fdd49068cb7c7da4fa38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c25f183679f41f51ffee4f482bfe7a64763647d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941903"
 ---
-# <a name="certificatevalidator"></a>\<certificateValidator >
-Задает пользовательский тип для проверки сертификата. Этот тип используется только в том случае, если `certificateValidationMode` атрибут [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) имеет значение «Custom».  
+# <a name="certificatevalidator"></a>\<Цертификатевалидатор >
+Указывает пользовательский тип для проверки сертификата. Этот тип используется только в том случае `certificateValidationMode` , если атрибуту [ \<элемента цертификатевалидатион >](certificatevalidation.md) присвоено значение Custom.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<certificateValidation >  
-\<certificateValidator >  
+ \<> System. identityModel  
+\<identityConfiguration >  
+\<Цертификатевалидатион >  
+\<Цертификатевалидатор >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +38,16 @@ ms.locfileid: "61667370"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Задает пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator> класса. Задайте `certificateValidationMode` атрибут [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) элемент на «Пользовательский», чтобы использовать этот тип. Дополнительные сведения о способах указания `type` атрибут, см. в разделе [ссылок на пользовательские типы](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Необязательный параметр.|  
+|type|Указывает пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator> класса. Задайте для `certificateValidationMode` [ атрибута\<элемента > цертификатевалидатион](certificatevalidation.md) значение Custom, чтобы использовать этот тип. Дополнительные сведения об указании `type` атрибута см. в разделе [ссылки на пользовательские типы](../windows-workflow-foundation/index.md). Необязательный параметр.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Управляет параметрами, используемых обработчиками токена для проверки сертификатов.|  
+|[\<Цертификатевалидатион >](certificatevalidation.md)|Управляет параметрами, которые обработчики маркеров используют для проверки сертификатов.|  
   
 ## <a name="example"></a>Пример  
   

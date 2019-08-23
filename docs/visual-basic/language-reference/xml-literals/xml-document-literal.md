@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: f58c1365e145166dfe122d455854d44526300a1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a489be46295c213b7a8b355eb3c9786d49dd8f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958503"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML-литерал документа (Visual Basic)
-Объект литерал, представляющий <xref:System.Xml.Linq.XDocument> объекта.  
+Литерал, представляющий <xref:System.Xml.Linq.XDocument> объект.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,26 +32,26 @@ rootElement
   
 |Термин|Определение|  
 |---|---|  
-|`encoding`|Необязательный параметр. Использует литеральный текст, определения кодировки документа.|  
-|`standalone`|Необязательный параметр. Литеральный текст. Должен быть «yes» или «no».|  
-|`piCommentList`|Необязательный параметр. Список инструкции по обработке XML и XML-комментариев. Имеет следующий формат:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Каждый `piComment` может принимать одно из следующих:<br /><br /> -   [Литерал инструкции обработки XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|Обязательный. Корневой элемент документа. Одно из следующих имеет следующий формат:<br /><br /> <ul><li>[XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Внедренные выражения вида `<%=` `elementExp` `%>`. `elementExp` Возвращает одно из следующих:<br /><br /> <ul><li>Объект <xref:System.Xml.Linq.XElement>.</li><li>Коллекция, содержащая один <xref:System.Xml.Linq.XElement> объекта и любое количество <xref:System.Xml.Linq.XProcessingInstruction> и <xref:System.Xml.Linq.XComment> объектов.</li></ul></li></ul><br /> Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`encoding`|Необязательный параметр. Литеральный текст, объявляющий кодировку, используемую в документе.|  
+|`standalone`|Необязательный параметр. Текст литерала. Значение должно быть "Yes" или "No".|  
+|`piCommentList`|Необязательный параметр. Список инструкций по обработке XML и XML-комментариев. Принимает следующий формат:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Каждый `piComment` из них может быть одним из следующих:<br /><br /> -   [Литерал инструкции обработки XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|Обязательный. Корневой элемент документа. Формат может быть одним из следующих:<br /><br /> <ul><li>[Литерал XML-элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Внедренное выражение формы `<%=`. `elementExp` `%>` Метод `elementExp` возвращает одно из следующих:<br /><br /> <ul><li>Объект <xref:System.Xml.Linq.XElement>.</li><li>Коллекция, содержащая один <xref:System.Xml.Linq.XElement> объект и любое <xref:System.Xml.Linq.XProcessingInstruction> количество объектов и <xref:System.Xml.Linq.XComment> .</li></ul></li></ul><br /> Дополнительные сведения см. [в разделе внедренные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="remarks"></a>Примечания  
- Литерала XML-документа определяется с помощью объявления XML в начале литерала. Несмотря на то, что каждый XML-литерала документа должен иметь ровно один корневой элемент XML, он может иметь любое количество инструкций по обработке XML и XML-комментариев.  
+ Литерал XML-документа определяется XML-объявлением в начале литерала. Хотя каждый литерал XML-документа должен иметь ровно один корневой XML-элемент, он может иметь любое количество инструкций по обработке XML и XML-комментариев.  
   
- Литерал XML-документа не может присутствовать в XML-элемента.  
+ Литерал XML-документа не может присутствовать в элементе XML.  
   
 > [!NOTE]
->  XML-литерал может занимать несколько строк без использования символа продолжения строки. Это позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в программу Visual Basic.  
+> XML-литерал может охватывать несколько строк без использования символов продолжения строки. Это позволяет копировать содержимое из XML-документа и вставлять его непосредственно в Visual Basic программу.  
   
- Компилятор Visual Basic преобразует XML-литерала документа в вызовы <xref:System.Xml.Linq.XDocument.%23ctor%2A> и <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> конструкторы.  
+ Компилятор Visual Basic преобразует литерал XML-документа в вызовы <xref:System.Xml.Linq.XDocument.%23ctor%2A> конструкторов и. <xref:System.Xml.Linq.XDeclaration.%23ctor%2A>  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается документ XML с XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
+ В следующем примере создается XML-документ с XML-объявлением, инструкцией по обработке, комментарием и элементом, содержащим другой элемент.  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

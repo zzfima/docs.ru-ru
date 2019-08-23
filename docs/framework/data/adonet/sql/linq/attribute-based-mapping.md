@@ -2,22 +2,22 @@
 title: Сопоставление, основанное на атрибутах
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964097"
 ---
 # <a name="attribute-based-mapping"></a>Сопоставление, основанное на атрибутах
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных SQL Server для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели, либо путем применения атрибутов или с помощью внешнего файла сопоставления. В этом разделе представлен подход на основе атрибутов.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]сопоставляет базу данных [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server с объектной моделью с помощью применения атрибутов или внешнего файла сопоставления. В этом разделе представлен подход на основе атрибутов.  
   
- В своей самой простой форме [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных с <xref:System.Data.Linq.DataContext>, таблицу с классом, а столбцы и связи - со свойствами этих классов. Атрибуты также можно использовать для сопоставления иерархии наследования в объектной модели. Дополнительные сведения см. в разделе [Практическое руководство. Создание модели объектов в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ В своей самой простой форме [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных с <xref:System.Data.Linq.DataContext>, таблицу с классом, а столбцы и связи - со свойствами этих классов. Атрибуты также можно использовать для сопоставления иерархии наследования в объектной модели. Дополнительные сведения см. в разделе [Практическое руководство. Создайте объектную модель в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Разработчики, использующие Visual Studio обычно выполняют сопоставление на основе атрибутов с помощью реляционного конструктора объектов. Можно также использовать программу командной строки SQLMetal или вручную написать код атрибутов самостоятельно. Дополнительные сведения см. в разделе [Практическое руководство. Создание модели объектов в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Разработчики, использующие Visual Studio, обычно выполняют сопоставление на основе атрибутов с помощью реляционный конструктор объектов. Можно также использовать программу командной строки SQLMetal или вручную написать код атрибутов самостоятельно. Дополнительные сведения см. в разделе [Практическое руководство. Создайте объектную модель в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
->  Сопоставление можно также выполнять с помощью внешнего файла XML. Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Сопоставление можно также выполнять с помощью внешнего файла XML. Дополнительные сведения см. в разделе [внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  В следующих разделах представлено более подробное описание сопоставления на основе атрибутов. Дополнительные сведения см. в описании пространства имен <xref:System.Data.Linq.Mapping>.  
   
@@ -49,38 +49,38 @@ ms.locfileid: "67743615"
 |Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Никогда|Указывает среде CLR на необходимость получить значение после выполнения операции вставки или обновления.<br /><br /> Параметры: Always, Never, OnUpdate, OnInsert.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Указывает, что столбец может содержать значения NULL.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|логический|`true`|Указывает, что столбец может содержать значения NULL.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|Определенный тип столбца базы данных|Для указания типа столбца базы данных использует типы и модификаторы базы данных.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|Определяет вычисляемый столбец в базе данных.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Указывает, что столбец содержит значения, автоматически генерируемые базой данных.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|Указывает, что столбец содержит значение дискриминатора для иерархии наследования [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|Указывает, что этот член класса представляет столбец, входящий в состав первичных ключей таблицы.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|Определяет тип столбца члена как метка времени или номер версии в базе данных.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|логический|`false`|Указывает, что столбец содержит значения, автоматически генерируемые базой данных.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|логический|`false`|Указывает, что столбец содержит значение дискриминатора для иерархии наследования [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|логический|`false`|Указывает, что этот член класса представляет столбец, входящий в состав первичных ключей таблицы.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|логический|`false`|Определяет тип столбца члена как метка времени или номер версии в базе данных.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, до тех пор, пока <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> имеет значение `true` для члена|Указывает, какой подход реализуется в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для обнаружения конфликтов оптимистичного параллелизма.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования .NET, включая те, которые обычно регистр не учитывается, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования .NET, даже тем, которые обычно не чувствительны к регистру, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Атрибут AssociationAttribute  
- Применяйте этот атрибут для указания свойства, которое будет представлять связь в базе данных, такую как отношение внешнего и первичного ключей. Дополнительные сведения о связях см. в разделе [как: Сопоставление связей баз данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Применяйте этот атрибут для указания свойства, которое будет представлять связь в базе данных, такую как отношение внешнего и первичного ключей. Дополнительные сведения о связях см. [в разделе как Сопоставление связей баз данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
 |Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|При задании данного свойства для ассоциации, в которой члены внешнего ключа не поддерживают значение NULL, удаляет объект при установке ассоциации значения NULL.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|Добавляет в ассоциацию поведение удаления.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|При значении "true" назначает член в качестве внешнего ключа в ассоциации, представляющей отношение базы данных.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|При значении «true» указывает ограничение уникальности для первичного ключа.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|логический|`false`|При задании данного свойства для ассоциации, в которой члены внешнего ключа не поддерживают значение NULL, удаляет объект при установке ассоциации значения NULL.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|Отсутствуют|Добавляет в ассоциацию поведение удаления.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|логический|`false`|При значении "true" назначает член в качестве внешнего ключа в ассоциации, представляющей отношение базы данных.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|логический|`false`|При значении «true» указывает ограничение уникальности для первичного ключа.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|Идентификатор связанного класса|Назначает один или более членов целевого класса сущности в качестве ключевых значений на другой стороне ассоциации.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|String|Идентификатор содержащего класса|Назначает элементы данного класса сущности, которые будут представлять ключевые значения на этой стороне ассоциации.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования .NET, включая те, которые обычно регистр не учитывается, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр. Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде. Это относится ко всем языкам программирования .NET, даже тем, которые обычно не чувствительны к регистру, включая Visual Basic. Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Атрибут InheritanceMappingAttribute  
  Применяйте этот атрибут для сопоставления иерархии наследования.  
@@ -89,9 +89,9 @@ ms.locfileid: "67743615"
   
 |Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|Отсутствует. Необходимо предоставить значение.|Указывает значение кода дискриминатора.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|При значении "true" создает объект данного типа, когда значение дискриминатора в хранилище не соответствует ни одному заданному значению.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Тип|Отсутствует. Необходимо предоставить значение.|Указывает тип класса в иерархии.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|Нет. Необходимо предоставить значение.|Указывает значение кода дискриминатора.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|логический|`false`|При значении "true" создает объект данного типа, когда значение дискриминатора в хранилище не соответствует ни одному заданному значению.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Тип|Нет. Необходимо предоставить значение.|Указывает тип класса в иерархии.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "67743615"
   
 |Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Если значение равно false, указывает сопоставление с хранимой процедурой. При значении «true» указывает сопоставление с пользовательской функцией.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|логический|`false`|Если значение равно false, указывает сопоставление с хранимой процедурой. При значении «true» указывает сопоставление с пользовательской функцией.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|Строка, соответствующая имени базы данных|Указывает имя хранимой процедуры или пользовательской функции.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.FunctionAttribute>.  
@@ -114,7 +114,7 @@ ms.locfileid: "67743615"
   
 |Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|None|Указывает тип базы данных.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|Отсутствуют|Указывает тип базы данных.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|Строка, соответствующая имени параметра в базе данных|Указывает имя для параметра.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.ParameterAttribute>.  

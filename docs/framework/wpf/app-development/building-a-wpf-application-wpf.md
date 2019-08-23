@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958710"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
 
@@ -24,7 +24,7 @@ ms.locfileid: "68401694"
 
 Приложения WPF можно компилировать следующими способами.
 
-- Из командной строки. Приложение должно содержать только код (без XAML) и файл определения приложения. Дополнительные сведения см. в разделе [Построение из командной строки с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) или [Построение из командной строки (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+- Из командной строки. Приложение должно содержать только код (без XAML) и файл определения приложения. Дополнительные сведения см. в разделе [Построение из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) или [Построение из командной строки (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
 - С помощью Microsoft Build Engine (MSBuild). Помимо кода и файлов XAML приложение должно содержать файл проекта MSBuild. Дополнительные сведения см. в разделе "MSBuild".
 
@@ -42,7 +42,7 @@ ms.locfileid: "68401694"
 
 ### <a name="pre-build-initializations"></a>Инициализации перед сборкой
 
-Перед сборкой [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] определяет расположение важных инструментов и библиотек, включая следующие.
+Перед сборкой MSBuild определяет расположение важных средств и библиотек, включая следующие:
 
 - .NET Framework.
 
@@ -52,7 +52,7 @@ ms.locfileid: "68401694"
 
 - Свойство для путей поиска сборки.
 
-В первую очередь [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] ищет сборки в каталоге ссылочных сборок (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). На этом шаге процесс сборки также инициализирует различные свойства и группы элементов и выполняет все необходимые действия по очистке.
+Первое расположение, где MSBuild ищет сборки, — это каталог ссылочной сборки (%ProgramFiles%\Reference\\assemblies\microsoft\framework\v3.0.). На этом шаге процесс сборки также инициализирует различные свойства и группы элементов и выполняет все необходимые действия по очистке.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-По умолчанию компиляция разметки выполняется в той <xref:System.AppDomain> же [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] самой подсистеме. Это обеспечивает значительный выигрыш в производительности. Это поведение можно переключать с помощью свойства `AlwaysCompileMarkupFilesInSeparateDomain`. Это имеет преимущество выгрузки всех ссылочных сборок путем выгрузки отдельного <xref:System.AppDomain>.
+По умолчанию компиляция разметки выполняется в том <xref:System.AppDomain> же виде, что и модуль MSBuild. Это обеспечивает значительный выигрыш в производительности. Это поведение можно переключать с помощью свойства `AlwaysCompileMarkupFilesInSeparateDomain`. Это имеет преимущество выгрузки всех ссылочных сборок путем выгрузки отдельного <xref:System.AppDomain>.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

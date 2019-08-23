@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3e16ead437bf3ebec9fcae6131577fa03e1df9
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660685"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987243"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -32,10 +32,10 @@ ms.locfileid: "67660685"
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Данная статья не содержит исчерпывающей информации обо всех новых возможностях и может быть изменена. Общие сведения о .NET Framework см. в разделе [Начало работы с .NET Framework](../get-started/index.md). Поддерживаемые платформы см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md). Ссылки для загрузки и инструкции по установке см. в разделе [Руководство по установке](../install/guide-for-developers.md).
+Данная статья не содержит исчерпывающей информации обо всех новых возможностях и может быть изменена. Общие сведения о .NET Framework см. в разделе [Начало работы с .NET Framework](../get-started/index.md). Поддерживаемые платформы см. в разделе [Требования к системе](../get-started/system-requirements.md). Ссылки для загрузки и инструкции по установке см. в разделе [Руководство по установке](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Команда .NET Framework также выпускает компоненты в виде внештатных выпусков совместно с NuGet для расширения поддержки и введения новых возможностей (таких как неизменяемые коллекции и векторные типы с поддержкой SIMD). Дополнительные сведения см. в разделах [Дополнительные библиотеки классов и интерфейсы API](../additional-apis/index.md) и [.NET Framework и внештатные выпуски](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+> Команда .NET Framework также выпускает компоненты в виде внештатных выпусков совместно с NuGet для расширения поддержки и введения новых возможностей (таких как неизменяемые коллекции и векторные типы с поддержкой SIMD). Дополнительные сведения см. в разделах [Дополнительные библиотеки классов и интерфейсы API](../additional-apis/index.md) и [.NET Framework и внештатные выпуски](../get-started/the-net-framework-and-out-of-band-releases.md).
 > См. [полный список пакетов NuGet](https://www.nuget.org/profiles/dotnetframework) для .NET Framework.
 
 <a name="v48" />
@@ -605,7 +605,7 @@ End Class
 
 **Поддержка .NET Standard 2.0**
 
-[.NET Standard](~/docs/standard/net-standard.md) определяет набор интерфейсов API, которые должны быть доступны в каждой реализации .NET, поддерживающей эту версию стандарта. .NET Framework 4.7.1 полностью поддерживает .NET Standard 2.0 и предлагает [около 200 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt), которые определены в .NET Standard 2.0 и отсутствуют в .NET Framework версий 4.6.1, 4.6.2 и 4.7. (Обратите внимание, что эти версии .NET Framework поддерживают .NET Standard 2.0 только в том случае, если дополнительные файлы поддержки .NET Standard также развертываются в целевой системе.) Дополнительные сведения см. в разделе о поддержке .NET Standard 2.0 в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
+[.NET Standard](../../standard/net-standard.md) определяет набор интерфейсов API, которые должны быть доступны в каждой реализации .NET, поддерживающей эту версию стандарта. .NET Framework 4.7.1 полностью поддерживает .NET Standard 2.0 и предлагает [около 200 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt), которые определены в .NET Standard 2.0 и отсутствуют в .NET Framework версий 4.6.1, 4.6.2 и 4.7. (Обратите внимание, что эти версии .NET Framework поддерживают .NET Standard 2.0 только в том случае, если дополнительные файлы поддержки .NET Standard также развертываются в целевой системе.) Дополнительные сведения см. в разделе о поддержке .NET Standard 2.0 в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
 
 **Поддержка построителей конфигурации**
 
@@ -623,7 +623,7 @@ End Class
 
 **Поддержка ссылок только для чтения**
 
-.NET Framework 4.7.1 включает <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Этот атрибут используется компиляторами языка для пометки членов, имеющих типы возвращаемые ссылочные значения (или параметры) только для чтения. Дополнительные сведения см. в разделе о поддержке ReadOnlyReferences в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора). Сведения о возвращаемых ссылочных значениях см. в разделах [Возвращаемые ссылочные значения и ссылочные локальные переменные (справочник по C#)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) и [Возвращаемые ссылочные значения (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+.NET Framework 4.7.1 включает <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Этот атрибут используется компиляторами языка для пометки членов, имеющих типы возвращаемые ссылочные значения (или параметры) только для чтения. Дополнительные сведения см. в разделе о поддержке ReadOnlyReferences в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора). Сведения о возвращаемых ссылочных значениях см. в разделах [Возвращаемые ссылочные значения и ссылочные локальные переменные (справочник по C#)](../../csharp/programming-guide/classes-and-structs/ref-returns.md) и [Возвращаемые ссылочные значения (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 

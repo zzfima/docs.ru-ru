@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df1f1c7e28464781a73a0939c3413f4c9d620d7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942385"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
   
  Методы трассировки и отладки имеют связанные условные атрибуты. Например, если условный атрибут трассировки имеет значение **true**, все операторы трассировки включаются в сборку (компилированные файлы .exe или .dll); если условный атрибут **Trace** имеет значение **false**, операторы трассировки не включаются.  
   
- Для сборки можно включить условный атрибут **Trace** или **Debug**, оба эти атрибута одновременно или ни один из них. Таким образом существует четыре типа сборки: **Отладка**, **трассировки**, оба или ни одной. Некоторые сборки выпуска для продуктивного развертывания могут не содержать ни одну из них, однако большинство сборок отладки содержат обе.  
+ Для сборки можно включить условный атрибут **Trace** или **Debug**, оба эти атрибута одновременно или ни один из них. Таким образом, существует четыре типа сборки: **Отладка**, **Трассировка**, оба или ни одного. Некоторые сборки выпуска для продуктивного развертывания могут не содержать ни одну из них, однако большинство сборок отладки содержат обе.  
   
  Можно задать параметры компилятора для вашего приложения несколькими способами.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "64660400"
   
      Например, следующая инструкция компилятора, введенная в командной строке, включит код трассировки в компилируемый исполняемый файл.  
   
-     Для Visual Basic: **vbc-r:System.dll -d: TRACE = TRUE -d: DEBUG = FALSE MyApplication.vb**  
+     Для Visual Basic: **vbc-р:систем.длл-д:траце = true-д:дебуг = false MyApplication. vb**  
   
-     Для C#: **csc-r:System.dll -d: TRACE -d: DEBUG = FALSE MyApplication.cs**  
+     Для C#: **Csc-р:систем.длл-д:траце-д:дебуг = false MyApplication.CS**  
   
     > [!TIP]
     >  Чтобы скомпилировать несколько файлов приложений, оставьте пробел между именами файлов, например **MyApplication1.vb MyApplication2.vb MyApplication3.vb** или **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -67,7 +67,7 @@ ms.locfileid: "64660400"
     |`-d:`|Определяет символ условной компиляции|  
   
     > [!NOTE]
-    >  Необходимо ввести команды TRACE или DEBUG буквами верхнего регистра. Для получения дополнительных сведений о командах условной компиляции введите `vbc /?` (для Visual Basic) или `csc /?` (для C#) в командной строке. Дополнительные сведения см. в разделах [Построение из командной строки](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) или [Вызов компилятора командной строки](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
+    > Необходимо ввести команды TRACE или DEBUG буквами верхнего регистра. Для получения дополнительных сведений о командах условной компиляции введите `vbc /?` (для Visual Basic) или `csc /?` (для C#) в командной строке. Дополнительные сведения см. в разделах [Построение из командной строки](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) или [Вызов компилятора командной строки](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Выполнение условной компиляции с помощью #CONST или #define  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64660400"
 Удалите комментарий к директиве компилятора.  
   
 > [!NOTE]
->  Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:**), чтобы определить символы условной компиляции.  
+> Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:** ), чтобы определить символы условной компиляции.  
   
 ## <a name="see-also"></a>См. также
 
@@ -102,5 +102,5 @@ ms.locfileid: "64660400"
 - [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Практическое руководство. Вызов компилятора командной строки](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Практическое руководство. Вызов компилятора командной строки](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771869"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910973"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
 
-Эта статья поможет приступить к развертыванию платформы .NET Framework с приложением. Большая часть информации предназначена для разработчиков, изготовителей оборудования и администраторов предприятия. Пользователям, которые хотят установить .NET Framework на своих компьютерах, следует прочитать статью [Установка .NET Framework](~/docs/framework/install/index.md).
+Эта статья поможет приступить к развертыванию платформы .NET Framework с приложением. Большая часть информации предназначена для разработчиков, изготовителей оборудования и администраторов предприятия. Пользователям, которые хотят установить .NET Framework на своих компьютерах, следует прочитать статью [Установка .NET Framework](../install/index.md).
 
 ## <a name="key-deployment-resources"></a>Основные ресурсы, посвященные развертыванию
 
@@ -32,9 +32,9 @@ ms.locfileid: "61771869"
 
   - Тип установщика:
 
-    - [веб-установщик](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable);
+    - [веб-установщик](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable);
 
-    - [автономный установщик](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable).
+    - [автономный установщик](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable).
 
   - Режимы установки:
 
@@ -44,7 +44,7 @@ ms.locfileid: "61771869"
 
   - [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - Развертывание .NET Framework с клиентским приложением (для разработчиков):
 
@@ -160,7 +160,7 @@ ms.locfileid: "61771869"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Заголовок|ОПИСАНИЕ|
 |-----------|-----------------|
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|
 |[Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|

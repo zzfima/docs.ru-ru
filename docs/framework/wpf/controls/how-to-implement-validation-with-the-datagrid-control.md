@@ -8,82 +8,82 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 6175e60b1dbdbdb31500f484da24b0f94990b2d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ae651b3085b39673a51cf8d5f65e9bfb9da87d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663342"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962043"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Практическое руководство. Реализация проверки с помощью элемента управления DataGrid
-<xref:System.Windows.Controls.DataGrid> Элемент управления позволяет выполнять проверку на уровне строк и ячеек. Когда пользователь обновляет значение проверки на уровне ячейки проверяются отдельные свойства объекта привязки данных. Когда пользователь вносит изменения в строку проверки на уровне строк проверяются целые объекты данных. Также можно реализовать визуальную реакцию на ошибки проверки или использовать визуальную обратную связь по умолчанию, <xref:System.Windows.Controls.DataGrid> предоставляет элемент управления.  
+<xref:System.Windows.Controls.DataGrid> Элемент управления позволяет выполнять проверку на уровне ячеек и строк. При проверке на уровне ячейки вы проверяете отдельные свойства привязанного объекта данных, когда пользователь обновляет значение. При проверке на уровне строк выполняется проверка всех объектов данных, когда пользователь фиксирует изменения в строке. Можно также предоставить настраиваемые визуальные Отзывы об ошибках проверки или использовать визуальный отзыв по умолчанию <xref:System.Windows.Controls.DataGrid> , предоставляемый элементом управления.  
   
- Следующие процедуры описывают способы применения правил проверки к <xref:System.Windows.Controls.DataGrid> привязки и настраивать визуальную обратную связь.  
+ В следующих процедурах описывается применение правил проверки к <xref:System.Windows.Controls.DataGrid> привязкам и настройка визуальной обратной связи.  
   
-### <a name="to-validate-individual-cell-values"></a>Чтобы проверить значения отдельных ячеек  
+### <a name="to-validate-individual-cell-values"></a>Проверка значений отдельных ячеек  
   
-- Укажите одно или несколько правил проверки для привязки, используемой со столбцом. Это аналогично проверке данных в простые элементы управления, как описано в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md).  
+- Укажите одно или несколько правил проверки для привязки, используемой со столбцом. Это похоже на проверку данных в простых элементах управления, как описано в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md).  
   
-     В следующем примере показан <xref:System.Windows.Controls.DataGrid> элемента управления с четырьмя столбцами, которые привязаны к различным свойствам бизнес-объекта. Укажите трех столбцов <xref:System.Windows.Controls.ExceptionValidationRule> , задав <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> свойства `true`.  
+     В следующем примере показан <xref:System.Windows.Controls.DataGrid> элемент управления с четырьмя столбцами, привязанными к различным свойствам бизнес-объекта. Три столбца указывают, <xref:System.Windows.Controls.ExceptionValidationRule> <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> присвоив свойству `true`значение.  
   
      [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
-     Когда пользователь вводит недопустимое значение (например, отличный от integer в столбце идентификатор курса), появится красная граница вокруг ячейки. Вы можете изменить эти отзывы проверки по умолчанию, как описано в следующей процедуре.  
+     Когда пользователь вводит недопустимое значение (например, не целое число в столбце Course ID), вокруг ячейки появляется красная граница. Можно изменить этот отзыв по проверке по умолчанию, как описано в следующей процедуре.  
   
-### <a name="to-customize-cell-validation-feedback"></a>Настройка сигнала о проверке ячейки  
+### <a name="to-customize-cell-validation-feedback"></a>Настройка обратной связи по проверке ячейки  
   
-- Значение столбца <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> свойство на стиль, соответствующий столбец редактирования элемента управления. Так как элементы управления создаются во время выполнения, нельзя использовать <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> присоединенного свойства, как с помощью простых элементов управления.  
+- Задайте для <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> свойства столбца стиль, соответствующий элементу управления для редактирования столбца. Поскольку элементы управления для редактирования создаются во время выполнения, нельзя использовать <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> присоединенное свойство, как и для простых элементов управления.  
   
-     В следующем примере обновляется предыдущего примера, добавив стиля ошибки, применяемое для трех столбцов с помощью правил проверки. Когда пользователь вводит недопустимое значение, стиль изменяет цвет фона ячейки и добавляет всплывающей подсказки. Обратите внимание на использование триггера, чтобы определить, имеется ли ошибка проверки. Это необходимо, поскольку в настоящее время отсутствует специальный шаблон ошибок для ячеек.  
+     Следующий пример обновляет предыдущий пример, добавляя стиль ошибки, совместно используемый тремя столбцами с правилами проверки. Когда пользователь вводит недопустимое значение, стиль изменяет цвет фона ячейки и добавляет подсказку. Обратите внимание на использование триггера для определения наличия ошибки проверки. Это необходимо, так как в настоящее время нет выделенного шаблона ошибок для ячеек.  
   
      [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
-     Можно реализовать дополнительную настройку, заменив <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> используемый столбцом.  
+     Можно реализовать более обширную настройку, заменив <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> значение, используемое столбцом.  
   
-### <a name="to-validate-multiple-values-in-a-single-row"></a>Для проверки нескольких значений в одной строке  
+### <a name="to-validate-multiple-values-in-a-single-row"></a>Проверка нескольких значений в одной строке  
   
-1. Реализуйте <xref:System.Windows.Controls.ValidationRule> подкласса, который проверяет несколько свойств объекта привязки данных. В вашей <xref:System.Windows.Controls.ValidationRule.Validate%2A> привести реализацию метода `value` значение параметра для <xref:System.Windows.Data.BindingGroup> экземпляра. Вы можете обращаться к объекту данных, используя <xref:System.Windows.Data.BindingGroup.Items%2A> свойство.  
+1. Реализуйте <xref:System.Windows.Controls.ValidationRule> подкласс, который проверяет несколько свойств привязанного объекта данных. В реализации `value` <xref:System.Windows.Data.BindingGroup> метода приведите значение параметра к экземпляру. <xref:System.Windows.Controls.ValidationRule.Validate%2A> Затем можно получить доступ к объекту данных с помощью <xref:System.Windows.Data.BindingGroup.Items%2A> свойства.  
   
-     В следующем примере демонстрируется этот процесс проверки ли `StartDate` значение свойства для `Course` объекта более ранняя, чем его `EndDate` значение свойства.  
+     В следующем примере показан этот процесс для проверки того, `StartDate` является ли значение `Course` свойства объекта более ранним, `EndDate` чем значение его свойства.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2. Добавить правило проверки к <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> коллекции. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Свойство обеспечивает прямой доступ к <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> свойство <xref:System.Windows.Data.BindingGroup> экземпляр, который группирует все привязки, используемые элементом управления.  
+2. Добавьте правило проверки в <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> коллекцию. Свойство предоставляет прямой доступ <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> к свойству <xref:System.Windows.Data.BindingGroup> экземпляра, который группирует все привязки, используемые элементом управления. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>  
   
-     В следующем примере задается <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> свойства в XAML. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> Свойству <xref:System.Windows.Controls.ValidationStep.UpdatedValue> таким образом, чтобы проверка осуществляется только после обновления объект привязанных данных.  
+     В следующем примере задается <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> свойство в XAML. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> Свойство имеет <xref:System.Windows.Controls.ValidationStep.UpdatedValue> значение, поэтому проверка выполняется только после обновления привязанного объекта данных.  
   
      [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
-     Когда пользователь указывает дату окончания, более ранняя, чем дата начала, в заголовке строки появляется красный восклицательный знак (!). Вы можете изменить эти отзывы проверки по умолчанию, как описано в следующей процедуре.  
+     Когда пользователь указывает дату окончания, предшествующую дате начала, в заголовке строки появляется красный восклицательный знак (!). Можно изменить этот отзыв по проверке по умолчанию, как описано в следующей процедуре.  
   
-### <a name="to-customize-row-validation-feedback"></a>Настройка сигнала о проверке строки  
+### <a name="to-customize-row-validation-feedback"></a>Настройка обратной связи по проверке строк  
   
-- Задайте свойство <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType>. Это свойство позволяет настраивать сигнала о проверке строки для отдельных <xref:System.Windows.Controls.DataGrid> элементов управления. Могут также влиять на несколько элементов управления с помощью неявный стиль строки для установки <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> свойство.  
+- Задайте свойство <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType>. Это свойство позволяет настроить отзыв о проверке строк для отдельных <xref:System.Windows.Controls.DataGrid> элементов управления. Можно также повлиять на несколько элементов управления, используя неявный стиль строк <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> для задания свойства.  
   
-     В следующем примере заменяется сигнала о проверке строки по умолчанию с более заметный индикатор. Когда пользователь вводит недопустимое значение, красный круг с белым восклицательным знаком отображается в заголовке строки. Эта операция выполняется для ошибок проверки строк и ячеек. Сообщение об ошибке отображается во всплывающей подсказке.  
+     В следующем примере отменяется обратная связь по проверке строк по умолчанию с более видимым индикатором. Когда пользователь вводит недопустимое значение, в заголовке строки появляется красный кружок с белым восклицательным знаком. Это происходит как для ошибок проверки строк, так и для ячеек. Связанное сообщение об ошибке отображается в подсказке.  
   
      [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример приводится полная демонстрация проверки ячеек и строк. `Course` Класс предоставляет образец данных объект, реализующий <xref:System.ComponentModel.IEditableObject> для поддержки транзакций. <xref:System.Windows.Controls.DataGrid> Элемент управления взаимодействует с <xref:System.ComponentModel.IEditableObject> чтобы пользователи могли отменить изменения, нажав клавишу ESC.  
+ В следующем примере приведена полная демонстрация проверки ячеек и строк. Класс предоставляет образец объекта данных, который реализует <xref:System.ComponentModel.IEditableObject> для поддержки транзакций. `Course` Элемент управления взаимодействует с <xref:System.ComponentModel.IEditableObject> , позволяя пользователям отменить изменения, нажав клавишу ESC. <xref:System.Windows.Controls.DataGrid>  
   
 > [!NOTE]
->  Если вы используете Visual Basic, в первой строке файла MainWindow.XAML, замените `x:Class="DataGridValidation.MainWindow"` с `x:Class="MainWindow"`.  
+> При использовании Visual Basic в первой строке файла MainWindow. XAML замените `x:Class="DataGridValidation.MainWindow"` `x:Class="MainWindow"`на.  
   
- Чтобы протестировать проверку, попробуйте сделайте следующее:  
+ Чтобы проверить проверку, попробуйте выполнить следующие действия.  
   
-- В столбце идентификатор курса введите значение отличный от integer.  
+- В столбце Course ID (идентификатор курса) введите значение, отличное от целого.  
   
-- В столбце даты окончания введите дату, более ранняя, чем дата начала.  
+- В столбце Дата окончания введите дату, предшествующую дате начала.  
   
-- Удаление значения в идентификатор курса, Дата начала или дата окончания.  
+- Удалите значение в поле идентификатор курса, Дата начала или Дата окончания.  
   
-- Чтобы отменить недопустимое значение для ячейки, поместите курсор в ячейку и нажмите клавишу ESC.  
+- Чтобы отменить недопустимое значение ячейки, установите курсор обратно в ячейку и нажмите клавишу ESC.  
   
-- Чтобы отменить изменения для всей строки, когда текущая ячейка находится в режиме редактирования, дважды нажмите клавишу ESC.  
+- Чтобы отменить изменения для всей строки, если текущая ячейка находится в режиме редактирования, нажмите клавишу ESC дважды.  
   
-- При возникновении ошибки проверки, наведите указатель мыши на индикатор в заголовке строки, чтобы просмотреть сообщение об ошибке.  
+- При возникновении ошибки проверки наведите указатель мыши на индикатор в заголовке строки, чтобы просмотреть соответствующее сообщение об ошибке.  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

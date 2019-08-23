@@ -3,22 +3,22 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32aad3529ded6d0234b1bcb388ecbbc3b0a11c87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790485"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944275"
 ---
-# <a name="trustedissuers"></a>\<trustedIssuers>
-Настраивает список доверенных издателей сертификатов, используемых реестр имен издателей на основе конфигурации (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
+# <a name="trustedissuers"></a>\<Трустедиссуерс >
+Настраивает список сертификатов доверенных издателей, используемых в реестре имен поставщиков на основе конфигурации<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>().  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
-\<securityTokenHandlerConfiguration>  
-\<issuerNameRegistry>  
-\<trustedIssuers>  
+\<Секурититокенхандлерконфигуратион >  
+\<issuerNameRegistry >  
+\<Трустедиссуерс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,29 +44,29 @@ ms.locfileid: "61790485"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет  
+ Отсутствуют  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|Добавляет сертификат в коллекцию доверенных издателей. Сертификат указывается с помощью `thumbprint` атрибута. Этот атрибут является обязательным и должен содержать формы в кодировке ASN.1 отпечатка сертификата. `name` Атрибут является необязательным и может использоваться для указания понятное имя для сертификата.|  
-|`<clear>`|Очищает все сертификаты из коллекции доверенных издателей.|  
+|`<add thumbprint=xs:string name=xs:string>`|Добавляет сертификат в коллекцию доверенных издателей. Сертификат указывается с помощью `thumbprint` атрибута. Этот атрибут является обязательным и должен содержать форму отпечатка сертификата в кодировке ASN. 1. `name` Атрибут является необязательным и может использоваться для указания понятного имени сертификата.|  
+|`<clear>`|Удаляет все сертификаты из коллекции доверенных издателей.|  
 |`<remove thumbprint=xs:string>`|Удаляет сертификат из коллекции доверенных издателей. Сертификат указывается с помощью `thumbprint` атрибута. Атрибут обязателен.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Настраивает реестр имен издателей. **Внимание!**  `type` Атрибут `<issuerNameRegistry>` должен ссылаться элемент <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса для `<trustedIssuers>` элемент был допустимым.|  
+|[\<issuerNameRegistry >](issuernameregistry.md)|Настраивает реестр имен издателя. **Важно!**  Атрибут элемента должен ссылаться на класс, чтобы элемент был допустимым. `<trustedIssuers>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `type` `<issuerNameRegistry>`|  
   
 ## <a name="remarks"></a>Примечания  
- Windows Identity Foundation (WIF) обеспечивает единую реализацию <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класс по умолчанию, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса. Конфигурация реестр имен издателей ведет список доверенных издателей, загруженный из конфигурации. Список связывает каждое имя издателя с сертификатом X.509, который необходим для проверки подписи токенов, создаваемых издателем. Список доверенных издателей сертификатов, указанные в разделе `<trustedIssuers>` элемент. Каждый элемент в списке связывает имя мнемонический издателя с сертификатом X.509, который необходим для проверки подписи токенов, создаваемых этим издателем. Доверенные сертификаты указываются с помощью ASN.1 кодированной формы отпечатка сертификата и добавляются к коллекции с помощью `<add>` элемент. Вы можете удалить или удалить из списка издателей (сертификаты), с помощью `<clear>` и `<remove>` элементы.  
+ Windows Identity Foundation (WIF) предоставляет единую реализацию <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса из Box <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> , класса. В реестре имени издателя конфигурации хранится список доверенных издателей, которые загружаются из конфигурации. Список всех имен издателей связывается с сертификатом X. 509, который необходим для проверки подписи маркеров, созданных издателем. Список сертификатов доверенных издателей указывается в `<trustedIssuers>` элементе. Каждый элемент в списке связывает назначенное имя издателя с сертификатом X. 509, который необходим для проверки подписи маркеров, созданных этим издателем. Доверенные сертификаты указываются с помощью формы отпечатка сертификата в кодировке ASN. 1 и добавляются в коллекцию `<add>` с помощью элемента. Можно удалить или удалить издателей (сертификаты) из списка с помощью `<clear>` элементов и. `<remove>`  
   
- `type` Атрибут `<issuerNameRegistry>` должен ссылаться элемент <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса для `<trustedIssuers>` элемент был допустимым.  
+ Атрибут элемента должен ссылаться на класс, чтобы элемент был допустимым. `<trustedIssuers>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `type` `<issuerNameRegistry>`  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показано, как указать поставщика конфигурации на основе реестра имен.  
+ В следующем коде XML показано, как указать реестр имен поставщиков на основе конфигурации.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

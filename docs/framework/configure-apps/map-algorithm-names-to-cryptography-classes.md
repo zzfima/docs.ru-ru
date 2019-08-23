@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912866"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Отображение имен алгоритмов на криптографические классы
 Существует четыре способа, с помощью которых разработчик может создать криптографический объект, используя Windows SDK:  
@@ -58,16 +58,16 @@ ms.locfileid: "69566720"
 </configuration>  
 ```  
   
- Имя атрибута можно указать в [элементе < cryptoClass\> ](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (в предыдущем примере имя атрибута `MySHA1Hash`). Значением атрибута в  **\<элементе > cryptoClass** является строка, которую среда CLR использует для поиска класса. Можно использовать любую строку, которая соответствует требованиям, указанным в указании [полных имен типов](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ Имя атрибута можно указать в [элементе < cryptoClass\> ](./file-schema/cryptography/cryptoclass-element.md) (в предыдущем примере имя атрибута `MySHA1Hash`). Значением атрибута в  **\<элементе > cryptoClass** является строка, которую среда CLR использует для поиска класса. Можно использовать любую строку, которая соответствует требованиям, указанным в указании [полных имен типов](../reflection-and-codedom/specifying-fully-qualified-type-names.md).  
   
- Многие имена алгоритмов могут сопоставляться с одним и тем же классом. Элемент элементе nameentry > сопоставляет класс с одним понятным именем алгоритма. [ \<](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Атрибут **Name** может быть либо строкой, используемой при вызове метода **System. Security. Cryptography. CryptoConfig. CreateFromName** , либо именем абстрактного криптографического <xref:System.Security.Cryptography> класса в пространстве имен. Значением атрибута **Class** является имя атрибута в  **\<элементе > cryptoClass** .  
+ Многие имена алгоритмов могут сопоставляться с одним и тем же классом. Элемент элементе nameentry > сопоставляет класс с одним понятным именем алгоритма. [ \<](./file-schema/cryptography/nameentry-element.md) Атрибут **Name** может быть либо строкой, используемой при вызове метода **System. Security. Cryptography. CryptoConfig. CreateFromName** , либо именем абстрактного криптографического <xref:System.Security.Cryptography> класса в пространстве имен. Значением атрибута **Class** является имя атрибута в  **\<элементе > cryptoClass** .  
   
 > [!NOTE]
->  Алгоритм SHA1 можно получить, вызвав <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> метод или **Security. CryptoConfig. CreateFromName ("SHA1")** . Каждый метод гарантирует только то, что он возвращает объект, реализующий алгоритм SHA1. Нет необходимости сопоставлять каждое понятное имя алгоритма с тем же классом в файле конфигурации.  
+> Алгоритм SHA1 можно получить, вызвав <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> метод или **Security. CryptoConfig. CreateFromName ("SHA1")** . Каждый метод гарантирует только то, что он возвращает объект, реализующий алгоритм SHA1. Нет необходимости сопоставлять каждое понятное имя алгоритма с тем же классом в файле конфигурации.  
   
  Список имен по умолчанию и классов, с которыми они сопоставляются, <xref:System.Security.Cryptography.CryptoConfig>см. в разделе.  
   
 ## <a name="see-also"></a>См. также
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
-- [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [Настройка криптографических классов](configure-cryptography-classes.md)

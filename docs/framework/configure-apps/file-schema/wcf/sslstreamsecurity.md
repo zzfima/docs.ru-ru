@@ -2,21 +2,21 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed87adfb3963513602844fc69afce8f7994fa8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932427"
 ---
-# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
+# <a name="sslstreamsecurity"></a>\<Раздел sslstreamsecurity >
 Представляет пользовательский элемент привязки, который поддерживает безопасность канала с помощью потока SSL.  
   
- \<system.serviceModel>  
+ \<> System. serviceModel  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<sslStreamSecurity>  
+\<Раздел sslstreamsecurity >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,24 +32,24 @@ ms.locfileid: "61757993"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|requireClientCertificate|Логическое значение, указывающее, требуется ли для этой привязки сертификат клиента. Значение по умолчанию — `false`.|  
-|sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются. Значение по умолчанию — Ssl3&#124;Tls&#124;Tls11&#124;Tls12.|  
+|requireClientCertificate|Логическое значение, указывающее, требуется ли для этой привязки сертификат клиента. Значение по умолчанию — `false`.|  
+|sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются. Значение по умолчанию&#124;—&#124;Ssl3&#124;TLS Tls11 Tls12.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Расширение привязок](../../../wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

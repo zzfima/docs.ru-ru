@@ -8,23 +8,23 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ae7817bc158f30fbf55b5f6228ecdf134d6657d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962189"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>Общие сведения о компоненте ContextMenu (Windows Forms)
 > [!IMPORTANT]
->  Несмотря на то что <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> элементы управления из предыдущих версий <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем, если выбран.  
+> Хотя <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> заменяют и добавляют функции к элементам управления и предыдущих версий и сохраняются для обратной совместимости и использования в будущем при выборе. <xref:System.Windows.Forms.ContextMenuStrip>  
   
- С помощью Windows Forms <xref:System.Windows.Forms.ContextMenu> компонента, вы можете предоставить пользователям доступного контекстного меню часто используемых команд, которые связаны с выбранным объектом. Элементы в контекстном меню часто представляют собой подмножество элементов из главного меню, которые отображаются в другом месте в приложении. Как правило, пользователь может открыть контекстное меню щелчком правой кнопки мыши. В Windows Forms контекстные меню связаны с элементами управления.  
+ С помощью компонента <xref:System.Windows.Forms.ContextMenu> Windows Forms можно предоставить пользователям легко доступное контекстное меню часто используемых команд, связанных с выбранным объектом. Элементы в контекстном меню часто являются подмножеством элементов из главных меню, которые появляются в других частях приложения. Обычно пользователь может получить доступ к контекстному меню, щелкнув его правой кнопкой мыши. В Windows Forms контекстные меню связаны с элементами управления.  
   
 ## <a name="key-properties"></a>Ключевые свойства  
- Контекстное меню можно связать с элементом управления, задав элемента управления <xref:System.Windows.Forms.Control.ContextMenu%2A> свойства <xref:System.Windows.Forms.ContextMenu> компонента. Одно контекстное меню можно связать с несколькими элементами управления, но каждый элемент управления может иметь только один контекстное меню.  
+ Контекстное меню можно связать с элементом управления, присвоив <xref:System.Windows.Forms.Control.ContextMenu%2A> свойству <xref:System.Windows.Forms.ContextMenu> элемента управления компонент. Одно контекстное меню может быть связано с несколькими элементами управления, но у каждого элемента управления может быть только одно контекстное меню.  
   
- Ключевое свойство <xref:System.Windows.Forms.ContextMenu> компонент является <xref:System.Windows.Forms.Menu.MenuItems%2A> свойство. Можно добавить элементы меню, создание программным путем <xref:System.Windows.Forms.MenuItem> объектов и добавления их в <xref:System.Windows.Forms.Menu.MenuItemCollection> контекстного меню. Так как элементы в контекстном меню, обычно являются производными от других меню, наиболее часто добавляются элементы в контекстное меню, скопировав их.  
+ Ключевым свойством <xref:System.Windows.Forms.ContextMenu> компонента <xref:System.Windows.Forms.Menu.MenuItems%2A> является свойство. Элементы меню можно добавлять путем программного создания <xref:System.Windows.Forms.MenuItem> объектов и их добавления <xref:System.Windows.Forms.Menu.MenuItemCollection> в контекстное меню. Поскольку элементы в контекстном меню обычно выводятся из других меню, чаще всего добавляются элементы в контекстное меню путем их копирования.  
   
 ## <a name="see-also"></a>См. также
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301197"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920653"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > элемент для \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<элемент sectionGroup > для \<> configSections
 
 Определяет пространство имен для разделов конфигурации.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
 
 ## <a name="syntax"></a>Синтаксис
@@ -36,27 +36,27 @@ ms.locfileid: "66301197"
 
 |           | Описание |
 | --------- | ----------- |
-| **name**  | Обязательный атрибут.<br><br>Задает имя группы раздела, который вы определяете. |
+| **name**  | Обязательный атрибут.<br><br>Указывает имя определяемой группы разделов. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configSections >** элемент](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Содержит раздел конфигурации и пространства имен объявления. |
+| [элемент  **>\<configSections**](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<раздел >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Содержит объявление раздела конфигурации. |
+| [ **\<раздел >** ](section-element.md) | Содержит объявление раздела конфигурации. |
 
 ## <a name="remarks"></a>Примечания
 
-Объявление группы разделов создает тег контейнера для разделов конфигурации и гарантирует отсутствие конфликтов имен с разделами конфигурации, определенными другим пользователем. Можно вложить  **\<sectionGroup >** элементов друг с другом.
+Объявление группы разделов создает тег контейнера для разделов конфигурации и гарантирует отсутствие конфликтов имен с разделами конфигурации, определенными другими пользователями. Элементы  **\<sectionGroup >** можно вкладывать друг в друга.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как определения группы разделов и объявления разделов внутри группы:
+В следующем примере показано, как объявить группу разделов и объявить разделы в группе разделов:
 
 ```xml
 <configuration>
@@ -76,8 +76,8 @@ ms.locfileid: "66301197"
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
+Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](index.md)

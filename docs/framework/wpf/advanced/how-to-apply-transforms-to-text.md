@@ -15,22 +15,22 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b749d21c1b5940d216e244393eeb3c133dc153b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956474"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Практическое руководство. Применение преобразования к тексту
-Преобразования могут менять отображение текста в приложении. В следующих примерах используются различные типы преобразований отрисовки влияющие на отображение текста в <xref:System.Windows.Controls.TextBlock> элемента управления.  
+Преобразования могут менять отображение текста в приложении. В следующих примерах используются различные типы преобразований отрисовки, влияющие на отображение текста в <xref:System.Windows.Controls.TextBlock> элементе управления.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показан текст, повернутый относительно заданной точки в двухмерной плоскости x-y.  
   
  ![Текст, повернутый с использованием RotateTransform](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
- В следующем примере кода используется <xref:System.Windows.Media.RotateTransform> вращение текста. <xref:System.Windows.Media.RotateTransform.Angle%2A> Значение 90, поворачивает элемент на 90 градусов по часовой стрелке.  
+ В следующем примере кода используется <xref:System.Windows.Media.RotateTransform> для поворота текста. <xref:System.Windows.Media.RotateTransform.Angle%2A> Значение 90 поворачивает элемент на 90 градусов по часовой стрелке.  
   
  [!code-xaml[TextTransformSample#TextTransformSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
@@ -38,12 +38,12 @@ ms.locfileid: "61776977"
   
  ![Текст, масштабируемый с использованием ScaleTransform](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
- В следующем примере кода используется <xref:System.Windows.Media.ScaleTransform> для масштабирования текста из исходного размера.  
+ В следующем примере кода используется <xref:System.Windows.Media.ScaleTransform> для масштабирования текста по исходному размеру.  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
 > [!NOTE]
->  Масштабирование текста не равнозначно увеличению шрифта текста. Размеры шрифта рассчитываются независимо друг от друга, чтобы обеспечить оптимальное разрешение для разных размеров. В масштабированном тексте, с другой стороны, сохранены пропорции текста исходного размера.  
+> Масштабирование текста не равнозначно увеличению шрифта текста. Размеры шрифта рассчитываются независимо друг от друга, чтобы обеспечить оптимальное разрешение для разных размеров. В масштабированном тексте, с другой стороны, сохранены пропорции текста исходного размера.  
   
  В следующем примере показан текст, наклоненный вдоль оси X.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "61776977"
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Предоставляет широкий набор функций для создания эффектов тени. Дополнительные сведения см. в разделе [Создание текста с тенью](how-to-create-text-with-a-shadow.md).  
+> Предоставляет <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> широкий набор функций, позволяющих создать эффекты тени. Дополнительные сведения см. в разделе [Создание текста с тенью](how-to-create-text-with-a-shadow.md).  
   
 ## <a name="see-also"></a>См. также
 

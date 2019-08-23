@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959041"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>Метод IHostTaskManager::LeaveRuntime
-Уведомляет основное приложение, что текущая выполняющаяся задача сейчас оставьте общеязыковой среды выполнения (CLR) и введите неуправляемого кода.  
+Уведомляет основное приложение о том, что Текущая выполняемая задача собирается покинуть среду CLR, и введите неуправляемый код.  
   
 > [!IMPORTANT]
->  Соответствующего вызова [IHostTaskManager::EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) Уведомляет основное приложение, что текущая выполняющаяся задача является повторное введение управляемого кода.  
+> Соответствующий вызов [IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) уведомляет основное приложение о том, что выполняемая в данный момент задача повторно вводит управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,38 +40,38 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>Параметры  
  `target`  
- [in] Адрес в сопоставленной переносимый исполняемый файл для вызова неуправляемой функции.  
+ окне Адрес в сопоставленном переносимом исполняемом файле неуправляемой функции для вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`LeaveRuntime`успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Недостаточно памяти для завершения запрошенного выделения.|  
   
 ## <a name="remarks"></a>Примечания  
- Последовательность вызовов к и из неуправляемого кода могут быть вложенными. Например, следующий список содержит гипотетическую ситуацию, в котором последовательность вызовов к `LeaveRuntime`, [IHostTaskManager::ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager::ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), и `IHostTaskManager::EnterRuntime` позволяет основному приложению определить вложенные слои.  
+ Последовательности вызовов для и из неуправляемого кода могут быть вложенными. Например, приведенный `LeaveRuntime`ниже список описывает гипотетическую ситуацию, в которой последовательность вызовов, [IHostTaskManager:: реверсинтеррунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), и `IHostTaskManager::EnterRuntime` позволяет узлу определяет вложенные слои.  
   
 |Действие|Вызов соответствующего метода|  
 |------------|-------------------------------|  
-|Управляемый исполняемый файл вызывает Visual Basic вызова неуправляемой функции, написанные на языке C с помощью платформы.|`IHostTaskManager::LeaveRuntime`|  
-|Неуправляемая функция C вызывает метод в управляемую библиотеку DLL, написанные на C#.|`IHostTaskManager::ReverseEnterRuntime`|  
-|Управляемый C# функция вызывает другую неуправляемую функцию, написанную на языке C, также использование вызов платформ.|`IHostTaskManager::LeaveRuntime`|  
-|Второй неуправляемая функция возвращает результат выполнения для C# функции.|`IHostTaskManager::EnterRuntime`|  
-|C# Функции возвращает результат выполнения первой неуправляемой функции.|`IHostTaskManager::ReverseLeaveRuntime`|  
-|Первая неуправляемая функция возвращает выполнение программы на Visual Basic.|`IHostTaskManager::EnterRuntime`|  
+|Управляемый исполняемый файл Visual Basic вызывает неуправляемую функцию, написанную на языке C, с помощью вызова неуправляемого кода.|`IHostTaskManager::LeaveRuntime`|  
+|Неуправляемая функция C вызывает метод в управляемой библиотеке DLL, написанной C#в.|`IHostTaskManager::ReverseEnterRuntime`|  
+|Управляемая C# функция вызывает другую неуправляемую функцию, написанную на языке C, также используя вызов неуправляемого кода.|`IHostTaskManager::LeaveRuntime`|  
+|Вторая неуправляемая функция возвращает выполнение C# функции.|`IHostTaskManager::EnterRuntime`|  
+|C# Функция возвращает выполнение в первую неуправляемую функцию.|`IHostTaskManager::ReverseLeaveRuntime`|  
+|Первая неуправляемая функция возвращает выполнение в программу Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

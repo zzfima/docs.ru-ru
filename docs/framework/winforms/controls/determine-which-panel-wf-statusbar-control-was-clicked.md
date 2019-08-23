@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965724"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> элементы управления заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления сохраняются для обеспечения обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
+> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Элементы управления <xref:System.Windows.Forms.ToolStripStatusLabel> и заменяют и добавляют функциональные возможности в элементы управления и, однако, элементы управления и сохраняются для обратной совместимости и использования в будущем, если <xref:System.Windows.Forms.StatusStrip> выбрали.  
   
- Для программы [элемента управления StatusBar](statusbar-control-windows-forms.md) элемента управления, чтобы отвечать на щелчок пользователя, используйте инструкции case в <xref:System.Windows.Forms.StatusBar.PanelClick> событий. Событие содержит аргумент (аргумент панели), который содержит ссылку на нажатый элемент <xref:System.Windows.Forms.StatusBarPanel>. Используя эту ссылку, можно определить индекс выбранной панели и программировать соответствующим образом.  
+ Чтобы программировать элемент управления [StatusBar](statusbar-control-windows-forms.md) для реагирования на нажатия пользователем, используйте оператор case в <xref:System.Windows.Forms.StatusBar.PanelClick> событии. Событие содержит аргумент (аргумент Panel), который содержит ссылку на щелчок <xref:System.Windows.Forms.StatusBarPanel>. Используя эту ссылку, можно определить индекс для нажатой панели и соответствующим образом программировать.  
   
 > [!NOTE]
->  Убедитесь, что <xref:System.Windows.Forms.StatusBar> элемента управления <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойству `true`.  
+> Убедитесь, что <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойство элемента управления имеет значение `true`.  
   
-### <a name="to-determine-which-panel-was-clicked"></a>Чтобы определить, какая панель была выбрана  
+### <a name="to-determine-which-panel-was-clicked"></a>Определение того, какая панель была нажата  
   
-1. В <xref:System.Windows.Forms.StatusBar.PanelClick> обработчик событий, используйте `Select Case` (в Visual Basic) или `switch case` (Visual C# или визуальным элементом C++) инструкцию, чтобы определить, какая панель была нажата, путем проверки индекса выбранной панели в аргументах события.  
+1. `switch case` `Select Case` В обработчике C# событий используйте оператор (в Visual Basic) или (визуальный или визуальный C++), чтобы определить, какая панель была нажата, проверив индекс нажатой панели в аргументах события. <xref:System.Windows.Forms.StatusBar.PanelClick>  
   
-     В следующем примере кода необходимо наличие, в форме из <xref:System.Windows.Forms.StatusBar> управления `StatusBar1`и два <xref:System.Windows.Forms.StatusBarPanel> объектов, `StatusBarPanel1` и `StatusBarPanel2`.  
+     В следующем примере кода требуется присутствие, в <xref:System.Windows.Forms.StatusBar> форме, элемента управления, `StatusBar1`и двух <xref:System.Windows.Forms.StatusBarPanel> объектов, `StatusBarPanel1` и `StatusBarPanel2`.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -79,7 +79,7 @@ ms.locfileid: "66053723"
        }  
     ```  
   
-     (Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Визуальный C#элемент C++, визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   
@@ -97,6 +97,6 @@ ms.locfileid: "66053723"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Практическое руководство. Задать размер панели строки состояния](how-to-set-the-size-of-status-bar-panels.md)
-- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Практическое руководство. Установка размера панелей строки состояния](how-to-set-the-size-of-status-bar-panels.md)
+- [Пошаговое руководство: Обновление сведений в строке состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
 - [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caec297f8d0f6febad5cf46adb0a2658960c6bb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a5314fe5927abf2d3855acb45c763507ab6cb3c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920751"
 ---
 # <a name="generatepublisherevidence-element"></a>\<Элемент > generatePublisherEvidence
 Указывает, создает <xref:System.Security.Policy.Publisher> ли среда выполнения свидетельство для управления доступом для кода (CAS).  
@@ -57,12 +57,12 @@ ms.locfileid: "69663674"
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  В .NET Framework 4 и более поздних версиях этот элемент не влияет на время загрузки сборки. Дополнительные сведения см. в разделе "упрощение политики безопасности" раздела [изменения в системе безопасности](../../../security/security-changes.md).  
+> В .NET Framework 4 и более поздних версиях этот элемент не влияет на время загрузки сборки. Дополнительные сведения см. в разделе "упрощение политики безопасности" раздела [изменения в системе безопасности](../../../security/security-changes.md).  
   
  Среда CLR пытается проверить подпись Authenticode во время загрузки, чтобы создать <xref:System.Security.Policy.Publisher> свидетельство для сборки. Однако по умолчанию большинству приложений не требуется <xref:System.Security.Policy.Publisher> свидетельство. Стандартная политика CAS не зависит от <xref:System.Security.Policy.PublisherMembershipCondition>. Следует избегать ненужных затрат на запуск, связанных с проверкой подписи издателя, если приложение не выполняется на компьютере с настраиваемой политикой CAS или планирует удовлетворить требования <xref:System.Security.Permissions.PublisherIdentityPermission> к в среде с частичным доверием. (Требования для разрешений идентификации всегда выполняются в среде с полным доверием.)  
   
 > [!NOTE]
->  Рекомендуется, чтобы службы использовали `<generatePublisherEvidence>` элемент для повышения производительности при запуске.  Использование этого элемента также может помочь избежать задержек, которые могут привести к превышению времени ожидания и отмене запуска службы.  
+> Рекомендуется, чтобы службы использовали `<generatePublisherEvidence>` элемент для повышения производительности при запуске.  Использование этого элемента также может помочь избежать задержек, которые могут привести к превышению времени ожидания и отмене запуска службы.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
  Этот элемент может использоваться только в файле конфигурации приложения.  

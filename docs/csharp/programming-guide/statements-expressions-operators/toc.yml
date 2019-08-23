@@ -7,8 +7,6 @@
       href: expressions.md
     - name: 'Элементы, воплощающие выражение'
       href: expression-bodied-members.md
-    - name: Операторы
-      href: operators.md
     - name: Анонимные функции
       items:
         - name: Обзор

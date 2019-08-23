@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953268"
 ---
 # <a name="handling-datatable-events"></a>Обработка событий таблиц данных
 Объект <xref:System.Data.DataTable> предоставляет ряд событий, которые может обрабатывать приложение. В следующей таблице приводится описание событий `DataTable`.  
@@ -30,7 +30,7 @@ ms.locfileid: "62034311"
 |<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Происходит, когда объект `DataTable` удаляется `Disposed`. Наследуется от <xref:System.ComponentModel.MarshalByValueComponent>.|  
   
 > [!NOTE]
->  Большинство операций, которые добавляют или удаляют строки, не вызывают событий `ColumnChanged` и `ColumnChanging`. Однако метод `ReadXml` вызывает события `ColumnChanged` и `ColumnChanging`, если только свойству `XmlReadMode` не задано значение `DiffGram` или значение `Auto`, когда читаемый XML-документ является `DiffGram`.  
+> Большинство операций, которые добавляют или удаляют строки, не вызывают событий `ColumnChanged` и `ColumnChanging`. Однако метод `ReadXml` вызывает события `ColumnChanged` и `ColumnChanging`, если только свойству `XmlReadMode` не задано значение `DiffGram` или значение `Auto`, когда читаемый XML-документ является `DiffGram`.  
   
 > [!WARNING]
 >  Изменение данных в объекте `DataSet`, из которого было вызвано событие `RowChanged`, может привести к повреждению данных. При подобном повреждении данных исключение вызвано не будет.  
@@ -68,7 +68,7 @@ ms.locfileid: "62034311"
 10. Проверьте ограничения на столбцы выражения.  
   
 > [!NOTE]
->  Внесение изменений в столбцы выражений никогда не вызывает события `DataTable`. Внесение изменений в столбцы выражений вызывает только события `DataView` и `DataRowView`. Столбцы выражения могут иметь зависимости от нескольких других столбцов, их оценка во время одной операции `DataRow` может производиться несколько раз. События вызываются при вычислении каждого выражения, а при работе со столбцами выражений одна операция `DataRow` может вызвать несколько событий `ListChanged` и `PropertyChanged`, возможно, с несколькими событиями для одного столбца выражений.  
+> Внесение изменений в столбцы выражений никогда не вызывает события `DataTable`. Внесение изменений в столбцы выражений вызывает только события `DataView` и `DataRowView`. Столбцы выражения могут иметь зависимости от нескольких других столбцов, их оценка во время одной операции `DataRow` может производиться несколько раз. События вызываются при вычислении каждого выражения, а при работе со столбцами выражений одна операция `DataRow` может вызвать несколько событий `ListChanged` и `PropertyChanged`, возможно, с несколькими событиями для одного столбца выражений.  
   
 > [!WARNING]
 >  Не вызывайте исключение <xref:System.NullReferenceException> в обработчике события `RowChanged`. Если исключение <xref:System.NullReferenceException> вызывается в пределах события `RowChanged` объекта `DataTable`, объект `DataTable` будет поврежден.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 0727bb8ac4f0ff25640ae6f8e292d89f903e4eb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: faa1fbad85acf5788c10de7750c6a7c32b535bf5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627325"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957033"
 ---
 # <a name="controls"></a>Элементы управления
 <a name="introduction"></a>
@@ -20,7 +20,7 @@ ms.locfileid: "64627325"
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>Создание экземпляра элемента управления  
- Элемент управления можно добавить в приложение с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] или кода.  В следующем примере показано, как создать простое приложение, которое запрашивает у пользователя имя и фамилию.  В этом примере создается шесть элементов управления: две метки, два текстовых поля и две кнопки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Все элементы управления могут быть созданы аналогичным образом.  
+ Элемент управления можно добавить в приложение с помощью либо [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] кода, либо.  В следующем примере показано, как создать простое приложение, которое запрашивает у пользователя имя и фамилию.  В этом примере создается шесть элементов управления: две метки, два текстовых поля и две кнопки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Все элементы управления могут быть созданы аналогичным образом.  
   
  [!code-xaml[ControlsOverview#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64627325"
 [!code-xaml[ControlsOverview#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
   
 > [!NOTE]
->  Свойству <xref:System.Windows.Controls.Control.Background%2A> элемента управления <xref:System.Windows.Controls.Button> должно быть присвоено значение <xref:System.Windows.Media.SolidColorBrush> для правильной работы примера.  
+> Свойству <xref:System.Windows.Controls.Control.Background%2A> элемента управления <xref:System.Windows.Controls.Button> должно быть присвоено значение <xref:System.Windows.Media.SolidColorBrush> для правильной работы примера.  
   
 <a name="subscribing_to_events"></a>   
 ## <a name="subscribing-to-events"></a>Подписка на события  
@@ -104,7 +104,7 @@ ms.locfileid: "64627325"
 - [Библиотека элементов управления](control-library.md)
 - [Общие сведения о шаблонах данных](../data/data-templating-overview.md)
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
-- [Ввод](../advanced/input-wpf.md)
+- [Входные данные](../advanced/input-wpf.md)
 - [Включение команды](../advanced/how-to-enable-a-command.md)
 - [Пошаговые руководства: Создание пользовательской анимированной кнопки](walkthroughs-create-a-custom-animated-button.md)
 - [Настройка элементов управления](control-customization.md)

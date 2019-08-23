@@ -2,18 +2,18 @@
 title: <add> из <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24f1478b99aef909ae93f87a70be257e9ba10d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701194"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926751"
 ---
-# <a name="add-of-contracttypenames"></a>\<Добавить > из \<contractTypeNames >
-Элемент конфигурации, указывающий имя контракта искомых служб, а также критерии, обычно используемые при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, совпадающих со ВСЕМИ контрактами. Обратите внимание на то, что в Windows Communication Foundation (WCF), конечной точки поддерживает только один контракт.  
+# <a name="add-of-contracttypenames"></a>\<Добавление > \<> контракттипенамес
+Элемент конфигурации, указывающий имя контракта искомых служб, а также критерии, обычно используемые при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, совпадающих со ВСЕМИ контрактами. Обратите внимание, что в Windows Communication Foundation (WCF) конечная точка может поддерживать только один контракт.  
   
- \<system.ServiceModel>  
-\<standardEndpoints >  
+ \<системой. > ServiceModel  
+\<Стандардендпоинтс >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,13 +52,13 @@ ms.locfileid: "61701194"
 |namespace|Строка, в которой указано пространство имен типа контракта.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Коллекция имен типа контракта.|  
+|[\<Контракттипенамес >](contracttypenames.md)|Коллекция имен типа контракта.|  
   
 ## <a name="see-also"></a>См. также
 

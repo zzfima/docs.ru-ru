@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039538"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960629"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms
 Проводник Windows — это общий вариант пользовательского интерфейса для приложений из-за его готовности.
@@ -35,7 +35,7 @@ ms.locfileid: "69039538"
 3. Выберите все три элемента управления, нажав клавишу CTRL и щелкнув их по очереди. При выборе <xref:System.Windows.Forms.SplitContainer> элемента управления щелкните линию разделения, а не панели.
 
     > [!NOTE]
-    >  Не используйте команду **выбрать все** в меню **Правка** . В этом случае свойство, необходимое на следующем шаге, не будет отображаться в окне **Свойства** .
+    > Не используйте команду **выбрать все** в меню **Правка** . В этом случае свойство, необходимое на следующем шаге, не будет отображаться в окне **Свойства** .
 
 4. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.SplitContainer.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.
 
@@ -44,7 +44,7 @@ ms.locfileid: "69039538"
      В этой форме представлен пользовательский интерфейс с двумя частями, аналогичный проводнику Windows.
 
     > [!NOTE]
-    >  При перетаскивании разделителя размеры панелей изменяются самим.
+    > При перетаскивании разделителя размеры панелей изменяются самим.
 
 ## <a name="see-also"></a>См. также
 

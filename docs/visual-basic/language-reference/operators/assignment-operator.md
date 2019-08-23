@@ -8,12 +8,12 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: ad74e3ebc947af4f36022be838b69df6ce24997a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d260dffb7175e9dddcbf9acb75415f5f973727e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608282"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962020"
 ---
 # <a name="-operator-visual-basic"></a>Оператор = (Visual Basic)
 Присваивает значение переменной или свойству.  
@@ -26,22 +26,22 @@ variableorproperty = value
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Любой доступный для записи переменной или любого свойства.  
+ Любая изменяемая переменная или любое свойство.  
   
  `value`  
- Любой литерал, константу или выражение.  
+ Любой литерал, константа или выражение.  
   
 ## <a name="remarks"></a>Примечания  
- Элемент слева от знака равенства (`=`) может быть простой скалярной переменной, свойства или элемента массива. Не может быть переменной или свойству [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). `=` Оператор присваивает значение справа переменной или свойства слева от него.  
+ Элемент в левой части знака равенства (`=`) может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). `=` Оператор присваивает значение справа переменной или свойству слева.  
   
 > [!NOTE]
->  `=` Оператор также используется как оператор сравнения. Дополнительные сведения см. в разделе [операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=` Оператор также используется в качестве оператора сравнения. Дополнительные сведения см. в разделе [Операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md).  
   
 ## <a name="overloading"></a>Перегрузка  
- `=` Оператор может быть перегружен, только как оператор сравнения, а не как оператор присваивания. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `=` Оператор может быть перегружен только как оператор реляционного сравнения, а не как оператор присваивания. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример оператора присваивания. Значение справа назначается переменной слева.  
+ В следующем примере показан оператор присваивания. Значение справа присваивается переменной слева.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
@@ -50,9 +50,9 @@ variableorproperty = value
 - [Оператор &=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [Оператор *=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [Оператор +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/ =-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Оператор](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [Оператор-= (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [Оператор/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\\Оператор =](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Оператор ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md)

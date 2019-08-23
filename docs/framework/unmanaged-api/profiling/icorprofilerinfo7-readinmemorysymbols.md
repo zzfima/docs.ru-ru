@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::ReadInMemorySymbols
+title: 'ICorProfilerInfo7:: Реадинмеморисимболс'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748640"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955374"
 ---
-# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
+# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: Реадинмеморисимболс
 [Поддерживается в .NET Framework 4.6.1 и более поздних версиях.]  
   
- Считывает байт из потока символов в памяти.  
+ Считывает байты из потока символов в памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,37 +38,37 @@ HRESULT ReadInMemorySymbols(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, содержащего поток в памяти.  
+ окне Идентификатор модуля, содержащего поток в памяти.  
   
  `symbolsReadOffset`  
- [in] Смещение в поток в памяти, с которого начинается чтение байтов.  
+ окне Смещение в потоке в памяти, с которого начинается чтение байтов.  
   
  `pSymbolBytes`  
- [out] Указатель на буфер, в который будут копироваться данные. Буфер должен иметь `countSymbolBytes` доступного пространства.  
+ заполняет Указатель на буфер, в который будут копироваться данные. Буфер должен иметь `countSymbolBytes` доступное место.  
   
  `countSymbolBytes`  
- [in] Число байтов для копирования.  
+ окне Число байтов для копирования.  
   
  `pCountSymbolBytesRead`  
- [out] При возвращении метода содержит фактическое число считанных байтов.  
+ заполняет При возврате из метода содержит фактическое число считанных байтов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если были считаны ненулевое число байтов.  
+ `S_OK`значение, если было считано ненулевое число байтов.  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`, если модуль был создан с помощью <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Примечания  
- `ReadInMemorySymbols` Метод пытается считать `countSymbolBytes` данных, начиная со смещения `symbolsReadOffset` в потоке в памяти. Данные копируются `pSymbolBytes`, который должен иметь `countSymbolBytes` доступного пространства.     `pCountSymbolsBytesRead` содержит фактическое число считанных байтов, который может быть меньше, чем `countSymbolBytes` если достигнут конец потока.  
+ Метод пытается выполнить чтение `countSymbolBytes` данных, начиная со смещения `symbolsReadOffset` в потоке в памяти. `ReadInMemorySymbols` Данные копируются в `pSymbolBytes`, что должно иметь `countSymbolBytes` доступное место.     `pCountSymbolsBytesRead`содержит фактическое число считанных байтов, которое может быть меньше, `countSymbolBytes` чем при достижении конца потока.  
   
 > [!NOTE]
->  Текущая реализация не поддерживает Reflection.Emit. Если модуль был создан с помощью Reflection.Emit, метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Текущая реализация не поддерживает отражение. Emit. Если модуль был создан с помощью отражения. Emit, метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC`значение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf. idl, CorProf. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

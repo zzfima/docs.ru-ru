@@ -1,5 +1,5 @@
 ---
-title: <filter> Элемент для <add> для <listeners> для <source>
+title: <filter><add> Элемент для<listeners> для<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 3abfd0bdd40f98a9e4774677fc2cd5068c14333f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d25d0b955a94986147922914068c8a1cf2d96c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920521"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<Фильтр > элемент для \<Добавить > для \<прослушиватели > для \<источника >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<элемент Filter > для \<добавления > для \<прослушивателей > \<для источника >
 Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.  
   
  \<configuration>  
-\<system.diagnostics>  
+\<> System. Diagnostics  
 \<источники >  
-\<Источник >  
+\<исходный >  
 \<прослушиватели >  
 \<add>  
-\<Фильтр >  
+\<> фильтра  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,11 +42,11 @@ ms.locfileid: "61673775"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`type`|Обязательный атрибут.<br /><br /> Указывает тип фильтра, который должен быть производным от <xref:System.Diagnostics.TraceFilter> класса. Можно использовать имя с указанием пространства имен типа, который соответствует типу <xref:System.Type.FullName%2A> свойство, или можно использовать полное имя, включая сведения о сборке, которая соответствует <xref:System.Type.AssemblyQualifiedName%2A> свойство. Сведения о полных имен типов, см. в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса фильтра.|  
+|`type`|Обязательный атрибут.<br /><br /> Указывает тип фильтра, который должен наследоваться от <xref:System.Diagnostics.TraceFilter> класса. Можно использовать имя, уточненное пространством имен типа, которое соответствует <xref:System.Type.FullName%2A> свойству типа, или можно использовать полное имя типа, включая сведения о сборке, соответствующие <xref:System.Type.AssemblyQualifiedName%2A> свойству. Дополнительные сведения о полных именах типов см. в разделе Указание полных [имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая конструктору для указанного класса фильтра.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -56,16 +56,16 @@ ms.locfileid: "61673775"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
 |`sources`|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
 |`source`|Содержит источник трассировки, который инициирует сообщения трассировки.|  
-|`listeners`|Содержит прослушиватели, сбора, хранения и маршрутизации сообщений. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.|  
+|`listeners`|Содержит прослушиватели, собирающие, сохраняющие и направляющие сообщения. Прослушиватели направляют выходные данные трассировки в соответствующий целевой объект.|  
 |`add`|Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- `<filter>` Элемент должен быть включен в `<add>` элемент прослушиватель трассировки источника, который указывает тип прослушивателя, не только имя прослушивателя, определенное в [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Если прослушиватель определен в [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), фильтр для этого прослушивателя, должен быть определен в этом элементе.  
+ Элемент должен содержаться `<add>` в элементе для прослушивателя источника трассировки, который указывает тип прослушивателя, а не только имя прослушивателя, определенного в [ \<> шаредлистенерс.](sharedlisteners-element.md) `<filter>` Если прослушиватель определен в [ \<> шаредлистенерс](sharedlisteners-element.md), то фильтр для этого прослушивателя должен быть определен в этом элементе.  
   
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<filter>` элемент, чтобы добавить фильтр к прослушивателю `console` в `Listeners` коллекции для источника трассировки `myTraceSource`, указывающие уровень фильтра событий как `Error`.  
+ В следующем примере показано, как с помощью `<filter>` элемента добавить фильтр в прослушиватель `console` в `Listeners` коллекции для источника `myTraceSource`трассировки, указав уровень событий фильтра как `Error`.  
   
 ```xml  
 <configuration>  
@@ -96,4 +96,4 @@ ms.locfileid: "61673775"
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Схема параметров трассировки и отладки](index.md)

@@ -8,43 +8,43 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 890269857aaa00ce62195ccb2f4cb184b363b61e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921038"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Настраиваемый элемент для NameValueSectionHandler и DictionarySectionHandler
 
-Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы.
+Определяет параметры для пользовательских разделов конфигурации, <xref:System.Configuration.NameValueSectionHandler> использующих <xref:System.Configuration.DictionarySectionHandler> классы и.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
-&nbsp;&nbsp; **\<параметра sectionName >**
+[ **\<configuration>** ](configuration-element.md)\
+&nbsp;&nbsp; **\<sectionName >**
 
 ## <a name="attributes"></a>Атрибуты
 
-Нет
+Отсутствуют
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
+| [ **\<configuration>** ](configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<Добавить >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler>  | Добавляет пользовательские параметры приложения. |
-| [ **\<Удалить >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> | Удаляет ранее определенный параметр. |
-| [ **\<Очистить >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> | Удаляет все ранее определенные параметры в разделе. |
+| Добавьте > для и [ **\<** ](add-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler>  | Добавляет настраиваемые параметры приложения. |
+| Удалите > для и [ **\<** ](remove-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler> | Удаляет ранее определенный параметр. |
+| очистить > для и [ **\<** ](clear-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler> | Удаляет все ранее определенные параметры в разделе. |
 
 ## <a name="remarks"></a>Примечания
 
 **\<Параметра sectionName>** элемент является пользовательским элементом определяется **\<разделе>** тегом **\<configSections>** элемент.
 
-В следующей таблице показаны возвращает тип объекта, метод ConfigurationSettings.GetConfig для каждого обработчика раздела конфигурации:
+В следующей таблице показан тип объекта, возвращаемого методом ConfigurationSettings. config для каждого обработчика раздела конфигурации:
 
 | Обработчик раздела конфигурации                        | Возвращаемый тип                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
@@ -53,9 +53,9 @@ ms.locfileid: "66300761"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан способ объявления разделах, использующих <xref:System.Configuration.DictionarySectionHandler> и <xref:System.Configuration.NameValueSectionHandler> классы.
+В следующем примере показано, как объявить разделы, в <xref:System.Configuration.DictionarySectionHandler> которых <xref:System.Configuration.NameValueSectionHandler> используются классы и.
 
-Первый элемент управления находится  **\<dictionarySample >** , который содержит параметры, считываемые <xref:System.Configuration.DictionarySectionHandler> в класс `System.dll` сборки. Второй элемент управления находится  **\<mySection >** , который содержит параметры, считываемые <xref:System.Configuration.NameValueSectionHandler> в класс `System.dll` сборки.
+Первый настраиваемый элемент —  **\<диктионарисампле >** , который содержит <xref:System.Configuration.DictionarySectionHandler> параметры, считанные классом в `System.dll` сборке. Второй настраиваемый элемент —  **\<мисектион >** , который содержит <xref:System.Configuration.NameValueSectionHandler> параметры, считанные классом в `System.dll` сборке.
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ ms.locfileid: "66300761"
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
+Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](index.md)

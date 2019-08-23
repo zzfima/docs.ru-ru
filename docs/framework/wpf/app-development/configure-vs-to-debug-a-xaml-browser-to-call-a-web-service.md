@@ -8,57 +8,57 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e41dd46e4ddbdcde6448c68b4f9fb2e073baca43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958690"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Практическое руководство. Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Запустите в изолированной среде безопасности частичного доверия, ограниченной набором разрешений зоны Интернета. Этот набор разрешений вызовы веб-службы для веб-служб, расположенных в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] исходном узле приложения. Когда [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] отладке из Visual Studio 2005, однако не считается имеют тот же исходный узел веб-служба ссылки. Исключения безопасности этой причины, вызываемого при [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] пытается вызвать веб-службы. Тем не менее Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] проекта можно настроить для имитации того же исходного узла как веб-службу, он вызывает во время отладки. Это позволяет [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] безопасно вызвать веб-службу, не вызывая исключения безопасности.
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]выполнение в песочнице безопасности с частичным доверием, ограниченным набором разрешений зоны Интернета. Этот набор разрешений разрешает вызовы веб-службы только для веб-служб, расположенных на [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] исходном узле приложения. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Однако при отладке из Visual Studio 2005 не считается, что исходный сайт совпадает с веб-службой, на которую он ссылается. Это приводит к возникновению исключений безопасности при [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] попытке вызова веб-службы. Однако проект Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] можно настроить для имитации того же узла происхождения, что и веб-служба, которую он вызывает во время отладки. Это позволяет безопасно [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] вызывать веб-службу, не вызывая исключений безопасности.
 
 ## <a name="configuring-visual-studio"></a>Настройка Visual Studio
- Чтобы настроить Visual Studio 2005 для отладки [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , вызывает веб-службы:
+ Чтобы настроить Visual Studio 2005 для отладки [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , который вызывает веб-службу, сделайте следующее:
 
 1. Выберите проект в **обозревателе решений**, а затем в меню **Проект** щелкните **Свойства**.
 
-2. В **конструктор проектов**, нажмите кнопку **Отладка** вкладки.
+2. В **конструкторе проектов**перейдите на вкладку **Отладка** .
 
-3. В **действие при запуске** выберите **запуск внешней программы** и введите следующее:
+3. В разделе **действие при запуске** выберите **Запуск внешней программы** и введите следующее:
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4. В **параметры запуска** введите следующий текст в **аргументы командной строки** текстового поля:
+4. В разделе **Параметры запуска** введите следующий текст в текстовое поле **аргументы командной строки** :
 
-     `-debug`  *Имя файла*
+     `-debug`  *файлов*
 
-     *Filename* значение **-Отладка** параметр является XBAP-файла, например:
+     Значение *filename* для параметра **-Debug** — имя файла XBAP; Например:
 
      `-debug c:\example.xbap`
 
 > [!NOTE]
->  Это конфигурация по умолчанию для решений, созданных с помощью Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] шаблона проекта.
+> Это конфигурация по умолчанию для решений, созданных с помощью шаблона проекта Visual Studio [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] 2005.
 
 1. Выберите проект в **обозревателе решений**, а затем в меню **Проект** щелкните **Свойства**.
 
-2. В **конструктор проектов**, нажмите кнопку **Отладка** вкладки.
+2. В **конструкторе проектов**перейдите на вкладку **Отладка** .
 
-3. В **параметры запуска** разделе, добавьте следующий параметр командной строки для **аргументы командной строки** текстового поля:
+3. В разделе **Параметры запуска** добавьте следующий параметр командной строки в текстовое поле **аргументы командной строки** :
 
      `-debugSecurityZoneURL`  *URL*
 
-     *URL-адрес* значение **- debugSecurityZoneURL** параметр [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] расположения, которое требуется имитировать как узлу вашего приложения.
+     *URL-адрес* для [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] параметра **-дебугсекуритизонеурл** — это расположение, которое вы хотите имитировать как исходный сайт приложения.
 
- Например, рассмотрим [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] , использует веб-службы со следующими [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:
+ Например, рассмотрим [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] , что использует веб-службу со следующим [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
- Исходный узел [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] для этого веб-служба является:
+ Исходный [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] сайт для этой веб-службы:
 
  `http://services.msdn.microsoft.com`
 
- Следовательно, полный **- debugSecurityZoneURL** параметра командной строки и значением является:
+ Следовательно, параметр и значение командной строки Complete **-дебугсекуритизонеурл** :
 
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 

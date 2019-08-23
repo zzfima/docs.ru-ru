@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877100"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957197"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей
 
@@ -58,9 +58,9 @@ ms.locfileid: "65877100"
 
 - Убедитесь в том, что любой элемент управления Label, относящийся к элементу TextBox, непосредственно предшествует элементу TextBox в последовательности табуляции.
 
-- Добавьте клавишу доступа, с помощью символа «&», в <xref:System.Windows.Forms.Control.Text%2A> свойства любого элемента управления, пользователь может потребоваться перейти.
+- Добавьте ключ доступа с помощью символа "&" к <xref:System.Windows.Forms.Control.Text%2A> свойству любого элемента управления, к которому пользователю может потребоваться перейти.
 
-- Добавьте клавишу доступа, с помощью символа «&», в <xref:System.Windows.Forms.Control.Text%2A> метки, которая предшествует элементу управления, который пользователь может потребоваться перейти. Задайте для свойства <xref:System.Windows.Forms.Label.UseMnemonic%2A> метки значение `true`, чтобы при нажатии клавиши доступа фокус переводился на следующий элемент управления в последовательности табуляции.
+- Добавьте ключ доступа с помощью символа "&" к <xref:System.Windows.Forms.Control.Text%2A> свойству метки, предшествующей элементу управления, к которому пользователю может потребоваться перейти. Задайте для свойства <xref:System.Windows.Forms.Label.UseMnemonic%2A> метки значение `true`, чтобы при нажатии клавиши доступа фокус переводился на следующий элемент управления в последовательности табуляции.
 
 - Добавьте клавиши доступа для всех элементов меню.
 
@@ -73,13 +73,13 @@ ms.locfileid: "65877100"
    |Form1|AccessibleDescription|Форма заказа|
    ||AccessibleName|Форма заказа|
    ||Размер шрифта|10|
-   ||Текста|Форма заказа пиццы|
+   ||Текст|Форма заказа пиццы|
    |PictureBox|name|logo|
    ||AccessibleDescription|Порция пиццы|
    ||AccessibleName|Логотип компании|
    ||Изображение|Любой значок или растровое изображение|
    |Метка|name|companyLabel|
-   ||Текста|Вкусная пицца|
+   ||Текст|Вкусная пицца|
    ||TabIndex|1|
    ||AccessibleDescription|Название компании|
    ||AccessibleName|Название компании|
@@ -87,34 +87,34 @@ ms.locfileid: "65877100"
    ||Forecolor|Желтый|
    ||Font size|18|
    |Метка|name|customerLabel|
-   ||Текста|&Имя|
+   ||Текст|&Имя|
    ||TabIndex|2|
    ||AccessibleDescription|Подпись имени заказчика|
    ||AccessibleName|Подпись имени заказчика|
    ||UseMnemonic|True|
    |TextBox|name|customerName|
-   ||Текста|(нет)|
+   ||Текст|(нет)|
    ||TabIndex|3|
    ||AccessibleDescription|Имя заказчика|
    ||AccessibleName|Имя заказчика|
    |GroupBox|name|sizeOptions|
    ||AccessibleDescription|Размеры порции пиццы|
    ||AccessibleName|Размеры порции пиццы|
-   ||Текста|Размер пиццы|
+   ||Текст|Размер пиццы|
    ||TabIndex|4|
    |RadioButton|name|smallPizza|
-   ||Текста|&Маленькая 300 р.|
+   ||Текст|&Маленькая 300 р.|
    ||Установлен|True|
    ||TabIndex|0|
    ||AccessibleDescription|Маленькая пицца|
    ||AccessibleName|Маленькая пицца|
    |RadioButton|name|largePizza|
-   ||Текста|&Большая 500 р.|
+   ||Текст|&Большая 500 р.|
    ||TabIndex|1|
    ||AccessibleDescription|Большая пицца|
    ||AccessibleName|Большая пицца|
    |Метка|name|toppingsLabel|
-   ||Текста|&Начинки (40 р. за каждую)|
+   ||Текст|&Начинки (40 р. за каждую)|
    ||TabIndex|5|
    ||AccessibleDescription|Метка начинки|
    ||AccessibleName|Метка начинки|
@@ -125,28 +125,28 @@ ms.locfileid: "65877100"
    ||AccessibleName|Выбор начинок|
    ||Элементы|Пепперони, колбаса, грибы|
    |Кнопка|name|порядок|
-   ||Текста|&Порядок|
+   ||Текст|&Порядок|
    ||TabIndex|7|
    ||AccessibleDescription|Сумма заказа|
    ||AccessibleName|Сумма заказа|
    |Кнопка|name|cancel|
-   ||Текста|О&тмена|
+   ||Текст|О&тмена|
    ||TabIndex|8|
    ||AccessibleDescription|Отмена заказа|
    ||AccessibleName|Отмена заказа|
    |MainMenu|name|theMainMenu|
    |MenuItem|name|fileCommands|
-   ||Текста|&Файл|
+   ||Текст|&Файл|
    |MenuItem|name|exitApp|
-   ||Текста|Вы&ход|
+   ||Текст|Вы&ход|
 
-   Форма будет выглядеть примерно как на следующем изображении:
+   Форма будет выглядеть примерно так, как на следующем рисунке:
 
-   ![Форма заказа пиццы имя текстового поля и размер и начинки выделением.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![Форма заказа на пиццу с текстовым полем имени и выбором размера и наименований.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>Поддержка режима высокой контрастности
 
-Режим высокой контрастности представляет собой тип системной настройки Windows, при которой удобство чтения текста повышается за счет более контрастных цветов и размеров шрифта, подходящих для пользователей с нарушениями зрения. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Свойство позволяет определить, установлен ли режим высокой контрастности.
+Режим высокой контрастности представляет собой тип системной настройки Windows, при которой удобство чтения текста повышается за счет более контрастных цветов и размеров шрифта, подходящих для пользователей с нарушениями зрения. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Свойство указывается, чтобы определить, установлен ли режим Высокая контрастность.
 
 Если свойство SystemInformation.HighContrast имеет значение `true`, то в приложении происходит следующее:
 
@@ -158,7 +158,7 @@ ms.locfileid: "65877100"
 
 Приложение должно проверять значение свойства <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> при запуске и отвечать на системное событие <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. При изменении значения свойства <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> происходит событие <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.
 
-В этом примере единственным элементом, не использующим системные параметры цвета, является `lblCompanyName`. <xref:System.Drawing.SystemColors> Класс используется для замены параметров цвета метки на выбранные пользователем системные цвета.
+В этом примере единственным элементом, не использующим системные параметры цвета, является `lblCompanyName`. <xref:System.Drawing.SystemColors> Класс используется для изменения параметров цвета метки на выбранные пользователем системные цвета.
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Эффективный способ обеспечения высокой контрастности
 
@@ -303,7 +303,7 @@ ms.locfileid: "65877100"
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Обеспечение передачи важной информации способами помимо звукового сигнала
 
-1. Сделайте строку заголовка мигающей с помощью функции FlashWindow интерфейса Windows API. Пример вызова функций Windows API, см. в разделе [Пошаговое руководство: Вызов Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+1. Сделайте строку заголовка мигающей с помощью функции FlashWindow интерфейса Windows API. Пример вызова функций API Windows см. в разделе [пошаговое руководство. Вызов интерфейсов](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)API Windows.
 
     > [!NOTE]
     > У пользователя может быть включена служба визуального оповещения Windows, что также приведет к миганию окна при подаче системных звуковых сигналов через встроенные динамики компьютера.

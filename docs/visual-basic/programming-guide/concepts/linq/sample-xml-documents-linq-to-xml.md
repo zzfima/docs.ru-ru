@@ -2,18 +2,18 @@
 title: Примеры XML-документов (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50abcc6ef4c23bcd78c5ab0e5e5deb4a369b164
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787144"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916546"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Примеры XML-документов (LINQ to XML)
 Следующие примеры файлов используются в образцах и фрагментах кода во всей документации по [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
->  Использованные в примерах компании, организации, продукты, доменные имена, адреса электронной почты, логотипы, имена людей, географические названия и события являются вымышленными. Любые совпадения с реальными именами и названиями случайны.  
+> Использованные в примерах компании, организации, продукты, доменные имена, адреса электронной почты, логотипы, имена людей, географические названия и события являются вымышленными. Любые совпадения с реальными именами и названиями случайны.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -35,4 +35,4 @@ ms.locfileid: "61787144"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Руководством по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

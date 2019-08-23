@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987705"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957446"
 ---
 # <a name="icordebugprocess3-interface"></a>Интерфейс ICorDebugProcess3
 Управляет пользовательскими уведомлениями отладчика.  
@@ -30,20 +30,20 @@ ms.locfileid: "61987705"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Включает и отключает пользовательскими уведомлениями отладчика указанного типа.|  
+|[Метод SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Включает и отключает настраиваемые уведомления отладчика указанного типа.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс логически расширяет интерфейс ICorDebugProcess и ICorDebugProcess2.  
+ Этот интерфейс логически расширяет интерфейсы ICorDebugProcess и ICorDebugProcess2.  
   
 > [!NOTE]
->  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
+> Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

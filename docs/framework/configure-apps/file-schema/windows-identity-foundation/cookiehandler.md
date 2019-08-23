@@ -3,19 +3,19 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 5238ea7b96c09fb976a25bc00b952539ddd44b49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942805"
 ---
-# <a name="cookiehandler"></a>\<cookieHandler >
-Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) используется для чтения и записи файлов cookie.  
+# <a name="cookiehandler"></a>\<Кукиехандлер >
+Настраивает <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> , что (SAM) использует для чтения и записи файлов cookie.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
-\<cookieHandler >  
+ \<> System. identityModel. Services  
+\<federationConfiguration >  
+\<Кукиехандлер >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,41 +43,41 @@ ms.locfileid: "61791746"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|имя|Указывает базовое имя для записываемых файлов cookie. Значение по умолчанию — «FedAuth».|  
-|path|Указывает значение пути для записываемых файлов cookie. Значение по умолчанию — «HttpRuntime.AppDomainAppVirtualPath».|  
-|режим|Один из <xref:System.IdentityModel.Services.CookieHandlerMode> значений, указывающее тип обработчика файлов cookie, используемый SAM. Могут использоваться следующие значения:<br /><br /> -«Default» — так же, как «Chunked».<br />-Шифрование «фрагментированной» – используется экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса. Этот обработчик файлов cookie гарантирует, что отдельные файлы cookie не превышает заданный максимальный размер. Он делает это, потенциально «фрагментация» один логический файл cookie на несколько файлов cookie на лету.<br />-«Custom» – используется экземпляр пользовательского класса, производного от <xref:System.IdentityModel.Services.CookieHandler>. Производный класс ссылается `<customCookieHandler>` дочерний элемент.<br /><br /> По умолчанию используется «Default».|  
-|persistentSessionLifetime|Указывает время существования постоянных сеансов. Если значение равно нулю, всегда используются временные сеансы. Значение по умолчанию — «помечает», который указывает временный сеанс. Максимальное значение равно «365:0:0», который указывает сеанс 365 дней. Значение должно быть указано в соответствии с следующее ограничение: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, где самое левое значение указывает дни, среднее значение (при его наличии) указывает часы и самое правое значение (при его наличии) указывает минуты.|  
-|RequireSsl|Указывает, создается ли флаг «Безопасно» для записываемых файлов cookie. Если это значение задано, файлы cookie сеанса входа доступна только по протоколу HTTPS. Значение по умолчанию - "true".|  
-|hideFromScript|Определяет, создается ли флаг «HttpOnly» для записываемых файлов cookie. Некоторые веб-браузеры учитывает этот флаг, оставив скрипт на стороне клиента доступ к значение файла cookie. Значение по умолчанию - "true".|  
-|домен|Значение домена для записываемых файлов cookie. По умолчанию используется значение "".|  
+|имя|Указывает базовое имя для всех записанных файлов cookie. Значение по умолчанию — FedAuth.|  
+|path|Указывает значение пути для всех записанных файлов cookie. Значение по умолчанию — HttpRuntime. Аппдомаинаппвиртуалпас.|  
+|режим|Одно из <xref:System.IdentityModel.Services.CookieHandlerMode> значений, указывающее тип обработчика файлов cookie, используемый SAM. Можно использовать следующие значения:<br /><br /> -"Default" — то же, что и "фрагментированный".<br />-"Фрагментированный" — использует экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса. Этот обработчик файлов cookie гарантирует, что отдельные файлы cookie не превышают установленный максимальный размер. Это достигается за счет потенциального «фрагментирования» одного логического файла cookie в несколько файлов cookie в сети.<br />-"Custom" — использует экземпляр пользовательского класса, производного от <xref:System.IdentityModel.Services.CookieHandler>. На производный класс ссылается `<customCookieHandler>` дочерний элемент.<br /><br /> Значение по умолчанию — "по умолчанию".|  
+|персистентсессионлифетиме|Указывает время существования постоянных сеансов. Если значение равно нулю, временные сеансы всегда используются. Значение по умолчанию — "0:0:0", которое указывает временный сеанс. Максимальное значение — "365:0:0", которое указывает сеанс в 365 дней. Значение должно быть указано в соответствии со следующим ограничением: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, где самое левое значение указывает дни, среднее значение (при наличии) указывает часы, а самое правое значение (при наличии) указывает минуты.|  
+|requireSsl|Указывает, порождается ли флаг "Secure" для всех записанных файлов cookie. Если это значение задано, то файлы cookie сеанса входа будут доступны только по протоколу HTTPS. Значение по умолчанию - "true".|  
+|хидефромскрипт|Определяет, порождается ли флаг "HttpOnly" для всех записанных файлов cookie. Некоторые веб-браузеры используют этот флаг, так как клиентский сценарий получает доступ к значению cookie. Значение по умолчанию - "true".|  
+|домен|Значение домена для всех записанных файлов cookie. По умолчанию используется значение "".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Default» или шифрование «фрагментированной».|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Задает тип обработчика пользовательских файлов cookie. Этот элемент должен присутствовать Если `mode` атрибут `<cookieHandler>` элемент является «Custom». Он не может присутствовать для других значений параметра `mode` атрибута. Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.|  
+|[\<Чункедкукиехандлер >](chunkedcookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Этот элемент может присутствовать только в `mode` том случае, если атрибут `<cookieHandler>` элемента имеет значение "default" или "фрагментированный".|  
+|[\<Кустомкукиехандлер >](customcookiehandler.md)|Задает тип обработчика пользовательских файлов cookie. Этот элемент должен присутствовать, `mode` если атрибут `<cookieHandler>` элемента имеет значение Custom. Он не может присутствовать ни для каких других значений `mode` атрибута. Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Содержит параметры, которые настраивают <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> свойства (всфам) <xref:System.IdentityModel.Services.SessionAuthenticationModule> и (SAM).|  
   
 ## <a name="remarks"></a>Примечания  
- <xref:System.IdentityModel.Services.CookieHandler> Отвечает за чтение и запись необработанных файлов cookie HTTP-протокола уровня. Возможность настроить <xref:System.IdentityModel.Services.ChunkedCookieHandler> или пользовательский обработчик файлов cookie, производный от <xref:System.IdentityModel.Services.CookieHandler> класса.  
+ <xref:System.IdentityModel.Services.CookieHandler> Компонент отвечает за чтение и запись необработанных файлов cookie на уровне протокола HTTP. Можно настроить <xref:System.IdentityModel.Services.ChunkedCookieHandler> либо пользовательский обработчик файлов cookie, производный <xref:System.IdentityModel.Services.CookieHandler> от класса.  
   
- Чтобы настроить фрагментированный обработчик cookie, устанавливают атрибут режима «Chunked» или «Default». Размер блока по умолчанию равен 2000 байтам, но можно указать размер блоков разного, включив `<chunkedCookieHandler>` дочерний элемент.  
+ Чтобы настроить обработчик фрагментированных файлов cookie, установите для атрибута mode значение "фрагментированный" или "по умолчанию". Размер фрагмента по умолчанию составляет 2000 байт, но при необходимости можно указать другой размер блока, включив `<chunkedCookieHandler>` дочерний элемент.  
   
- Чтобы настроить пользовательский обработчик файлов cookie, устанавливают атрибут режима на «Custom». Необходимо также указать `<customCookieHandler>` дочерний элемент, ссылающийся на тип пользовательского обработчика.  
+ Чтобы настроить пользовательский обработчик файлов cookie, установите для атрибута mode значение Custom. Необходимо также указать `<customCookieHandler>` дочерний элемент, который ссылается на тип пользовательского обработчика.  
   
- `<cookieHandler>` Элемент, представленный объектом <xref:System.IdentityModel.Services.CookieHandlerElement> класса. Обработчик файлов cookie, который был указан в конфигурации доступен из <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> свойство <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> на набор объектов <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> свойство.  
+ `<cookieHandler>` Элемент представлен<xref:System.IdentityModel.Services.CookieHandlerElement> классом. Обработчик файлов cookie, указанный в конфигурации, доступен из <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> свойства объекта, <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> установленного для <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> свойства.  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показывает `<cookieHandler>` элемент. В этом примере так как `mode` атрибут не указан, обработчик файлов cookie по умолчанию будет использоваться SAM. Это экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса. Так как `<chunkedCookieHandler>` дочерний элемент не указан, будет использоваться размер блока по умолчанию. HTTPS не требуется, так как `requireSsl` атрибут имеет значение `false`.  
+ В следующем коде XML показан `<cookieHandler>` элемент. В этом примере, поскольку `mode` атрибут не задан, SAM будет использовать обработчик файлов cookie по умолчанию. Это экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса. Так как `<chunkedCookieHandler>` дочерний элемент не указан, будет использоваться размер фрагмента данных по умолчанию. Протокол HTTPS не будет требоваться, `requireSsl` поскольку задан `false`атрибут.  
   
 > [!WARNING]
->  В этом примере HTTPS не требуется для записи файлов cookie сеанса. Это обусловлено `requireSsl` атрибут `<cookieHandler>` элементу присваивается `false`. Этот параметр не рекомендуется для большинства рабочих сред, как он может представлять угрозу безопасности.  
+>  В этом примере протокол HTTPS не требуется для записи файлов cookie сеанса. Это обусловлено тем `requireSsl` , что атрибут `<cookieHandler>` элемента имеет значение `false`. Этот параметр не рекомендуется для большинства рабочих сред, так как может представлять угрозу безопасности.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

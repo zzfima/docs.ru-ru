@@ -1,5 +1,5 @@
 ---
-title: -nologo (Visual Basic)
+title: -неэмблема (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: c1824e4a086ecdd4b6a776bd6894f6e003d02867
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07e1718554b158635b9d8b04958834e804e1fe9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789011"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964379"
 ---
-# <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Отключает отображение авторских прав и информационных сообщений во время компиляции.  
+# <a name="-nologo-visual-basic"></a>-неэмблема (Visual Basic)
+Отключает отображение баннера и информационных сообщений об авторских правах во время компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -24,13 +24,13 @@ ms.locfileid: "61789011"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Если указать `-nologo`, компилятор не отображается баннер авторских прав. По умолчанию `-nologo` не действует.  
+ Если указано `-nologo`, компилятор не отображает баннер авторского права. По умолчанию `-nologo` не действует.  
   
 > [!NOTE]
->  `-nologo` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+> Этот `-nologo` параметр недоступен в среде разработки Visual Studio; он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `T2.vb` и не отображается баннер авторских прав.  
+ Следующий код компилирует `T2.vb` и не отображает баннер авторского права.  
   
 ```console
 vbc -nologo t2.vb  
