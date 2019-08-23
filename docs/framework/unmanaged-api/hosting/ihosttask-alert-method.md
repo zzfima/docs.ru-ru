@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a5e3b82645456ffa574f63931abbf60a2194540
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75b3fc0b1dde35e743e699d22c5766cab4cf0faf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964720"
 ---
 # <a name="ihosttaskalert-method"></a>Метод IHostTask::Alert
-Запросы, что узел пробуждения задач, представленный текущим [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) экземпляра, поэтому задача может быть прервана.  
+Запрашивает выход узла из задачи, представленной текущим экземпляром [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) , поэтому задачу можно прервать.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,25 +37,25 @@ HRESULT Alert ();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Метод возвратился успешно.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|Метод успешно возвращен.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Среда CLR вызывает `Alert` метод при <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> вызывается из пользовательского кода, или когда <xref:System.AppDomain> связанный с текущим <xref:System.Threading.Thread> завершает работу. Узел должен возвращаться немедленно, так как вызов выполняется асинхронно. Если узел не может немедленно предупредить об этой задаче, он пробуждения следующий раз, он переходит в состояние, в котором его можно получать оповещения.  
+ Среда CLR вызывает `Alert` метод, когда <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> вызывается из пользовательского кода, или когда объект <xref:System.AppDomain> , связанный с текущим <xref:System.Threading.Thread> , завершает работу. Узел должен возвращаться немедленно, так как вызов выполняется асинхронно. Если узел не может немедленно предупредить задачу, он должен пробудиться при следующем входе в состояние, в котором она может быть оповещена.  
   
 > [!NOTE]
->  `Alert` затрагивает только те задачи, к которым среда выполнения достиг [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) значение WAIT_ALERTABLE для методов, таких как [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
+> `Alert`затрагивает только те задачи, к которым среда выполнения передала значение [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) WAIT_ALERTABLE в такие методы, как [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

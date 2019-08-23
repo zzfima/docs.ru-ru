@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052692"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910614"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Пример Обработка исключений при привязке данных
 > [!NOTE]
->  В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
+> В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
   
- В следующем примере показано, как устранить [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) исключение, возникающее, когда приложения, скомпилированные с использованием цепочки инструментов .NET Native пытается привязать данные. Сведения об исключении:  
+ В следующем примере показано, как разрешить исключение [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) , возникающее, когда приложение, скомпилированное с помощью цепочки инструментов .NET Native, пытается привязать данные. Сведения об исключении:  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Что делало это приложение?  
- В нижней части стека, кадры из <xref:Windows.UI.Xaml?displayProperty=nameWithType> пространство имен указывают, что запущен механизм отрисовки XAML.   Использование метода <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType>указывает на поиск на основе отражения значения свойства типа, метаданные которого были удалены.  
+ В базе стека кадры из <xref:Windows.UI.Xaml?displayProperty=nameWithType> пространства имен указывают, что обработчик визуализации XAML запущен.   Использование метода <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType>указывает на поиск на основе отражения значения свойства типа, метаданные которого были удалены.  
   
  На первом шаге предоставления директивы метаданных следовало бы добавить метаданные `serialize` для типа, чтобы его свойства стали доступны:  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Можно переписать код, чтобы не использовать отражение?  
  Так как привязки данных интенсивно использует отражение, изменение кода, чтобы избежать отражения невозможно.  
   
- Однако, существуют способы задания `ViewModel` странице XAML таким образом, чтобы цепочка инструментов могла связать привязки свойства с нужным типом во время компиляции и сохранить метаданные без использования директивы среды выполнения.  Например, можно применить <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> атрибута свойства. Это вынуждает компилятор XAML создать необходимые таблицы подстановок и избежать использования директивы среды выполнения в файле Default.rd.xml.  
+ Однако, существуют способы задания `ViewModel` странице XAML таким образом, чтобы цепочка инструментов могла связать привязки свойства с нужным типом во время компиляции и сохранить метаданные без использования директивы среды выполнения.  Например, <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> атрибут можно применить к свойствам. Это вынуждает компилятор XAML создать необходимые таблицы подстановок и избежать использования директивы среды выполнения в файле Default.rd.xml.  
   
 ## <a name="see-also"></a>См. также
 

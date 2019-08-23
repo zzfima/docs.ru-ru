@@ -6,26 +6,26 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 37433768c1bca3c013fb1e505d55bd7295f34933
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 943cdb2a21cbf2f95ef7fe2feefe6c0e71f57be4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758024"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939680"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Типы, перенесенные из WPF в System.Xaml
-В .NET Framework 3.5 и .NET Framework 3.0 оба [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и Windows Workflow Foundation содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично открытые типы, которые обеспечивают расширение для Windows Workflow Foundation XAML существовал в сборке System.Workflow.ComponentModel. В .NET Framework 4 некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация .NET Framework служб языка XAML поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы но теперь являются частью общей поддержке языка .NET Framework 4 XAML. В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
+В .NET Framework 3,5 и .NET Framework 3,0 как, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] так и Windows Workflow Foundation включала реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогичным образом, открытые типы, которые обеспечивают расширяемость для Windows Workflow Foundation XAML, существовали в сборке System. Workflow. ComponentModel. В .NET Framework 4 некоторые из типов, связанных с XAML, переносятся в сборку System. XAML. Распространенная реализация .NET Framework языковых служб XAML позволяет реализовать многие сценарии расширения XAML, которые изначально были определены реализацией XAML конкретной платформы, но теперь являются частью общей .NET Framework 4-языковой поддержки языка XAML. В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>Сборки и пространства имен  
- В .NET Framework 3.5 и .NET Framework 3.0, типы, которые реализованы в WPF для поддержки XAML, обычно находились в <xref:System.Windows.Markup> пространства имен. Большинство из них были включены в сборку WindowsBase.  
+ В .NET Framework 3,5 и .NET Framework 3,0 типы, реализованные в WPF для поддержки XAML, обычно находятся в <xref:System.Windows.Markup> пространстве имен. Большинство из них были включены в сборку WindowsBase.  
   
- В .NET Framework 4 доступна новая <xref:System.Xaml> пространства имен и новая сборка System.Xaml. Многие типы, которые первоначально были реализованы для XAML WPF, теперь предоставляются в виде точек расширения или служб для любой реализации XAML. Чтобы сделать типы доступными для более общих сценариев, они были перенесены из исходной сборки WPF в сборку System.Xaml. Это позволяет реализовать сценарии расширения XAML без включения сборок других платформ (например, WPF и Windows Workflow Foundation).  
+ В .NET Framework 4 имеется новое <xref:System.Xaml> пространство имен и новая сборка System. XAML. Многие типы, которые первоначально были реализованы для XAML WPF, теперь предоставляются в виде точек расширения или служб для любой реализации XAML. Чтобы сделать типы доступными для более общих сценариев, они были перенесены из исходной сборки WPF в сборку System.Xaml. Это позволяет использовать сценарии расширяемости XAML без необходимости включать сборки других платформ (например, WPF и Windows Workflow Foundation).  
   
- Большинство типов перенесенных типов остались в пространстве имен <xref:System.Windows.Markup> . Частично это было вызвано желанием избежать нарушения сопоставлений пространств имен среды CLR в существующих реализациях для каждого файла. В результате <xref:System.Windows.Markup> пространства имен в .NET Framework 4 содержит смесь общих типов поддержки языка XAML (из сборки System.Xaml) и типы, относящиеся к реализации WPF XAML (из WindowsBase и других сборок WPF). Любой тип, который был перенесены в сборку System.Xaml, но ранее существовал в сборке WPF, поддерживает перенаправление типов в 4 версии сборки WPF.  
+ Большинство типов перенесенных типов остались в пространстве имен <xref:System.Windows.Markup> . Частично это было вызвано желанием избежать нарушения сопоставлений пространств имен среды CLR в существующих реализациях для каждого файла. В результате <xref:System.Windows.Markup> пространство имен в .NET Framework 4 содержит сочетание общих типов поддержки языка XAML (из сборки System. XAML) и типов, характерных для реализации XAML в WPF (из WindowsBase и других сборок WPF). Любой тип, который был перенесены в сборку System.Xaml, но ранее существовал в сборке WPF, поддерживает перенаправление типов в 4 версии сборки WPF.  
   
 ### <a name="workflow-xaml-support-types"></a>Типы поддержки XAML рабочего процесса  
- Windows Workflow Foundation также предоставляемые типы поддержки XAML, и во многих случаях они имели идентичные короткие имена эквивалентов в WPF. Ниже приведен список типов поддержки Windows Workflow Foundation XAML:  
+ Windows Workflow Foundation также предоставлены типы поддержки XAML, и во многих случаях они имели одинаковые короткие имена для эквивалента WPF. Ниже приведен список типов поддержки Windows Workflow Foundation XAML.  
   
 - <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
@@ -33,15 +33,15 @@ ms.locfileid: "66758024"
   
 - <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
- Поддержки типов по-прежнему существуют в сборках Windows Workflow Foundation для .NET Framework 4 и по-прежнему можно использовать для конкретных приложений Windows Workflow Foundation; Тем не менее они должны не должны ссылаться приложения и платформы, не использующие Windows Workflow Foundation.  
+ Эти типы поддержки по-прежнему существуют в сборках Windows Workflow Foundation для .NET Framework 4 и по-прежнему могут использоваться для конкретных приложений Windows Workflow Foundation; Однако на них не должны ссылаться приложения или платформы, не использующие Windows Workflow Foundation.  
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- В .NET Framework 3.5 и .NET Framework 3.0 <xref:System.Windows.Markup.MarkupExtension> класса для WPF находился в сборке WindowsBase. Параллельный класс для Windows Workflow Foundation, <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>, размещался в сборке System.Workflow.ComponentModel. В .NET Framework 4 <xref:System.Windows.Markup.MarkupExtension> класс перенесен в сборку System.Xaml. В .NET Framework 4 <xref:System.Windows.Markup.MarkupExtension> предназначен для любого сценария расширения XAML, который использует служб XAML .NET Framework, не только для тех, которые с конкретными платформами. Если это возможно, определенные платформы или пользовательский код в платформе также должны использовать класс <xref:System.Windows.Markup.MarkupExtension> для расширения XAML.  
+ В .NET Framework 3,5 и .NET Framework 3,0 <xref:System.Windows.Markup.MarkupExtension> класс для WPF находился в сборке WindowsBase. Параллельный класс для Windows Workflow Foundation <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>,, существовал в сборке System. Workflow. ComponentModel. В .NET Framework 4 <xref:System.Windows.Markup.MarkupExtension> класс переносится в сборку System. XAML. В .NET Framework 4 <xref:System.Windows.Markup.MarkupExtension> предназначен для любого сценария расширения XAML, использующего .NET Framework служб XAML, а не только для тех, которые построены на конкретных платформах. Если это возможно, определенные платформы или пользовательский код в платформе также должны использовать класс <xref:System.Windows.Markup.MarkupExtension> для расширения XAML.  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>Вспомогательные классы службы MarkupExtension  
- .NET framework 3.5 и .NET Framework 3.0 для WPF предоставляли ряд служб, которые были доступны для <xref:System.Windows.Markup.MarkupExtension> разработчиков и <xref:System.ComponentModel.TypeConverter> реализации для поддержки использования типа или свойства в XAML. Вот эти службы.  
+ .NET Framework 3,5 и .NET Framework 3,0 для WPF предоставил несколько служб, которые были доступны <xref:System.Windows.Markup.MarkupExtension> для разработчиков и <xref:System.ComponentModel.TypeConverter> реализаций для поддержки использования типа/свойства в XAML. Вот эти службы.  
   
 - <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66758024"
 - <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  Другая служба из .NET Framework 3.5, который связан с расширениями разметки — <xref:System.Windows.Markup.IReceiveMarkupExtension> интерфейс. <xref:System.Windows.Markup.IReceiveMarkupExtension> не был перенесен и помечен `[Obsolete]` для .NET Framework 4. Сценарии, в которых ранее использовался <xref:System.Windows.Markup.IReceiveMarkupExtension> , следует применять обратные вызовы <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> с атрибутами. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> также помечен как `[Obsolete]`.  
+> Другой службой из .NET Framework 3,5, которая связана с расширениями разметки <xref:System.Windows.Markup.IReceiveMarkupExtension> , является интерфейс. <xref:System.Windows.Markup.IReceiveMarkupExtension>не был перенесен и помечен `[Obsolete]` для .NET Framework 4. Сценарии, в которых ранее использовался <xref:System.Windows.Markup.IReceiveMarkupExtension> , следует применять обратные вызовы <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> с атрибутами. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> также помечен как `[Obsolete]`.  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>Возможности языка XAML  
- Некоторые возможности и компоненты языка XAML для WPF были доступны ранее в сборке PresentationFramework. Они были реализованы как подкласс <xref:System.Windows.Markup.MarkupExtension> для предоставления расширений разметки в XAML-разметке. В .NET Framework 4 они находятся в сборке System.Xaml, проекты, которые не включают сборки WPF можно использовать эти возможности уровня языка XAML. WPF использует те же реализации для приложений .NET Framework 4. Как в других случаях, перечисленных в этом разделе, поддерживающие типы по-прежнему размещены в пространстве имен <xref:System.Windows.Markup> , чтобы избежать повреждения прежних ссылок.  
+ Некоторые возможности и компоненты языка XAML для WPF были доступны ранее в сборке PresentationFramework. Они были реализованы как подкласс <xref:System.Windows.Markup.MarkupExtension> для предоставления расширений разметки в XAML-разметке. В .NET Framework 4 они существуют в сборке System. XAML, чтобы проекты, которые не содержат сборки WPF, могли использовать эти функции на уровне языка XAML. WPF использует те же реализации для приложений .NET Framework 4. Как в других случаях, перечисленных в этом разделе, поддерживающие типы по-прежнему размещены в пространстве имен <xref:System.Windows.Markup> , чтобы избежать повреждения прежних ссылок.  
   
  Следующая таблица содержит список классов поддержки XAML, определенных в сборке System.Xaml.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "66758024"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer и классы поддержки  
- Класс <xref:System.Windows.Markup.ValueSerializer> поддерживает преобразование типов в строку, в частности для сериализации XAML, для которой может потребоваться несколько режимов или узлов в выходных данных. В .NET Framework 3.5 и .NET Framework 3.0 <xref:System.Windows.Markup.ValueSerializer> для WPF находился в сборке WindowsBase. В .NET Framework 4 <xref:System.Windows.Markup.ValueSerializer> класс находится в System.Xaml и предназначен для любого сценария расширения XAML, не только для сценариев на основе WPF. <xref:System.Windows.Markup.IValueSerializerContext> (поддерживающая служба) и <xref:System.Windows.Markup.DateTimeValueSerializer> (конкретный подкласс) также перенесены в сборку System.Xaml.  
+ Класс <xref:System.Windows.Markup.ValueSerializer> поддерживает преобразование типов в строку, в частности для сериализации XAML, для которой может потребоваться несколько режимов или узлов в выходных данных. В .NET Framework 3,5 и .NET Framework 3,0, <xref:System.Windows.Markup.ValueSerializer> для WPF находилась в сборке WindowsBase. В .NET Framework 4 <xref:System.Windows.Markup.ValueSerializer> класс находится в System. XAML и предназначен для любого сценария расширения XAML, а не только для тех, которые построены на WPF. <xref:System.Windows.Markup.IValueSerializerContext> (поддерживающая служба) и <xref:System.Windows.Markup.DateTimeValueSerializer> (конкретный подкласс) также перенесены в сборку System.Xaml.  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>Атрибуты, связанные с XAML  
- XAML в WPF содержал несколько атрибутов, которые можно было применять к типам CLR, чтобы указать что-то об их поведении в XAML. Ниже приведен список атрибутов, которые существовали в сборках WPF в .NET Framework 3.5 и .NET Framework 3.0. Они перенесены в System.Xaml в .NET Framework 4.  
+ XAML в WPF содержал несколько атрибутов, которые можно было применять к типам CLR, чтобы указать что-то об их поведении в XAML. Ниже приведен список атрибутов, которые существовали в сборках WPF в .NET Framework 3,5 и .NET Framework 3,0. Эти атрибуты переносятся в System. XAML в .NET Framework 4.  
   
 - <xref:System.Windows.Markup.AmbientAttribute>  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66758024"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>Различные классы  
- <xref:System.Windows.Markup.IComponentConnector> Интерфейс существовал в WindowsBase в .NET Framework 3.5 и .NET Framework 3.0, но размещен в System.Xaml в .NET Framework 4. <xref:System.Windows.Markup.IComponentConnector> в основном предназначен для поддержки инструментария и компиляторов разметки XAML.  
+ <xref:System.Windows.Markup.IComponentConnector> Интерфейс существовал в WindowsBase .NET Framework 3,5 и .NET Framework 3,0, но существует в System. XAML в .NET Framework 4. <xref:System.Windows.Markup.IComponentConnector> в основном предназначен для поддержки инструментария и компиляторов разметки XAML.  
   
- <xref:System.Windows.Markup.INameScope> Интерфейс существовал в WindowsBase в .NET Framework 3.5 и .NET Framework 3.0, но размещен в System.Xaml в .NET Framework 4. <xref:System.Windows.Markup.INameScope> определяет базовые операции для пространства имен XAML.  
+ <xref:System.Windows.Markup.INameScope> Интерфейс существовал в WindowsBase .NET Framework 3,5 и .NET Framework 3,0, но существует в System. XAML в .NET Framework 4. <xref:System.Windows.Markup.INameScope> определяет базовые операции для пространства имен XAML.  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>Классы с общими именами, связанные с XAML, которые существуют в WPF и System.Xaml  
- Следующие классы существуют в сборках WPF и в сборке System.Xaml в .NET Framework 4:  
+ Следующие классы существуют как в сборках WPF, так и в сборке System. XAML в .NET Framework 4:  
   
  `XamlReader`  
   

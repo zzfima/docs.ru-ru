@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 10d2a025096579c6bed64f82cc955deb0542717c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927479"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<Элемент > бипасслист (параметры сети)
 Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.  
@@ -55,7 +55,7 @@ ms.locfileid: "69664208"
   
  При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
   
- Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
