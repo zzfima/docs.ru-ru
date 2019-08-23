@@ -9,29 +9,29 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7438705a82faee464649b5f6f577627a379e9a8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216786"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918359"
 ---
 # <a name="how-to-use-systemfonts"></a>Практическое руководство. Использование SystemFonts
-В этом примере показано, как использовать статические ресурсы <xref:System.Windows.SystemFonts> класс для изменения стиля или настроек кнопки.  
+В этом примере показано, как использовать статические ресурсы <xref:System.Windows.SystemFonts> класса, чтобы изменить стиль или настроить кнопку.  
   
 ## <a name="example"></a>Пример  
- Системные ресурсы предоставляют несколько значений, определяемых системой, в качестве ресурсов и свойств, помогающих создавать визуальные элементы, согласованные с параметрами системы. <xref:System.Windows.SystemFonts> — Это класс, содержащий значения системного шрифта в виде статических свойств и свойства со ссылками на ключи ресурсов, которые могут использоваться для доступа к этим значениям динамически во время выполнения. Например <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> — <xref:System.Windows.SystemFonts> значение, и <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> является ключом соответствующего ресурса.  
+ Системные ресурсы предоставляют несколько значений, определяемых системой, в качестве ресурсов и свойств, помогающих создавать визуальные элементы, согласованные с параметрами системы. <xref:System.Windows.SystemFonts>— Это класс, который содержит значения системного шрифта как статические свойства и свойства, которые ссылаются на ключи ресурсов, которые могут использоваться для динамического доступа к этим значениям во время выполнения. Например, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> <xref:System.Windows.SystemFonts> является значением и <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> является соответствующим ключом ресурса.  
   
- В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], можно использовать члены <xref:System.Windows.SystemFonts> как статические свойства или ссылки на динамические ресурсы (со статическим значением свойства в качестве ключа). Используйте ссылку на динамический ресурс, если метрика шрифта должна автоматически обновляться во время выполнения приложения. В противном случае используйте ссылку на статическое значение.  
+ В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]можно использовать <xref:System.Windows.SystemFonts> члены в качестве статических свойств или ссылок на динамические ресурсы (со статическим значением свойства в качестве ключа). Используйте ссылку на динамический ресурс, если метрика шрифта должна автоматически обновляться во время выполнения приложения. В противном случае используйте ссылку на статическое значение.  
   
 > [!NOTE]
->  К именам свойств, используемых в качестве ключей ресурсов, добавляется суффикс Key.  
+> К именам свойств, используемых в качестве ключей ресурсов, добавляется суффикс Key.  
   
- Приведенный ниже показано, как получить доступ и использовать свойства <xref:System.Windows.SystemFonts> как статических значений для изменения стиля или настроек кнопки. Этот пример разметки присваивает <xref:System.Windows.SystemFonts> значения к кнопке.  
+ В следующем примере показано, как получить доступ к свойствам <xref:System.Windows.SystemFonts> и использовать их в качестве статических значений для стиля или настройки кнопки. Этот пример разметки присваивает <xref:System.Windows.SystemFonts> значения кнопке.  
   
  [!code-xaml[SystemRes_snip#FontStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
- Чтобы использовать значения из <xref:System.Windows.SystemFonts> в коде, не нужно использовать статическое значение или ссылку на динамический ресурс. Вместо этого использовать неключевые свойства <xref:System.Windows.SystemFonts> класса. Хотя неключевые свойства очевидно определены как статические, поведение времени выполнения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , размещенного по системе будут пересчитываться свойства в режиме реального времени и правильно учитываться вносимые пользователем изменения значений системы. В приведенном ниже примере показано, как задать параметры шрифта кнопки.  
+ Чтобы использовать значения <xref:System.Windows.SystemFonts> в коде, не нужно использовать статическое значение или ссылку на динамический ресурс. Вместо этого используйте неключевые свойства <xref:System.Windows.SystemFonts> класса. Несмотря на то что неключевые свойства, очевидно, определены как статические, поведение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] во время выполнения, размещенное системой, будет переоценивать свойства в режиме реального времени и будет правильно учитывать изменения, управляемые пользователем, в значениях системы. В приведенном ниже примере показано, как задать параметры шрифта кнопки.  
   
  [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  

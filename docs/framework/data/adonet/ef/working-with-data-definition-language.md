@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 788388b93a00cf5393174d35b8a160b4991da3bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911637"
 ---
 # <a name="working-with-data-definition-language"></a>Работа с языком описания данных DDL
 Начиная с .NET Framework версии 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает язык описания данных (DDL). Это позволяет создавать и удалять экземпляры базы данных с использованием строки подключения и метаданных модели хранения (SSDL).  
@@ -26,7 +26,7 @@ ms.locfileid: "67743726"
 - <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
->  Предполагается наличие достаточных разрешений для выполнения команд DDL.  
+> Предполагается наличие достаточных разрешений для выполнения команд DDL.  
   
  Ранее указанные методы делегируют большую часть работы базовому поставщику данных ADO.NET. Поставщик отвечает за соблюдение соглашения об именах, применяемых при создании объектов базы данных, в соответствии с правилами, используемыми для запросов и обновлений.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "67743726"
   
 2. Добавьте существующую модель в приложение.  
   
-    1. Добавьте пустую модель с именем `SchoolModel`. Чтобы создать пустую модель, см. в разделе [как: Создать новый EDMX-файл](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) раздела.  
+    1. Добавьте пустую модель с `SchoolModel`именем. Чтобы создать пустую модель, см. [раздел как Создайте новый EDMX-файл](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) .  
   
      В проект будет добавлен файл SchoolModel.edmx.  
   
-    1. Скопируйте концептуальную, хранения и содержимое о сопоставлении для модели School из [модели School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) раздела.  
+    1. Скопируйте концептуальное, хранилище и сопоставленное содержимое для модели School из статьи [School Model (учебная модель](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) ).  
   
     2. Откройте файл SchoolModel.edmx и вставьте нужное содержимое в тегах `edmx:Runtime`.  
   

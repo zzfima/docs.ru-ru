@@ -2,19 +2,19 @@
 title: <add> из <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926689"
 ---
-# <a name="add-of-filters"></a>\<Добавить > из \<фильтры >
+# <a name="add-of-filters"></a>\<Добавление > \<фильтров >
 Фильтр XPath, задающий тип сообщений для записи в журнал.  
   
- \<system.ServiceModel>  
-\<диагностические >  
-\<messageLogging >  
+ \<системой. > ServiceModel  
+\<Диагностические >  
+\<Мессажелоггинг >  
 \<Фильтры >  
 \<add>  
   
@@ -36,13 +36,13 @@ ms.locfileid: "61704548"
 |фильтр|Строка, задающая запрос к документу XML, определенный в виде выражения XPath 1.0. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Фильтры>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
+|[\<Фильтры>](filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
   
 ## <a name="remarks"></a>Примечания  
  Фильтры применяются только на транспортном уровне, когда параметр `logMessagesAtTransportLevel` имеет значение `true`. Фильтры не влияют на ведение журнала сообщений уровня службы и неправильно сформированных сообщений.  
@@ -79,5 +79,5 @@ ms.locfileid: "61704548"
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [Настройка ведения журналов сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Настройка ведения журналов сообщений](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<Мессажелоггинг >](messagelogging.md)

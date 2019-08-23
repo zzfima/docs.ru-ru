@@ -3,19 +3,19 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790498"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944299"
 ---
-# <a name="tokenreplaydetection"></a>\<tokenReplayDetection >
-Включает обнаружение воспроизведения токенов и определяет срок действия маркеров.  
+# <a name="tokenreplaydetection"></a>\<Токенреплайдетектион >
+Включает обнаружение воспроизведения маркеров и задает срок действия токенов.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<tokenReplayDetection >  
+ \<> System. identityModel  
+\<identityConfiguration >  
+\<Токенреплайдетектион >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +38,20 @@ ms.locfileid: "61790498"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|enabled|Значение, указывающее, включено ли обнаружение воспроизведения токенов; «true», чтобы включить маркер обнаружения воспроизведения.|  
-|expirationPeriod|Объект <xref:System.TimeSpan> , указывающий максимальное количество времени, прежде чем элемент считается устаревшим и удаляется из кэша.  Дополнительные сведения о способах указания <xref:System.TimeSpan> значения, см. в разделе [значения Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|enabled|Значение типа, указывающее, включено ли обнаружение воспроизведения маркеров. значение true, чтобы включить обнаружение воспроизведения маркеров.|  
+|експиратионпериод|Значение <xref:System.TimeSpan> типа, указывающее максимальное количество времени, по истечении которого элемент считается просроченным и удаляется из кэша.  Дополнительные сведения об указании <xref:System.TimeSpan> значений см. в разделе [значения TimeSpan](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
+|[\<identityConfiguration >](identityconfiguration.md)|Задает параметры удостоверений уровня службы.|  
+|[\<Секурититокенхандлерконфигуратион >](securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции обработчиков маркеров безопасности.|  
   
 ## <a name="remarks"></a>Примечания  
- Объект `<tokenReplayDetection>` на уровне службы может быть задан элемент `<identityConfiguration>` элемент или на уровне коллекции обработчиков токенов безопасности в разделе `<securityTokenHandlerConfiguration>` элемент. Переопределить параметры на коллекцию обработчиков токенов, теми, которые указаны в службе.  
+ Элемент можно указать на уровне службы `<identityConfiguration>` в элементе или на уровне коллекции `<securityTokenHandlerConfiguration>` обработчика маркеров безопасности под элементом. `<tokenReplayDetection>` Параметры коллекции обработчиков маркеров переопределяют указанные в службе.  
   
- Тип кэша повторного использования токенов задается [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) элемент.
+ Тип кэша воспроизведения токенов задается [ \<элементом > tokenReplayCache](tokenreplaycache.md) .

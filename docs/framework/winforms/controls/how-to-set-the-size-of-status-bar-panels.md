@@ -10,22 +10,22 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba0f7f02b548a5d9ea1a99605a668f449b3e4a9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013248"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923629"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Практическое руководство. Определение размера панелей строки состояния
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.ToolStripStatusLabel> заменяет элемент управления <xref:System.Windows.Forms.StatusBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.StatusBar> можно сохранить для обратной совместимости и использования в будущем.  
+> Элемент управления <xref:System.Windows.Forms.ToolStripStatusLabel> заменяет элемент управления <xref:System.Windows.Forms.StatusBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.StatusBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- Каждый экземпляр <xref:System.Windows.Forms.StatusBarPanel> класса в [элемента управления StatusBar](statusbar-control-windows-forms.md) элемент управления имеет ряд динамических свойств, определяющих его ширину и изменение размеров во время выполнения.  
+ Каждый экземпляр <xref:System.Windows.Forms.StatusBarPanel> класса в элементе управления [StatusBar](statusbar-control-windows-forms.md) имеет ряд динамических свойств, определяющих его ширину и поведение при изменении размера во время выполнения.  
   
-### <a name="to-set-the-size-of-a-panel"></a>Чтобы задать размер панели  
+### <a name="to-set-the-size-of-a-panel"></a>Задание размера панели  
   
-1. В процедуре, задайте <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, и <xref:System.Windows.Forms.StatusBarPanel.Width%2A> свойства (или любое подмножество этой последовательности) для строки состояния панели, с помощью индекса передать <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство <xref:System.Windows.Forms.StatusBarPanel> коллекции.  
+1. В процедуре <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>задайте свойства, <xref:System.Windows.Forms.StatusBarPanel.Width%2A> <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>и (или любое подмножество) для панелей <xref:System.Windows.Forms.StatusBar.Panels%2A> строки состояния, используя индекс, передаваемый через свойство <xref:System.Windows.Forms.StatusBarPanel> коллекции.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -69,6 +69,6 @@ ms.locfileid: "62013248"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Пошаговое руководство: Обновление сведений в строке состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Практическое руководство. Определите, какая панель элемента управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

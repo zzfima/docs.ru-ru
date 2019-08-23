@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039419"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916698"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.
@@ -142,7 +142,7 @@ ms.locfileid: "69039419"
  Поставщик можно вызывать одновременно из нескольких потоков, но он всегда будет выполнять запись данных в одно место хранения. Таким образом, архитектура параметров приложения будет всегда создавать только один экземпляр класса поставщика.
 
 > [!IMPORTANT]
->  Следует убедиться, что поставщик является потокобезопасным и позволяет выполнять запись в файлы конфигурации только одному потоку за раз.
+> Следует убедиться, что поставщик является потокобезопасным и позволяет выполнять запись в файлы конфигурации только одному потоку за раз.
 
  Поставщик не обязан поддерживать все атрибуты параметров <xref:System.Configuration?displayProperty=nameWithType> , определенные в пространстве имен, хотя он должен поддерживаться как <xref:System.Configuration.ApplicationScopedSettingAttribute> минимум <xref:System.Configuration.UserScopedSettingAttribute>, а также должен поддерживать <xref:System.Configuration.DefaultSettingValueAttribute>. Для тех атрибутов, которые он не поддерживает, поставщик должен завершаться ошибкой без уведомления. Он не должен создавать исключение. Если класс параметров использует недопустимое сочетание атрибутов, например применение <xref:System.Configuration.ApplicationScopedSettingAttribute> и к одному и <xref:System.Configuration.UserScopedSettingAttribute> тому же параметру, поставщик должен вызвать исключение и прекратить операцию.
 

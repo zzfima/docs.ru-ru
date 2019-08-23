@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7281f1aa0da417eba618b748ac68ba1fefb4907d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948467"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>Метод ICorProfilerInfo4::GetFunctionFromIP2
-Сопоставляет указатель инструкции управляемого кода для перекомпиляции JIT версию функции.  
+Сопоставляет указатель инструкции управляемого кода с JIT-повторно скомпилированной версией функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,26 +38,26 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Параметры  
  `ip`  
- [in] Указатель инструкций в управляемом коде.  
+ окне Указатель инструкции в управляемом коде.  
   
  `pFunctionId`  
- [out] Идентификатор функции.  
+ заполняет Идентификатор функции.  
   
  `pReJitId`  
- [out] Идентификация версию функции перекомпиляции JIT.  
+ заполняет Удостоверение JIT-повторно скомпилированной версии функции.  
   
 ## <a name="remarks"></a>Примечания  
- `GetFunctionFromIP2` аналогичен `GetFunctionFromIP`, за исключением того, что он получает идентификатор перекомпиляции JIT, а не идентификатор функции, функции, которая содержит указанный IP-адрес.  
+ `GetFunctionFromIP2`функция похожа `GetFunctionFromIP`на, за исключением того, что он получает JIT-перекомпилированный идентификатор вместо идентификатора функции функции, которая содержит указанный IP-адрес.  
   
 > [!NOTE]
->  `GetFunctionFromIP2` можно запустить сбор мусора, тогда как `GetFunctionFromIP` не будет.  Дополнительные сведения см. в разделе [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2`может запустить сборку мусора, тогда как `GetFunctionFromIP` это не будет.  Дополнительные сведения см. в разделе [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf. idl, CorProf. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

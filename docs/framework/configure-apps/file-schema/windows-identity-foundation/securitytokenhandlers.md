@@ -3,18 +3,18 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678e5c705181c55257b1ddb853690ada60ecd17a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942461"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers >
-Задает коллекцию обработчиков токенов безопасности, которые зарегистрированы с конечной точкой.  
+Указывает коллекцию обработчиков маркеров безопасности, зарегистрированных в конечной точке.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -35,26 +35,26 @@ ms.locfileid: "61793839"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|имя|Указывает имя коллекции обработчиков токенов. Только значения, распознаются платформой являются «ActAs» и «OnBehalfOf». Если с любой из этих имен указаны коллекции обработчиков токенов, коллекции будет использоваться при обработке ActAs или OnBehalfOf маркеров соответственно.|  
+|имя|Указывает имя коллекции обработчиков маркеров. Платформа принимает только те значения, которые распознаются платформой: "ActAs" и "OnBehalfOf". Если коллекции обработчиков маркеров указаны с одним из этих имен, коллекция будет использоваться при обработке маркеров ActAs или OnBehalfOf соответственно.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Удаляет все обработчики маркеров безопасности из коллекции обработчиков токенов.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Удаляет обработчик токенов безопасности из коллекции обработчиков токенов.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции обработчиков токенов.|  
+|[\<add>](add.md)|Добавляет обработчик маркеров безопасности в коллекцию обработчиков маркеров.|  
+|[\<clear>](clear.md)|Удаляет все обработчики маркеров безопасности из коллекции обработчиков маркеров.|  
+|[\<remove>](remove.md)|Удаляет обработчик маркера безопасности из коллекции обработчиков маркеров.|  
+|[\<Секурититокенхандлерконфигуратион >](securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции обработчиков маркеров.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
+|[\<identityConfiguration >](identityconfiguration.md)|Задает параметры удостоверений уровня службы.|  
   
 ## <a name="remarks"></a>Примечания  
- В конфигурации службы можно указать одну или несколько именованных коллекций обработчиков токенов безопасности. Можно указать имя для коллекции с помощью `name` атрибута. Это единственные имена, платформа обрабатывает являются «ActAs» и «OnBehalfOf». Если в эти коллекции существуют обработчики, они используются службой маркеров безопасности (STS) вместо обработчики по умолчанию при обработке `ActAs` и `OnBehalfOf` маркеров.  
+ В конфигурации службы можно указать одну или несколько именованных коллекций обработчиков маркеров безопасности. Имя коллекции можно указать с помощью `name` атрибута. Единственными именами, которые обрабатывает платформа, являются "ActAs" и "OnBehalfOf". Если в этих коллекциях есть обработчики, они используются службой маркеров безопасности (STS) вместо обработчиков по умолчанию при обработке `ActAs` и `OnBehalfOf` токенах.  
   
- По умолчанию коллекция заполняется следующие типы обработчиков: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, и <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Коллекции можно изменить с помощью `<add>`, `<remove>`, и `<clear>` элементов. Необходимо убедиться, что только один обработчик любого конкретного типа существует в коллекции. Например, если вы наследуете обработчика <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класса, либо обработчик или <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> могут быть настроены в одной коллекции, но не оба.  
+ По умолчанию <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>коллекция заполняется следующими типами обработчиков:, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler> <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>,, и <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>. Коллекцию можно изменить с помощью `<add>`элементов, `<remove>`и `<clear>` . Необходимо убедиться, что в коллекции существует только один обработчик любого определенного типа. Например, если создать производный обработчик от <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класса, то либо обработчик, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> либо может быть настроен в одной коллекции, но не в обоих.  
   
- Используйте `<securityTokenHandlerConfiguration>` элемента, чтобы указать параметры конфигурации для обработчиков в коллекции. Параметры, заданные с помощью этого элемента переопределяют указанные службы с помощью [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент. Некоторые обработчики (включая некоторых типов встроенный обработчик) может поддерживать дополнительные конфигурации через дочерний элемент элемента `<add>` элемент. Настройки, указанные на обработчик переопределяют аналогичные параметры, заданные в коллекции или службы.
+ Используйте элемент `<securityTokenHandlerConfiguration>` , чтобы указать параметры конфигурации для обработчиков в коллекции. Параметры, заданные с помощью этого элемента, [ \<](identityconfiguration.md) переопределяют указанные в службе элементы с помощью элемента identityConfiguration >. Некоторые обработчики (включая несколько встроенных типов обработчиков) могут поддерживать дополнительную конфигурацию через дочерний элемент `<add>` элемента. Параметры, заданные для обработчика, переопределяют эквивалентные параметры, указанные в коллекции или службе.

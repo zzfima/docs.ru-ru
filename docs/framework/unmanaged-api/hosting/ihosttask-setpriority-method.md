@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9ecdeb4df6210805490586f1818298025fc036
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533e3d715b46b4ef6d473795a010fa3ad297ded2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913753"
 ---
 # <a name="ihosttasksetpriority-method"></a>Метод IHostTask::SetPriority
-Уровень запросов, настройки, узел приоритет потока для задачи, представленный текущим [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) экземпляра.  
+Запрашивает у узла настройку уровня приоритета потока для задачи, представленной текущим экземпляром [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +37,21 @@ HRESULT SetPriority (
   
 ## <a name="parameters"></a>Параметры  
  `newPriority`  
- [in] Целое число, представляющее значение приоритета запрошенный поток для задачи, представленный текущим `IHostTask` экземпляра.  
+ окне Целое число, представляющее запрошенное значение приоритета потока для задачи, представленной текущим `IHostTask` экземпляром.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetPriority` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetPriority`успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Потоки время выполнения предоставляется с помощью системы циклический перебор, частично основывается на уровень приоритета потока. `SetPriority` позволяет среде CLR задать уровень приоритета потока для текущей задачи. Следующие `newPriority` значения поддерживаются.  
+ Потокам предоставляется время обработки с помощью системы циклического перебора, частично основанной на уровне приоритета потока. `SetPriority`позволяет среде CLR устанавливать этот уровень приоритета потока для текущей задачи. Поддерживаются `newPriority` следующие значения.  
   
 - THREAD_PRIORITY_ABOVE_NORMAL  
   
@@ -61,25 +61,25 @@ HRESULT SetPriority (
   
 - THREAD_PRIORITY_IDLE  
   
-- НАИНИЗШИЙ  
+- THREAD_PRIORITY_LOWEST  
   
 - THREAD_PRIORITY_NORMAL  
   
 - THREAD_PRIORITY_TIME_CRITICAL  
   
- Среда CLR вызывает `SetPriority` при значение <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> изменяется с помощью пользовательского кода. Узел можно определить собственные алгоритмы для назначения приоритета потоков и игнорировать этот запрос.  
+ Среда CLR вызывает `SetPriority` , когда значение <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> изменяется с помощью пользовательского кода. Узел может определять собственные алгоритмы для назначения приоритета потоков и может без необходимости пропускать этот запрос.  
   
 > [!NOTE]
->  `SetPriority` не сообщать, был ли изменен уровень приоритета потока. Вызовите [IHostTask::GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) для определения значения уровня приоритета потока задачи.  
+> `SetPriority`не сообщает, был ли изменен уровень приоритета потока. Вызовите метод [IHostTask:: предшествовал](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) , чтобы определить значение уровня приоритета потока задачи.  
   
- Значения уровня приоритета потока определяются Win32 `SetThreadPriority` функции. Дополнительные сведения о приоритете потока см. в документации платформы Windows.  
+ Значения уровня приоритета потока определяются функцией Win32 `SetThreadPriority` . Дополнительные сведения о приоритете потоков см. в документации по платформе Windows.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

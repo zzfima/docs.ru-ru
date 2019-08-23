@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920495"
 ---
-# <a name="listeners-element-for-source"></a>\<прослушиватели > элемент для \<источника >
-Добавляет или удаляет прослушиватели в <xref:System.Diagnostics.TraceSource.Listeners%2A> коллекции для <xref:System.Diagnostics.TraceSource>. Прослушиватель направляет данные трассировки соответствующему целевому объекту, например журнал, окно или текстовый файл.  
+# <a name="listeners-element-for-source"></a>\<Listeners > элемент \<для исходного >
+Добавляет или удаляет прослушиватели в <xref:System.Diagnostics.TraceSource.Listeners%2A> коллекции <xref:System.Diagnostics.TraceSource>для. Прослушиватель направляет выходные данные трассировки в соответствующий целевой объект, например журнал, окно или текстовый файл.  
   
  \<configuration>  
-\<system.diagnostics>  
+\<> System. Diagnostics  
 \<источники >  
-\<Источник >  
-\<прослушиватели > элемент  
+\<исходный >  
+\<Listeners > элемент  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +37,15 @@ ms.locfileid: "61673762"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Удаляет прослушиватель из `Listeners` коллекции.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Очищает коллекцию `Listeners` для источника трассировки.|  
+|[\<add>](add-element-for-listeners-for-source.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Удаляет прослушиватель из `Listeners` коллекции.|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|Очищает коллекцию `Listeners` для источника трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -59,10 +59,10 @@ ms.locfileid: "61673762"
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
+ Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<listeners>` элемент, чтобы добавить прослушиватель трассировки консоли `mySource` источника и удалить прослушиватель трассировки по умолчанию.  
+ В следующем примере показано, как использовать `<listeners>` элемент для добавления прослушивателя трассировки консоли `mySource` в источник и для удаления прослушивателя трассировки по умолчанию.  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ ms.locfileid: "61673762"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Diagnostics.TraceListener>
-- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Схема параметров трассировки и отладки](index.md)
+- [Прослушиватели трассировки](../../../debug-trace-profile/trace-listeners.md)

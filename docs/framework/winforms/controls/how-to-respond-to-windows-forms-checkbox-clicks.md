@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff6b2aad9ef0775547af57f11af28839e69637c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912942"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914984"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms
-Каждый раз, когда пользователь щелкает форм Windows <xref:System.Windows.Forms.CheckBox> управления <xref:System.Windows.Forms.Control.Click> событием. Можно программировать приложения для выполнения некоторых операций, в зависимости от состояния флажка.  
+Когда пользователь щелкает элемент управления Windows Forms <xref:System.Windows.Forms.CheckBox> <xref:System.Windows.Forms.Control.Click> , возникает событие. Приложение можно запрограммировать для выполнения некоторых действий в зависимости от состояния флажка.  
   
-### <a name="to-respond-to-checkbox-clicks"></a>Реагировать на щелчка элемента управления CheckBox  
+### <a name="to-respond-to-checkbox-clicks"></a>Реагирование на нажатия кнопки CheckBox  
   
-1. В <xref:System.Windows.Forms.Control.Click> обработчик событий, используйте <xref:System.Windows.Forms.CheckBox.Checked%2A> свойство, чтобы определить состояние элемента управления, а также выполнять любые необходимые действия.  
+1. В обработчике <xref:System.Windows.Forms.CheckBox.Checked%2A>событийиспользуйте свойство для определения состояния элемента управления и выполнения необходимых действий. <xref:System.Windows.Forms.Control.Click>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ ms.locfileid: "61912942"
     ```  
   
     > [!NOTE]
-    >  Если пользователь пытается получить дважды щелкните <xref:System.Windows.Forms.CheckBox> элемента управления, каждый щелчок будет обрабатываться отдельно, то есть, <xref:System.Windows.Forms.CheckBox> управления не поддерживает события двойного щелчка.  
+    > Если пользователь пытается дважды щелкнуть <xref:System.Windows.Forms.CheckBox> элемент управления, каждый щелчок будет обрабатываться отдельно, то есть <xref:System.Windows.Forms.CheckBox> элемент управления не поддерживает событие двойного щелчка.  
   
     > [!NOTE]
-    >  Когда <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> свойство `true` (по умолчанию), <xref:System.Windows.Forms.CheckBox> автоматически установлен или снят, при щелчке. В противном случае необходимо вручную задать <xref:System.Windows.Forms.CheckBox.Checked%2A> свойство при <xref:System.Windows.Forms.Control.Click> событием.  
+    > Если свойство имеет `true` значение (по умолчанию), <xref:System.Windows.Forms.CheckBox> то при щелчке автоматически выбирается или удаляется. <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> В противном случае необходимо вручную задать <xref:System.Windows.Forms.CheckBox.Checked%2A> свойство <xref:System.Windows.Forms.Control.Click> при возникновении события.  
   
-     Можно также использовать <xref:System.Windows.Forms.CheckBox> управления, чтобы определить направление дальнейших действий.  
+     Можно также использовать <xref:System.Windows.Forms.CheckBox> элемент управления для определения курса действий.  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Чтобы определить порядок действий при типа "флажок" нажата  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Определение курса действий при нажатии на флажок  
   
-1. Оператор case для запроса значения <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойства, чтобы определить направление дальнейших действий. Когда <xref:System.Windows.Forms.CheckBox.ThreeState%2A> свойству `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойство может вернуть три возможных значения, представляющие флажком, поле снятому или сторонним неопределенном состоянии, в котором отображается поле с серым цветом внешний вид, чтобы указать параметр будет недоступен.  
+1. Используйте оператор Case для запроса значения <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойства, чтобы определить направление действия. Если свойство имеет `true`значение, <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойство может возвращать три возможных значения, которые представляют проверяемую рамку, флажок снят или третье неопределенное состояние, при котором поле отображается серым цветом. <xref:System.Windows.Forms.CheckBox.ThreeState%2A> внешний вид, указывающий, что параметр недоступен.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,11 +133,11 @@ ms.locfileid: "61912942"
     ```  
   
     > [!NOTE]
-    >  Когда <xref:System.Windows.Forms.CheckBox.ThreeState%2A> свойству `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> возвращает `true` для обоих <xref:System.Windows.Forms.CheckState.Checked> и <xref:System.Windows.Forms.CheckState.Indeterminate>.  
+    > `true` <xref:System.Windows.Forms.CheckBox.Checked%2A> `true` Если свойство имеет значение, свойство возвращается для<xref:System.Windows.Forms.CheckState.Checked> и .<xref:System.Windows.Forms.CheckState.Indeterminate> <xref:System.Windows.Forms.CheckBox.ThreeState%2A>  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)
-- [Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Практическое руководство. Настройка параметров с помощью элементов управления CheckBox Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [Элемент управления CheckBox](checkbox-control-windows-forms.md)

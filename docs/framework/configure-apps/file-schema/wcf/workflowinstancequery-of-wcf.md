@@ -1,26 +1,26 @@
 ---
-title: <workflowInstanceQuery> для WCF
+title: <workflowInstanceQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e15d7654aeafa5fa7b87922283d6520d5493242
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915227"
 ---
-# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > из WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > WCF
 
 Представляет запрос, отслеживающий изменения жизненного цикла экземпляра рабочего процесса, например начавшиеся и завершенные события.  
   
-Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<system.serviceModel>  
+\<> System. serviceModel  
 \<Отслеживание >  
-\<профили >  
+\<Профили >  
 \<trackingProfile >  
-\<рабочий процесс >  
-\<workflowInstanceQueries >  
+\<> рабочего процесса  
+\<Воркфловинстанцекуериес >  
 \<workflowInstanceQuery >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -49,7 +49,7 @@ ms.locfileid: "61672969"
   
 ### <a name="attributes"></a>Атрибуты  
 
-Отсутствует.  
+Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -95,5 +95,5 @@ ms.locfileid: "61672969"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Отслеживание и трассировка рабочих процессов](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md)

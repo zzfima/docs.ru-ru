@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bde1083fe232563aa6129cec79fdfc6c16c77d03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f85dccd5b59610c52adcf685828984c9344fd49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911286"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::Метод GetThread
 Получает поток, в котором произошло событие.  
@@ -24,19 +24,19 @@ HRESULT GetThread(
   
 ## <a name="parameters"></a>Параметры  
  ppThread  
- [out] Указатель на адрес ICorDebugThread объект, представляющий поток, на котором произошло событие.  
+ заполняет Указатель на адрес объекта ICorDebugThread, представляющий поток, в котором произошло событие.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+> Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

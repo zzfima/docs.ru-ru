@@ -10,20 +10,20 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 181248f69684860fd43648952ef4eb3cced1c0ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859737"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944639"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Практическое руководство. Диагностика проблем при выполнении заданий печати
-Администраторы сетей часто получают от пользователей жалобы на то, что задания печати не выполняются или выполняются слишком медленно. Широкий набор свойств заданий печати в API-интерфейсы Microsoft .NET Framework предоставляют средства для выполнения быструю удаленную диагностику заданий печати.  
+Администраторы сетей часто получают от пользователей жалобы на то, что задания печати не выполняются или выполняются слишком медленно. Широкий набор свойств задания печати, предоставляемых в API Microsoft .NET Framework, предоставляет средства для быстрой удаленной диагностики заданий печати.  
   
 ## <a name="example"></a>Пример  
  Ниже представлены основные этапы создания подобной служебной программы.  
   
-1. Определите, на какое задание печати жалуется пользователь. Части пользователи не могут указать его точно. Они могут не знать имена серверов печати или принтеров. Пользователи могут описывать расположение принтера в терминологии, который использовался в параметрах его <xref:System.Printing.PrintQueue.Location%2A> свойство. В связи с этим будет полезно составить список задач, отправленных пользователем на данный момент. Если их несколько, определить, какое именно задание вызывает проблемы, позволит взаимодействие между пользователем и системным администратором печати. Порядок действий при этом следующий:  
+1. Определите, на какое задание печати жалуется пользователь. Части пользователи не могут указать его точно. Они могут не знать имена серверов печати или принтеров. Они могут описывать расположение принтера в терминологии, отличной от той, которая использовалась для <xref:System.Printing.PrintQueue.Location%2A> установки его свойства. В связи с этим будет полезно составить список задач, отправленных пользователем на данный момент. Если их несколько, определить, какое именно задание вызывает проблемы, позволит взаимодействие между пользователем и системным администратором печати. Порядок действий при этом следующий:  
   
     1. Получите список всех серверов печати.  
   
@@ -35,31 +35,31 @@ ms.locfileid: "67859737"
   
 2. Обнаружив проблемное задание, изучите соответствующие свойства, чтобы узнать, в чем может быть проблема. Например, определите, находится ли задание в состоянии ошибки и не отключился ли обслуживающий очередь принтер от сети перед печатью задания.  
   
- Приведенный ниже код представляет собой последовательность примеров кода. Код в первом примере кода содержит циклический просмотр очередей печати. (Шаг 1c выше.) Переменная `myPrintQueues` является <xref:System.Printing.PrintQueueCollection> объект для текущего сервера печати.  
+ Приведенный ниже код представляет собой последовательность примеров кода. Код в первом примере кода содержит циклический просмотр очередей печати. (Шаг 1c выше.) `myPrintQueues` Переменная<xref:System.Printing.PrintQueueCollection> является объектом для текущего сервера печати.  
   
- В примере кода начинается с обновления текущего объекта очереди печати с <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>. Это гарантирует, что свойства объекта точно отображают состояние физического принтера, который он представляет. Затем приложение получает коллекцию заданий печати в настоящее время в очереди печати с помощью <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>.  
+ В начале примера кода выполняется обновление текущего объекта очереди печати с помощью <xref:System.Printing.PrintQueue.Refresh%2A?displayProperty=nameWithType>. Это гарантирует, что свойства объекта точно отображают состояние физического принтера, который он представляет. Затем приложение получает коллекцию заданий печати, находящихся в очереди на печать, с <xref:System.Printing.PrintQueue.GetPrintJobInfoCollection%2A>помощью.  
   
- Затем приложение выполняет цикл по <xref:System.Printing.PrintSystemJobInfo> коллекции и сравнивает <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> свойство с псевдонимом подавшего жалобу пользователя. Если они совпадают, приложение добавляет идентификационные сведения о задании в предоставляемую строку. (Переменные `userName` и `jobList` инициализируются в приложении на более раннем этапе.)  
+ Затем приложение просматривает <xref:System.Printing.PrintSystemJobInfo> коллекцию и сравнивает каждое <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> свойство с псевдонимом воданного пользователя. Если они совпадают, приложение добавляет идентификационные сведения о задании в предоставляемую строку. (Переменные `userName` и `jobList` инициализируются в приложении на более раннем этапе.)  
   
  [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
  [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
  [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
- В следующем примере кода выбирается приложение с шага 2. (См. выше.) Проблемное задание обнаружено, и приложение запрашивает данные, которые позволят его идентифицировать. На основе этих данных он создает <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, и <xref:System.Printing.PrintSystemJobInfo> объектов.  
+ В следующем примере кода выбирается приложение с шага 2. (См. выше.) Проблемное задание обнаружено, и приложение запрашивает данные, которые позволят его идентифицировать. На основе этих сведений создаются <xref:System.Printing.PrintServer>объекты <xref:System.Printing.PrintQueue>, и <xref:System.Printing.PrintSystemJobInfo> .  
   
  На этом этапе приложение содержит структуру ветвления, соответствующую двум способам проверки состояния заданий печати:  
   
-- Вы можете прочесть флаги из <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> свойства, которые имеют тип <xref:System.Printing.PrintJobStatus>.  
+- Можно прочитать флаги <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> свойства, имеющего тип <xref:System.Printing.PrintJobStatus>.  
   
-- Можно прочитать каждое соответствующее свойство, например <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> и <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Можно прочитать каждое соответствующее свойство, <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> например и. <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>  
   
- В этом примере демонстрируются оба метода, поскольку пользователь получил какой метод использовать и ответил «Y», если хотите использовать флаги <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> свойство. Ниже представлены подробные сведения об этих двух методах. Наконец, для создания отчетов о возможности печати соответствующего задания в это время суток в приложении используется метод под названием **ReportQueueAndJobAvailability**. Этот метод обсуждается в разделе [Практическое руководство. Определение возможности печати в заданное время суток](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
+ В этом примере демонстрируются оба метода, поэтому пользователю ранее было предложено, какой метод использовать, и ответил "Y", если ему нужно использовать флаги <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> свойства. Ниже представлены подробные сведения об этих двух методах. Наконец, для создания отчетов о возможности печати соответствующего задания в это время суток в приложении используется метод под названием **ReportQueueAndJobAvailability**. Этот метод обсуждается в разделе [Практическое руководство. Определение возможности печати в заданное время суток](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   
  [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- Чтобы проверить состояние задания печати, используя флаги <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> свойство, проверьте каждый соответствующий флаг включен. Обычно определить, задан ли один бит в наборе битовых флагов, позволяет логическая операция И с набором флагов в качестве одной операнды и самим флагом в качестве второй. Поскольку сам флаг имеет только один набор битов, результатом логической операции И может стать максимум установка самого бита. Чтобы определить, установлен ли этот бит, просто сравните результат логической операции И с самим флагом. Дополнительные сведения см. в разделе <xref:System.Printing.PrintJobStatus>, [& оператор (C# ссылку)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), и <xref:System.FlagsAttribute>.  
+ Чтобы проверить состояние задания печати с помощью флагов <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> свойства, необходимо проверить каждый соответствующий флаг, чтобы проверить, задан ли он. Обычно определить, задан ли один бит в наборе битовых флагов, позволяет логическая операция И с набором флагов в качестве одной операнды и самим флагом в качестве второй. Поскольку сам флаг имеет только один набор битов, результатом логической операции И может стать максимум установка самого бита. Чтобы определить, установлен ли этот бит, просто сравните результат логической операции И с самим флагом. Дополнительные сведения см. в <xref:System.Printing.PrintJobStatus>разделе, [оператор & (C# Reference)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)и. <xref:System.FlagsAttribute>  
   
  Для каждого атрибута с заданным битом код передает соответствующие данные на экран консоли и иногда предлагает способы реагирования. (Метод **HandlePausedJob**, который вызывается в случае приостановки задания или очереди, описывается ниже.)  
   
@@ -73,9 +73,9 @@ ms.locfileid: "67859737"
  [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
  [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
   
- Метод **HandlePausedJob** позволяет пользователю приложения удаленно возобновлять приостановленные задания. Поскольку приостановка очереди печати может быть связана именно с этим, метод начинается с запроса решения пользователя о его возобновлении. Если вы ответили «Y», а затем <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> вызывается метод.  
+ Метод **HandlePausedJob** позволяет пользователю приложения удаленно возобновлять приостановленные задания. Поскольку приостановка очереди печати может быть связана именно с этим, метод начинается с запроса решения пользователя о его возобновлении. Если ответ имеет значение «Y», <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> вызывается метод.  
   
- Затем пользователю предлагается решить, следует ли возобновить само задание печати (на случай, если оно было приостановлено независимо от очереди печати). (Сравните <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> и <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) Если вы ответили «Y», затем <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> вызываемой; в противном случае <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> вызывается.  
+ Затем пользователю предлагается решить, следует ли возобновить само задание печати (на случай, если оно было приостановлено независимо от очереди печати). (Сравнение <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> и <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) Если ответ равен «Y», то <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> вызывается; в противном случае <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> вызывается.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
  [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
@@ -87,6 +87,6 @@ ms.locfileid: "67859737"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& Оператор (C# ссылка)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [Оператор & (C# Reference)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)

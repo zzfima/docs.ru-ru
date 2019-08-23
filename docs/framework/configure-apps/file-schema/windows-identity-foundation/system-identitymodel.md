@@ -3,17 +3,17 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 286ae88946692e6894ca3c7ee9e1348415c84ade
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943599"
 ---
-# <a name="systemidentitymodel"></a>\<system.identityModel>
+# <a name="systemidentitymodel"></a>\<> System. identityModel
 Предоставляет конфигурацию для включения параметров Windows Identity Foundation (WIF) в приложениях.  
   
- \<system.identityModel>  
+ \<> System. identityModel  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,13 +26,13 @@ ms.locfileid: "61793761"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет  
+ Отсутствуют  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
+|[\<identityConfiguration >](identityconfiguration.md)|Задает параметры удостоверений уровня службы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -41,10 +41,10 @@ ms.locfileid: "61793761"
 |`<configuration>`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="remarks"></a>Примечания  
- Добавить `<system.identityModel>` раздел в файл конфигурации для настройки службы или приложения для использования Windows Identity Foundation (WIF). `<system.identityModel>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> класса.  
+ `<system.identityModel>` Добавьте раздел в файл конфигурации, чтобы настроить службу или приложение для использования Windows Identity Foundation (WIF). `<system.identityModel>` Элемент представлен<xref:System.IdentityModel.Configuration.SystemIdentityModelSection> классом.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как добавить `<system.identityModel>` раздел в файл конфигурации. Необходимо сначала добавить объявление раздела и пространства имен конфигурации в разделе `<configSections>` элемент. Затем можно добавить `<system.IdentityModel>` элемент в файл конфигурации, чтобы указать одну или несколько конфигураций удостоверений.  
+ В следующем примере показано, как добавить `<system.identityModel>` раздел в файл конфигурации. Сначала необходимо добавить раздел конфигурации и объявление пространства имен в `<configSections>` элемент. Затем можно добавить `<system.IdentityModel>` элемент в файл конфигурации, чтобы указать одну или несколько конфигураций удостоверений.  
   
 ```xml  
 <configuration>  

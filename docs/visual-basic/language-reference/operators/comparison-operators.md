@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: 10558563b528ce0bae3f77f31a97a217018f455f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ddb07bdf5f67e281847082ba4487568e9ba3c9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962236"
 ---
 # <a name="comparison-operators-visual-basic"></a>Операторы сравнения (Visual Basic)
 Ниже приведены операторы сравнения, определенные в Visual Basic.
@@ -100,7 +100,7 @@ result = string Like pattern
 |`<>`(Не равно)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
->  [Оператор =](../../../visual-basic/language-reference/operators/assignment-operator.md) также используется в качестве оператора присваивания.
+> [Оператор =](../../../visual-basic/language-reference/operators/assignment-operator.md) также используется в качестве оператора присваивания.
 
  Оператор, оператор и`Like` оператор имеют специальные функции сравнения, отличные от операторов в предыдущей таблице. `IsNot` `Is`
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967287"
 ---
 # <a name="marshaling-mda"></a>MDA маршалинг
 Помощник по отладке управляемого кода (MDA) `marshaling`активируется, когда среда CLR задает сведения о маршалинге для параметра метода или поля структуры. Данный MDA не работает для сборок JIT-компиляции.  
@@ -30,8 +30,8 @@ Marshaling from 'Char' to 'ANSI char'
 name="assembly!Namespace.Class::myChar  
 ```  
   
-## <a name="configuration"></a>Параметр Configuration  
- Конфигурация MDA позволяет фильтровать сообщенные сведения о маршалинге на основе связанных полей или имен методов.  В следующем примере показано использование элементов `methodFilter`, `fieldFilter` и `match` для определения фильтров.  Установка звездочки (*) в атрибуте `name` означает, что будут соответствовать все элементы.  
+## <a name="configuration"></a>Конфигурация  
+ Конфигурация MDA позволяет фильтровать сообщенные сведения о маршалинге на основе связанных полей или имен методов.  В следующем примере показано использование элементов `methodFilter`, `fieldFilter` и `match` для определения фильтров.  Присвоение\*атрибуту значения звездочки () будет соответствовать всем параметрам. `name`  
   
 ```xml  
 <mdaConfig>  

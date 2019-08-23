@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 76a78debdce14123cc465ac9abf4db906fe0a2df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817967"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961348"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Практическое руководство. Переход вперед или назад по журналу навигации
 В этом примере показано, как перейти вперед или назад к записям в журнале навигации.  
@@ -40,4 +40,4 @@ ms.locfileid: "68817967"
  **Кангофорвард**, **GoForward**, **CanGoBack**и **GoBack** реализуются с помощью <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>и <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  При вызове **GoForward**и отсутствии записей в журнале переходов вперед или при вызове программы **GoBack**и отсутствии записей в <xref:System.InvalidOperationException> журнале переходов назад создается исключение.
+> При вызове **GoForward**и отсутствии записей в журнале переходов вперед или при вызове программы **GoBack**и отсутствии записей в <xref:System.InvalidOperationException> журнале переходов назад создается исключение.
