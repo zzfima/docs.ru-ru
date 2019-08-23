@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947242"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951339"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Практическое руководство. Управление часами в интерактивном режиме
-Объект <xref:System.Windows.Media.Animation.Clock> объекта <xref:System.Windows.Media.Animation.ClockController> свойства можно в интерактивном режиме запуск, приостановка, возобновление, поиска, перемещать значение к периоду заполнения и остановить часы. Можно интерактивно управлять только корневые часы дерево временной шкалы.  
+Свойство<xref:System.Windows.Media.Animation.ClockController>объектапозволяет интерактивно запускать, приостанавливать, возобновлять, искать, прерывать часы до периода заполнения и останавливать часы. <xref:System.Windows.Media.Animation.Clock> Только корневые часы дерева времени можно контролировать в интерактивном режиме.  
   
 > [!NOTE]
->  Существуют другие способы интерактивного управления анимации, которые не требуется работать непосредственно с часов: можно также использовать раскадровки. Раскадровки поддерживаются в разметке и коде. Например, см. в разделе [анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md) или [Общие сведения об анимации](animation-overview.md).  
+> Существуют и другие способы интерактивного управления анимациями, которые не нуждаются в непосредственной работе с часами. можно также использовать раскадровки. Раскадровки поддерживаются как в разметке, так и в коде. Пример см. в разделе [анимация свойства с помощью](how-to-animate-a-property-by-using-a-storyboard.md) раскадровки или [обзора анимации](animation-overview.md).  
   
- В следующем примере несколько кнопок используются для интерактивного управления таймера анимации.  
+ В следующем примере несколько кнопок используются для интерактивного управления часами анимации.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750895"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949916"
 ---
 # <a name="mouse-events-in-windows-forms"></a>События мыши в формах Windows Forms
 
-При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши, см. в разделе [принцип работы мыши ввода в Windows Forms](how-mouse-input-works-in-windows-forms.md).  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).
+При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши см. [в разделе как работает ввод с помощью мыши в Windows Forms](how-mouse-input-works-in-windows-forms.md).  См. также обзор [обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).
 
 ## <a name="mouse-information"></a>Сведения о мыши
 
@@ -66,7 +66,7 @@ ms.locfileid: "64750895"
 
 8. Событие<xref:System.Windows.Forms.Control.MouseUp> .
 
-Пример кода, который демонстрирует порядок мыши события щелчка мыши, см. в разделе [как: Дескриптор пользовательского ввода, события в Windows Forms, элементы управления](how-to-handle-user-input-events-in-windows-forms-controls.md).
+Пример кода, демонстрирующий порядок событий щелчка мыши, см. в разделе [как Обрабатывает события пользовательского ввода в элементах](how-to-handle-user-input-events-in-windows-forms-controls.md)управления Windows Forms.
 
 ### <a name="individual-controls"></a>Особые элементы управления
 
@@ -79,11 +79,11 @@ ms.locfileid: "64750895"
 
   - Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Щелкните правой кнопкой мыши: Событие щелчка не вызывается
+  - Щелчок правой кнопкой мыши: События щелчка не вызваны
 
   - Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Дважды щелкните справа: Событие щелчка не вызывается
+  - Дважды щелкните правой кнопкой мыши: События щелчка не вызваны
 
 - Элементы управления <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> и <xref:System.Windows.Forms.CheckedListBox>
 
@@ -92,11 +92,11 @@ ms.locfileid: "64750895"
 
   - Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Щелкните правой кнопкой мыши: Событие щелчка не вызывается
+  - Щелчок правой кнопкой мыши: События щелчка не вызваны
 
   - Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - Дважды щелкните справа: Событие щелчка не вызывается
+  - Дважды щелкните правой кнопкой мыши: События щелчка не вызваны
 
 - Элемент управления <xref:System.Windows.Forms.ListView>
 
@@ -145,7 +145,7 @@ ms.locfileid: "64750895"
 8. Возникает событие <xref:System.Windows.Forms.Control.MouseUp>.
 
     > [!NOTE]
-    >  Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши (например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>. События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.
+    > Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши (например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>. События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.
 
 ## <a name="see-also"></a>См. также
 

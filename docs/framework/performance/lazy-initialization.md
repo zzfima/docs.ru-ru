@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943809"
 ---
 # <a name="lazy-initialization"></a>Отложенная инициализация
 *Отложенная инициализация* объекта означает, что его создание откладывается до первого использования. (В этом разделе термины *отложенная инициализация* и *отложенное создание экземпляра* являются синонимами.) Отложенная инициализация в основном используется, чтобы повысить быстродействие, избежать ресурсоемких вычислений и уменьшить требования к памяти программы. Ниже приведены наиболее распространенные сценарии.  
@@ -62,7 +62,7 @@ ms.locfileid: "68364047"
  По умолчанию объекты <xref:System.Lazy%601> являются потокобезопасными. То есть если конструктор не задает тип потокобезопасности, создаваемые им объекты <xref:System.Lazy%601> являются потокобезопасными. В сценариях с несколькими потоками первый поток, обращающийся к свойству <xref:System.Lazy%601.Value%2A> потокобезопасного объекта <xref:System.Lazy%601>, инициализирует его для всех последующих случаев доступа из всех потоков, и все потоки совместно используют одни и те же данные. Следовательно, неважно, какой поток инициализирует объект, и состояния гонки являются мягкими.  
   
 > [!NOTE]
->  Можно повысить эту устойчивость к ошибкам путем кэширования исключений. Дополнительные сведения см. в следующем разделе [Исключения в объектах с отложенной инициализацией](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Можно повысить эту устойчивость к ошибкам путем кэширования исключений. Дополнительные сведения см. в следующем разделе [Исключения в объектах с отложенной инициализацией](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
   
  В приведенном ниже примере показано, что один и тот же экземпляр `Lazy<int>` обладает одним и тем же значением для трех отдельных потоков.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "68364047"
 |Потокобезопасность объекта|Параметр `LazyThreadSafetyMode` `mode`|Логический параметр `isThreadSafe`|Без параметров потокобезопасности|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Полностью потокобезопасный; только один поток пытается инициализировать значение в определенный момент времени.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Да.|  
-|Не является потокобезопасным.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Неприменимо.|  
-|Полностью потокобезопасный; потоки состязаются за право инициализации значения.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Неприменимо.|Неприменимо.|  
+|Не является потокобезопасным.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Не применяется|  
+|Полностью потокобезопасный; потоки состязаются за право инициализации значения.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Не применяется|Не применяется|  
   
  Как показано в таблице, указание <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> для параметра `mode` равносильно указанию `true` для параметра `isThreadSafe`, а указание <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> равносильно указанию `false`.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "68364047"
 ## <a name="exceptions-in-lazy-objects"></a>Исключения в объектах с отложенной инициализацией  
  Как упоминалось выше, объект <xref:System.Lazy%601> всегда возвращает тот же объект или то же значение, которые использовались для его инициализации, следовательно, свойство <xref:System.Lazy%601.Value%2A> доступно только для чтения. Если включено кэширование исключений, эта неизменность также распространяется на поведение исключений. Если объект с отложенной инициализацией включает кэширование исключений и создает исключение из метода инициализации при <xref:System.Lazy%601.Value%2A> первом обращении к свойству, то это же исключение возникает при каждой последующей попытке <xref:System.Lazy%601.Value%2A> доступа к свойству. . Другими словами, конструктор заключенного в оболочку типа никогда не вызывается повторно даже в сценариях с несколькими потоками. Следовательно, объект <xref:System.Lazy%601> не может создавать исключение при одной попытке доступа и возвращать значение при последующих попытках доступа.  
   
- Кэширование исключений включено, если используется какой-либо конструктор <xref:System.Lazy%601?displayProperty=nameWithType>, принимающий метод инициализации (параметр `valueFactory`); например, оно включено при использовании конструктора `Lazy(T)(Func(T))`. Если конструктор также принимает значение <xref:System.Threading.LazyThreadSafetyMode> (параметр `mode`), укажите <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> или <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Указание метода инициализации включает кэширование исключений для этих двух режимов. Метод инициализации может быть очень простым. Например, он может вызвать конструктор без параметров `T`для: `new Lazy<Contents>(() => new Contents(), mode)` в C#или `New Lazy(Of Contents)(Function() New Contents())` в Visual Basic. При использовании <xref:System.Lazy%601?displayProperty=nameWithType> конструктора, не определяющего метод инициализации, исключения, вызываемые конструктором без параметров для `T` , не кэшируются. Дополнительные сведения см. в описании перечисления <xref:System.Threading.LazyThreadSafetyMode>.  
+ Кэширование исключений включено, если используется какой-либо конструктор <xref:System.Lazy%601?displayProperty=nameWithType>, принимающий метод инициализации (параметр `valueFactory`); например, оно включено при использовании конструктора `Lazy(T)(Func(T))`. Если конструктор также принимает значение <xref:System.Threading.LazyThreadSafetyMode> (параметр `mode`), укажите <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> или <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Указание метода инициализации включает кэширование исключений для этих двух режимов. Метод инициализации может быть очень простым. Например, он может вызвать конструктор без параметров `T`для: `new Lazy<Contents>(() => new Contents(), mode)` в C#или `New Lazy(Of Contents)(Function() New Contents())` в Visual Basic. Если вы используете конструктор <xref:System.Lazy%601?displayProperty=nameWithType>, который не указывает метод инициализации, исключения, вызываемые конструктором без параметров для `T`, не кэшируются. Дополнительные сведения см. в описании перечисления <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
->  Если создается объект <xref:System.Lazy%601> с параметром конструктора `isThreadSafe`, установленным в значение `false`, или с параметром конструктора `mode`, установленным в значение <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, обращаться к объекту <xref:System.Lazy%601> необходимо из одного потока или обеспечить свою собственную синхронизацию. Это относится ко всем аспектам объекта, включая кэширование исключений.  
+> Если создается объект <xref:System.Lazy%601> с параметром конструктора `isThreadSafe`, установленным в значение `false`, или с параметром конструктора `mode`, установленным в значение <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, обращаться к объекту <xref:System.Lazy%601> необходимо из одного потока или обеспечить свою собственную синхронизацию. Это относится ко всем аспектам объекта, включая кэширование исключений.  
   
  Как отмечалось в предыдущем разделе, объекты <xref:System.Lazy%601>, созданные путем указания <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, обрабатывают исключения иначе. В случае с <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> за инициализацию экземпляра <xref:System.Lazy%601> могут конкурировать несколько потоков. В этом случае исключения не кэшируются, и попытки доступа к свойству <xref:System.Lazy%601.Value%2A> могут продолжаться до успешной инициализации.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68364047"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Локальные по отношению к потоку переменные в методах Parallel.For и ForEach  
- При использовании метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или метода <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для параллельной итерации источников данных можно применить перегруженные версии со встроенной поддержкой локальных по отношению к потоку данных. В этих методах локальность по отношению к потоку достигается с помощью локальных делегатов, используемых для создания данных, доступа к ним и их очистки. Дополнительные сведения см. в разделе [Практическое руководство. Написание цикла Parallel.For с локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) и [Практическое руководство. Написание цикла Parallel.ForEach c локальными переменными раздела](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ При использовании метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или метода <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для параллельной итерации источников данных можно применить перегруженные версии со встроенной поддержкой локальных по отношению к потоку данных. В этих методах локальность по отношению к потоку достигается с помощью локальных делегатов, используемых для создания данных, доступа к ним и их очистки. Дополнительные сведения см. в разделе [Практическое руководство. Написание цикла Parallel.For с локальными переменными потока](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) и [Практическое руководство. Написание цикла Parallel.ForEach c локальными переменными раздела](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Использование отложенной инициализации для сценариев с низкими издержками  
  Если необходимо использовать отложенную инициализацию для большого числа объектов, может оказаться, что заключение каждого объекта в оболочку <xref:System.Lazy%601> требует слишком много памяти или вычислительных ресурсов. Либо могут предъявляться строгие требования к предоставлению отложенной инициализации. В таких случаях можно использовать методы `static` (`Shared` в Visual Basic) класса <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>, чтобы выполнить отложенную инициализацию каждого объекта, не заключая его в экземпляр <xref:System.Lazy%601>.  
@@ -154,7 +154,7 @@ ms.locfileid: "68364047"
   
 ## <a name="see-also"></a>См. также
 
-- [Основы управляемых потоков](../../../docs/standard/threading/managed-threading-basics.md)
-- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)
-- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Основы управляемых потоков](../../standard/threading/managed-threading-basics.md)
+- [Потоки и работа с потоками](../../standard/threading/threads-and-threading.md)
+- [Библиотека параллельных задач (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [Практическое руководство. Выполнение отложенной инициализации объектов](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

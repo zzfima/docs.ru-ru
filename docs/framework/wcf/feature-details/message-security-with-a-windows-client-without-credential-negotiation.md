@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 0e4ac18d4c5835f3bd0539f2a79d68b59860b6e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 699ea45d67658ab9c768bf938d5336be7a5427c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637942"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955352"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Безопасность сообщений с использованием клиента Windows без согласования учетных данных
-В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные протоколом Kerberos.  
+В следующем сценарии показан клиент Windows Communication Foundation (WCF) и служба, защищенные протоколом Kerberos.  
   
  Клиент и служба находятся в одном и том же домене или в доверенных доменах.  
   
 > [!NOTE]
->  Разница между этот сценарий и [безопасность сообщений с клиентом Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) — это то, что этот сценарий не выполняет согласование учетных данных службы перед отправкой сообщения приложения. И так как для этого требуется протокол Kerberos, для этого сценария необходима среда домена Windows.  
+> Разница между этим сценарием и [безопасностью сообщений с помощью клиента Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) заключается в том, что этот сценарий не согласовывает учетные данные службы с службой до отправки сообщения приложения. И так как для этого требуется протокол Kerberos, для этого сценария необходима среда домена Windows.  
   
- ![Безопасность без согласования учетных данных сообщений](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")  
+ ![Безопасность сообщений без согласования учетных данных](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -44,18 +44,18 @@ ms.locfileid: "64637942"
  В следующем коде создается конечная точка службы, которая использует безопасность сообщений. Этот код отключает согласование учетных данных службы и установку маркера контекста безопасности (SCT).  
   
 > [!NOTE]
->  Для использования типа учетных данных Windows без согласования учетная запись пользователя службы должна иметь доступ к имени участника-службы (SPN), зарегистрированному с доменом Active Directory. Для этого существуют два способа:  
+> Для использования типа учетных данных Windows без согласования учетная запись пользователя службы должна иметь доступ к имени участника-службы (SPN), зарегистрированному с доменом Active Directory. Для этого существуют два способа:  
   
-1. Используйте учетную запись `NetworkService` или `LocalSystem` для запуска службы. Так как эти учетные записи имеют доступ к SPN компьютера, определяются, когда компьютер присоединяется к домену Active Directory, WCF автоматически создает соответствующий элемент SPN внутри конечной точки службы в метаданных службы (Web Services Description Язык или язык WSDL).  
+1. Используйте учетную запись `NetworkService` или `LocalSystem` для запуска службы. Поскольку эти учетные записи имеют доступ к имени участника-службы (SPN), установленному при присоединении компьютера к домену Active Directory, WCF автоматически создает соответствующий элемент SPN внутри конечной точки службы в метаданных службы (описание веб-служб Язык или WSDL).  
   
-2. Запустите службу из любой учетной записи домена Active Directory. В этом случае потребуется установить SPN для учетной записи домена. Это можно сделать, например, с помощью средства Setspn.exe. Создав SPN для учетной записи службы, Настройка WCF, чтобы публиковать это SPN в клиентах службы через ее метаданные (WSDL). Это можно сделать, настроив удостоверение конечной точки для предоставляемой конечной точки либо в файле конфигурации приложения, либо в коде. В следующем примере описывается программный способ публикации удостоверения.  
+2. Запустите службу из любой учетной записи домена Active Directory. В этом случае потребуется установить SPN для учетной записи домена. Это можно сделать, например, с помощью средства Setspn.exe. После создания имени SPN для учетной записи службы настройте WCF для публикации имени участника-службы на клиентах службы через ее метаданные (WSDL). Это можно сделать, настроив удостоверение конечной точки для предоставляемой конечной точки либо в файле конфигурации приложения, либо в коде. В следующем примере описывается программный способ публикации удостоверения.  
   
- Дополнительные сведения об именах SPN, протокол Kerberos и Active Directory, см. в разделе [Kerberos технические дополнения для Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Дополнительные сведения об удостоверениях конечных точек см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Дополнительные сведения об именах участников-служб, протоколе Kerberos и Active Directory см. в статье [Техническая поддержка Kerberos для Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Дополнительные сведения о идентификаторах конечных точек см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
   
-### <a name="configuration"></a>Параметр Configuration  
+### <a name="configuration"></a>Конфигурация  
  Вместо кода можно использовать следующую конфигурацию.  
   
 ```xml  
@@ -92,12 +92,12 @@ ms.locfileid: "64637942"
 </configuration>  
 ```  
   
-## <a name="client"></a>"Клиент";  
+## <a name="client"></a>Клиент  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономный клиент, используя код (и код клиента).  
   
-- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:  
+- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,15 +106,15 @@ ms.locfileid: "64637942"
  Следующий код служит для настройки клиента. Для режима безопасности задано значение Message, типу учетных данных клиента присвоено значение Windows. Обратите внимание: свойствам <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> и <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> задается значение `false`.  
   
 > [!NOTE]
->  Для использования типа учетных данных Windows без согласования требуется настроить SPN учетной записи службы до начала обмена данными со службой. Клиент использует имя SPN, чтобы получить маркер Kerberos для проверки подлинности и обеспечения безопасности обмена данными со службой. В следующем образце показано, как настроить SPN службы для клиента. Если вы используете [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания клиента, SPN службы будут автоматически распространяться клиенту из метаданных службы (WSDL), если содержит метаданные службы Эти сведения. Дополнительные сведения о том, как настроить службу для включения имени участника-службы в метаданных службы см. в разделе «Служба» далее в этом разделе.  
+> Для использования типа учетных данных Windows без согласования требуется настроить SPN учетной записи службы до начала обмена данными со службой. Клиент использует имя SPN, чтобы получить маркер Kerberos для проверки подлинности и обеспечения безопасности обмена данными со службой. В следующем образце показано, как настроить SPN службы для клиента. Если для создания клиента используется [средство служебной программы для метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , то SPN службы будет автоматически распространяться на клиент из метаданных службы (WSDL), если метаданные службы содержат эти сведения. Дополнительные сведения о настройке службы для включения имени участника-службы в метаданные службы см. в подразделе "служба" Далее в этом разделе.  
 >   
->  Дополнительные сведения о SPN, Kerberos и Active Directory, см. в разделе [Kerberos технические дополнения для Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Дополнительные сведения об удостоверениях конечных точек см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) раздела.  
+>  Дополнительные сведения о SPN, Kerberos и Active Directory см. в статье [Техническая поддержка Kerberos для Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Дополнительные сведения о удостоверениях конечных точек см. в разделе [SecurityBindingElement Authentication modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) .  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  
   
-### <a name="configuration"></a>Параметр Configuration  
- Следующий код служит для настройки клиента. Обратите внимание, что [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) должно быть присвоено соответствовать SPN службы, установленному для учетной записи службы в домене Active Directory.  
+### <a name="configuration"></a>Конфигурация  
+ Следующий код служит для настройки клиента. Обратите внимание [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) , что элементу "пере>" не должно соответствовать имя SPN службы, зарегистрированное для учетной записи службы в домене Active Directory.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

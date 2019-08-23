@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19aced41860002081caaf6436bad08f5f9a09e9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d02478c2421823ce2acb533d2abea2ea8b13c74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950291"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>Метод ICLRAppDomainResourceMonitor::GetCurrentAllocated
-Получает общий размер в байтах для всех операций выделения памяти, которые были внесены доменом приложения с момента его создания, без вычитания памяти, который был удален сборщиком мусора.  
+Возвращает общий размер (в байтах) всех выделений памяти, сделанных доменом приложения с момента его создания, без вычитания памяти, которая была собрана сборщиком мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +36,10 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
   
 ## <a name="parameters"></a>Параметры  
  `dwAppDomainId`  
- [in] Идентификатор домена запрошенное приложение.  
+ окне ИДЕНТИФИКАТОР запрошенного домена приложения.  
   
  `pBytesAllocated`  
- [out] Указатель на общий размер всех операций выделения памяти.  
+ заполняет Указатель на общий размер всех выделений памяти.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -50,20 +50,20 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |COR_E_APPDOMAINUNLOADED|Домен приложения был выгружен или не существует.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод эквивалентен неуправляемых управляемых <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> свойство.  
+ Этот метод является неуправляемым эквивалентом управляемого <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> свойства.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок.** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
 - [Интерфейс ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Отслеживание ресурсов домена приложения](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Отслеживание ресурсов домена приложения](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

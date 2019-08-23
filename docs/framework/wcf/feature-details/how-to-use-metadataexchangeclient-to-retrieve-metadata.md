@@ -2,22 +2,22 @@
 title: Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9558e1943c3886a61c3b19801e22d57732e459a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968749"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 Используйте класс <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных по протоколу WS-MetadataExchange (MEX). Извлеченные файлы метаданных возвращаются в виде объекта <xref:System.ServiceModel.Description.MetadataSet>. Возвращенный объект <xref:System.ServiceModel.Description.MetadataSet> содержит коллекцию объектов <xref:System.ServiceModel.Description.MetadataSection>, каждый из которых содержит конкретный диалект метаданных и идентификатор. Возвращенные метаданные можно записать в файлы или (если метаданные содержат документы WSDL) импортировать с помощью <xref:System.ServiceModel.Description.WsdlImporter>.  
   
  Конструкторы <xref:System.ServiceModel.Description.MetadataExchangeClient>, получающие адрес, используют привязку в статическом классе <xref:System.ServiceModel.Description.MetadataExchangeBindings>, который соответствует схеме универсального кода ресурса (URI) этого адреса. В качестве альтернативы можно использовать конструктор <xref:System.ServiceModel.Description.MetadataExchangeClient>, позволяющий явно задать используемую привязку. Заданная привязка применяется для распознавания всех ссылок на метаданные.  
   
- Так же, как любой другой клиент Windows Communication Foundation (WCF), <xref:System.ServiceModel.Description.MetadataExchangeClient> тип предоставляет конструктор для загрузки конфигураций клиентских конечных точек, используя имя конфигурации конечной точки. Заданная конфигурация конечной точки должна определять контракт <xref:System.ServiceModel.Description.IMetadataExchange>. Адрес в конфигурации конечной точки не загружается, поэтому следует использовать одну из перегрузок <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>, которые получают адрес. При задании адреса метаданных с помощью экземпляра <xref:System.ServiceModel.EndpointAddress> клиент <xref:System.ServiceModel.Description.MetadataExchangeClient> предполагает, что этот адрес соответствует конечной точке MEX. Если адрес метаданных задается в виде URL-адреса, необходимо также задать используемый режим <xref:System.ServiceModel.Description.MetadataExchangeClientMode> - MEX или HTTP GET.  
+ Как и любой другой клиент Windows Communication Foundation (WCF), <xref:System.ServiceModel.Description.MetadataExchangeClient> тип предоставляет конструктор для загрузки конфигураций клиентских конечных точек с помощью имени конфигурации конечной точки. Заданная конфигурация конечной точки должна определять контракт <xref:System.ServiceModel.Description.IMetadataExchange>. Адрес в конфигурации конечной точки не загружается, поэтому следует использовать одну из перегрузок <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>, которые получают адрес. При задании адреса метаданных с помощью экземпляра <xref:System.ServiceModel.EndpointAddress> клиент <xref:System.ServiceModel.Description.MetadataExchangeClient> предполагает, что этот адрес соответствует конечной точке MEX. Если адрес метаданных задается в виде URL-адреса, необходимо также задать используемый режим <xref:System.ServiceModel.Description.MetadataExchangeClientMode> - MEX или HTTP GET.  
   
 > [!IMPORTANT]
->  По умолчанию <xref:System.ServiceModel.Description.MetadataExchangeClient> распознает все ссылки, включая импорт WSDL, а также импорт схемы XML и включаемые элементы. Эту функцию можно отключить, задав для свойства <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> значение `false`. Максимальным количеством распознаваемых ссылок можно управлять с помощью свойства <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A>. Это свойство можно использовать совместно со свойством `MaxReceivedMessageSize` в привязке для управления объемом извлекаемых метаданных.  
+> По умолчанию <xref:System.ServiceModel.Description.MetadataExchangeClient> распознает все ссылки, включая импорт WSDL, а также импорт схемы XML и включаемые элементы. Эту функцию можно отключить, задав для свойства <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> значение `false`. Максимальным количеством распознаваемых ссылок можно управлять с помощью свойства <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A>. Это свойство можно использовать совместно со свойством `MaxReceivedMessageSize` в привязке для управления объемом извлекаемых метаданных.  
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>Использование MetadataExchangeClient для получения метаданных  
   

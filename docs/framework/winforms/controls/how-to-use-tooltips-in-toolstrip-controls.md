@@ -6,34 +6,34 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: b009d19ed949edbd52ec02252ba1e2271e4cb738
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f383b6cccba7825637ea65a0e13280b91b406c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939729"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Практическое руководство. Использование всплывающих подсказок в элементах управления ToolStrip
-Можно отобразить <xref:System.Windows.Forms.ToolTip> для <xref:System.Windows.Forms.ToolStrip> элемента управления, присвоив элемента управления <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> свойства `true`.  
+Можно отобразить <xref:System.Windows.Forms.ToolTip> <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> для нужного `true`элемента управления, присвоив свойству элемента управления значение. <xref:System.Windows.Forms.ToolStrip>  
   
-### <a name="to-display-a-tooltip"></a>Для отображения всплывающей подсказки  
+### <a name="to-display-a-tooltip"></a>Отображение подсказки  
   
-- Задайте <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> свойство элемента управления, `true`.  
+- Присвойте `true`свойству элемента управления значение. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-     Значение по умолчанию <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> — `true`и значение по умолчанию <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> является `false`.  
+     Значение <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> по умолчанию равно `true` <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> , а значение <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> по умолчанию — `false`.  
   
-### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Чтобы использовать свойство ToolTipText для текста подсказки ToolStripButton  
+### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Использование свойства ToolTipText для текста подсказки в ToolStripButton  
   
-1. Задайте <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> свойство кнопки `true`.  
+1. Присвойте `true`свойству кнопки значение. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-2. Задайте <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> свойство кнопки `false`.  
+2. Присвойте `false`свойству кнопки значение. <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType>  
   
-     `AutoToolTip` Свойство `true` по умолчанию для <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, и <xref:System.Windows.Forms.ToolStripSplitButton>.  
+     `true` <xref:System.Windows.Forms.ToolStripDropDownButton>По умолчанию<xref:System.Windows.Forms.ToolStripButton>свойство имеет значение, и<xref:System.Windows.Forms.ToolStripSplitButton>. `AutoToolTip`  
   
-     Объект <xref:System.Windows.Forms.ToolStripButton> использует его `Text` свойство для <xref:System.Windows.Forms.ToolTip> текст по умолчанию. Эта процедура используется для отображения пользовательского текста в <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
+     По умолчанию `Text`компонентиспользует его <xref:System.Windows.Forms.ToolTip> свойство для текста. <xref:System.Windows.Forms.ToolStripButton> Эта процедура используется для вывода пользовательского текста в <xref:System.Windows.Forms.ToolStripButton>. <xref:System.Windows.Forms.ToolTip>  
   
 > [!NOTE]
->  Если задать <xref:System.Windows.Forms.ToolStripItemDisplayStyle> для <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> или <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, текст не будет отображаться на кнопке, но по-прежнему отображается всплывающая подсказка.  
+> Если задано <xref:System.Windows.Forms.ToolStripItemDisplayStyle> значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> или <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, текст на кнопке не отображается, но подсказка по-прежнему отображается.  
   
 ## <a name="see-also"></a>См. также
 

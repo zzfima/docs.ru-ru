@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f38f9a3ebd88e0a5abb7a6bc8cb4026dc7d0f068
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736935"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943297"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>Метод ICorDebugProcess2::GetReferenceValueFromGCHandle
-Получает указатель ссылки на указанный управляемый объект, с дескриптором сборки мусора.  
+Возвращает указатель ссылки на указанный управляемый объект, который имеет обработчик сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,24 +38,24 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>Параметры  
  `handle`  
- [in] Указатель на управляемый объект, имеющий дескриптор сборки мусора. Это значение равно <xref:System.IntPtr> объекта и могут быть получены из <xref:System.Runtime.InteropServices.GCHandle> для управляемого объекта.  
+ окне Указатель на управляемый объект, который имеет обработчик сборки мусора. Это значение является <xref:System.IntPtr> объектом и может быть получено <xref:System.Runtime.InteropServices.GCHandle> из объекта для управляемого объекта.  
   
  `pOutValue`  
- [out] Указатель на адрес ICorDebugReferenceValue объект, представляющий ссылку на указанный управляемый объект.  
+ заполняет Указатель на адрес объекта ICorDebugReferenceValue, который представляет ссылку на указанный управляемый объект.  
   
 ## <a name="remarks"></a>Примечания  
- Не следует путать возвращенное значение ссылки со значением ссылки сбора мусора.  
+ Не путайте возвращаемое ссылочное значение со ссылочным значением сборки мусора.  
   
- Возвращаемая ссылка ведет себя как обычной ссылки. Этот параметр отключен, когда выполнение кода продолжается после точки останова. Время существования целевого объекта не зависит от времени существования значения ссылки.  
+ Возвращаемая ссылка ведет себя как обычная ссылка. Он отключен, когда выполнение кода продолжится после точки останова. Время существования целевого объекта не зависит от времени существования ссылочного значения.  
   
 > [!NOTE]
->  `GetReferenceValueFromGCHandle` Метод не проверяет маркер. Таким образом `GetReferenceValueFromGCHandle` метода может привести к повреждению отладчика и отлаживаемого, если передается недопустимый дескриптор кода.  
+> `GetReferenceValueFromGCHandle` Метод не проверяет этот обработчик. Таким образом, `GetReferenceValueFromGCHandle` метод может привести к повреждению отладчика и отлаживаемого кода при передаче недопустимого маркера.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

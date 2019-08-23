@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920926"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Элемент > AppContextSwitchOverrides
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -138,7 +138,7 @@ ms.locfileid: "69658977"
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Определяет, пропускаются ли пустые последовательности ключей в составных ключах при проверке схемы XSD. Дополнительные сведения см. в разделе [Устранение рисков. Проверка](../../../migration-guide/mitigation-xml-schema-validation.md)XML-схемы.|.NET Framework 4.6|  
   
 > [!NOTE]
->  `AppContextSwitchOverrides` Вместо добавления элемента в файл конфигурации приложения можно также задать параметры программным способом, `static` вызвав метод (in C#) или `Shared` (в Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> .  
+> `AppContextSwitchOverrides` Вместо добавления элемента в файл конфигурации приложения можно также задать параметры программным способом, `static` вызвав метод (in C#) или `Shared` (в Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> .  
   
  Разработчики библиотек также могут определять пользовательские параметры, позволяющие вызывающим объектам отказаться от измененных функциональных возможностей, появившихся в более поздних версиях их библиотек. Дополнительные сведения см. в описании класса <xref:System.AppContext>.  
   

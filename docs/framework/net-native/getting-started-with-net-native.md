@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ce43ef1a24a0b9bcf0248647245cc35838700295
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052627"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910499"
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
 
-При разработке нового приложения для Windows 10 или при миграции существующего приложения Магазина Windows можно использовать один и тот же набор процедур. Чтобы создать приложение машинного кода .NET, выполните следующие действия.
+При разработке нового приложения для Windows 10 или при миграции существующего приложения Магазина Windows можно использовать один и тот же набор процедур. Чтобы создать .NET Native приложение, выполните следующие действия.
 
 1. [Разработайте приложение универсальной платформы Windows (UWP), предназначенное для Windows 10](#Step1), и протестируйте его отладочные сборки, чтобы убедиться в его правильной работе.
 
@@ -24,7 +24,7 @@ ms.locfileid: "66052627"
 4. [Вручную разрешите отсутствующие метаданные](#Step4) и повторяйте [шаг 3](#Step3) до тех пор, пока все вопросы не будут разрешены.
 
 > [!NOTE]
-> Если вы переносите существующее приложение Windows Store в машинный код .NET, обязательно просмотрите [миграция Windows Store приложения в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> Если вы переносите существующее приложение Магазина Windows на .NET Native, обязательно ознакомьтесь со статьей [миграция приложения из Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
 
 <a name="Step1"></a>
 
@@ -36,16 +36,16 @@ ms.locfileid: "66052627"
 
 2. Обратите внимание, что существуют некоторые известные проблемы совместимости между проектами приложений UWP, скомпилированными с помощью цепочки инструментов машинного кода .NET и без нее. Обратитесь к [руководство по миграции](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) для получения дополнительных сведений.
 
-Теперь можно написать C# или код Visual Basic .NET Native контактную зону, который выполняется в локальной системе (или в симуляторе).
+Теперь вы можете писать C# или Visual Basic код по .NET Native контактной зоне, которая выполняется в локальной системе (или в симуляторе).
 
 > [!IMPORTANT]
 > При разработке приложения, обратите внимание на любое использование сериализации или отражения в коде.
 
-По умолчанию в отладочных сборках, JIT-компиляции включить быстрое развертывание F5, а сборки выпуска компилируются с помощью технологии предварительной компиляции .NET Native. Это означает, что вам следует создать и протестировать отладочные сборки приложения, чтобы проверить правильность их работы, перед тем как компилировать их с помощью цепочки инструментов машинного кода .NET.
+По умолчанию отладочные сборки компилируются JIT-компилятором, чтобы обеспечить быстрое развертывание F5, а сборки выпуска компилируются с помощью технологии предварительной компиляции .NET Native. Это означает, что вам следует создать и протестировать отладочные сборки приложения, чтобы проверить правильность их работы, перед тем как компилировать их с помощью цепочки инструментов машинного кода .NET.
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Шаг 2. Обработайте дополнительные использования отражения и сериализации
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Шаг 2. Обработку дополнительного отражения и использования сериализации
 
 Файл директив среды выполнения по умолчанию Default.RD.XML автоматически добавляется в проект при его создании. При разработке на языке C# он находится в папке **Properties** вашего проекта. При разработке на языке Visual Basic он находится в папке **My Project** вашего проекта.
 
@@ -60,7 +60,7 @@ ms.locfileid: "66052627"
 
 - сериализаторы, работающие без использования отражения. сериализаторы из библиотеки классов .NET Framework, например, <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и классы <xref:System.Xml.Serialization.XmlSerializer> не используют отражение. Тем не менее, они требуют генерировать код на основе объекта для сериализации или десериализации.  Дополнительные сведения см. в разделе "Сериализаторы Microsoft" в [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).
 
-- Сериализаторы сторонних поставщиков. Библиотеки сериализации сторонних поставщиков, наиболее распространенной из которых является сериализатор Newtonsoft JSON, обычно работают на основе отражения и требуют выполнения записей в файл *. rd.xml файл для поддержки сериализации и десериализации объектов. Дополнительные сведения см. в разделе "Сериализаторы сторонних поставщиков" в [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).
+- Сериализаторы сторонних поставщиков. Сторонние библиотеки сериализации, наиболее распространенный из которых является сериализатором Newtonsoft JSON, обычно основаны на отражении, и для них требуется запись \*в файле. Rd. XML для поддержки сериализации и десериализации объектов. Дополнительные сведения см. в разделе "Сериализаторы сторонних поставщиков" в [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).
 
 **Методы, основанные на отражении**
 
@@ -68,7 +68,7 @@ ms.locfileid: "66052627"
 
 - метод <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> ;
 
-- методы <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> и <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 
+- методы <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> и <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>
 
 - метод <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> ;
 
@@ -79,19 +79,19 @@ ms.locfileid: "66052627"
 
 <a name="Step3"></a>
 
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Шаг 3. Разверните и протестируйте выпускаемые сборки приложения
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Шаг 3. Развертывание и тестирование сборок выпуска приложения
 
 После обновления файла директив среды выполнения можно перестроить и развернуть выпускаемые сборки приложения. Двоичные файлы машинного кода .NET помещаются в подкаталог ILC.out каталога, заданного в текстовом поле **Build output path** (Путь к выходным данным построения) диалогового окна **Properties** (Свойства) проекта, вкладка **Compile** (Компилировать). Двоичные файлы, которые отсутствуют в этой папке, еще не были скомпилированы с использованием машинного кода .NET. Тщательно протестируйте свое приложение и проверьте все сценарии, включая сценарии сбоя, на каждой целевой платформе.
 
-Если приложение работает плохо (особенно в случаях, где он выдает [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) или [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) исключения во время выполнения), следуйте инструкциям в следующем раздел, [Step 4: Вручную разрешите отсутствующие метаданные](#Step4). Включение исключений первого шанса может помочь в обнаружении этих ошибок.
+Если приложение работает неправильно (особенно в случаях, когда оно вызывает исключения [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) или [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) во время выполнения), следуйте инструкциям в следующем разделе, [шаг 4. Вручную разрешить отсутствующие](#Step4)метаданные. Включение исключений первого шанса может помочь в обнаружении этих ошибок.
 
-Когда Вы протестировали и отладка отладочных построений приложения, и вы уверены, что вы решили [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) и [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) исключения, необходимо протестировать приложение в качестве оптимизированного приложения .NET Native. Чтобы сделать это, измените настройку активного проекта с **Debug** (Отладка) на **Release**(Выпуск).
+После тестирования и отладки отладочных сборок приложения и уверенности в устранении исключений [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) и [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) следует протестировать приложение в качестве оптимизированного .NET Native приложения. Чтобы сделать это, измените настройку активного проекта с **Debug** (Отладка) на **Release**(Выпуск).
 
 <a name="Step4"></a>
 
-## <a name="step-4-manually-resolve-missing-metadata"></a>Шаг 4. Вручную разрешите отсутствующие метаданные
+## <a name="step-4-manually-resolve-missing-metadata"></a>Шаг 4. Вручную разрешить отсутствующие метаданные
 
-Наиболее распространенные ошибки, вы столкнетесь с помощью .NET Native, которые не встречаются на рабочем столе — это среда выполнения [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), или [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) исключение. В некоторых случаях отсутствие метаданных может проявляться в непредсказуемое поведение или даже сбоях приложений. В этом разделе рассматриваются отладка и устранения этих исключений путем добавления директив в файл директив среды выполнения. Сведения о директивах среды выполнения см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). После добавления директив среды выполнения необходимо снова [развернуть и протестировать ваше приложение](#Step3) и полностью устранить все новые исключения [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) и [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md).
+Наиболее распространенный сбой при .NET Native, который не встречается на рабочем столе, — это исключение времени выполнения [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)или [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . В некоторых случаях отсутствие метаданных может проявляться в непредсказуемое поведение или даже сбоях приложений. В этом разделе рассматриваются отладка и устранения этих исключений путем добавления директив в файл директив среды выполнения. Сведения о директивах среды выполнения см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). После добавления директив среды выполнения необходимо снова [развернуть и протестировать ваше приложение](#Step3) и полностью устранить все новые исключения [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) и [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md).
 
 > [!TIP]
 > Укажите директивы среды выполнения на высоком уровне, чтобы ваше приложение было устойчиво к изменениям кода.  Рекомендуется добавить директивы среды выполнения на уровне пространства имен и типов, а не на уровне членов. Обратите внимание, что может потребоваться компромисс между устойчивостью и большими по размеру двоичными файлами с более длительным временем компиляции.
@@ -113,7 +113,7 @@ ms.locfileid: "66052627"
   - Вызывает ли код метод, зависящий от отражения, когда доступен несколько лучший вариант?
 
 > [!NOTE]
-> Дополнительные сведения об устранении проблем, возникающих из-за различий в отражении и доступности метаданных в классических приложениях и машинного кода .NET, см. в разделе [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> Дополнительные сведения об обработке проблем, возникающих из-за различий в отражении и доступности метаданных в классических приложениях и .NET Native, см. в разделе [интерфейсы API, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
 Конкретные примеры обработки исключений и других проблем, возникающих при тестировании приложения, см. в:
 
@@ -126,7 +126,7 @@ ms.locfileid: "66052627"
 ## <a name="see-also"></a>См. также
 
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Установка .NET и конфигурация](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [Установка и настройка .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

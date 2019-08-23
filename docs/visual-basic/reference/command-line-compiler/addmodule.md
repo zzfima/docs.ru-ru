@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 2de5fe82f1969a2fdb305d45951d7d698252c0c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e0915a2534f950cec074632a59750c3f96b679d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962457"
 ---
 # <a name="-addmodule"></a>-addmodule
 Дает компилятору указание сделать всю информацию о типах из указанных файлов доступной компилируемому проекту.  
@@ -24,22 +24,22 @@ ms.locfileid: "61839226"
   
 ## <a name="arguments"></a>Аргументы  
  `fileList`  
- Обязательный. Разделенный запятыми список файлов, которые содержат метаданные, но не содержат манифестов сборки. Имена файлов, содержащие пробелы, которые должны быть заключены в кавычки (» «).  
+ Обязательный. Разделенный запятыми список файлов, содержащих метаданные, но не содержащих Манифесты сборки. Имена файлов, содержащие пробелы, должны быть заключены в кавычки ("").  
   
 ## <a name="remarks"></a>Примечания  
- Файлы, упорядоченные по `fileList` параметр должен быть создан с `-target:module` параметр, или с помощью другого компилятора эквивалентно `-target:module`.  
+ Файлы, перечисленные в `fileList` параметре, должны быть созданы `-target:module` с параметром или с `-target:module`другим эквивалентом компилятора.  
   
- Все модули, добавленные с помощью `-addmodule` во время выполнения должны находиться в том же каталоге, что и выходной файл. То есть можно указать модуль в любом каталоге во время компиляции, но во время выполнения он должен находиться в каталоге приложения. Если это не так, вы получаете <xref:System.TypeLoadException> ошибки.  
+ Все модули, добавленные с помощью `-addmodule` , должны находиться в одном каталоге с выходным файлом во время выполнения. Это значит, что модуль можно указать в любом каталоге во время компиляции, но во время выполнения модуль должен находиться в каталоге приложения. Если это не так, <xref:System.TypeLoadException> возникает ошибка.  
   
- При указании (явно или неявно) любой[-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) параметра, отличное от `-target:module` с `-addmodule`, файлов, передаваемый `-addmodule` становятся частью сборки проекта. Сборка необходима для проведения выходной файл, который имеет один или добавить дополнительные файлы с `-addmodule`.  
+ При указании (неявно или явно) любого[целевого параметра (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) `-addmodule`, отличного от `-target:module` , передаваемые `-addmodule` файлы становятся частью сборки проекта. Сборка необходима для запуска выходного файла, который содержит один или несколько файлов, добавленных `-addmodule`с помощью.  
   
  Используйте [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) для импорта метаданных из файла, содержащего сборку.  
   
 > [!NOTE]
->  `-addmodule` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+> Этот `-addmodule` параметр недоступен в среде разработки Visual Studio; он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- В следующем коде создается модуль.  
+ Следующий код создает модуль.  
   
  [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  
   
@@ -47,11 +47,11 @@ ms.locfileid: "61839226"
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- При запуске `t1`, он выводит `802`.  
+ При запуске `t1`он выводит `802`.  
   
 ## <a name="see-also"></a>См. также
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611470"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956048"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611470"
  При запуске проект XBAP откроется в окне браузера, а не в отдельном окне. При отладке XBAP из Visual Studio приложение запускается с разрешениями зоны Интернета и, таким образом, создает исключения безопасности, если эти разрешения превышены. Дополнительные сведения см. в разделах [Безопасность](../security-wpf.md) и [Безопасность частичного доверия в WPF](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Если вы не разрабатываете с помощью Visual Studio или хотите узнать больше о файлах проекта, см. раздел [Создание приложения WPF](building-a-wpf-application-wpf.md).  
+> Если вы не разрабатываете с помощью Visual Studio или хотите узнать больше о файлах проекта, см. раздел [Создание приложения WPF](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Развертывание XBAP  
@@ -174,7 +174,7 @@ ms.locfileid: "69611470"
 |Интернет|Сбой с сообщением "Доверие не оказано"|Подпишите приложение XBAP с помощью сертификата.|  
   
 > [!NOTE]
->  Поведение, описанное в предыдущей таблице, относится к приложениям XBAP с полным доверием, не следующим модели доверенного развертывания ClickOnce.  
+> Поведение, описанное в предыдущей таблице, относится к приложениям XBAP с полным доверием, не следующим модели доверенного развертывания ClickOnce.  
   
  Для развертывания XBAP с полным доверием рекомендуется использовать модель доверенного развертывания ClickOnce. Она позволяет XBAP получать полное доверие автоматически, независимо от зоны безопасности и не запрашивая подтверждение пользователя. При использовании этой модели приложение должно быть подписано сертификатом надежного издателя. Дополнительные сведения см. в разделах [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview) и [Знакомство с подписыванием кода](https://go.microsoft.com/fwlink/?LinkId=166327).  
   

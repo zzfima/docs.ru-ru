@@ -8,16 +8,16 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c7742f3e4691f29490e73b05616754415eac58
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775732"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953907"
 ---
 # <a name="use-caching-in-ui-automation"></a>Использование кэширования в модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе показано, как реализовать кэширование шаблонов элементов управления и свойств <xref:System.Windows.Automation.AutomationElement> .  
   
@@ -33,9 +33,9 @@ ms.locfileid: "61775732"
   
 5. Задайте для свойства <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> значение <xref:System.Windows.Automation.AutomationElementMode.None> , если хотите повысить эффективность, не получая полную ссылку на объекты. (Это сделает невозможным получение текущих значений из этих объектов.)  
   
-6. Активируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Activate%2A> в `using` блока (`Using` в Microsoft Visual Basic .NET).  
+6. Активируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` внутри блока (`Using` в Microsoft Visual Basic .NET).  
   
- После получения объекта <xref:System.Windows.Automation.AutomationElement> или подписки на события деактивируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Pop%2A> (если использовался <xref:System.Windows.Automation.CacheRequest.Push%2A> ) или удалив объект, созданный <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Используйте <xref:System.Windows.Automation.CacheRequest.Activate%2A> в `using` блока (`Using` в Microsoft Visual Basic .NET).  
+ После получения объекта <xref:System.Windows.Automation.AutomationElement> или подписки на события деактивируйте запрос с помощью <xref:System.Windows.Automation.CacheRequest.Pop%2A> (если использовался <xref:System.Windows.Automation.CacheRequest.Push%2A> ) или удалив объект, созданный <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Используйте <xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` в блоке (`Using` в Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Кэширование свойств AutomationElement  
   

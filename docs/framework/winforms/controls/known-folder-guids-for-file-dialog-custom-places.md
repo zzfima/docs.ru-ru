@@ -6,62 +6,62 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758773"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962589"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
-Использовании <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известную папку при добавлении папок в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определяются в файле KnownFolders.h в пакете SDK для Windows.  
+При добавлении папок <xref:System.Guid> в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекцию используется [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] для указания известной папки. Идентификаторы GUID известных папок не чувствительны к регистру и определяются в файле Кновнфолдерс. h в Windows SDK.  
   
 > [!NOTE]
->  В некоторых случаях известную папку добавляемого <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> не будет отображаться в **Избранные ссылки** области. Например если указанная известная папка отсутствует на компьютере, на котором выполняется приложение, известную папку не указывается.  
+> В некоторых случаях известная папка, добавленная в <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> , не будет отображаться в области « **Избранные ссылки** ». Например, если указанная известная папка отсутствует на компьютере, на котором работает приложение, то известная папка не отображается.  
   
 ## <a name="list-of-guids"></a>Список идентификаторов GUID  
- В следующей таблице перечислены [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известных папок и связанные с ними <xref:System.Guid>.  
+ В следующей таблице перечислены [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известные папки и связанные <xref:System.Guid>с ними имена.  
   
- AddNewPrograms  
+ аддневпрограмс  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
   
- AdminTools  
+ админтулс  
  724EF170-A42D-4FEF-9F26-B60E846FBA4F  
   
- AppDataLow  
+ аппдаталов  
  A520A1A4-1780-4FF6-BD18-167343C5AF16  
   
- AppUpdates  
+ аппупдатес  
  A305CE99-F527-492B-8B1A-7E76FA98D6E4  
   
- CDBurning  
+ кдбурнинг  
  9E52AB10-F80D-49DF-ACB8-4330F5687855  
   
- ChangeRemovePrograms  
+ чанжеремовепрограмс  
  DF7266AC-9274-4867-8D55-3BD661DE872D  
   
- CommonAdminTools  
+ коммонадминтулс  
  D0384E7D-BAC3-4797-8F14-CBA229B392B5  
   
- CommonOEMLinks  
- C1BAE2D0-10DF-4334-BEDD-7AA20B227A9D  
+ коммоноемлинкс  
+ C1BAE2D0-10DF-4334-7AA20B227A9D  
   
- CommonPrograms  
+ коммонпрограмс  
  0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8  
   
- CommonStartMenu  
+ коммонстартмену  
  A4115719-D62E-491D-AA7C-E74B8BE3B067  
   
- CommonStartup  
+ коммонстартуп  
  82A5EA35-D9CD-47C5-9629-E15D2F714E6E  
   
- CommonTemplates  
+ коммонтемплатес  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
  Компьютер  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- Конфликт  
+ Конфликта  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  Подключения  
@@ -70,7 +70,7 @@ ms.locfileid: "66758773"
  Контакты  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- Панели управления  
+ контролпанел  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  Файлы cookie  
@@ -94,7 +94,7 @@ ms.locfileid: "66758773"
  Игры  
  CAC52C1A-B53D-4EDC-92D7-6B2E8AC19434  
   
- GameTasks  
+ гаметаскс  
  054FAE61-4DD8-4787-80B6-090220C4B700  
   
  Журнал  
@@ -103,7 +103,7 @@ ms.locfileid: "66758773"
  Интернет  
  4D9F7874-4E0C-4904-967B-40B0D20C3E4B  
   
- InternetCache  
+ интернеткаче  
  352481E8-33BE-4251-BA85-6007CAEDCF9D  
   
  Ссылки  
@@ -112,46 +112,46 @@ ms.locfileid: "66758773"
  LocalAppData  
  F1B32785-6FBA-4FCF-9D55-7B8E7F157091  
   
- LocalizedResourcesDir  
+ локализедресаурцесдир  
  2A00375E-224C-49DE-B8D1-440DF7EF3DDC  
   
  Музыка  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- NetHood  
+ несуд  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
- Сеть  
+ Network  
  D20BEEC4-5CA8-4905-AE3B-BF251EA09B53  
   
- OriginalImages  
+ оригиналимажес  
  2C36C0AA-5812-4B87-BFD0-4CD0DFB19B39  
   
- PhotoAlbums  
+ Фотоальбомы  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- Изображения  
+ Фотографии  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
  Списки воспроизведения  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
- Принтеры  
+ Столь  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
- PrintHood  
+ принсуд  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
  Профиль  
  5E6C858F-0E22-4760-9AFE-EA3317B67173  
   
- ProgramData  
+ Папка ProgramData  
  62AB5D82-FDC1-4DC3-A9DD-070D1D495D97  
   
  ProgramFiles  
  905E63B6-C1BF-494E-B29C-65B732D3D21A  
   
- ProgramFilesCommon  
+ програмфилескоммон  
  F7F1ED05-9F6D-47A2-AAAE-29D317C6F066  
   
  ProgramFilesCommonX64  
@@ -172,61 +172,61 @@ ms.locfileid: "66758773"
  Public  
  DFDF76A2-C82A-4D63-906A-5644AC457385  
   
- PublicDesktop  
+ публикдесктоп  
  C4AA340D-F20F-4863-AFEF-F87EF2E6BA25  
   
- PublicDocuments  
+ публикдокументс  
  ED4824AF-DCE4-45A8-81E2-FC7965083634  
   
- PublicDownloads  
+ публикдовнлоадс  
  3D644C9B-1FB8-4F30-9B45-F670235F79C0  
   
- PublicGameTasks  
+ публикгаметаскс  
  DEBF2536-E1A8-4C59-B6A2-414586476AEA  
   
- PublicMusic  
+ публикмусик  
  3214FAB5-9757-4298-BB61-92A9DEAA44FF  
   
- PublicPictures  
+ публикпиктурес  
  B6EBFB86-6907-413C-9AF7-4FC2ABF07CC5  
   
- PublicVideos  
+ публиквидеос  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- Быстрый запуск  
+ Быстрого  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  Последние  
  AE50C081-EBD2-438A-8655-8A092E34987A  
   
- RecordedTV  
+ рекордедтв  
  BD85E001-112E-431E-983B-7B15AC09FFF1  
   
  RecycleBin  
  B7534046-3ECB-4C18-BE4E-64CD4CB7D6AC  
   
- ResourceDir  
+ ресаурцедир  
  8AD10C31-2ADB-4296-A8F7-E4701232C972  
   
- RoamingAppData  
+ роамингаппдата  
  3EB685DB-65F9-4CF6-A03A-E3EF65729F3D  
   
- SampleMusic  
+ самплемусик  
  B250C668-F57D-4EE1-A63C-290EE7D1AA1F  
   
- SamplePictures  
+ самплепиктурес  
  C4900540-2379-4C75-844B-64E6FAF8716B  
   
- SamplePlaylists  
+ самплеплайлистс  
  15CA69B3-30EE-49C1-ACE1-6B5EC372AFB5  
   
- SampleVideos  
+ самплевидеос  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- С сохраненными играми  
+ саведгамес  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- SavedSearches  
+ саведсеарчес  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -235,31 +235,31 @@ ms.locfileid: "66758773"
  SEARCH_MAPI  
  98EC0E18-2098-4D44-8644-66979315A281  
   
- SearchHome  
+ сеарчхоме  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
- Отправить  
+ Cервера  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
- SidebarDefaultParts  
+ сидебардефаултпартс  
  7B396E54-9EC5-4300-BE0A-2482EBAE1A26  
   
- SidebarParts  
+ сидебарпартс  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Меню "Пуск"  
+ Связывается  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Запуск  
  B97D20BB-F46A-4C97-BA10-5E3608430854  
   
- SyncManager  
+ синкманажер  
  43668BF8-C14E-49B2-97C9-747784D784B7  
   
- SyncResults  
+ синкресултс  
  289A9A43-BE44-4057-A41B-587A76D7E7F9  
   
- SyncSetup  
+ синксетуп  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
   
  Система  
@@ -271,13 +271,13 @@ ms.locfileid: "66758773"
  Шаблоны  
  A63293E8-664E-48DB-A079-DF759E0509F7  
   
- TreeProperties  
+ трипропертиес  
  5B3749AD-B49F-49C1-83EB-15370FBD4882  
   
- UserProfiles  
+ UserProfile  
  0762D272-C50A-4BB0-A382-697DCD729B80  
   
- UsersFiles  
+ усерсфилес  
  F3CE0F7C-4901-4ACC-8648-D5D44B04EF8F  
   
  Видеоролики  
@@ -289,4 +289,4 @@ ms.locfileid: "66758773"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Практическое руководство. Добавление пользовательских размещений в диалоговое окно файла](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Практическое руководство. Диалоговое окно "Добавление пользовательского размещения в файл"](how-to-add-a-custom-place-to-a-file-dialog-box.md)

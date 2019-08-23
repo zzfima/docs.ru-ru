@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950754"
 ---
 # <a name="pack-uris-in-wpf"></a>URI типа "pack" в WPF
 
@@ -85,7 +85,7 @@ ms.locfileid: "68796757"
 
 ## <a name="resource-file-pack-uris"></a>URI типа "pack" для файла ресурсов
 
-Файлы ресурсов настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` элементы и компилируются в сборки. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]поддерживает создание пакетов [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , которое можно использовать для обнаружения файлов ресурсов, которые либо компилируются в локальную сборку, либо компилируются в сборку, на которую ссылается локальная сборка.
+Файлы ресурсов настраиваются как элементы `Resource` MSBuild и компилируются в сборки. WPF поддерживает создание URI типа "Pack", которые можно использовать для обнаружения файлов ресурсов, которые либо компилируются в локальную сборку, либо компилируются в сборку, на которую ссылается локальная сборка.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -95,7 +95,7 @@ ms.locfileid: "68796757"
 
 - **Центр**: application:///.
 
-- **Путь**: Имя файла ресурсов, включая путь, относительно корневой папки проекта локальной сборки.
+- **Путь**. Имя файла ресурсов, включая путь, относительно корневой папки проекта локальной сборки.
 
 В следующем примере показан пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для файла ресурсов, который находится в корне папки проекта локальной сборки.
 
@@ -113,7 +113,7 @@ ms.locfileid: "68796757"
 
 - **Центр**: application:///.
 
-- **Путь**: Имя файла ресурсов, компилируемого в указанную сборку. Путь должен соответствовать следующему формату:
+- **Путь**. Имя файла ресурсов, компилируемого в указанную сборку. Путь должен соответствовать следующему формату:
 
   *Ассемблишортнаме* { *; Версия*] { *; PublicKey*]; компонент или*путь*
 
@@ -151,7 +151,7 @@ ms.locfileid: "68796757"
 
 - **Центр**: application:///.
 
-- **Путь**: Имя файла содержимого, включая путь относительно расположения файловой системы главной исполняемой сборки приложения.
+- **Путь**. Имя файла содержимого, включая путь относительно расположения файловой системы главной исполняемой сборки приложения.
 
 В следующем примере показан пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для файла содержимого, расположенного в той же папке, что и исполняемая сборка.
 
@@ -172,7 +172,7 @@ ms.locfileid: "68796757"
 
 - **Центр**: siteoforigin:///.
 
-- **Путь**: Имя файла исходного узла, включая его путь относительно расположения, из которого была запущена исполняемая сборка.
+- **Путь**. Имя файла исходного узла, включая его путь относительно расположения, из которого была запущена исполняемая сборка.
 
 В следующем примере показан пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для файла исходного узла, хранящегося в расположении, из которого запускается исполняемая сборка.
 
@@ -186,9 +186,9 @@ ms.locfileid: "68796757"
 
 ## <a name="page-files"></a>Файлы подкачки
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]файлы, настроенные как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементы, компилируются в сборки таким же образом, как и файлы ресурсов. Следовательно, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементы можно определить с помощью Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] для файлов ресурсов.
+Файлы XAML, настроенные как элементы `Page` MSBuild, компилируются в сборки таким же образом, как и файлы ресурсов. Следовательно, элементы `Page` MSBuild можно определить с помощью URI типа "Pack" для файлов ресурсов.
 
-Типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлов, которые обычно настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементы, имеют один из следующих элементов в качестве корневого элемента:
+Типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлов, которые обычно настраиваются как элементы MSBuild`Page` , имеют в качестве корневого элемента один из следующих элементов:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

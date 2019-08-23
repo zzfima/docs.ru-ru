@@ -2,21 +2,21 @@
 title: Элемент <security> для <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 15740144b0aad7eb2798db4712e4769d08d893a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61b56ca1fae5c328cda0bbebef4026f0784095a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936824"
 ---
-# <a name="security-element-of-ws2007federationhttpbinding"></a>\<Безопасность > элемент \<ws2007FederationHttpBinding >
-Определяет параметры безопасности [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) элемент.  
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<Элемент > безопасности > \<ws2007FederationHttpBinding
+Определяет параметры [ \<безопасности элемента ws2007FederationHttpBinding >](ws2007federationhttpbinding.md) .  
   
- \<system.ServiceModel>  
+ \<системой. > ServiceModel  
 \<привязки >  
 \<ws2007FederationHttpBinding >  
 \<Привязка >  
-\<Безопасность >  
+\<> безопасности  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ ms.locfileid: "61670551"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Нет|Во время передачи сообщение SOAP не защищено.|  
+|Отсутствуют|Во время передачи сообщение SOAP не защищено.|  
 |Сообщение|Целостность, конфиденциальность, проверка подлинности сервера и проверка подлинности клиента обеспечиваются с помощью средств безопасности сообщений SOAP. По умолчанию текст сообщений шифруется и подписывается. Служба должна быть настроена с использованием сертификата. Проверка подлинности клиента основана на маркере, выданного клиенту службой маркеров безопасности.|  
 |TransportWithMessageCredential|Целостность, конфиденциальность и проверка подлинности сервера обеспечиваются с помощью HTTPS. Служба должна быть настроена с использованием сертификата. Проверка подлинности клиента выполняется с помощью средств безопасности сообщений SOAP и основана на маркере, выданном клиенту службой маркеров безопасности.|  
   
@@ -56,13 +56,13 @@ ms.locfileid: "61670551"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Определяет параметры безопасности уровня сообщений. Это элемент типа <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<> сообщения](message-of-ws2007httpbinding.md)|Определяет параметры безопасности уровня сообщений. Это элемент типа <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности привязки [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности [ \<привязки > WSDualHttpBinding](wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>См. также
 
@@ -70,10 +70,10 @@ ms.locfileid: "61670551"
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [Практическое руководство. Создание WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Привязки](../../../../../docs/framework/wcf/bindings.md)
-- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Практическое руководство. Создание WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Выбор типа учетных данных](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Привязки](../../../wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../misc/binding.md)

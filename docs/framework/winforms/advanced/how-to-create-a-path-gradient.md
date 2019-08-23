@@ -9,108 +9,108 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8399a56fca87704e10456a4cf8109d7c80d4db45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964404"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Практическое руководство. Создание градиента вдоль контура
-<xref:System.Drawing.Drawing2D.PathGradientBrush> Класс позволяет настраивать то, как вы постепенно изменение цвета заливки фигуры. Например можно указать один цвет для центра контура, а другой — для границы пути. Можно также определить отдельные цвета для каждой из нескольких точек на границе пути.  
+<xref:System.Drawing.Drawing2D.PathGradientBrush> Класс позволяет настроить способ заливки фигуры с постепенно изменяющимися цветами. Например, можно указать один цвет для центра контура и другой цвет для границы пути. Можно также указать отдельные цвета для каждой из нескольких точек вдоль границы пути.  
   
 > [!NOTE]
->  В GDI +, путь представляет собой последовательность линий и кривых, поддерживаемых <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. Дополнительные сведения о GDI + пути, см. в разделе [контуры в GDI +](graphics-paths-in-gdi.md) и [Constructing и рисование контуров](constructing-and-drawing-paths.md).  
+> В GDI+ путь представляет собой последовательность линий и кривых, <xref:System.Drawing.Drawing2D.GraphicsPath> обслуживаемых объектом. Дополнительные сведения о путях GDI+ см. [в разделе графические пути в GDI+](graphics-paths-in-gdi.md) , [Создание и рисование контуров](constructing-and-drawing-paths.md).  
 
-В этой статье относятся методы, вызываемые из элемента управления <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
+Примеры в этой статье — это методы, которые вызываются из обработчика <xref:System.Windows.Forms.Control.Paint> событий элемента управления.  
 
-### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Заливка эллипса с градиента вдоль контура  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Заливка эллипса с помощью градиента контура  
   
-- В следующем примере заполняется эллипса с кисти градиента контура. Имеет значение центрального цвета на синем и граничным цветом — зеленовато-голубой. На следующем рисунке заполненного эллипса.  
+- В следующем примере заливка эллипса осуществляется с помощью кисти градиента вдоль пути. Центральная цвет устанавливается синим цветом, а цвет границы — голубым. На следующем рисунке показан закрашенный эллипс.  
   
-     ![Градиент контура осуществляется заливка эллипса.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
+     ![Градиентный контур заполняет эллипс.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
-     По умолчанию кисти градиента контура не распространяется за пределами границы пути. При использовании пути градиентной кисти для заливки фигуры, которая выходит за пределы границ пути области экрана за пределами контура заполняться не будет.  
+     По умолчанию кисть градиента контура не выходит за границы пути. При использовании кисти градиента вдоль пути для заливки фигуры, выходящей за пределы контура, область экрана за пределами контура не будет заполнена.  
   
-     На следующем рисунке показано, что происходит при изменении <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> вызов в следующий код, чтобы `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     На следующем рисунке показано, что происходит при изменении <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> вызова в следующем коде на: `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`  
   
-     ![Градиент контура выходили за пределы границ пути.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
+     ![Градиентный путь, превышающий границу пути.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> e, который является параметром из <xref:System.Windows.Forms.PaintEventHandler>.  
+     Предыдущий пример кода предназначен для использования с Windows Forms, и для него требуется <xref:System.Windows.Forms.PaintEventArgs> e, который является <xref:System.Windows.Forms.PaintEventHandler>параметром.  
   
 ### <a name="to-specify-points-on-the-boundary"></a>Указание точек на границе  
   
-- В следующем примере создается градиентной кисти путь из пути форме четырехконечной звезды. В коде устанавливается <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> свойство, которое задает цвет в центре звезды как красный. Затем устанавливается <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> свойство, чтобы указать различные цвета (хранящиеся в `colors` массива) отдельных точек в `points` массива. Последняя инструкция кода заливку пути в форме звезды с помощью кисти градиента контура.  
+- В следующем примере кисть градиента контура строится на основе траектории в форме звезды. В коде задается <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> свойство, которое устанавливает красный цвет в центроид звезды. Затем в коде задается <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> свойство для указания различных цветов (хранящихся `colors` в массиве) в отдельных точках `points` массива. Окончательный оператор Code заполняет траекторию в форме звезды с помощью кисти градиента вдоль пути.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
-- В следующем примере рисуется градиента вдоль контура без <xref:System.Drawing.Drawing2D.GraphicsPath> в коде. Конкретного <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> конструктор в примере, получает массив точек, но не требует <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. Кроме того, обратите внимание, что <xref:System.Drawing.Drawing2D.PathGradientBrush> используется для заливки прямоугольника, а не путь. Прямоугольник больше, чем замкнутый контур, используемый для задания кисти, поэтому часть прямоугольника не закрашивается кистью. Ниже показан прямоугольник (пунктирная линия) и часть прямоугольника, созданный при помощи кисти градиента контура: 
+- В следующем примере градиент контура рисуется без <xref:System.Drawing.Drawing2D.GraphicsPath> объекта в коде. Определенный <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> конструктор в примере получает массив точек, но не <xref:System.Drawing.Drawing2D.GraphicsPath> требует объекта. Кроме того, обратите <xref:System.Drawing.Drawing2D.PathGradientBrush> внимание, что объект используется для заполнения прямоугольника, а не контура. Прямоугольник больше, чем замкнутый контур, используемый для определения кисти, поэтому часть прямоугольника не закрашивается кистью. На следующем рисунке показан прямоугольник (пунктирная линия) и часть прямоугольника, закрашенная кистью градиента вдоль пути: 
   
-     ![Часть градиента, созданный при помощи кисти градиента контура.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
+     ![Часть градиента, закрашенная кистью градиента вдоль пути.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### <a name="to-customize-a-path-gradient"></a>Чтобы настроить градиента вдоль контура  
+### <a name="to-customize-a-path-gradient"></a>Настройка градиента контура  
   
-- Одним из способов настройки кисти градиента контура является установка его <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> свойство. Это свойство определяет внутренний путь, расположенную внутри главный путь. Центрального цвета везде в пределах этого внутреннего пути, а не только в центральной точке.  
+- Одним из способов настройки кисти градиента контура является установка ее <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> свойства. Масштабирование фокуса определяет внутренний путь, который находится внутри основного пути. Центральный цвет отображается везде внутри этого внутреннего пути, а не только в центральной точке.  
   
-     В следующем примере создается на основе эллиптической пути кисти градиента контура. Код задает в качестве цвета границы на синий, устанавливает центрального цвета на голубой и затем использует путь градиентной кисти для заливки по контуру.  
+     В следующем примере создается кисть градиента контура на основе эллиптического пути. Код устанавливает синий цвет границы, устанавливает цвет центрального цвета в голубой, а затем использует кисть градиента вдоль пути для заполнения эллиптического контура.  
   
-     Затем код задает коэффициенты масштабирования кисти градиента контура. Коэффициент масштабирования по x имеет значение 0.3 и масштабирования по оси y имеет значение 0,8. Этот код вызывает <xref:System.Drawing.Graphics.TranslateTransform%2A> метод <xref:System.Drawing.Graphics> объекта таким образом, последующий вызов <xref:System.Drawing.Graphics.FillPath%2A> осуществляется заливка эллипса, который находится справа от первого эллипса.  
+     Затем код задает масштабное масштабирование кисти градиента вдоль пути. Масштаб фокуса x устанавливается равным 0,3, а масштаб фокуса по оси y устанавливается равным 0,8. Код вызывает <xref:System.Drawing.Graphics.TranslateTransform%2A> метод <xref:System.Drawing.Graphics> объекта <xref:System.Drawing.Graphics.FillPath%2A> , чтобы последующий вызов заполнил эллипс, расположенный справа от первого эллипса.  
   
-     Чтобы увидеть эффект коэффициенты масштабирования, представьте себе небольшой эллипса, который совпадает с основной эллипс центром. Небольшой (внутренний) эллипс представляет собой основной эллипс, вдвое 0.3 и по вертикали с коэффициентом 0,8 горизонтально масштабировать (относительно ее центра). При перемещении от границы внешнего эллипса к границе внутреннего эллипса цвет плавно меняется от синего на голубой. При перемещении от границы внутреннего эллипса к общему центру зеленовато-голубой цвет сохраняется.  
+     Чтобы увидеть результат масштабирования фокуса, представьте себе маленький эллипс, который использует его центр с основным эллипсом. Маленький (внутренний) эллипс — это основной эллипс (по центру) по горизонтали на 0,3 и вертикальный коэффициент, равный 0,8. При переходе от границы внешнего эллипса к границе внутреннего эллипса цвет постепенно меняется от синего к голубому. При переходе от границы внутреннего эллипса к общему центру цвет остается голубым.  
   
-     На рисунке ниже показан результат выполнения кода. Эллипс в левой части — голубой цвет только в центральной точки. Эллипс в правой — голубой везде в пределах внутреннего пути.  
+     На рисунке ниже показан результат выполнения кода. Эллипс слева имеет голубой цвет только в центральной точке. Эллипс справа — это голубой цвет везде внутри внутреннего пути.  
   
- ![Эффект градиента для коэффициенты масштабирования](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
+ ![Градиентный эффекты шкалы фокуса](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
 ### <a name="to-customize-with-interpolation"></a>Настройка с интерполяцией  
   
-- Чтобы указать массив интерполяции цветов и позиций интерполяции является другим способом настройки кисти градиента контура.  
+- Другой способ настройки кисти градиента контура заключается в том, чтобы указать массив цветов интерполяции и массив позиций интерполяции.  
   
-     В следующем примере создается исходя треугольником кисти градиента контура. В коде устанавливается <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> свойство кисти градиента контура, чтобы указать массив цветов интерполяции (темно-зеленый, голубой, синий), а также массив позиций интерполяции (0, 0,25, 1). При перемещении от границы треугольника к центральной точке цвет плавно меняется от темно-зеленый голубой, а затем из голубой цвет на синий. Изменение темно-зеленого цвета на голубой происходит на 25 процентов от расстояния от темно-зеленого до синего.  
+     В следующем примере создается кисть градиента контура на основе треугольника. Код задает <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> свойство кисти градиента контура, чтобы указать массив цветов интерполяции (темно-зеленый, голубой, синий) и массив позиций интерполяции (0, 0,25, 1). При переходе от границы треугольника к центральной точке цвет меняется постепенно с темно-зеленого на голубой, а затем с голубого на синий. Изменение с темно-зеленого на голубой происходит в 25% от темно-зеленого до синего.  
   
-     Ниже показан треугольник, заполненный градиентной кисти пользовательский путь.  
+     На следующем рисунке показан треугольник, закрашенный с помощью настраиваемой кисти градиента пути.  
   
-     ![Треугольник заполняется пользовательский путь градиентной кисти.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
+     ![Треугольник заполняется настраиваемой градиентной кистью пути.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### <a name="to-set-the-center-point"></a>Чтобы задать точку center  
+### <a name="to-set-the-center-point"></a>Задание центральной точки  
   
-- По умолчанию центральная точка градиентной кисти путь находится в центре путь, используемый для создания кисти. Можно изменить расположение точки center, задав <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> свойство <xref:System.Drawing.Drawing2D.PathGradientBrush> класса.  
+- По умолчанию Центральная точка кисти градиента контура находится в центроид пути, используемого для создания кисти. Расположение центральной точки можно изменить, задав <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> свойство <xref:System.Drawing.Drawing2D.PathGradientBrush> класса.  
   
-     В следующем примере создается на основе эллиптического кисти градиента контура. Центром эллипса является точка (70, 35), но центральную точку градиента кисти путь имеет значение (120, 40).  
+     В следующем примере создается кисть градиента контура на основе эллипса. Центр эллипса находится в точке (70, 35), но Центральная точка кисти градиента контура имеет значение (120, 40).  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     Ниже показан закрашенный эллипс и центральную точку градиента кисти пути:  
+     На следующем рисунке показан закрашенный эллипс и Центральная точка кисти градиента вдоль пути:  
   
-     ![Градиент контура с помощью закрашенный эллипс и центральную точку.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
+     ![Градиентный контур с закрашенным эллипсом и Центральной точкой.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
-- Можно задать центральную точку градиента кисти путь в расположение вне пути, который использовался для создания кисти. В следующем примере заменяется вызов для установки <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> свойство в приведенном выше коде.  
+- Можно задать центральную точку кисти градиента контура, расположенную за пределами пути, который использовался для создания кисти. В следующем примере вызывается замена вызова для задания <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> свойства в предыдущем коде.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     На следующем рисунке показан выходные данные этого изменения:  
+     На следующем рисунке показаны выходные данные с этим изменением:  
   
-     ![Градиент контура с центральной точкой за пределами контура.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
+     ![Градиентный путь с центральной точкой за пределами пути.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
-     В приведенном выше рисунке в крайней правой точки эллипса не являются чисто синими (несмотря на то, что они очень близки). Цвета градиента располагаются так, как если бы заливки достиг точки (145, 35), где цвет является чисто синим (0, 0, 255). Никогда не дойти до точки (145, 35), так как путь Градиентная кисть закрашивает только в пределах заданного пути.  
+     На предыдущем рисунке точки в дальней правой части эллипса не являются чисто синими (хотя они очень близки). Цвета в градиенте размещаются, как если бы заливка достигла точки (145, 35), где цвет будет чистым синим (0, 0, 255). Но заливка никогда не достигает (145, 35), так как кисть градиента контура рисует только внутри ее контура.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и они требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
+ Приведенные выше примеры предназначены для использования с Windows Forms и им требуется <xref:System.Windows.Forms.PaintEventArgs> `e`, который <xref:System.Windows.Forms.Control.Paint> является параметром обработчика событий.  
   
 ## <a name="see-also"></a>См. также
 

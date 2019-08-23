@@ -2,12 +2,12 @@
 title: Защита приложений ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963119"
 ---
 # <a name="securing-adonet-applications"></a>Защита приложений ADO.NET
 При написании безопасного приложения ADO.NET следует не просто избегать обычных проблем кодирования, таких как отсутствие проверки входных данных пользователя. В приложении, в котором выполняется обращение к данным, много потенциально уязвимых мест, которые атакующий может использовать для получения конфиденциальных данных, манипулирования ими или их уничтожения. Поэтому важно понимать все аспекты безопасности, от моделирования угроз на этапе проектирования приложения до развертывания и текущего обслуживания.  
@@ -39,7 +39,7 @@ ms.locfileid: "61664198"
  [Вопросы безопасности](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  Описывает средства безопасности для приложений Entity Framework.  
   
- [Безопасность](../../../../docs/standard/security/index.md)  
+ [Безопасность](../../../standard/security/index.md)  
  Содержит ссылки на статьи, в которых описываются все аспекты безопасности в .NET.  
   
  [Средства обеспечения безопасности](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  

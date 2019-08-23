@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3680721c70ab69776c973913d929f7bdd9db3909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccd73963302ae99c7d5d1a7201bc77c4544363f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937900"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>Метод IHostAssemblyManager::GetNonHostStoreAssemblies
-Получает указатель интерфейса на [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , представляющий список сборок, на которые оно ожидает общеязыковой среды выполнения (CLR) для загрузки.  
+Возвращает указатель интерфейса на объект [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , представляющий список сборок, которые должны загружаться хостом в среде CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,42 +37,42 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>Параметры  
  `ppReferenceList`  
- [out] Указатель на адрес `ICLRAssemblyReferenceList` , содержащий список ссылок на сборки, которые, среда CLR для загрузки.  
+ заполняет Указатель на адрес `ICLRAssemblyReferenceList` объекта, содержащий список ссылок на сборки, которые узел загружает в среду CLR.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Не хватает памяти была доступна для создания списка ссылок для запрошенного `ICLRAssemblyReferenceList`.|  
+|S_OK|`GetNonHostStoreAssemblies`успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Недостаточно свободной памяти для создания списка ссылок для запрошенного `ICLRAssemblyReferenceList`объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- Среда CLR разрешает ссылки, используя следующий набор правил:  
+ Среда CLR разрешает ссылки с помощью следующего набора рекомендаций:  
   
-- Во-первых, она учитывает список ссылок на сборки, возвращенный `GetNonHostStoreAssemblies`.  
+- Во первых, он обращается к списку ссылок на сборки, `GetNonHostStoreAssemblies`возвращаемых.  
   
-- Если сборка присутствует в списке, среда CLR привязывает к нему обычным образом.  
+- Если сборка отображается в списке, среда CLR привязывает ее к обычному.  
   
-- Если сборка не отображается в списке, а узел предоставил реализацию [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), среда CLR вызывает [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) чтобы разрешить основному приложению предоставить сборка для привязки.  
+- Если сборка не отображается в списке и узел предоставил реализацию [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), среда CLR вызывает [IHostAssemblyStore::P ровидеассембли](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) , чтобы разрешить узлу предоставить сборку для привязки.  
   
-- В противном случае среде CLR не удается выполнить привязку к сборке.  
+- В противном случае среда CLR не сможет выполнить привязку к сборке.  
   
- Если основное приложение задает `ppReferenceList` значение NULL, среда CLR сначала проверяет глобальный кэш сборок, вызывает `ProvideAssembly`, а затем проверяет базу приложения для разрешения ссылки на сборку.  
+ Если узел `ppReferenceList` имеет значение null, среда CLR сначала проверяет глобальный кэш сборок, вызывает `ProvideAssembly`, а затем проверяет базу приложения для разрешения ссылки на сборку.  
   
 > [!NOTE]
->  При инициализации, среда CLR вызывает `GetNonHostStoreAssemblies` только один раз. Метод не вызывается снова.  
+> После инициализации среда CLR вызывает `GetNonHostStoreAssemblies` только один раз. Метод не вызывается снова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

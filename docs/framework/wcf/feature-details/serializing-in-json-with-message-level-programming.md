@@ -2,21 +2,21 @@
 title: Сериализация в Json с помощью программирования на уровне сообщений
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: fc2777d71376cc482b715898fa81ddf618bd8284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e8bb43b7a7755c20699aa377c9d60b0f285493b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949199"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>Сериализация в Json с помощью программирования на уровне сообщений
 WCF поддерживает сериализацию данных в формате JSON. В этом разделе описывается, как в WCF выполнить сериализацию типов с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
 ## <a name="typed-message-programming"></a>Программирование типизированных сообщений  
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> используется, когда к операции службы применяется атрибут <xref:System.ServiceModel.Web.WebGetAttribute> или атрибут <xref:System.ServiceModel.Web.WebInvokeAttribute>. Оба атрибута позволяют задать формат запроса `RequestFormat` и формат ответа `ResponseFormat`. Для использования формата JSON для запросов и ответов. Задайте для обоих параметров значение `WebMessageFormat.Json`.  Чтобы использовать JSON, необходимо использовать <xref:System.ServiceModel.WebHttpBinding>, которая автоматически настраивает <xref:System.ServiceModel.Description.WebHttpBehavior>. Дополнительные сведения о сериализации WCF см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md). Дополнительные сведения о JSON и WCF см. в разделе [станция техобслуживания - введение в RESTful Services с помощью WCF](https://msdn.microsoft.com/magazine/dd315413.aspx).  
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> используется, когда к операции службы применяется атрибут <xref:System.ServiceModel.Web.WebGetAttribute> или атрибут <xref:System.ServiceModel.Web.WebInvokeAttribute>. Оба атрибута позволяют задать формат запроса `RequestFormat` и формат ответа `ResponseFormat`. Для использования JSON в запросах и ответах. Задайте для `WebMessageFormat.Json`обоих свойств значение.  Чтобы использовать JSON, необходимо использовать <xref:System.ServiceModel.WebHttpBinding>, который автоматически настраивает. <xref:System.ServiceModel.Description.WebHttpBehavior> Дополнительные сведения о сериализации WCF см. в разделе [сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md). Дополнительные сведения о JSON и WCF см. в разделе [служебная станция — введение в службы RESTful с помощью WCF](https://msdn.microsoft.com/magazine/dd315413.aspx).  
   
 > [!IMPORTANT]
->  Для использования с JSON требуется привязка <xref:System.ServiceModel.WebHttpBinding> и поведение <xref:System.ServiceModel.Description.WebHttpBehavior>, которые не поддерживают связь по протоколу SOAP. Службы, взаимодействующие с <xref:System.ServiceModel.WebHttpBinding> не поддерживают предоставление метаданных службы, поэтому вы не сможете использовать функции добавления служебной ссылки Visual Studio или средство командной строки svcutil для создания клиентского прокси. Дополнительные сведения, как возможности программного вызова служб, использующих <xref:System.ServiceModel.WebHttpBinding>, см. в разделе [как использовать службы REST с WCF](https://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx).  
+> Для использования с JSON требуется привязка <xref:System.ServiceModel.WebHttpBinding> и поведение <xref:System.ServiceModel.Description.WebHttpBehavior>, которые не поддерживают связь по протоколу SOAP. Службы, взаимодействующие <xref:System.ServiceModel.WebHttpBinding> с, не поддерживают предоставление метаданных службы, поэтому вы не сможете использовать функциональные возможности Visual Studio Добавление ссылки на службу или программу командной строки Svcutil для создания прокси на стороне клиента. Дополнительные сведения о программном вызове служб, использующих <xref:System.ServiceModel.WebHttpBinding>, см. в разделе Использование [служб RESTful с WCF](https://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx).  
   
 ## <a name="untyped-message-programming"></a>Программирование нетипизированных сообщений  
  При работе напрямую с объектами нетипизированного сообщения следует явно задать свойства нетипизированного сообщения для его сериализации в виде JSON. В следующем фрагменте кода показано, как это сделать.  

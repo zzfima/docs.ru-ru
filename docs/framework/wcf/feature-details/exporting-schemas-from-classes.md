@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 5365c5274d2810f8fd93f81f10bbedf903756e0b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3db3cc1c529ab40bf775c06a5128e4dabf3c8a56
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586664"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963656"
 ---
 # <a name="exporting-schemas-from-classes"></a>Экспорт схем из классов
 Чтобы создать схемы языка определения схемы XML (XSD) из классов, используемых в модели контракта данных, используйте класс <xref:System.Runtime.Serialization.XsdDataContractExporter> . В данном разделе описывается процесс создания схем.  
@@ -21,7 +21,7 @@ ms.locfileid: "65586664"
 ## <a name="the-export-process"></a>Процесс экспорта  
  Процесс экспорта схемы начинается с одного или нескольких типов, что приводит к созданию класса <xref:System.Xml.Schema.XmlSchemaSet> , описывающего XML-проекцию этих типов.  
   
- `XmlSchemaSet` Входит из платформы .NET Framework объектной модели схемы (SOM), представляющий собой набор документов схемы XSD. Чтобы создать документы XSD из класса `XmlSchemaSet`, используйте коллекцию схем из свойства <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> класса `XmlSchemaSet` . Затем сериализуйте каждый объект <xref:System.Xml.Schema.XmlSchema> с помощью сериализатора <xref:System.Xml.Serialization.XmlSerializer>.  
+ Компонент `XmlSchemaSet` является частью модели объектов схемы (SOM) .NET Framework, представляющей набор документов XSD-схемы. Чтобы создать документы XSD из класса `XmlSchemaSet`, используйте коллекцию схем из свойства <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> класса `XmlSchemaSet` . Затем сериализуйте каждый объект <xref:System.Xml.Schema.XmlSchema> с помощью сериализатора <xref:System.Xml.Serialization.XmlSerializer>.  
   
 #### <a name="to-export-schemas"></a>Экспорт схем  
   
@@ -36,16 +36,16 @@ ms.locfileid: "65586664"
      При нескольких вызовах метода `Export` в один и тот же объект `XmlSchemaSet`добавляется несколько типов. Тип не создается в объекте `XmlSchemaSet` , если он уже имеется в нем. Следовательно, рекомендуется вызывать метод `Export` несколько раз в одном и том же классе `XsdDataContractExporter` , а не создавать несколько экземпляров класса `XsdDataContractExporter` . Это помогает избежать создания повторяющихся типов схем.  
   
     > [!NOTE]
-    >  В случае сбоя при экспорте объект `XmlSchemaSet` будет находиться в непредсказуемом состоянии.  
+    > В случае сбоя при экспорте объект `XmlSchemaSet` будет находиться в непредсказуемом состоянии.  
   
 5. Для доступа к объекту <xref:System.Xml.Schema.XmlSchemaSet> используется свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> .  
   
 ## <a name="export-options"></a>Параметры экспорта  
  Можно присвоить свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> объекта <xref:System.Runtime.Serialization.XsdDataContractExporter> экземпляру класса <xref:System.Runtime.Serialization.ExportOptions> для управления различными аспектами процесса экспорта. В частности, можно задать следующие параметры.  
   
-- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. В этой коллекции `Type` представлены известные типы для экспортируемых типов. (Дополнительные сведения см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Эти известные типы экспортируются при каждом вызове метода `Export` в дополнение к типам, передаваемым в метод `Export`.  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. В этой коллекции `Type` представлены известные типы для экспортируемых типов. (Дополнительные сведения см. в статье о [известных типах контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Эти известные типы экспортируются при каждом вызове метода `Export` в дополнение к типам, передаваемым в метод `Export`.  
   
-- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать <xref:System.Runtime.Serialization.IDataContractSurrogate> для настройки процесса экспорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать <xref:System.Runtime.Serialization.IDataContractSurrogate> для настройки процесса экспорта. Дополнительные сведения см. в разделе [суррогаты контракта данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
 ## <a name="helper-methods"></a>Вспомогательные методы  
  Помимо выполнения основной задачи, заключающейся в экспорте схемы, экспортер `XsdDataContractExporter` предлагает несколько полезных вспомогательных методов, предоставляющих сведения о типах. К ним относятся следующие методы.  

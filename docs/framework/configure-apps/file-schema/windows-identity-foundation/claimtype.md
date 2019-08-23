@@ -3,20 +3,20 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942879"
 ---
-# <a name="claimtype"></a>\<claimType>
-Указывает одно утверждение обязательными или необязательными для входящих маркеров безопасности.  
+# <a name="claimtype"></a>\<> с
+Указывает одно необязательное или обязательное утверждение для входящих токенов безопасности.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimTypeRequired>  
-\<claimType>  
+ \<> System. identityModel  
+\<identityConfiguration >  
+\<Клаимтиперекуиред >  
+\<> с  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,14 +38,14 @@ ms.locfileid: "61667227"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Тип утверждения. Обычно URI. Обязательный.|  
+|type|Тип утверждения. Обычно это URI. Обязательный.|  
 |необязательные|Логическое значение, указывающее, является ли тип утверждения необязательным. Необязательный параметр.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Указывает набор утверждений, необходимых для входящих маркеров безопасности.|
+|[\<Клаимтиперекуиред >](claimtyperequired.md)|Указывает набор обязательных утверждений для входящих маркеров безопасности.|

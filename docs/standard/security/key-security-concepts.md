@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917259"
 ---
 # <a name="key-security-concepts"></a>Основные понятия безопасности
 Microsoft .NET Framework предлагает безопасность на основе ролей для решения проблем безопасности, связанных с мобильным кодом, и предоставления поддержки, которая позволяет компонентам определять, какие пользователи авторизованы для выполнения действий.  
@@ -52,7 +52,7 @@ Microsoft .NET Framework предлагает безопасность на ос
  Следующий пример требует, чтобы активный участник был администратором. Параметр `name` имеет значение `null`, что позволяет любому пользователю с правами администратора проходить требование.  
   
 > [!NOTE]
->  В Windows Vista привилегии пользователя определяются контролем учетных записей (UAC). Члену встроенной группы «Администраторы» присваивается два маркера доступа на время выполнения: маркер доступа обычного пользователя и маркер доступа администратора. По умолчанию назначена роль обычного пользователя. Чтобы выполнить код, требующий прав администратора, необходимо сначала повысить права от прав стандартного пользователя до прав администратора. Это можно сделать при запуске приложения, , щелкнув значок приложения правой кнопкой мыши и указав, что приложение должно запускаться от имени администратора.  
+> В Windows Vista привилегии пользователя определяются контролем учетных записей (UAC). Члену встроенной группы «Администраторы» присваивается два маркера доступа на время выполнения: маркер доступа обычного пользователя и маркер доступа администратора. По умолчанию назначена роль обычного пользователя. Чтобы выполнить код, требующий прав администратора, необходимо сначала повысить права от прав стандартного пользователя до прав администратора. Это можно сделать при запуске приложения, , щелкнув значок приложения правой кнопкой мыши и указав, что приложение должно запускаться от имени администратора.  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
@@ -64,5 +64,5 @@ Microsoft .NET Framework предлагает безопасность на ос
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Авторизация  
+## <a name="authorization"></a>Authorization  
  Авторизация — это процесс определения, разрешено ли участнику выполнять запрошенное действие. Авторизация происходит после проверки подлинности и использует сведения об удостоверении и ролях участника, чтобы определить, к каким ресурсам имеет доступ этот участник. Для реализации авторизации можно использовать безопасность на основе ролей в .NET Framework.

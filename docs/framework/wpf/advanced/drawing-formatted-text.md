@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937695"
 ---
 # <a name="drawing-formatted-text"></a>Рисование форматированного текста
 В этом разделе приводятся общие сведения о возможностях <xref:System.Windows.Media.FormattedText> объекта. Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "68629745"
  ![Отображенный текст с использованием объекта FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  Для разработчиков, осуществляющих переход с API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в таблице из раздела [Миграция Win32](#win32_migration) перечислены флаги DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] и примерный эквивалент в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+> Для разработчиков, осуществляющих переход с API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в таблице из раздела [Миграция Win32](#win32_migration) перечислены флаги DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] и примерный эквивалент в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Причины использования форматированного текста  
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. Как правило <xref:System.Windows.Controls.TextBlock> , элемент следует использовать, если требуется ограниченная поддержка текста, например краткое предложение [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]в. <xref:System.Windows.Controls.Label>может использоваться, если требуется минимальная поддержка текста. Дополнительные сведения см. в разделе [Документы в WPF](documents-in-wpf.md).  
@@ -93,26 +93,26 @@ ms.locfileid: "68629745"
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Используйте свойство, чтобы вычислить [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] соответствующую DrawText координату y. <xref:System.Windows.Media.FormattedText.Height%2A>|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Используйте свойства <xref:System.Windows.Media.FormattedText.Width%2A> и для вычисления прямоугольника вывода. <xref:System.Windows.Media.FormattedText.Height%2A>|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Используйте свойство со значением <xref:System.Windows.TextAlignment.Center>. <xref:System.Windows.Media.FormattedText.TextAlignment%2A>|  
-|DT_EDITCONTROL|None|Не требуется. Ширина пробелов и отрисовка последней строки соответствуют этим параметрам в элементе управления редактированием среды.|  
+|DT_EDITCONTROL|Отсутствуют|Не требуется. Ширина пробелов и отрисовка последней строки соответствуют этим параметрам в элементе управления редактированием среды.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Используйте свойство со значением <xref:System.Windows.TextTrimming.CharacterEllipsis>. <xref:System.Windows.Media.FormattedText.Trimming%2A><br /><br /> Используйте <xref:System.Windows.TextTrimming.WordEllipsis> для получения [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DT_END_ELLIPSIS с DT_WORD_ELIPSIS End многоточие — в данном случае символ многоточие выполняется только для слов, которые не умещаются в одной строке.|  
-|DT_EXPAND_TABS|None|Не требуется. Символы табуляции автоматически расширяются до точек каждые 4 размера максимального пробела (это примерно соответствует ширине 8 независимых от языка символов).|  
-|DT_EXTERNALLEADING|None|Не требуется. Внешнее ведение всегда включается в междустрочный интервал. <xref:System.Windows.Media.FormattedText.LineHeight%2A> Используйте свойство для создания определяемого пользователем межстрочного междустрочного промежутка.|  
-|DT_HIDEPREFIX|None|Не поддерживается. Удалите "&" из строки перед созданием <xref:System.Windows.Media.FormattedText> объекта.|  
+|DT_EXPAND_TABS|Отсутствуют|Не требуется. Символы табуляции автоматически расширяются до точек каждые 4 размера максимального пробела (это примерно соответствует ширине 8 независимых от языка символов).|  
+|DT_EXTERNALLEADING|Отсутствуют|Не требуется. Внешнее ведение всегда включается в междустрочный интервал. <xref:System.Windows.Media.FormattedText.LineHeight%2A> Используйте свойство для создания определяемого пользователем межстрочного междустрочного промежутка.|  
+|DT_HIDEPREFIX|Отсутствуют|Не поддерживается. Удалите "&" из строки перед созданием <xref:System.Windows.Media.FormattedText> объекта.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Это выравнивание текста по умолчанию. Используйте свойство со значением <xref:System.Windows.TextAlignment.Left>. <xref:System.Windows.Media.FormattedText.TextAlignment%2A> (только WPF)|  
-|DT_MODIFYSTRING|None|Не поддерживается.|  
+|DT_MODIFYSTRING|Отсутствуют|Не поддерживается.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Отсечение не происходит автоматически. Если нужно обрезать текст, используйте <xref:System.Windows.Media.Visual.VisualClip%2A> свойство.|  
-|DT_NOFULLWIDTHCHARBREAK|None|Не поддерживается.|  
-|DT_NOPREFIX|None|Не требуется. Символ & в строке всегда рассматривается как обычный символ.|  
-|DT_PATHELLIPSIS|None|Используйте свойство со значением <xref:System.Windows.TextTrimming.WordEllipsis>. <xref:System.Windows.Media.FormattedText.Trimming%2A>|  
-|DT_PREFIX|None|Не поддерживается. Если вы хотите использовать подчеркивания для текста, например сочетания клавиш или ссылку, используйте <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> метод.|  
-|DT_PREFIXONLY|None|Не поддерживается.|  
+|DT_NOFULLWIDTHCHARBREAK|Отсутствуют|Не поддерживается.|  
+|DT_NOPREFIX|Отсутствуют|Не требуется. Символ & в строке всегда рассматривается как обычный символ.|  
+|DT_PATHELLIPSIS|Отсутствуют|Используйте свойство со значением <xref:System.Windows.TextTrimming.WordEllipsis>. <xref:System.Windows.Media.FormattedText.Trimming%2A>|  
+|DT_PREFIX|Отсутствуют|Не поддерживается. Если вы хотите использовать подчеркивания для текста, например сочетания клавиш или ссылку, используйте <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> метод.|  
+|DT_PREFIXONLY|Отсутствуют|Не поддерживается.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Используйте свойство со значением <xref:System.Windows.TextAlignment.Right>. <xref:System.Windows.Media.FormattedText.TextAlignment%2A> (только WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Задайте для свойства <xref:System.Windows.Media.FormattedText.FlowDirection%2A> значение <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|None|Не требуется. <xref:System.Windows.Media.FormattedText>объекты ведут себя как один элемент управления Line, если только <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> свойство не задано или текст содержит символ возврата каретки или перевода строки (CR/LF).|  
-|DT_TABSTOP|None|Отсутствует поддержка пользовательских позиций табуляции.|  
+|DT_SINGLELINE|Отсутствуют|Не требуется. <xref:System.Windows.Media.FormattedText>объекты ведут себя как один элемент управления Line, если только <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> свойство не задано или текст содержит символ возврата каретки или перевода строки (CR/LF).|  
+|DT_TABSTOP|Отсутствуют|Отсутствует поддержка пользовательских позиций табуляции.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Не требуется. По умолчанию используется выравнивание по верхнему краю. Другие значения вертикального позиционирования можно определить с помощью <xref:System.Windows.Media.FormattedText.Height%2A> свойства, чтобы вычислить соответствующую [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] позицию DrawText "y".|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Используйте свойство, чтобы вычислить [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] соответствующую DrawText координату y. <xref:System.Windows.Media.FormattedText.Height%2A>|  
-|DT_WORDBREAK|None|Не требуется. Разбиение по словам происходит <xref:System.Windows.Media.FormattedText> автоматически с объектами. Его нельзя отключить.|  
+|DT_WORDBREAK|Отсутствуют|Не требуется. Разбиение по словам происходит <xref:System.Windows.Media.FormattedText> автоматически с объектами. Его нельзя отключить.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Используйте свойство со значением <xref:System.Windows.TextTrimming.WordEllipsis>. <xref:System.Windows.Media.FormattedText.Trimming%2A>|  
   
 ## <a name="see-also"></a>См. также

@@ -1,16 +1,16 @@
 ---
-title: 'Как выполнить: создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF'
+title: Как создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910587"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941293"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Как выполнить: создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Как создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF
 ## <a name="applies-to"></a>Применение  
   
 - Microsoft® Windows® Identity Foundation (WIF)  
@@ -62,7 +62,7 @@ ms.locfileid: "64910587"
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Настройка приложения ASP.NET для проверки подлинности на основе утверждений  
   
-1. Добавьте в файл конфигурации *Web.config* следующий раздел конфигурации непосредственно после открывающего элемента **\<configuration>**:  
+1. Добавьте в файл конфигурации *Web.config* следующий раздел конфигурации непосредственно после открывающего элемента **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "64910587"
     </configSections>  
     ```  
   
-2. Добавьте элемент **\<location>**, который обеспечивает доступ к метаданным федерации приложения:  
+2. Добавьте элемент **\<location>** , который обеспечивает доступ к метаданным федерации приложения:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "64910587"
     </location>  
     ```  
   
-3. Добавьте следующие записи конфигурации в элементы **\<system.web>**, чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.  
+3. Добавьте следующие записи конфигурации в элементы **\<system.web>** , чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "64910587"
     <authentication mode="None" />  
     ```  
   
-4. Добавьте элемент **\<system.webServer>**, который определяет модули для федеративной проверки подлинности. Обратите внимание, что атрибут *PublicKeyToken* должен иметь то же значение, что и атрибут *PublicKeyToken* для ранее добавленных записей **\<configSections>**:  
+4. Добавьте элемент **\<system.webServer>** , который определяет модули для федеративной проверки подлинности. Обратите внимание, что атрибут *PublicKeyToken* должен иметь то же значение, что и атрибут *PublicKeyToken* для ранее добавленных записей **\<configSections>** :  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "64910587"
     </system.webServer>  
     ```  
   
-5. Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>**, атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>**. Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).  
+5. Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>** , атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>** . Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -161,7 +161,7 @@ ms.locfileid: "64910587"
 2. Сохраните файл **Default.aspx**, а затем откройте его файл кода программной части с именем **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  Файл **Default.aspx.cs** может быть скрыт в узле **Default.aspx** в обозревателе решений. Если файл **Default.aspx.cs** не отображается, разверните узел **Default.aspx**, щелкнув значок треугольника рядом с ним.  
+    > Файл **Default.aspx.cs** может быть скрыт в узле **Default.aspx** в обозревателе решений. Если файл **Default.aspx.cs** не отображается, разверните узел **Default.aspx**, щелкнув значок треугольника рядом с ним.  
   
 3. Замените существующий код метода **Page_Load** в файле **Default.aspx.cs** следующим:  
   

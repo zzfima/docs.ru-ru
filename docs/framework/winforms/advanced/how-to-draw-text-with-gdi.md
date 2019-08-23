@@ -10,31 +10,31 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 3d5b79e82185c044314ff8807b86835ef6a87c45
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3ed2b5c94e4a38a5873a34e61287c4038cab5cbb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956546"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Практическое руководство. Рисование текста с использованием GDI
-С помощью <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод в <xref:System.Windows.Forms.TextRenderer> класс, может обращаться к функции GDI для рисования текста в форме или элементе управления. Отрисовка текста GDI, как правило, обеспечивает более высокую производительность и более точно текста, измерения, чем GDI +.  
+С помощью <xref:System.Windows.Forms.TextRenderer> метода в классе можно получить доступ к функциональным возможностям GDI для рисования текста в форме или элементе управления. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Визуализация текста GDI обычно обеспечивает лучшую производительность и более точное измерение текста, чем GDI+.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Методы <xref:System.Windows.Forms.TextRenderer> класса не поддерживаются для печати. При печати, всегда используйте <xref:System.Drawing.Graphics.DrawString%2A> методы <xref:System.Drawing.Graphics> класса.  
+> <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Методы<xref:System.Windows.Forms.TextRenderer> класса не поддерживаются для печати. При печати всегда используйте <xref:System.Drawing.Graphics.DrawString%2A> методы <xref:System.Drawing.Graphics> класса.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано, как отображается текст на нескольких строках внутри прямоугольника с помощью <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод.  
+ В следующем примере кода показано, как нарисовать текст на нескольких строках в прямоугольнике <xref:System.Windows.Forms.TextRenderer.DrawText%2A> с помощью метода.  
   
  [!code-csharp[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
  [!code-vb[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
   
- Для вывода текста с <xref:System.Windows.Forms.TextRenderer> класса, вам потребуется <xref:System.Drawing.IDeviceContext>, такие как <xref:System.Drawing.Graphics> и <xref:System.Drawing.Font>, расположение для рисования текста и цвет, в котором оно должно отображаться. При необходимости можно указать с помощью форматирования текста <xref:System.Windows.Forms.TextFormatFlags> перечисления.  
+ Для отрисовки текста с <xref:System.Windows.Forms.TextRenderer> помощью класса <xref:System.Drawing.IDeviceContext>требуется, <xref:System.Drawing.Font>например <xref:System.Drawing.Graphics> , и, расположение для рисования текста, а также цвет, в котором он должен быть нарисован. При необходимости можно указать форматирование текста с помощью <xref:System.Windows.Forms.TextFormatFlags> перечисления.  
   
- Дополнительные сведения о получении <xref:System.Drawing.Graphics>, см. в разделе [как: Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md). Дополнительные сведения о построении <xref:System.Drawing.Font>, см. в разделе [как: Шрифты и их семейств](how-to-construct-font-families-and-fonts.md).  
+ Дополнительные сведения о получении <xref:System.Drawing.Graphics>см. в разделе как [ Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md). Дополнительные сведения о создании <xref:System.Drawing.Font>см. в разделе как [ Создание семейств шрифтов и шрифтов](how-to-construct-font-families-and-fonts.md).  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+ Приведенный выше пример кода предназначен для использования с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, <xref:System.Windows.Forms.PaintEventHandler>который является параметром.  
   
 ## <a name="see-also"></a>См. также
 

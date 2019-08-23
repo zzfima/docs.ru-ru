@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4ba64bc4bbec94171cee73625d18330728b66d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009673"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964450"
 ---
 # <a name="splitter-control-windows-forms"></a>Элемент управления Splitter (Windows Forms)
-Windows Forms `Splitter` элементы управления используются для изменения размера закрепленных элементов управления во время выполнения. `Splitter` Управления часто используется в формах с помощью элементов управления, имеющих данные для представления, например в проводнике Windows, где области данных содержат сведения о разных размеров в разное время переменной длины.  
+Элементы `Splitter` управления Windows Forms используются для изменения размеров закрепленных элементов управления во время выполнения. `Splitter` Элемент управления часто используется в формах с элементами управления, имеющими разную длину данных, например в проводнике Windows, области данных которых содержат сведения различной ширины в разное время.  
   
 > [!NOTE]
->  Несмотря на то что <xref:System.Windows.Forms.SplitContainer> заменяет и расширяет его функциональные возможности `Splitter` элемента управления предыдущих версий `Splitter` сохраняется для обратной совместимости и использования в будущем, если вы выберете.  
+> Несмотря <xref:System.Windows.Forms.SplitContainer> наточтофункция`Splitter` заменяет и добавляет функции к управлениюпредыдущимиверсиями,сохраняетсякакдляобратнойсовместимости,такидлябудущегоиспользованияпривыборе.`Splitter`  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления Splitter](splitter-control-overview-windows-forms.md)  

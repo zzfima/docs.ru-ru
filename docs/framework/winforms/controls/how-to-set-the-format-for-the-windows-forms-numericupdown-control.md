@@ -9,19 +9,19 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: a5d8de6db8a0d6f62a082fc381a7b855eb948514
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6db7a1b2aeb7282c3ac827cb8319706ed348fc22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630612"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949154"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms
-Можно настроить способ отображения значения в Windows Forms <xref:System.Windows.Forms.NumericUpDown> элемента управления. <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Свойство определяет, сколько номеров появляются после десятичной запятой значение по умолчанию — 0. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Ли между каждой из трех цифр вставляется разделитель определяет значение по умолчанию — `false`. Элемент управления может отображать значения в шестнадцатеричном формате вместо десятичного формата, если <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> свойству `true`; по умолчанию используется `false`.  
+Можно настроить отображение значений в элементе управления Windows Forms <xref:System.Windows.Forms.NumericUpDown> . <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Свойство определяет, сколько чисел отображается после десятичной запятой; значение по умолчанию — 0. Свойство определяет, будет ли вставляться разделитель между всеми тремя десятичными цифрами; значение по умолчанию — `false`. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Элемент управления может отображать значения в шестнадцатеричном формате вместо десятичного формата, <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> если свойство имеет `true`значение; значение по умолчанию — `false`.  
   
-### <a name="to-format-the-numeric-value"></a>Чтобы отформатировать числовое значение  
+### <a name="to-format-the-numeric-value"></a>Форматирование числового значения  
   
-- Отобразить значение десятичного числа, задав <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> свойство целочисленное значение, а параметр <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> свойства `true` или `false`.  
+- Отобразите десятичное значение, задав <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> свойству целое число и <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> задав для `true` свойства значение `false`или.  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -40,7 +40,7 @@ ms.locfileid: "64630612"
   
      -или-  
   
-- Отобразите шестнадцатеричное число, задав <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> свойства `true`.  
+- Отобразите шестнадцатеричное значение, задав <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> для `true`свойства значение.  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  
@@ -55,7 +55,7 @@ ms.locfileid: "64630612"
     ```  
   
     > [!NOTE]
-    >  Даже если значение отображается в форме как шестнадцатеричное значение, все тесты, выполните на <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство будет тестироваться его десятичное значение.  
+    > Даже если значение отображается в форме как шестнадцатеричное, все тесты, выполняемые в <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойстве, будут проверять его десятичное значение.  
   
 ## <a name="see-also"></a>См. также
 

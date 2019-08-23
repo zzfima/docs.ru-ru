@@ -1,5 +1,5 @@
 ---
-title: Настраиваемый элемент для SingleTagSectionHandler
+title: Настраиваемый элемент для Синглетагсектионхандлер
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301157"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927504"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a>Настраиваемый элемент для SingleTagSectionHandler
+# <a name="custom-element-for-singletagsectionhandler"></a>Настраиваемый элемент для Синглетагсектионхандлер
 
-Определяет параметры настраиваемого раздела конфигурации, определяемый \<разделе > элемент и использует <xref:System.Configuration.SingleTagSectionHandler> класса.
+Определяет параметры в разделе пользовательской конфигурации, который определяется по \<разделу > элементу и <xref:System.Configuration.SingleTagSectionHandler> использует класс.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp; *\<параметра sectionName >*
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,13 +30,13 @@ ms.locfileid: "66301157"
 
 ## <a name="attributes"></a>Атрибуты
 
-Атрибуты и значения атрибутов являются определяемые пользователем.
+Атрибуты и значения атрибутов определяются пользователем.
 
 ## <a name="parent-element"></a>Родительский элемент
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
+| [ **\<configuration>** ](configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -44,11 +44,11 @@ None
 
 ## <a name="remarks"></a>Примечания
 
-**\<Параметра sectionName >** элемент является пользовательским элементом определяется [  **\<разделе >** ](~/docs/framework/configure-apps/file-schema/section-element.md) тегом [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) элемент. Система конфигурации возвращает <xref:System.Collections.IDictionary> объекта при вызове <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+Элемент > [ **\<** ](section-element.md) sectionName является пользовательским элементом, определяемым разделом > тегом в [ **\<элементе > configSections**](configsections-element-for-configuration.md) .  **\<** Система конфигурации возвращает <xref:System.Collections.IDictionary> объект при вызове метода <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Пример
 
-В следующем примере объявляется пользовательский элемент с именем  **\<sampleSection >** , содержащий параметры, считываемые <xref:System.Configuration.SingleTagSectionHandler> класса:
+В следующем примере объявляется пользовательский элемент с именем  **\<самплесектион >** , который содержит <xref:System.Configuration.SingleTagSectionHandler> параметры, считанные классом:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ None
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
+Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
 ## <a name="see-also"></a>См. также
 
-- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](index.md)

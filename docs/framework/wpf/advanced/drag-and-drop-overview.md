@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 0a2fae2acd2b190e6133c1f02010a7e3d35bba67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663357"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940881"
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
@@ -30,12 +30,12 @@ ms.locfileid: "64663357"
   
  Конкретные действия, выполняемые во время операции перетаскивания, зависят от приложения и часто определяются контекстом.  Например, при перетаскивании выбранных файлов из одной папки в другую на одном запоминающем устройстве эти файлы по умолчанию перемещаются, тогда как при перетаскивании файлов из общего ресурса [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] в локальную папку эти файлы по умолчанию копируются.  
   
- В средствах перетаскивания, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], предусмотрена высокая гибкость и возможность настройки с целью поддержки различных сценариев перетаскивания.  Перетаскивание поддерживает управление объектами в рамках одного приложения или в разных приложениях. Перетаскивание мышью между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений и других приложений Windows также полностью поддерживается.  
+ В средствах перетаскивания, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], предусмотрена высокая гибкость и возможность настройки с целью поддержки различных сценариев перетаскивания.  Перетаскивание поддерживает управление объектами в рамках одного приложения или в разных приложениях. Также полностью поддерживаются перетаскивание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] между приложениями и другими приложениями Windows.  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] любые элементы <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> могут участвовать в операциях перетаскивания. События и методы, необходимые для операций перетаскивания, определяются в классе <xref:System.Windows.DragDrop>. Классы <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement> содержат псевдонимы для вложенных событий <xref:System.Windows.DragDrop>, чтобы эти события отображались в списке членов класса, когда <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> наследуется как базовый элемент. Обработчики событий, связанные с этими событиями, присоединяются к основному вложенному событию <xref:System.Windows.DragDrop> и получают один и тот же экземпляр данных события. Дополнительные сведения см. в описании события <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Перетаскивание OLE не работает в зоне Интернета.  
+> Перетаскивание OLE не работает в зоне Интернета.  
   
 <a name="Data_Transfer"></a>   
 ## <a name="data-transfer"></a>Передача данных  
@@ -122,7 +122,7 @@ ms.locfileid: "64663357"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Пример перетаскивания  
- В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Полное описание действий по реализации перетаскивания и вставки, см. в разделе [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Подробные инструкции по реализации перетаскивания см. в разделе [пошаговое руководство. Включение перетаскивания для пользовательского элемента управления](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -157,7 +157,7 @@ ms.locfileid: "64663357"
  Параметр `allowedEffects` используется для указания, какие действия с передаваемыми данными источник перетаскивания будет разрешать цели перетаскивания. Обычные значения для источника перетаскивания — <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> и <xref:System.Windows.DragDropEffects.All>.  
   
 > [!NOTE]
->  Цель перетаскивания также может указывать ожидаемые эффекты перетаскивания данных. Например, если цель перетаскивания не распознает тип вставляемых данных, то она может отклонить эти данные, задав <xref:System.Windows.DragDropEffects.None> в качестве разрешенных эффектов. Обычно она делает это в своем обработчике событий <xref:System.Windows.DragDrop.DragOver>.  
+> Цель перетаскивания также может указывать ожидаемые эффекты перетаскивания данных. Например, если цель перетаскивания не распознает тип вставляемых данных, то она может отклонить эти данные, задав <xref:System.Windows.DragDropEffects.None> в качестве разрешенных эффектов. Обычно она делает это в своем обработчике событий <xref:System.Windows.DragDrop.DragOver>.  
   
  Источник перетаскивания может также обрабатывать события <xref:System.Windows.DragDrop.GiveFeedback> и <xref:System.Windows.DragDrop.QueryContinueDrag>. Эти события имеют обработчики по умолчанию, которые используются, если события не помечены как обработанные. Обычно эти события игнорируются, если нет особой необходимости изменения их поведения по умолчанию.  
   

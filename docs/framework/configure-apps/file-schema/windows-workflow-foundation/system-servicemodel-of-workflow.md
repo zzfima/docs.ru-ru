@@ -1,16 +1,16 @@
 ---
-title: < system.serviceModel > рабочего процесса
+title: < > System. serviceModel рабочего процесса
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947366"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > рабочего процесса
+# <a name="systemservicemodel-of-workflow"></a>\<> System. serviceModel рабочего процесса
 В этом разделе конфигурации содержатся все элементы конфигурации рабочего процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -95,14 +95,14 @@ ms.locfileid: "67422891"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет  
+ Отсутствуют  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<варианты поведения >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|В этом разделе определяется **serviceBehaviors** коллекции.  Каждый элемент в коллекции определяет элементы поведения, используемые службами. Каждый элемент поведения идентифицируется по уникальному **имя** атрибута.|  
-|[\<Отслеживание >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.<br /><br /> Дополнительные сведения об отслеживании рабочих процессов и его конфигурации, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания для рабочего процесса](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<> поведения](behaviors-of-workflow.md)|В этом разделе определяется коллекция **serviceBehaviors** .  Каждый элемент в коллекции определяет элементы поведения, используемые службами. Каждый элемент поведения определяется с помощью уникального атрибута **имени** .|  
+|[\<Отслеживание >](tracking.md)|Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.<br /><br /> Дополнительные сведения об отслеживании рабочих процессов и его конфигурации см. в разделе Отслеживание рабочего процесса [и трассировка](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания рабочего процесса](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962759"
 ---
 # <a name="handling-dataadapter-events"></a>Обработка событий DataAdapter
 В ADO.NET <xref:System.Data.Common.DataAdapter> доступно три события, с помощью которых можно реагировать на изменения, внесенные в источник данных. В следующей таблице показаны события `DataAdapter`.  
@@ -39,7 +39,7 @@ ms.locfileid: "61667071"
   
  Кроме того, для обработки ошибок для обновленных строк можно использовать свойство `ContinueUpdateOnError`. Если `DataAdapter.ContinueUpdateOnError` имеет значение `true`, когда обновление строки приводит к возникновению исключения, то текст исключения помещается в сведения `RowError` для конкретной строки, и обработка продолжается без вызова исключения. Это позволяет реагировать на ошибки, когда `Update` завершено, в отличие от события `RowUpdated`, которое позволяет реагировать на ошибки при их возникновении.  
   
- В следующем образце кода показано, как добавлять и удалять обработчики событий. Обработчик события `RowUpdating` ведет журнал всех удаленных записей с временной меткой. `RowUpdated` Обработчик событий добавляет сведения об ошибке для `RowError` свойство строки в `DataSet`, запрещает исключение и продолжает обработку (зеркально отображая поведение из `ContinueUpdateOnError`  =  `true`).  
+ В следующем образце кода показано, как добавлять и удалять обработчики событий. Обработчик события `RowUpdating` ведет журнал всех удаленных записей с временной меткой.  =  `DataSet` `RowError` `ContinueUpdateOnError`Обработчик событий добавляет сведения об ошибке в свойство строки в, подавляет исключение и `true`возобновляет обработку (зеркальное отображение поведения). `RowUpdated`  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -131,7 +131,7 @@ protected static void OnRowUpdated(
   
  Аргументы `FillErrorEventArgs`, переданные в событие `FillError` могут содержать несколько свойств, которые позволяют предпринять ответные действия и устранить ошибки. В приведенной ниже таблице показаны свойства объекта `FillErrorEventArgs`.  
   
-|Свойство|Описание|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |`Errors`|Возникшее исключение (`Exception`).|  
 |`DataTable`|Объект `DataTable` заполнялся, когда возникла ошибка.|  
@@ -191,5 +191,5 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Обработка событий наборов данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [Обработка событий DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [События](../../../../docs/standard/events/index.md)
+- [События](../../../standard/events/index.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

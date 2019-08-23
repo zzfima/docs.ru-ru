@@ -3,18 +3,18 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793826"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942414"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate >
-Настраивает сертификат X.509, используемый для шифрования и расшифровки маркеров.  
+Настраивает сертификат X. 509, используемый для шифрования и расшифровки токенов.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+ \<> System. identityModel. Services  
+\<federationConfiguration >  
 \<serviceCertificate >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -32,22 +32,22 @@ ms.locfileid: "61793826"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет  
+ Отсутствуют  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<certificateReference >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|Задает параметры, которые используются для поиска и проверки сертификатов X.509 в хранилище сертификатов.|  
+|[\<certificateReference >](certificatereference.md)|Задает параметры, используемые для поиска и проверки сертификата X. 509 в хранилище сертификатов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Содержит параметры, которые настраивают <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> свойства (всфам) <xref:System.IdentityModel.Services.SessionAuthenticationModule> и (SAM).|  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показывает использование \<serviceCertificate > элемента. XML-код взят из `CustomToken` образца.  
+ В следующем коде XML показано использование \<элемента > serviceCertificate. XML взят из `CustomToken` примера.  
   
 ```xml  
 <serviceCertificate>  

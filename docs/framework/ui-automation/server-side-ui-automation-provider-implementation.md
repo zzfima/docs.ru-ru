@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651153"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961216"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе описывается реализация серверного поставщика автоматизации пользовательского интерфейса для пользовательского элемента управления.  
   
- Реализация для элементов Windows Presentation Foundation (WPF) и не-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] элементы (например, предназначенных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) существенно различается. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.  
+ Реализация для элементов Windows Presentation Foundation (WPF) и[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] элементов, не являющихся элементами (например, разработанных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), является фундаментально отличающимся. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Вопросы безопасности  
@@ -102,7 +102,7 @@ ms.locfileid: "64651153"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Для получения дополнительной информации см. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
+> Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Для получения дополнительной информации см. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
 >   
 >  Для поставщиков, размещенных в элементе управления <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> , должен возвращаться [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . В этом случае поставщику окна по умолчанию может не удастся получить правильное значение.  
 >   
@@ -134,7 +134,7 @@ ms.locfileid: "64651153"
  Поставщики простых элементов управления, таких как пользовательская кнопка, размещенная в окне (HWND), не требуется поддерживать навигацию в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Переход между элемент обрабатывается поставщиком по умолчанию для главного окна, который указывается в реализации <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>. Однако при реализации поставщика сложного пользовательского элемента управления необходимо поддерживать навигацию между корневым узлом фрагмента и его потомками, а также между одноуровневыми узлами.  
   
 > [!NOTE]
->  Элементы фрагмента, отличные от корневого, должны возвращать ссылку `null` из <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, так как они размещаются не непосредственно в окне, а никакой поставщик по умолчанию не может поддерживать переходы между ними.  
+> Элементы фрагмента, отличные от корневого, должны возвращать ссылку `null` из <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, так как они размещаются не непосредственно в окне, а никакой поставщик по умолчанию не может поддерживать переходы между ними.  
   
  Структура фрагмента определяется реализацией <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>. Для каждого возможного направления из каждого фрагмента этот метод возвращает объект поставщика для элемента в указанном направлении. Если в этом направлении нет элемента, метод возвращает ссылку `null` .  
   

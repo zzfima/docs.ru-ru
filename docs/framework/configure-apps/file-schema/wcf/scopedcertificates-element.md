@@ -2,24 +2,24 @@
 title: Элемент <scopedCertificates>
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed53a42575a8d57c365f7a329a1a9c1df075d6d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670642"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935225"
 ---
-# <a name="scopedcertificates-element"></a>\<scopedCertificates > элемент
+# <a name="scopedcertificates-element"></a>\<Элемент > Скопедцертификатес
 Представляет коллекцию сертификатов X.509, предоставленную конкретными службами (в области действия) для проверки подлинности. Эта коллекция обычно используется, чтобы задать сертификаты служб для служб маркеров безопасности в федеративной инфраструктуре.  
   
- \<system.ServiceModel>  
-\<варианты поведения >  
+ \<системой. > ServiceModel  
+\<> поведения  
 раздел endpointBehaviors  
-\<поведение >  
-\<clientCredentials>  
+\<> поведения  
+\<> clientCredentials  
 \<serviceCertificate >  
-\<scopedCertificates > элемент  
-\<Добавить > элемент для \<scopedCertificates >  
+\<Элемент > Скопедцертификатес  
+\<Добавление элемента > для \<скопедцертификатес >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,29 +37,29 @@ ms.locfileid: "61670642"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
+ Нет.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|Добавляет сертификат X.509 в коллекцию сертификатов в области действия.|  
+|[\<add>](add-of-scopedcertificates-element.md)|Добавляет сертификат X.509 в коллекцию сертификатов в области действия.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Задает сертификат для использования при проверке подлинности службы для клиента.|  
+|[\<serviceCertificate >](servicecertificate-of-servicecredentials.md)|Задает сертификат для использования при проверке подлинности службы для клиента.|  
   
 ## <a name="remarks"></a>Примечания  
  Эта коллекция позволяет клиенту настроить сертификаты служб для использования на основе URL-адреса службы, с которой он связывается. Это особенно полезно в сценариях с выданным маркером, в которых клиент может связываться с несколькими службами (с конечной службой, а также с промежуточными службами маркеров безопасности). Для привязок, в которых используется безопасность сообщений на основе сертификатов, этот сертификат используется для шифрования сообщений службе; предполагается также, что он будет использоваться службой для подписи ответов клиенту.  
   
  Если для привязки необходим сертификат для службы, а конкретный сертификат для URL-адреса службы в элементе ScopedCertificates отсутствует, то используется сертификат по умолчанию.  
   
- Дополнительные сведения см. в разделе «Сертификаты в области действия» [как: Создание федеративного клиента](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Дополнительные сведения см. в разделе "сертификаты с заданной областью [" статьи как Создайте федеративный клиент](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере задается сертификат службы для клиента для использования при взаимодействии с конечными точками, именем домена которых является `http://www.contoso.com` по протоколу HTTP.  
+ В следующем примере задается сертификат службы, используемый клиентом при взаимодействии с конечными точками, доменное имя которых находится `http://www.contoso.com` по протоколу HTTP.  
   
 ```xml  
 <serviceCertificate>
@@ -80,8 +80,8 @@ ms.locfileid: "61670642"
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Практическое руководство. Создание федеративного клиента](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
-- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Работа с сертификатами](../../../wcf/feature-details/working-with-certificates.md)
+- [Практическое руководство. Создание федеративного клиента](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [\<add>](add-of-scopedcertificates-element.md)
+- [Защита клиентов](../../../wcf/securing-clients.md)
+- [Защита служб и клиентов](../../../wcf/feature-details/securing-services-and-clients.md)

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955346"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Безопасность сообщений с использованием взаимных сертификатов
-В следующем сценарии показаны службы Windows Communication Foundation (WCF) и клиента, защищенный с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов.  
+В следующем сценарии показана служба Windows Communication Foundation (WCF) и клиент защищены с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов.  
   
  Данный сценарий поддерживает возможность взаимодействия, поскольку в нем используется WS-Security с профилем маркера сертификата X.509.  
   
 > [!NOTE]
->  Данный сценарий не выполняет согласование сертификата службы. Сертификат службы должен быть предоставлен клиенту перед началом любой связи. Сертификат сервера может быть распределен приложением или предоставлен во внеполосной связи.  
+> Данный сценарий не выполняет согласование сертификата службы. Сертификат службы должен быть предоставлен клиенту перед началом любой связи. Сертификат сервера может быть распределен приложением или предоставлен во внеполосной связи.  
   
- ![Безопасность с использованием взаимных сертификатов сообщений](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![Безопасность сообщений с помощью взаимных сертификатов](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "64637838"
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a>Параметр Configuration  
+### <a name="configuration"></a>Конфигурация  
  Вместо кода для создания той же службы можно использовать следующую конфигурацию.  
   
 ```xml  
@@ -90,12 +90,12 @@ ms.locfileid: "64637838"
 </configuration>  
 ```  
   
-## <a name="client"></a>"Клиент";  
+## <a name="client"></a>Клиент  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономный клиент, используя код (и код клиента).  
   
-- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:  
+- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,8 +106,8 @@ ms.locfileid: "64637838"
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a>Параметр Configuration  
- Следующий код служит для настройки клиента. Сертификат клиента должен быть указан с помощью [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Кроме того, сертификат службы задается с помощью [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+### <a name="configuration"></a>Конфигурация  
+ Следующий код служит для настройки клиента. Сертификат клиента должен быть указан с помощью [ \<> clientcertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Кроме того, сертификат службы указывается с помощью [ \<> дефаултцертификате](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,4 +162,4 @@ ms.locfileid: "64637838"
 
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Практическое руководство. Создание и настройка временных сертификатов в WCF для обеспечения безопасности транспорта во время разработки](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Практическое руководство. Создание и Установка временных сертификатов в WCF для обеспечения безопасности транспорта во время разработки](https://go.microsoft.com/fwlink/?LinkId=244264)

@@ -3,21 +3,21 @@ title: <userNameSecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-ms.openlocfilehash: 18769794da8528f085c567264827db5aa6b214f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fed8964e03b80e365fdc5eafd45b4fc372a6e352
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944257"
 ---
-# <a name="usernamesecuritytokenhandlerrequirement"></a>\<userNameSecurityTokenHandlerRequirement>
-Предоставляет конфигурацию для <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> классом или производными классами.  
+# <a name="usernamesecuritytokenhandlerrequirement"></a>\<Усернамесекурититокенхандлеррекуиремент >
+Предоставляет конфигурацию для <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> класса или производных классов.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
+ \<> System. identityModel  
+\<identityConfiguration >  
 \<securityTokenHandlers >  
 \<add>  
-\<userNameSecurityTokenHandlerRequirement>  
+\<Усернамесекурититокенхандлеррекуиремент >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,19 +41,19 @@ ms.locfileid: "61790459"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|membershipProviderName|Указывает <xref:System.Web.Security.MembershipProvider> , рекомендуется использовать обработчик токенов безопасности.|  
+|мембершиппровидернаме|<xref:System.Web.Security.MembershipProvider> Указывает, который должен использоваться обработчиком маркеров безопасности.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
+|[\<add>](add.md)|Добавляет указанный обработчик маркеров безопасности в коллекцию обработчиков маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
- `<userNameSecurityTokenHandlerRequirement>` Наборов элементов <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> свойство при <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> объект инициализирован из конфигурации.  
+ Элемент задает свойство при<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> инициализации объекта из конфигурации. <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> `<userNameSecurityTokenHandlerRequirement>`  
   
 ## <a name="example"></a>Пример  
   

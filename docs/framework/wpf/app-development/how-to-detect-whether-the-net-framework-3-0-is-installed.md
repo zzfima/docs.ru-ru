@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960244"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
-Прежде чем развертывать приложения Microsoft .NET Framework в системе, их необходимо сначала убедиться, что присутствует в среде выполнения .NET Framework. В этом разделе предоставляет скрипты, написанные на HTML/JavaScript, администраторы могут использовать для определения наличия .NET Framework в системе.  
+Прежде чем администраторы смогут развертывать приложения Microsoft .NET Framework в системе, они должны сначала убедиться в наличии среды выполнения .NET Framework. В этом разделе содержится сценарий, написанный на языке HTML/JavaScript, который администраторы могут использовать для определения наличия .NET Framework в системе.  
   
 > [!NOTE]
->  Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework, см. в обсуждении [развертывание Microsoft .NET Framework версии 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Более подробные сведения об установке, развертывании и обнаружении Microsoft .NET Framework см. в статье [Развертывание платформы Microsoft .NET Framework версии 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>Обнаружить строку агента пользователя «CLR.NET»  
- При установке .NET Framework, MSI-ФАЙЛ добавляет строки UserAgent «CLR.NET» и номер версии. Пример скрипта, внедренных в простую HTML-страницу. Сценарий выполняет поиск строки UserAgent, чтобы определить, установлен ли .NET Framework и отображается сообщение о состоянии по результатам поиска.  
+## <a name="detect-the-net-clr-user-agent-string"></a>Определение строки агента пользователя ".NET CLR"  
+ При установке .NET Framework MSI добавляет ".NET CLR" и номер версии в строку UserAgent. В следующем примере показан сценарий, внедренный в простую HTML-страницу. Сценарий выполняет поиск строки UserAgent, чтобы определить, установлена ли .NET Framework, и отображает сообщение о состоянии для результатов поиска.  
   
 ```  
 <HTML>  
@@ -113,7 +113,7 @@ ms.locfileid: "61947827"
 </HTML>  
 ```  
   
- При успешном выполнении поиска для версии «CLR.NET», появится сообщение о состоянии следующего типа:  
+ Если поиск версии ".NET CLR" завершился успешно, отображается сообщение о состоянии следующего типа:  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   

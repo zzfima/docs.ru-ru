@@ -1,17 +1,17 @@
 ---
-title: Метод ICorDebugSymbolProvider::GetInstanceFieldSymbols
+title: 'Метод метод icordebugsymbolprovider:: GetInstanceFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ffabfc43861d3d295a0bd2ea09213b06b6868a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964613"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Метод ICorDebugSymbolProvider::GetInstanceFieldSymbols
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Метод метод icordebugsymbolprovider:: GetInstanceFieldSymbols
 Получает символы поля экземпляра, которые соответствуют сигнатуре TypeSpec.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,19 +40,19 @@ HRESULT GetInstanceFieldSymbols(
  [out] Указатель на число  символов, полученных при помощи метода.  
   
  `pSymbols`  
- [out] Указатель на [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) массив, содержащий символы поля запрошенного экземпляра.  
+ заполняет Указатель на массив [икордебугстатикфиелдсимбол](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) , содержащий запрошенные символы поля экземпляра.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+> Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

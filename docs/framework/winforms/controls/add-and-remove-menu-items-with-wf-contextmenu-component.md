@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d1862b1fc1398f0f8c2217b51c4efb93db639af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957023"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
 Объясняется, как добавлять и удалять элементы контекстного меню в Windows Forms.  
   
- Windows Forms <xref:System.Windows.Forms.ContextMenu> компонент предоставляет меню часто используемых команд, относящихся к выбранному объекту. Элементы добавляются в контекстное меню, добавив <xref:System.Windows.Forms.MenuItem> объектов <xref:System.Windows.Forms.Menu.MenuItems%2A> коллекции.  
+ Компонент Windows Forms <xref:System.Windows.Forms.ContextMenu> предоставляет меню часто используемых команд, относящихся к выбранному объекту. В контекстное меню можно добавлять элементы, добавляя <xref:System.Windows.Forms.MenuItem> объекты <xref:System.Windows.Forms.Menu.MenuItems%2A> в коллекцию.  
   
- Элементы контекстного меню можно удалить без возможности восстановления; Тем не менее во время выполнения он может быть более подходящим для скрытия или отключение элементов.  
+ Элементы контекстного меню можно удалить без возможности восстановления. Тем не менее во время выполнения может быть более уместно скрывать или отключать элементы.  
   
 > [!IMPORTANT]
->  Несмотря на то что <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> элементы управления из предыдущих версий <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем, если выбран.  
+> Хотя <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> заменяют и добавляют функции к элементам управления и предыдущих версий и сохраняются для обратной совместимости и использования в будущем при выборе. <xref:System.Windows.Forms.ContextMenuStrip>  
   
-### <a name="to-remove-items-from-a-shortcut-menu"></a>Чтобы удалить элементы из контекстного меню  
+### <a name="to-remove-items-from-a-shortcut-menu"></a>Удаление элементов из контекстного меню  
   
-1. Используйте <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> или <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.Menu.MenuItems%2A> коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления определенного элемента меню.  
+1. Используйте метод <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> коллекции<xref:System.Windows.Forms.ContextMenu>компонента или для удаления определенного элемента меню. <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> <xref:System.Windows.Forms.Menu.MenuItems%2A>  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ ms.locfileid: "61640339"
   
      -или-  
   
-2. Используйте `Clear` метод `MenuItems` коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления всех элементов в меню.  
+2. `Clear` Используйте метод `MenuItems` коллекции компонента,чтобыудалитьвсеэлементыизменю.<xref:System.Windows.Forms.ContextMenu>  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
