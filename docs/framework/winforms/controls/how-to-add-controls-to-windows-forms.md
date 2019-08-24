@@ -9,48 +9,48 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912616"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987511"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="7af8d-102">Практическое руководство. Добавление элементов управления в формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7af8d-102">How to: Add Controls to Windows Forms</span></span>
-<span data-ttu-id="7af8d-103">Большинство форм разрабатываются путем добавления элементов управления на поверхность формы для определения пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="7af8d-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="7af8d-104">*Элемент управления* — это компонент в форме, используемый для вывода информации или ввода данных пользователем.</span><span class="sxs-lookup"><span data-stu-id="7af8d-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="7af8d-105">Дополнительные сведения об элементах управления см. в разделе [элементы управления Windows Forms](index.md).</span><span class="sxs-lookup"><span data-stu-id="7af8d-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>
+# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="7b2ab-102">Практическое руководство. Добавление элементов управления в формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7b2ab-102">How to: Add Controls to Windows Forms</span></span>
+<span data-ttu-id="7b2ab-103">Большинство форм разрабатываются путем добавления элементов управления на поверхность формы для определения пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="7b2ab-104">*Элемент управления* — это компонент в форме, используемый для вывода информации или ввода данных пользователем.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="7b2ab-105">Дополнительные сведения об элементах управления см. в разделе [элементы управления Windows Forms](index.md).</span><span class="sxs-lookup"><span data-stu-id="7b2ab-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>
 
-## <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="7af8d-106">Рисование элемента управления в форме</span><span class="sxs-lookup"><span data-stu-id="7af8d-106">To draw a control on a form</span></span>
+## <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="7b2ab-106">Рисование элемента управления в форме</span><span class="sxs-lookup"><span data-stu-id="7b2ab-106">To draw a control on a form</span></span>
 
-1. <span data-ttu-id="7af8d-107">Откройте форму.</span><span class="sxs-lookup"><span data-stu-id="7af8d-107">Open the form.</span></span> <span data-ttu-id="7af8d-108">Дополнительные сведения см. в разделе [Практическое руководство. Отображение Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="7af8d-108">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+1. <span data-ttu-id="7b2ab-107">Откройте форму.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-107">Open the form.</span></span> <span data-ttu-id="7b2ab-108">Дополнительные сведения см. в разделе [Практическое руководство. Отображение Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="7b2ab-108">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
 
-2. <span data-ttu-id="7af8d-109">В **области элементов**щелкните элемент управления, который необходимо добавить в форму.</span><span class="sxs-lookup"><span data-stu-id="7af8d-109">In the **Toolbox**, click the control you want to add to your form.</span></span>
+2. <span data-ttu-id="7b2ab-109">В **области элементов**щелкните элемент управления, который необходимо добавить в форму.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-109">In the **Toolbox**, click the control you want to add to your form.</span></span>
 
-3. <span data-ttu-id="7af8d-110">В области формы нажмите на место желаемого положения верхнего левого угла элемента и перетащите указатель к месту желаемого положения нижнего правого угла элемента.</span><span class="sxs-lookup"><span data-stu-id="7af8d-110">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>
+3. <span data-ttu-id="7b2ab-110">В области формы нажмите на место желаемого положения верхнего левого угла элемента и перетащите указатель к месту желаемого положения нижнего правого угла элемента.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-110">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>
 
-     <span data-ttu-id="7af8d-111">Элемент управления добавляется в форму с указанными расположением и размером.</span><span class="sxs-lookup"><span data-stu-id="7af8d-111">The control is added to the form with the specified location and size.</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="7af8d-112">Каждый элемент управления имеет определенный размер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7af8d-112">Each control has a default size defined.</span></span> <span data-ttu-id="7af8d-113">Можно добавить элемент управления на форму с его размером по умолчанию, перетащив его из **панели элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="7af8d-113">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>
-
-## <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="7af8d-114">Чтобы перетащить элемент управления на форму</span><span class="sxs-lookup"><span data-stu-id="7af8d-114">To drag a control to a form</span></span>
-
-1. <span data-ttu-id="7af8d-115">Откройте форму.</span><span class="sxs-lookup"><span data-stu-id="7af8d-115">Open the form.</span></span> <span data-ttu-id="7af8d-116">Дополнительные сведения см. в разделе [Практическое руководство. Отображение Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="7af8d-116">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
-
-2. <span data-ttu-id="7af8d-117">На **панели элементов**щелкните нужный элемент управления и перетащите его в форму.</span><span class="sxs-lookup"><span data-stu-id="7af8d-117">In the **Toolbox**, click the control you want and drag it to your form.</span></span>
-
-     <span data-ttu-id="7af8d-118">Элемент управления будет добавлен на форму в указанном месте с размером по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7af8d-118">The control is added to the form at the specified location in its default size.</span></span>
+     <span data-ttu-id="7b2ab-111">Элемент управления добавляется в форму с указанными расположением и размером.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-111">The control is added to the form with the specified location and size.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="7af8d-119">Можно дважды щелкнуть элемент управления на **нанели элементов**, чтобы добавить его в левом верхнем углу формы с размером по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7af8d-119">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>
+    > <span data-ttu-id="7b2ab-112">Каждый элемент управления имеет определенный размер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-112">Each control has a default size defined.</span></span> <span data-ttu-id="7b2ab-113">Можно добавить элемент управления на форму с его размером по умолчанию, перетащив его из **панели элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-113">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>
 
-     <span data-ttu-id="7af8d-120">Вы можете добавить элементы управления на форму динамически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="7af8d-120">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="7af8d-121">В следующем примере кода элемент управления <xref:System.Windows.Forms.TextBox> будет добавлен на форму при нажатии элемента управления <xref:System.Windows.Forms.Button>.</span><span class="sxs-lookup"><span data-stu-id="7af8d-121">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>
+## <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="7b2ab-114">Чтобы перетащить элемент управления на форму</span><span class="sxs-lookup"><span data-stu-id="7b2ab-114">To drag a control to a form</span></span>
+
+1. <span data-ttu-id="7b2ab-115">Откройте форму.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-115">Open the form.</span></span> <span data-ttu-id="7b2ab-116">Дополнительные сведения см. в разделе [Практическое руководство. Отображение Windows Forms в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="7b2ab-116">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+
+2. <span data-ttu-id="7b2ab-117">На **панели элементов**щелкните нужный элемент управления и перетащите его в форму.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-117">In the **Toolbox**, click the control you want and drag it to your form.</span></span>
+
+     <span data-ttu-id="7b2ab-118">Элемент управления будет добавлен на форму в указанном месте с размером по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-118">The control is added to the form at the specified location in its default size.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="7af8d-122">Следующая процедура требует наличия формы с уже расположенным на ней элементом управления **button** — `Button1`.</span><span class="sxs-lookup"><span data-stu-id="7af8d-122">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>
+    > <span data-ttu-id="7b2ab-119">Можно дважды щелкнуть элемент управления на **нанели элементов**, чтобы добавить его в левом верхнем углу формы с размером по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-119">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>
 
-## <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="7af8d-123">Добавление элемента управления в форму программным способом</span><span class="sxs-lookup"><span data-stu-id="7af8d-123">To add a control to a form programmatically</span></span>
+     <span data-ttu-id="7b2ab-120">Вы можете добавить элементы управления на форму динамически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-120">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="7b2ab-121">В следующем примере кода элемент управления <xref:System.Windows.Forms.TextBox> будет добавлен на форму при нажатии элемента управления <xref:System.Windows.Forms.Button>.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-121">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>
 
-1. <span data-ttu-id="7af8d-124">В метод, обрабатывающий событие `Click` кнопки в классе формы, вставьте код, аналогичный приведенному ниже, чтобы создать ссылку на переменную элемента управления, установить его свойство `Location` и добавить элемент управления на форму.</span><span class="sxs-lookup"><span data-stu-id="7af8d-124">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="7b2ab-122">Следующая процедура требует наличия формы с уже расположенным на ней элементом управления **button** — `Button1`.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-122">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>
+
+## <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="7b2ab-123">Добавление элемента управления в форму программным способом</span><span class="sxs-lookup"><span data-stu-id="7b2ab-123">To add a control to a form programmatically</span></span>
+
+1. <span data-ttu-id="7b2ab-124">В метод, обрабатывающий событие `Click` кнопки в классе формы, вставьте код, аналогичный приведенному ниже, чтобы создать ссылку на переменную элемента управления, установить его свойство `Location` и добавить элемент управления на форму.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-124">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -81,15 +81,14 @@ ms.locfileid: "69912616"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="7af8d-125">Кроме того, можно добавить код для инициализации других свойств элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7af8d-125">You can also add code to initialize other properties of the control.</span></span>
+    > <span data-ttu-id="7b2ab-125">Кроме того, можно добавить код для инициализации других свойств элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-125">You can also add code to initialize other properties of the control.</span></span>
 
     > [!IMPORTANT]
-    >  <span data-ttu-id="7af8d-126">Создание ссылки на вредоносный элемент `UserControl` может поставить локальный компьютер под угрозу атаки по сети.</span><span class="sxs-lookup"><span data-stu-id="7af8d-126">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="7af8d-127">Это может произойти только в том случае, если злоумышленник создаст небезопасный пользовательский элемент управления, а затем вы по ошибке добавите его в проект.</span><span class="sxs-lookup"><span data-stu-id="7af8d-127">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>
+    >  <span data-ttu-id="7b2ab-126">Создание ссылки на вредоносный элемент `UserControl` может поставить локальный компьютер под угрозу атаки по сети.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-126">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="7b2ab-127">Это может произойти только в том случае, если злоумышленник создаст небезопасный пользовательский элемент управления, а затем вы по ошибке добавите его в проект.</span><span class="sxs-lookup"><span data-stu-id="7b2ab-127">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7af8d-128">См. также</span><span class="sxs-lookup"><span data-stu-id="7af8d-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b2ab-128">См. также</span><span class="sxs-lookup"><span data-stu-id="7b2ab-128">See also</span></span>
 
-- [<span data-ttu-id="7af8d-129">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7af8d-129">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="7af8d-130">Упорядочение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7af8d-130">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="7af8d-131">Практическое руководство. Изменить размер элементов управления на Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7af8d-131">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
-- [<span data-ttu-id="7af8d-132">Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7af8d-132">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="7af8d-133">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7af8d-133">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="7b2ab-129">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7b2ab-129">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="7b2ab-130">Практическое руководство. Изменить размер элементов управления на Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7b2ab-130">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
+- [<span data-ttu-id="7b2ab-131">Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7b2ab-131">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="7b2ab-132">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7b2ab-132">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
