@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: de523a42f1274784a92243735a8c239a6b5bcff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960234"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016087"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "69960234"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
- В ноябре 2004 года [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] выпустила новую версию рекомендаций по тестированию драйверов; драйверы, написанные после этой даты, более стабильны. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать для таких драйверов конвейер аппаратного ускорения и вернется к программной отрисовке для драйверов XPDM, опубликованных до этой даты.  
+ В ноябре 2004 Корпорация Майкрософт выпустила новую версию рекомендаций по тестированию драйверов. драйверы, написанные после этой даты, обеспечивают лучшую стабильность. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать для таких драйверов конвейер аппаратного ускорения и вернется к программной отрисовке для драйверов XPDM, опубликованных до этой даты.  
   
  Параметр **требуемая дата видеодрайвера** позволяет указать альтернативную минимальную дату для драйверов XPDM. Дату ранее ноября 2004 г. следует указывать только в случае, если вы не уверены, что видеодрайвер достаточно стабилен для поддержки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   

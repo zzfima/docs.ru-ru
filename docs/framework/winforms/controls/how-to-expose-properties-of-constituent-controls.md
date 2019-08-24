@@ -10,53 +10,53 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f006e42771a5ecc71f6a508fd78d0e2dd8f2d2f2
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941379"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015882"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Практическое руководство. Обеспечение доступа к свойствам составных элементов управления
-Элементы управления, составляющих составной элемент управления, называются *составные элементы управления*. Эти элементы управления обычно объявляются частных и таким образом, не может использоваться разработчиком. Если вы хотите сделать доступными свойства этих элементов управления для последующих пользователей, их необходимо предоставить пользователю. Свойство составного элемента управления предоставляется путем создания свойства в пользовательский элемент управления и использования `get` и `set` методы доступа этого свойства для внесения изменений в закрытое свойство составляющего элемента управления.  
-  
- Рассмотрим гипотетический пользовательский элемент управления, содержащий составную кнопку `MyButton`. В этом примере, когда пользователь запрашивает `ConstituentButtonBackColor` свойство, значение, хранящееся в <xref:System.Windows.Forms.Control.BackColor%2A> свойство `MyButton` доставляется. Когда пользователь назначает значение этого свойства, это значение автоматически передается <xref:System.Windows.Forms.Control.BackColor%2A> свойство `MyButton` и `set` код будет выполнен, изменения цвета `MyButton`.  
-  
- Следующий пример показывает способ предоставления <xref:System.Windows.Forms.Control.BackColor%2A> составных кнопки:  
-  
-```vb  
-Public Property ButtonColor() as System.Drawing.Color  
-   Get  
-      Return MyButton.BackColor  
-   End Get  
-   Set(Value as System.Drawing.Color)  
-      MyButton.BackColor = Value  
-   End Set  
-End Property  
-```  
-  
-```csharp  
-public Color ButtonColor  
-{  
-   get  
-   {  
-      return(myButton.BackColor);  
-   }  
-   set  
-   {  
-      myButton.BackColor = value;  
-   }  
-}  
-```  
-  
-### <a name="to-expose-a-property-of-a-constituent-control"></a>Чтобы предоставить свойство составного элемента управления  
-  
-1. Создайте общедоступное свойство пользовательского элемента управления.  
-  
-2. В `get` раздел свойства, написать код, который извлекает значение свойства, которому требуется предоставить доступ.  
-  
-3. В `set` раздел свойства, написать код, который передает значение свойства, предоставленному свойству составляющего элемента управления.  
-  
+Элементы управления, составляющие составной элемент управления, называются *составляющими элементами управления*. Эти элементы управления обычно объявляются частными, и поэтому разработчик не может получить к ним доступ. Если вы хотите, чтобы свойства этих элементов управления были доступны для будущих пользователей, необходимо предоставить их пользователю. Свойство составного элемента управления предоставляется путем создания свойства в пользовательском элементе управления и использования `get` методов доступа и `set` этого свойства для изменения закрытого свойства составляющего элемента управления.
+
+ Рассмотрим гипотетический пользовательский элемент управления с составной кнопкой `MyButton`с именем. В этом примере, когда пользователь запрашивает `ConstituentButtonBackColor` свойство, значение, хранящееся <xref:System.Windows.Forms.Control.BackColor%2A> в свойстве `MyButton` , доставляется. Когда пользователь присваивает значение <xref:System.Windows.Forms.Control.BackColor%2A> этому свойству, это значение автоматически передается свойству объекта `MyButton` , и `set` `MyButton`код будет выполнен, изменив цвет.
+
+ В следующем примере показано, <xref:System.Windows.Forms.Control.BackColor%2A> как предоставить свойство составной кнопки:
+
+```vb
+Public Property ButtonColor() as System.Drawing.Color
+   Get
+      Return MyButton.BackColor
+   End Get
+   Set(Value as System.Drawing.Color)
+      MyButton.BackColor = Value
+   End Set
+End Property
+```
+
+```csharp
+public Color ButtonColor
+{
+   get
+   {
+      return(myButton.BackColor);
+   }
+   set
+   {
+      myButton.BackColor = value;
+   }
+}
+```
+
+### <a name="to-expose-a-property-of-a-constituent-control"></a>Предоставление свойства составного элемента управления
+
+1. Создайте открытое свойство для пользовательского элемента управления.
+
+2. `get` В разделе Свойства напишите код, который получает значение свойства, которое необходимо предоставить.
+
+3. `set` В разделе Свойства напишите код, который передает значение свойства в предоставляемое свойство составляющего элемента управления.
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.UserControl>

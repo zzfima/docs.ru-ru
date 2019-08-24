@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958546"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016111"
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
 С Microsoft .NET Framework разработчики приложений, использующие Windows Presentation Foundation (WPF), имеют богатый новый набор API-интерфейсов для управления печатью и системой печати. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. В основе этой новой функциональности лежит новый формат файла [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] и способ печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "69958546"
   
  Чтобы включить использование принтеров на основе XPSDrv в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и Windows Forms приложений, драйвер принтера XPS (XPSDrv) поддерживает преобразование из GDI в формат XPS. Модель XPSDrv также предоставляет конвертер для формата XPS в GDI, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] чтобы приложения могли печатать [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] документы. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений преобразование XPS в формат GDI выполняется автоматически <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> методами <xref:System.Windows.Xps.XpsDocumentWriter> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> класса, когда целевая очередь печати в операции записи не имеет драйвера XPSDrv. (Windows Forms приложения не могут [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] печатать документы.)  
   
- На следующем рисунке показана подсистема печати и определены части [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], предоставляемые, а также части, определяемые поставщиками программного обеспечения и оборудования.  
+ На следующем рисунке показана подсистема печати и определены части, предоставляемые корпорацией Майкрософт, а также части, определяемые поставщиками программного обеспечения и оборудования.  
   
  ![На снимке экрана показана система печати XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   

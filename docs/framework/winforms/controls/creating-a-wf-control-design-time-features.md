@@ -10,104 +10,69 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666233"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016012"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки
+# <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Пошаговое руководство. Создание элемента управления, использующего преимущества функций времени разработки
 
 Интерфейс времени разработки для пользовательского элемента управления можно расширить путем создания связанного пользовательского конструктора.
 
-В этом пошаговом руководстве показано, как создать пользовательский конструктор для пользовательского элемента управления. Будет реализован `MarqueeControl` тип и связанный класс конструктора с именем `MarqueeControlRootDesigner`.
+В этой статье показано, как создать пользовательский конструктор для пользовательского элемента управления. Вы реализуете `MarqueeControl` тип и связанный класс конструктора с именем `MarqueeControlRootDesigner`.
 
-`MarqueeControl` Тип реализует экран, аналогичный области театра с анимированными индикаторами и мигающим текстом.
+`MarqueeControl` Тип реализует вид, аналогичный области театра с анимированными индикаторами и мигающим текстом.
 
 Конструктор для этого элемента управления взаимодействует с средой разработки, чтобы обеспечить пользовательский интерфейс во время разработки. С помощью пользовательского конструктора можно собирать пользовательскую `MarqueeControl` реализацию с анимированными индикаторами и мигающим текстом во многих сочетаниях. Собранный элемент управления можно использовать в форме, как и любой другой элемент управления Windows Forms.
 
-В данном пошаговом руководстве представлены следующие задачи.
-
-- Создание проекта
-
-- Создание проекта библиотеки элементов управления
-
-- Ссылка на проект пользовательского элемента управления
-
-- Определение пользовательского элемента управления и его пользовательского конструктора
-
-- Создание экземпляра пользовательского элемента управления
-
-- Настройка проекта для отладки во время разработки
-
-- Реализация пользовательского элемента управления
-
-- Создание дочернего элемента управления для пользовательского элемента управления
-
-- Создание дочернего элемента управления Маркуибордер
-
-- Создание пользовательского конструктора для теневого копирования и свойств фильтра
-
-- Обработка изменений компонентов
-
-- Добавление команд конструктора в пользовательский конструктор
-
-- Создание пользовательского UITypeEditor
-
-- Тестирование пользовательского элемента управления в конструкторе
-
-По завершении пользовательский элемент управления будет выглядеть примерно следующим образом:
+По завершении работы с этим пошаговым руководством пользовательский элемент управления будет выглядеть примерно следующим образом:
 
 ![Приложение, показывающее текст с текстом и кнопки запуска и окончания.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-Полный листинг кода см. в разделе [как Создайте элемент управления Windows Forms, который использует преимущества функций](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))времени разработки.
+Полный листинг кода см. в разделе [как Создайте элемент управления Windows Forms, который использует преимущества функций](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))времени разработки.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения этого пошагового руководства вам потребуется Visual Studio.
 
-## <a name="creating-the-project"></a>Создание проекта
+## <a name="create-the-project"></a>Создание проекта
 
 Первым шагом является создание проекта приложения. Этот проект будет использоваться для создания приложения, в котором размещается пользовательский элемент управления.
 
-Откройте Visual Studio и создайте проект приложения Windows Forms с именем "маркуиконтролтест" (**файл** > **создать** > **проект** >  **C# визуальный** элемент или **Visual Basic**  >  **Классический рабочий стол** **Windows Forms приложение).**  > 
+В Visual Studio создайте новый проект приложения Windows Forms и назовите его **маркуиконтролтест**.
 
-## <a name="creating-a-control-library-project"></a>Создание проекта библиотеки элементов управления
+## <a name="create-the-control-library-project"></a>Создание проекта библиотеки элементов управления
 
-Следующим шагом является создание проекта библиотеки элементов управления. Будет создан новый пользовательский элемент управления и соответствующий ему пользовательский конструктор.
+1. Добавьте в решение проект библиотеки элементов управления Windows Forms. Назовите проект **маркуиконтроллибрари**.
 
-### <a name="to-create-the-control-library-project"></a>Создание проекта библиотеки элементов управления
+2. С помощью **Обозреватель решений**удалите элемент управления проекта по умолчанию, удалив исходный файл с именем "UserControl1.cs" или "UserControl1. vb" в зависимости от выбранного языка.
 
-1. Добавьте в решение проект библиотеки элементов управления Windows Forms. Назовите проект «Маркуиконтроллибрари».
+3. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlLibrary` в проект. Присвойте новому исходному файлу базовое имя **маркуиконтрол**.
 
-2. С помощью **Обозреватель решений**удалите элемент управления проекта по умолчанию, удалив исходный файл с именем "UserControl1.cs" или "UserControl1. vb" в зависимости от выбранного языка. Дополнительные сведения см. в разделе [Практическое руководство. Удаление, удаление и исключение элементов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+4. С помощью **Обозреватель решений**создайте новую папку в `MarqueeControlLibrary` проекте.
 
-3. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlLibrary` в проект. Присвойте новому исходному файлу базовое имя "Маркуиконтрол".
+5. Щелкните правой кнопкой мыши папку **конструктора** и добавьте новый класс. Назовите его **маркуиконтролрутдесигнер**.
 
-4. С помощью **Обозреватель решений**создайте новую папку в `MarqueeControlLibrary` проекте. Дополнительные сведения см. в разделе [Практическое руководство. Добавление новых элементов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))проекта. Назовите новую папку «Design».
+6. Необходимо использовать типы из сборки System. Design, поэтому добавьте эту ссылку в `MarqueeControlLibrary` проект.
 
-5. Щелкните правой кнопкой мыши папку **конструктора** и добавьте новый класс. Присвойте исходному файлу базовое имя "Маркуиконтролрутдесигнер".
-
-6. Вам потребуется использовать типы из сборки System. Design, поэтому добавьте эту ссылку в `MarqueeControlLibrary` проект.
-
-    > [!NOTE]
-    > Чтобы использовать сборку System. Design, проект должен быть предназначен для полной версии .NET Framework, а не .NET Framework клиентского профиля. Чтобы изменить целевую платформу, см [. раздел как определить целевую версию .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
-
-## <a name="referencing-the-custom-control-project"></a>Ссылка на проект пользовательского элемента управления
+## <a name="reference-the-custom-control-project"></a>Ссылка на проект пользовательского элемента управления
 
 Для тестирования пользовательского элемента `MarqueeControlTest` управления будет использоваться проект. Тестовый проект будет получать информацию о пользовательском элементе управления при добавлении в нее `MarqueeControlLibrary` ссылки на проект.
 
-### <a name="to-reference-the-custom-control-project"></a>Ссылка на проект пользовательского элемента управления
+В проекте добавьте в `MarqueeControlLibrary` сборку ссылку на проект. `MarqueeControlTest` Обязательно используйте вкладку **проекты** в диалоговом окне **Добавление ссылки** вместо непосредственной ссылки на `MarqueeControlLibrary` сборку.
 
-- В проекте добавьте в `MarqueeControlLibrary` сборку ссылку на проект. `MarqueeControlTest` Обязательно используйте вкладку **проекты** в диалоговом окне **Добавление ссылки** вместо непосредственной ссылки на `MarqueeControlLibrary` сборку.
+## <a name="define-a-custom-control-and-its-custom-designer"></a>Определение пользовательского элемента управления и его пользовательского конструктора
 
-## <a name="defining-a-custom-control-and-its-custom-designer"></a>Определение пользовательского элемента управления и его пользовательского конструктора
- Пользовательский элемент управления будет производным от <xref:System.Windows.Forms.UserControl> класса. Это позволяет элементу управления содержать другие элементы управления, а также обеспечивает большую часть функциональных возможностей по умолчанию.
+Пользовательский элемент управления будет производным от <xref:System.Windows.Forms.UserControl> класса. Это позволяет элементу управления содержать другие элементы управления, а также обеспечивает большую часть функциональных возможностей по умолчанию.
 
- Пользовательский элемент управления будет иметь связанный пользовательский конструктор. Это позволяет создать уникальный интерфейс разработки, специально предназначенный для пользовательского элемента управления.
+Пользовательский элемент управления будет иметь связанный пользовательский конструктор. Это позволяет создать уникальный интерфейс разработки, специально предназначенный для пользовательского элемента управления.
 
- Элемент управления связывается с конструктором с помощью <xref:System.ComponentModel.DesignerAttribute> класса. Поскольку вы разрабатываете все поведение пользовательского элемента управления во время разработки, Пользовательский конструктор будет реализовывать <xref:System.ComponentModel.Design.IRootDesigner> интерфейс.
+Элемент управления связывается с конструктором с помощью <xref:System.ComponentModel.DesignerAttribute> класса. Поскольку вы разрабатываете все поведение пользовательского элемента управления во время разработки, Пользовательский конструктор будет реализовывать <xref:System.ComponentModel.Design.IRootDesigner> интерфейс.
 
 ### <a name="to-define-a-custom-control-and-its-custom-designer"></a>Определение пользовательского элемента управления и его пользовательского конструктора
 
@@ -128,76 +93,76 @@ ms.locfileid: "69666233"
 
 4. Измените объявление `MarqueeControlRootDesigner` для наследования <xref:System.Windows.Forms.Design.DocumentDesigner> от класса. Примените <xref:System.ComponentModel.ToolboxItemFilterAttribute> , чтобы указать взаимодействие конструктора с **панелью элементов**.
 
-     **Примечание** . Определение `MarqueeControlRootDesigner` класса было заключено в пространство имен с именем «маркуиконтроллибрари. Design». Это объявление помещает конструктор в специальное пространство имен, зарезервированное для типов, связанных с конструированием.
+   > [!NOTE]
+   > Определение `MarqueeControlRootDesigner` класса было заключено в пространство имен с именем маркуиконтроллибрари. Design. Это объявление помещает конструктор в специальное пространство имен, зарезервированное для типов, связанных с конструированием.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#530](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#530)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#530](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#530)]
 
-5. Определите конструктор для `MarqueeControlRootDesigner` класса. <xref:System.Diagnostics.Trace.WriteLine%2A> Вставьте оператор в тело конструктора. Это будет полезно в целях отладки.
+5. Определите конструктор для `MarqueeControlRootDesigner` класса. <xref:System.Diagnostics.Trace.WriteLine%2A> Вставьте оператор в тело конструктора. Это будет полезно для отладки.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#540](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#540)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#540](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#540)]
 
-## <a name="creating-an-instance-of-your-custom-control"></a>Создание экземпляра пользовательского элемента управления
- Чтобы наблюдать за пользовательским поведением элемента управления во время разработки, необходимо поместить экземпляр элемента управления в форму в `MarqueeControlTest` Project.
+## <a name="create-an-instance-of-your-custom-control"></a>Создание экземпляра пользовательского элемента управления
 
-### <a name="to-create-an-instance-of-your-custom-control"></a>Создание экземпляра пользовательского элемента управления
-
-1. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlTest` в проект. Присвойте новому исходному файлу базовое имя "Демомаркуиконтрол".
+1. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlTest` в проект. Присвойте новому исходному файлу базовое имя **демомаркуиконтрол**.
 
 2. Откройте файл в **редакторе кода.** `DemoMarqueeControl` В верхней части файла импортируйте `MarqueeControlLibrary` пространство имен:
 
-```vb
-Imports MarqueeControlLibrary
-```
+   ```vb
+   Imports MarqueeControlLibrary
+   ```
 
-```csharp
-using MarqueeControlLibrary;
-```
+   ```csharp
+   using MarqueeControlLibrary;
+   ```
 
-1. Измените объявление `DemoMarqueeControl` для наследования `MarqueeControl` от класса.
+3. Измените объявление `DemoMarqueeControl` для наследования `MarqueeControl` от класса.
 
-2. Выполните построение проекта.
+4. Выполните построение проекта.
 
-3. Откройте `Form1` в конструкторе Windows Forms.
+5. Откройте форму Form1 в конструктор Windows Forms.
 
-4. Найдите вкладку **компоненты маркуиконтролтест** на **панели элементов** и откройте ее. Перетащите элемент `DemoMarqueeControl` из **области элементов** на форму.
+6. Найдите вкладку **компоненты маркуиконтролтест** на **панели элементов** и откройте ее. Перетащите элемент `DemoMarqueeControl` из **области элементов** на форму.
 
-5. Выполните построение проекта.
+7. Выполните построение проекта.
 
-## <a name="setting-up-the-project-for-design-time-debugging"></a>Настройка проекта для отладки во время разработки
+## <a name="set-up-the-project-for-design-time-debugging"></a>Настройка проекта для отладки во время разработки
 
-При разработке настраиваемой среды разработки необходимо выполнять отладку элементов управления и компонентов. Существует простой способ настройки проекта, позволяющий выполнять отладку во время разработки. Дополнительные сведения см. в разделе [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)время разработки.
-
-### <a name="to-set-up-the-project-for-design-time-debugging"></a>Настройка проекта для отладки во время разработки
+При разработке настраиваемой среды разработки необходимо выполнить отладку элементов управления и компонентов. Существует простой способ настройки проекта, позволяющий выполнять отладку во время разработки. Дополнительные сведения см. в разделе [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)время разработки.
 
 1. Щелкните `MarqueeControlLibrary` правой кнопкой мыши проект и выберите пункт **Свойства**.
 
-2. В диалоговом окне "страницы свойств Маркуиконтроллибрари" выберите страницу **Отладка** .
+2. В диалоговом окне **страницы свойств маркуиконтроллибрари** выберите страницу **Отладка** .
 
-3. В разделе **действие при запуске** выберите **Запуск внешней программы**. Вы будете выполнять отладку отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием![(...) в окно свойств кнопки Visual Studio.](./media/visual-studio-ellipsis-button.png)), чтобы найти интегрированную среду разработки Visual Studio. Имя исполняемого файла — devenv. exe, и если вы установили в расположение по умолчанию, то его путь —%programfiles%\Microsoft Visual Studio 9.0 \ Common7\IDE\devenv.exe.
+3. В разделе **действие при запуске** выберите **Запуск внешней программы**. Вы будете выполнять отладку отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием![(...) в окно свойств в Visual Studio](./media/visual-studio-ellipsis-button.png)), чтобы найти интегрированную среду разработки Visual Studio. Имя исполняемого файла — devenv. exe, и если вы установили в расположение по умолчанию, его путь: *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE\devenv.exe*.
 
-4. Нажмите кнопку ОК, чтобы закрыть диалоговое окно.
+4. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
 
-5. Щелкните `MarqueeControlLibrary` проект правой кнопкой мыши и выберите команду "Назначить запускаемым проектом", чтобы включить эту конфигурацию отладки.
+5. Щелкните правой кнопкой мыши проект Маркуиконтроллибрари и выберите **Назначить запускаемым проектом** , чтобы включить эту конфигурацию отладки.
 
 ## <a name="checkpoint"></a>Контрольная точка
 
-Теперь все готово для отладки поведения пользовательского элемента управления во время разработки. После определения того, что среда отладки настроена правильно, вы проверите связь между пользовательским элементом управления и пользовательским конструктором.
+Теперь все готово для отладки поведения пользовательского элемента управления во время разработки. После определения правильности настройки среды отладки вы проверите связь между пользовательским элементом управления и пользовательским конструктором.
 
 ### <a name="to-test-the-debugging-environment-and-the-designer-association"></a>Тестирование среды отладки и ассоциации конструктора
 
-1. Откройте исходный файл в **редакторе кода** и поместите точку останова в <xref:System.Diagnostics.Trace.WriteLine%2A> инструкцию. `MarqueeControlRootDesigner`
+1. Откройте исходный файл маркуиконтролрутдесигнер в **редакторе кода** и поместите точку останова в <xref:System.Diagnostics.Trace.WriteLine%2A> инструкцию.
 
-2. Нажмите клавишу F5, чтобы запустить сеанс отладки. Обратите внимание, что создается новый экземпляр Visual Studio.
+2. Нажмите клавишу **F5** , чтобы запустить сеанс отладки.
 
-3. В новом экземпляре Visual Studio откройте решение "Маркуиконтролтест". Решение можно легко найти, выбрав **последние проекты** в меню **файл** . Файл решения "Маркуиконтролтест. sln" будет указан как самый последний использовавшийся файл.
+   Создается новый экземпляр Visual Studio.
 
-4. `DemoMarqueeControl` Откройте в конструкторе. Обратите внимание, что экземпляр отладки Visual Studio получает фокус и выполнение останавливается в точке останова. Нажмите клавишу F5, чтобы продолжить сеанс отладки.
+3. В новом экземпляре Visual Studio откройте решение Маркуиконтролтест. Решение можно легко найти, выбрав **последние проекты** в меню **файл** . Файл решения Маркуиконтролтест. sln будет указан как последний использовавшийся файл.
 
-На этом этапе все готово для разработки и отладки пользовательского элемента управления и связанного с ним пользовательского конструктора. Оставшаяся часть этого пошагового руководства посвящена деталям реализации функций элемента управления и конструктора.
+4. `DemoMarqueeControl` Откройте в конструкторе.
 
-## <a name="implementing-your-custom-control"></a>Реализация пользовательского элемента управления
+   Экземпляр отладки Visual Studio получает фокус и выполнение останавливается в точке останова. Нажмите клавишу **F5** , чтобы продолжить сеанс отладки.
+
+На этом этапе все готово для разработки и отладки пользовательского элемента управления и связанного с ним пользовательского конструктора. Оставшаяся часть этой статьи сосредоточена на деталях реализации функций элемента управления и конструктора.
+
+## <a name="implement-the-custom-control"></a>Реализация пользовательского элемента управления
 
 `MarqueeControl` —Этос<xref:System.Windows.Forms.UserControl> небольшой настройкой. Он предоставляет два метода: `Start`, который запускает анимацию бегущей строки и `Stop`, в результате которой останавливается анимация. `StartMarquee` `IMarqueeWidget` `StopMarquee` `Stop` `Start` Поскольку содержит дочерние элементы управления, реализующие интерфейс, и перечисляет каждый дочерний элемент управления и вызывают методы и соответственно для каждого дочернего элемента управления. `MarqueeControl` , реализующий интерфейс `IMarqueeWidget`.
 
@@ -217,7 +182,7 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
 
-## <a name="creating-a-child-control-for-your-custom-control"></a>Создание дочернего элемента управления для пользовательского элемента управления
+## <a name="create-a-child-control-for-your-custom-control"></a>Создание дочернего элемента управления для пользовательского элемента управления
 
 В `MarqueeControl` будет размещено два вида дочерних элементов управления `MarqueeBorder` : элемент управления и `MarqueeText` элемент управления.
 
@@ -249,7 +214,9 @@ using MarqueeControlLibrary;
 
 5. Перетащите компонент из **панели элементов** на элементуправления.`MarqueeText` <xref:System.ComponentModel.BackgroundWorker> Этот компонент позволит `MarqueeText` элементу управления обновляться в асинхронном режиме.
 
-6. В окно свойств установите <xref:System.ComponentModel.BackgroundWorker> для <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> `WorkerReportsProgress`компонентаисвойства значение`true`. Эти параметры позволяют <xref:System.ComponentModel.BackgroundWorker> компоненту периодически <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> вызывать событие и отменять асинхронные обновления. Дополнительные сведения см. в разделе [компонент BackgroundWorker](backgroundworker-component.md).
+6. В окне **Свойства** установите <xref:System.ComponentModel.BackgroundWorker> для компонента `WorkerReportsProgress` и <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> свойства **значение true**. Эти параметры позволяют <xref:System.ComponentModel.BackgroundWorker> компоненту периодически <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> вызывать событие и отменять асинхронные обновления.
+
+   Дополнительные сведения см. в разделе [компонент BackgroundWorker](backgroundworker-component.md).
 
 7. Откройте исходный файл в **редакторе кода.** `MarqueeText` В верхней части файла импортируйте следующие пространства имен:
 
@@ -294,7 +261,7 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. Нажмите клавишу F6 для построения решения.
+14. Нажмите клавишу **F6** , чтобы создать решение.
 
 ## <a name="create-the-marqueeborder-child-control"></a>Создание дочернего элемента управления Маркуибордер
 
@@ -308,9 +275,9 @@ using MarqueeControlLibrary;
 
 2. Перетащите компонент из **панели элементов** на элементуправления.`MarqueeBorder` <xref:System.ComponentModel.BackgroundWorker> Этот компонент позволит `MarqueeBorder` элементу управления обновляться в асинхронном режиме.
 
-3. В окно свойств установите <xref:System.ComponentModel.BackgroundWorker> для <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> `WorkerReportsProgress`компонентаисвойства значение`true`. Эти параметры позволяют <xref:System.ComponentModel.BackgroundWorker> компоненту периодически <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> вызывать событие и отменять асинхронные обновления. Дополнительные сведения см. в разделе [компонент BackgroundWorker](backgroundworker-component.md).
+3. В окне **Свойства** установите <xref:System.ComponentModel.BackgroundWorker> для компонента `WorkerReportsProgress` и <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> свойства **значение true**. Эти параметры позволяют <xref:System.ComponentModel.BackgroundWorker> компоненту периодически <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> вызывать событие и отменять асинхронные обновления. Дополнительные сведения см. в разделе [компонент BackgroundWorker](backgroundworker-component.md).
 
-4. В окно свойств нажмите кнопку события. Присоединение обработчиков <xref:System.ComponentModel.BackgroundWorker.DoWork> для <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> событий и.
+4. В окне **Свойства** нажмите кнопку **события** . Присоединение обработчиков <xref:System.ComponentModel.BackgroundWorker.DoWork> для <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> событий и.
 
 5. Откройте исходный файл в **редакторе кода.** `MarqueeBorder` В верхней части файла импортируйте следующие пространства имен:
 
@@ -373,7 +340,7 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#70)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#70)]
 
-## <a name="creating-a-custom-designer-to-shadow-and-filter-properties"></a>Создание пользовательского конструктора для теневого копирования и свойств фильтра
+## <a name="create-a-custom-designer-to-shadow-and-filter-properties"></a>Создание пользовательского конструктора для тени и фильтрации свойств
 
 `MarqueeControlRootDesigner` Класс предоставляет реализацию для корневого конструктора. Помимо этого конструктора, который работает `MarqueeControl`с, необходим пользовательский конструктор, специально связанный `MarqueeBorder` с элементом управления. Этот конструктор предоставляет настраиваемое поведение, которое подходит для контекста пользовательского корневого конструктора.
 
@@ -399,7 +366,7 @@ using MarqueeControlLibrary;
 
 - <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A>
 
-При изменении открытого интерфейса компонента с помощью этих методов необходимо соблюдать следующие правила.
+При изменении открытого интерфейса компонента с помощью этих методов следует соблюдать следующие правила.
 
 - Добавлять или удалять элементы только в `PreFilter` методах
 
@@ -415,9 +382,9 @@ using MarqueeControlLibrary;
 
 ### <a name="to-create-a-custom-designer-to-shadow-and-filter-properties"></a>Создание пользовательского конструктора для теневого копирования и свойств фильтра
 
-1. Щелкните правой кнопкой мыши папку **конструктора** и добавьте новый класс. Присвойте исходному файлу базовое имя "Маркуибордердесигнер".
+1. Щелкните правой кнопкой мыши папку **конструктора** и добавьте новый класс. Присвойте исходному файлу базовое имя **маркуибордердесигнер**.
 
-2. Откройте исходный файл в **редакторе кода.** `MarqueeBorderDesigner` В верхней части файла импортируйте следующие пространства имен:
+2. Откройте исходный файл Маркуибордердесигнер в **редакторе кода**. В верхней части файла импортируйте следующие пространства имен:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#420](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#420)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#420](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#420)]
@@ -439,14 +406,15 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#440)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#440)]
 
-## <a name="handling-component-changes"></a>Обработка изменений компонентов
- Класс предоставляет пользовательские возможности времени разработки `MarqueeControl` для экземпляров. `MarqueeControlRootDesigner` Большая часть функций времени разработки наследуется от <xref:System.Windows.Forms.Design.DocumentDesigner> класса; в коде будут реализованы две определенные настройки: обработка изменений компонентов и Добавление команд конструктора.
+## <a name="handle-component-changes"></a>Обработку изменений компонентов
 
- По мере разработки пользователями `MarqueeControl` своих экземпляров корневой конструктор будет отслеживанию изменений `MarqueeControl` в и его дочерних элементах управления. Среда разработки предоставляет удобную службу <xref:System.ComponentModel.Design.IComponentChangeService>для отслеживания изменений состояния компонента.
+Класс предоставляет пользовательские возможности времени разработки `MarqueeControl` для экземпляров. `MarqueeControlRootDesigner` Большая часть функций времени разработки наследуется от <xref:System.Windows.Forms.Design.DocumentDesigner> класса. В коде будут реализованы две определенные настройки: обработка изменений компонентов и Добавление команд конструктора.
 
- Чтобы получить ссылку на эту службу, запросите среду с помощью <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> метода. Если запрос выполнен успешно, конструктор может присоединить обработчик для <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> события и выполнить все задачи, необходимые для поддержания стабильного состояния во время разработки.
+По мере разработки пользователями `MarqueeControl` своих экземпляров корневой конструктор будет отслеживанию изменений `MarqueeControl` в и его дочерних элементах управления. Среда разработки предоставляет удобную службу <xref:System.ComponentModel.Design.IComponentChangeService>для отслеживания изменений состояния компонента.
 
- В случае `MarqueeControlRootDesigner` класса <xref:System.Windows.Forms.Control.Refresh%2A> метод будет вызываться для каждого `IMarqueeWidget` объекта, содержащегося в `MarqueeControl`. Это приведет к тому `IMarqueeWidget` , что объект будет правильно перерисовываться при изменении свойств <xref:System.Windows.Forms.Control.Size%2A> , таких как его родительский элемент.
+Чтобы получить ссылку на эту службу, запросите среду с помощью <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> метода. Если запрос выполнен успешно, конструктор может присоединить обработчик для <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> события и выполнить все задачи, необходимые для поддержания стабильного состояния во время разработки.
+
+В случае `MarqueeControlRootDesigner` класса <xref:System.Windows.Forms.Control.Refresh%2A> метод будет вызываться для каждого `IMarqueeWidget` объекта, содержащегося в `MarqueeControl`. Это приведет к тому `IMarqueeWidget` , что объект будет правильно перерисовываться при изменении свойств <xref:System.Windows.Forms.Control.Size%2A> , таких как его родительский элемент.
 
 ### <a name="to-handle-component-changes"></a>Для управления изменениями компонентов
 
@@ -460,7 +428,7 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#560](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#560)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]
 
-## <a name="adding-designer-verbs-to-your-custom-designer"></a>Добавление команд конструктора в пользовательский конструктор
+## <a name="add-designer-verbs-to-your-custom-designer"></a>Добавление команд конструктора в пользовательский конструктор
 
 Команда конструктора — это команда меню, связанная с обработчиком событий. Команды конструктора добавляются в контекстное меню компонента во время разработки. Дополнительные сведения см. в разделе <xref:System.ComponentModel.Design.DesignerVerb>.
 
@@ -480,9 +448,9 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]
 
-## <a name="creating-a-custom-uitypeeditor"></a>Создание пользовательского UITypeEditor
+## <a name="create-a-custom-uitypeeditor"></a>Создание настраиваемого UITypeEditor
 
-При создании пользовательской среды разработки для пользователей часто желательно создать пользовательское взаимодействие с окно свойств. Это можно сделать, создав <xref:System.Drawing.Design.UITypeEditor>. Дополнительные сведения см. в разделе [Практическое руководство. Создайте редактор](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))типов пользовательского интерфейса.
+При создании пользовательской среды разработки для пользователей часто желательно создать пользовательское взаимодействие с окно свойств. Это можно сделать, создав <xref:System.Drawing.Design.UITypeEditor>.
 
 `MarqueeBorder` Элемент управления предоставляет несколько свойств в окно свойств. Два из этих свойств `MarqueeSpinDirection` и `MarqueeLightShape` представлены перечислениями. Чтобы продемонстрировать использование редактора типов пользовательского интерфейса, `MarqueeLightShape` свойство будет иметь связанный <xref:System.Drawing.Design.UITypeEditor> класс.
 
@@ -510,69 +478,69 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
 
-## <a name="creating-a-view-control-for-your-custom-uitypeeditor"></a>Создание элемента управления View для пользовательского UITypeEditor
+## <a name="create-a-view-control-for-your-custom-uitypeeditor"></a>Создание элемента управления View для пользовательского UITypeEditor
 
-1. Свойство поддерживает два типа простых фигур: `Square` и `Circle`. `MarqueeLightShape` Вы создадите пользовательский элемент управления, используемый исключительно в целях графического отображения этих значений в окно свойств. Этот пользовательский элемент управления будет использоваться <xref:System.Drawing.Design.UITypeEditor> для взаимодействия с окно свойств.
+Свойство поддерживает два типа простых фигур: `Square` и `Circle`. `MarqueeLightShape` Вы создадите пользовательский элемент управления, используемый исключительно в целях графического отображения этих значений в окно свойств. Этот пользовательский элемент управления будет использоваться <xref:System.Drawing.Design.UITypeEditor> для взаимодействия с окно свойств.
 
 ### <a name="to-create-a-view-control-for-your-custom-ui-type-editor"></a>Создание элемента управления представления для пользовательского редактора типов пользовательского интерфейса
 
-1. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlLibrary` в проект. Присвойте новому исходному файлу базовое имя "Лигхтшапеселектионконтрол".
+1. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlLibrary` в проект. Присвойте новому исходному файлу базовое имя **лигхтшапеселектионконтрол**.
 
-2. Перетащите два <xref:System.Windows.Forms.Panel> элемента управления из **панели элементов** в `LightShapeSelectionControl`область. Назовите `squarePanel` их `circlePanel`и. Расположите их параллельно. Задайте для <xref:System.Windows.Forms.Panel> свойства обоих элементов управления значение (60, 60). <xref:System.Windows.Forms.Control.Size%2A> Присвойте `squarePanel` свойству элемента управления значение (8, 10). <xref:System.Windows.Forms.Control.Location%2A> Присвойте `circlePanel` свойству элемента управления значение (80, 10). <xref:System.Windows.Forms.Control.Location%2A> Наконец, задайте <xref:System.Windows.Forms.Control.Size%2A> для свойства значение `LightShapeSelectionControl` (150, 80).
+2. Перетащите два <xref:System.Windows.Forms.Panel> элемента управления из **панели элементов** в `LightShapeSelectionControl`область. Назовите `squarePanel` их `circlePanel`и. Расположите их параллельно. Задайте для <xref:System.Windows.Forms.Panel>свойстваобоих элементов управления значение **(60, 60).** <xref:System.Windows.Forms.Control.Size%2A> Присвойте `squarePanel`свойству элемента управления значение **(8, 10).** <xref:System.Windows.Forms.Control.Location%2A> Присвойте `circlePanel`свойству элемента управления значение **(80, 10).** <xref:System.Windows.Forms.Control.Location%2A> Наконец, задайте <xref:System.Windows.Forms.Control.Size%2A> для свойства значение `LightShapeSelectionControl` **(150, 80)** .
 
 3. Откройте исходный файл в **редакторе кода.** `LightShapeSelectionControl` В верхней части файла импортируйте <xref:System.Windows.Forms.Design?displayProperty=nameWithType> пространство имен:
 
-```vb
-Imports System.Windows.Forms.Design
-```
+   ```vb
+   Imports System.Windows.Forms.Design
+   ```
 
-```csharp
-using System.Windows.Forms.Design;
-```
+   ```csharp
+   using System.Windows.Forms.Design;
+   ```
 
-1. Реализуйте <xref:System.Windows.Forms.Control.Click> обработчики событий `squarePanel` для `circlePanel` элементов управления и. Эти методы вызывают <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> для завершения пользовательского <xref:System.Drawing.Design.UITypeEditor> сеанса редактирования.
+4. Реализуйте <xref:System.Windows.Forms.Control.Click> обработчики событий `squarePanel` для `circlePanel` элементов управления и. Эти методы вызывают <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> для завершения пользовательского <xref:System.Drawing.Design.UITypeEditor> сеанса редактирования.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#390](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#390)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#390](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#390)]
 
-2. Объявите <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> переменную экземпляра `editorService`с именем.
+5. Объявите <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> переменную экземпляра `editorService`с именем.
 
-```vb
-Private editorService As IWindowsFormsEditorService
-```
+   ```vb
+   Private editorService As IWindowsFormsEditorService
+   ```
 
-```csharp
-private IWindowsFormsEditorService editorService;
-```
+   ```csharp
+   private IWindowsFormsEditorService editorService;
+   ```
 
-1. Объявите `MarqueeLightShape` переменную экземпляра `lightShapeValue`с именем.
+6. Объявите `MarqueeLightShape` переменную экземпляра `lightShapeValue`с именем.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#330](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#330)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#330](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#330)]
 
-2. `circlePanel` <xref:System.Windows.Forms.Control.Click> `squarePanel` В конструкторе присоедините обработчики событий<xref:System.Windows.Forms.Control.Click> к событиям элементов управления и. `LightShapeSelectionControl` Кроме того, определите перегрузку конструктора, которая `MarqueeLightShape` назначает значение `lightShapeValue` полю в среде разработки.
+7. `circlePanel` <xref:System.Windows.Forms.Control.Click> `squarePanel` В конструкторе присоедините обработчики событий<xref:System.Windows.Forms.Control.Click> к событиям элементов управления и. `LightShapeSelectionControl` Кроме того, определите перегрузку конструктора, которая `MarqueeLightShape` назначает значение `lightShapeValue` полю в среде разработки.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#340](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#340)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#340](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#340)]
 
-3. В методе отсоедините обработчики <xref:System.Windows.Forms.Control.Click>событий. <xref:System.ComponentModel.Component.Dispose%2A>
+8. В методе отсоедините обработчики <xref:System.Windows.Forms.Control.Click>событий. <xref:System.ComponentModel.Component.Dispose%2A>
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#350](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#350)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#350](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#350)]
 
-4. В **обозревателе решений** нажмите кнопку **Показать все файлы**. Откройте файл LightShapeSelectionControl.Designer.cs или лигхтшапеселектионконтрол. Designer. vb и удалите определение <xref:System.ComponentModel.Component.Dispose%2A> метода по умолчанию.
+9. В **обозревателе решений** нажмите кнопку **Показать все файлы**. Откройте файл LightShapeSelectionControl.Designer.cs или лигхтшапеселектионконтрол. Designer. vb и удалите определение <xref:System.ComponentModel.Component.Dispose%2A> метода по умолчанию.
 
-5. Реализуйте свойство `LightShape`.
+10. Реализуйте свойство `LightShape`.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-6. Переопределите метод <xref:System.Windows.Forms.Control.OnPaint%2A> . В этой реализации будет нарисован закрашенный квадрат и круг. Он также выделяет выбранное значение, рисуя границу вокруг одной или другой фигуры.
+11. Переопределите метод <xref:System.Windows.Forms.Control.OnPaint%2A> . В этой реализации будет нарисован закрашенный квадрат и круг. Он также выделяет выбранное значение, рисуя границу вокруг одной или другой фигуры.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]
 
-## <a name="testing-your-custom-control-in-the-designer"></a>Тестирование пользовательского элемента управления в конструкторе
+## <a name="test-your-custom-control-in-the-designer"></a>Тестирование пользовательского элемента управления в конструкторе
 
 На этом этапе можно построить `MarqueeControlLibrary` проект. Протестируйте реализацию, создав элемент управления, который наследует от `MarqueeControl` класса и использует его в форме.
 
@@ -602,29 +570,29 @@ private IWindowsFormsEditorService editorService;
 
 12. В обработчиках `Start` `Stop` `DemoMarqueeControl`событий вызовите методы и для. <xref:System.Windows.Forms.Control.Click>
 
-```vb
-Private Sub startButton_Click(sender As Object, e As System.EventArgs)
-    Me.demoMarqueeControl1.Start()
-End Sub 'startButton_Click
+    ```vb
+    Private Sub startButton_Click(sender As Object, e As System.EventArgs)
+        Me.demoMarqueeControl1.Start()
+    End Sub 'startButton_Click
 
-Private Sub stopButton_Click(sender As Object, e As System.EventArgs)
-Me.demoMarqueeControl1.Stop()
-End Sub 'stopButton_Click
-```
+    Private Sub stopButton_Click(sender As Object, e As System.EventArgs)
+    Me.demoMarqueeControl1.Stop()
+    End Sub 'stopButton_Click
+    ```
 
-```csharp
-private void startButton_Click(object sender, System.EventArgs e)
-{
-    this.demoMarqueeControl1.Start();
-}
+    ```csharp
+    private void startButton_Click(object sender, System.EventArgs e)
+    {
+        this.demoMarqueeControl1.Start();
+    }
 
-private void stopButton_Click(object sender, System.EventArgs e)
-{
-    this.demoMarqueeControl1.Stop();
-}
-```
+    private void stopButton_Click(object sender, System.EventArgs e)
+    {
+        this.demoMarqueeControl1.Stop();
+    }
+    ```
 
-1. `MarqueeControlTest` Задайте проект в качестве запускаемого проекта и запустите его. Вы увидите форму, в которой отображается `DemoMarqueeControl`. Нажмите кнопку " **Пуск** ", чтобы запустить анимацию. Вы увидите, что текст мигает и индикаторы перемещаются вокруг границы.
+13. `MarqueeControlTest` Задайте проект в качестве запускаемого проекта и запустите его. Вы увидите форму, в которой отображается `DemoMarqueeControl`. Нажмите кнопку **запустить** , чтобы запустить анимацию. Вы увидите, что текст мигает и индикаторы перемещаются вокруг границы.
 
 ## <a name="next-steps"></a>Следующие шаги
 
@@ -636,7 +604,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
 
 - Дальнейшая настройка взаимодействия во время разработки. Можно попытаться затенить больше <xref:System.Windows.Forms.Control.Enabled%2A> свойств <xref:System.Windows.Forms.Control.Visible%2A>, чем и, и добавить новые свойства. Добавьте новые команды конструктора для упрощения распространенных задач, таких как закрепление дочерних элементов управления.
 
-- `MarqueeControl`Лицензия. Дополнительные сведения см. в разделе [Практическое руководство. Компоненты и элементы управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))лицензиями.
+- `MarqueeControl`Лицензия.
 
 - Управление сериализацией элементов управления и созданием кода для них. Дополнительные сведения см. в разделе [Динамическое создание и компиляция исходного кода](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
@@ -649,6 +617,3 @@ private void stopButton_Click(object sender, System.EventArgs e)
 - <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Практическое руководство. Создание элемента управления Windows Forms, который использует преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
-- [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Пользовательские конструкторы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039873"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015914"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Практическое руководство. Создание элементов управления для форм Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Практическое руководство. Создание элементов управления для Windows Forms
 
 Элемент управления выполняет роль визуальной связи между пользователем и программой. Он может предоставлять или обрабатывать данные, принимать входные данные пользователя, реагировать на события или выполнять любые другие функции, устанавливающие связь между пользователем и приложением. Поскольку элемент управления — это по сути компонент с графическим интерфейсом, он может выполнять любую функцию компонента и в то же время обеспечивать взаимодействие с пользователем. Элементы управления создаются для конкретных целей, и процесс их создания входит в процесс программирования. Ниже описан процесс создания элемента управления с учетом всего вышесказанного. Ссылки указывают на дополнительные сведения об отдельных этапах.
-
-> [!NOTE]
-> Если вам необходимо создать пользовательский элемент управления для использования в Web Forms, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
 ## <a name="to-author-a-control"></a>Создание элемента управления
 
@@ -42,7 +42,7 @@ ms.locfileid: "69039873"
 
 6. Если элемент управления наследуется <xref:System.Windows.Forms.UserControl>от, можно проверить его поведение во время выполнения, создав проект элемента управления и запустив его в **тестовом контейнере UserControl**. Дополнительные сведения см. в разделе [Практическое руководство. Проверка поведения элемента управления UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)во время выполнения.
 
-7. Кроме того, для тестирования и отладки элемента управления можно создать новый проект, например приложение Windows, и поместив его в контейнер. Этот процесс демонстрируется в рамках [пошагового руководства. Создание составного элемента управления с](walkthrough-authoring-a-composite-control-with-visual-basic.md)помощью Visual Basic.
+7. Кроме того, для тестирования и отладки элемента управления можно создать новый проект, например приложение Windows, и поместив его в контейнер. Этот процесс демонстрируется в рамках [пошагового руководства. Создание составного элемента](walkthrough-authoring-a-composite-control-with-visual-csharp.md)управления.
 
 8. При добавлении каждой функции добавляйте ее в тестовый проект для реализации новых функциональных возможностей.
 
@@ -52,8 +52,6 @@ ms.locfileid: "69039873"
 
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Пошаговое руководство: Наследование от элемента управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Практическое руководство. Наследование от класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Практическое руководство. Наследование от класса Control](how-to-inherit-from-the-control-class.md)
 - [Практическое руководство. Наследовать от существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)

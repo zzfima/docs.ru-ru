@@ -7,52 +7,48 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 2d6220a95d20cc0ab8ea1cdeb396804dfbcef8a1
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 9ccbf3de3f5c65b99a06c29ffce4c96896d11fae
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211477"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015960"
 ---
-# <a name="develop-a-composite-windows-forms-control"></a>Разработка составного элемента управления форм Windows Forms
+# <a name="develop-a-composite-windows-forms-control"></a>Разработка составного элемента управления Windows Forms
 
-Можно разработать составной элемент управления Windows Forms, объединив другие элементы управления Windows Forms. Составные элементы управления, которые являются производными от <xref:System.Web.UI.UserControl> называются пользовательскими элементами управления. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию событий клавиатуры для дочерних элементов управления, это гарантирует, что дочерние элементы управления смогут получать фокус ввода. Пример пользовательского элемента управления, см. в разделе <xref:System.Windows.Forms.UserControl> в [как: Применение атрибутов в элементах управления Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).
+Можно разработать составной элемент управления Windows Forms, объединив другие элементы управления Windows Forms. Составные элементы управления, производные от <xref:System.Web.UI.UserControl> , называются пользовательскими. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию событий клавиатуры для дочерних элементов управления, это гарантирует, что дочерние элементы управления смогут получать фокус ввода. Пример пользовательского элемента управления см. в <xref:System.Windows.Forms.UserControl> примере в [разделе как Применение атрибутов в элементах](how-to-apply-attributes-in-windows-forms-controls.md)управления Windows Forms.
 
-Конструктор Windows Forms в Visual Studio предоставляет широкие возможности поддержки времени разработки для пользовательских элементов управления.
+Конструктор Windows Forms в Visual Studio обеспечивает широкую поддержку во время разработки для разработки пользовательских элементов управления.
 
-- [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Практическое руководство. Отображение элемента управления в диалоговом окне "Выбор элементов панели элементов"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 
-- [Пошаговое руководство: Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
+- [Пошаговое руководство: Сериализация коллекций стандартных типов с помощью Десигнерсериализатионвисибилитяттрибуте](serializing-collections-designerserializationvisibilityattribute.md)
 
-- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Пошаговое руководство: Наследование от элемента управления Windows Forms с помощью VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 
 - [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](how-to-provide-a-toolbox-bitmap-for-a-control.md)
 
-- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Наследовать от существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
 
 - [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во время разработки](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 
-- [Практическое руководство. Наследовать от класса Control](how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование от класса Control](how-to-inherit-from-the-control-class.md)
 
-- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Практическое руководство. Проверка поведения элемента управления UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 
-- [Практическое руководство. Выравнивание элементов управления по границам формы во время разработки](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Практическое руководство. Выровняйте элемент управления по краям форм во время разработки](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 
-- [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Практическое руководство. Наследование от класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
 
-- [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Практическое руководство. Создание элементов управления для Windows Forms](how-to-author-controls-for-windows-forms.md)
 
 - [Практическое руководство. Создание составных элементов управления](how-to-author-composite-controls.md)
 
-- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-
 - [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 
-- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Пошаговое руководство: Создание элемента управления Windows Forms, который использует преимущества функций времени разработки Visual Studio](creating-a-wf-control-design-time-features.md)
 
-- [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](creating-a-wf-control-design-time-features.md)
-
-- [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Практическое руководство. Создание элемента управления Windows Forms, который использует преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
 ## <a name="see-also"></a>См. также
 

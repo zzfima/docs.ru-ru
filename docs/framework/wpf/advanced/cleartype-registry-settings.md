@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964881"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015611"
 ---
 # <a name="cleartype-registry-settings"></a>Параметры реестра ClearType
 В этом разделе приводятся общие сведения о параметрах реестра Microsoft ClearType, используемых приложениями WPF.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Общие сведения о технологии  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения, отображающие текст на устройстве отображения, используют возможности технологии ClearType для повышения удобства чтения. Технология ClearType представляет собой программную технологию [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , разработанную таким образом, улучшая удобочитаемость текста на существующих LCDs (жидкокристаллических дисплеях), таких как экраны ноутбука, карманные экраны и мониторы с плоскими панелями. Технология ClearType работает путем доступа к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. Дополнительные сведения о технологии ClearType см. в разделе [Общие сведения об ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]приложения, отображающие текст на устройстве отображения, используют возможности технологии ClearType для повышения удобства чтения. Технология ClearType представляет собой программную технологию, разработанную корпорацией Майкрософт, которая повышает удобочитаемость текста на существующих LCDs (жидкокристаллических дисплеях), например экраны ноутбука, карманные экраны и мониторы с плоскими панелями. Технология ClearType работает путем доступа к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. Дополнительные сведения о технологии ClearType см. в разделе [Общие сведения об ClearType](cleartype-overview.md).  
   
  Текст, отображаемый с помощью технологии ClearType, может заметно отличаться при просмотре на различных устройствах отображения. Например, небольшое число мониторов реализует элементы цветовых полос в синем, зеленом и красном порядке, а не в более распространенном порядке красного, [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]зеленого, синего ().  
   

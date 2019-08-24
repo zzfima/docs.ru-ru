@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039893"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015925"
 ---
 # <a name="how-to-author-composite-controls"></a>Практическое руководство. Создание составных элементов управления
 
 Составные элементы управления можно применять различным образом. Их можно создать как часть проекта приложения рабочего стола Windows и использовать только в формах проекта. Или их можно создать в проекте библиотеки элементов управления Windows, скомпилировать проект в сборку и использовать элементы управления в других проектах. Можно даже наследовать от них и использовать визуальное наследование, чтобы быстро настроить их для специальных целей.
 
-> [!NOTE]
-> Если необходимо создать составной элемент управления для использования в Web Forms, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
-
 ## <a name="to-author-a-composite-control"></a>Создание составного элемента управления
 
-1. В Visual Studio создайте новый проект **приложения Windows** с именем `DemoControlHost`.
+1. В Visual Studio создайте новый проект **приложения Windows** и назовите его **демоконтролхост**.
 
 2. В меню **Проект** выберите команду **Добавить пользовательский элемент управления**.
 
@@ -79,10 +79,8 @@ ms.locfileid: "69039893"
 
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Пошаговое руководство: Наследование от элемента управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Пошаговое руководство: Наследование от элемента управления Windows Forms с помощью VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Пошаговое руководство: Создание составного элемента управления](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Пошаговое руководство: Наследование от элемента управления Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Рекомендации относительно типов элементов управления](control-type-recommendations.md)
 - [Практическое руководство. Создание элементов управления для Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

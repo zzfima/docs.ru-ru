@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039510"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015635"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
 
 С помощью *простой привязки*можно отобразить один элемент данных, например значение столбца из таблицы набора данных, в элементе управления. Можно выполнить простую привязку любого свойства элемента управления к значению данных.
 
-### <a name="to-simple-bind-a-control"></a>Простая привязка элемента управления
+## <a name="to-simple-bind-a-control"></a>Простая привязка элемента управления
 
 1. Подключение к источнику данных. Дополнительные сведения см. [в разделе Подключение к источнику данных](../data/adonet/connecting-to-a-data-source.md).
 
-2. В форме выберите элемент управления и откройте окно **Свойства** .
+2. В Visual Studio выберите элемент управления в форме и откройте окно **Свойства** .
 
 3. Разверните свойство **(DataBindings)** .
 
