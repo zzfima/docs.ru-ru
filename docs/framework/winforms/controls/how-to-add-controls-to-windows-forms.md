@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912616"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987511"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления в формы Windows Forms
 Большинство форм разрабатываются путем добавления элементов управления на поверхность формы для определения пользовательского интерфейса. *Элемент управления* — это компонент в форме, используемый для вывода информации или ввода данных пользователем. Дополнительные сведения об элементах управления см. в разделе [элементы управления Windows Forms](index.md).
@@ -89,7 +89,6 @@ ms.locfileid: "69912616"
 ## <a name="see-also"></a>См. также
 
 - [Элементы управления Windows Forms](index.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
 - [Практическое руководство. Изменить размер элементов управления на Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

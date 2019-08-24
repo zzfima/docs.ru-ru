@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964970"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988249"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -19,7 +19,7 @@ ms.locfileid: "69964970"
 > Используйте API-синдикации WinRT вместо методов, доступных через службу WCF. Дополнительные сведения см. в разделе [API синдикации WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  Использование диалогового окна «Добавление ссылки на службу» для добавления ссылки на веб-службу в компонент среды выполнения Windows не поддерживается.  
+> Использование диалогового окна «Добавление ссылки на службу» для добавления ссылки на веб-службу в компонент среды выполнения Windows не поддерживается.  
   
 ### <a name="supported-bindings"></a>Поддерживаемые привязки  
  Поддерживаются следующие привязки WCF в приложениях Магазина Windows:  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. XmlSerializer  
   
 > [!WARNING]
->  XmlDictionaryWriter.Write (DateTime) теперь записывает объект DateTime в виде строки.  
+> XmlDictionaryWriter.Write (DateTime) теперь записывает объект DateTime в виде строки.  
   
 ### <a name="security"></a>Безопасность  
 
@@ -154,7 +154,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
  Рекомендуется определять только асинхронные операции службы с помощью асинхронной модели на основе событий. Это гарантирует, что приложения Магазина Windows сохранят высокую скорость отклика при вызове операции службы.  
   
 > [!WARNING]
->  Хотя исключение не возникнет, если указать синхронную операцию, настоятельно рекомендуется определять только асинхронные операции.  
+> Хотя исключение не возникнет, если указать синхронную операцию, настоятельно рекомендуется определять только асинхронные операции.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Вызов служб WCF из приложений Магазина Windows  
  Как уже говорилось, вся настройка должна быть сделана в коде метода GetBindingForEndpoint в сформированном прокси-классе. Вызов операции службы выполняется точно так же, как и вызов любого асинхронного метода, как показано в следующем фрагменте кода.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949208"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988651"
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 Windows Communication Foundation (WCF) включает новый механизм <xref:System.Runtime.Serialization.DataContractSerializer>сериализации. <xref:System.Runtime.Serialization.DataContractSerializer> Преобразование между объектами .NET Framework и XML в обоих направлениях. В данном разделе объясняется, как работает сериализатор.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) включает новый механи�
  В <xref:System.Runtime.Serialization.NetDataContractSerializer>состав WCF также входит вспомогательный сериализатор,. Объект <xref:System.Runtime.Serialization.NetDataContractSerializer> аналогичен <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> сериализаторам и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> , так как он также выдает имена типов .NET Framework как часть сериализованных данных. Он применяется при совместном использовании одних и тех же типов на концах сериализации и десериализации. Оба сериализатора ( <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer> ) являются производными от общего базового класса <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
->  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. Это может вызвать проблемы с клиентом, отличным от WCF, при отправке таких данных в службу WCF.  
+> Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. Это может вызвать проблемы с клиентом, отличным от WCF, при отправке таких данных в службу WCF.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Создание экземпляра DataContractSerializer  
  Создание экземпляра <xref:System.Runtime.Serialization.DataContractSerializer> является важным этапом. После создания экземпляра невозможно менять какие-либо настройки.  

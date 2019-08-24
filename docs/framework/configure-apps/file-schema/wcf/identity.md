@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: d5d06953c67b90e8367f2c0d01a670a46f487526
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 262ac9be6d5ce6466cf9aff33c0c2791c0e149dd
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925416"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988381"
 ---
 # <a name="identity"></a>\<> удостоверений
 Элемент identity позволяет разработчику клиента указать во время разработки ожидаемое удостоверение службы. В процессе подтверждения между клиентом и службой инфраструктура Windows Communication Foundation (WCF) обеспечит соответствие идентификатора ожидаемой службы значениям этого элемента и, таким образом, может пройти проверку подлинности. Дополнительные сведения см. в статье [удостоверение службы и проверка](../../../wcf/feature-details/service-identity-and-authentication.md)подлинности.  
@@ -29,7 +29,7 @@ ms.locfileid: "69925416"
   <dns value="String" />
   <rsa value="String" />
   <servicePrincipalName value="String" />
-  <usePrincipalName value="String" />
+  <userPrincipalName value="String" />
 </identity>
 ```  
   

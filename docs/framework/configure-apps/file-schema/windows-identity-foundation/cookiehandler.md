@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942805"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988338"
 ---
 # <a name="cookiehandler"></a>\<Кукиехандлер >
 Настраивает <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> , что (SAM) использует для чтения и записи файлов cookie.  
@@ -77,7 +77,7 @@ ms.locfileid: "69942805"
  В следующем коде XML показан `<cookieHandler>` элемент. В этом примере, поскольку `mode` атрибут не задан, SAM будет использовать обработчик файлов cookie по умолчанию. Это экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса. Так как `<chunkedCookieHandler>` дочерний элемент не указан, будет использоваться размер фрагмента данных по умолчанию. Протокол HTTPS не будет требоваться, `requireSsl` поскольку задан `false`атрибут.  
   
 > [!WARNING]
->  В этом примере протокол HTTPS не требуется для записи файлов cookie сеанса. Это обусловлено тем `requireSsl` , что атрибут `<cookieHandler>` элемента имеет значение `false`. Этот параметр не рекомендуется для большинства рабочих сред, так как может представлять угрозу безопасности.  
+> В этом примере протокол HTTPS не требуется для записи файлов cookie сеанса. Это обусловлено тем `requireSsl` , что атрибут `<cookieHandler>` элемента имеет значение `false`. Этот параметр не рекомендуется для большинства рабочих сред, так как может представлять угрозу безопасности.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

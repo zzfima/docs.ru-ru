@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953268"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988306"
 ---
 # <a name="handling-datatable-events"></a>Обработка событий таблиц данных
 Объект <xref:System.Data.DataTable> предоставляет ряд событий, которые может обрабатывать приложение. В следующей таблице приводится описание событий `DataTable`.  
@@ -33,7 +33,7 @@ ms.locfileid: "69953268"
 > Большинство операций, которые добавляют или удаляют строки, не вызывают событий `ColumnChanged` и `ColumnChanging`. Однако метод `ReadXml` вызывает события `ColumnChanged` и `ColumnChanging`, если только свойству `XmlReadMode` не задано значение `DiffGram` или значение `Auto`, когда читаемый XML-документ является `DiffGram`.  
   
 > [!WARNING]
->  Изменение данных в объекте `DataSet`, из которого было вызвано событие `RowChanged`, может привести к повреждению данных. При подобном повреждении данных исключение вызвано не будет.  
+> Изменение данных в объекте `DataSet`, из которого было вызвано событие `RowChanged`, может привести к повреждению данных. При подобном повреждении данных исключение вызвано не будет.  
   
 ## <a name="additional-related-events"></a>Дополнительные связанные события  
  Свойство <xref:System.Data.DataTable.Constraints%2A> содержит экземпляр <xref:System.Data.ConstraintCollection>. Класс <xref:System.Data.ConstraintCollection> представляет событие <xref:System.Data.ConstraintCollection.CollectionChanged>. Это событие возникает при добавлении, изменении или удалении ограничения из коллекции `ConstraintCollection`.  
@@ -71,7 +71,7 @@ ms.locfileid: "69953268"
 > Внесение изменений в столбцы выражений никогда не вызывает события `DataTable`. Внесение изменений в столбцы выражений вызывает только события `DataView` и `DataRowView`. Столбцы выражения могут иметь зависимости от нескольких других столбцов, их оценка во время одной операции `DataRow` может производиться несколько раз. События вызываются при вычислении каждого выражения, а при работе со столбцами выражений одна операция `DataRow` может вызвать несколько событий `ListChanged` и `PropertyChanged`, возможно, с несколькими событиями для одного столбца выражений.  
   
 > [!WARNING]
->  Не вызывайте исключение <xref:System.NullReferenceException> в обработчике события `RowChanged`. Если исключение <xref:System.NullReferenceException> вызывается в пределах события `RowChanged` объекта `DataTable`, объект `DataTable` будет поврежден.  
+> Не вызывайте исключение <xref:System.NullReferenceException> в обработчике события `RowChanged`. Если исключение <xref:System.NullReferenceException> вызывается в пределах события `RowChanged` объекта `DataTable`, объект `DataTable` будет поврежден.  
   
 ### <a name="example"></a>Пример  
  В следующем примере демонстрируется, как создавать обработчики событий для событий `RowChanged`, `RowChanging`, `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging`, `TableNewRow`, `TableCleared` и `TableClearing`. Каждый обработчик события при возникновении события отображает выводимые данные в консольном окне.  

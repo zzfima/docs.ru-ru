@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942776"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988331"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration >
 Настраивает <xref:System.IdentityModel.Services.SessionAuthenticationModule> (всфам) и (SAM) при использовании федеративной проверки подлинности через протокол WS-Federation. <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Настраивает <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> при использовании класса или для предоставления управления доступом на основе утверждений. <xref:System.Security.Claims.ClaimsAuthorizationManager>  
@@ -74,7 +74,7 @@ ms.locfileid: "69942776"
  В следующем XML-коде `<federationConfiguration>` показан элемент, указывающий параметры для всфам и указывающий, что SAM использует обработчик файлов cookie по <xref:System.IdentityModel.Services.ChunkedCookieHandler> умолчанию (экземпляр класса).  
   
 > [!WARNING]
->  В этом примере ни обработчику файлов cookie, ни ВСФАМ не требуются для использования HTTPS. Это обусловлено тем `requireHttps` , что атрибут `<wsFederation>` элемента `<cookieHandlerElement>` и `requireSsl` атрибут в имеют `false`значение. Эти параметры не рекомендуются для большинства рабочих сред, так как они могут представлять угрозу безопасности.  
+> В этом примере ни обработчику файлов cookie, ни ВСФАМ не требуются для использования HTTPS. Это обусловлено тем `requireHttps` , что атрибут `<wsFederation>` элемента `<cookieHandlerElement>` и `requireSsl` атрибут в имеют `false`значение. Эти параметры не рекомендуются для большинства рабочих сред, так как они могут представлять угрозу безопасности.  
   
 ```xml  
 <system.identityModel.services>  

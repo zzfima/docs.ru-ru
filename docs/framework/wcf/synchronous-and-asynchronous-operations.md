@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952924"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988538"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  Операция SampleMethodTaskAsync возвращает значение типа Task\<string>, так как логическая операция возвращает строковое значение. Дополнительные сведения об асинхронной модели на основе задач см. в [этой статье](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
->  При использовании асинхронной модели на основе задач может быть вызван объект T:System.AggregateException в случае возникновения исключения во время ожидания завершения операции. Это исключение может возникнуть на стороне клиента или службы  
+> При использовании асинхронной модели на основе задач может быть вызван объект T:System.AggregateException в случае возникновения исключения во время ожидания завершения операции. Это исключение может возникнуть на стороне клиента или службы  
   
 #### <a name="event-based-asynchronous-pattern"></a>Асинхронная модель на основе событий  
  Служба, поддерживающая асинхронную модель на основе событий, будет содержать одну или несколько операций с именем MethodNameAsync. Эти методы могут копировать синхронные версии, выполняющие ту же операцию в текущем потоке. Этот класс также может содержать событие MethodNameCompleted, а также метод MethodNameAsyncCancel (или просто CancelAsync). Клиент, вызывающий операцию, определяет обработчик событий, вызываемый после завершения операции.  

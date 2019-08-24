@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662783"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988761"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
-Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) включает несколько предоставляемых системой привязок, которые можно настроить, но не обеспечивают полную гибкость при настройке всех параметров безопасности, поддерживаемых WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает форму канала <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, которая по умолчанию используется формами каналов TCP-транспорта, если свойство <xref:System.ServiceModel.TransferMode> имеет значение <xref:System.ServiceModel.TransferMode.Buffered>. Необходимо задать свойству <xref:System.ServiceModel.TransferMode> значение <xref:System.ServiceModel.TransferMode.Streamed> для использования элемента <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.  
+> <xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает форму канала <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, которая по умолчанию используется формами каналов TCP-транспорта, если свойство <xref:System.ServiceModel.TransferMode> имеет значение <xref:System.ServiceModel.TransferMode.Buffered>. Необходимо задать свойству <xref:System.ServiceModel.TransferMode> значение <xref:System.ServiceModel.TransferMode.Streamed> для использования элемента <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.  
   
 ## <a name="creating-a-custom-binding"></a>Создание пользовательской привязки  
  В WCF все привязки состоят из *элементов привязки*. Каждый элемент привязки наследуется от класса <xref:System.ServiceModel.Channels.BindingElement>. В случае стандартных предоставляемых системой привязок элементы привязки уже созданы и настроены, хотя значения некоторых свойств можно изменить.  
   
  В противоположность этому при создании пользовательской привязки потребуется создать и настроить элементы привязки и создать из этих элементов объект <xref:System.ServiceModel.Channels.CustomBinding>.  
   
- Для этого необходимо добавить отдельные элементы привязки в коллекцию, представляемую экземпляром класса <xref:System.ServiceModel.Channels.BindingElementCollection>, а затем задать свойство `Elements` класса `CustomBinding` равным этому объекту. Элементы привязки необходимо добавить в следующем порядке: Поток транзакций, надежный сеанс, безопасности, составной дуплексный канал, односторонней связи, Stream Security, кодирование сообщений и транспорта. Обратите внимание, что все перечисленные элементы привязки являются обязательными для каждой привязки.  
+ Для этого необходимо добавить отдельные элементы привязки в коллекцию, представляемую экземпляром класса <xref:System.ServiceModel.Channels.BindingElementCollection>, а затем задать свойство `Elements` класса `CustomBinding` равным этому объекту. Элементы привязки необходимо добавить в следующем порядке: Поток транзакций, надежный сеанс, безопасность, композитный дуплексный, односторонний, потоковая безопасность, кодирование сообщений и транспорт. Обратите внимание, что все перечисленные элементы привязки являются обязательными для каждой привязки.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  С безопасностью уровня сообщений связаны три элемента привязки; все они наследуются от класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. Эти три элемента называются <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> и <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Элемент <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> используется для обеспечения смешанного режима безопасности. Другие два элемента используются, когда безопасность обеспечивается уровнем сообщений.  
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) включает в себя нескол
   
  Обратите внимание, что у элементов привязки безопасности имеется ряд настраиваемых параметров. Дополнительные сведения см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- Дополнительные сведения см. в разделе [безопасных диалогах и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Дополнительные сведения см. в разделе [безопасные беседы и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Процедуры  
   

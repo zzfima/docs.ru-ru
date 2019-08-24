@@ -2,25 +2,25 @@
 title: Конечная точка элемента управления рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 3c826147d9d3ad452957230adb8f32659b4d1352
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66424019"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988554"
 ---
 # <a name="workflow-control-endpoint"></a>Конечная точка элемента управления рабочего процесса
 Конечная точка управления рабочим процессом позволяет разработчику вызывать операции удаленного управления экземплярами рабочего процесса, размещенные с помощью <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Эта функция может быть использована для программного выполнения таких операций управления, как приостановка, возобновление и завершение.  
   
 > [!WARNING]
->  Если с помощью конечной точки управления рабочего процесса в транзакции, а также контролируемого рабочий процесс содержит <xref:System.Activities.Statements.Persist> действия экземпляра рабочего процесса будет заблокирован до истечения времени ожидания транзакции.  
+> Если в транзакции используется конечная точка управления рабочего процесса и управляемый рабочий процесс содержит <xref:System.Activities.Statements.Persist> действие, экземпляр рабочего процесса будет заблокирован до истечения времени ожидания транзакции.  
   
 ## <a name="workflow-instance-management"></a>Управление экземплярами рабочего процесса  
  Платформа [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] включает новый контракт <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Этот контракт определяет последовательность операций управления, которые дают возможность удаленно управлять экземплярами рабочего процесса, размещенными в <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> - это стандартная конечная точка, которая обеспечивает реализацию контракта <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. <xref:System.ServiceModel.Activities.WorkflowControlClient> - класс, который используется для отправки управляющих операций конечной точке <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  
   
  Экземпляры рабочих процессов могут иметь следующие состояния.  
   
- Активная  
+ Активен  
  Состояния экземпляра рабочего процесса до достижения завершенного состояния при условии, что экземпляр не находится в приостановленном состоянии. В этом состоянии экземпляр рабочего процесса запускается и обрабатывает сообщения приложения.  
   
  Приостановлена  
@@ -46,10 +46,10 @@ ms.locfileid: "66424019"
 |TransactedTerminate|Выполняет операцию прекращения для транзакции (передается от клиента или создается локально). Если система сохраняет устойчивое состояние экземпляра рабочего процесса, экземпляр рабочего процесса должен быть сохранен во время выполнения этой операции.|  
 |TransactedUnsuspend|Выполняет операцию возобновления для транзакции (передается от клиента или создается локально). Если система сохраняет устойчивое состояние экземпляра рабочего процесса, экземпляр рабочего процесса должен быть сохранен во время выполнения этой операции.|  
   
- Контракт <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> не предусматривает возможности создания нового экземпляра рабочего процесса, а лишь обеспечивает управление существующими экземплярами рабочих процессов. Дополнительные сведения об удаленном создании нового экземпляра рабочего процесса см. в разделе [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ Контракт <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> не предусматривает возможности создания нового экземпляра рабочего процесса, а лишь обеспечивает управление существующими экземплярами рабочих процессов. Дополнительные сведения о удаленном создании нового экземпляра рабочего процесса см. в статье [Расширяемость узла службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> является стандартной конечной точкой с фиксированным контрактом <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. После добавления к экземпляру <xref:System.ServiceModel.Activities.WorkflowServiceHost> эта конечная точка затем может быть использована для отправки командных операций в любой экземпляр рабочего процесса, размещенного в ведущем экземпляре. Дополнительные сведения о стандартных конечных точек см. в разделе [стандартные конечные точки](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> является стандартной конечной точкой с фиксированным контрактом <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. После добавления к экземпляру <xref:System.ServiceModel.Activities.WorkflowServiceHost> эта конечная точка затем может быть использована для отправки командных операций в любой экземпляр рабочего процесса, размещенного в ведущем экземпляре. Дополнительные сведения о стандартных конечных точках см. в разделе [Стандартные конечные точки](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> является классом, позволяющим отправлять сообщения управления <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> в <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Содержит метод для каждой из операций, поддерживаемых контрактом <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>, кроме транзакционных операций. <xref:System.ServiceModel.Activities.WorkflowControlClient> определяет необходимость использования транзакционных операций с помощью внешних транзакций.
