@@ -1,16 +1,16 @@
 ---
 title: Развертывание модели в веб-API ASP.NET Core
 description: Использование модели машинного обучения ML.NET для анализа тональности через Интернет с помощью веб-API ASP.NET Core
-ms.date: 05/03/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641084"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666659"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Развертывание модели в веб-API ASP.NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "65641084"
 
 ## <a name="create-aspnet-core-web-api-project"></a>Создание проекта веб-API ASP.NET Core
 
-1. Откройте Visual Studio 2017. В меню выберите **Файл > Новый > Проект**. В диалоговом окне "Новый проект" щелкните узел **Visual C#**, а затем — **Веб**. Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**. В текстовое поле **Имя** введите SentimentAnalysisWebAPI и нажмите кнопку **ОК**.
+1. Откройте Visual Studio 2017. В меню выберите **Файл > Новый > Проект**. В диалоговом окне "Новый проект" щелкните узел **Visual C#** , а затем — **Веб**. Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**. В текстовое поле **Имя** введите SentimentAnalysisWebAPI и нажмите кнопку **ОК**.
 
 1. В окне с разными типами проектов ASP.NET Core выберите **API** и нажмите кнопку **ОК**.
 
@@ -189,7 +189,7 @@ ms.locfileid: "65641084"
 1. Откройте PowerShell и введите следующий код, где PORT — это порт, через который приложение ожидает передачи денных.
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
     В случае успешного выполнения результат должен выглядеть, как показано ниже:

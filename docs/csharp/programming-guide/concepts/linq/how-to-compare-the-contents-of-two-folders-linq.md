@@ -2,12 +2,12 @@
 title: Практическое руководство. Сравнение содержимого двух папок (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585903"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924227"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Практическое руководство. Сравнение содержимого двух папок (LINQ) (C#)
 В этом примере демонстрируются три способа сравнения двух списков файлов:  
@@ -19,7 +19,7 @@ ms.locfileid: "65585903"
 - путем запроса разности множеств для извлечения файлов, находящихся в одной папке, но отсутствующих в другой.  
   
     > [!NOTE]
-    >  Методы, представленные в этом примере, можно адаптировать для сравнения последовательностей объектов любого типа.  
+    > Методы, представленные в этом примере, можно адаптировать для сравнения последовательностей объектов любого типа.  
   
  Класс `FileComparer`, показанный здесь, демонстрирует применение пользовательского класса сравнения вместе со стандартными операторами запросов. Класс не предназначен для использования в реальных сценариях. Он использует только имя и длину каждого файла в байтах для определения идентичности содержимого папок. В реальном сценарии для выполнения более строгой проверки равенства этот класс следует изменить.  
   
@@ -130,5 +130,5 @@ namespace QueryCompareTwoDirs
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921521"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Практическое руководство. Получение уведомлений о первом этапе обработки исключений
 Событие <xref:System.AppDomain.FirstChanceException> класса <xref:System.AppDomain> позволяет получать уведомления о порождении исключений до того, как среда CLR начнет искать обработчики исключений.
@@ -91,7 +91,7 @@ ms.locfileid: "65584460"
  Каждый раз `Thrower` метод вызывает исключение в `AD1`, <xref:System.AppDomain.FirstChanceException> события в `AD1`, и обработчик событий выводит сообщение. Затем среда выполнения ищет обработчик исключений. В первом случае он обнаруживается в `AD1`. Во втором случае исключение в `AD1` не обрабатывается и перехватывается только в домене приложения по умолчанию.
 
 > [!NOTE]
->  Имя домена приложения по умолчанию совпадает с именем исполняемого файла.
+> Имя домена приложения по умолчанию совпадает с именем исполняемого файла.
 
  При добавлении обработчика для события <xref:System.AppDomain.FirstChanceException> в домен приложения по умолчанию событие возникает и обрабатывается еще до того, как домен приложения по умолчанию обработает исключение. Чтобы увидеть, как это происходит, добавьте код на C# `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (в Visual Basic — `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) в начало метода `Main()`.
 

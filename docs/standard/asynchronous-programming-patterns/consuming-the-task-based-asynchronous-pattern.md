@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490833"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666560"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
 
 При работе асинхронными операциями с использованием асинхронного шаблона, основанного на задачах, можно использовать обратные вызовы для реализации неблокирующего ожидания.  Для задач это достигается с помощью таких методов, как <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Поддержка асинхронных операций на основе языка скрывает обратные вызовы, разрешая асинхронным операциям находиться в режиме ожидания в нормальном потоке управления, а код, созданный компилятором, предоставляет поддержку на том же уровне API.
 
 ## <a name="suspending-execution-with-await"></a>Приостановление выполнения с помощью Await
- Начиная с версии .NET Framework 4.5 для асинхронного ожидания объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> можно использовать ключевое слово [await](~/docs/csharp/language-reference/keywords/await.md) (в C#) и [оператор Await](~/docs/visual-basic/language-reference/operators/await-operator.md) (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в .NET Framework 4.5 см. в спецификациях языка C# и Visual Basic.
+ Начиная с версии .NET Framework 4.5 для асинхронного ожидания объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> можно использовать ключевое слово [await](../../csharp/language-reference/keywords/await.md) (в C#) и [оператор Await](../../visual-basic/language-reference/operators/await-operator.md) (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в .NET Framework 4.5 см. в спецификациях языка C# и Visual Basic.
 
  На самом деле функция ожидания реализуется с помощью установки обратного вызова для задачи с помощью продолжения.  Этот обратный вызов возобновляет асинхронный методы в точке остановки. При возобновлении асинхронного метода, если ожидаемая операция была завершена успешно и имела тип <xref:System.Threading.Tasks.Task%601>, возвращается ее значение `TResult`.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Canceled>, создается исключение <xref:System.OperationCanceledException>.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Faulted>, создается вызвавшее эту проблему исключение. `Task` может завершиться с ошибкой из-за нескольких исключений, но распространяется только одно из этих исключений. Тем не менее, свойство <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> возвращает исключение <xref:System.AggregateException> с полным списком ошибок.
 

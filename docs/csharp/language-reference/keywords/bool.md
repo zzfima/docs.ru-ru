@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424439"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606061"
 ---
 # <a name="bool-c-reference"></a>bool (Справочник по C#)
 
@@ -52,10 +52,10 @@ ms.locfileid: "67424439"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Целочисленные типы](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](./index.md)
+- [Целочисленные типы](../builtin-types/integral-numeric-types.md)
+- [Таблица встроенных типов](./built-in-types-table.md)
+- [Таблица неявных числовых преобразований](./implicit-numeric-conversions-table.md)
+- [Таблица явных числовых преобразований](./explicit-numeric-conversions-table.md)

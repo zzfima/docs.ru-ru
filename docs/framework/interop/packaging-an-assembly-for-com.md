@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988157"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Упаковка сборки .NET Framework для COM
 
@@ -33,13 +33,13 @@ ms.locfileid: "69567234"
 
   Некоторые управляемые типы невидимы в модели COM, другие видны, но недоступны для создания, однако третьи можно как видеть, так и создавать. В сборку можно включать типы любого вида в любом сочетании. Для полноты информации определите типы в сборке, которые будут предоставлены модели COM. Особое внимание уделите типам, входящим в подмножество типов, предоставляемых платформе .NET Framework.
 
-  Дополнительные сведения см. в разделе [Уточнение типов .NET для взаимодействия](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
+  Дополнительные сведения см. в разделе [Уточнение типов .NET для взаимодействия](../../standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Инструкции по управлению версиями
 
   В отношении управления версиями управляемых классов, которые реализуют интерфейс класса (создаваемые в результате COM-взаимодействия класс), действуют определенные ограничения.
 
-  Рекомендации по использованию интерфейса класса см. в разделе [Introducing the class interface](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса).
+  Рекомендации по использованию интерфейса класса см. в разделе [Introducing the class interface](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса).
 
 - Инструкции по развертыванию
 
@@ -94,8 +94,8 @@ ms.locfileid: "69567234"
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
-- [Oпределение типов .NET для взаимодействия](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Introducing the class interface](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
+- [Oпределение типов .NET для взаимодействия](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Introducing the class interface](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
 - [Вопросы безопасности сборок](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Регистрация сборок в COM](registering-assemblies-with-com.md)

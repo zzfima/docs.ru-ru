@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423672"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590543"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Типы перечислений (Руководство по программированию в C#)
 
-Тип перечисления (называемый также перечислением) предоставляет эффективный способ определения набора именованных целочисленных констант, который можно назначить переменной. Например, предположим, что нужно определить переменную, значение которого должно представлять день недели. Имеется только семь имеющих смысл значений, которые может принимать переменная. Для определения этих значений можно использовать тип перечисления, который объявлен с помощью ключевого слова [enum](../../csharp/language-reference/keywords/enum.md).
+Тип перечисления (называемый также перечислением) предоставляет эффективный способ определения набора именованных целочисленных констант, который можно назначить переменной. Например, предположим, что нужно определить переменную, значение которого должно представлять день недели. Имеется только семь имеющих смысл значений, которые может принимать переменная. Для определения этих значений можно использовать тип перечисления, который объявлен с помощью ключевого слова [enum](../language-reference/keywords/enum.md).
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-По умолчанию базовым типом каждого элемента перечисления является [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md). Можно задать другой целочисленный тип, используя двоеточие, как показано в предыдущем примере. Полный список возможных типов см. в разделе [enum (справочник по C#)](../../csharp/language-reference/keywords/enum.md).
+По умолчанию базовым типом каждого элемента перечисления является [int](../language-reference/builtin-types/integral-numeric-types.md). Можно задать другой целочисленный тип, используя двоеточие, как показано в предыдущем примере. Полный список возможных типов см. в разделе [enum (справочник по C#)](../language-reference/keywords/enum.md).
 
 Чтобы проверить основные числовые значения путем приведения в базовый тип, как показано в следующем примере.
 
@@ -86,10 +86,10 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 Дополнительные сведения можно найти по адресу: <xref:System.Enum?displayProperty=nameWithType>.
 
-Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Enum?displayProperty=nameWithType>
-- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)
-- [enum](../../csharp/language-reference/keywords/enum.md)
+- [Руководство по программированию на C#](./index.md)
+- [enum](../language-reference/keywords/enum.md)

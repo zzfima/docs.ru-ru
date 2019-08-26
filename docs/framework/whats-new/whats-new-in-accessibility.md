@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952827"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
@@ -22,7 +22,7 @@ ms.locfileid: "67661377"
 
 ## <a name="accessibility-switches"></a>Переключатель специальных возможностей
 
-Вы можете включить в приложении функции специальных возможностей, если оно предназначено для .NET Framework 4.7 или более ранней версии, но выполняется на платформе .NET Framework 4.7.1 или более поздней версии. Вы также можете настроить в приложении использование компонентов прежних версий (и не использовать преимущества функций специальных возможностей), если оно предназначено для .NET Framework 4.7.1 или более поздней версии. У каждой версии платформы .NET Framework с функциями специальных возможностей есть специальный переключатель, который можно добавить в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения. Ниже приведены поддерживаемые переключатели:
+Вы можете включить в приложении функции специальных возможностей, если оно предназначено для .NET Framework 4.7 или более ранней версии, но выполняется на платформе .NET Framework 4.7.1 или более поздней версии. Вы также можете настроить в приложении использование компонентов прежних версий (и не использовать преимущества функций специальных возможностей), если оно предназначено для .NET Framework 4.7.1 или более поздней версии. У каждой версии платформы .NET Framework с функциями специальных возможностей есть специальный переключатель, который можно добавить в элемент [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](../configure-apps/file-schema/runtime/index.md) файла конфигурации приложения. Ниже приведены поддерживаемые переключатели:
 
 |Версия|Параметр|
 |---|---|
@@ -32,7 +32,7 @@ ms.locfileid: "67661377"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Использование преимуществ усовершенствованных специальных возможностей
 
-Новые специальные возможности включены по умолчанию для приложений, предназначенных для .NET Framework 4.7.1 или более поздней версии. Кроме того, приложения, которые предназначены для более ранней версии .NET Framework, но работают на платформе .NET Framework 4.7.1 или более поздней версии, могут явно отказаться от устаревших вариантов специальных возможностей (и тем самым согласиться на использование улучшений специальных возможностей). Для этого добавьте параметры в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установите для них значение `false`. В следующем примере показано, как принять усовершенствованные специальные возможности, представленные в .NET Framework 4.7.1:
+Новые специальные возможности включены по умолчанию для приложений, предназначенных для .NET Framework 4.7.1 или более поздней версии. Кроме того, приложения, которые предназначены для более ранней версии .NET Framework, но работают на платформе .NET Framework 4.7.1 или более поздней версии, могут явно отказаться от устаревших вариантов специальных возможностей (и тем самым согласиться на использование улучшений специальных возможностей). Для этого добавьте параметры в элемент [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](../configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установите для них значение `false`. В следующем примере показано, как принять усовершенствованные специальные возможности, представленные в .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -41,7 +41,7 @@ ms.locfileid: "67661377"
 </runtime>
 ```
 
-Если вы решили включить функции специальных возможностей из более поздней версии .NET Framework, необходимо явным образом включить эти функции из более ранних версий платформы .NET Framework. Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1 и 4.7.2 требуется следующий элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+Если вы решили включить функции специальных возможностей из более поздней версии .NET Framework, необходимо явным образом включить эти функции из более ранних версий платформы .NET Framework. Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1 и 4.7.2 требуется следующий элемент [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <runtime>
@@ -50,7 +50,7 @@ ms.locfileid: "67661377"
 </runtime>
 ```
 
-Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1, 4.7.2 и 4.8 требуется следующий элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1, 4.7.2 и 4.8 требуется следующий элемент [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <runtime>
@@ -61,7 +61,7 @@ ms.locfileid: "67661377"
 
 ### <a name="restoring-legacy-behavior"></a>Восстановление поведения из предыдущих версий
 
-Для приложений, ориентированных на версии .NET Framework, начиная с 4.7.1, можно отключить функции специальных возможностей, добавив следующий параметр в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установив значение `true`. Например, следующая конфигурация задает отказ от функций специальных возможностей, представленных в .NET Framework 4.7.2:
+Для приложений, ориентированных на версии .NET Framework, начиная с 4.7.1, можно отключить функции специальных возможностей, добавив следующий параметр в элемент [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](../configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установив значение `true`. Например, следующая конфигурация задает отказ от функций специальных возможностей, представленных в .NET Framework 4.7.2:
 
 ```xml
 <runtime>

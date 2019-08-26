@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364032"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967207"
 ---
 # <a name="reflection-and-generic-types"></a>Отражение и универсальные типы
 <a name="top"></a> С точки зрения отражения различие между универсальным типом и обычным заключается в том, что с универсальным типом связан набор параметров типа (если это определение универсального типа) или аргументы типа (если это сконструированный тип). Универсальный метод отличается от обычного тем же.  
@@ -32,7 +32,7 @@ ms.locfileid: "68364032"
 - Параметры типа определений универсальных типов и определений универсальных методов представлены экземплярами класса <xref:System.Type> .  
   
     > [!NOTE]
-    >  Многие свойства и методы класса <xref:System.Type> функционируют иначе, если объект <xref:System.Type> представляет параметр универсального типа. Эти различия описаны в разделах, посвященных этим свойствам и методам. Например, см. класс <xref:System.Type.IsAutoClass%2A> и тип <xref:System.Type.DeclaringType%2A>. Кроме того, некоторые элементы действительны, только если объект <xref:System.Type> представляет параметр универсального типа. Пример см. в разделе <xref:System.Type.GetGenericTypeDefinition%2A>.  
+    > Многие свойства и методы класса <xref:System.Type> функционируют иначе, если объект <xref:System.Type> представляет параметр универсального типа. Эти различия описаны в разделах, посвященных этим свойствам и методам. Например, см. класс <xref:System.Type.IsAutoClass%2A> и тип <xref:System.Type.DeclaringType%2A>. Кроме того, некоторые элементы действительны, только если объект <xref:System.Type> представляет параметр универсального типа. Пример см. в разделе <xref:System.Type.GetGenericTypeDefinition%2A>.  
   
 - Если экземпляр типа <xref:System.Type> представляет универсальный тип, он содержит массив типов, которые представляют параметры типа (для определений универсального типа) или аргументы типа (для сконструированных типов). То же самое справедливо для экземпляра класса <xref:System.Reflection.MethodInfo> , который представляет универсальный метод.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68364032"
   
  Пример кода, демонстрирующего описанные здесь методы, см. в статье [Руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
- В следующем обсуждении предполагается, что вы знакомы с терминологией универсальности, то есть понимаете различия между параметрами типа и аргументами, а также открытыми и закрытыми сконструированными типами. Дополнительные сведения см. в статье [Универсальные шаблоны](../../../docs/standard/generics/index.md).  
+ В следующем обсуждении предполагается, что вы знакомы с терминологией универсальности, то есть понимаете различия между параметрами типа и аргументами, а также открытыми и закрытыми сконструированными типами. Дополнительные сведения см. в статье [Универсальные шаблоны](../../standard/generics/index.md).  
   
  Этот обзор состоит из следующих разделов.  
   
@@ -131,7 +131,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Свойство <xref:System.Type.GenericParameterAttributes%2A> получает значение <xref:System.Reflection.GenericParameterAttributes> , которое указывает на дисперсию (ковариация и контрвариация) и особые ограничения параметра типа.  
   
 #### <a name="covariance-and-contravariance"></a>Ковариация и контрвариация  
- Чтобы определить, является ли параметр типа ковариантным или контравариантным, примените маску <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> к значению <xref:System.Reflection.GenericParameterAttributes> , возвращаемому свойством <xref:System.Type.GenericParameterAttributes%2A> . Если результатом является <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, параметр типа является инвариантным. См. раздел [Ковариация и контрвариация](../../../docs/standard/generics/covariance-and-contravariance.md).  
+ Чтобы определить, является ли параметр типа ковариантным или контравариантным, примените маску <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> к значению <xref:System.Reflection.GenericParameterAttributes> , возвращаемому свойством <xref:System.Type.GenericParameterAttributes%2A> . Если результатом является <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, параметр типа является инвариантным. См. раздел [Ковариация и контрвариация](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Особые ограничения  
  Чтобы определить особые ограничения параметра типа, примените маску <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> к значению <xref:System.Reflection.GenericParameterAttributes> , возвращаемому свойством <xref:System.Type.GenericParameterAttributes%2A> . Если результатом является <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, специальные ограничения отсутствуют. Параметр типа может быть ограничен ссылочным типом, являться типом значения, не допускающим значения NULL, и иметь конструктор без параметров.  
@@ -150,6 +150,6 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
-|[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описана универсальность и поддержка этой технологии в .NET Framework.|  
+|[Универсальные шаблоны](../../standard/generics/index.md)|Описана универсальность и поддержка этой технологии в .NET Framework.|  
 |[Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Показано использование порождения отражения для создания универсальных типов в динамических сборках.|  
 |[Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|

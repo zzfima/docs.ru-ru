@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878033"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917971"
 ---
 # <a name="overview-of-the-net-framework"></a>Общие сведения о платформе .NET Framework
 
@@ -75,7 +75,7 @@ ms.locfileid: "65878033"
 
 Как и ожидается от объектно-ориентированной библиотеки классов, типы .NET Framework позволяют решать типовые задачи программирования, включая работу со строками, сбор данных, подключения к базам данных и доступ к файлам. В дополнение к этим обычным задачам библиотека классов содержит типы, поддерживающие многие специализированные сценарии разработки. Используйте платформу .NET Framework для разработки следующих типов приложений и служб:
 
-- Консольные приложения. См. статью [Построение консольных приложений](../../../docs/standard/building-console-apps.md).
+- Консольные приложения. См. статью [Построение консольных приложений](../../standard/building-console-apps.md).
 
 - Приложения с графическим интерфейсом Windows (Windows Forms). См. статью [Windows Forms](../../../docs/framework/winforms/index.md).
 

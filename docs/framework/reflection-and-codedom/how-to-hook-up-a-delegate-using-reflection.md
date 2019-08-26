@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364062"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935712"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Практическое руководство. Подключение делегата с помощью отражения
-При использовании отражения для загрузки и запуска сборок невозможно использовать функциональные возможности языка, такие как оператор C# `+=` или [оператор AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) в Visual Basic. В следующих процедурах показано, как подключить существующий метод к событию посредством получения всех необходимых типов через отражение и как создать динамический метод с помощью порожденного отражения и подключить этот метод к событию.  
+При использовании отражения для загрузки и запуска сборок невозможно использовать функциональные возможности языка, такие как оператор C# `+=` или [оператор AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) в Visual Basic. В следующих процедурах показано, как подключить существующий метод к событию посредством получения всех необходимых типов через отражение и как создать динамический метод с помощью порожденного отражения и подключить этот метод к событию.  
   
 > [!NOTE]
->  Другой способ подключения делегата, обрабатывающего события, см. в примере кода для метода <xref:System.Reflection.EventInfo.AddEventHandler%2A> класса <xref:System.Reflection.EventInfo>.  
+> Другой способ подключения делегата, обрабатывающего события, см. в примере кода для метода <xref:System.Reflection.EventInfo.AddEventHandler%2A> класса <xref:System.Reflection.EventInfo>.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>Подключение делегата с помощью отражения  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68364062"
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Получите метод доступа `add` и вызовите его для подключения события. Все события имеют метод доступа `add` и метод доступа `remove`, которые скрыты с помощью синтаксиса в высокоуровневых языках. Например, в C# используется оператор `+=` для подключения событий, а в Visual Basic используется [оператор AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). В следующем коде получается метод доступа `add` для события <xref:System.Windows.Forms.Control.Click> и вызывается с поздней привязкой, передавая в него экземпляр делегата. Аргументы должны передаваться в качестве массива.  
+6. Получите метод доступа `add` и вызовите его для подключения события. Все события имеют метод доступа `add` и метод доступа `remove`, которые скрыты с помощью синтаксиса в высокоуровневых языках. Например, в C# используется оператор `+=` для подключения событий, а в Visual Basic используется [оператор AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md). В следующем коде получается метод доступа `add` для события <xref:System.Windows.Forms.Control.Click> и вызывается с поздней привязкой, передавая в него экземпляр делегата. Аргументы должны передаваться в качестве массива.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

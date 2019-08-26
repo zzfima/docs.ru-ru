@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591485"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940035"
 ---
 # <a name="reflection-in-the-net-framework"></a>Отражение в .NET Framework
 Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](../../standard/base-types/common-type-system.md#classes), [интерфейсы](../../standard/base-types/common-type-system.md#interfaces) и [типы значений](../../csharp/language-reference/keywords/value-types.md). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.
   
- Загрузчик [среды CLR](../../../docs/standard/clr.md) управляет [доменами приложений](../../../docs/framework/app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
+ Загрузчик [среды CLR](../../standard/clr.md) управляет [доменами приложений](../../../docs/framework/app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
   
  [Сборки](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) содержат модули, модули содержат типы, а типы содержат члены. Отражение предоставляет объекты, которые инкапсулируют сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту или получения типа из существующего объекта. Затем можно вызывать методы типа или получать доступ к его полям и свойствам. Ниже приведены типичные варианты использования отражения.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64591485"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|  
 |[Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Объясняется обработка отражением параметров и аргументов типа для универсальных типов и методов.|  
@@ -83,7 +83,7 @@ ms.locfileid: "64591485"
 |[Практическое руководство. Подключение делегата с помощью отражения](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Объясняется, как создать делегат для метода и привязать его к событию. Также объясняется, как создать метод обработки событий во время выполнения с помощью <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Объясняется, как создавать динамические сборки и динамические методы.|  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  

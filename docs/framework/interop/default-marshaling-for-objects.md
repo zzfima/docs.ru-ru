@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bc165c6f1a7cdc6b8a03db0b7648583d75cd7a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626333"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946665"
 ---
 # <a name="default-marshaling-for-objects"></a>Маршалинг по умолчанию для объектов
 Параметры и поля, типизированные как <xref:System.Object?displayProperty=nameWithType>, могут предоставляться в неуправляемый код в виде одного из следующих типов:  
@@ -87,7 +87,7 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  Маршалер взаимодействия после вызова автоматически высвобождает любой выделенный объект внутри варианта.  
+> Маршалер взаимодействия после вызова автоматически высвобождает любой выделенный объект внутри варианта.  
   
  В следующем примере показан форматированный тип значения.  
   
@@ -266,7 +266,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Соответствующий тип упакованного значения.|  
 |**VT_VARIANT**|Не поддерживается.|  
@@ -287,7 +287,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  **Поведение по умолчанию при маршалинге объектов и вариантов по ссылке**  
   
- Для распространения изменений в вызывающем объекте параметры необходимо передавать по ссылке. Например, можно использовать ключевое слово **ref** в C# (или **ByRef** в управляемом коде Visual Basic) для передачи параметров по ссылке. В модели COM ссылочные параметры передаются с использованием указателя, например **variant \***.  
+ Для распространения изменений в вызывающем объекте параметры необходимо передавать по ссылке. Например, можно использовать ключевое слово **ref** в C# (или **ByRef** в управляемом коде Visual Basic) для передачи параметров по ссылке. В модели COM ссылочные параметры передаются с использованием указателя, например **variant \*** .  
   
 - При передаче объекта в COM по ссылке маршалер создает новый вариант и копирует содержимое ссылки на объект в вариант до того, как будет выполнен вызов. Вариант передается в неуправляемую функцию, в которой пользователь может изменять его содержимое. После возврата из вызова изменения, внесенные в вариант в неуправляемом коде, применяются к исходному объекту. Если тип варианта отличается от типа варианта, переданного в вызов, изменения применяются к объекту другого типа. Таким образом, тип переданного в вызов объекта может отличаться от типа объекта, возвращаемого из вызова.  
   

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946461"
 ---
 # <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
 
 Программы-оболочки модели COM можно создавать с использованием функций Visual Studio 2005 или средств платформы .NET Framework (Tlbimp.exe и Regasm.exe). Оба метода позволяют создать два типа программ-оболочек COM:
 
-- [Вызываемая оболочка времени выполнения](../../../docs/standard/native-interop/runtime-callable-wrapper.md) из библиотеки типов для выполнения COM-объектов в управляемом коде.
+- [Вызываемая оболочка времени выполнения](../../standard/native-interop/runtime-callable-wrapper.md) из библиотеки типов для выполнения COM-объектов в управляемом коде.
 
-- [Вызываемая оболочка COM](../../../docs/standard/native-interop/com-callable-wrapper.md) с соответствующими параметрами реестра для выполнения управляемого объекта в собственном приложении.
+- [Вызываемая оболочка COM](../../standard/native-interop/com-callable-wrapper.md) с соответствующими параметрами реестра для выполнения управляемого объекта в собственном приложении.
 
 В Visual Studio 2005 оболочку COM можно добавить в проект в виде ссылки.
 
@@ -75,5 +75,5 @@ ms.locfileid: "68629358"
   
 ## <a name="see-also"></a>См. также
 
-- [Вызываемая оболочка времени выполнения](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
-- [Вызываемая оболочка COM](../../../docs/standard/native-interop/com-callable-wrapper.md)
+- [Вызываемая оболочка времени выполнения](../../standard/native-interop/runtime-callable-wrapper.md)
+- [Вызываемая оболочка COM](../../standard/native-interop/com-callable-wrapper.md)

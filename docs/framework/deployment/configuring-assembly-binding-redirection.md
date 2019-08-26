@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151545"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965763"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Настройка перенаправления привязки сборок
 По умолчанию приложение использует набор сборок .NET Framework, поставляемых вместе с версией среды выполнения, которая использовалась для компиляции приложения. Чтобы перенаправить ссылки привязки сборок на определенную версию сборок .NET Framework, можно использовать атрибут **appliesTo** элемента [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент **\<assemblyBinding>** применяется ко всем версиям платформы .NET Framework.  
@@ -20,7 +20,7 @@ ms.locfileid: "59151545"
  Атрибут **appliesTo** появился в .NET Framework 1.1; он игнорируется в .NET Framework 1.0. Это означает, что при использовании платформы .NET Framework версии 1.0 применяются все элементы **\<assemblyBinding>** , даже если атрибут **appliesTo** задан.  
   
 > [!NOTE]
->  Используйте атрибут **appliesTo**, чтобы ограничить перенаправление привязки сборки лишь определенной версией среды выполнения.  
+> Используйте атрибут **appliesTo**, чтобы ограничить перенаправление привязки сборки лишь определенной версией среды выполнения.  
   
  Например, чтобы перенаправить привязку сборки .NET Framework версии 1.0, следует включить в файл конфигурации приложения приведенный ниже код XML.  
   

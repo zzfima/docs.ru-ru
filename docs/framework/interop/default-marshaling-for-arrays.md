@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946694"
 ---
 # <a name="default-marshaling-for-arrays"></a>Маршалинг по умолчанию для массивов
 Если приложение полностью состоит из управляемого кода, общеязыковая среда выполнения (CLR) передает типы массивов в качестве параметров ввода-вывода. В отличие от этого, маршалер взаимодействия по умолчанию передает массив в качестве параметров ввода.  
@@ -175,7 +175,7 @@ void New3(ref String ar);
  При маршалинге массивов из неуправляемого в управляемый код маршалер проверяет связанный с параметром атрибут **MarshalAsAttribute**, чтобы определить размер массива. Если размер массива не указан, выполняется маршалинг только одного элемента.  
   
 > [!NOTE]
->  Атрибут **MarshalAsAttribute** не учитывается при маршалинге управляемых массивов в неуправляемый код. В этом направлении размер массива определяется с помощью проверки. Маршалинг подмножества управляемого массива невозможен.  
+> Атрибут **MarshalAsAttribute** не учитывается при маршалинге управляемых массивов в неуправляемый код. В этом направлении размер массива определяется с помощью проверки. Маршалинг подмножества управляемого массива невозможен.  
   
  Маршалер взаимодействия использует методы **CoTaskMemAlloc** и **CoTaskMemFree** для выделения и высвобождения памяти. Эти методы также необходимо использовать при выделении памяти в неуправляемом коде.  
   
@@ -185,12 +185,12 @@ void New3(ref String ar);
 |Тип управляемого массива|Экспортируется как|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип предоставляется в сигнатуре. Ранг всегда равен 1, а нижняя граница всегда — 0. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип, ранг и границы предоставляются в сигнатуре. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип, ранг и границы предоставляются в сигнатуре. Размер всегда известен во время выполнения.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
   
  В OLE-автоматизации существует ограничение в отношении массивов структур, которые содержат LPSTR или LPWSTR.  Таким образом, поля **String** должны маршалироваться как **UnmanagedType.BSTR**. В противном случае будет создаваться исключение.  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
+### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  При экспорте метода, содержащего параметр **ELEMENT_TYPE_SZARRAY** (одномерный массив), из сборки .NET в библиотеку типов параметр массива преобразуется в массив **SAFEARRAY** заданного типа. Те же правила преобразования применяются к типам элементов массива. Содержимое управляемого массива автоматически копируется из управляемой памяти в **SAFEARRAY**. Например:  
   
 #### <a name="managed-signature"></a>Управляемая сигнатура  
@@ -248,7 +248,7 @@ HRESULT New(LPStr ar[]);
   
  Несмотря на то, что маршалеру известна длина, необходимая для маршалинга массива, длина массива обычно передается вызываемому объекту в отдельном аргументе.  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
+### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
  При экспорте метода, содержащего параметр **ELEMENT_TYPE_ARRAY**, из сборки .NET в библиотеку типов параметр массива преобразуется в массив **SAFEARRAY** заданного типа. Содержимое управляемого массива автоматически копируется из управляемой памяти в **SAFEARRAY**. Например:  
   
 #### <a name="managed-signature"></a>Управляемая сигнатура  
@@ -311,7 +311,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
  При экспорте метода, содержащего параметр <xref:System.Array?displayProperty=nameWithType>, из сборки .NET в библиотеку типов параметр массива преобразуется в интерфейс **_Array**. Содержимое этого управляемого массива доступно только через методы и свойства интерфейса **_Array**. Массив **System.Array** также может маршалироваться как **SAFEARRAY** с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>. При маршалинге безопасного массива его элементы маршалируются как варианты. Например:  
   
 #### <a name="managed-signature"></a>Управляемая сигнатура  

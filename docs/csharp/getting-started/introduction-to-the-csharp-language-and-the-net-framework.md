@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504034"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608301"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и .NET Framework
 
@@ -44,9 +44,9 @@ C# является элегантным, типобезопасным объе�
   
  Вот еще несколько ресурсов по языку C#.  
   
-- Общая вводная информация о языке хорошо представлена в Главе 1 [спецификации языка C#](../../csharp/language-reference/language-specification/index.md).  
+- Общая вводная информация о языке хорошо представлена в Главе 1 [спецификации языка C#](../language-reference/language-specification/index.md).  
   
-- Подробные сведения о конкретных аспектах языка C# вы найдете в [справочнике по C#](../../csharp/language-reference/index.md).  
+- Подробные сведения о конкретных аспектах языка C# вы найдете в [справочнике по C#](../language-reference/index.md).  
   
 - Дополнительные сведения о [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] см. в [этой статье о LINQ](../programming-guide/concepts/linq/index.md).  
 
@@ -68,5 +68,5 @@ C# является элегантным, типобезопасным объе�
   
 ## <a name="see-also"></a>См. также
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

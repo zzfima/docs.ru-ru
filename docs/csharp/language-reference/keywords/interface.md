@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: ce3cb95617c87d1bf66879f4a2432b4de4ac40f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 058d6b96e96a3237ebac2ca079807fd154715d68
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586466"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608646"
 ---
 # <a name="interface-c-reference"></a>interface (Справочник по C#)
 
@@ -54,7 +54,7 @@ ms.locfileid: "54586466"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
 - [Ссылочные типы](reference-types.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956662"
 ---
 # <a name="viewing-type-information"></a>Просмотр сведений о типах
 Класс <xref:System.Type?displayProperty=nameWithType> является центральной частью отражения. Среда CLR создает объект **Type** для загруженного типа, когда он запрашивается отражением. Используя методы, поля, свойства и вложенные классы объекта **Type**, можно получить полные сведения об этом типе.  
@@ -26,7 +26,7 @@ ms.locfileid: "59190407"
  Используйте <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> или <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> для получения объектов **Type** из сборок, которые не были загружены, передавая имя необходимого типа или типов. Используйте <xref:System.Type.GetType%2A?displayProperty=nameWithType> для получения объектов **Type** из уже загруженной сборки. Используйте <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> и <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> для получения объектов **Type** модуля.  
   
 > [!NOTE]
->  Если следует проверить универсальные типы и методы и управлять ими, ознакомьтесь с дополнительными сведениями, приведенными в разделах [Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) и [Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+> Если следует проверить универсальные типы и методы и управлять ими, ознакомьтесь с дополнительными сведениями, приведенными в разделах [Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) и [Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  В приведенном ниже примере показан синтаксис для получения объекта <xref:System.Reflection.Assembly> и модуля сборки.  
   

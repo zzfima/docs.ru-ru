@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923883"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Аргументы командной строки (Руководство по программированию на C#)
 Вы можете передавать аргументы в метод `Main`, определив метод одним из следующих способов:  
@@ -20,7 +20,7 @@ ms.locfileid: "65877535"
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  Чтобы включить аргументы командной строки в методе `Main` в приложении Windows Forms, необходимо вручную изменить сигнатуру `Main` в файле program.cs. Код, созданный с помощью конструктора Windows Forms, создает `Main` без входного параметра. Также можно использовать <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> или <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> для доступа к аргументам командной строки из любой точки в консоли или приложении Windows.  
+> Чтобы включить аргументы командной строки в методе `Main` в приложении Windows Forms, необходимо вручную изменить сигнатуру `Main` в файле program.cs. Код, созданный с помощью конструктора Windows Forms, создает `Main` без входного параметра. Также можно использовать <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> или <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> для доступа к аргументам командной строки из любой точки в консоли или приложении Windows.  
   
  Параметр метода `Main` — это массив <xref:System.String>, представляющий аргументы командной строки. Как правило, определить, существуют ли аргументы, можно, проверив свойство `Length`, например:  
   
@@ -70,15 +70,15 @@ long num = Convert.ToInt64(s);
 5. Код создает следующие выходные данные: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](/visualstudio/ide/reference/debug-page-project-designer).  
+> При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Дополнительные примеры использования аргументов командной строки см. в статье [Практическое руководство. Создание и использование сборок с помощью командной строки](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Дополнительные примеры использования аргументов командной строки см. в статье [Практическое руководство. Создание и использование сборок с помощью командной строки](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Руководство по программированию на C#](../index.md)
+- [Main() и аргументы командной строки](./index.md)
+- [Практическое руководство. Отображение аргументов командной строки](./how-to-display-command-line-arguments.md)
+- [Значения, возвращаемые методом main()](./main-return-values.md)
+- [Классы](../classes-and-structs/classes.md)

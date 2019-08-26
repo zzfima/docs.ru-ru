@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915425"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (программа импорта элементов ActiveX форм Windows)
 Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Отключает отображение эмблемы Майкрософт при запуске.|  
 |`/out:` *filename*|Задает имя создаваемой сборки.|  
 |`/publickey:` *filename*|Подписывает полученный элемент управления строгим именем с помощью открытого ключа из *filename*.|  
-|`/rcw:` *filename*|Использует указанную вызываемую оболочку времени выполнения вместо создания новой. Можно указать несколько экземпляров. Для относительных путей используется текущий каталог. Дополнительные сведения см. в разделе [Вызываемая оболочка времени выполнения](../../../docs/standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *filename*|Использует указанную вызываемую оболочку времени выполнения вместо создания новой. Можно указать несколько экземпляров. Для относительных путей используется текущий каталог. Дополнительные сведения см. в разделе [Вызываемая оболочка времени выполнения](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Запрещает отображение сообщений об успешно выполненных операциях.|  
 |`/source`|Создает исходный код оболочки Windows Forms на языке C#.|  
 |`/verbose`|Включает режим отображения дополнительных сведений о ходе выполнения.|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  Прокси Windows Forms для элементов управления ActiveX (Ax обозначает ActiveX): Ax*progid*.dll  
   
 > [!NOTE]
->  Если имя члена элемента управления ActiveX совпадает с именем, заданным в .NET Framework, к имени члена при создании производного класса AxHost программа Aximp.exe добавит префикс "Ctl". Например, если элемент управления ActiveX содержит член с именем "Layout", в производном классе "AxHost" он будет переименован в "CtlLayout", так как в .NET Framework задано событие "Layout".  
+> Если имя члена элемента управления ActiveX совпадает с именем, заданным в .NET Framework, к имени члена при создании производного класса AxHost программа Aximp.exe добавит префикс "Ctl". Например, если элемент управления ActiveX содержит член с именем "Layout", в производном классе "AxHost" он будет переименован в "CtlLayout", так как в .NET Framework задано событие "Layout".  
   
  Созданные файлы можно проверить с помощью таких программ, как [Ildasm.exe (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953192"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Преобразуемые и непреобразуемые типы
 Большинство типов данных имеют общее представление как в управляемой, так и в неуправляемой памяти и не требуют специальной обработки со стороны маршалера взаимодействия. Такие типы называются *непреобразуемыми*, поскольку при их передаче между управляемым и неуправляемым кодом не требуется преобразование.  
@@ -71,7 +71,7 @@ ms.locfileid: "65469458"
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Преобразует в структуру с фиксированным расположением в памяти.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Преобразует в массив в стиле C или `SAFEARRAY`.|  
   
- Типы классов и объектов поддерживаются только COM-взаимодействием. Для соответствующих типов в Visual Basic, C# и C++ см. раздел [Обзор библиотеки классов](../../../docs/standard/class-library-overview.md).  
+ Типы классов и объектов поддерживаются только COM-взаимодействием. Для соответствующих типов в Visual Basic, C# и C++ см. раздел [Обзор библиотеки классов](../../standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>См. также
 

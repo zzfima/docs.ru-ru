@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d0fe4b8c2ba3e64aa7ee34fc9d02b29bda5c017
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595471"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590170"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Использование исключений (Руководство по программированию на C#)
 В C# ошибки в программе в среде выполнения передаются через программу с помощью механизма, который называется исключениями. Исключения вызываются кодом, который встречает ошибку, и перехватываются кодом, который может ее исправить. Исключения могут вызываться средой CLR .NET Framework или кодом в программе. Вызванное исключение передается вверх по стеку вызовов, пока не будет найден соответствующий оператор `catch`. Не перехваченные исключения обрабатываются универсальным обработчиком исключений, предоставляемым системой, которая отображает диалоговое окно.  
@@ -46,5 +46,5 @@ ms.locfileid: "64595471"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Исключения и обработка исключений](./index.md)

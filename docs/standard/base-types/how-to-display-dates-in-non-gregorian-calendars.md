@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963359"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
 Для типов<xref:System.DateTime> и <xref:System.DateTimeOffset> в качестве календаря по умолчанию используется григорианский календарь. Это означает, что вызов метода `ToString` для значения даты и времени выведет строковое представление даты и времени по григорианскому календарю даже в том случае, если значение даты и времени создавалось с помощью другого календаря. Это показано в следующем примере, в котором двумя разными способами создаются значения даты и времени с персидским календарем. При вызове метода <xref:System.DateTime.ToString%2A> значения даты и времени по-прежнему отображаются в григорианском календаре. В этом примере представлены два часто используемых неверных способа отображения даты в заданном календаре.  
@@ -39,7 +39,7 @@ ms.locfileid: "65588825"
 4. Присвойте объект календаря в качестве значения свойству <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> в объекте <xref:System.Globalization.DateTimeFormatInfo>, который возвращается свойством <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  Класс <xref:System.Globalization.CultureInfo> также содержит свойство <xref:System.Globalization.CultureInfo.Calendar%2A>. Но это свойство доступно только для чтения и является константой, то есть не изменяется в соответствии с новым календарем по умолчанию, присвоенным свойству <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
+    > Класс <xref:System.Globalization.CultureInfo> также содержит свойство <xref:System.Globalization.CultureInfo.Calendar%2A>. Но это свойство доступно только для чтения и является константой, то есть не изменяется в соответствии с новым календарем по умолчанию, присвоенным свойству <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
   
 5. Вызовите метод <xref:System.DateTime.ToString%2A> или <xref:System.DateTime.ToString%2A>, передав ему объект <xref:System.Globalization.CultureInfo>, для которого мы на предыдущем шаге изменили календарь по умолчанию.  
   

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 3b543181e3d836226759e77f0d56ed3c3e57e7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d207c96621564acd8070c9d5f618f43a6d8f15a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924605"
 ---
 # <a name="define-c-reference"></a>#define (Справочник по C#)
-`#define` позволяет определить символ. При использовании символа в качестве выражения, которое передается директиве [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), выражение будет иметь значение `true`, как показано в следующем примере:  
+`#define` позволяет определить символ. При использовании символа в качестве выражения, которое передается директиве [#if](./preprocessor-if.md), выражение будет иметь значение `true`, как показано в следующем примере:  
  
  ```csharp
  #define DEBUG
@@ -24,13 +24,13 @@ ms.locfileid: "54696208"
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Директиву `#define` нельзя использовать для объявления значений констант, как это обычно делается в C и C++. Для определения констант в C# следует использовать статические элементы класса или структуры. При наличии нескольких констант имеет смысл создать для них отдельный класс "Constants".  
+> Директиву `#define` нельзя использовать для объявления значений констант, как это обычно делается в C и C++. Для определения констант в C# следует использовать статические элементы класса или структуры. При наличии нескольких констант имеет смысл создать для них отдельный класс "Constants".  
   
- Символы можно использовать для указания условий компиляции. Для проверки символов можно использовать директивы [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) или [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Для условной компиляции также можно использовать <xref:System.Diagnostics.ConditionalAttribute>.  
+ Символы можно использовать для указания условий компиляции. Для проверки символов можно использовать директивы [#if](./preprocessor-if.md) или [#elif](./preprocessor-elif.md). Для условной компиляции также можно использовать <xref:System.Diagnostics.ConditionalAttribute>.  
   
  Можно определить символ, но нельзя назначить символу значение. Директива `#define` должна находиться в файле перед использованием любых инструкций, которые также не являются директивами препроцессора.  
   
- Также символ можно определить с помощью параметра компилятора [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Также символ можно определить с помощью параметра компилятора [-define](../compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](./preprocessor-undef.md).  
   
  Символ, определенный с помощью `-define` или `#define`, не конфликтует с одноименной переменной. Имя переменной не должно передаваться директиве препроцессора, а символ может вычисляться только директивой препроцессора.  
   
@@ -62,14 +62,14 @@ public class TestDefine
 // Debugging is enabled.  
 ```  
   
- Пример отмены определения символа см. в разделе [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Пример отмены определения символа см. в разделе [#undef](./preprocessor-undef.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [const](../../../csharp/language-reference/keywords/const.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Директивы препроцессора C#](./index.md)
+- [const](../keywords/const.md)
 - [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
-- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
-- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+- [#undef](./preprocessor-undef.md)
+- [#if](./preprocessor-if.md)

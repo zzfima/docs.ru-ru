@@ -2,17 +2,17 @@
 title: Использование вариативности в универсальных методах-делегатах Func и Action (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540602"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659911"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Использование вариативности в универсальных методах-делегатах Func и Action (C#)
 Эти примеры показывают, как обеспечить возможность многократного использования методов и сделать код более гибким, используя ковариацию и контравариацию в универсальных методах-делегатах `Func` и `Action`.  
   
- Дополнительные сведения о ковариации и контравариации см. в разделе [Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Дополнительные сведения о ковариации и контравариации см. в разделе [Вариативность в делегатах (C#)](./variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Использование методов-делегатов с параметрами ковариантного типа  
  Следующий пример иллюстрирует преимущества поддержки ковариации в универсальных методах-делегатах `Func`. Метод `FindByTitle` принимает параметр типа `String` и возвращает объект типа `Employee`. При этом данный метод можно назначить методу-делегату `Func<String, Person>`, поскольку `Employee` наследует `Person`.  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>См. также
 
-- [Covariance and Contravariance (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контрвариантность (C#))
-- [Универсальные шаблоны](~/docs/standard/generics/index.md)
+- [Covariance and Contravariance (C#)](./index.md) (Ковариантность и контрвариантность (C#))
+- [Универсальные шаблоны](../../../../standard/generics/index.md)

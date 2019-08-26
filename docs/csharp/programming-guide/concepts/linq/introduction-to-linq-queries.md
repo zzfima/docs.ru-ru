@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6188af0ffea699899212e4bcf20b7c19f68858b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879204"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924336"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Введение в запросы LINQ (C#)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов. Со временем для различных типов источников данных, например SQL для реляционных баз данных и XQuery для XML, были разработаны разные языки. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных или формата данных, для которых они должны обеспечить поддержку. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощает ситуацию, реализуя согласованную модель работы с данными для различных типов источников данных и форматов данных. В запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] вы всегда работаете с объектами. Вы используете одинаковые базовые шаблоны кода для запроса и преобразования данных в XML-документы, базы данных SQL, наборы данных ADO.NET, коллекции .NET и любые другие форматы, для которых доступен поставщик [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -56,15 +56,15 @@ IQueryable<Customer> custQuery =
  Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Но общее правило очень простое: источником данных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] является любой объект, который поддерживает универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> или интерфейс, наследуемый от него.  
   
 > [!NOTE]
->  Такие типы как <xref:System.Collections.ArrayList>, которые поддерживают неуниверсальный интерфейс <xref:System.Collections.IEnumerable>, также можно использовать в качестве источника данных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+> Такие типы как <xref:System.Collections.ArrayList>, которые поддерживают неуниверсальный интерфейс <xref:System.Collections.IEnumerable>, также можно использовать в качестве источника данных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](./how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="query"></a> Запрос  
  Запрос указывает, какую информацию нужно извлечь из источника или источников данных. Дополнительно в запросе можно указать, как следует сортировать, группировать и формировать возвращаемую информацию. Запрос хранится в переменной запроса и инициализируется выражением запроса. Чтобы упростить написание запросов, в C# был представлен новый синтаксис запроса.  
   
- В предыдущем примере запрос возвращает все четные числа из массива целых чисел. Выражение запроса содержит три предложения: `from`, `where` и `select`. (Если вы знакомы с SQL, то должны были заметить, что порядок предложений противоположен порядку в SQL.) Предложение `from` указывает источник данных, предложение `where` применяет фильтр, а предложение `select` задает тип возвращаемых элементов. Эти и другие предложения запросов подробно описываются в разделе [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md). А сейчас важно то, что в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] сама переменная запроса не выполняет никаких действий и не возвращает никаких данных. Она просто хранит сведения, необходимые для предоставления результатов при выполнении запроса на более позднем этапе. Дополнительные сведения о принципах конструирования запросов см. в разделе [Общие сведения о стандартных операторах запросов (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ В предыдущем примере запрос возвращает все четные числа из массива целых чисел. Выражение запроса содержит три предложения: `from`, `where` и `select`. (Если вы знакомы с SQL, то должны были заметить, что порядок предложений противоположен порядку в SQL.) Предложение `from` указывает источник данных, предложение `where` применяет фильтр, а предложение `select` задает тип возвращаемых элементов. Эти и другие предложения запросов подробно описываются в разделе [Выражения запросов LINQ](../../linq-query-expressions/index.md). А сейчас важно то, что в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] сама переменная запроса не выполняет никаких действий и не возвращает никаких данных. Она просто хранит сведения, необходимые для предоставления результатов при выполнении запроса на более позднем этапе. Дополнительные сведения о принципах конструирования запросов см. в разделе [Общие сведения о стандартных операторах запросов (C#)](./standard-query-operators-overview.md).  
   
 > [!NOTE]
->  Запросы могут также выражаться с помощью синтаксиса методов. Дополнительные сведения см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+> Запросы могут также выражаться с помощью синтаксиса методов. Дополнительные сведения см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="query-execution"></a>Выполнение запроса  
   
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>См. также
 
-- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Пошаговое руководство: Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
-- [Ключевые слова запроса (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+- [Приступая к работе с LINQ в C#](./getting-started-with-linq.md)
+- [Пошаговое руководство: Написание запросов на C#](./walkthrough-writing-queries-linq.md)
+- [Выражения запросов LINQ](../../linq-query-expressions/index.md)
+- [foreach, in](../../../language-reference/keywords/foreach-in.md)
+- [Ключевые слова запроса (LINQ)](../../../language-reference/keywords/query-keywords.md)

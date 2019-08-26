@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935524"
 ---
 # <a name="how-to-log-information-about-services"></a>Практическое руководство. Запись сведений о службах в журнал
 По умолчанию все проекты служб Windows могут взаимодействовать с журналом событий приложения и записывать в него сведения и исключения. Чтобы указать, что эта функциональность должна быть в вашем приложении, можно использовать свойство <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> . По умолчанию ведение журнала включено для любой службы, созданной с помощью шаблона проекта службы Windows. Можно использовать статическую форму класса <xref:System.Diagnostics.EventLog> для записи сведений в журнал, и тогда не потребуется создавать экземпляр компонента <xref:System.Diagnostics.EventLog> или вручную регистрировать источник.  
@@ -28,14 +28,14 @@ ms.locfileid: "64591649"
  Если вы хотите выполнять запись в другой журнал событий, отличный от журнала приложения, то необходимо задать для свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение `false`, создать собственный пользовательский журнал событий в коде службы и зарегистрировать службу в качестве источника записей для этого журнала. Затем вам придется написать код для выполнения записи в журнал всякий раз, когда происходит интересующее вас действие.  
   
 > [!NOTE]
->  Если вы используете пользовательский журнал событий и настроили службу для записи в этот журнал, не пытайтесь обратиться к этому журналу до установки свойства <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> службы в коде. Журналу событий нужно значение этого свойства, чтобы зарегистрировать службу в качестве допустимого источника событий.  
+> Если вы используете пользовательский журнал событий и настроили службу для записи в этот журнал, не пытайтесь обратиться к этому журналу до установки свойства <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> службы в коде. Журналу событий нужно значение этого свойства, чтобы зарегистрировать службу в качестве допустимого источника событий.  
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>Включение ведения журнала событий по умолчанию для службы  
   
 - Установите для свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> вашего компонента значение `true`.  
   
     > [!NOTE]
-    >  По умолчанию для свойства задано значение `true`. Вам не нужно задавать это явно, если только вы не создаете более сложную обработку, такую как оценка условия и последующая установка свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> в зависимости от результата этого условия.  
+    > По умолчанию для свойства задано значение `true`. Вам не нужно задавать это явно, если только вы не создаете более сложную обработку, такую как оценка условия и последующая установка свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> в зависимости от результата этого условия.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>Отключение ведения журнала событий для службы  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64591649"
 1. Задайте для свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение `false`.  
   
     > [!NOTE]
-    >  Чтобы использовать пользовательский журнал, необходимо задать в свойстве <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение false.  
+    > Чтобы использовать пользовательский журнал, необходимо задать в свойстве <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение false.  
   
 2. Настройте экземпляр компонента <xref:System.Diagnostics.EventLog> в приложении службы Windows.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64591649"
      Следующий код показывает, как настроить ведение пользовательского журнала.  
   
     > [!NOTE]
-    >  В этом примере кода экземпляр компонента <xref:System.Diagnostics.EventLog> называется `eventLog1` (`EventLog1` в Visual Basic). Если на шаге 2 вы создали экземпляр с другим именем, измените код соответствующим образом.  
+    > В этом примере кода экземпляр компонента <xref:System.Diagnostics.EventLog> называется `eventLog1` (`EventLog1` в Visual Basic). Если на шаге 2 вы создали экземпляр с другим именем, измените код соответствующим образом.  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

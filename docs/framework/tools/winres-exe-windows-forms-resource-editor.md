@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937924"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (редактор для локализации ресурсов Windows)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Аргументы
 
-|Аргумент|Описание|
+|Аргумент|ОПИСАНИЕ|
 |--------------|-----------------|
 |`resourceFile`|Файл ресурсов, который требуется локализовать. Это должен быть файл ресурсов Windows Forms с расширением RESX или RESOURCES, созданный с помощью конструктора Visual Studio. Программа Winres.exe не может открывать универсальные RESX-файлы и RESOURCES-файлы.|
 
-|Параметр|Описание|
+|Параметр|ОПИСАНИЕ|
 |------------|-----------------|
 |**/?**|Отображает синтаксис команд и параметров программы.|
 
@@ -110,7 +110,7 @@ winres /?
 
 2. Чтобы открыть ресурсы по умолчанию для локализуемой формы, выберите команду **Открыть** в меню **Файл** и найдите нужный файл.
 
-     - или -
+     -или-
 
      При запуске программы Winres.exe в командной строке укажите файл, который требуется открыть.
 
@@ -146,4 +146,4 @@ winres /?
 - <xref:System.Resources.ResourceWriter>
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
-- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
+- [Глобализация и локализация](../../standard/globalization-localization/index.md)

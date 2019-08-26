@@ -2,12 +2,12 @@
 title: LINQ to XML или модель DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 65dff4dc1c2faa1cd17e640d0c1a0e1d2a514fbe
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 68d380873e71d767ddd60f8f9d0f4b82846d1371
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710015"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591763"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML или модель DOM (C#)
 В этом разделе описываются некоторые основные различия между [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] и текущим преобладающим программным интерфейсом API XML, а именно моделью DOM консорциума W3C.  
@@ -75,7 +75,7 @@ XElement contacts =
   
  Обратите внимание, что отступы в коде, который строит XML-дерево, показывают структуру базового документа XML.  
   
- Дополнительные сведения см. в разделе [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
+ Дополнительные сведения см. в разделе [Создание деревьев XML (C#)](./linq-to-xml-overview.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Работа непосредственно с XML-элементами  
  При программировании на XML основное внимание обычно уделяется XML-элементам и, возможно, атрибутам. В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] можно работать с XML-элементами и атрибутами напрямую. Например, можно выполнять следующие действия.  
@@ -105,7 +105,7 @@ doc.AppendChild(name);
  Еще одним недостатком DOM является то, что отсутствует возможность изменять имена узлов. Вместо этого необходимо создать новый узел и скопировать в него все дочерние узлы, но при этом идентификатор первоначального узла будет потерян. В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] эта проблема решена за счет возможности установки свойства <xref:System.Xml.Linq.XName> узла.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Поддержка статических методов для загрузки XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет загружать XML при помощи статических методов, а не методов экземпляра. Это упрощает загрузку и синтаксический анализ. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка XML-кода из файла (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет загружать XML при помощи статических методов, а не методов экземпляра. Это упрощает загрузку и синтаксический анализ. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка XML-кода из файла (C#)](./how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Удаление поддержки конструкций DTD  
  За счет удаления поддержки сущностей и ссылок на сущности [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] еще более упрощает программирование на XML. Управление сущностями является весьма сложным процессом и поэтому редко используется. Удаление поддержки сущностей позволяет повысить производительность и упростить интерфейс программирования. При заполнении дерева [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] все сущности DTD раскрываются.  
@@ -126,11 +126,11 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] хранит пробелы как узлы <xref:System.Xml.Linq.XText>, а не имеет сериализованный тип узла <xref:System.Xml.XmlNodeType.Whitespace>, который есть в DOM.  
   
 ## <a name="support-for-annotations"></a>Поддержка заметок  
- Элементы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживают расширяемый набор заметок. Это полезно для отслеживания различной информации об элементе, например сведений о схеме, сведений о привязке элемента к пользовательскому интерфейсу, а также любых других сведений, относящихся к конкретному приложению. Дополнительные сведения см. в разделе [Заметки LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
+ Элементы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживают расширяемый набор заметок. Это полезно для отслеживания различной информации об элементе, например сведений о схеме, сведений о привязке элемента к пользовательскому интерфейсу, а также любых других сведений, относящихся к конкретному приложению. Дополнительные сведения см. в разделе [Заметки LINQ to XML](./linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Поддержка сведений схемы  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обеспечивает поддержку проверки правильности по схеме XSD через методы расширения в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>. Можно проверить XML-дерево на соответствие схеме XSD. XML-дерево можно заполнить при помощи модуля проверки после обработки схемы (PSVI). Дополнительные сведения см. в разделе [Практическое руководство. Проверка с использованием XSD](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) и <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обеспечивает поддержку проверки правильности по схеме XSD через методы расширения в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>. Можно проверить XML-дерево на соответствие схеме XSD. XML-дерево можно заполнить при помощи модуля проверки после обработки схемы (PSVI). Дополнительные сведения см. в разделе [Практическое руководство. Проверка с использованием XSD](./how-to-validate-using-xsd-linq-to-xml.md) и <xref:System.Xml.Schema.Extensions>.  
   
 ## <a name="see-also"></a>См. также
 
-- [Начало работы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Начало работы (LINQ to XML)](./linq-to-xml-overview.md)

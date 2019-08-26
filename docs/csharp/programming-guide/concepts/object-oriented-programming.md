@@ -2,12 +2,12 @@
 title: Объектно ориентированное программирование (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398068"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659868"
 ---
 # <a name="object-oriented-programming-c"></a>Объектно ориентированное программирование (C#)
 
@@ -79,9 +79,9 @@ struct SampleStruct
 
 Дополнительные сведения:
 
-- [class](../../../csharp/language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> Члены класса
 
@@ -133,9 +133,9 @@ class SampleClass
 
 Дополнительные сведения:
 
-- [get](../../../csharp/language-reference/keywords/get.md)
+- [get](../../language-reference/keywords/get.md)
 
-- [set](../../../csharp/language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> Методы
 
@@ -166,9 +166,9 @@ public int sampleMethod(int sampleParam) {}
 
 Дополнительные сведения:
 
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Методы](../classes-and-structs/methods.md)
 
-- [Методы расширения](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Методы расширения](../classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> Конструкторы
 
@@ -188,7 +188,7 @@ public class SampleClass
 
 Дополнительные сведения:
 
-[Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md).
+[Конструкторы](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a> Методы завершения
 
@@ -200,7 +200,7 @@ public class SampleClass
 
 События позволяют классу или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или порождающий) событие, называется *издателем*, а классы, принимающие (или обрабатывающие) событие, называются *подписчиками*. Дополнительные сведения о том, как порождаются и обрабатываются события, см. в разделе [События](../../../standard/events/index.md).
 
-- Чтобы объявить событие в классе, используйте ключевое слово [event](../../../csharp/language-reference/keywords/event.md).
+- Чтобы объявить событие в классе, используйте ключевое слово [event](../../language-reference/keywords/event.md).
 
 - Чтобы породить событие, вызовите делегат события.
 
@@ -234,14 +234,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 |Модификатор C#|Определение|
 |------------------|----------------|
-|[public](../../../csharp/language-reference/keywords/public.md)|Доступ к типу или члену возможен из любого другого кода в той же сборке или другой сборке, ссылающейся на него.|
-|[private](../../../csharp/language-reference/keywords/private.md)|Доступ к типу или члену можно получить только из кода в том же классе.|
-|[protected](../../../csharp/language-reference/keywords/protected.md)|Доступ к типу или члену можно получить только из кода в том же классе или в производном классе.|
-|[internal](../../../csharp/language-reference/keywords/internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.|
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, или из производного класса в другой сборке.|
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Доступ к типу или члену можно получить из кода в том же классе или в производном классе в сборке базового класса.|
+|[public](../../language-reference/keywords/public.md)|Доступ к типу или члену возможен из любого другого кода в той же сборке или другой сборке, ссылающейся на него.|
+|[private](../../language-reference/keywords/private.md)|Доступ к типу или члену можно получить только из кода в том же классе.|
+|[protected](../../language-reference/keywords/protected.md)|Доступ к типу или члену можно получить только из кода в том же классе или в производном классе.|
+|[internal](../../language-reference/keywords/internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, или из производного класса в другой сборке.|
+|[private protected](../../language-reference/keywords/private-protected.md)|Доступ к типу или члену можно получить из кода в том же классе или в производном классе в сборке базового класса.|
 
-Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Дополнительные сведения см. в статье [Модификаторы доступа](../classes-and-structs/access-modifiers.md).
 
 ### <a name="InstantiatingClasses"></a> Создание экземпляров классов
 
@@ -270,9 +270,9 @@ SampleClass sampleObject = new SampleClass
 
 Дополнительные сведения:
 
-- [Оператор new](../../../csharp/language-reference/operators/new-operator.md)
+- [Оператор new](../../language-reference/operators/new-operator.md)
 
-- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Инициализаторы объектов и коллекций](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="Static"></a> Статические классы и их члены
 
@@ -295,7 +295,7 @@ Console.WriteLine(SampleClass.SampleString);
 
 Статические классы в C# имеют только статические члены и не могут быть созданы. Статические члены также не могут обращаться к нестатическим свойствам, полям или методам.
 
-Дополнительные сведения см. в разделе [static](../../../csharp/language-reference/keywords/static.md).
+Дополнительные сведения см. в разделе [static](../../language-reference/keywords/static.md).
 
 ### <a name="AnonymousTypes"></a> Анонимные типы
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Дополнительные сведения: [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
+Дополнительные сведения: [Анонимные типы](../classes-and-structs/anonymous-types.md).
 
 ## <a name="Inheritance"></a> Наследование
 
@@ -340,9 +340,9 @@ public abstract class B { }
 
 Дополнительные сведения:
 
-- [sealed](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="Overriding"></a> Переопределение членов
 
@@ -352,10 +352,10 @@ public abstract class B { }
 
 |Модификатор C#|Определение|
 |------------------|----------------|
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Разрешает переопределение члена класса в производном классе.|
-|[override](../../../csharp/language-reference/keywords/override.md)|Переопределяет виртуальный (переопределяемый) член в базовом классе.|
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Требует, чтобы член класса был переопределен в производном классе.|
-|[Модификатор new](../../../csharp/language-reference/keywords/new-modifier.md)|Скрывает член, наследуемый от базового класса|
+|[virtual](../../language-reference/keywords/virtual.md)|Разрешает переопределение члена класса в производном классе.|
+|[override](../../language-reference/keywords/override.md)|Переопределяет виртуальный (переопределяемый) член в базовом классе.|
+|[abstract](../../language-reference/keywords/abstract.md)|Требует, чтобы член класса был переопределен в производном классе.|
+|[Модификатор new](../../language-reference/keywords/new-modifier.md)|Скрывает член, наследуемый от базового класса|
 
 ## <a name="Interfaces"></a> Интерфейсы
 
@@ -384,9 +384,9 @@ class SampleClass : ISampleInterface
 
 Дополнительные сведения:
 
-[Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
+[Интерфейсы](../interfaces/index.md)
 
-[interface](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> Универсальные шаблоны
 
@@ -410,9 +410,9 @@ sampleObject.Field = "Sample string";
 
 Дополнительные сведения:
 
-- [Универсальные шаблоны](~/docs/standard/generics/index.md)
+- [Универсальные шаблоны](../../../standard/generics/index.md)
 
-- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
+- [Универсальные шаблоны](../generics/index.md)
 
 ## <a name="Delegates"></a> Делегаты
 
@@ -448,10 +448,10 @@ class SampleClass
 
 Дополнительные сведения:
 
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Делегаты](../delegates/index.md)
 
-- [delegate](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Руководство по программированию на C#](../index.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911588"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (генератор образов в машинном коде)
 
@@ -640,6 +640,6 @@ ngen executeQueuedItems
 ## <a name="see-also"></a>См. также
 
 - [Инструменты](../../../docs/framework/tools/index.md)
-- [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md)
+- [Процесс управляемого выполнения](../../standard/managed-execution-process.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

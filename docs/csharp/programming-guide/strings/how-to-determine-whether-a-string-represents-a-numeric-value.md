@@ -7,15 +7,15 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 626fce590ba08bbdabf27ac33287a0b46b592f9c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921781"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Практическое руководство. Как определить, представляет ли строка числовое значение (руководство по программированию на C#)
-Чтобы определить, является ли строка допустимым представлением указанного числового типа, воспользуйтесь статическим методом `TryParse`, реализуемым всеми простыми числовыми типами, например <xref:System.DateTime> и <xref:System.Net.IPAddress>. В следующем примере показано, как определить, является ли число 108 допустимым типом [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).  
+Чтобы определить, является ли строка допустимым представлением указанного числового типа, воспользуйтесь статическим методом `TryParse`, реализуемым всеми простыми числовыми типами, например <xref:System.DateTime> и <xref:System.Net.IPAddress>. В следующем примере показано, как определить, является ли число 108 допустимым типом [int](../../language-reference/builtin-types/integral-numeric-types.md).  
   
 ```  
 int i = 0;   
@@ -26,7 +26,7 @@ bool result = int.TryParse(s, out i); //i now = 108
  Если строка содержит нечисловые знаки либо числовое значение слишком велико или мало для указанного типа, `TryParse` возвращает значение "false" и задает выходному параметру значение "0". В противном случае возвращается значение "true", а выходному параметру задается числовое значение строки.  
   
 > [!NOTE]
->  Строка может содержать только числовые знаки и оставаться недопустимой для типа, где используется метод `TryParse`. Например, "256" не является допустимым значением для `byte`, однако оно допустимо для `int`. "98,6" не является допустимым значением для `int`, однако оно допустимо для `decimal`.  
+> Строка может содержать только числовые знаки и оставаться недопустимой для типа, где используется метод `TryParse`. Например, "256" не является допустимым значением для `byte`, однако оно допустимо для `int`. "98,6" не является допустимым значением для `int`, однако оно допустимо для `decimal`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано использование `TryParse` со строковыми представлениями значений `long`, `byte` и `decimal`.  
@@ -41,8 +41,8 @@ bool result = int.TryParse(s, out i); //i now = 108
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Преобразование массива байтов в значение типа int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)
-- [Практическое руководство. Преобразование строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
-- [Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [Практическое руководство. Преобразование массива байтов в значение типа int](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [Практическое руководство. Преобразование строки в число](../types/how-to-convert-a-string-to-a-number.md)
+- [Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
 - [Анализ числовых строк](../../../standard/base-types/parsing-numeric.md)
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)
