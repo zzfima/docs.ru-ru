@@ -2,20 +2,20 @@
 title: Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585747"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593156"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="b13d0-102">Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b13d0-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="09a3d-102">Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="09a3d-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="b13d0-103">В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа.</span><span class="sxs-lookup"><span data-stu-id="b13d0-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="b13d0-104">Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл.</span><span class="sxs-lookup"><span data-stu-id="b13d0-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="b13d0-105">Можно изменить пример для обработки любого типа структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="b13d0-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="09a3d-103">В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа.</span><span class="sxs-lookup"><span data-stu-id="09a3d-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="09a3d-104">Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл.</span><span class="sxs-lookup"><span data-stu-id="09a3d-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="09a3d-105">Можно изменить пример для обработки любого типа структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="09a3d-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="b13d0-106">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="b13d0-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="09a3d-106">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="09a3d-106">To create the data files</span></span>
   
-1. <span data-ttu-id="b13d0-107">Скопируйте следующие строки в файл с именем *scores.csv* и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="b13d0-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="b13d0-108">Этот файл представляет данные электронной таблицы.</span><span class="sxs-lookup"><span data-stu-id="b13d0-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="b13d0-109">Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.</span><span class="sxs-lookup"><span data-stu-id="b13d0-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="09a3d-107">Скопируйте следующие строки в файл с именем *scores.csv* и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="09a3d-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="09a3d-108">Этот файл представляет данные электронной таблицы.</span><span class="sxs-lookup"><span data-stu-id="09a3d-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="09a3d-109">Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.</span><span class="sxs-lookup"><span data-stu-id="09a3d-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "65585747"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="b13d0-110">Скопируйте следующие строки в файл с именем *names.csv* и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="b13d0-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="b13d0-111">Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.</span><span class="sxs-lookup"><span data-stu-id="b13d0-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="09a3d-110">Скопируйте следующие строки в файл с именем *names.csv* и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="09a3d-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="09a3d-111">Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.</span><span class="sxs-lookup"><span data-stu-id="09a3d-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "65585747"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b13d0-112">Пример</span><span class="sxs-lookup"><span data-stu-id="b13d0-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="09a3d-112">Пример</span><span class="sxs-lookup"><span data-stu-id="09a3d-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="b13d0-113">См. также</span><span class="sxs-lookup"><span data-stu-id="b13d0-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09a3d-113">См. также</span><span class="sxs-lookup"><span data-stu-id="09a3d-113">See also</span></span>
 
-- [<span data-ttu-id="b13d0-114">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="b13d0-114">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="b13d0-115">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="b13d0-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="09a3d-114">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="09a3d-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="09a3d-115">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="09a3d-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

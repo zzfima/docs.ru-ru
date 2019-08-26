@@ -2,22 +2,22 @@
 title: Практическое руководство. Создание запросов со сложной фильтрацией (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 08c1e124542e6d7e4c728102b2aa7fb4a804794c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710044"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592169"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="7a58d-102">Практическое руководство. Создание запросов со сложной фильтрацией (C#)</span><span class="sxs-lookup"><span data-stu-id="7a58d-102">How to: Write Queries with Complex Filtering (C#)</span></span>
-<span data-ttu-id="7a58d-103">Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="7a58d-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="7a58d-104">Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением.</span><span class="sxs-lookup"><span data-stu-id="7a58d-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="7a58d-105">В этом разделе приводится пример написания запроса с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="7a58d-105">This topic gives an example of writing a query with complex filtering.</span></span>  
+# <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="9a571-102">Практическое руководство. Создание запросов со сложной фильтрацией (C#)</span><span class="sxs-lookup"><span data-stu-id="9a571-102">How to: Write Queries with Complex Filtering (C#)</span></span>
+<span data-ttu-id="9a571-103">Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="9a571-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="9a571-104">Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением.</span><span class="sxs-lookup"><span data-stu-id="9a571-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="9a571-105">В этом разделе приводится пример написания запроса с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="9a571-105">This topic gives an example of writing a query with complex filtering.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7a58d-106">Пример</span><span class="sxs-lookup"><span data-stu-id="7a58d-106">Example</span></span>  
- <span data-ttu-id="7a58d-107">В этом примере показано, как найти все элементы `PurchaseOrder`, имеющие дочерний элемент `Address` с атрибутом `Type`, равным «Доставка», и дочерним элементом `State`, равным «NY».</span><span class="sxs-lookup"><span data-stu-id="7a58d-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="7a58d-108">В нем используется вложенный запрос в предложении `Where`, а оператор `Any` возвращает значение `true`, если коллекция содержит элементы.</span><span class="sxs-lookup"><span data-stu-id="7a58d-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `true` if the collection has any elements in it.</span></span> <span data-ttu-id="7a58d-109">Сведения об использовании синтаксиса запросов на основе методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="7a58d-109">For information about using method-based query syntax, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9a571-106">Пример</span><span class="sxs-lookup"><span data-stu-id="9a571-106">Example</span></span>  
+ <span data-ttu-id="9a571-107">В этом примере показано, как найти все элементы `PurchaseOrder`, имеющие дочерний элемент `Address` с атрибутом `Type`, равным «Доставка», и дочерним элементом `State`, равным «NY».</span><span class="sxs-lookup"><span data-stu-id="9a571-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="9a571-108">В нем используется вложенный запрос в предложении `Where`, а оператор `Any` возвращает значение `true`, если коллекция содержит элементы.</span><span class="sxs-lookup"><span data-stu-id="9a571-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `true` if the collection has any elements in it.</span></span> <span data-ttu-id="9a571-109">Сведения об использовании синтаксиса запросов на основе методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](./query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="9a571-109">For information about using method-based query syntax, see [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- <span data-ttu-id="7a58d-110">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7a58d-110">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="9a571-110">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9a571-110">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="7a58d-111">Дополнительные сведения об операторе `Any` см. в разделе [Операции, использующие квантификаторы (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="7a58d-111">For more information about the `Any` operator, see [Quantifier Operations (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
+ <span data-ttu-id="9a571-111">Дополнительные сведения об операторе `Any` см. в разделе [Операции, использующие квантификаторы (C#)](./quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="9a571-111">For more information about the `Any` operator, see [Quantifier Operations (C#)](./quantifier-operations.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
@@ -35,16 +35,16 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute("PurchaseOrderNumber"));  
 ```  
   
- <span data-ttu-id="7a58d-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="7a58d-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="9a571-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="9a571-112">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="example"></a><span data-ttu-id="7a58d-113">Пример</span><span class="sxs-lookup"><span data-stu-id="7a58d-113">Example</span></span>  
- <span data-ttu-id="7a58d-114">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="7a58d-114">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7a58d-115">Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7a58d-115">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9a571-113">Пример</span><span class="sxs-lookup"><span data-stu-id="9a571-113">Example</span></span>  
+ <span data-ttu-id="9a571-114">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="9a571-114">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9a571-115">Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9a571-115">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="7a58d-116">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="7a58d-116">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="9a571-116">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="9a571-116">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -63,15 +63,15 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute(aw + "PurchaseOrderNumber"));  
 ```  
   
- <span data-ttu-id="7a58d-117">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="7a58d-117">This code produces the following output:</span></span>  
+ <span data-ttu-id="9a571-117">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="9a571-117">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7a58d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7a58d-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a571-118">См. также</span><span class="sxs-lookup"><span data-stu-id="9a571-118">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="7a58d-119">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="7a58d-119">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-- [<span data-ttu-id="7a58d-120">Операции, использующие квантификаторы (C#)</span><span class="sxs-lookup"><span data-stu-id="7a58d-120">Quantifier Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+- [<span data-ttu-id="9a571-119">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="9a571-119">Projection Operations (C#)</span></span>](./projection-operations.md)
+- [<span data-ttu-id="9a571-120">Операции, использующие квантификаторы (C#)</span><span class="sxs-lookup"><span data-stu-id="9a571-120">Quantifier Operations (C#)</span></span>](./quantifier-operations.md)
