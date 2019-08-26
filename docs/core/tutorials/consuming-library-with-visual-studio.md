@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362396"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660571"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Использование библиотеки .NET Standard в Visual Studio 2017
 
@@ -30,7 +30,7 @@ ms.locfileid: "54362396"
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Откройте решение `ClassLibraryProjects`, созданное в рамках статьи [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](./library-with-visual-studio.md). В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
-1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
+1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#** , выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
 
    ![Диалоговое окно "Добавление нового проекта" в Visual Studio (C#)](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
@@ -60,7 +60,7 @@ ms.locfileid: "54362396"
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Откройте решение `ClassLibraryProjects`, созданное в рамках статьи [Создание библиотеки классов на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md). В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
-1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
+1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
 
    ![Диалоговое окно "Добавление нового проекта" в Visual Studio (Visual Basic)](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
@@ -93,7 +93,7 @@ ms.locfileid: "54362396"
 
 ## <a name="distributing-the-library-in-a-nuget-package"></a>Распространение библиотеки в виде пакета NuGet
 
-Библиотеку классов можно распространить и для других разработчиков, опубликовав ее в виде пакета NuGet. Visual Studio не поддерживает создание пакетов NuGet. Для создания пакета используйте [служебную программу командной строки](../../core/tools/dotnet.md) `dotnet` следующим образом:
+Библиотеку классов можно распространить и для других разработчиков, опубликовав ее в виде пакета NuGet. Visual Studio не поддерживает создание пакетов NuGet. Для создания пакета используйте [служебную программу командной строки](../tools/dotnet.md) `dotnet` следующим образом:
 
 1. Откройте окно консоли. Например, в текстовом поле **Задайте любой вопрос** на панели задач Windows введите `Command Prompt` (или `cmd` для краткости), а затем откройте окно консоли с помощью приложения **командной строки** или клавиши ВВОД, если оно выделено в результатах поиска.
 
@@ -104,4 +104,4 @@ ms.locfileid: "54362396"
    > [!TIP]
    > Если каталог, содержащий *dotnet.exe*, не находится в системном пути, найдите расположение этого файла, введя `where dotnet.exe` в окне консоли.
 
-Дополнительные сведения о создании пакетов NuGet см. в статье [How to Create a NuGet Package with Cross Platform Tools](../../core/deploying/creating-nuget-packages.md) (Создание пакета NuGet с помощью кроссплатформенных средств).
+Дополнительные сведения о создании пакетов NuGet см. в статье [How to Create a NuGet Package with Cross Platform Tools](../deploying/creating-nuget-packages.md) (Создание пакета NuGet с помощью кроссплатформенных средств).

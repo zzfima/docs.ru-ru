@@ -2,12 +2,12 @@
 title: Команда dotnet new
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 ms.date: 05/06/2019
-ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878317"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660542"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -54,7 +54,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>ОПИСАНИЕ
 
 Команда `dotnet new` предоставляет удобный способ инициализации проекта .NET Core.
 
@@ -168,7 +168,7 @@ dotnet new [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
 `--dry-run`
 
@@ -223,7 +223,7 @@ dotnet new [-h|--help]
 > Чтобы удалить шаблон с помощью `PATH`, вам необходимо указать полный путь. Например, *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* будет работать, а *./GarciaSoftware.ConsoleTemplate.CSharp* — нет.
 > Кроме того, путь к шаблону не должен содержать конечную косую черту закрытия каталога.
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--force`
 
@@ -357,7 +357,7 @@ dotnet new [-h|--help]
 
 Каждый шаблон проекта может содержать дополнительные доступные параметры. Основные шаблоны имеют следующие дополнительные параметры:
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
 **Консоль**
 
@@ -491,7 +491,7 @@ dotnet new [-h|--help]
 
 `--sdk-version <VERSION_NUMBER>` — задает версию пакета SDK для .NET Core, используемую в файле *global.json*.
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 **console, angular, react, reactredux, razorclasslib**
 
@@ -774,6 +774,6 @@ dotnet new [-h|--help]
 ## <a name="see-also"></a>См. также
 
 - [Пользовательские шаблоны для команды dotnet new](custom-templates.md)
-- [Создание пользовательского шаблона для dotnet](~/docs/core/tutorials/create-custom-template.md)
+- [Создание пользовательского шаблона для dotnet](../tutorials/create-custom-template.md)
 - [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)
 - [Доступные шаблоны для команды dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

@@ -4,12 +4,12 @@ description: Узнайте, как разместить среду выполн
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402026"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660524"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Написание пользовательского хост-приложения NET Core для управления средой выполнения .NET из машинного кода
 
@@ -23,7 +23,7 @@ ms.locfileid: "67402026"
 
 Так как основные приложения являются собственными, в этом учебнике рассматривается создание приложения C++ для размещения .NET Core. Вам потребуется среда разработки C++ (например, предоставляемая в [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
-Потребуется также и простое приложение .NET Core для проверки основного приложения, поэтому следует установить пакет [.NET Core SDK](https://www.microsoft.com/net/core) и [создать небольшое тестовое приложение .NET Core](../../core/tutorials/with-visual-studio.md) (например, приложение "Hello World"). Достаточно приложения "Hello World", созданного с помощью нового шаблона для консольного проекта .NET Core.
+Потребуется также и простое приложение .NET Core для проверки основного приложения, поэтому следует установить пакет [.NET Core SDK](https://www.microsoft.com/net/core) и [создать небольшое тестовое приложение .NET Core](with-visual-studio.md) (например, приложение "Hello World"). Достаточно приложения "Hello World", созданного с помощью нового шаблона для консольного проекта .NET Core.
 
 ## <a name="hosting-apis"></a>Размещение API
 Есть три разных API, которые можно использовать для размещения .NET Core. В этом документе (и связанных с ним [примерах](https://github.com/dotnet/samples/tree/master/core/hosting)) рассматриваются все возможные варианты.

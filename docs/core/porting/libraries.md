@@ -4,12 +4,12 @@ description: Узнайте, как перенести проекты библи
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745564"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660700"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Перенос библиотек .NET Framework в .NET Core
 
@@ -29,16 +29,16 @@ ms.locfileid: "56745564"
 [.NET Standard](../../standard/net-standard.md)\
 В этой статье рассматривается официальная спецификация API-интерфейсов .NET, которые должны быть доступны во всех реализациях .NET.
 
-[Пакеты, метапакеты и платформы](~/docs/core/packages.md)   
+[Пакеты, метапакеты и платформы](../packages.md)   
 Из этой статьи вы узнаете, как .NET Core определяет и использует пакеты и как пакеты поддерживают выполнение кода во множестве реализаций .NET.
 
-[Разработка библиотек с помощью кроссплатформенных средств](~/docs/core/tutorials/libraries.md)   
+[Разработка библиотек с помощью кроссплатформенных средств](../tutorials/libraries.md)   
 В этой статье объясняется создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки.
 
-[Дополнения к формату *CSPROJ* для .NET Core](~/docs/core/tools/csproj.md)   
+[Дополнения к формату *CSPROJ* для .NET Core](../tools/csproj.md)   
 В этой статье перечислены изменения, внесенные в файлы проекта при перемещении в *CSPROJ* и MSBuild.
 
-[Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков](~/docs/core/porting/third-party-deps.md)   
+[Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков](third-party-deps.md)   
 В этом разделе рассматривается переносимость зависимостей сторонних разработчиков и объясняется, что делать, если зависимость пакета NuGet не работает в .NET Core.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Изменение целевой платформы для кода .NET Framework на .NET Framework 4.7.2

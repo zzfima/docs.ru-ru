@@ -4,12 +4,12 @@ description: Этот раздел описывает, как сборку ре�
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 454f67b39b3558b3f34519bdc018118738b99f6b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300147"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660697"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
@@ -28,7 +28,7 @@ Visual Studio для Mac предоставляет полнофункциона
 - [Пакет SDK для .NET Core 1.1.или более поздней версии](https://www.microsoft.com/net/core#macos).
 - [Visual Studio 2017 для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-Дополнительные сведения о необходимых компонентах см. в разделе [Необходимые компоненты для .NET Core на Mac](../../core/macos-prerequisites.md). Полный список требований к Visual Studio 2017 для Mac см. в статье [Требования к системе Visual Studio 2017 для Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Дополнительные сведения о необходимых компонентах см. в разделе [Необходимые компоненты для .NET Core на Mac](../macos-prerequisites.md). Полный список требований к Visual Studio 2017 для Mac см. в статье [Требования к системе Visual Studio 2017 для Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Создание библиотеки
 
