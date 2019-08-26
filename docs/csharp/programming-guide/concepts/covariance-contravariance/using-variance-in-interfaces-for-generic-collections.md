@@ -2,19 +2,19 @@
 title: Использование вариативности в интерфейсах для универсальных коллекций (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 6119d8756295606fc2ef66f5157e815b4d903659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562119"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595218"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Использование вариативности в интерфейсах для универсальных коллекций (C#)
 Ковариантный интерфейс позволяет его методам возвращать более производные типы, чем указанные в интерфейсе. Контравариантный интерфейс позволяет его методам принимать параметры менее производных типов, чем указанные в интерфейсе.  
   
  В .NET Framework 4 несколько имеющихся интерфейсов стали ковариантными и контравариантными. В их числе <xref:System.Collections.Generic.IEnumerable%601> и <xref:System.IComparable%601>. Это позволяет повторно использовать методы, оперирующие универсальными коллекциями базовых типов, для коллекций производных типов.  
   
- Список вариативных интерфейсов в .NET Framework см. в разделе [Вариативность в универсальных интерфейсах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+ Список вариативных интерфейсов в .NET Framework см. в разделе [Вариативность в универсальных интерфейсах (C#)](./variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Преобразование универсальных коллекций  
  Следующий пример иллюстрирует преимущества поддержки ковариантности в интерфейсе <xref:System.Collections.Generic.IEnumerable%601>. Метод `PrintFullName` принимает коллекцию типа `IEnumerable<Person>` в качестве параметра. При этом его можно повторно использовать для коллекции типа `IEnumerable<Employee>`, так как `Employee` наследует `Person`.  
@@ -115,4 +115,4 @@ class Program
   
 ## <a name="see-also"></a>См. также
 
-- [Вариативность в универсальных интерфейсах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Вариативность в универсальных интерфейсах (C#)](./variance-in-generic-interfaces.md)

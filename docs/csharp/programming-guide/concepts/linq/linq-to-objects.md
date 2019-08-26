@@ -2,15 +2,15 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: c66a818d48316279817fdc6b7919a7667b6b8eb8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484468"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591864"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
-Термин "LINQ to Objects" означает использование запросов LINQ с любой коллекцией <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без привлечения промежуточного поставщика LINQ, API [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) или [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md). Вы можете выполнить запрос LINQ к любой перечислимой коллекции, такой как <xref:System.Collections.Generic.List%601>, <xref:System.Array> или <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
+Термин "LINQ to Objects" означает использование запросов LINQ с любой коллекцией <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без привлечения промежуточного поставщика LINQ, API [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) или [LINQ to XML](./linq-to-xml-overview.md). Вы можете выполнить запрос LINQ к любой перечислимой коллекции, такой как <xref:System.Collections.Generic.List%601>, <xref:System.Array> или <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
   
  В общем смысле LINQ to Objects представляет собой новый подход к коллекциям. Раньше нужно было написать сложные циклы `foreach`, определяющие порядок извлечения данных из коллекции. При использовании LINQ пишется декларативный код, описывающий, какие данные необходимо извлечь.  
   
@@ -27,20 +27,20 @@ ms.locfileid: "66484468"
  Целью этого раздела является демонстрация подхода LINQ с помощью нескольких примеров. Он не претендует на исчерпывающий характер.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ и строки (C#)](./linq-and-strings.md)  
  Использование LINQ для запроса и преобразования строк и коллекций строк. Ссылки на разделы, демонстрирующие эти принципы.  
   
- [LINQ и отражение (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
+ [LINQ и отражение (C#)](./linq-and-reflection.md)  
  Ссылки на пример, демонстрирующий, как LINQ использует отражение.  
   
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)  
  Использование LINQ для взаимодействия с файловыми системами. Ссылки на разделы, демонстрирующие эти понятия.  
   
- [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
  Выполнение запроса ArrayList в C#.  
   
- [Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  Расширение набора методов, которые можно использовать для запросов LINQ путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ (C#)](./index.md)  
  Ссылки на разделы, рассказывающие LINQ и содержащие примеры кода выполнения запросов.

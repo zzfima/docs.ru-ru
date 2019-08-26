@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание подписанных дружественных сборок в (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582980"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595930"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Практическое руководство. Создание подписанных дружественных сборок в (C#)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
@@ -79,7 +79,7 @@ ms.locfileid: "64582980"
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.  Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.  Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../language-reference/compiler-options/out-compiler-option.md).  
   
 7. Запустите файл friend_signed_B.exe.  
   
@@ -93,8 +93,8 @@ ms.locfileid: "64582980"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки](../../../../standard/assembly/friend-assemblies.md)
-- [Практическое руководство. Создание неподписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [Практическое руководство. Создание неподписанных дружественных сборок (C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Создание и использование сборок со строгими именами](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+- [Создание и использование сборок со строгими именами](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Руководство по программированию на C#](../../index.md)

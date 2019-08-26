@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70f5ee17209c7ed54462fab6e5cc4d75091c9df2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608034"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588281"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "64608034"
   
  Динамические объекты обеспечивают удобный доступ к динамическим языкам, таким как IronPython и IronRuby. С помощью динамического объекта можно ссылаться на динамический скрипт, интерпретируемый во время выполнения.  
   
- Ссылка на динамический объект выполняется с помощью позднего связывания. В C# тип объектов с поздним связыванием указывается как `dynamic`. В Visual Basic тип объектов с поздним связыванием указывается как `Object`. Дополнительные сведения см. в разделах [dynamic](../../../csharp/language-reference/keywords/dynamic.md) и [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Ссылка на динамический объект выполняется с помощью позднего связывания. В C# тип объектов с поздним связыванием указывается как `dynamic`. В Visual Basic тип объектов с поздним связыванием указывается как `Object`. Дополнительные сведения см. в разделах [dynamic](../../language-reference/keywords/dynamic.md) и [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  Вы можете создавать настраиваемые динамические объекты, используя классы из пространства имен <xref:System.Dynamic?displayProperty=nameWithType>. Например, можно создать объект <xref:System.Dynamic.ExpandoObject> и задать члены этого объекта во время выполнения. Также можно создать собственный тип, наследующий класс <xref:System.Dynamic.DynamicObject>. Затем для обеспечения динамических функциональных возможностей во время выполнения можно переопределить члены класса <xref:System.Dynamic.DynamicObject>.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "64608034"
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Использование типа dynamic](./using-type-dynamic.md)
 - [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
 - [Реализация динамических интерфейсов (документ в формате PDF на сайте Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

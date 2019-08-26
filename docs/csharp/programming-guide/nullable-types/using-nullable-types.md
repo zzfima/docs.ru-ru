@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 75b8889f5f1f1b0dab4aa365daa34ef5ae226b02
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306655"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588837"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Использование допускающих значение NULL типов (руководство по программированию на C#)
 
@@ -95,5 +95,5 @@ ms.locfileid: "59306655"
 ## <a name="see-also"></a>См. также
 
 - [Типы, допускающие значения NULL](index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Руководство по программированию на C#](../index.md)
 - [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Что означает термин "расширенные"?)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dc876f609643b7112c0f54574bd202c7c19cb119
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345096"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924771"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (параметры компилятора C#)
 Этот параметр предоставляет удобный способ для сообщения о внутренней ошибке компилятора C# в корпорацию Майкрософт.  
   
 > [!NOTE]
->  В Windows Vista и Windows Server 2008 параметры отчетов об ошибках, установленные в среде Visual Studio, не переопределяют параметры отчетов об ошибках Windows. Параметры отчетов об ошибках Windows всегда имеют приоритет над параметрами отчетов об ошибках Visual Studio.  
+> В Windows Vista и Windows Server 2008 параметры отчетов об ошибках, установленные в среде Visual Studio, не переопределяют параметры отчетов об ошибках Windows. Параметры отчетов об ошибках Windows всегда имеют приоритет над параметрами отчетов об ошибках Visual Studio.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,4 +63,4 @@ ms.locfileid: "59345096"
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)

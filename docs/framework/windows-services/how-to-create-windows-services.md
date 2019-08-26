@@ -6,18 +6,18 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 960d30f4e484238e9e7c23741578650a8c3005c8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649403"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987159"
 ---
 # <a name="how-to-create-windows-services"></a>Практическое руководство. Создание служб Windows
 При создании службы можно использовать шаблон проекта Visual Studio, который называется **Служба Windows**. Этот шаблон автоматически выполняет основную часть работы, ссылаясь на необходимые классы и пространства имен, устанавливая наследование от базового класса для служб и переопределяя некоторые методы, которые вы обычно хотите переопределять.  
   
 > [!WARNING]
->  Шаблон проекта "Службы Windows" в экспресс-выпуске Visual Studio отсутствует.  
+> Шаблон проекта "Службы Windows" в экспресс-выпуске Visual Studio отсутствует.  
   
  Для создания функциональной службы необходимо выполнить, как минимум, следующее:  
   
@@ -32,14 +32,14 @@ ms.locfileid: "64649403"
 1. Создайте проект **Служба Windows**.  
   
     > [!NOTE]
-    >  Инструкции по созданию службы без использования шаблона см. в разделе [Практический пример. Создание служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > Инструкции по созданию службы без использования шаблона см. в разделе [Практический пример. Создание служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 2. В окне **Свойства** задайте для своей службы свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
   
      ![Задание свойства ServiceName](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
-    >  Значение <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> свойства всегда должно соответствовать имени, указанному в классах установщика. При изменении этого свойства необходимо также обновить свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> классов установщика.  
+    > Значение <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> свойства всегда должно соответствовать имени, указанному в классах установщика. При изменении этого свойства необходимо также обновить свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> классов установщика.  
   
 3. Установите любые из следующих свойств для определения режима работы службы.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64649403"
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` для внесения информационных записей в журнал событий приложения, когда служба выполняет некоторое действие; `false` для отключения этой функции. Дополнительные сведения см. в разделе [Практическое руководство. Запись сведений о службах в журнал](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Примечание.**  По умолчанию свойство <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> имеет значение `true`.|  
   
     > [!NOTE]
-    >  Когда <xref:System.ServiceProcess.ServiceBase.CanStop%2A> или <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> имеют значение `false`, **диспетчер служб** будет отключать пункты меню, отвечающие за остановку, приостановку или возобновление работы службы.  
+    > Когда <xref:System.ServiceProcess.ServiceBase.CanStop%2A> или <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> имеют значение `false`, **диспетчер служб** будет отключать пункты меню, отвечающие за остановку, приостановку или возобновление работы службы.  
   
 4. Откройте редактор кода и введите данные для выполнения операций для процедур <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "64649403"
 7. Скомпилируйте проект, выбрав в меню **Сборка** пункт **Собрать решение**.  
   
     > [!NOTE]
-    >  Не нажимайте клавишу F5 для запуска проекта — таким способом нельзя запустить проект службы.  
+    > Не нажимайте клавишу F5 для запуска проекта — таким способом нельзя запустить проект службы.  
   
 8. Установите службу. Дополнительные сведения см. в разделе [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   

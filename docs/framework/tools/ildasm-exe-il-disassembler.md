@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912493"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (дизассемблер IL)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|Включает ссылки на строки исходного файла.|
 |**/nobar**|Подавляет вывод всплывающего окна с индикатором хода выполнения дизассемблирования.|
 |**/noca**|Подавляет вывод настраиваемых атрибутов.|
-|**/project**|Отображает метаданные в представлении для управляемого кода, а не так, как их представляет среда выполнения Windows в машинном коде. Если параметр `PEfilename` не является файлом метаданных Windows (*WINMD*-файлом), этот параметр не учитывается. См. раздел [Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Отображает метаданные в представлении для управляемого кода, а не так, как их представляет среда выполнения Windows в машинном коде. Если параметр `PEfilename` не является файлом метаданных Windows (*WINMD*-файлом), этот параметр не учитывается. См. раздел [Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Дизассемблирует только открытые типы и члены. Эквивалентен **/visibility:PUB**.|
 |**/quoteallnames**|Заключает все имена в одинарные кавычки.|
 |**/raweh**|Отображает предложения обработки исключений в исходном виде.|
@@ -188,5 +188,5 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (ассемблер IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md)
+- [Процесс управляемого выполнения](../../standard/managed-execution-process.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c02e4f62aabb17213ce172e7e3a773e86d1e9908
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cdd425970442e284d6fd6488bbb13394c12e939a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201603"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596450"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Свойства интерфейса (Руководство по программированию на C#)
-Свойства можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md). Ниже показан пример метода доступа к свойству интерфейса:  
+Свойства можно объявлять для [интерфейса](../../language-reference/keywords/interface.md). Ниже показан пример метода доступа к свойству интерфейса:  
   
  [!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]  
   
@@ -27,7 +27,7 @@ ms.locfileid: "57201603"
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
- Это называется [явной реализацией интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых содержат свойство `Name`, потребуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление свойства:  
+ Это называется [явной реализацией интерфейса](../interfaces/explicit-interface-implementation.md). Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых содержат свойство `Name`, потребуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление свойства:  
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
@@ -53,9 +53,9 @@ ms.locfileid: "57201603"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
-- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Свойства](./properties.md)
+- [Использование свойств](./using-properties.md)
+- [Сравнение свойств и индексаторов](../indexers/comparison-between-properties-and-indexers.md)
+- [Индексаторы](../indexers/index.md)
+- [Интерфейсы](../interfaces/index.md)

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398417"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596386"
 ---
 # <a name="objects-c-programming-guide"></a>Объекты (Руководство по программированию на C#)
 Определение класса или структуры подобно чертежу, на котором указаны действия, выполняемые типом. В сущности, объект является блоком памяти, выделенной и настроенной в соответствии с чертежом. Программа может создать множество объектов одного класса. Объекты также называют экземплярами. Они могут храниться либо в именованной переменной, либо в массиве или коллекции. Клиентский код — это код, использующий эти переменные для вызова методов и доступа к открытым свойствам объекта. В объектно-ориентированном языке, таком как C#, стандартная программа состоит из нескольких динамически взаимодействующих объектов.  
   
 > [!NOTE]
-> Поведение статических типов отличается от описанного здесь поведения. Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+> Поведение статических типов отличается от описанного здесь поведения. Дополнительные сведения см. в статье [Статические классы и члены статических классов](./static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Экземпляры структуры и Экземпляры классов  
  Так как классы являются ссылочными типами, в переменной объекта класса хранится ссылка на адрес объекта в управляемой куче. Если первому объекту назначен второй объект того же типа, обе переменные ссылаются на объект, расположенный по данному адресу. Эта особенность обсуждается более подробно далее в этом разделе.  
   
- Экземпляры классов создаются с помощью [оператора new](../../../csharp/language-reference/operators/new-operator.md). В приведенном ниже примере `Person` является типом, а `person1` и `person 2` — экземплярами или объектами этого типа.  
+ Экземпляры классов создаются с помощью [оператора new](../../language-reference/operators/new-operator.md). В приведенном ниже примере `Person` является типом, а `person1` и `person 2` — экземплярами или объектами этого типа.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -46,27 +46,27 @@ ms.locfileid: "67398417"
   
  В реализации <xref:System.ValueType?displayProperty=nameWithType> `Equals` используется отражение, так как необходимо определить поля, имеющиеся в любой структуре. При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.  
   
-- Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следуйте рекомендациям из [практического руководства по определению равенства значений для типа](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и раздела <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../language-reference/operators/equality-operators.md#equality-operator-). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следуйте рекомендациям из [практического руководства по определению равенства значений для типа](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и раздела <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Классы](./classes.md)  
   
-- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Структуры](./structs.md)  
   
-- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Конструкторы](./constructors.md)  
   
-- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Методы завершения](./destructors.md)  
   
-- [События](../../../csharp/programming-guide/events/index.md)  
+- [События](../events/index.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Оператор new](../../../csharp/language-reference/operators/new-operator.md)
+- [Руководство по программированию на C#](../index.md)
+- [object](../../language-reference/keywords/object.md)
+- [Наследование](./inheritance.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [Оператор new](../../language-reference/operators/new-operator.md)
 - [Система общих типов CTS](../../../standard/base-types/common-type-system.md)

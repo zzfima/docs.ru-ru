@@ -2,12 +2,12 @@
 title: Использование метода Async для доступа к файлам (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330938"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595545"
 ---
 # <a name="using-async-for-file-access-c"></a>Использование метода Async для доступа к файлам (C#)
 Для доступа к файлам можно использовать функцию Async. При использовании функции Async вы можете вызывать асинхронные методы без использования обратных вызовов или разделения вашего кода на множество методов или лямбда-выражений. Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.  
@@ -75,10 +75,10 @@ Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
 await theTask;  
 ```  
   
- Первый оператор возвращает задачу и вызывает запуск обработки файла. Вторая строка с await немедленно оставляет метод и возвращается в другую задачу. При окончании обработки файла выполнение возвращается в точку выполнения, которая следует за await. Дополнительные сведения см. в разделе [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Первый оператор возвращает задачу и вызывает запуск обработки файла. Вторая строка с await немедленно оставляет метод и возвращается в другую задачу. При окончании обработки файла выполнение возвращается в точку выполнения, которая следует за await. Дополнительные сведения см. в разделе [Поток управления в асинхронных программах (C#)](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Чтение текста  
- Следующий пример считывает текст из файла. Текст добавляется в буфер обмена, а затем, в данном случае, помещается в <xref:System.Text.StringBuilder>. В отличие от предыдущего примера await выдаёт в результате значение. Метод <xref:System.IO.Stream.ReadAsync%2A> возвращает <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, поэтому по завершении операции оценка await выдает значение `Int32` (`numRead`). Дополнительные сведения см. в разделе [Асинхронные типы возвращаемых значений (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Следующий пример считывает текст из файла. Текст добавляется в буфер обмена, а затем, в данном случае, помещается в <xref:System.Text.StringBuilder>. В отличие от предыдущего примера await выдаёт в результате значение. Метод <xref:System.IO.Stream.ReadAsync%2A> возвращает <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, поэтому по завершении операции оценка await выдает значение `Int32` (`numRead`). Дополнительные сведения см. в разделе [Асинхронные типы возвращаемых значений (C#)](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  
@@ -172,10 +172,10 @@ public async Task ProcessWriteMultAsync()
 }  
 ```  
   
- При использовании методов <xref:System.IO.Stream.WriteAsync%2A> и <xref:System.IO.Stream.ReadAsync%2A> можно указать <xref:System.Threading.CancellationToken>, который позволяет отменить операцию в середине потока. Дополнительные сведения см. в разделах [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) и [Отмена в управляемых потоках](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ При использовании методов <xref:System.IO.Stream.WriteAsync%2A> и <xref:System.IO.Stream.ReadAsync%2A> можно указать <xref:System.Threading.CancellationToken>, который позволяет отменить операцию в середине потока. Дополнительные сведения см. в разделах [Настройка асинхронного приложения (C#)](./fine-tuning-your-async-application.md) и [Отмена в управляемых потоках](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)
-- [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)
+- [Асинхронное программирование с использованием ключевых слов async и await (C#)](./index.md)
+- [Async Return Types (C#)](./async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)
+- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)

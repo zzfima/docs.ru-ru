@@ -2,12 +2,12 @@
 title: Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584369"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592380"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)
 В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.  
@@ -130,5 +130,5 @@ class SplitWithGroups
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ и строки (C#)](./linq-and-strings.md)
+- [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)

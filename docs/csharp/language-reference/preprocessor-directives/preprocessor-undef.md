@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 0dedd1480dae15d2c04b47cee132ab3227098f56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdf22e90be766e87e823a7f8cc27ea00c17d2bb5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739038"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605584"
 ---
 # <a name="undef-c-reference"></a>#undef (Справочник по C#)
-`#undef` позволяет отменить определение символа таким образом, чтобы при использовании этого символа в качестве выражения в директиве [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) возвращалось значение `false`.  
+`#undef` позволяет отменить определение символа таким образом, чтобы при использовании этого символа в качестве выражения в директиве [#if](./preprocessor-if.md) возвращалось значение `false`.  
   
- Символ можно определить с помощью директивы [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) или параметра компилятора [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Директива `#undef` должна находиться в файле перед использованием любых инструкций, которые также не являются директивами.  
+ Символ можно определить с помощью директивы [#define](./preprocessor-define.md) или параметра компилятора [-define](../compiler-options/define-compiler-option.md). Директива `#undef` должна находиться в файле перед использованием любых инструкций, которые также не являются директивами.  
   
 ## <a name="example"></a>Пример  
 
@@ -43,6 +43,6 @@ class MyClass
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Директивы препроцессора C#](./index.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Написание метода оси LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 6e777e615d21dd43317f0813461a3f1d8a506c90
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 71d9d0e9ba1f63d8badb1f10ab7ede1dbb30a19f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484662"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592185"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Практическое руководство. Написание метода оси LINQ to XML (C#)
 Можно написать свои собственные методы оси для получения коллекций из XML-дерева. Один из лучших способов выполнения этого состоит в написании метода расширения, возвращающего коллекцию элементов или атрибутов. Метод расширения можно написать для возврата указанных поднаборов элементов или атрибутов с учетом требований приложения.  
@@ -15,7 +15,7 @@ ms.locfileid: "66484662"
 ## <a name="example"></a>Пример  
  В следующем примере используются два метода расширения. Первый метод расширения, `GetXPath`, действует применительно к <xref:System.Xml.Linq.XObject> и возвращает выражение XPath, которое после его вычисления возвращает узел или атрибут. Второй метод расширения, `Find`, применяется к <xref:System.Xml.Linq.XElement>. Он возвращает коллекцию объектов <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XElement>, содержащих некоторый указанный текст.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 public static class MyExtensions  

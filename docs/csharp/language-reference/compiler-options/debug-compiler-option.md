@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338492"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922502"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (параметры компилятора C#)
 При заданном параметре **-debug** компилятор создает отладочную информацию и помещает ее в один или несколько выходных файлов.  
@@ -38,11 +38,11 @@ ms.locfileid: "59338492"
  При использовании параметра **-debug:full** нужно учитывать некоторое влияние на скорость и размер оптимизированного кода JIT и незначительное влияние на качество кода с **-debug:full**. Для создания кода выпуска рекомендуется использовать параметр **-debug:pdbonly** либо не использовать PDB.  
   
 > [!NOTE]
->  Отличие **-debug:pdbonly** от **-debug:full** заключается в том, что компилятор с параметром **-debug:full** создает <xref:System.Diagnostics.DebuggableAttribute>, сообщающий JIT-компилятору о доступности отладочных сведений. Поэтому если при использовании параметра **-debug:full** код содержит <xref:System.Diagnostics.DebuggableAttribute> со значением false, выводится сообщение об ошибке.  
+> Отличие **-debug:pdbonly** от **-debug:full** заключается в том, что компилятор с параметром **-debug:full** создает <xref:System.Diagnostics.DebuggableAttribute>, сообщающий JIT-компилятору о доступности отладочных сведений. Поэтому если при использовании параметра **-debug:full** код содержит <xref:System.Diagnostics.DebuggableAttribute> со значением false, выводится сообщение об ошибке.  
   
  Дополнительные сведения о настройке производительности отладки для приложения см. в разделе [Упрощение отладки образов](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
- Чтобы изменить расположение PDB-файла, см. раздел [-pdb (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
+ Чтобы изменить расположение PDB-файла, см. раздел [-pdb (параметры компилятора C#)](./pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -65,5 +65,5 @@ csc -debug -pdb:app.pdb test.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

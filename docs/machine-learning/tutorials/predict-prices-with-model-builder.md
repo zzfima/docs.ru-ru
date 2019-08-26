@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331686"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611454"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Прогнозирование цен с помощью регрессии с использованием построителя моделей
 
@@ -202,7 +202,6 @@ ms.locfileid: "68331686"
 Дополнительные сведения см. в следующих статьях:
 
 - [Сценарии для построителя моделей](../automate-training-with-model-builder.md#scenarios)
-- [Форматы данных для построителя моделей](../automate-training-with-model-builder.md#data-formats)
 - [Регрессия](../resources/glossary.md#regression)
 - [Метрики модели регрессии](../resources/metrics.md#metrics-for-regression)
 - [Набор данных о поездках на такси, предоставленный Комиссией по лицензированию перевозок автотранспортом города Нью-Йорк (TLC)](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

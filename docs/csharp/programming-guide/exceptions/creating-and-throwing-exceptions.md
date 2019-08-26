@@ -8,15 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595359"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590314"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Создание и генерация исключений (Руководство по программированию C#)
-Исключения позволяют обозначить, что во время выполнения программы произошла ошибка. Объекты исключений, описывающие ошибку, создаются и затем *вызываются* с помощью ключевого слова [throw](../../../csharp/language-reference/keywords/throw.md). Далее среда выполнения ищет наиболее совместимый обработчик исключений.  
+Исключения позволяют обозначить, что во время выполнения программы произошла ошибка. Объекты исключений, описывающие ошибку, создаются и затем *вызываются* с помощью ключевого слова [throw](../../language-reference/keywords/throw.md). Далее среда выполнения ищет наиболее совместимый обработчик исключений.  
   
  Программисты должны вызывать исключения при выполнении одного или нескольких из перечисленных ниже условий.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64595359"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Исключения и обработка исключений](./index.md)
 - [Иерархия исключений](../../../standard/exceptions/index.md)
-- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Обработка исключений](./exception-handling.md)

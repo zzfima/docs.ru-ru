@@ -2,12 +2,12 @@
 title: Допустимое содержимое объектов XElement и XDocument3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483272"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590932"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Допустимое содержимое объектов XElement и XDocument
 В этом разделе описываются допустимые аргументы, которые можно передавать конструкторам, а также методы, которые можно использовать для добавления содержимого в элементы и документы.  
@@ -75,7 +75,7 @@ ms.locfileid: "66483272"
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Конструкторы и функции, допускающие добавление содержимого  
  Следующие методы позволяют добавлять дочернее содержимое к элементу <xref:System.Xml.Linq.XElement> или к документу <xref:System.Xml.Linq.XDocument>.  
   
-|Метод|Описание|  
+|Метод|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Создает элемент <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Создает документ <xref:System.Xml.Linq.XDocument>.|  
@@ -90,4 +90,4 @@ ms.locfileid: "66483272"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Создание деревьев XML (C#)](./linq-to-xml-overview.md)

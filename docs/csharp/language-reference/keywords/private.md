@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 67b2621d382651abc27cee2eadad91a6253895c1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a20c0a6fd729c2fc34449167eb92cb774bc3b84e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633327"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602007"
 ---
 # <a name="private-c-reference"></a>private (Справочник по C#)
 
@@ -49,8 +49,8 @@ class Employee
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
 - [Модификаторы доступа](access-modifiers.md)
 - [Уровни доступности](accessibility-levels.md)

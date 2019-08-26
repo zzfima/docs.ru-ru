@@ -2,20 +2,20 @@
 title: Итерации по коллекциям в C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 931f0662b71b4dd99ac4a419c279be5058c61e92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635509"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594962"
 ---
 # <a name="iterators-c"></a>Итераторы (C#)
 
 *Итератор* можно использовать для прохода по коллекции, такой как список или массив.
 
-Метод итератора или метод доступа `get` выполняет настраиваемую итерацию по коллекции. Метод итератора использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для поочередного возврата каждого элемента. При достижении инструкции `yield return` текущее расположение в коде запоминается. При следующем вызове функции итератора выполнение возобновляется с этого места.
+Метод итератора или метод доступа `get` выполняет настраиваемую итерацию по коллекции. Метод итератора использует оператор [yield return](../../language-reference/keywords/yield.md) для поочередного возврата каждого элемента. При достижении инструкции `yield return` текущее расположение в коде запоминается. При следующем вызове функции итератора выполнение возобновляется с этого места.
 
-Итератор используется из клиентского кода с помощью оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md) или с помощью запроса LINQ.
+Итератор используется из клиентского кода с помощью оператора [foreach](../../language-reference/keywords/foreach-in.md) или с помощью запроса LINQ.
 
 В приведенном ниже примере первая итерация цикла `foreach` приводит к вызову метода итератора `SomeNumbers`, пока не будет достигнут первый оператор `yield return`. Эта итерация возвращает значение 3. Текущее расположение в методе итератора сохраняется. В следующей итерации цикла выполнение метода итератора возобновляется с того же места и снова приостанавливается при достижении оператора `yield return`. Эта итерация возвращает значение 5. Текущее расположение в методе итератора снова сохраняется. Цикл завершается при достижении конца метода итератора.
 
@@ -43,11 +43,11 @@ public static System.Collections.IEnumerable SomeNumbers()
 Для завершения итерации можно использовать оператор `yield break`.
 
 > [!NOTE]
-> Все примеры в этом разделе, кроме примера простого итератора, включают директивы [using](../../../csharp/language-reference/keywords/using-directive.md) для пространств имен `System.Collections` и `System.Collections.Generic`.
+> Все примеры в этом разделе, кроме примера простого итератора, включают директивы [using](../../language-reference/keywords/using-directive.md) для пространств имен `System.Collections` и `System.Collections.Generic`.
 
 ## <a name="simple-iterator"></a>Простой итератор
 
-В следующем примере имеется один оператор `yield return`, который находится внутри цикла [for](../../../csharp/language-reference/keywords/for.md). В методе `Main` каждая итерация оператора `foreach` создает вызов функции итератора, которая выполняет следующий оператор `yield return`.
+В следующем примере имеется один оператор `yield return`, который находится внутри цикла [for](../../language-reference/keywords/for.md). В методе `Main` каждая итерация оператора `foreach` создает вызов функции итератора, которая выполняет следующий оператор `yield return`.
 
 ```csharp
 static void Main()
@@ -336,7 +336,7 @@ public class Stack<T> : IEnumerable<T>
 
 Чтобы просмотреть операции компилятора, воспользуйтесь средством Ildasm.exe, чтобы просмотреть код промежуточного языка Майкрософт, создаваемый для метода итератора.
 
-При создании итератора для [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md) реализация всего интерфейса <xref:System.Collections.IEnumerator> не требуется. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.
+При создании итератора для [класса](../../language-reference/keywords/class.md) или [структуры](../../language-reference/keywords/struct.md) реализация всего интерфейса <xref:System.Collections.IEnumerator> не требуется. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.
 
 В каждой последовательной итерации цикла `foreach` (или непосредственном вызове метода `IEnumerator.MoveNext`) код тела следующего итератора возобновляет выполнение после предыдущего оператора `yield return`. Затем он выполняется до следующего оператора `yield return` до тех пор, пока не будет достигнут конец тела итератора или пока не будет обнаружен оператор `yield break`.
 
@@ -358,7 +358,7 @@ public class Stack<T> : IEnumerable<T>
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [Использование оператора foreach с массивами](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
+- [foreach, in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [Использование оператора foreach с массивами](../arrays/using-foreach-with-arrays.md)
+- [Универсальные шаблоны](../generics/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632967"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915579"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 
@@ -95,7 +95,7 @@ ms.locfileid: "65632967"
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [Общеязыковая среда выполнения](../../../docs/standard/clr.md)
+- [Общеязыковая среда выполнения](../../standard/clr.md)
 - [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
 - [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
-- [Пошаговое руководство: Создание и использование динамических объектов](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Пошаговое руководство: Создание и использование динамических объектов](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

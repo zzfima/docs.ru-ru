@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание объединения C/C++ с помощью атрибутов (C#)
+title: Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599040"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595373"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Как выполнить Создание объединения C/C++ с помощью атрибутов (C#)
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)
 С помощью атрибутов можно настраивать расположение структур в памяти. Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.  
   
 ## <a name="example"></a>Пример  
@@ -70,9 +70,9 @@ ms.locfileid: "54599040"
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
-- [Атрибуты](../../../../../docs/standard/attributes/index.md)
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))
-- [Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Руководство по программированию на C#](../../index.md)
+- [Атрибуты](../../../../standard/attributes/index.md)
+- [Reflection (C#)](../reflection.md) (Отражение (C#))
+- [Атрибуты (C#)](./index.md)
+- [Создание настраиваемых атрибутов (C#)](./creating-custom-attributes.md)
+- [Обращение к атрибутам с помощью отражения (C#)](./accessing-attributes-by-using-reflection.md)

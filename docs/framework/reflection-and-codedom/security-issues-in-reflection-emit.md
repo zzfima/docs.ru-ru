@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347315"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956685"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Вопросы безопасности в порождаемом отражении
 Платформа .NET Framework предоставляет три способа создания промежуточного языка Майкрософт (MSIL), каждый из которых имеет собственные вопросы безопасности:  
@@ -32,19 +32,19 @@ ms.locfileid: "67347315"
  Независимо от способа создания динамического кода для его выполнения необходимы все разрешения, которые требуются типам и методам, используемым этим кодом.  
   
 > [!NOTE]
->  Разрешения, необходимые для отражения и порождения кода, были изменены в последующих выпусках .NET Framework. Подробнее см. в подразделе [Сведения о версиях](#Version_Information) далее в этом разделе.  
+> Разрешения, необходимые для отражения и порождения кода, были изменены в последующих выпусках .NET Framework. Подробнее см. в подразделе [Сведения о версиях](#Version_Information) далее в этом разделе.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Динамические сборки  
  Динамические сборки создаются с помощью перегрузок метода <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. Большинство способов перегрузки этого метода не рекомендуется использовать в .NET Framework 4, так как политика безопасности на уровне компьютера больше не используется. (См. раздел [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).) Остальные перегрузки могут выполняться из любого кода независимо от уровня доверия. Эти перегрузки делятся на две группы: те, которые определяют список атрибутов, применяемых к динамической сборке при ее создании, и те, которые этого не делают. Если не указать модель прозрачности для сборки, применив атрибут <xref:System.Security.SecurityRulesAttribute> при ее создании, эта модель наследуется от порождающей сборки.  
   
 > [!NOTE]
->  Атрибуты, применяемые к динамической сборке после ее создания с помощью метода <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>, не действуют, пока сборка не будет сохранена на диск и повторно загружена в память.  
+> Атрибуты, применяемые к динамической сборке после ее создания с помощью метода <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>, не действуют, пока сборка не будет сохранена на диск и повторно загружена в память.  
   
  Код в динамической сборке может получать доступ к видимым типам и членам в других сборках.  
   
 > [!NOTE]
->  Динамические сборки не используют флаги <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> и <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, разрешающие динамическим методам получать доступ к закрытым типам и членам.  
+> Динамические сборки не используют флаги <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> и <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, разрешающие динамическим методам получать доступ к закрытым типам и членам.  
   
  Временные динамические сборки создаются в памяти и никогда не сохраняются на диск, поэтому им не требуются разрешения на доступ к файлам. Для сохранения динамической сборки на диск требуется разрешение <xref:System.Security.Permissions.FileIOPermission> с соответствующими флагами.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67347315"
  Вместо этого при создании анонимно размещаемых динамических методов записывается стек вызовов. При создании метода требования безопасности предъявляются к записанному стеку вызовов.  
   
 > [!NOTE]
->  Концептуально требования предъявляются во время создания метода. То есть требования могут предъявляться при порождении каждой инструкции MSIL. В текущей реализации все требования предъявляются при вызове метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> или JIT-компилятора, если метод вызывается без вызова <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
+> Концептуально требования предъявляются во время создания метода. То есть требования могут предъявляться при порождении каждой инструкции MSIL. В текущей реализации все требования предъявляются при вызове метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> или JIT-компилятора, если метод вызывается без вызова <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
  Если домен приложения допускает такое поведение, анонимно размещенные динамические методы могут пропускать проверки видимости JIT-компилятора, однако действует следующее ограничение: закрытые типы и члены, к которым получает доступ анонимно размещенный динамический метод, должны находиться в сборках, наборы прав которых идентичны набору прав порождающего стека вызовов или являются его подмножествами. Эта ограниченная возможность пропускать проверки видимости JIT доступна, если домен приложения предоставляет разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67347315"
 - Разрешения, необходимые всем типам и членам, используемым динамическим методом, включены в набор прав сборки с частичным доверием.  
   
 > [!NOTE]
->  Динамические методы не поддерживают отладочные символы.  
+> Динамические методы не поддерживают отладочные символы.  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Динамические методы, связанные с существующими сборками  
@@ -113,7 +113,7 @@ ms.locfileid: "67347315"
 - Если динамический метод связывается с типом или модулем в другой сборке, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и набор прав сборки, содержащей этот модуль. Таким образом, стек вызовов должен включать все разрешения из набора прав целевого модуля, а также разрешение <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  В целях обратной совместимости, если не удается удовлетворить потребность в целевом наборе прав и разрешении <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, конструктору требуется разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+    > В целях обратной совместимости, если не удается удовлетворить потребность в целевом наборе прав и разрешении <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, конструктору требуется разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
  Несмотря на то что элементы в этом списке описываются в терминах набора прав порождающей сборки, помните, что требования предъявляются к полному стеку вызовов, включая границы домена приложения.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67347315"
 ### <a name="generating-dynamic-methods-from-partially-trusted-code"></a>Создание динамических методов из частично доверенного кода  
   
 > [!NOTE]
->  Для создания динамических методов из частично доверенного кода рекомендуется использовать [анонимно размещенные динамические методы](#Anonymously_Hosted_Dynamic_Methods).  
+> Для создания динамических методов из частично доверенного кода рекомендуется использовать [анонимно размещенные динамические методы](#Anonymously_Hosted_Dynamic_Methods).  
   
  Рассмотрим условия, в которых сборка с разрешениями на доступ к Интернету может создавать динамический метод и выполнять его.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67347315"
 - Динамический метод не пропускает проверки видимости JIT-компилятора.  
   
 > [!NOTE]
->  Динамические методы не поддерживают отладочные символы.  
+> Динамические методы не поддерживают отладочные символы.  
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Сведения о версии  
@@ -144,7 +144,7 @@ ms.locfileid: "67347315"
  Начиная с .NET Framework 2.0 с пакетом обновления 1 (SP1), разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> больше не требуется при порождении динамических сборок и динамических методов. Этот флаг необходим во всех более ранних версиях платформы .NET Framework.  
   
 > [!NOTE]
->  Разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> включается по умолчанию в именованные наборы разрешений `FullTrust` и `LocalIntranet`, но не в набор разрешений `Internet`. Таким образом, в более ранних версиях платформы .NET Framework библиотеку можно использовать с разрешениями на доступ к Интернету только в том случае, если она выполняет <xref:System.Security.PermissionSet.Assert%2A> для <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Такие библиотеки требуют тщательной проверки безопасности, так как ошибки в коде могут стать причиной уязвимости. Платформа .NET Framework 2.0 с пакетом обновления 1 (SP1) позволяет создавать код в сценариях частичного доверия без предъявления каких-либо требований к безопасности, так как создание кода по сути не является привилегированной операцией. То есть созданный код имеет не больше разрешений, чем породившая его сборка. Это позволяет библиотекам, порождающим код, сохранять прозрачность для системы безопасности, что устраняет необходимость в утверждении перечисления <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> и упрощает задачу написания безопасной библиотеки.  
+> Разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> включается по умолчанию в именованные наборы разрешений `FullTrust` и `LocalIntranet`, но не в набор разрешений `Internet`. Таким образом, в более ранних версиях платформы .NET Framework библиотеку можно использовать с разрешениями на доступ к Интернету только в том случае, если она выполняет <xref:System.Security.PermissionSet.Assert%2A> для <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Такие библиотеки требуют тщательной проверки безопасности, так как ошибки в коде могут стать причиной уязвимости. Платформа .NET Framework 2.0 с пакетом обновления 1 (SP1) позволяет создавать код в сценариях частичного доверия без предъявления каких-либо требований к безопасности, так как создание кода по сути не является привилегированной операцией. То есть созданный код имеет не больше разрешений, чем породившая его сборка. Это позволяет библиотекам, порождающим код, сохранять прозрачность для системы безопасности, что устраняет необходимость в утверждении перечисления <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> и упрощает задачу написания безопасной библиотеки.  
   
  Кроме того, в .NET Framework 2.0 с пакетом обновления 1 (SP1) появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> для доступа к закрытым типам и членам из частично доверенных динамических методов. Более ранние версии платформы .NET Framework требуют флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> для динамических методов, которые обращаются к закрытым типам и членам; это разрешение, которое никогда не должно предоставляться частично доверенному коду.  
   

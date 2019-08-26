@@ -2,12 +2,12 @@
 title: Общие атрибуты (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603340"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595458"
 ---
 # <a name="common-attributes-c"></a>Общие атрибуты (C#)
 В этом разделе описываются атрибуты, которые чаще всего используются в программах C#.  
@@ -221,19 +221,19 @@ class SampleClass
   
  Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Атрибут|Описание|Тип|  
+|Атрибут|ОПИСАНИЕ|Тип|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. Дополнительные сведения см. в разделе [Сведения о вызывающем объекте (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. Дополнительные сведения см. в разделе [Сведения о вызывающем объекте (C#)](../caller-information.md).|`String`|  
   
- Дополнительные сведения об информационных атрибутах вызывающего объекта см. в разделе [Сведения о вызывающем объекте (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
+ Дополнительные сведения об информационных атрибутах вызывающего объекта см. в разделе [Сведения о вызывающем объекте (C#)](../caller-information.md).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
-- [Атрибуты](../../../../../docs/standard/attributes/index.md)
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))
-- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Руководство по программированию на C#](../../index.md)
+- [Атрибуты](../../../../standard/attributes/index.md)
+- [Reflection (C#)](../reflection.md) (Отражение (C#))
+- [Обращение к атрибутам с помощью отражения (C#)](./accessing-attributes-by-using-reflection.md)

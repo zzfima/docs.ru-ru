@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025415"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587062"
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -21,33 +21,33 @@ ms.locfileid: "67025415"
 ## <a name="in-this-section"></a>В этом разделе  
 
  [Доступ к Интернету с помощью модификатора Async и оператора Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../csharp/language-reference/keywords/async.md) и [Await](../csharp/language-reference/keywords/await.md).  
+ Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](./language-reference/keywords/async.md) и [Await](./language-reference/keywords/await.md).  
   
  [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Описание процесса создания типа среды выполнения Windows, его упаковки в компонент среды выполнения Windows и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  
   
- [Программирование для Office (C# и Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Программирование для Office (C# и Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Описание процесса создания книги Excel и документа Word с помощью C# и Visual Basic.  
   
- [Создание и использование динамических объектов (C# и Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ [Создание и использование динамических объектов (C# и Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  Описание процесса создания пользовательского объекта, который динамически предоставляет содержимое текстового файла, и создание проекта, использующего библиотеку `IronPython`.  
    
- [Создание составного элемента управления с помощью C#](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [Создание составного элемента управления с помощью C#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Описание процесса создания простого составного элемента управления и расширение его функциональных возможностей через наследование.  
   
- [Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ [Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  Описание создания пользовательского конструктора для пользовательского элемента управления.  
   
- [Наследование элементов управления Windows Forms с помощью Visual C#](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [Наследование элементов управления Windows Forms с помощью Visual C#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  Описание способа создания простого наследуемого элемента управления Button. Эта кнопка наследует функциональные возможности от стандартной кнопки Windows Forms и предоставляет настраиваемый элемент.  
   
- [Отладка пользовательских элементов управления Windows Forms во время разработки](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [Отладка пользовательских элементов управления Windows Forms во время разработки](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Описание процедуры отладки поведения пользовательского элемента управления во время разработки.
 
- [Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  Описание некоторых наиболее типичных задач, таких как добавление или удаление вкладки в элементе управления `TabControl`, закрепление элемента управления в родительском элементе и изменение ориентации элемента управления `SplitContainer`.  
   
- [Написание запросов на C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Написание запросов на C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
  [Обработка данных (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
@@ -71,5 +71,5 @@ ms.locfileid: "67025415"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../csharp/programming-guide/index.md)
+- [Руководство по программированию на C#](./programming-guide/index.md)
 - [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)

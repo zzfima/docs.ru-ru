@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398154"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589134"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Практическое руководство. Доступ к объектам взаимодействия Office с помощью возможностей Visual C# (Руководство по программированию на C#)
 
@@ -95,7 +95,7 @@ ms.locfileid: "67398154"
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 и более поздние версии преобразуют возвращаемое значение `Object` в `dynamic` автоматически, если ссылка на сборку задана с помощью параметра компилятора [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) или, что эквивалентно, если свойство Excel **Внедрить типы взаимодействия** имеет значение true. True является значением по умолчанию для этого свойства.
+     C# 4 и более поздние версии преобразуют возвращаемое значение `Object` в `dynamic` автоматически, если ссылка на сборку задана с помощью параметра компилятора [/link](../../language-reference/compiler-options/link-compiler-option.md) или, что эквивалентно, если свойство Excel **Внедрить типы взаимодействия** имеет значение true. True является значением по умолчанию для этого свойства.
 
 ## <a name="to-run-the-project"></a>Запуск проекта
 
@@ -137,9 +137,9 @@ ms.locfileid: "67398154"
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Задание свойства "Внедрить типы взаимодействия"
 
-1. При вызове типа COM, который не требует во время выполнения основной сборки взаимодействия (PIA), можно использовать дополнительные усовершенствования. Избавление от зависимостей от PIA приводит к независимости версий и делает развертывание более простым. Дополнительные сведения о преимуществах программирования без основных сборок взаимодействия см. в руководстве по [ внедрению типов из управляемых сборок](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+1. При вызове типа COM, который не требует во время выполнения основной сборки взаимодействия (PIA), можно использовать дополнительные усовершенствования. Избавление от зависимостей от PIA приводит к независимости версий и делает развертывание более простым. Дополнительные сведения о преимуществах программирования без основных сборок взаимодействия см. в руководстве по [ внедрению типов из управляемых сборок](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
 
-     Кроме того, писать программы стало проще, поскольку типы, принимаемые и возвращаемые методами COM, можно представить с помощью типа `dynamic` вместо типа `Object`. Переменные типа `dynamic` не вычисляются до времени выполнения, что позволяет обходиться без явного приведения. Дополнительные сведения см. в разделе [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).
+     Кроме того, писать программы стало проще, поскольку типы, принимаемые и возвращаемые методами COM, можно представить с помощью типа `dynamic` вместо типа `Object`. Переменные типа `dynamic` не вычисляются до времени выполнения, что позволяет обходиться без явного приведения. Дополнительные сведения см. в разделе [Использование типа dynamic](../types/using-type-dynamic.md).
 
      В C# 4 внедрение сведений о типах вместо использования сборок PIA является поведением по умолчанию. За счет этого несколько приведенных выше примеров становятся проще, поскольку явное приведение не требуется. Например, объявление `worksheet` в методе `DisplayInExcel` записывается как `Excel._Worksheet workSheet = excelApp.ActiveSheet`, а не как `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Для вызовов `AutoFit` в рамках одного метода также требовалось бы явное приведение без поведения по умолчанию, поскольку `ExcelApp.Columns[1]` возвращает тип `Object`, а `AutoFit` является методом Excel. Приведение показано в следующем примере.
 
@@ -149,7 +149,7 @@ ms.locfileid: "67398154"
 
 3. Если окно **Свойства** не отображается, нажмите клавишу **F4**.
 
-4. В списке свойств найдите свойство **Внедрить типы взаимодействия** и измените его значение на **False**. Также можно выполнить компиляцию через командную строку с использованием параметра компилятора [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) вместо [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md).
+4. В списке свойств найдите свойство **Внедрить типы взаимодействия** и измените его значение на **False**. Также можно выполнить компиляцию через командную строку с использованием параметра компилятора [/reference](../../language-reference/compiler-options/reference-compiler-option.md) вместо [/link](../../language-reference/compiler-options/link-compiler-option.md).
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Дополнительное форматирование таблицы
 
@@ -176,7 +176,7 @@ ms.locfileid: "67398154"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [Использование типа dynamic](../types/using-type-dynamic.md)
+- [Именованные и необязательные аргументы](../classes-and-structs/named-and-optional-arguments.md)
+- [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

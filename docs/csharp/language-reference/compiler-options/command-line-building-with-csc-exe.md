@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833360"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606975"
 ---
 # <a name="command-line-build-with-cscexe"></a>Построение из командной строки с помощью csc.exe
 Чтобы вызвать компилятор C#, следует ввести имя соответствующего исполняемого файла (*csc.exe*) в командной строке.
 
 Если используется окно **Командная строка разработчика для Visual Studio**, все необходимые переменные среды устанавливаются автоматически. Дополнительные сведения о получении доступа к этому инструменту см. в статье [Командная строка разработчика для Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md). 
 
-Если используется стандартное окно командной строки, необходимо изменить путь к файлу *csc.exe*, прежде чем вызывать его из любого подкаталога на компьютере. Чтобы задать соответствующие переменные среды для поддержки построения из командной строки, необходимо запустить пакетный файл *vsvars32.bat*. Дополнительные сведения о файле *vsvars32.bat*, включая инструкции о том, как его найти и выполнить, см. в [руководстве по настройке переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Если используется стандартное окно командной строки, необходимо изменить путь к файлу *csc.exe*, прежде чем вызывать его из любого подкаталога на компьютере. Чтобы задать соответствующие переменные среды для поддержки построения из командной строки, необходимо запустить пакетный файл *vsvars32.bat*. Дополнительные сведения о файле *vsvars32.bat*, включая инструкции о том, как его найти и выполнить, см. в [руководстве по настройке переменных среды для командной строки Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Если на вашем компьютере установлен только пакет средств разработки программного обеспечения для Windows, компилятор C# можно использовать из **командной строки SDK**, которая открывается через пункт меню **Microsoft .NET Framework SDK**.
 
@@ -97,10 +97,10 @@ csc -target:library -out:Something.xyz *.cs
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [Параметры компилятора C# ](./index.md)
+- [Параметры компилятора C# в алфавитном порядке](./listed-alphabetically.md)
+- [Параметры компилятора C#, упорядоченные по категориям](./listed-by-category.md)
+- [Main() и аргументы командной строки](../../programming-guide/main-and-command-args/index.md)
+- [Аргументы командной строки](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [Практическое руководство. Отображение аргументов командной строки](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Значения, возвращаемые методом main()](../../programming-guide/main-and-command-args/main-return-values.md)

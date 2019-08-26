@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796878"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666492"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Практическое руководство. Обработка нескольких событий с помощью их свойств
 Чтобы использовать свойства событий, следует определить свойства событий в классе, который вызывает события, а затем задать делегаты для свойств событий в классах, обрабатывающих события. Для реализации нескольких свойств событий в классе класс должен хранить и обслуживать внутри себя делегата, определенного для каждого события. Типичная стратегия заключается в реализации коллекции делегатов, которая индексируется по ключу события.  
@@ -52,4 +52,4 @@ ms.locfileid: "68796878"
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [События](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
-- [Практическое руководство. Объявление пользовательских событий для экономии памяти](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Практическое руководство. Объявление пользовательских событий для экономии памяти](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

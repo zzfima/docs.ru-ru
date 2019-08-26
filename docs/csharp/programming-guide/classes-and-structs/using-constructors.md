@@ -5,32 +5,32 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 018710f753df261fce28e2e1cae1272b36923a05
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 6825fbc571d8b08808f14a3f69ffc6f8a1ef048c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363008"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596192"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Использование конструкторов (Руководство по программированию на C#)
 
-Каждый раз, когда создается [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md), вызывается конструктор. Конструкторы имеют имя, совпадающее с именем класса или структуры, и обычно инициализируют члены данных нового объекта.  
+Каждый раз, когда создается [класс](../../language-reference/keywords/class.md) или [структура](../../language-reference/keywords/struct.md), вызывается конструктор. Конструкторы имеют имя, совпадающее с именем класса или структуры, и обычно инициализируют члены данных нового объекта.  
   
- В следующем примере класс с именем `Taxi` определяется с помощью простого конструктора. Затем оператор [new](../../../csharp/language-reference/operators/new-operator.md) создает экземпляр этого класса. Конструктор `Taxi` вызывается оператором `new` сразу после того, как новому объекту будет выделена память.  
+ В следующем примере класс с именем `Taxi` определяется с помощью простого конструктора. Затем оператор [new](../../language-reference/operators/new-operator.md) создает экземпляр этого класса. Конструктор `Taxi` вызывается оператором `new` сразу после того, как новому объекту будет выделена память.  
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- Конструктор, который не принимает никаких параметров, называется *конструктором без параметров*. Конструкторы без параметров вызываются всякий раз, когда создается экземпляр объекта с помощью оператора `new`, а аргументы в `new` не передаются. Дополнительные сведения см. в разделе [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+ Конструктор, который не принимает никаких параметров, называется *конструктором без параметров*. Конструкторы без параметров вызываются всякий раз, когда создается экземпляр объекта с помощью оператора `new`, а аргументы в `new` не передаются. Дополнительные сведения см. в разделе [Конструкторы экземпляров](./instance-constructors.md).  
   
- Если класс не является [статическим](../../../csharp/language-reference/keywords/static.md), компилятор C# выделяет классам без конструкторов открытый конструктор без параметров, позволяющий создавать экземпляры классов. Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Если класс не является [статическим](../../language-reference/keywords/static.md), компилятор C# выделяет классам без конструкторов открытый конструктор без параметров, позволяющий создавать экземпляры классов. Дополнительные сведения см. в статье [Статические классы и члены статических классов](./static-classes-and-static-class-members.md).  
   
  Создание экземпляров класса можно запретить, сделав конструктор закрытым, следующим образом:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
- Дополнительные сведения см. в разделе [Закрытые конструкторы](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
+ Дополнительные сведения см. в разделе [Закрытые конструкторы](./private-constructors.md).  
   
- Конструкторы для типов [struct](../../../csharp/language-reference/keywords/struct.md) похожи на конструкторы классов, однако `structs` не может содержать явный конструктор без параметров, так как он предоставляется компилятором автоматически. Этот конструктор инициализирует каждое поле в `struct` со значением по умолчанию. Дополнительные сведения см. в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md). При этом конструктор без параметров вызывается только в том случае, если экземпляр `struct` создается с помощью переменной `new`. Например, в этом коде конструктор без параметров используется для <xref:System.Int32> — это обеспечивает инициализацию целого числа:  
+ Конструкторы для типов [struct](../../language-reference/keywords/struct.md) похожи на конструкторы классов, однако `structs` не может содержать явный конструктор без параметров, так как он предоставляется компилятором автоматически. Этот конструктор инициализирует каждое поле в `struct` со значением по умолчанию. Дополнительные сведения см. в разделе [Таблица значений по умолчанию](../../language-reference/keywords/default-values-table.md). При этом конструктор без параметров вызывается только в том случае, если экземпляр `struct` создается с помощью переменной `new`. Например, в этом коде конструктор без параметров используется для <xref:System.Int32> — это обеспечивает инициализацию целого числа:  
   
 ```csharp  
 int i = new int();  
@@ -55,7 +55,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  В связи с этим вызывать конструктор без параметров для типа значения необязательно.  
   
- Оба класса и `structs` могут определять конструкторы, принимающие параметры. Конструкторы, принимающие параметры, необходимо вызывать с помощью оператора `new` или [base](../../../csharp/language-reference/keywords/base.md). Классы и `structs` могут определять также несколько конструкторов; для определения конструктора без параметров ни один их них не требуется. Например:  
+ Оба класса и `structs` могут определять конструкторы, принимающие параметры. Конструкторы, принимающие параметры, необходимо вызывать с помощью оператора `new` или [base](../../language-reference/keywords/base.md). Классы и `structs` могут определять также несколько конструкторов; для определения конструктора без параметров ни один их них не требуется. Например:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -67,7 +67,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
- В этом примере конструктор базового класса вызывается перед выполнением соответствующего ему блока. Ключевое слово `base` можно использовать как с параметрами, так и без них. Любые параметры для конструктора можно использовать как параметры для `base` или как часть выражения. Дополнительные сведения см. в разделе [base](../../../csharp/language-reference/keywords/base.md).  
+ В этом примере конструктор базового класса вызывается перед выполнением соответствующего ему блока. Ключевое слово `base` можно использовать как с параметрами, так и без них. Любые параметры для конструктора можно использовать как параметры для `base` или как часть выражения. Дополнительные сведения см. в разделе [base](../../language-reference/keywords/base.md).  
   
  В производном классе, если конструктор базового класса не вызывается явным образом с помощью ключевого слова `base`, конструктор без параметров, если он существует, вызывается неявно. Это означает, что следующие объявления конструкторов действуют одинаково:  
   
@@ -77,7 +77,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Если базовый класс не предлагает конструктор без параметров, производный класс должен явно вызвать конструктор базового класса с помощью `base`.  
   
- Конструктор может вызывать другой конструктор в том же объекте с помощью ключевого слова [this](../../../csharp/language-reference/keywords/this.md). Как и `base`, `this` можно использовать с параметрами или без, а все параметры в конструкторе доступны как параметры `this` или как часть выражения. Например, второй конструктор в предыдущем примере можно переписать, используя `this`:  
+ Конструктор может вызывать другой конструктор в том же объекте с помощью ключевого слова [this](../../language-reference/keywords/this.md). Как и `base`, `this` можно использовать с параметрами или без, а все параметры в конструкторе доступны как параметры `this` или как часть выражения. Например, второй конструктор в предыдущем примере можно переписать, используя `this`:  
   
  [!code-csharp[csProgGuideObjects#59](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#59)]  
   
@@ -85,9 +85,9 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
   
- Конструкторы могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) или [private protected](../../../csharp/language-reference/keywords/private-protected.md). Эти модификаторы доступа определяют, каким образом пользователи класса смогут создавать класс. Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Конструкторы могут иметь пометку [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md) или [private protected](../../language-reference/keywords/private-protected.md). Эти модификаторы доступа определяют, каким образом пользователи класса смогут создавать класс. Дополнительные сведения см. в статье [Модификаторы доступа](./access-modifiers.md).  
   
- Конструктор можно объявить статическим, используя ключевое слово [static](../../../csharp/language-reference/keywords/static.md). Статические конструкторы вызываются автоматически непосредственно перед доступом к статическим полям и обычно используются для инициализации членов статического класса. Дополнительные сведения см. в разделе [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+ Конструктор можно объявить статическим, используя ключевое слово [static](../../language-reference/keywords/static.md). Статические конструкторы вызываются автоматически непосредственно перед доступом к статическим полям и обычно используются для инициализации членов статического класса. Дополнительные сведения см. в разделе [Статические конструкторы](./static-constructors.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
@@ -95,7 +95,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Руководство по программированию на C#](../index.md)
+- [Классы и структуры](./index.md)
+- [Конструкторы](./constructors.md)
+- [Методы завершения](./destructors.md)

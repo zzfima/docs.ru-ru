@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: ff19b3d71858552158a8ae5d0ab362a86dc98e65
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 31ab511bf88bfbc2134029564ecbf70aa75119d7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423505"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659853"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Универсальные делегаты. (Руководство по программированию на C#)
-[Делегат](../../../csharp/language-reference/keywords/delegate.md) может определять собственные параметры типа. В коде, который ссылается на универсальный делегат, можно указать аргумент типа для создания закрытого сконструированного типа. Это будет аналогично созданию экземпляра универсального класса или вызову универсального метода, как показано в следующем примере:  
+[Делегат](../../language-reference/keywords/delegate.md) может определять собственные параметры типа. В коде, который ссылается на универсальный делегат, можно указать аргумент типа для создания закрытого сконструированного типа. Это будет аналогично созданию экземпляра универсального класса или вызову универсального метода, как показано в следующем примере:  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  
   
@@ -37,10 +37,10 @@ ms.locfileid: "66423505"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Collections.Generic>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
-- [Универсальные методы](../../../csharp/programming-guide/generics/generic-methods.md)
-- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)
-- [Универсальные интерфейсы](../../../csharp/programming-guide/generics/generic-interfaces.md)
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
-- [Универсальные шаблоны](~/docs/standard/generics/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Введение в универсальные шаблоны](./index.md)
+- [Универсальные методы](./generic-methods.md)
+- [Универсальные классы](./generic-classes.md)
+- [Универсальные интерфейсы](./generic-interfaces.md)
+- [Делегаты](../delegates/index.md)
+- [Универсальные шаблоны](../../../standard/generics/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924110"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Пошаговое руководство. Написание запросов на C# (LINQ)
 В этом пошаговом руководстве описываются возможности C#, предназначенные для написания выражений запросов LINQ.  
@@ -20,7 +20,7 @@ ms.locfileid: "66483218"
 ## <a name="create-a-c-project"></a>Создание проекта C#  
   
 > [!NOTE]
->  Приведенные ниже инструкции относятся к Visual Studio. Если вы пользуетесь другой средой разработки, создайте консольный проект со ссылкой на библиотеку System.Core.dll и директиву `using` для пространства имен <xref:System.Linq?displayProperty=nameWithType>.  
+> Приведенные ниже инструкции относятся к Visual Studio. Если вы пользуетесь другой средой разработки, создайте консольный проект со ссылкой на библиотеку System.Core.dll и директиву `using` для пространства имен <xref:System.Linq?displayProperty=nameWithType>.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Создание проекта в Visual Studio  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66483218"
   
 - Сам список инициализируется инициализатором коллекции.  
   
- Вся эта структура данных инициализируется и создается без явных вызовов какого-либо конструктора или прямого доступа к членам. Дополнительные сведения об этих новых возможностях см. в разделах [Автоматически внедренные свойства](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) и [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Вся эта структура данных инициализируется и создается без явных вызовов какого-либо конструктора или прямого доступа к членам. Дополнительные сведения об этих новых возможностях см. в разделах [Автоматически внедренные свойства](../../classes-and-structs/auto-implemented-properties.md) и [Инициализаторы объектов и коллекций](../../classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Добавление источника данных  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66483218"
   
 #### <a name="to-create-a-simple-query"></a>Создание простого запроса  
   
-- В методе `Main` приложения создайте простой запрос, при выполнении которого будет возвращаться список учащихся, набравших в результате тестирования больше 90 баллов. Поскольку выбран весь объект `Student`, запрос имеет тип `IEnumerable<Student>`. Несмотря на то, что код можно также набрать напрямую, используя ключевое слово [var](../../../../csharp/language-reference/keywords/var.md), для демонстрации результатов применяется неявная типизация. (Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- В методе `Main` приложения создайте простой запрос, при выполнении которого будет возвращаться список учащихся, набравших в результате тестирования больше 90 баллов. Поскольку выбран весь объект `Student`, запрос имеет тип `IEnumerable<Student>`. Несмотря на то, что код можно также набрать напрямую, используя ключевое слово [var](../../../language-reference/keywords/var.md), для демонстрации результатов применяется неявная типизация. (Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Кроме того переменная диапазона в запросе, `student`, служит ссылкой на каждый объект `Student` в источнике и предоставляет доступ к каждому объекту.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66483218"
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Дополнительные сведения см. в разделе [Предложение where](../../../../csharp/language-reference/keywords/where-clause.md).  
+     Дополнительные сведения см. в разделе [Предложение where](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="modify-the-query"></a>Изменение запроса  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66483218"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     Дополнительные сведения см. в разделе [Предложение orderby](../../../../csharp/language-reference/keywords/orderby-clause.md).  
+     Дополнительные сведения см. в разделе [Предложение orderby](../../../language-reference/keywords/orderby-clause.md).  
   
 #### <a name="to-group-the-results"></a>Группировка результатов  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66483218"
   
 3. Запустите приложение и просмотрите результаты в окне **Консоль**.  
   
-     Дополнительные сведения см. в разделе [Предложение group](../../../../csharp/language-reference/keywords/group-clause.md).  
+     Дополнительные сведения см. в разделе [Предложение group](../../../language-reference/keywords/group-clause.md).  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>Преобразование переменных в явно типизированные  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66483218"
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     Дополнительные сведения о переменной [var](../../../../csharp/language-reference/keywords/var.md) см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+     Дополнительные сведения о переменной [var](../../../language-reference/keywords/var.md) см. в разделе [Неявно типизированные локальные переменные](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>Упорядочение групп по значению ключа  
   
@@ -153,11 +153,11 @@ ms.locfileid: "66483218"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     Дополнительные сведения см. в разделе [Предложение let](../../../../csharp/language-reference/keywords/let-clause.md).  
+     Дополнительные сведения см. в разделе [Предложение let](../../../language-reference/keywords/let-clause.md).  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Использование синтаксиса метода в выражении запроса  
   
-1. Как описано в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), некоторые операции запросов можно выразить, только используя синтаксис метода. Представленный ниже код вычисляет общий балл для каждого объекта `Student` в исходной последовательности, а затем применяет метод `Average()` к результатам запроса, чтобы рассчитать средний балл класса.
+1. Как описано в разделе [Синтаксис запросов и синтаксис методов в LINQ](./query-syntax-and-method-syntax-in-linq.md), некоторые операции запросов можно выразить, только используя синтаксис метода. Представленный ниже код вычисляет общий балл для каждого объекта `Student` в исходной последовательности, а затем применяет метод `Average()` к результатам запроса, чтобы рассчитать средний балл класса.
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ ms.locfileid: "66483218"
 ## <a name="next-steps"></a>Следующие шаги  
  Ознакомившись с основными аспектами работы с запросами в C#, вы будете готовы прочитать документацию и примеры по интересующему вас типу поставщика LINQ:  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ (C#)](./index.md)
+- [Выражения запросов LINQ](../../linq-query-expressions/index.md)

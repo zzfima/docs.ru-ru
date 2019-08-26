@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 1608cd7b888a67af3ccb98b16323e74a9c5ad4a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433850"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608411"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ограничение универсального типа) (справочник по C#)
 
@@ -55,9 +55,9 @@ ms.locfileid: "68433850"
 
 [!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
-Дополнительные сведения об универсальных делегатах см. в разделе [Универсальные делегаты](../../../csharp/programming-guide/generics/generic-delegates.md).
+Дополнительные сведения об универсальных делегатах см. в разделе [Универсальные делегаты](../../programming-guide/generics/generic-delegates.md).
 
-Дополнительные сведения о синтаксисе и применении ограничений см. в разделе [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
+Дополнительные сведения о синтаксисе и применении ограничений см. в разделе [Ограничения параметров типа](../../programming-guide/generics/constraints-on-type-parameters.md).
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -65,8 +65,8 @@ ms.locfileid: "68433850"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
-- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)
-- [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Введение в универсальные шаблоны](../../programming-guide/generics/index.md)
+- [Ограничение new](./new-constraint.md)
+- [Ограничения параметров типа](../../programming-guide/generics/constraints-on-type-parameters.md)

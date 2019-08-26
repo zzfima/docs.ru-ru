@@ -2,12 +2,12 @@
 title: Общие сведения о классах LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 6e7e25a0faa659dc362cf1184951c9e5fa49ca18
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55be666fc0db0becb12ec8b525e7fc443536e1df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484460"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591886"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Общие сведения о классах LINQ to XML (C#)
 В этом разделе приведен список классов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в пространстве имен <xref:System.Xml.Linq> с кратким описанием каждого из них.  
@@ -15,7 +15,7 @@ ms.locfileid: "66484460"
 ## <a name="linq-to-xml-classes"></a>Классы LINQ to XML  
   
 ### <a name="xattribute-class"></a>Класс XAttribute  
- Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибут. Подробные сведения и примеры см. в разделе [Общие сведения о классе XAttribute (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).  
+ Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибут. Подробные сведения и примеры см. в разделе [Общие сведения о классе XAttribute (C#)](./xattribute-class-overview.md).  
   
 ### <a name="xcdata-class"></a>Класс XCData  
  Класс <xref:System.Xml.Linq.XCData> представляет узел текста CDATA.  
@@ -34,16 +34,16 @@ ms.locfileid: "66484460"
  Класс <xref:System.Xml.Linq.XDeclaration> представляет XML-декларацию. XML-декларация используется для объявления версии XML и кодировки документа. Кроме того, в XML-декларации указывается, является ли данный XML-документ изолированным. Если документ является изолированным, то внешние декларации разметки не используются ни во внешних DTD, ни во внешних сущностях параметров, ссылки на которые имеются во встроенном DTD.  
   
 ### <a name="xdocument-class"></a>Класс XDocument  
- Класс <xref:System.Xml.Linq.XDocument> представляет XML-документ. Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ Класс <xref:System.Xml.Linq.XDocument> представляет XML-документ. Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](./xdocument-class-overview.md).  
   
 ### <a name="xdocumenttype-class"></a>Класс XDocumentType  
  Класс <xref:System.Xml.Linq.XDocumentType> представляет определения типа XML-документа (DTD).  
   
 ### <a name="xelement-class"></a>Класс XElement  
- Класс <xref:System.Xml.Linq.XElement> представляет XML-элемент. Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).  
+ Класс <xref:System.Xml.Linq.XElement> представляет XML-элемент. Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XElement (C#)](./xelement-class-overview.md).  
   
 ### <a name="xname-class"></a>Класс XName  
- Класс <xref:System.Xml.Linq.XName> представляет имена элементов (<xref:System.Xml.Linq.XElement>) и атрибутов (<xref:System.Xml.Linq.XAttribute>). Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ Класс <xref:System.Xml.Linq.XName> представляет имена элементов (<xref:System.Xml.Linq.XElement>) и атрибутов (<xref:System.Xml.Linq.XAttribute>). Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](./xdocument-class-overview.md).  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет сделать XML-имена как можно более понятными. В силу их сложности XML-имена часто считаются затруднительной темой для изучения в XML. Возможно, эта сложность возникает не из-за пространств имен, которые разработчики часто используют при программировании, а из-за префиксов пространств имен. Префиксы пространств имен могут быть полезны для сокращения количества нажатий клавиш при вводе XML или для повышения удобства чтения XML. Но часто префиксы являются просто ярлыком, свидетельствующим об использовании полного пространства имен XML, в большинстве случаев они не нужны. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] упрощает XML-имена путем разрешения всех префиксов в соответствующее им пространство имен XML. Если они нужны, то префиксами можно воспользоваться при помощи метода <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.  
   
@@ -88,4 +88,4 @@ ms.locfileid: "66484460"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Общие сведения о программировании LINQ to XML (C#)](./linq-to-xml-overview.md)

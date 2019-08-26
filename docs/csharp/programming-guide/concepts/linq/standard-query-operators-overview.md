@@ -2,12 +2,12 @@
 title: Общие сведения о стандартных операторах запроса (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537963"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590977"
 ---
 # <a name="standard-query-operators-overview-c"></a>Общие сведения о стандартных операторах запроса (C#)
 *Стандартные операторы запросов* — это методы, формирующие шаблон LINQ. Большинство этих методов работают с последовательностями. В данном контексте последовательность — это объект, тип которого реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>. Функциональные возможности стандартных операторов запросов включают фильтрацию, проекцию, статистическую обработку, сортировку и многие другие.  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Синтаксис выражений запросов  
- Некоторые из наиболее часто используемых стандартных операторов запросов имеют представление в виде ключевых слов в синтаксисе языка C# и Visual Basic, что позволяет вызывать их как часть *выражения* *запроса*. Дополнительные сведения о стандартных операторах запросов с выделенными ключевыми словами и соответствующим синтаксисом см. в разделе [Синтаксис выражений запросов для стандартных операторов запросов (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Некоторые из наиболее часто используемых стандартных операторов запросов имеют представление в виде ключевых слов в синтаксисе языка C# и Visual Basic, что позволяет вызывать их как часть *выражения* *запроса*. Дополнительные сведения о стандартных операторах запросов с выделенными ключевыми словами и соответствующим синтаксисом см. в разделе [Синтаксис выражений запросов для стандартных операторов запросов (C#)](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Расширение стандартных операторов запросов  
  Набор стандартных операторов запросов можно дополнить, создав специальные методы, соответствующие вашему целевому домену или технологии. Кроме того, можно заменить стандартные операторы запросов на собственные реализации, предоставляющие дополнительные услуги, такие как удаленное вычисление, перевод запросов и оптимизация. Пример см. в разделе <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>Связанные разделы  
  Следующие ссылки адресуют к разделам, содержащим дополнительные сведения о различных стандартных операторах запросов в зависимости от их функциональности.  
   
- [Сортировка данных (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [Сортировка данных (C#)](./sorting-data.md)  
   
- [Операции над множествами (C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [Операции над множествами (C#)](./set-operations.md)  
   
- [Фильтрация данных (C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [Фильтрация данных (C#)](./filtering-data.md)  
   
- [Операции, использующие квантификаторы (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [Операции, использующие квантификаторы (C#)](./quantifier-operations.md)  
   
- [Операции проекции (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [Операции проекции (C#)](./projection-operations.md)  
   
- [Секционирование данных (C#)](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [Секционирование данных (C#)](./partitioning-data.md)  
   
- [Операции соединения (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [Операции соединения (C#)](./join-operations.md)  
   
- [Группирование данных (C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [Группирование данных (C#)](./grouping-data.md)  
   
- [Операции создания (C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [Операции создания (C#)](./generation-operations.md)  
   
- [Операции сравнения (C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [Операции сравнения (C#)](./equality-operations.md)  
   
- [Операции с элементами (C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [Операции с элементами (C#)](./element-operations.md)  
   
- [Преобразование типов данных (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [Преобразование типов данных (C#)](./converting-data-types.md)  
   
- [Операции объединения (C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [Операции объединения (C#)](./concatenation-operations.md)  
   
- [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [Операции агрегирования (C#)](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Введение в запросы LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [Синтаксис выражений запроса для стандартных операторов запроса (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Классификация стандартных операторов запросов по способу выполнения (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Введение в запросы LINQ (C#)](./introduction-to-linq-queries.md)
+- [Синтаксис выражений запроса для стандартных операторов запроса (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [Классификация стандартных операторов запросов по способу выполнения (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Методы расширения](../../classes-and-structs/extension-methods.md)

@@ -2,12 +2,12 @@
 title: Отладка деревьев выражений в Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 93b1b660181cd81c31055f5d30d43e535171bb55
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195987"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595222"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Отладка деревьев выражений в Visual Studio (C#)
 При отладке приложений можно анализировать структуру и содержимое деревьев выражений. Чтобы получить краткий обзор структуры дерева выражения, вы можете использовать свойство `DebugView`, которое представляет деревья выражений, [используя специальный синтаксис](debugview-syntax.md). (Обратите внимание, что `DebugView` доступен только в режиме отладки.)  
@@ -40,7 +40,7 @@ ms.locfileid: "66195987"
   
 ## <a name="see-also"></a>См. также
 
-- [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Expression Trees (C#)](./index.md) (Деревья выражений (C#))
 - [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Создание настраиваемых визуализаторов](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [Синтаксис `DebugView`](debugview-syntax.md)

@@ -2,12 +2,12 @@
 title: Вариативность в делегатах (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598060"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924379"
 ---
 # <a name="variance-in-delegates-c"></a>Вариативность в делегатах (C#)
 В платформе .NET Framework 3.5 появилась поддержка вариативности при сопоставлении сигнатур методов с типами делегатов во всех делегатах в C#. Это означает, что делегатам можно назначать не только методы, которые обладают соответствующими сигнатурами, но и методы, которые возвращают более производные типы (ковариация), или принимают параметры, которые имеют менее производные типы (контравариативность), чем указано в типе делегата. Это касается не только универсальных методов-делегатов, но и методов-делегатов, не являющихся универсальными.  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- Дополнительные примеры см. в разделах [Использование вариативности в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) и [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Дополнительные примеры см. в разделах [Использование вариативности в делегатах (C#)](./using-variance-in-delegates.md) и [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Вариативность в параметрах универсального типа  
  В платформе .NET Framework 4 и более поздних версиях можно включить неявное преобразование между делегатами, которое позволит универсальным методам-делегатам, имеющим разные типы, указанные параметрами универсального типа, быть назначенными друг другу, если типы наследуются друг от друга так, как того требует вариативность.  
@@ -122,7 +122,7 @@ public static void Test()
   
 - Делегат <xref:System.Converter%602>  
   
- Дополнительные примеры см. в разделе [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Дополнительные примеры см. в разделе [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Объявление вариативных параметров типа в универсальных методах-делегатах  
  Если универсальный метод-делегат содержит ковариантные или контравариантные параметры универсального типа, он называется *вариативным универсальным методом-делегатом*.  
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  Параметры `ref`, `in` и `out` в C# невозможно пометить как вариативные.  
+> Параметры `ref`, `in` и `out` в C# невозможно пометить как вариативные.  
   
  В одном делегате можно реализовать поддержку вариативности и ковариации, но для разных параметров типа. Эти действия показаны в следующем примере.  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>См. также
 
-- [Универсальные шаблоны](~/docs/standard/generics/index.md)
-- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Универсальные шаблоны](../../../../standard/generics/index.md)
+- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

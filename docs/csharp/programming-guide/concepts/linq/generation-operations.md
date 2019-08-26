@@ -2,12 +2,12 @@
 title: Операции создания (C#)
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: eb30fd9a354c7482ebe84cae764f362585aa87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fe04c34752825d45ca5bcf33051a24b72243b51
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586193"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594235"
 ---
 # <a name="generation-operations-c"></a>Операции создания (C#)
 Под созданием понимается формирование новых последовательностей значений.  
@@ -16,7 +16,7 @@ ms.locfileid: "54586193"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|ОПИСАНИЕ|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |DefaultIfEmpty|Заменяет пустую коллекцию на одноэлементную коллекцию со значениями по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
 |Empty|Возвращает пустую коллекцию.|Неприменимо.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
@@ -26,4 +26,4 @@ ms.locfileid: "54586193"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Linq>
-- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)

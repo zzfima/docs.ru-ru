@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание иерархии с помощью группировки (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485842"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593850"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Практическое руководство. Создание иерархии с помощью группировки (C#)
 Этот пример показывает, как группировать данные и затем создавать код XML на основе группирования.  
@@ -15,7 +15,7 @@ ms.locfileid: "66485842"
 ## <a name="example"></a>Пример  
  В этом примере сначала данные группируются по категориям, а затем создается новый XML-файл, в котором XML-иерархия отражает группирование.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  

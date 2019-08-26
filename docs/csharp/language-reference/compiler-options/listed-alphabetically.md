@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58037699"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602752"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
 
@@ -77,7 +77,7 @@ ms.locfileid: "58037699"
 |-ruleset:\<файл>|Укажите файл набора правил, который отключает определенные диагностики.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Задает минимальную версию подсистемы, которую может использовать исполняемый файл.|
 |[-target](target-compiler-option.md)|Задает формат выходного файла, используя один из четырех параметров: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md).|
-|[/unsafe](unsafe-compiler-option.md)|Разрешает небезопасный ([unsafe](../../../csharp/language-reference/keywords/unsafe.md)) код.|
+|[/unsafe](unsafe-compiler-option.md)|Разрешает небезопасный ([unsafe](../keywords/unsafe.md)) код.|
 |[-utf8output](utf8output-compiler-option.md)|Выводит сообщения компилятора в кодировке UTF-8.|
 |-version|Отображение номера версии компилятора и выход.|
 |[/warn](warn-compiler-option.md)|Устанавливает уровень предупреждений (0–4).|

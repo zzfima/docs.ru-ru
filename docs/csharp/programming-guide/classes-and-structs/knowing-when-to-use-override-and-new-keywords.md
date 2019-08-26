@@ -7,16 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398431"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596475"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Использование ключевых слов "Override" и "New" (Руководство по программированию в C#)
 
-В C# метод в производном классе может иметь то же имя, что и метод в базовом классе. Можно задать способ взаимодействия методов, воспользовавшись ключевыми словами [new](../../../csharp/language-reference/keywords/new-modifier.md) и [override](../../../csharp/language-reference/keywords/override.md). Модификатор `override` *расширяет* метод `virtual` базового класса, а модификатор `new` *скрывает* доступный метод базового класса. Эта разница показана в примере в этой статье.  
+В C# метод в производном классе может иметь то же имя, что и метод в базовом классе. Можно задать способ взаимодействия методов, воспользовавшись ключевыми словами [new](../../language-reference/keywords/new-modifier.md) и [override](../../language-reference/keywords/override.md). Модификатор `override` *расширяет* метод `virtual` базового класса, а модификатор `new` *скрывает* доступный метод базового класса. Эта разница показана в примере в этой статье.  
   
  В консольном приложении объявите два класса — `BaseClass` и `DerivedClass`. Тип`DerivedClass` наследуется от типа `BaseClass`.  
   
@@ -115,7 +115,7 @@ public new void Method2()
 }  
 ```  
   
- Запустите программу еще раз, чтобы убедиться, что выходные данные не изменились. Также убедитесь, что предупреждение больше не появляется. Используя ключевое слово `new`, вы утверждаете, что вам известно, что модифицируемый им член скрывается членом, который наследуется от базового класса. Дополнительные сведения о скрытии имен через наследование см. в разделе [Модификатор new](../../../csharp/language-reference/keywords/new-modifier.md).  
+ Запустите программу еще раз, чтобы убедиться, что выходные данные не изменились. Также убедитесь, что предупреждение больше не появляется. Используя ключевое слово `new`, вы утверждаете, что вам известно, что модифицируемый им член скрывается членом, который наследуется от базового класса. Дополнительные сведения о скрытии имен через наследование см. в разделе [Модификатор new](../../language-reference/keywords/new-modifier.md).  
   
  Чтобы противопоставить это поведение эффекту использования `override`, добавьте в `DerivedClass` следующий метод. Модификатор `override` можно добавить перед или после `public`.  
   
@@ -545,8 +545,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [Руководство по программированию на C#](../index.md)
+- [Классы и структуры](./index.md)
+- [Управление версиями с помощью ключевых слов Override и New](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

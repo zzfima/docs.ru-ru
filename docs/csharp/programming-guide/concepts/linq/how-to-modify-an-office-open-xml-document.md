@@ -2,12 +2,12 @@
 title: Практическое руководство. Изменение документа в формате Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486646"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593136"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Практическое руководство. Изменение документа в формате Office Open XML (C#)
 В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
@@ -141,7 +141,7 @@ class Program
   
  Если открыть файл `SampleDoc.docx` после выполнения этой программы, можно будет увидеть, что программа преобразовала первый абзац в документе в верхний регистр.  
   
- При запуске с образцом документа Open XML, описанным в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), этот пример выводит следующие результаты:  
+ При запуске с образцом документа Open XML, описанным в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md), этот пример выводит следующие результаты:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

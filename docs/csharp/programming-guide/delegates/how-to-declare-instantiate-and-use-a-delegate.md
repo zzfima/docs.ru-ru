@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608740"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590627"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Объявление, создание экземпляра и использование делегата
 В C# 1.0 и более поздних версий делегаты можно объявлять так, как показано в следующем примере.  
@@ -23,7 +23,7 @@ ms.locfileid: "64608740"
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- В C# 2.0 и более поздних версиях можно использовать анонимный метод для объявления и инициализации [делегата](../../../csharp/language-reference/keywords/delegate.md), как показано в следующем примере.  
+ В C# 2.0 и более поздних версиях можно использовать анонимный метод для объявления и инициализации [делегата](../../language-reference/keywords/delegate.md), как показано в следующем примере.  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64608740"
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- Дополнительные сведения см. в разделе [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Дополнительные сведения см. в разделе [Лямбда-выражения](../statements-expressions-operators/lambda-expressions.md).  
   
  Следующий пример демонстрирует объявление, создание экземпляра и использование делегата. Класс `BookDB` инкапсулирует базу данных книжного магазина, в которой хранится информация о книгах. Он предоставляет метод `ProcessPaperbackBooks`, который находит в базе данных все книги в мягкой обложке и вызывает делегат для каждой из них. Используется тип `delegate` с именем `ProcessBookDelegate`. Класс `Test` использует этот класс для печати заголовков и средней цены книг в мягкой обложке.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "64608740"
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     Будет создан новый объект делегата, связанный со [статическим](../../../csharp/language-reference/keywords/static.md) методом `Test.PrintTitle`. Аналогичным образом, в следующем примере передается нестатический метод `AddBookToTotal` для объекта `totaller`:  
+     Будет создан новый объект делегата, связанный со [статическим](../../language-reference/keywords/static.md) методом `Test.PrintTitle`. Аналогичным образом, в следующем примере передается нестатический метод `AddBookToTotal` для объекта `totaller`:  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   
@@ -74,6 +74,6 @@ ms.locfileid: "64608740"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [События](../../../csharp/programming-guide/events/index.md)
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [События](../events/index.md)
+- [Делегаты](./index.md)

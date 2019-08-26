@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956711"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 
@@ -98,7 +98,7 @@ ms.locfileid: "67660890"
 
 ## <a name="serialization"></a>Сериализация
 
-Что касается сериализации, разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> предоставляет возможность получать и задавать члены сериализуемых типов независимо от доступности. Это разрешение позволяет коду обнаруживать и изменять закрытое состояние экземпляра. (Помимо наличия соответствующих разрешений тип должен быть [помечен](../../../docs/standard/attributes/applying-attributes.md) как сериализуемый в метаданных.)
+Что касается сериализации, разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> предоставляет возможность получать и задавать члены сериализуемых типов независимо от доступности. Это разрешение позволяет коду обнаруживать и изменять закрытое состояние экземпляра. (Помимо наличия соответствующих разрешений тип должен быть [помечен](../../standard/attributes/applying-attributes.md) как сериализуемый в метаданных.)
 
 ## <a name="parameters-of-type-methodinfo"></a>Параметры типа MethodInfo
 
@@ -121,5 +121,5 @@ ms.locfileid: "67660890"
 - [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)
 - [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Применение атрибутов](../../../docs/standard/attributes/applying-attributes.md)
+- [Применение атрибутов](../../standard/attributes/applying-attributes.md)
 - [Доступ к пользовательским атрибутам](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

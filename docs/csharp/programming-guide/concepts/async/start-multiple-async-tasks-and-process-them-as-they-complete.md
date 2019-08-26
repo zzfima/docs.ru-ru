@@ -2,12 +2,12 @@
 title: Обработка асинхронных задач по мере завершения
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600285"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595596"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
 
@@ -39,9 +39,9 @@ ms.locfileid: "64600285"
 
 ## <a name="create-the-program-yourself"></a>Самостоятельное создание программы
 
-Код из этого примера добавляется к коду, который вы создали в руководстве [Отмена оставшихся асинхронных задач после завершения одной из них (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md), и использует тот же пользовательский интерфейс.
+Код из этого примера добавляется к коду, который вы создали в руководстве [Отмена оставшихся асинхронных задач после завершения одной из них (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md), и использует тот же пользовательский интерфейс.
 
-Чтобы самостоятельно собрать пример, шаг за шагом выполните инструкции из раздела [Скачивание примера](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example), выбрав в качестве запускаемого проекта **CancelAfterOneTask**. Добавьте изменения в данном разделе в метод `AccessTheWebAsync` в этом проекте. Изменения помечены звездочками.
+Чтобы самостоятельно собрать пример, шаг за шагом выполните инструкции из раздела [Скачивание примера](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example), выбрав в качестве запускаемого проекта **CancelAfterOneTask**. Добавьте изменения в данном разделе в метод `AccessTheWebAsync` в этом проекте. Изменения помечены звездочками.
 
 Проект **CancelAfterOneTask** уже содержит запрос, который при выполнении создает коллекцию задач. Каждый вызов `ProcessURLAsync` в следующем коде возвращает <xref:System.Threading.Tasks.Task%601>, где `TResult` — целое число.
 
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)
-- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)
+- [Асинхронное программирование с использованием ключевых слов async и await (C#)](./index.md)
 - [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

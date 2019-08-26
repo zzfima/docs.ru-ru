@@ -8,17 +8,17 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: fc3e29ad606cf8a60318a320e8ebc65b0d7f6e48
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965258"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597292"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Абстрактные и запечатанные классы и члены классов (Руководство по программированию на C#)
-Ключевое слово [abstract](../../../csharp/language-reference/keywords/abstract.md) позволяет создавать классы и члены [классов](../../../csharp/language-reference/keywords/class.md), которые являются неполными и должны быть реализованы в производном классе.  
+Ключевое слово [abstract](../../language-reference/keywords/abstract.md) позволяет создавать классы и члены [классов](../../language-reference/keywords/class.md), которые являются неполными и должны быть реализованы в производном классе.  
   
- Ключевое слово [sealed](../../../csharp/language-reference/keywords/sealed.md) позволяет предотвратить наследование класса или определенных членов класса, помеченных ранее как [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+ Ключевое слово [sealed](../../language-reference/keywords/sealed.md) позволяет предотвратить наследование класса или определенных членов класса, помеченных ранее как [virtual](../../language-reference/keywords/virtual.md).  
   
 ## <a name="abstract-classes-and-class-members"></a>Абстрактные классы и члены классов  
  Классы могут быть объявлены абстрактными путем помещения ключевого слова `abstract` перед определением класса. Например:  
@@ -38,21 +38,21 @@ ms.locfileid: "56965258"
  Если метод `virtual` объявляется как `abstract`, он все равно считается виртуальным по отношению к любому классу, наследующему от абстрактного класса. Класс, наследующий абстрактный метод, не может получать доступ к исходной реализации метода (так, в предыдущем примере `DoWork` для класса F не может вызывать `DoWork` для класса D). Таким образом, абстрактный класс может принудительно задавать необходимость предоставлять новые реализации виртуальных методов в производных классах.  
   
 ## <a name="sealed-classes-and-class-members"></a>Запечатанные классы и члены классов  
- Классы могут быть объявлены как [запечатанные](../../../csharp/language-reference/keywords/sealed.md) путем помещения ключевого слова `sealed` перед определением класса. Например:  
+ Классы могут быть объявлены как [запечатанные](../../language-reference/keywords/sealed.md) путем помещения ключевого слова `sealed` перед определением класса. Например:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   
  Запечатанный класс не может использоваться в качестве базового класса. Поэтому он также не может быть абстрактным классом. Запечатанные классы предотвращают наследование. Поскольку их нельзя использовать в качестве базовых классов, определенная оптимизация во время выполнения позволяет несколько ускорить вызов членов запечатанных классов.  
   
- Метод, индексатор, свойство или событие для производного класса, переопределяющего виртуальный член базового класса, может объявлять этот член как запечатанный. Это делает бесполезным виртуальный аспект члена для каждого последующего производного класса. Для этого в объявлении члена класса необходимо перед ключевым словом [override](../../../csharp/language-reference/keywords/override.md) поместить ключевое слово `sealed`. Например:  
+ Метод, индексатор, свойство или событие для производного класса, переопределяющего виртуальный член базового класса, может объявлять этот член как запечатанный. Это делает бесполезным виртуальный аспект члена для каждого последующего производного класса. Для этого в объявлении члена класса необходимо перед ключевым словом [override](../../language-reference/keywords/override.md) поместить ключевое слово `sealed`. Например:  
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [Практическое руководство. Определение абстрактных свойств](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md).
+- [Руководство по программированию на C#](../index.md)
+- [Классы и структуры](./index.md)
+- [Наследование](./inheritance.md)
+- [Методы](./methods.md)
+- [Поля](./fields.md)
+- [Практическое руководство. Определение абстрактных свойств](./how-to-define-abstract-properties.md).

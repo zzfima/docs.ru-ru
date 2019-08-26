@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: d079441e91ff90bcc974564bbd7069e0548a7d77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575301"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602557"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (параметры компилятора C#)
 С помощью параметра компилятора `-preferreduilang` можно указать язык, на котором компилятор C# отображает выходные данные, например сообщения об ошибках.  
@@ -39,4 +39,4 @@ csc.exe -preferreduilang:ja-JP
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)

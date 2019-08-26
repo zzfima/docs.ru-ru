@@ -2,12 +2,12 @@
 title: Поиск текста в документах Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487493"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594344"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Поиск текста в документах Word (C#)
 В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.  
@@ -15,7 +15,7 @@ ms.locfileid: "66487493"
 ## <a name="example"></a>Пример  
  В этом примере выполняется обработка документа WordprocessingML, чтобы найти все вхождения определенного фрагмента текста в документе. Чтобы сделать это, для примера используем запрос, по которому найдем строку «Здравствуйте». Этот пример основан на предыдущих примерах данного учебника. Новый запрос выявляется в комментариях в нижеприведенном коде.  
   
- Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -320,15 +320,15 @@ StyleName:Code ><
   
  Это пример можно улучшить несколькими способами. Например, чтобы выполнить поиск по тексту, можно использовать регулярные выражения, можно последовательно пройти по всем файлам Word в определенном каталоге и т. п.  
   
- Обратите внимание, что этот пример работает почти так же хорошо, как если бы составлялся только один запрос. Поскольку каждый запрос выполняется отложенным неспешным образом, не происходит выдачи результатов каждого запроса до тех пор, пока не будет закончен поиск по всему заданному пространству. Дополнительные сведения о выполнении и отложенном вычислении см. в разделе [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Обратите внимание, что этот пример работает почти так же хорошо, как если бы составлялся только один запрос. Поскольку каждый запрос выполняется отложенным неспешным образом, не происходит выдачи результатов каждого запроса до тех пор, пока не будет закончен поиск по всему заданному пространству. Дополнительные сведения о выполнении и отложенном вычислении см. в разделе [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="next-steps"></a>Следующие шаги  
  В следующем разделе приводятся дополнительные сведения о документах WordprocessingML:  
   
-- [Сведения о документах WordprocessingML в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
+- [Сведения о документах WordprocessingML в формате Office Open XML (C#)](./wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Рефакторинг с использованием чистых функций (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Рефакторинг с использованием чистых функций (C#)](./refactoring-using-a-pure-function.md)
+- [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

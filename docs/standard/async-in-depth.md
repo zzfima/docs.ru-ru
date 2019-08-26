@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844740"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666584"
 ---
 # <a name="async-in-depth"></a>Подробный обзор асинхронного программирования
 
@@ -30,7 +30,7 @@ Task (задача) — это конструкции, реализующие [
 
 Использование `await` позволяет приложению или службе выполнять полезную работу во время выполнения задачи за счет передачи управления вызывающему объекту задачи до ее завершения. В коде не нужно использовать обратные вызовы или события для продолжения выполнения после завершения задачи. Это берут на себя язык и интеграцию API-интерфейса задач. Если вы используете `Task<T>`, ключевое слово `await` будет дополнительно "разворачивать" значение, возвращаемое после завершения задачи.  Ниже приводится подробное описание того, как это работает.
 
-Дополнительные сведения о задачах и разных способах взаимодействия с ними см. в статье [Асинхронный шаблон, основанный на задачах (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
+Дополнительные сведения о задачах и разных способах взаимодействия с ними см. в статье [Асинхронный шаблон, основанный на задачах (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Подробный обзор задач, связанных с операциями ввода-вывода
 
@@ -146,7 +146,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ## <a name="see-also"></a>См. также
 
-- [Асинхронное программирование на C#](~/docs/csharp/async.md)
+- [Асинхронное программирование на C#](../csharp/async.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [Асинхронное программирование на F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Асинхронное программирование на F#](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398562"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597309"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Одномерные массивы (Руководство по программированию на C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "67398562"
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Этот массив содержит элементы с `array[0]` по `array[4]`. С помощью оператора [new](../../../csharp/language-reference/operators/new-operator.md) можно создать массив и инициализировать его элементы, используя значения по умолчанию. В этом примере при инициализации всем элементам массива присваиваются нулевые значения.  
+ Этот массив содержит элементы с `array[0]` по `array[4]`. С помощью оператора [new](../../language-reference/operators/new-operator.md) можно создать массив и инициализировать его элементы, используя значения по умолчанию. В этом примере при инициализации всем элементам массива присваиваются нулевые значения.  
   
  Таким же образом можно объявить массив, в котором хранятся строковые элементы. Например:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67398562"
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- В C# 3.0 представлены неявно типизированные массивы. Дополнительные сведения см. в разделе [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ В C# 3.0 представлены неявно типизированные массивы. Дополнительные сведения см. в разделе [Неявно типизированные массивы](./implicitly-typed-arrays.md).  
   
 ## <a name="value-type-and-reference-type-arrays"></a>Массивы типов значений и ссылочных типов
 
@@ -55,12 +55,12 @@ ms.locfileid: "67398562"
   
  Результат этого оператора зависит от того, является ли `SomeType` типом значения или ссылочным типом. Если это тип значения, оператор создает массив из 10 элементов, каждый из которых имеет тип `SomeType`. Если `SomeType` является ссылочным типом, этот оператор создает массив из 10 элементов, каждый из которых инициализируется с использованием ссылки NULL.  
   
- Дополнительные сведения о типах значений и ссылочных типах см. в разделе [Типы](../../../csharp/language-reference/keywords/types.md).  
+ Дополнительные сведения о типах значений и ссылочных типах см. в разделе [Типы](../../language-reference/keywords/types.md).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Array>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Массивы](../../../csharp/programming-guide/arrays/index.md)
-- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [Массивы массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [Руководство по программированию на C#](../index.md)
+- [Массивы](./index.md)
+- [Многомерные массивы](./multidimensional-arrays.md)
+- [Массивы массивов](./jagged-arrays.md)

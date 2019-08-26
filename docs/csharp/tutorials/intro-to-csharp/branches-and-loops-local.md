@@ -3,12 +3,12 @@ title: Ветви и циклы. Вводное руководство по C#
 description: В рамках этого руководства, посвященного ветвям и циклам, вы создадите пример кода на C#, который демонстрирует возможности языка для организации условного ветвления и циклического выполнения операторов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427257"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587224"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Изучение условной логики с операторами ветви и цикла
 
@@ -143,6 +143,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -205,7 +206,7 @@ while (counter < 10)
 В цикле `while` условие проверяется, прежде чем выполнить код, который следует после `while`. А в цикле `do` ... `while` сначала выполняется код, а потом проверяется условие. Действие во время цикла показано в следующем примере кода.
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -220,7 +221,7 @@ do
 Цикл **for** широко используется в C#. Выполните в методе Main() следующий код:
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
 }

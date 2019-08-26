@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815945"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988398"
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
 При компиляции приложения можно указать, должно ли оно запускаться в 64-разрядной операционной системе Windows в качестве собственного приложения или в эмуляторе WOW64 (в 32- или 64-разрядной ОС Windows). WOW64 — это среда совместимости, которая позволяет выполнять 32-разрядное приложение в 64-разрядной системе. Эмулятор WOW64 входит в состав всех 64-разрядных версий операционной системы Windows.  
@@ -24,7 +24,7 @@ ms.locfileid: "66815945"
  Visual Studio устанавливает на компьютер с архитектурой x86 32-разрядную версию среды CLR, а на компьютер с 64-разрядной ОС Windows — 32-разрядную и соответствующую 64-разрядную версию среды CLR. (Так как среда Visual Studio является 32-разрядным приложением, то при установке в 64-разрядной системе она выполняется в эмуляторе WOW64.)  
   
 > [!NOTE]
->  Из-за особенностей эмуляции x86 и подсистемы WOW64 для процессоров семейства Itanium выполнение приложений ограничено одним процессором. Эти факторы снижают производительность и масштабируемость 32-разрядных приложений .NET Framework, выполняемых в системах на базе Itanium. Для повышения производительности и масштабируемости рекомендуем использовать версию .NET Framework 4 со встроенной поддержкой 64-разрядных систем на базе Itanium.  
+> Из-за особенностей эмуляции x86 и подсистемы WOW64 для процессоров семейства Itanium выполнение приложений ограничено одним процессором. Эти факторы снижают производительность и масштабируемость 32-разрядных приложений .NET Framework, выполняемых в системах на базе Itanium. Для повышения производительности и масштабируемости рекомендуем использовать версию .NET Framework 4 со встроенной поддержкой 64-разрядных систем на базе Itanium.  
   
  При запуске 64-разрядного управляемого приложения в 64-разрядной операционной системе Windows по умолчанию можно создавать объекты размером не более 2 гигабайт (ГБ). Однако в .NET Framework 4.5 это ограничение можно повысить.  Дополнительные сведения см. в разделе [\<Элемент gcAllowVeryLargeObjects>](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66815945"
   
 |Компилятор|Параметр компилятора|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform (параметры компилятора C#)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|Вы можете создавать платформенно-независимые приложения MSIL с помощью **/clr:safe**. Дополнительные сведения см. в разделе [/clr (компиляция CLR)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ содержит отдельные компиляторы для каждой 64-разрядной операционной системы. Дополнительные сведения об использовании Visual C++ для создания приложений, выполняемых как собственные в 64-разрядной операционной системе Windows, см. в разделе [64-разрядное программирование](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Определение состояния EXE- или DLL-файлов  

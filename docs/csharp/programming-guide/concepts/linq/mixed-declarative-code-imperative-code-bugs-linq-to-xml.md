@@ -2,15 +2,15 @@
 title: Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 651b1eddb54f0588ddd3a64927fe79f95671d085
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484245"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591623"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Интерфейс программирования описывается в разделе [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Интерфейс программирования описывается в разделе [Изменение деревьев XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
   
  Этот вид ошибки иногда называется Halloween Problem.  
   

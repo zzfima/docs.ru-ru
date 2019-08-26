@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693828"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602905"
 ---
 # <a name="-help---c-compiler-options"></a>-help, -? (параметры компилятора C#)
 Этот параметр отправляет список параметров компилятора и краткое описание каждого параметра в stdout.  
@@ -36,5 +36,5 @@ ms.locfileid: "54693828"
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

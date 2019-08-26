@@ -2,19 +2,19 @@
 title: Использование вариативности в делегатах (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667285"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595267"
 ---
 # <a name="using-variance-in-delegates-c"></a>Использование вариативности в делегатах (C#)
 При назначении метода делегату *ковариация* и *контравариантость* обеспечивают гибкость сопоставления типа делегата с сигнатурой метода. Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в делегате. Контравариантность позволяет использовать метод с типами параметров, степень наследования которых меньше, чем у типа делегата.  
   
 ## <a name="example-1-covariance"></a>Пример 1. Ковариантность  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>ОПИСАНИЕ  
  В этом примере демонстрируется использование делегатов с методами, типы возвращаемых значений которых являются производными от типа возвращаемого значения в сигнатуре делегата. Тип данных, возвращаемый `DogsHandler`, является типом `Dogs`, производным от определенного в делегате типа `Mammals`.  
   
 ### <a name="code"></a>Код  
@@ -50,7 +50,7 @@ class Program
   
 ## <a name="example-2-contravariance"></a>Пример 2: Контрвариантность  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>ОПИСАНИЕ  
  В этом примере демонстрируется использование делегатов с методами, параметры типа которых являются базовыми типами типа параметра сигнатуры делегата. Контравариантность позволяет использовать один обработчик событий вместо нескольких. Например, можно создать обработчик событий, принимающих входной параметр `EventArgs`, и использовать его с событием `Button.MouseClick`, которое отправляет тип `MouseEventArgs` в качестве параметра, а также с событием `TextBox.KeyDown`, которое отправляет параметр `KeyEventArgs`.  
   
 ### <a name="code"></a>Код  
@@ -79,5 +79,5 @@ public Form1()
   
 ## <a name="see-also"></a>См. также
 
-- [Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Вариативность в делегатах (C#)](./variance-in-delegates.md)
+- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

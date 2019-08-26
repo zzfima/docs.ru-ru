@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599283"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935444"
 ---
 # <a name="service-application-programming-architecture"></a>Программная архитектура приложений служб
 В основе приложений-служб Windows лежит класс, наследуемый от класса <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Вы можете переопределить методы из этого класса и определить функции для них, чтобы настроить поведение службы.  
@@ -47,7 +47,7 @@ ms.locfileid: "64599283"
 |<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Укажите, как должна реагировать служба при получении события управления питанием, например низкого заряда батареи или операции приостановки.|  
   
 > [!NOTE]
->  Эти методы представляют состояния, через которые служба проходит за время своего существования, а именно — переходы службы от одного состояния к другому. Например, служба будет отвечать на команду <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> только после вызова <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
+> Эти методы представляют состояния, через которые служба проходит за время своего существования, а именно — переходы службы от одного состояния к другому. Например, служба будет отвечать на команду <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> только после вызова <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
   
  Есть несколько других свойств и методов, которые представляют интерес. Сюда входит следующее.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "64599283"
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  В этих примерах используется массив типа <xref:System.ServiceProcess.ServiceBase>. В него можно добавить каждую службу, которую содержит приложение, а затем запустить все службы одновременно. Если создается только одна служба, вы можете не использовать массив, а просто объявить и запустить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase>. Пример см. в статье [Практическое руководство. Создание служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > В этих примерах используется массив типа <xref:System.ServiceProcess.ServiceBase>. В него можно добавить каждую службу, которую содержит приложение, а затем запустить все службы одновременно. Если создается только одна служба, вы можете не использовать массив, а просто объявить и запустить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase>. Пример см. в статье [Практическое руководство. Создание служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 - Наборы свойств в классе <xref:System.ServiceProcess.ServiceBase>. Они определяют, какие методы могут вызываться в службе. Например, если свойству <xref:System.ServiceProcess.ServiceBase.CanStop%2A> задать значение `true`, в службе можно вызвать метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>. Если свойству <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> задать значение `true`, в службе можно вызвать методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A> и <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>. Если одному из этих свойств задать значение `true`, необходимо переопределить и реализовать обработку для соответствующих методов.  
   
     > [!NOTE]
-    >  Используемая служба должна переопределять хотя бы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
+    > Используемая служба должна переопределять хотя бы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
  Можно также использовать компонент, называемый <xref:System.ServiceProcess.ServiceController>, для обмена данными с существующей службой и управления ее поведением.  
   

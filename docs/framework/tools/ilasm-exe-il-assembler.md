@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567063"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933655"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (ассемблер IL)
 
-Ассемблер IL создает переносимый исполняемый (PE) файл на промежуточном языке (IL). (Дополнительные сведения о промежуточном языке см. в разделе [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md).) Можно запустить полученный исполняемый файл, содержащий код на промежуточном языке и необходимые метаданные, чтобы проверить, выполняется ли код IL так, как ожидалось.
+Ассемблер IL создает переносимый исполняемый (PE) файл на промежуточном языке (IL). (Дополнительные сведения о промежуточном языке см. в разделе [Процесс управляемого выполнения](../../standard/managed-execution-process.md).) Можно запустить полученный исполняемый файл, содержащий код на промежуточном языке и необходимые метаданные, чтобы проверить, выполняется ли код IL так, как ожидалось.
 
 Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -231,5 +231,5 @@ public class Hello
 
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-- [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md)
+- [Процесс управляемого выполнения](../../standard/managed-execution-process.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

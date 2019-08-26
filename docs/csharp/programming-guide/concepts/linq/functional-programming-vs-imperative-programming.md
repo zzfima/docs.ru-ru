@@ -2,12 +2,12 @@
 title: Сравнение функционального и Императивное программирование (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596707"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594312"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Сравнение функционального и Императивное программирование (C#)
 В этом разделе сравнивается и противопоставляется функциональное программирование с традиционным императивным (процедурным) программированием.  
@@ -52,6 +52,6 @@ ms.locfileid: "64596707"
   
 ## <a name="see-also"></a>См. также
 
-- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Введение в чистые функциональные преобразования (C#)](./introduction-to-pure-functional-transformations.md)
 - [Преобразования XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Рефакторинг в чистые функции (C#)](./refactoring-into-pure-functions.md)

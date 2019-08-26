@@ -6,15 +6,15 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 82ed87bbcbc741695afc49069c413ae440bd147b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ffb00325bc04aad79d61558925546e0aa8544551
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921748"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Практическое руководство. Преобразование массива байтов в значение типа int (руководство по программированию на C#)
-В этом примере демонстрируется использование класса <xref:System.BitConverter> для преобразования массива байтов в значение типа [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) и обратно в массив байтов. Например, может потребоваться преобразование из байтов во встроенный тип данных после чтения байтов из сети. В дополнение к методу [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)), показанному в примере, для преобразования байтов (из массива байтов) в другие встроенные типы данных можно использовать и другие методы класса <xref:System.BitConverter>, представленные в таблице ниже.  
+В этом примере демонстрируется использование класса <xref:System.BitConverter> для преобразования массива байтов в значение типа [int](../../language-reference/builtin-types/integral-numeric-types.md) и обратно в массив байтов. Например, может потребоваться преобразование из байтов во встроенный тип данных после чтения байтов из сети. В дополнение к методу [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)), показанному в примере, для преобразования байтов (из массива байтов) в другие встроенные типы данных можно использовать и другие методы класса <xref:System.BitConverter>, представленные в таблице ниже.  
   
 |Возвращаемый тип|Метод|  
 |-------------------|------------|  
@@ -33,7 +33,7 @@ ms.locfileid: "67423555"
  Этот пример инициализирует массив байтов, обращает порядок расположения элементов в массиве, если в архитектуре компьютера используется прямой порядок байтов (т. е. первым сохраняется наименее значащий байт), и затем вызывает метод [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) для преобразования четырех байтов массива в значение типа `int`. Второй аргумент [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) указывает начальный индекс массива байтов.  
   
 > [!NOTE]
->  Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
+> Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
   
  [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67423555"
  В этом примере вызывается метод <xref:System.BitConverter.GetBytes%28System.Int32%29> класса <xref:System.BitConverter> для преобразования значения `int` в массив байтов.  
   
 > [!NOTE]
->  Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
+> Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
   
  [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]  
   
@@ -49,4 +49,4 @@ ms.locfileid: "67423555"
 
 - <xref:System.BitConverter>
 - <xref:System.BitConverter.IsLittleEndian>
-- [Типы](../../../csharp/programming-guide/types/index.md)
+- [Типы](./index.md)

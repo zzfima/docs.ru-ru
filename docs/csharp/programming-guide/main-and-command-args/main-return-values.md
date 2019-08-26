@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878927"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588884"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Значения, возвращаемые методом Main() (Руководство по программированию на C#)
 
@@ -95,7 +95,7 @@ private static async Task<int> AsyncConsoleWork()
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Руководство по программированию на C#](../index.md)
 - [Справочник по C#](../index.md)
 - [Main() и аргументы командной строки](index.md)
-- [Практическое руководство. Отображение аргументов командной строки](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Практическое руководство. Отображение аргументов командной строки](./how-to-display-command-line-arguments.md)

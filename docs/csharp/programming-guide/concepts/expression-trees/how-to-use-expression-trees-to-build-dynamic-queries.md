@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: dc8ff7504464e05ce19df3f0dfe907476a17413a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 400668e51fda4a728b42679c37a07399d1f73326
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170330"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595070"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#)
 В LINQ деревья выражений используются для представления структурированных запросов к источникам данных, которые реализуют интерфейс <xref:System.Linq.IQueryable%601>. Например, поставщик LINQ реализует интерфейс <xref:System.Linq.IQueryable%601> для выполнения запросов к реляционным хранилищам данных. Компилятор C# компилирует запросы к таким источникам данных в код, который строит дерево выражения во время выполнения. Поставщик запросов может переходить по структуре данных дерева выражения и преобразовать ее в язык запросов, соответствующий источнику данных.  
@@ -107,6 +107,6 @@ foreach (string company in results)
   
 ## <a name="see-also"></a>См. также
 
-- [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
-- [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Expression Trees (C#)](./index.md) (Деревья выражений (C#))
+- [Практическое руководство. Выполнение деревьев выражений (C#)](./how-to-execute-expression-trees.md)
+- [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)

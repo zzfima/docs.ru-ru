@@ -2,12 +2,12 @@
 title: Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 21c05b0134fda5011ecaf14f296e5a5172cf3bf5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7e3540dfe6d93f5262790bce615cc7fe3f1fbb93
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585923"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594042"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)
 В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.  
@@ -100,5 +100,5 @@ class QueryWithRegEx
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ и строки (C#)](./linq-and-strings.md)
+- [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)

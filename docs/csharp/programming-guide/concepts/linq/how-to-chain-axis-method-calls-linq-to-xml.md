@@ -2,12 +2,12 @@
 title: Практическое руководство. Связанные вызовы метода оси (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 93b05a39baea5c3ee75224562d27365e8936bc92
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 573efb50dd889d1e10fc3a74bb5c7d9a8ac30eab
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710145"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594079"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Практическое руководство. Связанные вызовы метода оси (LINQ to XML) (C#)
 Обычно при написании кода вы будете придерживаться схемы, по которой вызывается метод оси, после чего вызывается одна из осей метода расширений.  
@@ -17,7 +17,7 @@ ms.locfileid: "68710145"
 ## <a name="example"></a>Пример  
  В этом примере с помощью методов<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> и <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> выполняется поиск всех элементов `Name` во всех элементах `Address` во всех элементах `PurchaseOrder`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -90,7 +90,7 @@ foreach (XElement cp in configParameters)
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же способ обработки XML, что и в пространстве имен. Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>См. также
 
-- [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Оси LINQ to XML (C#)](./linq-to-xml-axes.md)

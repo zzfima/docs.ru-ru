@@ -10,28 +10,28 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: cde196c2bf0b40443c6b497a6a73863e5f89dd0a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca990693d29f8c8abd2e4ba2488a429a797afaec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582991"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596174"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ограничение доступности методов доступа (Руководство по программированию на C#)
-Выражения [get](../../../csharp/language-reference/keywords/get.md) и [set](../../../csharp/language-reference/keywords/set.md) свойства или индексатора называются *методами доступа*. По умолчанию они имеют такие же уровни видимости или доступа, что и свойство или индексатор, которым они принадлежат. Дополнительные сведения см. в разделе [Уровни доступа](../../../csharp/language-reference/keywords/accessibility-levels.md). Тем не менее в некоторых случаях рекомендуется ограничить уровни доступа для этих методов. Как правило, в этом случае ограничивается уровень доступа для метода `set`, тогда как метод `get` остается общедоступным. Например:  
+Выражения [get](../../language-reference/keywords/get.md) и [set](../../language-reference/keywords/set.md) свойства или индексатора называются *методами доступа*. По умолчанию они имеют такие же уровни видимости или доступа, что и свойство или индексатор, которым они принадлежат. Дополнительные сведения см. в разделе [Уровни доступа](../../language-reference/keywords/accessibility-levels.md). Тем не менее в некоторых случаях рекомендуется ограничить уровни доступа для этих методов. Как правило, в этом случае ограничивается уровень доступа для метода `set`, тогда как метод `get` остается общедоступным. Например:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
- В этом примере свойство `Name` определяет методы доступа `get` и `set`. Метод доступа `get` получает уровень доступа самого свойства (в этом случае `public`), а к методу `set` явным образом применяется модификатор доступа [protected](../../../csharp/language-reference/keywords/protected.md).  
+ В этом примере свойство `Name` определяет методы доступа `get` и `set`. Метод доступа `get` получает уровень доступа самого свойства (в этом случае `public`), а к методу `set` явным образом применяется модификатор доступа [protected](../../language-reference/keywords/protected.md).  
   
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>Ограничения модификаторов доступа для методов доступа  
  При использовании модификаторов доступа для свойств или индексаторов необходимо соблюдать следующие ограничения:  
   
-- Модификаторы доступа нельзя использовать в интерфейсе или явной реализации элемента [interface](../../../csharp/language-reference/keywords/interface.md).  
+- Модификаторы доступа нельзя использовать в интерфейсе или явной реализации элемента [interface](../../language-reference/keywords/interface.md).  
   
 - Модификаторы доступа можно использовать только в том случае, если для свойства или индексатора определены одновременно методы доступа `set` и `get`. В этом случае модификатор может применяться только к одному из двух методов доступа.  
   
-- Если свойству или индексатору назначен модификатор [override](../../../csharp/language-reference/keywords/override.md), модификатор доступа должен соответствовать методу доступа для переопределенного метода доступа, если такой существует.  
+- Если свойству или индексатору назначен модификатор [override](../../language-reference/keywords/override.md), модификатор доступа должен соответствовать методу доступа для переопределенного метода доступа, если такой существует.  
   
 - Уровень доступности для метода доступа должен быть более строгим по сравнению с уровнем доступа самого свойства или идентификатора.  
   
@@ -46,12 +46,12 @@ ms.locfileid: "64582991"
  [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
 ## <a name="accessor-accessibility-domain"></a>Домен доступности для метода доступа  
- При использовании модификатора доступа для метода доступа этот модификатор определяет [домен доступности](../../../csharp/language-reference/keywords/accessibility-domain.md) для такого метода.  
+ При использовании модификатора доступа для метода доступа этот модификатор определяет [домен доступности](../../language-reference/keywords/accessibility-domain.md) для такого метода.  
   
  Если к методу доступа не применяется модификатор доступа, домен доступности этого метода определяется уровнем доступности свойства или индексатора.  
   
 ## <a name="example"></a>Пример  
- В следующем примере определяются три класса: `BaseClass`, `DerivedClass` и `MainClass`. В классе `BaseClass` для обоих классов определены свойства `Name` и `Id`. В этом примере демонстрируется, как свойство `Id` класса `DerivedClass` может быть скрыто свойством `Id` класса `BaseClass` при использовании ограничивающего модификатора доступа, такого как [protected](../../../csharp/language-reference/keywords/protected.md) или [private](../../../csharp/language-reference/keywords/private.md). Таким образом, при присвоении значений этому свойству вместо него вызывается свойство класса `BaseClass`. Чтобы сделать это свойство доступным, необходимо заменить модификатор доступа на [public](../../../csharp/language-reference/keywords/public.md).  
+ В следующем примере определяются три класса: `BaseClass`, `DerivedClass` и `MainClass`. В классе `BaseClass` для обоих классов определены свойства `Name` и `Id`. В этом примере демонстрируется, как свойство `Id` класса `DerivedClass` может быть скрыто свойством `Id` класса `BaseClass` при использовании ограничивающего модификатора доступа, такого как [protected](../../language-reference/keywords/protected.md) или [private](../../language-reference/keywords/private.md). Таким образом, при присвоении значений этому свойству вместо него вызывается свойство класса `BaseClass`. Чтобы сделать это свойство доступным, необходимо заменить модификатор доступа на [public](../../language-reference/keywords/public.md).  
   
  В этом примере также демонстрируется, что ограничивающий модификатор доступа (`private` или `protected`) для метода доступа `set` свойства `Name` в классе `DerivedClass` запрещает доступ к этому методу и при попытке присвоить ему значение возвращает ошибку.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "64582991"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
-- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [Руководство по программированию на C#](../index.md)
+- [Свойства](./properties.md)
+- [Индексаторы](../indexers/index.md)
+- [Модификаторы доступа](./access-modifiers.md)

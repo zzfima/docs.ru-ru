@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c9584d6c7fec064e2234df9db7e21a38806e8992
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481395"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587948"
 ---
 # <a name="para-c-programming-guide"></a>\<para> (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -28,14 +28,14 @@ ms.locfileid: "57481395"
  Текст абзаца.  
   
 ## <a name="remarks"></a>Примечания  
- Тег \<para> используется внутри другого тега, например [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md), [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) или [\<returns>](../../../csharp/programming-guide/xmldoc/returns.md), и позволяет добавить к тексту структуру.  
+ Тег \<para> используется внутри другого тега, например [\<summary>](./summary.md), [\<remarks>](./remarks.md) или [\<returns>](./returns.md), и позволяет добавить к тексту структуру.  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../language-reference/compiler-options/doc-compiler-option.md).  
   
 ## <a name="example"></a>Пример  
- В разделе [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) можно найти пример использования тега \<para>.  
+ В разделе [\<summary>](./summary.md) можно найти пример использования тега \<para>.  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Руководство по программированию на C#](../index.md)
+- [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

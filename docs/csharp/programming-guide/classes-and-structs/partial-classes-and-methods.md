@@ -7,16 +7,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398382"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596285"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Разделяемые классы и методы (Руководство по программированию в C#)
 
-Можно разделить определение [класса](../../../csharp/language-reference/keywords/class.md), [структуры](../../../csharp/language-reference/keywords/struct.md), [интерфейса](../../../csharp/language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.
+Можно разделить определение [класса](../../language-reference/keywords/class.md), [структуры](../../language-reference/keywords/struct.md), [интерфейса](../../language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.
 
 ## <a name="partial-classes"></a>Разделяемые классы
 
@@ -26,7 +26,7 @@ ms.locfileid: "67398382"
 
 - При работе с использованием автоматически создаваемого источника код можно добавлять в класс без повторного создания файла источника. Visual Studio использует этот подход при создании форм Windows Forms, кода оболочки веб-службы и т. д. Можно создать код, который использует эти классы, без необходимости изменения файла, созданного в Visual Studio.
 
-- Чтобы разделить определение класса, используйте модификатор ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), как показано ниже:
+- Чтобы разделить определение класса, используйте модификатор ключевого слова [partial](../../language-reference/keywords/partial-type.md), как показано ниже:
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
@@ -91,25 +91,25 @@ ms.locfileid: "67398382"
 
 - Приведенные ниже ключевые слова необязательно должны присутствовать в определении разделяемого типа, но если они присутствуют в одном определении разделяемого типа, то не должны конфликтовать с ключевыми словами, указанными в других определениях того же разделяемого типа.
 
-  - [public](../../../csharp/language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
-  - [private](../../../csharp/language-reference/keywords/private.md)
+  - [private](../../language-reference/keywords/private.md)
 
-  - [protected](../../../csharp/language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
-  - [internal](../../../csharp/language-reference/keywords/internal.md)
+  - [internal](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../../csharp/language-reference/keywords/abstract.md)
+  - [abstract](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - базовый класс
 
-  - модификатор [new](../../../csharp/language-reference/keywords/new-modifier.md) (вложенные части)
+  - модификатор [new](../../language-reference/keywords/new-modifier.md) (вложенные части)
 
   - универсальные ограничения
 
-Дополнительные сведения см. в разделе [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
+Дополнительные сведения см. в разделе [Ограничения параметров типа](../generics/constraints-on-type-parameters.md).
 
 ## <a name="example-1"></a>Пример 1
 
@@ -152,19 +152,19 @@ partial void onNameChanged()
 }
 ```
 
-- Объявления разделяемого метода должны начинаться с контекстно-зависимого ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), а метод должен возвращать значение типа [void](../../../csharp/language-reference/keywords/void.md).
+- Объявления разделяемого метода должны начинаться с контекстно-зависимого ключевого слова [partial](../../language-reference/keywords/partial-type.md), а метод должен возвращать значение типа [void](../../language-reference/keywords/void.md).
 
-- Разделяемые методы могут иметь параметры [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) или [ref](../../../csharp/language-reference/keywords/ref.md), но не [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).
+- Разделяемые методы могут иметь параметры [in](../../language-reference/keywords/in-parameter-modifier.md) или [ref](../../language-reference/keywords/ref.md), но не [out](../../language-reference/keywords/out-parameter-modifier.md).
 
-- Разделяемые методы неявно имеют модификатор [private](../../../csharp/language-reference/keywords/private.md) и поэтому не могут иметь модификатор [virtual](../../../csharp/language-reference/keywords/virtual.md).
+- Разделяемые методы неявно имеют модификатор [private](../../language-reference/keywords/private.md) и поэтому не могут иметь модификатор [virtual](../../language-reference/keywords/virtual.md).
 
-- Разделяемые методы не могут иметь модификатор [extern](../../../csharp/language-reference/keywords/extern.md), поскольку наличие тела определяет, выполняется ли их определение или реализация.
+- Разделяемые методы не могут иметь модификатор [extern](../../language-reference/keywords/extern.md), поскольку наличие тела определяет, выполняется ли их определение или реализация.
 
-- Разделяемые методы могут иметь модификаторы [static](../../../csharp/language-reference/keywords/static.md) и [unsafe](../../../csharp/language-reference/keywords/unsafe.md).
+- Разделяемые методы могут иметь модификаторы [static](../../language-reference/keywords/static.md) и [unsafe](../../language-reference/keywords/unsafe.md).
 
 - Разделяемые методы могут быть универсальными. Ограничения налагаются на ту часть объявления разделяемого метода, где находится определение, и могут дополнительно повторяться в разделе реализации. Имена параметров и типов параметров необязательно должны совпадать в объявлении реализации и в объявлении определения.
 
-- Можно использовать [делегат](../../../csharp/language-reference/keywords/delegate.md) в качестве определенного и реализованного разделяемого метода, но его нельзя использовать в качестве разделяемого метода, который только определен.
+- Можно использовать [делегат](../../language-reference/keywords/delegate.md) в качестве определенного и реализованного разделяемого метода, но его нельзя использовать в качестве разделяемого метода, который только определен.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -172,8 +172,8 @@ partial void onNameChanged()
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
-- [partial (тип)](../../../csharp/language-reference/keywords/partial-type.md)
+- [Руководство по программированию на C#](../index.md)
+- [Классы](./classes.md)
+- [Структуры](./structs.md)
+- [Интерфейсы](../interfaces/index.md)
+- [partial (тип)](../../language-reference/keywords/partial-type.md)

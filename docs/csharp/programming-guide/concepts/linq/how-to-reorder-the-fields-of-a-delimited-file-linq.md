@@ -2,12 +2,12 @@
 title: Практическое руководство. Изменение порядка полей файла с разделителями (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 260f3dff25eb1e9c47a8102822da709bdede9b72
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1507d0f743070f15b8e64d5dcfb1b9499470b123
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584430"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592690"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Практическое руководство. Изменение порядка полей файла с разделителями (LINQ) (C#)
 CSV-файл — это текстовый файл, который часто используется для хранения данных электронных таблиц или других табличных данных, представленных строками и столбцами. Использование метода <xref:System.String.Split%2A> для разделения полей упрощает создание запросов к CSV-файлам и управление ими с помощью LINQ. Фактически та же технология может использоваться для изменения порядка частей любой структурированной строки текста, а не только CSV-файлов.  
@@ -80,6 +80,6 @@ class CSVFiles
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [Практическое руководство. Создание XML из CSV-файлов (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [LINQ и строки (C#)](./linq-and-strings.md)
+- [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)
+- [Практическое руководство. Создание XML из CSV-файлов (C#)](./how-to-generate-xml-from-csv-files.md)

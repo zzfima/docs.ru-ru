@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320036"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606603"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (параметры компилятора C#)
 Параметр **-optimize** включает или отключает оптимизацию кода компилятором, чтобы сделать код более быстрым, коротким и эффективным.  
@@ -31,13 +31,13 @@ ms.locfileid: "59320036"
 ## <a name="remarks"></a>Примечания  
  Кроме того, параметр **-optimize** включает оптимизацию кода во время выполнения в общеязыковой среде выполнения (CLR).  
   
- По умолчанию оптимизация отключена. Чтобы включить оптимизацию, укажите **-optimize+**.  
+ По умолчанию оптимизация отключена. Чтобы включить оптимизацию, укажите **-optimize+** .  
   
  При создании модуля для сборки используйте те же настройки параметра **-optimize**, что и для сборки.  
   
  **-o** является краткой формой параметра **-optimize**.  
   
- Параметры **-optimize** и [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) можно объединять.  
+ Параметры **-optimize** и [-debug](./debug-compiler-option.md) можно объединять.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -58,5 +58,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

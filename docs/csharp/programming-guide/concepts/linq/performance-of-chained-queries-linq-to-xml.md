@@ -2,12 +2,12 @@
 title: Производительность связанных запросов (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689992"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591568"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Производительность связанных запросов (LINQ to XML) (C#)
 
@@ -53,6 +53,6 @@ foreach (var i in query2)
 
 Таким образом, работа итерации по запросу `query2` прямо пропорциональна количеству элементов в источнике первого запроса, то есть имеет линейную зависимость. Соответствующий пример Visual Basic будет иметь те же показатели производительности.
 
-Дополнительные сведения об итерациях см. в разделе [yield](../../../../csharp/language-reference/keywords/yield.md).
+Дополнительные сведения об итерациях см. в разделе [yield](../../../language-reference/keywords/yield.md).
 
-Более подробные сведения об объединении запросов в цепочки см. в разделе [Учебник. Объединение запросов в цепочки](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Более подробные сведения об объединении запросов в цепочки см. в разделе [Учебник. Объединение запросов в цепочки](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

@@ -2,12 +2,12 @@
 title: LINQ и каталоги файлов (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: b2153d755b63e1ec14c11b5e94116f7d6b9490f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652375"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591976"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ и каталоги файлов (C#)
 Многие операции файловой системы по существу являются запросами и, следовательно, соответствуют принципам LINQ.  
@@ -16,25 +16,25 @@ ms.locfileid: "54652375"
   
  В этом разделе рассматриваются следующие вопросы.  
   
- [Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  Демонстрация поиска файлов путем проверки одного или нескольких свойств его объекта <xref:System.IO.FileInfo>.  
   
- [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)  
  Демонстрация возвращения групп объектов <xref:System.IO.FileInfo> в зависимости от расширения имени файла.  
   
- [Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
+ [Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  Демонстрация возвращения общего числа байтов во всех файлах в указанном дереве каталогов.  
   
- [Практическое руководство. Сравнение содержимого двух папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)  
+ [Практическое руководство. Сравнение содержимого двух папок (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
  Демонстрация возвращения всех файлов, присутствующих в двух указанных папках, а также всех файлов, которые присутствуют в одной папке, но отсутствуют в другой.  
   
- [Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
  Демонстрация возвращения наибольшего или наименьшего файла либо определенного числа файлов в дереве каталогов.  
   
- [Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  Демонстрация группирования всех имен файлов, находящихся в нескольких расположениях в указанном дереве каталогов. Также показано, как выполнять более сложные сравнения на основе пользовательской функции сравнения.  
   
- [Практическое руководство. Запрос содержимого файлов в папке (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ [Практическое руководство. Запрос содержимого файлов в папке (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)  
  Демонстрация итерации по папкам в дереве, открытия каждого файла и запроса содержимого файла.  
   
 ## <a name="comments"></a>Комментарии  
@@ -42,4 +42,4 @@ ms.locfileid: "54652375"
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

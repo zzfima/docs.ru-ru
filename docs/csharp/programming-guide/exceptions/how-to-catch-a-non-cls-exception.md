@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 27b36d85b2ece957c8ef3fce70a6fd794bb3d4e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ba212610372a89c2a3b4c6a249c6d8a02fa507
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595670"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590286"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Практическое руководство. Перехват несовместимого с CLS исключения
 Некоторые языки .NET, включая C++/CLI, позволяют объектам вызывать исключения, которые не являются производными от <xref:System.Exception>. Такие исключения называются *несовместимыми с CLS исключениями* или *необработанными исключениями*. В C# невозможно вызвать несовместимые с CLS исключения, однако можно перехватить их следующими двумя способами.  
@@ -52,4 +52,4 @@ catch (RuntimeWrappedException e)
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
-- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)
+- [Исключения и обработка исключений](./index.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 600bb249d1bc1e9f68026caf6596e0a35bb97c43
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170256"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589697"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Универсальные методы (Руководство по программированию на C#)
 Универсальным называется метод, объявленный с использованием параметров типа, как показано ниже:  
@@ -49,6 +49,6 @@ ms.locfileid: "67170256"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Collections.Generic>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Руководство по программированию на C#](../index.md)
+- [Введение в универсальные шаблоны](./index.md)
+- [Методы](../classes-and-structs/methods.md)

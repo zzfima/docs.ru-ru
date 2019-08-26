@@ -2,19 +2,19 @@
 title: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 305733ccf249f1a2c2608a5bd01d74ba2b1e1b86
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e6c0cbf523095122be4227bebee8d7a234eba2d0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585787"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592389"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)
 В следующем примере демонстрируется сортировка строк структурированного текста, таких как значения, разделенные запятыми, по любому полю в строке. Поле можно указывать в среде выполнения динамически. Допустим, поля в файле scores.csv содержат идентификационные номера учащихся и баллы, которые они набрали в результате четырех тестов.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Создание файла с данными  
   
-1. Скопируйте данные из файла scores.csv (см. раздел [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)) в папку решения.  
+1. Скопируйте данные из файла scores.csv (см. раздел [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)) в папку решения.  
   
 ## <a name="example"></a>Пример  
   
@@ -80,4 +80,4 @@ public class SortLines
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ и строки (C#)](./linq-and-strings.md)

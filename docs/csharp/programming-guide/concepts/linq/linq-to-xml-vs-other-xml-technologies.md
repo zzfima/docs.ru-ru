@@ -2,17 +2,17 @@
 title: LINQ to XML или Другие XML-технологии3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484313"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591873"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML или Другие XML-технологии
 В этом разделе [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] сравнивается со следующими XML-технологиями: <xref:System.Xml.XmlReader>, XSLT, MSXML и XmlLite. Данные сведения могут помочь в выборе технологии.  
   
- Сравнение [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] с моделью DOM см. в разделе [Сравнение LINQ to XML или DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
+ Сравнение [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] с моделью DOM см. в разделе [Сравнение LINQ to XML или DOM (C#)](./linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML или XmlReader  
  <xref:System.Xml.XmlReader> - это быстрое однопроходное средство синтаксического анализа без кэширования.  
@@ -54,4 +54,4 @@ ms.locfileid: "66484313"
   
 ## <a name="see-also"></a>См. также
 
-- [Начало работы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Начало работы (LINQ to XML)](./linq-to-xml-overview.md)

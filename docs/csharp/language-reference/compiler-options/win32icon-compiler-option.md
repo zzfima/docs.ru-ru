@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317458"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606278"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (параметры компилятора C#)
 Параметр **-win32icon** вставляет в выходной файл ICO-файл, который придает выходному файлу необходимый вид в проводнике.  
@@ -31,7 +31,7 @@ ms.locfileid: "59317458"
 ## <a name="remarks"></a>Примечания  
  ICO-файл можно создать с помощью [компилятора ресурсов](/windows/desktop/menurc/resource-compiler). Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла.  
   
- Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно. Дополнительные сведения об импорте RES-файла см. в разделе [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).  
+ Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](./linkresource-compiler-option.md) и [-resource](./resource-compiler-option.md) соответственно. Дополнительные сведения об импорте RES-файла см. в разделе [-win32res](./win32res-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -52,5 +52,5 @@ csc -win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

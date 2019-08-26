@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586020"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924762"
 ---
 # <a name="-link-c-compiler-options"></a>-link (параметры компилятора C#)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
@@ -41,7 +41,7 @@ ms.locfileid: "65586020"
  Параметр `-link` внедряет только интерфейсы, структуры и делегаты. Внедрение COM-классов не поддерживается.  
   
 > [!NOTE]
->  Если в коде создается экземпляр внедренного COM-типа, его следует создавать, используя соответствующий интерфейс. При попытке создать экземпляр внедренного COM-типа с помощью компонентного класса возникнет ошибка.  
+> Если в коде создается экземпляр внедренного COM-типа, его следует создавать, используя соответствующий интерфейс. При попытке создать экземпляр внедренного COM-типа с помощью компонентного класса возникнет ошибка.  
   
  Чтобы задать параметр `-link` в Visual Studio, добавьте ссылку на сборку и задайте для свойства `Embed Interop Types` значение **true**. По умолчанию для свойства `Embed Interop Types` задается значение **false**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65586020"
   
 - Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
   
- Как и параметр компилятора [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), параметр компилятора `-link` использует файл ответов Csc.rsp, который ссылается на часто используемые сборки .NET Framework. Если вы не хотите, чтобы компилятор использовал файл Csc.rsp, примените параметр компилятора [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md).  
+ Как и параметр компилятора [-reference](./reference-compiler-option.md), параметр компилятора `-link` использует файл ответов Csc.rsp, который ссылается на часто используемые сборки .NET Framework. Если вы не хотите, чтобы компилятор использовал файл Csc.rsp, примените параметр компилятора [-noconfig](./noconfig-compiler-option.md).  
   
  Краткой формой `-link` является `-l`.  
   
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Пошаговое руководство: внедрение типов из управляемых сборок](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [-reference (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-- [-noconfig (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
-- [Сборка из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [Общие сведения о взаимодействии](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [-reference (параметры компилятора C#)](./reference-compiler-option.md)
+- [-noconfig (параметры компилятора C#)](./noconfig-compiler-option.md)
+- [Сборка из командной строки с помощью csc.exe](./command-line-building-with-csc-exe.md)
+- [Общие сведения о взаимодействии](../../programming-guide/interop/interoperability-overview.md)

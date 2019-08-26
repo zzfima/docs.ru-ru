@@ -2,17 +2,17 @@
 title: Извлечение абзацев и стилей (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 9edbaaf004018a26b84539d1e8ab133af5dca934
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483882"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591196"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Извлечение абзацев и стилей (C#)
 В этом примере составляется запрос, при котором получаются узлы абзацев из документа WordprocessingML. Также идентифицируется стиль каждого абзаца.  
   
- Этот запрос основан на запросе из предыдущего примера — [Поиск стиля абзаца по умолчанию (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), который получает стиль по умолчанию из списка стилей. Эти сведения требуются для того, чтобы запрос мог идентифицировать стиль абзацев, для которых явно не установлен стиль. Стили абзацев устанавливаются при помощи элемента `w:pPr`. Если абзац не содержит этот элемент, выполняется форматирование стилем по умолчанию.  
+ Этот запрос основан на запросе из предыдущего примера — [Поиск стиля абзаца по умолчанию (C#)](./finding-the-default-paragraph-style.md), который получает стиль по умолчанию из списка стилей. Эти сведения требуются для того, чтобы запрос мог идентифицировать стиль абзацев, для которых явно не установлен стиль. Стили абзацев устанавливаются при помощи элемента `w:pPr`. Если абзац не содержит этот элемент, выполняется форматирование стилем по умолчанию.  
   
  В этом разделе объясняется значение некоторых фрагментов запроса, после чего запрос показывается в составе целостного рабочего примера.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "66483882"
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- Это выражение напоминает источник запроса предыдущего примера — [Поиск стиля абзаца по умолчанию (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). Основная разница в том, что здесь используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A> вместо оси <xref:System.Xml.Linq.XContainer.Elements%2A>. В запросе используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A>, поскольку в документах, в которых имеются разделы, абзацы не будут прямыми потомками элемента текста, а будут находиться на два уровня ниже в иерархии. За счет использования оси <xref:System.Xml.Linq.XContainer.Descendants%2A> этот код будет работать вне зависимости от того, используются разделы или нет.  
+ Это выражение напоминает источник запроса предыдущего примера — [Поиск стиля абзаца по умолчанию (C#)](./finding-the-default-paragraph-style.md). Основная разница в том, что здесь используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A> вместо оси <xref:System.Xml.Linq.XContainer.Elements%2A>. В запросе используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A>, поскольку в документах, в которых имеются разделы, абзацы не будут прямыми потомками элемента текста, а будут находиться на два уровня ниже в иерархии. За счет использования оси <xref:System.Xml.Linq.XContainer.Descendants%2A> этот код будет работать вне зависимости от того, используются разделы или нет.  
   
 ## <a name="example"></a>Пример  
  В этом разделе используется предложение `let`, чтобы определить элемент, содержащий узел стиля. Если элемент не найден, то `styleNode` устанавливается в значение `null`:  
@@ -39,7 +39,7 @@ let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()
 ## <a name="example"></a>Пример  
  В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Новый запрос выявляется в комментариях в нижеприведенном коде.  
   
- Инструкции по созданию исходного документа для данного примера можно найти в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для данного примера можно найти в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -109,7 +109,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1  
@@ -130,8 +130,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Следующие шаги  
- В следующем разделе [Извлечение текста абзацев (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md) вы создадите запрос для извлечение текста абзацев.  
+ В следующем разделе [Извлечение текста абзацев (C#)](./retrieving-the-text-of-the-paragraphs.md) вы создадите запрос для извлечение текста абзацев.  
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

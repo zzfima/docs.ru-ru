@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583075"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596151"
 ---
 # <a name="properties-c-programming-guide"></a>Свойства (Руководство по программированию в C#)
 
@@ -23,12 +23,12 @@ ms.locfileid: "64583075"
   
 - Свойства позволяют классу предоставлять общий способ получения и задания значений, скрывая при этом код реализации или проверки.  
   
-- Метод доступа [get](../../../csharp/language-reference/keywords/get.md) используется для возврата значения свойства, а метод доступа [set](../../../csharp/language-reference/keywords/set.md) — для присвоения нового значения. Эти методы доступа могут иметь различные уровни доступа. Дополнительные сведения см. в разделе [Доступность методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- Метод доступа [get](../../language-reference/keywords/get.md) используется для возврата значения свойства, а метод доступа [set](../../language-reference/keywords/set.md) — для присвоения нового значения. Эти методы доступа могут иметь различные уровни доступа. Дополнительные сведения см. в разделе [Доступность методов доступа](./restricting-accessor-accessibility.md).  
   
-- Ключевое слово [value](../../../csharp/language-reference/keywords/value.md) используется для определения значения, присваиваемого методом доступа `set`.  
+- Ключевое слово [value](../../language-reference/keywords/value.md) используется для определения значения, присваиваемого методом доступа `set`.  
 - Свойства могут быть доступны для *чтения и записи* (они имеют оба метода доступа — `get` и `set`), *только для чтения* (они имеют метод доступа `get`, но не имеют метода доступа `set`) или *только для записи* (они имеют метод доступа `set`, но не имеют метода доступа `get`). Свойства только для записи встречаются редко и чаще всего используются для ограничения доступа к конфиденциальным данным.
 
-- Простые свойства, не требующие пользовательского кода метода доступа, можно реализовать как определения текста выражений или как [автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).
+- Простые свойства, не требующие пользовательского кода метода доступа, можно реализовать как определения текста выражений или как [автоматически реализуемые свойства](./auto-implemented-properties.md).
  
 ## <a name="properties-with-backing-fields"></a>Свойства с резервными полями
 
@@ -60,15 +60,15 @@ ms.locfileid: "64583075"
 
 ## <a name="related-sections"></a>Связанные разделы  
   
-- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Использование свойств](./using-properties.md)  
   
-- [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Свойства интерфейса](./interface-properties.md)  
   
-- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Сравнение свойств и индексаторов](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Ограничение доступности методов доступа](./restricting-accessor-accessibility.md)  
   
-- [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Автоматически реализуемые свойства](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
@@ -76,8 +76,8 @@ ms.locfileid: "64583075"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
-- [Ключевое слово get](../../../csharp/language-reference/keywords/get.md)
-- [Ключевое слово set](../../../csharp/language-reference/keywords/set.md)
+- [Руководство по программированию на C#](../index.md)
+- [Использование свойств](./using-properties.md)
+- [Индексаторы](../indexers/index.md)
+- [Ключевое слово get](../../language-reference/keywords/get.md)
+- [Ключевое слово set](../../language-reference/keywords/set.md)

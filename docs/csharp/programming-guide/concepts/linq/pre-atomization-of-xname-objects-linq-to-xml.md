@@ -2,12 +2,12 @@
 title: Предварительная атомизация объектов XName (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
-ms.openlocfilehash: f67a4da56a2bbcde538f0559ec6ee70a0037de2f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484065"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591497"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>Предварительная атомизация объектов XName (LINQ to XML) (C#)
 Одним из способов повышения производительности в LINQ to XML является предварительная атомизация объектов <xref:System.Xml.Linq.XName>. Предварительная атомизация состоит в том, что необходимо назначить строке объект <xref:System.Xml.Linq.XName>, прежде чем создавать XML-дерево с использованием конструкторов классов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute>. Затем, вместо того чтобы передавать строку в конструктор, где будет выполнено ее неявное преобразование в объект <xref:System.Xml.Linq.XName>, можно передать инициализированный объект <xref:System.Xml.Linq.XName>.  
@@ -119,4 +119,4 @@ Console.WriteLine("Time to construct:{0}", t2 - t1);
   
 ## <a name="see-also"></a>См. также
 
-- [Атомарные объекты XName и XNamespace (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [Атомарные объекты XName и XNamespace (LINQ to XML) (C#)](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)

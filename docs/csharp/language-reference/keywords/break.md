@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 15b193d9f294c01826b6b60587678ad76248e976
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422076"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602250"
 ---
 # <a name="break-c-reference"></a>break (Справочник по C#)
 
-Оператор `break` завершает выполнение ближайшего оператора внешнего цикла или [switch](../../../csharp/language-reference/keywords/switch.md), в котором он находится. Управление передается оператору, который расположен после завершенного оператора.
+Оператор `break` завершает выполнение ближайшего оператора внешнего цикла или [switch](./switch.md), в котором он находится. Управление передается оператору, который расположен после завершенного оператора.
 
 ## <a name="example"></a>Пример
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422076"
 
 ## <a name="example"></a>Пример
 
-В этом примере демонстрируется использование `break` в операторе [switch](../../../csharp/language-reference/keywords/switch.md).
+В этом примере демонстрируется использование `break` в операторе [switch](./switch.md).
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -50,7 +50,7 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [switch](../../../csharp/language-reference/keywords/switch.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](./index.md)
+- [switch](./switch.md)

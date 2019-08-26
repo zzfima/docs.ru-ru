@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170518"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911115"
 ---
 # <a name="in-process-side-by-side-execution"></a>Внутрипроцессное параллельное выполнение
 Начиная с .NET Framework 4, разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  
@@ -45,7 +45,7 @@ ms.locfileid: "67170518"
     |4|Да|Да|Неприменимо|  
   
 > [!NOTE]
->  Версии платформы .NET Framework 3.0 и 3.5 созданы с помощью инкрементального построения на базе версии 2.0 и не требуют параллельного запуска. По сути они представляют собой одну и ту же версию.  
+> Версии платформы .NET Framework 3.0 и 3.5 созданы с помощью инкрементального построения на базе версии 2.0 и не требуют параллельного запуска. По сути они представляют собой одну и ту же версию.  
   
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Общие сценарии параллельного размещения  

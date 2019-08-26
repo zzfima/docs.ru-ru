@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661533"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608369"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Арифметические операторы (справочник по C#)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67661533"
 
 ## <a name="increment-operator-"></a>Оператор инкремента ++
 
-Оператор инкремента `++` увеличивает операнд на 1. Операндом должна быть переменная, [свойство](../../programming-guide/classes-and-structs/properties.md) или [индексатор](../../../csharp/programming-guide/indexers/index.md).
+Оператор инкремента `++` увеличивает операнд на 1. Операндом должна быть переменная, [свойство](../../programming-guide/classes-and-structs/properties.md) или [индексатор](../../programming-guide/indexers/index.md).
 
 Оператор инкремента поддерживается в двух формах: постфиксный оператор инкремента (`x++`) и префиксный оператор инкремента (`++x`).
 
@@ -63,7 +63,7 @@ ms.locfileid: "67661533"
 
 ## <a name="decrement-operator---"></a>Оператор декремента --
 
-Унарный оператор декремента `--` уменьшает операнд на 1. Операндом должна быть переменная, [свойство](../../programming-guide/classes-and-structs/properties.md) или [индексатор](../../../csharp/programming-guide/indexers/index.md).
+Унарный оператор декремента `--` уменьшает операнд на 1. Операндом должна быть переменная, [свойство](../../programming-guide/classes-and-structs/properties.md) или [индексатор](../../programming-guide/indexers/index.md).
 
 Оператор декремента поддерживается в двух формах: постфиксный оператор декремента (`x--`) и префиксный оператор декремента (`--x`).
 

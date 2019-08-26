@@ -2,12 +2,12 @@
 title: Функциональное преобразование XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: b1325644873db29b2c40901ded3eb254b3a31073
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485958"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594306"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Функциональное преобразование XML (C#)
 В этом разделе описан подход с использованием чисто функционального преобразования для изменения XML-документов и производится сравнение его с процедурным подходом.  
@@ -26,14 +26,14 @@ ms.locfileid: "66485958"
 ### <a name="xml-functional-transformational-technologies"></a>Технологии функционального преобразования XML  
  Корпорация Майкрософт предлагает две технологии функционального преобразования, которые можно использовать в XML-документах: XSLT и LINQ to XML. XSLT поддерживается в управляемом пространстве имен <xref:System.Xml.Xsl>, а также в собственной COM реализации MSXML. Не смотря на то что XSLT представляет собой надежную технологию работы с XML-документами, для ее использования требуется опыт в специализированных областях, а именно в области языка XSLT и поддерживающих его API-интерфейсов.  
   
- В LINQ to XML предусмотрены инструменты, необходимые для чисто функциональных преобразований, кодируемых выразительно и эффективно внутри кода на языках C# и Visual Basic. Например, многие примеры в документации LINQ to XML используют чисто функциональный подход. Также в разделе [Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) используется функциональный подход к LINQ to XML для управления сведениями в документе Microsoft Word.  
+ В LINQ to XML предусмотрены инструменты, необходимые для чисто функциональных преобразований, кодируемых выразительно и эффективно внутри кода на языках C# и Visual Basic. Например, многие примеры в документации LINQ to XML используют чисто функциональный подход. Также в разделе [Учебник. Управление содержимым в документе WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) используется функциональный подход к LINQ to XML для управления сведениями в документе Microsoft Word.  
   
- Для более полного сравнения LINQ to XML с другими технологиями Microsoft XML см. раздел [Сравнение LINQ to XML с другими XML-технологиями](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).  
+ Для более полного сравнения LINQ to XML с другими технологиями Microsoft XML см. раздел [Сравнение LINQ to XML с другими XML-технологиями](./linq-to-xml-vs-other-xml-technologies.md).  
   
- XSLT - это рекомендованный инструмент для преобразований, ориентированных на работу с документами, когда исходный документ имеет неправильную структуру. Несмотря на это, LINQ to XML также может осуществлять преобразования, ориентированные на работу с документами. Дополнительные сведения см. в разделе [Практическое руководство. Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+ XSLT - это рекомендованный инструмент для преобразований, ориентированных на работу с документами, когда исходный документ имеет неправильную структуру. Несмотря на это, LINQ to XML также может осуществлять преобразования, ориентированные на работу с документами. Дополнительные сведения см. в разделе [Практическое руководство. Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Сравнение LINQ to XML с другими XML-технологиями](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [Введение в чистые функциональные преобразования (C#)](./introduction-to-pure-functional-transformations.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Сравнение LINQ to XML с другими XML-технологиями](./linq-to-xml-vs-other-xml-technologies.md)

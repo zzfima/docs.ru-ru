@@ -2,19 +2,19 @@
 title: Создание вариантных универсальных интерфейсов (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: ad82ba27a98d27a18d9cff1e65ab929cd9d711a6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673760"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595305"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Создание вариантных универсальных интерфейсов (C#)
 
 Параметры универсального типа можно объявить в интерфейсах как ковариантные или контравариантные. *Ковариация* позволяет методам интерфейса иметь тип возвращаемого значения, степень наследования которого больше, чем указано в параметрах универсального типа. *Контравариантность* позволяет методам интерфейса иметь типы аргументов, степень наследования которых меньше, чем указано в параметре универсального типа. Универсальный интерфейс, который имеет ковариантные или контравариантные параметры универсального типа, называется *вариантным*.
 
 > [!NOTE]
-> В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Список вариантных интерфейсов в .NET Framework см. в разделе [Вариативность в универсальных интерфейсах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Список вариантных интерфейсов в .NET Framework см. в разделе [Вариативность в универсальных интерфейсах (C#)](./variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Объявление вариантных универсальных интерфейсов
 
@@ -37,7 +37,7 @@ ms.locfileid: "57673760"
     }
     ```
 
-    Существует одно исключение из данного правила. Если в качестве параметра метода используется контравариантный универсальный делегат, этот тип можно использовать в качестве параметра универсального типа для этого делегата. Это продемонстрировано ниже на примере типа `R`. Дополнительные сведения см. в разделах [Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) и [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Существует одно исключение из данного правила. Если в качестве параметра метода используется контравариантный универсальный делегат, этот тип можно использовать в качестве параметра универсального типа для этого делегата. Это продемонстрировано ниже на примере типа `R`. Дополнительные сведения см. в разделах [Вариативность в делегатах (C#)](./variance-in-delegates.md) и [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).
 
     ```csharp
     interface ICovariant<out R>
@@ -192,5 +192,5 @@ class Program
 
 ## <a name="see-also"></a>См. также
 
-- [Вариативность в универсальных интерфейсах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Вариативность в универсальных интерфейсах (C#)](./variance-in-generic-interfaces.md)
+- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635280"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589372"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Руководство по программированию на C#. Создание первой программы Hello World
 
@@ -32,7 +32,7 @@ ms.locfileid: "65635280"
 
      Откроется диалоговое окно **Новый проект** .
 
-3. Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#**, а затем выберите **Консольное приложение**.
+3. Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#** , а затем выберите **Консольное приложение**.
 
 4. В текстовом поле **Имя** введите имя проекта и нажмите кнопку **ОК**.
 
@@ -62,7 +62,7 @@ ms.locfileid: "65635280"
 
 Консольное приложение C# должно содержать метод `Main`, в котором начинается и заканчивается управление. В методе `Main` создаются объекты и выполняются другие методы.
 
-Метод `Main` является [статическим](../../../csharp/language-reference/keywords/static.md) методом, расположенным внутри класса или структуры. В предыдущем примере "Hello World!" он размещается в классе с именем `Hello`. Вы можете объявить метод `Main` одним из следующих способов.
+Метод `Main` является [статическим](../../language-reference/keywords/static.md) методом, расположенным внутри класса или структуры. В предыдущем примере "Hello World!" он размещается в классе с именем `Hello`. Вы можете объявить метод `Main` одним из следующих способов.
 
 - Он может возвращать значение `void`.
 
@@ -76,13 +76,13 @@ ms.locfileid: "65635280"
 
      [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-     - или -
+     -или-
 
      [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы. В отличие от C++, массив не содержит имя исполняемого файла (EXE).
 
-Дополнительные сведения об использовании командной строки см. в примерах в описании [Main() и аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и практическом руководстве по [ созданию и использованию сборок с помощью командной строки](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
+Дополнительные сведения об использовании командной строки см. в примерах в описании [Main() и аргументов командной строки](../main-and-command-args/index.md) и практическом руководстве по [ созданию и использованию сборок с помощью командной строки](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
 
 Вызов <xref:System.Console.ReadKey%2A> в конце метода `Main` предотвращает закрытие окна консоли, чтобы вы успели прочитать выходные данные, когда запускаете программу в режиме отладки с помощью клавиши F5.
 
@@ -116,7 +116,7 @@ ms.locfileid: "65635280"
 
     - Включите сборки из командной строки из стандартного окна командной строки.
 
-         См. практическое руководство по [ настройке переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+         См. практическое руководство по [ настройке переменных среды для командной строки Visual Studio](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 3. В окне командной строки перейдите к папке, содержащей файл `Hello.cs`.
 
@@ -130,14 +130,14 @@ ms.locfileid: "65635280"
 
      `Hello`
 
- Дополнительные сведения о компиляторе C# и его параметрах см. в разделе [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md).
+ Дополнительные сведения о компиляторе C# и его параметрах см. в разделе [Параметры компилятора C#](../../language-reference/compiler-options/index.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)
-- [Строки](../../../csharp/programming-guide/strings/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Структура программы C#](./index.md)
+- [Строки](../strings/index.md)
 - [Примеры и руководства](../../../samples-and-tutorials/index.md)
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Справочник по C#](../../language-reference/index.md)
+- [Main() и аргументы командной строки](../main-and-command-args/index.md)
 - [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

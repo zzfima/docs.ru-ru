@@ -2,15 +2,15 @@
 title: Рефакторинг с использованием метода расширения (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487256"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591298"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Рефакторинг с использованием метода расширения (C#)
-Этот пример основан на предыдущем примере, [Извлечение текста абзацев (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), и в нем применяется оптимизация кода объединения строк с помощью чистой функции, которая реализуется в виде метода расширения.  
+Этот пример основан на предыдущем примере, [Извлечение текста абзацев (C#)](./retrieving-the-text-of-the-paragraphs.md), и в нем применяется оптимизация кода объединения строк с помощью чистой функции, которая реализуется в виде метода расширения.  
   
  В предыдущем примере использовался стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A> для объединения нескольких строк в одну. Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.  
   
@@ -19,7 +19,7 @@ ms.locfileid: "66487256"
   
  В примере представлено несколько перегруженных вариантов метода `StringConcatenate`.  
   
- Инструкции по созданию исходного документа для данного примера можно найти в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для данного примера можно найти в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -219,7 +219,7 @@ class Program
 }  
 ```  
   
- Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -248,5 +248,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Рефакторинг в чистые функции (C#)](./refactoring-into-pure-functions.md)

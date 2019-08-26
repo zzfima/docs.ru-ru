@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 16b4e8d2d62c2930411bb61abd4d4b65ab7989fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e81a95102100d3b0f3fdc84cf2113abf6ae35351
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487841"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588124"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -28,14 +28,14 @@ ms.locfileid: "57487841"
  Описание примера кода.  
   
 ## <a name="remarks"></a>Примечания  
- Тег \<example> позволяет указать пример использования метода или другого элемента библиотеки. Вместе с ним часто применяется тег [\<code>](../../../csharp/programming-guide/xmldoc/code.md).  
+ Тег \<example> позволяет указать пример использования метода или другого элемента библиотеки. Вместе с ним часто применяется тег [\<code>](./code.md).  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../language-reference/compiler-options/doc-compiler-option.md).  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Руководство по программированию на C#](../index.md)
+- [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md)

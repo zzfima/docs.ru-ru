@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ff00a60d92ec6abbeb257abec76ed2812867f651
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316028"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588874"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Практическое руководство. Использование пространства имен "My" (руководство по программированию на C#)
 Пространство имен <xref:Microsoft.VisualBasic.MyServices> (`My` в Visual Basic) обеспечивает простой и интуитивно понятный доступ к ряду классов .NET Framework, позволяя создавать код, взаимодействующий с компьютером, приложением, параметрами, ресурсами и т. д. Пространство имен `MyServices` изначально разработано для Visual Basic, однако может применяться и в приложениях C#.  
@@ -41,6 +41,6 @@ ms.locfileid: "59316028"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
-- [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Руководство по программированию на C#](../index.md)
+- [Пространства имен](./index.md)
+- [Использование пространств имен](./using-namespaces.md)

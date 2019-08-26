@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722537"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594413"
 ---
 # <a name="c-features-that-support-linq"></a>Возможности C#, поддерживающие LINQ
 
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Дополнительные сведения см. в разделе [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md).
+Дополнительные сведения см. в разделе [Выражения запросов LINQ](../../linq-query-expressions/index.md).
 
 ## <a name="implicitly-typed-variables-var"></a>Неявно типизированные переменные (var)
 
-Вместо явного задания типа при объявлении и инициализации переменной можно использовать модификатор [var](../../../../csharp/language-reference/keywords/var.md), чтобы сообщить компилятору о необходимости определить и присвоить тип, как показано ниже:
+Вместо явного задания типа при объявлении и инициализации переменной можно использовать модификатор [var](../../../language-reference/keywords/var.md), чтобы сообщить компилятору о необходимости определить и присвоить тип, как показано ниже:
 
 ```csharp
 var number = 5;
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 Переменные, объявленные как `var`, настолько же строго типизированы, как и переменные, тип которых вы задаете явно. Использование `var` делает возможным создание анонимных типов, однако его можно использовать только для локальных переменных. Массивы также могут быть объявлены путем неявной типизации.
 
-Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).
+Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).
 
 ## <a name="object-and-collection-initializers"></a>Инициализаторы объектов и коллекций
 
@@ -68,9 +68,9 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 
 Дополнительные сведения:
 
-- [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Инициализаторы объектов и коллекций](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [Синтаксис выражений запроса для стандартных операторов запроса](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Синтаксис выражений запроса для стандартных операторов запроса](./query-expression-syntax-for-standard-query-operators.md)
 
 ## <a name="anonymous-types"></a>Анонимные типы
 
@@ -80,13 +80,13 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-Дополнительные сведения см. в статье [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
+Дополнительные сведения см. в статье [Анонимные типы](../../classes-and-structs/anonymous-types.md).
 
 ## <a name="extension-methods"></a>Методы расширения
 
 Метод расширения представляет собой статический метод, который может быть связан с типом, чтобы его можно было вызывать, как если бы он являлся методом экземпляра типа. Эта возможность позволяет, по сути, "добавлять" новые методы в существующие типы, фактически не изменяя их. Стандартные операторы запросов представляют собой набор методов расширения, предоставляющих функции запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для любого типа, реализующего интерфейс <xref:System.Collections.Generic.IEnumerable%601>.
 
-Дополнительные сведения см. в разделе [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).
+Дополнительные сведения см. в разделе [Методы расширения](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Лямбда-выражения
 
@@ -94,12 +94,12 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Дополнительные сведения:
 
-- [Анонимные функции](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+- [Анонимные функции](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Лямбда-выражения](../../statements-expressions-operators/lambda-expressions.md)
 
-- [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Expression Trees (C#)](../expression-trees/index.md) (Деревья выражений (C#))
 
 ## <a name="see-also"></a>См. также
 
-- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (C#)](./index.md)

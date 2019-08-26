@@ -5,20 +5,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 8e3534abf961ba7b8a41eed592455962e5b551e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5003e03b488a16d53e4e3d20a0b0b0e09630b46f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979038"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596704"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Практическое руководство. Использование неявно типизированных локальных переменных и массивов в выражении запроса (руководство по программированию на C#)
 Неявно типизированные локальные переменные можно использовать в тех случаях, когда требуется, чтобы компилятор определял тип локальной переменной. Неявно типизированные локальные переменные необходимо использовать для хранения анонимных типов, которые часто используются в выражениях запроса. В следующих примерах демонстрируется обязательное и необязательное использование неявно типизированных локальных переменных в запросах.  
   
- Неявно типизированные локальные переменные объявляются с помощью контекстного ключевого слова [var](../../../csharp/language-reference/keywords/var.md). Дополнительные сведения см. в разделах [Неявно типизированные локальные переменные](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) и [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ Неявно типизированные локальные переменные объявляются с помощью контекстного ключевого слова [var](../../language-reference/keywords/var.md). Дополнительные сведения см. в разделах [Неявно типизированные локальные переменные](./implicitly-typed-local-variables.md) и [Неявно типизированные массивы](../arrays/implicitly-typed-arrays.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показан общий сценарий, в котором использование ключевого слова `var` является обязательным: выражение запроса, создающее последовательность анонимных типов. В этом случае переменная запроса и переменная итерации в операторе `foreach` должны быть неявно типизированы с помощью ключевого слова `var`, поскольку доступ к имени анонимного типа отсутствует. Дополнительные сведения об анонимных типах см. в разделе [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ В следующем примере показан общий сценарий, в котором использование ключевого слова `var` является обязательным: выражение запроса, создающее последовательность анонимных типов. В этом случае переменная запроса и переменная итерации в операторе `foreach` должны быть неявно типизированы с помощью ключевого слова `var`, поскольку доступ к имени анонимного типа отсутствует. Дополнительные сведения об анонимных типах см. в разделе [Анонимные типы](./anonymous-types.md).  
   
  [!code-csharp[csProgGuideLINQ#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#32)]  
   
@@ -29,8 +29,8 @@ ms.locfileid: "56979038"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Методы расширения](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [Встроенный язык запросов LINQ](../../../csharp/linq/index.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Методы расширения](./extension-methods.md)
+- [Встроенный язык запросов LINQ](../../linq/index.md)
+- [var](../../language-reference/keywords/var.md)
+- [Выражения запросов LINQ](../linq-query-expressions/index.md)

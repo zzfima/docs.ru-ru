@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: ba693948bce91fa80f0c6cd73f2d5fc537e5f900
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: dfd2c39eff44b431ec10d85f855fb015a2391f29
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423742"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596238"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Передача параметров типа значения (Руководство по программированию в C#)
-Переменная [типа значения](../../../csharp/language-reference/keywords/value-types.md) напрямую содержит данные, в отличие от переменной [ссылочного типа](../../../csharp/language-reference/keywords/reference-types.md), которая содержит только ссылку на данные. Передавая в метод переменную типа значения, вы передаете ему копию этой переменной. Любые изменения параметра, которые происходят внутри метода, не влияют на исходные данные, хранимые в переменной. Если вы хотите, чтобы вызываемый метод изменял значение аргумента, его необходимо передать по ссылке с помощью ключевых слов [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Можно также использовать ключевое слово [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) для передачи параметра значения по ссылке, чтобы избежать копирования и гарантировать неизменность значения. В следующих примерах мы для простоты используем `ref`.  
+Переменная [типа значения](../../language-reference/keywords/value-types.md) напрямую содержит данные, в отличие от переменной [ссылочного типа](../../language-reference/keywords/reference-types.md), которая содержит только ссылку на данные. Передавая в метод переменную типа значения, вы передаете ему копию этой переменной. Любые изменения параметра, которые происходят внутри метода, не влияют на исходные данные, хранимые в переменной. Если вы хотите, чтобы вызываемый метод изменял значение аргумента, его необходимо передать по ссылке с помощью ключевых слов [ref](../../language-reference/keywords/ref.md) или [out](../../language-reference/keywords/out-parameter-modifier.md). Можно также использовать ключевое слово [in](../../language-reference/keywords/in-parameter-modifier.md) для передачи параметра значения по ссылке, чтобы избежать копирования и гарантировать неизменность значения. В следующих примерах мы для простоты используем `ref`.  
   
 ## <a name="passing-value-types-by-value"></a>Передача переменных типа значения по значению  
  Следующий пример демонстрирует передачу параметров типа значения по значению. Переменная `n` передается по значению в метод `SquareIt`. Любые изменения, выполненные внутри метода, не влияют на исходное значение переменной.  
@@ -28,7 +28,7 @@ ms.locfileid: "67423742"
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   
- В этом примере передается не значение `n`, а ссылка на `n`. Теперь параметр `x` будет не значением типа [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), а ссылкой на `int`. В нашем примере это ссылка на `n`. Таким образом, при передаче `x` в метод передается только информация о том, что `x` ссылается на `n`.  
+ В этом примере передается не значение `n`, а ссылка на `n`. Теперь параметр `x` будет не значением типа [int](../../language-reference/builtin-types/integral-numeric-types.md), а ссылкой на `int`. В нашем примере это ссылка на `n`. Таким образом, при передаче `x` в метод передается только информация о том, что `x` ссылается на `n`.  
   
 ## <a name="swapping-value-types"></a>Изменение типов значений  
  Распространенным примером изменения значений аргументов является метод замены, при котором в метод передаются две переменные, а метод меняет местами их содержимое. Для метода замены аргументы необходимо передавать по ссылке. В противном случае замена затронет лишь локальные копии параметров в этом методе, но в вызывающем методе не произойдет никаких изменений. В следующем примере меняются местами целочисленные значения.  
@@ -41,6 +41,6 @@ ms.locfileid: "67423742"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Передача параметров](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
-- [Передача параметров ссылочного типа](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)
+- [Руководство по программированию на C#](../index.md)
+- [Передача параметров](./passing-parameters.md)
+- [Передача параметров ссылочного типа](./passing-reference-type-parameters.md)

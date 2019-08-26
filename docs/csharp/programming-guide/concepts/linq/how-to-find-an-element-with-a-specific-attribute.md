@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск элементов с определенным атрибутом (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 0362ded5984ff797a1ced93076679b7b975b998c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: da2d1691af6268a97e1f586e92c26bbb26906100
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709957"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593602"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Практическое руководство. Поиск элементов с определенным атрибутом (C#)
 В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.  
@@ -15,7 +15,7 @@ ms.locfileid: "68709957"
 ## <a name="example"></a>Пример  
  В примере показано, как выполнить поиск элемента `Address`, имеющего атрибут `Type` со значением «Billing».  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Операции проекции (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
+- [Операции проекции (C#)](./projection-operations.md)

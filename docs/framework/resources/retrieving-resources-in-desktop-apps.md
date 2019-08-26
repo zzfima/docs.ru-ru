@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650494"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941460"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Извлечение ресурсов в приложениях для настольных систем
 При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  Сведения об извлечении ресурсов в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. на странице [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) в центре разработки для Windows.  
@@ -159,7 +159,7 @@ GetObject.exe
  После создания ресурсов и помещения их в соответствующий каталог создайте объект <xref:System.Resources.ResourceManager> , чтобы использовать ресурсы путем вызова метода <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . Первый параметр указывает корневое имя RESOURCES-файла по умолчанию в приложении (в примере из предыдущего раздела этому соответствует "strings"). Второй параметр указывает расположение ресурсов ("Resources" в предыдущем примере). Третий параметр указывает используемую реализацию <xref:System.Resources.ResourceSet> . Если третий параметр равен `null`, используется среда выполнения по умолчанию <xref:System.Resources.ResourceSet> .  
   
 > [!NOTE]
->  Не развертывайте приложения ASP.NET с использованием автономных файлов RESOURCES. Это может привести к проблемам с блокировкой и нарушениям развертывания XCOPY. Рекомендуется развертывать ресурсы ASP.NET во вспомогательных сборках. Дополнительные сведения см. в разделе [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
+> Не развертывайте приложения ASP.NET с использованием автономных файлов RESOURCES. Это может привести к проблемам с блокировкой и нарушениям развертывания XCOPY. Рекомендуется развертывать ресурсы ASP.NET во вспомогательных сборках. Дополнительные сведения см. в разделе [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  После его создания экземпляра объекта <xref:System.Resources.ResourceManager> используйте методы <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>и <xref:System.Resources.ResourceManager.GetStream%2A> для извлечения ресурсов, как было описано выше. Однако получение ресурсов непосредственно из RESOURCES-файлов отличается от извлечения внедренных ресурсов из сборок. При получении ресурсов из RESOURCES-файлов методы <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>и <xref:System.Resources.ResourceManager.GetStream%28System.String%29> всегда извлекают ресурсы для языка и региональных параметров по умолчанию, независимо от текущего их значения. Чтобы извлечь ресурсы для текущей или конкретной комбинации языка и региональных параметров приложения, необходимо вызвать метод <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>или <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> и указать комбинацию языка и региональных параметров, ресурсы которой требуется получить. Чтобы получить ресурсы для текущего языка и региональных параметров, укажите значение свойства <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> в качестве аргумента `culture` . Если диспетчер ресурсов не может извлечь ресурсы `culture`, для извлечения необходимых ресурсов он использует стандартные правила резервных ресурсов.  
   

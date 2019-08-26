@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -highentropyva compiler option [C#]
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
-ms.openlocfilehash: 2ff63ddc48a4f5c4287fe1badb092a1db93f68dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b710bb829f6a7591159d2f2e6bacc670d21c42d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216682"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606847"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva (параметры компилятора C#)
 Параметр компилятора **-highentropyva** сообщает ядру Windows, поддерживает ли указанный исполняемый файл технологию Address Space Layout Randomization (ASLR) с высокой энтропией.  
@@ -26,7 +26,7 @@ ms.locfileid: "33216682"
   
 ## <a name="arguments"></a>Аргументы  
  `+` &#124; `-`  
- Этот параметр указывает, что 64-битный исполняемый файл или исполняемый файл, отмеченный параметром компилятора [-platform:anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md), поддерживает виртуальное адресное пространство с высокой энтропией. Этот параметр отключен по умолчанию. Чтобы включить его, используйте параметр **-highentropyva+** или **-highentropyva**.  
+ Этот параметр указывает, что 64-битный исполняемый файл или исполняемый файл, отмеченный параметром компилятора [-platform:anycpu](./platform-compiler-option.md), поддерживает виртуальное адресное пространство с высокой энтропией. Этот параметр отключен по умолчанию. Чтобы включить его, используйте параметр **-highentropyva+** или **-highentropyva**.  
   
 ## <a name="remarks"></a>Примечания  
  Параметр **-highentropyva** позволяет совместимым версиям ядра Windows использовать более высокие степени энтропии во время смешивания структуры адресного пространства процесса в рамках ASLR. Использование более высоких степеней энтропии означает, что можно выделить больше адресов таким областям памяти, как стеки и кучи. Из-за этого сложнее подобрать расположение определенной области памяти.  

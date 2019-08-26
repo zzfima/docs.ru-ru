@@ -2,12 +2,12 @@
 title: Практическое руководство. Загрузка XML-кода из файла (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: cd4e45767b2f72de8d9a3de9814da6260d2413fe
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d3e7cdbb0691fafcfcfc684f4495f4785b4ea3e7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485307"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593178"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Практическое руководство. Загрузка XML-кода из файла (C#)
 В этом разделе показана загрузка XML из URI с помощью метода <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -15,7 +15,7 @@ ms.locfileid: "66485307"
 ## <a name="example"></a>Пример  
  В следующем примере показана загрузка XML-документа из файла. В следующем примере загружается файл books.xml и происходит вывод XML-дерева на консоль.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  

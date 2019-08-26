@@ -2,12 +2,12 @@
 title: -target:winmdobj (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe1332f9ed6de9c50c2509e29f22ed7c0e57ade9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319304"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606356"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (параметры компилятора C#)
 Если используется параметр компилятора **-target:winmdobj**, компилятор создает промежуточный WINMDOBJ-файл, который можно преобразовать в двоичный WINMD-файл среды выполнения Windows. Затем WINMD-файл можно использовать в программах на языках JavaScript и C++ в дополнение к программам, использующим управляемые языки.  
@@ -23,9 +23,9 @@ ms.locfileid: "59319304"
   
  Выходные данные файла, скомпилированного с помощью параметра **-target:winmdobj**, предназначены только для использования в качестве входных данных инструментом экспорта WimMDExp (на WINMDOBJ-файл нет прямой ссылки).  
   
- Выходной файл получает имя первого входного файла, если только с помощью параметра [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) не указано иное. Метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md) не требуется.  
+ Выходной файл получает имя первого входного файла, если только с помощью параметра [-out](./out-compiler-option.md) не указано иное. Метод [Main](../../programming-guide/main-and-command-args/index.md) не требуется.  
   
- Если параметр -target:winmdobj указан в командной строке, все файлы до следующего параметра **-out** или [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) будут использоваться для создания программы Windows.  
+ Если параметр -target:winmdobj указан в командной строке, все файлы до следующего параметра **-out** или [-target:module](./target-module-compiler-option.md) будут использоваться для создания программы Windows.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Установка данного параметра компилятора в интегрированной среде разработки Visual Studio для приложения для Магазина Windows  
   
@@ -48,5 +48,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>См. также
 
-- [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (параметры компилятора C#)](./target-compiler-option.md)
+- [Параметры компилятора C# ](./index.md)

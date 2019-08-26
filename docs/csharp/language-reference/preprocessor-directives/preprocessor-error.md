@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 3aa31ce7e189684bd60c238905df3bcbd1818ed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f18dbd007e80397b815256231a1d56e5ca50010e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559347"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608561"
 ---
 # <a name="error-c-reference"></a>#error (справочник по C#)
 `#error` позволяет создать определяемую пользователем ошибку [CS1029](../compiler-messages/cs1029.md) из определенного места в коде. Например:  
@@ -24,7 +24,7 @@ ms.locfileid: "54559347"
 ## <a name="remarks"></a>Примечания  
  Как правило, `#error` применяется в условной директиве.  
   
- Кроме того, с помощью директивы [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md) можно создать определяемое пользователем предупреждение.  
+ Кроме того, с помощью директивы [#warning](./preprocessor-warning.md) можно создать определяемое пользователем предупреждение.  
   
 ## <a name="example"></a>Пример  
   
@@ -45,6 +45,6 @@ class MainClass
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Директивы препроцессора C#](./index.md)

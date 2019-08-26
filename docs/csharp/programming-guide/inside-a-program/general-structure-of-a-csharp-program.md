@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 80f9fd4e86abbdcc316ff22090cc980bbb8245d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb6af4b43e04b231feca2f996eca0f8dc60da6c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595448"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589366"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Общая структура программы на C# (Руководство по программированию на C#)
 Программа на языке C# может состоять из одного или нескольких файлов. Каждый файл может содержать нуль или несколько пространств имен. Пространство имен может содержать типы, такие как классы, структуры, интерфейсы, перечисления и делегаты, а также другие пространства имен. Ниже приведена структура программы на C#, содержащей все эти элементы.  
@@ -20,15 +20,15 @@ ms.locfileid: "64595448"
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Классы](../classes-and-structs/classes.md)  
   
-- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Структуры](../classes-and-structs/structs.md)  
   
-- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)  
+- [Пространства имен](../namespaces/index.md)  
   
-- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)  
+- [Интерфейсы](../interfaces/index.md)  
   
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
+- [Делегаты](../delegates/index.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
@@ -36,6 +36,6 @@ ms.locfileid: "64595448"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)
-- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Структура программы C#](./index.md)
+- [Справочник по C#](../../language-reference/index.md)

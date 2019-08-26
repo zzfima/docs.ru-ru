@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533142"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605914"
 ---
 # <a name="checked-c-reference"></a>checked (Справочник по C#)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54533142"
 
 [!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
 
-Для запрета проверки переполнения можно использовать ключевое слово [unchecked](../../../csharp/language-reference/keywords/unchecked.md).
+Для запрета проверки переполнения можно использовать ключевое слово [unchecked](./unchecked.md).
 
 ## <a name="example"></a>Пример
 
@@ -43,8 +43,8 @@ ms.locfileid: "54533142"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
-- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](./index.md)
+- [Операторы checked и unchecked](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

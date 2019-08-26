@@ -2,12 +2,12 @@
 title: Проецирование XML в другую форму (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 3b992b9eb56f978ce92f3b0210223da978f44e2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484037"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591531"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Проецирование XML в другую форму (C#)
 В этом разделе показан пример проецированного XML, который находится в форме, отличной от исходного XML.  
@@ -17,7 +17,7 @@ ms.locfileid: "66484037"
 ## <a name="example"></a>Пример  
  В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль и текст каждого абзаца. Наконец, в примере проецируется XML с другой формой. Этот пример основан на предыдущих примерах данного учебника. Новая инструкция, которая выполняет проекцию, выявляется в комментариях в нижеприведенном коде.  
   
- Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -233,5 +233,5 @@ class Program
 ## <a name="next-steps"></a>Следующие шаги  
  В следующем примере составлен запрос на выявление всего текста в документе Word:  
   
-- [Поиск текста в документах Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Поиск текста в документах Word (C#)](./finding-text-in-word-documents.md)  
   

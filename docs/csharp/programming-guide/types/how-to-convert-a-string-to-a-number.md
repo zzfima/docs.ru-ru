@@ -8,20 +8,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b2e6fdc6248ca65213ea83942d792f983bd3b3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423532"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588393"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Практическое руководство. Преобразование строки в число (руководство по программированию на C#)
 
-Вы можете преобразовывать [строку](../../../csharp/language-reference/keywords/string.md) в число с помощью вызова метода `Parse` или `TryParse`, который можно найти в различных числовых типах (`int`, `long`, `double` и т. д.), или используя методы в классе <xref:System.Convert?displayProperty=nameWithType>.  
+Вы можете преобразовывать [строку](../../language-reference/keywords/string.md) в число с помощью вызова метода `Parse` или `TryParse`, который можно найти в различных числовых типах (`int`, `long`, `double` и т. д.), или используя методы в классе <xref:System.Convert?displayProperty=nameWithType>.  
   
  Если имеется строка, то немного эффективнее и проще вызвать метод `TryParse` (например, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) или метод `Parse` (например, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  Использование метода <xref:System.Convert> более удобно для общих объектов, реализующих <xref:System.IConvertible>.  
   
- Вы можете использовать методы `Parse` или `TryParse` в числовом типе, который предположительно содержит строка, таком как тип <xref:System.Int32?displayProperty=nameWithType>.  Метод <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> использует <xref:System.Int32.Parse%2A> внутри себя.  Метод `Parse` возвращает преобразованное число; метод `TryParse` возвращает значение <xref:System.Boolean>, которое указывает, успешно ли выполнено преобразование, и возвращает преобразованное число в [параметр`out`](../../../csharp/language-reference/keywords/out.md). Если строка имеет недопустимый формат, `Parse` создает исключение, а `TryParse` возвращает значение [false](../../../csharp/language-reference/keywords/false-literal.md). В случае сбоя операции синтаксического анализа при вызове метода `Parse` вы всегда должны использовать обработку исключений, чтобы перехватить <xref:System.FormatException>.  
+ Вы можете использовать методы `Parse` или `TryParse` в числовом типе, который предположительно содержит строка, таком как тип <xref:System.Int32?displayProperty=nameWithType>.  Метод <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> использует <xref:System.Int32.Parse%2A> внутри себя.  Метод `Parse` возвращает преобразованное число; метод `TryParse` возвращает значение <xref:System.Boolean>, которое указывает, успешно ли выполнено преобразование, и возвращает преобразованное число в [параметр`out`](../../language-reference/keywords/out.md). Если строка имеет недопустимый формат, `Parse` создает исключение, а `TryParse` возвращает значение [false](../../language-reference/keywords/false-literal.md). В случае сбоя операции синтаксического анализа при вызове метода `Parse` вы всегда должны использовать обработку исключений, чтобы перехватить <xref:System.FormatException>.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Вызов методов Parse и TryParse
 
@@ -51,12 +51,12 @@ ms.locfileid: "67423532"
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- В данном примере вызывается метод <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> для преобразования входных данных string в значение типа [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Пример перехватывает два наиболее распространенных исключения, которые могут создаваться этим методом, — <xref:System.FormatException> и <xref:System.OverflowException>. Если итоговое число можно увеличить, не превышая <xref:System.Int32.MaxValue?displayProperty=nameWithType>, пример добавляет 1 к результату и отображает вывод.  
+ В данном примере вызывается метод <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> для преобразования входных данных string в значение типа [int](../../language-reference/builtin-types/integral-numeric-types.md). Пример перехватывает два наиболее распространенных исключения, которые могут создаваться этим методом, — <xref:System.FormatException> и <xref:System.OverflowException>. Если итоговое число можно увеличить, не превышая <xref:System.Int32.MaxValue?displayProperty=nameWithType>, пример добавляет 1 к результату и отображает вывод.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Типы](../../../csharp/programming-guide/types/index.md)
-- [Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Типы](./index.md)
+- [Практическое руководство. Определение представления числового значения в строке](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Служебная программа форматирования .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

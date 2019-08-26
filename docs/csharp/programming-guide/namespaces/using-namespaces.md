@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b27a2fa42fc8e0d9ff0d1524c5d1bc19acbfbdb0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039469"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588851"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен. (Руководство по программированию в C#)
 
@@ -93,8 +93,8 @@ ms.locfileid: "69039469"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
-- [Оператор .](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [Оператор ::](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
-- [Псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md)
+- [Руководство по программированию на C#](../index.md)
+- [Пространства имен](./index.md)
+- [Оператор .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Оператор ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [Псевдоним extern](../../language-reference/keywords/extern-alias.md)

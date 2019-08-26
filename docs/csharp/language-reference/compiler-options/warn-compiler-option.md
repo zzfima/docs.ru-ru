@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315807"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602403"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (параметры компилятора C#)
 Параметр **-warn** задает уровень предупреждений, которые должны отображаться компилятором.  
@@ -41,9 +41,9 @@ ms.locfileid: "59315807"
 |4 (по умолчанию)|Отображает все предупреждения уровня 3, а также информационные предупреждения.|  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы получить сведения об ошибке или предупреждении, выполните поиск по соответствующему коду в указателе справочной системы. Дополнительные сведения о других способах получить информацию об ошибках и предупреждениях см. в разделе [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md).  
+ Чтобы получить сведения об ошибке или предупреждении, выполните поиск по соответствующему коду в указателе справочной системы. Дополнительные сведения о других способах получить информацию об ошибках и предупреждениях см. в разделе [Ошибки компилятора C#](../compiler-messages/index.md).  
   
- Параметр [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) позволяет обрабатывать все предупреждения как ошибки. Параметр [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
+ Параметр [-warnaserror](./warnaserror-compiler-option.md) позволяет обрабатывать все предупреждения как ошибки. Параметр [-nowarn](./nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
   
  **-w** является краткой формой **-warn**.  
   
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

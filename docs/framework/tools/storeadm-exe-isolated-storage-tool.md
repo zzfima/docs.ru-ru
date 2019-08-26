@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929907"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (средство изолированного хранилища)
 Программа изолированного хранилища выводит список или удаляет все существующие хранилища для текущего пользователя.  
@@ -32,7 +32,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|ОПИСАНИЕ|  
 |------------|-----------------|  
 |**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
 |**/list**|Отображает все существующие хранилища для текущего пользователя. В их число включаются хранилища для всех приложений или сборок, выполненных данным пользователем.|  
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - Хранилище компьютера является общим для всех пользователей данного компьютера и располагается в его общем каталоге.  
   
     > [!NOTE]
-    >  Поддержка хранилища компьютера является новой возможностью .NET Framework 2.0.  
+    > Поддержка хранилища компьютера является новой возможностью .NET Framework 2.0.  
   
  Управление программой Storeadm.exe не зависит от того, включен ли режим перемещения для пользователя. При запуске программы без параметров все действия применяются к локальному хранилищу. При запуске программы с параметром **/roaming** все действия будут применяться к перемещаемому хранилищу. При запуске программы с параметром **/machine** все действия применяются к хранилищу компьютера.  
   
 ## <a name="see-also"></a>См. также
 
 - [Инструменты](../../../docs/framework/tools/index.md)
-- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
+- [Изолированное хранилище](../../standard/io/isolated-storage.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

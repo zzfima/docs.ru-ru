@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593058"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606664"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (параметры компилятора C#)
 Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.  
@@ -37,7 +37,7 @@ ms.locfileid: "64593058"
   
 - Существующая сборка предоставила дружественной сборке доступ к сборке, в которую будет встроен .netmodule.  
   
- Дополнительные сведения о сборке NETMODULE см. в разделе [-target:module (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Дополнительные сведения о сборке NETMODULE см. в разделе [-target:module (параметры компилятора C#)](./target-module-compiler-option.md).  
   
  Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend-assemblies.md).  
   
@@ -97,5 +97,5 @@ class A {
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

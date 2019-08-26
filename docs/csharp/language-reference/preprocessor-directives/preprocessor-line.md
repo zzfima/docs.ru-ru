@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: f4e3c3edbe1d542f9bf5c984c403e0486a9da61b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611982"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608536"
 ---
 # <a name="line-c-reference"></a>#line (Справочник по C#)
 
@@ -83,6 +83,6 @@ class MainClass
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Директивы препроцессора C#](./index.md)

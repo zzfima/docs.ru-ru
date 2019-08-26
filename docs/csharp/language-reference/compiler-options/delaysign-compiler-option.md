@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681733"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603022"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (параметры компилятора C#)
 
@@ -29,17 +29,17 @@ ms.locfileid: "54681733"
 
 `+` &#124; `-`
 
-Если требуется полностью подписанная сборка, используйте параметр **-delaysign-**. Если нужно лишь поместить в сборку открытый ключ, используйте параметр **-delaysign+**. Значение по умолчанию — **-delaysign-**.
+Если требуется полностью подписанная сборка, используйте параметр **-delaysign-** . Если нужно лишь поместить в сборку открытый ключ, используйте параметр **-delaysign+** . Значение по умолчанию — **-delaysign-** .
 
 ## <a name="remarks"></a>Примечания
 
-Параметр **-delaysign** никак не действует, если не использовать его с [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) или [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).
+Параметр **-delaysign** никак не действует, если не использовать его с [-keyfile](./keyfile-compiler-option.md) или [-keycontainer](./keycontainer-compiler-option.md).
 
 Параметры **-delaysign** и **-publicsign** — взаимоисключающие.
 
 При запросе полностью подписанной сборки компилятор хэширует файл, содержащий манифест (метаданные сборки), и подписывает хэш закрытым ключом. Эта операция предназначена для создания итоговой цифровой подписи, которая хранится в файле, содержащем манифест. При использовании отложенной подписи компилятор не вычисляет и не сохраняет подпись, а резервирует место в файле для добавления подписи в сборку в будущем.
 
-Например, чтобы поместить сборку в глобальный кэш для тестирования, используйте параметр **-delaysign+**. После тестирования можно полностью подписать сборку, поместив в нее закрытый ключ с помощью [компоновщика сборок](../../../framework/tools/al-exe-assembly-linker.md).
+Например, чтобы поместить сборку в глобальный кэш для тестирования, используйте параметр **-delaysign+** . После тестирования можно полностью подписать сборку, поместив в нее закрытый ключ с помощью [компоновщика сборок](../../../framework/tools/al-exe-assembly-linker.md).
 
 Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).
 

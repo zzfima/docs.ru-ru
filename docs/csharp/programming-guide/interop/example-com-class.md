@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: d4ea445339057bc65c3597d30a46f46d58b6e696
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 461d5a2afb197596c1c52daeeca0583b7b5e9693
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595534"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589138"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Пример COM-класса (Руководство по программированию на C#)
 Далее приведен пример класса, который можно предоставить в качестве COM-объекта. После помещения этого кода в CS-файл и добавления в проект свойства **Регистрация для COM-взаимодействия** необходимо присвоить значение **Истина**. Дополнительные сведения см. в разделе [Практическое руководство. Register a Component for COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)) (Практическое руководство. Регистрация компонента для COM-взаимодействия).
@@ -39,6 +39,6 @@ ms.locfileid: "64595534"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Взаимодействие](../../../csharp/programming-guide/interop/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Взаимодействие](./index.md)
 - [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

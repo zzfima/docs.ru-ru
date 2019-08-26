@@ -2,12 +2,12 @@
 title: Промежуточная материализация (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: d83bbc5e3de992e9ad4d86d0f684e2dfc3a29411
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 273cd68b9714287f259e763c9b7c534aac1931e6
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484532"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592130"
 ---
 # <a name="intermediate-materialization-c"></a>Промежуточная материализация (C#)
 Если не соблюдать осторожность, то в некоторых ситуациях может происходить преждевременная материализация коллекций в запросах, что приводит к радикальному изменению характера использования памяти и снижению производительности приложения. Некоторые стандартные операторы запросов материализуют свою исходную коллекцию еще до получения хотя бы одного элемента. Например, при выполнении оператора <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> вначале происходит итерация по всей исходной коллекции, затем сортировка всех элементов и лишь после этого осуществляется возврат первого элемента. Это означает, что самой дорогостоящей операцией является получение первого элемента упорядоченной коллекции, после чего затраты ресурсов на каждый последующий элемент становятся меньше. Это имеет смысл: сделать иначе оператор запроса не мог бы.  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  Стандартные операторы запроса можно также соединять в виде цепочки. Это показано в последнем разделе учебника.  
   
-- [Связывание стандартных операторов запросов (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+- [Связывание стандартных операторов запросов (C#)](./chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Учебник. Объединение запросов в цепочки (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

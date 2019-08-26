@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566253"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604216"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Встроенные ссылочные типы (справочник по C#)
 
@@ -172,7 +172,7 @@ obj = obj + 3;
 
 - [Справочник по C#](../index.md)
 - [Ключевые слова в C#](../keywords/index.md)
-- [События](../../../csharp/programming-guide/events/index.md)
+- [События](../../programming-guide/events/index.md)
 - [Использование типа dynamic](../../programming-guide/types/using-type-dynamic.md)
 - [Рекомендации по использованию строк](../../../standard/base-types/best-practices-strings.md)
 - [Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)

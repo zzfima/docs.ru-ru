@@ -2,17 +2,17 @@
 title: Общие сведения об осях LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 73587e0637e562ce4a35f9ec92a407928e0ad885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b775a37869f0c8baa7d482475e301347cb77c538
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503082"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591921"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Общие сведения об осях LINQ to XML (C#)
 После создания XML-дерева или загрузки XML-документа в XML-дерево можно опросить его для поиска элементов и атрибутов и извлечения их значений. Коллекции получают с помощью *методов оси*, называемых также *осями*. Некоторые оси являются методами в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument>, которые возвращают коллекции <xref:System.Collections.Generic.IEnumerable%601>. Некоторые оси являются методами расширений в классе <xref:System.Xml.Linq.Extensions>. Оси, которые реализованы как методы расширений, работают с коллекциями и возвращают коллекции.  
   
- Как описано в разделе [Общие сведения о классе XElement](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md), объект <xref:System.Xml.Linq.XElement> представляет собой узел с одним элементом. Содержимое элемента может быть сложным (иногда называется структурированным содержимым), или это может быть простой элемент. Простой элемент может быть пустым или содержать значение. Если узел содержит структурированное содержимое, можно использовать различные методы оси, чтобы получить перечисление элементов-потомков. Наиболее часто используемыми методами оси являются <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Как описано в разделе [Общие сведения о классе XElement](./xelement-class-overview.md), объект <xref:System.Xml.Linq.XElement> представляет собой узел с одним элементом. Содержимое элемента может быть сложным (иногда называется структурированным содержимым), или это может быть простой элемент. Простой элемент может быть пустым или содержать значение. Если узел содержит структурированное содержимое, можно использовать различные методы оси, чтобы получить перечисление элементов-потомков. Наиболее часто используемыми методами оси являются <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  В дополнение к методам оси, которые возвращают коллекции, есть еще два метода, которые обычно используются в запросах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Метод <xref:System.Xml.Linq.XContainer.Element%2A> возвращает одиночный <xref:System.Xml.Linq.XElement>. Метод <xref:System.Xml.Linq.XElement.Attribute%2A> возвращает одиночный <xref:System.Xml.Linq.XAttribute>.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "54503082"
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>Методы получения коллекции элементов  
  Ниже приведена сводка методов класса <xref:System.Xml.Linq.XElement> (а также его базовых классов), которые можно вызвать в экземпляре <xref:System.Xml.Linq.XElement>, чтобы вернуть коллекцию элементов.  
   
-|Метод|Описание|  
+|Метод|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> предков экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> предков экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> потомков экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> потомков экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
@@ -36,24 +36,24 @@ ms.locfileid: "54503082"
 ## <a name="method-for-retrieving-a-single-element"></a>Метод получения одного элемента  
  Следующий метод позволяет получить один дочерний элемент из объекта <xref:System.Xml.Linq.XElement>.  
   
-|Метод|Описание|  
+|Метод|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Возвращает первый дочерний элемент объекта <xref:System.Xml.Linq.XElement>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Метод получения коллекции атрибутов  
  Следующий метод позволяет получить атрибуты из объекта <xref:System.Xml.Linq.XElement>.  
   
-|Метод|Описание|  
+|Метод|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> всех атрибутов <xref:System.Xml.Linq.XAttribute>.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Метод получения одного атрибута  
  Следующий метод позволяет получить один атрибут из объекта <xref:System.Xml.Linq.XElement>.  
   
-|Метод|Описание|  
+|Метод|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Возвращает атрибут <xref:System.Xml.Linq.XAttribute>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Оси LINQ to XML (C#)](./linq-to-xml-axes.md)

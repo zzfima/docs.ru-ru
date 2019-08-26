@@ -10,12 +10,12 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 160938e631d9f9e49d53bbec8806c7a134864701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bb4027f1c479bbaedda889d72712acb587b5713
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637691"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606865"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (параметры компилятора C#)
 Параметр **-fullpaths** указывает компилятору на необходимость задавать полный путь к файлу при выводе списка ошибок и предупреждений компиляции.  
@@ -33,4 +33,4 @@ ms.locfileid: "54637691"
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)

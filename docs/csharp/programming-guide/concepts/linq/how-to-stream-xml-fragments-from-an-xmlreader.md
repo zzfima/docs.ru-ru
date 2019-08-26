@@ -2,12 +2,12 @@
 title: Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 6937a7160c83def3238c8d2fe3e2b83c996396fd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c27c2165af95b8b781564e14efc0668f596e3057
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484905"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592411"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)
 При необходимости обработать большой XML-файл загрузка в память полного XML-дерева, возможно, будет неосуществима. В этом разделе показано, как обрабатывать фрагменты в потоке с помощью <xref:System.Xml.XmlReader>.  
@@ -18,9 +18,9 @@ ms.locfileid: "66484905"
   
  Если нужно создать частичное дерево, можно создать экземпляр <xref:System.Xml.XmlReader>, указать для модуля чтения узел, который должен быть преобразован в дерево <xref:System.Xml.Linq.XElement>, и создать объект <xref:System.Xml.Linq.XElement>.  
   
- В разделе [Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) приводятся сведения и пример потоковой передачи более сложного документа.  
+ В разделе [Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) приводятся сведения и пример потоковой передачи более сложного документа.  
   
- В разделе [Практическое руководство. Выполнение потокового преобразования крупных XML-документов (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) содержится пример использования LINQ to XML для преобразования чрезвычайно больших XML-документов с использованием небольшого объема памяти.  
+ В разделе [Практическое руководство. Выполнение потокового преобразования крупных XML-документов (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) содержится пример использования LINQ to XML для преобразования чрезвычайно больших XML-документов с использованием небольшого объема памяти.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается пользовательский метод оси. Его можно запросить с помощью запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Пользовательский метод оси `StreamRootChildDoc` специально разработан для чтения документа с повторяющимся элементом `Child`.  

@@ -6,30 +6,30 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924543"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Модификаторы доступа (Руководство по программированию в C#)
 Все типы и члены имеют уровень доступности, определяющий возможность их использования из другого кода в вашей или в других сборках. Следующие модификаторы доступа позволяют указать доступность типа или члена при объявлении:  
   
- [public](../../../csharp/language-reference/keywords/public.md)  
+ [public](../../language-reference/keywords/public.md)  
  Доступ к типу или члену возможен из любого другого кода в той же сборке или другой сборке, ссылающейся на него. 
   
- [private](../../../csharp/language-reference/keywords/private.md)  
+ [private](../../language-reference/keywords/private.md)  
  Доступ к типу или члену возможен только из кода в том же классе или структуре.  
   
- [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [protected](../../language-reference/keywords/protected.md)  
  Доступ к типу или члену возможен только из кода в том же классе либо в классе, производном от этого класса.  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [internal](../../language-reference/keywords/internal.md)  
  Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.  
   
- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) Доступ к типу или члену возможен из любого кода в той сборке, где он был объявлен, или из производного класса в другой сборке. 
+ [protected internal](../../language-reference/keywords/protected-internal.md) Доступ к типу или члену возможен из любого кода в той сборке, где он был объявлен, или из производного класса в другой сборке. 
 
- [private protected](../../../csharp/language-reference/keywords/private-protected.md) Доступ к типу или члену возможен только из его объявляющей сборки из кода в том же классе либо в типе, производном от этого класса.
+ [private protected](../../language-reference/keywords/private-protected.md) Доступ к типу или члену возможен только из его объявляющей сборки из кода в том же классе либо в типе, производном от этого класса.
   
  В следующих примерах показано, как изменить модификаторы доступа для типа или члена типа:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67609649"
   
  Тип любого члена, который является полем, свойством или событием, должен иметь, как минимум, такой же уровень доступности, как у самого члена. Точно так же тип возвращаемого значения и типы параметров любого члена, который является методом, индексатором или делегатом, должен иметь, как минимум, такой же уровень доступности, как у самого члена. Например, нельзя иметь открытый метод `M`, возвращающий класс `C`, если `C` не является также открытым. Аналогичным образом нельзя иметь защищенное свойство типа `A`, если `A` объявлен как закрытый.  
   
- Пользовательские операторы всегда должны объявляться как открытые и статические. Для получения дополнительной информации см. раздел [Перегрузка операторов](../../../csharp/language-reference/operators/operator-overloading.md).  
+ Пользовательские операторы всегда должны объявляться как открытые и статические. Для получения дополнительной информации см. раздел [Перегрузка операторов](../../language-reference/operators/operator-overloading.md).  
   
  Методы завершения не могут иметь модификаторы доступа.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "67609649"
  [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
->  Защищенный внутренний уровень доступности означает защищенный ИЛИ внутренний доступ, а не защищенный И внутренний. Другими словами, защищенный внутренний член доступен из любого класса в той же сборке, включая производные классы. Чтобы сделать его доступным только для производных классов в той же сборке, объявите сам класс как внутренний, а его члены как защищенные. Кроме того, начиная с C# 7.2, можно использовать защищенные закрытые модификаторы доступа для достижения такого же результата без необходимости преобразования содержащего класса во внутренний.  
+> Защищенный внутренний уровень доступности означает защищенный ИЛИ внутренний доступ, а не защищенный И внутренний. Другими словами, защищенный внутренний член доступен из любого класса в той же сборке, включая производные классы. Чтобы сделать его доступным только для производных классов в той же сборке, объявите сам класс как внутренний, а его члены как защищенные. Кроме того, начиная с C# 7.2, можно использовать защищенные закрытые модификаторы доступа для достижения такого же результата без необходимости преобразования содержащего класса во внутренний.  
   
 ## <a name="other-types"></a>Другие типы  
  Интерфейсы, объявляемые непосредственно в пространстве имен, могут быть объявлены как открытые или внутренние. Равно как и в случае с классами и структурами, для интерфейсов по умолчанию задается внутренний доступ. Члены интерфейса всегда открыты, поскольку интерфейс как раз и создан для того, чтобы обеспечить доступ к классу или структуре для других типов. Модификаторы доступа к членам интерфейса не применяются.  
@@ -76,15 +76,15 @@ ms.locfileid: "67609649"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [protected internal](../../../csharp/language-reference/keywords/protected-internal.md)
-- [private protected](../../../csharp/language-reference/keywords/private-protected.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [interface](../../../csharp/language-reference/keywords/interface.md)
+- [Руководство по программированию на C#](../index.md)
+- [Классы и структуры](./index.md)
+- [Интерфейсы](../interfaces/index.md)
+- [private](../../language-reference/keywords/private.md)
+- [public](../../language-reference/keywords/public.md)
+- [internal](../../language-reference/keywords/internal.md)
+- [protected](../../language-reference/keywords/protected.md)
+- [protected internal](../../language-reference/keywords/protected-internal.md)
+- [private protected](../../language-reference/keywords/private-protected.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [interface](../../language-reference/keywords/interface.md)

@@ -2,12 +2,12 @@
 title: Вариативность в универсальных интерфейсах (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 9cbbea35003e86e05d618f5e6000ba2788359cb0
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 12a8b58983256be0ca2b56ea6ed09e724e0814c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539496"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595157"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Вариативность в универсальных интерфейсах (C#)
 
@@ -76,7 +76,7 @@ class Program
 }
 ```
 
-Дополнительные примеры см.в разделе [Использование вариативности в интерфейсах для универсальных коллекций (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).
+Дополнительные примеры см.в разделе [Использование вариативности в интерфейсах для универсальных коллекций (C#)](./using-variance-in-interfaces-for-generic-collections.md).
 
 Вариативность в универсальных интерфейсах поддерживается только для ссылочных типов. Типы значений не поддерживают вариативность. Например, `IEnumerable<int>` нельзя неявно преобразовать в `IEnumerable<object>`, так как типом значения является integer.
 
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>См. также
 
-- [Использование вариативности в интерфейсах для универсальных коллекций (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [Создание вариантных универсальных интерфейсов (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [Использование вариативности в интерфейсах для универсальных коллекций (C#)](./using-variance-in-interfaces-for-generic-collections.md)
+- [Создание вариантных универсальных интерфейсов (C#)](./creating-variant-generic-interfaces.md)
 - [Универсальные интерфейсы](../../../../standard/generics/interfaces.md)
-- [Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Вариативность в делегатах (C#)](./variance-in-delegates.md)

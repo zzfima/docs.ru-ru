@@ -2,12 +2,12 @@
 title: Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584389"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593051"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
 
@@ -18,7 +18,7 @@ ms.locfileid: "65584389"
 
 ## <a name="to-create-the-data-file"></a>Создание файла данных
 
-Скопируйте файлы names.csv и scores.csv в папку проекта, как описано в разделе [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Скопируйте файлы names.csv и scores.csv в папку проекта, как описано в разделе [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Пример
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-В предложении [select](../../../../csharp/language-reference/keywords/select-clause.md) инициализатор объектов используется для создания каждого нового объекта `Student` на основе данных из двух источников.
+В предложении [select](../../../language-reference/keywords/select-clause.md) инициализатор объектов используется для создания каждого нового объекта `Student` на основе данных из двух источников.
 
 Если не требуется хранить результаты запроса, анонимные типы могут быть более удобными, чем именованные типы. Именованные типы необходимы, если результаты запроса передаются за пределы метода, в котором выполняется запрос. Следующий пример кода выполняет ту же задачу, что и в предыдущем примере, но использует анонимные типы вместо именованных типов:
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>См. также
 
-- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ и строки (C#)](./linq-and-strings.md)
+- [Инициализаторы объектов и коллекций](../../classes-and-structs/object-and-collection-initializers.md)
+- [Анонимные типы](../../classes-and-structs/anonymous-types.md)

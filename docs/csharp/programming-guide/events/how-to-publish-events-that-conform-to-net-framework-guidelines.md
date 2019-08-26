@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347601"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924024"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Публикация событий, соответствующих рекомендациям .NET Framework
 Следующая процедура показывает, как добавлять события, которые соответствуют стандартному шаблону .NET Framework для классов и структур. Все события в библиотеке классов .NET Framework основаны на делегате <xref:System.EventHandler>, который определен следующим образом:  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  В .NET Framework 2.0 представлена универсальная версия этого делегата, <xref:System.EventHandler%601>. В следующих примерах демонстрируется использование обеих версий.  
+> В .NET Framework 2.0 представлена универсальная версия этого делегата, <xref:System.EventHandler%601>. В следующих примерах демонстрируется использование обеих версий.  
   
  Хотя события в определяемых классах могут быть основаны на действительном типе делегата, даже на делегатах, возвращающих значение, обычно рекомендуется основывать события на шаблоне .NET Framework с помощью <xref:System.EventHandler>, как показано в следующем примере.  
   
@@ -77,6 +77,6 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Delegate>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [События](../../../csharp/programming-guide/events/index.md)
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [События](./index.md)
+- [Делегаты](../delegates/index.md)

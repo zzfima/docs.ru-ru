@@ -2,12 +2,12 @@
 title: Преобразование типов данных (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 918a9fbfc523e62c7b4a5d915c28c00ea781d3e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597724"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594618"
 ---
 # <a name="converting-data-types-c"></a>Преобразование типов данных (C#)
 Методы преобразования изменяют тип входных объектов.  
@@ -25,7 +25,7 @@ ms.locfileid: "64597724"
   
  Методы преобразования в этой таблице, имена которых начинаются с "As", изменяют статический тип исходной коллекции, но не выполняют перечисление. Методы, имена которых начинаются с "To", перечисляют исходную коллекцию и помещают элементы в соответствующий тип коллекции.  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|ОПИСАНИЕ|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|Возвращает входное значение, типизированное как <xref:System.Collections.Generic.IEnumerable%601>.|Неприменимо.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|Преобразует <xref:System.Collections.IEnumerable> (универсальный шаблон) в <xref:System.Linq.IQueryable> (универсальный шаблон).|Неприменимо.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
@@ -77,7 +77,7 @@ static void Cast()
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Linq>
-- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [предложение from](../../../../csharp/language-reference/keywords/from-clause.md)
-- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
+- [предложение from](../../../language-reference/keywords/from-clause.md)
+- [Выражения запросов LINQ](../../linq-query-expressions/index.md)
+- [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)

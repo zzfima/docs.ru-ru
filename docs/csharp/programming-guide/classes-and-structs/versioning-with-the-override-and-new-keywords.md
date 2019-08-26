@@ -6,21 +6,21 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398076"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596006"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Практическое руководство. Управление версиями с помощью ключевых слов "Override" и "New" (Руководство по программированию в C#)
-Язык C# построен таким образом, что управление версиями [базовых](../../../csharp/language-reference/keywords/base.md) и производных классов в различных библиотеках может включать сохранение и расширение обратной совместимости. Это означает, например, то, что C# полностью поддерживает введение в базовый [класс](../../../csharp/language-reference/keywords/class.md) нового члена с таким же именем, как у члена производного класса, и никакое непредвиденное поведение при этом не возникает. Кроме того, это значит, что класс должен прямо указывать, в каких случаях метод будет перезаписывать унаследованный метод, а в каких он будет становиться новым методом, скрывающим одноименный унаследованный метод.  
+Язык C# построен таким образом, что управление версиями [базовых](../../language-reference/keywords/base.md) и производных классов в различных библиотеках может включать сохранение и расширение обратной совместимости. Это означает, например, то, что C# полностью поддерживает введение в базовый [класс](../../language-reference/keywords/class.md) нового члена с таким же именем, как у члена производного класса, и никакое непредвиденное поведение при этом не возникает. Кроме того, это значит, что класс должен прямо указывать, в каких случаях метод будет перезаписывать унаследованный метод, а в каких он будет становиться новым методом, скрывающим одноименный унаследованный метод.  
   
  В C# производные классы могут содержать методы с такими же именами, как у методов базового класса.  
   
-- Метод базового класса должен быть определен как [виртуальный](../../../csharp/language-reference/keywords/virtual.md).  
+- Метод базового класса должен быть определен как [виртуальный](../../language-reference/keywords/virtual.md).  
   
-- Если методу в производном классе не предшествуют ключевые слова [new](../../../csharp/language-reference/keywords/new-modifier.md) или [override](../../../csharp/language-reference/keywords/override.md), компилятор выдаст предупреждение, а метод будет вести себя так, как если бы имелось ключевое слово `new`.  
+- Если методу в производном классе не предшествуют ключевые слова [new](../../language-reference/keywords/new-modifier.md) или [override](../../language-reference/keywords/override.md), компилятор выдаст предупреждение, а метод будет вести себя так, как если бы имелось ключевое слово `new`.  
   
 - Если методу в производном классе предшествует ключевое слово `new`, он определяется как независимый от метода в базовом классе.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "67398076"
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- Дополнительные примеры `new` и `override` см. в разделе [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Дополнительные примеры `new` и `override` см. в разделе [Использование ключевых слов Override и New](./knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Руководство по программированию на C#](../index.md)
+- [Классы и структуры](./index.md)
+- [Методы](./methods.md)
+- [Наследование](./inheritance.md)

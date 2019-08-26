@@ -2,12 +2,12 @@
 title: Практическое руководство. Чтение данных объекта из XML-файла (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595234"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590736"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Практическое руководство. Чтение данных объекта из XML-файла (C#)
 В этом примере демонстрируется считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Замените имя файла "c:\temp\SerializationOverview.xml" на имя файла, в котором содержатся сериализованные данные. Дополнительные сведения о сериализации данных см. в разделе [Практическое руководство. Запись данных объекта в XML-файл (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Замените имя файла "c:\temp\SerializationOverview.xml" на имя файла, в котором содержатся сериализованные данные. Дополнительные сведения о сериализации данных см. в разделе [Практическое руководство. Запись данных объекта в XML-файл (C#)](./how-to-write-object-data-to-an-xml-file.md).  
   
  У класса должен быть открытый конструктор без параметров.  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>См. также
 
 - <xref:System.IO.StreamWriter>
-- [Практическое руководство. Запись данных объекта в XML-файл (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+- [Практическое руководство. Запись данных объекта в XML-файл (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Сериализация (C#)](./index.md)
+- [Руководство по программированию на C#](../../index.md)

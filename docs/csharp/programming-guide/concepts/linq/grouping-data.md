@@ -2,12 +2,12 @@
 title: Группирование данных (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753916"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594200"
 ---
 # <a name="grouping-data-c"></a>Группирование данных (C#)
 Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
@@ -20,9 +20,9 @@ ms.locfileid: "64753916"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|Имя метода|ОПИСАНИЕ|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> - или -<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> -или-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Неприменимо.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса  
@@ -62,10 +62,10 @@ foreach (var group in query)
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Linq>
-- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [предложение group](../../../../csharp/language-reference/keywords/group-clause.md)
-- [Практическое руководство. Создание вложенной группы](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
-- [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Практическое руководство. Группировка результатов запросов](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
-- [Практическое руководство. Вложенный запрос в операции группирования](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
+- [предложение group](../../../language-reference/keywords/group-clause.md)
+- [Практическое руководство. Создание вложенной группы](../../linq-query-expressions/how-to-create-a-nested-group.md)
+- [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Практическое руководство. Группировка результатов запросов](../../linq-query-expressions/how-to-group-query-results.md)
+- [Практическое руководство. Вложенный запрос в операции группирования](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

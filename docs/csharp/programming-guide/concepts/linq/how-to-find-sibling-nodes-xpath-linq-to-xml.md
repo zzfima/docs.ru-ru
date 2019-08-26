@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c64806c4505b507a9058a03d5cb882412f6868da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485391"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593412"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
 Допустим, что требуется найти все одноуровневые элементы с указанным именем. Полученная в результате коллекция может содержать контекстный узел, если этот контекстный узел также имеет указанное имя.  
@@ -19,7 +19,7 @@ ms.locfileid: "66485391"
 ## <a name="example"></a>Пример  
  В этом примере вначале осуществляется поиск элемента `Book`, а затем всех одноуровневых элементов с именем `Book`. Полученная в результате коллекция содержит контекстный узел.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

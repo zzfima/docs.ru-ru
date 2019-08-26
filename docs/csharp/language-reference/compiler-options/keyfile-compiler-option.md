@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: eef843c87b8f1993c3419b261894a6df31096294
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344654"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606887"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (параметры компилятора C#)
 Задает имя файла, содержащего криптографический ключ.  
@@ -33,9 +33,9 @@ ms.locfileid: "59344654"
 ## <a name="remarks"></a>Примечания  
  При использовании этого параметра компилятор вставляет открытый ключ из указанного файла в манифест сборки и затем подписывает окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите в командной строке sn -k `file`.  
   
- При компиляции с параметром **-target:module** имя файла ключа сохраняется в модуле и включается в сборку, создаваемую при компиляции с параметром [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ При компиляции с параметром **-target:module** имя файла ключа сохраняется в модуле и включается в сборку, создаваемую при компиляции с параметром [-addmodule](./addmodule-compiler-option.md).  
   
- Также можно передать сведения о шифровании компилятору с помощью параметра [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Если требуется использовать частично подписанную сборку, применяйте параметр [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md).  
+ Также можно передать сведения о шифровании компилятору с помощью параметра [-keycontainer](./keycontainer-compiler-option.md). Если требуется использовать частично подписанную сборку, применяйте параметр [-delaysign](./delaysign-compiler-option.md).  
   
  Если для одной процедуры компиляции одновременно заданы параметры -keyfile и -keycontainer (в командной строке или с помощью пользовательских атрибутов), то сначала будет предпринята попытка использовать контейнер ключей. В случае успеха сборка подписывается данными контейнера ключей. Если компилятору не удалось обнаружить контейнер ключей, будет предпринята попытка использовать файл, заданный параметром -keyfile. В случае успеха сборка подписывается данными из файла ключей, и эти данные о ключах будут помещены в контейнер ключей (аналогично команде sn -i); таким образом, при следующей компиляции контейнер ключей будет действителен.  
   
@@ -55,5 +55,5 @@ ms.locfileid: "59344654"
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

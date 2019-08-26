@@ -2,12 +2,12 @@
 title: Модель асинхронного программирования задач (TAP) с использованием ключевых слов async и await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: dcb5148e7f91d07bc038e5304ab65f5f3c59b216
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347689"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595600"
 ---
 # <a name="task-asynchronous-programming-model"></a>Асинхронная модель программирования
 
@@ -38,7 +38,7 @@ ms.locfileid: "67347689"
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Методы Async проще создавать
 
-В C# основой асинхронного программирования. являются ключевые слова [async](../../../../csharp/language-reference/keywords/async.md) и [await](../../../../csharp/language-reference/keywords/await.md). Они позволяют использовать ресурсы платформы .NET Framework, .NET Core или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Асинхронные методы, которые определяются с помощью ключевого слова `async`, называются *методами async*.
+В C# основой асинхронного программирования. являются ключевые слова [async](../../../language-reference/keywords/async.md) и [await](../../../language-reference/keywords/await.md). Они позволяют использовать ресурсы платформы .NET Framework, .NET Core или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Асинхронные методы, которые определяются с помощью ключевого слова `async`, называются *методами async*.
 
 Ниже приводится пример асинхронного метода. Почти все элементы кода должны быть вам знакомы.
 
@@ -136,7 +136,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. Если `AccessTheWebAsync` содержит строковый результат, метод может вычислить длину строки. Затем работа `AccessTheWebAsync` также завершена, и ожидающий обработчик событий может возобновить работу. В полном примере в конце этого раздела видно, что обработчик событий извлекает значение длины и выводит результат.
 Если вы недавно занимаетесь асинхронным программированием, рекомендуем обратить внимание на различия между синхронным и асинхронным поведением. Синхронный метод возвращает управление, когда его работа завершается (шаг 5), тогда как асинхронный метод возвращает значение задачи, когда его работа приостанавливается (шаги 3 и 6). Когда асинхронный метод в конечном счете завершает работу, задача помечается как завершенная и результат, при его наличии, сохраняется в задаче.
 
-Дополнительные сведения о потоке управления см. в статье [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах на C#).
+Дополнительные сведения о потоке управления см. в статье [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Поток управления в асинхронных программах на C#).
 
 ## <a name="BKMK_APIAsyncMethods"></a> Async-методы API-интерфейсов
 
@@ -154,9 +154,9 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 ## <a name="BKMK_AsyncandAwait"></a> Async и Await
 
-Если с помощью модификатора [async](../../../../csharp/language-reference/keywords/async.md) указать, что метод является асинхронным, у вас появятся следующие две возможности.
+Если с помощью модификатора [async](../../../language-reference/keywords/async.md) указать, что метод является асинхронным, у вас появятся следующие две возможности.
 
-- Асинхронный метод сможет использовать [await](../../../../csharp/language-reference/keywords/await.md) для обозначения точек приостановки. Оператор `await` сообщает компилятору, что асинхронный метод не может выполняться после этой точки до завершения ожидаемого асинхронного процесса. На это время управление возвращается вызывающему объекту асинхронного метода.
+- Асинхронный метод сможет использовать [await](../../../language-reference/keywords/await.md) для обозначения точек приостановки. Оператор `await` сообщает компилятору, что асинхронный метод не может выполняться после этой точки до завершения ожидаемого асинхронного процесса. На это время управление возвращается вызывающему объекту асинхронного метода.
 
      Приостановка асинхронного метода на выражении `await` не считается выходом из метода и блоки `finally` не выполняются.
 
@@ -166,15 +166,15 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 `async` и `await` являются контекстными ключевыми словами. Дополнительные сведения и примеры см. в следующих разделах:
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
+- [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../../csharp/language-reference/keywords/await.md)
+- [await](../../../language-reference/keywords/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Типы и параметры возвращаемого значения
 
 В результате работы асинхронного метода обычно возвращается <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Внутри асинхронного метода оператор `await` применяется к задаче, возвращаемой из вызова другого асинхронного метода.
 
-В качестве возвращаемого типа указывается <xref:System.Threading.Tasks.Task%601>, если метод содержит оператор [`return`](../../../../csharp/language-reference/keywords/return.md), который задает операнд типа `TResult`.
+В качестве возвращаемого типа указывается <xref:System.Threading.Tasks.Task%601>, если метод содержит оператор [`return`](../../../language-reference/keywords/return.md), который задает операнд типа `TResult`.
 
 Используйте <xref:System.Threading.Tasks.Task> в качестве возвращаемого типа, если метод не содержит операторов return или содержит оператор return, который не возвращает операнд.
 
@@ -218,9 +218,9 @@ await GetTaskAsync();
 
 Асинхронный метод, который имеет тип возвращаемого значения `void`, невозможно ожидать методом await. Вызывающий объект не может перехватывать исключения, которые выдает такой метод.
 
-Асинхронный метод не может объявлять параметры [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) или [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md), но может вызывать методы с этими параметрами. Аналогичным образом, асинхронный метод не может возвращать значение по ссылке, несмотря на то, что он может вызывать методы с возвращаемыми значениями ref.
+Асинхронный метод не может объявлять параметры [in](../../../language-reference/keywords/in-parameter-modifier.md), [ref](../../../language-reference/keywords/ref.md) или [out](../../../language-reference/keywords/out-parameter-modifier.md), но может вызывать методы с этими параметрами. Аналогичным образом, асинхронный метод не может возвращать значение по ссылке, несмотря на то, что он может вызывать методы с возвращаемыми значениями ref.
 
-Дополнительные сведения и примеры см. в статье [о типах возвращаемых значений асинхронных операций](../../../../csharp/programming-guide/concepts/async/async-return-types.md). Дополнительные сведения о перехвате исключений в асинхронных методах см. в описании механизма [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).
+Дополнительные сведения и примеры см. в статье [о типах возвращаемых значений асинхронных операций](./async-return-types.md). Дополнительные сведения о перехвате исключений в асинхронных методах см. в описании механизма [try-catch](../../../language-reference/keywords/try-catch.md).
 
 При программировании в среде выполнения Windows асинхронные API-интерфейсы имеют один из следующих возвращаемых типов, которые похожи на задачи.
 
@@ -242,16 +242,16 @@ await GetTaskAsync();
 
 |Заголовок|Описание|Пример|
 |-----------|-----------------|------------|
-|[Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await в C#](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Иллюстрирует преобразование синхронного решения WPF в асинхронное. Приложение загружает ряд веб-сайтов.|[Пример использования Async. Пошаговое руководство по обращению к веб-сайтам](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
-|[Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll в C#](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Добавляет <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> к предыдущему пошаговому руководству. Использование `WhenAll` запускает все загрузки одновременно.||
-|[Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await в C#](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Иллюстрирует, как запустить несколько задач одновременно.|[Пример использования Async. Параллельное выполнение нескольких веб-запросов](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
-|[Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)|Иллюстрирует типы, которые могут возвращать асинхронные методы, и поясняет, когда следует использовать каждый из этих типов.||
-|[Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)|Выполняет подробную трассировку потока управления через последовательность выражений ожидания в асинхронной программе.|[Пример использования Async. Поток управления в асинхронных программах](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
-|[Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)|Иллюстрирует добавление следующих функциональных возможностей в асинхронное решение:<br /><br /> - [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Отмена асинхронной задачи или списка задач в C#)<br />- [Cancel Async Tasks after a Period of Time (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md) (Отмена асинхронных задач после определенного периода времени в C#)<br />- [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) (Отмена оставшихся асинхронных задач после завершения одной из них в C#)<br />- [Start Multiple Async Tasks and Process Them As They Complete (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md) (Запуск нескольких асинхронных задач и их обработка по мере завершения в C#)|[Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
-|[Handling Reentrancy in Async Apps (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md) (Обработка повторного входа в асинхронных приложениях C#)|Иллюстрирует обработку случаев, в которых активная асинхронная операция перезапускается при выполнении.||
+|[Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await в C#](./walkthrough-accessing-the-web-by-using-async-and-await.md)|Иллюстрирует преобразование синхронного решения WPF в асинхронное. Приложение загружает ряд веб-сайтов.|[Пример использования Async. Пошаговое руководство по обращению к веб-сайтам](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
+|[Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll в C#](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Добавляет <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> к предыдущему пошаговому руководству. Использование `WhenAll` запускает все загрузки одновременно.||
+|[Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await в C#](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Иллюстрирует, как запустить несколько задач одновременно.|[Пример использования Async. Параллельное выполнение нескольких веб-запросов](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
+|[Async Return Types (C#)](./async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)|Иллюстрирует типы, которые могут возвращать асинхронные методы, и поясняет, когда следует использовать каждый из этих типов.||
+|[Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)|Выполняет подробную трассировку потока управления через последовательность выражений ожидания в асинхронной программе.|[Пример использования Async. Поток управления в асинхронных программах](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
+|[Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)|Иллюстрирует добавление следующих функциональных возможностей в асинхронное решение:<br /><br /> - [Cancel an Async Task or a List of Tasks (C#)](./cancel-an-async-task-or-a-list-of-tasks.md) (Отмена асинхронной задачи или списка задач в C#)<br />- [Cancel Async Tasks after a Period of Time (C#)](./cancel-async-tasks-after-a-period-of-time.md) (Отмена асинхронных задач после определенного периода времени в C#)<br />- [Cancel Remaining Async Tasks after One Is Complete (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) (Отмена оставшихся асинхронных задач после завершения одной из них в C#)<br />- [Start Multiple Async Tasks and Process Them As They Complete (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md) (Запуск нескольких асинхронных задач и их обработка по мере завершения в C#)|[Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
+|[Handling Reentrancy in Async Apps (C#)](./handling-reentrancy-in-async-apps.md) (Обработка повторного входа в асинхронных приложениях C#)|Иллюстрирует обработку случаев, в которых активная асинхронная операция перезапускается при выполнении.||
 |[WhenAny. Связывание .NET Framework и среды выполнения Windows в C# и Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Иллюстрирует, как создать мост между типами задач на платформе .NET Framework и IAsyncOperations в среде выполнения Windows, чтобы можно было использовать <xref:System.Threading.Tasks.Task.WhenAny%2A> с методом среды выполнения Windows.|[Пример использования Async. Связывание .NET и среды выполнения Windows с помощью AsTask и WhenAny](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739)|
 |Отмена Async. Связывание .NET Framework и среды выполнения Windows|Иллюстрирует, как создать мост между типами задач на платформе .NET Framework и IAsyncOperations в среде выполнения Windows, чтобы можно было использовать <xref:System.Threading.CancellationTokenSource> с методом среды выполнения Windows.|[Пример использования Async. Связывание .NET и среды выполнения Windows с помощью AsTask и Cancellation](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
-|[Using Async for File Access (C#)](../../../../csharp/programming-guide/concepts/async/using-async-for-file-access.md) (Использование метода async для доступа к файлам в C#)|Иллюстрирует преимущества использования асинхронности и ожидания для доступа к файлам.||
+|[Using Async for File Access (C#)](./using-async-for-file-access.md) (Использование метода async для доступа к файлам в C#)|Иллюстрирует преимущества использования асинхронности и ожидания для доступа к файлам.||
 |[Task-based Asynchronous Pattern (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))|Описывает новый шаблон для асинхронности в платформе .NET Framework. Шаблон основан на типах <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.||
 |[Видеоролики об async на канале Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Предоставляет ссылки на различные видеоролики об асинхронном программировании.||
 
@@ -342,7 +342,7 @@ namespace AsyncFirstExample
 
 ## <a name="see-also"></a>См. также
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
-- [Асинхронное программирование](../../../../csharp/async.md)
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/keywords/await.md)
+- [Асинхронное программирование](../../../async.md)
 - [Общие сведения об асинхронной модели](../../../../standard/async.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Проецирование нового типа (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 2bb521d1445dcecdad8b9c7b28bed90e1e38c8e8
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012927"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593046"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Практическое руководство. Проецирование нового типа (LINQ to XML) (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "69012927"
 
 В данном примере показано, как создавать экземпляры объектов в предложении `select`. Сначала в коде определяется новый класс с помощью конструктора, а затем модифицируется инструкция `select`, чтобы это выражение представляло новый экземпляр нового класса.
 
-В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
+В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
 
 ```csharp
 class NameQty 

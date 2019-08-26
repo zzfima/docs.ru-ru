@@ -2,15 +2,15 @@
 title: Связывание стандартных операторов запросов (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 89cf7f526bdc60881e901d7ca8f556e97488b220
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487617"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594841"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Связывание стандартных операторов запросов (C#)
-Это заключительная тема в разделе [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+Это заключительная тема в разделе [Учебник. Объединение запросов в цепочки (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Стандартные операторы запросов также можно объединять в цепочки. Например, можно вставить оператор <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>, который также будет действовать как отложенный. Этот оператор не материализует промежуточные результаты.  
   

@@ -2,15 +2,15 @@
 title: Извлечение текста абзацев (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: d1f526374c56a5195438be72748ba15d0ab6741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88a7e82a7d27048ce3f901e6e9d50b8737797adb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595715"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591085"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Извлечение текста абзацев (C#)
-Этот пример основан на предыдущем примере [Извлечение абзацев и стилей (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  
+Этот пример основан на предыдущем примере [Извлечение абзацев и стилей (C#)](./retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  
   
  Чтобы получить текст, в этом примере добавляется дополнительный запрос, который последовательно проходит по коллекции анонимных типов и проецирует новую коллекцию анонимного типа с добавлением нового члена, `Text`. Он использует стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну.  
   
@@ -18,12 +18,12 @@ ms.locfileid: "64595715"
   
  Конечно, было бы возможным создать единичный запрос, который содержит функциональные возможности получать абзацы, стиль и текст каждого абзаца. Однако часто полезно разбить более сложный запрос на несколько запросов, поскольку при этом результирующий код выглядит более модульным и легким для поддержки. Более того, если потребуется повторно использовать часть запроса, будет легче выполнить оптимизацию кода.  
   
- Эти связанные в цепочку запросы используют модель обработки, подробно рассматриваемую в разделе [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
+ Эти связанные в цепочку запросы используют модель обработки, подробно рассматриваемую в разделе [Учебник. Объединение запросов в цепочки (C#)](./tutorial-chaining-queries-together.md).  
   
 ## <a name="example"></a>Пример  
  В этом примере выполняется обработка документа WordprocessingML, определение узла элемента, имени стиля и текста каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Новый запрос выявляется в комментариях в нижеприведенном коде.  
   
- Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -117,7 +117,7 @@ foreach (var p in paraWithText)
     Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text);  
 ```  
   
- Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -140,9 +140,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Следующие шаги  
  В следующем примере показано, как использовать метод расширений вместо <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну.  
   
-- [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Рефакторинг с использованием метода расширения (C#)](./refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

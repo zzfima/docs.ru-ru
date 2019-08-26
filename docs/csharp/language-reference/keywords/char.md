@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661458"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605947"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
@@ -44,12 +44,12 @@ ms.locfileid: "67661458"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Char>
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Целочисленные типы](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md)
-- [Строки](../../../csharp/programming-guide/strings/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](./index.md)
+- [Целочисленные типы](../builtin-types/integral-numeric-types.md)
+- [Таблица встроенных типов](./built-in-types-table.md)
+- [Таблица неявных числовых преобразований](./implicit-numeric-conversions-table.md)
+- [Таблица явных числовых преобразований](./explicit-numeric-conversions-table.md)
+- [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md)
+- [Строки](../../programming-guide/strings/index.md)

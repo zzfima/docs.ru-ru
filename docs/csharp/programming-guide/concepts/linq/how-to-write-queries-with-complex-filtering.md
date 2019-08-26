@@ -2,22 +2,22 @@
 title: Практическое руководство. Создание запросов со сложной фильтрацией (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 08c1e124542e6d7e4c728102b2aa7fb4a804794c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710044"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592169"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Практическое руководство. Создание запросов со сложной фильтрацией (C#)
 Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией. Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением. В этом разделе приводится пример написания запроса с комплексной фильтрацией.  
   
 ## <a name="example"></a>Пример  
- В этом примере показано, как найти все элементы `PurchaseOrder`, имеющие дочерний элемент `Address` с атрибутом `Type`, равным «Доставка», и дочерним элементом `State`, равным «NY». В нем используется вложенный запрос в предложении `Where`, а оператор `Any` возвращает значение `true`, если коллекция содержит элементы. Сведения об использовании синтаксиса запросов на основе методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ В этом примере показано, как найти все элементы `PurchaseOrder`, имеющие дочерний элемент `Address` с атрибутом `Type`, равным «Доставка», и дочерним элементом `State`, равным «NY». В нем используется вложенный запрос в предложении `Where`, а оператор `Any` возвращает значение `true`, если коллекция содержит элементы. Сведения об использовании синтаксиса запросов на основе методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Дополнительные сведения об операторе `Any` см. в разделе [Операции, использующие квантификаторы (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).  
+ Дополнительные сведения об операторе `Any` см. в разделе [Операции, использующие квантификаторы (C#)](./quantifier-operations.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
@@ -44,7 +44,7 @@ foreach (XElement el in purchaseOrders)
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in purchaseOrders)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Операции проекции (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-- [Операции, использующие квантификаторы (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+- [Операции проекции (C#)](./projection-operations.md)
+- [Операции, использующие квантификаторы (C#)](./quantifier-operations.md)

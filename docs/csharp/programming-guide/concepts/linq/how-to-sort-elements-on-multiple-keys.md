@@ -2,12 +2,12 @@
 title: Практическое руководство. Сортировка элементов по нескольким ключам (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709913"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592446"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Практическое руководство. Сортировка элементов по нескольким ключам (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "68709913"
 
 В этом примере результаты упорядочиваются вначале по почтовому коду доставки, а затем по дате заказа.
 
-В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +67,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).
 
-В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).
+В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы в пространстве имен](./sample-xml-file-customers-and-orders-in-a-namespace.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

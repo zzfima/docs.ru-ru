@@ -2,12 +2,12 @@
 title: Сохранение пробелов при загрузке и анализе XML
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 263121468b3010884c14c9e593a857d01dc253ef
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: d015c21813df2224356bb49212fe282fa5372d03
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868818"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591552"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Сохранение пробелов при загрузке и анализе XML
 В этой статье показан способ управления тем, как обрабатываются пробелы в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -16,7 +16,7 @@ ms.locfileid: "68868818"
   
  Другой типичный сценарий заключается в чтении и изменении XML с уже существующими преднамеренными отступами. Эти отступы ни в коем случае изменять нельзя. Для этого в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] можно сохранить пробелы при загрузке или синтаксическом анализе XML и отключить форматирование при сериализации XML.  
   
- В этой статье описывается, как методы, заполняющие XML-деревья, обрабатывают пробелы. Сведения об управлении пробелами при сериализации деревьев XML см. в разделе [Сохранение пробелов при сериализации](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ В этой статье описывается, как методы, заполняющие XML-деревья, обрабатывают пробелы. Сведения об управлении пробелами при сериализации деревьев XML см. в разделе [Сохранение пробелов при сериализации](./preserving-white-space-while-serializing.md).  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Поведение методов, заполняющих XML-деревья  
  Следующие методы в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument> заполняют XML-дерево. XML-дерево можно заполнить из файла, объекта <xref:System.IO.TextReader>, объекта <xref:System.Xml.XmlReader> или строки:  

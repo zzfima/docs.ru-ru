@@ -2,12 +2,12 @@
 title: Обработка повторного входа в асинхронных приложениях (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480876"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595638"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Обработка повторного входа в асинхронных приложениях (C#)
 
@@ -141,7 +141,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 Вместо отключения кнопки **Start** можно оставить кнопку активной, но при этом, если пользователь нажмет эту кнопку еще раз, нужно отменить операцию, которая уже выполняется, и задать продолжение выполнения последней запущенной операции.
 
-Дополнительные сведения об отмене см. в разделе [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Дополнительные сведения об отмене см. в разделе [Настройка асинхронного приложения (C#)](./fine-tuning-your-async-application.md).
 
 Чтобы настроить этот сценарий, внесите следующие изменения в основной код, который содержится в разделе [Проверка и выполнение примера приложения](#BKMD_SettingUpTheExample). Также можно загрузить готовое приложение в разделе [Примеры асинхронности. Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Этот проект называется CancelAndRestart.
 
@@ -724,5 +724,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await в C#](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await в C#](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Асинхронное программирование с использованием ключевых слов async и await (C#)](./index.md)

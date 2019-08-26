@@ -2,12 +2,12 @@
 title: Практическое руководство. Фильтрация по именам элементов (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 9c29183a7548a4551aca813b3d297f7e03484b36
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9febe3b834261326bab3e82d87c476f99d4e6b1f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710104"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593804"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Практическое руководство. Фильтрация по именам элементов (LINQ to XML) (C#)
 При вызове одного из методов, возвращающих коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, можно осуществить фильтрацию по именам элементов.  
@@ -15,7 +15,7 @@ ms.locfileid: "68710104"
 ## <a name="example"></a>Пример  
  В этом примере показано получение отфильтрованной коллекции потомков, в которой содержатся только потомки с указанным именем.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -52,7 +52,7 @@ ProductName:Baby Monitor
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -73,4 +73,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>См. также
 
-- [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [Оси LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

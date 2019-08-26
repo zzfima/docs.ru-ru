@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566863"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588423"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Руководство по программированию на C#. Приведение и преобразование типов
 
@@ -32,17 +32,17 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Явные преобразования (приведения)** . Для явных преобразований требуется оператор приведения. Приведение требуется, если в ходе преобразования данные могут быть утрачены или преобразование может завершиться сбоем по другим причинам.  Типичными примерами являются числовое преобразование в тип с меньшей точностью или меньшим диапазоном и преобразование экземпляра базового класса в производный класс.  
   
-- **Пользовательские преобразования**. Такие преобразования выполняются специальными методами, которые можно определить для включения явных и неявных преобразований между пользовательскими типами без связи "базовый класс — производный класс". Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](../../../csharp/language-reference/operators/user-defined-conversion-operators.md).  
+- **Пользовательские преобразования**. Такие преобразования выполняются специальными методами, которые можно определить для включения явных и неявных преобразований между пользовательскими типами без связи "базовый класс — производный класс". Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Преобразования с использованием вспомогательных классов**. Чтобы выполнить преобразование между несовместимыми типами, например целыми числами и объектами <xref:System.DateTime?displayProperty=nameWithType> или шестнадцатеричными строками и массивами байтов, можно использовать классы <xref:System.BitConverter?displayProperty=nameWithType> и <xref:System.Convert?displayProperty=nameWithType>, а также методы `Parse` встроенных числовых типов, такие как <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Практическое руководство. преобразованию массива байтов в значение типа int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [ преобразованию строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) и [ преобразованию из шестнадцатеричных строк в числовые типы](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Преобразования с использованием вспомогательных классов**. Чтобы выполнить преобразование между несовместимыми типами, например целыми числами и объектами <xref:System.DateTime?displayProperty=nameWithType> или шестнадцатеричными строками и массивами байтов, можно использовать классы <xref:System.BitConverter?displayProperty=nameWithType> и <xref:System.Convert?displayProperty=nameWithType>, а также методы `Parse` встроенных числовых типов, такие как <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Практическое руководство. преобразованию массива байтов в значение типа int](./how-to-convert-a-byte-array-to-an-int.md), [ преобразованию строки в число](./how-to-convert-a-string-to-a-number.md) и [ преобразованию из шестнадцатеричных строк в числовые типы](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Неявные преобразования
 
- Для встроенных числовых типов неявное преобразование можно выполнить, если сохраняемое значение может уместиться в переменной без усечения или округления. При использовании целочисленных типов это означает, что диапазон исходного типа является надлежащим подмножеством диапазона для целевого типа. Например, переменная типа [long](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (64-разрядное целое число) может хранить любое значение, которое может хранить переменная [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) (32-разрядное целое число). В следующем примере компилятор неявно преобразует значение `num` справа в тип `long` перед назначением `bigNum`.  
+ Для встроенных числовых типов неявное преобразование можно выполнить, если сохраняемое значение может уместиться в переменной без усечения или округления. При использовании целочисленных типов это означает, что диапазон исходного типа является надлежащим подмножеством диапазона для целевого типа. Например, переменная типа [long](../../language-reference/builtin-types/integral-numeric-types.md) (64-разрядное целое число) может хранить любое значение, которое может хранить переменная [int](../../language-reference/builtin-types/integral-numeric-types.md) (32-разрядное целое число). В следующем примере компилятор неявно преобразует значение `num` справа в тип `long` перед назначением `bigNum`.  
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Полный список всех неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Полный список всех неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../language-reference/keywords/implicit-numeric-conversions-table.md).  
   
  Для ссылочных типов неявное преобразование всегда предусмотрено из класса в любой из его прямых или косвенных базовых классов или интерфейсов. Никакой специальный синтаксис не требуется, поскольку производный класс всегда содержит все члены базового класса.  
   
@@ -53,11 +53,11 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>Явные преобразования
 
- Тем не менее если преобразование нельзя выполнить без риска потери данных, компилятор требует выполнения явного преобразования, которое называется *приведением*. Приведение — это способ явно указать компилятору, что необходимо выполнить преобразование и что вам известно, что может произойти потеря данных. Чтобы выполнить приведение, укажите тип, в который производится приведение, в круглых скобках перед преобразуемым значением или переменной. В следующей программе выполняется приведение типа [double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) в [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Программа не будет компилироваться без приведения.  
+ Тем не менее если преобразование нельзя выполнить без риска потери данных, компилятор требует выполнения явного преобразования, которое называется *приведением*. Приведение — это способ явно указать компилятору, что необходимо выполнить преобразование и что вам известно, что может произойти потеря данных. Чтобы выполнить приведение, укажите тип, в который производится приведение, в круглых скобках перед преобразуемым значением или переменной. В следующей программе выполняется приведение типа [double](../../language-reference/builtin-types/floating-point-numeric-types.md) в [int](../../language-reference/builtin-types/integral-numeric-types.md). Программа не будет компилироваться без приведения.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- Список разрешенных явных числовых преобразований см. в разделе [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Список разрешенных явных числовых преобразований см. в разделе [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
   
  Для ссылочных типов явное приведение является обязательным, если необходимо преобразовать базовый тип в производный тип:  
   
@@ -75,7 +75,7 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- Операция приведения между ссылочными типами не меняет тип времени выполнения базового объекта; изменяется только тип значения, который используется в качестве ссылки на этот объект. Дополнительные сведения см. в разделе [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Операция приведения между ссылочными типами не меняет тип времени выполнения базового объекта; изменяется только тип значения, который используется в качестве ссылки на этот объект. Дополнительные сведения см. в разделе [Полиморфизм](../classes-and-structs/polymorphism.md).  
   
 ## <a name="type-conversion-exceptions-at-run-time"></a>Исключения преобразования типов во время выполнения
 
@@ -91,9 +91,9 @@ Giraffe g2 = (Giraffe) a;
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Типы](../../../csharp/programming-guide/types/index.md)
-- [Оператор приведения ()](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
-- [Операторы пользовательского преобразования](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
+- [Руководство по программированию на C#](../index.md)
+- [Типы](./index.md)
+- [Оператор приведения ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [Операторы пользовательского преобразования](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Обобщенное преобразование типов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [Практическое руководство. Преобразование строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+- [Практическое руководство. Преобразование строки в число](./how-to-convert-a-string-to-a-number.md)

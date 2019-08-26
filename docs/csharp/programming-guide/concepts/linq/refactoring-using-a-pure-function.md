@@ -2,20 +2,20 @@
 title: Рефакторинг с использованием чистых функций (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483997"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591313"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Рефакторинг с использованием чистых функций (C#)
-В приведенном ниже примере выполняется оптимизация кода предыдущего примера [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) для использования чистой функции. При этом код, предназначенный для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.  
+В приведенном ниже примере выполняется оптимизация кода предыдущего примера [Рефакторинг с использованием метода расширения (C#)](./refactoring-using-an-extension-method.md) для использования чистой функции. При этом код, предназначенный для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.  
   
 ## <a name="example"></a>Пример  
  В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Оптимизированный код поясняется в комментариях кода ниже.  
   
- Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -177,10 +177,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Следующие шаги  
  В следующем примере показано, как выполнить проекцию XML в другую форму:  
   
-- [Проецирование XML в другую форму (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Проецирование XML в другую форму (C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Рефакторинг с использованием метода расширения (C#)](./refactoring-using-an-extension-method.md)
+- [Рефакторинг в чистые функции (C#)](./refactoring-into-pure-functions.md)

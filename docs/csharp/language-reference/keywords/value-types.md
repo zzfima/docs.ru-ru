@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363083"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608380"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68363083"
 
 В отличие от ссылочных типов, создать новый производный от типа значения тип нельзя. Тем не менее, как и ссылочные типы, структуры могут реализовывать интерфейсы.
 
-Переменные типа значения не могут иметь значение `null` по умолчанию. Однако переменные соответствующих [типов, допускающих значение null](../../../csharp/programming-guide/nullable-types/index.md), могут иметь значение `null`.
+Переменные типа значения не могут иметь значение `null` по умолчанию. Однако переменные соответствующих [типов, допускающих значение null](../../programming-guide/nullable-types/index.md), могут иметь значение `null`.
 
 Каждый тип значения имеет неявный конструктор без параметров, который инициализирует значение по умолчанию этого типа. Дополнительные сведения о значениях по умолчанию для типов значений см. в разделе [Таблица значений по умолчанию (справочник по C#)](default-values-table.md).
 

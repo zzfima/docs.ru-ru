@@ -5,12 +5,12 @@ ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: bab2c4c996f7780cec572d58eb572a90aeea592a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 22f80365b974df66999ac68f7bc2a9ffa7d445a5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267669"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596818"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Практическое руководство. Инициализация словаря с помощью инициализатора коллекции (Руководство по программированию на C#)
 
@@ -26,5 +26,5 @@ ms.locfileid: "67267669"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Руководство по программированию на C#](../index.md)
+- [Инициализаторы объектов и коллекций](./object-and-collection-initializers.md)

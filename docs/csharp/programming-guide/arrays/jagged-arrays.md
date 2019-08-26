@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200680"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597339"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Массивы массивов (Руководство по программированию на C#)
 
@@ -45,7 +45,7 @@ ms.locfileid: "57200680"
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- Массивы массивов и многомерные массивы можно смешивать. Ниже показаны объявление и инициализация одномерного массива массивов, элементами которого являются двухмерные массивы разного размера. Дополнительные сведения о двумерных массивах см. в разделе [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).  
+ Массивы массивов и многомерные массивы можно смешивать. Ниже показаны объявление и инициализация одномерного массива массивов, элементами которого являются двухмерные массивы разного размера. Дополнительные сведения о двумерных массивах см. в разделе [Многомерные массивы](./multidimensional-arrays.md).  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -68,7 +68,7 @@ ms.locfileid: "57200680"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Array>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Массивы](../../../csharp/programming-guide/arrays/index.md)
-- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [Руководство по программированию на C#](../index.md)
+- [Массивы](./index.md)
+- [Одномерные массивы](./single-dimensional-arrays.md)
+- [Многомерные массивы](./multidimensional-arrays.md)

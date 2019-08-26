@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск атрибута родительского элемента (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: f30c810483d8253132b9fe3e0959d04a8b4d26a0
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2e6c124d2653fb4426b3abb693f0b58daa5413c2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690062"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593613"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск атрибута родительского элемента (XPath-LINQ to XML) (C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "66690062"
 
 Сначала в данном примере осуществляется поиск элемента `Author`. Затем в нем осуществляется поиск атрибута `id` родительского элемента.
 
-В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");

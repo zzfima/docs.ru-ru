@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329107"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606248"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (параметры компилятора C#)
 Параметр **-warnaserror+** предписывает обрабатывать все предупреждения как ошибки  
@@ -27,11 +27,11 @@ ms.locfileid: "59329107"
 ## <a name="remarks"></a>Примечания  
  Все сообщения, которые до этого получали статус предупреждений, будут возвращаться как ошибки, в результате чего процесс построения прерывается без создания выходных файлов.  
   
- По умолчанию действует параметр **-warnaserror-**, при котором наличие предупреждений не препятствует созданию выходного файла. Если задан параметр **-warnaserror** или эквивалентный ему **-warnaserror+**, все предупреждения обрабатываются как ошибки.  
+ По умолчанию действует параметр **-warnaserror-** , при котором наличие предупреждений не препятствует созданию выходного файла. Если задан параметр **-warnaserror** или эквивалентный ему **-warnaserror+** , все предупреждения обрабатываются как ошибки.  
   
  Если требуется обрабатывать как ошибки только конкретные предупреждения, укажите их номера через запятую.  
   
- Параметр [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) позволяет указать уровень предупреждений, которые будет отображать компилятор. Параметр [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
+ Параметр [-warn](./warn-compiler-option.md) позволяет указать уровень предупреждений, которые будет отображать компилятор. Параметр [-nowarn](./nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -53,5 +53,5 @@ csc -warnaserror:642,649,652 in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

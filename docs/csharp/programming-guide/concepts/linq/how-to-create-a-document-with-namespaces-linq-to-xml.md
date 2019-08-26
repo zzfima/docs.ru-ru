@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710004"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593894"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)
 В этом разделе описано, как создавать документы с пространствами имен.  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  Этот подход влияет на производительность. Всякий раз при передаче [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] строки, содержащей развернутое имя, система [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] должна проанализировать это имя, обнаружить атомизированное пространство имен и атомарное имя. Этот процесс требует затрат процессорного времени. Если производительность является важным фактором, целесообразнее объявить и использовать объект <xref:System.Xml.Linq.XNamespace> явным образом.  
   
- Если производительность важна, дополнительные сведения см. в разделе [Предварительная атомизация объектов XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md).  
+ Если производительность важна, дополнительные сведения см. в разделе [Предварительная атомизация объектов XName (LINQ to XML) (C#)](./pre-atomization-of-xname-objects-linq-to-xml.md).  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

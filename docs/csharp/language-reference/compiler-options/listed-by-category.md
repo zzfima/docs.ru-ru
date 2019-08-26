@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028702"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606726"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Параметры компилятора C#, упорядоченные по категориям
 
@@ -102,7 +102,7 @@ ms.locfileid: "58028702"
 |[-nologo](nologo-compiler-option.md)|Подавляет сведения баннера компилятора.|
 |[-recurse](recurse-compiler-option.md)|Выполняет поиск в подкаталогах исходных файлов для компиляции.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Задает минимальную версию подсистемы, которую может использовать исполняемый файл.|
-|[/unsafe](unsafe-compiler-option.md)|Разрешает компиляцию кода, использующего ключевое слово [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|
+|[/unsafe](unsafe-compiler-option.md)|Разрешает компиляцию кода, использующего ключевое слово [unsafe](../keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Отображает выходные данные компилятора в кодировке UTF-8.|
 |-parallel[+&#124;-]|Указывает, следует ли использовать параллельную сборку (+).|
 |-checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Допустимые значения: SHA1 (по умолчанию) или SHA256.<br>Из-за конфликта с SHA1 корпорация Майкрософт рекомендует использовать SHA256.|

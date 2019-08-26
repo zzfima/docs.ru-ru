@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 89139867cb0a207dbe82168015629fcb9e2fa6eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601900"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602439"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (параметры компилятора C#)
 Этот параметр указывает компилятору не создавать манифест сборки.  
@@ -27,9 +27,9 @@ ms.locfileid: "54601900"
 ## <a name="remarks"></a>Примечания  
  По умолчанию выходной файл, созданный при компиляции с этим параметром, имеет расширение .netmodule.  
   
- Файл без манифеста сборки не может быть загружен в общеязыковую среду выполнения .NET Framework. Тем не менее его можно включить в манифест сборки с помощью параметра [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Файл без манифеста сборки не может быть загружен в общеязыковую среду выполнения .NET Framework. Тем не менее его можно включить в манифест сборки с помощью параметра [-addmodule](./addmodule-compiler-option.md).  
   
- Если в рамках одной процедуры компиляции создается несколько модулей, типы [internal](../../../csharp/language-reference/keywords/internal.md) из одного модуля будут доступны для других модулей, компилируемых вместе с ним. Если код одного модуля ссылается на типы `internal` в другом модуле, оба модуля нужно включить в манифест сборки с помощью параметра **-addmodule**.  
+ Если в рамках одной процедуры компиляции создается несколько модулей, типы [internal](../keywords/internal.md) из одного модуля будут доступны для других модулей, компилируемых вместе с ним. Если код одного модуля ссылается на типы `internal` в другом модуле, оба модуля нужно включить в манифест сборки с помощью параметра **-addmodule**.  
   
  Создание модуля в среде разработки Visual Studio не поддерживается.  
   
@@ -44,5 +44,5 @@ csc -target:module in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (параметры компилятора C#)](./target-compiler-option.md)
+- [Параметры компилятора C# ](./index.md)

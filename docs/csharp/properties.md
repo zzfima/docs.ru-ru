@@ -2,12 +2,12 @@
 title: Свойства
 description: Сведения о свойствах в C#, в том числе информация о функциях для проверки, вычисляемых значениях, отложенных вычислениях и уведомлениях об изменении свойств.
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878277"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587400"
 ---
 # <a name="properties"></a>Свойства
 
@@ -104,7 +104,7 @@ public class Measurements
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-В примере выше используется функция [интерполяции строк](../csharp/language-reference/tokens/interpolated.md) для создания форматированной строки для полного имени.
+В примере выше используется функция [интерполяции строк](./language-reference/tokens/interpolated.md) для создания форматированной строки для полного имени.
 
 Можно также использовать *члены, воплощающие выражения*, которые обеспечивают более краткий способ создания вычисляемого свойства `FullName`:
 

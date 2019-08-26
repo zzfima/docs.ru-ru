@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607125"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666461"
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
@@ -101,7 +101,7 @@ ms.locfileid: "54607125"
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Реализация шаблона удаления для производного класса
 
@@ -125,7 +125,7 @@ ms.locfileid: "54607125"
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Использование безопасных дескрипторов

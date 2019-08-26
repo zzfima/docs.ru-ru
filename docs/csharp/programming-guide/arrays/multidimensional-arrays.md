@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: df9063d0616b72ad15c9c48fa4459a6dc98b77c1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 63b8729a14e4c309e85a588c5cddc692fb6a6fad
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972616"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597411"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Многомерные массивы (Руководство по программированию на C#)
 
@@ -51,7 +51,7 @@ ms.locfileid: "56972616"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Массивы](../../../csharp/programming-guide/arrays/index.md)
-- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [Массивы массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [Руководство по программированию на C#](../index.md)
+- [Массивы](./index.md)
+- [Одномерные массивы](./single-dimensional-arrays.md)
+- [Массивы массивов](./jagged-arrays.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928066"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Разделители для тегов в документации (Руководство по программированию на C#)
 Для создания комментариев в документах XML необходимо использовать разделители, по которым компилятор определяет начало и конец комментария. С тегами в XML-документации можно использовать следующие виды разделителей:  
@@ -21,7 +21,7 @@ ms.locfileid: "65634765"
  Однострочный разделитель. Это форма, представленная в примерах документов и используемая в шаблонах проектов Visual C#. Если после разделителя имеется символ пробела, этот символ не включается в выходные данные XML.  
   
 > [!NOTE]
->  В интегрированной среде разработки Visual Studio имеется функция автоматического редактирования комментариев Smart Comment Editing, которая автоматически вставляет теги \<summary> и \</summary> и перемещает курсор в этих тегах после ввода разделителя `///` в редакторе кода. Вы можете включить или отключить эту функцию в [диалоговом окне "Параметры"](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
+> В интегрированной среде разработки Visual Studio имеется функция автоматического редактирования комментариев Smart Comment Editing, которая автоматически вставляет теги \<summary> и \</summary> и перемещает курсор в этих тегах после ввода разделителя `///` в редакторе кода. Вы можете включить или отключить эту функцию в [диалоговом окне "Параметры"](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
   
  `/** */`  
  Многострочные разделители.  
@@ -80,7 +80,7 @@ ms.locfileid: "65634765"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/index.md)
-- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Комментарии XML-документации](./index.md)
+- [/doc (параметры компилятора C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Комментарии XML-документации](./index.md)

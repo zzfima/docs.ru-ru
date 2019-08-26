@@ -2,12 +2,12 @@
 title: Удаление элементов, атрибутов и узлов из дерева XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 977636a9d8a3d0a1431b8afb99966b809b4f420c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: badaa6bab35367d62a73f56c5221cb7d6d4a45f7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689930"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591257"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Удаление элементов, атрибутов и узлов из дерева XML (C#)
 
@@ -15,11 +15,11 @@ ms.locfileid: "66689930"
 
 Удаление одного элемента или атрибута из XML-документа является простой операцией. Но при удалении коллекций элементов или атрибутов необходимо вначале материализовать коллекцию в список, а затем удалить элементы или атрибуты из списка. Наилучшим подходом является использование метода расширения <xref:System.Xml.Linq.Extensions.Remove%2A>, позволяющего выполнить эту задачу.
 
-Основной причиной этого является то, что большинство коллекций, получаемых из XML-дерева, формируется с помощью отложенного выполнения. Если не проводится их предварительная материализация в список или не используются методы расширения, то становится возможным возникновение определенного класса ошибок. Дополнительные сведения см. в разделе [Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).
+Основной причиной этого является то, что большинство коллекций, получаемых из XML-дерева, формируется с помощью отложенного выполнения. Если не проводится их предварительная материализация в список или не используются методы расширения, то становится возможным возникновение определенного класса ошибок. Дополнительные сведения см. в разделе [Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#)](./mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).
 
 Следующие методы позволяют удалять узлы и атрибуты из XML-дерева.
 
-|Метод|Описание|
+|Метод|ОПИСАНИЕ|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Удаляет <xref:System.Xml.Linq.XAttribute> из его родительского элемента.|
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Удаляет дочерние узлы из <xref:System.Xml.Linq.XContainer>.|
@@ -32,11 +32,11 @@ ms.locfileid: "66689930"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>ОПИСАНИЕ
 
 В этом примере показано три подхода к удалению элементов. Сначала удаляется одиночный элемент. Затем он возвращает коллекцию элементов, материализует их с помощью оператора <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> и удаляет коллекцию. Наконец, он получает коллекцию элементов и удаляет их с помощью метода расширения <xref:System.Xml.Linq.Extensions.Remove%2A>.
 
-Дополнительные сведения об операторе <xref:System.Linq.Enumerable.ToList%2A> см. в разделе [Преобразование типов данных (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).
+Дополнительные сведения об операторе <xref:System.Linq.Enumerable.ToList%2A> см. в разделе [Преобразование типов данных (C#)](./converting-data-types.md).
 
 ### <a name="code"></a>Код
 

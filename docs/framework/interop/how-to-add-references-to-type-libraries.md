@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление ссылок на библиотеки типов
+title: Практическое руководство. Добавление ссылок на библиотеки типов
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3fda2af84ff74e129c36dc966bad247bdf9e20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4f0f254b7794ce1cd4c765bee70c78e3c60a14aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946495"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Как выполнить Добавление ссылок на библиотеки типов
+# <a name="how-to-add-references-to-type-libraries"></a>Практическое руководство. Добавление ссылок на библиотеки типов
 При добавлении ссылки на библиотеку типов Visual Studio генерирует сборку взаимодействия, в которой содержатся метаданные. Если первичная сборка взаимодействия доступна, Visual Studio обращается к существующей сборке, прежде чем генерировать новую.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Добавление ссылки на библиотеку типов в Visual Studio  
@@ -36,7 +36,7 @@ ms.locfileid: "59427140"
 7. Убедитесь, что в окне **Свойства** свойству **Внедрить типы взаимодействия** присвоено значение **True**. Visual Studio внедрит информацию о типах COM в исполняемые файлы, устранив тем самым необходимость развертывать основные сборки взаимодействия в приложении.  
   
 > [!NOTE]
->  Пункты меню и параметры диалогового окна зависят от используемой версии Visual Studio.  
+> Пункты меню и параметры диалогового окна зависят от используемой версии Visual Studio.  
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Добавление ссылки на библиотеку типов для компиляции командной строки  
   

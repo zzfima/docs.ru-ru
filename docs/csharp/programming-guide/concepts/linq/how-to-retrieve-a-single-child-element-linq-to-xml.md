@@ -2,12 +2,12 @@
 title: Практическое руководство. Извлечение одного дочернего элемента (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: 16b9c54365bf32c87cc38ba5a2982623786d5cbf
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5f2f675f5ce4914124f62981a2591441260b6976
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709920"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592628"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Практическое руководство. Извлечение одного дочернего элемента (LINQ to XML) (C#)
 В этом разделе объясняется, как обеспечить получение отдельных дочерних элементов, когда известно имя этого дочернего элемента. Если известно имя дочернего элемента, а также то, что есть только один элемент с таким именем, удобнее получить один элемент, а не целую коллекцию.  
@@ -21,7 +21,7 @@ ms.locfileid: "68709920"
   
  В примере по Visual Basic демонстрируется использование обозначения индексатора массива для получения отдельного элемента.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -38,7 +38,7 @@ Console.WriteLine(e);
 ## <a name="example"></a>Пример  
  В следующем примере демонстрируется тот же код XML-документа, который находится в пространстве имен. Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -55,4 +55,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>См. также
 
-- [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [Оси LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

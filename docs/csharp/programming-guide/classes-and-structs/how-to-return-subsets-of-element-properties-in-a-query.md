@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586076"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596833"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Возвращение подмножества свойств элементов в запросе
 Используйте анонимный тип в выражении запроса, если выполняются оба следующих условия:  
@@ -48,6 +48,6 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Анонимные типы](./anonymous-types.md)
+- [Выражения запросов LINQ](../linq-query-expressions/index.md)

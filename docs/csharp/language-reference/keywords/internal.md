@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661167"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602080"
 ---
 # <a name="internal-c-reference"></a>internal (Справочник по C#)
-Ключевое слово `internal` является [модификатором доступа](../../../csharp/language-reference/keywords/access-modifiers.md) для типов и членов типов. 
+Ключевое слово `internal` является [модификатором доступа](./access-modifiers.md) для типов и членов типов. 
   
  > Эта страница содержит доступ `internal`. Ключевое слово `internal` также является частью модификатора доступа [`protected internal`](./protected-internal.md).
   
@@ -30,7 +30,7 @@ public class BaseClass
 }  
 ```  
 
- Сравнение модификатора `internal` с другими модификаторами доступа см. в разделах [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md) и [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Сравнение модификатора `internal` с другими модификаторами доступа см. в разделах [Уровни доступности](./accessibility-levels.md) и [Модификаторы доступа](../../programming-guide/classes-and-structs/access-modifiers.md).  
   
  См. дополнительные сведения о [сборках в .NET](../../../standard/assembly/index.md).  
   
@@ -93,12 +93,12 @@ public class TestAccess
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](./index.md)
+- [Модификаторы доступа](./access-modifiers.md)
+- [Уровни доступности](./accessibility-levels.md)
+- [Модификаторы](./modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

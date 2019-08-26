@@ -2,12 +2,12 @@
 title: Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f9d045aa2e9cc11fdb4de202d03f76f85bac6500
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584338"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592875"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (C#)
 Иногда файлы с одинаковыми именами могут находиться в нескольких папках. Например, в папке установки Visual Studio несколько папок содержат файл readme.htm. В этом примере показано, как запросить такие повторяющиеся имена файлов в указанной корневой папке. Во втором примере показано, как запросить файлы, размер и время создания которых также совпадают.  
@@ -174,5 +174,5 @@ class QueryDuplicateFileNames
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)
