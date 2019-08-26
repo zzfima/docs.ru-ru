@@ -7,35 +7,37 @@
       href: choosing-between-datetime.md
     - name: 'Поиск часового пояса, заданного в локальной системе'
       href: finding-the-time-zones-on-local-system.md
-    - name: Как выполнить Перечисление присутствующих на компьютере часовых поясов
+    - name: Практическое руководство. Перечисление присутствующих на компьютере часовых поясов
       href: enumerate-time-zones.md
-    - name: Как выполнить Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов
+    - name: Практическое руководство. Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов
       href: access-utc-and-local.md
-    - name: Как выполнить Создание экземпляра объекта TimeZoneInfo
+    - name: Практическое руководство. Создание экземпляра объекта TimeZoneInfo
       href: instantiate-time-zone-info.md
     - name: Создание экземпляра объекта DateTimeOffset
       href: instantiating-a-datetimeoffset-object.md
-    - name: Как выполнить Создание часовых поясов без правил коррекции
+    - name: Практическое руководство. Создание часовых поясов без правил коррекции
       href: create-time-zones-without-adjustment-rules.md
-    - name: Как выполнить Создание часовых поясов с правилами коррекции
+    - name: Практическое руководство. Создание часовых поясов с правилами коррекции
       href: create-time-zones-with-adjustment-rules.md
     - name: Сохранение и восстановление часовых поясов
       href: saving-and-restoring-time-zones.md
-    - name: Как выполнить Сохранение часовых поясов во внедренном ресурсе
+    - name: Практическое руководство. Сохранение часовых поясов во внедренном ресурсе
       href: save-time-zones-to-an-embedded-resource.md
-    - name: Как выполнить Восстановление часовых поясов из внедренного ресурса
+    - name: Практическое руководство. Восстановление часовых поясов из внедренного ресурса
       href: restore-time-zones-from-an-embedded-resource.md
     - name: Работа с календарями
       href: working-with-calendars.md
     - name: Выполнение арифметических операций с датами и временем
       href: performing-arithmetic-operations.md
-    - name: Как выполнить Использование часовых поясов в арифметических операциях с датами и временем
+    - name: Практическое руководство. Использование часовых поясов в арифметических операциях с датами и временем
       href: use-time-zones-in-arithmetic.md
     - name: Взаимное преобразование структур DateTime и DateTimeOffset
       href: converting-between-datetime-and-offset.md
     - name: Преобразование времени из одного часового пояса в другой
       href: converting-between-time-zones.md
-    - name: Как выполнить Разрешение проблемы неоднозначности времени
+    - name: Практическое руководство. Разрешение проблемы неоднозначности времени
       href: resolve-ambiguous-times.md
-    - name: Как выполнить Предоставление пользователям возможности разрешения неоднозначности времени
+    - name: Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени
       href: let-users-resolve-ambiguous-times.md
+    - name: Поддержка DateTime и DateTimeOffset в System.Text.Json
+      href: system-text-json-support.md
