@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968417"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Синхронизация данных для многопоточности
 
@@ -35,7 +35,7 @@ ms.locfileid: "65638762"
 |Категория|Глобальные поля|Статические поля|Статические методы|Поля экземпляра|Методы экземпляра|Определенные блоки кода|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Синхронизации нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|Синхронизированные контексты|Нет|Нет|Нет|Да|Да|Нет|  
+|Синхронизированные контексты|Нет|Нет|Нет|Yes|Да|Нет|  
 |Синхронизированные области кода|Нет|Нет|Только если помечены|Нет|Только если помечены|Только если помечены|  
 |Синхронизация вручную|Вручную|Вручную|Вручную|Вручную|Вручную|Вручную|  
   
@@ -51,17 +51,17 @@ ms.locfileid: "65638762"
  Visual Basic и C# поддерживают маркировку блоков кода ключевым словом определенного языка, оператором `lock` в C# или `SyncLock` в Visual Basic. Если код выполняется потоком, он пытается получить блокировку. Если блокировка уже получена другим потоком, поток блокируется, пока блокировка не станет доступной. Когда поток выходит из синхронизированного блока кода, блокировка снимается независимо от того, каким образом поток выходит из блока.  
   
 > [!NOTE]
->  Инструкции `lock` И `SyncLock` реализуются с помощью <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, чтобы в синхронизованной области с ними можно было использовать другие методы <xref:System.Threading.Monitor>.  
+> Инструкции `lock` И `SyncLock` реализуются с помощью <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, чтобы в синхронизованной области с ними можно было использовать другие методы <xref:System.Threading.Monitor>.  
   
  Метод можно также оформить с помощью <xref:System.Runtime.CompilerServices.MethodImplAttribute> со значением <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, который действует точно так же, как <xref:System.Threading.Monitor> или одно из ключевых слов компилятора, блокируя все тело метода.  
   
  С помощью <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> можно вывести поток из операций блокировки, таких как ожидание доступа к синхронизированной области кода. **Thread.Interrupt** также используется для вывода потоков из таких операций, как <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Не блокируйте тип, т. е. `typeof(MyType)` в C#, `GetType(MyType)` в Visual Basic или `MyType::typeid` в C++, для защиты методов `static` (методы `Shared` в Visual Basic). Вместо этого используйте закрытый статический объект. Кроме того, не блокируйте методы экземпляра, используя `this` в C# (`Me` в Visual Basic). Вместо этого используйте закрытый объект. Класс или экземпляр может заблокировать чужой код, вызвав при этом взаимоблокировку или проблемы производительности.  
+> Не блокируйте тип, т. е. `typeof(MyType)` в C#, `GetType(MyType)` в Visual Basic или `MyType::typeid` в C++, для защиты методов `static` (методы `Shared` в Visual Basic). Вместо этого используйте закрытый статический объект. Кроме того, не блокируйте методы экземпляра, используя `this` в C# (`Me` в Visual Basic). Вместо этого используйте закрытый объект. Класс или экземпляр может заблокировать чужой код, вызвав при этом взаимоблокировку или проблемы производительности.  
   
 ### <a name="compiler-support"></a>Поддержка компилятора  
- Visual Basic и C# поддерживают ключевое слово языка для блокировки объекта с помощью <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Visual Basic поддерживает оператор [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md), а C# поддерживает оператор [lock](~/docs/csharp/language-reference/keywords/lock-statement.md).  
+ Visual Basic и C# поддерживают ключевое слово языка для блокировки объекта с помощью <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Visual Basic поддерживает оператор [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md), а C# поддерживает оператор [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
  В обоих случаях, если в коде блока возникает исключение, блокировка, введенная оператором **lock** или **SyncLock**, автоматически снимается. Компиляторы C# и Visual Basic выдают блок **try**/**finally** с **Monitor.Enter** в начале оператора try и **Monitor.Exit** в блоке **finally**. Если исключение возникает в блоке **lock** или **SyncLock**, запускается обработчик **finally**, позволяющий выполнить очистку.  
   
@@ -74,5 +74,5 @@ ms.locfileid: "65638762"
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)
 - [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [Оператор SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [Оператор lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [Оператор SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [Оператор lock](../../csharp/language-reference/keywords/lock-statement.md)

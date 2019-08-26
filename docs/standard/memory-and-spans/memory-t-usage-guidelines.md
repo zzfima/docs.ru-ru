@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362904"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666417"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Рекомендации по использованию структур Memory\<T> и Span\<T>
 
@@ -78,7 +78,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-Этот пример можно также написать, используя [`using`](~/docs/csharp/language-reference/keywords/using-statement.md).
+Этот пример можно также написать, используя [`using`](../../csharp/language-reference/keywords/using-statement.md).
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Метод `DisplayBufferToConsole` теперь работает с практически всеми возможными типами буфера: `T[]`, блоком памяти, выделяемым с помощью ключевого слова [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) и т. д. Ему даже можно непосредственно передать <xref:System.String>!
+Метод `DisplayBufferToConsole` теперь работает с практически всеми возможными типами буфера: `T[]`, блоком памяти, выделяемым с помощью ключевого слова [stackalloc](../../csharp/language-reference/operators/stackalloc.md) и т. д. Ему даже можно непосредственно передать <xref:System.String>!
 
 **Правило 3. Если метод принимает Memory\<T> и возвращает `void`, вам не следует использовать экземпляр Memory\<T> после возврата метода**
 
@@ -246,7 +246,7 @@ class Person
 
 **Правило 9. Если вы создаете оболочку для синхронного метода p/invoke, API должен принимать Span\<T> в качестве параметра.**
 
-В соответствии с правилом 1, <xref:System.Span%601> — это тот тип, который обычно следует использовать для синхронных API. Вы можете закрепить экземпляры <xref:System.Span%601> с помощью ключевого слова [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), как показано в следующем примере.
+В соответствии с правилом 1, <xref:System.Span%601> — это тот тип, который обычно следует использовать для синхронных API. Вы можете закрепить экземпляры <xref:System.Span%601> с помощью ключевого слова [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md), как показано в следующем примере.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **Правило 10. Если вы создаете оболочку для асинхронного метода p/invoke, API должен принимать Memory\<T> в качестве параметра**
 
-Так как ключевое слово [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) нельзя использовать для асинхронных операций, используйте метод <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>, чтобы закрепить экземпляры <xref:System.Memory%601>, независимо от вида непрерывной памяти, представленной экземпляром. В следующем примере показано, как использовать этот API, чтобы выполнить вызов асинхронного метода p/invoke.
+Так как ключевое слово [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) нельзя использовать для асинхронных операций, используйте метод <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>, чтобы закрепить экземпляры <xref:System.Memory%601>, независимо от вида непрерывной памяти, представленной экземпляром. В следующем примере показано, как использовать этот API, чтобы выполнить вызов асинхронного метода p/invoke.
 
 ```csharp
 using System.Runtime.InteropServices;

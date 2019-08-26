@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550492"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968428"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Классы Semaphore и SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Класс представляет собой именованный (общесистемный) или локальный семафор. Он является тонкой оболочкой вокруг объекта семафора Win32. Семафоры Win32 являются семафорами счета, которые могут быть использованы для управления доступом к пулу ресурсов.  
@@ -40,7 +40,7 @@ ms.locfileid: "54550492"
  Можно создать <xref:System.Threading.Semaphore> объект, который представляет именованный системный семафор с помощью одного из конструкторов, указывающих имя.  
   
 > [!NOTE]
->  Так как именованные семафоры относятся ко всей системе, можно иметь несколько объектов <xref:System.Threading.Semaphore>, представляющих один и тот же именованный семафор. При каждом вызове конструктора или метода <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> создается новый объект <xref:System.Threading.Semaphore>. Если указать одно и то же имя несколько раз, создается несколько объектов, представляющих один и тот же именованный семафор.  
+> Так как именованные семафоры относятся ко всей системе, можно иметь несколько объектов <xref:System.Threading.Semaphore>, представляющих один и тот же именованный семафор. При каждом вызове конструктора или метода <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> создается новый объект <xref:System.Threading.Semaphore>. Если указать одно и то же имя несколько раз, создается несколько объектов, представляющих один и тот же именованный семафор.  
   
  Будьте осторожны при использовании именованных семафоров. Так как они относятся ко всей системе, другой процесс, использующий то же имя, может неожиданно войти в семафор. Вредоносный код, выполняемый на одном компьютере может использовать это как основу для атак типа "отказ в обслуживании".  
   

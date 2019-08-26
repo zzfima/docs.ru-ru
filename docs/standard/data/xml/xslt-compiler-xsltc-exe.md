@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774898"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923287"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-компилятор (xsltc.exe)
 XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку. Скомпилированную таблицу стилей можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Подписанные сборки не могут создаваться с помощью xsltc.exe.  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  Решения XSLT могут состоять из нескольких модулей таблиц стилей. Программа xsltc.exe создает сборки из таблиц стилей. Затем эти сборки можно передать методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Это может снизить затраты производительности в некоторых сценариях развертывания XSLT.  
   
 > [!NOTE]
->  Необходимо также включить в приложение скомпилированную сборку в виде ссылки.  
+> Необходимо также включить в приложение скомпилированную сборку в виде ссылки.  
   
  Программа xsltc.exe не проверяет имена класса (`/class:`*name*) и сборки (`/out:`*assemblyName*). Если имена оказываются недопустимыми, среда CLR сообщает об ошибке.  
   

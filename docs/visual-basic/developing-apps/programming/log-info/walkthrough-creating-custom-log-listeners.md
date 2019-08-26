@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593333"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965265"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)
 В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
@@ -29,7 +29,7 @@ ms.locfileid: "64593333"
      К методам <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A> применяется атрибут <xref:System.Security.Permissions.HostProtectionAttribute>, чтобы их атрибуты соответствовали методы базового класса. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, проверять наличие в коде синхронизации защиты узла.  
   
     > [!NOTE]
-    >  Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и реализована защита узлов, например для SQL Server.  
+    > Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и реализована защита узлов, например для SQL Server.  
   
  Чтобы объект `My.Application.Log` использовал прослушиватель журнала, следует присвоить строгое имя сборке, содержащей прослушиватель журнала.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64593333"
   
 3. Выберите поле **Подписать сборку**.  
   
-4. В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>**.  
+4. В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>** .  
   
      Откроется диалоговое окно **Создание ключа строгого имени**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "64593333"
   
 1. Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
-     - или -  
+     -или-  
   
      Если есть файл app.config:  
   

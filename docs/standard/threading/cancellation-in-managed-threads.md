@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490790"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960147"
 ---
 # <a name="cancellation-in-managed-threads"></a>Отмена в управляемых потоках
 В .NET Framework 4 введена новая универсальная модель совместной отмены асинхронных или долго выполняющихся синхронных операций. Эта модель построена на простом объекте, называемом токеном отмены. Объект, который вызывает одну или несколько отменяемых операций, например, путем создания новых потоков или задач, передает этот токен в каждую операцию. Операция, в свою очередь, передает копии этого токена в другие операции. Некоторое время спустя объект, создавший токен, может использовать его для запроса остановки выполнения операции. Запрос на отмену может создавать только запрашивающий объект, и каждый прослушиватель должен обнаружить этот запрос, чтобы правильно и своевременно отреагировать на него.  
@@ -31,7 +31,7 @@ ms.locfileid: "66490790"
 - Вызывается метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для предоставления уведомления об отмене.  
   
 > [!IMPORTANT]
->  Класс <xref:System.Threading.CancellationTokenSource> реализует интерфейс <xref:System.IDisposable>. По завершении использования источника токена отмены обязательно вызовите метод <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType>, чтобы освободить все занятые неуправляемые ресурсы.  
+> Класс <xref:System.Threading.CancellationTokenSource> реализует интерфейс <xref:System.IDisposable>. По завершении использования источника токена отмены обязательно вызовите метод <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType>, чтобы освободить все занятые неуправляемые ресурсы.  
   
  На рисунке ниже показана связь между источником токена и всеми копиями токена.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66490790"
 ## <a name="cancellation-types"></a>Типы отмены  
  Инфраструктура отмены реализована в виде набора связанных типов, приведенных в таблице ниже.  
   
-|Имя типа|Описание|  
+|Имя типа|ОПИСАНИЕ|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Объект, который создает токен отмены и запрос на отмену для всех копий этого токена.|  
 |<xref:System.Threading.CancellationToken>|Простой тип значения, передаваемый одному или нескольким прослушивателям, обычно в виде параметра метода. Прослушиватели отслеживают значение свойства `IsCancellationRequested` токена посредством опроса, обратного вызова или дескриптора ожидания.|  
@@ -66,7 +66,7 @@ ms.locfileid: "66490790"
  В примере ниже запрашивающий объект создает объект <xref:System.Threading.CancellationTokenSource>, а затем передает его свойство <xref:System.Threading.CancellationTokenSource.Token%2A> в отменяемую операцию. Операция, получающая запрос, отслеживает значение свойства <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> токена путем опроса. Когда свойство принимает значение `true`, прослушиватель может завершить операцию любым приемлемым способом. В этом примере просто выполняется выход из метода. Во многих случаях этого достаточно.  
   
 > [!NOTE]
->  В этом примере метод <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> используется для демонстрации совместимости новой инфраструктуры отмены с устаревшими интерфейсами API. Пример, в котором используется новый предпочтительный тип <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, см. в разделе [Руководство. Отмена задачи и ее дочерних элементов](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> В этом примере метод <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> используется для демонстрации совместимости новой инфраструктуры отмены с устаревшими интерфейсами API. Пример, в котором используется новый предпочтительный тип <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, см. в разделе [Руководство. Отмена задачи и ее дочерних элементов](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  

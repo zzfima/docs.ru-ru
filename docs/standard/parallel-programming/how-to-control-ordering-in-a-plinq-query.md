@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Управление порядком в запросе PLINQ
+title: Практическое руководство. Управление порядком в запросе PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30be9fc661ce05a664f9e901edef621d9de62e34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713448"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988191"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>Как выполнить Управление порядком в запросе PLINQ
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>Практическое руководство. Управление порядком в запросе PLINQ
 В этих примерах показано, как управлять правилами упорядочения в запросе PLINQ с помощью метода расширения <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
 > [!WARNING]
->  Эти примеры предназначены в основном для демонстрации использования, и могут выполняться быстрее или не быстрее аналогичных последовательных запросов LINQ to Objects.  
+> Эти примеры предназначены в основном для демонстрации использования, и могут выполняться быстрее или не быстрее аналогичных последовательных запросов LINQ to Objects.  
   
 ## <a name="example"></a>Пример  
  В следующем примере сохраняется порядок исходной последовательности. Иногда это необходимо. Например, некоторым операторам запроса нужна упорядоченная исходная последовательность для предоставления правильных результатов.  

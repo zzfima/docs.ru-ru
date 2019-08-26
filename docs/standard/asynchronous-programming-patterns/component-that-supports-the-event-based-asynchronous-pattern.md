@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773664"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950779"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать для этого класса асинхронные функции с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "67773664"
  Метод `CalculateWorker` заключается в делегат и вызывается асинхронно с помощью вызова к `BeginInvoke`.  
   
 > [!NOTE]
->  Отчет о ходе выполнения реализован в методе `BuildPrimeNumberList`. На быстрых компьютерах события `ProgressChanged` могут возникать быстро друг за другом. Клиентский поток, в котором возникают эти события, должен быть готов к такой ситуации. Если код пользовательского интерфейса будет перегружен сообщениями, это приведет к зависанию. Пример пользовательского интерфейса, который успешно справляется с этой ситуацией, см. в разделе [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+> Отчет о ходе выполнения реализован в методе `BuildPrimeNumberList`. На быстрых компьютерах события `ProgressChanged` могут возникать быстро друг за другом. Клиентский поток, в котором возникают эти события, должен быть готов к такой ситуации. Если код пользовательского интерфейса будет перегружен сообщениями, это приведет к зависанию. Пример пользовательского интерфейса, который успешно справляется с этой ситуацией, см. в разделе [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Для асинхронного вычисления простых чисел выполните следующие действия.  
   

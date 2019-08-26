@@ -2,12 +2,12 @@
 title: Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование концепции seedwork в качестве отправной точки для запуска реализации для модели предметной области, ориентированной на DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676311"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660764"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68676311"
 
 ## <a name="the-custom-entity-base-class"></a>Пользовательский базовый класс Entity
 
-Следующий код представляет пример базового класса Entity, где можно разместить код, который может многократно использоваться тем же способом в любой сущности предметной области, например идентификатор сущности, [операторы равенства](~/docs/csharp/language-reference/operators/equality-operators.md), список событий предметной области по сущностям и т. п.
+Следующий код представляет пример базового класса Entity, где можно разместить код, который может многократно использоваться тем же способом в любой сущности предметной области, например идентификатор сущности, [операторы равенства](../../../csharp/language-reference/operators/equality-operators.md), список событий предметной области по сущностям и т. п.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053201"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915882"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Сравнение строк без учета языка и региональных параметров
 По умолчанию метод <xref:System.String.Compare%2A?displayProperty=nameWithType> выполняет сравнение с учетом языка и региона и регистра символов. Этот метод также содержит несколько перегрузок, которые предоставляют параметр `culture`, позволяющий задать используемый язык и региональные параметры, и параметр `comparisonType`, позволяющий указать используемые правила сравнения. При вызове этих методов вместо перегрузки по умолчанию удаляется любая неопределенность в отношении правил, используемых при вызове конкретного метода, и четко определяется, учитываются ли при конкретном сравнении язык и региональные параметры.  
   
 > [!NOTE]
->  Обе перегрузки метода <xref:System.String.CompareTo%2A?displayProperty=nameWithType> выполняют сравнение с учетом языка и региональных параметров и с учетом регистра; для сравнения без учета языка и региональных параметров этот метод использовать нельзя. Для получения более понятного кода рекомендуется вместо этого метода использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType>.  
+> Обе перегрузки метода <xref:System.String.CompareTo%2A?displayProperty=nameWithType> выполняют сравнение с учетом языка и региональных параметров и с учетом регистра; для сравнения без учета языка и региональных параметров этот метод использовать нельзя. Для получения более понятного кода рекомендуется вместо этого метода использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType>.  
   
  Для операций с учетом языка и региональных параметров в качестве параметра <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> следует указать значение перечисления <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> или `comparisonType`. Чтобы выполнить сравнение с учетом языка и региональных параметров, используя назначенный (отличный от текущего) язык и региональные параметры, в качестве параметра <xref:System.Globalization.CultureInfo> следует указать объект `culture`, представляющий этот язык и региональные параметры.  
   

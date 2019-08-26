@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589851"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939411"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Проверка XML-документа в DOM
 По умолчанию класс <xref:System.Xml.XmlDocument> не сверяет код XML в модели DOM ни с данными схемы XSD, ни c определением типа документа (DTD). Код XML проверяется только на правильность формата.  
@@ -76,7 +76,7 @@ ms.locfileid: "64589851"
  Ошибки проверки обрабатываются с помощью обработчика <xref:System.Xml.Schema.ValidationEventHandler>. Если обработчик <xref:System.Xml.Schema.ValidationEventHandler> был назначен экземпляру <xref:System.Xml.XmlReaderSettings> или передан методу <xref:System.Xml.XmlDocument.Validate%2A> класса <xref:System.Xml.XmlDocument>, <xref:System.Xml.Schema.ValidationEventHandler> будет обрабатывать ошибки проверки схемы; иначе возникнет исключение <xref:System.Xml.Schema.XmlSchemaValidationException> при обнаружении ошибки проверки схемы.  
   
 > [!NOTE]
->  XML-данные загружаются в модель DOM, несмотря на возникновение ошибок проверки схемы, если обработчик ошибок <xref:System.Xml.Schema.ValidationEventHandler> не вызовет исключение для остановки процесса.  
+> XML-данные загружаются в модель DOM, несмотря на возникновение ошибок проверки схемы, если обработчик ошибок <xref:System.Xml.Schema.ValidationEventHandler> не вызовет исключение для остановки процесса.  
 >   
 >  Предупреждения проверки схемы не выводятся, если на объекте <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> не установлен флаг <xref:System.Xml.XmlReaderSettings>.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950806"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Рекомендации по реализации асинхронной модели, основанной на событиях
 Асинхронная модель на основе событий является эффективным средством для обеспечения асинхронной работы в классах на базе привычной семантики делегатов и событий. Чтобы внедрить асинхронную модель на основе событий, необходимо выполнить определенные требования относительно поведения. В следующих разделах описываются требования и рекомендации, которые следует учитывать при реализации класса, поддерживающего асинхронную модель на основе событий.  
@@ -125,7 +125,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  Чтобы сообщить клиенту о ходе выполнения, добавочных результатах и завершении, выполните вызов методов <xref:System.ComponentModel.AsyncOperation.Post%2A> и <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> для <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation> отвечает за маршалинг вызовов обработчиков событий клиента в подходящий поток или контекст.  
   
 > [!NOTE]
->  Вы можете не соблюдать эти правила, если хотите явно нарушить политику модели приложения, но при этом воспользоваться другими преимуществами асинхронной модели на основе событий. Например, вам может понадобиться, чтобы класс, работающий в Windows Forms, был со свободным потоком. Вы можете создать класс со свободным потоком, если разработчики осознают накладываемые этим ограничения. Консольные приложения не синхронизируют выполнение вызовов <xref:System.ComponentModel.AsyncOperation.Post%2A>. Это может вызвать беспорядочное возникновение событий `ProgressChanged`. Если вы хотите получить сериализованное выполнение вызовов <xref:System.ComponentModel.AsyncOperation.Post%2A>, реализуйте и установите класс <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
+> Вы можете не соблюдать эти правила, если хотите явно нарушить политику модели приложения, но при этом воспользоваться другими преимуществами асинхронной модели на основе событий. Например, вам может понадобиться, чтобы класс, работающий в Windows Forms, был со свободным потоком. Вы можете создать класс со свободным потоком, если разработчики осознают накладываемые этим ограничения. Консольные приложения не синхронизируют выполнение вызовов <xref:System.ComponentModel.AsyncOperation.Post%2A>. Это может вызвать беспорядочное возникновение событий `ProgressChanged`. Если вы хотите получить сериализованное выполнение вызовов <xref:System.ComponentModel.AsyncOperation.Post%2A>, реализуйте и установите класс <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
   
  Дополнительные сведения об использовании <xref:System.ComponentModel.AsyncOperation> и <xref:System.ComponentModel.AsyncOperationManager> для включения асинхронных операций см. в разделе [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   

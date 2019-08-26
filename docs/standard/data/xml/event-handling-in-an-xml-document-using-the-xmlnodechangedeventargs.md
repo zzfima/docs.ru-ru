@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204894"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965889"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
 Класс **XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, которые зарегистрированы в объекте **XmlDocument** для обработки событий. События и описания условий их срабатывания приведены в следующей таблице.  
@@ -28,7 +28,7 @@ ms.locfileid: "44204894"
 |<xref:System.Xml.XmlDocument.NodeChanged>|После изменения значения узла.|  
   
 > [!NOTE]
->  Если использование памяти **XmlDataDocument** полностью оптимизировано для работы хранилища **DataSet**, **XmlDataDocument** может не инициировать приведенные выше события при внесении изменений в базовом хранилище **DataSet**. Если вам нужны эти события, просмотрите один раз весь **XmlDocument**, чтобы полностью оптимизировать использование памяти.  
+> Если использование памяти **XmlDataDocument** полностью оптимизировано для работы хранилища **DataSet**, **XmlDataDocument** может не инициировать приведенные выше события при внесении изменений в базовом хранилище **DataSet**. Если вам нужны эти события, просмотрите один раз весь **XmlDocument**, чтобы полностью оптимизировать использование памяти.  
   
  В следующем примере кода показано, как определить обработчик событий, и как добавить его к событию.  
   

@@ -1,35 +1,42 @@
 ---
 title: Операторы C# — справочник по C#
-ms.date: 04/30/2019
+ms.date: 08/20/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
 - operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+- operator precedence [C#]
+- operator associativity [C#]
+- expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7db61e530ba5c3e0b5ae0ee0002621e369e1833b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 75697a7a52fbfb04e1b44ecf591e271217a69bf4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924652"
 ---
 # <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
-C# предоставляет ряд стандартных операторов, поддерживаемых встроенными типами. Например [арифметические операторы](arithmetic-operators.md) выполняют арифметические операции с операндами встроенных числовых типов, а [логические операторы](boolean-logical-operators.md) выполняют логические операции с операндами [bool](../keywords/bool.md).
+C# предоставляет ряд операторов, поддерживаемых встроенными типами. Например [арифметические операторы](arithmetic-operators.md) выполняют арифметические операции с числовыми операндами, а [логические операторы](boolean-logical-operators.md) выполняют логические операции с операндами [bool](../keywords/bool.md). Большинство операторов могут быть [перегружены](operator-overloading.md). С помощью перегрузки операторов можно указать поведение оператора для операндов определяемого пользователем типа.
 
-Определяемый пользователем тип может перегружать некоторые операторы для определения соответствующего поведения операндов этого типа. Для получения дополнительной информации см. раздел [Перегрузка операторов](operator-overloading.md).
+В [выражении](../../programming-guide/statements-expressions-operators/expressions.md) приоритет и ассоциативность операторов определяют порядок выполнения операций. Порядок вычисления, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок.
+
+## <a name="operator-precedence"></a>Приоритет операторов
+
+В выражении с несколькими операторами операторы с более высоким приоритетом оцениваются до операторов с более низким приоритетом. В следующем примере умножение выполняется сначала, так как оно имеет более высокий приоритет, чем сложение:
+
+```csharp-interactive
+var a = 2 + 2 * 2;
+Console.WriteLine(a); //  output: 6
+```
+
+Используйте скобки, чтобы изменить порядок вычисления, накладываемый приоритетом операторов:
+
+```csharp-interactive
+var a = (2 + 2) * 2;
+Console.WriteLine(a); //  output: 8
+```
 
 В следующей таблице перечислены операторы C# в порядке убывания приоритета. Операторы в каждой строке имеют одинаковый приоритет.
 
@@ -51,7 +58,39 @@ C# предоставляет ряд стандартных операторов
 | [c ? t : f](conditional-operator.md) | Условный оператор |
 | [x = y](assignment-operator.md), [x += y](arithmetic-operators.md#compound-assignment), [x -= y](arithmetic-operators.md#compound-assignment), [x *= y](arithmetic-operators.md#compound-assignment), [x /= y](arithmetic-operators.md#compound-assignment), [x %= y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^= y](boolean-logical-operators.md#compound-assignment), [x <<= y](bitwise-and-shift-operators.md#compound-assignment), [x >>= y](bitwise-and-shift-operators.md#compound-assignment), [=>](lambda-operator.md) | Назначение и объявление лямбда-выражений |
 
+## <a name="operator-associativity"></a>Ассоциативность операторов
+
+Если операторы имеют одинаковый приоритет, порядок их выполнения определяется ассоциативностью операторов:
+
+- Операторы с *левой ассоциативностью* вычисляются слева направо. За исключением [операторов присваивания](assignment-operator.md) и [оператора объединения со значением NULL `??`](null-coalescing-operator.md) все бинарные операторы имеют левую ассоциативность. Например, выражение `a + b - c` вычисляется как `(a + b) - c`.
+- Операторы с *правой ассоциативностью* вычисляются справа налево. Операторы присваивания, оператор объединения со значением NULL `??` и [условный оператор `?:`](conditional-operator.md) имеют правую ассоциативность. Например, выражение `x = y = z` вычисляется как `x = (y = z)`.
+
+Используйте скобки, чтобы изменить порядок вычисления, накладываемый ассоциативностью операторов:
+
+```csharp-interactive
+int a = 13 / 5 / 2;
+int b = 13 / (5 / 2);
+Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
+```
+
+## <a name="operand-evaluation"></a>Вычисление операнда
+
+Не связанные с приоритетом и ассоциативностью операторов операнды в выражении вычисляются слева направо. В следующих примерах иллюстрируется порядок вычисления операторов и операндов:
+
+| Выражение | Порядок вычислений |
+| ---------- | ------------------- |
+|`a + b`|a, b, +|
+|`a + b * c`|a, b, c, *, +|
+|`a / b + c * d`|a, b, /, c, d, *, +|
+|`a / (b + c) * d`|a, b, c, +, /, d, *|
+
+Как правило, оцениваются все операнды операторов. Некоторые операторы оценивают операнды условно. То есть значение первого операнда такого оператора определяет, следует ли оценивать другие операнды. Эти операторы являются условными логическими операторами [И (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) и [ИЛИ (`||`) ](boolean-logical-operators.md#conditional-logical-or-operator-), [оператором объединения со значением NULL`??`](null-coalescing-operator.md), [условными операторами со значением NULL `?.` и `?[]`](member-access-operators.md#null-conditional-operators--and-) и [условным оператором `?:`](conditional-operator.md). Подробнее см. в описании каждого оператора.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделе [Операторы](~/_csharplang/spec/expressions.md#operators) статьи [Спецификация языка C#](~/_csharplang/spec/introduction.md).
+
 ## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
-- [Инструкции](../../programming-guide/statements-expressions-operators/operators.md)
+- [Выражения](../../programming-guide/statements-expressions-operators/expressions.md)

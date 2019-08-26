@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300633"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666309"
 ---
 # <a name="task-based-asynchronous-programming"></a>Асинхронное программирование на основе задач
 
@@ -97,7 +97,7 @@ ms.locfileid: "66300633"
 
 Большинство интерфейсов API, в которых создаются задачи, предоставляют перегрузки, принимающие параметр <xref:System.Threading.Tasks.TaskCreationOptions>. Указывая один из этих параметров, пользователь задает планировщику задач способ планирования задачи в пуле потоков. В следующей таблице перечислены различные параметры создания задач.
 
-|Значение параметра <xref:System.Threading.Tasks.TaskCreationOptions>|Описание|
+|Значение параметра <xref:System.Threading.Tasks.TaskCreationOptions>|ОПИСАНИЕ|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Значение по умолчанию, если параметр не задан. Планировщик использует его эвристику по умолчанию для планирования задачи.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Указывает, что задачу необходимо планировать так, чтобы созданные раньше задачи выполнялись раньше, а более поздние задачи — позже.|
@@ -256,11 +256,11 @@ ms.locfileid: "66300633"
 
 ## <a name="tasks-without-delegates"></a>Задачи без делегатов
 
-В некоторых случаях может потребоваться использовать <xref:System.Threading.Tasks.Task> для инкапсуляции некоторой асинхронной операции, которая выполняется внешним компонентом, а не собственным пользовательским делегатом. Если операция основана на шаблоне Begin/End модели асинхронного программирования, можно использовать методы <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. В противном случае можно использовать объект <xref:System.Threading.Tasks.TaskCompletionSource%601> для заключения операции в задачу, чтобы получить некоторые преимущества программирования <xref:System.Threading.Tasks.Task>, например поддержку распространения исключений и продолжений. Для получения дополнительной информации см. <xref:System.Threading.Tasks.TaskCompletionSource%601>.
+В некоторых случаях может потребоваться использовать <xref:System.Threading.Tasks.Task> для инкапсуляции некоторой асинхронной операции, которая выполняется внешним компонентом, а не собственным пользовательским делегатом. Если операция основана на шаблоне Begin/End модели асинхронного программирования, можно использовать методы <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. В противном случае можно использовать объект <xref:System.Threading.Tasks.TaskCompletionSource%601> для заключения операции в задачу, чтобы получить некоторые преимущества программирования <xref:System.Threading.Tasks.Task>, например поддержку распространения исключений и продолжений. Дополнительные сведения можно найти по адресу: <xref:System.Threading.Tasks.TaskCompletionSource%601>.
 
 ## <a name="custom-schedulers"></a>Пользовательские планировщики
 
-Большинство разработчиков приложений или библиотек не обращают внимания на то, на каком процессоре запускается задача, как она синхронизирует свою работу с другими задачами или как она планируется в <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Им только требуется, чтобы она выполнялась максимально эффективно на главном компьютере. Если требуется более точное управление сведениями планирования, библиотека параллельных задач позволяет настроить некоторые параметры в планировщике задач по умолчанию и даже предоставить пользовательский планировщик. Для получения дополнительной информации см. <xref:System.Threading.Tasks.TaskScheduler>.
+Большинство разработчиков приложений или библиотек не обращают внимания на то, на каком процессоре запускается задача, как она синхронизирует свою работу с другими задачами или как она планируется в <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Им только требуется, чтобы она выполнялась максимально эффективно на главном компьютере. Если требуется более точное управление сведениями планирования, библиотека параллельных задач позволяет настроить некоторые параметры в планировщике задач по умолчанию и даже предоставить пользовательский планировщик. Дополнительные сведения можно найти по адресу: <xref:System.Threading.Tasks.TaskScheduler>.
 
 ## <a name="related-data-structures"></a>Структуры связанных данных
 
@@ -268,13 +268,13 @@ ms.locfileid: "66300633"
 
 ## <a name="custom-task-types"></a>Настраиваемые типы задач
 
-Наследование из <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> не рекомендуется. Вместо этого рекомендуется с помощью свойства <xref:System.Threading.Tasks.Task.AsyncState%2A> связать дополнительные данные или состояние с объектом <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Можно также использовать методы расширения для расширения функциональных возможностей классов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Дополнительные сведения о методах расширения см. в разделах [Методы расширения](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) и [Методы расширения](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+Наследование из <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> не рекомендуется. Вместо этого рекомендуется с помощью свойства <xref:System.Threading.Tasks.Task.AsyncState%2A> связать дополнительные данные или состояние с объектом <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Можно также использовать методы расширения для расширения функциональных возможностей классов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Дополнительные сведения о методах расширения см. в разделах [Методы расширения](../../csharp/programming-guide/classes-and-structs/extension-methods.md) и [Методы расширения](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
 Если необходимо наследовать от <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, классы <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> нельзя использовать для создания экземпляров настраиваемого типа задач, поскольку эти механизмы создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Кроме того, механизмы продолжения задачи, работу которых обеспечивают <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> и <xref:System.Threading.Tasks.TaskFactory%601>, нельзя использовать для создания экземпляров настраиваемого типа задач, поскольку эти механизмы также создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Заголовок|ОПИСАНИЕ|
 |-|-|
 |[Создание цепочки задач с помощью задач продолжения](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Описание работы продолжений.|
 |[Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Описание различий между присоединенными и отсоединенными дочерними задачами.|

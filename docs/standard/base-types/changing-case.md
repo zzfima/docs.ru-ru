@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648976"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987208"
 ---
 # <a name="changing-case-in-net"></a>Смена регистра в .NET
 При написании приложения, которое принимает входные данные от пользователя, невозможно предугадать, какой регистр будет использоваться для ввода данных. Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе. В таблице ниже описаны три метода изменения регистра. Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.  
@@ -34,7 +34,7 @@ ms.locfileid: "54648976"
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Преобразует первые символы всех слов в строке в заглавные.|  
   
 > [!WARNING]
->  Обратите внимание, что методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType> и <xref:System.String.ToLower%2A?displayProperty=nameWithType> не следует использовать для преобразования строк с целью их сравнения или проверки на равенство. См. дополнительные сведения о [сравнении строк, содержащих символы в разных регистрах](#Comparing).  
+> Обратите внимание, что методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType> и <xref:System.String.ToLower%2A?displayProperty=nameWithType> не следует использовать для преобразования строк с целью их сравнения или проверки на равенство. См. дополнительные сведения о [сравнении строк, содержащих символы в разных регистрах](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Сравнение строк, содержащих символы в разных регистрах  

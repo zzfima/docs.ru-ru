@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946353"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
 В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.  
@@ -82,7 +82,7 @@ ms.locfileid: "67755047"
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  Версия метода `CreateCompositeBitmap` в C# использует указатели для обеспечения эффективной обработки объектов <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Поэтому необходимо включить параметр **Разрешить небезопасный код** в проекте для использования ключевого слова [небезопасный](~/docs/csharp/language-reference/keywords/unsafe.md). Дополнительные сведения о включении небезопасного кода в проекте Visual C# см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    > Версия метода `CreateCompositeBitmap` в C# использует указатели для обеспечения эффективной обработки объектов <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Поэтому необходимо включить параметр **Разрешить небезопасный код** в проекте для использования ключевого слова [небезопасный](../../csharp/language-reference/keywords/unsafe.md). Дополнительные сведения о включении небезопасного кода в проекте Visual C# см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Следующая таблица описывает члены сети.  
   

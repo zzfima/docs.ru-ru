@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623668"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968583"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Извлечение информации, сохраненной в атрибуте
 Извлечение пользовательских атрибутов не представляет никакой сложности. Сначала объявите экземпляр атрибута, который вам нужно получить. Затем вызовите метод <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>, чтобы инициализировать новый атрибут тем значением, которое вы хотите получить. После инициализации нового атрибута обращайтесь к его свойствам, чтобы получить значения.  
   
 > [!IMPORTANT]
->  В этой статье объясняется, как можно получить настраиваемые атрибуты для кода, загруженного в контекст выполнения. Чтобы получить атрибуты для кода, загруженного в контекст только для отражения, необходимо использовать класс <xref:System.Reflection.CustomAttributeData>, как показано в статье [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+> В этой статье объясняется, как можно получить настраиваемые атрибуты для кода, загруженного в контекст выполнения. Чтобы получить атрибуты для кода, загруженного в контекст только для отражения, необходимо использовать класс <xref:System.Reflection.CustomAttributeData>, как показано в статье [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  В этом разделе описываются следующие способы извлечения атрибутов.  
   

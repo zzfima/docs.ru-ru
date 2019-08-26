@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939617"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Проверка по схеме с помощью XPathNavigator
 С помощью класса <xref:System.Xml.XmlDocument> можно проверять XML-содержимое в объекте <xref:System.Xml.XmlDocument> двумя способами. Первый способ проверки XML- содержимого заключается в использовании проверяющего объекта <xref:System.Xml.XmlReader>, а второй - в вызове метода <xref:System.Xml.XmlDocument.Validate%2A> класса <xref:System.Xml.XmlDocument>. Можно также выполнить проверку XML-содержимого «только для чтения» с помощью класса <xref:System.Xml.XPath.XPathDocument>.  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  Свойство <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> можно использовать для определения допустимости отдельного атрибута или элемента при их оценке с помощью объекта <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  Если XML-документ загружается в объект <xref:System.Xml.XmlDocument> со связанной схемой, определяющей значения по умолчанию, объект <xref:System.Xml.XmlDocument> рассматривает их как значения по умолчанию XML-документа. Это означает, что свойство <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> всегда возвращает значение `false` для элемента, получившего значения по умолчанию из схемы, даже если в XML-документе это был пустой элемент.  
+> Если XML-документ загружается в объект <xref:System.Xml.XmlDocument> со связанной схемой, определяющей значения по умолчанию, объект <xref:System.Xml.XmlDocument> рассматривает их как значения по умолчанию XML-документа. Это означает, что свойство <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> всегда возвращает значение `false` для элемента, получившего значения по умолчанию из схемы, даже если в XML-документе это был пустой элемент.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Проверка документа с помощью метода Validate  
  Метод <xref:System.Xml.XmlDocument.Validate%2A> класса <xref:System.Xml.XmlDocument> проверяет XML-документ, содержащийся в объекте <xref:System.Xml.XmlDocument>, по схеме, указанной в свойстве <xref:System.Xml.XmlDocument> объекта <xref:System.Xml.XmlDocument.Schemas%2A>, и выполняет приращение информационного набора. Результатом является замена в объекте <xref:System.Xml.XmlDocument> ранее нетипизированного XML-документа типизированным документом.  

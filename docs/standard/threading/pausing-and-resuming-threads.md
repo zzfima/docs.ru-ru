@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963576"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Приостановка и прерывание потоков
 
@@ -41,7 +41,7 @@ ms.locfileid: "64644921"
  Ожидающий поток можно прервать, вызвав метод <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> для заблокированного потока. Это действие создает исключение <xref:System.Threading.ThreadInterruptedException>, которое выводит поток из вызова блокировки. Поток должен перехватить исключение <xref:System.Threading.ThreadInterruptedException> и выполнить соответствующие действия для продолжения работы. Если поток пропускает исключение, среда выполнения перехватывает его и останавливает поток.  
   
 > [!NOTE]
->  Если целевой поток не заблокирован при вызове метода <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, поток не прерывается до блокировки. Если поток никогда не блокируется, он может завершиться, не будучи прерванным.  
+> Если целевой поток не заблокирован при вызове метода <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, поток не прерывается до блокировки. Если поток никогда не блокируется, он может завершиться, не будучи прерванным.  
   
  Если ожидание является управляемым, методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> незамедлительно выводят поток из спящего режима. Если ожидание является неуправляемым (как, например, вызов неуправляемого кода функции Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)), то методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> не могут управлять потоком, пока он не вернется в управляемый код или не вызовет управляемый код. В управляемом коде это поведение выглядит следующим образом:  
   

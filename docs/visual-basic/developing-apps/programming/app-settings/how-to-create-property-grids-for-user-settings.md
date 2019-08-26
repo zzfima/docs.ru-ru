@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание таблицы свойств для пользовательских параметров в Visual Basic
+title: Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a31b44cca61caea5fdf725405646f628b5430b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968390"
 ---
-# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Как выполнить Создание таблицы свойств для пользовательских параметров в Visual Basic
+# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic
 Вы можете создать таблицу свойств для параметров пользователя, заполнив элемент управления <xref:System.Windows.Forms.PropertyGrid> свойствами параметров пользователей для объекта `My.Settings`.  
   
 > [!NOTE]
->  Для надлежащего выполнения этого примера для приложения необходимо настроить пользовательские параметры. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Для надлежащего выполнения этого примера для приложения необходимо настроить пользовательские параметры. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
  Объект `My.Settings` представляет каждый параметр в виде свойства. Имя свойства совпадает с именем параметра, а тип свойства совпадает с типом параметра. **Область** параметра определяет, доступно ли свойство только для чтения. Свойство для параметра с областью **Приложение** доступно только для чтения, а свойство для параметра с областью **Пользователь** доступно для чтения или записи. Дополнительные сведения см. в разделе [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
->  Невозможно изменить или сохранить значения параметров области определения приложения во время выполнения. Параметры области определения приложения можно изменить только при создании приложения (с помощью **конструктора проектов**) или путем изменения файла конфигурации приложения. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Невозможно изменить или сохранить значения параметров области определения приложения во время выполнения. Параметры области определения приложения можно изменить только при создании приложения (с помощью **конструктора проектов**) или путем изменения файла конфигурации приложения. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
  В этом примере элемент управления <xref:System.Windows.Forms.PropertyGrid> используется для доступа к свойствам параметров пользователей объекта `My.Settings`. По умолчанию <xref:System.Windows.Forms.PropertyGrid> отображает все свойства объекта `My.Settings`. Однако свойства параметров пользователей имеют атрибут <xref:System.Configuration.UserScopedSettingAttribute>. В данном примере для свойства <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> объекта <xref:System.Windows.Forms.PropertyGrid> устанавливается значение <xref:System.Configuration.UserScopedSettingAttribute>, чтобы отображать только свойства параметров пользователей.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "59311621"
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
     > [!NOTE]
-    >  Чтобы отобразить только параметры области определения приложения, используйте атрибут <xref:System.Configuration.ApplicationScopedSettingAttribute> вместо <xref:System.Configuration.UserScopedSettingAttribute>.  
+    > Чтобы отобразить только параметры области определения приложения, используйте атрибут <xref:System.Configuration.ApplicationScopedSettingAttribute> вместо <xref:System.Configuration.UserScopedSettingAttribute>.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Приложение сохраняет пользовательские параметры при завершении работы. Чтобы сохранить параметры немедленно, вызовите метод `My.Settings.Save`. Дополнительные сведения см. в разделе [Как Сохранение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+ Приложение сохраняет пользовательские параметры при завершении работы. Чтобы сохранить параметры немедленно, вызовите метод `My.Settings.Save`. Дополнительные сведения см. в разделе [Практическое руководство. Сохранение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>См. также
 

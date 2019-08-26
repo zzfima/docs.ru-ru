@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac1f2283ad30499748511e6fed6d5ce98da7fd14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490828"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960104"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> представляет собой примитив синхронизации, снимающий блокировку потоков в состоянии ожидания после определенного числа сигналов. <xref:System.Threading.CountdownEvent> предназначен для таких ситуаций, в которых он может заменить вызовы <xref:System.Threading.ManualResetEvent> или <xref:System.Threading.ManualResetEventSlim> с ручным уменьшением значения переменной перед подачей сигнала о событии. Например, в алгоритме ветвления и соединения вы можете создать <xref:System.Threading.CountdownEvent> со значением 5 для счетчика сигналов, а затем запустить пять рабочих элементов в пуле потоков, каждый из которых будет вызывать <xref:System.Threading.CountdownEvent.Signal%2A> после завершения работы. Каждый вызов <xref:System.Threading.CountdownEvent.Signal%2A> уменьшает значение счетчика на 1. В основном потоке вызов <xref:System.Threading.CountdownEvent.Wait%2A> блокируется до тех пор, пока значение счетчика не достигнет нуля.  
   
 > [!NOTE]
->  Если ваш код не будет взаимодействовать с устаревшими API синхронизации платформы .NET Framework, вы можете еще проще реализовать параллелизм ветвления-соединения с помощью объектов <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или метода <xref:System.Threading.Tasks.Parallel.Invoke%2A>.  
+> Если ваш код не будет взаимодействовать с устаревшими API синхронизации платформы .NET Framework, вы можете еще проще реализовать параллелизм ветвления-соединения с помощью объектов <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или метода <xref:System.Threading.Tasks.Parallel.Invoke%2A>.  
   
  <xref:System.Threading.CountdownEvent> предоставляет следующие дополнительные возможности:  
   

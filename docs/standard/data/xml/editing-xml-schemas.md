@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308722"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948486"
 ---
 # <a name="editing-xml-schemas"></a>Изменение XML-схем
 Изменение схем XML является одной из самых важных возможностей модели SOM. Все свойства модели SOM, относящиеся к работе перед компиляцией схемы, можно использовать для изменения существующих значений в схеме XML. Затем можно повторно скомпилировать схему XML, чтобы изменения вступили в силу.  
@@ -93,7 +93,7 @@ ms.locfileid: "59308722"
 8. Выполнение итерации по каждому <xref:System.Xml.Schema.XmlSchemaObject> в коллекции <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> перед компиляцией схемы.  
   
 > [!NOTE]
->  Поскольку элемент `FirstName` не является глобальным в схеме, он недоступен в коллекциях <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> и <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. Пример кода определяет расположение элемента `FirstName` по расположению элемента `Customer`.  
+> Поскольку элемент `FirstName` не является глобальным в схеме, он недоступен в коллекциях <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> и <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. Пример кода определяет расположение элемента `FirstName` по расположению элемента `Customer`.  
 >   
 >  В первом примере кода обзор схемы выполняется с помощью коллекции <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> типа «после компиляции схемы». В этом образце для обзора схемы используется коллекция <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> типа «перед компиляцией схемы». Обе коллекции предоставляют доступ к глобальным элементам схемы, но проход по коллекции <xref:System.Xml.Schema.XmlSchema.Items%2A> занимает больше времени, поскольку необходимо проходить по всем глобальным элементам в схеме, а в схеме отсутствуют свойства PSCI. Коллекции PSCI (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> и т. д.) предоставляют прямой доступ к своим глобальным элементам, атрибутам, типам и их свойствам PSCI.  
   

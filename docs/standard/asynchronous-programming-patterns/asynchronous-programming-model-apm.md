@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628937"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950874"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Асинхронная модель программирования (APM)
 Асинхронная операция, использующая шаблон разработки <xref:System.IAsyncResult>, реализуется в виде двух методов с именами `BeginOperationName` и `EndOperationName`, которые соответственно начинают и завершают асинхронную операцию *OperationName*. Например, класс <xref:System.IO.FileStream> предоставляет методы <xref:System.IO.FileStream.BeginRead%2A> и <xref:System.IO.FileStream.EndRead%2A> для асинхронного считывания байтов из файла. Эти методы реализуют асинхронную версию метода <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
->  Начиная с версии .NET Framework 4 библиотека параллельных задач предоставляет новую модель для асинхронного и параллельного программирования. Дополнительные сведения см. в разделах [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) и [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).)  
+> Начиная с версии .NET Framework 4 библиотека параллельных задач предоставляет новую модель для асинхронного и параллельного программирования. Дополнительные сведения см. в разделах [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) и [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).)  
   
  После вызова метода `BeginOperationName` приложение может продолжить выполнение инструкций в вызывающем потоке, пока асинхронная операция выполняется в другом потоке. Для каждого вызова метода `BeginOperationName` приложение должно вызывать метод `EndOperationName`, получающий результаты операции.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Начало асинхронной операции  
  Метод `BeginOperationName` начинает асинхронную операцию *OperationName* и возвращает объект, реализующий интерфейс <xref:System.IAsyncResult>. В объектах<xref:System.IAsyncResult> хранятся сведения об асинхронных операциях. В таблице ниже приведены сведения об асинхронной операции.  
   
-|Член|Описание|  
+|Член|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Относящийся к необязательному приложению объект, содержащий сведения об асинхронной операции.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Объект <xref:System.Threading.WaitHandle> , который можно использовать, чтобы заблокировать выполнение приложения до завершения асинхронной операции.|  
@@ -48,10 +48,10 @@ ms.locfileid: "64628937"
  Если асинхронная операция, представленная объектом <xref:System.IAsyncResult>, не завершилась к моменту вызова метода `EndOperationName`, метод `EndOperationName` блокирует выполнение вызывающего потока до момента завершения асинхронной операции. Исключения, создаваемые асинхронной операцией, возникают из метода `EndOperationName`. Многократный вызов метода `EndOperationName` с одним экземпляром <xref:System.IAsyncResult> не определен. Аналогично, вызов метода `EndOperationName` с объектом <xref:System.IAsyncResult>, который не был возвращен соответствующим методом Begin, также имеет неопределенный эффект.  
   
 > [!NOTE]
->  В случае реализации этих неопределенных сценариев рекомендуется вызывать исключение <xref:System.InvalidOperationException>.  
+> В случае реализации этих неопределенных сценариев рекомендуется вызывать исключение <xref:System.InvalidOperationException>.  
   
 > [!NOTE]
->  В случае реализации этого шаблона разработки необходимо уведомить вызывающий объект о завершении асинхронной операции, установив свойство <xref:System.IAsyncResult.IsCompleted%2A> в значение true, вызвав асинхронный метод обратного вызова (если он указан) и отправив сигнал <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
+> В случае реализации этого шаблона разработки необходимо уведомить вызывающий объект о завершении асинхронной операции, установив свойство <xref:System.IAsyncResult.IsCompleted%2A> в значение true, вызвав асинхронный метод обратного вызова (если он указан) и отправив сигнал <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
   
  Разработчики приложений имеют выбор способов доступа к результатам асинхронной операции. Правильный выбор зависит от того, содержит ли приложение инструкции, которые могут выполняться, пока не завершена операция. Если приложение не может выполнять дополнительную работу, пока не получены результаты асинхронной операции, его необходимо заблокировать до момента, когда станут доступны результаты. Чтобы заблокировать работу до завершения асинхронной операции, используйте один из описанных ниже способов.  
   

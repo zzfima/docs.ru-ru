@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909686"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Удаление XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> располагает набором методов, используемых для удаления узлов и значений из XML-документа. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
@@ -33,7 +33,7 @@ ms.locfileid: "54674145"
  Операция удаления не влияет на позицию любого объекта <xref:System.Xml.XPath.XPathNavigator>, позиционированного на удаленном узле. Эти объекты <xref:System.Xml.XPath.XPathNavigator> допустимы в том отношении, что могут перемещаться внутри удаленного поддерева, но не могут быть перенесены в главный узел дерева с помощью обычных методов перемещения по набору узлов класса <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  Метод <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> класса <xref:System.Xml.XPath.XPathNavigator> может быть использован для перемещения этих объектов <xref:System.Xml.XPath.XPathNavigator> назад в главный узел дерева или из главного узла дерева в удаленное поддерево.  
+> Метод <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> класса <xref:System.Xml.XPath.XPathNavigator> может быть использован для перемещения этих объектов <xref:System.Xml.XPath.XPathNavigator> назад в главный узел дерева или из главного узла дерева в удаленное поддерево.  
   
  В следующем примере элемент `price` первого элемента `book` файла `contosoBooks.xml` удаляется с помощью метода <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A>. Позиция объекта <xref:System.Xml.XPath.XPathNavigator> после удаления элемента `price` - на родительском элементе `book`.  
   

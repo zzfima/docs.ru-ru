@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567923"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910347"
 ---
 # <a name="mutexes"></a>Mutexes
 Объект <xref:System.Threading.Mutex> можно использовать для получения монопольного доступа к ресурсу. Класс <xref:System.Threading.Mutex> использует больше системных ресурсов, чем класс <xref:System.Threading.Monitor>, но он может маршалироваться между доменами приложений, использоваться с несколькими ожиданиями и синхронизировать потоки в нескольких процессах. Сравнение механизмов управляемой синхронизации см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "54567923"
  Если поток завершается без освобождения <xref:System.Threading.Mutex>, мьютекс считается отмененным. Это часто указывает на серьезную ошибку программирования, поскольку ресурс, защищаемый мьютексом, может остаться в несогласованном состоянии. На платформе .NET Framework версии 2.0 в такой ситуации создается исключение <xref:System.Threading.AbandonedMutexException> в следующем потоке, который завладеет этим мьютексом.  
   
 > [!NOTE]
->  На платформе .NET Framework версий 1.0 и 1.1 отмененный объект <xref:System.Threading.Mutex> переходит в сигнальное состояние, а владение переходит к следующему ожидающему потоку. Если отсутствуют потоки в состоянии ожидания, <xref:System.Threading.Mutex> остается в сигнальном состоянии. Исключение не возникает.  
+> На платформе .NET Framework версий 1.0 и 1.1 отмененный объект <xref:System.Threading.Mutex> переходит в сигнальное состояние, а владение переходит к следующему ожидающему потоку. Если отсутствуют потоки в состоянии ожидания, <xref:System.Threading.Mutex> остается в сигнальном состоянии. Исключение не возникает.  
   
  В случае системного мьютекса брошенный мьютекс может указывать на то, что работа приложения была внезапно прекращена (например, с помощью диспетчера задач Windows).  
   

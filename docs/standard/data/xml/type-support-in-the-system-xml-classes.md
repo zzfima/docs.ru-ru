@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 979975e993a84dfe5c5527291f8cfe650be80ee6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 954ff12ae1ac8b4d601c35fcd76ea35b2bb3acbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647839"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939442"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Поддержка типов в классах System.Xml
 На платформе .NET Framework версии 2.0 основные классы XML были улучшены, чтобы включить функции поддержки типов. Классы <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.XPath.XPathNavigator> включают возможности поддержки типов, включая возможность преобразования между собой типов схемы XML и типов CLR.  
@@ -26,7 +26,7 @@ ms.locfileid: "64647839"
 - Свойства **ValueAs** и <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> класса <xref:System.Xml.XPath.XPathNavigator> возвращают значение узла и преобразуют его в значение CLR за один вызов метода.  
   
 > [!NOTE]
->  На платформе .NET Framework версии 1.0 класс <xref:System.Xml.XmlConvert> был нужен для взаимного преобразования типов схемы XML и типов CLR.  
+> На платформе .NET Framework версии 1.0 класс <xref:System.Xml.XmlConvert> был нужен для взаимного преобразования типов схемы XML и типов CLR.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Сопоставление типов XML-данных с типами CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  

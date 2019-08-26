@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305043"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939462"
 ---
 # <a name="traversing-xml-schemas"></a>Обход XML-схем
 Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM. Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
@@ -35,7 +35,7 @@ ms.locfileid: "59305043"
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (предоставляет доступ к атрибутам, не принадлежащим к пространству имен схемы).|  
   
 > [!NOTE]
->  Все свойства, перечисленные выше в таблице, кроме свойства <xref:System.Xml.Schema.XmlSchema.Items%2A>, являются свойствами Post-Schema-Compilation-Infoset (PSCI), доступными только после компиляции схемы. Свойство <xref:System.Xml.Schema.XmlSchema.Items%2A> доступно до компиляции схемы и может использоваться, когда схема еще не скомпилирована, для доступа ко всем элементам, атрибутам и типам глобального уровня и для их изменения.  
+> Все свойства, перечисленные выше в таблице, кроме свойства <xref:System.Xml.Schema.XmlSchema.Items%2A>, являются свойствами Post-Schema-Compilation-Infoset (PSCI), доступными только после компиляции схемы. Свойство <xref:System.Xml.Schema.XmlSchema.Items%2A> доступно до компиляции схемы и может использоваться, когда схема еще не скомпилирована, для доступа ко всем элементам, атрибутам и типам глобального уровня и для их изменения.  
 >   
 >  Свойство <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> предоставляет доступ ко всем атрибутам, не принадлежащим к пространству имен схемы. Эти атрибуты не обрабатываются обработчиком схемы.  
   

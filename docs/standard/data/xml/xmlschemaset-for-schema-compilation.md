@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969032"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet для компиляции схемы
 Описывает класс <xref:System.Xml.Schema.XmlSchemaSet>, который представляет собой кэш, в котором можно хранить и проверять схемы XSD.  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  Схемы в классе <xref:System.Xml.Schema.XmlSchemaSet> компилируются в одну логическую схему с помощью метода <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet>.  
   
 > [!NOTE]
->  В отличие от устаревшего класса <xref:System.Xml.Schema.XmlSchemaCollection>, при вызове метода <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> схемы не компилируются.  
+> В отличие от устаревшего класса <xref:System.Xml.Schema.XmlSchemaCollection>, при вызове метода <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> схемы не компилируются.  
   
  Если метод <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> выполняется успешно, свойство <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> имеет значение `true`.  
   
 > [!NOTE]
->  Свойство <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> не изменяется, если изменяются схемы в классе <xref:System.Xml.Schema.XmlSchemaSet>. Обновления отдельных схем в классе <xref:System.Xml.Schema.XmlSchemaSet> не отслеживаются. В результате свойство <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> может иметь значение `true`, даже если одна из схем в классе <xref:System.Xml.Schema.XmlSchemaSet> была изменена, но схемы не добавлялись и не удалялись из класса <xref:System.Xml.Schema.XmlSchemaSet>.  
+> Свойство <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> не изменяется, если изменяются схемы в классе <xref:System.Xml.Schema.XmlSchemaSet>. Обновления отдельных схем в классе <xref:System.Xml.Schema.XmlSchemaSet> не отслеживаются. В результате свойство <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> может иметь значение `true`, даже если одна из схем в классе <xref:System.Xml.Schema.XmlSchemaSet> была изменена, но схемы не добавлялись и не удалялись из класса <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  В следующем примере файл `books.xsd` добавляется в класс <xref:System.Xml.Schema.XmlSchemaSet>, а затем вызывается метод <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>.  
   

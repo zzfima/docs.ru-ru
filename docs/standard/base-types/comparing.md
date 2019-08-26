@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963420"
 ---
 # <a name="comparing-strings-in-net"></a>Сравнение строк в .NET
 Платформа .NET обеспечивает несколько методов для сравнения значений строк. В таблице ниже перечислены и описаны методы сравнения значений.  
@@ -46,12 +46,12 @@ ms.locfileid: "66053595"
   
 |Возвращаемое значение|Условие|  
 |------------------|---------------|  
-|Отрицательное целое число|Первая строка предшествует второй в порядке сортировки.<br /><br /> - или -<br /><br /> Первая строка имеет значение `null`.|  
-|0|Первая и вторая строка равны.<br /><br /> - или -<br /><br /> Обе строки имеют значение `null`.|  
-|Положительное целое число<br /><br /> - или -<br /><br /> 1|Первая строка следует за второй в порядке сортировки.<br /><br /> - или -<br /><br /> Вторая строка имеет значение `null`.|  
+|Отрицательное целое число|Первая строка предшествует второй в порядке сортировки.<br /><br /> -или-<br /><br /> Первая строка имеет значение `null`.|  
+|0|Первая и вторая строка равны.<br /><br /> -или-<br /><br /> Обе строки имеют значение `null`.|  
+|Положительное целое число<br /><br /> -или-<br /><br /> 1|Первая строка следует за второй в порядке сортировки.<br /><br /> -или-<br /><br /> Вторая строка имеет значение `null`.|  
   
 > [!IMPORTANT]
->  Метод <xref:System.String.Compare%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> Метод <xref:System.String.Compare%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  В примере ниже метод <xref:System.String.Compare%2A?displayProperty=nameWithType> используется для определения относительных значений двух строк.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66053595"
  Метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> сравнивает два строковых объекта без учета локального языка и региональных параметров. Возвращаемые этим методом значения идентичны значениям, возвращаемым методом **Compare** в предыдущей таблице.  
   
 > [!IMPORTANT]
->  Метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> Метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  В примере ниже метод **CompareOrdinal** используется для сравнения значений двух строк.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66053595"
  Метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> сравнивает строку, которую инкапсулирует текущий строковый объект, с другой строкой или объектом. Возвращаемые этим методом значения идентичны значениям, возвращаемым методом <xref:System.String.Compare%2A?displayProperty=nameWithType> в предыдущей таблице.  
   
 > [!IMPORTANT]
->  Метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> Метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  В примере ниже метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> используется для сравнения объекта `string1` с объектом `string2` .  
   

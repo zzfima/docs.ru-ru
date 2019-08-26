@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Реализация клиента асинхронной модели на основе событий
+title: Практическое руководство. Реализация клиента асинхронной модели на основе событий
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-ms.openlocfilehash: 8d2825ff738ffc50ba9a438024db27aff5686a0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50aa36d2caf774638ad20323813f0de3703aab2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950721"
 ---
-# <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Как выполнить Реализация клиента асинхронной модели на основе событий
+# <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Практическое руководство. Реализация клиента асинхронной модели на основе событий
 В приведенном ниже примере кода показано, как использовать компонент, который соответствует принципам [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). В форме в этом примере компонент `PrimeNumberCalculator` используется так, как описано в разделе [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
  Запустив проект с этим примером, вы увидите форму расчета простых чисел с сеткой и двумя кнопками: **Start New Task** (Выполнить новую задачу) и **Cancel** (Отменить). Вы можете нажать кнопку **Start New Task** (Выполнить новую задачу) несколько раз подряд, и при каждом нажатии запустится асинхронная операция вычисления, которая проверяет, является ли случайное проверяемое число простым. Форма периодически обновляется, отображая ход выполнения и накопленные результаты. Каждой операции присваивается уникальный идентификатор задачи. Результат вычисления отображается в столбце **Result** (Результат). Если проверяемое число не является простым, оно дополняется отметкой **Composite** (Составное) и значением его первого делителя.  
@@ -33,7 +33,7 @@ ms.locfileid: "54661391"
  Кнопка **Cancel** (Отменить) позволяет отменить все операции, ожидающие выполнения. Вы можете выбрать несколько элементов.  
   
 > [!NOTE]
->  Большинство чисел не будут простыми. Если после нескольких операций вам не удастся найти простое число, просто запустите еще несколько задач. Рано или поздно простые числа будут обнаружены.  
+> Большинство чисел не будут простыми. Если после нескольких операций вам не удастся найти простое число, просто запустите еще несколько задач. Рано или поздно простые числа будут обнаружены.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]

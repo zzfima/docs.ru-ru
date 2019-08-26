@@ -1,33 +1,28 @@
 - name: Элементы управления Windows Forms
   href: index.md
   items:
-    - name: Расположение элементов управления в формах Windows Forms
-      href: arranging-controls-on-windows-forms.md
+    - name: Упорядочение элементов управления в формах Windows Forms
       items:
-        - name: Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms
+        - name: Практическое руководство. Выравнивание нескольких элементов управления
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: Практическое руководство. Привязка элементов управления в формах Windows Forms
+        - name: Практическое руководство. Привязка элементов управления
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: Практическое руководство. Копирование элементов управления между формами Windows Forms
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: Практическое руководство. Закрепление элементов управления в формах Windows Forms
+        - name: Практическое руководство. Закрепление элементов управления
           href: how-to-dock-controls-on-windows-forms.md
-        - name: Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms
+        - name: Практическое руководство. Создание слоев объектов
           href: how-to-layer-objects-on-windows-forms.md
-        - name: Практическое руководство. Прикрепление элементов управления в формах Windows Forms
+        - name: Практическое руководство. Блокировка элементов управления
           href: how-to-lock-controls-to-windows-forms.md
-        - name: Практическое руководство. Размещение элементов управления в формах Windows Forms
+        - name: Практическое руководство. Размещение элементов управления
           href: how-to-position-controls-on-windows-forms.md
-        - name: Практическое руководство. Изменение размера элементов управления в формах Windows Forms
+        - name: Практическое руководство. Изменение размера элементов управления
           href: how-to-resize-controls-on-windows-forms.md
         - name: Практическое руководство. Установка параметров сетки для всех форм Windows Forms
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: Практическое руководство. Установка последовательности переходов в формах Windows Forms
+        - name: Практическое руководство. Установка последовательности перехода
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
+        - name: Пошаговое руководство. Размещение элементов управления с помощью линий привязки
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: Практическое руководство. Переназначение существующих элементов управления другим родительским элементам
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 'Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize'
@@ -35,15 +30,15 @@
     - name: Размещение элементов управления в формах Windows Forms
       href: putting-controls-on-windows-forms.md
       items:
-        - name: Практическое руководство. Добавление элементов управления в формы Windows Forms
+        - name: Практическое руководство. Добавление элементов управления
           href: how-to-add-controls-to-windows-forms.md
-        - name: 'Практическое руководство. Добавление элементов управления, для которых не существует пользовательского интерфейса, в формы Windows Forms'
+        - name: 'Практическое руководство. Добавление элементов управления, для которых не существует пользовательского интерфейса'
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms
+        - name: Практическое руководство. Добавление элементов управления ActiveX
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Вопросы размещения элемента управления ActiveX в форме Windows Forms
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: Практическое руководство. Обработка события нажатия кнопки в Windows Forms
+            - name: Практическое руководство. Реагирование на нажатия кнопок
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Способы активации элемента управления Button в Windows Forms
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: Общие сведения об элементе управления CheckBox
               href: checkbox-control-overview-windows-forms.md
-            - name: Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms
+            - name: Практическое руководство. Реагирование на нажатия флажков
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms
+            - name: Практическое руководство. Задание параметров с помощью элементов управления CheckBox
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: Элемент управления CheckedListBox
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: 'Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms'
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: Практическое руководство. Связывание объектов с элементами управления DataGridView в Windows Forms
+                - name: Практическое руководство. Связывание объектов с элементами управления DataGridView
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms
+                - name: Практическое руководство. Доступ к связанным объектам в строках DataGridView
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: Общие сведения об элементе управления DomainUpDown
               href: domainupdown-control-overview-windows-forms.md
-            - name: Практическое руководство. Добавление элементов в элемент управления DomainUpDown в Windows Forms
+            - name: Практическое руководство. Добавление элементов в элементы управления DomainUpDown программными средствами
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md

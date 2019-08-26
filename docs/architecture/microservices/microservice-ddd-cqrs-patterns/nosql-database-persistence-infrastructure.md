@@ -2,12 +2,12 @@
 title: Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSql в целом и в Azure Cosmos DB в частности для реализации сохраняемости.
 ms.date: 10/08/2018
-ms.openlocfilehash: 023904319651ec91000ff036850c773f66d1a267
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2ea3841aa3bdbad3b67b529e0e9820b96f0fa038
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676341"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015076"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -333,7 +333,7 @@ services:
   <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
 - **Образ Docker MongoDB (контейнер для Linux и Windows)**   \
-  <https://hub.docker.com/\_/mongo/>
+  <https://hub.docker.com/_/mongo/>
 
 - **Использование MongoChef (Studio 3T) с Azure Cosmos DB: API для учетной записи MongoDB**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916658"
 ---
 # <a name="compiled-xpath-expressions"></a>Скомпилированные выражения XPath
 Объект <xref:System.Xml.XPath.XPathExpression> представляет скомпилированный запрос XPath, возвращаемый либо статическим методом <xref:System.Xml.XPath.XPathExpression.Compile%2A> класса <xref:System.Xml.XPath.XPathExpression>, либо методом <xref:System.Xml.XPath.XPathNavigator.Compile%2A> класса <xref:System.Xml.XPath.XPathNavigator>.  
@@ -37,7 +37,7 @@ ms.locfileid: "64647956"
   
  В следующей таблице описаны возвращаемые типы W3C XPath и их эквиваленты в платформе Microsoft .NET Framework, а также методы, с которыми можно использовать объект <xref:System.Xml.XPath.XPathExpression> в зависимости от возвращаемого им типа.  
   
-|Тип возвращаемого значения W3C XPath|Эквивалентный тип в .NET Framework|Описание|Методы|  
+|Тип возвращаемого значения W3C XPath|Эквивалентный тип в .NET Framework|ОПИСАНИЕ|Методы|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Неупорядоченная коллекция узлов без повторяющихся узлов, созданная в порядке документа.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> или <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Значение `true` или `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> или<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -45,7 +45,7 @@ ms.locfileid: "64647956"
 |`String`|<xref:System.String>|Последовательность символов UCS.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  Метод <xref:System.Xml.XPath.XPathNavigator.Matches%2A> принимает в качестве параметра выражение XPath. Метод <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> возвращает объект <xref:System.Xml.XPath.XPathNavigator>, а не один из возвращаемых типов W3C XPath.  
+> Метод <xref:System.Xml.XPath.XPathNavigator.Matches%2A> принимает в качестве параметра выражение XPath. Метод <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> возвращает объект <xref:System.Xml.XPath.XPathNavigator>, а не один из возвращаемых типов W3C XPath.  
   
 ### <a name="the-returntype-property"></a>Свойство ReturnType  
  После компиляции запроса XPath в объект <xref:System.Xml.XPath.XPathExpression> можно использовать свойство <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> объекта <xref:System.Xml.XPath.XPathExpression>, чтобы определить возвращаемый тип запроса XPath.  

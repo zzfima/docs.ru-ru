@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948783"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Универсальные делегаты для управления массивами и списками
 В этом разделе содержится обзор универсальных делегатов для преобразований, предикатов поиска и действий, осуществляемых с элементами массива или коллекции.  
@@ -28,7 +28,7 @@ ms.locfileid: "54613913"
  Универсальный класс <xref:System.Collections.Generic.List%601> также предоставляет метод <xref:System.Collections.Generic.List%601.ForEach%2A>, использующий делегат <xref:System.Action%601>. Этот метод неуниверсальный.  
   
 > [!NOTE]
->  Это интересная особенность универсальных типов и методов. Метод <xref:System.Array.ForEach%2A?displayProperty=nameWithType> должен быть статическим (`Shared` в Visual Basic) и универсальным, так как <xref:System.Array> не является универсальным типом. Единственной причиной, по которой можно задать тип для <xref:System.Array.ForEach%2A?displayProperty=nameWithType>, является то, что метод имеет свой собственный список параметров типа. Напротив, неуниверсальный метод <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> принадлежит к универсальному классу <xref:System.Collections.Generic.List%601>, поэтому он просто использует параметр типа своего класса. Класс является строго типизированным, поэтому этот метод может быть методом экземпляра.  
+> Это интересная особенность универсальных типов и методов. Метод <xref:System.Array.ForEach%2A?displayProperty=nameWithType> должен быть статическим (`Shared` в Visual Basic) и универсальным, так как <xref:System.Array> не является универсальным типом. Единственной причиной, по которой можно задать тип для <xref:System.Array.ForEach%2A?displayProperty=nameWithType>, является то, что метод имеет свой собственный список параметров типа. Напротив, неуниверсальный метод <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> принадлежит к универсальному классу <xref:System.Collections.Generic.List%601>, поэтому он просто использует параметр типа своего класса. Класс является строго типизированным, поэтому этот метод может быть методом экземпляра.  
   
  Универсальный делегат <xref:System.Predicate%601> представляет метод, который определяет, удовлетворяет ли конкретный элемент заданным критериям. Его можно использовать со следующими статическими универсальными методами <xref:System.Array> для поиска элемента или набора элементов: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A> и <xref:System.Array.TrueForAll%2A>.  
   

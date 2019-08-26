@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36a003c96e81996e304fc4347ed05bf7a255c224
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e1487d3721694ae45b67ae3534c89cc62f513911
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189456"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666321"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Лямбда-выражения в PLINQ и библиотеке параллельных задач
 Библиотека параллельных задач (TPL) содержит множество методов, которые принимают в качестве входных параметров один из делегатов семейства <xref:System.Func%601?displayProperty=nameWithType> или <xref:System.Action?displayProperty=nameWithType>. Используйте эти делегаты для передачи пользовательской программной логики в параллельный цикл, задачу или запрос. В примерах кода для библиотеки параллельных задач и PLINQ лямбда-выражения используются для создания экземпляров этих делегатов как встроенных блоков кода. В этом разделе дается краткое введение в делегаты Func и Action и демонстрируется использование лямбда-выражений в библиотеке параллельных задач и PLINQ.  
   
- **Примечание.** Дополнительные сведения о делегатах см. в разделах [Делегаты](../../csharp/programming-guide/delegates/index.md) и [Делегаты](../../visual-basic/programming-guide/language-features/delegates/index.md). Дополнительные сведения о лямбда-выражениях в C# и Visual Basic см. в разделах [Лямбда-выражения](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) и [Лямбда-выражения](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ **Примечание.** Дополнительные сведения о делегатах см. в разделах [Делегаты](../../csharp/programming-guide/delegates/index.md) и [Делегаты](../../visual-basic/programming-guide/language-features/delegates/index.md). Дополнительные сведения о лямбда-выражениях в C# и Visual Basic см. в разделах [Лямбда-выражения](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) и [Лямбда-выражения](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="func-delegate"></a>Делегат Func  
  Делегат `Func` инкапсулирует метод, который возвращает значение. В сигнатуре Func последний или крайний правый тип параметра всегда указывает возвращаемый тип. Распространенной причиной ошибок компилятора является попытка передать в <xref:System.Func%602?displayProperty=nameWithType> два входных параметра. На самом деле этот тип принимает только один входной параметр. Библиотека классов Framework определяет 17 версий для `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> и так далее вплоть до <xref:System.Func%6017?displayProperty=nameWithType>.  
   
 ## <a name="action-delegate"></a>Делегат Action  
- Делегат <xref:System.Action?displayProperty=nameWithType> инкапсулирует метод (Sub в Visual Basic), который не возвращает значение или возвращает [void](~/docs/csharp/language-reference/keywords/void.md). В сигнатуре типа Action параметры типа представляют только входные параметры. Как и в случае с делегатом Func, библиотека классов Framework определяет 17 версий делегата Action, начиная с версии без параметров типа и заканчивая версией с 16 параметрами типа.  
+ Делегат <xref:System.Action?displayProperty=nameWithType> инкапсулирует метод (Sub в Visual Basic), который не возвращает значение или возвращает [void](../../csharp/language-reference/keywords/void.md). В сигнатуре типа Action параметры типа представляют только входные параметры. Как и в случае с делегатом Func, библиотека классов Framework определяет 17 версий делегата Action, начиная с версии без параметров типа и заканчивая версией с 16 параметрами типа.  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует метод <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> позволяющий выразить делегаты Func и Action через лямбда-выражения.  

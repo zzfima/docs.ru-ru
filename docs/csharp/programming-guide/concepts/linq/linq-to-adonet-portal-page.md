@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (Страница портала)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 8c39582ee95619bfddc7b89380e0a86305eeac27
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924261"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Страница портала)
 LINQ to ADO.NET позволяет запрашивать любой перечисляемый объект в ADO.NET с помощью модели программирования [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 > [!NOTE]
->  Документация по LINQ to ADO.NET находится в разделе ADO.NET пакета SDK для .NET Framework: ](../../../../framework/data/adonet/linq-and-ado-net.md)LINQ и ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
+> Документация по LINQ to ADO.NET находится в разделе ADO.NET пакета SDK для .NET Framework: [LINQ и ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).  
   
  Существуют три отдельные технологии ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] и LINQ to Entities. Технология LINQ to DataSet обеспечивает расширенные и оптимизированные запросы к <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] позволяет запрашивать непосредственно схемы базы данных SQL Server, а LINQ to Entities — выполнять запросы к EDM.  
   
@@ -29,7 +29,7 @@ LINQ to ADO.NET позволяет запрашивать любой переч�
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] включает поддержку хранимых процедур, определяемых пользователем функций в базе данных и наследования в объектной модели.  
   
- Дополнительные сведения см. в разделе [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Дополнительные сведения см. в разделе [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  В модели EDM реляционные данные представлены в виде объектов в среде .NET. Благодаря этому поддержка [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] эффективно реализуется на уровне объектов, что позволяет составлять запросы баз данных на языке, используемом для сборки бизнес-логики. Эта функция называется LINQ to Entities. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md).  
@@ -37,4 +37,4 @@ LINQ to ADO.NET позволяет запрашивать любой переч�
 ## <a name="see-also"></a>См. также
 
 - [LINQ и ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
-- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (C#)](./index.md)

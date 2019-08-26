@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af1dc3e1ce22112d76ad566873f40c1c2ac05c9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591281"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968690"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
 В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями. Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.  
@@ -44,7 +44,7 @@ ms.locfileid: "65591281"
      Сведения о просмотре окна вывода отладочных данных приложения см. в разделе [Окно вывода](/visualstudio/ide/reference/output-window). Дополнительные сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
-    >  По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.  
+    > По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.  
   
      В приведенном выше примере второй вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> и вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> приводят к получению данных журнала, а первый и последний вызовы метода `WriteEntry` — нет. Это связано с тем, что уровнями серьезности для `WriteEntry` и `WriteException` являются "Информация" и "Ошибка". Оба эти значения разрешены при фильтрации журнала по умолчанию для объекта `My.Application.Log`. Однако событиям с уровнями серьезности "Запуск" и "Остановка" запрещено создание выходных данных журнала.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65591281"
 |`Off`|Все сообщения блокируются.|  
   
 > [!NOTE]
->  Каждый метод `WriteEntry` и `WriteException` имеет перегрузку, которая не указывает уровень серьезности. Неявным уровнем серьезности для перегрузки `WriteEntry` является "Информация", а неявным уровнем серьезности для перегрузки `WriteException` — "Ошибка".  
+> Каждый метод `WriteEntry` и `WriteException` имеет перегрузку, которая не указывает уровень серьезности. Неявным уровнем серьезности для перегрузки `WriteEntry` является "Информация", а неявным уровнем серьезности для перегрузки `WriteException` — "Ошибка".  
   
  В этой таблице приводятся выходные данные журнала из предыдущего примера: с параметром `DefaultSwitch` по умолчанию "Информация" только второй вызов метода `WriteEntry` и вызов метода `WriteException` формируют выходные данные журнала.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65591281"
   
 1. Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
-     - или -  
+     -или-  
   
      Если файл app.config отсутствует, выполните указанные ниже действия.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65591281"
 9. Измените значение атрибута `value` снова на "Информация".  
   
     > [!NOTE]
-    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов <xref:System.Diagnostics.Trace?displayProperty=nameWithType> и <xref:System.Diagnostics.Debug?displayProperty=nameWithType> .NET Framework он не влияет.  
+    > Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов <xref:System.Diagnostics.Trace?displayProperty=nameWithType> и <xref:System.Diagnostics.Debug?displayProperty=nameWithType> .NET Framework он не влияет.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Отдельная фильтрация прослушивателей My.Application.Log  
  В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`. В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала. По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.  
@@ -148,7 +148,7 @@ ms.locfileid: "65591281"
   
 1. Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
-     - или -  
+     -или-  
   
      Если файл app.config отсутствует, выполните указанные ниже действия.  
   

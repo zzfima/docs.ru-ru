@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966952"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Вставка XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для вставки в XML-документ одноуровневых узлов, дочерних узлов и узлов атрибутов. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - Если и префикс, и URI-код пространства имен в обоих контекстах объекта <xref:System.Xml.XmlReader> и объекта <xref:System.Xml.XPath.XPathNavigator> одинаковы, то к вновь добавленному узлу декларация нового пространства имен не добавляется.  
   
 > [!NOTE]
->  Приведенное выше описание применимо также к декларациям пространства имен с пустой строкой `string` в качестве префикса (например, декларация пространства имен по умолчанию).  
+> Приведенное выше описание применимо также к декларациям пространства имен с пустой строкой `string` в качестве префикса (например, декларация пространства имен по умолчанию).  
   
  Ниже перечислены возможные конфликты деклараций `xml:lang`.  
   
@@ -251,12 +251,12 @@ navigator.SetTypedValue(DateTime.Now);
 ## <a name="inserting-nodes-with-xmlwriter"></a>Вставка узлов с помощью класса XmlWriter  
  Методы, используемые для вставки одноуровневых узлов, дочерних узлов и узлов атрибутов, которые описаны в разделе «Вставка узлов и атрибутов», перегружены. Методы <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> и <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> класса <xref:System.Xml.XPath.XPathNavigator> возвращают объект <xref:System.Xml.XmlWriter>, используемый для вставки узлов.  
   
-### <a name="unsupported-xmlwriter-methods"></a>Неподдерживаемые методы класса XmlWriter   
+### <a name="unsupported-xmlwriter-methods"></a>Неподдерживаемые методы класса XmlWriter  
  Не все методы, используемые для записи данных в XML-документ с помощью класса <xref:System.Xml.XmlWriter>, поддерживаются классом <xref:System.Xml.XPath.XPathNavigator>, что связано с различиями между моделями данных XPath и DOM.  
   
  В следующей таблице описаны методы класса <xref:System.Xml.XmlWriter>, которые не поддерживаются в классе <xref:System.Xml.XPath.XPathNavigator>.  
   
-|Метод|Описание|  
+|Метод|ОПИСАНИЕ|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Формирует исключение <xref:System.NotSupportedException>.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Не обрабатывается на корневом уровне и формирует исключение <xref:System.NotSupportedException> при вызове на любом другом уровне XML-документа.|  

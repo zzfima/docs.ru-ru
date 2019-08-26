@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962032"
 ---
 # <a name="building-xml-schemas"></a>Построение XML-схем
 Классы в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType> сопоставляются со структурами, определенными в рекомендациях по схемам XML консорциума W3C, и могут использоваться для сборки схем XML в памяти.  
@@ -35,14 +35,14 @@ ms.locfileid: "54650997"
  Содержимое элементов и атрибутов определяется их типом. Чтобы создать элементы и атрибуты со встроенными типами схемы, свойство <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> классов <xref:System.Xml.Schema.XmlSchemaElement> или <xref:System.Xml.Schema.XmlSchemaAttribute> принимает значение соответствующего полного имени встроенного типа с помощью класса <xref:System.Xml.XmlQualifiedName>. Чтобы создать определяемый пользователем тип для элементов и атрибутов, формируется новый простой или сложный тип с помощью классов <xref:System.Xml.Schema.XmlSchemaSimpleType> или <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
 > [!NOTE]
->  Чтобы создать неименованные простые или сложные типы, являющиеся анонимными потомками элемента или атрибута (к атрибутам применяются только простые типы), присвойте свойству <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> класса <xref:System.Xml.Schema.XmlSchemaElement> или класса <xref:System.Xml.Schema.XmlSchemaAttribute> значение неименованного простого или сложного типа, а не свойства <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> классов <xref:System.Xml.Schema.XmlSchemaElement> или <xref:System.Xml.Schema.XmlSchemaAttribute>.  
+> Чтобы создать неименованные простые или сложные типы, являющиеся анонимными потомками элемента или атрибута (к атрибутам применяются только простые типы), присвойте свойству <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> класса <xref:System.Xml.Schema.XmlSchemaElement> или класса <xref:System.Xml.Schema.XmlSchemaAttribute> значение неименованного простого или сложного типа, а не свойства <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> классов <xref:System.Xml.Schema.XmlSchemaElement> или <xref:System.Xml.Schema.XmlSchemaAttribute>.  
   
  Схемы XML допускают, чтобы анонимные и именованные простые типы выводились по ограничению из других простых типов (встроенных или пользовательских) либо конструировались в виде списка или объединения других простых типов. Класс <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> используется для создания простого типа, ограничивая встроенный тип `xs:string`. Чтобы создать тип списка или объединения, можно также использовать класс <xref:System.Xml.Schema.XmlSchemaSimpleTypeList> или <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion>. Свойство <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> обозначает, является ли оно простым типом ограничения, типом списка или объединением.  
   
  В следующем примере кода тип `FirstName` элемента является встроенным типом `xs:string`, тип `LastName` - именованным простым типом, представляющим собой ограничение встроенного типа `xs:string` со значением аспекта `MaxLength`, равным 20, а тип атрибута `CustomerId` является встроенным типом `xs:positiveInteger`. Элемент `Customer` представляет собой анонимный сложный тип, примитив которого является последовательностью элементов `FirstName` и `LastName` и атрибут которого содержит атрибут `CustomerId`.  
   
 > [!NOTE]
->  Классы <xref:System.Xml.Schema.XmlSchemaChoice> и <xref:System.Xml.Schema.XmlSchemaAll> можно также использовать в качестве примитивов сложного типа для репликации семантики `<xs:choice />` или `<xs:all />`.  
+> Классы <xref:System.Xml.Schema.XmlSchemaChoice> и <xref:System.Xml.Schema.XmlSchemaAll> можно также использовать в качестве примитивов сложного типа для репликации семантики `<xs:choice />` или `<xs:all />`.  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
@@ -58,7 +58,7 @@ ms.locfileid: "54650997"
  Метод <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> проверяет пользовательскую схему по правилам схемы XML и делает доступными свойства результатов проверки компиляции схемы.  
   
 > [!NOTE]
->  Все свойства результатов проверки компиляции схемы в API модели SOM отличаются от информационного набора окончательной проверки схемы.  
+> Все свойства результатов проверки компиляции схемы в API модели SOM отличаются от информационного набора окончательной проверки схемы.  
   
  Объект <xref:System.Xml.Schema.ValidationEventHandler>, добавленный к набору <xref:System.Xml.Schema.XmlSchemaSet>, является делегатом, вызывающим метод ответного вызова `ValidationCallback` для обработки ошибок и предупреждений проверки схемы.  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910493"
 ---
 # <a name="xslt-security-considerations"></a>Рекомендации по безопасности XSLT
 Язык XSLT обладает широким набором возможностей с большими возможностями и обеспечивает гибкость применения. В него входит много возможностей, которые полезны, но могут злонамеренно использоваться внешними источниками. Чтобы использовать XSLT безопасно, необходимо иметь представление о проблемах безопасности, сопряженных с использованием XSLT, и основных стратегиях, применяемых для снижения этих рисков.  
@@ -39,7 +39,7 @@ ms.locfileid: "64615320"
 - если во время выполнения преобразования для разрешения функции <xref:System.Xml.XmlResolver> используется объект `document()`.  
   
     > [!NOTE]
-    >  Функция `document()` по умолчанию отключена в классе <xref:System.Xml.Xsl.XslCompiledTransform>. Чтобы включить эту возможность, установите свойство <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> в значение `true` и передайте объект <xref:System.Xml.Xsl.XsltSettings> методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+    > Функция `document()` по умолчанию отключена в классе <xref:System.Xml.Xsl.XslCompiledTransform>. Чтобы включить эту возможность, установите свойство <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> в значение `true` и передайте объект <xref:System.Xml.Xsl.XsltSettings> методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
  Методы <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> и <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> имеют перегруженные версии, принимающие объект <xref:System.Xml.XmlResolver> в качестве одного из аргументов. Если <xref:System.Xml.XmlResolver> не указан, используется <xref:System.Xml.XmlUrlResolver> по умолчанию без учетных данных.  
   

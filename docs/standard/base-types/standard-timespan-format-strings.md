@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66491097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968552"
 ---
 # <a name="standard-timespan-format-strings"></a>Строки стандартного формата TimeSpan
 <a name="Top"></a> Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования. Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>. Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "66491097"
  В отличие от описателей формата "g" и "G" описатель формата "c" не учитывает язык и региональные параметры. Он создает строковое представление значения <xref:System.TimeSpan>, которое является инвариантным и общим для всех предыдущих версий платформы .NET Framework до выхода .NET Framework 4. c — это строка формата <xref:System.TimeSpan> по умолчанию. Метод <xref:System.TimeSpan.ToString?displayProperty=nameWithType> форматирует значение временного интервала с помощью строки формата c.  
   
 > [!NOTE]
->  <xref:System.TimeSpan> также поддерживает строки стандартного формата "t" и "T", которые идентичны поведению строки стандартного формата "c".  
+> <xref:System.TimeSpan> также поддерживает строки стандартного формата "t" и "T", которые идентичны поведению строки стандартного формата "c".  
   
  В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат. В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "c".  
   

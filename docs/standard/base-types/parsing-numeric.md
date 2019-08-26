@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633325"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988793"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Синтаксический анализ числовых строк в .NET
 Все числовые типы имеют два статических метода синтаксического анализа — `Parse` и `TryParse`, которые можно использовать для преобразования строкового представления числа в числовой тип. Эти методы позволяют анализировать строки, которые были созданы с помощью строк формата, описанных в разделах [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md) и [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md). По умолчанию методы `Parse` и `TryParse` могут успешно преобразовывать строки, содержащие целые десятичные числа, только в целочисленные значения. Они могут успешно преобразовывать строки, содержащие целые и дробные десятичные числа, разделители групп и десятичные разделители, в значения с плавающей запятой. Если операцию выполнить не удалось, метод `Parse` создает исключение, а метод `TryParse` возвращает значение `false`.  
@@ -46,7 +46,7 @@ ms.locfileid: "64633325"
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
   
 > [!WARNING]
->  Операция синтаксического анализа всегда использует правила форматирования конкретного языка и региональных параметров. Если значения языка и региональных параметров не заданы в объекте <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo>, используются язык и региональные параметры, связанные с текущим потоком.  
+> Операция синтаксического анализа всегда использует правила форматирования конкретного языка и региональных параметров. Если значения языка и региональных параметров не заданы в объекте <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo>, используются язык и региональные параметры, связанные с текущим потоком.  
   
  В следующей таблице приводятся элементы перечисления <xref:System.Globalization.NumberStyles> и описано их влияние на операцию синтаксического анализа.  
   
