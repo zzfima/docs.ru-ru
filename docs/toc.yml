@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: Перенос проектов WPF
           href: core/porting/wpf.md
+    - name: Загрузка зависимостей
+      items:
+        - name: Обзор
+          href: core/dependency-loading/overview.md
+        - name: Основные сведения об AssemblyLoadContext
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: Загрузка сведений
+          items:
+            - name: Проверка зависимостей по умолчанию
+              href: core/dependency-loading/default-probing.md
+            - name: Загрузка управляемых сборок
+              href: core/dependency-loading/loading-managed.md
+            - name: Загрузка вспомогательных сборок
+              href: core/dependency-loading/loading-resources.md
+            - name: Загрузка неуправляемых библиотек
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: Учебники
+          items:
+            - name: Создание приложения .NET Core с подключаемыми модулями
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: Использование и отладка сборок с возможностью выгрузки в .NET Core
+              href: standard/assembly/unloadability-howto.md
     - name: "Сборка .NET\_Core из исходного кода"
       href: core/build/index.md
       items:
