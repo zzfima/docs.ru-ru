@@ -10,112 +10,113 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053537"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046190"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms
-Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок может отображать элемент управления цветом и подчеркиванием. Можно написать код, который открывает окно браузера, веб-узлом, указанный в тексте ссылки, при щелчке ссылки.  
-  
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Чтобы связать веб-страницу с элементом управления RichTextBox  
-  
-1. Задайте <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство на строку, которая содержит допустимый URL-адрес (например, "http://www.microsoft.com/«).  
-  
-2. Убедитесь, что <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойству `true` (по умолчанию).  
-  
-3. Создать новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.  
-  
-4. Написать обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий, который отправляет браузер требуемый текст.  
-  
-     В следующем примере <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий открывает экземпляр Internet Explorer на URL-адрес, указанный в <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления. В этом примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> элемента управления.  
-  
+
+Элемент управления <xref:System.Windows.Forms.RichTextBox> Windows Forms может отображать веб-ссылки как цветные и подчеркнутые. Можно написать код, открывающий окно браузера, в котором отображается веб-сайт, указанный в тексте ссылки при щелчке ссылки.
+
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Ссылка на веб-страницу с помощью элемента управления RichTextBox
+
+1. Задайте для http://www.microsoft.com/ свойства строку, содержащую допустимый URL-адрес (например, ""). <xref:System.Windows.Forms.RichTextBox.Text%2A>
+
+2. Убедитесь, <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> что свойство имеет `true` значение (по умолчанию).
+
+3. Создайте новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.
+
+4. Напишите обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> события, которое отправляет браузеру нужный текст.
+
+    В приведенном ниже <xref:System.Windows.Forms.RichTextBox.LinkClicked> примере событие открывает экземпляр Internet Explorer по URL-адресу, указанному <xref:System.Windows.Forms.RichTextBox.Text%2A> в свойстве <xref:System.Windows.Forms.RichTextBox> элемента управления. В этом примере предполагается наличие формы <xref:System.Windows.Forms.RichTextBox> с элементом управления.
+
     > [!IMPORTANT]
-    >  В вызывающем <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метод, вы столкнетесь <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостатка прав. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).  
-  
-    ```vb  
-    Public p As New System.Diagnostics.Process  
-    Private Sub RichTextBox1_LinkClicked _  
-       (ByVal sender As Object, ByVal e As _  
-       System.Windows.Forms.LinkClickedEventArgs) _  
-       Handles RichTextBox1.LinkClicked  
-          ' Call Process.Start method to open a browser  
-          ' with link text as URL.  
-          p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public System.Diagnostics.Process p = new System.Diagnostics.Process();  
-  
-    private void richTextBox1_LinkClicked(object sender,   
-    System.Windows.Forms.LinkClickedEventArgs e)  
-    {  
-       // Call Process.Start method to open a browser  
-       // with link text as URL.  
-       p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       System::Diagnostics::Process ^ p;  
-  
-    private:  
-       void richTextBox1_LinkClicked(System::Object ^  sender,  
-          System::Windows::Forms::LinkClickedEventArgs ^  e)  
-       {  
-          // Call Process.Start method to open a browser  
-          // with link text as URL.  
-          p = System::Diagnostics::Process::Start("IExplore.exe",  
-             e->LinkText);  
-       }  
-    ```  
-  
-     (Visual C++) Необходимо инициализировать процесс `p`, что можно сделать, включив в конструктор формы следующую инструкцию:  
-  
-    ```cpp  
-    p = gcnew System::Diagnostics::Process();  
-    ```  
-  
-     (Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
-  
-    ```csharp  
-    this.richTextBox1.LinkClicked += new   
-       System.Windows.Forms.LinkClickedEventHandler  
-       (this.richTextBox1_LinkClicked);  
-    ```  
-  
-    ```cpp  
-    this->richTextBox1->LinkClicked += gcnew  
-       System::Windows::Forms::LinkClickedEventHandler  
-       (this, &Form1::richTextBox1_LinkClicked);  
-    ```  
-  
-     Важно, чтобы немедленно остановить процесс, который вы создали после завершения работы с ним. Ссылка на код, представленный выше, код, чтобы остановить процесс может выглядеть следующим образом:  
-  
-    ```vb  
-    Public Sub StopWebProcess()  
-       p.Kill()  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void StopWebProcess()  
-    {  
-       p.Kill();  
-    }  
-    ```  
-  
-    ```cpp  
-    public: void StopWebProcess()  
-    {  
-       p->Kill();  
-    }  
-    ```  
-  
+    > При вызове <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метода возникает <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).
+
+    ```vb
+    Public p As New System.Diagnostics.Process
+    Private Sub RichTextBox1_LinkClicked _
+       (ByVal sender As Object, ByVal e As _
+       System.Windows.Forms.LinkClickedEventArgs) _
+       Handles RichTextBox1.LinkClicked
+          ' Call Process.Start method to open a browser
+          ' with link text as URL.
+          p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)
+    End Sub
+    ```
+
+    ```csharp
+    public System.Diagnostics.Process p = new System.Diagnostics.Process();
+
+    private void richTextBox1_LinkClicked(object sender,
+    System.Windows.Forms.LinkClickedEventArgs e)
+    {
+       // Call Process.Start method to open a browser
+       // with link text as URL.
+       p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);
+    }
+    ```
+
+    ```cpp
+    public:
+       System::Diagnostics::Process ^ p;
+
+    private:
+       void richTextBox1_LinkClicked(System::Object ^  sender,
+          System::Windows::Forms::LinkClickedEventArgs ^  e)
+       {
+          // Call Process.Start method to open a browser
+          // with link text as URL.
+          p = System::Diagnostics::Process::Start("IExplore.exe",
+             e->LinkText);
+       }
+    ```
+
+    (Визуальный C++элемент) Для этого необходимо инициализировать `p`процесс, добавив в конструктор формы следующую инструкцию:
+
+    ```cpp
+    p = gcnew System::Diagnostics::Process();
+    ```
+
+    (Визуальный C#элемент C++, визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.
+
+    ```csharp
+    this.richTextBox1.LinkClicked += new
+       System.Windows.Forms.LinkClickedEventHandler
+       (this.richTextBox1_LinkClicked);
+    ```
+
+    ```cpp
+    this->richTextBox1->LinkClicked += gcnew
+       System::Windows::Forms::LinkClickedEventHandler
+       (this, &Form1::richTextBox1_LinkClicked);
+    ```
+
+    Важно немедленно завершить процесс, созданный после завершения работы с ним. При указании кода, приведенного выше, код для завершения процесса может выглядеть следующим образом:
+
+    ```vb
+    Public Sub StopWebProcess()
+       p.Kill()
+    End Sub
+    ```
+
+    ```csharp
+    public void StopWebProcess()
+    {
+       p.Kill();
+    }
+    ```
+
+    ```cpp
+    public: void StopWebProcess()
+    {
+       p->Kill();
+    }
+    ```
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
