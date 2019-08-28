@@ -10,116 +10,117 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053537"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046190"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="d5a4e-102">Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d5a4e-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="d5a4e-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок может отображать элемент управления цветом и подчеркиванием.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="d5a4e-104">Можно написать код, который открывает окно браузера, веб-узлом, указанный в тексте ссылки, при щелчке ссылки.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
-  
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="d5a4e-105">Чтобы связать веб-страницу с элементом управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="d5a4e-105">To link to a Web page with the RichTextBox control</span></span>  
-  
-1. <span data-ttu-id="d5a4e-106">Задайте <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство на строку, которая содержит допустимый URL-адрес (например, "http://www.microsoft.com/«).</span><span class="sxs-lookup"><span data-stu-id="d5a4e-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
-  
-2. <span data-ttu-id="d5a4e-107">Убедитесь, что <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойству `true` (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="d5a4e-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
-  
-3. <span data-ttu-id="d5a4e-108">Создать новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
-  
-4. <span data-ttu-id="d5a4e-109">Написать обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий, который отправляет браузер требуемый текст.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
-  
-     <span data-ttu-id="d5a4e-110">В следующем примере <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий открывает экземпляр Internet Explorer на URL-адрес, указанный в <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="d5a4e-111">В этом примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
-  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="e58a7-102">Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e58a7-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+
+<span data-ttu-id="e58a7-103">Элемент управления <xref:System.Windows.Forms.RichTextBox> Windows Forms может отображать веб-ссылки как цветные и подчеркнутые.</span><span class="sxs-lookup"><span data-stu-id="e58a7-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="e58a7-104">Можно написать код, открывающий окно браузера, в котором отображается веб-сайт, указанный в тексте ссылки при щелчке ссылки.</span><span class="sxs-lookup"><span data-stu-id="e58a7-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>
+
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="e58a7-105">Ссылка на веб-страницу с помощью элемента управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="e58a7-105">To link to a Web page with the RichTextBox control</span></span>
+
+1. <span data-ttu-id="e58a7-106">Задайте для http://www.microsoft.com/ свойства строку, содержащую допустимый URL-адрес (например, ""). <xref:System.Windows.Forms.RichTextBox.Text%2A></span><span class="sxs-lookup"><span data-stu-id="e58a7-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>
+
+2. <span data-ttu-id="e58a7-107">Убедитесь, <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> что свойство имеет `true` значение (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="e58a7-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>
+
+3. <span data-ttu-id="e58a7-108">Создайте новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.</span><span class="sxs-lookup"><span data-stu-id="e58a7-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>
+
+4. <span data-ttu-id="e58a7-109">Напишите обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> события, которое отправляет браузеру нужный текст.</span><span class="sxs-lookup"><span data-stu-id="e58a7-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>
+
+    <span data-ttu-id="e58a7-110">В приведенном ниже <xref:System.Windows.Forms.RichTextBox.LinkClicked> примере событие открывает экземпляр Internet Explorer по URL-адресу, указанному <xref:System.Windows.Forms.RichTextBox.Text%2A> в свойстве <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="e58a7-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="e58a7-111">В этом примере предполагается наличие формы <xref:System.Windows.Forms.RichTextBox> с элементом управления.</span><span class="sxs-lookup"><span data-stu-id="e58a7-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>
+
     > [!IMPORTANT]
-    >  <span data-ttu-id="d5a4e-112">В вызывающем <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метод, вы столкнетесь <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостатка прав.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="d5a4e-113">Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="d5a4e-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
-  
-    ```vb  
-    Public p As New System.Diagnostics.Process  
-    Private Sub RichTextBox1_LinkClicked _  
-       (ByVal sender As Object, ByVal e As _  
-       System.Windows.Forms.LinkClickedEventArgs) _  
-       Handles RichTextBox1.LinkClicked  
-          ' Call Process.Start method to open a browser  
-          ' with link text as URL.  
-          p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public System.Diagnostics.Process p = new System.Diagnostics.Process();  
-  
-    private void richTextBox1_LinkClicked(object sender,   
-    System.Windows.Forms.LinkClickedEventArgs e)  
-    {  
-       // Call Process.Start method to open a browser  
-       // with link text as URL.  
-       p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       System::Diagnostics::Process ^ p;  
-  
-    private:  
-       void richTextBox1_LinkClicked(System::Object ^  sender,  
-          System::Windows::Forms::LinkClickedEventArgs ^  e)  
-       {  
-          // Call Process.Start method to open a browser  
-          // with link text as URL.  
-          p = System::Diagnostics::Process::Start("IExplore.exe",  
-             e->LinkText);  
-       }  
-    ```  
-  
-     <span data-ttu-id="d5a4e-114">(Visual C++) Необходимо инициализировать процесс `p`, что можно сделать, включив в конструктор формы следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="d5a4e-114">(Visual C++) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
-  
-    ```cpp  
-    p = gcnew System::Diagnostics::Process();  
-    ```  
-  
-     <span data-ttu-id="d5a4e-115">(Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-115">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
-  
-    ```csharp  
-    this.richTextBox1.LinkClicked += new   
-       System.Windows.Forms.LinkClickedEventHandler  
-       (this.richTextBox1_LinkClicked);  
-    ```  
-  
-    ```cpp  
-    this->richTextBox1->LinkClicked += gcnew  
-       System::Windows::Forms::LinkClickedEventHandler  
-       (this, &Form1::richTextBox1_LinkClicked);  
-    ```  
-  
-     <span data-ttu-id="d5a4e-116">Важно, чтобы немедленно остановить процесс, который вы создали после завершения работы с ним.</span><span class="sxs-lookup"><span data-stu-id="d5a4e-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="d5a4e-117">Ссылка на код, представленный выше, код, чтобы остановить процесс может выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d5a4e-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
-  
-    ```vb  
-    Public Sub StopWebProcess()  
-       p.Kill()  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void StopWebProcess()  
-    {  
-       p.Kill();  
-    }  
-    ```  
-  
-    ```cpp  
-    public: void StopWebProcess()  
-    {  
-       p->Kill();  
-    }  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="d5a4e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="d5a4e-118">See also</span></span>
+    > <span data-ttu-id="e58a7-112">При вызове <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метода возникает <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостаточных привилегий.</span><span class="sxs-lookup"><span data-stu-id="e58a7-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="e58a7-113">Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="e58a7-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>
+
+    ```vb
+    Public p As New System.Diagnostics.Process
+    Private Sub RichTextBox1_LinkClicked _
+       (ByVal sender As Object, ByVal e As _
+       System.Windows.Forms.LinkClickedEventArgs) _
+       Handles RichTextBox1.LinkClicked
+          ' Call Process.Start method to open a browser
+          ' with link text as URL.
+          p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)
+    End Sub
+    ```
+
+    ```csharp
+    public System.Diagnostics.Process p = new System.Diagnostics.Process();
+
+    private void richTextBox1_LinkClicked(object sender,
+    System.Windows.Forms.LinkClickedEventArgs e)
+    {
+       // Call Process.Start method to open a browser
+       // with link text as URL.
+       p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);
+    }
+    ```
+
+    ```cpp
+    public:
+       System::Diagnostics::Process ^ p;
+
+    private:
+       void richTextBox1_LinkClicked(System::Object ^  sender,
+          System::Windows::Forms::LinkClickedEventArgs ^  e)
+       {
+          // Call Process.Start method to open a browser
+          // with link text as URL.
+          p = System::Diagnostics::Process::Start("IExplore.exe",
+             e->LinkText);
+       }
+    ```
+
+    <span data-ttu-id="e58a7-114">(Визуальный C++элемент) Для этого необходимо инициализировать `p`процесс, добавив в конструктор формы следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="e58a7-114">(Visual C++) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>
+
+    ```cpp
+    p = gcnew System::Diagnostics::Process();
+    ```
+
+    <span data-ttu-id="e58a7-115">(Визуальный C#элемент C++, визуальный элемент) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="e58a7-115">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>
+
+    ```csharp
+    this.richTextBox1.LinkClicked += new
+       System.Windows.Forms.LinkClickedEventHandler
+       (this.richTextBox1_LinkClicked);
+    ```
+
+    ```cpp
+    this->richTextBox1->LinkClicked += gcnew
+       System::Windows::Forms::LinkClickedEventHandler
+       (this, &Form1::richTextBox1_LinkClicked);
+    ```
+
+    <span data-ttu-id="e58a7-116">Важно немедленно завершить процесс, созданный после завершения работы с ним.</span><span class="sxs-lookup"><span data-stu-id="e58a7-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="e58a7-117">При указании кода, приведенного выше, код для завершения процесса может выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="e58a7-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>
+
+    ```vb
+    Public Sub StopWebProcess()
+       p.Kill()
+    End Sub
+    ```
+
+    ```csharp
+    public void StopWebProcess()
+    {
+       p.Kill();
+    }
+    ```
+
+    ```cpp
+    public: void StopWebProcess()
+    {
+       p->Kill();
+    }
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="e58a7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="e58a7-118">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="d5a4e-119">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="d5a4e-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="d5a4e-120">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d5a4e-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="e58a7-119">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="e58a7-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="e58a7-120">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e58a7-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
