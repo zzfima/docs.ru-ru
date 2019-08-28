@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deec4d40270a11b9e48a0ab39504d774314c077c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d30384ea8b9ff4eee41abd43ae39486f770039e7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736186"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041426"
 ---
 # <a name="getcorsystemdirectory-function"></a>Функция GetCORSystemDirectory
-Возвращает каталог установки среда CLR (CLR), который загружается процесс. Каталог установки — полное имя, например, «c:\windows\microsoft.net\framework\v1.0.3705».  
+Возвращает каталог установки среды CLR, который загружается в процесс. Каталог установки полностью квалифицирован, например "c:\windows\microsoft.net\framework\v1.0.3705".  
   
- Эта функция является устаревшей. Он заменен [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) метода .NET Framework 4.  
+ Эта функция является устаревшей. Он заменяется методом [ICLRRuntimeInfo:: GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) , предоставленным в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,25 +41,25 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Параметры  
  `pbuffer`  
- [out] Буфер, в котором среда выполнения возвращает строку, содержащую полное имя каталога установки для среды выполнения, который загружается в процесс. Если среда выполнения еще не был загружен в процесс, функция возвращает данные каталога, соответствующего для последней версии среды выполнения, установленную на компьютере.  
+ заполняет Буфер, в котором среда выполнения возвращает строку, содержащую полное имя каталога установки для среды выполнения, которая загружается в процесс. Если среда выполнения еще не загружена в процесс, функция возвращает соответствующие сведения о каталоге для последней версии среды выполнения, установленной на компьютере.  
   
  `cchBuffer`  
- [in] Размер в байтах из `pbuffer`.  
+ окне Размер (в байтах `pbuffer`).  
   
  `dwLength`  
- [out] Число символов, возвращаемых в `pbuffer`.  
+ заполняет Число символов, возвращаемых в `pbuffer`.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!CAUTION]
->  Не используйте эту функцию в процессах, работающих под управлением версии 4 среды CLR. Если на компьютере установлена более ранняя версия среды CLR, эта функция возвращает каталог установки этой версии.  
+> Не используйте эту функцию в процессах, работающих в среде CLR версии 4. Если на компьютере установлена более ранняя версия среды CLR, эта функция возвращает каталог установки для этой версии.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок.** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотечная** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

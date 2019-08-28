@@ -2,12 +2,12 @@
 title: Инструкции по настройке виртуальных каталогов
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966739"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038650"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Инструкции по настройке виртуальных каталогов
 Примеры Windows Communication Foundation (WCF) предназначены для совместного использования общего виртуального каталога с именем servicemodelsamples, сопоставленного с папкой%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -36,10 +36,10 @@ ms.locfileid: "69966739"
 7. Нажмите кнопку **ОК**. Веб-приложение для образцов WCF создано.  
   
     > [!NOTE]
-    >  Эту задачу необходимо выполнить только один раз, так как все примеры WCF используют одно и то же веб-приложение servicemodelsamples.  
+    > Эту задачу необходимо выполнить только один раз, так как все примеры WCF используют одно и то же веб-приложение servicemodelsamples.  
   
     > [!NOTE]
-    >  В этой документации термины `virtual directory` и `Web application` являются синонимами.  
+    > В этой документации термины `virtual directory` и `Web application` являются синонимами.  
   
      Кроме создания виртуального каталога, необходимо также задать его свойства, чтобы разрешить выполнение служб WCF. Дополнительные сведения см. далее.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69966739"
 8. Нажмите кнопку **Далее**, а затем кнопку **Готово** , чтобы завершить работу мастера.  
   
     > [!NOTE]
-    >  Эту задачу необходимо выполнить только один раз, так как все примеры WCF используют один и тот же виртуальный каталог servicemodelsamples.  
+    > Эту задачу необходимо выполнить только один раз, так как все примеры WCF используют один и тот же виртуальный каталог servicemodelsamples.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Установка дополнительных свойств виртуального каталога в IIS 7,0 или 7,5  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 13ad6c85bbde57cd6ad19848de71dabc23ed8f49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953910"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044092"
 ---
 # <a name="use-the-automationid-property"></a>Использование свойства AutomationID
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "69953910"
 - Используйте такой инструмент, как [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] , чтобы сообщить о <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> интересующего элемента [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Затем это значение можно скопировать и вставить в клиентское приложение, такое как тестовый скрипт для последующего автоматического тестирования. Такой подход сокращает и упрощает код, необходимый для идентификации и обнаружения элементов во время выполнения.  
   
 > [!CAUTION]
->  В целом вы должны пытаться получить только прямые потомки <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Поиск потомков может выполнять итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
+> В целом вы должны пытаться получить только прямые потомки <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Поиск потомков может выполнять итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
   
  [!code-csharp[UIAAutomationID_snip#100](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#100)]
  [!code-vb[UIAAutomationID_snip#100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#100)]  

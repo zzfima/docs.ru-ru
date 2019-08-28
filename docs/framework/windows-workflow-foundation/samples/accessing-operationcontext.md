@@ -2,15 +2,15 @@
 title: Доступ к контексту OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: fc3be627c8dfc8d8e49fde01684968a54912f548
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d1c8543180a282a1b196393e5823dc3686aa16e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617336"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038411"
 ---
 # <a name="accessing-operationcontext"></a>Доступ к контексту OperationContext
-В этом образце показано как действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>) можно использовать с действием пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и подключить или извлечь пользовательского заголовка сообщения исходящего или входящего сообщения.  
+В этом примере показано, как действия обмена<xref:System.ServiceModel.Activities.Receive> сообщениями (и <xref:System.ServiceModel.Activities.Send>) могут использоваться с действием пользовательской области <xref:System.ServiceModel.OperationContext.Current%2A> для доступа к настраиваемому заголовку сообщения и его получения в исходящем или входящем сообщении.  
   
 ## <a name="demonstrates"></a>Демонстрации  
  Действия обмена сообщениями, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.  
@@ -20,7 +20,7 @@ ms.locfileid: "64617336"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP. Для выполнения этого образца, соответствующие URL ACL необходимо добавить (см. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) сведения), запустив Visual Studio от имени администратора или выполните следующую команду в строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом. Убедитесь, что подставлены нужный домен и имя пользователя.  
+1. В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP. Чтобы выполнить этот пример, необходимо добавить соответствующие списки ACL URL-адресов (см. Дополнительные сведения о [настройке HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), запустив Visual Studio от имени администратора или выполнив следующую команду в командной строке с повышенными привилегиями, чтобы добавить соответствующие списки ACL. Убедитесь, что подставлены нужный домен и имя пользователя.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -30,17 +30,17 @@ ms.locfileid: "64617336"
   
     1. Постройте решение.  
   
-    2. Задайте несколько запускаемых проектов, щелкните правой кнопкой мыши решение и выбрав **назначить запускаемые проекты**.  
+    2. Задайте несколько проектов запуска, щелкнув решение правой кнопкой мыши и выбрав пункт **задать запускаемые проекты**.  
   
-    3. Добавить **службы** и **клиента** (в таком порядке) в качестве запускаемых проектов.  
+    3. Добавьте **службу** и **клиент** (в этом порядке) в качестве нескольких запускаемых проектов.  
   
     4. Запустите приложение. На консоли клиента показан дважды выполняемый рабочий процесс, а в окне службы показаны идентификаторы экземпляров этих рабочих процессов.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911672"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044110"
 ---
 # <a name="ui-automation-events-for-clients"></a>События модели автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
@@ -44,7 +44,7 @@ ms.locfileid: "69911672"
 > Чтобы обработать события закрытия окна, приведите тип аргумента, передаваемого в обработчик событий, к типу <xref:System.Windows.Automation.WindowClosedEventArgs>. Поскольку элемент [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для окна больше не является допустимым, нельзя использовать параметр `sender` для получения сведений; используйте вместо него метод <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>.  
   
 > [!CAUTION]
->  Если ваше приложение может получать события из собственного [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], не используйте поток [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] вашего приложения для подписки на события или отмены подписки. Это может привести к непредсказуемому поведению. Для получения дополнительной информации см. [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Если ваше приложение может получать события из собственного [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], не используйте поток [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] вашего приложения для подписки на события или отмены подписки. Это может привести к непредсказуемому поведению. Для получения дополнительной информации см. [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
  При завершении работы или когда события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] больше не представляют интерес для приложения, клиенты автоматизации пользовательского интерфейса должны вызвать один из следующих методов.  
   

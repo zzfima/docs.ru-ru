@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: eea5317cbd3a41ba90c9d9d0f2a890dee5e9124b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 496589a0c1a5a0a029e464bfdd87caf8515bb9e3
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930568"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044872"
 ---
 # <a name="message-security-certificate"></a>Сертификат безопасности сообщений
 В этом образце показано, как реализовать приложение, использующее протокол WS-Security и проверку подлинности с использованием сертификата X.509 v3 для клиента и требующее проверки подлинности сервера с использованием сертификата X.509 v3 сервера. В этом образце используются параметры по умолчанию, обеспечивающие подписывание и шифрование всех сообщений приложения, которыми обмениваются клиент и сервер. Этот пример основан на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) и состоит из клиентской консольной программы и библиотеки служб, размещенной службы IIS (IIS). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  
@@ -266,19 +266,19 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  Если используется в англоязычном (не американском) выпуске Windows, необходимо изменить файл Setup.bat и заменить имя учетной записи «NT AUTHORITY\NETWORK SERVICE» своим региональным эквивалентом.  
+    > Если используется в англоязычном (не американском) выпуске Windows, необходимо изменить файл Setup.bat и заменить имя учетной записи «NT AUTHORITY\NETWORK SERVICE» своим региональным эквивалентом.  
   
 > [!NOTE]
 > Средства, используемые в этом пакетном файле, расположены в каталоге C:\Program Files\Microsoft Visual Studio 8\Common7\tools или C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. Один из этих каталогов должен быть указан в системном пути. Если у вас установлена Visual Studio, самый простой способ получить этот каталог в пути — открыть Командная строка разработчика для Visual Studio. Нажмите кнопку **Пуск**и выберите **все программы**, **Visual Studio 2012**, **инструменты**. В командной строке уже должны быть настроены соответствующие пути. В противном случае необходимо вручную добавить соответствующий каталог в путь.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец находится в следующем каталоге:  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец находится в следующем каталоге:  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
@@ -291,7 +291,7 @@ Press <ENTER> to terminate client.
 1. Откройте Командная строка разработчика для Visual Studio с правами администратора и запустите программу Setup. bat из папки примеров установки. При этом устанавливаются все сертификаты, необходимые для выполнения образца.  
   
     > [!NOTE]
-    >  Пакетный файл Setup. bat предназначен для запуска из Командная строка разработчика для Visual Studio. Необходимо, чтобы переменная среды path указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически задается в Командная строка разработчика для Visual Studio (2010).  
+    > Пакетный файл Setup. bat предназначен для запуска из Командная строка разработчика для Visual Studio. Необходимо, чтобы переменная среды path указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически задается в Командная строка разработчика для Visual Studio (2010).  
   
 2. Проверьте доступ к службе с помощью браузера, введя адрес `http://localhost/servicemodelsamples/service.svc`.  
   
@@ -332,4 +332,4 @@ Press <ENTER> to terminate client.
 - После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
   
     > [!NOTE]
-    >  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на нескольких компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на нескольких компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

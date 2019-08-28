@@ -2,12 +2,12 @@
 title: Установка системы очередей сообщений (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935984"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039622"
 ---
 # <a name="installing-message-queuing-msmq"></a>Установка системы очередей сообщений (MSMQ)
 В процедурах ниже показана методика установки очереди сообщений 4.0 и очереди сообщений 3.0.  
@@ -54,7 +54,7 @@ ms.locfileid: "69935984"
 3. Выберите очередь сообщений и щелкните **сведения**.  
   
     > [!NOTE]
-    >  При работе в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] выберите сервер приложений для доступа к очереди сообщений.  
+    > При работе в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] выберите сервер приложений для доступа к очереди сообщений.  
   
 4. Удостоверьтесь, что на странице сведений выбрана функция поддержки MSMQ HTTP.  
   

@@ -2,12 +2,12 @@
 title: Образец безопасности при обнаружении
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8512dbddc5d27e75d98d281c0bdccf142a113d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961726"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039816"
 ---
 # <a name="discovery-security-sample"></a>Образец безопасности при обнаружении
 В спецификации Discovery не требуется защищенность конечных точек, участвующих в процессе обнаружения. Включение функций безопасности для сообщений обнаружения обеспечивает защиту от атак различного типа (изменение сообщений, отказ в обслуживании, воспроизведение, подделка пакетов). В этом образце реализованы пользовательские каналы, которые вычисляют и проверяют сигнатуры сообщений в компактном формате (описан в разделе 8.2 спецификации WS-Discovery). Пример поддерживает [спецификацию обнаружения 2005](https://go.microsoft.com/fwlink/?LinkId=177912) и [версию 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -67,10 +67,10 @@ ms.locfileid: "69961726"
 3. После завершения работы образца выполните скрипт Cleanup.bat, который удаляет сертификаты, созданные для этого образца.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

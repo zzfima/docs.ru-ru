@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df1f1c7e28464781a73a0939c3413f4c9d620d7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1692b93e09ec972e537e4a375774eeeb865bd58c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942385"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70043433"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
@@ -55,7 +55,7 @@ ms.locfileid: "69942385"
      Для C#: **Csc-р:систем.длл-д:траце-д:дебуг = false MyApplication.CS**  
   
     > [!TIP]
-    >  Чтобы скомпилировать несколько файлов приложений, оставьте пробел между именами файлов, например **MyApplication1.vb MyApplication2.vb MyApplication3.vb** или **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
+    > Чтобы скомпилировать несколько файлов приложений, оставьте пробел между именами файлов, например **MyApplication1.vb MyApplication2.vb MyApplication3.vb** или **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
   
      Директивы условной компиляции, используемые в приведенных выше примерах, имеют следующие значения.  
   

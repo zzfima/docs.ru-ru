@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 9f6c82144031cb2bf4824985b8211453bb7f51ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959173"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044200"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
@@ -71,7 +71,7 @@ ms.locfileid: "69959173"
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  Не используйте <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Поведение этого свойства вне клиентских окон в масштабируемой среде не определено.  
+> Не используйте <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Поведение этого свойства вне клиентских окон в масштабируемой среде не определено.  
   
  Если приложение выполняет прямое межпроцессное взаимодействие с приложениями, не поддерживающими dpi, возможно преобразование между логическими и физическими координатами с помощью [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] функций `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
   

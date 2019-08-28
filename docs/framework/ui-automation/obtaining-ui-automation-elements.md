@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966383"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044146"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Получение элементов автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966383"
  В этом разделе описываются различные способы получения объектов <xref:System.Windows.Automation.AutomationElement> для элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
 > [!CAUTION]
->  Если клиентское приложение может пытаться искать элементы в собственном пользовательском интерфейсе, вы должны выполнять все вызовы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в отдельном потоке. Для получения дополнительной информации см. [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Если клиентское приложение может пытаться искать элементы в собственном пользовательском интерфейсе, вы должны выполнять все вызовы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в отдельном потоке. Для получения дополнительной информации см. [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Корневой элемент  
@@ -28,7 +28,7 @@ ms.locfileid: "69966383"
  Корневой элемент для рабочего стола, все элементы из которого являются потомками, получается из статического свойства <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> .  
   
 > [!CAUTION]
->  В целом вы должны пытаться получить только прямые потомки <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Поиск потомков может выполнять итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
+> В целом вы должны пытаться получить только прямые потомки <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Поиск потомков может выполнять итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Условия  

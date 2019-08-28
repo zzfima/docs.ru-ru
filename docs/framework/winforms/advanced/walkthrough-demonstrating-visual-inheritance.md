@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040325"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046140"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Пошаговое руководство. Демонстрация визуального наследования
 
@@ -35,19 +35,19 @@ ms.locfileid: "69040325"
 > [!CAUTION]
 > Не все элементы управления поддерживают визуальное наследование от базовой формы. Не поддерживают сценарий, описанный в этом пошаговом руководстве, следующие элементы управления:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Эти элементы управления в производной форме всегда доступны только для чтения, независимо от используемых модификаторов (`private`, `protected` или `public`).
+> Эти элементы управления в производной форме всегда доступны только для чтения, независимо от используемых модификаторов (`private`, `protected` или `public`).
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Создание проекта библиотеки классов, содержащего базовую форму
 
@@ -61,7 +61,7 @@ ms.locfileid: "69040325"
 
 5. В меню **файл** выберите **сохранить все** , чтобы сохранить проект и файлы в расположение по умолчанию.
 
- Следующие две процедуры выполняют добавление кнопок на базовую форму. Чтобы продемонстрировать визуальное наследование, кнопкам будет заданы разные уровни доступа с помощью свойств `Modifiers`.
+Следующие две процедуры выполняют добавление кнопок на базовую форму. Чтобы продемонстрировать визуальное наследование, кнопкам будет заданы разные уровни доступа с помощью свойств `Modifiers`.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Добавление кнопки, которая может быть изменена наследниками базовой формы
 
@@ -135,7 +135,7 @@ ms.locfileid: "69040325"
 
 5. Откройте наследуемую форму (**Form2**) в конструкторе, дважды щелкнув ее, если она еще не открыта.
 
-     В конструкторе наследуемые кнопки имеют символ (![Снимок экрана: символ наследования Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) в верхнем углу, указывая, что они унаследованы.
+    В конструкторе наследуемые кнопки имеют символ (![Снимок экрана: символ наследования Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) в верхнем углу, указывая, что они унаследованы.
 
 6. Нажмите кнопку **Привет** , чтобы увидеть маркеры изменения размера. Так как данная кнопка защищена, то наследники могут ее перемещать, изменять размер, название и вносить другие изменения.
 

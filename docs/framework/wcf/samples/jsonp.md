@@ -2,15 +2,15 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989893"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039558"
 ---
 # <a name="jsonp"></a>JSONP
-В этом образце показано, как обеспечить поддержку JSONP(JSON with Padding) в службах WCF REST. JSONP является правилом, используемым для вызова скриптов между доменами путем создания тегов скриптов в текущем документе. Результат возвращается в заданной функции обратного вызова. JSONP основан на идее, что теги, такие как `<script src="http://..." >` могут выполнять скрипты из любого домена, причем скрипт, полученный этими тегами, оценивается в области, в котором могут уже быть определены другие функции.
+В этом образце показано, как обеспечить поддержку JSONP(JSON with Padding) в службах WCF REST. JSONP является правилом, используемым для вызова скриптов между доменами путем создания тегов скриптов в текущем документе. Результат возвращается в заданной функции обратного вызова. JSONP основан на идее того, что теги, такие `<script src="http://..." >` как, могут оценивать сценарии из любого домена, а скрипт, полученный этими тегами, вычисляется в области, в которой уже могут быть определены другие функции.
 
 ## <a name="demonstrates"></a>Демонстрации
  Междоменная работа со скриптами с JSONP.
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- Веб-страница может вызывать службу WCF REST, поскольку эта служба использует объект <xref:System.ServiceModel.Description.WebScriptEndpoint>, где свойство `crossDomainScriptAccessEnabled` установлено в значении `true`. Обе операции настройки выполняются в файле Web.config в узле \<system.serviceModel > элемента.
+ Веб-страница может вызывать службу WCF REST, поскольку эта служба использует объект <xref:System.ServiceModel.Description.WebScriptEndpoint>, где свойство `crossDomainScriptAccessEnabled` установлено в значении `true`. Обе эти конфигурации выполняются в файле \<Web. config в элементе System. ServiceModel >.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager управляет взаимодействием со службой и устраняет сложности реализации доступа JSONP вручную. Когда `crossDomainScriptAccessEnabled` присваивается `true` и формат ответа для операции JSON, инфраструктура WCF проверяет URI запроса параметра строки запроса обратного вызова и заключает ответ JSON с помощью параметра строки запроса обратного вызова параметр. В образце веб-страница вызывает службу WCF REST со следующим URI.
+ ScriptManager управляет взаимодействием со службой и устраняет сложности реализации доступа JSONP вручную. Если `crossDomainScriptAccessEnabled` параметр имеет `true` значение и формат ответа для операции — JSON, инфраструктура WCF проверяет URI запроса на наличие параметра строки запроса обратного вызова и заключает ответ JSON в значение строки запроса обратного вызова. параметр. В образце веб-страница вызывает службу WCF REST со следующим URI.
 
 ```
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
@@ -51,21 +51,21 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 
  Этот ответ JSONP содержит данные о клиенте в формате JSON, заключенные в имя функции обратного вызова, запрошенной веб-страницей. ScriptManager будет выполнять этот обратный вызов, используя тег скрипта для междоменного запроса, а затем передаст результат в обработчик onSuccess, который передан в операцию GetCustomer прокси ASP.NET AJAX.
 
- Образец состоит из двух веб-приложений ASP.NET: один содержит только службу WCF, а еще один веб-страница ASPX, которая вызывает службу. При работе с решением, Visual Studio 2012 будут размещены два веб-сайта на разных портах среду, где служба и клиент работают в различных доменах.
+ Пример состоит из двух веб-приложений ASP.NET: один содержит только службу WCF, а другой — веб-страницу. aspx, которая вызывает службу. При запуске решения Visual Studio 2012 будет размещать два веб-сайта на разных портах, что создает среду, в которой служба и клиент находятся в разных доменах.
 
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
 #### <a name="to-run-the-sample"></a>Выполнение образца  
   
 1. Откройте решение для образца JSONP.  
   
-2. Нажмите клавишу F5, чтобы запустить `http://localhost:26648/JSONPClientPage.aspx` в браузере.  
+2. Нажмите клавишу F5 `http://localhost:26648/JSONPClientPage.aspx` для запуска в браузере.  
   
-3. Обратите внимание на то, что в случае, после загрузки страницы, поля ввода для «Name» и «Address» заполняются значениями.  Эти значения получены из-за обращения к службе WCF, после браузер завершил визуализацию страницы.
+3. Обратите внимание, что после загрузки страницы входные текстовые значения "Name" и "Address" заполняются значениями.  Эти значения были предоставлены из вызова службы WCF после того, как браузер завершил отрисовку страницы.

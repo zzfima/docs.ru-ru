@@ -2,12 +2,12 @@
 title: Неуниверсальное действие ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620844"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038074"
 ---
 # <a name="non-generic-foreach"></a>Неуниверсальное действие ForEach
 В область элементов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] входит набор действий потока управления, включая элемент <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по коллекциям <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -72,7 +72,7 @@ Activity sampleUsage =
 |Значением является `null`|Не указано значение необходимого аргумента действия "Values".|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Конструктор ForEach  
- Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ForEach%601>. Конструктор отображается в области элементов в **примеры**, **неуниверсальные действия** категории. Конструктор называется **ForEachWithBodyFactory** на панели элементов, поскольку это действие предоставляет <xref:System.Activities.Presentation.IActivityTemplateFactory> на панели элементов, который создает действие с настроенным <xref:System.Activities.ActivityAction>.  
+ Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ForEach%601>. Конструктор появится в области элементов в категории **примеры**, неуниверсальные **действия** . Конструктор называется **фореачвисбодифактори** на панели элементов, так как действие предоставляет объект <xref:System.Activities.Presentation.IActivityTemplateFactory> в области элементов, который создает действие с правильной настройкой. <xref:System.Activities.ActivityAction>  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,17 +97,17 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Установите выбранный проект в качестве проекта для запуска решения.  
   
-    1. **CodeTestClient** показано, как с помощью действия, с помощью кода.  
+    1. **Кодетестклиент** показывает, как использовать действие с помощью кода.  
   
-    2. **DesignerTestClient** показано, как с помощью действия в конструкторе.  
+    2. **Десигнертестклиент** показывает, как использовать действие в конструкторе.  
   
 2. Постройте и запустите проект.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

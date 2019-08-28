@@ -2,12 +2,12 @@
 title: Повторное размещение конструктора
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 360bf66b235d2cb4297f9bd69a3d7328706fb365
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ecbea5822825cca5f3f5cf40e20d5d249b17b07c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635583"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038196"
 ---
 # <a name="designer-rehosting"></a>Повторное размещение конструктора
 Повторное размещение конструктора представляет собой обычный сценарий, предусматривающий размещение поля визуальной разработки рабочего процесса в пользовательском приложении. Наиболее привычным приложением размещения является Visual Studio, однако в целом ряде сценариев может быть полезным отображение конструктора рабочих процессов в приложении.  
@@ -40,7 +40,7 @@ ms.locfileid: "65635583"
 </Grid>  
 ```  
   
- Затем в образце создается конструктор и связываются его первичные представления <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> с соответствующим контейнером в пользовательском интерфейсе. В следующем примере есть несколько дополнительных строк кода, которые заслуживают более подробного объяснения. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Вызов является обязательным для связи конструкторов действий по умолчанию для действий, поставлявшихся с .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> вызывается для передачи элемента WF, подлежащего редактированию. Наконец, в область пользовательского интерфейса помещаются <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (первичное полотно) и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (таблица свойств).  
+ Затем в образце создается конструктор и связываются его первичные представления <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> с соответствующим контейнером в пользовательском интерфейсе. В следующем примере есть несколько дополнительных строк кода, которые заслуживают более подробного объяснения. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Вызов необходим для связи конструкторов действий по умолчанию для действий, поставляемых с .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> вызывается для передачи элемента WF, подлежащего редактированию. Наконец, в область пользовательского интерфейса помещаются <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (первичное полотно) и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (таблица свойств).  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -114,17 +114,17 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Использование образца  
   
-1. Откройте решение DesignerRehosting.sln в Visual Studio 2010.  
+1. Откройте решение Десигнеррехостинг. sln в Visual Studio 2010.  
   
 2. Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.  
   
 3. Приложение WPF начинается с повторно размещенного конструктора.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

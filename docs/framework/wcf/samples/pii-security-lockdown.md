@@ -2,12 +2,12 @@
 title: Блокировка безопасности PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964596"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044788"
 ---
 # <a name="pii-security-lockdown"></a>Блокировка безопасности PII
 В этом примере показано, как управлять несколькими связанными с безопасностью компонентами службы Windows Communication Foundation (WCF) следующим образом.  
@@ -19,13 +19,13 @@ ms.locfileid: "69964596"
 - Управление отображением персональных данных в трассировках и журналах сообщений.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Обсуждение  
  С помощью этих функций можно управлять безопасностью службы, используя их вместе либо по отдельности. Это не является основным руководством по обеспечению безопасности службы WCF.  
@@ -120,7 +120,7 @@ ms.locfileid: "69964596"
 > Модуль System.Diagnostics игнорирует все атрибуты всех источников, за исключением приведенного в файле конфигурации первым. Добавление атрибута `logKnownPii` во второй источник в файле конфигурации не на что не повлияет.  
   
 > [!IMPORTANT]
->  Чтобы выполнить этот образец, необходимо вручную модифицировать файл Machine.config. Вносить изменения в файл Machine.config следует осторожно, так как неверные значения или синтаксис могут нарушить работу приложений .NET Framework.  
+> Чтобы выполнить этот образец, необходимо вручную модифицировать файл Machine.config. Вносить изменения в файл Machine.config следует осторожно, так как неверные значения или синтаксис могут нарушить работу приложений .NET Framework.  
   
  Также можно зашифровывать элементы файла конфигурации с помощью DPAPI и RSA. Дополнительные сведения см. на следующих страницах:  
   
