@@ -1,16 +1,16 @@
 ---
 title: Развертывание модели в Функциях Azure
 description: Использование модели машинного обучения ML.NET для анализа тональности и прогнозирования через Интернет с помощью Функций Azure
-ms.date: 06/11/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025975"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666673"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Развертывание модели в Функциях Azure
 
@@ -47,7 +47,7 @@ ms.locfileid: "67025975"
 
     В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. Выберите nuget.org в качестве источника пакетов, перейдите на вкладку "Обзор", выполните поиск по фразе **Microsoft.Extensions.ML**, выберите из списка этот пакет и нажмите кнопку **Установить**. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**, а затем нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с указанными условиями лицензионного соглашения для выбранных пакетов.
 
-1. Обновите **пакет NuGet Microsoft.NET.Sdk.Functions** до версии 1.0.28:
+1. Обновите **пакет NuGet Microsoft.NET.Sdk.Functions** до версии 1.0.28 или более поздней.
 
     В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. Выберите nuget.org в качестве источника пакетов, перейдите на вкладку "Установленные", выполните поиск по фразе **Microsoft.NET.Sdk.Functions**, выберите из списка этот пакет, выберите версию 1.0.28 или более позднюю в раскрывающемся списке "Версия" и нажмите кнопку **Обновить**. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**, а затем нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с указанными условиями лицензионного соглашения для выбранных пакетов.
 
@@ -155,8 +155,7 @@ ms.locfileid: "67025975"
     В редакторе кода откроется файл *Startup.cs*. Добавьте в начало файла *Startup.cs* следующий оператор using:
 
     ```csharp
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Hosting;
+    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
     using Microsoft.Extensions.ML;
     using SentimentAnalysisFunctionsApp;
     using SentimentAnalysisFunctionsApp.DataModels;
@@ -165,12 +164,12 @@ ms.locfileid: "67025975"
     Удалите существующий код ниже инструкций using и добавьте следующий код в файле *Startup.cs*:
 
     ```csharp
-    [assembly: WebJobsStartup(typeof(Startup))]
+    [assembly: FunctionsStartup(typeof(Startup))]
     namespace SentimentAnalysisFunctionsApp
     {
-        class Startup : IWebJobsStartup
+        public class Startup : FunctionsStartup
         {
-            public void Configure(IWebJobsBuilder builder)
+            public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
                     .FromFile("MLModels/sentiment_model.zip");

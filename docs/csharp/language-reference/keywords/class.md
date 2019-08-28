@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652076"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922392"
 ---
 # <a name="class-c-reference"></a>класс (Справочник по C#)
 
@@ -38,43 +38,43 @@ class TestClass
 |Отсутствует, реализует два интерфейса|`class ImplClass: IFace1, IFace2 { }`|
 |Одиночное, реализует один интерфейс|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-Классы, объявленные непосредственно в пространстве имен и не вложенные в другие классы, могут быть [открытыми](../../../csharp/language-reference/keywords/public.md) или [внутренними](../../../csharp/language-reference/keywords/internal.md). По умолчанию классы являются `internal`.
+Классы, объявленные непосредственно в пространстве имен и не вложенные в другие классы, могут быть [открытыми](./public.md) или [внутренними](./internal.md). По умолчанию классы являются `internal`.
 
 Члены класса, включая вложенные классы, могут объявляться с типом доступа [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) или [private protected](private-protected.md). По умолчанию члены имеют тип доступа `private`.
 
-Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Дополнительные сведения см. в статье [Модификаторы доступа](../../programming-guide/classes-and-structs/access-modifiers.md).
 
-Можно объявить универсальные классы, имеющие параметры типа. Дополнительные сведения см. в разделе [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md).
+Можно объявить универсальные классы, имеющие параметры типа. Дополнительные сведения см. в разделе [Универсальные классы](../../programming-guide/generics/generic-classes.md).
 
 Класс может содержать объявления следующих членов:
 
-- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Конструкторы](../../programming-guide/classes-and-structs/constructors.md)
 
-- [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [Константы](../../programming-guide/classes-and-structs/constants.md)
 
-- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Поля](../../programming-guide/classes-and-structs/fields.md)
 
-- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Методы завершения](../../programming-guide/classes-and-structs/destructors.md)
 
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Методы](../../programming-guide/classes-and-structs/methods.md)
 
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Свойства](../../programming-guide/classes-and-structs/properties.md)
 
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
+- [Индексаторы](../../programming-guide/indexers/index.md)
 
-- [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Инструкции](../operators/index.md)
 
-- [События](../../../csharp/programming-guide/events/index.md)
+- [События](../../programming-guide/events/index.md)
 
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Делегаты](../../programming-guide/delegates/index.md)
 
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Классы](../../programming-guide/classes-and-structs/classes.md)
 
-- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
+- [Интерфейсы](../../programming-guide/interfaces/index.md)
 
-- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Структуры](../../programming-guide/classes-and-structs/structs.md)
 
-- [Перечисления](../../../csharp/programming-guide/enumeration-types.md)
+- [Перечисления](../../programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>Пример
 
@@ -94,7 +94,7 @@ Console.Write(child1.name);   // Error
 
 Типы, объявленные в классе без модификатора доступа, по умолчанию являются `private`, поэтому члены данных в этом примере останутся `private`, если ключевые слова будут удалены.
 
-Наконец, обратите внимание, что для объекта, созданного с помощью стандартного конструктора (`child3`), поле `age` по умолчанию инициализировано с нулевым значением.
+Наконец, обратите внимание, что для объекта, созданного с помощью конструктора без параметров (`child3`), поле `age` по умолчанию инициализировано с нулевым значением.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -102,7 +102,7 @@ Console.Write(child1.name);   // Error
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](./index.md)
+- [Ссылочные типы](./reference-types.md)

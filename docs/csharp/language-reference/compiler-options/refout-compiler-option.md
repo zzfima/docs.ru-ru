@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 06d21843c6e2d7aeb1858c3ce72426d080f73595
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97cbf540527d0449387b71bb1d97df95b6a4aba4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410216"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602505"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (параметры компилятора C#)
 
-Параметр **-refout** указывает путь к файлу, в который нужно выводить базовую сборку. В API Emit он преобразуется в `metadataPeStream`.
+Параметр **-refout** указывает путь к файлу, в который нужно выводить базовую сборку. В API Emit он преобразуется в `metadataPeStream`. Этот параметр соответствует свойству проекта [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) в MSBuild.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,5 +46,5 @@ ms.locfileid: "58410216"
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](./index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

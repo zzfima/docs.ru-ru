@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570727"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70014948"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -30,14 +30,14 @@ ms.locfileid: "54570727"
 
 - Одна среда выполнения или несколько. Примеры CLR для .NET Framework, CoreCLR и CoreRT для .NET Core.
 - Библиотека классов, которая реализует .NET Standard, а также может реализовывать дополнительные API-интерфейсы. Примеры: библиотека базовых классов .NET Framework, библиотека базовых классов .NET Core.
-- (Необязательно) Одна платформа приложений или несколько. Примеры [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework.
+- (Необязательно) Одна платформа приложений или несколько. Примеры [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework и .NET Core.
 - (Необязательно) Средства разработки. Некоторые средства разработки, являются общими для нескольких реализаций.
 
 Существуют четыре основные реализации .NET, которые корпорация Майкрософт активно разрабатывает и обслуживает: .NET Core, .NET Framework, Mono и UWP.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core — это кроссплатформенная реализация .NET, предназначенная для обработки обширного ряда серверных и облачных рабочих нагрузок. Она работает в Windows, macOS и Linux. Она реализует .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать на .NET Core. ASP.NET Core выполняется в .NET Core. 
+.NET Core — это кроссплатформенная реализация .NET, предназначенная для обработки обширного ряда серверных и облачных рабочих нагрузок. Она работает в Windows, macOS и Linux. Она реализует .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать на .NET Core. [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) работают на основе .NET Core.
 
 Дополнительные сведения о .NET Core см. в [руководстве по .NET Core](../core/index.md) и в разделе [Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md).
 

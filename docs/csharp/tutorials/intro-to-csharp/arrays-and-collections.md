@@ -3,12 +3,12 @@ title: Работа с коллекциями. Вводное руководст
 description: Это руководство по C# предоставляет для изучения примере коллекции списков.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 064b01a30410b147e89b0f87180d5af9269a3a87
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 160e34ddb529a8515a08d6aab838ba107936c616
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634517"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587253"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Научитесь управлять коллекциями данных с использованием универсального типа списка
 
@@ -93,7 +93,8 @@ var index = names.IndexOf("Felipe");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 }
@@ -102,7 +103,8 @@ index = names.IndexOf("Not Found");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 
@@ -192,7 +194,7 @@ var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
 
 fibonacciNumbers.Add(previous + previous2);
 
-foreach(var item in fibonacciNumbers)
+foreach (var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 

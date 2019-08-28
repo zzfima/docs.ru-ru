@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924642"
 ---
 # <a name="member-access-operators-c-reference"></a>Операторы доступа к членам (справочник по C#)
 
@@ -145,7 +145,7 @@ if (handler != null)
 
 ### <a name="other-usages-of-"></a>Другие данные об использовании ()
 
-Кроме того, с помощью круглых скобок можно указывать порядок выполнения операций в выражении. Дополнительные сведения см. в разделе [Добавление скобок](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) руководства по использованию [операторов](../../programming-guide/statements-expressions-operators/operators.md). Список операторов, упорядоченных по уровню приоритета, см. в статье [Операторы в C#](index.md).
+Кроме того, с помощью круглых скобок можно настраивать порядок выполнения операций в выражении. Дополнительные сведения см. в разделе [Операторы C#](index.md).
 
 В [выражениях приведения](type-testing-and-cast.md#cast-operator-), которые выполняют явные преобразования типов, также используйте круглые скобки.
 

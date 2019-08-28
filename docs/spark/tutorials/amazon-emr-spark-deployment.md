@@ -6,80 +6,80 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 5414bc20de3bb90a5d2144bd006d1b859e184a39
 ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/19/2019
 ms.locfileid: "69576931"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Развертывание приложения .NET для Apache Spark в Amazon EMR Spark
 
-В этом учебнике описывается развертывание приложения .NET для Apache Spark в Amazon EMR Spark.
+В этом руководстве рассматривается развертывание приложения .NET для Apache Spark в Amazon EMR Spark.
 
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
-> * Подготовка Microsoft. Spark. Worker
+> * Подготовка Microsoft.Spark.Worker
 > * Публикация приложения Spark .NET
 > * Развертывание приложения в Amazon EMR Spark
 > * Запуск приложения
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем начать, выполните следующие действия.
+Прежде чем начать, сделайте следующее:
 
-* Скачайте интерфейс [командной строки AWS](https://aws.amazon.com/cli/).
-* Скачайте [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) на локальный компьютер. Это вспомогательный скрипт, который используется позже для копирования .NET для Apache Spark зависимых файлов в рабочие узлы кластера Spark.
+* Скачайте [интерфейс командной строки AWS](https://aws.amazon.com/cli/).
+* Скачайте файл [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) на локальный компьютер. Это вспомогательный скрипт, который будет использоваться позже для копирования зависимых файлов .NET для Apache Spark в рабочие узлы кластера Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Подготовка зависимостей рабочей роли
 
-**Microsoft. Spark. Worker** — это серверный компонент, который находится на отдельных рабочих узлах кластера Spark. Если вы хотите выполнить определяемую C# пользователем функцию (UDF), Spark необходимо понять, как запустить среду CLR .NET для выполнения пользовательской функции. **Microsoft. Spark. Worker** предоставляет коллекцию классов для Spark, которые обеспечивают эту функциональность.
+**Microsoft.Spark.Worker** — это серверный компонент, который размещается в отдельных рабочих узлах кластера Spark. Если вам нужно выполнить определяемую пользователем функцию C#, Spark необходимо знать, как запустить среду CLR .NET для выполнения этой функции. **Microsoft.Spark.Worker** предоставляет Spark коллекцию классов, которые обеспечивают такую возможность.
 
-1. Выберите выпуск [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp, который будет развернут в кластере.
+1. Выберите выпуск netcoreapp компонента [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) для Linux, который будет развернут в кластере.
 
-   Например, если вы хотите `.NET for Apache Spark v0.1.0` использовать `netcoreapp2.1`, скачайте [Microsoft. Spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
+   Например, чтобы использовать `.NET for Apache Spark v0.1.0` с `netcoreapp2.1`, скачайте выпуск [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
 
-2. Отправляйте `Microsoft.Spark.Worker.<release>.tar.gz` и [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) в распределенную файловую систему (например, S3), к которой имеет доступ кластер.
+2. Передайте файлы `Microsoft.Spark.Worker.<release>.tar.gz` и [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) в распределенную файловую систему (например, S3), к которой есть доступ у кластера.
 
-## <a name="prepare-your-net-for-apache-spark-app"></a>Подготовка .NET для приложения Apache Spark
+## <a name="prepare-your-net-for-apache-spark-app"></a>Подготовка приложения .NET для Apache Spark
 
-1. Выполните инструкции из руководства по [началу работы](get-started.md) , чтобы создать приложение.
+1. Выполните сборку приложения согласно инструкциям из [руководства по началу работы](get-started.md).
 
-2. Опубликуйте свое приложение Spark .NET как автономное.
+2. Опубликуйте приложение .NET для Spark как автономное.
 
-   Выполните следующую команду в Linux.
+   Выполните приведенную ниже команду в Linux.
 
    ```bash
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. Создание `<your app>.zip` для опубликованных файлов.
+3. Создайте `<your app>.zip` для опубликованных файлов.
 
-   Выполните следующую команду в Linux с помощью `zip`.
+   Выполните приведенную ниже команду в Linux с помощью `zip`.
 
    ```bash
    zip -r <your app>.zip .
    ```
 
-4. Отправьте следующие элементы в распределенную файловую систему (например, S3), к которой имеет доступ ваш кластер:
+4. Передайте в распределенную файловую систему (например, S3), к которой есть доступ у кластера, следующие объекты:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Этот JAR-файл входит в состав пакета NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
    * `<your app>.zip`
-   * Файлы (например, файлы зависимостей или общие данные, доступные каждому рабочему процессу) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции или библиотеки, от которых зависит ваше приложение) должны размещаться в рабочем каталоге каждого исполнителя.
+   * Файлы (например, файлы зависимостей или общие данные, доступные каждой рабочей роли) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции, или библиотеки, от которых зависит приложение), которые необходимо поместить в рабочий каталог каждого исполнителя.
 
 ## <a name="deploy-to-amazon-emr-spark"></a>Развертывание в Amazon EMR Spark
 
-[Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) — это управляемая кластерная платформа, которая упрощает запуск платформ больших данных на AWS.
+[Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) — это управляемая кластерная платформа, которая упрощает выполнение систем больших данных в AWS.
 
 > [!NOTE] 
-> Amazon EMR Spark — на основе Linux. Поэтому, если вы заинтересованы в развертывании приложения в Amazon EMR Spark, убедитесь, что приложение совместимо .NET Standard и вы используете [компилятор .NET Core](https://dotnet.microsoft.com/download) для компиляции приложения.
+> Amazon EMR Spark работает под управлением Linux. Поэтому если вы хотите развернуть приложение в Amazon EMR Spark, оно должно быть совместимо с .NET Standard, а для его компиляции необходимо использовать [компилятор .NET Core](https://dotnet.microsoft.com/download).
 
-### <a name="deploy-microsoftsparkworker"></a>Развертывание Microsoft. Spark. Worker
+### <a name="deploy-microsoftsparkworker"></a>Развертывание Microsoft.Spark.Worker
 
-Этот шаг требуется только при создании кластера.
+Этот шаг необходимо выполнить только при создании кластера.
 
-Выполнение `install-worker.sh` во время создания кластера с помощью [действий начальной загрузки](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).
+Выполните скрипт `install-worker.sh` во время создания кластера с помощью [действий начальной загрузки](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).
 
-Выполните следующую команду в Linux с помощью AWS CLI.
+Выполните приведенную ниже команду в Linux с помощью интерфейса командной строки AWS.
 
 ```bash
 aws emr create-cluster \
@@ -95,13 +95,13 @@ aws emr create-cluster \
 
 ## <a name="run-your-app"></a>Запуск приложения
 
-Существует два способа запуска приложения в Amazon EMR Spark: Spark-Submit и Amazon EMR.
+Приложение можно запускать в Amazon EMR Spark двумя способами: с помощью команды spark-submit или с помощью шагов Amazon EMR.
 
-### <a name="use-spark-submit"></a>Использование Spark-Submit
+### <a name="use-spark-submit"></a>Использование команды spark-submit
 
-Команду [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applications.html) можно использовать для отправки заданий .net для Apache Spark в Amazon EMR Spark.
+Для отправки заданий .NET для Apache Spark в Amazon EMR Spark можно использовать команду [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html).
 
-1. `ssh`в один из узлов в кластере.
+1. Подключитесь к одному из узлов кластера с помощью команды `ssh`.
 
 2. Запустите `spark-submit`.
 
@@ -114,11 +114,11 @@ aws emr create-cluster \
    s3://mybucket/<some dir>/<your app>.zip <your app> <app args>
    ```
 
-### <a name="use-amazon-emr-steps"></a>Использование действий Amazon EMR
+### <a name="use-amazon-emr-steps"></a>Использование шагов Amazon EMR
 
-[Действия Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-submit-step.html) можно использовать для отправки заданий в платформу Spark, установленную в кластере EMR.
+[Шаги Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-submit-step.html) можно использовать для отправки заданий в платформу Spark, установленную в кластере EMR.
 
-Выполните следующую команду в Linux с помощью AWS CLI.
+Выполните приведенную ниже команду в Linux с помощью интерфейса командной строки AWS.
 
 ```bash
 aws emr add-steps \
@@ -128,7 +128,7 @@ aws emr add-steps \
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В этом руководстве вы развернули приложение .NET для Apache Sparkного приложения в Amazon EMR Spark. Для .NET для Apache Spark примеров проектов перейдите на сайт GitHub.
+В этом руководстве вы развернули приложение .NET для Apache Spark в Amazon EMR Spark. Примеры проектов .NET для Apache Spark можно найти в GitHub.
 
 > [!div class="nextstepaction"]
 > [Примеры .NET для Apache Spark](https://github.com/dotnet/spark/tree/master/examples)

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68671229"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666638"
 ---
 # <a name="net-assembly-file-format"></a>Формат файла сборки .NET
 
@@ -35,4 +35,4 @@ ms.locfileid: "68671229"
 
 ## <a name="processing-the-assemblies"></a>Обработка сборок
 
-Можно создавать средства или API для обработки сборок. Сведения о сборке позволяют принимать программные решения во время выполнения, перезаписывать сборки, предоставляя API IntelliSense в редакторе и формируя документацию. <xref:System.Reflection?displayProperty=nameWithType> и [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) — это хорошие примеры средств, которые часто используются для этой цели.
+Можно создавать средства или API для обработки сборок. Сведения о сборке позволяют принимать программные решения во время выполнения, перезаписывать сборки, предоставляя API IntelliSense в редакторе и формируя документацию. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> и [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) — это хорошие примеры средств, которые часто используются для этой цели.

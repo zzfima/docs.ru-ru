@@ -3,7 +3,7 @@ documentType: LandingData
 title: Документация по .NET для Apache Spark
 metadata:
   document_id: na
-  title: Документация по .NET для Apache Spark. руководства и Справочник по API
+  title: Документация по .NET для Apache Spark. Руководства и справочники по API
   meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,23 +11,23 @@ metadata:
   ms.author: mamccrea
   author: mamccrea
 abstract:
-  description: 'Узнайте, как использовать .NET для Apache Spark, привязки .NET для Spark, написанные на уровне взаимодействия Spark. Вы можете обрабатывать пакеты данных, потоки в режиме реального времени, машинное обучение и Специальный запрос с Apache Spark в любом месте, где вы пишете код .NET. Учебники, примеры кода, справочник по API и другая документация покажут вам, как это сделать.'
+  description: 'Узнайте, как использовать .NET для Apache Spark, привязки .NET для Spark, написанные на уровне взаимодействия Spark. С помощью Apache Spark можно обрабатывать пакеты данных, потоки в реальном времени, процессы машинного обучения и специальные запросы при написании кода .NET. Учебники, примеры кода, справочник по API и другая документация покажут вам, как это сделать.'
 sections:
   - title: Пошаговые руководства
     items:
       - type: paragraph
-        text: 'Перенесите возможности Apache Spark в приложения .NET:'
+        text: 'Предоставьте возможности Apache Spark приложениям .NET:'
       - type: list
         style: unordered
         items:
           - html: <a href="/dotnet/spark/tutorials/get-started">Начало работы с .NET для Apache Spark</a>
           - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Развертывание приложения .NET для Apache Spark в Azure HDInsight</a>
           - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Развертывание приложения .NET для Apache Spark в Amazon EMR Spark</a>
-          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Развертывание .NET для Apache Spark приложения в модулях</a>
+          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Развертывание приложения .NET для Apache Spark в Databricks</a>
   - title: Ссылки и ресурсы
     items:
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=spark-dotnet">.NET для Apache Spark API</a>
-          - html: '<a href="https://github.com/dotnet/spark">.NET для Apache Spark в центре Git</a>'
+          - html: <a href="/dotnet/api/?view=spark-dotnet">API .NET для Apache Spark</a>
+          - html: '<a href="https://github.com/dotnet/spark">.NET для Apache Spark в GitHub</a>'

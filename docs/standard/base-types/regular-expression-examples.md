@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc62fffe3ca51acf0f2098d2975665b91b052992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930898"
 ---
 # <a name="regular-expression-examples"></a>Примеры регулярных выражений
 В этом разделе представлены примеры кодов, иллюстрирующих использование регулярных выражений в обычных приложениях.  
   
 > [!NOTE]
->  Пространство имен <xref:System.Web.RegularExpressions> содержит несколько объектов регулярных выражений, которые реализуют предопределенные шаблоны регулярных выражений для анализа строк из документов HTML, XML и ASP.NET. Например, класс <xref:System.Web.RegularExpressions.TagRegex> определяет в строке открывающие теги, а класс <xref:System.Web.RegularExpressions.CommentRegex> определяет в строке комментарии ASP.NET.  
+> Пространство имен <xref:System.Web.RegularExpressions> содержит несколько объектов регулярных выражений, которые реализуют предопределенные шаблоны регулярных выражений для анализа строк из документов HTML, XML и ASP.NET. Например, класс <xref:System.Web.RegularExpressions.TagRegex> определяет в строке открывающие теги, а класс <xref:System.Web.RegularExpressions.CommentRegex> определяет в строке комментарии ASP.NET.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Пример. Поиск ссылок HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
+ [Пример: поиск ссылок HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
  В этом примере выполняется поиск значения href="..." в исходных строках и выводятся найденные ссылки с указанием их позиций в строке.  
   
- [Пример. Изменение форматов даты](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
+ [Пример: Изменение форматов даты](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
  В этом примере заменяются даты в формате мм/дд/гг датами в формате дд-мм-гг.  
   
  [Практическое руководство. Извлечение протокола и номера порта из URL-адреса](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "34172507"
  [Практическое руководство. Проверка строк на соответствие формату электронной почты](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  Содержит пример, с помощью которого можно проверить, имеет ли строка допустимый формат адреса электронной почты.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Text.RegularExpressions>  
  Справочные сведения о библиотеке классов для пространства имен **System.Text.RegularExpressions** платформы .NET.  
   

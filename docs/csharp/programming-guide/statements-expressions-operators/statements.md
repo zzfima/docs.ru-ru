@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 78d40aa2069e56357f55f39c3b7479ee46d0342c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921794"
 ---
 # <a name="statements-c-programming-guide"></a>Инструкции (Руководство по программированию на C#)
 Действия программы выражаются в инструкциях. В общие действия включено объявление переменных, присвоение значений, вызов методов, проход по коллекциям и ветвление на один или другой блок кода, в зависимости от заданного условия. Порядок выполнения инструкций в программе называется потоком управления или потоком выполнения. Поток управления может отличаться при каждом запуске программы, в зависимости от реакции программы на входные данные, которые она получает во время выполнения.  
@@ -27,16 +27,16 @@ ms.locfileid: "66422830"
 |--------------|---------------------------|  
 |[Инструкции объявления](#declaration-statements)|Инструкция объявления представляет новую переменную или константу. Объявление переменной может при необходимости присвоить значение переменной. В объявлении константы необходимо назначение.|  
 |[Инструкции выражений](expressions.md)|Инструкции выражений, вычисляющие значение, должны сохранить его в переменной. Дополнительные сведения см. в разделе [Инструкции выражений](#expression-statements).|  
-|Операторы выбора|Инструкции выбора позволяют ветвление на разные разделы кода, в зависимости от одного или нескольких заданных условий. Дополнительные сведения см. в следующих разделах:<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
-|Операторы итерации|Инструкции итерации позволяют просмотр коллекций как массивов или многократное выполнение того же набора инструкций до выполнения заданного условия. Дополнительные сведения см. в следующих разделах:<br /><br /> [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
-|Операторы перехода|Инструкции перехода передают управление другому разделу кода. Дополнительные сведения см. в следующих разделах:<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
-|Операторы обработки исключений|Инструкции обработки исключений позволяют аккуратно выполнить восстановление после исключительных условий, возникающих во время выполнения. Дополнительные сведения см. в следующих разделах:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
-|[Инструкции checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Инструкции checked и unchecked позволяют указать, позволено ли числовым операциям вызывать переполнение, когда результат сохраняется в переменной, которая слишком мала для хранения результирующего значения. Дополнительные сведения см. в разделах [checked](../../../csharp/language-reference/keywords/checked.md) и [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
-|Инструкция `await`|Если пометить метод с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md), можно использовать в этом методе инструкцию [await](../../../csharp/language-reference/keywords/await.md). Когда управление достигает выражения `await` в асинхронном методе, управление возвращается вызывающему объекту, и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.<br /><br /> Простой пример см. в подразделе "Асинхронные методы" раздела [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md). Дополнительные сведения см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|Инструкция `yield return`|Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует инструкцию [yield return](../../../csharp/language-reference/keywords/yield.md) для возврата всех элементов по одному. При достижении инструкции `yield return` текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.<br /><br /> Дополнительные сведения см. в разделе [Итераторы](../../../csharp/programming-guide/concepts/iterators.md).|  
-|Инструкция `fixed`|Инструкция fixed не позволяет сборщику мусора переносить перемещаемую переменную. Дополнительные сведения см. в разделе [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
-|Инструкция `lock`|Инструкция lock позволяет ограничить одновременный доступ к блокам кода только до одного потока. Дополнительные сведения см. в разделе [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
-|Инструкции с метками|Инструкцию можно пометить и затем использовать ключевое слово [goto](../../../csharp/language-reference/keywords/goto.md) для перехода к инструкции с меткой. (См. пример в следующей строке.)|  
+|Операторы выбора|Инструкции выбора позволяют ветвление на разные разделы кода, в зависимости от одного или нескольких заданных условий. Дополнительные сведения см. в следующих разделах:<br /><br /> [if](../../language-reference/keywords/if-else.md), [else](../../language-reference/keywords/if-else.md), [switch](../../language-reference/keywords/switch.md), [case](../../language-reference/keywords/switch.md)|  
+|Операторы итерации|Инструкции итерации позволяют просмотр коллекций как массивов или многократное выполнение того же набора инструкций до выполнения заданного условия. Дополнительные сведения см. в следующих разделах:<br /><br /> [do](../../language-reference/keywords/do.md), [for](../../language-reference/keywords/for.md), [foreach](../../language-reference/keywords/foreach-in.md), [in](../../language-reference/keywords/foreach-in.md), [while](../../language-reference/keywords/while.md)|  
+|Операторы перехода|Инструкции перехода передают управление другому разделу кода. Дополнительные сведения см. в следующих разделах:<br /><br /> [break](../../language-reference/keywords/break.md), [continue](../../language-reference/keywords/continue.md), [default](../../language-reference/keywords/switch.md), [goto](../../language-reference/keywords/goto.md), [return](../../language-reference/keywords/return.md), [yield](../../language-reference/keywords/yield.md)|  
+|Операторы обработки исключений|Инструкции обработки исключений позволяют аккуратно выполнить восстановление после исключительных условий, возникающих во время выполнения. Дополнительные сведения см. в следующих разделах:<br /><br /> [throw](../../language-reference/keywords/throw.md), [try-catch](../../language-reference/keywords/try-catch.md), [try-finally](../../language-reference/keywords/try-finally.md), [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
+|[Инструкции checked и unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Инструкции checked и unchecked позволяют указать, позволено ли числовым операциям вызывать переполнение, когда результат сохраняется в переменной, которая слишком мала для хранения результирующего значения. Дополнительные сведения см. в разделах [checked](../../language-reference/keywords/checked.md) и [unchecked](../../language-reference/keywords/unchecked.md).|  
+|Инструкция `await`|Если пометить метод с помощью модификатора [async](../../language-reference/keywords/async.md), можно использовать в этом методе инструкцию [await](../../language-reference/keywords/await.md). Когда управление достигает выражения `await` в асинхронном методе, управление возвращается вызывающему объекту, и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.<br /><br /> Простой пример см. в подразделе "Асинхронные методы" раздела [Методы](../classes-and-structs/methods.md). Дополнительные сведения см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](../concepts/async/index.md).|  
+|Инструкция `yield return`|Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует инструкцию [yield return](../../language-reference/keywords/yield.md) для возврата всех элементов по одному. При достижении инструкции `yield return` текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.<br /><br /> Дополнительные сведения см. в разделе [Итераторы](../concepts/iterators.md).|  
+|Инструкция `fixed`|Инструкция fixed не позволяет сборщику мусора переносить перемещаемую переменную. Дополнительные сведения см. в разделе [fixed](../../language-reference/keywords/fixed-statement.md).|  
+|Инструкция `lock`|Инструкция lock позволяет ограничить одновременный доступ к блокам кода только до одного потока. Дополнительные сведения см. в разделе [lock](../../language-reference/keywords/lock-statement.md).|  
+|Инструкции с метками|Инструкцию можно пометить и затем использовать ключевое слово [goto](../../language-reference/keywords/goto.md) для перехода к инструкции с меткой. (См. пример в следующей строке.)|  
 |[Пустая инструкция](#the-empty-statement)|Пустая инструкция состоит из точки с запятой. Она ничего не делает, и ее можно использовать там, где инструкция необходима, но не нужно выполнять никаких действий.|  
   
 ## <a name="declaration-statements"></a>Инструкции объявления
@@ -59,7 +59,7 @@ ms.locfileid: "66422830"
 
 ## <a name="embedded-statements"></a>Внедренные инструкции
 
- В некоторых инструкциях, включая [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) и [foreach](../../../csharp/language-reference/keywords/foreach-in.md), всегда есть внедренная инструкция, следующая за ними. Эта внедренная инструкция может быть либо одной инструкцией, либо несколькими инструкциями, заключенными в скобки {} в блоке инструкций. Даже однострочные внедренные инструкции могут быть заключены в скобки {}, как показано в следующем примере:  
+ В некоторых инструкциях, включая [do](../../language-reference/keywords/do.md), [while](../../language-reference/keywords/while.md), [for](../../language-reference/keywords/for.md) и [foreach](../../language-reference/keywords/foreach-in.md), всегда есть внедренная инструкция, следующая за ними. Эта внедренная инструкция может быть либо одной инструкцией, либо несколькими инструкциями, заключенными в скобки {} в блоке инструкций. Даже однострочные внедренные инструкции могут быть заключены в скобки {}, как показано в следующем примере:  
   
  [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
@@ -81,17 +81,12 @@ ms.locfileid: "66422830"
   
  [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
-## <a name="related-sections"></a>Связанные разделы  
-  
-- [Ключевые слова инструкций](../../../csharp/language-reference/keywords/statement-keywords.md)  
-  
-- [Выражения](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
-  
-- [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделе [Операторы](~/_csharplang/spec/statements.md) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Ключевые слова операторов](../../language-reference/keywords/statement-keywords.md)  
+- [Выражения](expressions.md)  
