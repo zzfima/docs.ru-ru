@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422434"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133788"
 ---
 # <a name="ui-automation-security-overview"></a>Общие сведения о безопасности модели автоматизации пользовательского интерфейса
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.
 
 В этом обзоре описывается модель безопасности для [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] в [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)].
 
@@ -41,7 +41,7 @@ ms.locfileid: "67422434"
 
 ## <a name="manifest-files"></a>Файлы манифеста
 
-Чтобы получить доступ к защищенному системой пользовательского интерфейса, приложения должны быть построены с файлом манифеста, который включает в себя `uiAccess` атрибут в `requestedExecutionLevel` тег, следующим образом:
+Чтобы получить доступ к защищенному системному интерфейсу, приложения должны быть построены с помощью файла манифеста, который `requestedExecutionLevel` включает `uiAccess` атрибут в тег следующим образом:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ ms.locfileid: "67422434"
 
 Значение атрибута `level` в этом коде приводится только для примера.
 
-`uiAccess` имеет значение «false» по умолчанию. то есть если этот атрибут указан или если отсутствует манифест сборки, приложение не будет сможет получить доступ к защищенным пользовательского интерфейса.
-
-Дополнительные сведения о [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] безопасности, подписи приложений и при создании манифестов сборки см. в разделе [передовые методики и рекомендации для приложений в среде с минимальными привилегиями](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10)).
+`uiAccess`по умолчанию имеет значение false; Это значит, что если атрибут не указан или для сборки нет манифеста, приложение не сможет получить доступ к защищенному пользовательскому интерфейсу.

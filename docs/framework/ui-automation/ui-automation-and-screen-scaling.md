@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044200"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133767"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
 > Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]позволяет пользователям изменять параметр точек на дюйм (DPI), чтобы большинство [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] элементов на экране отображались крупнее. Хотя эта возможность уже давно была доступна в [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], в предыдущих версиях масштабирование должно было реализовываться в приложениях. В [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]диспетчер окон рабочего стола выполняет масштабирование по умолчанию для всех приложений, которые не обрабатывают собственное масштабирование. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
+Начиная с Windows Vista, Windows позволяет пользователям изменять параметр точек на дюйм (DPI), чтобы большинство элементов пользовательского интерфейса на экране отображались крупнее. Хотя эта функция в течение длительного времени была доступна в Windows, в предыдущих версиях масштабирование пришлось бы реализовать в приложениях. Начиная с Windows Vista, диспетчер окон рабочего стола выполняет масштабирование по умолчанию для всех приложений, которые не обрабатывали собственное масштабирование. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Масштабирование в Windows Vista  

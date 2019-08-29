@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 4f1489065a70065700d2f8ceb974e66ecceeebd0
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671838"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133813"
 ---
 # <a name="technology-regions-overview"></a>Общие сведения об областях применения технологий
 Если в приложении используются несколько технологий представления, такие как WPF, Win32 или DirectX, то они должны совместно использовать области отрисовки в общем окне верхнего уровня. В этом разделе описываются проблемы, которые могут повлиять на представление и выходные данные приложения взаимодействия с WPF.  
@@ -54,11 +54,9 @@ ms.locfileid: "68671838"
   
  Многослойные окна [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют разные функциональные возможности в различных операционных системах. Это обусловлено [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] тем, что использует DirectX для подготовки к просмотру, а многослойные окна — в первую очередь для отрисовки GDI, а не для отрисовки DirectX.  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает аппаратное ускорение многослойных окон в [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] и более поздних версиях. Для многослойных окон с [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] аппаратным ускорением требуется поддержка Microsoft DirectX, поэтому возможности будут зависеть от версии Microsoft DirectX на этом компьютере.  
+- WPF поддерживает многоуровневые окна с аппаратным ускорением.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не поддерживает цветовые ключи прозрачности, так как [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не может гарантировать отрисовку необходимого цвета, особенно при использовании аппаратного ускорения.  
-  
-- Если приложение работает в [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], многослойные окна на вершинах DirectX замерцаниются при визуализации приложения DirectX.  (Фактическая последовательность отрисовки заключается в том, что Microsoft Windows интерфейс графических устройств (GDI) скрывает многослойное окно, затем DirectX рисует, а затем Microsoft Windows интерфейс графических устройств (GDI) помещает многоуровневый окно обратно).  Это ограничение накладывается и на многослойные окна вне [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>См. также
 
