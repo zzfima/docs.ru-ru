@@ -3,12 +3,12 @@ title: Перенос .NET Core из project.json
 description: Сведения о переносе старого проекта .NET Core с использованием project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663354"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105311"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Перенос проектов .NET Core из project.json
 
@@ -78,13 +78,13 @@ Visual Studio выполнит перенос для выбранных прое
 
 Формат csproj .NET Core изменяется и развивается с выпуском каждой новой предварительной версии инструментов. Инструмента, с помощью которого можно перенести файл проекта из ранних версий csproj до последней версии, не существует, поэтому вам придется вручную изменить файл проекта. Фактические действия зависят от версии файла проекта, который вы переносите. Вот некоторые рекомендации, которые следует учитывать. Они основаны на изменениях, произошедших между версиями:
 
-* Удалите свойство версии инструмента из элемента `<Project>`, если оно задано.
-* Удалите пространство имен XML (`xmlns`) из элемента `<Project>`.
-* Если атрибут `Sdk` не существует, добавьте этот атрибут к элементу `<Project>` и установите значение атрибута в `Microsoft.NET.Sdk` или `Microsoft.NET.Sdk.Web`. Этот атрибут означает, что в проекте используется указанный пакет SDK. `Microsoft.NET.Sdk.Web` используется для веб-приложений.
-* Удалите инструкции `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` и `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` в верхней и нижней частях проекта. Эти инструкции импорта выполняются пакетом SDK, поэтому включать их в проект не нужно.
-* Если в проекте есть элементы `Microsoft.NETCore.App` или `NETStandard.Library` `<PackageReference>`, их следует удалить. Эти ссылки на пакет [содержатся в пакете SDK](https://aka.ms/sdkimplicitrefs).
-* Удалите элемент `Microsoft.NET.Sdk` `<PackageReference>`, если он существует. Пакет SDK ссылается на атрибут `Sdk` элемента `<Project>`.
-* Удалите [стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)), [подразумеваемые пакетом SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Если оставить эти объекты glob в проекте, это приведет к ошибке сборки из-за дублирования элементов компиляции.
+- Удалите свойство версии инструмента из элемента `<Project>`, если оно задано.
+- Удалите пространство имен XML (`xmlns`) из элемента `<Project>`.
+- Если атрибут `Sdk` не существует, добавьте этот атрибут к элементу `<Project>` и установите значение атрибута в `Microsoft.NET.Sdk` или `Microsoft.NET.Sdk.Web`. Этот атрибут означает, что в проекте используется указанный пакет SDK. `Microsoft.NET.Sdk.Web` используется для веб-приложений.
+- Удалите инструкции `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` и `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` в верхней и нижней частях проекта. Эти инструкции импорта выполняются пакетом SDK, поэтому включать их в проект не нужно.
+- Если в проекте есть элементы `Microsoft.NETCore.App` или `NETStandard.Library` `<PackageReference>`, их следует удалить. Эти ссылки на пакет [содержатся в пакете SDK](https://aka.ms/sdkimplicitrefs).
+- Удалите элемент `Microsoft.NET.Sdk` `<PackageReference>`, если он существует. Пакет SDK ссылается на атрибут `Sdk` элемента `<Project>`.
+- Удалите [стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)), [подразумеваемые пакетом SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Если оставить эти объекты glob в проекте, это приведет к ошибке сборки из-за дублирования элементов компиляции.
 
 После выполнения этих действий ваш проект должен быть полностью совместим с форматом csproj RTM .NET Core.
 

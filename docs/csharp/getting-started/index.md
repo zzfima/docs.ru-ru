@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604224"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104791"
 ---
 # <a name="get-started-with-c"></a>Начало работы с C\#
 
@@ -21,21 +21,21 @@ ms.locfileid: "69604224"
 
 Рассматриваются следующие темы:
 
-* [Введение в язык C# и платформу .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [Введение в язык C# и платформу .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      Содержит общие сведения о языке C# и .NET.
 
-* [Создание приложения "Hello World" на C# с помощью .NET Core в Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
+- [Создание приложения "Hello World" на C# с помощью .NET Core в Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, самая свежая версия Visual Studio, позволяет писать, компилировать, запускать, отлаживать, профилировать и публиковать приложения с помощью интегрированной среды разработки для ОС Windows.
 
    Эта статья предлагает вам создать и выполнить простое приложение Hello World, а затем преобразовать его в более интерактивный вариант. Когда вы завершите создание приложения и выполните его, вы сможете на его примере научиться [отлаживать](../../core/tutorials/debugging-with-visual-studio.md) и [публиковать](../../core/tutorials/publishing-with-visual-studio.md) приложения, чтобы выполнять их на любой платформе, поддерживаемой .NET Core.
 
-* [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
+- [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 
    Библиотека классов позволяет определять типы и члены типов, которые можно вызвать из любого приложения. В этой статье вы создадите библиотеку классов с единственным методом, который определяет, начинается ли строка с символа верхнего регистра. Когда вы закончите создавать библиотеку, можно разработать [модульный тест](../../core/tutorials/testing-library-with-visual-studio.md) и убедиться, что все работает как надо, а затем библиотеку можно сделать доступной для [приложений, в которых ее нужно использовать](../../core/tutorials/consuming-library-with-visual-studio.md).
 
-* [Начало работы с C# и Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
+- [Начало работы с C# и Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code — это бесплатный редактор кода, оптимизированный для сборки и отладки современных веб-приложений и облачных приложений. Он поддерживает технологию IntelliSense и доступен для Linux, macOS и Windows.
 
@@ -43,18 +43,18 @@ ms.locfileid: "69604224"
 
 ## <a name="related-sections"></a>Связанные разделы
 
-* [Руководство по программированию на C#](../programming-guide/index.md)
+- [Руководство по программированию на C#](../programming-guide/index.md)
 
     Содержит сведения о понятиях программирования C# и описание выполнения различных задач на C#.
 
-* [Справочник по C#](../language-reference/index.md)
+- [Справочник по C#](../language-reference/index.md)
 
     Содержит подробные справочные сведения о ключевых словах, операторах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.
 
-* [Пошаговые руководства](../walkthroughs.md)
+- [Пошаговые руководства](../walkthroughs.md)
 
     Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.
 
 ## <a name="see-also"></a>См. также
 
-- * [Разработка на C# в Visual Studio](/visualstudio/get-started/csharp/)
+- [Разработка на C# в Visual Studio](/visualstudio/get-started/csharp/)
