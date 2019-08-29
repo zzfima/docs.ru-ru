@@ -18,116 +18,116 @@ helpviewer_keywords:
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4bce84d26e8f498f065c887b583e18d8ea7c786
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb91ed8edd0c5cd3cb1d051157596f311718195d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901931"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107068"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Взаимное преобразование структур DateTime и DateTimeOffset
 
-Несмотря на то что <xref:System.DateTimeOffset> структура обеспечивает лучшую поддержку часовых поясов, чем <xref:System.DateTime> структуры, <xref:System.DateTime> параметры чаще используются в вызовах методов. По этой причине преобразование <xref:System.DateTimeOffset> значения <xref:System.DateTime> значения и наоборот играет особенно важно. В этом разделе показано, как выполнять эти преобразования таким образом, чтобы сохранять столько сведений о часовом поясе, максимально.
+Хотя структура обеспечивает большую степень осведомленности о часовых поясах, <xref:System.DateTime> чем структура, <xref:System.DateTime> параметры чаще используются в вызовах методов. <xref:System.DateTimeOffset> По этой причине возможность преобразования <xref:System.DateTimeOffset> значений в <xref:System.DateTime> значения и наоборот особенно важна. В этом разделе показано, как выполнять эти преобразования таким образом, чтобы сохранить как можно больше сведений о часовом поясе.
 
 > [!NOTE]
-> Как <xref:System.DateTime> и <xref:System.DateTimeOffset> типы имеют некоторые ограничения при представлении времени в часовых поясах. С его <xref:System.DateTime.Kind%2A> свойства <xref:System.DateTime> может автоматически только временем в формате UTC и местный часовой пояс компьютера. <xref:System.DateTimeOffset> отражает смещение времени от времени UTC, но не устанавливает фактический часовой пояс, к которому, смещением, принадлежащее. Дополнительные сведения о значениях времени и поддержке часовых поясов см. в разделе [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
+> <xref:System.DateTime> Итипы,иимеютнекоторыеограниченияприпредставлениивремени<xref:System.DateTimeOffset> в часовых поясах. С его <xref:System.DateTime.Kind%2A> <xref:System.DateTime> свойством можно отражать только время в формате UTC и местный часовой пояс системы. <xref:System.DateTimeOffset>отражает смещение времени от времени в формате UTC, но не отражает фактический часовой пояс, к которому относится это смещение. Дополнительные сведения о значениях времени и поддержке часовых поясов см. в разделе [Выбор между DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>Преобразование DateTime в DateTimeOffset
 
-<xref:System.DateTimeOffset> Структура предоставляет два равнозначных способа выполнения <xref:System.DateTime> для <xref:System.DateTimeOffset> преобразования, которые подходят для большинства преобразований:
+Структура предоставляет два эквивалентных способа <xref:System.DateTime> <xref:System.DateTimeOffset> преобразования, которые подходят для большинства преобразований: <xref:System.DateTimeOffset>
 
-* <xref:System.DateTimeOffset.%23ctor%2A> Конструктор, который создает новую <xref:System.DateTimeOffset> на основе <xref:System.DateTime> значение.
+- Конструктор, который создает новый <xref:System.DateTimeOffset> объект на основе <xref:System.DateTime> значения. <xref:System.DateTimeOffset.%23ctor%2A>
 
-* Оператор неявного преобразования, который позволяет связать <xref:System.DateTime> значение <xref:System.DateTimeOffset> объекта.
+- Оператор неявного преобразования, который позволяет присвоить <xref:System.DateTime> значение <xref:System.DateTimeOffset> объекту.
 
-Для времени UTC и местных <xref:System.DateTime> значения, <xref:System.DateTimeOffset.Offset%2A> результирующего <xref:System.DateTimeOffset> значение точно отражает смещение пояса UTC или местного времени. Например, следующий код преобразует время в формате UTC в эквивалентное <xref:System.DateTimeOffset> значение.
+Для времени в формате <xref:System.DateTime> UTC и локальных <xref:System.DateTimeOffset.Offset%2A> значений свойство результирующего <xref:System.DateTimeOffset> значения точно отражает время UTC или смещение местного часового пояса. Например, следующий код преобразует время в формате UTC в эквивалентное <xref:System.DateTimeOffset> значение.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#1)]
 
-В этом случае смещение переменной `utcTime2` равняется 00:00. Аналогичным образом, следующий код преобразует местное время в его эквивалент <xref:System.DateTimeOffset> значение.
+В этом случае смещение переменной `utcTime2` равняется 00:00. Аналогичным образом следующий код преобразует местное время в эквивалентное <xref:System.DateTimeOffset> ему значение.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#2)]
 
-Однако для <xref:System.DateTime> значений <xref:System.DateTime.Kind%2A> свойство <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, эти два метода преобразования возвращают <xref:System.DateTimeOffset> которого является смещение для местного часового пояса. Это показано в приведенном ниже примере, который выполняется в тихоокеанском стандартном часовом поясе США.
+Однако для <xref:System.DateTime> значений, свойство <xref:System.DateTime.Kind%2A> которых равно <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, эти два метода преобразования создают <xref:System.DateTimeOffset> значение, смещение которого равно значению местного часового пояса. Это показано в приведенном ниже примере, который выполняется в тихоокеанском стандартном часовом поясе США.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#3)]
 
-Если <xref:System.DateTime> значение отражает дату и время в нечто, отличное от местного часового пояса или в формате UTC, можно преобразовать его в <xref:System.DateTimeOffset> и сохранить сведения о его часовом поясе, вызвав перегруженный <xref:System.DateTimeOffset.%23ctor%2A> конструктор. Например, в следующем примере создается <xref:System.DateTimeOffset> , который отражает центральное стандартное время.
+Если значение отражает дату и время, отличные от местного часового пояса или времени в формате UTC, можно преобразовать его <xref:System.DateTimeOffset> в значение и сохранить сведения о часовом поясе, <xref:System.DateTimeOffset.%23ctor%2A> вызвав перегруженный конструктор. <xref:System.DateTime> Например, в следующем примере создается экземпляр <xref:System.DateTimeOffset> объекта, который отражает центральное стандартное время.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#4)]
 
-Второй параметр в этом перегруженном <xref:System.TimeSpan> , представляющий смещение времени от времени UTC, должен быть извлечен посредством вызова <xref:System.TimeZoneInfo.GetUtcOffset%28System.DateTime%29?displayProperty=nameWithType> метод соответствующего часового пояса по времени. Единственным параметром данного метода является <xref:System.DateTime> значение, представляющее дату и время для преобразования. Если часовой пояс поддерживает переход на летнее время, то этот параметр позволяет методу определять соответствующее смещение для конкретных даты и времени.
+Второй параметр для перегруженной версии конструктора, <xref:System.TimeSpan> объект, представляющий смещение времени от UTC, должен быть получен путем <xref:System.TimeZoneInfo.GetUtcOffset%28System.DateTime%29?displayProperty=nameWithType> вызова метода соответствующего часового пояса. Единственным параметром метода является <xref:System.DateTime> значение, представляющее дату и время, которые необходимо преобразовать. Если часовой пояс поддерживает переход на летнее время, то этот параметр позволяет методу определять соответствующее смещение для конкретных даты и времени.
 
 ## <a name="conversions-from-datetimeoffset-to-datetime"></a>Преобразование DateTimeOffset в DateTime
 
-<xref:System.DateTimeOffset.DateTime%2A> Свойство чаще всего используется для выполнения <xref:System.DateTimeOffset> для <xref:System.DateTime> преобразования. Тем не менее, он возвращает <xref:System.DateTime> которого <xref:System.DateTime.Kind%2A> свойство <xref:System.DateTimeKind.Unspecified>, как показано в следующем примере.
+Свойство чаще всего используется <xref:System.DateTimeOffset> <xref:System.DateTime> для преобразования. <xref:System.DateTimeOffset.DateTime%2A> Однако он возвращает <xref:System.DateTime> значение, свойство которого <xref:System.DateTime.Kind%2A> равно <xref:System.DateTimeKind.Unspecified>, как показано в следующем примере.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#5)]
 
-Это означает, что все сведения о <xref:System.DateTimeOffset> отношение значения в формат UTC будут потеряны при преобразовании при <xref:System.DateTimeOffset.DateTime%2A> используется свойство. Это влияет на <xref:System.DateTimeOffset> значения, которые соответствуют времени UTC или локальному времени системы так как <xref:System.DateTimeOffset.DateTime%2A> структура отражает только эти два часовых пояса в его <xref:System.DateTime.Kind%2A> свойство.
+Это означает, что все сведения о <xref:System.DateTimeOffset> связи значения со временем в формате UTC теряются <xref:System.DateTimeOffset.DateTime%2A> при преобразовании при использовании свойства. Это влияет <xref:System.DateTimeOffset> на значения, которые соответствуют времени в формате UTC или по местному времени системы <xref:System.DateTimeOffset.DateTime%2A> , поскольку структура отражает только два часовых пояса в <xref:System.DateTime.Kind%2A> своем свойстве.
 
-Для сохранения столько сведений о часовом поясе, максимально при преобразовании <xref:System.DateTimeOffset> для <xref:System.DateTime> значения, можно использовать <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойства.
+Чтобы сохранить как можно больше сведений о часовом поясе при <xref:System.DateTimeOffset> преобразовании <xref:System.DateTime> в значение <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> , можно использовать свойства и <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> .
 
-### <a name="converting-a-utc-time"></a>Преобразование времени UTC
+### <a name="converting-a-utc-time"></a>Преобразование времени в формате UTC
 
-Чтобы указать, что преобразуемое <xref:System.DateTimeOffset.DateTime%2A> значение в формате UTC, можно получить значение <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> свойства. Он отличается от <xref:System.DateTimeOffset.DateTime%2A> свойство двумя способами:
+Чтобы указать, что преобразованное <xref:System.DateTimeOffset.DateTime%2A> значение является временем в формате UTC, можно получить значение <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> свойства. Он отличается от <xref:System.DateTimeOffset.DateTime%2A> свойства двумя способами:
 
-* Он возвращает <xref:System.DateTime> которого <xref:System.DateTime.Kind%2A> свойство <xref:System.DateTimeKind.Utc>.
+- Он возвращает <xref:System.DateTime> значение, свойство <xref:System.DateTime.Kind%2A> которого равно <xref:System.DateTimeKind.Utc>.
 
-* Если <xref:System.DateTimeOffset.Offset%2A> значение свойства не равно <xref:System.TimeSpan.Zero?displayProperty=nameWithType>, оно преобразует время в формате UTC.
+- <xref:System.TimeSpan.Zero?displayProperty=nameWithType>Если значение <xref:System.DateTimeOffset.Offset%2A> свойства не равно, оно преобразует время в формат UTC.
 
 > [!NOTE]
-> Если приложения необходимо, чтобы преобразовать <xref:System.DateTime> значения однозначно идентифицирует единственный момент времени, следует рассмотреть возможность использования <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> свойства для обработки всех <xref:System.DateTimeOffset> для <xref:System.DateTime> преобразования.
+> Если приложению <xref:System.DateTime> требуется, чтобы преобразованные значения однозначно определяли один момент времени, следует <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> использовать <xref:System.DateTime> свойство для управления всеми <xref:System.DateTimeOffset> преобразованиями.
 
-В следующем коде используется <xref:System.DateTimeOffset.UtcDateTime%2A> свойства для преобразования <xref:System.DateTimeOffset> значение которого равно смещению <xref:System.TimeSpan.Zero?displayProperty=nameWithType> для <xref:System.DateTime> значение.
+В следующем коде <xref:System.DateTimeOffset.UtcDateTime%2A> свойство используется для <xref:System.DateTimeOffset> преобразования значения <xref:System.DateTime> , смещение которого равно <xref:System.TimeSpan.Zero?displayProperty=nameWithType> значению.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#6)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#6)]
 
-В следующем коде используется <xref:System.DateTimeOffset.UtcDateTime%2A> для выполнения преобразования часового пояса и преобразования типов на <xref:System.DateTimeOffset> значение.
+В следующем коде <xref:System.DateTimeOffset.UtcDateTime%2A> свойство используется для выполнения преобразования часового пояса и преобразования типа <xref:System.DateTimeOffset> для значения.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#12)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#12)]
 
-### <a name="converting-a-local-time"></a>Преобразование локального времени
+### <a name="converting-a-local-time"></a>Преобразование местного времени
 
-Чтобы указать, что <xref:System.DateTimeOffset> значение представляет местное время, можно передать <xref:System.DateTime> значение, возвращенное <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> свойства `static` (`Shared` в Visual Basic) <xref:System.DateTime.SpecifyKind%2A> метод. Возвращает дату и время, переданного в качестве первого параметра метода, но также задает <xref:System.DateTime.Kind%2A> свойства к значению, указанному в качестве второго параметра. В следующем коде используется <xref:System.DateTime.SpecifyKind%2A> метод при преобразовании <xref:System.DateTimeOffset> значение, смещение которого соответствует смещению местного часового пояса.
+Чтобы указать, что <xref:System.DateTimeOffset> значение представляет местное время, можно <xref:System.DateTime> передать значение, возвращаемое <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> свойством, `static` в метод (`Shared` в Visual Basic) <xref:System.DateTime.SpecifyKind%2A> . Метод возвращает дату и время, переданные в нее в качестве первого параметра, но устанавливает <xref:System.DateTime.Kind%2A> свойство в значение, заданное вторым параметром. В следующем коде <xref:System.DateTime.SpecifyKind%2A> метод используется при <xref:System.DateTimeOffset> преобразовании значения, смещение которого соответствует значению местного часового пояса.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-Можно также использовать <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойства для преобразования <xref:System.DateTimeOffset> к локальному <xref:System.DateTime> значение. <xref:System.DateTime.Kind%2A> Свойства возвращаемого <xref:System.DateTime> значение <xref:System.DateTimeKind.Local>. В следующем коде используется <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойство при преобразовании <xref:System.DateTimeOffset> значение, смещение которого соответствует смещению местного часового пояса. 
+Можно также использовать <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойство для <xref:System.DateTimeOffset> преобразования значения в локальное <xref:System.DateTime> значение. Возвращаемым <xref:System.DateTime.Kind%2A> <xref:System.DateTime> значением является <xref:System.DateTimeKind.Local>свойство. В следующем коде <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойство используется при <xref:System.DateTimeOffset> преобразовании значения, смещение которого соответствует значению местного часового пояса. 
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-При извлечении <xref:System.DateTime> с использованием синтаксиса <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойства, свойства `get` доступа сначала преобразует <xref:System.DateTimeOffset> значение в формате UTC, затем преобразует его в местное время, вызвав <xref:System.DateTimeOffset.ToLocalTime%2A> метод. Это означает, что можно получить значение из <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> для выполнения преобразования часового пояса в то же время выполнения преобразования типа. Это также означает, что при выполнении преобразования применяются правила коррекции местного часового пояса. Следующий код иллюстрирует использование <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> для выполнения тип и преобразования часового пояса.
+При <xref:System.DateTime> извлечении значения `get` <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> с помощью свойства метод доступа свойства сначала преобразует <xref:System.DateTimeOffset> значение в <xref:System.DateTimeOffset.ToLocalTime%2A> формат UTC, а затем преобразует его в местное время, вызвав метод. Это означает, что можно извлечь значение из <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойства, чтобы выполнить преобразование часового пояса одновременно с выполнением преобразования типов. Это также означает, что при выполнении преобразования применяются правила коррекции местного часового пояса. В следующем коде показано использование <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> свойства для выполнения преобразования типа и часового пояса.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]
 
-### <a name="a-general-purpose-conversion-method"></a>Метод преобразования общего назначения
+### <a name="a-general-purpose-conversion-method"></a>Универсальный метод преобразования
 
-В следующем примере определяется метод с именем `ConvertFromDateTimeOffset` , преобразующий <xref:System.DateTimeOffset> значения <xref:System.DateTime> значения. Исходя из его смещение, определяет ли <xref:System.DateTimeOffset> значение времени UTC, местное время или другое время и определяет Возвращаемая дата и время значение <xref:System.DateTime.Kind%2A> свойство соответствующим образом.
+В следующем примере определяется метод с именем `ConvertFromDateTimeOffset` , который <xref:System.DateTimeOffset> преобразует значения <xref:System.DateTime> в значения. В зависимости от его смещения он определяет, является <xref:System.DateTimeOffset> ли значение временем в формате UTC, местным временем или другим временем, и соответствующим образом определяет <xref:System.DateTime.Kind%2A> свойство возвращаемого значения даты и времени.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#8)]
 
-В следующем примере вызывается `ConvertFromDateTimeOffset` метод для преобразования <xref:System.DateTimeOffset> значений, представляющих время в формате UTC, местное время и время в США. США.
+В приведенном ниже примере `ConvertFromDateTimeOffset` вызывается метод <xref:System.DateTimeOffset> для преобразования значений, представляющих время в формате UTC, местное время и время в США. США.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#9)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#9)]
 
 Обратите внимание, что этот код делает два предположения, которые в зависимости от применения и источника значений даты и времени могут оказаться недопустимыми:
 
-* Предполагается, что даты и времени значения, смещение которого равно <xref:System.TimeSpan.Zero?displayProperty=nameWithType> представляет время UTC. На самом деле UTC не является временем в определенном часовом поясе, но оно является временем, по отношению к которому стандартизованы времена часовых поясов в мире. Часовые пояса также могут иметь смещение <xref:System.TimeSpan.Zero>.
+- Предполагается, что значение даты и времени, смещение <xref:System.TimeSpan.Zero?displayProperty=nameWithType> которого представляет время в формате UTC. На самом деле UTC не является временем в определенном часовом поясе, но оно является временем, по отношению к которому стандартизованы времена часовых поясов в мире. Часовые пояса также могут иметь смещение <xref:System.TimeSpan.Zero>.
 
-* Предполагается, что значение даты и времени, смещение для которого равно смещению местного часового пояса, представляет местный часовой пояс. Поскольку значения даты и времени не связаны со своими исходными часовыми поясами, то это может не выполняться. Значение даты и времени может быть создано в другом часовом поясе с тем же самым смещением.
+- Предполагается, что значение даты и времени, смещение для которого равно смещению местного часового пояса, представляет местный часовой пояс. Поскольку значения даты и времени не связаны со своими исходными часовыми поясами, то это может не выполняться. Значение даты и времени может быть создано в другом часовом поясе с тем же самым смещением.
 
 ## <a name="see-also"></a>См. также
 

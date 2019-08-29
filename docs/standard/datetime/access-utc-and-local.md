@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8aa19118ce0837b9ce0eb523f3e086fcbcecb9e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586428"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106554"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Практическое руководство. Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов
 
-<xref:System.TimeZoneInfo> Класс предоставляет два свойства <xref:System.TimeZoneInfo.Utc%2A> и <xref:System.TimeZoneInfo.Local%2A>, обеспечивающие доступ к объектам предопределенный часовой пояс. В этом разделе рассматривается порядок работы с объектами <xref:System.TimeZoneInfo>, возвращаемыми этими свойствами.
+Класс предоставляет два свойства, <xref:System.TimeZoneInfo.Utc%2A> и <xref:System.TimeZoneInfo.Local%2A>, которые предоставляют коду доступ к предопределенным объектам часового пояса. <xref:System.TimeZoneInfo> В этом разделе рассматривается порядок работы с объектами <xref:System.TimeZoneInfo>, возвращаемыми этими свойствами.
 
 ### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a>Получение объекта TimeZoneInfo времени UTC
 
-1. Используйте `static` (`Shared` в Visual Basic) <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> свойство для доступа к в формате UTC.
+1. Используйте свойство`Shared` <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> (в Visual Basic) для доступа к всеобщему скоординированному времени. `static`
 
-2. Вместо того чтобы <xref:System.TimeZoneInfo> объекты, возвращаемые свойством объектной переменной, по-прежнему получить доступ к времени через <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> свойство.
+2. Вместо того чтобы назначать <xref:System.TimeZoneInfo> объект, возвращаемый свойством, в объектную переменную, продолжайте обращаться к времени в <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> формате UTC через свойство.
 
 ### <a name="to-access-the-local-time-zone"></a>Получение местного часового пояса
 
-1. Используйте `static` (`Shared` в Visual Basic) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> свойство для доступа к часового пояса локальной системы.
+1. Используйте свойство`Shared` <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> (в Visual Basic) для доступа к часовому поясу локальной системы. `static`
 
-2. Вместо того чтобы <xref:System.TimeZoneInfo> объекты, возвращаемые свойством объектной переменной, по-прежнему получить доступ к местным часовым поясом <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> свойство.
+2. Вместо того чтобы назначать <xref:System.TimeZoneInfo> объект, возвращаемый свойством, в объектную переменную, продолжайте обращаться к местному <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> часовому поясу через свойство.
 
 ## <a name="example"></a>Пример
 
@@ -45,13 +45,13 @@ ms.locfileid: "65586428"
 [!code-csharp[System.TimeZone2.Concepts#13](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#13)]
 [!code-vb[System.TimeZone2.Concepts#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#13)]
 
-Следует всегда обращаться к местным часовым поясом <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> свойства, а не местный часовой пояс в <xref:System.TimeZoneInfo> переменной объекта. Аналогичным образом, следует всегда обращаться к временем через <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> свойство, вместо назначения UTC часовой пояс <xref:System.TimeZoneInfo> переменной объекта. Это предотвращает <xref:System.TimeZoneInfo> переменной объекта путем вызова <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> метод.
+Необходимо всегда обращаться к локальному часовому поясу через свойство, <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> а не назначать местный часовой пояс <xref:System.TimeZoneInfo> переменной объекта. Аналогичным образом следует всегда обращаться к всеобщему скоординированному <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> времени через свойство, не назначив часовой пояс <xref:System.TimeZoneInfo> в объектную переменную. Это предотвращает <xref:System.TimeZoneInfo> недействительность аннулирования переменной объекта при вызове <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> метода.
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
 Для этого примера требуются:
 
-* Что <xref:System> импорт пространства имен с помощью `using` инструкции (обязательно в коде C#).
+- , Что `using` пространство имен должно быть импортировано с помощью оператора C# (требуется в коде). <xref:System>
 
 ## <a name="see-also"></a>См. также
 

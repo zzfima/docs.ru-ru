@@ -2,12 +2,12 @@
 title: Размеченные объединения
 description: Узнайте, как использовать F# размеченные объединения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 940bc51f49e283c31846dd2047b749769b919838
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630359"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106771"
 ---
 # <a name="discriminated-unions"></a>Размеченные объединения
 
@@ -200,10 +200,10 @@ type Shape =
 
 В размеченных объединениях обычно встречаются следующие атрибуты:
 
-* `[<RequireQualifiedAccess>]`
-* `[<NoEquality>]`
-* `[<NoComparison>]`
-* `[<Struct>]`
+- `[<RequireQualifiedAccess>]`
+- `[<NoEquality>]`
+- `[<NoComparison>]`
+- `[<Struct>]`
 
 ## <a name="see-also"></a>См. также
 

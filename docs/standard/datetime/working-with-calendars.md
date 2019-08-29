@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630549"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106702"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
 
@@ -30,39 +30,39 @@ ms.locfileid: "68630549"
 
 Все календари в .NET являются производными <xref:System.Globalization.Calendar?displayProperty=nameWithType> от класса, который обеспечивает реализацию базового календаря. Одним из классов, наследующих от класса <xref:System.Globalization.Calendar>, является класс <xref:System.Globalization.EastAsianLunisolarCalendar> — базовый класс для всех лунно-солнечных календарей. .NET включает следующие реализации календаря:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>. Представляет китайский лунно-солнечный календарь.
+- <xref:System.Globalization.ChineseLunisolarCalendar>. Представляет китайский лунно-солнечный календарь.
 
-* <xref:System.Globalization.GregorianCalendar>. Представляет григорианский календарь. Этот календарь, в свою очередь, разделяется на подтипы (такие как арабский и ближневосточный французский), определяемые перечислением <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. Свойство <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> определяет подтип григорианского календаря.
+- <xref:System.Globalization.GregorianCalendar>. Представляет григорианский календарь. Этот календарь, в свою очередь, разделяется на подтипы (такие как арабский и ближневосточный французский), определяемые перечислением <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. Свойство <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> определяет подтип григорианского календаря.
 
-* <xref:System.Globalization.HebrewCalendar>. Представляет еврейский календарь.
+- <xref:System.Globalization.HebrewCalendar>. Представляет еврейский календарь.
 
-* <xref:System.Globalization.HijriCalendar>. Представляет календарь Хиджра.
+- <xref:System.Globalization.HijriCalendar>. Представляет календарь Хиджра.
 
-* <xref:System.Globalization.JapaneseCalendar>. Представляет японский календарь.
+- <xref:System.Globalization.JapaneseCalendar>. Представляет японский календарь.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>. Представляет японский лунно-солнечный календарь.
+- <xref:System.Globalization.JapaneseLunisolarCalendar>. Представляет японский лунно-солнечный календарь.
 
-* <xref:System.Globalization.JulianCalendar>Представляет юлианский календарь.
+- <xref:System.Globalization.JulianCalendar>Представляет юлианский календарь.
 
-* <xref:System.Globalization.KoreanCalendar>. Представляет корейский календарь.
+- <xref:System.Globalization.KoreanCalendar>. Представляет корейский календарь.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>. Представляет корейский лунно-солнечный календарь.
+- <xref:System.Globalization.KoreanLunisolarCalendar>. Представляет корейский лунно-солнечный календарь.
 
-* <xref:System.Globalization.PersianCalendar>. Представляет персидский календарь.
+- <xref:System.Globalization.PersianCalendar>. Представляет персидский календарь.
 
-* <xref:System.Globalization.TaiwanCalendar>. Представляет тайваньский календарь.
+- <xref:System.Globalization.TaiwanCalendar>. Представляет тайваньский календарь.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>. Представляет тайваньский лунно-солнечный календарь.
+- <xref:System.Globalization.TaiwanLunisolarCalendar>. Представляет тайваньский лунно-солнечный календарь.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>. Представляет тай-буддистский календарь.
+- <xref:System.Globalization.ThaiBuddhistCalendar>. Представляет тай-буддистский календарь.
 
-* <xref:System.Globalization.UmAlQuraCalendar>. Представляет саудовский календарь.
+- <xref:System.Globalization.UmAlQuraCalendar>. Представляет саудовский календарь.
 
 Календарь можно использовать одним из двух способов:
 
-* Как календарь, используемый для конкретных языка и региональных параметров. Каждый объект <xref:System.Globalization.CultureInfo> имеет текущий календарь, то есть календарь, который объект использует в настоящий момент. Строковое представление значений даты и времени автоматически отражает используемые язык и региональные параметры и текущий календарь. Обычно текущий календарь является календарем по умолчанию для языка и региональных параметров. <xref:System.Globalization.CultureInfo>объекты также имеют дополнительные календари, в том числе дополнительные календари, которые может использовать язык и региональные параметры.
+- Как календарь, используемый для конкретных языка и региональных параметров. Каждый объект <xref:System.Globalization.CultureInfo> имеет текущий календарь, то есть календарь, который объект использует в настоящий момент. Строковое представление значений даты и времени автоматически отражает используемые язык и региональные параметры и текущий календарь. Обычно текущий календарь является календарем по умолчанию для языка и региональных параметров. <xref:System.Globalization.CultureInfo>объекты также имеют дополнительные календари, в том числе дополнительные календари, которые может использовать язык и региональные параметры.
 
-* Как самостоятельный календарь, не зависящий от конкретных языка и региональных параметров. В таком случае методы <xref:System.Globalization.Calendar> используются для выражения дат и значений календаря.
+- Как самостоятельный календарь, не зависящий от конкретных языка и региональных параметров. В таком случае методы <xref:System.Globalization.Calendar> используются для выражения дат и значений календаря.
 
 Обратите внимание, что шесть классов календаря (<xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, <xref:System.Globalization.JulianCalendar>, <xref:System.Globalization.KoreanLunisolarCalendar>, <xref:System.Globalization.PersianCalendar> и <xref:System.Globalization.TaiwanLunisolarCalendar>) можно использовать только как самостоятельные календари. Никакие языки и региональные параметры не используют их как календари по умолчанию или как дополнительные календари.
 
@@ -138,7 +138,7 @@ ms.locfileid: "68630549"
 В календарях даты обычно разделены на эры. Однако классы в .NET не поддерживают каждую эпоху, определенную календарем, и большинство <xref:System.Globalization.Calendar> классов поддерживают только одну эру. <xref:System.Globalization.Calendar> Только классы <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> поддерживают несколько эр.
 
 > [!IMPORTANT]
-> Эра реива, Новая эра в <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>начинается с 1 мая 2019. Это изменение затрагивает все приложения, использующие эти календари. Дополнительные сведения см. в следующих статьях:
+> Эра реива, Новая эра в <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>начинается с 1 мая 2019. Это изменение затрагивает все приложения, использующие эти календари. Дополнительные сведения см. в этих статьях:
 > - [Обработка новой эры в японском календаре в .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), которая документирует функции, добавленные в .NET для поддержки календарей с несколькими Эр, и обсуждаются рекомендации по обработке календарей с несколькими эрами.
 > - [Подготовьте свое приложение к изменению японской эры](/windows/uwp/design/globalizing/japanese-era-change), которое содержит сведения о тестировании приложений в Windows, чтобы гарантировать их готовность к изменению эры.
 > - [Сводка новых обновлений японской эры для .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), в которой перечислены .NET Framework обновления для отдельных версий Windows, связанных с новой эре японского календаря, заметок о новых функциях .NET Framework для поддержки нескольких эпох, а также о том, как Ищите в тестируемых приложениях.

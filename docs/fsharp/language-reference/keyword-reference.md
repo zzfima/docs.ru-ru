@@ -2,12 +2,12 @@
 title: Справочные сведения о ключевых словах
 description: Найдите ссылки на сведения обо всех ключевых словах F# языка.
 ms.date: 05/16/2016
-ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 8c2df9d081caae48489e3e316ca158f3b9106efb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733484"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107043"
 ---
 # <a name="keyword-reference"></a>Справочные сведения о ключевых словах
 
@@ -92,44 +92,44 @@ ms.locfileid: "68733484"
 
 Следующие токены зарезервированы F# в, так как они являются ключевыми словами на языке OCaml:
 
-* `asr`
-* `land`
-* `lor`
-* `lsl`
-* `lsr`
-* `lxor`
-* `mod`
-* `sig`
+- `asr`
+- `land`
+- `lor`
+- `lsl`
+- `lsr`
+- `lxor`
+- `mod`
+- `sig`
 
 Если используется `--mlcompatibility` параметр компилятора, указанные выше ключевые слова можно использовать в качестве идентификаторов.
 
 Следующие токены зарезервированы в качестве ключевых слов для будущего F# расширения языка:
 
-* `atomic`
-* `break`
-* `checked`
-* `component`
-* `const`
-* `constraint`
-* `constructor`
-* `continue`
-* `eager`
-* `event`
-* `external`
-* `functor`
-* `include`
-* `method`
-* `mixin`
-* `object`
-* `parallel`
-* `process`
-* `protected`
-* `pure`
-* `sealed`
-* `tailcall`
-* `trait`
-* `virtual`
-* `volatile`
+- `atomic`
+- `break`
+- `checked`
+- `component`
+- `const`
+- `constraint`
+- `constructor`
+- `continue`
+- `eager`
+- `event`
+- `external`
+- `functor`
+- `include`
+- `method`
+- `mixin`
+- `object`
+- `parallel`
+- `process`
+- `protected`
+- `pure`
+- `sealed`
+- `tailcall`
+- `trait`
+- `virtual`
+- `volatile`
 
 ## <a name="see-also"></a>См. также
 

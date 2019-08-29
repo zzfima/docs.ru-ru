@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Доступ к Интернету с помощью Async и await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630996"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106957"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Пошаговое руководство. Доступ к Интернету с помощью Async и await (Visual Basic)
 
@@ -22,17 +22,17 @@ ms.locfileid: "68630996"
 В этом пошаговом руководстве выполняются следующие задачи.
 
 > [!div class="checklist"]
-> * [Создание приложения WPF](#create-a-wpf-application)
-> * [Проектирование простого WPF MainWindow](#design-a-simple-wpf-mainwindow)
-> * [Добавление ссылки](#add-a-reference)
-> * [Добавление необходимых операторов Imports](#add-necessary-imports-statements)
-> * [Создание синхронного приложения](#create-a-synchronous-application)
-> * [Тестирование синхронного решения](#test-the-synchronous-solution)
-> * [Преобразование GetURLContents в асинхронный метод](#convert-geturlcontents-to-an-asynchronous-method)
-> * [Преобразование SumPageSizes в асинхронный метод](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [Преобразование startButton_Click в асинхронный метод](#convert-startbutton_click-to-an-asynchronous-method)
-> * [Тестирование асинхронного решения](#test-the-asynchronous-solution)
-> * [Замените метод GetURLContentsAsync методом .NET Framework](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [Создание приложения WPF](#create-a-wpf-application)
+> - [Проектирование простого WPF MainWindow](#design-a-simple-wpf-mainwindow)
+> - [Добавление ссылки](#add-a-reference)
+> - [Добавление необходимых операторов Imports](#add-necessary-imports-statements)
+> - [Создание синхронного приложения](#create-a-synchronous-application)
+> - [Тестирование синхронного решения](#test-the-synchronous-solution)
+> - [Преобразование GetURLContents в асинхронный метод](#convert-geturlcontents-to-an-asynchronous-method)
+> - [Преобразование SumPageSizes в асинхронный метод](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [Преобразование startButton_Click в асинхронный метод](#convert-startbutton_click-to-an-asynchronous-method)
+> - [Тестирование асинхронного решения](#test-the-asynchronous-solution)
+> - [Замените метод GetURLContentsAsync методом .NET Framework](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 Полный пример асинхронной работы см. в разделе " [Пример](#example) ".
 
@@ -355,7 +355,7 @@ ms.locfileid: "68630996"
 
     Преобразование `SumPageSizes` в `SumPageSizesAsync` завершено.
 
-## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>Преобразование startButton_Click в асинхронный метод
+## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>Преобразование startButton_Click в асинхронный метод
 
 1. В обработчике событий измените имя вызываемого метода с `SumPageSizes` на `SumPageSizesAsync`, если это еще не сделано.
 

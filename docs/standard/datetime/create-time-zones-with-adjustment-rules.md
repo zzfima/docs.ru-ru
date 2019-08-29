@@ -12,72 +12,72 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: face995dbd5ba4b0b12e80bcef10a90b46c093ff
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ae739d3c5dd233c2129950666846979edfba370
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586408"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106673"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>Практическое руководство. Создание часовых поясов с правилами коррекции
 
-Точные сведения о часовом поясе, которые требуются для приложения может отсутствовать в конкретной системе по следующим причинам:
+Точные сведения о часовом поясе, необходимые для приложения, могут отсутствовать в определенной системе по нескольким причинам:
 
-* Часовой пояс никогда не был определен в локального системного реестра.
+- Часовой пояс никогда не был определен в реестре локальной системы.
 
-* Данные о часовом поясе, изменен или удален из реестра.
+- Данные о часовом поясе были изменены или удалены из реестра.
 
-* Часовой пояс не поддерживает точные сведения о коррекции часового пояса для конкретного исторического периода.
+- Часовой пояс не содержит точных сведений о корректировках часового пояса для определенного исторического периода.
 
-В этих случаях можно вызвать <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод для определения часового пояса, необходимой для приложения. Можно использовать перегрузки этого метода, создаваемого с или без правил коррекции часового пояса. Если часовой пояс поддерживает летнее время, можно определить с помощью либо правила коррекции fixed или с плавающей запятой. (Для определения этих терминов см. в разделе «Терминология часовых поясов» в [Общие сведения о часовом поясе](../../../docs/standard/datetime/time-zone-overview.md).)
+В таких случаях можно вызвать <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод, чтобы определить часовой пояс, необходимый для приложения. Перегрузки этого метода можно использовать для создания часового пояса с правилами коррекции или без них. Если часовой пояс поддерживает переход на летнее время, можно определить корректировки с помощью фиксированных или плавающих правил коррекции. (Определения этих терминов см. в подразделе «терминология часовых поясов» раздела « [Общие сведения о](../../../docs/standard/datetime/time-zone-overview.md)часовом поясе».)
 
 > [!IMPORTANT]
-> Пользовательский часовой пояс, созданных вызывающими <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод не добавляются в реестр. Вместо этого они может осуществляться только через ссылку на объект, возвращаемый <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> вызова метода.
+> Пользовательские часовые пояса, созданные путем <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> вызова метода, не добавляются в реестр. Вместо этого доступ к ним можно получить только через ссылку на объект, <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> возвращенную вызовом метода.
 
-В этом разделе показано, как создание часовых поясов с правилами коррекции. Чтобы создать часовой пояс, который не поддерживает правил коррекции летнего времени, см. в разделе [как: Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+В этом разделе показано, как создать часовой пояс с правилами коррекции. Сведения о создании часового пояса, не поддерживающего правила коррекции перехода на летнее время, см. в разделе [как Создание часовых поясов без правил](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)коррекции.
 
-### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Для создания часовых поясов с правилами коррекции
+### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Создание часового пояса с плавающими правилами коррекции
 
-1. Для каждой коррекции (то есть, для каждого перехода со и обратно на стандартное время, через указанный интервал времени) выполните следующие действия:
+1. Для каждой корректировки (т. е. для каждого перехода на зимнее и обратное время в течение определенного интервала времени) выполните следующие действия.
 
     1. Определите начальное время перехода для коррекции часового пояса.
 
-       Необходимо вызвать <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> метод и передать его <xref:System.DateTime> значение, определяющее время перехода, целочисленное значение, которое определяет месяц перехода, целочисленное значение, определяющее неделю, на котором происходит переход и <xref:System.DayOfWeek> значение, определяющее день недели, на котором происходит переход. Вызов этого метода создает <xref:System.TimeZoneInfo.TransitionTime> объекта.
+       Необходимо вызвать <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> метод и передать <xref:System.DateTime> ему значение, определяющее время перехода, целочисленное значение, определяющее месяц перехода, целочисленное значение, определяющее неделю, в которой происходит <xref:System.DayOfWeek> переход, и значение, определяющее день недели, в который происходит переход. Этот вызов метода создает экземпляр <xref:System.TimeZoneInfo.TransitionTime> объекта.
 
-    2. Определите конечное время перехода для коррекции часового пояса. Это необходимо, чтобы вызвать <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> метод. Вызов этого метода создает второй экземпляр <xref:System.TimeZoneInfo.TransitionTime> объекта.
+    2. Укажите время окончания перехода для коррекции часового пояса. Для этого требуется еще один вызов <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> метода. Этот вызов метода создает экземпляр второго <xref:System.TimeZoneInfo.TransitionTime> объекта.
 
-    3. Вызовите <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> метод и передать его начала и окончания коррекции, <xref:System.TimeSpan> объект, который определяет количество времени в переходе, а два <xref:System.TimeZoneInfo.TransitionTime> объектами, которые определяют, когда переход с летнее время время относиться. Вызов этого метода создает <xref:System.TimeZoneInfo.AdjustmentRule> объекта.
+    3. Вызовите <xref:System.TimeSpan> <xref:System.TimeZoneInfo.TransitionTime> метод и передайте ему действующие даты начала и окончания корректировки, объект, определяющий время перехода, и два объекта, которые определяют, когда переход на летнее и обратно <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> время. Этот вызов метода создает экземпляр <xref:System.TimeZoneInfo.AdjustmentRule> объекта.
 
-    4. Назначить <xref:System.TimeZoneInfo.AdjustmentRule> объект в массив <xref:System.TimeZoneInfo.AdjustmentRule> объектов.
+    4. Назначьте объект массиву <xref:System.TimeZoneInfo.AdjustmentRule>объектов. <xref:System.TimeZoneInfo.AdjustmentRule>
 
-2. Определите отображаемое имя часового пояса. Отображаемое имя соответствует стандартному формату, в котором смещение часового пояса от времени в формате UTC, заключенный в круглые скобки и сопровождается строку, которая определяет часовой пояс, один или несколько городов в часовой пояс, или один или несколько из частей в курс заданий или области в часовом поясе.
+2. Определите отображаемое имя часового пояса. Отображаемое имя соответствует довольно стандартному формату, в котором смещение часового пояса относительно времени в формате UTC заключено в круглые скобки. за ним следует строка, определяющая часовой пояс, один или несколько городов в часовом поясе или один или несколько из КАУ. нтриес или регионы в часовом поясе.
 
-3. Определите имя для зимнего времени часового пояса. Как правило эта строка также используется как идентификатор часового пояса.
+3. Определите имя стандартного времени часового пояса. Как правило, эта строка также используется в качестве идентификатора часового пояса.
 
-4. Определите имя летнего времени текущего часового пояса.
+4. Определите название часового пояса (лето).
 
-5. Если вы хотите использовать другой идентификатор, чем стандартное имя часового пояса, определите идентификатор часового пояса.
+5. Если вы хотите использовать другой идентификатор, отличный от стандартного имени часового пояса, определите идентификатор часового пояса.
 
-6. Создать экземпляр <xref:System.TimeSpan> объект, который определяет смещение часового пояса от времени UTC. Часовые пояса со временем, которые прибыли позже, чем UTC, имеют положительное смещение. Часовые пояса со временем, предшествующих UTC, имеют отрицательное смещение.
+6. Создайте экземпляр объекта, который определяет смещение часового пояса относительно времени в формате UTC. <xref:System.TimeSpan> Часовые пояса со временем, превышающим время UTC, имеют положительное смещение. Часовые пояса со временем, предшествующим UTC, имеют отрицательное смещение.
 
-7. Вызовите <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> метод для создания экземпляра нового часового пояса.
+7. Вызовите <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> метод, чтобы создать экземпляр нового часового пояса.
 
 ## <a name="example"></a>Пример
 
-В следующем примере определяется стандартного центрального часовой пояс для США, который включает в себя правила коррекции для различных интервалов времени с 1918 по текущую.
+В следующем примере определяется центральный стандартный часовой пояс для США, включающий правила коррекции для различных временных интервалов от 1918 до текущего.
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
 [!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]
 
-Часовой пояс, созданные в этом примере имеет несколько правил коррекции. Чтобы убедиться, что действующие даты начала и окончания одного правила коррекции не будут перекрываться с датами другого правила коррекции необходимо соблюдать осторожность. При наличии перекрытия <xref:System.InvalidTimeZoneException> возникает исключение.
+Часовой пояс, созданный в этом примере, имеет несколько правил коррекции. Необходимо соблюдать осторожность, чтобы гарантировать, что действующие даты начала и окончания всех правил коррекции не перекрываются с датами другого правила коррекции. Если перекрывается, <xref:System.InvalidTimeZoneException> создается исключение.
 
-Для плавающие правила коррекции, значение 5 передается `week` параметр <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> метод, чтобы указать, что переход происходит на последней недели определенного месяца.
+Для правил коррекции с плавающей запятой значение 5 передается `week` в параметр <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> метода, чтобы указать, что переход выполняется в последнюю неделю конкретного месяца.
 
-При создании массива <xref:System.TimeZoneInfo.AdjustmentRule> объектов для использования в <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> вызова метода, код может инициализировать массив до размера, требуемого на число корректировки, создаваемых для часового пояса. Вместо этого данный пример кода вызывает <xref:System.Collections.Generic.List%601.Add%2A> метод для добавления каждого правила коррекции универсальный <xref:System.Collections.Generic.List%601> коллекцию <xref:System.TimeZoneInfo.AdjustmentRule> объектов. Затем код вызывает <xref:System.Collections.Generic.List%601.CopyTo%2A> метод копирования членов этой коллекции в массив.
+При создании массива <xref:System.TimeZoneInfo.AdjustmentRule> объектов для использования <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> в вызове метода код может инициализировать массив до размера, необходимого для количества корректировок, создаваемых для часового пояса. Вместо этого этот пример кода вызывает <xref:System.Collections.Generic.List%601.Add%2A> метод, чтобы добавить каждое правило коррекции в универсальную <xref:System.Collections.Generic.List%601> коллекцию <xref:System.TimeZoneInfo.AdjustmentRule> объектов. Затем код вызывает <xref:System.Collections.Generic.List%601.CopyTo%2A> метод, чтобы скопировать члены этой коллекции в массив.
 
-В примере также используется <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> метод для определения корректировки фиксированной датой. Это аналогично вызову <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> за тем исключением, что он требует только время, месяц и день из параметров перехода.
+В примере также используется <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> метод для определения корректировок фиксированной даты. Это похоже на вызов <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> метода, за исключением того, что ему требуется только время, месяц и день параметров перехода.
 
-Пример можно проверить при помощи следующего кода:
+Пример можно протестировать с помощью следующего кода:
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
 [!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]
@@ -86,7 +86,7 @@ ms.locfileid: "65586408"
 
 Для этого примера требуются:
 
-* Что импортируется следующие пространства имен:
+- Для импорта следующих пространств имен:
 
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
