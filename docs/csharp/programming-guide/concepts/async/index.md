@@ -2,14 +2,14 @@
 title: Асинхронное программирование на C#
 description: Общие сведения о языковой поддержке асинхронного программирования в C# с помощью async, await, задач и Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307127"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167894"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Асинхронная модель программирования задач в C\#
+# <a name="asynchronous-programming-with-async-and-await"></a>Асинхронное программирование с использованием ключевых слов async и await
 
 Модель асинхронного программирования задач (TAP) предоставляет абстракцию асинхронного кода. Вы пишете код как последовательность операторов, как обычно. Вы можете читать этот код, как если бы каждая инструкция завершалась до начала следующей. Компилятор выполняет ряд преобразований, так как некоторые из этих инструкций могут начать работу и вернуть <xref:System.Threading.Tasks.Task>, представляющий текущую работу.
 
