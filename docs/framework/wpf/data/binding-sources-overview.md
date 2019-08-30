@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944684"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169098"
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.  
@@ -42,7 +42,7 @@ ms.locfileid: "69944684"
 ### <a name="other-characteristics"></a>Другие характеристики  
  Ниже приведены другие важные замечания.  
   
-- Если вы хотите создать объект в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], класс должен иметь конструктор без параметров. В некоторых [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] языках, например C#, конструктор без параметров может быть создан для вас.  
+- Если вы хотите создать объект в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], класс должен иметь конструктор без параметров. В некоторых языках .NET, например C#, конструктор без параметров может быть создан для вас.  
   
 - Свойства, используемые в качестве свойств источника привязки, должны быть открытыми свойствами класса. Явно определенные свойства интерфейса не могут использоваться для целей привязки, также как и защищенные, закрытые или виртуальные свойства, не имеющие базовой реализации.  
   

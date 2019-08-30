@@ -11,25 +11,22 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: 4900c391ae94447cdf4be331a27f6f3398e9129a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a651e4ca76fda9e65ea4a5848c19b1f0ebfe91b1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659716"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168929"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Схема параметров поставщиков языков и компиляторов
 Параметры поставщиков языков и компиляторов определяют элементы конфигурации компиляторов для доступных поставщиков языков. Каждый элемент конфигурации компилятора определяет имя типа поставщика кода, параметры компилятора, названия поддерживаемых языков и поддерживаемые расширения имен файлов.  
   
- В .NET Framework начальные параметры компилятора определены файле конфигурации компьютера (Machine.config). Разработчики и поставщики компиляторов могут добавлять параметры конфигурации для новой реализации <xref:System.CodeDom.Compiler.CodeDomProvider>. С помощью метода <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> можно осуществлять программное перечисление параметров конфигурации для поставщиков языков и компиляторов на компьютере.  
+В .NET Framework начальные параметры компилятора определены файле конфигурации компьютера (Machine.config). Разработчики и поставщики компиляторов могут добавлять параметры конфигурации для новой реализации <xref:System.CodeDom.Compiler.CodeDomProvider>. С помощью метода <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> можно осуществлять программное перечисление параметров конфигурации для поставщиков языков и компиляторов на компьютере.  
   
- [Элемент \<configuration>](../configuration-element.md)  
-  
- [\<system.codedom>](system-codedom-element.md)  
-  
- [\<compilers>](compilers-element.md)  
-  
- [\<compiler>](compiler-element.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Компиляторы >** ](compilers-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> компилятора**](compiler-element.md)  
   
 |Элемент|Описание|  
 |-------------|-----------------|  

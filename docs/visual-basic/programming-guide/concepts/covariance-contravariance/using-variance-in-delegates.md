@@ -2,12 +2,12 @@
 title: Использование вариативности в делегатах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787261"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169071"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Использование вариативности в делегатах (Visual Basic)
 
@@ -44,11 +44,25 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>Пример 2: Контрвариантность
+## <a name="example-2-contravariance"></a>Пример 2 Контрвариантность
 
 ### <a name="description"></a>Описание
 
-В этом примере демонстрируется использование делегатов с методами, параметры типа которых являются базовыми типами типа параметра сигнатуры делегата. Контравариантность позволяет использовать один обработчик событий вместо нескольких. Например, можно создать обработчик событий, принимающих входной параметр `EventArgs`, и использовать его с событием `Button.MouseClick`, которое отправляет тип `MouseEventArgs` в качестве параметра, а также с событием `TextBox.KeyDown`, которое отправляет параметр `KeyEventArgs`.
+В этом примере показано, как можно использовать делегаты с методами, которые имеют параметры, типы которых являются базовыми типами для типа параметра сигнатуры делегата. Контравариантность позволяет использовать один обработчик событий вместо нескольких. В следующем примере используются два делегата:
+
+- Делегат, определяющий сигнатуру события [Button. KeyDown.](xref:System.Windows.Forms.Control.KeyDown) <xref:System.Windows.Forms.KeyEventHandler> Его сигнатура:
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- Делегат, определяющий сигнатуру события [Button. маусекликк.](xref:System.Windows.Forms.Control.MouseDown) <xref:System.Windows.Forms.MouseEventHandler> Его сигнатура:
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+В примере определяется обработчик событий с <xref:System.EventArgs> параметром, который используется для обработки `Button.KeyDown` событий и `Button.MouseClick` . Это можно сделать, поскольку <xref:System.EventArgs> является базовым типом <xref:System.Windows.Forms.KeyEventArgs> для и <xref:System.Windows.Forms.MouseEventArgs>.
 
 ### <a name="code"></a>Код
 

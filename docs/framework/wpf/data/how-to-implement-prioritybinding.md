@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937448"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169088"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Практическое руководство. Реализация PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Works, указав список привязок. Список привязок упорядочивается от наивысшего приоритета к низшему приоритету. Если привязка с наивысшим приоритетом возвращает значение успешно при обработке, то нет необходимости обрабатывать другие привязки в списке. Может быть, если привязка с наивысшим приоритетом занимает много времени, поэтому следующий высший приоритет, возвращающий значение, будет использоваться до тех пор, пока привязка с более высоким приоритетом не вернет значение.  
@@ -27,7 +27,7 @@ ms.locfileid: "69937448"
  Метод доступа `SlowestDP` get ожидает 5 секунд перед возвратом значения `_slowestDP` элемента данных.  
   
 > [!NOTE]
-> Этот пример приведен только в качестве демонстрации. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Рекомендации рекомендуются для определения свойств, порядок которых меньше, чем набор полей. Дополнительные сведения см. в разделе [Выбор между свойствами и методами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
+> Этот пример приведен только в качестве демонстрации. Рекомендации по .NET рекомендуются для определения свойств, порядок которых меньше, чем набор полей. Дополнительные сведения см. в разделе [Выбор между свойствами и методами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
