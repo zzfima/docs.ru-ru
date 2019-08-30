@@ -2,13 +2,13 @@
 title: Ресурсы по машинному обучению
 description: Следующие ресурсы по ML.NET помогут вам создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
 ms.custom: seodec18
-ms.date: 03/01/2019
-ms.openlocfilehash: 9a4c0633034a73f2531aea19c2efe23ff6b41cef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 08/26/2019
+ms.openlocfilehash: c33494f3c5144ad20c6317d18b13a6775cd01299
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645137"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106836"
 ---
 # <a name="machine-learning-resources"></a>Ресурсы по машинному обучению 
 
@@ -17,4 +17,5 @@ ms.locfileid: "65645137"
 - [Глоссарий по машинному обучению](glossary.md): содержит определения важных терминов, связанных с машинным обучением.
 - [Основы машинного обучения](basics.md): содержит ссылки на учебные ресурсы, которые помогут вам приступить к работе с машинным обучением.
 - [Задачи машинного обучения](tasks.md): описывает различные сценарии использования машинного обучения, поддерживаемые ML.NET.
+- [Система типов IDataView](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html): содержит подробное описание интерфейса [IDataView](xref:Microsoft.ML.IDataView) и его системы типов.
 - [Преобразования данных](transforms.md): общие сведения о преобразованиях данных, поддерживаемых ML.NET.
