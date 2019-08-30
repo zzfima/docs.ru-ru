@@ -149,7 +149,7 @@ public class ResilientTransaction
 - **Устойчивость подключений и перехват команд c помощью EF в приложении ASP.NET MVC** \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
-- **Сезар де ла Торре (Cesar de la Torre). Using Resilient Entity Framework Core SQL Connections and Transactions** \ (Использование устойчивых SQL-подключений Entity Framework Core и транзакций)
+- **Сезар де ла Торре (Cesar de la Torre). Using Resilient Entity Framework Core SQL Connections and Transactions (Использование устойчивых SQL-подключений Entity Framework Core и транзакций)**  \
   <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
