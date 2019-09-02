@@ -2,12 +2,12 @@
 title: Команда dotnet add package
 description: Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект.
 ms.date: 06/26/2019
-ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569503"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105168"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -54,59 +54,59 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="arguments"></a>Аргументы
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   Указывает файл проекта. Если он не указан, команда ищет текущий каталог для него.
 
-* **`PACKAGE_NAME`**
+- **`PACKAGE_NAME`**
 
   Добавляемая ссылка на пакет.
 
 ## <a name="options"></a>Параметры
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Добавляет ссылку на пакет только при ориентации на конкретную [платформу](../../standard/frameworks.md).
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Выводит краткую справку по команде.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Позволяет остановить команду и дождаться, пока пользователь введет данные или выполнит действие (например, завершит проверку подлинности). Доступно с версии пакета SDK 2.1 для .NET Core версии 2.1.400 или более поздней версии.
 
-* **`-n|--no-restore`**
+- **`-n|--no-restore`**
 
   Добавляет ссылку на пакет без предварительного просмотра восстановления и проверки совместимости.
 
-* **`--package-directory <PACKAGE_DIRECTORY>`**
+- **`--package-directory <PACKAGE_DIRECTORY>`**
 
   Каталог, в который нужно восстановить пакеты. Расположение по умолчанию для восстановления пакетов — `%userprofile%\.nuget\packages` в Windows и `~/.nuget/packages` в macOS и Linux. Дополнительные сведения см. в статье [Управление папкой установки глобальных пакетов, кэшем и временными папками](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   Источник пакета NuGet для использования в ходе операции восстановления.
 
-* **`-v|--version <VERSION>`**
+- **`-v|--version <VERSION>`**
 
   Версия пакета. См. статью [Package versioning](https://docs.microsoft.com/nuget/reference/package-versioning) (Управление версиями пакета).
 
 ## <a name="examples"></a>Примеры
 
-* Добавление пакета NuGet `Newtonsoft.Json` в проект:
+- Добавление пакета NuGet `Newtonsoft.Json` в проект:
 
   ```console
   dotnet add package Newtonsoft.Json
   ```
 
-* Добавление определенной версии пакета в проект:
+- Добавление определенной версии пакета в проект:
 
   ```console
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-* Добавление пакета с помощью определенного источника NuGet:
+- Добавление пакета с помощью определенного источника NuGet:
 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json

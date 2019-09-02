@@ -1,12 +1,12 @@
 ---
 title: Пошаговое руководство. Сохранение объекта с помощью C#
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975827"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105927"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Пошаговое руководство. Сохранение объекта с помощью C\#
 
@@ -22,14 +22,14 @@ ms.locfileid: "56975827"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* Для сборки и запуска установите [пакет SDK для .NET Core](https://www.microsoft.com/net/core).
+- Для сборки и запуска установите [пакет SDK для .NET Core](https://www.microsoft.com/net/core).
 
-* Установите любой привычный для вас редактор кода, если еще не сделали этого.
+- Установите любой привычный для вас редактор кода, если еще не сделали этого.
 
 > [!TIP]
 > Нужно ли устанавливать редактор кода? Попробуйте использовать [Visual Studio](https://visualstudio.com/downloads).
 
-* Этот пример требует C# версии 7.3. См. [сведения о выборе версии языка C#](../../../language-reference/configure-language-version.md). 
+- Этот пример требует C# версии 7.3. См. [сведения о выборе версии языка C#](../../../language-reference/configure-language-version.md). 
 
 Можно просмотреть образец кода онлайн [в репозитории GitHub с примерами .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

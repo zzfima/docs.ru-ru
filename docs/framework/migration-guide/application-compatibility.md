@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623779"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106483"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Совместимость приложений в .NET Framework
 
@@ -22,9 +22,9 @@ ms.locfileid: "64623779"
 
 Каждое приложение разрабатывается для конкретной версии платформы .NET Framework, которую можно указать следующими способами.
 
-* Назначив требуемую версию .NET Framework в Visual Studio.
-* Указав требуемую версию .NET Framework в файле проекта.
-* Применив <xref:System.Runtime.Versioning.TargetFrameworkAttribute> к исходному коду.
+- Назначив требуемую версию .NET Framework в Visual Studio.
+- Указав требуемую версию .NET Framework в файле проекта.
+- Применив <xref:System.Runtime.Versioning.TargetFrameworkAttribute> к исходному коду.
 
 При использовании более новой версии .NET Framework по сравнению с целевой, платформа будет имитировать поведение старой целевой версии. Другими словами, приложение будет запущено на более новой версии платформы, но будет работать так, как если бы оно было запущено на более ранней версии. Такая имитация позволяет устранить многие проблемы совместимости между версиями .NET Framework. Версия платформы .NET Framework, для которой предназначено приложение, определяется целевой версией начальной сборки для домена приложения, где выполняется код. Все дополнительные сборки, загруженные в этот домен приложения, нацелены на эту версию .NET Framework. Например, в случае исполняемого файла платформа, на которую нацелен исполняемый файл, — это режим совместимости, в котором будут работать все сборки в этом домене приложения.
 
@@ -71,8 +71,8 @@ ms.locfileid: "64623779"
 ## <a name="usage"></a>Использование
 Для начала выберите тип изменения совместимости ниже.
 
-* [Изменение целевой платформы](./retargeting/index.md)
-* [Изменения среды выполнения](./runtime/index.md)
+- [Изменение целевой платформы](./retargeting/index.md)
+- [Изменения среды выполнения](./runtime/index.md)
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Глоссарий по .NET
 description: Узнайте значение выбранных терминов, используемых в документации по .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674514"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106925"
 ---
 # <a name="net-glossary"></a>Глоссарий по .NET
 
@@ -85,9 +85,9 @@ ms.locfileid: "57674514"
 Обычно это всеобъемлющая коллекция API-интерфейсов, которая упрощает разработку и развертывание приложений, основанных на определенной технологии. В этом общем смысле ASP.NET Core и Windows Forms являются примерами платформ приложений. См. также [библиотека](#library).
 
 Слово "платформа" имеет более специфичное техническое значение в следующих терминах.
-* [.NET Framework](#net-framework)
-* [целевая платформа](#target-framework)
-* [TFM (моникер целевой платформы)](#tfm)
+- [.NET Framework](#net-framework)
+- [целевая платформа](#target-framework)
+- [TFM (моникер целевой платформы)](#tfm)
 
 В существующей документации "платформа" иногда означает [реализацию .NET](#implementation-of-net). Например, в статье .NET Core может упоминаться как платформа. Мы планируем избавиться от путаницы в документации.
 

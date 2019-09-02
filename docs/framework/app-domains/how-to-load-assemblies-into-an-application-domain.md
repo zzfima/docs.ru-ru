@@ -52,5 +52,5 @@ ms.locfileid: "69921527"
 - [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)
 - [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
-- [Практическое руководство. загрузке сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Домены приложений и сборки](application-domains.md#application-domains-and-assemblies)

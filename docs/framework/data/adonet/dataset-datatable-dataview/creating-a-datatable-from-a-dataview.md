@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: c70dd0401ea518613a2b51f047de13f6c7270152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36839574ae8a8acd1cb56fa82ebcfa6bddb0c97e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621187"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203869"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Создание таблицы данных из объекта DataView
-После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если вам нужно создать новый <xref:System.Data.DataTable> из <xref:System.Data.DataView>, можно использовать <xref:System.Data.DataView.ToTable%2A> метод, чтобы скопировать все строки и столбцы либо подмножество данных в новую <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
+После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если необходимо создать <xref:System.Data.DataTable> новый объект <xref:System.Data.DataView>из <xref:System.Data.DataView.ToTable%2A> , можно использовать метод, чтобы скопировать все строки и столбцы или подмножество данных в новый <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
   
 - Создание таблицы <xref:System.Data.DataTable>, содержащей столбцы, которые являются подмножеством столбцов в представлении <xref:System.Data.DataView>.  
   
-- Создание <xref:System.Data.DataTable> содержащей только уникальные строки из <xref:System.Data.DataView>, аналогично ключевому для ключевого слова DISTINCT в Transact-SQL.  
+- Создание, включающее в себя только уникальные строки <xref:System.Data.DataView>из, аналогично ключевому слову DISTINCT в Transact-SQL. <xref:System.Data.DataTable>  
   
 ## <a name="example"></a>Пример  
- В следующем образце консольного приложения создает <xref:System.Data.DataTable> , содержащий данные из **Person.Contact** в таблицу **AdventureWorks** образца базы данных. Затем пример создает отсортированное и отфильтрованное представление <xref:System.Data.DataView> на основе <xref:System.Data.DataTable>. После отображения содержимого таблицы <xref:System.Data.DataTable> и <xref:System.Data.DataView>, создается новая <xref:System.Data.DataTable> из <xref:System.Data.DataView> путем вызова <xref:System.Data.DataView.ToTable%2A> метод, выбрав только подмножество доступных столбцов. Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
+ В следующем примере консольного приложения создается <xref:System.Data.DataTable> объект, содержащий данные из таблицы **Person. Contact** в образце базы данных **AdventureWorks** . Далее в примере создается Сортировка и фильтрация <xref:System.Data.DataView> на основе. <xref:System.Data.DataTable> <xref:System.Data.DataTable> После отображения содержимого <xref:System.Data.DataView.ToTable%2A> <xref:System.Data.DataView> <xref:System.Data.DataTable> и, в примере создается новый объект из, вызывая метод, выбирая только подмножество доступных столбцов. <xref:System.Data.DataView> Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,5 +208,5 @@ Console.WriteLine();
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Data.DataView.ToTable%2A>
-- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Объекты DataView](dataviews.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

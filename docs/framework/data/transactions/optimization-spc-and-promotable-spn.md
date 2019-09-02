@@ -2,12 +2,12 @@
 title: Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793631"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205896"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения
 
@@ -32,9 +32,9 @@ ms.locfileid: "61793631"
 Если транзакцию <xref:System.Transactions> требуется передать на следующий уровень иерархии (например, для поддержки нескольких диспетчеров ресурсов), инфраструктура <xref:System.Transactions> информирует об этом диспетчер ресурсов путем вызова метода <xref:System.Transactions.ITransactionPromoter.Promote%2A> интерфейса <xref:System.Transactions.ITransactionPromoter>, от которого наследуется интерфейс <xref:System.Transactions.IPromotableSinglePhaseNotification>. После этого диспетчер ресурсов осуществляет внутреннее преобразование локальной транзакции (для которой не требуется ведение журнала) в объект транзакции, способный участвовать в транзакции DTC, и связывает этот объект с уже выполненными действиями. В случае запроса фиксации транзакции диспетчер транзакций отправляет уведомление <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> диспетчеру ресурсов, который фиксирует распределенную транзакцию, созданную во время передачи на следующий уровень иерархии.
 
 > [!NOTE]
-> **TransactionCommitted** трассировок (создаваемых при вызове фиксации над повышенной транзакцией) содержится идентификатор действия транзакции DTC.
+> Трассировки **трансактионкоммиттед** (которые создаются при вызове фиксации в повышенной транзакции) содержат идентификатор действия транзакции DTC.
 
-Дополнительные сведения о расширении управления, см. в разделе [эскалации управления транзакцией](../../../../docs/framework/data/transactions/transaction-management-escalation.md).
+Дополнительные сведения о укрупнении управления см. в разделе [укрупнение управления транзакциями](transaction-management-escalation.md).
 
 ## <a name="transaction-management-escalation-scenario"></a>Сценарий передачи управления транзакцией на следующий уровень иерархии
 
@@ -50,7 +50,7 @@ ms.locfileid: "61793631"
 
 4. На этом этапе соединение CN1 передает транзакцию на следующий уровень иерархии с помощью механизма, характерного для SQL 2005 и <xref:System.Data>.
 
-5. Значение, возвращаемое методом <xref:System.Transactions.ITransactionPromoter.Promote%2A>, представляет массив байтов, который содержит токен распространения для транзакции. <xref:System.Transactions> использует этот маркер распространения для создания транзакции DTC, его можно включить в локальной транзакции.
+5. Значение, возвращаемое методом <xref:System.Transactions.ITransactionPromoter.Promote%2A>, представляет массив байтов, который содержит токен распространения для транзакции. <xref:System.Transactions>использует этот токен распространения для создания транзакции DTC, которую она может включить в локальную транзакцию.
 
 6. На этом этапе соединение CN2 может использовать данные, полученные в результате вызова одного из методов объектом <xref:System.Transactions.TransactionInterop>, для передачи транзакции в SQL.
 
@@ -58,13 +58,13 @@ ms.locfileid: "61793631"
 
 ## <a name="single-phase-commit-optimization"></a>Оптимизация однофазной фиксации
 
-Протокол однофазной фиксации наиболее эффективен при использовании во время выполнения, поскольку все изменения производятся без какой-либо явной координации. Чтобы использовать данную оптимизацию, необходимо реализовать диспетчер ресурсов с помощью интерфейса <xref:System.Transactions.ISinglePhaseNotification> и зачислить его в транзакцию с помощью метода <xref:System.Transactions.Transaction.EnlistDurable%2A> или <xref:System.Transactions.Transaction.EnlistVolatile%2A>. В частности *EnlistmentOptions* должно быть равно параметр <xref:System.Transactions.EnlistmentOptions.None> гарантирует, что будет выполнять однофазной фиксации.
+Протокол однофазной фиксации наиболее эффективен при использовании во время выполнения, поскольку все изменения производятся без какой-либо явной координации. Чтобы использовать данную оптимизацию, необходимо реализовать диспетчер ресурсов с помощью интерфейса <xref:System.Transactions.ISinglePhaseNotification> и зачислить его в транзакцию с помощью метода <xref:System.Transactions.Transaction.EnlistDurable%2A> или <xref:System.Transactions.Transaction.EnlistVolatile%2A>. В частности, параметр *енлистментоптионс* должен равняться <xref:System.Transactions.EnlistmentOptions.None> значению, чтобы обеспечить выполнение одного этапа фиксации.
 
 Интерфейс <xref:System.Transactions.ISinglePhaseNotification> наследуется от интерфейса <xref:System.Transactions.IEnlistmentNotification>, поэтому если реализованный диспетчер ресурсов не подходит для однофазной фиксации, он, тем не менее, может получать уведомления о двухфазной фиксации. Если реализованный диспетчер ресурсов получает уведомление <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> от диспетчера транзакций, он должен попытаться выполнить действия, необходимые для фиксации транзакции, и сообщить диспетчеру транзакций о необходимости фиксации или отката транзакции путем вызова метода <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A>, <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> или <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> параметра <xref:System.Transactions.SinglePhaseEnlistment>. Ответ <xref:System.Transactions.Enlistment.Done%2A>, переданный зачисленному ресурсу на данном этапе, подразумевает семантику ReadOnly. Поэтому не следует передавать ответ <xref:System.Transactions.Enlistment.Done%2A> в дополнение к вызову любого из других методов.
 
-Если имеется только один неустойчивый ресурс и не зачисление устойчивых ресурсов, неустойчивый ресурс получает уведомление о SPC. При возникновении любой зачислений неустойчивых ресурсов и только одно зачисление устойчивых ресурсов, зачисленные неустойчивые ресурсы получают 2PC. После этого зачисленный устойчивый ресурс получает уведомление об однофазной фиксации (SPC).
+При наличии только одного переменного прикрепления и отсутствия устойчивого прикрепления, постоянное прикрепление получает уведомление SPC. Если существуют переменные прикрепления и только один устойчивый связующий объект, то временные прикрепления получают 2PC. После этого зачисленный устойчивый ресурс получает уведомление об однофазной фиксации (SPC).
 
 ## <a name="see-also"></a>См. также
 
-- [Зачисление ресурсов в транзакцию в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
-- [Однофазная и многофазная фиксация транзакции](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+- [Зачисление ресурсов в транзакцию в качестве участников](enlisting-resources-as-participants-in-a-transaction.md)
+- [Однофазная и многофазная фиксация транзакции](committing-a-transaction-in-single-phase-and-multi-phase.md)

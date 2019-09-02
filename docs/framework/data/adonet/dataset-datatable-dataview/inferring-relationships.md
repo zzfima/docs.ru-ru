@@ -2,15 +2,15 @@
 title: Определение отношений
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879675"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204769"
 ---
 # <a name="inferring-relationships"></a>Определение отношений
-Если элемент, выводимый в виде таблицы, имеет дочерний элемент, который также выводится в виде таблицы, между двумя этими таблицами будет создана связь <xref:System.Data.DataRelation>. Новый столбец с именем **ParentTableName_Id** будут добавлены как таблицы, созданной для родительского элемента, так и таблицу, созданную для дочернего элемента. **ColumnMapping** данного столбца идентификаторов будет установлено **MappingType.Hidden**. Столбец будет заданы с автоматическим приращением первичным ключом для родительской таблицы, а также будет использоваться для **DataRelation** между двумя таблицами. Тип данных добавленный столбец идентификаторов будет **System.Int32**, в отличие от всех остальных выведенных столбцов типа данных, который является **System.String**. Объект <xref:System.Data.ForeignKeyConstraint> с **DeleteRule** = **Cascade** также будет создаваться с помощью нового столбца в родительской и дочерней таблицами.  
+Если элемент, выводимый в виде таблицы, имеет дочерний элемент, который также выводится в виде таблицы, между двумя этими таблицами будет создана связь <xref:System.Data.DataRelation>. Новый столбец с именем **ParentTableName_Id** будет добавлен как в таблицу, созданную для родительского элемента, так и на таблицу, созданную для дочернего элемента. Свойству **ColumnMapping** этого столбца идентификаторов будет присвоено значение **MappingType. Hidden**. Столбец будет автоматически инкрементным первичным ключом для родительской таблицы и будет использоваться для **связи DataRelation** между двумя таблицами. Тип данных добавленного столбца идентификаторов будет **System. Int32**, в отличие от типа данных всех других выводимых столбцов, которые имеют тип **System. String**. Объект <xref:System.Data.ForeignKeyConstraint> с **DeleteRule** = **CASCADE** также будет создан с помощью нового столбца как в родительской, так и в дочерней таблице.  
   
  Например, рассмотрим следующий XML-код:  
   
@@ -25,56 +25,56 @@ ms.locfileid: "61879675"
   
  В процессе вывода будут созданы две таблицы: **Element1** и **ChildElement1**.  
   
- **Element1** таблица будет содержать два столбца: **Element1_Id** и **ChildElement2**. **ColumnMapping** свойство **Element1_Id** столбца будет присвоено **MappingType.Hidden**. **ColumnMapping** свойство **ChildElement2** столбца будет присвоено **MappingType.Element**. **Element1_Id** столбца будет установлено в качестве первичного ключа **Element1** таблицы.  
+ Таблица **Element1** будет содержать два столбца: **Element1_Id** и **ChildElement2**. Свойству **ColumnMapping** столбца **Element1_Id** будет присвоено значение **MappingType. Hidden**. Свойству **ColumnMapping** столбца **ChildElement2** будет присвоено значение **MappingType. element**. Столбец **Element1_Id** будет установлен в качестве первичного ключа таблицы **Element1** .  
   
- **ChildElement1** таблица будет иметь три столбца: **attr1**, **attr2** и **Element1_Id**. **ColumnMapping** свойство для **attr1** и **attr2** столбцов будет присвоено **MappingType.Attribute**. **ColumnMapping** свойство **Element1_Id** столбца будет присвоено **MappingType.Hidden**.  
+ Таблица **ChildElement1** будет содержать три столбца: **attr1**, **attr2** и **Element1_Id**. Свойству **ColumnMapping** для столбцов **attr1** и **attr2** будет присвоено значение **MappingType. Attribute**. Свойству **ColumnMapping** столбца **Element1_Id** будет присвоено значение **MappingType. Hidden**.  
   
- Объект **DataRelation** и **ForeignKeyConstraint** будет создан с помощью **Element1_Id** столбцы из обеих таблиц.  
+ **DataRelation** и **ForeignKeyConstraint** будут созданы с использованием столбцов **Element1_Id** из обеих таблиц.  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
 |0|Text2|  
   
- **Таблица:** ChildElement1  
+ **Таблица** ChildElement1  
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
 |value1|value2|0|  
   
- **DataRelation:** Element1_ChildElement1  
+ **DataRelation** Element1_ChildElement1  
   
- **ParentTable:** Element1  
+ **Паренттабле:** Element1  
   
- **ParentColumn:** Element1_Id  
+ **Парентколумн:** Element1_Id  
   
- **ChildTable:** ChildElement1  
+ **ChildTable** ChildElement1  
   
- **ChildColumn:** Element1_Id  
+ **Чилдколумн:** Element1_Id  
   
- **Вложенные:** True  
+ **Вложенные** True  
   
- **ForeignKeyConstraint:** Element1_ChildElement1  
+ **ForeignKeyConstraint** Element1_ChildElement1  
   
- **Столбец:** Element1_Id  
+ **Рубрик** Element1_Id  
   
- **ParentTable:** Element1  
+ **Паренттабле:** Element1  
   
- **ChildTable:** ChildElement1  
+ **ChildTable** ChildElement1  
   
- **DeleteRule:** Cascade  
+ **DeleteRule** Cascade  
   
- **AcceptRejectRule:** Нет  
+ **Акцептрежектруле:** Отсутствуют  
   
 ## <a name="see-also"></a>См. также
 
-- [Определение реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Определение реляционной структуры DataSet из XML](inferring-dataset-relational-structure-from-xml.md)
+- [Загрузка DataSet из XML](loading-a-dataset-from-xml.md)
+- [Загрузка сведений о схеме DataSet из XML](loading-dataset-schema-information-from-xml.md)
+- [Вложенность объектов DataRelation](nesting-datarelations.md)
+- [Использование XML в наборах данных](using-xml-in-a-dataset.md)
+- [Наборы данных, таблицы данных и объекты DataView](index.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

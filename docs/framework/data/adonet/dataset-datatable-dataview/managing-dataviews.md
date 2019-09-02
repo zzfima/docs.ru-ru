@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6dcc206775866fd9136e4f6f5f038d021d11433
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785415"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204682"
 ---
 # <a name="managing-dataviews"></a>Управление объектами DataView
-С помощью класса <xref:System.Data.DataViewManager> можно управлять параметрами представлений во всех таблицах <xref:System.Data.DataView>. Если у вас есть элемент управления, который требуется связать с несколькими таблицами, например сеткой перехода по связям, **DataViewManager** идеально.  
+С помощью класса <xref:System.Data.DataViewManager> можно управлять параметрами представлений во всех таблицах <xref:System.Data.DataView>. Если у вас есть элемент управления, который необходимо привязать к нескольким таблицам, например сетку, которая переходит между связями, то **DataViewManager** является идеальным.  
   
- **DataViewManager** содержит коллекцию <xref:System.Data.DataViewSetting> объекты, которые используются для установки параметров представления таблиц в <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> Содержит один <xref:System.Data.DataViewSetting> объект для каждой таблицы в **набора данных**. Можно задать значение по умолчанию **ApplyDefaultSort**, **сортировки**, **RowFilter**, и **RowStateFilter** свойства упоминаемой таблицы по с помощью его **DataViewSetting**. Вы можете ссылаться на **DataViewSetting** для конкретной таблицы по имени или порядковому номеру, либо передав ссылку на этот конкретный объект таблицы. Можно получить доступ к коллекции **DataViewSetting** объекты в **DataViewManager** с помощью **DataViewSettings** свойство.  
+ **DataViewManager** содержит коллекцию <xref:System.Data.DataViewSetting> объектов, которые используются для задания параметра представления таблиц в. <xref:System.Data.DataSet> Содержит один <xref:System.Data.DataViewSetting> объект для каждой таблицы в наборе **данных.** <xref:System.Data.DataViewSettingCollection> Можно задать свойства **апплидефаултсорт**, **Sort**, **RowFilter**и **RowStateFilter** по умолчанию для упоминаемой таблицы, используя его **датавиевсеттинг**. Вы можете ссылаться на **датавиевсеттинг** для конкретной таблицы по имени или по порядковому номеру или путем передачи ссылки на этот объект таблицы. Доступ к коллекции объектов **датавиевсеттинг** в **DataViewManager** можно получить с помощью свойства **датавиевсеттингс** .  
   
- Следующий код заполняет пример **набора данных** с SQL Server **Northwind** таблицы базы данных **клиентов**, **заказы**и  **Подробности заказа**, создает связи между таблицами, использует **DataViewManager** задать по умолчанию **DataView** параметров и привязывает **DataGrid**  для **DataViewManager**. В примере задается значение по умолчанию **DataView** параметры для всех таблиц в **набора данных** для сортировки первичного ключа таблицы (**ApplyDefaultSort**  =  **true**), а затем изменяет порядок сортировки **клиентов** для сортировки по **CompanyName**.  
+ В следующем примере кода объект **DataSet** заполняется таблицами базы данных SQL Server **Northwind** , **Customers**, Orders и **Order Details**, создаются связи между таблицами, используется **DataViewManager** для Задайте параметры **DataView** по умолчанию и привязывает **DataGrid** к **DataViewManager**. В примере задаются **Параметры DataView** по умолчанию для всех таблиц в **наборе данных** для сортировки по первичному ключу таблицы (**апплидефаултсорт** = **true**), а затем изменяется порядок сортировки таблицы **Customers** на Сортировать по **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,5 +125,5 @@ grid.SetDataBinding(viewManager, "Customers");
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
-- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Объекты DataView](dataviews.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

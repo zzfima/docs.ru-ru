@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675581"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105476"
 ---
 # <a name="architectural-principles"></a>Архитектурные принципы
 
@@ -101,8 +101,8 @@ ms.locfileid: "68675581"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-* [Конструктивные шаблоны JAVA: принципы](https://java-design-patterns.com/principles/)
-* [Ограниченный контекст](https://martinfowler.com/bliki/BoundedContext.html)
+- [Конструктивные шаблоны JAVA: принципы](https://java-design-patterns.com/principles/)
+- [Ограниченный контекст](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Назад](choose-between-traditional-web-and-single-page-apps.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666461"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106891"
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
@@ -26,12 +26,12 @@ ms.locfileid: "69666461"
   
 Существует два варианта шаблона удаления:  
   
-* Заключение в оболочку каждого неуправляемого ресурса, используемого типом в безопасном дескрипторе (то есть в классе, производном от <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). В этом случае необходимо реализовать интерфейс <xref:System.IDisposable> и дополнительный метод `Dispose(Boolean)`. Это рекомендуемый вариант, не требующий переопределения метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+- Заключение в оболочку каждого неуправляемого ресурса, используемого типом в безопасном дескрипторе (то есть в классе, производном от <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). В этом случае необходимо реализовать интерфейс <xref:System.IDisposable> и дополнительный метод `Dispose(Boolean)`. Это рекомендуемый вариант, не требующий переопределения метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
   > Пространство имен <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> содержит набор классов, производных от <xref:System.Runtime.InteropServices.SafeHandle>. Эти классы перечислены в разделе [Использование безопасных дескрипторов](#SafeHandles). Если не удается найти класс, способный освободить неуправляемый ресурс, можно реализовать собственный подкласс <xref:System.Runtime.InteropServices.SafeHandle>.  
   
-* Реализация интерфейса <xref:System.IDisposable> и дополнительного метода `Dispose(Boolean)`, а также переопределение метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Необходимо переопределить метод <xref:System.Object.Finalize%2A>, чтобы убедиться, что неуправляемые ресурсы удаляются, если реализация <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> не вызывается объектом-получателем типа. При использовании рекомендуемого метода, описанного в предыдущем пункте, класс <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> делает это от вашего имени.  
+- Реализация интерфейса <xref:System.IDisposable> и дополнительного метода `Dispose(Boolean)`, а также переопределение метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Необходимо переопределить метод <xref:System.Object.Finalize%2A>, чтобы убедиться, что неуправляемые ресурсы удаляются, если реализация <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> не вызывается объектом-получателем типа. При использовании рекомендуемого метода, описанного в предыдущем пункте, класс <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> делает это от вашего имени.  
   
 Чтобы обеспечить соответствующую очистку ресурсов, метод <xref:System.IDisposable.Dispose%2A> должен быть доступен для многократного вызова без выдачи исключения.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69666461"
 
 Интерфейс <xref:System.IDisposable> требует реализации одного метода <xref:System.IDisposable.Dispose%2A> без параметров. Однако шаблон удаления требует реализации двух методов `Dispose`:  
   
-* Реализация открытого невиртуального (в Visual Basic — `NonInheritable`) метода <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> без параметров.  
+- Реализация открытого невиртуального (в Visual Basic — `NonInheritable`) метода <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> без параметров.  
   
-* Защищенный виртуальный (в Visual Basic — `Overridable`) метод `Dispose` со следующей подписью:  
+- Защищенный виртуальный (в Visual Basic — `Overridable`) метод `Dispose` со следующей подписью:  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
@@ -64,9 +64,9 @@ ms.locfileid: "69666461"
   
 Тело метода состоит из двух блоков кода:  
   
-* Блок, который освобождает неуправляемые ресурсы. Этот блок выполняется вне зависимости от значения параметра `disposing`.  
+- Блок, который освобождает неуправляемые ресурсы. Этот блок выполняется вне зависимости от значения параметра `disposing`.  
   
-* Условный блок, который освобождает управляемые ресурсы. Этот блок выполняется, если параметр `disposing` имеет значение `true`. К управляемым ресурсам, которые он освобождает, могут относиться:  
+- Условный блок, который освобождает управляемые ресурсы. Этот блок выполняется, если параметр `disposing` имеет значение `true`. К управляемым ресурсам, которые он освобождает, могут относиться:  
   
   **Управляемые объекты, реализующие <xref:System.IDisposable>.** Условный блок может использоваться для вызова реализации <xref:System.IDisposable.Dispose%2A>. При использовании безопасного дескриптора в качестве оболочки для неуправляемого ресурса необходимо вызвать реализацию <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType>.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "69666461"
 > [!IMPORTANT]
 > Вам следует реализовать этот шаблон для всех базовых классов, которые реализуют <xref:System.IDisposable.Dispose> и не являются `sealed` (`NotInheritable` в Visual Basic).  
   
-* Реализация <xref:System.IDisposable.Dispose%2A>, которая вызывает метод `Dispose(Boolean)`.  
+- Реализация <xref:System.IDisposable.Dispose%2A>, которая вызывает метод `Dispose(Boolean)`.  
   
-* Метод `Dispose(Boolean)`, который выполняет фактическую работу по освобождению ресурсов.  
+- Метод `Dispose(Boolean)`, который выполняет фактическую работу по освобождению ресурсов.  
   
-* Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную.  
+- Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную.  
   
 Вот общий шаблон реализации шаблона удаления для базового класса, который использует безопасный дескриптор.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "69666461"
 
 Класс, производный от класса, реализующего интерфейс <xref:System.IDisposable>, не должен реализовывать интерфейс <xref:System.IDisposable>, поскольку реализация метода <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> базового класса наследуется производными классами. Вместо этого, чтобы реализовать шаблон удаления для базового класса, необходимо следующее:  
   
-* Метод `protected Dispose(Boolean)`, который переопределяет метод базового класса и выполняет фактическую работу по освобождению ресурсов производного класса. Этот метод должен также вызвать метод `Dispose(Boolean)` базового класса и передать состояние удаления ресурса в качестве аргумента.  
+- Метод `protected Dispose(Boolean)`, который переопределяет метод базового класса и выполняет фактическую работу по освобождению ресурсов производного класса. Этот метод должен также вызвать метод `Dispose(Boolean)` базового класса и передать состояние удаления ресурса в качестве аргумента.  
   
-* Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную. Если есть метод завершения, он должен вызывать перегруженный метод `Dispose(Boolean)`, указывая при этом аргумент *disposing* со значением `false`.  
+- Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную. Если есть метод завершения, он должен вызывать перегруженный метод `Dispose(Boolean)`, указывая при этом аргумент *disposing* со значением `false`.  
   
 Вот общий шаблон реализации шаблона удаления для производного класса, который использует безопасный дескриптор:  
   
@@ -134,15 +134,15 @@ ms.locfileid: "69666461"
   
 Классы, производные от класса <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>, упрощают проблемы времени существования объекта путем назначения и освобождения дескрипторов без прерываний. Они содержат критический метод завершения, который обязательно выполняется во время выгрузки домена приложения. Дополнительные сведения о преимуществах использования безопасного дескриптора см. в разделе <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Безопасные дескрипторы предоставляются следующими производными классами в пространстве имен <xref:Microsoft.Win32.SafeHandles>:  
   
-* Классы <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> и <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> — для файлов, файлов сопоставления памяти и каналов.  
+- Классы <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> и <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> — для файлов, файлов сопоставления памяти и каналов.  
   
-* Класс <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> — для представлений памяти.  
+- Класс <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> — для представлений памяти.  
   
-* Классы <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> и <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> — для конструкций шифрования.  
+- Классы <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> и <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> — для конструкций шифрования.  
   
-* Класс <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> — для разделов реестра.  
+- Класс <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> — для разделов реестра.  
   
-* Класс <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> — для дескрипторов ожидания.  
+- Класс <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> — для дескрипторов ожидания.  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Использование безопасного дескриптора для реализации шаблона удаления для базового класса

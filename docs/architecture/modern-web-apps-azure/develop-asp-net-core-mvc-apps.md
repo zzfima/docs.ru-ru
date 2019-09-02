@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971206"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105465"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Разработка приложений MVC ASP.NET Core
 
@@ -43,7 +43,7 @@ Razor Pages — это подход по умолчанию для новых �
 Приложения MVC ASP.NET Core могут использовать обычные маршруты, маршруты с атрибутами или оба вида маршрутов. Обычные маршруты определяются в коде путем указания _соглашений_ о маршрутизации с использованием показанного в следующем примере синтаксиса:
 
 ```csharp
-app.UseMvc(routes =>;
+app.UseMvc(routes =>
 {
     routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
 });
@@ -208,7 +208,7 @@ app.UseMvc(routes =>
 В ASP.NET Core это поведение реализуется с использованием встроенных типов соглашений. При необходимости эти соглашения можно изменить или заменить. Например, вы можете определить соглашение, по которому имя компонента для указанного контроллера будет получаться автоматически на основе его пространства имен (оно обычно связано с папкой, в которой располагается контроллер):
 
 ```csharp
-FeatureConvention : IControllerModelConvention
+public class FeatureConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
@@ -474,7 +474,7 @@ public class Program
     public static void Main(string[] args)
     {
         StartConnectionAsync();
-        _connection.On("receiveMessage", (arguments) =>;
+        _connection.On("receiveMessage", (arguments) =>
         {
             Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });

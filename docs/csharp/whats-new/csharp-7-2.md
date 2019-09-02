@@ -2,12 +2,12 @@
 title: Новые возможности C# 7.2
 description: Обзор новых возможностей в C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347416"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105746"
 ---
 # <a name="whats-new-in-c-72"></a>Новые возможности C# 7.2
 
@@ -20,18 +20,18 @@ ms.locfileid: "67347416"
 
 Новые языковые функции в этом выпуске
 
-* [Методы написания безопасного и эффективного кода](#safe-efficient-code-enhancements)
+- [Методы написания безопасного и эффективного кода](#safe-efficient-code-enhancements)
   - Ряд улучшений синтаксиса, обеспечивающих работу с типами значений с использованием семантики ссылок.
-* [Неконечные именованные аргументы](#non-trailing-named-arguments)
+- [Неконечные именованные аргументы](#non-trailing-named-arguments)
   - После именованных аргументов могут следовать позиционные аргументы.
-* [Начальные символы подчеркивания в числовых литералах](#leading-underscores-in-numeric-literals)
+- [Начальные символы подчеркивания в числовых литералах](#leading-underscores-in-numeric-literals)
   - Перед любыми печатными знаками в числовых литералах теперь могут использоваться начальные знаки подчеркивания.
-* [Модификатор доступа `private protected`](#private-protected-access-modifier)
+- [Модификатор доступа `private protected`](#private-protected-access-modifier)
   - Модификатор доступа `private protected` разрешает доступ для производных классов в одной сборке.
-* [Условные выражения`ref` ](#conditional-ref-expressions)
+- [Условные выражения`ref` ](#conditional-ref-expressions)
   - Результат условного выражения `?:` теперь может быть ссылкой.
 
-В оставшейся части этой статьи представлены общие сведения об этих функциях. Каждая функция сопровождается обоснованием. Вы изучите синтаксис Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`.
+В оставшейся части этой статьи представлены общие сведения об этих функциях. Каждая функция сопровождается обоснованием. Вы изучите синтаксис Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`:
 
 1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
 1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
@@ -63,7 +63,7 @@ ms.locfileid: "67347416"
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>_private protected_ — модификатор доступа
+## <a name="_private-protected_-access-modifier"></a>_private protected_ — модификатор доступа
 
 Новый составной модификатор доступа `private protected` указывает, что доступ к члену может осуществляться содержащим классом или производными классами, которые объявлены в рамках одной сборки. В отличие от модификатора `protected internal`, который разрешает доступ производным классам или классам из той же сборки, `private protected` ограничивает доступ только для производных классов, объявленных в рамках одной сборки.
 

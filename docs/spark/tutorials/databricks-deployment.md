@@ -4,12 +4,12 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ca9e93a413622c84325ca9fc8bac17268b990c5a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "69576971"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107355"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Развертывание приложения .NET для Apache Spark в Databricks
 
@@ -18,17 +18,17 @@ ms.locfileid: "69576971"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
-> * Подготовка Microsoft.Spark.Worker
-> * Публикация приложения Spark .NET
-> * Развертывание приложения в Databricks
-> * Запуск приложения
+> - Подготовка Microsoft.Spark.Worker
+> - Публикация приложения Spark .NET
+> - Развертывание приложения в Databricks
+> - Запуск приложения
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем начать, сделайте следующее:
 
-* Скачайте [интерфейс командной строки Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
-* Скачайте файл [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) на локальный компьютер. Это вспомогательный скрипт, который будет использоваться позже для копирования зависимых файлов .NET для Apache Spark в рабочие узлы кластера Spark.
+- Скачайте [интерфейс командной строки Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
+- Скачайте файл [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) на локальный компьютер. Это вспомогательный скрипт, который будет использоваться позже для копирования зависимых файлов .NET для Apache Spark в рабочие узлы кластера Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Подготовка зависимостей рабочей роли
 
@@ -62,9 +62,9 @@ ms.locfileid: "69576971"
 
 4. Передайте в распределенную файловую систему (например, DBFS), к которой есть доступ у кластера, следующие файлы:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
-   * `<your app>.zip`
-   * Файлы (например, файлы зависимостей или общие данные, доступные каждой рабочей роли) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции, или библиотеки, от которых зависит приложение), которые необходимо поместить в рабочий каталог каждого исполнителя.
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
+   - `<your app>.zip`
+   - Файлы (например, файлы зависимостей или общие данные, доступные каждой рабочей роли) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции, или библиотеки, от которых зависит приложение), которые необходимо поместить в рабочий каталог каждого исполнителя.
 
 ## <a name="deploy-to-databricks"></a>Развертывание в Databricks
 

@@ -3,12 +3,12 @@ title: Установка средства ML.NET CLI
 description: Обзор и установка средства ML.NET CLI.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832935"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106899"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Установка средства ML.NET CLI
 
@@ -106,9 +106,9 @@ dotnet tool update -g mlnet
 
 2. Добавьте соответствующую оболочку совместимости к профилю оболочки. Может потребоваться создать файл профиля оболочки. Скрипт оболочки совместимости перенаправит запрос завершения из оболочки в средство `dotnet-suggest`, которое делегирует его в соответствующее `System.CommandLine`-приложение.
 
-    * Для bash следует добавить содержимое [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) в `~/.bash_profile`.
+    - Для bash следует добавить содержимое [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) в `~/.bash_profile`.
 
-    * Для PowerShell следует добавить содержимое [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) в свой профиль PowerShell. Ожидаемый путь к профилю PowerShell можно получить, выполнив следующую команду в консоли:
+    - Для PowerShell следует добавить содержимое [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) в свой профиль PowerShell. Ожидаемый путь к профилю PowerShell можно получить, выполнив следующую команду в консоли:
 
     ```console
     echo $profile

@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666482"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106942"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Использование объектов, реализующих IDisposable
 
 Сборщик мусора среды CLR освобождает память, используемую управляемыми объектами, но типы, которые используют неуправляемые ресурсы, реализуют интерфейс <xref:System.IDisposable>, который позволяет освободить память, выделенную таким неуправляемым ресурсам. По окончании использования объекта, который реализует интерфейс <xref:System.IDisposable>, необходимо вызвать реализацию объекта <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Это можно сделать одним из двух способов.  
   
-* С помощью оператора `using` (C#) или `Using` (Visual Basic).  
+- С помощью оператора `using` (C#) или `Using` (Visual Basic).  
   
-* Путем реализации блока `try/finally`.  
+- Путем реализации блока `try/finally`.  
 
 ## <a name="the-using-statement"></a>Оператор using
 
@@ -49,9 +49,9 @@ ms.locfileid: "69666482"
 
 Вместо размещения блока `try/finally` в операторе `using` можно реализовать блок `try/finally` напрямую. Это может быть личным стилем программирования или же осуществляться по одной из следующих причин:  
   
-* Чтобы включить блок `catch` для обработки исключений, вызванных в блоке `try`. В противном случае исключения, вызываемые оператором `using`, а также создаваемые в блоке `using`, если блок `try/catch` отсутствует, не обрабатываются.  
+- Чтобы включить блок `catch` для обработки исключений, вызванных в блоке `try`. В противном случае исключения, вызываемые оператором `using`, а также создаваемые в блоке `using`, если блок `try/catch` отсутствует, не обрабатываются.  
   
-* Чтобы создать экземпляр объекта, реализующего интерфейс <xref:System.IDisposable>, область действия которого не является локальной для блока, в котором он объявлен.  
+- Чтобы создать экземпляр объекта, реализующего интерфейс <xref:System.IDisposable>, область действия которого не является локальной для блока, в котором он объявлен.  
   
 Следующий пример похож на предыдущий с тем отличием, что в нем используется блок `try/catch/finally`для создания, использования и удаления экземпляра объекта <xref:System.IO.StreamReader>, а также для обработки исключений, создаваемых конструктором <xref:System.IO.StreamReader> и его методом <xref:System.IO.StreamReader.ReadToEnd%2A>. Обратите внимание, что перед вызовом метода `finally` код в блоке <xref:System.IDisposable> проверяет, имеет ли объект, реализующий интерфейс `null`, значение <xref:System.IDisposable.Dispose%2A>. Если этого сделать не удастся, это может привести к исключению <xref:System.NullReferenceException> во время выполнения.  
   

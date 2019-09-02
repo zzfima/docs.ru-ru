@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860151"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107197"
 ---
 # <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
 
@@ -82,11 +82,11 @@ ms.locfileid: "67860151"
 
 При создании собственных классов исключений можно использовать по меньшей мере три общих конструктора: конструктор без параметров, конструктор, принимающий строковое сообщение, и конструктор, принимающий строковое сообщение и внутреннее исключение.
 
-* <xref:System.Exception.%23ctor>, использующий значения по умолчанию.
+- <xref:System.Exception.%23ctor>, использующий значения по умолчанию.
 
-* <xref:System.Exception.%23ctor%28System.String%29>, принимающий строковое сообщение.
+- <xref:System.Exception.%23ctor%28System.String%29>, принимающий строковое сообщение.
 
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, принимающий строковое сообщение и внутреннее исключение.
+- <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, принимающий строковое сообщение и внутреннее исключение.
 
 Пример см. в статье [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md).
 

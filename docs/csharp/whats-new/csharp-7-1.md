@@ -2,12 +2,12 @@
 title: Новые возможности C# 7.1
 description: Обзор новых возможностей в C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796595"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105553"
 ---
 # <a name="whats-new-in-c-71"></a>Новые возможности C# 7.1
 
@@ -17,13 +17,13 @@ C# 7.1 — это первая доработанная версия для C#. 
 
 Новые языковые функции в этом выпуске
 
-* [`async` метод `Main`](#async-main)
+- [`async` метод `Main`](#async-main)
   - Точка входа для приложения может иметь модификатор `async`.
-* [Литеральные выражения `default`](#default-literal-expressions)
+- [Литеральные выражения `default`](#default-literal-expressions)
   - Литеральные выражения по умолчанию можно использовать в выражениях значения по умолчанию, если можно вывести тип целевого объекта.
-* [Выводимые имена элементов кортежа](#inferred-tuple-element-names)
+- [Выводимые имена элементов кортежа](#inferred-tuple-element-names)
   - Имена элементов кортежа часто можно вывести из инициализации кортежа.
-* [Сопоставление шаблонов в параметрах универсального типа](#pattern-matching-on-generic-type-parameters)
+- [Сопоставление шаблонов в параметрах универсального типа](#pattern-matching-on-generic-type-parameters)
   - Выражения сопоставления шаблонов можно использовать с переменными, тип которых является параметром универсального типа.
 
 Наконец, у компилятора есть два параметра `-refout` и `-refonly`, которые управляют [созданием базовой сборки](#reference-assembly-generation).

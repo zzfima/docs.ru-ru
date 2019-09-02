@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587062"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168972"
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -21,7 +21,7 @@ ms.locfileid: "69587062"
 ## <a name="in-this-section"></a>В этом разделе  
 
  [Доступ к Интернету с помощью модификатора Async и оператора Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](./language-reference/keywords/async.md) и [Await](./language-reference/keywords/await.md).  
+ Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](./language-reference/keywords/async.md) и [Await](./language-reference/operators/await.md).  
   
  [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Описание процесса создания типа среды выполнения Windows, его упаковки в компонент среды выполнения Windows и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  

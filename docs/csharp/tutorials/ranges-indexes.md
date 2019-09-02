@@ -3,12 +3,12 @@ title: Анализ диапазонов данных с помощью инде
 description: В этом учебнике подробно рассказывается, как анализировать данные с помощью индексов и диапазонов и, таким образом, изучать срезы последовательного набора данных.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557190"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105784"
 ---
 # <a name="indices-and-ranges"></a>Индексы и диапазоны
 
@@ -17,9 +17,9 @@ ms.locfileid: "65557190"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
-> * Использовать этот синтаксис для диапазонов в последовательности.
-> * Проектировать начало и конец каждой последовательности.
-> * Составлять сценарии для типов <xref:System.Index> и <xref:System.Range>.
+> - Использовать этот синтаксис для диапазонов в последовательности.
+> - Проектировать начало и конец каждой последовательности.
+> - Составлять сценарии для типов <xref:System.Index> и <xref:System.Range>.
 
 ## <a name="language-support-for-indices-and-ranges"></a>Поддержка языков для индексов и диапазонов
 

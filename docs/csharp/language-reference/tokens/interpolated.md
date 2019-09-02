@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251002"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202955"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочник по C#)
 
@@ -34,13 +34,13 @@ ms.locfileid: "66251002"
 
 Структура элемента с выражением интерполяции выглядит следующим образом:
 
-```
+```csharp
 {<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Элементы в квадратных скобках являются необязательными. Каждый из элементов описан в таблице ниже:
 
-|Элемент|Описание|
+|Элемент|ОПИСАНИЕ|
 |-------------|-----------------|
 |`interpolationExpression`|Выражение, создающее форматируемый результат. Строковым представлением результата `null` является <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Константное выражение, значение которого определяет минимальное число символов в строковом представлении результата выражения интерполяции. Если оно положительное, строковое представление выравнивается по правому краю, если отрицательное — по левому краю. Дополнительные сведения см. в разделе [Компонент выравнивания](../../../standard/base-types/composite-formatting.md#alignment-component).|

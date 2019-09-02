@@ -2,12 +2,12 @@
 title: Модель асинхронного программирования задач (TAP) с использованием ключевых слов async и await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595600"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167904"
 ---
 # <a name="task-asynchronous-programming-model"></a>Асинхронная модель программирования
 
@@ -38,7 +38,7 @@ ms.locfileid: "69595600"
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Методы Async проще создавать
 
-В C# основой асинхронного программирования. являются ключевые слова [async](../../../language-reference/keywords/async.md) и [await](../../../language-reference/keywords/await.md). Они позволяют использовать ресурсы платформы .NET Framework, .NET Core или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Асинхронные методы, которые определяются с помощью ключевого слова `async`, называются *методами async*.
+В C# основой асинхронного программирования. являются ключевые слова [async](../../../language-reference/keywords/async.md) и [await](../../../language-reference/operators/await.md). Они позволяют использовать ресурсы платформы .NET Framework, .NET Core или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Асинхронные методы, которые определяются с помощью ключевого слова `async`, называются *методами async*.
 
 Ниже приводится пример асинхронного метода. Почти все элементы кода должны быть вам знакомы.
 
@@ -156,7 +156,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 Если с помощью модификатора [async](../../../language-reference/keywords/async.md) указать, что метод является асинхронным, у вас появятся следующие две возможности.
 
-- Асинхронный метод сможет использовать [await](../../../language-reference/keywords/await.md) для обозначения точек приостановки. Оператор `await` сообщает компилятору, что асинхронный метод не может выполняться после этой точки до завершения ожидаемого асинхронного процесса. На это время управление возвращается вызывающему объекту асинхронного метода.
+- Асинхронный метод сможет использовать [await](../../../language-reference/operators/await.md) для обозначения точек приостановки. Оператор `await` сообщает компилятору, что асинхронный метод не может выполняться после этой точки до завершения ожидаемого асинхронного процесса. На это время управление возвращается вызывающему объекту асинхронного метода.
 
      Приостановка асинхронного метода на выражении `await` не считается выходом из метода и блоки `finally` не выполняются.
 
@@ -168,7 +168,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Типы и параметры возвращаемого значения
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>См. также
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Асинхронное программирование](../../../async.md)
 - [Общие сведения об асинхронной модели](../../../../standard/async.md)
+ 

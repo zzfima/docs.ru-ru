@@ -4,12 +4,12 @@ description: Сведения о том, как создать глобальн�
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612671"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202763"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Создание глобального средства .NET Core с помощью интерфейса командной строки .NET Core
 
@@ -174,7 +174,7 @@ dotnet tool install --global --add-source ./nupkg botsay
 
 Если установка выполнена успешно, отображается сообщение с командой, используемой для вызова средства, и установленной версией, аналогичное приведенному ниже:
 
-```
+```output
 You can invoke the tool using the following command: botsay
 Tool 'botsay' (version '1.0.0') was successfully installed.
 ```

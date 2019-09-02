@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9bff69e28aa17da87da7e94d4e110c0375f043ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504107"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203707"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Создание строго типизированных наборов данных
-Учитывая схему XML, которые соответствуют стандартный язык определения схемы XML (XSD), можно создавать строго типизированный <xref:System.Data.DataSet> с помощью инструмента XSD.exe, предоставляемого с Windows Software Development Kit (SDK).  
+Учитывая схему XML, которая соответствует стандарту языка определения схемы XML (XSD), можно создать строго типизированную <xref:System.Data.DataSet> программу с помощью средства XSD. exe, поставляемого с пакетом средств разработки программного обеспечения (SDK) для Windows.  
   
- (Чтобы сформировать xsd из таблиц базы данных, см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
+ (Чтобы создать схему XSD из таблиц базы данных, <xref:System.Data.DataSet.WriteXmlSchema%2A> см. статью или [Работа с DataSets в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
- Ниже показан синтаксис для создания **набора данных** с помощью этого средства.  
+ В следующем коде показан синтаксис для создания **набора данных** с помощью этого средства.  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- В этом синтаксисе `/d` директива указывает, что для создания **набора данных**и `/l:` предписывает используемый язык (например, C# или Visual Basic .NET). Необязательный `/eld` директива указывает, можно использовать LINQ to DataSet для запроса к созданному **набора данных.** Данный параметр используется при указании параметра `/d`. Дополнительные сведения см. в разделе [запросе типизированных наборов DataSet](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Необязательный `/n:` директива указывает, что для пространства имен для **набора данных** вызывается **XSDSchema.Namespace**. Выходом команды является файл XSDSchemaFileName.cs, который можно скомпилировать и использовать в приложении ADO.NET. Созданный код можно скомпилировать в виде библиотеки или модуля.  
+ В этом синтаксисе `/d` директива указывает средству создать **набор данных**, а `/l:` указывает, какой язык следует использовать (например, C# или Visual Basic .NET). Необязательная `/eld` директива указывает, что можно использовать LINQ to DataSet для запроса к созданному **набору данных.** Данный параметр используется при указании параметра `/d`. Дополнительные сведения см. в разделе [запросы к типизированным наборам данных](../querying-typed-datasets.md). Необязательная `/n:` директива указывает средству создавать пространство имен для **набора данных** с именем **кссдсчема. Namespace**. Выходом команды является файл XSDSchemaFileName.cs, который можно скомпилировать и использовать в приложении ADO.NET. Созданный код можно скомпилировать в виде библиотеки или модуля.  
   
  В следующем коде показан синтаксис для компиляции созданного кода в виде библиотеки с помощью компилятора C# (csc.exe).  
   
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- В следующем примере кода используется типизированный **набора данных** с именем **CustomerDataSet** загрузить список клиентов из **Northwind** базы данных. После загрузки данных с помощью **заполнения** метод, пример выполняет цикл по каждому клиенту в **клиентов** таблицы с помощью типизированного **CustomersRow** ( **DataRow**) объекта. Это обеспечивает прямой доступ к **CustomerID** столбец, в отличие от до **DataColumnCollection**.  
+ В следующем примере кода используется типизированный **набор данных** с именем **кустомердатасет** для загрузки списка клиентов из базы данных **Northwind** . После загрузки данных с помощью метода **Fill** в примере выполняется циклический перебор каждого клиента в таблице **Customers** с помощью объекта типизированной **кустомерсров** (**DataRow**). Это обеспечивает прямой доступ к столбцу **CustomerID** , в отличие от **датаколумнколлектион**.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -98,6 +98,6 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Типизированные наборы данных](typed-datasets.md)
+- [Наборы данных, таблицы данных и объекты DataView](index.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

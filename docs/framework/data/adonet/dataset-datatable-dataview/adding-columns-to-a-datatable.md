@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043952"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204054"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Добавление столбцов в таблицу данных
 Объект <xref:System.Data.DataTable> содержит<xref:System.Data.DataColumn> коллекцию объектов, на которые ссылается свойство **Columns** таблицы. Эта коллекция столбцов наряду с ограничениями определяет схему, или структуру, таблицы.  
@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- Обратите внимание, что в этом примере свойству для столбца **CustID** присвоено значение, которое не разрешает значения **DBNull** и ограничивает значения уникальными. Однако если определить столбец **CustID** в качестве первичного ключевого столбца таблицы, то свойству **AllowDbNull** автоматически будет присвоено значение **false** , а свойству **UNIQUE** будет автоматически присвоено значение **true**. Дополнительные сведения см. в разделе [Определение первичных ключей](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ Обратите внимание, что в этом примере свойству для столбца **CustID** присвоено значение, которое не разрешает значения **DBNull** и ограничивает значения уникальными. Однако если определить столбец **CustID** в качестве первичного ключевого столбца таблицы, то свойству **AllowDbNull** автоматически будет присвоено значение **false** , а свойству **UNIQUE** будет автоматически присвоено значение **true**. Дополнительные сведения см. в разделе [Определение первичных ключей](defining-primary-keys.md).  
   
 > [!CAUTION]
 > Если имя столбца не указано для столбца, то столбцу присваивается добавочное имя по умолчанию для столбца*N,* начинающееся с «Column1», при добавлении в **датаколумнколлектион**. Рекомендуется избегать использования соглашения об именовании "Column*N*" при указании имени столбца, так как указываемое имя может конфликтовать с существующим именем столбца по умолчанию в **датаколумнколлектион**. Если указанное имя уже существует, вызывается исключение.  
@@ -56,6 +56,6 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
-- [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Определение схемы DataTable](datatable-schema-definition.md)
+- [DataTables](datatables.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

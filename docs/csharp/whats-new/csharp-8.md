@@ -2,12 +2,12 @@
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363899"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105514"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -16,10 +16,10 @@ ms.locfileid: "68363899"
 - [Члены только для чтения](#readonly-members)
 - [Члены интерфейса по умолчанию](#default-interface-members)
 - [Улучшения сопоставления шаблонов](#more-patterns-in-more-places):
-  * [выражения switch](#switch-expressions);
-  * [шаблоны свойств](#property-patterns);
-  * [шаблоны кортежей](#tuple-patterns);
-  * [позиционные шаблоны](#positional-patterns).
+  - [выражения switch](#switch-expressions);
+  - [шаблоны свойств](#property-patterns);
+  - [шаблоны кортежей](#tuple-patterns);
+  - [позиционные шаблоны](#positional-patterns).
 - [Объявления using](#using-declarations).
 - [Статические локальные функции](#static-local-functions).
 - [Удаляемые ссылочные структуры](#disposable-ref-structs).

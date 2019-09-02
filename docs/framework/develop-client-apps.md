@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 68d9365e6aed247770eb250f5a2e296b710febc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8c63aa074f699fa77c25441995a2ae74b78caf8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671295"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106495"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Разработка клиентских приложений с использованием .NET Framework
 
 Существует несколько способов разработки приложений Windows с помощью .NET Framework. Вы можете использовать любые из этих средств и платформ. 
 
-* [Универсальная платформа Windows (UWP)](https://developer.microsoft.com/windows/apps)
-* [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
-* [Windows Forms](../../docs/framework/winforms/index.md)
+- [Универсальная платформа Windows (UWP)](https://developer.microsoft.com/windows/apps)
+- [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
+- [Windows Forms](../../docs/framework/winforms/index.md)
 
 В темах этого раздела описаны способы создания приложений Windows с помощью Windows Presentation Foundation и Windows Forms. Но с помощью .NET Framework вы можете создавать и веб-приложения, а также клиентские приложения для компьютеров и устройств, публикуемые в Microsoft Store.
  

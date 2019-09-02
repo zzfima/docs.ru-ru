@@ -2,17 +2,17 @@
 title: Наследование реляционной структуры набора данных от схемы XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934467"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203776"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Наследование реляционной структуры набора данных от схемы XML (XSD)
 В этом разделе приведены общие сведения о построении реляционной схемы `DataSet` на основе документа схемы на языке XSD. Как правило, для каждого `complexType` дочернего элемента в элементе Schema создается таблица `DataSet`в. Структура таблицы задается определением сложного типа. Таблицы создаются в `DataSet` для элементов верхнего уровня схемы. Однако таблица создается только для элемента верхнего уровня `complexType` , `complexType` если элемент вложен в другой `complexType` элемент `DataSet`. в этом случае вложенный `complexType` элемент сопоставляется с элементом `DataTable` в.  
   
- Дополнительные сведения о XSD см. в разделе консорциум W3C (W3C) [XML-схема, часть 0. Рекомендации](https://www.w3.org/TR/xmlschema-0/) по[основам, схема XML, часть 1: Рекомендации](https://www.w3.org/TR/xmlschema-1/) по[структурам и схеме XML, часть 2: Рекомендации](https://www.w3.org/TR/xmlschema-2/)по типам.  
+ Дополнительные сведения о XSD см. в разделе консорциум W3C (W3C) [XML-схема, часть 0. Рекомендации](https://www.w3.org/TR/xmlschema-0/) по[основам, схема XML, часть 1: Рекомендации](https://www.w3.org/TR/xmlschema-1/) по[структурам и схеме XML, часть 2: Рекомендация по типам данных](https://www.w3.org/TR/xmlschema-2/).  
   
  В следующем примере показана схема XML, `customers` где — это дочерний `MyDataSet` элемент элемента DataSet, который является элементом **набора данных** .  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Описывает элементы XML-схемы, используемые для создания ограничений UNIQUE и FOREIGN KEY в `DataSet`.  
   
- [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Создание отношений DataSet из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Описывает элементы XML-схемы, `DataSet`используемые для создания связей между столбцами таблицы в.  
   
- [Ограничения и отношения схемы XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [Ограничения и отношения схемы XML](xml-schema-constraints-and-relationships.md)  
  Описывает, как неявным образом создаются связи при использовании элементов схемы XML для создания ограничений `DataSet`в.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Использование XML в наборах данных](using-xml-in-a-dataset.md)  
  Описывает загрузку и сохранение реляционной структуры и данных в `DataSet` виде XML-данных.  
   
 ## <a name="see-also"></a>См. также

@@ -2,12 +2,12 @@
 title: Определение схемы таблицы данных
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952360"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204989"
 ---
 # <a name="datatable-schema-definition"></a>Определение схемы таблицы данных
 Схема, или структура, таблицы представляется столбцами и ограничениями. Схема <xref:System.Data.DataTable> определяется с использованием объектов <xref:System.Data.DataColumn>, а также объектов <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint>. Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.  
@@ -20,22 +20,22 @@ ms.locfileid: "69952360"
 > Свойство объекта DataTable не влияет на это поведение. <xref:System.Data.DataTable.CaseSensitive%2A> Свойство **CaseSensitive** применяется к данным в таблице и влияет на сортировку, поиск, фильтрацию, применение ограничений и т. д., но не на ссылки на столбцы, связи и ограничения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Добавление столбцов в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Добавление столбцов в DataTable](adding-columns-to-a-datatable.md)  
  Описывает, как определить столбцы таблицы с помощью объектов **DataColumn** .  
   
- [Создание столбцов выражений](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Создание столбцов выражений](creating-expression-columns.md)  
  Объясняет, как свойство **Expression** столбца может использоваться для вычисления значений на основе значений из других столбцов в строке.  
   
- [Создание столбцов AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [Создание столбцов AutoIncrement](creating-autoincrement-columns.md)  
  Описывает, как для столбца может быть установлено автоматическое увеличение числовых значений для обеспечения уникального значения столбца в строке.  
   
- [Определение первичных ключей](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Определение первичных ключей](defining-primary-keys.md)  
  Описывает, как указать первичный ключ таблицы из одного или нескольких объектов **DataColumn** .  
   
- [Ограничения DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Ограничения DataTable](datatable-constraints.md)  
  Описывает, как определить внешний ключ и ограничения уникальности для столбцов в таблице.  
   
 ## <a name="see-also"></a>См. также
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTables](datatables.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,15 +2,15 @@
 title: Определение таблиц
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 174d305688c7090c163df60a11e233aea24b8f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84cee828f2d3c918a12e449da5b01a3d72d86333
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587363"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203514"
 ---
 # <a name="inferring-tables"></a>Определение таблиц
-При выведении схемы для <xref:System.Data.DataSet> из XML-документа ADO.NET сначала определяет, какой из XML-элементов представляет таблицы. Следующие структуры XML приводятся в таблице для **набора данных** схемы:  
+При выведении схемы для <xref:System.Data.DataSet> из XML-документа ADO.NET сначала определяет, какой из XML-элементов представляет таблицы. Следующие XML-структуры приводят к созданию таблицы для схемы **набора данных** :  
   
 - Элементы с атрибутами.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "64587363"
   
  В процессе вывода создается таблица с именем Element1.  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -52,15 +52,15 @@ ms.locfileid: "64587363"
   
  В процессе вывода создается таблица с именем Element1.  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text1|  
   
- Элемент документа или корневой элемент приводится в выведенной таблице, если он имеет атрибуты или дочерние элементы, которые выводятся в виде столбцов. Если элемент документа не имеет атрибутов и дочерних элементов, которые выводились бы как столбцы, то элемент выводится как **набора данных**. Например, рассмотрим следующий XML-код:  
+ Элемент документа или корневой элемент приводится в выведенной таблице, если он имеет атрибуты или дочерние элементы, которые выводятся в виде столбцов. Если элемент документа не имеет атрибутов и не содержит дочерних элементов, которые будут выводиться как столбцы, то элемент выводится как **набор данных**. Например, рассмотрим следующий XML-код:  
   
 ```xml  
 <DocumentElement>  
@@ -71,9 +71,9 @@ ms.locfileid: "64587363"
   
  В процессе вывода создается таблица с именем DocumentElement.  
   
- **Набор данных:** NewDataSet  
+ **Объекте** невдатасет  
   
- **Таблица:** DocumentElement  
+ **Таблица** DocumentElement  
   
 |Element1|Element2|  
 |--------------|--------------|  
@@ -87,11 +87,11 @@ ms.locfileid: "64587363"
 </DocumentElement>  
 ```  
   
- В процессе вывода создается **набора данных** с именем «DocumentElement», который содержит таблицу с именем «Элемент1».  
+ Процесс вывода создает **набор данных** с именем «documentElement», содержащий таблицу с именем «Element1».  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -109,9 +109,9 @@ ms.locfileid: "64587363"
   
  В процессе вывода создается таблица с именем Element1.  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |Element1_Text|  
 |--------------------|  
@@ -120,9 +120,9 @@ ms.locfileid: "64587363"
   
 ## <a name="see-also"></a>См. также
 
-- [Определение реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Определение реляционной структуры DataSet из XML](inferring-dataset-relational-structure-from-xml.md)
+- [Загрузка DataSet из XML](loading-a-dataset-from-xml.md)
+- [Загрузка сведений о схеме DataSet из XML](loading-dataset-schema-information-from-xml.md)
+- [Использование XML в наборах данных](using-xml-in-a-dataset.md)
+- [Наборы данных, таблицы данных и объекты DataView](index.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

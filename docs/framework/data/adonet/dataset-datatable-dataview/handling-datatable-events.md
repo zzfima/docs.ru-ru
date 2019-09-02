@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988306"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203687"
 ---
 # <a name="handling-datatable-events"></a>Обработка событий таблиц данных
 Объект <xref:System.Data.DataTable> предоставляет ряд событий, которые может обрабатывать приложение. В следующей таблице приводится описание событий `DataTable`.  
@@ -81,7 +81,7 @@ ms.locfileid: "69988306"
   
 ## <a name="see-also"></a>См. также
 
-- [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Обработка событий DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Обработка событий наборов данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Управление данными в DataTable](manipulating-data-in-a-datatable.md)
+- [Обработка событий DataAdapter](../handling-dataadapter-events.md)
+- [Обработка событий наборов данных](handling-dataset-events.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

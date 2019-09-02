@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539307"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104949"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Выбор версии .NET Core для использования
 
@@ -32,8 +32,8 @@ ms.locfileid: "67539307"
 
 Команды пакета SDK включают `dotnet new` и `dotnet run`. В .NET Core CLI нужно выбрать версию пакета SDK для каждой команды `dotnet`. В CLI используется пакет SDK последней версии, установленный на компьютере по умолчанию, даже если:
 
-* проект предназначен для более ранней версии среды выполнения .NET Core;
-* последняя версия пакета SDK для .NET Core доступна в виде предварительной версии.
+- проект предназначен для более ранней версии среды выполнения .NET Core;
+- последняя версия пакета SDK для .NET Core доступна в виде предварительной версии.
 
 Вы можете воспользоваться последними преимуществами и улучшениями пакета SDK при работе с более ранними версиями среды выполнения .NET Core. Вы можете выбирать несколько версий среды выполнения .NET Core в разных проектах, используя одинаковые средства пакета SDK для всех проектов.
 

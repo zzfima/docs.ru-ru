@@ -2,15 +2,15 @@
 title: Определение текста элемента
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879636"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203532"
 ---
 # <a name="inferring-element-text"></a>Определение текста элемента
-Если элемент содержит текст и не имеет дочерних элементов был определен как таблицы, например (элементы с атрибутами) или повторяющимися элементами, новый столбец с именем **TableName_Text** добавляется к таблице, выводящейся для элемента. Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце. **ColumnMapping** нового столбца будет установлено **MappingType.SimpleContent**.  
+Если элемент содержит текст и не имеет дочерних элементов, которые должны выводиться как таблицы (например, элементы с атрибутами или повторяющиеся элементы), в таблицу, выводимую для элемента, будет добавлен новый столбец с именем **TableName_Text** . Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце. Свойству **ColumnMapping** нового столбца будет присвоено значение **MappingType. SimpleContent**.  
   
  Например, рассмотрим следующий XML-код:  
   
@@ -20,11 +20,11 @@ ms.locfileid: "61879636"
 </DocumentElement>  
 ```  
   
- Процесс вывода сформирует таблицу с именем **Element1** с двумя столбцами: **attr1** и **Element1_Text**. **ColumnMapping** свойство **attr1** столбца будет присвоено **MappingType.Attribute**. **ColumnMapping** свойство **Element1_Text** столбца будет присвоено **MappingType.SimpleContent**.  
+ В процессе вывода создается таблица с именем **Element1** с двумя столбцами: **attr1** и **Element1_Text**. Свойству **ColumnMapping** столбца **attr1** будет присвоено значение **MappingType. Attribute**. Свойству **ColumnMapping** столбца **Element1_Text** будет присвоено значение **MappingType. SimpleContent**.  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -40,11 +40,11 @@ ms.locfileid: "61879636"
 </Element1>  
 ```  
   
- Процесс вывода сформирует таблицу с именем **Element1** с одним столбцом с именем **ChildElement1**. Текст для **ChildElement1** элемент будет включен в строку в таблице. Весь прочий текст будет пропущен. **ColumnMapping** свойство **ChildElement1** столбца будет присвоено **MappingType.Element**.  
+ В процессе вывода создается таблица с именем **Element1** с одним столбцом с именем **ChildElement1**. Текст элемента **ChildElement1** будет включаться в строку таблицы. Весь прочий текст будет пропущен. Свойству **ColumnMapping** столбца **ChildElement1** будет присвоено значение **MappingType. element**.  
   
- **Набор данных:** DocumentElement  
+ **Объекте** DocumentElement  
   
- **Таблица:** Element1  
+ **Таблица** Element1  
   
 |ChildElement1|  
 |-------------------|  
@@ -52,9 +52,9 @@ ms.locfileid: "61879636"
   
 ## <a name="see-also"></a>См. также
 
-- [Определение реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Определение реляционной структуры DataSet из XML](inferring-dataset-relational-structure-from-xml.md)
+- [Загрузка DataSet из XML](loading-a-dataset-from-xml.md)
+- [Загрузка сведений о схеме DataSet из XML](loading-dataset-schema-information-from-xml.md)
+- [Использование XML в наборах данных](using-xml-in-a-dataset.md)
+- [Наборы данных, таблицы данных и объекты DataView](index.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

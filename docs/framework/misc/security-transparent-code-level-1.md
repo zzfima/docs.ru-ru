@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910710"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206077"
 ---
 # <a name="security-transparent-code-level-1"></a>Прозрачный для системы безопасности код, уровень 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Прозрачность позволяет разработчикам создавать более безопасные библиотеки .NET Framework, предоставляющие частично доверенному коду доступ к функциям. Прозрачность уровня 1 появилась в платформе .NET Framework версии 2.0 и в основном использовалась только корпорацией Майкрософт. Начиная с .NET Framework 4 можно использовать [прозрачность уровня 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Однако прозрачность уровня 1 была сохранена, чтобы можно было найти устаревший код, который должен выполняться с более ранними правилами безопасности.  
+ Прозрачность позволяет разработчикам создавать более безопасные библиотеки .NET Framework, предоставляющие частично доверенному коду доступ к функциям. Прозрачность уровня 1 появилась в платформе .NET Framework версии 2.0 и в основном использовалась только корпорацией Майкрософт. Начиная с .NET Framework 4 можно использовать [прозрачность уровня 2](security-transparent-code-level-2.md). Однако прозрачность уровня 1 была сохранена, чтобы можно было найти устаревший код, который должен выполняться с более ранними правилами безопасности.  
   
 > [!IMPORTANT]
 > Прозрачность уровня 1 следует указывать только для совместимости, то есть уровень 1 следует задавать только для кода, разработанного на платформе .NET Framework 3.5 или более ранней версии и использующего <xref:System.Security.AllowPartiallyTrustedCallersAttribute> или не использующего модель прозрачности. Например, используйте прозрачность уровня 1 для сборок .NET Framework 2.0, которые допускают вызовы из частично доверенных вызывающих объектов (APTCA). Для кода, разработанного для .NET Framework 4, всегда используйте прозрачность уровня 2.  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>См. также
 
-- [Прозрачный для системы безопасности код, уровень 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [Изменения системы безопасности](../../../docs/framework/security/security-changes.md)
+- [Прозрачный для системы безопасности код, уровень 2](security-transparent-code-level-2.md)
+- [Изменения системы безопасности](../security/security-changes.md)

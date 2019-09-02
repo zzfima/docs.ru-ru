@@ -3,12 +3,12 @@ title: Преобразование деревьев выражений
 description: Сведения о том, как перейти к каждому узлу в дереве выражения при создании измененной копии этого дерева выражений.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490077"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202948"
 ---
 # <a name="translating-expression-trees"></a>Преобразование деревьев выражений
 
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 Если выполнить его в том же выражении, получаются следующие выходные данные:
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 Ниже вы видите выходные данные проверки этого выражения:
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1

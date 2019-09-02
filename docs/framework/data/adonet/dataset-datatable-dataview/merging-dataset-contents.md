@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607934"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203361"
 ---
 # <a name="merging-dataset-contents"></a>Слияние содержимого набора данных
 
@@ -35,7 +35,7 @@ ms.locfileid: "61607934"
 
 ## <a name="preservechanges"></a>Флаг PreserveChanges
 
-Когда `DataSet`, `DataTable` или `DataRow` передается в метод `Merge`, можно включить необязательные параметры, указывающие, сохранять ли изменения в существующем объекте `DataSet` и как обрабатывать элементы новой схемы в исходных данных. Первым из этих параметров после входных данных является логический флаг <xref:System.Data.LoadOption.PreserveChanges>, который задает, сохранять ли изменения в существующем `DataSet`. Если флаг `PreserveChanges` установлен в `true`, входные значения не переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` установлен в `false`, входные значения переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` не задан, по умолчанию он устанавливается в `false`. Дополнительные сведения о версиях строк см. в разделе [строки состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+Когда `DataSet`, `DataTable` или `DataRow` передается в метод `Merge`, можно включить необязательные параметры, указывающие, сохранять ли изменения в существующем объекте `DataSet` и как обрабатывать элементы новой схемы в исходных данных. Первым из этих параметров после входных данных является логический флаг <xref:System.Data.LoadOption.PreserveChanges>, который задает, сохранять ли изменения в существующем `DataSet`. Если флаг `PreserveChanges` установлен в `true`, входные значения не переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` установлен в `false`, входные значения переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` не задан, по умолчанию он устанавливается в `false`. Дополнительные сведения о версиях строк см. в разделе [состояния строк и версии строк](row-states-and-row-versions.md).
 
 Если `PreserveChanges` имеет значение `true`, данные из существующей строки сохраняются в версии <xref:System.Data.DataRowVersion.Current> текущей строки, в то время как данные из версии <xref:System.Data.DataRowVersion.Original> существующей строки переопределяются данными из версии `Original` входной строки. <xref:System.Data.DataRow.RowState%2A> существующей строки установлен в <xref:System.Data.DataRowState.Modified>. Применяются следующие исключения:
 
@@ -69,9 +69,9 @@ ms.locfileid: "61607934"
 Рассмотрим случай, когда существующая строка в `DataSet` является строкой `Unchanged` со значением первичного ключа, равным 1. Во время выполнения операции слияния с входной строкой `Modified` со значением первичного ключа `Original`, равным 2, и значением первичного ключа `Current`, равным 1, существующая строка и входная строка не считаются совпадающими, так как различаются значения первичных ключей `Original`. Однако после завершения объединения и проверки ограничений появится исключение, т. к. значения первичного ключа `Current` нарушают ограничение уникальности для столбца первичного ключа.
 
 > [!NOTE]
-> Если строки вставляются в таблицу базы данных, содержащую столбец, автоматически увеличивающий свое значение, например столбец идентификаторов, то возвращаемое вставкой значение столбца идентификаторов может не совпадать со значением в объекте `DataSet`, в результате чего возвращаемые строки не объединяются, а присоединяются. Дополнительные сведения см. в разделе [извлечение идентификации или значений автонумерации](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Если строки вставляются в таблицу базы данных, содержащую столбец, автоматически увеличивающий свое значение, например столбец идентификаторов, то возвращаемое вставкой значение столбца идентификаторов может не совпадать со значением в объекте `DataSet`, в результате чего возвращаемые строки не объединяются, а присоединяются. Дополнительные сведения см. в разделе [Получение значений Identity или](../retrieving-identity-or-autonumber-values.md)автонумерации.
 
-В следующем примере кода выполняет слияние двух `DataSet` объектов с разными схемами в одну `DataSet` с объединенный схемами двух входных `DataSet` объектов.
+В следующем примере кода два `DataSet` объекта с разными схемами объединяются в одну `DataSet` с объединенными схемами двух входящих `DataSet` объектов.
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ ms.locfileid: "61607934"
 
 ## <a name="see-also"></a>См. также
 
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [Объекты DataAdapter и DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Извлечение идентификации или значений автонумерации](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Наборы данных, таблицы данных и объекты DataView](index.md)
+- [Состояния и версии строк](row-states-and-row-versions.md)
+- [Объекты DataAdapter и DataReader](../dataadapters-and-datareaders.md)
+- [Извлечение и изменение данных в ADO.NET](../retrieving-and-modifying-data.md)
+- [Извлечение идентификации или значений автонумерации](../retrieving-identity-or-autonumber-values.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

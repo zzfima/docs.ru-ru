@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034532"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205489"
 ---
 # <a name="adding-data-to-a-datatable"></a>Добавление данных в таблицу данных
-После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных. Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>. Новый **DataRow** объект возвращается при вызове <xref:System.Data.DataTable.NewRow%2A> метод. **DataTable** создает **DataRow** объекта на основе структуры таблицы, как определено <xref:System.Data.DataColumnCollection>.  
+После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных. Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>. При вызове <xref:System.Data.DataTable.NewRow%2A> метода возвращается новый объект **DataRow** . Затем **Таблица** данных создает объект **DataRow** на основе структуры таблицы, как определено в <xref:System.Data.DataColumnCollection>.  
   
- В следующем примере показано, как для создания новой строки, вызвав **NewRow** метод.  
+ В следующем примере показано, как создать новую строку, вызвав метод **невров** .  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- После вставки данных в новую строку, **добавить** метод используется для добавления строки в <xref:System.Data.DataRowCollection>, как показано в следующем коде.  
+ После вставки данных в новую строку метод **Add** используется для добавления строки <xref:System.Data.DataRowCollection>в, показанной в следующем коде.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Можно также вызвать **добавить** типизированный метод для добавления новой строки, передав массив значений, как <xref:System.Object>, как показано в следующем примере.  
+ Можно также вызвать метод **Add** , чтобы добавить новую строку, передав массив значений, типизированный как <xref:System.Object>, как показано в следующем примере.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Передавая ему массив значений с типом **объект**, **добавить** метод создает новую строку в таблице и заданию значений столбцов со значениями в массиве объектов. Обратите внимание, что значения в массиве сопоставляются со столбцами последовательно, с учетом порядка этих столбцов в таблице.  
+ Передача массива значений, типизированных как **Object**, в метод **Add** создает новую строку внутри таблицы и устанавливает для ее значений столбцов значения в массиве объектов. Обратите внимание, что значения в массиве сопоставляются со столбцами последовательно, с учетом порядка этих столбцов в таблице.  
   
- В следующем примере добавляется 10 строк к вновь созданному **клиентов** таблицы.  
+ В следующем примере в созданную таблицу **Customers** добавляется 10 строк.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Управление данными в DataTable](manipulating-data-in-a-datatable.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

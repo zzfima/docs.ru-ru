@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916296"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206138"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Проверка введенных пользователем данных в Windows Forms
 Когда пользователи вводят данные в приложение, может потребоваться проверить, являются ли данные допустимыми, прежде чем использовать их в приложении. Может потребоваться, чтобы определенные текстовые поля не были нулевой длины, поле было отформатировано как номер телефона или другой тип данных правильного формата или что строка не содержит небезопасный символ, который можно использовать для нарушения безопасности базы данных. Windows Forms предоставляет несколько способов проверки входных данных в приложении.  
@@ -85,7 +85,7 @@ ms.locfileid: "69916296"
   
 - Путем вызова <xref:System.Windows.Forms.Form.Close%2A> метода программным способом.  
   
- Однако в некоторых случаях может потребоваться разрешить пользователю закрывать форму независимо от того, являются ли значения в элементах управления допустимыми. Можно переопределить проверку и закрыть форму, которая по-прежнему содержит недопустимые данные, создав обработчик для <xref:System.Windows.Forms.Form.Closing> события формы. В событии присвойте <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `false`свойству значение. Это приводит к закрытию формы. Дополнительные сведения и пример см. в разделе <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ Однако в некоторых случаях может потребоваться разрешить пользователю закрывать форму независимо от того, являются ли значения в элементах управления допустимыми. Можно переопределить проверку и закрыть форму, которая по-прежнему содержит недопустимые данные, создав обработчик для <xref:System.Windows.Forms.Form.FormClosing> события формы. В событии присвойте <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `false`свойству значение. Это приводит к закрытию формы. Дополнительные сведения и пример см. в разделе <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>.  
   
 > [!NOTE]
 > Если принудительно закрыть форму таким образом, все данные в элементах управления формы, которые еще не были сохранены, теряются. Кроме того, модальные формы не проверяют содержимое элементов управления при их закрытии. Вы по-прежнему можете использовать проверку элемента управления для блокировки фокуса на элемент управления, но не нужно беспокоиться о поведении, связанном с закрытием формы.  
@@ -93,7 +93,7 @@ ms.locfileid: "69916296"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [Элемент управления MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md)
 - [Примеры регулярных выражений](../../standard/base-types/regular-expression-examples.md)

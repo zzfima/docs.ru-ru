@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2c9fea2189819058187020c2e67b8826659fbed4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596833"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205448"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Возвращение подмножества свойств элементов в запросе
 Используйте анонимный тип в выражении запроса, если выполняются оба следующих условия:  
@@ -21,7 +21,7 @@ ms.locfileid: "69596833"
   
  Если требуется возвращать только одно свойство или поле из каждого исходного элемента, вы можете использовать оператор "точка" в предложении `select`. Например, чтобы вернуть только `ID` для каждого элемента `student`, напишите предложение `select` следующим образом:  
   
-```  
+```csharp  
 select student.ID;  
 ```  
   
@@ -32,7 +32,7 @@ select student.ID;
   
  Обратите внимание, что анонимный тип использует имена исходных элементов для соответствующих свойств, если имена не заданы. Чтобы присваивать новые имена свойствам в анонимном типе, напишите инструкцию `select` следующим образом:  
   
-```  
+```csharp  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   

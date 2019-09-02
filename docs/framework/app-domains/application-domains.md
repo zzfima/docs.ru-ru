@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927998"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040737"
 ---
 # <a name="application-domains"></a>Домены приложений
 
@@ -145,9 +145,9 @@ COMPLUS_LoaderOptimization = 1
  Если значение флага среды COMPLUS_LoaderOptimization — 1, то хост-приложение среды выполнения использует способ загрузки SingleDomain. Он принудительно загружает все сборки как зависимые от домена, за исключением сборки Mscorlib, которая всегда загружается как независимая. Этот вариант называется однодоменным, поскольку обычно он используется, когда в хост-приложении запускается только одно приложение в процессе.  
   
 > [!CAUTION]
->  Флаг среды COMPLUS_LoaderOptimization предназначен для сценариев диагностики и тестирования. Когда он включен, работа может существенно замедляться, а использование памяти — увеличиваться.  
+> Флаг среды COMPLUS_LoaderOptimization предназначен для сценариев диагностики и тестирования. Когда он включен, работа может существенно замедляться, а использование памяти — увеличиваться.  
   
-### <a name="code-example"></a>Пример кода
+### <a name="code-example"></a>Примеры кода
 
  Чтобы все сборки для службы IISADMIN загружались как зависимые от домена, добавьте код `COMPLUS_LoaderOptimization=1` в многострочный параметр среды в разделе HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
   

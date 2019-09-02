@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607025"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203110"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Запись содержимого набора как данных XML
 В ADO.NET можно записать XML-представление объекта <xref:System.Data.DataSet> вместе со схемой или без нее. Если информация схемы встраивается внутрь XML, она записываются на языке XSD. Схема содержит определения таблиц для <xref:System.Data.DataSet>, а также определения связей и ограничений.  
   
  Если <xref:System.Data.DataSet> записан как XML-данные, строки в <xref:System.Data.DataSet> записываются в своей текущей версии. Однако <xref:System.Data.DataSet> может быть записан как DiffGram, так что будут включены и текущие, и исходные данные строк.  
   
- XML-представление <xref:System.Data.DataSet> могут записываться в файл, поток, **XmlWriter**, или строка. Эти возможности обеспечивают большую гибкость способа переноса XML-представления для <xref:System.Data.DataSet>. Чтобы получить XML-представление <xref:System.Data.DataSet> как строку, используйте **GetXml** метод, как показано в следующем примере.  
+ XML-представление <xref:System.Data.DataSet> может быть записано в файл, в поток, в **XmlWriter**или в строку. Эти возможности обеспечивают большую гибкость способа переноса XML-представления для <xref:System.Data.DataSet>. Чтобы получить XML-представление в <xref:System.Data.DataSet> виде строки, используйте метод **getXML** , как показано в следующем примере.  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  
@@ -27,21 +27,21 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml** возвращает XML-представление <xref:System.Data.DataSet> без сведений о схеме. Для записи сведений о схеме из <xref:System.Data.DataSet> (в виде XML-схемы) в строку, используйте **GetXmlSchema**.  
+ **GetXML** возвращает XML-представление <xref:System.Data.DataSet> без сведений о схеме. Чтобы записать сведения о схеме из <xref:System.Data.DataSet> (в виде XML-схемы) в строку, используйтепараметр GetSchema.  
   
- Для записи <xref:System.Data.DataSet> в файл, поток, или **XmlWriter**, использовать **WriteXml** метод. Первый параметр, передаваемый **WriteXml** — место назначения выходных данных XML. Например, передается строка, содержащая имя файла, **System.IO.TextWriter** объекта и т. д. Можно передать необязательный второй параметр **XmlWriteMode** для указания, как должны записываться выходные данные XML.  
+ Для записи <xref:System.Data.DataSet> в файл, поток или **XmlWriter**используйте метод **WriteXml** . Первым параметром, который передается в **WriteXml** , является назначение выходных данных в формате XML. Например, передайте строку, содержащую имя файла, объект **System. IO. TextWriter** и т. д. Можно передать необязательный второй параметр **ксмлвритемоде** , чтобы указать способ записи выходных данных XML.  
   
- В следующей таблице показаны параметры для **XmlWriteMode**.  
+ В следующей таблице показаны параметры для **ксмлвритемоде**.  
   
 |Параметр XmlWriteMode|Описание|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|Записывает текущее содержимое <xref:System.Data.DataSet> как XML-данные, без схемы XML. Это значение по умолчанию.|  
 |**WriteSchema**|Записывает текущее содержимое <xref:System.Data.DataSet> в виде XML-данных с реляционной структурой в виде встроенной схемы XML.|  
-|**DiffGram**|Записывает весь <xref:System.Data.DataSet> как DiffGram, включая исходные и текущие значения. Дополнительные сведения см. в разделе [дельт](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**DiffGram**|Записывает весь <xref:System.Data.DataSet> как DiffGram, включая исходные и текущие значения. Дополнительные сведения см. в разделе [дельтами](diffgrams.md).|  
   
- При записи XML-представление <xref:System.Data.DataSet> , содержащий **DataRelation** объектов, вы, вероятно, пожелают результирующем XML-КОДЕ дочерние строки для каждой связи были вложены в соответствующие родительские элементы. Для этого необходимо задать **Nested** свойство **DataRelation** для **true** при добавлении **DataRelation** для <xref:System.Data.DataSet>. Дополнительные сведения см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ При написании XML-представления <xref:System.Data.DataSet> объекта, содержащего объекты **DataRelation** , скорее всего потребуется, чтобы результирующий XML имели дочерние строки каждой связи, вложенные в соответствующие им родительские элементы. Для этого присвойте свойству **Nested** объекта **DataRelation** значение **true** при добавлении <xref:System.Data.DataSet>объекта **DataRelation** в коллекцию. Дополнительные сведения см. в разделе [вложенность связей](nesting-datarelations.md)данных.  
   
- Далее даются два примера того, как записать в файл XML-представление для <xref:System.Data.DataSet>. Первый пример передает имя файла для итогового XML как строку **WriteXml**. Во втором примере передается **System.IO.StreamWriter** объекта.  
+ Далее даются два примера того, как записать в файл XML-представление для <xref:System.Data.DataSet>. В первом примере имя файла для результирующего XML передается в **WriteXml**в виде строки. Во втором примере передается объект **System. IO. StreamWriter** .  
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -64,20 +64,20 @@ xmlSW.Close();
 ```  
   
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Сопоставление столбцов с XML-элементами, атрибутами и текстом  
- Можно указать, как столбец таблицы представляется в XML с помощью **ColumnMapping** свойство **DataColumn** объекта. В следующей таблице показаны различные **MappingType** значений в параметре **ColumnMapping** свойства столбца таблицы и получаемый код XML.  
+ Можно указать способ представления столбца таблицы в XML с помощью свойства **ColumnMapping** объекта **DataColumn** . В следующей таблице показаны различные значения **MappingType** для свойства **ColumnMapping** столбца таблицы и результирующий XML.  
   
 |Значение MappingType|Описание|  
 |-----------------------|-----------------|  
-|**Элемент**|Это значение по умолчанию. Столбец записывается как XML-элемент, где ColumnName - имя элемента, а содержимое столбца записывается как текст элемента. Пример:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|Столбец записывается как XML-атрибут XML-элемента для текущей строки, где ColumnName - это имя атрибута, а содержимое столбца записывается как значение атрибута. Пример:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|Содержимое столбца записывается как текст в XML-элементе для текущей строки. Пример:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Обратите внимание, что **SimpleContent** невозможно задать для столбца таблицы, имеющей **элемент** столбцы или вложенные связи.|  
-|**Скрытые**|Столбец не записывается в выводимый XML.|  
+|**Элемент**|Это значение по умолчанию. Столбец записывается как XML-элемент, где ColumnName - имя элемента, а содержимое столбца записывается как текст элемента. Например:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|Столбец записывается как XML-атрибут XML-элемента для текущей строки, где ColumnName - это имя атрибута, а содержимое столбца записывается как значение атрибута. Например:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**SimpleContent**|Содержимое столбца записывается как текст в XML-элементе для текущей строки. Например:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Обратите внимание, что значение **SimpleContent** не может быть задано для столбца таблицы, имеющей столбцы **элементов** или вложенные отношения.|  
+|**Служеб**|Столбец не записывается в выводимый XML.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [Запись сведений о схеме DataSet как XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Использование XML в наборах данных](using-xml-in-a-dataset.md)
+- [DiffGrams](diffgrams.md)
+- [Вложенность объектов DataRelation](nesting-datarelations.md)
+- [Запись сведений о схеме DataSet как XSD](writing-dataset-schema-information-as-xsd.md)
+- [Наборы данных, таблицы данных и объекты DataView](index.md)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

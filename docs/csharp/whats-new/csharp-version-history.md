@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363875"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105682"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -19,11 +19,11 @@ ms.locfileid: "68363875"
 
 Для использования средств сборки C# требуется последний основной выпуск версии языка по умолчанию. Основные выпуски, описанные в других статьях этого раздела, могут чередоваться с дополнительными выпусками. Чтобы использовать новые возможности доработанного выпуска, [настройте версию языка компилятора](../language-reference/configure-language-version.md), выбрав необходимую. После C# 7.0 было три дополнительных выпуска:
 
-* [C# 7.3](csharp-7-3.md).
+- [C# 7.3](csharp-7-3.md).
   - Версия C# 7.3 появилась в [Visual Studio 2017 версии 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
-* [C# 7.2](csharp-7-2.md).
+- [C# 7.2](csharp-7-2.md).
   - Версия C# 7.2 появилась в [Visual Studio 2017 версии 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
-* [C# 7.1](csharp-7-1.md).
+- [C# 7.1](csharp-7-1.md).
   - Версия C# 7.1 появилась в [Visual Studio 2017 версии 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# версии 1.0
@@ -124,7 +124,7 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 ### <a name="see-also"></a>См. также
 
-* [Code Project. Информационные атрибуты вызывающего объекта в C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Code Project. Информационные атрибуты вызывающего объекта в C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Информационный атрибут вызывающего объекта позволяет легко получать сведения о контексте, в котором выполняется работа, не прибегая к массивному стандартному коду отражения. Он находит обширное применение в задачах диагностики и ведения журнала.
 

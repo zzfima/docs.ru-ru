@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950696"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046489"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Обзор асинхронной модели, основанной на событиях
 Приложениям, выполняющим множество задач одновременно и при этом активно реагирующим на действия пользователя, часто требуется структура, использующая несколько потоков. Пространство имен <xref:System.Threading> предоставляет все необходимые средства для создания высокопроизводительных многопоточных приложений, однако для эффективного использования этих средств требуется значительный опыт в области многопоточной программной инженерии. Для относительно простых многопоточных приложений компонент <xref:System.ComponentModel.BackgroundWorker> предоставляет прямолинейное решение. Для более сложных асинхронных приложений рекомендуется реализовать класс, который соответствует асинхронной модели на основе событий.  
@@ -45,7 +45,7 @@ ms.locfileid: "69950696"
  Асинхронная модель на основе событий требует наличия возможности отмены асинхронной операции, и элемент управления <xref:System.Windows.Forms.PictureBox> позволяет выполнить это требование с помощью метода <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. При вызове <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> отправляется запрос на остановку ожидающей загрузки, а после отмены задачи возникает событие <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
 > [!CAUTION]
->  Загрузка может закончиться одновременно с получением запроса <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>, поэтому <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> может не отражать отмену запроса. Это называется *состоянием гонки* и является распространенной проблемой в многопоточном программировании. Дополнительные сведения о проблемах многопоточного программирования см. в разделе [Рекомендации по работе с потоками](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> Загрузка может закончиться одновременно с получением запроса <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>, поэтому <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> может не отражать отмену запроса. Это называется *состоянием гонки* и является распространенной проблемой в многопоточном программировании. Дополнительные сведения о проблемах многопоточного программирования см. в разделе [Рекомендации по работе с потоками](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Характеристики асинхронной модели на основе событий  
  Асинхронная модель на основе событий может принимать разную форму в зависимости от операций, поддерживаемых определенным классом. Простейшие классы могут иметь один метод _MethodName_**Async** и одно соответствующее ему событие _MethodName_**Completed**. Более сложные классы будут содержать несколько методов _MethodName_**Async** с соответствующими событиями _MethodName_**Completed**, а также синхронные версии этих методов. Классы также могут поддерживать отмену, составление отчетов о ходе работы и добавочные результаты для каждого асинхронного метода.  
