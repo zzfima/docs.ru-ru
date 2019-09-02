@@ -9,11 +9,11 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742475"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "61674898"
 ---
 # <a name="using-application-domains"></a>Использование доменов приложений
 Домены приложений предоставляют изолированный модуль для среды CLR. Они создаются и выполняются внутри процесса. Домены приложений обычно создаются хост-приложением среды выполнения — приложением, ответственным за загрузку среды выполнения в процесс и выполнение пользовательского кода внутри домена приложения. Хост-приложение среды выполнения создает процесс и домен приложения по умолчанию, а также выполняет внутри него управляемый код. Хост-приложения среды выполнения включают в себя ASP.NET, Microsoft Internet Explorer и оболочку Windows.  
@@ -21,34 +21,34 @@ ms.locfileid: "32742475"
  Для большинства приложений нет необходимости создавать собственный домен приложения: хост-приложение среды выполнения создает все требуемые домены автоматически. Но вы можете создать и настроить дополнительные домены приложений, если приложению необходимо изолировать код или использовать и выгружать библиотеки DLL.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Создание домена приложения](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ [How to: Создание домена приложения](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  Описание того, как создать домен приложения программным способом.  
   
- [Практическое руководство. Выгрузка домена приложения](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ [How to: Выгрузка домена приложения](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
  Описание того, как выгрузить домен приложения программным способом.  
   
- [Практическое руководство. Настройка домена приложения](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ [How to: Настройка домена приложения](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
  Содержит общие сведения о настройке домена приложения.  
   
  [Извлечение сведений о настройке из домена приложения](../../../docs/framework/app-domains/retrieve-setup-information.md)  
  Описание того, как извлечь сведения о настройке из домена приложения.  
   
- [Практическое руководство. Загрузка сборок в домен приложения](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+ [How to: Загрузка сборок в домен приложения](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  Описание того, как загрузить сборку в домен приложения.  
   
- [Практическое руководство. Получение сведений о типах и членах из сборки](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [How to: Получение сведений о типах и членах из сборки](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  Описание того, как получить сведения о сборке.  
   
  [Теневое копирование сборок](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
  Описание того, как теневое копирование позволяет обновлять сборки во время их использования и как настроить теневое копирование.  
   
- [Практическое руководство. Получение уведомлений о первом этапе обработки исключений](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ [How to: Получение уведомлений о первом этапе обработки исключений](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  Описывается, как можно получать уведомления о создании исключений до того, как среда CLR начнет искать обработчики исключений.  
   
  [Разрешение загрузки сборок](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
  Содержит инструкции по использованию события <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> для разрешения сбоев загрузки сборок.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.AppDomain>  
  Представляет домен приложения. Предоставляет методы для создания доменов приложений и управления ими.  
   
