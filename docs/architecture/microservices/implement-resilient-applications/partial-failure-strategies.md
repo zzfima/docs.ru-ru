@@ -33,7 +33,7 @@ ms.locfileid: "68674511"
 - **Повышение устойчивости и оптимизация производительности**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
-- **Переборка.** Репозиторий GitHub. Реализация с помощью политики Polly.
+- **Переборка.** Репозиторий GitHub. Реализация с помощью политики Polly.\
   <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
 - **Проектирование устойчивых приложений для Azure**\
