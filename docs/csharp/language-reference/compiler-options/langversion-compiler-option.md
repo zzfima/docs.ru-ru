@@ -1,6 +1,6 @@
 ---
 title: -langversion (параметры компилятора C#)
-ms.date: 05/14/2018
+ms.date: 08/23/2019
 f1_keywords:
 - /langversion
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f34b5d512a8054b0ab0d3fba54525801eb560143
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602827"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040459"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (параметры компилятора C#)
 
@@ -46,6 +46,8 @@ ms.locfileid: "69602827"
 |3|Компилятор принимает только синтаксис, включенный в спецификацию C# 3.0 или более раннюю <sup id="TCS3">[CS3](#FCS3)</sup>|
 |ISO-2|Компилятор принимает только синтаксис, включенный в спецификацию ISO/IEC 23270:2006 C# (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |ISO-1|Компилятор принимает только синтаксис, включенный в спецификацию ISO/IEC 23270:2003 C# (1.0/1.2) <sup id="TISO1">[ISO1](#FISO1)</sup>|  
+
+Версия языка по умолчанию зависит от целевой платформы приложения, а также от установленной версии пакета SDK или Visual Studio. Эти правила определяются в статье о [настройке версии языка](../configure-language-version.md#defaults)
 
 ## <a name="remarks"></a>Примечания
 

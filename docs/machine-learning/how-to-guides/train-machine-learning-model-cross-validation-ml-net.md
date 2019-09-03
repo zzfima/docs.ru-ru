@@ -1,16 +1,16 @@
 ---
 title: Обучение модели машинного обучения с помощью перекрестной проверки
 description: Узнайте, как использовать кросс-валидацию для создания более надежных моделей машинного обучения в ML.NET. Кросс-валидация — это методика обучения и оценки модели, которая разбивает данные на несколько секций и обучает несколько алгоритмов на этих секциях.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397649"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169062"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>Обучение модели машинного обучения с помощью перекрестной проверки
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-Можно моделировать данные с помощью класса, например `HousingData`:
+Данные можно моделировать с помощью класса, например, `HousingData`, и загружать в [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 public class HousingData
@@ -47,8 +47,6 @@ public class HousingData
     public float CurrentPrice { get; set; }
 }
 ```
-
-Загрузка данных в [`IDataView`](xref:Microsoft.ML.IDataView):
 
 ## <a name="prepare-the-data"></a>Подготовка данных
 

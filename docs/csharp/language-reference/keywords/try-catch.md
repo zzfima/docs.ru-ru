@@ -11,18 +11,16 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422591"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168723"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Справочник по C#)
 
 Оператор try-catch состоит из блока `try`, за которым следует одно или несколько предложений `catch`, задающих обработчики для различных исключений.
-
-## <a name="remarks"></a>Примечания
 
 При возникновении исключения общеязыковая среда выполнения (CLR) ищет оператор `catch`, который обрабатывает это исключение. Если текущий выполняемый метод не содержит такой блок `catch`, среда CLR выполняет поиск в методе, который вызвал текущий метод, и так далее вверх по стеку вызовов. Если блок `catch` не находится, то среда CLR отображает пользователю сообщение о необработанном исключении и останавливает выполнение программы.
 
@@ -131,15 +129,16 @@ static void Main()
 Дополнительные сведения о перехвате исключений см. в разделе [try-catch-finally](try-catch-finally.md).
 
 ## <a name="exceptions-in-async-methods"></a>Исключения в асинхронных методах
-Асинхронный метод помечается модификатором [async](async.md) и обычно содержит одно или несколько выражений или инструкций await. Выражение await применяет оператор [await](await.md) к <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>.
+
+Асинхронный метод помечается модификатором [async](async.md) и обычно содержит одно или несколько выражений или инструкций await. Выражение await применяет оператор [await](../operators/await.md) к <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>.
 
 Когда управление достигает `await` в асинхронном методе, выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи выполнение в методе может быть возобновлено. Дополнительные сведения см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](../../programming-guide/concepts/async/index.md) и [Поток управления в асинхронных программах](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
 
 Завершенная задача, к которой применяется `await`, может находиться в состоянии сбоя из-за необработанного исключения в методе, который возвращает эту задачу. Ожидание задачи вызывает исключение. Задача также может завершиться в отмененном состоянии, если отменяется асинхронный процесс, возвращающий эту задачу. Ожидание отмененной задачи вызывает `OperationCanceledException`. Дополнительные сведения о том, как отменить асинхронный процесс, см. в разделе [Точная настройка асинхронного приложения (C# и Visual Basic)](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Для перехвата исключения ожидайте задачу в блоке `try` и перехватывайте это исключение в соответствующем блоке `catch`. См. пример в разделе «Пример».
+Для перехвата исключения ожидайте задачу в блоке `try` и перехватывайте это исключение в соответствующем блоке `catch`. См. пример в разделе [Пример асинхронного метода](#async-method-example).
 
-Задача может быть в состоянии сбоя, если в ожидаемом асинхронном методе произошло несколько исключений. Например, задача может быть результатом вызова метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. При ожидании такой задачи перехватывается только одно из исключений и невозможно предсказать, какое исключение будет перехвачено. См. пример в разделе «Пример».
+Задача может быть в состоянии сбоя, если в ожидаемом асинхронном методе произошло несколько исключений. Например, задача может быть результатом вызова метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. При ожидании такой задачи перехватывается только одно из исключений и невозможно предсказать, какое исключение будет перехвачено. См. пример в разделе [Пример Task.WhenAll](#taskwhenall-example).
 
 ## <a name="example"></a>Пример
 
@@ -147,7 +146,7 @@ static void Main()
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
-## <a name="example"></a>Пример
+## <a name="two-catch-blocks-example"></a>Пример двух блоков catch
 
 В следующем примере используются два блока catch и перехватывается наиболее конкретное исключение, поступившее первым.
 
@@ -157,7 +156,7 @@ static void Main()
 
 [!code-csharp[csrefKeywordsExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#3)]
 
-## <a name="example"></a>Пример
+## <a name="async-method-example"></a>Пример асинхронного метода
 
 В следующем примере демонстрируется обработка исключений для асинхронных методов. Для перехвата исключения, вызванного асинхронной задачей, поместите выражение `await` в блок `try` и перехватывайте это исключение в блоке `catch`.
 
@@ -167,7 +166,7 @@ static void Main()
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
-## <a name="example"></a>Пример
+## <a name="taskwhenall-example"></a>Пример Task.WhenAll
 
 В следующем примере демонстрируется обработка исключений, когда несколько задач могут привести к нескольким исключениям. Блок `try` ожидает задачу, которая возвращается вызовом метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Эта задача завершается после завершения трех задач, к которым применяется WhenAll.
 
@@ -177,7 +176,7 @@ static void Main()
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в разделе [Оператор try](~/_csharplang/spec/statements.md#the-try-statement) в документации [Спецификация C# 6.0](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 

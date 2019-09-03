@@ -1,8 +1,8 @@
 ---
-title: Отражение в .NET Framework
+title: Отражение в .NET
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940035"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133747"
 ---
-# <a name="reflection-in-the-net-framework"></a>Отражение в .NET Framework
+# <a name="reflection-in-net"></a>Отражение в .NET
 Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](../../standard/base-types/common-type-system.md#classes), [интерфейсы](../../standard/base-types/common-type-system.md#interfaces) и [типы значений](../../csharp/language-reference/keywords/value-types.md). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.
   
  Загрузчик [среды CLR](../../standard/clr.md) управляет [доменами приложений](../../../docs/framework/app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
@@ -83,7 +83,7 @@ ms.locfileid: "69940035"
 |[Практическое руководство. Подключение делегата с помощью отражения](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Объясняется, как создать делегат для метода и привязать его к событию. Также объясняется, как создать метод обработки событий во время выполнения с помощью <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Объясняется, как создавать динамические сборки и динамические методы.|  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Справочники  
  <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  

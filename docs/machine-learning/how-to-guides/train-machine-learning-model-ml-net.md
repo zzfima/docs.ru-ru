@@ -1,16 +1,16 @@
 ---
 title: Обучение и оценка модели
 description: Из этой статьи вы узнаете, как создавать модели машинного обучения, собирать метрики и измерять производительность с помощью ML.NET. Модель машинного обучения выполняет обнаружение шаблонов в данных обучения для создания прогнозов на основе новых данных.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397639"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169051"
 ---
 # <a name="train-and-evaluate-a-model"></a>Обучение и оценка модели
 
@@ -20,7 +20,7 @@ ms.locfileid: "67397639"
 
 Цель модели машинного обучения — обнаружить закономерности в обучающих данных. Эти закономерности используются для создания прогнозов на основе новых данных.
 
-Рассмотрим следующую модель данных:
+Можно моделировать данные с помощью класса, например `HousingData`.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Загрузка данных в [`IDataView`](xref:Microsoft.ML.IDataView):
+Используйте следующие данные, которые загружаются в [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 HousingData[] housingData = new HousingData[]

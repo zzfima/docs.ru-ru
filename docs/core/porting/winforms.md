@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327169"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105218"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Практическое руководство. Перенос приложения Windows Forms в .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "59327169"
 
 В этой статье применяются различные имена для обозначения типов файлов, используемых для переноса. При переносе вашего проекта файлы будут называться иначе, поэтому попытайтесь мысленно сопоставить их с именами из этой таблицы:
 
-| Файл | Описание |
+| Файл | ОПИСАНИЕ |
 | ---- | ----------- |
 | **MyApps.sln** | Имя файла решения. |
 | **MyForms.csproj** | Имя проекта Windows Forms в .NET Framework, который нужно перенести. |
@@ -52,7 +52,7 @@ ms.locfileid: "59327169"
 
     После выпуска .NET Core 3.0 предварительной версии 1 исходный код Windows Forms был размещен в свободном доступе на сайте GitHub. Код .NET Core Windows Forms является вилкой с базой кода .NET Framework Windows Forms. Возможно, в используемой вами версии есть некоторые отличия и приложение не удастся перенести.
 
-01. [Пакет обеспечения совместимости Windows][compat-pack] может помочь с переносом.
+01. Помочь с переносом может [пакет обеспечения совместимости Windows][compat-pack].
 
     Некоторые API, доступные в .NET Framework, недоступны в .NET Core 3.0. [Пакет обеспечения совместимости Windows][compat-pack] поддерживает многие из этих API и может обеспечить приложению Windows Forms совместимость с .NET Core.
 
@@ -189,7 +189,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 Используя пример из предыдущего шага, расширим перечень проектов и файлов, с которыми мы работаем.
 
-| Файл | Описание |
+| Файл | ОПИСАНИЕ |
 | ---- | ----------- |
 | **MyApps.sln** | Имя файла решения. |
 | **MyControls.csproj** | Имя проекта библиотеки элементов управления Windows Forms, который нужно перенести. |
@@ -300,7 +300,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
  
 ## <a name="next-steps"></a>Следующие шаги
 
-* Дополнительные сведения о [пакете обеспечения совместимости Windows][compat-pack].
-* [Видео о переносе](https://www.youtube.com/watch?v=upVQEUc_KwU) проекта Windows Forms из .NET Framework в .NET Core.
+- Дополнительные сведения о [пакете обеспечения совместимости Windows][compat-pack].
+- [Видео о переносе](https://www.youtube.com/watch?v=upVQEUc_KwU) проекта Windows Forms из .NET Framework в .NET Core.
 
 [compat-pack]: windows-compat-pack.md

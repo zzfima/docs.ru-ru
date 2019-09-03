@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание многофайловой сборки
+title: Практическое руководство. Создание многофайловой сборки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187802"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040860"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Как выполнить Создание многофайловой сборки
+# <a name="how-to-build-a-multifile-assembly"></a>Практическое руководство. Создание многофайловой сборки
+
 В этой статье рассматривается порядок создания многофайловой сборки и приводится код, иллюстрирующий каждый шаг процедуры.
 
 > [!NOTE]
@@ -69,23 +70,19 @@ ms.locfileid: "59187802"
     >[!NOTE]
     >Компиляторы C# и Visual Basic поддерживают непосредственное создание многофайловых сборок с помощью следующих двух синтаксических структур.
     >
-    >- Для создания сборки из двух файлов используются две компиляции:
+    >- Для создания сборки из двух файлов используются две компиляции: [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- При создании сборки из двух файлов используется одна компиляция:
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- При создании сборки из двух файлов используется одна компиляция: [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
 03. Используйте [компоновщик сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) для создания выходного файла, содержащего манифест сборки. Выходной файл содержит справочную информацию для всех модулей или ресурсов, входящих в сборку.
 
     В командной строке введите следующую команду:
 
-    **al** \<*имя модуля*> \<*имя модуля*> … **/main:**\<*имя метода*> **/out:**\<*имя файла*> **/target:**\<*тип файла сборки*>
+    **al** \<*имя модуля*> \<*имя модуля*> … **/main:** \<*имя метода*>  **/out:** \<*имя файла*>  **/target:** \<*тип файла сборки*>
 
     В этой команде в аргументах *имя модуля* задаются имена всех модулей, которые будут включены в сборку. В параметре **/main:** указывается имя метода, являющегося точкой входа сборки. В параметре **/out:** задается имя выходного файла, содержащего метаданные сборки. В параметре **/target:** указывается, что сборка является исполняемым файлом консольного приложения (EXE), исполняемым файлом Windows (WIN) или же файлом библиотеки (LIB).
 

@@ -3,15 +3,15 @@ title: Учебник. Обнаружение объектов с использ
 description: В этом учебнике показано, как использовать предварительно обученную модель глубокого обучения ONNX в ML.NET для обнаружения объектов в изображениях.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868725"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106865"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Учебник. Обнаружение объектов с помощью ONNX в ML.NET
 
@@ -21,11 +21,11 @@ ms.locfileid: "68868725"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
-> * Определение проблемы
-> * Узнайте, что такое ONNX и как он работает с ML.NET
-> * Общие сведения о модели
-> * Повторное использование предварительно обученной модели
-> * Обнаружение объектов в загруженной модели
+> - Определение проблемы
+> - Узнайте, что такое ONNX и как он работает с ML.NET
+> - Общие сведения о модели
+> - Повторное использование предварительно обученной модели
+> - Обнаружение объектов в загруженной модели
 
 ## <a name="pre-requisites"></a>Предварительные требования
 
@@ -117,7 +117,7 @@ Open Neural Network Exchange (ONNX) — это формат с открытым 
 
 Добавьте следующие новые операторы `using` в начало файла *Program.cs*:
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 Затем определите пути к различным ресурсам. 
 
@@ -125,7 +125,7 @@ Open Neural Network Exchange (ONNX) — это формат с открытым 
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. Затем внутри метода `Main` создайте поля для хранения расположения ресурсов:
+1. Затем внутри метода `Main` создайте поля для хранения расположения ресурсов.
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ Open Neural Network Exchange (ONNX) — это формат с открытым 
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>Добавление вспомогательных методов
-
-После того как модель предоставила прогноз, обычно называемый оценкой, и выходные данные обработаны, ограничивающие прямоугольники должны быть выведены на изображении. Для этого добавьте метод `DrawBoundingBox` под методом `GetAbsolutePath` в *Program.cs*.
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-Сначала загрузите изображение и получите измерения Height и Width в методе `DrawBoundingBox`.
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-Затем создайте цикл for-each для прохода по каждому ограничивающему прямоугольнику, обнаруженному моделью.
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-В цикле for-each получите размеры ограничивающего прямоугольника.
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-Поскольку размеры ограничивающего прямоугольника соответствуют входным данным модели `416 x 416`, масштабируйте размеры ограничивающего прямоугольника в соответствии с фактическим размером изображения.
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-Затем определите шаблон для текста, который будет отображен над каждым ограничивающим прямоугольником. Текст будет содержать класс объекта внутри соответствующего ограничивающего прямоугольника, а также его достоверность.
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-Чтобы нарисовать что-то на изображении, преобразуйте его в объект [`Graphics`](xref:System.Drawing.Graphics).
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-Внутри блока кода `using` настройте параметры графического объекта [`Graphics`](xref:System.Drawing.Graphics).
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-Ниже задайте параметры шрифта и цвета для текста и ограничивающего прямоугольника.
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-Создайте и заполните прямоугольник над ограничивающей рамкой, которая будет содержать текст, с помощью метода [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*). Это поможет выделить текст и улучшить удобочитаемость.
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-Затем нарисуйте текст и ограничивающий прямоугольник на изображении с помощью методов [`DrawString`](xref:System.Drawing.Graphics.DrawString*) и [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*).
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-За пределами цикла for-each добавьте код для сохранения изображений в `outputDirectory`.
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-Чтобы получить дополнительные данные о том, что приложение делает ожидаемые прогнозы во время выполнения, добавьте метод `LogDetectedObjects` под методом `DrawBoundingBox` в файле *Program.cs* для вывода обнаруженных объектов на консоль.
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-Оба эти метода будут полезны, когда модель выдала выходные данные и они обработались. Сначала же создайте функциональные возможности для обработки выходных данных модели.
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>Создание средства анализа для выходных данных модели после обработки
 
@@ -344,7 +274,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
     - `CELL_HEIGHT` — высота одной ячейки в сетке изображения.
     - `channelStride` — начальная координата текущей ячейки в сетке.
 
-    Когда модель оценивает изображение, она делит входные данные `416px x 416px` на сетку ячеек размером `13 x 13`. Каждая ячейка содержит `32px x 32px`. В каждой ячейке есть пять ограничивающих прямоугольников, каждый из которых содержит пять компонентов (X, Y, ширина, высота, достоверность). Кроме того, каждый ограничивающий прямоугольник содержит вероятность каждого из классов, которых в данном случае насчитывается 20. Таким образом, каждая ячейка содержит 125 элементов данных (пять функций + 20 вероятностей классов). 
+    Когда модель выполняет прогноз, также известный как оценка, она делит входной образ `416px x 416px` на сетку ячеек размером `13 x 13`. Каждая ячейка содержит `32px x 32px`. В каждой ячейке есть пять ограничивающих прямоугольников, каждый из которых содержит пять компонентов (X, Y, ширина, высота, достоверность). Кроме того, каждый ограничивающий прямоугольник содержит вероятность каждого из классов, которых в данном случае насчитывается 20. Таким образом, каждая ячейка содержит 125 элементов данных (пять функций + 20 вероятностей классов). 
 
 Создайте список привязок ниже `channelStride` для всех пяти ограничивающих прямоугольников:
 
@@ -560,7 +490,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    Конвейеры ML.NET обычно предполагают, что данные будут обрабатываться при вызове метода [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*). В этом случае будет использоваться процесс, аналогичный обучению. Однако, поскольку фактического обучения не происходит, допустимо использовать пустое значение [`IDataView`](xref:Microsoft.ML.IDataView). Создайте новый [`IDataView`](xref:Microsoft.ML.IDataView) для конвейера из пустого списка.
+    Конвейеры ML.NET обычно должны знать схему данных для работы при вызове метода [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*). В этом случае будет использоваться процесс, аналогичный обучению. Однако, поскольку фактического обучения не происходит, допустимо использовать пустое значение [`IDataView`](xref:Microsoft.ML.IDataView). Создайте новый [`IDataView`](xref:Microsoft.ML.IDataView) для конвейера из пустого списка.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 ## <a name="detect-objects"></a>Обнаружение объектов
 
-Теперь, когда все настройки завершены, пришло время обнаружить объекты. В методе `Main` класса *Program.cs* добавьте оператор try-catch.
+Теперь, когда все настройки завершены, пришло время обнаружить объекты. Начните с добавления ссылок на средство оценки и средство синтаксического анализа в классе *Program.cs*.
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>Выходные данные модели оценки и синтаксического анализа
+
+В методе `Main` класса *Program.cs* добавьте оператор try-catch.
 
 ```csharp
 try
@@ -633,7 +569,78 @@ catch (Exception ex)
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-После обработки выходных данных модели настало время рисования ограничивающих прямоугольников на изображениях. Создайте цикл for для итерации по каждому из оцененных изображений.
+После обработки выходных данных модели настало время рисования ограничивающих прямоугольников на изображениях. 
+
+### <a name="visualize-predictions"></a>Визуализация прогнозов
+
+После того как модель оценила изображения и обработала выходные данные, на изображении появятся ограничивающие прямоугольники. Для этого добавьте метод `DrawBoundingBox` под методом `GetAbsolutePath` в *Program.cs*.
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+Сначала загрузите изображение и получите измерения Height и Width в методе `DrawBoundingBox`.
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+Затем создайте цикл for-each для прохода по каждому ограничивающему прямоугольнику, обнаруженному моделью.
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+В цикле for-each получите размеры ограничивающего прямоугольника.
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+Поскольку размеры ограничивающего прямоугольника соответствуют входным данным модели `416 x 416`, масштабируйте размеры ограничивающего прямоугольника в соответствии с фактическим размером изображения.
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+Затем определите шаблон для текста, который будет отображен над каждым ограничивающим прямоугольником. Текст будет содержать класс объекта внутри соответствующего ограничивающего прямоугольника, а также его достоверность.
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+Чтобы нарисовать что-то на изображении, преобразуйте его в объект [`Graphics`](xref:System.Drawing.Graphics).
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+Внутри блока кода `using` настройте параметры графического объекта [`Graphics`](xref:System.Drawing.Graphics).
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+Ниже задайте параметры шрифта и цвета для текста и ограничивающего прямоугольника.
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+Создайте и заполните прямоугольник над ограничивающей рамкой, которая будет содержать текст, с помощью метода [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*). Это поможет выделить текст и улучшить удобочитаемость.
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+Затем нарисуйте текст и ограничивающий прямоугольник на изображении с помощью методов [`DrawString`](xref:System.Drawing.Graphics.DrawString*) и [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*).
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+За пределами цикла for-each добавьте код для сохранения изображений в `outputDirectory`.
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+Чтобы получить дополнительные данные о том, что приложение делает ожидаемые прогнозы во время выполнения, добавьте метод `LogDetectedObjects` под методом `DrawBoundingBox` в файле *Program.cs* для вывода обнаруженных объектов на консоль.
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+Теперь, когда у вас есть вспомогательные методы для создания визуальной обратной связи из прогнозов, добавьте цикл for для итерации по каждому из оцененных изображений.
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ for (var i = 0; i < images.Count(); i++)
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-Наконец, добавьте логику ведения журнала с помощью метода `LogDetectedObjects`.
+Наконец, используйте метод `LogDetectedObjects` для вывода прогнозов на консоль.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ person and its Confidence score: 0.5551759
 
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
-> * Определение проблемы
-> * Узнайте, что такое ONNX и как он работает с ML.NET
-> * Общие сведения о модели
-> * Повторное использование предварительно обученной модели
-> * Обнаружение объектов в загруженной модели
+> - Определение проблемы
+> - Узнайте, что такое ONNX и как он работает с ML.NET
+> - Общие сведения о модели
+> - Повторное использование предварительно обученной модели
+> - Обнаружение объектов в загруженной модели
 
 Ознакомьтесь с примерами машинного обучения в репозитории GitHub, чтобы подробнее изучить расширенный пример обнаружения объектов.
 > [!div class="nextstepaction"]
