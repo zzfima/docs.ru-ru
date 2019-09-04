@@ -2,17 +2,17 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: efab5f1abbc5e0c22e404c37dc80dd5aafa09ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879610"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250935"
 ---
-# <a name="function-entity-sql"></a><span data-ttu-id="02839-102">FUNCTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="02839-102">FUNCTION (Entity SQL)</span></span>
-<span data-ttu-id="02839-103">Определяет функцию в рамках команды запроса Entity SQL.</span><span class="sxs-lookup"><span data-stu-id="02839-103">Defines a function in the scope of an Entity SQL query command.</span></span>  
+# <a name="function-entity-sql"></a><span data-ttu-id="ba968-102">FUNCTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ba968-102">FUNCTION (Entity SQL)</span></span>
+<span data-ttu-id="ba968-103">Определяет функцию в рамках команды запроса Entity SQL.</span><span class="sxs-lookup"><span data-stu-id="ba968-103">Defines a function in the scope of an Entity SQL query command.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02839-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="02839-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba968-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ba968-104">Syntax</span></span>  
   
 ```  
 FUNCTION function-name  
@@ -28,32 +28,32 @@ FUNCTION function-name
         }   
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="02839-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="02839-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="ba968-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="ba968-105">Arguments</span></span>  
  `function-name`  
- <span data-ttu-id="02839-106">Имя функции.</span><span class="sxs-lookup"><span data-stu-id="02839-106">Name of the function.</span></span>  
+ <span data-ttu-id="ba968-106">Имя функции.</span><span class="sxs-lookup"><span data-stu-id="ba968-106">Name of the function.</span></span>  
   
  `parameter-name`  
- <span data-ttu-id="02839-107">Имя параметра функции.</span><span class="sxs-lookup"><span data-stu-id="02839-107">Name of a parameter in the function.</span></span>  
+ <span data-ttu-id="ba968-107">Имя параметра функции.</span><span class="sxs-lookup"><span data-stu-id="ba968-107">Name of a parameter in the function.</span></span>  
   
  `function_expression`  
- <span data-ttu-id="02839-108">Допустимое выражение Entity SQL, представляющее функцию.</span><span class="sxs-lookup"><span data-stu-id="02839-108">A valid Entity SQL expression that is the function.</span></span> <span data-ttu-id="02839-109">Команда в функции может действовать, используя параметры `parameter_name` , переданные функции.</span><span class="sxs-lookup"><span data-stu-id="02839-109">The command in the function can act on `parameter_name` parameters passed to the function.</span></span>  
+ <span data-ttu-id="ba968-108">Допустимое выражение Entity SQL, представляющее функцию.</span><span class="sxs-lookup"><span data-stu-id="ba968-108">A valid Entity SQL expression that is the function.</span></span> <span data-ttu-id="ba968-109">Команда в функции может действовать, используя параметры `parameter_name` , переданные функции.</span><span class="sxs-lookup"><span data-stu-id="ba968-109">The command in the function can act on `parameter_name` parameters passed to the function.</span></span>  
   
  `data_type`  
- <span data-ttu-id="02839-110">Имя поддерживаемого типа.</span><span class="sxs-lookup"><span data-stu-id="02839-110">Name of a supported type.</span></span>  
+ <span data-ttu-id="ba968-110">Имя поддерживаемого типа.</span><span class="sxs-lookup"><span data-stu-id="ba968-110">Name of a supported type.</span></span>  
   
- <span data-ttu-id="02839-111">КОЛЛЕКЦИИ (< type_definition`>` )</span><span class="sxs-lookup"><span data-stu-id="02839-111">COLLECTION ( <type_definition`>` )</span></span>  
- <span data-ttu-id="02839-112">Выражение, возвращающее коллекцию поддерживаемых типов, строк или ссылок.</span><span class="sxs-lookup"><span data-stu-id="02839-112">An expression that returns a collection of supported types, rows, or references.</span></span>  
+ <span data-ttu-id="ba968-111">Коллекция (< type_definition`>` )</span><span class="sxs-lookup"><span data-stu-id="ba968-111">COLLECTION ( <type_definition`>` )</span></span>  
+ <span data-ttu-id="ba968-112">Выражение, возвращающее коллекцию поддерживаемых типов, строк или ссылок.</span><span class="sxs-lookup"><span data-stu-id="ba968-112">An expression that returns a collection of supported types, rows, or references.</span></span>  
   
- <span data-ttu-id="02839-113">REF **(**`data_type`**)**</span><span class="sxs-lookup"><span data-stu-id="02839-113">REF **(**`data_type`**)**</span></span>  
- <span data-ttu-id="02839-114">Выражение, возвращающее ссылку на тип сущности.</span><span class="sxs-lookup"><span data-stu-id="02839-114">An expression that returns a reference to an entity type.</span></span>  
+ <span data-ttu-id="ba968-113">REF **(** `data_type` **)**</span><span class="sxs-lookup"><span data-stu-id="ba968-113">REF **(**`data_type`**)**</span></span>  
+ <span data-ttu-id="ba968-114">Выражение, возвращающее ссылку на тип сущности.</span><span class="sxs-lookup"><span data-stu-id="ba968-114">An expression that returns a reference to an entity type.</span></span>  
   
- <span data-ttu-id="02839-115">ROW **(**`row_expression`**)**</span><span class="sxs-lookup"><span data-stu-id="02839-115">ROW **(**`row_expression`**)**</span></span>  
- <span data-ttu-id="02839-116">Выражение, возвращающее анонимные структурно типизированные записи из одного или нескольких значений.</span><span class="sxs-lookup"><span data-stu-id="02839-116">An expression that returns anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="02839-117">Дополнительные сведения см. в разделе [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="02839-117">For more information, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
+ <span data-ttu-id="ba968-115">ROW **(** `row_expression` **)**</span><span class="sxs-lookup"><span data-stu-id="ba968-115">ROW **(**`row_expression`**)**</span></span>  
+ <span data-ttu-id="ba968-116">Выражение, возвращающее анонимные структурно типизированные записи из одного или нескольких значений.</span><span class="sxs-lookup"><span data-stu-id="ba968-116">An expression that returns anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="ba968-117">Дополнительные сведения см. в разделе [ROW](row-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="ba968-117">For more information, see [ROW](row-entity-sql.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02839-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="02839-118">Remarks</span></span>  
- <span data-ttu-id="02839-119">Объявить встроенными можно несколько функций с одинаковыми именами при условии, что эти функции имеют различные сигнатуры.</span><span class="sxs-lookup"><span data-stu-id="02839-119">Multiple functions with the same name can be declared inline, as long as the function signatures are different.</span></span> <span data-ttu-id="02839-120">Для получения дополнительной информации см. [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="02839-120">For more information, see [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba968-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="ba968-118">Remarks</span></span>  
+ <span data-ttu-id="ba968-119">Объявить встроенными можно несколько функций с одинаковыми именами при условии, что эти функции имеют различные сигнатуры.</span><span class="sxs-lookup"><span data-stu-id="ba968-119">Multiple functions with the same name can be declared inline, as long as the function signatures are different.</span></span> <span data-ttu-id="ba968-120">Для получения дополнительной информации см. [Function Overload Resolution](function-overload-resolution-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="ba968-120">For more information, see [Function Overload Resolution](function-overload-resolution-entity-sql.md).</span></span>  
   
- <span data-ttu-id="02839-121">Встроенная функция может быть вызвана командой SQL только после определения ее в этой команде.</span><span class="sxs-lookup"><span data-stu-id="02839-121">An inline function can be called in an Entity SQL command only after it has been defined in that command.</span></span> <span data-ttu-id="02839-122">Однако встроенная функция может быть вызвана в пределах другой встроенной функции как до, так и после определения вызываемой функции.</span><span class="sxs-lookup"><span data-stu-id="02839-122">However, an inline function can be called inside another inline function either before or after the called function has been defined.</span></span> <span data-ttu-id="02839-123">В следующем примере функция A вызывает функцию B до того, как функция B была определена.</span><span class="sxs-lookup"><span data-stu-id="02839-123">In the following example, function A calls function B before function B is defined:</span></span>  
+ <span data-ttu-id="ba968-121">Встроенная функция может быть вызвана командой SQL только после определения ее в этой команде.</span><span class="sxs-lookup"><span data-stu-id="ba968-121">An inline function can be called in an Entity SQL command only after it has been defined in that command.</span></span> <span data-ttu-id="ba968-122">Однако встроенная функция может быть вызвана в пределах другой встроенной функции как до, так и после определения вызываемой функции.</span><span class="sxs-lookup"><span data-stu-id="ba968-122">However, an inline function can be called inside another inline function either before or after the called function has been defined.</span></span> <span data-ttu-id="ba968-123">В следующем примере функция A вызывает функцию B до того, как функция B была определена.</span><span class="sxs-lookup"><span data-stu-id="ba968-123">In the following example, function A calls function B before function B is defined:</span></span>  
   
  `Function A() as ('A calls B. ' + B())`  
   
@@ -61,21 +61,21 @@ FUNCTION function-name
   
  `A()`  
   
- <span data-ttu-id="02839-124">Дополнительные сведения см. в разделе [Как Вызов определяемой пользователем функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="02839-124">For more information, see [How to: Call a User-Defined Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).</span></span>  
+ <span data-ttu-id="ba968-124">Дополнительные сведения см. в разделе [Практическое руководство. Вызов определяемой пользователем функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="ba968-124">For more information, see [How to: Call a User-Defined Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).</span></span>  
   
- <span data-ttu-id="02839-125">Функции также могут быть объявлены внутри самой модели.</span><span class="sxs-lookup"><span data-stu-id="02839-125">Functions can also be declared in the model itself.</span></span> <span data-ttu-id="02839-126">Функции, объявленные в модели, выполняются так же, как и функции, объявленные встроенными в команде.</span><span class="sxs-lookup"><span data-stu-id="02839-126">Functions declared in the model are executed in the same way as functions declared inline in the command.</span></span> <span data-ttu-id="02839-127">Дополнительные сведения см. в разделе [определяемые пользователем функции](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="02839-127">For more information, see [User-Defined Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).</span></span>  
+ <span data-ttu-id="ba968-125">Функции также могут быть объявлены внутри самой модели.</span><span class="sxs-lookup"><span data-stu-id="ba968-125">Functions can also be declared in the model itself.</span></span> <span data-ttu-id="ba968-126">Функции, объявленные в модели, выполняются так же, как и функции, объявленные встроенными в команде.</span><span class="sxs-lookup"><span data-stu-id="ba968-126">Functions declared in the model are executed in the same way as functions declared inline in the command.</span></span> <span data-ttu-id="ba968-127">Дополнительные сведения см. в разделе [определяемые пользователем функции](user-defined-functions-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="ba968-127">For more information, see [User-Defined Functions](user-defined-functions-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="02839-128">Пример</span><span class="sxs-lookup"><span data-stu-id="02839-128">Example</span></span>  
- <span data-ttu-id="02839-129">В следующей команде Entity SQL определяется функция `Products` , использующая целочисленное значение для фильтрации возвращаемых продуктов.</span><span class="sxs-lookup"><span data-stu-id="02839-129">The following Entity SQL command defines a function `Products` that takes an integer value to filter the returned products.</span></span>  
+## <a name="example"></a><span data-ttu-id="ba968-128">Пример</span><span class="sxs-lookup"><span data-stu-id="ba968-128">Example</span></span>  
+ <span data-ttu-id="ba968-129">В следующей команде Entity SQL определяется функция `Products` , использующая целочисленное значение для фильтрации возвращаемых продуктов.</span><span class="sxs-lookup"><span data-stu-id="ba968-129">The following Entity SQL command defines a function `Products` that takes an integer value to filter the returned products.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
   
-## <a name="example"></a><span data-ttu-id="02839-130">Пример</span><span class="sxs-lookup"><span data-stu-id="02839-130">Example</span></span>  
- <span data-ttu-id="02839-131">В следующей команде Entity SQL определяется функция `StringReturnsCollection` , использующая коллекцию строк для фильтрации возвращаемых контактов.</span><span class="sxs-lookup"><span data-stu-id="02839-131">The following Entity SQL command defines a function `StringReturnsCollection` that takes a collection of strings to filter the returned contacts.</span></span>  
+## <a name="example"></a><span data-ttu-id="ba968-130">Пример</span><span class="sxs-lookup"><span data-stu-id="ba968-130">Example</span></span>  
+ <span data-ttu-id="ba968-131">В следующей команде Entity SQL определяется функция `StringReturnsCollection` , использующая коллекцию строк для фильтрации возвращаемых контактов.</span><span class="sxs-lookup"><span data-stu-id="ba968-131">The following Entity SQL command defines a function `StringReturnsCollection` that takes a collection of strings to filter the returned contacts.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
   
-## <a name="see-also"></a><span data-ttu-id="02839-132">См. также</span><span class="sxs-lookup"><span data-stu-id="02839-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba968-132">См. также</span><span class="sxs-lookup"><span data-stu-id="ba968-132">See also</span></span>
 
-- [<span data-ttu-id="02839-133">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="02839-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="02839-134">Язык Entity SQL</span><span class="sxs-lookup"><span data-stu-id="02839-134">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [<span data-ttu-id="ba968-133">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ba968-133">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="ba968-134">Язык Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ba968-134">Entity SQL Language</span></span>](entity-sql-language.md)
