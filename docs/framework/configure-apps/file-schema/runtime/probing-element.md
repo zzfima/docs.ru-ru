@@ -11,49 +11,50 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663526"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252388"
 ---
-# <a name="probing-element"></a><span data-ttu-id="48373-102">\<Элемент > проверки</span><span class="sxs-lookup"><span data-stu-id="48373-102">\<probing> Element</span></span>
-<span data-ttu-id="48373-103">Задает базовые подкаталоги приложения для поиска средой CLR при загрузке сборок.</span><span class="sxs-lookup"><span data-stu-id="48373-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
+# <a name="probing-element"></a><span data-ttu-id="14e2a-102">\<Элемент > проверки</span><span class="sxs-lookup"><span data-stu-id="14e2a-102">\<probing> Element</span></span>
+<span data-ttu-id="14e2a-103">Задает базовые подкаталоги приложения для поиска средой CLR при загрузке сборок.</span><span class="sxs-lookup"><span data-stu-id="14e2a-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
   
- <span data-ttu-id="48373-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="48373-104">\<configuration></span></span>  
-<span data-ttu-id="48373-105">\<> среды выполнения</span><span class="sxs-lookup"><span data-stu-id="48373-105">\<runtime></span></span>  
-<span data-ttu-id="48373-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="48373-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="48373-107">\<Проверка ></span><span class="sxs-lookup"><span data-stu-id="48373-107">\<probing></span></span>  
+<span data-ttu-id="14e2a-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="14e2a-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="14e2a-105">&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="14e2a-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
+<span data-ttu-id="14e2a-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)</span><span class="sxs-lookup"><span data-stu-id="14e2a-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)</span></span>\
+<span data-ttu-id="14e2a-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Проверка >**</span><span class="sxs-lookup"><span data-stu-id="14e2a-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48373-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="48373-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14e2a-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="14e2a-108">Syntax</span></span>  
   
 ```xml  
 <probing privatePath="paths"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="48373-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="48373-109">Attributes and Elements</span></span>  
- <span data-ttu-id="48373-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="48373-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="14e2a-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="14e2a-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="14e2a-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="14e2a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="48373-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="48373-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="14e2a-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="14e2a-111">Attributes</span></span>  
   
-|<span data-ttu-id="48373-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="48373-112">Attribute</span></span>|<span data-ttu-id="48373-113">Описание</span><span class="sxs-lookup"><span data-stu-id="48373-113">Description</span></span>|  
+|<span data-ttu-id="14e2a-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="14e2a-112">Attribute</span></span>|<span data-ttu-id="14e2a-113">Описание</span><span class="sxs-lookup"><span data-stu-id="14e2a-113">Description</span></span>|  
 |---------------|-----------------|  
-|`privatePath`|<span data-ttu-id="48373-114">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="48373-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="48373-115">Указывает подкаталоги базового каталога приложения, которые могут содержать сборки.</span><span class="sxs-lookup"><span data-stu-id="48373-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="48373-116">Для каждого подкаталога следует выделить точку с запятой.</span><span class="sxs-lookup"><span data-stu-id="48373-116">Delimit each subdirectory with a semicolon.</span></span>|  
+|`privatePath`|<span data-ttu-id="14e2a-114">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="14e2a-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="14e2a-115">Указывает подкаталоги базового каталога приложения, которые могут содержать сборки.</span><span class="sxs-lookup"><span data-stu-id="14e2a-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="14e2a-116">Для каждого подкаталога следует выделить точку с запятой.</span><span class="sxs-lookup"><span data-stu-id="14e2a-116">Delimit each subdirectory with a semicolon.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="48373-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="48373-117">Child Elements</span></span>  
- <span data-ttu-id="48373-118">Нет.</span><span class="sxs-lookup"><span data-stu-id="48373-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="14e2a-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="14e2a-117">Child Elements</span></span>  
+
+<span data-ttu-id="14e2a-118">Нет.</span><span class="sxs-lookup"><span data-stu-id="14e2a-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="48373-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="48373-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="14e2a-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="14e2a-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="48373-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="48373-120">Element</span></span>|<span data-ttu-id="48373-121">Описание</span><span class="sxs-lookup"><span data-stu-id="48373-121">Description</span></span>|  
+|<span data-ttu-id="14e2a-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="14e2a-120">Element</span></span>|<span data-ttu-id="14e2a-121">Описание</span><span class="sxs-lookup"><span data-stu-id="14e2a-121">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="48373-122">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="48373-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="48373-123">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="48373-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="48373-124">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="48373-124">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="14e2a-122">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="14e2a-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="14e2a-123">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="14e2a-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="14e2a-124">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="14e2a-124">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="48373-125">Пример</span><span class="sxs-lookup"><span data-stu-id="48373-125">Example</span></span>  
- <span data-ttu-id="48373-126">В следующем примере показано, как задать базовые подкаталоги приложения, которые среда выполнения должна использовать для поиска сборок.</span><span class="sxs-lookup"><span data-stu-id="48373-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="14e2a-125">Пример</span><span class="sxs-lookup"><span data-stu-id="14e2a-125">Example</span></span>  
+ <span data-ttu-id="14e2a-126">В следующем примере показано, как задать базовые подкаталоги приложения, которые среда выполнения должна использовать для поиска сборок.</span><span class="sxs-lookup"><span data-stu-id="14e2a-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,9 +66,9 @@ ms.locfileid: "69663526"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="48373-127">См. также</span><span class="sxs-lookup"><span data-stu-id="48373-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14e2a-127">См. также</span><span class="sxs-lookup"><span data-stu-id="14e2a-127">See also</span></span>
 
-- [<span data-ttu-id="48373-128">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="48373-128">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="48373-129">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="48373-129">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="48373-130">Указание расположения сборки</span><span class="sxs-lookup"><span data-stu-id="48373-130">Specifying an Assembly's Location</span></span>](../../specify-assembly-location.md)
-- [<span data-ttu-id="48373-131">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="48373-131">How the Runtime Locates Assemblies</span></span>](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="14e2a-128">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="14e2a-128">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="14e2a-129">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="14e2a-129">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="14e2a-130">Указание расположения сборки</span><span class="sxs-lookup"><span data-stu-id="14e2a-130">Specifying an Assembly's Location</span></span>](../../specify-assembly-location.md)
+- [<span data-ttu-id="14e2a-131">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="14e2a-131">How the Runtime Locates Assemblies</span></span>](../../../deployment/how-the-runtime-locates-assemblies.md)
