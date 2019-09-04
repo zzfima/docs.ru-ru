@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: 56ae913da3ca06a08b5bacc5ce225597980467a6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539458"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250147"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Примеры синтаксиса запросов на основе методов. Навигация по связям
-Свойства навигации в модели [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] - это свойства быстрого доступа, используемые для нахождения сущностей в элементах ассоциации. Свойства навигации позволяют пользователю переходить от одной сущности к другой или от сущности к связанным сущностям в наборе ассоциаций. В этом разделе приведены примеры синтаксиса запросов на основе методов перехода по связям с помощью свойств навигации в LINQ для запросов сущностей.  
+Свойства навигации в модели [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] - это свойства быстрого доступа, используемые для нахождения сущностей в элементах ассоциации. Свойства навигации позволяют пользователю переходить от одной сущности к другой или от сущности к связанным сущностям в наборе ассоциаций. В этом разделе приведены примеры синтаксиса запросов на основе методов, позволяющих перемещаться по связям с помощью свойств навигации в запросах LINQ to Entities.  
   
  Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
- В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
+ В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -55,4 +55,4 @@ ms.locfileid: "67539458"
 ## <a name="see-also"></a>См. также
 
 - [Связи, свойства навигации и внешние ключи](/ef/ef6/fundamentals/relationships)
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)

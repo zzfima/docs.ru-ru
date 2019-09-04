@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 0795784f4090fca02c89cdfb396d217620b1ba68
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0eb29b750c474c277ef54c343726b338fbf5dbe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948241"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250230"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Примеры синтаксиса запросов на основе методов. Фильтрация
-В примерах этого раздела показано, как использовать `Where` методы и `Where…Contains` для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса запросов на основе методов. Примечание. где...`Contains` не может использоваться как часть [скомпилированного запроса](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+В примерах этого раздела показано, как использовать `Where` методы и `Where…Contains` для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса запросов на основе методов. Примечание. где...`Contains` не может использоваться как часть [скомпилированного запроса](compiled-queries-linq-to-entities.md).  
   
  Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
@@ -67,4 +67,4 @@ ms.locfileid: "69948241"
   
 ## <a name="see-also"></a>См. также
 
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)

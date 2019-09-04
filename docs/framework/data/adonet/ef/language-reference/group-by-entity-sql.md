@@ -2,15 +2,15 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936096"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250899"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
-Определяет группы, в которые должны быть помещены объекты, возвращаемые выражением запроса ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)).  
+Определяет группы, в которые должны быть помещены объекты, возвращаемые выражением запроса ([SELECT](select-entity-sql.md)).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,12 +57,12 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- Пример использования GROUP BY см. в статье [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md).  
+ Пример использования GROUP BY см. в статье [HAVING](having-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор GROUP BY задает группы, в которые помещаются объекты, возвращаемые запросом. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
@@ -70,5 +70,5 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Выражения запросов](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [Выражения запросов](query-expressions-entity-sql.md)

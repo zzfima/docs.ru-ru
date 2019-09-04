@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489499"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251253"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 Вычисляет набор выражений типа `Boolean` для определения результата.  
@@ -41,7 +41,7 @@ END
  Возвращает тип с наивысшим приоритетом из набора типов в выражении `result_expression` и необязательном выражении `else_result_expression`.  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Выражение case напоминает выражение case языка Transact-SQL. Выражение CASE применяется для выполнения ряда проверок условий в целях определения того, вычисление какого выражения приведет к получению приемлемого результата. В этой форме выражение CASE применяется к ряду, состоящему из одного или нескольких выражений типа `Boolean` , для определения правильного результирующего выражения.  
+ Выражение [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case напоминает выражение CASE языка Transact-SQL. Выражение CASE применяется для выполнения ряда проверок условий в целях определения того, вычисление какого выражения приведет к получению приемлемого результата. В этой форме выражение CASE применяется к ряду, состоящему из одного или нескольких выражений типа `Boolean` , для определения правильного результирующего выражения.  
   
  Функция CASE находит значение `Boolean_expression` для каждого предложения WHEN в указанном порядке и возвращает значение `result_expression` первого выражения `Boolean_expression` , которое определяется как `true`. Остальные выражения оцениваться не будут. Если ни одно выражение `Boolean_expression` не вычисляется в `true`, компонент Database Engine возвращает выражение `else_result_expression` , если указано предложение ELSE, или значение NULL, если предложение ELSE не указано.  
   
@@ -50,7 +50,7 @@ END
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL с помощью выражения CASE оценивает набор выражений типа `Boolean` , чтобы определить результат. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
@@ -58,6 +58,6 @@ END
   
 ## <a name="see-also"></a>См. также
 
-- [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [THEN](then-entity-sql.md)
+- [SELECT](select-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

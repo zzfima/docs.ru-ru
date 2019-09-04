@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489893"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249215"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Указывает элементы, возвращаемые запросом.  
@@ -34,18 +34,18 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `topSubclause`  
  Любое допустимое выражение, указывающее число первых результатов, возвращаемых запросом, в формате `top(expr)`.  
   
- Параметр LIMIT [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) оператор также можно выбрать первые n элементов в результирующем наборе.  
+ Параметр LIMIT оператора [ORDER BY](order-by-entity-sql.md) также позволяет выбрать первые n элементов в результирующем наборе.  
   
  `aliasedExpr`  
  Выражение в следующем формате.  
   
- `expr` as `identifier` &#124; `expr`  
+ `expr`как `identifier` &#124;`expr`  
   
  `expr`  
  Литерал или выражение.  
   
 ## <a name="remarks"></a>Примечания  
- Предложение SELECT вычисляется после [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), и [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) будут вычислены предложения. В предложении SELECT могут быть указаны только те элементы, которые в настоящий момент находящиеся в области (из предложения FROM, из внешних областей). Если указано предложение GROUP BY, то предложение SELECT может ссылаться только на псевдонимы для ключей GROUP BY. Обращение к элементам предложения FROM допустимо только в агрегатных функциях.  
+ Предложение SELECT вычисляется после вычисления предложений [from](from-entity-sql.md), [Group By](group-by-entity-sql.md)и [HAVING](having-entity-sql.md) . В предложении SELECT могут быть указаны только те элементы, которые в настоящий момент находящиеся в области (из предложения FROM, из внешних областей). Если указано предложение GROUP BY, то предложение SELECT может ссылаться только на псевдонимы для ключей GROUP BY. Обращение к элементам предложения FROM допустимо только в агрегатных функциях.  
   
  Список, содержащий одно или более выражений запросов, следующих за ключевым словом SELECT, называется списком выбора, или более формально - проекцией. Наиболее распространенная форма проекции - единственное выражение запроса. Если выбрать элемент `member1` из коллекции `collection1`, то будет подготовлена новая коллекция всех значений `member1` для каждого объекта в `collection1`, как показано в следующем примере.  
   
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- Предшествующее выражение запроса Transact-SQL выражается в [!INCLUDE[esql](../../../../../../includes/esql-md.md)] следующим образом.  
+ Предыдущее выражение запроса Transact-SQL выражается [!INCLUDE[esql](../../../../../../includes/esql-md.md)] следующим образом.  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -94,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор SELECT используется для задания элементов, возвращаемых запросом. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -102,6 +102,6 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
 ## <a name="see-also"></a>См. также
 
-- [Выражения запросов](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [Выражения запросов](query-expressions-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [TOP](top-entity-sql.md)

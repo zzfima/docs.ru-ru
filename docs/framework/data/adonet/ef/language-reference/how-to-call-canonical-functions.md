@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 01a638d494b988e29ccf07763a7e0aecf54cc11c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3ad4576a5c7a3f2be4b68e4060df191932ceeb19
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936070"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250830"
 ---
 # <a name="how-to-call-canonical-functions"></a>Практическое руководство. Вызов канонических функций
-Класс <xref:System.Data.Objects.EntityFunctions> содержит методы, предоставляющие доступ к каноническим функциям для использования в запросах LINQ to Entities. Сведения о канонических функциях см. в разделе [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+Класс <xref:System.Data.Objects.EntityFunctions> содержит методы, предоставляющие доступ к каноническим функциям для использования в запросах LINQ to Entities. Сведения о канонических функциях см. в разделе [Канонические функции](canonical-functions.md).  
   
 > [!NOTE]
 > Методы <xref:System.Data.Objects.EntityFunctions.AsUnicode%2A> и <xref:System.Data.Objects.EntityFunctions.AsNonUnicode%2A> в классе <xref:System.Data.Objects.EntityFunctions> не имеют эквивалентных канонических функций.  
   
  Канонические функции, которые производят вычисление по ряду значений и возвращают одиночное значение (известные также как статистические канонические функции), могут вызываться напрямую. Другие канонические функции могут вызываться только в составе запроса LINQ to Entities. Чтобы вызвать агрегатную функцию напрямую, ей необходимо передать экземпляр <xref:System.Data.Objects.ObjectQuery%601>. Дополнительные сведения см. в приведенном ниже втором примере.  
   
- Некоторые канонические функции можно вызвать с помощью методов среды CLR в запросах LINQ to Entities. Список методов CLR, соответствующих каноническим функциям, см. [в разделе Сопоставление методов CLR с каноническими](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)функциями.  
+ Некоторые канонические функции можно вызвать с помощью методов среды CLR в запросах LINQ to Entities. Список методов CLR, соответствующих каноническим функциям, см. [в разделе Сопоставление методов CLR с каноническими](clr-method-to-canonical-function-mapping.md)функциями.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется [модель AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples). В этом примере выполняется запрос LINQ to Entities, в котором используется метод <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> для возврата всех продуктов, для которых разница между датами `SellEndDate` и `SellStartDate` меньше 365 суток:  
@@ -36,5 +36,5 @@ ms.locfileid: "69936070"
   
 ## <a name="see-also"></a>См. также
 
-- [Вызов функций в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Вызов функций в запросах LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)

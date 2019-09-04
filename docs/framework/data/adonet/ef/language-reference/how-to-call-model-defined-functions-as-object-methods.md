@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 787ead2c52f874af2ca1a02bf009da40cee875ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936003"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250768"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Практическое руководство. Вызов определенных моделью функций как методов объектов
-В данном разделе описывается, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. *Определяемая моделью функция* — это функция, определенная в концептуальной модели. В данном разделе показываются процедуры вызова этих функций напрямую, а не с помощью запросов LINQ to Entities. Дополнительные сведения о вызове функций, определяемых моделью, в запросах LINQ to Entities см. в разделе [как Вызов определяемых моделью функций в запросах](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+В данном разделе описывается, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. *Определяемая моделью функция* — это функция, определенная в концептуальной модели. В данном разделе показываются процедуры вызова этих функций напрямую, а не с помощью запросов LINQ to Entities. Дополнительные сведения о вызове функций, определяемых моделью, в запросах LINQ to Entities см. в разделе [как Вызов определяемых моделью функций в запросах](how-to-call-model-defined-functions-in-queries.md).  
   
  Если определяемая в модели функция вызвается как метод <xref:System.Data.Objects.ObjectContext> или как статический метод для пользовательского класса, в первую очередь необходимо сопоставить метод с определямой в модели функцией с <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Если метод определяется для класса <xref:System.Data.Objects.ObjectContext>, то следует использовать свойство <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> для предоставления поставщика LINQ, однако, если статический метод определяется для пользовательского класса, то следует использовать свойство <xref:System.Linq.IQueryable.Provider%2A> для предоставления поставщика LINQ. Дополнительные сведения см. в примерах, приведенных после указанных ниже процедур.  
   
@@ -108,5 +108,5 @@ ms.locfileid: "69936003"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о файле EDMX](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Вызов функций в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)
+- [Вызов функций в запросах LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: 4b0d7e668526fd71943513db2fc3c076c8bd3bad
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d0926bb1a0e35caa058f268f0a0c414e805a8674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539928"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251169"
 ---
 # <a name="comparison-expressions"></a>Выражения сравнения
-Выражение сравнения проверяет, является ли значение константы, свойства или результата метода равным другому значению, не равным ему, большим или меньшим его. Если данное сравнение недопустимо для LINQ to Entities, будет вызвано исключение. Все сравнения, как явные, так и неявные, требуют сравнимости всех компонентов в источнике данных. Выражения сравнения часто используются в предложениях `Where` для ограничения результатов запроса.  
+Выражение сравнения проверяет, является ли значение константы, свойства или результата метода равным другому значению, не равным ему, большим или меньшим его. Если определенное сравнение недопустимо для LINQ to Entities, будет создано исключение. Все сравнения, как явные, так и неявные, требуют сравнимости всех компонентов в источнике данных. Выражения сравнения часто используются в предложениях `Where` для ограничения результатов запроса.  
   
  Следующий пример с синтаксисом выражений запроса представляет собой запрос, возвращающий данные заказа, номер которого равен SO43663.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67539928"
  [!code-csharp[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constantexpression)]
  [!code-vb[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constantexpression)]  
   
- LINQ to Entities поддерживает использование пользовательского класса в качестве константы. Однако ссылка на свойство пользовательского класса считается константой; она будет преобразована в константное выражение дерева команд и выполнена в источнике данных.  
+ LINQ to Entities не поддерживает использование класса пользователя в качестве константы. Однако ссылка на свойство пользовательского класса считается константой; она будет преобразована в константное выражение дерева команд и выполнена в источнике данных.  
   
  [!code-csharp[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myclass)]
  [!code-vb[DP L2E Conceptual Examples#MyClass](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myclass)]  
@@ -55,4 +55,4 @@ ms.locfileid: "67539928"
   
 ## <a name="see-also"></a>См. также
 
-- [Выражения в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [Выражения в запросах LINQ to Entities](expressions-in-linq-to-entities-queries.md)

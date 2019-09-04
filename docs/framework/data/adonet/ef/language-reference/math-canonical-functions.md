@@ -2,16 +2,16 @@
 title: Математические канонические функции
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760640"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250304"
 ---
 # <a name="math-canonical-functions"></a>Математические канонические функции
 
-Язык Entity SQL включает в себя следующие математические канонические функции:
+Entity SQL включает следующие математические канонические функции:
   
 ## <a name="absvalue"></a>Abs(значение)
 
@@ -19,7 +19,7 @@ ms.locfileid: "61760640"
 
 **Аргументы**
 
-`Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, И `Decimal`.
+`Int16` ,`Int32` ,,`Single`,, И.`Double` `Byte` `Int64` `Decimal`
 
 **Возвращаемое значение**
 
@@ -35,7 +35,7 @@ ms.locfileid: "61760640"
 
 **Аргументы**
 
-Объект `Single`, `Double`, и `Decimal`.
+`Single` ,`Double`И .`Decimal`
 
 **Возвращаемое значение**
 
@@ -52,7 +52,7 @@ ms.locfileid: "61760640"
 
 **Аргументы**
 
-Объект `Single`, `Double`, и `Decimal`.
+`Single` ,`Double`И .`Decimal`
 
 **Возвращаемое значение**
 
@@ -71,8 +71,8 @@ ms.locfileid: "61760640"
 
 |  |  |
 |--|--|
-|`value` | `Int32, Int64, Double`, Или `Decimal`. |
-|`exponent` | `Int64`, `Double`, Или `Decimal`. |
+|`value` | Объект `Int32, Int64, Double`, или `Decimal`. |
+|`exponent` | `Int64` ,`Double`Или .`Decimal` |
 
 **Возвращаемое значение**
 
@@ -88,7 +88,7 @@ ms.locfileid: "61760640"
 
 **Аргументы**
 
-Объект `Single`, `Double`, и `Decimal`.
+`Single` ,`Double`И .`Decimal`
 
 **Возвращаемое значение**
 
@@ -138,8 +138,8 @@ ms.locfileid: "61760640"
   
  Эти функции возвращают `null` при получении на входе `null`.  
   
- Эквивалентную функциональность предоставляет управляемый поставщик клиента Microsoft SQL. Дополнительные сведения см. в разделе [функции SqlClient для Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ Эквивалентную функциональность предоставляет управляемый поставщик клиента Microsoft SQL. Дополнительные сведения см. в разделе [SqlClient для функций Entity Framework](../sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Канонические функции](canonical-functions.md)

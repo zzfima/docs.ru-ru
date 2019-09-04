@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9fac4e1a98f67c6d5d946ade1b7f2115ce0d5f8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92a72bdc99471e14f607e674104e7faa3e796975
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964880"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254148"
 ---
 # <a name="documents-in-wpf"></a>Документы в WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предлагает широкий спектр возможностей документов, позволяющих создавать высокоточные материалы, которые упрощают доступ и чтение, чем в предыдущих поколениях Windows. В дополнение к расширенным возможностям и повышенному качеству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет интегрированные службы для отображения, упаковки и обеспечения безопасности документов. В этом разделе содержатся вводные сведения о типах и упаковке документов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -63,13 +63,13 @@ ms.locfileid: "69964880"
   
  Архитектура пакета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] лежит в основе ряда ключевых технологий:  
   
-- Документы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)], соответствующие стандарту [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+- Документы XPS, которые соответствует спецификации формата XML (XPS).  
   
 - Документы открытого XML-формата Microsoft Office "12" (.docx).  
   
 - Пользовательские форматы хранения для собственного приложения.  
   
- Основываясь на интерфейсах API упаковки <xref:System.Windows.Xps.Packaging.XpsDocument> , специально разработан для хранения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] документов с фиксированным содержимым. — Это автономный документ, который может быть открыт в средстве просмотра, отображен <xref:System.Windows.Controls.DocumentViewer> в элементе управления, направляется в очередь печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]или выводится непосредственно на совместимый принтер. <xref:System.Windows.Xps.Packaging.XpsDocument>  
+ Основываясь на интерфейсах API упаковки <xref:System.Windows.Xps.Packaging.XpsDocument> , специально разработан для хранения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] документов с фиксированным содержимым. — Это автономный документ, который может быть открыт в средстве просмотра, отображен <xref:System.Windows.Controls.DocumentViewer> в элементе управления, направляется в очередь печати или выводится непосредственно на принтер, совместимый с XPS. <xref:System.Windows.Xps.Packaging.XpsDocument>  
   
  В следующих разделах приводятся дополнительные сведения <xref:System.IO.Packaging.Package> о <xref:System.Windows.Xps.Packaging.XpsDocument> API-интерфейсах и, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]в.  
   
@@ -125,15 +125,15 @@ ms.locfileid: "69964880"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS-документы  
- Документ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] — это пакет, который содержит один или несколько фиксированных документов и все ресурсы и сведения, необходимые для отображения.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] также является собственным форматом файлов в очереди на печать [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Объект <xref:System.Windows.Xps.Packaging.XpsDocument> хранится в стандартном наборе данных ZIP и может включать в себя сочетание XML-и двоичных компонентов, таких как файлы изображений и шрифтов. [PackageRelationships](#PackageRelationships) используются для определения зависимостей между содержимым и ресурсами, необходимыми для полного отображения документа.  <xref:System.Windows.Xps.Packaging.XpsDocument> Проект предоставляет единое высококачественное решение для документов, которое поддерживает несколько целей:  
+ Документ в формате XPS — это пакет, содержащий один или несколько фиксированных документов вместе со всеми ресурсами и сведениями, необходимыми для подготовки к просмотру.  XPS также является собственным [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] форматом файла очереди печати.  Объект <xref:System.Windows.Xps.Packaging.XpsDocument> хранится в стандартном наборе данных ZIP и может включать в себя сочетание XML-и двоичных компонентов, таких как файлы изображений и шрифтов. [PackageRelationships](#PackageRelationships) используются для определения зависимостей между содержимым и ресурсами, необходимыми для полного отображения документа.  <xref:System.Windows.Xps.Packaging.XpsDocument> Проект предоставляет единое высококачественное решение для документов, которое поддерживает несколько целей:  
   
 - Чтение, запись и хранение содержимого и ресурсов документов фиксированного формата в одном портативном документе с возможностью удобного распространения.  
   
-- Отображение документов в приложении средства просмотра [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+- Отображение документов с помощью приложения средства просмотра XPS.  
   
 - Вывод документов в собственном формате вывода в очередь на печать [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
   
-- Перенаправление документов непосредственно на совместимый с [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] принтер.  
+- Маршрутизация документов непосредственно на совместимый с XPS принтер.  
   
 ## <a name="see-also"></a>См. также
 

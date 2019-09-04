@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663526"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252388"
 ---
 # <a name="probing-element"></a>\<Элемент > проверки
 Задает базовые подкаталоги приложения для поиска средой CLR при загрузке сборок.  
   
- \<configuration>  
-\<> среды выполнения  
-\<assemblyBinding >  
-\<Проверка >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Проверка >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,8 @@ ms.locfileid: "69663526"
 |`privatePath`|Обязательный атрибут.<br /><br /> Указывает подкаталоги базового каталога приложения, которые могут содержать сборки. Для каждого подкаталога следует выделить точку с запятой.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+
+Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

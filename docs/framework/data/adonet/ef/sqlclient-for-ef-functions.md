@@ -2,34 +2,34 @@
 title: Функции SqlClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fb495284108e97bd0cd8ce01b145c77c07c9939
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879142"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248389"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Функции SqlClient для Entity Framework
 Поставщик данных .NET Framework для SQL Server (SqlClient) на платформе Entity Framework предоставляет набор функций для выполнения математических и статистических вычислений, а также функции для выполнения операций с данными, имеющими тип `System.DateTime` и `string`. Эти функции находятся в пространстве имен `SQLServer`.  
   
- Список функций, которые должны работать с любым поставщиком, см. в разделе [канонические функции](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+ Список функций, которые должны работать с любым поставщиком, см. в разделе [канонические функции](./language-reference/canonical-functions.md).  
   
- Сведения о сопоставлении канонических функций с функциями SQL Server, см. в разделе [концептуальной модели каноническое сопоставление функций SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md).  
+ Сведения о том, как канонические функции сопоставляются с SQL Server функциями, см. [в разделе концептуальная модель Каноническая для сопоставления функций SQL Server](conceptual-model-canonical-to-sql-server-functions-mapping.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Сопоставление канонических функций концептуальной модели с функциями SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [Сопоставление канонических функций концептуальной модели с функциями SQL Server](conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
- [Статистические функции](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
+ [Статистические функции](aggregate-functions-sqlclient-for-entity-framework.md)  
   
- [Функции даты и времени](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
+ [Функции даты и времени](date-and-time-functions.md)  
   
- [Математические функции](../../../../../docs/framework/data/adonet/ef/mathematical-functions.md)  
+ [Математические функции](mathematical-functions.md)  
   
- [Строковые функции](../../../../../docs/framework/data/adonet/ef/string-functions.md)  
+ [Строковые функции](string-functions.md)  
   
- [Системные функции](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
+ [Системные функции](system-functions.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Справочник по Entity SQL](./language-reference/entity-sql-reference.md)
+- [Общие сведения об Entity SQL](./language-reference/entity-sql-overview.md)

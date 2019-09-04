@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: ea9e7cb61facb880a050fbfae3aa9b07c03361fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbcb6ffe27234beb120e71ebc71c782abd4be24a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614175"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249453"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Примеры синтаксиса выражений запросов. Упорядочение
-Примеры в этом разделе демонстрируют, как использовать `OrderBy` и `OrderByDescending` методы запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса выражений запроса. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+В примерах этого раздела показано, как использовать `OrderBy` методы и `OrderByDescending` для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса выражения запроса. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
- В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
+ В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -60,4 +60,4 @@ ms.locfileid: "61614175"
   
 ## <a name="see-also"></a>См. также
 
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)

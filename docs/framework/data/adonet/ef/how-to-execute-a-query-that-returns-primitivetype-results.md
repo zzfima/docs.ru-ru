@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 78d6c9287c5c69c41bd2f50abd8d57dcd1cb4e06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4805a9f959096b87e2ed3e35b02fbd8c04d45fbc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605813"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251489"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Практическое руководство. Выполнение запроса, возвращающего типы-примитивы
 В этом подразделе показано выполнение команды для концептуальной модели с помощью объекта <xref:System.Data.EntityClient.EntityCommand>, а также получение результатов <xref:System.Data.Metadata.Edm.PrimitiveType> с помощью <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Выполнение кода в этом примере  
   
-1. Добавить [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+1. Добавьте [модель AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) в проект и настройте проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Используйте мастер](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))EDM.  
   
 2. На странице кода приложения добавьте следующие инструкции `using` (`Imports` в Visual Basic):  
   
@@ -38,5 +38,5 @@ ms.locfileid: "61605813"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+- [Справочник по Entity SQL](./language-reference/entity-sql-reference.md)
+- [Поставщик EntityClient для Entity Framework](entityclient-provider-for-the-entity-framework.md)

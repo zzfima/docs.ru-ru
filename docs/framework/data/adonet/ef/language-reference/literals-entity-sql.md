@@ -2,12 +2,12 @@
 title: Литералы (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953290"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250339"
 ---
 # <a name="literals-entity-sql"></a>Литералы (Entity SQL)
 В этом разделе рассматривается поддержка литералов в [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -15,9 +15,9 @@ ms.locfileid: "69953290"
 ## <a name="null"></a>NULL  
  Литерал null используется для представления значения NULL применительно к любому типу. Литерал null является совместимым с любым типом.  
   
- Типизированные значения null могут быть созданы путем применения операции приведения к типу по отношению к литералу NULL. Дополнительные сведения см. в разделе [Cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Типизированные значения null могут быть созданы путем применения операции приведения к типу по отношению к литералу NULL. Дополнительные сведения см. в разделе [Cast](cast-entity-sql.md).  
   
- Правила того, где можно использовать свободные плавающие литералы NULL, см. в разделе [литералы NULL и определение типа](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Правила того, где можно использовать свободные плавающие литералы NULL, см. в разделе [литералы NULL и определение типа](null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>логический  
  Логические литералы могут быть представлены с помощью ключевых слов `true` и `false`.  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Общие сведения об Entity SQL](entity-sql-overview.md)

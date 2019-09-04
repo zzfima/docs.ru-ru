@@ -3,20 +3,21 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: ebf1f7f3de1b44dba63977bf524dea9af2690fb1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1f32e17cf0da5e948d778e8b61aca6053eff4ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942782"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252021"
 ---
 # <a name="customcookiehandler"></a>\<Кустомкукиехандлер >
 Задает тип обработчика пользовательских файлов cookie. Этот элемент может присутствовать только в `mode` том случае, если атрибут `<cookieHandler>` элемента имеет значение Custom. Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.  
   
- \<> System. identityModel. Services  
-\<federationConfiguration >  
-\<Кукиехандлер >  
-\<Кустомкукиехандлер >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. identityModel. Services**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Кукиехандлер >** ](cookiehandler.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Кустомкукиехандлер >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

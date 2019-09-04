@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 676080a6cc4208ea1a4d72b85a4a55e01fafe638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641452"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249253"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Создает анонимные структурно типизированные записи из одного или нескольких значений.  
@@ -35,7 +35,7 @@ ROW ( expression [ AS alias ] [,...] )
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
- Если в конструкторе строк не указан псевдоним для выражения, то платформа Entity Framework попытается сформировать его. Дополнительные сведения см. в разделе «Правила присвоения псевдонимов» темы [Идентификаторы](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) .  
+ Если в конструкторе строк не указан псевдоним для выражения, то платформа Entity Framework попытается сформировать его. Дополнительные сведения см. в разделе «Правила присвоения псевдонимов» темы [Идентификаторы](identifiers-entity-sql.md) .  
   
  В конструкторе строк псевдонимы присваиваются выражениям по следующим правилам.  
   
@@ -43,12 +43,12 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 - Два выражения в одном конструкторе строк не могут иметь одинаковый псевдоним.  
   
- Дополнительные сведения о конструкторах запросов см. в разделе [типов, создав](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Дополнительные сведения о конструкторах запросов см. в разделе [Создание типов](constructing-types-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор ROW используется для создания анонимных структурно типизированных записей. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -56,6 +56,6 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 ## <a name="see-also"></a>См. также
 
-- [Сборка типов](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Определения типов](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [Сборка типов](constructing-types-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [Определения типов](type-definitions-entity-sql.md)

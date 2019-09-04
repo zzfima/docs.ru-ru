@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780410"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250559"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Определяет, имеет ли выражение запроса значение null.  
@@ -57,9 +57,9 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Вызывает ошибку.|  
   
 ## <a name="example"></a>Пример  
- Следующие [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запросе используется оператор IS NOT NULL, чтобы определить, если выражение запроса не равно null. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+ Следующий [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запрос использует оператор is not null, чтобы определить, имеет ли выражение запроса значение, не равное NULL. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -67,4 +67,4 @@ select c from LOB.Customer as c where c.DOB is not null
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

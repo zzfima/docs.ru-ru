@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250503"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Определяет, соответствует ли аргумент типа `String` заданному шаблону.  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Пример  
  Следующие два [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запроса используют операторы LIKE и escape для определения того, соответствует ли конкретная строка символов указанному шаблону. Первый запрос выполняет поиск `Name` , который начинается с символов. `Down_` В этом запросе используется параметр ESCAPE, так как символ подчеркивания (`_`) является символом-шаблоном. Без указания параметра ESCAPE запрос будет выполнять поиск любых значений `Name`, начинающихся со слова `Down`, за которым следует любой единичный символ, отличный от символа подчеркивания. Запросы основаны на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

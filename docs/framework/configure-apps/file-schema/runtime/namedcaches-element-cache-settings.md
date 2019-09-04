@@ -6,20 +6,20 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 9cedd462aa539745ddab844dff158912914cb024
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4587234ad91fa3b1abbb376bd7ae517d5abea6c3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663583"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252461"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<Элемент > Намедкачес (параметры кэша)
 Задает коллекцию параметров конфигурации для именованных <xref:System.Runtime.Caching.MemoryCache> экземпляров. Свойство ссылается на коллекцию параметров конфигурации из одного или нескольких `namedCaches` элементов файла конфигурации. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>  
   
- \<configuration>  
-\<System. Runtime. Caching >  
-\<memoryCache >  
-\<Намедкачес >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Намедкачес >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,7 +56,9 @@ ms.locfileid: "69663583"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
+|[\<configuration>](../configuration-element.md)|Указывает корневой элемент в каждом файле конфигурации, который используется средой CLR и .NET Framework приложениями.|  
 |[\<memoryCache>](memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Содержит типы, позволяющие реализовать кэширование вывода в приложениях, встроенных в .NET Framework.|  
   
 ## <a name="remarks"></a>Примечания  
  Раздел конфигурации кэша памяти файла Web. `add`config может содержать атрибуты, `remove`и `clear` для `namedCaches` коллекции. Каждая `namedCaches` запись уникально идентифицируется `name` атрибутом.  

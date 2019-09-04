@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879766"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248976"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -21,7 +21,7 @@ ms.locfileid: "61879766"
 
 ## <a name="arguments"></a>Аргументы
 
-`n` Числовое выражение, указывающее количество возвращаемых строк. `n` может быть одним числовым литералом или одним параметром.
+`n`Числовое выражение, задающее количество возвращаемых строк. `n` может быть одним числовым литералом или одним параметром.
 
 ## <a name="remarks"></a>Примечания
 
@@ -39,13 +39,13 @@ select distinct top(10) c.a1, c.a2 from T as a
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-Выражение TOP является недетерминированным, если запрос не отсортирован. При необходимости в детерминированном результате используйте вложенные предложения [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) и [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) в предложении [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) . Предложения TOP и SKIP/LIMIT являются взаимоисключающими.
+Выражение TOP является недетерминированным, если запрос не отсортирован. При необходимости в детерминированном результате используйте вложенные предложения [SKIP](skip-entity-sql.md) и [LIMIT](limit-entity-sql.md) в предложении [ORDER BY](order-by-entity-sql.md) . Предложения TOP и SKIP/LIMIT являются взаимоисключающими.
 
 ## <a name="example"></a>Пример
 
 В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] для указания верхней строки, которую следует вернуть из результата запроса, используется выражение TOP. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.
 
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.
 
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :
 
@@ -53,8 +53,8 @@ select distinct top(@topParam) c.a1, c.a2 from T as a
 
 ## <a name="see-also"></a>См. также
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

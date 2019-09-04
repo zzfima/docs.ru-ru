@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958457"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251423"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
 В этом разделе показано, как с помощью средства «Генератор модели EDM» (EdmGen.exe) на основе базы данных School формируются следующие файлы:  
@@ -22,7 +22,7 @@ ms.locfileid: "69958457"
   
 - Просмотр файлов.  
   
- Средство EdmGen.exe использует ключ /mode:FullGeneration для создания перечисленных выше файлов. Дополнительные сведения о командах EdmGen. exe см. в разделе [генератор EDM (EdmGen. exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
+ Средство EdmGen.exe использует ключ /mode:FullGeneration для создания перечисленных выше файлов. Дополнительные сведения о командах EdmGen. exe см. в разделе [генератор EDM (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
  Если для создания файлов модели и сопоставления используется Программа EdmGen. exe, по-прежнему необходимо настроить проект Visual Studio для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Вручную настройте проект](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Entity Framework.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "69958457"
   
 ## <a name="see-also"></a>См. также
 
-- [Моделирование и сопоставление](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [Моделирование и сопоставление](modeling-and-mapping.md)
 - [Практическое руководство. Настройка проекта Entity Framework вручную](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Практическое руководство. Предварительное создание представлений для повышения производительности запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [Средства EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Практическое руководство. Проверка файлов модели и сопоставления с помощью программы EdmGen. exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Практическое руководство. Проверка файлов модели и сопоставления с помощью программы EdmGen. exe](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

@@ -5,20 +5,21 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: fd6668a551663470a97b07ff131710dbe92a91f5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 076d940e0c15cf48013480fef68b8fac42cf76e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659030"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252892"
 ---
 # <a name="add-element-for-namedcaches"></a>\<Добавление элемента > для \<намедкачес >
 `namedCache` Добавляет запись`namedCaches` в коллекцию для кэша памяти.  
   
- \<System. Runtime. Caching >  
-\<memoryCache >  
-\<Намедкачес >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Намедкачес >** ](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

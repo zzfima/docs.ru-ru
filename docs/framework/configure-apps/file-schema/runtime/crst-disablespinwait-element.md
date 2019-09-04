@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663842"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252714"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Элемент > Crst_DisableSpinWait
 
 Указывает, следует ли отключать режим ожидания для критической секции, если это не так.  
   
- \<configuration>  
-\<> среды выполнения  
-\<Crst_DisableSpinWait >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

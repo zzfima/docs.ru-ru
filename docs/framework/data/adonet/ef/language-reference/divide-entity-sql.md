@@ -1,13 +1,13 @@
 ---
-title: '- (Деление) (Язык entity SQL)'
+title: '- Деление (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4e4c1449b665e6dea22bfcc0ee2277478b4da1a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606066"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251056"
 ---
 # <a name="-divide-entity-sql"></a>/ (деление) (Entity SQL)
 Делит одно число на другое.  
@@ -26,12 +26,12 @@ dividend / divisor
  Числовое выражение, на которое делится делимое. `divisor` - любое допустимое выражение с любым числовым типом данных.  
   
 ## <a name="result-types"></a>Типы результата  
- Тип данных, который является результатом неявного повышения типов обоих аргументов. Дополнительные сведения о неявном повышении уровня типов, см. в разделе [система типов](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  
+ Тип данных, который является результатом неявного повышения типов обоих аргументов. Дополнительные сведения о неявном повышении типа см. в разделе [System Type](type-system-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
- В следующем запросе Entity SQL используется арифметический оператор деления для деления одного числа на другое. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+ Следующий Entity SQL запрос использует арифметический оператор/для деления одного числа на другое. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -39,4 +39,4 @@ dividend / divisor
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

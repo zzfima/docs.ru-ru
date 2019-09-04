@@ -2,28 +2,28 @@
 title: Вопросы разработки и развертывания
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: d0402fde61b1bfcdee6e0e8e435d35e59ad76b6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f6c34a9cfae08e189b89ad772321b2e43799660
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606645"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251586"
 ---
 # <a name="development-and-deployment-considerations"></a>Вопросы разработки и развертывания
 В этом разделе приводятся рекомендации, которые следует учесть при разработке или развертывании приложений, основанных на платформе ADO.NET Entity Framework.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Вопросы безопасности](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Вопросы безопасности](security-considerations.md)  
   
- [Особенности производительности](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [Особенности производительности](performance-considerations.md)  
   
- [Вопросы миграции](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [Вопросы миграции](migration-considerations.md)  
   
- [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Требования к развертыванию](deployment-considerations.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
-- [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
-- [Начало работы](../../../../../docs/framework/data/adonet/ef/getting-started.md)
-- [Средства модели EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET Entity Framework](index.md)
+- [Общие сведения об Entity Framework](overview.md)
+- [Начало работы](getting-started.md)
+- [Средства EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

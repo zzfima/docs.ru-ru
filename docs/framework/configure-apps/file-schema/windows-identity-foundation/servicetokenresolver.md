@@ -3,21 +3,22 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 69d34cb54c2236f178ac4291ed24a3f5b45db48e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30a53c11b551623311f7ca3f957143fc702568a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923111"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251852"
 ---
 # <a name="servicetokenresolver"></a>\<Сервицетокенресолвер >
 Регистрирует сопоставитель маркеров службы, используемый обработчиками в коллекции обработчиков маркеров. Сопоставитель токенов службы используется для разрешения маркера шифрования входящих токенов и сообщений.  
   
- \<> System. identityModel  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
-\<Секурититокенхандлерконфигуратион >  
-\<Сервицетокенресолвер >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. identityModel**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Секурититокенхандлерконфигуратион >** ](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Сервицетокенресолвер >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,3 +66,4 @@ ms.locfileid: "69923111"
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```
+ 

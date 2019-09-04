@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83980d315c83aa5cc23944dbd271c29e0ed83206
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920709"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252465"
 ---
 # <a name="loadfromremotesources-element"></a>\<Элемент > Лоадфромремотесаурцес
 Указывает, должны ли сборки, загруженные из удаленных источников, предоставлять полное доверие в .NET Framework 4 и более поздних версий.
@@ -20,9 +20,9 @@ ms.locfileid: "69920709"
 > [!NOTE]
 > Если вы перенаправлялись на эту статью из-за сообщения об ошибке в списке ошибок проекта Visual Studio или ошибки сборки, [см. раздел как Используйте сборку из Интернета в Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
- \<configuration>  
-\<> среды выполнения  
-\<Лоадфромремотесаурцес >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Лоадфромремотесаурцес >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

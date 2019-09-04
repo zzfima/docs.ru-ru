@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52681a4035ef55133c6191e7eac2cab7ed36c8fb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249335"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Примеры синтаксиса выражений запросов. Проекция
-Примеры в этом разделе демонстрируют, как использовать `Select` метод и `From … From …` ключевых слов [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса выражений запроса. `From … From …` - это основанный на запросе эквивалент метода `SelectMany`. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+В примерах этого раздела показано, как использовать `Select` метод `From … From …` и ключевые слова для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса выражения запроса. `From … From …` - это основанный на запросе эквивалент метода `SelectMany`. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
- В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
+ В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="select"></a>Выбрать  
+## <a name="select"></a>Выбор  
   
 ### <a name="example"></a>Пример  
  В следующем примере метод <xref:System.Linq.Enumerable.Select%2A> используется для возврата всех строк из таблицы `Product` и отображения названий продуктов.  
@@ -40,7 +40,7 @@ ms.locfileid: "61614418"
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
   
-## <a name="from--from--selectmany"></a>От... От... (SelectMany)  
+## <a name="from--from--selectmany"></a>От... От... SelectMany  
   
 ### <a name="example"></a>Пример  
  В следующем примере используется инструкция `From … From …` (эквивалент метода <xref:System.Linq.Enumerable.SelectMany%2A>) для выделения всех заказов, в которых значение `TotalDue` меньше 500,00.  
@@ -62,4 +62,4 @@ ms.locfileid: "61614418"
   
 ## <a name="see-also"></a>См. также
 
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)
