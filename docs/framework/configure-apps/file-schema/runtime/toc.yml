@@ -26,12 +26,14 @@
                   href: bindingredirect-element.md
                 - name: Элемент <codeBase>
                   href: codebase-element.md
+                - name: Элемент <publisherPolicy>
+                  href: publisherpolicy-element.md
             - name: Элемент <probing>
               href: probing-element.md
-            - name: Элемент <publisherPolicy>
-              href: publisherpolicy-element.md
             - name: Элемент <qualifyAssembly>
               href: qualifyassembly-element.md
+            - name: Элемент <supportPortability>
+              href: supportportability-element.md
         - name: Элемент <bypassTrustedAppStrongNames>
           href: bypasstrustedappstrongnames-element.md
         - name: Элемент <CompatSortNLSVersion>
@@ -82,23 +84,6 @@
           href: relativebindforresources-element.md
         - name: Элемент <shadowCopyVerifyByTimestamp>
           href: shadowcopyverifybytimestamp-element.md
-        - name: Элемент <supportPortability>
-          href: supportportability-element.md
-        - name: Элемент <system.runtime.caching> (параметры кэша)
-          href: system-runtime-caching-element-cache-settings.md
-          items:
-            - name: Элемент <memoryCache> (параметры кэша)
-              href: memorycache-element-cache-settings.md
-              items:
-                - name: Элемент <namedCaches> (параметры кэша)
-                  href: namedcaches-element-cache-settings.md
-                  items:
-                    - name: Элемент <add> для <namedCaches>
-                      href: add-element-for-namedcaches.md
-                    - name: Элемент <clear> для <namedCaches>
-                      href: clear-element-for-namedcaches.md
-                    - name: Элемент <remove> для <namedCaches>
-                      href: remove-element-for-namedcaches.md
         - name: Элемент <Thread_UseAllCpuGroups>
           href: thread-useallcpugroups-element.md
         - name: Элемент <ThrowUnobservedTaskExceptions>
@@ -111,3 +96,18 @@
           href: userandomizedstringhashalgorithm-element.md
         - name: Элемент <UseSmallInternalThreadStacks>
           href: usesmallinternalthreadstacks-element.md
+    - name: Элемент <system.runtime.caching> (параметры кэша)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: Элемент <memoryCache> (параметры кэша)
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: Элемент <namedCaches> (параметры кэша)
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: Элемент <add> для <namedCaches>
+                  href: add-element-for-namedcaches.md
+                - name: Элемент <clear> для <namedCaches>
+                  href: clear-element-for-namedcaches.md
+                - name: Элемент <remove> для <namedCaches>
+                  href: remove-element-for-namedcaches.md
