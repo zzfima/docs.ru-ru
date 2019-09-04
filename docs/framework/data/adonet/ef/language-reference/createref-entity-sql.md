@@ -2,12 +2,12 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: 6ae4712fb280418ad8cf17cd68a7bbcd9cf3b8a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbaea82108dd3debcca972ca15dea248227330ac
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785285"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251105"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Формирует ссылки на сущность в наборе сущностей.  
@@ -38,7 +38,7 @@ from LOB.Orders as o
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор CREATEREF используется для формирования ссылок на сущность в наборе сущностей. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -46,7 +46,7 @@ from LOB.Orders as o
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
-- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [DEREF](deref-entity-sql.md)
+- [KEY](key-entity-sql.md)
+- [REF](ref-entity-sql.md)

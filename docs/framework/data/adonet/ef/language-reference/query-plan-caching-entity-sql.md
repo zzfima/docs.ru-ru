@@ -2,17 +2,17 @@
 title: Кэширование плана запроса (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 9b809962e11ee74a99f736769b47bf3052af5e8a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca95f3aed5c092247a97bbfe5b0237a45b95ae16
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641470"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249288"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Кэширование плана запроса (Entity SQL)
 При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен. Если это так, то кэшированный план используется повторно вместо построения нового плана. Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется. Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров (имен и типов). Все текстовые сравнения выполняются с учетом регистра.  
   
-## <a name="configuration"></a>Параметр Configuration  
+## <a name="configuration"></a>Конфигурация  
  Кэширование планов запросов можно настроить с помощью <xref:System.Data.EntityClient.EntityCommand>.  
   
  Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, назначьте этому свойству значение `true` или `false`. Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.  
@@ -50,4 +50,4 @@ ms.locfileid: "64641470"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Общие сведения об Entity SQL](entity-sql-overview.md)

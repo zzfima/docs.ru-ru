@@ -2,12 +2,12 @@
 title: = (равно) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ec87ec682e1773c001c225567a35b3cedc9c5aba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333162"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251004"
 ---
 # <a name="-equals-entity-sql"></a>= (равно) (Entity SQL)
 Проверяет равенство двух выражений.  
@@ -33,7 +33,7 @@ expression == expression
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор сравнения = используется для сравнения двух выражений. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -41,4 +41,4 @@ expression == expression
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

@@ -2,12 +2,12 @@
 title: '! (NOT) (язык Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 51d3bdbc4adb0b5fd6275629219698dd9b42fa86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4055d56d878b817fe88bb0dacb53ea39061bc4b2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760381"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249863"
 ---
 # <a name="-not-entity-sql"></a>! (NOT) (язык Entity SQL)
 Изменяет значение выражения типа `Boolean` на обратное.  
@@ -30,7 +30,7 @@ or
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор NOT, чтобы изменить на обратное выражение типа `Boolean` . Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -38,4 +38,4 @@ or
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

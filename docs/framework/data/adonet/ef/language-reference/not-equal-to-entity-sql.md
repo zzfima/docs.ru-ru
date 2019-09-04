@@ -2,12 +2,12 @@
 title: '!= (не равно) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2ccadaa5801cac9c10241108f02ade223a8697f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760341"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249853"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (не равно) (Entity SQL)
 Сравнивает два выражения, чтобы определить, является ли значение левого выражения не равным значению правого выражения. Действие оператора != (не равно) эквивалентно действию оператора <>.  
@@ -30,7 +30,7 @@ expression <> expression
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор != используется для сравнения двух выражений, чтобы определить, отличается ли значение левого выражения от значения правого. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -38,4 +38,4 @@ expression <> expression
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
