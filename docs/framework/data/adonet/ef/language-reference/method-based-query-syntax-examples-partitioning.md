@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: eaf98dc21499817446efca2f10edf7faea15761c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42c562e7665a53053f125c17d073eb437574939f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760523"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250119"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Примеры синтаксиса запросов на основе методов. Секционирование
-Примеры в этом разделе демонстрируют, как использовать <xref:System.Linq.Enumerable.Skip%2A>, и <xref:System.Linq.Enumerable.Take%2A> методы запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса выражений запроса. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+В примерах этого раздела показано <xref:System.Linq.Enumerable.Skip%2A>, как использовать методы и <xref:System.Linq.Enumerable.Take%2A> для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса выражений запросов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
- В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
+ В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -50,4 +50,4 @@ ms.locfileid: "61760523"
   
 ## <a name="see-also"></a>См. также
 
-- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Запросы в LINQ to Entities](queries-in-linq-to-entities.md)

@@ -2,12 +2,12 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d35306d1299e91ecaa55a7d2818ee1e2982793f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797765"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249200"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 Возвращает ссылку на экземпляр сущности.  
@@ -33,7 +33,7 @@ REF( expression )
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL используется оператор REF в целях получения ссылки для входного аргумента сущности. Тот же запрос разыменовывает ссылку, поскольку для доступа к свойству сущности Product используется оператор получения свойства (.). Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
@@ -41,8 +41,8 @@ REF( expression )
   
 ## <a name="see-also"></a>См. также
 
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Определения типов](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [DEREF](deref-entity-sql.md)
+- [CREATEREF](createref-entity-sql.md)
+- [KEY](key-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [Определения типов](type-definitions-entity-sql.md)

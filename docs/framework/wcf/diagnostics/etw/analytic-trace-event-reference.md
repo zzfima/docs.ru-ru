@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae792a0b55b0559b13c2394bd27d85f224d1aea0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753040"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243972"
 ---
 # <a name="analytic-trace-event-reference"></a>Ссылка на событие аналитического отслеживания
-Следующая таблица определяет уровни событий, идентификаторы и сообщения, связанные с аналитической трассировки WCF.  
+В следующей таблице определены уровни событий, идентификаторы и сообщения, связанные с аналитической трассировкой WCF.  
   
 ## <a name="event-reference"></a>Ссылка на событие  
   
@@ -109,7 +109,6 @@ ms.locfileid: "61753040"
 |[1431 — ConcurrentCallsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1431-concurrentcallsratio.md)|Verbose|Отношение одновременных сеансов: %1/%2|Квота|  
 |[1432 — ConcurrentSessionsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1432-concurrentsessionsratio.md)|Verbose|Отношение одновременных сеансов: %1/%2|Квота|  
 |[1433 — OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|Verbose|Отношение исходящих соединений на конечную точку: %1/%2|Квота|  
-|[1433 — OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|Verbose|Отношение исходящих соединений на конечную точку: %1/%2|Квота|  
 |[1436 — PendingMessagesPerChannelRatio](../../../../../docs/framework/wcf/diagnostics/etw/1436-pendingmessagesperchannelratio.md)|Verbose|Отношение ожидающих сообщений на канал: %1/%2|Квота|  
 |[1438 — ConcurrentInstancesRatio](../../../../../docs/framework/wcf/diagnostics/etw/1438-concurrentinstancesratio.md)|Verbose|Отношение одновременных экземпляров: %1/%2|Квота|  
 |[1439 — PendingAcceptsAtZero](../../../../../docs/framework/wcf/diagnostics/etw/1439-pendingacceptsatzero.md)|Сведения|Ожидающих принятий не осталось|Квота|  
@@ -126,7 +125,7 @@ ms.locfileid: "61753040"
 |[3305 — ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|Сведения|Число кэшированных фабрик каналов: «%1».  Максимальное число фабрик каналов для кэширования:  «%2».|ServiceModel|  
 |[3306 — ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|Сведения|Фабрика канала устарела и была удалена из кэша, так как объем кэша достиг предела «%1».|ServiceModel|  
 |[3307 — ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|Сведения|В кэше обнаружена использованная одинаковая фабрика каналов.|ServiceModel|  
-|[3308 — ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Сведения|Не используется фабрика каналов из кэша, т. е. кэширование отключено для экземпляра.|ServiceModel|  
+|[3308 — ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Сведения|Фабрика каналов из кэша не используется, т. е. кэширование отключено для экземпляра.|ServiceModel|  
 |[3309 — QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|Сведения|Построение запроса с помощью «%1» было выполнено для URI запроса: «%2».|ServiceModel|  
 |[3310 — DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|Операция «%1» была подготовлена с ошибками.|ServiceModel|  
 |[3311 — DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|Сведения|Операция «%1» была успешно подготовлена.|ServiceModel|  
@@ -187,7 +186,7 @@ ms.locfileid: "61753040"
 |[3371 — MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|Verbose|MtomMessageEncoder начал кодирование сообщения.|Канал|  
 |[3372 — TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|Verbose|TextMessageEncoder начал кодирование сообщения.|Канал|  
 |[3373 — BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|Verbose|BinaryMessageEncoder начал расшифровку сообщения.|Канал|  
-|[3374 — MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|Verbose|MtomMessageEncoder начал расшифровку сообщения.|Канал|  
+|[3374 — MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|Verbose|Mtommessageencoder начал начата декодирование сообщения.|Канал|  
 |[3375 — TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|Verbose|TextMessageEncoder начал расшифровку сообщения.|Канал|  
 |[3376 — HttpResponseReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3376-httpresponsereceivestart.md)|Сведения|Транспорт HTTP начал получение сообщения.|HTTP|  
 |[3377 — SocketReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3377-socketreadstop.md)|Verbose|SocketId: %1 прочел «%2» байт по адресу «%3».|TCP|  

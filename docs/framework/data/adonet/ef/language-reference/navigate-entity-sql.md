@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 2c6c2ae4c593da1d5fe8cdf3015eb0e31e4b12b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307325"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249941"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 
@@ -21,13 +21,13 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 ## <a name="arguments"></a>Аргументы
 
-`instance-expression` Экземпляр сущности.
+`instance-expression`Экземпляр сущности.
 
-`relationship-type` Имя типа связи из языка CSDL файла определения концептуальной схемы. `relationship-type` Принимается в качестве \<пространства имен >.\< имя_типа_связи >.
+`relationship-type`Имя типа связи из CSDL-файла языка определения схемы. Является полным именем \<> пространства имен.\< `relationship-type` имя типа отношения >.
 
-`to` Конец связи.
+`to`Конец связи.
 
-`from` Начало этой связи.
+`from`Начало связи.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -35,7 +35,7 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 ## <a name="remarks"></a>Примечания
 
-Связи являются конструкция первого класса в Entity Data Model (EDM). Связи могут устанавливаться между двумя или несколькими типами сущностей, а пользователи могут переходить по связи от одного элемента (от одной сущности) к другому. `from` и `to` являются необязательными при том условии, что нет неоднозначности в разрешении имен в пределах связи.
+Связи — это конструкции первого класса в EDM (EDM). Связи могут устанавливаться между двумя или несколькими типами сущностей, а пользователи могут переходить по связи от одного элемента (от одной сущности) к другому. `from` и `to` являются необязательными при том условии, что нет неоднозначности в разрешении имен в пределах связи.
 
 Оператор NAVIGATE является допустимым в пространствах O и C.
 
@@ -43,14 +43,14 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )
 
-Пример:
+Например:
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Здесь OrderCustomer является значением параметра `relationship`, а Customer и Order являются элементами связи `to-end` (customer) и `from-end` (order). Если OrderCustomer был отношений n: 1, то типом результата выражения перехода будет Ref\<клиента >.
+Здесь OrderCustomer является значением параметра `relationship`, а Customer и Order являются элементами связи `to-end` (customer) и `from-end` (order). Если ордеркустомер является отношением n:1, то тип результата выражения Navigate является ссылочным\<> клиента.
 
 Для этого выражение существует следующая упрощенная форма.
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Аналогичным образом в запросе следующей формы выражение перехода вернет значение Collection < Ref\<порядок >>.
+Аналогично, в запросе следующей формы выражение Navigate выдает коллекцию < порядок ссылок\<> >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
@@ -72,7 +72,7 @@ From LOB.Customers as c
 
 В следующем запросе Entity SQL оператор NAVIGATE используется для перехода по связи, заданной между типами сущностей Address и SalesOrderHeader. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.
 
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.
 
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :
 
@@ -80,5 +80,5 @@ From LOB.Customers as c
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Практическое руководство. Перейдите связям с помощью оператора Navigate](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [Практическое руководство. Навигация по связям с помощью оператора Navigate](navigate-entity-sql.md)

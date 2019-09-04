@@ -1,13 +1,13 @@
 ---
-title: '- (Вычитание) (Язык entity SQL)'
+title: '- Вычесть (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: bc4327f9-09c0-438f-a008-927c5c478040
-ms.openlocfilehash: 2e4c08788ea57000e189c8371f0494641931184b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b5cfee4c82757e55babdf1ad14f6cf3c743a5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797661"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249020"
 ---
 # <a name="--subtract-entity-sql"></a>- (вычитание) (Entity SQL)
 Вычитает одно число из другого.  
@@ -23,12 +23,12 @@ expression - expression
  Любое допустимое выражение с любым числовым типом данных.  
   
 ## <a name="result-types"></a>Типы результата  
- Тип данных, который является результатом неявного повышения типов обоих аргументов. Дополнительные сведения о неявном повышении уровня типов, см. в разделе [система типов](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  
+ Тип данных, который является результатом неявного повышения типов обоих аргументов. Дополнительные сведения о неявном повышении типа см. в разделе [System Type](type-system-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует арифметический оператор вычитания (-) для вычитания одного числа из другого. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -36,4 +36,4 @@ expression - expression
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

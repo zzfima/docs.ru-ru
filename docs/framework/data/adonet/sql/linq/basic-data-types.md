@@ -2,12 +2,12 @@
 title: Базовые типы данных
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964068"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248028"
 ---
 # <a name="basic-data-types"></a>Базовые типы данных
 Поскольку запросы LINQ to SQL преобразуются на язык Transact-SQL перед их выполнением на Microsoft SQL Server, LINQ to SQL поддерживает встроенные функции, во многом сходные с теми, которые SQL Server использует для основных типов данных.  
@@ -24,5 +24,5 @@ ms.locfileid: "69964068"
   
 ## <a name="see-also"></a>См. также
 
-- [Сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Сопоставление типов SQL-CLR](sql-clr-type-mapping.md)
+- [Типы данных и функции](data-types-and-functions.md)

@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: efab5f1abbc5e0c22e404c37dc80dd5aafa09ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879610"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250935"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Определяет функцию в рамках команды запроса Entity SQL.  
@@ -41,17 +41,17 @@ FUNCTION function-name
  `data_type`  
  Имя поддерживаемого типа.  
   
- КОЛЛЕКЦИИ (< type_definition`>` )  
+ Коллекция (< type_definition`>` )  
  Выражение, возвращающее коллекцию поддерживаемых типов, строк или ссылок.  
   
- REF **(**`data_type`**)**  
+ REF **(** `data_type` **)**  
  Выражение, возвращающее ссылку на тип сущности.  
   
- ROW **(**`row_expression`**)**  
- Выражение, возвращающее анонимные структурно типизированные записи из одного или нескольких значений. Дополнительные сведения см. в разделе [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ ROW **(** `row_expression` **)**  
+ Выражение, возвращающее анонимные структурно типизированные записи из одного или нескольких значений. Дополнительные сведения см. в разделе [ROW](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Примечания  
- Объявить встроенными можно несколько функций с одинаковыми именами при условии, что эти функции имеют различные сигнатуры. Для получения дополнительной информации см. [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
+ Объявить встроенными можно несколько функций с одинаковыми именами при условии, что эти функции имеют различные сигнатуры. Для получения дополнительной информации см. [Function Overload Resolution](function-overload-resolution-entity-sql.md).  
   
  Встроенная функция может быть вызвана командой SQL только после определения ее в этой команде. Однако встроенная функция может быть вызвана в пределах другой встроенной функции как до, так и после определения вызываемой функции. В следующем примере функция A вызывает функцию B до того, как функция B была определена.  
   
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- Дополнительные сведения см. в разделе [Как Вызов определяемой пользователем функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Вызов определяемой пользователем функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
- Функции также могут быть объявлены внутри самой модели. Функции, объявленные в модели, выполняются так же, как и функции, объявленные встроенными в команде. Дополнительные сведения см. в разделе [определяемые пользователем функции](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
+ Функции также могут быть объявлены внутри самой модели. Функции, объявленные в модели, выполняются так же, как и функции, объявленные встроенными в команде. Дополнительные сведения см. в разделе [определяемые пользователем функции](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
  В следующей команде Entity SQL определяется функция `Products` , использующая целочисленное значение для фильтрации возвращаемых продуктов.  
@@ -77,5 +77,5 @@ FUNCTION function-name
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Язык Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
+- [Язык Entity SQL](entity-sql-language.md)
