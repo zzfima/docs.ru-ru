@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972120"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254069"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание классического приложения WPF
 
@@ -39,7 +39,7 @@ ms.locfileid: "68972120"
 По завершении работы с пошаговым руководством вы создадите автономное приложение Windows, позволяющее пользователям просматривать отчеты о расходах для выбранных лиц. Приложение состоит из нескольких страниц WPF, размещенных в окне в стиле браузера.
 
 > [!TIP]
-> Пример кода, который используется для построения этого пошагового руководства, доступен как для C# Visual Basic, так и в пошаговом [руководстве по примерам кода приложения WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp).
+> Пример кода, который используется для построения этого пошагового руководства, доступен как для C# Visual Basic, так и в [пошаговом руководстве по примерам кода приложения WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp).
 >
 > Язык кода образца кода можно переключать между C# и Visual Basic с помощью **\< />** раскрывающегося списка в правой верхней части этой статьи.
 
@@ -55,7 +55,7 @@ ms.locfileid: "68972120"
 
 1. Создайте новый проект приложения WPF в Visual Basic или Visual C# с именем **`ExpenseIt`** :
 
-   1. Откройте Visual Studio и выберите **создать новый проект** в меню Приступая к **работе** .
+   1. Откройте Visual Studio и выберите **создать новый проект** в меню **Приступая к работе** .
 
       Откроется диалоговое окно **Создание нового проекта** .
 
@@ -143,7 +143,7 @@ ms.locfileid: "68972120"
 
 1. Присвойте свойству`ExpenseIt - Home`значение "". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Установите значения элементов `DesignWidth`иравными 300 пикселам. `DesignHeight`
+1. Задайте для `DesignHeight` параметра значение 350 пикселей, `DesignWidth` а для параметра — значение 500 пикселей.
 
     Теперь XAML выглядит следующим образом для Visual Basic:
 
@@ -168,7 +168,7 @@ ms.locfileid: "68972120"
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
    > [!TIP]
-   > Также можно задать свойство **Source** в категории Разное в окне **Свойства** .
+   > Также можно задать свойство **Source** в категории **Разное** в окне **Свойства** .
    >
    > ![Свойство Source в окно свойств](./media/properties-source.png)
 
@@ -184,7 +184,7 @@ ms.locfileid: "68972120"
 
 1. Присвойте свойству`ExpenseIt - View Expense`значение "". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Установите значения элементов `DesignWidth`иравными 300 пикселам. `DesignHeight`
+1. Задайте для `DesignHeight` параметра значение 350 пикселей, `DesignWidth` а для параметра — значение 500 пикселей. 
 
     *Файл ExpenseReportPage. XAML* теперь выглядит следующим образом в Visual Basic:
 
@@ -240,7 +240,7 @@ ms.locfileid: "68972120"
 Каждый из этих элементов управления макета поддерживает определенный тип макета для своих дочерних элементов. `ExpenseIt`размеры страниц можно изменять, и каждая страница содержит элементы, расположенные горизонтально и вертикально рядом с другими элементами. В этом примере <xref:System.Windows.Controls.Grid> используется как элемент макета для приложения.
 
 > [!TIP]
-> Дополнительные сведения об элементах см. в разделе <xref:System.Windows.Controls.Panel> [Общие сведения](../controls/panels-overview.md)о панелях. Дополнительные сведения о макете см. в разделе [Layout](../advanced/layout.md).
+> Дополнительные сведения об элементах см. в разделе <xref:System.Windows.Controls.Panel> [Общие сведения о панелях](../controls/panels-overview.md). Дополнительные сведения о макете см. в разделе [Layout](../advanced/layout.md).
 
 В этом разделе вы создадите таблицу с одним столбцом с тремя строками и 10-пиксельным полем, добавив определения <xref:System.Windows.Controls.Grid> столбцов и строк в в. *`ExpenseItHome.xaml`*
 
@@ -275,7 +275,7 @@ ms.locfileid: "68972120"
 - A <xref:System.Windows.Controls.Label> (для заголовка списка).
 - A <xref:System.Windows.Controls.Button> (щелкните, чтобы просмотреть отчет о расходах для пользователя, выбранного в списке).
 
-Каждый элемент управления помещается в строку объекта <xref:System.Windows.Controls.Grid> путем <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> установки присоединенного свойства. Дополнительные сведения о вложенных свойствах см. в разделе [Общие сведения](../advanced/attached-properties-overview.md)о вложенных свойствах.
+Каждый элемент управления помещается в строку объекта <xref:System.Windows.Controls.Grid> путем <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> установки присоединенного свойства. Дополнительные сведения о вложенных свойствах см. в разделе [Общие сведения о вложенных свойствах](../advanced/attached-properties-overview.md).
 
 1. В *`ExpenseItHome.xaml`* добавьте в <xref:System.Windows.Controls.Grid> тег следующий код XAML между тегами:
 

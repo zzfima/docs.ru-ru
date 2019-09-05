@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b65711ad8c404d1c4f54a6197faf598e2215226f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663761"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252651"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<Элемент > Дисаблефусионупдатесфромадманажер
 Указывает, отключено ли поведение по умолчанию, которое разрешает хост-приложению среды выполнения переопределять параметры конфигурации для домена приложения.  
   
- \<Элемент Configuration >  
-\<Элемент > среды выполнения  
-\<Дисаблефусионупдатесфромадманажер >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Дисаблефусионупдатесфромадманажер >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

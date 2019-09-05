@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920766"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252621"
 ---
 # <a name="etwenable-element"></a>\<Элемент > Етвенабле
 Указывает, следует ли включить трассировку событий Windows для событий среды CLR.  
   
- \<Элемент Configuration >  
-\<Элемент > среды выполнения  
-\<Етвенаблед >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Етвенаблед >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

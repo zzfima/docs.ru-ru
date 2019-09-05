@@ -2,18 +2,18 @@
 title: Создание кода SQL для изменения данных
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034136"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248571"
 ---
 # <a name="modification-sql-generation"></a>Создание кода SQL для изменения данных
 
 В этом разделе приведено описание разработки модуля создания кода SQL для изменения данных для конкретного поставщика (базы данных, совместимой с SQL:1999). Этот модуль обеспечивает преобразование дерева команд изменения в соответствующие инструкции INSERT, UPDATE или DELETE языка SQL.
 
-Сведения о создании кода SQL для инструкций select, см. в разделе [создание кода SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).
+Дополнительные сведения о создании SQL для инструкций SELECT см. в разделе [Создание SQL](sql-generation.md).
 
 ## <a name="overview-of-modification-command-trees"></a>Общие сведения о деревьях команд изменения
 
@@ -27,11 +27,11 @@ DbModificationCommandTree - это представление объектной
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree и его реализации, которые создаются по [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда представляют операцию одной строки. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.
+DbModificationCommandTree и его реализации, создаваемые функцией [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , всегда представляют операцию с одной строкой. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.
 
-![Схема](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Схема](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree имеет свойство Target, которое представляет набор целей для операции изменения. Свойство Expression свойства Target, которое определяет входной набор, всегда имеет тип DbScanExpression.  DbScanExpression может представлять либо таблицу или представление, или набора данных, определенный с запросом, если свойство метаданных «Defining Query» его свойства Target имеет отличное от null.
+DbModificationCommandTree имеет свойство Target, которое представляет набор целей для операции изменения. Свойство Expression свойства Target, которое определяет входной набор, всегда имеет тип DbScanExpression.  Дбсканекспрессион может представлять таблицу или представление либо набор данных, определенных с помощью запроса, если свойство метаданных ", определяющего запрос" целевого объекта, не имеет значение null.
 
 Объект DbScanExpression, который представляет запрос, может достичь поставщика только как цель изменения, если набор был определен с помощью определяющего запроса в модели, но для соответствующей операции изменения не была предоставлена какая-либо функция. Поставщики могут оказаться неспособными поддерживать такой сценарий (например, поставщик SqlClient его не поддерживает).
 
@@ -74,11 +74,11 @@ Property указывает свойство, которое должно быт
 
 Свойство Predicate указывает предикат, используемый для определения того, какие элементы целевой коллекции должны быть обновлены или удалены. Это дерево выражения, построенное исходя из следующего подмножества DbExpressions.
 
-- DbComparisonExpression типа Equals, правый дочерний элемент которого является выражением DbPropertyExpression, ограниченные ниже, а левый дочерний DbConstantExpression.
+- DbComparisonExpression типа Equals, где правый дочерний элемент является Дбпропертекспрессион, как показано ниже, а левый дочерний элемент DbConstantExpression.
 
 - DbConstantExpression
 
-- DbIsNullExpression DbPropertyExpression, ограниченные ниже
+- DbIsNullExpression над Дбпропертекспрессион, как показано ниже
 
 - Свойство DbPropertyExpression на основе выражения DbVariableReferenceExpression, представляющего ссылку на свойство Target соответствующего объекта DbModificationCommandTree.
 
@@ -90,11 +90,11 @@ Property указывает свойство, которое должно быт
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Создание кода SQL для изменения данных в образце поставщика
 
-[Образца поставщика Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) демонстрируются компоненты поставщиков данных ADO.NET, которые поддерживают [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Он предназначен для базы данных SQL Server 2005 и реализован как оболочка на основе поставщика данных System.Data.SqlClient ADO.NET 2.0.
+В [Entity Framework примере поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) демонстрируются компоненты поставщиков данных ADO.NET, которые поддерживают [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Он предназначен для базы данных SQL Server 2005 и реализован как оболочка на основе поставщика данных System.Data.SqlClient ADO.NET 2.0.
 
 Модуль создания кода SQL для изменения данных из образца поставщика (который находится в файле SQL Generation\DmlSqlGenerator.cs) принимает входные данные DbModificationCommandTree и вырабатывает одну инструкцию SQL изменения, за которой может следовать инструкция SELECT, обеспечивающая возврат модуля чтения, если это указано в DbModificationCommandTree. Следует отметить, что форма созданных команд зависит от целевой базы данных SQL Server.
 
-### <a name="helper-classes-expressiontranslator"></a>Вспомогательные классы: Класс ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>Вспомогательные классы: експрессионтранслатор
 
 Класс ExpressionTranslator служит в качестве общего упрощенного преобразователя для всех свойств дерева команд изменения типа DbExpression. Он поддерживает преобразование только типов выражений, которыми ограничиваются свойства дерева команд изменения, и создается с учетом конкретных ограничений.
 
@@ -116,7 +116,7 @@ Property указывает свойство, которое должно быт
 
 Для каждого конкретного объекта DbInsertCommandTree из образца поставщика созданная команда INSERT соответствует одному из двух приведенных далее шаблонов INSERT.
 
-Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «\@ @ROWCOUNT > 0" имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; scope_identity()» принимает форму «keyMemberI = scope_identity()» только в том случае, если keyMemberI — это ключ, созданный хранилищем, поскольку функция scope_identity() возвращает последнее значение identity, вставленное в identity ( столбец, созданный в хранилище).
+Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент Predicate "\@ @ROWCOUNT > 0" имеет значение true, если строка была вставлена. Элемент Predicate "Кэймембери = Кэйвалуеи &#124; SCOPE_IDENTITY ()" принимает фигуру "кэймембери = SCOPE_IDENTITY ()" только в том случае, если кэймембери является ключом, созданным для хранения, поскольку функция SCOPE_IDENTITY () возвращает последнее значение идентификатора, вставленное в удостоверение ( созданный хранилищем).
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Предложение set имеет фиктивное предложение set («@i = 0") только в том случае, если указаны никаких предложений set. Это должно гарантировать повторное вычисление всех вычисленных хранилищем столбцов.
+Предложение SET имеет поддельное предложение SET ("@i = 0") только в том случае, если не заданы предложения SET. Это должно гарантировать повторное вычисление всех вычисленных хранилищем столбцов.
 
 Только если свойство Returning не равно null, создается инструкция SELECT для возврата свойств, указанных в свойстве Returning.
 
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>См. также
 
-- [Создание поставщика данных Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Создание поставщика данных Entity Framework](writing-an-ef-data-provider.md)

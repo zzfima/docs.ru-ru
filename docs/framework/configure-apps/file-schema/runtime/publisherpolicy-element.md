@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663516"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252383"
 ---
 # <a name="publisherpolicy-element"></a>\<Элемент > Publisherpolicy Apply
 Указывает, применяет ли среда выполнения политику издателя.  
   
- \<configuration>  
-\<> среды выполнения  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<Publisherpolicy Apply >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Publisherpolicy Apply >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,13 +51,16 @@ ms.locfileid: "69663516"
 |`no`|Политика издателя не применяется.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+
+Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
+|`assemblyBinding`|Содержит сведения о перенаправлении версии сборки и о расположениях сборок.|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`dependentAssembly`|Инкапсулирует политику привязки и расположение каждой сборки. Для каждой `<dependentAssembly>` сборки используется один элемент.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  

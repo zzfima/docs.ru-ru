@@ -2,23 +2,23 @@
 title: Создание кода в LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939177"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247959"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Создание кода в LINQ to SQL
 Можно создать код для представления базы данных с помощью реляционный конструктор объектов или средства командной строки SQLMetal. В любом случае полный процесс создания кода включает три этапа.  
   
 1. Средство *извлечения DBML* извлекает данные схемы из базы данных и повторно собирает их в XML-файл DBML.  
   
-2. DBML-файл сканируется проверяющим средством *проверки DBML* на наличие ошибок.  
+2. DBML-файл сканируется *проверяющим средством проверки DBML* на наличие ошибок.  
   
 3. Если ошибки не обнаружены, файл передается в генератор кода.  
   
- Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Разработчики, использующие Visual Studio, также могут использовать реляционный конструктор объектов для создания кода. См. раздел [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Разработчики, использующие Visual Studio, также могут использовать реляционный конструктор объектов для создания кода. См. раздел [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Средство извлечения DBML  
  Средство извлечения DBML — [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] это компонент, который принимает метаданные базы данных как входные данные и создает DBML-файл в качестве выходных данных.  
@@ -29,10 +29,10 @@ ms.locfileid: "69939177"
 ## <a name="xml-schema-definition-file"></a>Файл определения схемы XML  
  Файл DBML должен быть проверен на соответствие следующему XSD-файлу определению схемы.  
   
- Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки файла внешних сопоставлений. Дополнительные сведения см. в разделе [внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки файла внешних сопоставлений. Дополнительные сведения см. в разделе [внешнее сопоставление](external-mapping.md).  
   
 > [!NOTE]
-> Пользователи Visual Studio также будут искать этот XSD-файл в диалоговом окне схемы XML в формате "Дбмлсчема. xsd". Чтобы правильно использовать XSD-файл для проверки файла DBML, см. [раздел как Проверьте DBML и внешние файлы](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)сопоставления.  
+> Пользователи Visual Studio также будут искать этот XSD-файл в диалоговом окне схемы XML в формате "Дбмлсчема. xsd". Чтобы правильно использовать XSD-файл для проверки файла DBML, см. [раздел как Проверьте DBML и внешние файлы](how-to-validate-dbml-and-external-mapping-files.md)сопоставления.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Образец DBML-файла  
- Следующий код является фрагментом DBML-файла, созданного из образца базы данных Northwind. Вы можете создать файл целиком с помощью SQLMetal с параметром **/XML** . Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Следующий код является фрагментом DBML-файла, созданного из образца базы данных Northwind. Вы можете создать файл целиком с помощью SQLMetal с параметром **/XML** . Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -271,8 +271,8 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Практическое руководство. Создать объектную модель как внешний файл](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Основные сведения](background-information.md)
+- [Внешнее сопоставление](external-mapping.md)
+- [Практическое руководство. Создать объектную модель как внешний файл](how-to-generate-the-object-model-as-an-external-file.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)
+- [Ссылки](reference.md)

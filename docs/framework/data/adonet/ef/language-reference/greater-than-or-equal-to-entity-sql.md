@@ -1,15 +1,15 @@
 ---
-title: '>= (Больше или равно) (язык Entity SQL)'
+title: '>= (Больше или равно) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb97786687616ff92f0e4402c86aef02de2e70c9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034155"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250871"
 ---
-# <a name="-greater-than-or-equal-to-entity-sql"></a>> = (больше или равно) (язык Entity SQL)
+# <a name="-greater-than-or-equal-to-entity-sql"></a>> = (больше или равно) (Entity SQL)
 Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -28,7 +28,7 @@ expression >= expression
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор сравнения >= для сравнения двух выражений и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -36,4 +36,4 @@ expression >= expression
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

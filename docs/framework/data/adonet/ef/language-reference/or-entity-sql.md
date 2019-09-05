@@ -2,12 +2,12 @@
 title: '|| (ИЛИ) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c88e041638fbe6f32717ce9c4f9c2ff6fb56d803
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760315"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249764"
 ---
 # <a name="-or-entity-sql"></a>|| (ИЛИ) (Entity SQL)
 Объединяет два выражения типа `Boolean` .  
@@ -30,20 +30,20 @@ boolean_expression || boolean_expression
 ## <a name="remarks"></a>Примечания  
  OR - это логический оператор [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Он используется только для объединения двух условий. Если в инструкции используется более одного логического оператора, операторы OR вычисляются после операторов AND. Однако порядок выполнения можно изменить с помощью скобок.  
   
- Двойная вертикальная черта (&#124;&#124;) имеют ту же функциональность, что и оператор OR.  
+ Двойные вертикальные&#124;&#124;черты () имеют те же функциональные возможности, что и оператор OR.  
   
  В следующей таблице указаны возможные входные значения и возвращаемые типы.  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|true|true|  
-|`FALSE`|true|false|NULL|  
-|`NULL`|true|NULL|NULL|  
+|`TRUE`|true|TRUE|TRUE|  
+|`FALSE`|TRUE|FALSE|NULL|  
+|`NULL`|TRUE|NULL|NULL|  
   
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор OR, чтобы объединить два выражения типа `Boolean` . Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
@@ -51,4 +51,4 @@ boolean_expression || boolean_expression
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)

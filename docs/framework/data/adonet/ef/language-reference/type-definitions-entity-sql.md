@@ -2,18 +2,18 @@
 title: Определения типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641394"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248954"
 ---
 # <a name="type-definitions-entity-sql"></a>Определения типов (Entity SQL)
 Определение типа используется в операторе объявления встраиваемой функции [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="remarks"></a>Примечания  
- Оператор объявления для встроенной функции состоит из [ФУНКЦИЯ](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) ключевое слово и идентификатор, представляющий имя функции (например, «MyAvg»), следуют список определений параметров в скобки (для Пример, «dues Collection(Decimal)»).  
+ Оператор объявления для встроенной функции состоит из ключевого слова [Function](function-entity-sql.md) , за которым следует идентификатор, представляющий имя функции (например, "мявг"), за которым следует список определений параметров в круглых скобках (например, "сборная коллекция ( Decimal) ").  
   
  Список определений параметров содержит ноль или более определений параметров. Каждое определение параметра состоит из идентификатора (имя параметра для функции, например «dues»), за которым следует определение типа (например, «Collection(Decimal)»).  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64641394"
   
 - Ключевое слово `COLLECTION`, за которым следует определение другого типа в скобках (например, «Collection(AdventureWorks.Order)»).  
   
-- Ключевое слово ROW, за которым следует список определений свойств в скобках (например, «Row(x AdventureWorks.Order)»). Определения свойств имеют формат "`identifier type_definition`, `identifier type_definition`,...».  
+- Ключевое слово ROW, за которым следует список определений свойств в скобках (например, «Row(x AdventureWorks.Order)»). Определения свойств имеют формат, например "`identifier type_definition`, `identifier type_definition`,...".  
   
 - Ключевое слово REF, за которым следует тип идентификатора в скобках (например, «Ref(AdventureWorks.Order)»). Для оператора определения типа REF требуется присутствие типа сущности в качестве аргумента. В качестве аргумента нельзя указать тип-примитив.  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Общие сведения об Entity SQL](entity-sql-overview.md)
+- [Справочник по Entity SQL](entity-sql-reference.md)
