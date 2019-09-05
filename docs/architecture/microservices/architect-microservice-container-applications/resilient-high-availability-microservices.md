@@ -65,7 +65,7 @@ ms.locfileid: "68675061"
 - **Система диагностики Azure** \
   <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Connect Windows computers to the Azure Monitor service** \ (Подключение компьютеров Windows к службе Azure Monitor)
+- **Подключение компьютеров Windows к службе Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **Запись значения в журнал. Использование прикладного блока семантического ведения журнала** \
