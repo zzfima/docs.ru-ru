@@ -125,7 +125,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 - **Следите за образами контейнеров .NET** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
-- **Using .NET and Docker Together — DockerCon 2018 Update** \ (Совместное использование .NET и Docker — новости с DockerCon 2018)
+- **Совместное использование .NET и Docker — новости с DockerCon 2018** \
   <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>Использование мультиархитектурных репозиториев
