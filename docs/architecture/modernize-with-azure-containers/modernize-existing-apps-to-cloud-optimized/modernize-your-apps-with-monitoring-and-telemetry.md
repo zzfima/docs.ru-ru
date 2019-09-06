@@ -2,12 +2,12 @@
 title: Модернизация приложений с помощью мониторинга и данных телеметрии
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Модернизировать приложения с помощью мониторинга и телеметрии
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578177"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373957"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизация приложений с помощью мониторинга и данных телеметрии
 
@@ -21,11 +21,11 @@ Application Insights — это расширяемая служба управл
 
 ![Панель мониторинга Application Insights мониторинга](./media/image10.png)
 
-> **Рис. 4-10.** Панель мониторинга Application Insights мониторинга
+**Рис. 4-10.** Панель мониторинга Application Insights мониторинга
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Мониторинг инфраструктуры DOCKER с помощью Log Analytics и решения для мониторинга контейнеров
 
-[Log Analytics Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) является частью [Microsoft Azure общего решения мониторинга](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). Это также служба в Operations [Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Log Analytics наблюдает за облачными и локальными средами (OMS для локальной среды), чтобы обеспечить доступность и производительность. Он собирает данные, созданные ресурсами в облачной и локальной средах, а также из других средств мониторинга для обеспечения анализа в нескольких источниках.
+[Log Analytics Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) является частью [Microsoft Azure общего решения мониторинга](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). Это также служба в [Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Log Analytics наблюдает за облачными и локальными средами (OMS для локальной среды), чтобы обеспечить доступность и производительность. Он собирает данные, созданные ресурсами в облачной и локальной средах, а также из других средств мониторинга для обеспечения анализа в нескольких источниках.
 
 В отношении журналов инфраструктуры Azure Log Analytics, как служба Azure, принимает данные журналов и метрик из других служб Azure (через [Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)), виртуальные машины Azure, контейнеры DOCKER и локальные или другие облачные инфраструктуры. Log Analytics предлагает гибкий поиск по журналам и готовый анализ на основе этих данных. Он предоставляет широкие средства, которые можно использовать для анализа данных в разных источниках, позволяя выполнять сложные запросы во всех журналах и получать Упреждающее оповещение на основе указанных условий. Вы даже можете получать пользовательские данные в централизованном репозитории Log Analytics, где их можно запрашивать и визуализировать. Вы также можете воспользоваться преимуществами встроенных решений Log Analytics, чтобы немедленно получить ценные сведения о безопасности и функциональности инфраструктуры.
 
@@ -45,7 +45,7 @@ Application Insights — это расширяемая служба управл
 
 ![Log Analytics решение для мониторинга контейнеров](./media/image11.png)
 
-> **Рис. 4-11.** Log Analytics решение для мониторинга контейнеров
+**Рис. 4-11.** Log Analytics решение для мониторинга контейнеров
 
 Решение для мониторинга контейнеров Log Analytics можно использовать для следующих задач:
 

@@ -2,12 +2,12 @@
 title: Перенос реляционных баз данных в Azure
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Перенос реляционных баз данных в Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660735"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374099"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Перенос реляционных баз данных в Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "69660735"
 
 ![Пути переноса баз данных в Azure](./media/image3-1.png)
 
-> **Рис. 3-1**. Пути переноса баз данных в Azure
+**Рис. 3-1**. Пути переноса баз данных в Azure
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Время перехода на Управляемый экземпляр Базы данных SQL Azure
 

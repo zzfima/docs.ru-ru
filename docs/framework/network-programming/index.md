@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642416"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398520"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
@@ -85,7 +85,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  Ссылки на загружаемые примеры программ, в которых используются классы из пространств имен <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Net?displayProperty=nameWithType>  
  Предоставляет простой программный интерфейс для многих современных сетевых протоколов. Классы <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.WebResponse?displayProperty=nameWithType> в этом пространстве имен являются основой для подключаемых протоколов.  
   
@@ -139,5 +139,4 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
 - [Рекомендации по использованию протокола TLS с .NET Framework](../../../docs/framework/network-programming/tls.md)
 - [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [Пример HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Пример HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

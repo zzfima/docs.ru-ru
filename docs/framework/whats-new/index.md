@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987243"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374449"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -174,7 +174,7 @@ ms.locfileid: "69987243"
 
 **Улучшения высокого разрешения**
 
-В .NET Framework 4.8 WPF добавлена поддержка DPI для каждого монитора версии 2 и масштабирование DPI в смешанном режиме. См. подробнее о [разработке классических приложений с поддержкой высокого разрешения в Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
+В .NET Framework 4.8 WPF добавлена поддержка DPI для каждого монитора версии 2 и масштабирование DPI в смешанном режиме. См. подробнее о [разработке классических приложений с поддержкой высокого разрешения в Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows).
 
 В .NET Framework 4.8 улучшена поддержка взаимодействия между размещенными HWND и Windows Forms в приложениях WPF с поддержкой высокого разрешения на платформах, которые поддерживают масштабирование DPI в смешанном режиме (начиная с обновления Windows 10 за апрель 2018 г.). Элементы управления размещенных HWND или Windows Forms, создаваемые в качестве окон с масштабированием DPI в смешанном режиме путем вызова [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) и [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), могут размещаться в приложении WPF с поддержкой DPI для каждого монитора версии 2 с правильными размером и масштабом. Такое размещенное содержимое не отображается в собственном высоком разрешении. Вместо этого операционная система масштабирует размещенное содержимое до соответствующего размера. Включение режима поддержки DPI для каждого монитора версии 2 также позволяет размещать элементы управления WPF (родительские) в собственном окне в приложении с поддержкой высокого разрешения.
 
