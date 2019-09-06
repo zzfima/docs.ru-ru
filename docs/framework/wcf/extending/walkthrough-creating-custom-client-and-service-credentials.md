@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: eb60bc474ae0dd8cec85ca36f68b12764d46044d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040220"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374457"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
 
@@ -23,8 +23,6 @@ ms.locfileid: "70040220"
 - предоставление интерфейсов API, позволяющих приложениям задавать учетные данные;
 
 - выступать в качестве фабрики для реализаций <xref:System.IdentityModel.Selectors.SecurityTokenManager>.
-
-И класс <xref:System.ServiceModel.Description.ClientCredentials>, и класс <xref:System.ServiceModel.Description.ServiceCredentials> наследуют от абстрактного класса <xref:System.ServiceModel.Security.SecurityCredentialsManager>, определяющего контракт для возвращения <xref:System.IdentityModel.Selectors.SecurityTokenManager>.
 
 Реализации по умолчанию, предоставляемые в WCF, поддерживают предоставляемые системой типы учетных данных и создают диспетчер маркеров безопасности, способный обрабатывать эти типы учетных данных.
 

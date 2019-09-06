@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401547"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374529"
 ---
 # <a name="control-authoring-overview"></a>Общие сведения о разработке элементов управления
 
@@ -264,7 +264,7 @@ ms.locfileid: "68401547"
 
 Не нужно определять ресурс для каждой темы. Если ресурс не определен для конкретной темы, элемент управления проверяет `Classic.xaml` для ресурса. Если ресурс не определен в файле, соответствующем текущей теме, или в `Classic.xaml`, то элемент управления использует общий ресурс, который находится в файле словаря ресурса с именем `generic.xaml`.  Файл `generic.xaml` расположен в той же папке, что и файлы словаря ресурсов, связанные с темами. Хотя `generic.xaml` не соответствует конкретной теме Windows, он по-прежнему является словарем уровня темы.
 
-[Пример пользовательского элемента управления NumericUpDown с темами и поддержкой автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=160025) содержит два словаря ресурсов для элемента управления `NumericUpDown`: один — в файле generic.xaml, а второй — в Luna.NormalColor.xaml.  Можно запустить приложение и переключаться между серебристой темой в Windows XP и другой темой, чтобы увидеть разницу между двумя шаблонами элемента управления. (Если вы используете Windows Vista, можно переименовать Luna.NormalColor.xaml в Aero.NormalColor.xaml и переключаться между двумя темами, например между классической и темой по умолчанию для Windows Vista.)
+Образец [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) или пользовательский элемент управления NumericUpDown с темой и поддержкой модели автоматизации пользовательского интерфейса содержит два `NumericUpDown` словаря ресурсов для элемента управления: один — в Generic. XAML, а другой — в Luna. NormalColor. XAML. 
 
 При помещении <xref:System.Windows.Controls.ControlTemplate> в любой из файлов словаря ресурсов для конкретной темы необходимо создать статический конструктор для элемента управления и <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> вызвать метод в <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, как показано в следующем примере.
 

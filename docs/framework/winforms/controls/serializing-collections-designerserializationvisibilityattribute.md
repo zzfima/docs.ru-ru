@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015738"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373684"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Пошаговое руководство. Сериализация коллекций стандартных типов
 
@@ -37,7 +37,7 @@ ms.locfileid: "70015738"
 
 1. В Visual Studio создайте проект библиотеки элементов управления Windows и назовите его **сериализатиондемоконтроллиб**.
 
-2. Переименовать `UserControl1` в `SerializationDemoControl`. Дополнительные сведения см. в разделе Переименование [символа кода с помощью](/visualstudio/ide/reference/rename)рефакторинга.
+2. Переименовать `UserControl1` в `SerializationDemoControl`. Дополнительные сведения см. [в разделе Переименование символа кода с помощью рефакторинга](/visualstudio/ide/reference/rename).
 
 3. В окне **Свойства** присвойте <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> свойству значение **10**.
 
@@ -90,8 +90,8 @@ ms.locfileid: "70015738"
 
 5. Введите несколько строк в **редакторе коллекции строк**. Разделите их, нажав клавишу **Ввод** в конце каждой строки. После завершения ввода строк нажмите кнопку **ОК** .
 
-> [!NOTE]
-> Введенные строки отображаются в <xref:System.Windows.Forms.TextBox>. `SerializationDemoControl`
+    > [!NOTE]
+    > Введенные строки отображаются в <xref:System.Windows.Forms.TextBox>. `SerializationDemoControl`
 
 6. В **обозревателе решений** нажмите кнопку **Показать все файлы**.
 
