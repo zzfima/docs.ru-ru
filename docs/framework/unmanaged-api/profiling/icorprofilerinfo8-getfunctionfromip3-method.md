@@ -53,7 +53,7 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
 
 **Библиотечная** Коргуидс. lib
 
-**.NET Framework версии:** [! ВКЛЮЧИТЬ[net_current_v472plus](../../../../includes/net-current-v472plus.md)
+**.NET Framework версии:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)
 
 ## <a name="see-also"></a>См. также
 
