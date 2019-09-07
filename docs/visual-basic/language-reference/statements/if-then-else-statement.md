@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400710"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Оператор If...Then...Else (Visual Basic)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106517"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -61,7 +61,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 `condition` \
 Обязательный. Выражение. Должен иметь значение `True` или `False`, или, или к типу данных, который неявно преобразуется `Boolean`в.
 
-Если выражение является переменной, [допускающей значение NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` , которая возвращает значение [Nothing](../../../visual-basic/language-reference/nothing.md), условие обрабатывается так, как `False` `Else` если бы выражение было, а блок выполняется.
+Если выражение является переменной, [допускающей значение NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` , значением которого является [Nothing](../../../visual-basic/language-reference/nothing.md), условие обрабатывается так, как если `False`бы выражение было `ElseIf` , а блоки оцениваются, если они существуют `Else` , или блоком является выполняется, если он существует.
 
 `Then` \
 Требуется в однострочном синтаксисе; Необязательный в многострочном синтаксисе.

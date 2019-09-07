@@ -2,22 +2,23 @@
 title: Элемент <message> для <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931582"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400285"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<элемент Message > элемента \<WSFederationHttpBinding >
 Определяет параметры безопасности на уровне сообщений для [ \<> WSFederationHttpBinding](wsfederationhttpbinding.md).  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<Всфедератедбиндинг >  
-\<Привязка >  
-\<> безопасности  
-\<> сообщения  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
   
 ## <a name="syntax"></a>Синтаксис  
   

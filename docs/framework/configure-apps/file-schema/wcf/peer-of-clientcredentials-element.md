@@ -2,22 +2,23 @@
 title: <peer> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 2f1cb5689125e2483a74dcac515beb07abbb7c70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dce7ef64de1e3eb248e3553c97cbce8e9b205b4c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934039"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400100"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<Одноранговая \<> >ного элемента ClientCredentials
 Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.  
   
- \<системой. > ServiceModel  
-\<> поведения  
-\<endpointBehaviors >  
-\<> поведения  
-\<> clientCredentials  
-\<Одноранговые >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> clientCredentials**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Одноранговые >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

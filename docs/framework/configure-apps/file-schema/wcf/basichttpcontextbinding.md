@@ -2,19 +2,20 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: 05c863cf7649546745db270a4b3ac0c638083a85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0f4bde41bdd37580d946af3195540082d3647e7a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919868"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400632"
 ---
 # <a name="basichttpcontextbinding"></a>\<basicHttpContextBinding>
 Указание привязки, предоставляющей контекст для обмена <xref:System.ServiceModel.BasicHttpBinding> путем включения файлов Cookie HTTP в качестве механизма обмена.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<basicHttpContextBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<basicHttpContextBinding >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

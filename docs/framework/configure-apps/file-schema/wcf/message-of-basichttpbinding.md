@@ -2,22 +2,23 @@
 title: <message> из <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 320aca16bde9fc27aa35cad27286d402745e4710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bce80d96b1bcec0d580f2de3fe88d5fd6ad0a3b5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931574"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400266"
 ---
 # <a name="message-of-basichttpbinding"></a>\<> сообщений от \<BasicHttpBinding >
 Определяет параметры безопасности на [ \<](basichttpbinding.md)уровне сообщений для > BasicHttpBinding.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<> basicHttpBinding  
-\<Привязка >  
-\<> безопасности  
-\<> сообщения  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> basicHttpBinding**](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
   
 ## <a name="syntax"></a>Синтаксис  
   

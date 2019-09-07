@@ -2,21 +2,22 @@
 title: <security> из <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a895df027bee7430e51e76c480136a49b6b2a0be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab5969da6a2d7cb59c057fd5bb909add6b6398a4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936579"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399790"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<> безопасности > \<WS2007HttpBinding
 Представляет параметры безопасности, используемые с [ \<элементом > WS2007HttpBinding](ws2007httpbinding.md) .  
   
- \<> System. serviceModel  
-\<привязки >  
-\<ws2007HttpBinding >  
-\<Привязка >  
-\<> безопасности  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> безопасности**  
   
 ## <a name="syntax"></a>Синтаксис  
   

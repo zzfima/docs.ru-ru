@@ -2,21 +2,22 @@
 title: <security> из <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: bed7f4ce325e0d5e387e310ca15a3b72ac93f18e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6a1c952b1ae65c8fb6f17237b5c15f3a8d4844a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936543"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399750"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<> безопасности > \<WSDualHttpBinding
 Определяет возможности [ \<безопасности > WSDualHttpBinding](wsdualhttpbinding.md).  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<wsDualHttpBinding >  
-\<Привязка >  
-\<> безопасности  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsDualHttpBinding >** ](wsdualhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> безопасности**  
   
 ## <a name="syntax"></a>Синтаксис  
   

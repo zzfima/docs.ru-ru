@@ -2,21 +2,22 @@
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 84310d4ae5e04e76e4484f4fc606c9896239c776
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0b46953924a3825420b719085e1210981da643a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940549"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399206"
 ---
 # <a name="userequestheadersformetadataaddress"></a>\<Усерекуессеадерсформетадатааддресс >
 Включает получение сведений об адресе метаданных из заголовков сообщений запросов.  
   
-\<системой. > ServiceModel  
-\<> поведения  
-\<serviceBehaviors >  
-\<> поведения  
-\<Усерекуессеадерсформетадатааддресс >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Усерекуессеадерсформетадатааддресс >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

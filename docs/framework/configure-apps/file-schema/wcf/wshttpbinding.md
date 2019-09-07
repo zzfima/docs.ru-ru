@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: 81f0101ce1dc2195cfc2f556e38a8551f674d13b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fc86a97ebae160f5bf2c8fcb2df9295ed7803963
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941508"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399019"
 ---
 # <a name="wshttpbinding"></a>\<> wsHttpBinding
 Определяет безопасную, надежную, привязку с возможностью взаимодействия, которая может использоваться для недуплексных контрактов службы. Привязка реализует следующие спецификации: WS-надежный обмен сообщениями для надежности и WS-Security для обеспечения безопасности и проверки подлинности сообщений. В качестве транспорта используется HTTP, а для кодировки сообщений — кодировка Text/XML.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<> wsHttpBinding  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> wsHttpBinding**  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -3,20 +3,21 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 79230c65d8eb8c15cef5dce73698448ca7b1e003
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 28d73bb74c4a49052589040adc26194b1300668c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947315"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397606"
 ---
 # <a name="tracking"></a>\<Отслеживание >
 Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.  
   
  Дополнительные сведения об отслеживании рабочих процессов и его конфигурации см. в разделе Отслеживание рабочего процесса [и трассировка](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания рабочего процесса](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-\<> System. serviceModel  
-\<Отслеживание >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<системой. > ServiceModel**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Отслеживание >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

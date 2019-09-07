@@ -2,22 +2,23 @@
 title: <transport> из <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915550"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399318"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport>  — \<netTcpBinding>
 Определяет тип требований безопасности на уровне сообщений для конечной точки, [ \<](nettcpbinding.md)настроенной с помощью > NetTcpBinding.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<netTcpBinding >  
-\<Привязка >  
-\<> безопасности  
-\<> транспорта  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> транспорта**  
   
 ## <a name="syntax"></a>Синтаксис  
   

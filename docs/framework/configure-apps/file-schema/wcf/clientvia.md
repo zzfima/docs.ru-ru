@@ -2,21 +2,22 @@
 title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: b12a882d942555a24c145b243d2cea764ba106b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1c2ee68fb039e24e1462148cb52daf1bb57f8ed
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919508"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398112"
 ---
 # <a name="clientvia"></a>\<Клиентвиа >
 Задает универсальный код ресурса (URI), для которого необходимо создать канал транспорта. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Description.ClientViaBehavior>.  
   
- \<системой. > ServiceModel  
-\<> поведения  
-\<endpointBehaviors >  
-\<> поведения  
-\<Клиентвиа >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Клиентвиа >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

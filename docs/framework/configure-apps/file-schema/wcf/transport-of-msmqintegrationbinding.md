@@ -2,22 +2,23 @@
 title: <transport> из <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 859bc00557f66e27d7bd82a16704fc59c6044613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b23cfa5c7e6afa756c5113d26dee0407533fa5e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934730"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399375"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<транспортное \<> из MsmqIntegrationBinding >
 Определяет параметры безопасности для транспорта интеграции очереди сообщений.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-msmqIntegrationBinding  
-\<Привязка >  
-\<> безопасности  
-\<> транспорта  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<msmqIntegrationBinding >** ](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> транспорта**  
   
 ## <a name="syntax"></a>Синтаксис  
   

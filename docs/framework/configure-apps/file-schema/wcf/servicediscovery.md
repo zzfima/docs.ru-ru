@@ -2,21 +2,22 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ac067e84f2a4d2724e3d8f2d0af9b220fd15538
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936278"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399660"
 ---
 # <a name="servicediscovery"></a>\<Сервицедисковери >
 Указывает возможность обнаружения конечных точек службы.  
   
- \<системой. > ServiceModel  
-\<> поведения  
-\<serviceBehaviors >  
-\<> поведения  
-\<Сервицедисковери >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Сервицедисковери >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

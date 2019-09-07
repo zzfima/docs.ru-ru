@@ -2,18 +2,19 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 63cef2b85aa57b5c1c0e0add1794ebedc73d96c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933048"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397697"
 ---
 # <a name="nettcp"></a>\<> NET. TCP
 Задает параметры конфигурации для службы общего доступа к портам Net.Tcp, которая позволяет нескольким процессам совместно использовать один и тот же порт протокола TCP.  
   
- \<> System. serviceModel. Activation  
-\<> NET. TCP  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel. Activation**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> NET. TCP**  
   
 ## <a name="syntax"></a>Синтаксис  
   

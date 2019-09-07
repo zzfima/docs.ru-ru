@@ -2,19 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 30d1aa27ce29b6aa4091c3e7be05746ad462102a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931272"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397827"
 ---
 # <a name="mexhttpsbinding"></a>\<Мексхттпсбиндинг >
 Задает параметры для привязки, используемой для обмена сообщениями WS-MetadataExchange (WS-MEX) посредством HTTPS.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<Мексхттпсбиндинг >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Мексхттпсбиндинг >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +53,7 @@ ms.locfileid: "69931272"
 |[\<привязки >](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта привязка по существу является привязкой `WSHttpBinding`, которая поддерживает безопасность уровня транспорта с помощью сертификатов. Дополнительные сведения о настройке и использовании такой конечной точки метаданных см. в [разделе как Настройка пользовательской привязки](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)WS-Metadata Exchange, [а именно: Получение метаданных по привязке](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)без обмена метаданными и пример [пользовательской защищенной конечной точки метаданных](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
+ Эта привязка по существу является привязкой `WSHttpBinding`, которая поддерживает безопасность уровня транспорта с помощью сертификатов. Дополнительные сведения о настройке и использовании такой конечной точки метаданных см. в [разделе как Настройка пользовательской привязки](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)WS-Metadata Exchange, [как: Получение метаданных по привязке](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)без обмена метаданными и пример [пользовательской защищенной конечной точки метаданных](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
   
 ## <a name="see-also"></a>См. также
 

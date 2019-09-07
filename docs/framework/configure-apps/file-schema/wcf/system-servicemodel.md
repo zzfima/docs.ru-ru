@@ -8,15 +8,18 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938908"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399443"
 ---
 # <a name="systemservicemodel"></a>\<> System. serviceModel
 Этот раздел конфигурации содержит все элементы конфигурации Windows Communication Foundation (WCF) ServiceModel.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<> System. serviceModel**  
   
 ## <a name="syntax"></a>Синтаксис  
   

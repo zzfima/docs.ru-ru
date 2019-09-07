@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364305"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400734"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Общее представление о понятиях и структурах потока узлов XAML
 
@@ -85,9 +85,6 @@ while (xxr.Read()) {
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>Доступ к XAML за рамками концепции цикла узлов
 
 Помимо цикла узлов XAML существуют и другие способы работы с представлением XAML. Например, может существовать  средство чтения XAML, которое может читать индексированный узел, в частности обращаться к узлам напрямую с помощью директивы `x:Name`, `x:Uid`или используя другие идентификаторы. Службы XAML .NET Framework не обеспечивают полную реализацию, но предоставляют рекомендуемый шаблон с помощью служб и типов поддержки. Дополнительные сведения см. в разделах <xref:System.Xaml.IXamlIndexingReader> и <xref:System.Xaml.XamlNodeList>.
-
-> [!TIP]
-> Корпорация Майкрософт также производит отдельный выпуск, известный как Microsoft XAML Toolkit. Этот отдельный выпуск пока находится на стадии предварительной версии. Однако если вы готовы работать с компонентами предварительных версий, Microsoft XAML Toolkit предоставляет некоторые интересные ресурсы для работы с XAML и статического анализа XAML. Набор средств Microsoft XAML Toolkit включает API модели DOM XAML, поддержку анализа FxCop и контекст схемы XAML для Silverlight. Дополнительные сведения см. в разделе [Набор средств Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).
 
 <a name="working_with_the_current_node"></a>
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 2f26f937901debd27cb936d1f642e0a5149b167a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c7dafae846a30424f008cce5f597efbdefa4bdf8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250138"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397356"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Примеры синтаксиса запросов на основе методов. Операторы соединения
-В примерах этого раздела показано, как использовать <xref:System.Linq.Enumerable.Join%2A> методы и <xref:System.Linq.Enumerable.GroupJoin%2A> для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+В примерах этого раздела показано, как использовать <xref:System.Linq.Enumerable.Join%2A> методы и <xref:System.Linq.Enumerable.GroupJoin%2A> для запроса [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) с помощью синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
  В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   

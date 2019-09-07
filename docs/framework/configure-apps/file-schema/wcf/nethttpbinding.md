@@ -2,19 +2,20 @@
 title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: ff589c502333851de4dcf23101bb14fac767d25d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fce40f4cea856a52229a4586d216670ff61c2423
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933070"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397682"
 ---
 # <a name="nethttpbinding"></a>\<netHttpBinding >
 Представляет привязку, которую служба Windows Communication Foundation (WCF) может использовать для настройки и предоставления конечных точек, которые могут взаимодействовать по протоколу HTTP. При использовании с дуплексным контрактом будут использоваться веб-сокеты, в противном случае будет использоваться HTTP.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<netHttpBinding >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<netHttpBinding >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

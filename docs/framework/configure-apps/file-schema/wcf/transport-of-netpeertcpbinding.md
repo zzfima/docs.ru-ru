@@ -2,22 +2,23 @@
 title: <transport> из <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915564"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399315"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<транспортное \<> из netPeerTcpBinding >
 Задает параметры безопасности на транспортном уровне при использовании [ \<> netPeerTcpBinding](netpeertcpbinding.md).  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<netPeerTcpBinding >  
-\<Привязка >  
-\<> безопасности  
-\<> транспорта  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> транспорта**  
   
 ## <a name="syntax"></a>Синтаксис  
   

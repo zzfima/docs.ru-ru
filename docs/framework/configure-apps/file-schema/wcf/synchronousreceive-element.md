@@ -2,21 +2,22 @@
 title: Элемент <synchronousReceive>
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: fa14d4606303b2d67cf5ef845d428bb086680204
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3f4860be6b7edac776a1c30611271b2eb36968e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938970"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399501"
 ---
 # <a name="synchronousreceive-element"></a>\<Элемент > Синчронаусрецеиве
 Этот элемент конфигурации используется, чтобы задавать поведение времени выполнения при получении сообщений в службе или в клиентском приложении. Он не имеет атрибутов или дочерних элементов.  
   
- \<системой. > ServiceModel  
-\<> поведения  
-\<endpointBehaviors >  
-\<> поведения  
-\<Синчронаусрецеиве >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Синчронаусрецеиве >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

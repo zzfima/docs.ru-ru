@@ -2,20 +2,21 @@
 title: <tracking>WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: ad4f85139ff0a0f587bc47f63334fe97e25440b0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e8f74d635299a965b754536234e6be28e4e7a104
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932375"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399422"
 ---
 # <a name="tracking-of-wcf"></a>\<Отслеживание > WCF
 Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.  
   
  Дополнительные сведения об отслеживании рабочих процессов и его конфигурации см. в разделе Отслеживание рабочего процесса [и трассировка](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания рабочего процесса](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
- \<> System. serviceModel  
-\<Отслеживание >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Отслеживание >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -2,21 +2,22 @@
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: e67cc316b8747ee785055ceb4f954988fa82a44c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c410967e84c9318d21ce0b3072d08b026a37b190
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940613"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399209"
 ---
 # <a name="usemanagedpresentation"></a>\<Усеманажедпресентатион >
 Элемент привязки, используемый для связи со службой маркеров безопасности CardSpace, которая поддерживает CardSpace-профиль WS-Trust. Этот элемент не имеет атрибутов и представлен как пустой переключатель.  
   
- \<> System. serviceModel  
-\<привязки >  
-\<customBinding >  
-\<Привязка >  
-\<Усеманажедпресентатион >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Усеманажедпресентатион >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

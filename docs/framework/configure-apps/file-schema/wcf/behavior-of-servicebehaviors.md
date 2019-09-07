@@ -2,12 +2,12 @@
 title: <behavior> из <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 8c847368934cc4cd8ccaab017ede00b7b8963897
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a17fac5c519f41588ef90383f024e645b809b49b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400609"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<> поведения > \<serviceBehaviors
 Элемент `behavior` содержит коллекцию параметров для поведения службы. Каждое поведение индексируется по атрибуту `name`. Службы могут ссылаться на каждое поведение с помощью этого имени, `behaviorConfiguration` используя атрибут [ \<элемента Endpoint >](endpoint-element.md) . Это позволяет конечным точкам иметь общие конфигурации поведений без переопределения параметров. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и привязках и поведении, которые не имеют имен, см. в разделе [упрощенная конфигурация](../../../wcf/simplified-configuration.md) и [упрощенная конфигурация для служб WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -15,10 +15,11 @@ ms.locfileid: "69926406"
 > [!NOTE]
 > Элементы поведения, относящиеся к действиям рабочего процесса Windows, таким как [ \<элемент > sendMessageChannelCache](../windows-workflow-foundation/sendmessagechannelcache.md) , описаны в [ \<> \<поведений страницы > serviceBehaviors](../windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) .  
   
- \<системой. > ServiceModel  
-\<> поведения  
-\<serviceBehaviors >  
-\<> поведения  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> поведения**  
   
 ## <a name="syntax"></a>Синтаксис  
   

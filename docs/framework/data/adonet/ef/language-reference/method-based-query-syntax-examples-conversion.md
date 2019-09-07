@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: 5506c37ea4f313599f666014fd305a79f5cc7ffb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a78588cb4bd09f8a8a8ce8ed4a60dd45fce1d386
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250246"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397485"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>Примеры синтаксиса запросов на основе методов. Преобразование
-<xref:System.Linq.Enumerable.ToArray%2A>В примерах этого раздела показано, <xref:System.Linq.Enumerable.ToDictionary%2A> как использовать методы и <xref:System.Linq.Enumerable.ToList%2A> для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+<xref:System.Linq.Enumerable.ToArray%2A>В примерах этого раздела показано, <xref:System.Linq.Enumerable.ToDictionary%2A> как использовать методы и <xref:System.Linq.Enumerable.ToList%2A> для запроса [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) с помощью синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
  В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   

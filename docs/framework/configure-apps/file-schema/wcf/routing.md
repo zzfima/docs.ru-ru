@@ -2,19 +2,20 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcf2d4eec93fd7127c6f800e1c739ad1fac49203
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934129"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399964"
 ---
 # <a name="routing"></a>\<> маршрутизации
 
 Представляет раздел конфигурации для определения набора фильтров маршрутизации, которые определяют тип Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> , используемый при оценке входящих сообщений, а также таблицы маршрутизации, определяющие целевые конечные точки. Отправка сообщений в при совпадении фильтра.
 
-[ **\<> System. serviceModel**](system-servicemodel.md)   
-&nbsp;&nbsp; **\<> маршрутизации**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> маршрутизации**
   
 ## <a name="syntax"></a>Синтаксис  
   

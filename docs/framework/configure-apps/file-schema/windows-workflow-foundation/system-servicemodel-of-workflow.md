@@ -3,15 +3,18 @@ title: < > System. serviceModel рабочего процесса
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947366"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398602"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<> System. serviceModel рабочего процесса
 В этом разделе конфигурации содержатся все элементы конфигурации рабочего процесса.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<системой. > ServiceModel**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -108,4 +111,4 @@ ms.locfileid: "69947366"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|\<configuration>|Корневой элемент для всех элементов конфигурации в файле конфигурации .NET.|
+|[\<configuration>](../configuration-element.md)|Корневой элемент для всех элементов конфигурации в файле конфигурации .NET.|

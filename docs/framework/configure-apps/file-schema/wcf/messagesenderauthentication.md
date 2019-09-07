@@ -2,23 +2,24 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: c1d3662b2ceda83eb32abe99244e926332214698
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6183a8d27d56c7199b815ccb31b06f983a51b33
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931325"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398390"
 ---
 # <a name="messagesenderauthentication"></a>\<Мессажесендераусентикатион >
 Задает параметры проверки подлинности для однорангового сертификата, используемого отправителем сообщения.  
   
- \<системой. > ServiceModel  
-\<> поведения  
-\<serviceBehaviors >  
-\<> поведения  
-\<serviceCredentials >  
-\<Одноранговые >  
-\<Мессажесендераусентикатион >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Одноранговые >** ](peer-of-servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Мессажесендераусентикатион >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +52,7 @@ ms.locfileid: "69931325"
 |[\<Одноранговые >](peer-of-servicecredentials.md)|Задает текущие учетные данные для однорангового узла.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент должен быть настроен, если выбрана проверка подлинности сообщения. Для выходных каналов каждое сообщение подписывается с помощью сертификата, [ \<](certificate-element.md)предоставленного сертификатом >. Во всех сообщениях перед доставкой приложению проверяются учетные данные сообщения с помощью модуля проверки, заданного атрибутом `customCertificateValidatorType` этого элемента. Модуль проверки может принять или отклонить учетные данные.  
+ Этот элемент должен быть настроен, если выбрана проверка подлинности сообщения. Для выходных каналов каждое сообщение подписывается с помощью сертификата, [ \<предоставленного сертификатом >](certificate-element.md). Во всех сообщениях перед доставкой приложению проверяются учетные данные сообщения с помощью модуля проверки, заданного атрибутом `customCertificateValidatorType` этого элемента. Модуль проверки может принять или отклонить учетные данные.  
   
 ## <a name="see-also"></a>См. также
 

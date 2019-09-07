@@ -2,22 +2,23 @@
 title: <transport> из <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: af5852c3c7850f91686d50294c8846f85574e909
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2cf69c48a51ce2c687ebcfe9f87f7c22f5f86084
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918637"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399387"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<> передачи для \<BasicHttpBinding >
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<> basicHttpBinding  
-\<Привязка >  
-\<> безопасности  
-\<> транспорта  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> basicHttpBinding**](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> транспорта**  
   
 ## <a name="syntax"></a>Синтаксис  
   

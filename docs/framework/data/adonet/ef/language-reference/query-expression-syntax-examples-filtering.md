@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ce4e28df3a09ddf718b000725afb0c9125bdd77
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249508"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397106"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Примеры синтаксиса выражений запросов. Фильтрация
-В примерах этого раздела показано, как использовать `Where` методы и `Where…Contains` для запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с помощью синтаксиса выражения запроса. Примечание. где...`Contains` не может использоваться как часть [скомпилированного запроса](compiled-queries-linq-to-entities.md).  
+В примерах этого раздела показано, как использовать `Where` методы и `Where…Contains` для запроса [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) с помощью синтаксиса выражения запроса. Примечание. где...`Contains` не может использоваться как часть [скомпилированного запроса](compiled-queries-linq-to-entities.md).  
   
  Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   

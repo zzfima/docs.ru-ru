@@ -2,22 +2,23 @@
 title: <message> из <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 30507e44997a2e0fcc43494332e87edb2cc37aa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8cb8879d866eca3b1dafbd139de39373874dad14
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931448"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397794"
 ---
 # <a name="message-of-wshttpbinding"></a>\<> \<сообщений WSHttpBinding >
 Определяет параметры безопасности на [ \<](wshttpbinding.md)уровне сообщений для > WSHttpBinding.  
   
- \<системой. > ServiceModel  
-\<привязки >  
-\<> wsHttpBinding  
-\<Привязка >  
-\<> безопасности  
-\<> сообщения  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsHttpBinding**](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
   
 ## <a name="syntax"></a>Синтаксис  
   

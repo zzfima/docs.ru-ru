@@ -2,21 +2,23 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925842"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398005"
 ---
 # <a name="dispatchersynchronization"></a>\<Диспатчерсинчронизатион >
   
 Указывает поведение конечной точки, которое позволяет службе отправлять ответы в асинхронном режиме.  
   
-\<> System. serviceModel  
-\<> поведения  
-\<endpointBehaviors >  
-\<> поведения  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Диспатчерсинчронизатион >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

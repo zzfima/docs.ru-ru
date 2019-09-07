@@ -2,18 +2,19 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 7d868d84318db8c9fe188293154dc275060a3952
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd984b2ab89060451b1b2d02c324e803766908ce
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933182"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397718"
 ---
 # <a name="netpipe"></a>\<> NET. pipe
 Задает параметры конфигурации для службы активации именованных каналов, которая управляет временем существования соединения для именованного канала, а также обрабатывает запросы на активацию, которые поступают по именованным каналам.  
   
- \<> System. serviceModel. Activation  
-\<> NET. pipe  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel. Activation**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> NET. pipe**  
   
 ## <a name="syntax"></a>Синтаксис  
   
