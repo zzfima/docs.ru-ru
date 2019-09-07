@@ -2,20 +2,21 @@
 title: <diagnostics> для активации
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33b2cd4c5ae1b4076892a61aa7e2b927efa1ddc1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919224"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400411"
 ---
-# <a name="diagnostics-for-activation"></a><span data-ttu-id="6e40c-102">\<Диагностика > для активации</span><span class="sxs-lookup"><span data-stu-id="6e40c-102">\<diagnostics> for Activation</span></span>
-<span data-ttu-id="6e40c-103">Настраивает функции диагностики прослушивателя Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="6e40c-103">Configures Windows Communication Foundation (WCF) listener's diagnostics functionalities.</span></span>  
+# <a name="diagnostics-for-activation"></a><span data-ttu-id="f8ee1-102">\<Диагностика > для активации</span><span class="sxs-lookup"><span data-stu-id="f8ee1-102">\<diagnostics> for Activation</span></span>
+<span data-ttu-id="f8ee1-103">Настраивает функции диагностики прослушивателя Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="f8ee1-103">Configures Windows Communication Foundation (WCF) listener's diagnostics functionalities.</span></span>  
   
- <span data-ttu-id="6e40c-104">\<> System. serviceModel. Activation</span><span class="sxs-lookup"><span data-stu-id="6e40c-104">\<system.serviceModel.activation></span></span>  
-<span data-ttu-id="6e40c-105">\<Диагностика ></span><span class="sxs-lookup"><span data-stu-id="6e40c-105">\<diagnostics></span></span>  
+<span data-ttu-id="f8ee1-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="f8ee1-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="f8ee1-105">&nbsp;&nbsp;[ **\<> System. serviceModel. Activation**](system-servicemodel-activation.md)</span><span class="sxs-lookup"><span data-stu-id="f8ee1-105">&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)</span></span>\
+<span data-ttu-id="f8ee1-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Диагностика >**</span><span class="sxs-lookup"><span data-stu-id="f8ee1-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<diagnostics>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e40c-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6e40c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8ee1-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f8ee1-107">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -25,27 +26,27 @@ ms.locfileid: "69919224"
 </configuration>
 ```  
   
-## <a name="type"></a><span data-ttu-id="6e40c-107">Тип</span><span class="sxs-lookup"><span data-stu-id="6e40c-107">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="f8ee1-108">Тип</span><span class="sxs-lookup"><span data-stu-id="f8ee1-108">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6e40c-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="6e40c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="6e40c-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="6e40c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f8ee1-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f8ee1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f8ee1-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f8ee1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6e40c-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="6e40c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f8ee1-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f8ee1-111">Attributes</span></span>  
   
-|<span data-ttu-id="6e40c-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="6e40c-111">Attribute</span></span>|<span data-ttu-id="6e40c-112">Описание</span><span class="sxs-lookup"><span data-stu-id="6e40c-112">Description</span></span>|  
+|<span data-ttu-id="f8ee1-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f8ee1-112">Attribute</span></span>|<span data-ttu-id="f8ee1-113">Описание</span><span class="sxs-lookup"><span data-stu-id="f8ee1-113">Description</span></span>|  
 |---------------|-----------------|  
-|`performanceCountersEnabled`|<span data-ttu-id="6e40c-113">Логическое значение, определяющее, включены ли счетчики производительности для целей диагностики.</span><span class="sxs-lookup"><span data-stu-id="6e40c-113">A Boolean value that indicates whether performance counters are enabled for diagnostic purposes.</span></span>|  
+|`performanceCountersEnabled`|<span data-ttu-id="f8ee1-114">Логическое значение, определяющее, включены ли счетчики производительности для целей диагностики.</span><span class="sxs-lookup"><span data-stu-id="f8ee1-114">A Boolean value that indicates whether performance counters are enabled for diagnostic purposes.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6e40c-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="6e40c-114">Child Elements</span></span>  
- <span data-ttu-id="6e40c-115">Нет.</span><span class="sxs-lookup"><span data-stu-id="6e40c-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f8ee1-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f8ee1-115">Child Elements</span></span>  
+ <span data-ttu-id="f8ee1-116">Нет.</span><span class="sxs-lookup"><span data-stu-id="f8ee1-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6e40c-116">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="6e40c-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f8ee1-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f8ee1-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="6e40c-117">Элемент</span><span class="sxs-lookup"><span data-stu-id="6e40c-117">Element</span></span>|<span data-ttu-id="6e40c-118">Описание</span><span class="sxs-lookup"><span data-stu-id="6e40c-118">Description</span></span>|  
+|<span data-ttu-id="f8ee1-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="f8ee1-118">Element</span></span>|<span data-ttu-id="f8ee1-119">Описание</span><span class="sxs-lookup"><span data-stu-id="f8ee1-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6e40c-119">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="6e40c-119">\<system.serviceModel.activation></span></span>](system-servicemodel-activation.md)|<span data-ttu-id="6e40c-120">Содержит параметры конфигурации для процесса прослушивателя SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="6e40c-120">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
+|[<span data-ttu-id="f8ee1-120">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="f8ee1-120">\<system.serviceModel.activation></span></span>](system-servicemodel-activation.md)|<span data-ttu-id="f8ee1-121">Содержит параметры конфигурации для процесса прослушивателя SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="f8ee1-121">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="6e40c-121">См. также</span><span class="sxs-lookup"><span data-stu-id="6e40c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8ee1-122">См. также</span><span class="sxs-lookup"><span data-stu-id="f8ee1-122">See also</span></span>
 
 - <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

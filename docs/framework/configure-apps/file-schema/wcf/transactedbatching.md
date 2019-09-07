@@ -2,56 +2,57 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918675"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399410"
 ---
-# <a name="transactedbatching"></a><span data-ttu-id="0a238-101">\<Трансактедбатчинг ></span><span class="sxs-lookup"><span data-stu-id="0a238-101">\<transactedBatching></span></span>
+# <a name="transactedbatching"></a><span data-ttu-id="698c2-101">\<Трансактедбатчинг ></span><span class="sxs-lookup"><span data-stu-id="698c2-101">\<transactedBatching></span></span>
 
-<span data-ttu-id="0a238-102">Указывает, поддерживается ли объединение транзакций для операций получения.</span><span class="sxs-lookup"><span data-stu-id="0a238-102">Specifies whether transaction batching is supported for receive operations.</span></span>
+<span data-ttu-id="698c2-102">Указывает, поддерживается ли объединение транзакций для операций получения.</span><span class="sxs-lookup"><span data-stu-id="698c2-102">Specifies whether transaction batching is supported for receive operations.</span></span>
 
-<span data-ttu-id="0a238-103">\<системой. ServiceModel > </span><span class="sxs-lookup"><span data-stu-id="0a238-103">\<system.ServiceModel></span></span>\
-<span data-ttu-id="0a238-104">\<поведения > </span><span class="sxs-lookup"><span data-stu-id="0a238-104">\<behaviors></span></span>\
-<span data-ttu-id="0a238-105">\<endpointBehaviors > </span><span class="sxs-lookup"><span data-stu-id="0a238-105">\<endpointBehaviors></span></span>\
-<span data-ttu-id="0a238-106">\<> поведения </span><span class="sxs-lookup"><span data-stu-id="0a238-106">\<behavior></span></span>\
-<span data-ttu-id="0a238-107">\<Трансактедбатчинг ></span><span class="sxs-lookup"><span data-stu-id="0a238-107">\<transactedBatching></span></span>
+<span data-ttu-id="698c2-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="698c2-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="698c2-104">&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="698c2-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="698c2-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)</span><span class="sxs-lookup"><span data-stu-id="698c2-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)</span></span>\
+<span data-ttu-id="698c2-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="698c2-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)</span></span>\
+<span data-ttu-id="698c2-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-endpointbehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="698c2-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)</span></span>\
+<span data-ttu-id="698c2-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Трансактедбатчинг >**</span><span class="sxs-lookup"><span data-stu-id="698c2-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transactedBatching>**</span></span>  
 
-## <a name="syntax"></a><span data-ttu-id="0a238-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0a238-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="698c2-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="698c2-109">Syntax</span></span>
 
 ```xml
 <transactedBatching maxBatchSize="Integer" />
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="0a238-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0a238-109">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="698c2-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="698c2-110">Attributes and Elements</span></span>
 
-<span data-ttu-id="0a238-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0a238-110">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="698c2-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="698c2-111">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="0a238-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0a238-111">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="698c2-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="698c2-112">Attributes</span></span>
 
-|<span data-ttu-id="0a238-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0a238-112">Attribute</span></span>|<span data-ttu-id="0a238-113">Описание</span><span class="sxs-lookup"><span data-stu-id="0a238-113">Description</span></span>|
+|<span data-ttu-id="698c2-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="698c2-113">Attribute</span></span>|<span data-ttu-id="698c2-114">Описание</span><span class="sxs-lookup"><span data-stu-id="698c2-114">Description</span></span>|
 |---------------|-----------------|
-|`maxBatchSize`|<span data-ttu-id="0a238-114">Целое число, указывающее максимальное число операций получения, которые могут быть объединены в одну транзакцию.</span><span class="sxs-lookup"><span data-stu-id="0a238-114">An integer that specifies the maximum number of receive operations that can be batched together in one transaction.</span></span> <span data-ttu-id="0a238-115">Значение по умолчанию — 0.</span><span class="sxs-lookup"><span data-stu-id="0a238-115">The default is 0.</span></span>|
+|`maxBatchSize`|<span data-ttu-id="698c2-115">Целое число, указывающее максимальное число операций получения, которые могут быть объединены в одну транзакцию.</span><span class="sxs-lookup"><span data-stu-id="698c2-115">An integer that specifies the maximum number of receive operations that can be batched together in one transaction.</span></span> <span data-ttu-id="698c2-116">Значение по умолчанию — 0.</span><span class="sxs-lookup"><span data-stu-id="698c2-116">The default is 0.</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="0a238-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0a238-116">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="698c2-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="698c2-117">Child Elements</span></span>
 
-<span data-ttu-id="0a238-117">Нет.</span><span class="sxs-lookup"><span data-stu-id="0a238-117">None.</span></span>
+<span data-ttu-id="698c2-118">Нет.</span><span class="sxs-lookup"><span data-stu-id="698c2-118">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="0a238-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0a238-118">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="698c2-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="698c2-119">Parent Elements</span></span>
 
-|<span data-ttu-id="0a238-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="0a238-119">Element</span></span>|<span data-ttu-id="0a238-120">Описание</span><span class="sxs-lookup"><span data-stu-id="0a238-120">Description</span></span>|
+|<span data-ttu-id="698c2-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="698c2-120">Element</span></span>|<span data-ttu-id="698c2-121">Описание</span><span class="sxs-lookup"><span data-stu-id="698c2-121">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="0a238-121">\<> поведения</span><span class="sxs-lookup"><span data-stu-id="0a238-121">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="0a238-122">Задает поведение конечной точки.</span><span class="sxs-lookup"><span data-stu-id="0a238-122">Specifies an endpoint behavior.</span></span>|
+|[<span data-ttu-id="698c2-122">\<> поведения</span><span class="sxs-lookup"><span data-stu-id="698c2-122">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="698c2-123">Задает поведение конечной точки.</span><span class="sxs-lookup"><span data-stu-id="698c2-123">Specifies an endpoint behavior.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="0a238-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="0a238-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="698c2-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="698c2-124">Remarks</span></span>
 
-<span data-ttu-id="0a238-124">Транзакция, настроенная на попытки объединения в один пакет нескольких операций получения.</span><span class="sxs-lookup"><span data-stu-id="0a238-124">A transport that is configured with transaction batching attempts to batch several receive operations into one transaction.</span></span> <span data-ttu-id="0a238-125">Это позволяет избежать относительно высоких затрат ресурсов на создание и отправку транзакции для каждой операции получения.</span><span class="sxs-lookup"><span data-stu-id="0a238-125">By doing so, the relatively high cost of creating a transaction and committing it in every receive operation is avoided.</span></span>
+<span data-ttu-id="698c2-125">Транзакция, настроенная на попытки объединения в один пакет нескольких операций получения.</span><span class="sxs-lookup"><span data-stu-id="698c2-125">A transport that is configured with transaction batching attempts to batch several receive operations into one transaction.</span></span> <span data-ttu-id="698c2-126">Это позволяет избежать относительно высоких затрат ресурсов на создание и отправку транзакции для каждой операции получения.</span><span class="sxs-lookup"><span data-stu-id="698c2-126">By doing so, the relatively high cost of creating a transaction and committing it in every receive operation is avoided.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0a238-126">Пример</span><span class="sxs-lookup"><span data-stu-id="0a238-126">Example</span></span>
+## <a name="example"></a><span data-ttu-id="698c2-127">Пример</span><span class="sxs-lookup"><span data-stu-id="698c2-127">Example</span></span>
 
-<span data-ttu-id="0a238-127">В следующем примере показано, как добавить поведение объединения транзакций для службы в файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0a238-127">The following example shows how to add the transacted batching behavior to a service in a configuration file.</span></span>
+<span data-ttu-id="698c2-128">В следующем примере показано, как добавить поведение объединения транзакций для службы в файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="698c2-128">The following example shows how to add the transacted batching behavior to a service in a configuration file.</span></span>
 
 ```xml
 <system.serviceModel>
@@ -88,7 +89,7 @@ ms.locfileid: "69918675"
 </system.serviceModel>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0a238-128">См. также</span><span class="sxs-lookup"><span data-stu-id="0a238-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="698c2-129">См. также</span><span class="sxs-lookup"><span data-stu-id="698c2-129">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
 - <xref:System.ServiceModel.Description.TransactedBatchingBehavior>
