@@ -6,12 +6,12 @@ title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972385"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799301"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -111,12 +111,12 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/core">Руководство по .NET Core</a></h3>
+                                                <h3><a href="/dotnet/core/">Руководство по .NET Core</a></h3>
                                                 <p><a href="/dotnet/core/get-started">Начало работы</a></p>
-                                                <p><a href="/dotnet/core/tutorials">Учебники</a></p>
-                                                <p><a href="/dotnet/core/porting">Перенос из .NET Framework</a></p>
-                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p><a href="/ef/core/index">EF Core</a></p>
+                                                <p><a href="/dotnet/core/tutorials/">Учебники</a></p>
+                                                <p><a href="/dotnet/core/porting/">Перенос из .NET Framework</a></p>
+                                                <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,11 +152,11 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">Кроссплатформенная разработка</a></p>
-                                                <p><a href="/xamarin/ios">Руководство по Xamarin.iOS</a></p>
-                                                <p><a href="/xamarin/android">Руководство по Xamarin.Android</a></p>
-                                                <p><a href="/xamarin/xamarin-forms">Руководство по Xamarin.Forms</a></p>
+                                                <h3><a href="/xamarin/">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform/">Кроссплатформенная разработка</a></p>
+                                                <p><a href="/xamarin/ios/">Руководство по Xamarin.iOS</a></p>
+                                                <p><a href="/xamarin/android/">Руководство по Xamarin.Android</a></p>
+                                                <p><a href="/xamarin/xamarin-forms/">Руководство по Xamarin.Forms</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -172,11 +172,11 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/csharp">Руководство по языку C#</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">Начало работы</a></p>
-                                                <p><a href="/dotnet/csharp/tour-of-csharp">Обзор языка C#</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">What's New in C#</a> (Новые возможности C#)</p>
-                                                <p><a href="/dotnet/csharp/language-reference">Справочник по языку C#</a></p>
+                                                <h3><a href="/dotnet/csharp/">Руководство по языку C#</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started/">Начало работы</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp/">Обзор языка C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new/">What's New in C#</a> (Новые возможности C#)</p>
+                                                <p><a href="/dotnet/csharp/language-reference/">Справочник по языку C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,10 +192,10 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">Руководство по языку F#</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Начало работы</a></p>
+                                                <h3><a href="/dotnet/fsharp/">Руководство по языку F#</a></h3>
+                                                <p><a href="/dotnet/fsharp/get-started/">Начало работы</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Обзор языка F#</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">Справочник по языку F#</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference/">Справочник по языку F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -211,10 +211,10 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/visual-basic">Руководство по Visual Basic</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">Начало работы</a></p>
-                                                <p><a href="/dotnet/visual-basic/walkthroughs">Обзор Visual Basic</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Справочник по языку Visual Basic</a></p>
+                                                <h3><a href="/dotnet/visual-basic/">Руководство по Visual Basic</a></h3>
+                                                <p><a href="/dotnet/visual-basic/getting-started/">Начало работы</a></p>
+                                                <p><a href="/dotnet/visual-basic/walkthroughs">Пошаговые руководства</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference/">Справочник по языку Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -230,11 +230,11 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/machine-learning">Руководство по ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">Учебники</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">Ресурсы</a></p>
+                                                <h3><a href="/dotnet/machine-learning/">Руководство по ML.NET</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials/">Учебники</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/">Ресурсы</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Глоссарий</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">Справочник по ML.NET API</a></p>
+                                                <p><a href="/dotnet/api/?view=ml-dotnet">Справочник по ML.NET API</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -250,9 +250,9 @@ ms.locfileid: "68972385"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/spark">Руководство по .NET для Apache Spark</a></h3>
-                                                <p><a href="/dotnet/spark/tutorials">Учебники</a></p>
-                                                <p><a href="/dotnet/spark/resources">Ресурсы</a></p>
+                                                <h3><a href="/dotnet/spark/">Руководство по .NET для Apache Spark</a></h3>
+                                                <p><a href="/dotnet/spark/tutorials/">Учебники</a></p>
+                                                <p><a href="/dotnet/spark/resources/">Ресурсы</a></p>
                                                 <p><a href="/dotnet/api/?view=spark-dotnet">Справочник по API .NET для Apache Spark</a></p>
                                             </div>
                                         </div>
@@ -262,7 +262,6 @@ ms.locfileid: "68972385"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Участие в разработке документов и примеров .NET</a></p>
-                                    <p><a href="/dotnet/project-json">Поиск документации для версии Visual Studio 2015/project.json</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -271,7 +270,7 @@ ms.locfileid: "68972385"
                         <a href="#web">Интернет</a>
                         <ul id="web" class="cardsC">
                             <li>
-                                <a href="https://www.asp.net/get-started">
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -366,25 +365,6 @@ ms.locfileid: "68972385"
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="/aspnet/core/tutorials/xplat">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Руководства по кроссплатформенности в ASP.NET Core</h3>
-                                                    <p>Узнайте, как создавать веб-приложения и веб-API с помощью ASP.NET Core.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -431,7 +411,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
+                                <a href="/dotnet/fsharp/using-fsharp-on-azure/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -456,7 +436,7 @@ ms.locfileid: "68972385"
                         <a href="#mobile">Мобильные приложения</a>
                         <ul id="mobile" class="cardsC">
                             <li>
-                                <a href="/xamarin/ios">
+                                <a href="/xamarin/ios/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -475,7 +455,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/android">
+                                <a href="/xamarin/android/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -494,7 +474,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/xamarin-forms">
+                                <a href="/xamarin/xamarin-forms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -518,7 +498,7 @@ ms.locfileid: "68972385"
                         <a href="#desktop">Классические приложения</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-                                <a href="/uwp">
+                                <a href="/uwp/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -538,7 +518,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/wpf/index">
+                                <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -558,7 +538,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/winforms/index">
+                                <a href="/dotnet/framework/winforms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -577,7 +557,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/mac">
+                                <a href="/xamarin/mac/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -685,7 +665,7 @@ ms.locfileid: "68972385"
                         <a href="#ml-ai">Машинное обучение и искусственный интеллект</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
-                                <a href="/dotnet/machine-learning">
+                                <a href="/dotnet/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -704,7 +684,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/cognitive-services">
+                                <a href="/azure/cognitive-services/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -723,7 +703,7 @@ ms.locfileid: "68972385"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/machine-learning">
+                                <a href="/azure/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
