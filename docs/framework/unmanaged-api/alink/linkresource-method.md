@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335d80255f7a3f5a22e8a69aa91c9e5b0843ea1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741586"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776954"
 ---
 # <a name="linkresource-method"></a>Метод LinkResource
 Ссылки в ресурсе.  
@@ -46,22 +46,22 @@ HRESULT LinkResource(
  Имя файла.  
   
  `pszNewLocation`  
- Необязательное имя нового файла. Если не NULL, `pszFileName` pszNewLocation будут скопированы.  
+ Необязательное новое имя файла. Если значение не равно NULL `pszFileName` , будет скопировано в псзневлокатион.  
   
  `pszResourceName`  
  Имя ресурса.  
   
  `dwFlags`  
- Специальные возможности, такие как флаги `mrPublic` и `mrPrivate`. Этот параметр может передаваться в [метод DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Флаги специальных возможностей `mrPublic` , `mrPrivate`такие как и. Этот параметр может быть передан [методу DefineManifestResource](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

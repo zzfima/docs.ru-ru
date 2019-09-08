@@ -2,28 +2,28 @@
 title: Несколько активных результирующих наборов (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: bb00fbfec32a9d64fd6661cd5cdfd06fe3aa7410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea1097145dbc6c24f4cded60d151e8081a3ccd74
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922360"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781094"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Несколько активных результирующих наборов (MARS)
 MARS - это возможность, обеспечивающая выполнение нескольких пакетов в одном соединении. В предыдущих версиях в одном соединении можно было одновременно выполнять только один пакет. Из того, что при использовании режима MARS выполняются сразу несколько пакетов, не следует, что операции выполняются одновременно.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Включение нескольких активных результирующих наборов](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+ [Включение нескольких активных результирующих наборов](enabling-multiple-active-result-sets.md)  
  Приведено описание того, как использовать MARS в SQL Server.  
   
- [Управление данными](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
+ [Управление данными](manipulating-data.md)  
  Предоставляет примеры разработки кода приложений MARS.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Асинхронные операции](asynchronous-operations.md)  
  Предоставляет подробные сведения об использовании новых асинхронных средств в ADO.NET.  
   
 ## <a name="see-also"></a>См. также
 
-- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server и ADO.NET](index.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Числовые операторы и операторы сравнения
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: ff54856a66ad5e9c0362c013f8df5f1147055cd0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e7af725864aa191f092055fa32b403093321aa5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915714"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781297"
 ---
 # <a name="numeric-and-comparison-operators"></a>Числовые операторы и операторы сравнения
 
@@ -61,6 +61,6 @@ ms.locfileid: "69915714"
 
 ## <a name="see-also"></a>См. также
 
-- [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Типы данных и функции](data-types-and-functions.md)
 - [Операторы в C#](../../../../../csharp/language-reference/operators/index.md)
 - [Инструкции](../../../../../visual-basic/language-reference/operators/index.md)

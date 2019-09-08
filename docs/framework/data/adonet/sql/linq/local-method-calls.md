@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec288d5ac2f6466860362be82c619c89204e8f31
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033518"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781417"
 ---
 # <a name="local-method-calls"></a>Локальные вызовы методов
-Локальным вызовом метода называется вызов, который выполняется в объектной модели. Удаленный вызов метода - это вызов, который [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует в команды SQL и передает в ядро базы данных для выполнения. Локальные вызовы методов необходимы при [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не удается преобразовать вызов в команды SQL. В противном случае возникает исключение <xref:System.InvalidOperationException>.  
+Локальным вызовом метода называется вызов, который выполняется в объектной модели. Удаленный вызов метода - это вызов, который [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует в команды SQL и передает в ядро базы данных для выполнения. Локальные вызовы методов необходимы, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не удается перевести вызов в SQL. В противном случае возникает исключение <xref:System.InvalidOperationException>.  
   
 ## <a name="example-1"></a>Пример 1  
  В следующем примере класс `Order` сопоставлен с таблицей "Orders" базы данных "Northwind". К классу добавлен локальный экземпляр метода.  
@@ -28,4 +28,4 @@ ms.locfileid: "62033518"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Основные сведения](background-information.md)

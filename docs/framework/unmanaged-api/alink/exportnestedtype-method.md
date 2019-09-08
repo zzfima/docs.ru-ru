@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742043"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777274"
 ---
 # <a name="exportnestedtype-method"></a>Метод ExportNestedType
-Задает вложенные типы как экспортируемый. [Метод ExportType](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) также можно экспортировать вложенные типы, но этот метод работает быстрее.  
+Указывает вложенные типы как экспортируемые. [Метод ExportType](exporttype-method.md) также может экспортировать вложенные типы, но этот метод выполняется быстрее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,34 +43,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки для экспорта.  
+ Идентификатор сборки, из которой производится экспорт.  
   
  `FileToken`  
- Маркер файла или сборки, определяющей тип, чтобы стать экспортируемый файл.  
+ Маркер файла или сборка файла, определяющая тип, который должен быть сделан экспортируемым.  
   
  `TypeToken`  
- Токен типа, чтобы стать экспортируемый типа.  
+ Токен типа, который должен быть доступен для экспорта.  
   
  `ParentType`  
- Маркер родительского типа.  
+ Токен родительского типа.  
   
  `pszTypename`  
  Полное имя типа для экспорта.  
   
  `dwFlags`  
- `ComType` флаги, такие как `tdPublic` или `tdNested`. Это значение может быть передано в [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`Флаги, `tdPublic` такие `tdNested`как или. Это значение может быть передано [методу дефиникспортедтипе](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Получает маркер для экспортируемого типа.  
+ Получает токен для экспортируемого типа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

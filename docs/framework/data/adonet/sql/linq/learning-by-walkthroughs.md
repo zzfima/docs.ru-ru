@@ -2,12 +2,12 @@
 title: Обучение с использованием пошаговых руководств
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929215"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781314"
 ---
 # <a name="learning-by-walkthroughs"></a>Обучение с использованием пошаговых руководств
 В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] документации представлено несколько пошаговых руководств. В данном разделе рассматриваются общие вопросы пошаговых руководств (включая устранение неполадок) и предоставляются ссылки на некоторые пошаговые руководства для начинающих изучать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,22 +22,22 @@ ms.locfileid: "69929215"
   
 |Цель|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Создание класса сущности и выполнение простого запроса.|[Пошаговое руководство: Простая модель объектов и запрос (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Пошаговое руководство: Простая объектная модель и запросC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Добавление второго класса и выполнение более сложного запроса.<br /><br /> (Требуется выполнение предыдущего пошагового руководства.)|[Пошаговое руководство: Выполнение запросов по связям (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Пошаговое руководство: Запросы между связями (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Добавление, изменение и удаление элементов в базе данных.|[Пошаговое руководство: Обработка данных (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Пошаговое руководство: Обработка данных (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Использование хранимых процедур.|[Пошаговое руководство: Использование только хранимых процедур (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Пошаговое руководство: Использование только хранимых процедурC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Создание класса сущности и выполнение простого запроса.|[Пошаговое руководство: Простая модель объектов и запрос (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Пошаговое руководство: Простая объектная модель и запросC#()](walkthrough-simple-object-model-and-query-csharp.md)|  
+|Добавление второго класса и выполнение более сложного запроса.<br /><br /> (Требуется выполнение предыдущего пошагового руководства.)|[Пошаговое руководство: Выполнение запросов по связям (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Пошаговое руководство: Запросы между связями (C#)](walkthrough-querying-across-relationships-csharp.md)|  
+|Добавление, изменение и удаление элементов в базе данных.|[Пошаговое руководство: Обработка данных (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[Пошаговое руководство: Обработка данных (C#)](walkthrough-manipulating-data-csharp.md)|  
+|Использование хранимых процедур.|[Пошаговое руководство: Использование только хранимых процедур (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[Пошаговое руководство: Использование только хранимых процедурC#()](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Общее  
  Ниже представлены общие сведения, которые касаются всех этих пошаговых руководств.  
   
 - Среда: В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] каждом пошаговом руководстве используется Visual Studio в качестве интегрированной среды разработки (IDE).  
   
-- Система SQL: эти пошаговые руководства предназначены для реализации с помощью SQL Server Express. Если на компьютере не установлено приложение SQL Server Express, его можно загрузить бесплатно. Дополнительные сведения см. в статье [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Система SQL: эти пошаговые руководства предназначены для реализации с помощью SQL Server Express. Если на компьютере не установлено приложение SQL Server Express, его можно загрузить бесплатно. Дополнительные сведения см. в статье [Загрузка образцов баз данных](downloading-sample-databases.md).  
   
     > [!NOTE]
-    > В качестве строки подключения в данных пошаговых руководствах [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется имя файла. Простое указания имени файла является одной из удобных возможностей, которые технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет пользователям SQL Server Express. Не забывайте уделять особое внимание вопросам безопасности. Дополнительные сведения см. [в разделе Безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > В качестве строки подключения в данных пошаговых руководствах [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется имя файла. Простое указания имени файла является одной из удобных возможностей, которые технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет пользователям SQL Server Express. Не забывайте уделять особое внимание вопросам безопасности. Дополнительные сведения см. [в разделе Безопасность в LINQ to SQL](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]для пошаговых руководств обычно требуется образец базы данных Northwind. Дополнительные сведения см. в статье [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]для пошаговых руководств обычно требуется образец базы данных Northwind. Дополнительные сведения см. в статье [Загрузка образцов баз данных](downloading-sample-databases.md).  
   
 - Диалоговые окна и команды меню, отображаемые в пошаговых руководствах, могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска Visual Studio. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -89,4 +89,4 @@ ms.locfileid: "69929215"
   
 ## <a name="see-also"></a>См. также
 
-- [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Начало работы](getting-started.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742057"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777348"
 ---
 # <a name="enumcustomattributes-method"></a>Метод EnumCustomAttributes
 Извлекает настраиваемые атрибуты уровня сборки.  
@@ -41,28 +41,28 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Параметры  
  `hEnum`  
- Дескриптор перечислителя.  
+ Маркер перечислителя.  
   
  `tkType`  
- Тип атрибутов, которые необходимо перечислить. Используйте `mdTokenNill` для всех атрибутов.  
+ Тип атрибутов для перечисления. Используется `mdTokenNill` для всех атрибутов.  
   
  `rCustomValues`  
  Получает маркеры настраиваемых атрибутов.  
   
  `cMax`  
- Указывает размер `rCustomValues` массива.  
+ Задает размер `rCustomValues` массива.  
   
  `pcCustomValues`  
- При необходимости получает число значений маркера.  
+ При необходимости получает число значений токена.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

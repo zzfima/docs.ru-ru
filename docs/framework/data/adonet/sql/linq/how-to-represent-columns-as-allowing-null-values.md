@@ -2,15 +2,15 @@
 title: Практическое руководство. Как представлять столбцы, допускающие значения NULL
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-ms.openlocfilehash: ef8fa87963b91ef7140fbaefb657fc7904604b5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a837467010c2d8a9f0ca16d6aba2fc5f4c973f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902919"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781805"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>Практическое руководство. Как представлять столбцы, допускающие значения NULL
-Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> свойство <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибут, чтобы указать, что связанный столбец базы данных может содержать значения null.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Используйте<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> свойство атрибута<xref:System.Data.Linq.Mapping.ColumnAttribute> , чтобы указать, что в связанном столбце базы данных могут храниться значения NULL.  
   
  Примеры кода см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
@@ -22,5 +22,5 @@ ms.locfileid: "61902919"
   
 ## <a name="see-also"></a>См. также
 
-- [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Модель объектов LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](how-to-customize-entity-classes-by-using-the-code-editor.md)

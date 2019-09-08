@@ -2,12 +2,12 @@
 title: Состояния объектов и отслеживание изменений
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043523"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781273"
 ---
 # <a name="object-states-and-change-tracking"></a>Состояния объектов и отслеживание изменений
 
@@ -21,7 +21,7 @@ ms.locfileid: "70043523"
 |-----------|-----------------|
 |`Untracked`|Объект, не отслеживаемый [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Далее представлено несколько примеров.<br /><br /> — Объект не запрашивается через текущий <xref:System.Data.Linq.DataContext> (например, только что созданный объект).<br />— Объект, созданный с помощью десериализации.<br />— Объект, запрашиваемый через другой <xref:System.Data.Linq.DataContext>.|
 |`Unchanged`|Объект, извлеченный с использованием текущего <xref:System.Data.Linq.DataContext> и не измененный после создания.|
-|`PossiblyModified`|Объект, присоединенный к <xref:System.Data.Linq.DataContext>. Дополнительные сведения см. в статьях [Получение данных и операции CUD в N-уровневых приложениях (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|
+|`PossiblyModified`|Объект, *присоединенный* к <xref:System.Data.Linq.DataContext>. Дополнительные сведения см. в статьях [Получение данных и операции CUD в N-уровневых приложениях (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).|
 |`ToBeInserted`|Объект, который не был извлечен с использованием текущего <xref:System.Data.Linq.DataContext>. Это приводит к `INSERT` базы данных во время <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeUpdated`|Объект, известный для изменения после извлечения. Это приводит к `UPDATE` базы данных во время <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeDeleted`|Объект, помеченный для удаления и вызывающий `DELETE` базы данных во время <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
@@ -31,7 +31,7 @@ ms.locfileid: "70043523"
 
 Используя `Inserts`, можно явным образом запросить <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>. Кроме того [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , может `Inserts` определиться путем поиска объектов, подключенных к одному из известных объектов, которые необходимо обновить. Например, если добавить `Untracked` объект <xref:System.Data.Linq.EntitySet%601> в <xref:System.Data.Linq.EntityRef%601> `Untracked` или задать объект для объекта,объектможносделатьдоступнымспомощьюотслеживанияобъектоввграфе.`Untracked` Во время <xref:System.Data.Linq.DataContext.SubmitChanges%2A>обработки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает отслеживающие объекты и обнаруживает все достижимые постоянные объекты, которые не отслеживаются. Такие объекты являются кандидатами на вставку в базу данных.
 
-Для классов в иерархии наследования ( <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>`o`) также задает значение члена, обозначенного как *Дискриминатор* , в соответствии с типом объекта `o`. Если тип совпадает со значением дискриминатора по умолчанию, данное значение переопределяет значение дискриминатора. Дополнительные сведения см. в разделе [Поддержка наследования](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).
+Для классов в иерархии наследования ( <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>`o`) также задает значение члена, обозначенного как *Дискриминатор* , в соответствии с типом объекта `o`. Если тип совпадает со значением дискриминатора по умолчанию, данное значение переопределяет значение дискриминатора. Дополнительные сведения см. в разделе [Поддержка наследования](inheritance-support.md).
 
 > [!IMPORTANT]
 > Объект, добавляемый в `Table` не является кэшем идентификации. Кэш идентификации отражает только данные, извлеченные из базы данных. После вызова <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> добавленная сущность не отображается в запросах к базе данных до успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.
@@ -69,5 +69,5 @@ ms.locfileid: "70043523"
 
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Операции вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Основные сведения](background-information.md)
+- [Операции вставки, обновления и удаления](insert-update-and-delete-operations.md)

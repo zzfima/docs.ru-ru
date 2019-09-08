@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfcc2db3f1f0d8646f903fedb1eb06b39928d00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742122"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777439"
 ---
 # <a name="emitassemblycustomattribute-method"></a>Метод EmitAssemblyCustomAttribute
-Вызов для установки настраиваемых атрибутов уровня сборки.  
+Вызовите метод, чтобы установить настраиваемые атрибуты уровня сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,31 +46,31 @@ HRESULT EmitAssemblyCustomAttribute(
  Идентификатор сборки.  
   
  `FileToken`  
- Файл, который определяет атрибут. Может иметь значение NULL, если `AssemblyID` не обеспечивает несвязанный NETMODULE-файл.  
+ Файл, который разфайлет атрибут. Может иметь значение NULL `AssemblyID` , если не указывает на непривязанный netmodule.  
   
  `tkType`  
  Тип настраиваемого атрибута.  
   
  `pCustomValue`  
- Пользовательское значение данных.  
+ Пользовательские данные значения.  
   
  `cbCustomValue`  
- Длина данных пользовательское значение.  
+ Длина данных пользовательского значения.  
   
  `bSecurity`  
- Значение TRUE, если пользовательский атрибут имеет отношение к подписи сборки.  
+ Значение TRUE, если настраиваемый атрибут связан с подписыванием сборки.  
   
  `bAllowMulti`  
- Значение TRUE, если несколько атрибутов для добавления.  
+ Значение TRUE, если требуется выдавать несколько атрибутов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

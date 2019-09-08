@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741783"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777372"
 ---
 # <a name="getwin32resblob-method"></a>Метод GetWin32ResBlob
-Извлекает большой двоичный объект ресурса Win32. Этот метод вызывается после задания параметров сборки.  
+Извлекает BLOB-объект ресурса Win32. Вызовите этот метод после установки параметров сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,10 +44,10 @@ HRESULT GetWin32ResBlob(
  Идентификатор сборки.  
   
  `FileToken`  
- Файл токен, используемый для извлечения имени файла для использования при создании ресурс версии Win32  
+ Токен файла, используемый для получения имени файла, используемого при создании ресурса версии Win32  
   
  `fDll`  
- Значение TRUE, если файл является библиотекой DLL, false для EXE-файла.  
+ Значение TRUE, если файл является библиотекой DLL, и false для EXE-файла.  
   
  `pszIconFile`  
  Необязательный значок для вставки в большой двоичный объект ресурса.  
@@ -59,13 +59,13 @@ HRESULT GetWin32ResBlob(
  Получает размер большого двоичного объекта.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

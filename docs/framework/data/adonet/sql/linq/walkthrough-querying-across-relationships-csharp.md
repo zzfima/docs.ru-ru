@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Запросы по связям (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946946"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780992"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Пошаговое руководство. Запросы по связям (C#)
 В этом пошаговом руководстве [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] демонстрируется использование *ассоциаций* для представления связей внешнего ключа в базе данных.  
@@ -17,7 +17,7 @@ ms.locfileid: "69946946"
  Это пошаговое руководство было написано с использованием параметров разработки Visual C#.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Необходимо выполнить [пошаговое руководство. Простая объектная модель и запросC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)). В основе данного пошагового руководства лежит руководство, описываемое в данном разделе; кроме того, в компьютере должен быть файл northwnd.mdf в папке c:\linqtest5.  
+ Необходимо выполнить [пошаговое руководство. Простая объектная модель и запросC#(](walkthrough-simple-object-model-and-query-csharp.md)). В основе данного пошагового руководства лежит руководство, описываемое в данном разделе; кроме того, в компьютере должен быть файл northwnd.mdf в папке c:\linqtest5.  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из трех основных задач.  
@@ -86,8 +86,8 @@ ms.locfileid: "69946946"
 4. Чтобы остановить отладку, в окне консоли нажмите клавишу ВВОД.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Следующее пошаговое[руководство (пошаговое руководство. Управление данными (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) демонстрирует, как управлять данными. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
+ Следующее пошаговое[руководство (пошаговое руководство. Управление данными (C#)](walkthrough-manipulating-data-csharp.md)) демонстрирует, как управлять данными. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
   
 ## <a name="see-also"></a>См. также
 
-- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Обучение с использованием пошаговых руководств](learning-by-walkthroughs.md)

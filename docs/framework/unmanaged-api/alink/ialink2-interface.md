@@ -8,41 +8,41 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876e4db7656c7a9976aee61931af29078e410c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789770"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777166"
 ---
 # <a name="ialink2-interface"></a>Интерфейс IALink2
-Дополняет [интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) путем объявления методов, которые выполняются на более новые интерфейсы метаданных, например [интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Кроме того IALink2 объявляет методы, предоставляющие дополнительную гибкость использования над интерфейсами IALink.  
+Дополняет [интерфейс иалинк](ialink-interface.md) , объявляя методы, которые работают с более новыми интерфейсами метаданных, такими как [Интерфейс IMetaDataEmit2](../metadata/imetadataemit2-interface.md). Кроме того, IALink2 объявляет методы, которые обеспечивают дополнительную гибкость использования по сравнению с исходными интерфейсами Иалинк.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Метод AddFile2](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
+ [Метод AddFile2](addfile2-method.md)  
   
- [Метод EmitAssembly](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
+ [Метод EmitAssembly](emitassembly-method.md)  
   
- [Метод EmitInternalExportedTypes](../../../../docs/framework/unmanaged-api/alink/emitinternalexportedtypes-method.md)  
+ [Метод EmitInternalExportedTypes](emitinternalexportedtypes-method.md)  
   
- [Метод GetFileDef](../../../../docs/framework/unmanaged-api/alink/getfiledef-method.md)  
+ [Метод GetFileDef](getfiledef-method.md)  
   
  Метод GetPublicKeyToken  
   
- [Метод GetScope2](../../../../docs/framework/unmanaged-api/alink/getscope2-method.md)  
+ [Метод GetScope2](getscope2-method.md)  
   
- [Метод ImportFileEx](../../../../docs/framework/unmanaged-api/alink/importfileex-method.md)  
+ [Метод ImportFileEx](importfileex-method.md)  
   
- [Метод ImportFileEx2](../../../../docs/framework/unmanaged-api/alink/importfileex2-method.md)  
+ [Метод ImportFileEx2](importfileex2-method.md)  
   
- [Метод ImportTypes2](../../../../docs/framework/unmanaged-api/alink/importtypes2-method.md)  
+ [Метод ImportTypes2](importtypes2-method.md)  
   
- [Метод SetAssemblyFile2](../../../../docs/framework/unmanaged-api/alink/setassemblyfile2-method.md)  
+ [Метод SetAssemblyFile2](setassemblyfile2-method.md)  
   
- [Метод SetPEKind](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
+ [Метод SetPEKind](setpekind-method.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [API ALink](index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Al.exe (компоновщик сборок)](../../tools/al-exe-assembly-linker.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741881"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777227"
 ---
 # <a name="getpublickeytoken-method"></a>Метод GetPublicKeyToken
-Извлекает токен открытого ключа для заданного файла или контейнера ключей.  
+Извлекает токен открытого ключа для данного ключа или контейнера ключей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,22 +42,22 @@ HRESULT GetPublicKeyToken(
  Имя файла ключа.  
   
  `pszKeyContainer`  
- Имя контейнера ключа.  
+ Имя контейнера ключей.  
   
  `pvPublicKeyToken`  
- Адрес, где будет храниться ключ.  
+ Адрес, по которому должен храниться токен ключа.  
   
  `pcbPublicKeyToken`  
- Указывает размер в байтах буфера, обозначается `pvPublicKeyToken`. По возвращении содержит фактическое число байтов, используемых.  
+ Задает размер буфера (в байтах), указанного в параметре `pvPublicKeyToken`. После возврата содержит фактическое число используемых байтов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [API ALink](index.md)

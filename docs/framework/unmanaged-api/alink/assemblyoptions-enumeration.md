@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742265"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777479"
 ---
 # <a name="assemblyoptions-enumeration"></a>Перечисление AssemblyOptions
 Перечисляет параметры сборки.  
@@ -58,32 +58,32 @@ typedef enum _AssemblyOptions {
   
 |Поле|Описание|  
 |-----------|-----------------|  
-|optAssemTitle|Строка — определяет название сборки.|  
-|optAssemDescription|Строка — содержит описание сборки.|  
-|optAssemConfig|Строка — содержит конфигурацию сборки.|  
-|optAssemOS|Строка - кодировке: «dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion».|  
-|optAssemProcessor|ULONG|  
-|optAssemLocale|Строка — содержит языковой стандарт сборки.|  
-|optAssemVersion|Строка - кодировке: «Основная.дополнительная.сборка.редакция».|  
-|optAssemCompany|Строка — содержит компании.|  
-|optAssemProduct|Строка — содержит имя продукта.|  
-|optAssemProductVersion|Строка (также известный как InformationalVersion).|  
-|optAssemCopyright|Строка — содержит сведения об авторских правах.|  
-|optAssemTrademark|Строка — содержит сведения о товарном знаке.|  
-|optAssemKeyFile|String (имя файла).|  
-|optAssemKeyName|Строка (имя ключа).|  
-|optAssemAlgID|ULONG|  
-|optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (также известен как DelaySign).|  
-|optAssemFileVersion|Строка - кодируется как «Основная.дополнительная.сборка.редакция»--так же, как ProductVersion.|  
-|optAssemSatelliteVer|Строка - кодируется как «Основная.дополнительная.сборка.редакция».|  
-|optLastAssemOption|Счетчик числа элементов.|  
+|оптассемтитле|Строка — представляет заголовок сборки.|  
+|оптассемдескриптион|Строка — содержит описание сборки.|  
+|оптассемконфиг|Строка — содержит конфигурацию сборки.|  
+|оптассемос|Строка в кодировке: "Двосплатформид. Двосмажорверсион. Двосминорверсион".|  
+|оптассемпроцессор|ULONG|  
+|оптассемлокале|Строка — содержит языковой стандарт сборки.|  
+|оптассемверсион|Строка в кодировке: "Основной. дополнительный. сборка. Редакция".|  
+|оптассемкомпани|Строка — содержит компанию.|  
+|оптассемпродукт|Строка — содержит имя продукта.|  
+|оптассемпродуктверсион|Строка (также известная как Информатионалверсион).|  
+|оптассемкопиригхт|Строка — содержит сведения об авторских правах.|  
+|оптассемтрадемарк|Строка — содержит сведения о товарном знаке.|  
+|оптассемкэйфиле|Строка (имя файла).|  
+|оптассемкэйнаме|Строка (имя ключа).|  
+|оптассемалгид|ULONG|  
+|оптассемфлагс|ULONG|  
+|оптассемхалфсигн|Bool (также называется DelaySign).|  
+|оптассемфилеверсион|Строка, закодированная как "основная. Дополнительная. сборка. Редакция"--то же, что и ProductVersion.|  
+|оптассемсателлитевер|Строка, закодированная как "основная. Дополнительная. сборка. Редакция".|  
+|оптластассемоптион|Счетчик числа элементов.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** alink.h  
+ **Заголовок:** ALink. h  
   
- **Библиотека**: alink.dll  
+ **Библиотека**: ALink. dll  
   
 ## <a name="see-also"></a>См. также
 
-- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (компоновщик сборок)](../../tools/al-exe-assembly-linker.md)

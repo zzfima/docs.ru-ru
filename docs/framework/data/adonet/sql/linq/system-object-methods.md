@@ -2,15 +2,15 @@
 title: Методы System.Object
 ms.date: 03/30/2017
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-ms.openlocfilehash: 3a52f081f1c0c6e6c5218550009c736d0ed60514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a36798ef789bbc44f581dfc631feee19e1f66b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917667"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781072"
 ---
 # <a name="systemobject-methods"></a>Методы System.Object
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает следующие <xref:System.Object> методы.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает следующие <xref:System.Object> методы.  
   
 |||  
 |-|-|  
@@ -26,8 +26,8 @@ ms.locfileid: "61917667"
 |<xref:System.Object.ToString?displayProperty=nameWithType> для двоичных типов, таких как `BINARY`, `VARBINARY`, `IMAGE` и `TIMESTAMP`.||  
   
 ## <a name="differences-from-net"></a>Отличия от платформы .NET  
- Выходные данные <xref:System.Object.ToString?displayProperty=nameWithType> для double используется SQL `CONVERT`(NVARCHAR(30), @x, 2) на SQL Server. В этом случае SQL всегда использует 16 цифр и экспоненциальный формат (например, «0.000000000000000e+000» для 0). В результате преобразование <xref:System.Object.ToString?displayProperty=nameWithType> формирует строку, отличную от строки преобразования <xref:System.Convert.ToString%2A?displayProperty=nameWithType> на платформе .NET Framework.  
+ Выходные данные <xref:System.Object.ToString?displayProperty=nameWithType> для типа Double используют SQL `CONVERT`(nvarchar (30), @x, 2) в SQL. В этом случае SQL всегда использует 16 цифр и экспоненциальный формат (например, «0.000000000000000e+000» для 0). В результате преобразование <xref:System.Object.ToString?displayProperty=nameWithType> формирует строку, отличную от строки преобразования <xref:System.Convert.ToString%2A?displayProperty=nameWithType> на платформе .NET Framework.  
   
 ## <a name="see-also"></a>См. также
 
-- [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Типы данных и функции](data-types-and-functions.md)

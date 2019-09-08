@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742157"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777457"
 ---
 # <a name="embedresource-method"></a>Метод EmbedResource
-Объявляет внедренного ресурса. Этот метод фактически не внедряет ресурс.  
+Объявляет внедренный ресурс. Этот метод фактически не внедряет ресурс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ HRESULT EmbedResource(
  Идентификатор сборки.  
   
  `FileToken`  
- Файл токена или идентификатор сборки файла, содержащего ресурс.  
+ Маркер файла или идентификатор сборки файла, содержащего ресурс.  
   
  `pszResourceName`  
  Имя ресурса.  
@@ -53,16 +53,16 @@ HRESULT EmbedResource(
  Смещение ресурса от RVA.  
   
  `dwFlags`  
- Специальные возможности, такие как флаги `mrPublic` и `mrPrivate`. Эти флаги может передаваться в [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Флаги специальных возможностей `mrPublic` , `mrPrivate`такие как и. Эти флаги можно передать в [метод дефиникспортедтипе](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd1ec9caa70dd7016253ae4385b16dbfb982f956
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742017"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777284"
 ---
 # <a name="exporttype-method"></a>Метод ExportType
-Указывает, что тип может быть экспортирован.  
+Указывает, что тип является экспортируемым.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,31 +41,31 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки для экспорта.  
+ Идентификатор сборки, из которой необходимо выполнить экспорт.  
   
  `FileToken`  
- Идентификатор маркера или сборки файла, определяющего экспортируемый тип файла.  
+ Маркер файла или идентификатор сборки файла, который определяет экспортируемый тип.  
   
  `TypeToken`  
- Токен типа, чтобы стать экспортируемый.  
+ Токен типа, который должен быть сделан экспортируемым.  
   
  `pszTypename`  
- Полное имя типа предполагающем экспортируемым.  
+ Полное имя типа, которое необходимо сделать экспортируемым.  
   
  `dwFlags`  
- `ComType` флаги, такие как `tdPublic` или `tdNested`. Этот параметр может передаваться в [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`Флаги, `tdPublic` такие `tdNested`как или. Этот параметр может быть передан [методу дефиникспортедтипе](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Получает маркер для экспортируемого типа.  
+ Получает токен для экспортируемого типа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)
