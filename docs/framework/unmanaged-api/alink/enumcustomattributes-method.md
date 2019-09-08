@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742057"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777348"
 ---
-# <a name="enumcustomattributes-method"></a><span data-ttu-id="b8433-102">Метод EnumCustomAttributes</span><span class="sxs-lookup"><span data-stu-id="b8433-102">EnumCustomAttributes Method</span></span>
-<span data-ttu-id="b8433-103">Извлекает настраиваемые атрибуты уровня сборки.</span><span class="sxs-lookup"><span data-stu-id="b8433-103">Retrieves assembly-level custom attributes.</span></span>  
+# <a name="enumcustomattributes-method"></a><span data-ttu-id="a6d7c-102">Метод EnumCustomAttributes</span><span class="sxs-lookup"><span data-stu-id="a6d7c-102">EnumCustomAttributes Method</span></span>
+<span data-ttu-id="a6d7c-103">Извлекает настраиваемые атрибуты уровня сборки.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-103">Retrieves assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8433-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b8433-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6d7c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a6d7c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumCustomAttributes(  
@@ -39,30 +39,30 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b8433-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b8433-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6d7c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a6d7c-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="b8433-106">Дескриптор перечислителя.</span><span class="sxs-lookup"><span data-stu-id="b8433-106">Handle of enumerator.</span></span>  
+ <span data-ttu-id="a6d7c-106">Маркер перечислителя.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-106">Handle of enumerator.</span></span>  
   
  `tkType`  
- <span data-ttu-id="b8433-107">Тип атрибутов, которые необходимо перечислить.</span><span class="sxs-lookup"><span data-stu-id="b8433-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="b8433-108">Используйте `mdTokenNill` для всех атрибутов.</span><span class="sxs-lookup"><span data-stu-id="b8433-108">Use `mdTokenNill` for all attributes.</span></span>  
+ <span data-ttu-id="a6d7c-107">Тип атрибутов для перечисления.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="a6d7c-108">Используется `mdTokenNill` для всех атрибутов.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-108">Use `mdTokenNill` for all attributes.</span></span>  
   
  `rCustomValues`  
- <span data-ttu-id="b8433-109">Получает маркеры настраиваемых атрибутов.</span><span class="sxs-lookup"><span data-stu-id="b8433-109">Receives custom attributes tokens.</span></span>  
+ <span data-ttu-id="a6d7c-109">Получает маркеры настраиваемых атрибутов.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-109">Receives custom attributes tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="b8433-110">Указывает размер `rCustomValues` массива.</span><span class="sxs-lookup"><span data-stu-id="b8433-110">Specifies size of `rCustomValues` array.</span></span>  
+ <span data-ttu-id="a6d7c-110">Задает размер `rCustomValues` массива.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-110">Specifies size of `rCustomValues` array.</span></span>  
   
  `pcCustomValues`  
- <span data-ttu-id="b8433-111">При необходимости получает число значений маркера.</span><span class="sxs-lookup"><span data-stu-id="b8433-111">Optionally receives count of token values.</span></span>  
+ <span data-ttu-id="a6d7c-111">При необходимости получает число значений токена.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-111">Optionally receives count of token values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b8433-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b8433-112">Return Value</span></span>  
- <span data-ttu-id="b8433-113">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="b8433-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6d7c-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a6d7c-112">Return Value</span></span>  
+ <span data-ttu-id="a6d7c-113">Если метод завершается с ошибкой, возвращает значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="a6d7c-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8433-114">Требования</span><span class="sxs-lookup"><span data-stu-id="b8433-114">Requirements</span></span>  
- <span data-ttu-id="b8433-115">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="b8433-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6d7c-114">Требования</span><span class="sxs-lookup"><span data-stu-id="a6d7c-114">Requirements</span></span>  
+ <span data-ttu-id="a6d7c-115">Требуется ALink. h</span><span class="sxs-lookup"><span data-stu-id="a6d7c-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8433-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b8433-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6d7c-116">См. также</span><span class="sxs-lookup"><span data-stu-id="a6d7c-116">See also</span></span>
 
-- [<span data-ttu-id="b8433-117">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="b8433-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="b8433-118">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="b8433-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="b8433-119">API ALink</span><span class="sxs-lookup"><span data-stu-id="b8433-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="a6d7c-117">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="a6d7c-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="a6d7c-118">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="a6d7c-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="a6d7c-119">API ALink</span><span class="sxs-lookup"><span data-stu-id="a6d7c-119">ALink API</span></span>](index.md)

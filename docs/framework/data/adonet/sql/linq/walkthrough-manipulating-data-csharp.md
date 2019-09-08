@@ -2,165 +2,165 @@
 title: Пошаговое руководство. Обработка данных (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8941ac30a67406346e5448ca5af4af8512d168a8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946978"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780999"
 ---
-# <a name="walkthrough-manipulating-data-c"></a><span data-ttu-id="b6d86-102">Пошаговое руководство. Обработка данных (C#)</span><span class="sxs-lookup"><span data-stu-id="b6d86-102">Walkthrough: Manipulating Data (C#)</span></span>
-<span data-ttu-id="b6d86-103">В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных.</span><span class="sxs-lookup"><span data-stu-id="b6d86-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="b6d86-104">Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="b6d86-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  
+# <a name="walkthrough-manipulating-data-c"></a><span data-ttu-id="46977-102">Пошаговое руководство. Обработка данных (C#)</span><span class="sxs-lookup"><span data-stu-id="46977-102">Walkthrough: Manipulating Data (C#)</span></span>
+<span data-ttu-id="46977-103">В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных.</span><span class="sxs-lookup"><span data-stu-id="46977-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="46977-104">Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="46977-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- <span data-ttu-id="b6d86-105">Это пошаговое руководство было написано с использованием параметров разработки Visual C#.</span><span class="sxs-lookup"><span data-stu-id="b6d86-105">This walkthrough was written by using Visual C# Development Settings.</span></span>  
+ <span data-ttu-id="46977-105">Это пошаговое руководство было написано с использованием параметров разработки Visual C#.</span><span class="sxs-lookup"><span data-stu-id="46977-105">This walkthrough was written by using Visual C# Development Settings.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="b6d86-106">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="b6d86-106">Prerequisites</span></span>  
- <span data-ttu-id="b6d86-107">Необходимо выполнить следующие требования.</span><span class="sxs-lookup"><span data-stu-id="b6d86-107">This walkthrough requires the following:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="46977-106">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="46977-106">Prerequisites</span></span>  
+ <span data-ttu-id="46977-107">Необходимо выполнить следующие требования.</span><span class="sxs-lookup"><span data-stu-id="46977-107">This walkthrough requires the following:</span></span>  
   
-- <span data-ttu-id="b6d86-108">Для хранения файлов используется выделенная папка ("c:\linqtest6").</span><span class="sxs-lookup"><span data-stu-id="b6d86-108">This walkthrough uses a dedicated folder ("c:\linqtest6") to hold files.</span></span> <span data-ttu-id="b6d86-109">Прежде чем приступить к выполнению задач, создайте такую папку.</span><span class="sxs-lookup"><span data-stu-id="b6d86-109">Create this folder before you begin the walkthrough.</span></span>  
+- <span data-ttu-id="46977-108">Для хранения файлов используется выделенная папка ("c:\linqtest6").</span><span class="sxs-lookup"><span data-stu-id="46977-108">This walkthrough uses a dedicated folder ("c:\linqtest6") to hold files.</span></span> <span data-ttu-id="46977-109">Прежде чем приступить к выполнению задач, создайте такую папку.</span><span class="sxs-lookup"><span data-stu-id="46977-109">Create this folder before you begin the walkthrough.</span></span>  
   
-- <span data-ttu-id="b6d86-110">Наличие учебной базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="b6d86-110">The Northwind sample database.</span></span>  
+- <span data-ttu-id="46977-110">Наличие учебной базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="46977-110">The Northwind sample database.</span></span>  
   
-     <span data-ttu-id="b6d86-111">Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="b6d86-111">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="b6d86-112">Инструкции см. в разделе [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="b6d86-112">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="b6d86-113">После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest6.</span><span class="sxs-lookup"><span data-stu-id="b6d86-113">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest6 folder.</span></span>  
+     <span data-ttu-id="46977-111">Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="46977-111">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="46977-112">Инструкции см. в разделе [Загрузка образцов баз данных](downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="46977-112">For instructions, see [Downloading Sample Databases](downloading-sample-databases.md).</span></span> <span data-ttu-id="46977-113">После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest6.</span><span class="sxs-lookup"><span data-stu-id="46977-113">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest6 folder.</span></span>  
   
-- <span data-ttu-id="b6d86-114">Наличие файла кода C#, созданного из базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="b6d86-114">A C# code file generated from the Northwind database.</span></span>  
+- <span data-ttu-id="46977-114">Наличие файла кода C#, созданного из базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="46977-114">A C# code file generated from the Northwind database.</span></span>  
   
-     <span data-ttu-id="b6d86-115">Этот файл можно создать с помощью реляционный конструктор объектов или средства SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="b6d86-115">You can generate this file by using either the Object Relational Designer or the SQLMetal tool.</span></span> <span data-ttu-id="b6d86-116">Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:</span><span class="sxs-lookup"><span data-stu-id="b6d86-116">This walkthrough was written by using the SQLMetal tool with the following command line:</span></span>  
+     <span data-ttu-id="46977-115">Этот файл можно создать с помощью реляционный конструктор объектов или средства SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="46977-115">You can generate this file by using either the Object Relational Designer or the SQLMetal tool.</span></span> <span data-ttu-id="46977-116">Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:</span><span class="sxs-lookup"><span data-stu-id="46977-116">This walkthrough was written by using the SQLMetal tool with the following command line:</span></span>  
   
-     <span data-ttu-id="b6d86-117">**SQLMetal/Code: "c:\linqtest6\northwind.cs"/Language: CSharp "C:\linqtest6\northwnd.mdf"/плурализе**</span><span class="sxs-lookup"><span data-stu-id="b6d86-117">**sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**</span></span>  
+     <span data-ttu-id="46977-117">**SQLMetal/Code: "c:\linqtest6\northwind.cs"/Language: CSharp "C:\linqtest6\northwnd.mdf"/плурализе**</span><span class="sxs-lookup"><span data-stu-id="46977-117">**sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**</span></span>  
   
-     <span data-ttu-id="b6d86-118">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="b6d86-118">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
+     <span data-ttu-id="46977-118">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="46977-118">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="b6d86-119">Обзор</span><span class="sxs-lookup"><span data-stu-id="b6d86-119">Overview</span></span>  
- <span data-ttu-id="b6d86-120">Данное пошаговое руководство состоит из шести основных задач.</span><span class="sxs-lookup"><span data-stu-id="b6d86-120">This walkthrough consists of six main tasks:</span></span>  
+## <a name="overview"></a><span data-ttu-id="46977-119">Обзор</span><span class="sxs-lookup"><span data-stu-id="46977-119">Overview</span></span>  
+ <span data-ttu-id="46977-120">Данное пошаговое руководство состоит из шести основных задач.</span><span class="sxs-lookup"><span data-stu-id="46977-120">This walkthrough consists of six main tasks:</span></span>  
   
-- <span data-ttu-id="b6d86-121">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Создание решения в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b6d86-121">Creating the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
+- <span data-ttu-id="46977-121">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Создание решения в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="46977-121">Creating the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
   
-- <span data-ttu-id="b6d86-122">Добавление файла кода базы данных в проект.</span><span class="sxs-lookup"><span data-stu-id="b6d86-122">Adding the database code file to the project.</span></span>  
+- <span data-ttu-id="46977-122">Добавление файла кода базы данных в проект.</span><span class="sxs-lookup"><span data-stu-id="46977-122">Adding the database code file to the project.</span></span>  
   
-- <span data-ttu-id="b6d86-123">Создание нового объекта клиента.</span><span class="sxs-lookup"><span data-stu-id="b6d86-123">Creating a new customer object.</span></span>  
+- <span data-ttu-id="46977-123">Создание нового объекта клиента.</span><span class="sxs-lookup"><span data-stu-id="46977-123">Creating a new customer object.</span></span>  
   
-- <span data-ttu-id="b6d86-124">Изменение контактного имени клиента.</span><span class="sxs-lookup"><span data-stu-id="b6d86-124">Modifying the contact name of a customer.</span></span>  
+- <span data-ttu-id="46977-124">Изменение контактного имени клиента.</span><span class="sxs-lookup"><span data-stu-id="46977-124">Modifying the contact name of a customer.</span></span>  
   
-- <span data-ttu-id="b6d86-125">Удаление заказа.</span><span class="sxs-lookup"><span data-stu-id="b6d86-125">Deleting an order.</span></span>  
+- <span data-ttu-id="46977-125">Удаление заказа.</span><span class="sxs-lookup"><span data-stu-id="46977-125">Deleting an order.</span></span>  
   
-- <span data-ttu-id="b6d86-126">Отправка внесенных изменений в базу данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="b6d86-126">Submitting these changes to the Northwind database.</span></span>  
+- <span data-ttu-id="46977-126">Отправка внесенных изменений в базу данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="46977-126">Submitting these changes to the Northwind database.</span></span>  
   
-## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="b6d86-127">Создание решения LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="b6d86-127">Creating a LINQ to SQL Solution</span></span>  
- <span data-ttu-id="b6d86-128">В этой первой задаче вы создадите решение Visual Studio, содержащее необходимые ссылки для сборки и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.</span><span class="sxs-lookup"><span data-stu-id="b6d86-128">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="46977-127">Создание решения LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="46977-127">Creating a LINQ to SQL Solution</span></span>  
+ <span data-ttu-id="46977-128">В этой первой задаче вы создадите решение Visual Studio, содержащее необходимые ссылки для сборки и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.</span><span class="sxs-lookup"><span data-stu-id="46977-128">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="b6d86-129">Создание решения LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="b6d86-129">To create a LINQ to SQL solution</span></span>  
+#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="46977-129">Создание решения LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="46977-129">To create a LINQ to SQL solution</span></span>  
   
-1. <span data-ttu-id="b6d86-130">В меню **файл** Visual Studio наведите указатель на пункт **создать**и выберите пункт **проект**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-130">On the Visual Studio **File** menu, point to **New**, and then click **Project**.</span></span>  
+1. <span data-ttu-id="46977-130">В меню **файл** Visual Studio наведите указатель на пункт **создать**и выберите пункт **проект**.</span><span class="sxs-lookup"><span data-stu-id="46977-130">On the Visual Studio **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2. <span data-ttu-id="b6d86-131">В области **типы проектов** диалогового окна **Новый проект** нажмите кнопку визуальный **C#** элемент.</span><span class="sxs-lookup"><span data-stu-id="b6d86-131">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>  
+2. <span data-ttu-id="46977-131">В области **типы проектов** диалогового окна **Новый проект** нажмите кнопку **визуальный C#** элемент.</span><span class="sxs-lookup"><span data-stu-id="46977-131">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>  
   
-3. <span data-ttu-id="b6d86-132">В области **Шаблоны** щелкните **Консольное приложение**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-132">In the **Templates** pane, click **Console Application**.</span></span>  
+3. <span data-ttu-id="46977-132">В области **Шаблоны** щелкните **Консольное приложение**.</span><span class="sxs-lookup"><span data-stu-id="46977-132">In the **Templates** pane, click **Console Application**.</span></span>  
   
-4. <span data-ttu-id="b6d86-133">В поле **имя** введите **линкдатаманипулатионапп**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-133">In the **Name** box, type **LinqDataManipulationApp**.</span></span>  
+4. <span data-ttu-id="46977-133">В поле **имя** введите **линкдатаманипулатионапп**.</span><span class="sxs-lookup"><span data-stu-id="46977-133">In the **Name** box, type **LinqDataManipulationApp**.</span></span>  
   
-5. <span data-ttu-id="b6d86-134">В поле **Расположение** проверьте, где вы хотите сохранить файлы проекта.</span><span class="sxs-lookup"><span data-stu-id="b6d86-134">In the **Location** box, verify where you want to store your project files.</span></span>  
+5. <span data-ttu-id="46977-134">В поле **Расположение** проверьте, где вы хотите сохранить файлы проекта.</span><span class="sxs-lookup"><span data-stu-id="46977-134">In the **Location** box, verify where you want to store your project files.</span></span>  
   
-6. <span data-ttu-id="b6d86-135">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-135">Click **OK**.</span></span>  
+6. <span data-ttu-id="46977-135">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="46977-135">Click **OK**.</span></span>  
   
-## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="b6d86-136">Добавление ссылок и директив LINQ</span><span class="sxs-lookup"><span data-stu-id="b6d86-136">Adding LINQ References and Directives</span></span>  
- <span data-ttu-id="b6d86-137">В этом пошаговом руководстве используются сборки, которые могут быть не установлены по умолчанию в проект.</span><span class="sxs-lookup"><span data-stu-id="b6d86-137">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="b6d86-138">Если System.Data.Linq не входит в список ссылок проекта, добавьте ее, как описано в следующих действиях.</span><span class="sxs-lookup"><span data-stu-id="b6d86-138">If System.Data.Linq is not listed as a reference in your project, add it, as explained in the following steps:</span></span>  
+## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="46977-136">Добавление ссылок и директив LINQ</span><span class="sxs-lookup"><span data-stu-id="46977-136">Adding LINQ References and Directives</span></span>  
+ <span data-ttu-id="46977-137">В этом пошаговом руководстве используются сборки, которые могут быть не установлены по умолчанию в проект.</span><span class="sxs-lookup"><span data-stu-id="46977-137">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="46977-138">Если System.Data.Linq не входит в список ссылок проекта, добавьте ее, как описано в следующих действиях.</span><span class="sxs-lookup"><span data-stu-id="46977-138">If System.Data.Linq is not listed as a reference in your project, add it, as explained in the following steps:</span></span>  
   
-#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="b6d86-139">Добавление сборки System.Data.Linq</span><span class="sxs-lookup"><span data-stu-id="b6d86-139">To add System.Data.Linq</span></span>  
+#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="46977-139">Добавление сборки System.Data.Linq</span><span class="sxs-lookup"><span data-stu-id="46977-139">To add System.Data.Linq</span></span>  
   
-1. <span data-ttu-id="b6d86-140">В **Обозреватель решений**щелкните правой кнопкой мыши элемент **ссылки**и выберите команду **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-140">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
+1. <span data-ttu-id="46977-140">В **Обозреватель решений**щелкните правой кнопкой мыши элемент **ссылки**и выберите команду **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="46977-140">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
   
-2. <span data-ttu-id="b6d86-141">В диалоговом окне **Добавление ссылки** щелкните **.NET**, выберите сборку System. Data. LINQ и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-141">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
+2. <span data-ttu-id="46977-141">В диалоговом окне **Добавление ссылки** щелкните **.NET**, выберите сборку System. Data. LINQ и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="46977-141">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
   
-     <span data-ttu-id="b6d86-142">Сборка будет добавлена в проект.</span><span class="sxs-lookup"><span data-stu-id="b6d86-142">The assembly is added to the project.</span></span>  
+     <span data-ttu-id="46977-142">Сборка будет добавлена в проект.</span><span class="sxs-lookup"><span data-stu-id="46977-142">The assembly is added to the project.</span></span>  
   
-3. <span data-ttu-id="b6d86-143">Добавьте следующие директивы в начало Program.cs.</span><span class="sxs-lookup"><span data-stu-id="b6d86-143">Add the following directives at the top of Program.cs:</span></span>  
+3. <span data-ttu-id="46977-143">Добавьте следующие директивы в начало Program.cs.</span><span class="sxs-lookup"><span data-stu-id="46977-143">Add the following directives at the top of Program.cs:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
-## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="b6d86-144">Добавление файла кода Northwind в проект</span><span class="sxs-lookup"><span data-stu-id="b6d86-144">Adding the Northwind Code File to the Project</span></span>  
- <span data-ttu-id="b6d86-145">При выполнении этих действий подразумевается, что для создания файла кода из учебной базы данных Northwind использовалось средство SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="b6d86-145">These steps assume that you have used the SQLMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="b6d86-146">Дополнительные сведения см. в разделе "Предварительные требования" ранее в этом руководстве.</span><span class="sxs-lookup"><span data-stu-id="b6d86-146">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
+## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="46977-144">Добавление файла кода Northwind в проект</span><span class="sxs-lookup"><span data-stu-id="46977-144">Adding the Northwind Code File to the Project</span></span>  
+ <span data-ttu-id="46977-145">При выполнении этих действий подразумевается, что для создания файла кода из учебной базы данных Northwind использовалось средство SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="46977-145">These steps assume that you have used the SQLMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="46977-146">Дополнительные сведения см. в разделе "Предварительные требования" ранее в этом руководстве.</span><span class="sxs-lookup"><span data-stu-id="46977-146">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="b6d86-147">Добавление файла кода northwind в проект</span><span class="sxs-lookup"><span data-stu-id="b6d86-147">To add the northwind code file to the project</span></span>  
+#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="46977-147">Добавление файла кода northwind в проект</span><span class="sxs-lookup"><span data-stu-id="46977-147">To add the northwind code file to the project</span></span>  
   
-1. <span data-ttu-id="b6d86-148">В меню **проект** выберите команду **Добавить существующий элемент**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-148">On the **Project** menu, click **Add Existing Item**.</span></span>  
+1. <span data-ttu-id="46977-148">В меню **проект** выберите команду **Добавить существующий элемент**.</span><span class="sxs-lookup"><span data-stu-id="46977-148">On the **Project** menu, click **Add Existing Item**.</span></span>  
   
-2. <span data-ttu-id="b6d86-149">В диалоговом окне **Добавление существующего элемента** перейдите к c:\linqtest6\northwind.cs и нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="b6d86-149">In the **Add Existing Item** dialog box, navigate to c:\linqtest6\northwind.cs, and then click **Add**.</span></span>  
+2. <span data-ttu-id="46977-149">В диалоговом окне **Добавление существующего элемента** перейдите к c:\linqtest6\northwind.cs и нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="46977-149">In the **Add Existing Item** dialog box, navigate to c:\linqtest6\northwind.cs, and then click **Add**.</span></span>  
   
-     <span data-ttu-id="b6d86-150">Файл northwind.cs будет добавлен в проект.</span><span class="sxs-lookup"><span data-stu-id="b6d86-150">The northwind.cs file is added to the project.</span></span>  
+     <span data-ttu-id="46977-150">Файл northwind.cs будет добавлен в проект.</span><span class="sxs-lookup"><span data-stu-id="46977-150">The northwind.cs file is added to the project.</span></span>  
   
-## <a name="setting-up-the-database-connection"></a><span data-ttu-id="b6d86-151">Настройка подключения к базе данных</span><span class="sxs-lookup"><span data-stu-id="b6d86-151">Setting Up the Database Connection</span></span>  
- <span data-ttu-id="b6d86-152">Сначала проверьте подключение к базе данных.</span><span class="sxs-lookup"><span data-stu-id="b6d86-152">First, test your connection to the database.</span></span> <span data-ttu-id="b6d86-153">Обратите особое внимание, что в имени базы данных - Northwnd - отсутствует буква "i".</span><span class="sxs-lookup"><span data-stu-id="b6d86-153">Note especially that the database, Northwnd, has no i character.</span></span> <span data-ttu-id="b6d86-154">Если при выполнении следующих действий возникают ошибки, просмотрите файл northwind.cs, чтобы определить написание разделяемого класса Northwind.</span><span class="sxs-lookup"><span data-stu-id="b6d86-154">If you generate errors in the next steps, review the northwind.cs file to determine how the Northwind partial class is spelled.</span></span>  
+## <a name="setting-up-the-database-connection"></a><span data-ttu-id="46977-151">Настройка подключения к базе данных</span><span class="sxs-lookup"><span data-stu-id="46977-151">Setting Up the Database Connection</span></span>  
+ <span data-ttu-id="46977-152">Сначала проверьте подключение к базе данных.</span><span class="sxs-lookup"><span data-stu-id="46977-152">First, test your connection to the database.</span></span> <span data-ttu-id="46977-153">Обратите особое внимание, что в имени базы данных - Northwnd - отсутствует буква "i".</span><span class="sxs-lookup"><span data-stu-id="46977-153">Note especially that the database, Northwnd, has no i character.</span></span> <span data-ttu-id="46977-154">Если при выполнении следующих действий возникают ошибки, просмотрите файл northwind.cs, чтобы определить написание разделяемого класса Northwind.</span><span class="sxs-lookup"><span data-stu-id="46977-154">If you generate errors in the next steps, review the northwind.cs file to determine how the Northwind partial class is spelled.</span></span>  
   
-#### <a name="to-set-up-and-test-the-database-connection"></a><span data-ttu-id="b6d86-155">Настройка и проверка подключения к базе данных</span><span class="sxs-lookup"><span data-stu-id="b6d86-155">To set up and test the database connection</span></span>  
+#### <a name="to-set-up-and-test-the-database-connection"></a><span data-ttu-id="46977-155">Настройка и проверка подключения к базе данных</span><span class="sxs-lookup"><span data-stu-id="46977-155">To set up and test the database connection</span></span>  
   
-1. <span data-ttu-id="b6d86-156">Введите или вставьте следующий код в метод `Main` в классе Program.</span><span class="sxs-lookup"><span data-stu-id="b6d86-156">Type or paste the following code into the `Main` method in the Program class:</span></span>  
+1. <span data-ttu-id="46977-156">Введите или вставьте следующий код в метод `Main` в классе Program.</span><span class="sxs-lookup"><span data-stu-id="46977-156">Type or paste the following code into the `Main` method in the Program class:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2. <span data-ttu-id="b6d86-157">Чтобы проверить приложение на этом этапе, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="b6d86-157">Press F5 to test the application at this point.</span></span>  
+2. <span data-ttu-id="46977-157">Чтобы проверить приложение на этом этапе, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="46977-157">Press F5 to test the application at this point.</span></span>  
   
-     <span data-ttu-id="b6d86-158">Откроется окно **консоли** .</span><span class="sxs-lookup"><span data-stu-id="b6d86-158">A **Console** window opens.</span></span>  
+     <span data-ttu-id="46977-158">Откроется окно **консоли** .</span><span class="sxs-lookup"><span data-stu-id="46977-158">A **Console** window opens.</span></span>  
   
-     <span data-ttu-id="b6d86-159">Приложение можно закрыть, нажав клавишу ВВОД в окне **консоли** или выбрав пункт прерывать **отладку** в меню Отладка Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b6d86-159">You can close the application by pressing Enter in the **Console** window, or by clicking **Stop Debugging** on the Visual Studio **Debug** menu.</span></span>  
+     <span data-ttu-id="46977-159">Приложение можно закрыть, нажав клавишу ВВОД в окне **консоли** или выбрав пункт **прерывать отладку** в меню **Отладка** Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="46977-159">You can close the application by pressing Enter in the **Console** window, or by clicking **Stop Debugging** on the Visual Studio **Debug** menu.</span></span>  
   
-## <a name="creating-a-new-entity"></a><span data-ttu-id="b6d86-160">Создание новой сущности</span><span class="sxs-lookup"><span data-stu-id="b6d86-160">Creating a New Entity</span></span>  
- <span data-ttu-id="b6d86-161">Создание новой сущности не представляет особых проблем.</span><span class="sxs-lookup"><span data-stu-id="b6d86-161">Creating a new entity is straightforward.</span></span> <span data-ttu-id="b6d86-162">Для создания объектов (например, `Customer`) можно использовать ключевое слово `new`.</span><span class="sxs-lookup"><span data-stu-id="b6d86-162">You can create objects (such as `Customer`) by using the `new` keyword.</span></span>  
+## <a name="creating-a-new-entity"></a><span data-ttu-id="46977-160">Создание новой сущности</span><span class="sxs-lookup"><span data-stu-id="46977-160">Creating a New Entity</span></span>  
+ <span data-ttu-id="46977-161">Создание новой сущности не представляет особых проблем.</span><span class="sxs-lookup"><span data-stu-id="46977-161">Creating a new entity is straightforward.</span></span> <span data-ttu-id="46977-162">Для создания объектов (например, `Customer`) можно использовать ключевое слово `new`.</span><span class="sxs-lookup"><span data-stu-id="46977-162">You can create objects (such as `Customer`) by using the `new` keyword.</span></span>  
   
- <span data-ttu-id="b6d86-163">В этом и следующих разделах выполняются изменения только локального кэша.</span><span class="sxs-lookup"><span data-stu-id="b6d86-163">In this and the following sections, you are making changes only to the local cache.</span></span> <span data-ttu-id="b6d86-164">Изменения не будут отправлены в базу данных до тех пор, пока ближе к концу данного руководства не будет вызван <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="b6d86-164">No changes are sent to the database until you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> toward the end of this walkthrough.</span></span>  
+ <span data-ttu-id="46977-163">В этом и следующих разделах выполняются изменения только локального кэша.</span><span class="sxs-lookup"><span data-stu-id="46977-163">In this and the following sections, you are making changes only to the local cache.</span></span> <span data-ttu-id="46977-164">Изменения не будут отправлены в базу данных до тех пор, пока ближе к концу данного руководства не будет вызван <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="46977-164">No changes are sent to the database until you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> toward the end of this walkthrough.</span></span>  
   
-#### <a name="to-add-a-new-customer-entity-object"></a><span data-ttu-id="b6d86-165">Добавление нового объекта сущностей Customer</span><span class="sxs-lookup"><span data-stu-id="b6d86-165">To add a new Customer entity object</span></span>  
+#### <a name="to-add-a-new-customer-entity-object"></a><span data-ttu-id="46977-165">Добавление нового объекта сущностей Customer</span><span class="sxs-lookup"><span data-stu-id="46977-165">To add a new Customer entity object</span></span>  
   
-1. <span data-ttu-id="b6d86-166">Создайте новый `Customer`, добавив перед `Console.ReadLine();`в методе `Main` следующий код.</span><span class="sxs-lookup"><span data-stu-id="b6d86-166">Create a new `Customer` by adding the following code before `Console.ReadLine();` in the `Main` method:</span></span>  
+1. <span data-ttu-id="46977-166">Создайте новый `Customer`, добавив перед `Console.ReadLine();`в методе `Main` следующий код.</span><span class="sxs-lookup"><span data-stu-id="46977-166">Create a new `Customer` by adding the following code before `Console.ReadLine();` in the `Main` method:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2. <span data-ttu-id="b6d86-167">Нажмите клавишу F5 для отладки решения.</span><span class="sxs-lookup"><span data-stu-id="b6d86-167">Press F5 to debug the solution.</span></span>  
+2. <span data-ttu-id="46977-167">Нажмите клавишу F5 для отладки решения.</span><span class="sxs-lookup"><span data-stu-id="46977-167">Press F5 to debug the solution.</span></span>  
   
-3. <span data-ttu-id="b6d86-168">Нажмите клавишу ВВОД в окне **консоли** , чтобы прекратить отладку и продолжить выполнение пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="b6d86-168">Press Enter in the **Console** window to stop debugging and continue the walkthrough.</span></span>  
+3. <span data-ttu-id="46977-168">Нажмите клавишу ВВОД в окне **консоли** , чтобы прекратить отладку и продолжить выполнение пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="46977-168">Press Enter in the **Console** window to stop debugging and continue the walkthrough.</span></span>  
   
-## <a name="updating-an-entity"></a><span data-ttu-id="b6d86-169">Обновление сущности</span><span class="sxs-lookup"><span data-stu-id="b6d86-169">Updating an Entity</span></span>  
- <span data-ttu-id="b6d86-170">При выполнении следующих действий будет извлечен объект `Customer` и изменено одно из его свойств.</span><span class="sxs-lookup"><span data-stu-id="b6d86-170">In the following steps, you will retrieve a `Customer` object and modify one of its properties.</span></span>  
+## <a name="updating-an-entity"></a><span data-ttu-id="46977-169">Обновление сущности</span><span class="sxs-lookup"><span data-stu-id="46977-169">Updating an Entity</span></span>  
+ <span data-ttu-id="46977-170">При выполнении следующих действий будет извлечен объект `Customer` и изменено одно из его свойств.</span><span class="sxs-lookup"><span data-stu-id="46977-170">In the following steps, you will retrieve a `Customer` object and modify one of its properties.</span></span>  
   
-#### <a name="to-change-the-name-of-a-customer"></a><span data-ttu-id="b6d86-171">Изменение имени клиента</span><span class="sxs-lookup"><span data-stu-id="b6d86-171">To change the name of a Customer</span></span>  
+#### <a name="to-change-the-name-of-a-customer"></a><span data-ttu-id="46977-171">Изменение имени клиента</span><span class="sxs-lookup"><span data-stu-id="46977-171">To change the name of a Customer</span></span>  
   
-- <span data-ttu-id="b6d86-172">Добавьте следующий код перед `Console.ReadLine();`:</span><span class="sxs-lookup"><span data-stu-id="b6d86-172">Add the following code above `Console.ReadLine();`:</span></span>  
+- <span data-ttu-id="46977-172">Добавьте следующий код перед `Console.ReadLine();`:</span><span class="sxs-lookup"><span data-stu-id="46977-172">Add the following code above `Console.ReadLine();`:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
-## <a name="deleting-an-entity"></a><span data-ttu-id="b6d86-173">Удаление сущности</span><span class="sxs-lookup"><span data-stu-id="b6d86-173">Deleting an Entity</span></span>  
- <span data-ttu-id="b6d86-174">Используя тот же самый объект клиента, можно удалить первый заказ.</span><span class="sxs-lookup"><span data-stu-id="b6d86-174">Using the same customer object, you can delete the first order.</span></span>  
+## <a name="deleting-an-entity"></a><span data-ttu-id="46977-173">Удаление сущности</span><span class="sxs-lookup"><span data-stu-id="46977-173">Deleting an Entity</span></span>  
+ <span data-ttu-id="46977-174">Используя тот же самый объект клиента, можно удалить первый заказ.</span><span class="sxs-lookup"><span data-stu-id="46977-174">Using the same customer object, you can delete the first order.</span></span>  
   
- <span data-ttu-id="b6d86-175">В следующем коде показано, как разорвать связь между строками и удалить строку из базы данных.</span><span class="sxs-lookup"><span data-stu-id="b6d86-175">The following code demonstrates how to sever relationships between rows, and how to delete a row from the database.</span></span> <span data-ttu-id="b6d86-176">Чтобы удаление объектов, добавьте следующий код перед `Console.ReadLine`.</span><span class="sxs-lookup"><span data-stu-id="b6d86-176">Add the following code before `Console.ReadLine` to see how objects can be deleted:</span></span>  
+ <span data-ttu-id="46977-175">В следующем коде показано, как разорвать связь между строками и удалить строку из базы данных.</span><span class="sxs-lookup"><span data-stu-id="46977-175">The following code demonstrates how to sever relationships between rows, and how to delete a row from the database.</span></span> <span data-ttu-id="46977-176">Чтобы удаление объектов, добавьте следующий код перед `Console.ReadLine`.</span><span class="sxs-lookup"><span data-stu-id="46977-176">Add the following code before `Console.ReadLine` to see how objects can be deleted:</span></span>  
   
-#### <a name="to-delete-a-row"></a><span data-ttu-id="b6d86-177">Удаление строки</span><span class="sxs-lookup"><span data-stu-id="b6d86-177">To delete a row</span></span>  
+#### <a name="to-delete-a-row"></a><span data-ttu-id="46977-177">Удаление строки</span><span class="sxs-lookup"><span data-stu-id="46977-177">To delete a row</span></span>  
   
-- <span data-ttu-id="b6d86-178">Добавьте следующий код перед `Console.ReadLine();`.</span><span class="sxs-lookup"><span data-stu-id="b6d86-178">Add the following code just above `Console.ReadLine();`:</span></span>  
+- <span data-ttu-id="46977-178">Добавьте следующий код перед `Console.ReadLine();`.</span><span class="sxs-lookup"><span data-stu-id="46977-178">Add the following code just above `Console.ReadLine();`:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   
-## <a name="submitting-changes-to-the-database"></a><span data-ttu-id="b6d86-179">Отправка изменений в базу данных</span><span class="sxs-lookup"><span data-stu-id="b6d86-179">Submitting Changes to the Database</span></span>  
- <span data-ttu-id="b6d86-180">Последнее действие, необходимое для создания, обновления и удаления объектов, заключается в фактической отправке изменений в базу данных.</span><span class="sxs-lookup"><span data-stu-id="b6d86-180">The final step required for creating, updating, and deleting objects, is to actually submit the changes to the database.</span></span> <span data-ttu-id="b6d86-181">Без него изменения останутся на локальном уровне и не появятся в результатах запроса.</span><span class="sxs-lookup"><span data-stu-id="b6d86-181">Without this step, your changes are only local and will not appear in query results.</span></span>  
+## <a name="submitting-changes-to-the-database"></a><span data-ttu-id="46977-179">Отправка изменений в базу данных</span><span class="sxs-lookup"><span data-stu-id="46977-179">Submitting Changes to the Database</span></span>  
+ <span data-ttu-id="46977-180">Последнее действие, необходимое для создания, обновления и удаления объектов, заключается в фактической отправке изменений в базу данных.</span><span class="sxs-lookup"><span data-stu-id="46977-180">The final step required for creating, updating, and deleting objects, is to actually submit the changes to the database.</span></span> <span data-ttu-id="46977-181">Без него изменения останутся на локальном уровне и не появятся в результатах запроса.</span><span class="sxs-lookup"><span data-stu-id="46977-181">Without this step, your changes are only local and will not appear in query results.</span></span>  
   
-#### <a name="to-submit-changes-to-the-database"></a><span data-ttu-id="b6d86-182">Отправка изменений в базу данных</span><span class="sxs-lookup"><span data-stu-id="b6d86-182">To submit changes to the database</span></span>  
+#### <a name="to-submit-changes-to-the-database"></a><span data-ttu-id="46977-182">Отправка изменений в базу данных</span><span class="sxs-lookup"><span data-stu-id="46977-182">To submit changes to the database</span></span>  
   
-1. <span data-ttu-id="b6d86-183">Вставьте следующий код перед `Console.ReadLine`.</span><span class="sxs-lookup"><span data-stu-id="b6d86-183">Insert the following code just above `Console.ReadLine`:</span></span>  
+1. <span data-ttu-id="46977-183">Вставьте следующий код перед `Console.ReadLine`.</span><span class="sxs-lookup"><span data-stu-id="46977-183">Insert the following code just above `Console.ReadLine`:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2. <span data-ttu-id="b6d86-184">Вставьте следующий код (после `SubmitChanges`), чтобы показать результаты до и после отправки изменений.</span><span class="sxs-lookup"><span data-stu-id="b6d86-184">Insert the following code (after `SubmitChanges`) to show the before and after effects of submitting the changes:</span></span>  
+2. <span data-ttu-id="46977-184">Вставьте следующий код (после `SubmitChanges`), чтобы показать результаты до и после отправки изменений.</span><span class="sxs-lookup"><span data-stu-id="46977-184">Insert the following code (after `SubmitChanges`) to show the before and after effects of submitting the changes:</span></span>  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3. <span data-ttu-id="b6d86-185">Нажмите клавишу F5 для отладки решения.</span><span class="sxs-lookup"><span data-stu-id="b6d86-185">Press F5 to debug the solution.</span></span>  
+3. <span data-ttu-id="46977-185">Нажмите клавишу F5 для отладки решения.</span><span class="sxs-lookup"><span data-stu-id="46977-185">Press F5 to debug the solution.</span></span>  
   
-4. <span data-ttu-id="b6d86-186">Нажмите клавишу ВВОД в окне **консоли** , чтобы закрыть приложение.</span><span class="sxs-lookup"><span data-stu-id="b6d86-186">Press Enter in the **Console** window to close the application.</span></span>  
+4. <span data-ttu-id="46977-186">Нажмите клавишу ВВОД в окне **консоли** , чтобы закрыть приложение.</span><span class="sxs-lookup"><span data-stu-id="46977-186">Press Enter in the **Console** window to close the application.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b6d86-187">После добавления нового клиента путем отправки изменений это решение нельзя повторно выполнить в исходном виде.</span><span class="sxs-lookup"><span data-stu-id="b6d86-187">After you have added the new customer by submitting the changes, you cannot execute this solution again as is.</span></span> <span data-ttu-id="b6d86-188">Для повторного выполнения решения измените имя клиента и значение идентификатора добавляемого клиента.</span><span class="sxs-lookup"><span data-stu-id="b6d86-188">To execute the solution again, change the name of the customer and customer ID to be added.</span></span>  
+> <span data-ttu-id="46977-187">После добавления нового клиента путем отправки изменений это решение нельзя повторно выполнить в исходном виде.</span><span class="sxs-lookup"><span data-stu-id="46977-187">After you have added the new customer by submitting the changes, you cannot execute this solution again as is.</span></span> <span data-ttu-id="46977-188">Для повторного выполнения решения измените имя клиента и значение идентификатора добавляемого клиента.</span><span class="sxs-lookup"><span data-stu-id="46977-188">To execute the solution again, change the name of the customer and customer ID to be added.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6d86-189">См. также</span><span class="sxs-lookup"><span data-stu-id="b6d86-189">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46977-189">См. также</span><span class="sxs-lookup"><span data-stu-id="46977-189">See also</span></span>
 
-- [<span data-ttu-id="b6d86-190">Обучение с использованием пошаговых руководств</span><span class="sxs-lookup"><span data-stu-id="b6d86-190">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [<span data-ttu-id="46977-190">Обучение с использованием пошаговых руководств</span><span class="sxs-lookup"><span data-stu-id="46977-190">Learning by Walkthroughs</span></span>](learning-by-walkthroughs.md)
