@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4432b17e5d9aa875d8346b3329cd618e15222040
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771022"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796826"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Метод IAssemblyCache::CreateAssemblyCacheItem
-Получает ссылку на новый [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) объекта.  
+Возвращает ссылку на новый объект [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +40,29 @@ HRESULT CreateAssemblyCacheItem (
   
 ## <a name="parameters"></a>Параметры  
  `dwFlags`  
- [in] Флаги, определенные в Fusion.idl. Поддерживаются следующие значения:  
+ окне Флаги, определенные в Fusion. idl. Поддерживаются следующие значения:  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
   
  `ppAsmItem`  
- [out] Возвращенный `IAssemblyCacheItem` указатель.  
+ заполняет Возвращаемый `IAssemblyCacheItem` указатель.  
   
  `pszAssemblyName`  
- [in, optional] Uncanonicalized, разделенных запятыми `name=value` пары.  
+ [входные, необязательные] Неканонические пары, разделенные `name=value` запятыми.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Интерфейс IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [Интерфейс IAssemblyCache](iassemblycache-interface.md)
+- [Интерфейс IAssemblyCacheItem](iassemblycacheitem-interface.md)

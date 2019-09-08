@@ -2,12 +2,12 @@
 title: Основные сведения об изменении состояния
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963076"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796940"
 ---
 # <a name="understanding-state-changes"></a>Основные сведения об изменении состояния
 В данном разделе рассматриваются состояния и переходы каналов, а также типы, используемые для структуризации каналов, и способы их реализации.  
@@ -28,12 +28,12 @@ ms.locfileid: "69963076"
   
  Каждый объект <xref:System.ServiceModel.ICommunicationObject> запускается в состоянии Created. В этом состоянии приложение может настраивать объект с помощью изменения его свойств. После того как объект находится в состоянии, отличном от Created, он считается неизменяемым.  
   
- ![Смена состояния канала](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "Чаннелстатетранитионшигхлевелдиаграм")  
+ ![Смена состояния канала](./media/channelstatetranitionshighleveldiagram.gif "Чаннелстатетранитионшигхлевелдиаграм")  
 Рис. 1. Конечный автомат ICommunicationObject.  
   
  Windows Communication Foundation (WCF) предоставляет абстрактный базовый класс с <xref:System.ServiceModel.Channels.CommunicationObject> именем, <xref:System.ServiceModel.ICommunicationObject> который реализует и конечный автомат канала. Ниже приведена схема изменившегося состояния, относящаяся к <xref:System.ServiceModel.Channels.CommunicationObject>. Кроме конечного автомата <xref:System.ServiceModel.ICommunicationObject>, на схеме также показано время, когда вызываются дополнительные методы <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
- ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Изменения состояния](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Рис. 2. Реализация CommunicationObject конечного автомата ICommunicationObject, включая вызовы событий и защищенных методов.  
   
 ### <a name="icommunicationobject-events"></a>События ICommunicationObject  
@@ -90,7 +90,7 @@ ms.locfileid: "69963076"
   
  Затем устанавливается состояние Opening и вызывается метод OnOpening() (создающий событие Opening), OnOpen() и OnOpened() в указанном порядке. Метод OnOpened() устанавливает состояние Opened и вызывает событие Opened. Если любое из этих событий создает исключение, метод Open() вызывает Fault() и выдает исключение. Следующая схема содержит подробные сведения о процессе Open.  
   
- ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Изменения состояния](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Переопределите метод OnOpen, чтобы реализовать пользовательскую логику открытия, например, открыть внутренний коммуникационный объект.  
   
  Метод Close  
@@ -101,7 +101,7 @@ ms.locfileid: "69963076"
   
  Метод Close() можно вызвать в любом состоянии. Метод пытается закрыть объект в обычном режиме. Если происходит ошибка, метод завершает выполнение объекта. Метод не выполняет никаких действий, если текущим состоянием является Closing или Closed. В противном случае он устанавливает состояние Closing. Если исходным состоянием является Created, Opening или Faulted, метод вызывает Abort() (см. следующую схему). Если исходным состоянием является Opened, вызывается метод OnClosing() (создающий событие Closing), OnClose() и OnClosed() в указанном порядке. Если любое из этих событий создает исключение, метод Close() вызывает Abort() и выдает исключение. Метод OnClosed() устанавливает состояние Closed и вызывает событие Closed. Следующая схема содержит подробные сведения о процессе Close.  
   
- ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO — клосефловчартк")  
+ ![Изменения состояния](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO — клосефловчартк")  
 Переопределите метод OnClose, чтобы реализовать пользовательскую логику закрытия, например, закрыть внутренний коммуникационный объект. Для мягкой логики закрытия, которая может выполнять блокировку на длительное время (например, для ожидания ответа другой стороны), следует реализовать метод OnClose(), поскольку он использует параметр времени ожидания и не вызывается как часть Abort().  
   
  Прервать  
@@ -111,7 +111,7 @@ ms.locfileid: "69963076"
   
  Метод Abort() не выполняет никаких действий, если текущим состоянием является Closed или объект был завершен ранее (например, с помощью выполнения метода Abort() в другом потоке). В противном случае устанавливается состояние Closing и вызывается метод OnClosing() (создающий событие Closing), OnAbort() и OnClosed() в указанном порядке (метод OnClose не вызывается, поскольку объект завершается, а не закрывается). Метод OnClosed() устанавливает состояние Closed и вызывает событие Closed. Если какое-либо из этих событий создает исключение, оно повторно выдается объекту, вызвавшему метод Abort. Реализации методов OnClosing(), OnClosed() и OnAbort() не должны выполнять блокировку (например, ввода-вывода). Следующая схема содержит подробные сведения о процессе Abort.  
   
- ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO — абортфловчартк")  
+ ![Изменения состояния](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO — абортфловчартк")  
 Переопределите метод OnAbort, чтобы реализовать пользовательскую логику завершения, например, завершить внутренний коммуникационный объект.  
   
  Fault  

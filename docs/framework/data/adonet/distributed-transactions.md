@@ -2,12 +2,12 @@
 title: Распределенные транзакции
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 143d39356f444bfc3c899164c43c9608a4aab335
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795200"
 ---
 # <a name="distributed-transactions"></a>Распределенные транзакции
 Транзакция - это набор связанных задач, который, помимо всего прочего, завершается успешно (фиксация) или с ошибкой (отмена) как единое целое. *Распределенная транзакция* — это транзакция, влияющая на несколько ресурсов. Для фиксации распределенной транзакции все участники должны гарантировать, что любое изменение данных будет постоянным. Изменения должны сохраняться даже в случае фатального сбоя системы или других непредвиденных событий. Если хоть один из участников не сможет предоставить такую гарантию, вся транзакция завершится с ошибкой и будет выполнен откат любых изменений данных внутри области транзакции.  
@@ -16,11 +16,11 @@ ms.locfileid: "70041248"
 > Если `DataReader` запускается во время активной транзакции, то при попытке зафиксировать или выполнить откат транзакции возникнет исключение.  
   
 ## <a name="working-with-systemtransactions"></a>Работа с System.Transactions  
- На платформе.NET Framework распределенные транзакции управляются с помощью API-интерфейса пространства имен <xref:System.Transactions>. При участии нескольких постоянных диспетчеров ресурсов API-интерфейс <xref:System.Transactions> делегирует обработку распределенной транзакции средству наблюдения за транзакциями, такому как координатор распределенных транзакций (Майкрософт) (MSDTC). Дополнительные сведения см. в статье [основы транзакций](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
+ На платформе.NET Framework распределенные транзакции управляются с помощью API-интерфейса пространства имен <xref:System.Transactions>. При участии нескольких постоянных диспетчеров ресурсов API-интерфейс <xref:System.Transactions> делегирует обработку распределенной транзакции средству наблюдения за транзакциями, такому как координатор распределенных транзакций (Майкрософт) (MSDTC). Дополнительные сведения см. в статье [основы транзакций](../transactions/transaction-fundamentals.md).  
   
- В ADO.NET 2.0 появилась поддержка прикрепления распределенных транзакций с помощью метода `EnlistTransaction`, который прикрепляет подключение к экземпляру <xref:System.Transactions.Transaction>. В предыдущих версиях ADO.NET явное прикрепление к распределенной транзакции выполнялось с помощью метода соединения `EnlistDistributedTransaction` для прикрепления соединения к экземпляру <xref:System.EnterpriseServices.ITransaction>, который поддерживался в целях обратной совместимости. Дополнительные сведения о транзакциях корпоративных служб см. в статье [взаимодействие с корпоративными службами и транзакциями COM+](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ В ADO.NET 2.0 появилась поддержка прикрепления распределенных транзакций с помощью метода `EnlistTransaction`, который прикрепляет подключение к экземпляру <xref:System.Transactions.Transaction>. В предыдущих версиях ADO.NET явное прикрепление к распределенной транзакции выполнялось с помощью метода соединения `EnlistDistributedTransaction` для прикрепления соединения к экземпляру <xref:System.EnterpriseServices.ITransaction>, который поддерживался в целях обратной совместимости. Дополнительные сведения о транзакциях корпоративных служб см. в статье [взаимодействие с корпоративными службами и транзакциями COM+](../transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
- При использовании транзакции <xref:System.Transactions> с поставщиком .NET Framework для SQL Server для базы данных SQL Server автоматически будет использована упрощенная <xref:System.Transactions.Transaction>. Затем по мере необходимости транзакция может стать полной распределенной транзакцией. Дополнительные сведения см. [в разделе Интеграция System. Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+ При использовании транзакции <xref:System.Transactions> с поставщиком .NET Framework для SQL Server для базы данных SQL Server автоматически будет использована упрощенная <xref:System.Transactions.Transaction>. Затем по мере необходимости транзакция может стать полной распределенной транзакцией. Дополнительные сведения см. [в разделе Интеграция System. Transactions с SQL Server](system-transactions-integration-with-sql-server.md).  
   
 > [!NOTE]
 > Максимальное количество распределенных транзакций, которое база данных Oracle может обрабатывать одновременно, по умолчанию равно 10. При соединении с базой данных Oracle после десятой транзакции возникает исключение. Oracle не поддерживает инструкции языка `DDL` внутри распределенной транзакции.  
@@ -42,13 +42,13 @@ ms.locfileid: "70041248"
 > Если соединение уже запустило транзакцию с помощью метода соединений `EnlistTransaction`, то <xref:System.Data.Common.DbConnection.BeginTransaction%2A> вызовет исключение. Однако, если транзакция является локальной и запущенной из источника данных (например, явно выполнив инструкцию BEGIN TRANSACTION с помощью <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` выполнит откат локальной транзакции и прикрепит к существующей распределенной транзакции. Уведомления об откате локальной транзакции не высылается, и управление любыми незапущенными локальными транзакциями осуществляется с помощью <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. При использовании поставщика данных .NET Framework для SQL Server (`SqlClient`) с SQL Server попытка прикрепления вызовет исключение. Все остальные случаи исключений не вызовут.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Повышаемые транзакции в SQL Server  
- SQL Server поддерживает повышаемые транзакции, в которых локальная упрощенная транзакция может быть автоматически повышена до распределенной, если потребуется. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Дополнительные сведения и пример кода см. в разделе [Интеграция System. Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+ SQL Server поддерживает повышаемые транзакции, в которых локальная упрощенная транзакция может быть автоматически повышена до распределенной, если потребуется. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Дополнительные сведения и пример кода см. в разделе [Интеграция System. Transactions с SQL Server](system-transactions-integration-with-sql-server.md).  
   
 ## <a name="configuring-distributed-transactions"></a>Настройка распределенных транзакций  
  Для использования распределенных транзакций возможна необходимость включения в сети MS DTC. Если включен межсетевой экран Windows, необходимо разрешить службе MS DTC использовать сеть или открыть порт MS DTC.  
   
 ## <a name="see-also"></a>См. также
 
-- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Транзакции и параллельность](transactions-and-concurrency.md)
+- [Интеграция System.Transactions с SQL Server](system-transactions-integration-with-sql-server.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Строки подключения в ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363745"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784901"
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 
@@ -57,23 +57,23 @@ Keyword=a=b=c
 
 При вводе ошибок могут возникать ошибки. Например, `Integrated Security=true` является допустимым, но `IntegratedSecurity=true` вызывает ошибку.
 
-Строки подключения, созданные вручную во время выполнения из непроверенных входных данных, уязвимы для атак путем внедрения строк и поддают риску безопасность в источнике данных. Для решения этих проблем в *ADO.NET* 2,0 появились [построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md) для каждого *.NET Framework* поставщика данных. Эти построители строк подключения предоставляют параметры в виде строго типизированных свойств и позволяют проверить строку подключения перед отправкой в источник данных.
+Строки подключения, созданные вручную во время выполнения из непроверенных входных данных, уязвимы для атак путем внедрения строк и поддают риску безопасность в источнике данных. Для решения этих проблем в *ADO.NET* 2,0 появились [построители строк подключения](connection-string-builders.md) для каждого *.NET Framework* поставщика данных. Эти построители строк подключения предоставляют параметры в виде строго типизированных свойств и позволяют проверить строку подключения перед отправкой в источник данных.
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Построители строк подключения](connection-string-builders.md)\
 Демонстрирует использование классов `ConnectionStringBuilder` для создания достоверных строк соединения во время выполнения.
 
-[Строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Строки подключения и файлы конфигурации](connection-strings-and-configuration-files.md)\
 Демонстрирует хранение и получение строк соединения в файлах конфигурации.
 
-[Синтаксис строки подключения](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Синтаксис строки подключения](connection-string-syntax.md)\
 Описывает настройку строк соединения, зависящих от поставщика, для `SqlClient`, `OracleClient`, `OleDb` и `Odbc`.
 
-[Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Защита сведений о соединении](protecting-connection-information.md)\
 Демонстрирует методы защиты сведений, используемых для подключения к источнику данных.
 
 ## <a name="see-also"></a>См. также
 
 - [Подключение к источнику данных](/cpp/data/odbc/connecting-to-a-data-source)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

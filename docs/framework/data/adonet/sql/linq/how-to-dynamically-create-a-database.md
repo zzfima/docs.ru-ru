@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940083"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793656"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Практическое руководство. Как динамически создать базу данных
 В LINQ to SQL модель объектов сопоставляется с реляционной базой данных. Сопоставление обеспечивается применением для описания структуры реляционной базы данных сопоставления на основе атрибутов или внешнего файла сопоставления. В обоих случаях имеется достаточно сведений о реляционной базе данных, позволяющих создать новый экземпляр базы данных с помощью метода <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -50,8 +50,8 @@ ms.locfileid: "69940083"
   
 ## <a name="see-also"></a>См. также
 
-- [Сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Внесение и отправка изменений данных](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Сопоставление, основанное на атрибутах](attribute-based-mapping.md)
+- [Внешнее сопоставление](external-mapping.md)
+- [Сопоставление типов SQL-CLR](sql-clr-type-mapping.md)
+- [Основные сведения](background-information.md)
+- [Внесение и отправка изменений данных](making-and-submitting-data-changes.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963167"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794408"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Получение данных с помощью DataReader
 Для получения данных с помощью **DataReader** создайте экземпляр объекта **Command**, а затем создайте **DataReader** путем вызова **Command.ExecuteReader** для получения строк из источника данных. **DataReader** предоставляет небуферизованный поток данных, позволяющий эффективно реализовать процедурную логику последовательной обработки результатов из источника данных. **DataReader** хорошо подходит для извлечения больших объемов данных, поскольку данные не кэшируются в памяти.
@@ -57,7 +57,7 @@ reader = command.ExecuteReader()
 ## <a name="working-with-ole-db-chapters"></a>Работа с разделами OLE DB  
  Иерархические наборы строк или главы (OLE DB Type **DBTYPE_HCHAPTER**, ADO Type **адчаптер**) можно <xref:System.Data.OleDb.OleDbDataReader>получить с помощью. Когда для возврата результатов запроса, содержащего раздел, используется **DataReader**, раздел возвращается в виде столбца в этом **DataReader** и представляется в виде объекта **DataReader**.  
   
- **DataSet** из ADO.NET также может использоваться для представления иерархических наборов строк с использованием отношений "родитель — потомок" между таблицами. Дополнительные сведения см. в разделе [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
+ **DataSet** из ADO.NET также может использоваться для представления иерархических наборов строк с использованием отношений "родитель — потомок" между таблицами. Дополнительные сведения см. в разделе [Наборы данных, таблицы данных и объекты DataView](./dataset-datatable-dataview/index.md).  
   
  В следующем примере кода поставщик MSDataShape используется, чтобы сформировать столбец раздела заказов по каждому клиенту из списка клиентов.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Чтобы избежать **OverflowException**, рекомендуется также производить преобразование из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в <xref:System.Data.DataRow>. Чтобы отследить возникновение **OverflowException**, можно использовать событие <xref:System.Data.Common.DataAdapter.FillError>. Дополнительные сведения о событии <xref:System.Data.Common.DataAdapter.FillError> см. в разделе [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Чтобы избежать **OverflowException**, рекомендуется также производить преобразование из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в <xref:System.Data.DataRow>. Чтобы отследить возникновение **OverflowException**, можно использовать событие <xref:System.Data.Common.DataAdapter.FillError>. Дополнительные сведения о событии <xref:System.Data.Common.DataAdapter.FillError> см. в разделе [Обработка событий DataAdapter](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Объекты DataAdapter и DataReader](dataadapters-and-datareaders.md)
+- [Команды и параметры](commands-and-parameters.md)
+- [Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

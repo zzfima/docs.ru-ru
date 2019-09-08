@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: fb27e11f81451d6a982edcf5b88b23861bef3c37
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 73c375f9acfd193680982994ed0852454cefebe5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938430"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791445"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Транзакции и операции массового копирования
 Операции массового копирования могут выполняться как изолированные операции или как часть многошаговой транзакции. Этот последний режим обеспечивает выполнение нескольких операций массового копирования в одной транзакции, а также выполнение операций базы данных (таких как вставки, обновления и удаления) при сохранении возможности фиксирования или отката всей транзакции.  
@@ -25,7 +25,7 @@ ms.locfileid: "69938430"
  Операция массового копирования выполняется со свойством <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A>, равным 10. Если при выполнении операции встретилась недопустимая строка, то вызывается исключение. В этом первом примере операция массового копирования не использует транзакцию. Все пакеты, скопированные до момента ошибки, фиксируются. Пакет, содержащий повторяющийся ключ, подвергается откату, а операция массового копирования прерывается до обработки любых других пакетов.  
   
 > [!NOTE]
-> Этот пример не будет выполняться, если вы не создали рабочие таблицы, как описано в статье [Пример установки с помощью инструкций копирования](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Этот код предназначен для демонстрации синтаксиса только для использования **SqlBulkCopy** . Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, то проще и быстрее использовать инструкцию Transact`INSERT … SELECT` -SQL для копирования данных.  
+> Этот пример не будет выполняться, если вы не создали рабочие таблицы, как описано в статье [Пример установки с помощью инструкций копирования](bulk-copy-example-setup.md). Этот код предназначен для демонстрации синтаксиса только для использования **SqlBulkCopy** . Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, то проще и быстрее использовать инструкцию Transact`INSERT … SELECT` -SQL для копирования данных.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ ms.locfileid: "69938430"
  Следующее приложение командной строки сходно с предыдущим примером, с одним исключением: в этом примере операция массового копирования управляет своей собственной транзакцией. Все пакеты, скопированные до момента ошибки, фиксируются. Пакет, содержащий повторяющийся ключ, подвергается откату, а операция массового копирования прерывается до обработки любых других пакетов.  
   
 > [!IMPORTANT]
-> Этот пример не будет выполняться, если вы не создали рабочие таблицы, как описано в статье [Пример установки с помощью инструкций копирования](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Этот код предназначен для демонстрации синтаксиса только для использования **SqlBulkCopy** . Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, то проще и быстрее использовать инструкцию Transact`INSERT … SELECT` -SQL для копирования данных.  
+> Этот пример не будет выполняться, если вы не создали рабочие таблицы, как описано в статье [Пример установки с помощью инструкций копирования](bulk-copy-example-setup.md). Этот код предназначен для демонстрации синтаксиса только для использования **SqlBulkCopy** . Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, то проще и быстрее использовать инструкцию Transact`INSERT … SELECT` -SQL для копирования данных.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,12 +54,12 @@ ms.locfileid: "69938430"
  Следующее приложение командной строки аналогично первому примеру (без транзакции), за одним исключением: здесь операция массового копирования включена в большую, внешнюю транзакцию. Если возникает ошибка нарушения первичного ключа, производится откат всей транзакции и в целевую таблицу строки не добавляются.  
   
 > [!IMPORTANT]
-> Этот пример не будет выполняться, если вы не создали рабочие таблицы, как описано в статье [Пример установки с помощью инструкций копирования](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Этот код предназначен для демонстрации синтаксиса только для использования **SqlBulkCopy** . Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, то проще и быстрее использовать инструкцию Transact`INSERT … SELECT` -SQL для копирования данных.  
+> Этот пример не будет выполняться, если вы не создали рабочие таблицы, как описано в статье [Пример установки с помощью инструкций копирования](bulk-copy-example-setup.md). Этот код предназначен для демонстрации синтаксиса только для использования **SqlBulkCopy** . Если исходная и целевая таблицы расположены в одном и том же экземпляре SQL Server, то проще и быстрее использовать инструкцию Transact`INSERT … SELECT` -SQL для копирования данных.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Операции массового копирования в SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Операции массового копирования в SQL Server](bulk-copy-operations-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

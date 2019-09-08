@@ -2,12 +2,12 @@
 title: Оптимистическая блокировка. Обзор
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938630"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792922"
 ---
 # <a name="optimistic-concurrency-overview"></a>Оптимистическая блокировка. Обзор
 Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает средства управления оптимистическим параллелизмом. В следующей таблице описаны термины, применяемые к оптимистичному параллелизму [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в документации.  
@@ -44,26 +44,26 @@ ms.locfileid: "69938630"
 |Пользователь1|Алексей||Маркетинговый отдел|  
 |Пользователь2||Инна|Служба|  
   
- Подобные конфликты можно разрешать различными способами. Дополнительные сведения см. в разделе [Практическое руководство. Управление конфликтами](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)изменений.  
+ Подобные конфликты можно разрешать различными способами. Дополнительные сведения см. в разделе [Практическое руководство. Управление конфликтами](how-to-manage-change-conflicts.md)изменений.  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>Контрольный список обнаружения и разрешения конфликтов  
  Конфликты можно обнаруживать и разрешать на любом уровне детализации. С одной стороны, можно разрешить все конфликты одним из трех способов (см. <xref:System.Data.Linq.RefreshMode>) без каких-либо дополнительных действий. С другой стороны, можно указать конкретное действие для каждого типа конфликта и для каждого конфликтующего члена.  
   
 - Укажите или проверьте параметры <xref:System.Data.Linq.Mapping.UpdateCheck> в объектной модели.  
   
-     Дополнительные сведения см. в разделе [Практическое руководство. Укажите, какие элементы проверяются на конфликты](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)параллелизма.  
+     Дополнительные сведения см. в разделе [Практическое руководство. Укажите, какие элементы проверяются на конфликты](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)параллелизма.  
   
 - В блоке "try/catch" вызова метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A> укажите, в какой точке должны вызываться исключения.  
   
-     Дополнительные сведения см. в разделе [Практическое руководство. Укажите, когда вызываются](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)исключения параллелизма.  
+     Дополнительные сведения см. в разделе [Практическое руководство. Укажите, когда вызываются](how-to-specify-when-concurrency-exceptions-are-thrown.md)исключения параллелизма.  
   
 - Определите уровень детализации извлекаемых сведений о конфликте и вставьте соответствующий код в блок "try/catch".  
   
-     Дополнительные сведения см. в разделе [Практическое руководство. Получение сведений о](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) конфликтах [сущностей и инструкции: Получение сведений о](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)конфликтах элементов.  
+     Дополнительные сведения см. в разделе [Практическое руководство. Получение сведений о](how-to-retrieve-entity-conflict-information.md) конфликтах [сущностей и инструкции: Получение сведений о](how-to-retrieve-member-conflict-information.md)конфликтах элементов.  
   
 - Включите в `try` / код способразрешенияразличныхобнаруженныхконфликтов.`catch`  
   
-     Дополнительные сведения см. в разделе [Практическое руководство. Разрешите конфликты, сооставляя](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)значения [базы данных, как: Разрешите конфликты, перезаписав](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)значения базы [данных, и выполните следующие действия. Разрешите конфликты путем слияния со](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)значениями базы данных.  
+     Дополнительные сведения см. в разделе [Практическое руководство. Разрешите конфликты, сооставляя](how-to-resolve-conflicts-by-retaining-database-values.md)значения [базы данных, как: Разрешите конфликты, перезаписав](how-to-resolve-conflicts-by-overwriting-database-values.md)значения базы [данных, и выполните следующие действия. Разрешите конфликты путем слияния со](how-to-resolve-conflicts-by-merging-with-database-values.md)значениями базы данных.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Типы LINQ to SQL, поддерживающие обнаружение и разрешение конфликтов  
  Ниже перечислены классы и возможности, поддерживающие разрешение конфликтов при оптимистическом параллелизме в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -90,4 +90,4 @@ ms.locfileid: "69938630"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Практическое руководство. Управление конфликтами изменений](how-to-manage-change-conflicts.md)

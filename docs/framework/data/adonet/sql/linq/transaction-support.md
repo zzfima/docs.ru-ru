@@ -2,15 +2,15 @@
 title: Поддержка транзакций
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c7128ef432fa609b8d628bc74caebe790058ede
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876841"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792277"
 ---
 # <a name="transaction-support"></a>Поддержка транзакций
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает три различные модели транзакций. Далее представлен список этих моделей в порядке выполненных проверок.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает три различные модели транзакций. Далее представлен список этих моделей в порядке выполненных проверок.  
   
 ## <a name="explicit-local-transaction"></a>Явные локальные транзакции  
  При вызове <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, если свойству <xref:System.Data.Linq.DataContext.Transaction%2A> задана транзакция (`IDbTransaction`), вызов <xref:System.Data.Linq.DataContext.SubmitChanges%2A> выполняется в контексте этой же транзакции.  
@@ -18,12 +18,12 @@ ms.locfileid: "61876841"
  Вашей обязанностью является выполнение фиксации или отката транзакции после ее успешного выполнения. Подключение, соответствующее транзакции, должно совпадать с подключением, используемым для создания <xref:System.Data.Linq.DataContext>. При использовании разных подключений создается исключение.  
   
 ## <a name="explicit-distributable-transaction"></a>Явные распределяемые транзакции  
- Можно вызвать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API-интерфейсы (включая, но не ограничиваясь <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) в области действия активного <xref:System.Transactions.Transaction>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] обнаруживает, что вызов находится в области транзакции и не создает новую транзакцию. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] также позволяет избежать в этом случае закрытия соединения. В контексте данной транзакции можно осуществить запрос и выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+ Вы можете вызывать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API (включая, <xref:System.Data.Linq.DataContext.SubmitChanges%2A>но не ограниченные) в области активного <xref:System.Transactions.Transaction>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Определяет, что вызов находится в области транзакции и не создает новую транзакцию. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Кроме того, не следует закрывать соединение в этом случае. В контексте данной транзакции можно осуществить запрос и выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 ## <a name="implicit-transaction"></a>Неявные транзакции  
- При вызове <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проверяет, является ли вызов в рамках <xref:System.Transactions.Transaction> или, если `Transaction` свойство (`IDbTransaction`) имеет значение запускаемая пользователем локальная транзакция. Если транзакции не [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запускает локальную транзакцию (`IDbTransaction`) и использовать ее для выполнения сгенерированных команд SQL. После успешного завершения всех команд SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] фиксирует локальную транзакцию и возвращается.  
+ При вызове <xref:System.Data.Linq.DataContext.SubmitChanges%2A>метод [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проверяет, находится ли вызов <xref:System.Transactions.Transaction> в области действия или если `Transaction` свойство (`IDbTransaction`) установлено в качестве пользовательской локальной транзакции. Если она не находит ни одной [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] транзакции, запускает локальную`IDbTransaction`транзакцию () и использует ее для выполнения созданных команд SQL. После успешного завершения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] всех команд SQL фиксирует локальную транзакцию и возвращает.  
   
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Практическое руководство. Объединить в пакеты отправку данных с помощью транзакций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Основные сведения](background-information.md)
+- [Практическое руководство. Скобки для отправки данных с помощью транзакций](how-to-bracket-data-submissions-by-using-transactions.md)

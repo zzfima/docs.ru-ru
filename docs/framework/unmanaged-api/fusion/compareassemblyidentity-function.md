@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b52d3af38bd09ce5864c25d27e148dbd7f4639b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778479"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795448"
 ---
 # <a name="compareassemblyidentity-function"></a>Функция CompareAssemblyIdentity
-Сравнивает два идентификатора сборки, чтобы определить, являются ли они равными.  
+Сравнивает два идентификатора сборки, чтобы определить, являются ли они эквивалентными.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,49 +42,49 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="parameters"></a>Параметры  
  `pwzAssemblyIdentity1`  
- [in] Текстовым идентификатором первой сборки в сравнении.  
+ окне Текстовое удостоверение первой сборки в сравнении.  
   
  `fUnified1`  
- [in] Логический флаг, указывающий пользовательские унификацию для `pwzAssemblyIdentity1`.  
+ окне Логический флаг, который указывает на определенное пользователем унификацию для `pwzAssemblyIdentity1`.  
   
  `pwzAssemblyIdentity2`  
- [in] Текстовый идентификатор вторую сборку для сравнения.  
+ окне Текстовое удостоверение второй сборки в сравнении.  
   
  `fUnified2`  
- [in] Логический флаг, указывающий пользовательские унификацию для `pwzAssemblyIdentity2`.  
+ окне Логический флаг, который указывает на определенное пользователем унификацию для `pwzAssemblyIdentity2`.  
   
  `pfEquivalent`  
- [out] Логический флаг, указывающее, равны ли две сборки.  
+ заполняет Логический флаг, указывающий, эквивалентны ли две сборки.  
   
  `pResult`  
- [out] [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) перечислению, содержащему подробные сведения о сравнении.  
+ заполняет Перечисление [ассембликомпарисонресулт](assemblycomparisonresult-enumeration.md) , содержащее подробные сведения о сравнении.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `pfEquivalent` Возвращает логическое значение, указывающее, равны ли две сборки. `pResult` Возвращает одно из `AssemblyComparisonResult` значений, чтобы предоставить более подробные причину значение `pfEquivalent`.  
+ `pfEquivalent`Возвращает логическое значение, указывающее, эквивалентны ли две сборки. `pResult`Возвращает одно из `AssemblyComparisonResult` значений, чтобы получить более подробную причину для `pfEquivalent`значения.  
   
 ## <a name="remarks"></a>Примечания  
- `CompareAssemblyIdentity` проверяет ли `pwzAssemblyIdentity1` и `pwzAssemblyIdentity2` эквивалентны. `pfEquivalent` имеет значение `true` в одной или нескольких из следующих условий:  
+ `CompareAssemblyIdentity`проверяет, `pwzAssemblyIdentity1` эквивалентны ли и `pwzAssemblyIdentity2` . `pfEquivalent`задается `true` в одном или нескольких следующих случаях.  
   
-- Идентификаторы двух сборок эквивалентны. Для сборок со строгими именами эквивалентности требуется имя сборки, версия, токен открытого ключа и языка и региональных параметров, считаются идентичными. Для сборок с простыми именами эквивалентности требуется сопоставление по имени сборки и языка и региональных параметров.  
+- Два удостоверения сборки эквивалентны. Для строго именованных сборок эквивалентность требует идентичности имени сборки, версии, токена открытого ключа и языка и региональных параметров. Для просто именованных сборок эквивалентность требует соответствия имени сборки и языку и региональным параметрам.  
   
-- Оба идентификатора сборки ссылаются на сборки, которые выполняются в .NET Framework. Это условие возвращает `true` даже если номера версий сборки не совпадают.  
+- Оба удостоверения сборки ссылаются на сборки, которые выполняются в .NET Framework. Это условие возвращает `true` значение, даже если номера версий сборки не совпадают.  
   
-- Две сборки не являются управляемыми, но `fUnified1` или `fUnified2` было присвоено `true`.  
+- Эти две сборки не являются управляемыми сборками `fUnified1` , `fUnified2` но или имеют `true`значение.  
   
- `fUnified` Флаг указывает, что все номера версий до номер версии сборки со строгими именами, считаются эквивалентными сборкой со строгим именем. К примеру Если значение `pwzAssemblyIndentity1` является «MyAssembly, версии = 3.0.0.0, culture = neutral, publicKeyToken =...» и значение `fUnified1` является `true`, это означает, что должно быть MyAssembly из версии 3.0.0.0 0.0.0.0 для всех версий рассматривается как эквивалент. В этом случае если `pwzAssemblyIndentity2` ссылается на ту же сборку `pwzAssemblyIndentity1`, за исключением того, что ниже номера версии, `pfEquivalent` присваивается `true`. Если `pwzAssemblyIdentity2` ссылается на более высокий номер версии `pfEquivalent` присваивается `true` только если значение `fUnified2` является `true`.  
+ `fUnified` Флаг указывает, что все номера версий, вплоть до номера версии строго именованной сборки, считаются эквивалентными сборке со строгим именем. Например, если значение `pwzAssemblyIndentity1` равно "MyAssembly, Version = 3.0.0.0, Culture = Neutral, PublicKeyToken =....", а `fUnified1` значение равно `true`, это означает, что все версии myAssembly из версии 0.0.0.0 на 3.0.0.0 должны быть рассматривается как эквивалент. В этом случае, `pwzAssemblyIndentity2` если ссылается на ту же сборку, что `pwzAssemblyIndentity1`и, за исключением того, что имеет меньший номер версии, `pfEquivalent` устанавливается в `true`значение. Если `pwzAssemblyIdentity2` ссылается на более высокий номер версии, `pfEquivalent` задается `true` только в том случае, `fUnified2` если `true`значение равно.  
   
- `pResult` Параметр содержит определенные сведения о почему две сборки считаются эквивалентным или не является эквивалентным. Дополнительные сведения см. в разделе [перечисление AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
+ `pResult` Параметр содержит конкретные сведения о том, почему две сборки считаются эквивалентными или не эквивалентными. Дополнительные сведения см. в разделе [перечисление ассембликомпарисонресулт](assemblycomparisonresult-enumeration.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Перечисление AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)
+- [Перечисление AssemblyComparisonResult](assemblycomparisonresult-enumeration.md)

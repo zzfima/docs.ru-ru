@@ -2,12 +2,12 @@
 title: Интеграция среды CLR и SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b40c6a1576b87d9bb4a7eb4b1ee3df8828b892
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876347"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780857"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Интеграция среды CLR и SQL Server
 В версии SQL Server 2005 появилась поддержка интеграции сервера со средой CLR инфраструктуры .NET Framework для Microsoft Windows. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции, определяемые пользователем агрегатные функции и возвращающие табличные значение потоковые функции теперь можно разрабатывать с использованием любого языка .NET Framework, включая Microsoft Visual Basic .NET и Microsoft Visual C#. Пространство имен <xref:Microsoft.SqlServer.Server> содержит ряд новых API-интерфейсов, что позволяет обеспечить взаимодействие управляемого кода со средой Microsoft SQL Server.  
@@ -18,31 +18,31 @@ ms.locfileid: "61876347"
   
  **Электронная документация по SQL Server**  
   
-1. [Распространенные языка среды CLR Integration основные понятия программирования](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [Основные понятия программирования интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Знакомство с интеграцией CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+ [Знакомство с интеграцией CLR в SQL Server](introduction-to-sql-server-clr-integration.md)  
  Предоставляет вводные сведения об интеграции SQL Server со средой CLR. Приводятся ссылки на дополнительные разделы.  
   
- [Определяемые пользователем функции среды CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [Определяемые пользователем функции среды CLR](clr-user-defined-functions.md)  
  Содержит описание реализации и использования различных типов функций среды CLR: возвращающих табличное значение, скалярных и определяемых пользователем агрегатных функций.  
   
- [Определяемые пользователем типы CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [Определяемые пользователем типы CLR](clr-user-defined-types.md)  
  Показывает, как реализовать и использовать определяемые пользователем типы среды CLR. Приводятся ссылки на дополнительные разделы.  
   
- [Хранимые процедуры CLR](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
+ [Хранимые процедуры CLR](clr-stored-procedures.md)  
  Показывает, как реализовать и использовать хранимые процедуры среды CLR. Приводятся ссылки на дополнительные разделы.  
   
- [Триггеры CLR](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
+ [Триггеры CLR](clr-triggers.md)  
  Показывает, как реализовать и использовать триггеры CLR. Приводятся ссылки на дополнительные разделы.  
   
- [Подключение контекста](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [Подключение контекста](the-context-connection.md)  
  Описывает контекстное соединение.  
   
- [Внутрипроцессное поведение ADO.NET в SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
+ [Внутрипроцессное поведение ADO.NET в SQL Server](sql-server-in-process-specific-behavior-of-adonet.md)  
  Описывает внутрипроцессные модули SQL Server, предназначенные для поддержки технологии ADO.NET, и контекстное соединение. Приводятся ссылки на дополнительные разделы.  
   
 ## <a name="see-also"></a>См. также
 
-- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server и ADO.NET](index.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

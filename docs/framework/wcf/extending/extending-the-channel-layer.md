@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: e60d8ef1a5191c6407b01eb1a2456a06aeeb1914
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76ca76d7973403c657b8f68bfde9619df36f220e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857913"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797136"
 ---
 # <a name="extending-the-channel-layer"></a>Расширение уровня каналов
 Уровень канала отвечает за обмен сообщениями между клиентами и службами. Расширения каналов могут реализовывать новые функциональные возможности протокола, такие как безопасность, или транспортные функциональные возможности, такие как реализация нового сетевого транспорта для передачи сообщений SOAP.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
+ [Общие сведения о модели каналов](channel-model-overview.md)  
  Высокоуровневый обзор каналов, предоставляемых ими функций и принципов работы в службе и клиентском приложении.  
   
- [Разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md)  
+ [Разработка каналов](developing-channels.md)  
  Подробное описание ролей, которые выполняют различные типы инфраструктуры каналов, принципов работы модуля состояния и жизненного цикла состояния, способов обработки исключений и ошибок, способов реализации поддержки метаданных и принципов работы каналов с кодировщиками сообщений.  
   
- [Пользовательские кодировщики](../../../../docs/framework/wcf/extending/custom-encoders.md)  
+ [Пользовательские кодировщики](custom-encoders.md)  
  Описание роли, которую выполняют кодировщики сообщений в каналах, и способов ее создания.  
   
- [Пользовательские обновления потоков](../../../../docs/framework/wcf/extending/custom-stream-upgrades.md)  
+ [Пользовательские обновления потоков](custom-stream-upgrades.md)  
  Описание процесса обновления потоков, предоставляемых поточно-ориентированными транспортами.

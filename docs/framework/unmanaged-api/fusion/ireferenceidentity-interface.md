@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789686"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796354"
 ---
 # <a name="ireferenceidentity-interface"></a>Интерфейс IReferenceIdentity
-Представляет ссылку на уникальную подпись объекта кода.  
+Представляет ссылку на уникальную сигнатуру объекта кода.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Получает указатель интерфейса на новый `IReferenceIdentity` экземпляр, который является идентичным этому `IReferenceIdentity`, за исключением изменения указанного атрибута.|  
-|`IReferenceIdentity::EnumAttributes`|Получает указатель интерфейса на `IEnumIDENTITY_ATTRIBUTE` экземпляр, содержащий атрибуты, связанные с этим `IReferenceIdentity`.|  
-|`IReferenceIdentity::GetAttribute`|Получает значение атрибута в указанного пространства имен, с указанным именем.|  
-|`IReferenceIdentity::SetAttribute`|Задает атрибут, имеющий указанное пространство имен и указанное имя, указанное значение.|  
+|`IReferenceIdentity::Clone`|Возвращает указатель интерфейса на новый `IReferenceIdentity` экземпляр, идентичный этому `IReferenceIdentity`, за исключением изменения указанного атрибута.|  
+|`IReferenceIdentity::EnumAttributes`|Возвращает указатель интерфейса на `IEnumIDENTITY_ATTRIBUTE` экземпляр, содержащий атрибуты, связанные с этим. `IReferenceIdentity`|  
+|`IReferenceIdentity::GetAttribute`|Возвращает значение атрибута в указанном пространстве имен с указанным именем.|  
+|`IReferenceIdentity::SetAttribute`|Задает для атрибута, имеющего указанное пространство имен и указанное имя, указанное значение.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Isolation.h  
+ **Заголовок.** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Интерфейс IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Интерфейс IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)

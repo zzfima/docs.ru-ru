@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 86c7e9fae270e75d1ba7e9725ded22ea1961311a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbb2f8cf37bd05864dc93b8ebbd33466a9a2c55e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911991"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793078"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]является компонентом .NET Framework версии 3,5, предоставляющей инфраструктуру времени выполнения для управления реляционными данными как объектами.  
@@ -22,16 +22,16 @@ ms.locfileid: "69911991"
  Документация, включенная в эту версию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], описывает основные строительные блоки, процессы и методики, необходимые для построения приложений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Можно также выполнить поиск по Документация Майкрософт для конкретных проблем, и вы можете принять участие в [форуме LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), где вы сможете обсуждать более сложные темы подробно с экспертами. Наконец, [LINQ to SQL: запрос к языку .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205) , содержащий технические сведения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] о технологии, завершенный с C# Visual Basic и примерами кода.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
+ [Начало работы](getting-started.md)  
  Содержит краткие общие сведения о [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], а также сведения о начале работы с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Руководство по программированию](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Руководство по программированию](programming-guide.md)  
  Содержит описание действий по сопоставлению, осуществлению запросов, обновлению, отладке и выполнению схожих задач.  
   
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Ссылки](reference.md)  
  Содержит справочные сведения о ряде аспектов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Представлены следующие разделы: "Сопоставление типов SQL-CLR", "Преобразование стандартного оператора запросов" и многие другие.  
   
- [Примеры](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
+ [Примеры](samples.md)  
  Содержит ссылки на Visual Basic и C# примеры.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -44,13 +44,13 @@ ms.locfileid: "69911991"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Описание [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] технологий для Visual Basic пользователей.  
   
- [LINQ и ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [LINQ и ADO.NET](../../linq-and-ado-net.md)  
  Ссылки на портал ADO.NET.  
   
  [Пошаговые руководства LINQ to SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Содержит список пошаговых руководств, доступных для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [Загрузка примеров баз данных](downloading-sample-databases.md)  
  Содержит инструкции по загрузке примеров баз данных, используемых в документации.  
   
  [Обзор серверного веб-элемента управления LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  

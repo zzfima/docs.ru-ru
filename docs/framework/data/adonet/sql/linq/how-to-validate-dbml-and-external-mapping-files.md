@@ -2,12 +2,12 @@
 title: Практическое руководство. Как проверять DBML-файлы и внешние файлы сопоставлений
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 212d65dfe998b825dd40e564756083ed685dff6f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041135"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793040"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Практическое руководство. Как проверять DBML-файлы и внешние файлы сопоставлений
 
@@ -31,9 +31,9 @@ ms.locfileid: "70041135"
 
 5. Отметьте определение схемы, соответствующее выполняемой задаче.
 
-    - Для проверки DBML-файла используется определение схемы DbmlSchema.xsd. Дополнительные сведения см. [в разделе Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - Для проверки DBML-файла используется определение схемы DbmlSchema.xsd. Дополнительные сведения см. [в разделе Создание кода в LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - Для проверки внешнего XML-файла сопоставлений используется определение схемы LinqToSqlMapping.xsd. Дополнительные сведения см. в разделе [внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - Для проверки внешнего XML-файла сопоставлений используется определение схемы LinqToSqlMapping.xsd. Дополнительные сведения см. в разделе [внешнее сопоставление](external-mapping.md).
 
 6. В столбце **использовать** в строке определения требуемой схемы щелкните, чтобы открыть раскрывающийся список, и выберите **использовать эту схему**.
 
@@ -53,9 +53,9 @@ ms.locfileid: "70041135"
 
 1. Найдите раздел справки, который содержит определение схемы. Инструкции по выбору определения схемы см. ранее в этом разделе.
 
-    - Сведения о файлах. dbml см. [в разделе Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - Сведения о файлах. dbml см. [в разделе Создание кода в LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - Сведения о внешних файлах сопоставлений см. в разделе [внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - Сведения о внешних файлах сопоставлений см. в разделе [внешнее сопоставление](external-mapping.md).
 
 2. Щелкните **Копировать код** , чтобы скопировать файл кода в буфер обмена.
 
@@ -74,4 +74,4 @@ ms.locfileid: "70041135"
 
 ## <a name="see-also"></a>См. также
 
-- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Ссылки](reference.md)

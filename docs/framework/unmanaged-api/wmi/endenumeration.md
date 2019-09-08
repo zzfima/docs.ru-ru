@@ -1,6 +1,6 @@
 ---
 title: Функция EndEnumeration (Справочник по неуправляемым API)
-description: Функция EndEnumeration завершает перечисления.
+description: Функция EndEnumeration завершает перечисление.
 ms.date: 11/06/2017
 api_name:
 - EndEnumeration
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636772"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798809"
 ---
 # <a name="endenumeration-function"></a>Функция EndEnumeration
 
-Завершает работу вызовом последовательности перечисления [функция BeginEnumeration](beginenumeration.md).
+Завершает последовательность перечисления, запущенную с вызовом [функции BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -41,34 +41,34 @@ HRESULT EndEnumeration (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`\
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`\
-[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
+окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
+|`WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) метод.
+Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Вызов `EndEnumeration` функция не является обязательным, но рекомендуется, так как он освобождает ресурсы, связанные с перечислением. Однако ресурсы освобождаются автоматически при запуске следующего перечисления или объект освобождается.
+Вызов `EndEnumeration` функции не требуется, но рекомендуется, так как он освобождает ресурсы, связанные с перечислением. Однако ресурсы освобождаются автоматически при запуске следующего перечисления или при освобождении объекта.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils.idl
+**Заголовок.** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

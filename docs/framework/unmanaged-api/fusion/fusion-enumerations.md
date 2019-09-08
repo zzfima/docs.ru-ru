@@ -8,38 +8,38 @@ helpviewer_keywords:
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffee9084bd07882079b2d44de25391f2491a1520
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936465"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795331"
 ---
 # <a name="fusion-enumerations"></a>Перечисления Fusion
-В этом разделе описываются неуправляемые перечисления, используемые API Fusion.  
+В этом разделе описаны неуправляемые перечисления, используемые API Fusion.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Перечисление ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  
- Указывает источник сборки, представленной [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) в глобальном кэше сборок.  
+ [Перечисление ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)  
+ Указывает источник сборки, представленной [IAssemblyCacheItem](iassemblycacheitem-interface.md) в глобальном кэше сборок.  
   
- [Перечисление ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)  
- Указывает версии, сборки, язык и региональные параметры и т. д., сборок, сравнить с [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) метод.  
+ [Перечисление ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md)  
+ Указывает версию, сборку, язык и региональные параметры, сигнатуру и т. д. для двух сборок, сравниваемых методом [IAssemblyName:: Equals](iassemblyname-isequal-method.md) .  
   
- [Перечисление ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)  
- Указывает версию, сборки, язык и региональные параметры, подпись и т. д., сборки, отображаемое имя будет использоваться [IAssemblyName::GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) метод.  
+ [Перечисление ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md)  
+ Указывает версию, сборку, язык и региональные параметры, сигнатуру и т. д. для сборки, отображаемое имя которого будет извлечено методом [IAssemblyName:: DisplayName](iassemblyname-getdisplayname-method.md) .  
   
- [Перечисление ASM_NAME](../../../../docs/framework/unmanaged-api/fusion/asm-name-enumeration.md)  
- Указывает версии, сборки, язык и региональные параметры, подпись и т. д., сборки, свойства которого будут извлечены или задается [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) методы.  
+ [Перечисление ASM_NAME](asm-name-enumeration.md)  
+ Указывает версию, сборку, язык и региональные параметры, сигнатуру и т. д. для сборки, свойства которой будут извлечены или заданы методами [IAssemblyName](iassemblyname-interface.md) .  
   
- [Перечисление AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)  
- Эквивалентность двух идентификаторов сборок, указывает, что определяется [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) функции.  
+ [Перечисление AssemblyComparisonResult](assemblycomparisonresult-enumeration.md)  
+ Указывает эквивалентность двух удостоверений сборки, как определено функцией [компареассемблидентити](compareassemblyidentity-function.md) .  
   
- [Перечисление CREATE_ASM_NAME_OBJ_FLAGS](../../../../docs/framework/unmanaged-api/fusion/create-asm-name-obj-flags-enumeration.md)  
- Указывает атрибуты `IAssemblyName` объекта при построении с [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) функции.  
+ [Перечисление CREATE_ASM_NAME_OBJ_FLAGS](create-asm-name-obj-flags-enumeration.md)  
+ Задает атрибуты `IAssemblyName` объекта при создании с помощью функции [креатеассемблинамеобжект](createassemblynameobject-function.md) .  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Интерфейсы Fusion](fusion-interfaces.md)  
   
- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Глобальные статические функции Fusion](fusion-global-static-functions.md)  
   
- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+ [Структуры Fusion](fusion-structures.md)

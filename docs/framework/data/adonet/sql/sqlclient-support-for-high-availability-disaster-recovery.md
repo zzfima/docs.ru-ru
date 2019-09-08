@@ -2,12 +2,12 @@
 title: Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938469"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791613"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В этом разделе обсуждается поддержка SqlClient (добавлена в .NET Framework 4,5) для обеспечения высокого уровня доступности, аварийного восстановления и группы доступности AlwaysOn.  Компонент группы доступности AlwaysOn был добавлен в SQL Server 2012. Дополнительные сведения о группы доступности AlwaysOn см. в разделе электронная документация на SQL Server.  
@@ -98,5 +98,5 @@ ms.locfileid: "69938469"
   
 ## <a name="see-also"></a>См. также
 
-- [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Возможности SQL Server и ADO.NET](sql-server-features-and-adonet.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

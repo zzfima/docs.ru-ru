@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774016"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796405"
 ---
 # <a name="iinstallreferenceenum-interface"></a>Интерфейс IInstallReferenceEnum
-Представляет перечислитель для упоминаемой сборок, установленных в глобальном кэше сборок.  
+Представляет перечислитель для сборок, на которые имеются ссылки, установленных в глобальном кэше сборок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +42,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetNextInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Получает указатель на следующий `IInstallReferenceItem` , содержащихся в данном `IInstallReferenceEnum`.|  
+|[Метод GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Возвращает указатель на следующий `IInstallReferenceItem` объект, содержащийся в этом. `IInstallReferenceEnum`|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Интерфейс IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Интерфейс IInstallReferenceItem](iinstallreferenceitem-interface.md)

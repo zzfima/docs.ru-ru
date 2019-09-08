@@ -2,24 +2,24 @@
 title: WebHostUnhandledException
 ms.date: 03/30/2017
 ms.assetid: 9e8564c6-8fd2-4bc9-85b5-68e0b55438ee
-ms.openlocfilehash: 5d34e1c6eab7bbf81e15f0b68cf5a2b19aee3907
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e7e99c1bc44ebf2e4ab00b63aa9264b4393b381
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944265"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797423"
 ---
 # <a name="webhostunhandledexception"></a>WebHostUnhandledException
 ИД: 109  
   
- Уровень серьезности: Error  
+ "Уровень серьезности" — Ошибка  
   
- Категория: ServiceModel  
+ Категори ServiceModel  
   
 ## <a name="description"></a>Описание  
  Данное событие указывает на необработанное исключение WebHost. В событии указаны информация об отправителе, исключение, имя и идентификатор процесса.  
   
 ## <a name="see-also"></a>См. также
 
-- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Ведение журнала событий](index.md)
+- [Общие справочные сведения о событиях](events-general-reference.md)

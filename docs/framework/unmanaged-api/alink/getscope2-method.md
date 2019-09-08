@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c0abc63610f3f1ed6e8a556c44ee15edc1ea20b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741845"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787344"
 ---
 # <a name="getscope2-method"></a>Метод GetScope2
-Получает область импортирования.  
+Возвращает область импорта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,22 +42,22 @@ HRESULT GetScope2(
  Идентификатор целевой сборки.  
   
  `FileToken`  
- Идентификатор файла для импорта.  
+ Идентификатор файла, из которого необходимо выполнить импорт.  
   
  `dwScope`  
- Отсчитываемый от нуля область для импорта.  
+ Отсчитываемая от нуля область для импорта.  
   
  `ppImportScope`  
- Получает указатель на [интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) интерфейс для указанной области.  
+ Получает указатель на интерфейс интерфейса [IMetaDataImport2](../metadata/imetadataimport2-interface.md) для указанной области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [API ALink](index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: dd4bca48c35b9b636a96fe5d4a724272abc4f71d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bde442e344ae8aa710d75c61d0957bff9264bf01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934404"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783546"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Получение класса DbProviderFactory
 Процесс получения <xref:System.Data.Common.DbProviderFactory> состоит из передачи сведений о поставщике данных классу <xref:System.Data.Common.DbProviderFactories>. На основе этих сведений метод <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> создает строго типизированную фабрику поставщика. Например, чтобы создать фабрику <xref:System.Data.SqlClient.SqlClientFactory>, можно передать методу `GetFactory` строку с именем поставщика, указанным в формате «System.Data.SqlClient». Другая перегрузка метода `GetFactory` принимает <xref:System.Data.DataRow>. После создания фабрики поставщика можно использовать ее методы для создания дополнительных объектов. К методам фабрики `SqlClientFactory` относятся <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> и <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -79,7 +79,7 @@ ms.locfileid: "69934404"
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Извлечение строки соединения по имени поставщика  
- Чтобы создать фабрику поставщика, необходимо предоставить строку соединения, а также имя поставщика. В этом примере показано, как получить строку подключения из файла конфигурации приложения, передав имя поставщика в инвариантном формате "*System. Data. ProviderName*". В коде выполняется просмотр элементов коллекции <xref:System.Configuration.ConnectionStringSettingsCollection>. В случае успеха возвращается <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>; в противном случае - `null` (`Nothing` в Visual Basic). При наличии нескольких записей для поставщика возвращается первая найденная. Дополнительные сведения и примеры получения строк подключения из файлов конфигурации см. в разделе [строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Чтобы создать фабрику поставщика, необходимо предоставить строку соединения, а также имя поставщика. В этом примере показано, как получить строку подключения из файла конфигурации приложения, передав имя поставщика в инвариантном формате "*System. Data. ProviderName*". В коде выполняется просмотр элементов коллекции <xref:System.Configuration.ConnectionStringSettingsCollection>. В случае успеха возвращается <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>; в противном случае - `null` (`Nothing` в Visual Basic). При наличии нескольких записей для поставщика возвращается первая найденная. Дополнительные сведения и примеры получения строк подключения из файлов конфигурации см. в разделе [строки подключения и файлы конфигурации](connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 > Для выполнения этого кода необходима ссылка на файл `System.Configuration.dll`.  
@@ -97,7 +97,7 @@ ms.locfileid: "69934404"
   
 ## <a name="see-also"></a>См. также
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Строки подключения](connection-strings.md)
 - [Использование классов конфигурации](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [Общие сведения об ADO.NET](ado-net-overview.md)

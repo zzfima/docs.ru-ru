@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 7c8687e0e14458c944e2dec2b51b9f78bb2377c3
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 30a782f5e37e867c7a0e4dfd800f4b2c2836d070
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504221"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784926"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Сравнение объектов DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] определяет различные операторы для работы с наборами, позволяющие сравнивать элементы и определять их равенство. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] предоставляет следующие операторы для работы с наборами:  
@@ -23,7 +23,7 @@ ms.locfileid: "67504221"
   
 - <xref:System.Linq.Enumerable.Except%2A>  
   
- Эти операторы сравнивают элементы путем вызова методов <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> и <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> для каждой коллекции элементов. Для объектов <xref:System.Data.DataRow> эти операторы выполняют ссылочное сравнение, которое в общем случае не является идеальным для операторов наборов, выполняющихся над табличными данными. Для операторов наборов обычно требуется определить, являются ли равными значения элементов, а не ссылки на элементы. Таким образом <xref:System.Data.DataRowComparer> класс будет добавлен к LINQ to DataSet. Этот класс можно использовать для сравнения значений в строках.  
+ Эти операторы сравнивают элементы путем вызова методов <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> и <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> для каждой коллекции элементов. Для объектов <xref:System.Data.DataRow> эти операторы выполняют ссылочное сравнение, которое в общем случае не является идеальным для операторов наборов, выполняющихся над табличными данными. Для операторов наборов обычно требуется определить, являются ли равными значения элементов, а не ссылки на элементы. Таким образом, <xref:System.Data.DataRowComparer> класс добавлен в LINQ to DataSet. Этот класс можно использовать для сравнения значений в строках.  
   
  Класс <xref:System.Data.DataRowComparer> содержит реализацию сравнения значений для объектов <xref:System.Data.DataRow>, поэтому его можно использовать в операциях над наборами, таких как <xref:System.Linq.Enumerable.Distinct%2A>. Этот класс нельзя создать напрямую, вместо этого необходимо использовать свойство <xref:System.Data.DataRowComparer.Default%2A> для возврата экземпляра <xref:System.Data.DataRowComparer%601>. Затем вызывается метод <xref:System.Data.DataRowComparer%601.Equals%2A>, которому в качестве входных параметров передаются два сравниваемых объекта <xref:System.Data.DataRow>. Метод <xref:System.Data.DataRowComparer%601.Equals%2A> возвращает значение `true`, если упорядоченные наборы значений столбцов в обоих объектах <xref:System.Data.DataRow> равны, в противном случае значение `false`.  
   
@@ -41,5 +41,5 @@ ms.locfileid: "67504221"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Data.DataRowComparer>
-- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Загрузка данных в DataSet](loading-data-into-a-dataset.md)
+- [Примеры LINQ to DataSet](linq-to-dataset-examples.md)
