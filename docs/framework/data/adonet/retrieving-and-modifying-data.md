@@ -2,66 +2,66 @@
 title: Извлечение и изменение данных в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78012a6a5ecdfac0e4cd7c4939ae3ab0036ab716
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782848"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
-Основной функцией любого приложения базы данных является соединение с источником данных и извлечение данных, которые он содержит. Поставщики данных .NET Framework для ADO.NET служат в качестве моста между приложением и источником данных, что позволяет вам выполнять команды и извлечение данных с помощью **DataReader** или **DataAdapter** . Ключевой функцией любого приложения базы данных является возможность обновления данных, хранимых в базе данных. В ADO.NET обновление данных включает использование **DataAdapter** и <xref:System.Data.DataSet>, и **команда** объекты должны быть удалены и он может включать использование транзакций.  
+Основной функцией любого приложения базы данных является соединение с источником данных и извлечение данных, которые он содержит. .NET Framework поставщики данных ADO.NET служат мостом между приложением и источником данных, что позволяет выполнять команды, а также получать данные с помощью объекта **DataReader** или **DataAdapter**. Ключевой функцией любого приложения базы данных является возможность обновления данных, хранимых в базе данных. В ADO.NET обновление данных включает использование объектов **DataAdapter** и <xref:System.Data.DataSet>и **, и,** Кроме того, может содержать использование транзакций.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [Подключение к источнику данных](connecting-to-a-data-source.md)  
  Описывается установка подключения к источнику данных и работа с событиями подключения.  
   
- [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [Строки подключения](connection-strings.md)  
  Содержит разделы, в которых описываются различные аспекты использования строк подключения, в том числе ключевых слов строки подключения, сведения о безопасности, их хранение и извлечение.  
   
- [Объединение подключений в пул](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Объединение подключений в пул](connection-pooling.md)  
  Описывает пул соединений для поставщиков данных платформы .NET Framework.  
   
- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Команды и параметры](commands-and-parameters.md)  
  Содержит разделы, в которых описывается создание команд и построителей команд, настройка параметров и выполнение команд для извлечения и изменения данных.  
   
- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Объекты DataAdapter и DataReader](dataadapters-and-datareaders.md)  
  Содержит разделы, в которых описываются объекты DataReader, DataAdapter, параметры, обработка событий объекта и выполнение пакетных операций.  
   
- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Транзакции и параллельность](transactions-and-concurrency.md)  
  Содержит разделы, в которых описывается выполнение локальных транзакций, распределенных транзакций и работа с оптимистичным параллелизмом.  
   
- [Извлечение идентификации или значений автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Пример сопоставления значений, созданных для **удостоверений** столбец в таблицу SQL Server или для **Autonumber** в таблицы Microsoft Access, со столбцом вставленной строки в таблице. Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
+ [Извлечение идентификации или значений автонумерации](retrieving-identity-or-autonumber-values.md)  
+ Содержит пример сопоставления значений, созданных для столбца **идентификаторов** в таблице SQL Server или для поля **счетчика** в таблице Microsoft Access, со столбцом вставленной строки в таблице. Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
   
- [Извлечение двоичных данных](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- Описывается извлечение двоичных данных или крупных структур данных с помощью `CommandBehavior`.`SequentialAccess` Чтобы изменить поведение по умолчанию `DataReader`.  
+ [Извлечение двоичных данных](retrieving-binary-data.md)  
+ Описывает, как получить двоичные данные или крупные структуры данных `CommandBehavior`с помощью.`SequentialAccess` изменение поведения `DataReader`по умолчанию для.  
   
- [Изменение данных с помощью хранимых процедур](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [Изменение данных с помощью хранимых процедур](modifying-data-with-stored-procedures.md)  
  Описывается использование входных и выходных параметров хранимой процедуры для вставки строки в базу данных с возвратом нового значения идентификатора.  
   
- [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md)  
  Описывает получение доступных баз данных или каталогов, таблиц и представлений базы данных, существующих ограничений для таблиц и других сведений о схеме из источника данных.  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](dbproviderfactories.md)  
  Описывается модель фабрики поставщика и демонстрируется использование базовых классов в пространстве имен `System.Data.Common`.  
   
- [Трассировка данных в ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md)  
+ [Трассировка данных в ADO.NET](data-tracing.md)  
  Описывается, как в ADO.NET реализованы встроенные функции трассировки данных.  
   
- [Счетчики производительности](../../../../docs/framework/data/adonet/performance-counters.md)  
+ [Счетчики производительности](performance-counters.md)  
  Описываются счетчики производительности, доступные для `SqlClient` и `OracleClient`.  
   
- [Асинхронное программирование](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- Описывает поддержку асинхронного программирования в ADO.NET.  
+ [Асинхронное программирование](asynchronous-programming.md)  
+ Описывает поддержку ADO.NET для асинхронного программирования.  
   
- [Поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Описывается порядок написания приложений, потоковая передача данных из SQL Server без необходимости его полной загрузки в память.  
+ [Поддержка потоковой передачи SqlClient](sqlclient-streaming-support.md)  
+ Описывает написание приложений, которые проводят потоковую передачу данных из SQL Server без полной загрузки в память.  
   
 ## <a name="see-also"></a>См. также
 
-- [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Сопоставления типов данных в ADO.NET](data-type-mappings-in-ado-net.md)
+- [Наборы данных, таблицы данных и объекты DataView](./dataset-datatable-dataview/index.md)
+- [Защита приложений ADO.NET](securing-ado-net-applications.md)
+- [SQL Server и ADO.NET](./sql/index.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

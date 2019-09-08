@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f24c558b1d5303b2417416beb14555539f498ea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923270"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797269"
 ---
 # <a name="client-channel-level-programming"></a>Программирование клиентов на уровне канала
-В этом разделе описывается, как написать приложение клиента Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> класс и его связанной объектной модели.  
+В этом разделе описывается Написание клиентского приложения Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> класса и связанной с ним объектной модели.  
   
 ## <a name="sending-messages"></a>Отправка сообщений  
  Чтобы подготовиться к отправке сообщений и получению и обработке ответов, необходимы следующие действия.  
@@ -29,7 +29,7 @@ ms.locfileid: "61923270"
 5. Закройте все объекты каналов.  
   
 #### <a name="creating-a-binding"></a>Создание привязки  
- Аналогичную получения (см. в разделе [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), отправка сообщений начинается путем создания привязки. В данном примере создается новая привязка <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, и в коллекцию ее элементов добавляется элемент <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>.  
+ Как и в случае с приемом (см. раздел [обслуживание на уровне канала службы](service-channel-level-programming.md)), отправка сообщений начинается с создания привязки. В данном примере создается новая привязка <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, и в коллекцию ее элементов добавляется элемент <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>.  
   
 #### <a name="building-a-channelfactory"></a>Создание фабрики каналов  
  На этот раз вместо того чтобы создавать прослушиватель каналов <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, следует создать производство каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> вызовом метода <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> в привязке с параметром типа <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Прослушиватели каналов используются ожидающей входящих сообщений стороной, а фабрики каналов - стороной, которая инициирует связь для создания канала. Точно так же, как при работе с прослушивателями каналов, фабрики каналов можно использовать только после того, как они будут открыты.  

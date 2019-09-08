@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
-ms.openlocfilehash: 2987e43c83bf84e32cd05a870b24da40dd37d8b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed32bbe7d27357cbed7d77dd235b698a65c0e29e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943559"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793535"
 ---
 # <a name="how-to-query-for-information"></a>Практическое руководство. Как обращаться с запросами о сведениях
 Для запросов в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется тот же синтаксис, что и для запросов [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Единственное отличие заключается в том, что объекты, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] на которые имеются ссылки в запросах, сопоставляются с элементами в базе данных. Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует написанные пользователем запросы в эквивалентные запросы SQL и отправляет их на сервер для обработки.  
   
- Некоторым запросам [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], возможно, требуется уделить особое внимание в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Дополнительные сведения см. в разделе [Основные понятия запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md).  
+ Некоторым запросам [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], возможно, требуется уделить особое внимание в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Дополнительные сведения см. в разделе [Основные понятия запросов](query-concepts.md).  
   
 ## <a name="example"></a>Пример  
  Следующий запрос возвращает список клиентов из Лондона. В этом примере используется таблица `Customers` из учебной базы данных "Northwind".  
@@ -27,6 +27,6 @@ ms.locfileid: "69943559"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Создание модели объектов](creating-the-object-model.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)
+- [Запрос к базе данных](querying-the-database.md)

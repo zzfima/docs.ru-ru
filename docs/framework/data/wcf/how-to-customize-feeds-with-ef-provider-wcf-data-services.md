@@ -1,27 +1,27 @@
 ---
-title: Практическое руководство. Настройка каналов с использованием поставщика Entity Framework (WCF Data Services)
+title: Практическое руководство. Настройка веб-каналов с помощью поставщика Entity Framework (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 9770527f41b4981e63d65f27c409b2ce5583d2cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f994065ea42d6fc522fa297cafa8c46a8164e67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765496"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780150"
 ---
-# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Практическое руководство. Настройка каналов с использованием поставщика Entity Framework (WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework. Дополнительные сведения см. в разделе [настройки веб-канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Практическое руководство. Настройка веб-каналов с помощью поставщика Entity Framework (WCF Data Services)
+Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework. Дополнительные сведения см. в разделе [Настройка веб-канала](feed-customization-wcf-data-services.md).  
   
- В этом разделе мы вручную изменим сформированный программой файл EDMX, содержащий модель данных. Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать этот файл. Дополнительные сведения о EDMX-файл, создаваемый средства модели EDM, см. в разделе [.edmx Общие сведения о файле (платформа Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)). Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ В этом разделе мы вручную изменим сформированный программой файл EDMX, содержащий модель данных. Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать этот файл. Дополнительные сведения о EDMX-файле, создаваемом EDM инструментами, см. в разделе [Общие сведения о файле EDMX (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)). Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).  
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Изменение файла Northwind.edmx вручную для добавления атрибутов настройки каналов  
   
-1. В **обозревателе решений**, щелкните правой кнопкой мыши `Northwind.edmx` файла и нажмите кнопку **открыть с помощью**.  
+1. В **Обозреватель решений**щелкните правой кнопкой мыши `Northwind.edmx` файл и выберите команду **Открыть с помощью**.  
   
-2. В **открыть с помощью — Northwind.edmx** выберите **редактор XML**, а затем нажмите кнопку **ОК**.  
+2. В диалоговом окне **Открыть с помощью-Northwind. EDMX** выберите **XML-редактор**и нажмите кнопку **ОК**.  
   
 3. Найдите элемент `ConceptualModels` и замените имеющийся тип сущности `Customers` на элемент, содержащий атрибуты сопоставления для настройки канала.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61765496"
   
 4. Сохраните изменения и закройте файл Northwind.edmx.  
   
-5. (Необязательно) Щелкните файл Northwind.edmx правой кнопкой мыши и выберите **пользовательское средство**.  
+5. Используемых Щелкните правой кнопкой мыши файл Northwind. edmx и выберите пункт **запустить настраиваемый инструмент**.  
   
      При этом будет повторно сформирован файл уровня объектов, который может потребоваться.  
   
@@ -42,4 +42,4 @@ ms.locfileid: "61765496"
   
 ## <a name="see-also"></a>См. также
 
-- [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Поставщик Entity Framework](entity-framework-provider-wcf-data-services.md)

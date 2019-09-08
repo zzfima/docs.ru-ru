@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d97ed04de25d4db0fbf17e26a1d169d356a72c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877764"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794393"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Приложения ASP.NET, использующие дескрипторы ожидания
 Модели ответного вызова и опроса для обработки асинхронных операций полезны, если приложение в определенный момент времени обрабатывает только одну асинхронную операцию. Модели ожидания предоставляют более гибкий способ обработки нескольких асинхронных операций. Существует две модели ожидания, называемые по именам методов <xref:System.Threading.WaitHandle>, используемых для их реализации: Wait (Any) и Wait (All).  
@@ -581,5 +581,5 @@ void Button1_Click(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>См. также
 
-- [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Асинхронные операции](asynchronous-operations.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

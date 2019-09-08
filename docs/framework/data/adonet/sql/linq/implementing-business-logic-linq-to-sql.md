@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5261aab1ef6641651f856b8ebb024f64ad32ee59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938654"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781439"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Реализация бизнес-логики (LINQ to SQL)
 Термин "бизнес-логика" в данном разделе относится к любым пользовательским правилам или проверкам, которые применяются к данным перед их вставкой, обновлением или удалением в базе данных. Бизнес-логику также иногда называют терминами "бизнес-правила" или "логика домена". В многоуровневых приложениях бизнес-логика реализуется в виде логического уровня, и ее можно изменять независимо от уровня представления данных или уровня доступа к данным. Бизнес-логика может вызываться уровнем доступа к данным перед обновлением, вставкой или удалением данных в базе данных или после выполнения этих операций.  
@@ -188,4 +188,4 @@ partial class Customer
 - [Разделяемые классы и методы](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Разделяемые методы](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [SqlMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md)

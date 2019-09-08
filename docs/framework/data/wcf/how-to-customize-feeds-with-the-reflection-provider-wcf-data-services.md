@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка каналов с поставщиком отражения (службы данных WCF)
+title: Практическое руководство. Настройка веб-каналов с помощью поставщика отражения (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: f09c9827498dfd6b85a8476e824d06bfb481d1f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43f46729ba84356bcb6507779bef9e4fd35bc315
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876555"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790671"
 ---
-# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Практическое руководство. Настройка каналов с поставщиком отражения (службы данных WCF)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенной с помощью поставщика отражения. Дополнительные сведения см. в разделе [настройки веб-канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Практическое руководство. Настройка веб-каналов с помощью поставщика отражения (WCF Data Services)
+Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенной с помощью поставщика отражения. Дополнительные сведения см. в разделе [Настройка веб-канала](feed-customization-wcf-data-services.md).  
   
- Определения модели данных в этом примере в разделе [как: Создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ Модель данных для этого примера определяется в разделе [как: Создание службы данных с помощью поставщика отражения](create-a-data-service-using-rp-wcf-data-services.md)  
   
 ## <a name="example"></a>Пример  
  В следующем примере оба свойства типа `Order` отображаются на существующие элементы Atom. Свойство `Product` типа `Item` отображается на специализированный атрибут канала в отдельном пространстве имен.  
@@ -33,4 +33,4 @@ ms.locfileid: "61876555"
   
 ## <a name="see-also"></a>См. также
 
-- [Поставщик отражений](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Поставщик отражений](reflection-provider-wcf-data-services.md)

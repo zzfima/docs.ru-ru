@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dd96b10b5ee2880e0f9ee18048ec8ba2ee0b5ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779059"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796448"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>Метод IInstallReferenceEnum::GetNextInstallReferenceItem
-Получает указатель на следующий [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) объект, содержащийся в этом [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) объекта.  
+Возвращает указатель на следующий объект [IInstallReferenceItem](iinstallreferenceitem-interface.md) , содержащийся в этом объекте [IInstallReferenceEnum](iinstallreferenceenum-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +39,22 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="parameters"></a>Параметры  
  `ppRefItem`  
- [out] Возвращенный `IInstallReferenceItem` указатель.  
+ заполняет Возвращаемый `IInstallReferenceItem` указатель.  
   
  `dwFlags`  
- [in] Зарезервировано для будущего расширения. `dwFlags` должно быть 0 (ноль).  
+ окне Зарезервировано для будущего расширения. `dwFlags`значение должно быть равно 0 (нулю).  
   
  `pvReserved`  
- [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [Интерфейс IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [Интерфейс IInstallReferenceItem](iinstallreferenceitem-interface.md)
+- [Интерфейс IInstallReferenceEnum](iinstallreferenceenum-interface.md)

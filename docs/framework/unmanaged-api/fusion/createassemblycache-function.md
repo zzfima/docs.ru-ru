@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffeb04ddcec290f899556bf0d8078acfb06707ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c855d6f85c3cbfa6d81a1fbce3ef5b83abb3f583
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778606"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795405"
 ---
 # <a name="createassemblycache-function"></a>Функция CreateAssemblyCache
-Возвращает указатель на новый [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) экземпляр, представляющий глобальный кэш сборок.  
+Возвращает указатель на новый экземпляр [IAssemblyCache](iassemblycache-interface.md) , представляющий глобальный кэш сборок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +39,22 @@ HRESULT CreateAssemblyCache (
   
 ## <a name="parameters"></a>Параметры  
  `ppAsmCache`  
- [out] Возвращенный `IAssemblyCache` указатель.  
+ заполняет Возвращаемый `IAssemblyCache` указатель.  
   
  `dwReserved`  
- [in] Зарезервировано для будущего расширения. `dwReserved` должно быть 0 (ноль).  
+ окне Зарезервировано для будущего расширения. `dwReserved`значение должно быть равно 0 (нулю).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+- [Интерфейс IAssemblyCache](iassemblycache-interface.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)
+- [Глобальный кэш сборок](../../app-domains/gac.md)

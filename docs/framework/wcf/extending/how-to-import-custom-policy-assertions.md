@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363857"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795618"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Практическое руководство. Импорт проверочных утверждений пользовательской политики
 В утверждениях политики описываются возможности и требования конечной точки службы.  Клиентские приложения могут использовать утверждения политики в метаданных службы для настройки привязки клиента или для настройки контракта службы для конечной точки службы.  
@@ -25,7 +25,7 @@ ms.locfileid: "68363857"
   
 3. Путем использования файла конфигурации. См. описанные ниже действия.  
   
-4. Использование файла конфигурации с [программой-средством метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). См. описанные ниже действия.  
+4. Использование файла конфигурации с [программой-средством метаданных ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). См. описанные ниже действия.  
   
 5. Программным путем. См. описанные ниже действия.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68363857"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Вставка импортера настраиваемой политики в систему метаданных с помощью файла конфигурации  
   
-1. Добавьте тип импортера в `<extensions>` элемент [ \<внутри элемента полициимпортерс >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) в файле конфигурации клиента.  
+1. Добавьте тип импортера в `<extensions>` элемент [ \<внутри элемента полициимпортерс >](../../configure-apps/file-schema/wcf/policyimporters.md) в файле конфигурации клиента.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ ms.locfileid: "68363857"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Вставка импортера настраиваемой политики в систему метаданных с помощью Svcutil.exe  
   
-1. Добавьте тип импортера в `<extensions>` элемент [ \<внутри элемента полициимпортерс >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) в файле конфигурации Svcutil. exe. config. Также можно с помощью параметра `/svcutilConfig` дать Svcutil.exe указание загрузить типы импортеров политик, зарегистрированные в другом файле конфигурации.  
+1. Добавьте тип импортера в `<extensions>` элемент [ \<внутри элемента полициимпортерс >](../../configure-apps/file-schema/wcf/policyimporters.md) в файле конфигурации Svcutil. exe. config. Также можно с помощью параметра `/svcutilConfig` дать Svcutil.exe указание загрузить типы импортеров политик, зарегистрированные в другом файле конфигурации.  
   
-2. Используйте [средство служебной программы для метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , чтобы импортировать метаданные, а импортер вызывается автоматически.  
+2. Используйте [средство служебной программы для метаданных ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , чтобы импортировать метаданные, а импортер вызывается автоматически.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Вставка импортера настраиваемой политики в систему метаданных программным путем  
   
@@ -68,4 +68,4 @@ ms.locfileid: "68363857"
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Расширение системы метаданных](extending-the-metadata-system.md)

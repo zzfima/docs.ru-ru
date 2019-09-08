@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f28179b43cb0af2d75e9e5b13783bc7287c8886
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203945"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784773"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Потребление набора данных из веб-службы XML
 Объект <xref:System.Data.DataSet> не имеет привязки к каким-либо источникам, что позволяет частично упростить передачу данных через Интернет. **Набор данных** является сериализуемым в том, что он может быть указан в качестве входных данных или выходных данных из веб-служб XML без дополнительного программирования, необходимого для потоковой передачи содержимого **набора данных** из веб-службы XML в клиент и обратно. **Набор данных** неявно преобразуется в XML-поток с помощью формата DiffGram, передается по сети, а затем перестраивается из потока XML в качестве **набора данных** на стороне получения. Это обеспечивает очень простой и гибкий метод передачи и получения реляционных данных с помощью веб-служб XML. Дополнительные сведения о формате DiffGram см. в разделе [дельтами](diffgrams.md).  
@@ -268,4 +268,4 @@ ms.locfileid: "70203945"
 - [Обновление источников данных с объектами DataAdapter](../updating-data-sources-with-dataadapters.md)
 - [Параметры DataAdapter](../dataadapter-parameters.md)
 - [Средство языка описания веб-служб (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

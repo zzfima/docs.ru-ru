@@ -2,12 +2,12 @@
 title: Методы System.DateTime
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876776"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792419"
 ---
 # <a name="systemdatetime-methods"></a>Методы System.DateTime
 Следующие методы, операторы и свойства с поддержкой LINQ to SQL доступны для использования в запросах LINQ to SQL. Если метод, оператор или свойство не поддерживаются, LINQ to SQL не может преобразовать этот элемент для выполнения в SQL Server. Эти элементы можно использовать в коде, но их значения необходимо вычислить перед преобразованием запроса в Transact-SQL или после получения результатов из базы данных.  
@@ -66,7 +66,7 @@ ms.locfileid: "61876776"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Основные принципы запросов](query-concepts.md)
+- [Создание модели объектов](creating-the-object-model.md)
+- [Сопоставление типов SQL-CLR](sql-clr-type-mapping.md)
+- [Типы данных и функции](data-types-and-functions.md)

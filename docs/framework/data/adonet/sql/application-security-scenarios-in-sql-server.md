@@ -2,12 +2,12 @@
 title: Сценарии безопасности приложений в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf844f35a3504af52cdb6bf745862ad5098dfc5f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782690"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Сценарии безопасности приложений в SQL Server
 Не существует одного правильного способа создания безопасного клиентского приложения SQL Server. Каждое приложение уникально своими требованиями, средой развертывания и количеством пользователей. Приложение, довольно хорошо защищенное при начальном развертывании, с течением времени может стать менее защищенным. Невозможно точно предсказать, какие угрозы могут возникнуть в будущем.  
@@ -20,7 +20,7 @@ ms.locfileid: "61877894"
 ### <a name="sql-injection"></a>Атака путем внедрения кода SQL  
  Внедрение кода SQL - это процесс, посредством которого пользователь-злоумышленник вводит инструкции языка Transact-SQL вместо допустимых входных данных. Если входные данные передаются непосредственно на сервер без оценки и если приложение случайно выполнит инфицированный код, атака сможет повредить или уничтожить данные. Атака путем внедрения кода SQL Server можно предотвратить, используя хранимые процедуры и параметризованные команды, отказавшись от динамического SQL и ограничив разрешения для всех пользователей.  
   
-### <a name="elevation-of-privilege"></a>Повышение привилегий  
+### <a name="elevation-of-privilege"></a>Повышение прав  
  Атаки повышения прав доступа возникают, если пользователь может принимать права доступа доверенной учетной записи, например учетной записи владельца или администратора. Всегда следует выполнять код под учетными записями с наименьшими правами доступа и назначать только необходимые разрешения. Избегайте использования учетных записей администратора или владельца для выполнения кода. Это ограничивает ущерб, который может быть нанесен при успешной атаке. При выполнении задач, для которых нужны дополнительные разрешения, используйте подписание процедуры или олицетворение только на время выполнения задачи. Можно подписывать хранимые процедуры при помощи сертификатов или использовать олицетворение для временного назначения разрешений.  
   
 ### <a name="probing-and-intelligent-observation"></a>Зондирование и интеллектуальное наблюдение  
@@ -35,30 +35,30 @@ ms.locfileid: "61877894"
  Всегда задавайте надежный пароль учетной записи `sa`, даже если используется проверка подлинности Windows.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [Управление разрешениями с использованием хранимых процедур в SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)  
  Описывает, как использовать хранимые процедуры для управления разрешениями и контроля доступа к данным. Использование хранимых процедур является эффективным способом ответа на многие угрозы системе безопасности.  
   
- [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [Написание безопасного динамического кода SQL в SQL Server](writing-secure-dynamic-sql-in-sql-server.md)  
  Описывает технику написания защищенного динамического SQL-кода с использованием хранимых процедур.  
   
- [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [Подписывание хранимых процедур в SQL Server](signing-stored-procedures-in-sql-server.md)  
  Описывает, как подписать хранимую процедуру при помощи сертификата, чтобы дать возможность пользователям работать с данными, к которым у них нет непосредственного доступа. Это позволяет хранимым процедурам выполнять операции, для непосредственного выполнения которых у вызывающей стороны нет разрешений.  
   
- [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [Настройка разрешений с олицетворением в SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)  
  Описывает, как использовать предложение EXECUTE AS для олицетворения другого пользователя. Олицетворение переключает контекст выполнения с вызывающей стороны на указанного пользователя.  
   
- [Предоставление разрешений уровня строки в SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [Предоставление разрешений уровня строки в SQL Server](granting-row-level-permissions-in-sql-server.md)  
  Описывает, как реализовать разрешения уровня строки для ограничения доступа к данным.  
   
- [Создание ролей приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [Создание ролей приложений в SQL Server](creating-application-roles-in-sql-server.md)  
  Описывает возможности и функции ролей приложения.  
   
- [Организация межбазового доступа в SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [Организация межбазового доступа в SQL Server](enabling-cross-database-access-in-sql-server.md)  
  Описывает, как включить перекрестный доступ между базами данных, не ухудшая безопасность.  
   
 ## <a name="see-also"></a>См. также
 
-- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Безопасность SQL Server](sql-server-security.md)
+- [Общие сведения о безопасности SQL Server](overview-of-sql-server-security.md)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

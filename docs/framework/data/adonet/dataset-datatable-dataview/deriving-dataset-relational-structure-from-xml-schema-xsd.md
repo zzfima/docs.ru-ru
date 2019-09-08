@@ -2,12 +2,12 @@
 title: Наследование реляционной структуры набора данных от схемы XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203776"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786332"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Наследование реляционной структуры набора данных от схемы XML (XSD)
 В этом разделе приведены общие сведения о построении реляционной схемы `DataSet` на основе документа схемы на языке XSD. Как правило, для каждого `complexType` дочернего элемента в элементе Schema создается таблица `DataSet`в. Структура таблицы задается определением сложного типа. Таблицы создаются в `DataSet` для элементов верхнего уровня схемы. Однако таблица создается только для элемента верхнего уровня `complexType` , `complexType` если элемент вложен в другой `complexType` элемент `DataSet`. в этом случае вложенный `complexType` элемент сопоставляется с элементом `DataTable` в.  
@@ -98,4 +98,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="see-also"></a>См. также
 
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

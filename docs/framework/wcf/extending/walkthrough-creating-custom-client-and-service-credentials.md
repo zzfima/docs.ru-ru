@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374457"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795474"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
 
@@ -42,11 +42,11 @@ ms.locfileid: "70374457"
 
 Создание пользовательского класса учетных данных — это лишь первый шаг, так как причина для настройки учетных данных заключается в изменении поведения WCF в отношении подготовки учетных данных, сериализации маркеров безопасности или проверки подлинности. В других подразделах этого раздела описывается создание пользовательских сериализаторов и структур проверки подлинности. В этом отношении создание пользовательского класса учетных данных - первый подраздел серии. Следующие действия (создание пользовательских сериализаторов и структур проверки подлинности) можно предпринимать только после создания пользовательских учетных данных. Содержание данного подраздела продолжают следующие подразделы:
 
-- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](how-to-create-a-custom-security-token-provider.md)
 
-- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](how-to-create-a-custom-security-token-authenticator.md)
 
-- [Практическое руководство. Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).
+- [Практическое руководство. Создание пользовательского токена](how-to-create-a-custom-token.md).
 
 ## <a name="procedures"></a>Процедуры
 
@@ -70,11 +70,11 @@ ms.locfileid: "70374457"
 
 1. Определите новый производный класс на основе класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.
 
-2. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)маркеров безопасности.
+2. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](how-to-create-a-custom-security-token-provider.md)маркеров безопасности.
 
-3. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых средствах проверки подлинности [маркеров безопасности см. в разделе как Создайте настраиваемую проверку подлинности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)маркеров безопасности.
+3. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых средствах проверки подлинности [маркеров безопасности см. в разделе как Создайте настраиваемую проверку подлинности](how-to-create-a-custom-security-token-authenticator.md)маркеров безопасности.
 
-4. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о настраиваемых маркерах безопасности и пользовательских сериализаторах маркеров безопасности см [. в разделе как Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).
+4. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о настраиваемых маркерах безопасности и пользовательских сериализаторах маркеров безопасности см [. в разделе как Создание пользовательского токена](how-to-create-a-custom-token.md).
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
@@ -158,11 +158,11 @@ ms.locfileid: "70374457"
 
 1. Определите новый класс, производный от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.
 
-2. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)маркеров безопасности.
+2. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](how-to-create-a-custom-security-token-provider.md)маркеров безопасности.
 
-3. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых средствах проверки подлинности [маркеров безопасности см. в разделе как Создание настраиваемого](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) раздела проверки подлинности маркеров безопасности.
+3. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о настраиваемых средствах проверки подлинности [маркеров безопасности см. в разделе как Создание настраиваемого](how-to-create-a-custom-security-token-authenticator.md) раздела проверки подлинности маркеров безопасности.
 
-4. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о настраиваемых маркерах безопасности и пользовательских сериализаторах маркеров безопасности см [. в разделе как Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).
+4. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о настраиваемых маркерах безопасности и пользовательских сериализаторах маркеров безопасности см [. в разделе как Создание пользовательского токена](how-to-create-a-custom-token.md).
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
@@ -188,6 +188,6 @@ ms.locfileid: "70374457"
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Практическое руководство. Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](how-to-create-a-custom-security-token-provider.md)
+- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание пользовательского токена](how-to-create-a-custom-token.md)

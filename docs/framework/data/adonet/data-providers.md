@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949816"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785649"
 ---
 # <a name="net-framework-data-providers"></a>Поставщики данных .NET Framework
 Поставщик данных .NET Framework используется для подключения к базе данных, исполнения команд и получения результатов. Эти результаты обрабатываются непосредственно, помещаются в <xref:System.Data.DataSet> , чтобы по мере необходимости они были доступны для пользователей вместе с данными из нескольких источников, либо распределяются между уровнями. .NET Framework поставщики данных являются облегченными, создавая минимальный уровень между источником данных и кодом, повышая производительность без ущерба для функциональности.  
@@ -54,12 +54,12 @@ ms.locfileid: "69949816"
 > [!NOTE]
 > Поставщик данных .NET Framework для ODBC имеет схожую архитектуру с поставщиком данных .NET Framework для OLE DB; Например, он вызывает компонент службы ODBC.  
   
- ![Поставщики данных](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Поставщики данных](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Сравнение поставщика данных .NET Framework для SQL Server и поставщика данных .NET Framework для OLE DB  
   
  Поставщик данных .NET Framework для SQL Server классов находится в <xref:System.Data.SqlClient> пространстве имен.  
   
- Поставщик данных .NET Framework для SQL Server поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных .NET Framework для SQL Server по умолчанию автоматически закрепляется в транзакции и получает сведения о транзакциях из служб компонентов Windows или <xref:System.Transactions>. Дополнительные сведения см. в разделе [Transactions and Concurrency](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Поставщик данных .NET Framework для SQL Server поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных .NET Framework для SQL Server по умолчанию автоматически закрепляется в транзакции и получает сведения о транзакциях из служб компонентов Windows или <xref:System.Transactions>. Дополнительные сведения см. в разделе [Transactions and Concurrency](transactions-and-concurrency.md).  
   
  Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.SqlClient` .  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>Поставщик данных .NET Framework для OLE DB  
- Поставщик данных .NET Framework для OLE DB (OleDb) использует собственные OLE DB через COM-взаимодействие для обеспечения доступа к данным. Поставщик данных .NET Framework для OLE DB поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных .NET Framework для OLE DB по умолчанию автоматически закрепляется в транзакции и получает сведения о транзакциях из служб компонентов Windows. Дополнительные сведения см. в разделе [Transactions and Concurrency](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Поставщик данных .NET Framework для OLE DB (OleDb) использует собственные OLE DB через COM-взаимодействие для обеспечения доступа к данным. Поставщик данных .NET Framework для OLE DB поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных .NET Framework для OLE DB по умолчанию автоматически закрепляется в транзакции и получает сведения о транзакциях из служб компонентов Windows. Дополнительные сведения см. в разделе [Transactions and Concurrency](transactions-and-concurrency.md).  
   
  В следующей таблице показаны поставщики, которые были протестированы с помощью ADO.NET.  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>Поставщик данных .NET Framework для ODBC  
- Поставщик данных .NET Framework для ODBC (ODBC) использует собственный диспетчер драйверов ODBC (DM) для обеспечения доступа к данным. Поставщик данных ODBC поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных ODBC по умолчанию автоматически задействуется в транзакции и получает сведения о транзакциях из служб компонентов Windows. Дополнительные сведения см. в разделе [Transactions and Concurrency](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Поставщик данных .NET Framework для ODBC (ODBC) использует собственный диспетчер драйверов ODBC (DM) для обеспечения доступа к данным. Поставщик данных ODBC поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных ODBC по умолчанию автоматически задействуется в транзакции и получает сведения о транзакциях из служб компонентов Windows. Дополнительные сведения см. в разделе [Transactions and Concurrency](transactions-and-concurrency.md).  
   
  В следующей таблице приведены драйверы ODBC, протестированные с помощью ADO.NET.  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > Поставщик данных .NET Framework для ODBC требует наличия MDAC 2,6 или более поздней версии, и рекомендуется использовать MDAC 2,8 SP1. Компоненты MDAC 2.8 с пакетом обновления 1 (SP1) можно скачать на веб-сайте [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173)(центр разработчиков средств доступа к данным и их хранения).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Поставщик данных .NET Framework для Oracle  
- Поставщик данных .NET Framework для Oracle (OracleClient) обеспечивает доступ к источникам данных Oracle через клиентское по Oracle Software Connectivity. Поставщик данных поддерживает клиентское ПО Oracle версии 8.1.7 или более поздней версии. Поставщик данных поддерживает как локальные, так и распределенные транзакции. Дополнительные сведения см. в разделе [Transactions and Concurrency](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Поставщик данных .NET Framework для Oracle (OracleClient) обеспечивает доступ к источникам данных Oracle через клиентское по Oracle Software Connectivity. Поставщик данных поддерживает клиентское ПО Oracle версии 8.1.7 или более поздней версии. Поставщик данных поддерживает как локальные, так и распределенные транзакции. Дополнительные сведения см. в разделе [Transactions and Concurrency](transactions-and-concurrency.md).  
   
  Для работы поставщика данных .NET Framework для Oracle требуется клиентское программное обеспечение Oracle (версия 8.1.7 или более поздняя) в системе, прежде чем можно будет подключиться к источнику данных Oracle.  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](ado-net-overview.md)
+- [Извлечение и изменение данных в ADO.NET](retrieving-and-modifying-data.md)

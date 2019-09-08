@@ -1,6 +1,6 @@
 ---
-title: Функция GetPropertyOrigin (Справочник по неуправляемым API)
-description: Функция GetPropertyOrigin определяет класс, в котором объявлено свойство.
+title: Функция Жетпропертйоригин (Справочник по неуправляемым API)
+description: Функция Жетпропертйоригин определяет класс, в котором объявлено свойство.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyOrigin
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 542c4a01a9fd56587d51421709ffb990707f2ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636787"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798493"
 ---
 # <a name="getpropertyorigin-function"></a>Функция GetPropertyOrigin
 
@@ -43,45 +43,45 @@ HRESULT GetPropertyOrigin (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`\
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`\
-[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
+окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethodName`\
-[in] Имя свойства для объекта, класс-владелец которого запрашивается.
+окне Имя свойства для объекта, класс-владелец которого запрашивается.
 
 `pstrClassName`\
-[out] Получает имя класса, которому принадлежит свойство.
+заполняет Получает имя класса, владеющего свойством.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найден. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
+|`WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найдено. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) метод.
+Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жетпропертйоригин](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) .
 
-Поскольку класс может наследовать свойства из одного или нескольких базовых классов, разработчики часто требуется определить свойство, в котором определен данный метод.
+Поскольку класс может наследовать свойства от одного или нескольких базовых классов, разработчики часто хотят определить свойство, в котором определен определенный метод.
 
-`pstrClassName` Параметр не должен указывать на допустимый `BSTR` перед вызовом функции, так как это `out` параметр; этот указатель не освобождается после возвращения функции.
+Параметр не должен указывать на допустимый `BSTR` до `out` вызова функции, так как это параметр; Этот указатель не освобождается после возвращения функции. `pstrClassName`
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils.idl
+**Заголовок.** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

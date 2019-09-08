@@ -2,12 +2,12 @@
 title: Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203417"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784408"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 В схеме языка определения схемы XML (XSD) элемент **UNIQUE** указывает ограничение уникальности для элемента или атрибута. В процессе преобразования схемы XML в реляционную схему наложенное на элемент или атрибут ограничение, гарантирующее уникальность, в XML-схеме сопоставляется с ограничением уникальности в объекте <xref:System.Data.DataTable> в соответствующем объекте <xref:System.Data.DataSet>, который формируется.  
@@ -84,7 +84,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- Это ограничение, создаваемое в результирующем наборе **данных**.  
+ Это ограничение, создаваемое в результирующем **наборе данных**.  
   
 ```  
 ConstraintName: SomeName  
@@ -97,4 +97,4 @@ ConstraintName: SomeName
 
 - [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Создание отношений DataSet из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

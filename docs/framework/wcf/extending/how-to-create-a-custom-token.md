@@ -10,15 +10,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 917278ef990842f2ce821474ffd1c6cd619ed289
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3bd44d197a655b67253ff363ef15937d4c021e08
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951784"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797042"
 ---
 # <a name="how-to-create-a-custom-token"></a>Практическое руководство. Создание пользовательского токена
-В этом разделе показано, как создать пользовательский маркер безопасности с помощью класса <xref:System.IdentityModel.Tokens.SecurityToken> и интегрировать его с поставщиком пользовательских маркеров безопасности и структурой проверки подлинности. Полный пример кода см. в примере [пользовательского маркера](../../../../docs/framework/wcf/samples/custom-token.md) .  
+В этом разделе показано, как создать пользовательский маркер безопасности с помощью класса <xref:System.IdentityModel.Tokens.SecurityToken> и интегрировать его с поставщиком пользовательских маркеров безопасности и структурой проверки подлинности. Полный пример кода см. в примере [пользовательского маркера](../samples/custom-token.md) .  
   
  *Маркер безопасности* — это, по сути, элемент XML, который используется платформой безопасности Windows Communication Foundation (WCF) для представления утверждений об отправителе в сообщении SOAP. Безопасность WCF предоставляет различные маркеры для режимов проверки подлинности, предоставляемых системой. Примером является маркер безопасности X.509, представленный классом <xref:System.IdentityModel.Tokens.X509SecurityToken>, или маркер безопасности Username, представленный классом <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69951784"
   
  В следующих процедурах показано, как создать пользовательский маркер безопасности и как интегрировать его с инфраструктурой безопасности WCF. В этом разделе создается маркер кредитной карты, который используется для передачи информации о кредитной карте на сервер.  
   
- Дополнительные сведения о пользовательских учетных данных и диспетчере маркеров безопасности см [. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
+ Дополнительные сведения о пользовательских учетных данных и диспетчере маркеров безопасности см [. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
   
  Сведения о дополнительных классах, представляющих маркеры безопасности, см. в описании пространства имен <xref:System.IdentityModel.Tokens>.  
   
@@ -102,14 +102,14 @@ ms.locfileid: "69951784"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Интеграция пользовательского маркера безопасности с поставщиком маркеров безопасности  
   
-1. Поставщик маркеров безопасности создает, изменяет (при необходимости) и возвращает экземпляр маркера. Чтобы создать пользовательский поставщик для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenProvider>. В следующем примере переопределяется метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> для возврата экземпляра `CreditCardToken`. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)маркеров безопасности.  
+1. Поставщик маркеров безопасности создает, изменяет (при необходимости) и возвращает экземпляр маркера. Чтобы создать пользовательский поставщик для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenProvider>. В следующем примере переопределяется метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> для возврата экземпляра `CreditCardToken`. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](how-to-create-a-custom-security-token-provider.md)маркеров безопасности.  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Интеграция пользовательского маркера безопасности со структурой проверки подлинности маркеров безопасности  
   
-1. Структура проверки подлинности маркеров безопасности проверяет содержимое маркера безопасности при его извлечении из сообщения. Чтобы создать пользовательскую структуру проверки подлинности для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>. В следующем примере демонстрируется метод переопределения <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Дополнительные сведения о настраиваемых средствах проверки подлинности [маркеров безопасности см. в разделе как Создайте настраиваемую проверку подлинности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)маркеров безопасности.  
+1. Структура проверки подлинности маркеров безопасности проверяет содержимое маркера безопасности при его извлечении из сообщения. Чтобы создать пользовательскую структуру проверки подлинности для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>. В следующем примере демонстрируется метод переопределения <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Дополнительные сведения о настраиваемых средствах проверки подлинности [маркеров безопасности см. в разделе как Создайте настраиваемую проверку подлинности](how-to-create-a-custom-security-token-authenticator.md)маркеров безопасности.  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -119,7 +119,7 @@ ms.locfileid: "69951784"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Интеграция пользовательского маркера безопасности с диспетчером маркеров безопасности  
   
-1. Диспетчер маркеров безопасности создает соответствующие экземпляры поставщика, структуры проверки подлинности и сериализатора маркеров безопасности. Чтобы создать диспетчер пользовательских маркеров, создайте класс, наследуемый от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Основные методы класса используют <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> для создания соответствующего поставщика и клиента или учетных данных службы. Дополнительные сведения о настраиваемых диспетчерах маркеров безопасности см [. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
+1. Диспетчер маркеров безопасности создает соответствующие экземпляры поставщика, структуры проверки подлинности и сериализатора маркеров безопасности. Чтобы создать диспетчер пользовательских маркеров, создайте класс, наследуемый от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Основные методы класса используют <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> для создания соответствующего поставщика и клиента или учетных данных службы. Дополнительные сведения о настраиваемых диспетчерах маркеров безопасности см [. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -129,7 +129,7 @@ ms.locfileid: "69951784"
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Интеграция пользовательского маркера безопасности с пользовательскими учетными данными клиента и службы  
   
-1. Учетные данные клиента и службы необходимо добавить для предоставления интерфейса API приложению, чтобы обеспечить возможность указания данных пользовательского маркера, которые используются инфраструктурой пользовательских маркеров безопасности, предварительно созданной для предоставления и проверки подлинности содержимого пользовательских маркеров безопасности. В следующих образцах показано, как это можно сделать. Дополнительные сведения о настраиваемых учетных данных клиента и службы [см. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
+1. Учетные данные клиента и службы необходимо добавить для предоставления интерфейса API приложению, чтобы обеспечить возможность указания данных пользовательского маркера, которые используются инфраструктурой пользовательских маркеров безопасности, предварительно созданной для предоставления и проверки подлинности содержимого пользовательских маркеров безопасности. В следующих образцах показано, как это можно сделать. Дополнительные сведения о настраиваемых учетных данных клиента и службы [см. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -146,7 +146,7 @@ ms.locfileid: "69951784"
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- В этом разделе показаны различные фрагменты кода, необходимые для реализации и использования пользовательского токена. Чтобы просмотреть полный пример того, как все эти фрагменты кода соответствуют друг другу, см. [Пользовательский токен](../../../../docs/framework/wcf/samples/custom-token.md).  
+ В этом разделе показаны различные фрагменты кода, необходимые для реализации и использования пользовательского токена. Чтобы просмотреть полный пример того, как все эти фрагменты кода соответствуют друг другу, см. [Пользовательский токен](../samples/custom-token.md).  
   
 ## <a name="see-also"></a>См. также
 
@@ -161,6 +161,6 @@ ms.locfileid: "69951784"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Пошаговое руководство: Создание настраиваемых учетных данных клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Пошаговое руководство: Создание настраиваемых учетных данных клиента и службы](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](how-to-create-a-custom-security-token-provider.md)

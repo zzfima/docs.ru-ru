@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d14b15f72bd196d8b3a61f22c614516e17d2e95b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963838"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781240"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Извлечение объектов из кэша идентификации
 В этом разделе описаны типы запросов LINQ to SQL, которые возвращают объект из кэша идентификаторов, управляемого <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ ms.locfileid: "69963838"
  Обычно, чтобы запрос LINQ to SQL мог вернуть объект из кэша идентификаторов, запрос должен быть основан на первичном ключе объекта и должен возвращать одиночный объект. В частности, запрос должен иметь одну из общих форм, представленных далее.  
   
 > [!NOTE]
-> Предварительно скомпилированные запросы не возвращают объекты из кэша идентификаторов. Дополнительные сведения о предварительно скомпилированных запросах см <xref:System.Data.Linq.CompiledQuery> . [в разделе и инструкции. Хранение и повторное](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)использование запросов.  
+> Предварительно скомпилированные запросы не возвращают объекты из кэша идентификаторов. Дополнительные сведения о предварительно скомпилированных запросах см <xref:System.Data.Linq.CompiledQuery> . [в разделе и инструкции. Хранение и повторное](how-to-store-and-reuse-queries.md)использование запросов.  
   
  Чтобы получить объект из кэша идентификаторов, запрос должен иметь одну из следующих общих форм.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69963838"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Идентификация объектов](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Идентификация объектов](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Основные принципы запросов](query-concepts.md)
+- [Идентификация объектов](object-identity.md)
+- [Основные сведения](background-information.md)
+- [Идентификация объектов](object-identity.md)

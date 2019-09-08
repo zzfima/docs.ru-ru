@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 4b95ec5a3e83fa5553a154ed64704312726153cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504201"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785629"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Создание таблицы данных из запроса (LINQ to DataSet)
 Объект <xref:System.Data.DataTable> часто используется для привязки данных. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> принимает результаты запроса и копирует данные в <xref:System.Data.DataTable>, которую в дальнейшем можно использовать для привязки данных. После выполнения операций с данными происходит слияние нового объекта <xref:System.Data.DataTable> с исходным объектом <xref:System.Data.DataTable>.  
   
  Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> использует для создания объекта <xref:System.Data.DataTable> на основе запроса следующий процесс.  
   
-1. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> клонирует объект <xref:System.Data.DataTable> из исходной таблицы (объект <xref:System.Data.DataTable>, реализующий интерфейс <xref:System.Linq.IQueryable%601>). <xref:System.Collections.IEnumerable> Источника обычно создается из LINQ запрос к набору данных выражения или метода.  
+1. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> клонирует объект <xref:System.Data.DataTable> из исходной таблицы (объект <xref:System.Data.DataTable>, реализующий интерфейс <xref:System.Linq.IQueryable%601>). <xref:System.Collections.IEnumerable> Источник обычно порожден из LINQ to DataSetного выражения или запроса метода.  
   
 2. Схема клонированного объекта <xref:System.Data.DataTable> строится на основе столбцов первого перечисленного объекта <xref:System.Data.DataRow> в исходной таблице, а клонированной таблице присваивается имя исходной таблицы с добавлением слова «query».  
   
@@ -36,8 +36,8 @@ ms.locfileid: "67504201"
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## <a name="creating-a-custom-copytodatatablet-method"></a>Создание пользовательских CopyToDataTable\<T > метод  
- Существующие методы <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> работают только с источником <xref:System.Collections.Generic.IEnumerable%601>, где общий параметр `T` принадлежит к типу <xref:System.Data.DataRow>. Хотя это и полезно, это не позволяет создавать таблицы из последовательности скалярных типов, из запросов, возвращающих анонимные типы, или из запросов, выполняющих соединение таблиц. Пример того, как применение пользовательских `CopyToDataTable` методы, загружающих таблицу из последовательности скалярных или анонимных типов, см. в разделе [как: Реализовать метод CopyToDataTable\<T > где универсальный тип T не является DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
+## <a name="creating-a-custom-copytodatatablet-method"></a>Создание пользовательского метода >\<CopyToDataTable T  
+ Существующие методы <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> работают только с источником <xref:System.Collections.Generic.IEnumerable%601>, где общий параметр `T` принадлежит к типу <xref:System.Data.DataRow>. Хотя это и полезно, это не позволяет создавать таблицы из последовательности скалярных типов, из запросов, возвращающих анонимные типы, или из запросов, выполняющих соединение таблиц. Пример реализации двух пользовательских `CopyToDataTable` методов, которые загружают таблицу из последовательности скалярных или анонимных типов, см. в разделе как [ Реализуйте\<CopyToDataTable T >, где универсальный тип T не является DataRow](implement-copytodatatable-where-type-not-a-datarow.md)s.  
   
  В примерах, приведенных в этом разделе, используются следующие пользовательские типы:  
   
@@ -76,6 +76,6 @@ ms.locfileid: "67504201"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Универсальные методы Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
-- [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Руководство по программированию](programming-guide-linq-to-dataset.md)
+- [Универсальные методы Field и SetField](generic-field-and-setfield-methods-linq-to-dataset.md)
+- [Примеры LINQ to DataSet](linq-to-dataset-examples.md)

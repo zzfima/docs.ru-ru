@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c5ea24594f5c7547dc75e6be9d53dd632513ff8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754011"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796615"
 ---
 # <a name="iassemblynamefinalize-method"></a>Метод IAssemblyName::Finalize
-Это позволяет [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объект освободить ресурсы и выполнить другие операции очистки, прежде чем его деструктора.  
+Позволяет этому объекту [IAssemblyName](iassemblyname-interface.md) освобождать ресурсы и выполнять другие операции очистки перед вызовом деструктора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,12 +34,12 @@ HRESULT Finalize ();
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)

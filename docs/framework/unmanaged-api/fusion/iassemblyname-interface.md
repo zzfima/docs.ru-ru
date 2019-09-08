@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aee9b986c1e26c1b2e34dac7151a00172451bbad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697931"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796550"
 ---
 # <a name="iassemblyname-interface"></a>Интерфейс IAssemblyName
-Предоставляет методы для описания и работа с уникальное удостоверение сборки.  
+Предоставляет методы для описания и работы с уникальным удостоверением сборки.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Создает неполную копию этого `IAssemblyName` объекта.|  
-|[Метод Finalize](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Это позволяет `IAssemblyName` объект освободить ресурсы и выполнить другие операции очистки, прежде чем его деструктора.|  
-|[Метод GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Возвращает понятное имя сборки, упоминаемой в этом `IAssemblyName` объекта.|  
-|[Метод GetName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Получает простое и незашифрованное имя сборки, упоминаемой в этом `IAssemblyName` объекта.|  
-|[Метод GetProperty](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Возвращает указатель на свойство ссылается заданный `PropertyId`.|  
-|[Метод GetVersion](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Возвращает сведения о версии для сборки, упоминаемой в этом `IAssemblyName` объекта.|  
-|[Метод IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Определяет, является ли заданное `IAssemblyName` объект равен данному `IAssemblyName`, основываясь на флаги указанного сравнения.|  
-|[Метод SetProperty](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Задает значение свойства, который ссылается заданный `PropertyId`.|  
+|[Метод Clone](iassemblyname-clone-method.md)|Создает неполную копию этого `IAssemblyName` объекта.|  
+|[Метод Finalize](iassemblyname-finalize-method.md)|Разрешает этому `IAssemblyName` объекту освобождать ресурсы и выполнять другие операции очистки перед вызовом деструктора.|  
+|[Метод GetDisplayName](iassemblyname-getdisplayname-method.md)|Возвращает удобное для восприятия имя сборки, на которую ссылается `IAssemblyName` этот объект.|  
+|[Метод GetName](iassemblyname-getname-method.md)|Возвращает простое незашифрованное имя сборки, на которую ссылается этот `IAssemblyName` объект.|  
+|[Метод GetProperty](iassemblyname-getproperty-method.md)|Возвращает указатель на свойство, на которое ссылается указанный `PropertyId`объект.|  
+|[Метод GetVersion](iassemblyname-getversion-method.md)|Возвращает сведения о версии для сборки, на которую ссылается `IAssemblyName` этот объект.|  
+|[Метод IsEqual](iassemblyname-isequal-method.md)|Определяет, равен ли `IAssemblyName` указанный объект этому `IAssemblyName`объекту на основе указанных флагов сравнения.|  
+|[Метод SetProperty](iassemblyname-setproperty-method.md)|Задает значение свойства, на которое ссылается указанный `PropertyId`объект.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Интерфейс IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Интерфейс IAssemblyEnum](iassemblyenum-interface.md)

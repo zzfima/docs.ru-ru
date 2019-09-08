@@ -8,17 +8,17 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 9d7216b3aed89dc88737cc346386d6b03929fe60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8101c0d1214eed2c6ea42a4faab774207aab3a79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997034"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797276"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
-В этом разделе показано, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в инфраструктуру безопасности Windows Communication Foundation (WCF). Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+В этом разделе показано, как изменить поставщик служб шифрования, используемый для предоставления закрытого ключа сертификата X. 509, и как интегрировать поставщик в платформу безопасности Windows Communication Foundation (WCF). Дополнительные сведения об использовании сертификатов см. [в разделе Работа с сертификатами](../feature-details/working-with-certificates.md).  
   
- Платформа безопасности WCF предоставляет способ введения новые типы маркеров безопасности, как описано в разделе [как: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  
+ Платформа безопасности WCF предоставляет способ создания новых типов маркеров безопасности, как описано в разделе [как: Создание пользовательского токена](how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  
   
  В этом разделе описывается замена предоставляемого системой маркера безопасности X.509 пользовательским маркером X.509, что делает возможным иную реализацию закрытого ключа сертификата. Эта возможность оказывается полезной, если фактический закрытый ключ предоставляется другим поставщиком служб шифрования, а не поставщиком служб шифрования Windows по умолчанию. В качестве примера альтернативного поставщика служб шифрования можно назвать аппаратный модуль безопасности, выполняющий все операции шифрования с закрытым ключом и не сохраняющий закрытые ключи в памяти, тем самым повышая уровень безопасности системы.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "61997034"
   
 2. Переопределите свойство <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>, доступное только для чтения. Это свойство возвращает фактический размер ключа пары ключей сертификата (открытого и закрытого).  
   
-3. Переопределите метод <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> . Этот метод вызывается инфраструктурой безопасности WCF для расшифровки симметричного ключа с помощью закрытого ключа сертификата. (Ранее этот ключ был зашифрован с помощью открытого ключа сертификата).  
+3. Переопределите метод <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> . Этот метод вызывается платформой безопасности WCF для расшифровки симметричного ключа с закрытым ключом сертификата. (Ранее этот ключ был зашифрован с помощью открытого ключа сертификата).  
   
-4. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> . Этот метод вызывается платформой безопасности WCF для получения экземпляра <xref:System.Security.Cryptography.AsymmetricAlgorithm> класс, представляющий поставщика служб шифрования для закрытого или открытого ключа или сертификата, в зависимости от параметров, передается в метод.  
+4. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> . Этот метод вызывается платформой безопасности WCF для получения экземпляра <xref:System.Security.Cryptography.AsymmetricAlgorithm> класса, представляющего поставщика служб шифрования для закрытого или открытого ключа сертификата, в зависимости от параметров, передаваемых в метод.  
   
 5. Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> . Переопределите этот метод, если требуется иная реализация класса <xref:System.Security.Cryptography.HashAlgorithm>.  
   
@@ -46,21 +46,21 @@ ms.locfileid: "61997034"
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- Ниже показано, как интегрировать X.509 безопасности асимметричного ключа реализацию пользовательского создан в предыдущей процедуре, с помощью платформы безопасности WCF, чтобы заменить предоставляемых системой безопасности X.509 маркера.  
+ В следующей процедуре показано, как интегрировать пользовательскую реализацию асимметричного ключа безопасности X. 509, созданную в предыдущей процедуре, с платформой безопасности WCF, чтобы заменить предоставленный системой маркер безопасности X. 509.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Замена предоставляемого системой маркера безопасности X.509 пользовательским маркером асимметричного ключа безопасности X.509  
   
-1. Создайте пользовательский маркер безопасности X.509, возвращающий пользовательский асимметричный ключ безопасности X.509 вместо предоставляемого системой ключа безопасности, как показано в следующем примере. Дополнительные сведения о пользовательских маркерах безопасности см. в разделе [как: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+1. Создайте пользовательский маркер безопасности X.509, возвращающий пользовательский асимметричный ключ безопасности X.509 вместо предоставляемого системой ключа безопасности, как показано в следующем примере. Дополнительные сведения о настраиваемых маркерах безопасности см [. в разделе как Создание пользовательского токена](how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomX509Token#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#2)]
      [!code-vb[c_CustomX509Token#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#2)]  
   
-2. Создайте пользовательский поставщик маркеров безопасности, возвращающий пользовательский маркер безопасности X.509, как показано в примере. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Создайте пользовательский поставщик маркеров безопасности, возвращающий пользовательский маркер безопасности X.509, как показано в примере. Дополнительные сведения о настраиваемых поставщиках маркеров безопасности см [. в разделе как Создайте настраиваемого поставщика](how-to-create-a-custom-security-token-provider.md)маркеров безопасности.  
   
      [!code-csharp[c_CustomX509Token#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#3)]
      [!code-vb[c_CustomX509Token#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#3)]  
   
-3. Если пользовательский ключ безопасности необходимо использовать на стороне инициатора, создайте пользовательский диспетчер маркеров безопасности клиента и пользовательские классы учетных данных клиента, как показано в следующем примере. Дополнительные сведения о пользовательских учетных данных клиента и диспетчеров маркеров безопасности клиента, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+3. Если пользовательский ключ безопасности необходимо использовать на стороне инициатора, создайте пользовательский диспетчер маркеров безопасности клиента и пользовательские классы учетных данных клиента, как показано в следующем примере. Дополнительные сведения о настраиваемых учетных данных клиента и диспетчере маркеров Client Security [см. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
   
      [!code-csharp[c_CustomX509Token#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#4)]
      [!code-vb[c_CustomX509Token#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#4)]  
@@ -68,7 +68,7 @@ ms.locfileid: "61997034"
      [!code-csharp[c_CustomX509Token#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#6)]
      [!code-vb[c_CustomX509Token#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#6)]  
   
-4. Если пользовательский ключ безопасности необходимо использовать на стороне получателя, создайте пользовательский диспетчер маркеров безопасности службы и пользовательские учетные данные службы, как показано в следующем примере. Дополнительные сведения о пользовательских учетных данных службы и диспетчеров маркеров безопасности службы, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+4. Если пользовательский ключ безопасности необходимо использовать на стороне получателя, создайте пользовательский диспетчер маркеров безопасности службы и пользовательские учетные данные службы, как показано в следующем примере. Дополнительные сведения о настраиваемых учетных данных службы и диспетчере маркеров безопасности службы [см. в разделе Пошаговое руководство. Создание настраиваемых учетных данных](walkthrough-creating-custom-client-and-service-credentials.md)клиента и службы.  
   
      [!code-csharp[c_CustomX509Token#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#5)]
      [!code-vb[c_CustomX509Token#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#5)]  
@@ -84,7 +84,7 @@ ms.locfileid: "61997034"
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm>
 - <xref:System.Security.Cryptography.HashAlgorithm>
 - <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
-- [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Практическое руководство. Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Практическое руководство. Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Пошаговое руководство: Создание настраиваемых учетных данных клиента и службы](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Практическое руководство. Создание настраиваемого средства проверки подлинности маркеров безопасности](how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](how-to-create-a-custom-security-token-provider.md)
+- [Практическое руководство. Создание пользовательского токена](how-to-create-a-custom-token.md)

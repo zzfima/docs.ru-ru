@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27caa9916b5adab2b2049a8f66ac34fed40e4d7f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778576"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795276"
 ---
-# <a name="asmcacheflags-enumeration"></a>Перечисление ASM_CACHE_FLAGS
-Указывает источник сборки, представленного [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) в глобальном кэше сборок.  
+# <a name="asm_cache_flags-enumeration"></a>Перечисление ASM_CACHE_FLAGS
+Указывает источник сборки, представленной [IAssemblyCacheItem](iassemblycacheitem-interface.md) в глобальном кэше сборок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,23 +42,23 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|Перечисляет кэша предварительно скомпилированных сборок с помощью Ngen.exe.|  
+|`ASM_CACHE_ZAP`|Перечисляет кэш предварительно скомпилированных сборок с помощью Ngen. exe.|  
 |`ASM_CACHE_GAC`|Перечисляет глобальный кэш сборок.|  
-|`ASM_CACHE_DOWNLOAD`|Перечисляет сборки, загруженные по запросу или которые были теневого копирования.|  
-|`ASM_CACHE_ROOT`|Указывает, что [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) функция должна возвращать путь в глобальном кэше сборок для общеязыковой среды выполнения (CLR) версии 2.0. Значение только в контексте вызова [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
-|`ASM_CACHE_ROOT_EX`|Указывает, что [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) функция должна возвращать путь в глобальном кэше сборок для среды CLR версии 4. Значение только в контексте вызова [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
+|`ASM_CACHE_DOWNLOAD`|Перечисляет сборки, скачанные по запросу или теневые копии.|  
+|`ASM_CACHE_ROOT`|Указывает, что функция [жеткачепас](getcachepath-function.md) должна возвращать путь к глобальному кэшу сборок для общеязыковой среды выполнения (CLR) версии 2,0. Имеет смысл только в контексте вызова [жеткачепас](getcachepath-function.md).|  
+|`ASM_CACHE_ROOT_EX`|Указывает, что функция [жеткачепас](getcachepath-function.md) должна возвращать путь к глобальному кэшу сборок для CLR версии 4. Имеет смысл только в контексте вызова [жеткачепас](getcachepath-function.md).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Функция GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
-- [Интерфейс IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
-- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Функция GetCachePath](getcachepath-function.md)
+- [Интерфейс IAssemblyCacheItem](iassemblycacheitem-interface.md)
+- [Перечисления Fusion](fusion-enumerations.md)

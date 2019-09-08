@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946586"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791874"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Статистика поставщика для SQL Server
 Начиная с .NET Framework 2.0, поставщик данных .NET Framework для SQL Server поддерживает получение статистики во время выполнения. После создания допустимого объекта соединения необходимо включить статистику путем присвоения свойству <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> объекта <xref:System.Data.SqlClient.SqlConnection> значения `True`. После включения статистики ее можно просмотреть в виде «моментального снимка во времени» путем получения ссылки <xref:System.Collections.IDictionary> через метод <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> объекта <xref:System.Data.SqlClient.SqlConnection>. Для обработки списка может использоваться набор элементов словаря, представленных в виде пар «имя/значение». Эти пары «имя/значение» являются неупорядоченными. Для сброса счетчиков можно в любое время вызвать метод <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> объекта <xref:System.Data.SqlClient.SqlConnection>. Если сбор статистики не был включен, исключение не формируется. Кроме того, если <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> вызывается перед вызовом <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, полученные значения являются первоначальными для каждой записи. Если статистика включена, запустите приложение и через некоторое время отключите статистику. Полученные значения будут отражать значения, собранные до момента отключения статистики. Все собранные статистические значения относятся к конкретному соединению.  
@@ -340,5 +340,5 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>См. также
 
-- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server и ADO.NET](index.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

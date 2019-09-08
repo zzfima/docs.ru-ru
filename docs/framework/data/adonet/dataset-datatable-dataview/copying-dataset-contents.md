@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205171"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786516"
 ---
 # <a name="copying-dataset-contents"></a>Копирование содержимого набора данных
 Можно создать копию, <xref:System.Data.DataSet> чтобы можно было работать с данными, не затрагивая исходные данные, или работать с подмножеством данных из **набора**данных. При копировании **набора данных**можно выполнить следующие действия.  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Чтобы создать копию **набора данных** , включающего схему, и только данные, представляющие **добавленные**, **измененные**или **Удаленные** строки, <xref:System.Data.DataSet.GetChanges%2A> используйте метод **набора данных**. Можно также использовать функции GetRows, чтобы возвратить только строки с указанным состоянием строки, передав значение **датаровстате** при вызовеметода GetRows. В следующем примере кода показано, как передать **датаровстате** при вызове методаического **изменения**.  
+ Чтобы создать копию **набора данных** , включающего схему, и только данные, представляющие **добавленные**, **измененные**или **Удаленные** строки, <xref:System.Data.DataSet.GetChanges%2A> используйте метод **набора данных**. Можно **также использовать функции GetRows, чтобы** возвратить только строки с указанным состоянием строки, передав значение **датаровстате** **при вызове**метода GetRows. В следующем примере кода показано, как передать **датаровстате** при вызове методаического **изменения**.  
   
 ```vb  
 ' Copy all changes.  
@@ -99,4 +99,4 @@ foreach (DataRow copyRow in copyRows)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

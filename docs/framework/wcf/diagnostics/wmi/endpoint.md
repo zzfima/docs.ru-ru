@@ -2,12 +2,12 @@
 title: Конечная точка
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963609"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795907"
 ---
 # <a name="endpoint"></a>Конечная точка
 Конечная точка  
@@ -37,7 +37,7 @@ class Endpoint
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Извлекает имя экземпляра счетчика производительности операций|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|Извлекает имя экземпляра счетчика производительности операций|  
   
 ## <a name="properties"></a>Свойства  
  Класс Endpoint имеет следующие свойства.  
@@ -71,7 +71,7 @@ class Endpoint
  Идентификатор домена приложения, который размещает конечную точку.  
   
 ### <a name="behaviors"></a>поведения  
- Тип данных: Массив Behavior  
+ Тип данных: Массив поведений  
   
  Тип доступа: Только чтение  
   

@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636848"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799227"
 ---
 # <a name="gethashfromblob-function"></a>Функция GetHashFromBlob
 
 Получает хэш сборки по указанному адресу памяти с помощью указанного хэш-алгоритма.
 
-Эта функция является устаревшей. Используйте [ICLRStrongName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) метод вместо этого.
+Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,30 +45,30 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>Параметры
 
 `pbBlob`\
-[in] Указатель на адрес блока памяти, хэширование которого требуется выполнить.
+окне Указатель на адрес блока памяти, который необходимо хэшировать.
 
 `cchBlob`\
-[in] Длина в байтах блока памяти.
+окне Длина блока памяти в байтах.
 
 `piHashAlg`\
-[in, out] Константа, указывающая хэш-алгоритм. Использовать нуль для алгоритма по умолчанию.
+[вход, выход] Константа, указывающая хэш-алгоритм. Используйте нуль для алгоритма по умолчанию.
 
 `pbHash`\
-[out] Буфер, возвращенный хэша.
+заполняет Возвращаемый буфер хэша.
 
 `cchHash`\
-[in] Запрошенный максимальный размер `pbHash`.
+окне Запрошенный максимальный размер `pbHash`.
 
 `pchHash`\
-[out] Размер в байтах, возвращаемого `pbHash`.
+заполняет Размер возвращаемого `pbHash`объекта (в байтах).
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** StrongName.h
+**Заголовок.** StrongName. h
 
-**Библиотека:** Включена как ресурс в MsCorEE.dll
+**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

@@ -2,12 +2,12 @@
 title: Общие сведения о процессе определения схемы набора данных
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 5266d08212e5259bd5b242a70d61e29ad9008006
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b0dd22412ddda86aa2883a26353abb1516a94e17
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785940"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Общие сведения о процессе определения схемы набора данных
 Процесс вывода схемы из XML-документа вначале определяет, какие элементы будут выведены как таблицы. Из оставшегося XML процесс вывода схемы определяет столбцы этих таблиц. Для вложенных таблиц процесс вывода формирует вложенные объекты <xref:System.Data.DataRelation> и <xref:System.Data.ForeignKeyConstraint>.  
@@ -37,4 +37,4 @@ ms.locfileid: "70203248"
 - [Загрузка сведений о схеме DataSet из XML](loading-dataset-schema-information-from-xml.md)
 - [Использование XML в наборах данных](using-xml-in-a-dataset.md)
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

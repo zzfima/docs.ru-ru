@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931169"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779818"
 ---
 # <a name="query-projections-wcf-data-services"></a>Проекции запросов (службы данных WCF)
 
@@ -28,7 +28,7 @@ ms.locfileid: "69931169"
 Предложение проекции можно добавить в запрос либо с помощью `$select` параметра запроса в URI, либо с помощью предложения [SELECT](../../../csharp/language-reference/keywords/select-clause.md) ([выберите](../../../visual-basic/language-reference/queries/select-clause.md) в Visual Basic) в запросе LINQ. Возвращаемые данные сущности могут быть проецированы в типы сущностей или в типы, отличные от сущностей, на клиенте. В примерах этого раздела показано, как использовать предложение `select` в запросе LINQ.
 
 > [!IMPORTANT]
-> При сохранении обновлений, выполненных в проецируемых типах, в службе данных может произойти потеря данных. Дополнительные сведения см. в разделе [рекомендации](#considerations)по проекции.
+> При сохранении обновлений, выполненных в проецируемых типах, в службе данных может произойти потеря данных. Дополнительные сведения см. в разделе [рекомендации по проекции](#considerations).
 
 ## <a name="requirements-for-entity-and-non-entity-types"></a>Требования к типам сущностей и несущностным типам
 
@@ -102,7 +102,7 @@ ms.locfileid: "69931169"
 
 При определении проекции запроса следует учитывать следующие дополнительные соображения.
 
-- При определении пользовательских потоков для формата Atom следует убедиться, что все свойства сущностей, имеющие пользовательские сопоставления, включены в проекцию. Если сопоставленное свойство сущности не включено в проекцию, может произойти потеря данных. Дополнительные сведения см. в разделе [Настройка веб-канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- При определении пользовательских потоков для формата Atom следует убедиться, что все свойства сущностей, имеющие пользовательские сопоставления, включены в проекцию. Если сопоставленное свойство сущности не включено в проекцию, может произойти потеря данных. Дополнительные сведения см. в разделе [Настройка веб-канала](feed-customization-wcf-data-services.md).
 
 - Если вставки выполняются в проецированный тип, который не содержит все свойства сущности в модели данных службы данных, свойства, не включенные в проекцию на клиенте, устанавливаются в их значения по умолчанию.
 
@@ -112,10 +112,10 @@ ms.locfileid: "69931169"
 
 - Если проекция включает свойство навигации, связанные объекты загружаются неявно, без вызова метода <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> не поддерживается для использования в проецированном запросе.
 
-- Запросы проецирования запроса на клиенте преобразуются для использования параметра запроса `$select` в URI запроса. Если запрос с проекцией выполняется для предыдущей версии служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], которая не поддерживает параметр запроса `$select`, возвращается ошибка. Это может также произойти, если версия <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> объекта <xref:System.Data.Services.DataServiceBehavior> для службы данных установлена в значение <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Дополнительные сведения см. в разделе [Управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Запросы проецирования запроса на клиенте преобразуются для использования параметра запроса `$select` в URI запроса. Если запрос с проекцией выполняется для предыдущей версии служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], которая не поддерживает параметр запроса `$select`, возвращается ошибка. Это может также произойти, если версия <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> объекта <xref:System.Data.Services.DataServiceBehavior> для службы данных установлена в значение <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Дополнительные сведения см. в разделе [Управление версиями службы данных](data-service-versioning-wcf-data-services.md).
 
-Дополнительные сведения см. в разделе [Практическое руководство. Результаты](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)запроса проекта.
+Дополнительные сведения см. в разделе [Практическое руководство. Результаты](how-to-project-query-results-wcf-data-services.md)запроса проекта.
 
 ## <a name="see-also"></a>См. также
 
-- [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)

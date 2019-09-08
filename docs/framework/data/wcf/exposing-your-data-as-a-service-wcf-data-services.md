@@ -6,30 +6,30 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: 0d774db264a02d8d6c752f55344ec1ab6645c0bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1dc1f0ec12c50c4c97b141a34b468e3367ead75e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633648"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780298"
 ---
-# <a name="expose-your-data-as-a-service-wcf-data-services"></a>Предоставления данных как услуга (службы данных WCF)
+# <a name="expose-your-data-as-a-service-wcf-data-services"></a>Предоставление данных в качестве службы (WCF Data Services)
 
-Службы WCF Data Services интегрируется с Visual Studio, чтобы можно было упрощая определение служб для предоставления данных как [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. Создание службы данных, предоставляющего канал OData включает в себя следующие основные шаги:
+WCF Data Services интегрируется с Visual Studio, чтобы упростить определение служб для предоставления данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. Создание службы данных, предоставляющей канал OData, включает следующие основные шаги.
 
-1. **Определение модели данных.** Службы WCF Data Services изначально поддерживают модели данных, которые основаны на [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Дополнительные сведения см. в разделе [Практическое руководство. Создание службы данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
+1. **Определите модель данных.** WCF Data Services изначально поддерживает модели данных, основанные на [Entity Frameworkе ADO.NET](../adonet/ef/index.md). Дополнительные сведения см. в разделе [Практическое руководство. Создайте службу данных с помощью источника](create-a-data-service-using-an-adonet-ef-data-wcf.md)данных ADO.NET Entity Framework.
 
-     Службы WCF Data Services поддерживают также модели данных, на основании объекта (CLR) среды CLR, возвращающих экземпляр <xref:System.Linq.IQueryable%601> интерфейс. Это позволяет развертывать службы данных на основе списков, массивов и коллекций .NET Framework. Для поддержки создания, обновления и удаления элементов этих структур данных необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [Практическое руководство. Создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
+     WCF Data Services также поддерживает модели данных, основанные на объектах среды CLR, которые возвращают экземпляр <xref:System.Linq.IQueryable%601> интерфейса. Это позволяет развертывать службы данных на основе списков, массивов и коллекций .NET Framework. Для поддержки создания, обновления и удаления элементов этих структур данных необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [Практическое руководство. Создание службы данных с помощью поставщика](create-a-data-service-using-rp-wcf-data-services.md)отражения.
 
-     Для более сложных сценариев службы данных WCF включает в себя набор поставщиков, которые позволяют определить модель данных на основе типов данных с поздним связыванием. Дополнительные сведения см. в разделе [специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).
+     В более сложных сценариях WCF Data Services включает набор поставщиков, позволяющих определить модель данных на основе типов данных с поздним связыванием. Дополнительные сведения см. в разделе [пользовательские поставщики служб данных](custom-data-service-providers-wcf-data-services.md).
 
-2. **Создание службы данных.** Самая базовая служба данных предоставляет класс, производный от класса <xref:System.Data.Services.DataService%601> , с типом `T` , представляющим имя контейнера сущностей, квалифицированное пространством имен. Дополнительные сведения см. в разделе [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
+2. **Создайте службу данных.** Самая базовая служба данных предоставляет класс, производный от класса <xref:System.Data.Services.DataService%601> , с типом `T` , представляющим имя контейнера сущностей, квалифицированное пространством имен. Дополнительные сведения см. в разделе [Defining WCF Data Services](defining-wcf-data-services.md).
 
-3. **Настройка службы данных.** По умолчанию службы данных WCF запрещает доступ к ресурсам, предоставляемым контейнером сущностей. <xref:System.Data.Services.DataServiceConfiguration> Интерфейс позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию OData и определить другие особенности поведения службы, такие как использование пакетирования или максимальное количество сущностей, которые могут быть возвращены в одном ответе. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+3. **Настройте службу данных.** По умолчанию WCF Data Services отключает доступ к ресурсам, предоставляемым контейнером сущностей. <xref:System.Data.Services.DataServiceConfiguration> Интерфейс позволяет настроить доступ к ресурсам и операциям службы, указать поддерживаемую версию OData и определить другие поведения на уровне службы, например поведение пакетной обработки или максимальное число возвращаемых сущностей. в одном ответе. Дополнительные сведения см. [в разделе Настройка службы данных](configuring-the-data-service-wcf-data-services.md).
 
-Пример создания простой службы данных, основанный на образце базы данных Northwind, см. в разделе [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+Пример создания простой службы данных, основанной на образце базы данных Northwind, см. в разделе [Краткое руководство](quickstart-wcf-data-services.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+- [Начало работы](getting-started-with-wcf-data-services.md)
+- [Обзор](wcf-data-services-overview.md)

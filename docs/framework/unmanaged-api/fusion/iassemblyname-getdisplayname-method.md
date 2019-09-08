@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c434595414fd5bdabeae96d959aaa6be6d84af2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f48f2d95829d2c8111065e5f4ede4e43a16d63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753972"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796661"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>Метод IAssemblyName::GetDisplayName
-Возвращает понятное имя сборки, упоминаемой в этом [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта.  
+Возвращает удобное для восприятия имя сборки, на которую ссылается этот объект [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +39,22 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>Параметры  
  `szDisplayName`  
- [out] Строковый буфер, который содержит имя сборки, на которую указывает ссылка.  
+ заполняет Строковый буфер, содержащий имя сборки, на которую указывает ссылка.  
   
  `pccDisplayName`  
- [in, out] Размер `szDisplayName` из расширенных символов, включая завершающий нуль-символ символ.  
+ [вход, выход] Размер `szDisplayName` в расширенных символах, включая символ конца null.  
   
  `dwDisplayFlags`  
- [in] Побитовое сочетание [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) значения, которые влияют на возможности `szDisplayName`.  
+ окне Побитовое сочетание значений [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) , влияющих на функции `szDisplayName`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Перечисления Fusion](fusion-enumerations.md)

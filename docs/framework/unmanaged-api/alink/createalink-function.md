@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787621"
 ---
 # <a name="createalink-function"></a>Функция CreateALink
 Создает экземпляр компоновщика сборок и задает указатель на указанный интерфейс.  
@@ -41,11 +41,11 @@ HRESULT CreateALink (
 |Параметр|Описание|  
 |---------------|-----------------|  
 |`riid`|Физическое имя одного из интерфейсов компоновщика сборок.|  
-|`ppInterface`|Расположение, которое при успешном завершении содержит указатель на `riid` интерфейс.|  
+|`ppInterface`|Расположение, которое в случае успешного завершения содержит указатель на `riid` интерфейс.|  
   
 ## <a name="requirements"></a>Требования  
- **Библиотека**: alink.dll  
+ **Библиотека**: ALink. dll  
   
 ## <a name="see-also"></a>См. также
 
-- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (компоновщик сборок)](../../tools/al-exe-assembly-linker.md)

@@ -2,24 +2,24 @@
 title: ComPlusServiceHostStartingServiceError
 ms.date: 03/30/2017
 ms.assetid: 10994991-3717-4352-ad58-c22c3eff60d5
-ms.openlocfilehash: a0ea251cefb2a99d06fa41effee37648883fb613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62a4c5c0fab8874c7911d10f36a5cd83b77c618f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969667"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798014"
 ---
 # <a name="complusservicehoststartingserviceerror"></a>ComPlusServiceHostStartingServiceError
 ИД: 130  
   
- Уровень серьезности: Error  
+ "Уровень серьезности" — Ошибка  
   
- Категория: ServiceModel  
+ Категори ServiceModel  
   
 ## <a name="description"></a>Описание  
  Это событие указывает, что произошла ошибка при запуске службы COM+. В событии указаны значения AppID, ClsID, а также суррогат, исключение, имя и идентификатор процесса.  
   
 ## <a name="see-also"></a>См. также
 
-- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Ведение журнала событий](index.md)
+- [Общие справочные сведения о событиях](events-general-reference.md)

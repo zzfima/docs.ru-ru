@@ -2,12 +2,12 @@
 title: Написание безопасного динамического кода SQL в SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 9b0c903c04c82c9a0f61197642645c5ba93ba099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c02455ba8798df1de1d52f6b4db3426d41b95daf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645922"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791417"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Написание безопасного динамического кода SQL в SQL Server
 Внедрение кода SQL - это процесс, посредством которого пользователь-злоумышленник вводит инструкции языка Transact-SQL вместо допустимых входных данных. Если входные данные передаются непосредственно на сервер без проверки, и если в приложении не приняты меры против выполнения внедренного кода, то появляется возможность осуществлять злонамеренные действия для повреждения или уничтожения данных.  
@@ -46,9 +46,9 @@ ms.locfileid: "64645922"
   
  В SQL Server имеются методы предоставления пользователям доступа к данным с помощью хранимых процедур и определяемых пользователем функций, в которых выполняется динамический код SQL.  
   
-- Использование олицетворения с предложением Transact-SQL EXECUTE AS, как описано в разделе [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Использование олицетворения с предложением Transact-SQL EXECUTE AS, как описано в разделе [Настройка разрешений с олицетворением в SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Подписывание хранимых процедур с помощью сертификатов, как описано в разделе [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Подписывание хранимых процедур с помощью сертификатов, как описано в разделе [Подписывание хранимых процедур в SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  Предложение EXECUTE AS заменяет разрешения вызывающего объекта разрешениями пользователя, указанного в предложении EXECUTE AS. Вложенные хранимые процедуры или триггеры выполняются в контексте безопасности пользователя-посредника. Это может привести к нарушению работы приложений, которые основаны на использовании средств безопасности уровня строки или требуют аудита. Некоторые функции, возвращающие идентификатор пользователя, возвращают данные о пользователе, указанном в предложении EXECUTE AS, а не данные первоначального вызывающего объекта. Контекст выполнения переходит к вызывающему объекту только после выполнения процедуры или при выполнении инструкции REVERT.  
@@ -62,16 +62,16 @@ ms.locfileid: "64645922"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Resource|Описание|  
 |--------------|-----------------|  
 |[Хранимые процедуры](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) и [Внедрение кода SQL](/sql/relational-databases/security/sql-injection) в электронной документации на SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Общие сведения о безопасности SQL Server](overview-of-sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)
+- [Управление разрешениями с использованием хранимых процедур в SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Подписывание хранимых процедур в SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Настройка разрешений с олицетворением в SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

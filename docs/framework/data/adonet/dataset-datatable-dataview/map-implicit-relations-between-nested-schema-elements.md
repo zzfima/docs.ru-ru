@@ -2,12 +2,12 @@
 title: Сопоставление неявных отношений между вложенными элементами схемы
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203479"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784436"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Сопоставление неявных отношений между вложенными элементами схемы
 Схема на языке XSD может иметь сложные типы, вложенные друг в друга. В этом случае процесс сопоставления применяет сопоставление по умолчанию и создает в объекте <xref:System.Data.DataSet>:  
@@ -101,4 +101,4 @@ ms.locfileid: "70203479"
 
 - [Создание отношений DataSet из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

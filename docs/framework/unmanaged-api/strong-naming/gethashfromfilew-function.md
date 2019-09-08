@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77b164cdec0dd224042e4de3265d14a4991d60ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771890"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799195"
 ---
 # <a name="gethashfromfilew-function"></a>Функция GetHashFromFileW
 Создает хэш содержимого файла, указанного строкой Юникода.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,34 +42,34 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Имя файла для хеширования Юникода.  
+ окне Имя файла в Юникоде для хэширования.  
   
  `piHashAlg`  
- [in, out] Алгоритм, используемый при создании хеша. Допустимыми являются алгоритмы, определенные интерфейсом Win32 CryptoAPI. Если `piHashAlg` имеет значение 0, CALG_SHA 1 используется алгоритм по умолчанию.  
+ [вход, выход] Алгоритм, используемый при формировании хэша. Допустимыми являются алгоритмы, определяемые интерфейсом Win32 CryptoAPI. Если `piHashAlg` параметр имеет значение 0, используется алгоритм по умолчанию CALG_SHA-1.  
   
  `pbHash`  
- [out] Массив байтов, содержащий созданный хэш.  
+ заполняет Массив байтов, содержащий созданный хэш.  
   
  `cchHash`  
- [in] Максимальный размер буфера, на которые указывают `pbHash`.  
+ окне Максимальный размер буфера, `pbHash`на который указывает.  
   
  `pchHash`  
- [out] Размер в байтах из `pbHash`.  
+ заполняет Размер (в байтах `pbHash`).  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция совпадает со значением [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), за исключением того, что спецификация имени файла — Юникод вместо ANSI.  
+ Эта функция аналогична [GetHashFromFile](gethashfromfile-function.md), за исключением того, что спецификация имени файла имеет кодировку Unicode, а не ANSI.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [Метод GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [Метод GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

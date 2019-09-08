@@ -2,12 +2,12 @@
 title: Методы System.String
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613742"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792492"
 ---
 # <a name="systemstring-methods"></a>Методы System.String
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает следующие методы <xref:System.String>.  
@@ -15,7 +15,7 @@ ms.locfileid: "64613742"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Неподдерживаемые методы System.String в целом  
  Далее представлены общие сведения о неподдерживаемых методах <xref:System.String>.  
   
-- Перегрузки, учитывающие язык и региональные параметры (методы, которые принимают `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Перегрузки с учетом языка и региональных параметров ( `CultureInfo`методы, принимающие  /   /  `StringComparison` `IFormatProvider`).  
   
 - Методы, которые принимают или создают массивы значений типа `char`.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64613742"
   
 - Запросы не учитывают параметры сортировки SQL Server, которые могут применяться на сервере, и поэтому по умолчанию выполняют сравнения, зависящие от языка и региональных параметров и не зависящие от регистра. Это поведение отличается от семантики платформы .NET Framework, по умолчанию учитывающей регистр.  
   
-- Когда `LastIndexOf` возвращает значение 0, что либо строка равна `NULL` либо найденная позиция равна 0.  
+- Если `LastIndexOf` функция возвращает значение 0, то либо `NULL` строка имеет значение, либо найденная позицией имеет значение 0.  
   
 - При объединении строк фиксированной длины (`CHAR`, `NCHAR`) или выполнении других операций над этими строками могут возвращаться непредвиденные результаты, поскольку к этим типам применяется автоматическое заполнение в базе данных.  
   
@@ -57,4 +57,4 @@ ms.locfileid: "64613742"
   
 ## <a name="see-also"></a>См. также
 
-- [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Типы данных и функции](data-types-and-functions.md)

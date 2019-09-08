@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741889"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787448"
 ---
 # <a name="getfiledef-method"></a>Метод GetFileDef
-Получает фактический маркер FileDef, используемый в метаданных (в отличие от маркера, назначенный ALink).  
+Извлекает фактический токен Филедеф, используемый в метаданных (в отличие от маркера, назначенного ALink).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,19 +41,19 @@ HRESULT GetFileDef(
  Идентификатор сборки.  
   
  `TargetFile`  
- Токен добавленный файл как полученные от AddFile метод или метод AddImport.  
+ Токен добавленного файла, полученный из метода AddFile или метода AddImport.  
   
  `pScope`  
- Получает маркер FileDef.  
+ Получает токен Филедеф.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [API ALink](index.md)

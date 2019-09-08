@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: d62d55771e4fda74d336163b3f53b3f50cfb1e39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a1249718d1e1e1e64fd6fa6ee9ee8157545b5e0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205294"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786630"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Добавление новой таблицы данных в набор данных
 ADO.NET позволяет создавать объекты <xref:System.Data.DataTable> и добавлять их к существующему <xref:System.Data.DataSet>. Можно задать данные ограничения для <xref:System.Data.DataTable>, используя свойства <xref:System.Data.DataTable.PrimaryKey%2A> и <xref:System.Data.DataColumn.Unique%2A>.  
@@ -22,7 +22,7 @@ ADO.NET позволяет создавать объекты <xref:System.Data.D
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>Учет регистра  
- В <xref:System.Data.DataSet> могут существовать две или несколько таблиц или связей, имеющие одинаковые имена, которые, тем не менее, состоят из символов с разными регистрами. В таких случаях ссылки по имени на таблицы и связи задаются с учетом регистра. Например <xref:System.Data.DataSet> , если **набор данных** содержит таблицы **Table1** и **Table1**, вы бы ссылались на таблицу **Table1** по имени как **DataSet. Tables ["table1"]** и **Table1** в качестве **набора данных. Tables ["table1"]** . Попытка ссылки на любую из таблиц в качестве **набора данных. таблицы ["table1"]** создают исключение.  
+ В <xref:System.Data.DataSet> могут существовать две или несколько таблиц или связей, имеющие одинаковые имена, которые, тем не менее, состоят из символов с разными регистрами. В таких случаях ссылки по имени на таблицы и связи задаются с учетом регистра. <xref:System.Data.DataSet> Например, если **набор данных** содержит таблицы **Table1** и **Table1**, вы бы ссылались на таблицу **Table1** по имени как **DataSet. Tables ["table1"]** и **Table1** в качестве **набора данных. Tables ["table1"]** . Попытка ссылки на любую из таблиц в качестве **набора данных. таблицы ["table1"]** создают исключение.  
   
  Это правило учета регистра не применяется, если только одна таблица или связь имеет какое-то определенное имя. Например, если <xref:System.Data.DataSet> имеет только **Таблица1**, можно ссылаться на него с помощью **DataSet. Tables ["table1"]** .  
   
@@ -35,4 +35,4 @@ ADO.NET позволяет создавать объекты <xref:System.Data.D
 ## <a name="see-also"></a>См. также
 
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

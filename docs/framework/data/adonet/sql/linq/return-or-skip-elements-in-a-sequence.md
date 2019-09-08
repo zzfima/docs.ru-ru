@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963864"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792752"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Возврат или пропуск элементов последовательности
 Для возвращения заданного числа элементов последовательности и пропуска оставшихся используется оператор <xref:System.Linq.Queryable.Take%2A>.  
@@ -18,7 +18,7 @@ ms.locfileid: "69963864"
  Для пропуска заданного числа элементов последовательности и возвращения оставшихся используется оператор <xref:System.Linq.Queryable.Skip%2A>.  
   
 > [!NOTE]
-> На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи "пропуск и получение исключений в SQL Server 2000" раздела [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи "пропуск и получение исключений в SQL Server 2000" раздела [Устранение неполадок](troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Преобразует <xref:System.Linq.Queryable.Skip%2A> с помощью вложенного запроса с предложением SQL `NOT EXISTS` . Это преобразование имеет следующие ограничения.  
   
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>См. также
 
-- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Примеры запросов](query-examples.md)
+- [Преобразование стандартных операторов запросов](standard-query-operator-translation.md)

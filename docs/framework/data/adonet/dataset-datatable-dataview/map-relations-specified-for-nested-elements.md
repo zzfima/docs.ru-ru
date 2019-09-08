@@ -2,12 +2,12 @@
 title: Сопоставление отношений, заданных для вложенных элементов
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786088"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Сопоставление отношений, заданных для вложенных элементов
 Схема может включать аннотацию **msdata: relationship** для явного указания сопоставления между любыми двумя элементами в схеме. Два элемента, указанные в **msdata: relationship** , могут быть вложены в схему, но не обязательно должны быть. Процесс сопоставления использует **msdata: relationship** в схеме для создания связи «первичный-внешний ключ» между двумя столбцами.  
@@ -78,4 +78,4 @@ ms.locfileid: "70204633"
 
 - [Создание отношений DataSet из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

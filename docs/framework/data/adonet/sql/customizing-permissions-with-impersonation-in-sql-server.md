@@ -2,12 +2,12 @@
 title: Настройка разрешений с олицетворением в SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961115"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782469"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Настройка разрешений с олицетворением в SQL Server
 Во многих приложениях используются хранимые процедуры для получения доступа к данным, что позволяет ограничивать доступ к базовым таблицам на основе формирования цепочки владения. При этом можно предоставлять разрешения EXECUTE для хранимых процедур, отзывая или отменяя разрешения по отношению к базовым таблицам. В СУБД SQL Server если хранимая процедура и таблицы имеют одного владельца, то разрешения вызывающего объекта не проверяются. Но формирование цепочки владения перестает действовать, если объекты имеют разных владельцев, а также в случае применения динамического кода SQL.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Использование предложения EXECUTE AS с инструкцией REVERT  
  Инструкцию REVERT языка Transact-SQL можно использовать для возврата к первоначальному контексту выполнения.  
   
- Необязательное предложение с параметром NO REVERT cookie = @variableNameпозволяет переключить контекст выполнения обратно вызывающему объекту, @variableName если переменная содержит правильное значение. Это позволяет переключать контекст выполнения обратно к контексту вызывающего объекта в тех средах, где используются пулы соединений. Поскольку значение @variableName известно только вызывающему объекту инструкции EXECUTE AS, вызывающий объект может гарантировать, что контекст выполнения не может быть изменен конечным пользователем, который вызывает приложение. Соединение после закрытия возвращается в пул. Дополнительные сведения о пуле подключений в ADO.NET см. в разделе [SQL Server подключение пулов (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Необязательное предложение с параметром NO REVERT cookie = @variableNameпозволяет переключить контекст выполнения обратно вызывающему объекту, @variableName если переменная содержит правильное значение. Это позволяет переключать контекст выполнения обратно к контексту вызывающего объекта в тех средах, где используются пулы соединений. Поскольку значение @variableName известно только вызывающему объекту инструкции EXECUTE AS, вызывающий объект может гарантировать, что контекст выполнения не может быть изменен конечным пользователем, который вызывает приложение. Соединение после закрытия возвращается в пул. Дополнительные сведения о пуле подключений в ADO.NET см. в разделе [SQL Server подключение пулов (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Определение контекста выполнения  
  Предложение EXECUTE AS можно не только использовать для указания пользователя, но и указывать в нем любое из следующих ключевых слов.  
@@ -67,11 +67,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Общие сведения о безопасности SQL Server](overview-of-sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)
+- [Управление разрешениями с использованием хранимых процедур в SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Написание безопасного динамического кода SQL в SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Подписывание хранимых процедур в SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Изменение данных с помощью хранимых процедур](../modifying-data-with-stored-procedures.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

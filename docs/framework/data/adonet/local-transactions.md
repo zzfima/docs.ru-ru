@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: a0cb72913c10712ece188a782095b93f98cdc0b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 979d51a97245bc9616349679ec8cf05cae8c595a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783709"
 ---
 # <a name="local-transactions"></a>Локальные транзакции
 Транзакции в ADO.NET используются, когда требуется связать несколько задач вместе, чтобы они выполнялись как единая единица работы. Например, пусть приложение выполняет две задачи. Во-первых, оно заносит в таблицу сведения о заказе. Во-вторых, обновляет таблицу, содержащую список товаров на складе, списывая заказанные элементы. Если любая из задач завершается неудачно, выполняется откат обоих обновлений.  
@@ -49,7 +49,7 @@ ms.locfileid: "69955773"
   
 ## <a name="see-also"></a>См. также
 
-- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Распределенные транзакции](../../../../docs/framework/data/adonet/distributed-transactions.md)
-- [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Транзакции и параллельность](transactions-and-concurrency.md)
+- [Распределенные транзакции](distributed-transactions.md)
+- [Интеграция System.Transactions с SQL Server](system-transactions-integration-with-sql-server.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 009da2579a6fe15cea3913ae5844fc886da2586c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 515a8477b3a9c72934e0ad11d7b1bf599e8b16a2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910744"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793513"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>Практическое руководство. Как представить столбцы в виде членов класса
-Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибут для связи поля или свойства со столбцом базы данных.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Используйтеатрибут,чтобысвязатьполеилисвойствосо<xref:System.Data.Linq.Mapping.ColumnAttribute> столбцом базы данных.  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>Сопоставление поля или свойства со столбцом база данных  
   
@@ -29,5 +29,5 @@ ms.locfileid: "64910744"
   
 ## <a name="see-also"></a>См. также
 
-- [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Модель объектов LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](how-to-customize-entity-classes-by-using-the-code-editor.md)

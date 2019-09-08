@@ -8,48 +8,48 @@ helpviewer_keywords:
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b91f2a749557f94a68f1929d649824719160d9ee
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944616"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786957"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Константы (справочные сведения о неуправляемых API)
-В этом разделе описывается тип языка, поставщика языка и константы типа документа, определяемые в CorSym.idl.  
+В этом разделе описывается тип языка, поставщик языка и константы типа документа, определенные в Корсим. idl.  
   
 ## <a name="language-type-constants"></a>Константы типа языка  
- Следующая таблица показывает языка константы типа, которые представляют идентификаторы GUID, которые идентифицируют языков программирования.  
+ В следующей таблице показаны константы типа языка, представляющие идентификаторы GUID, которые определяют языки программирования.  
   
 |Символ|Описание|  
 |------------|-----------------|  
 |CorSym_LanguageType_C|Указывает язык C.|  
-|CorSym_LanguageType_CPlusPlus|Указывает язык C++.|  
-|CorSym_LanguageType_CSharp|Указывает C# языка.|  
+|CorSym_LanguageType_CPlusPlus|Указывает C++ язык.|  
+|CorSym_LanguageType_CSharp|Указывает C# язык.|  
 |CorSym_LanguageType_Basic|Указывает базовый язык.|  
-|CorSym_LanguageType_Java|Указывает на языке Java.|  
+|CorSym_LanguageType_Java|Указывает язык Java.|  
 |CorSym_LanguageType_Cobol|Указывает язык COBOL.|  
-|CorSym_LanguageType_Pascal|Указывает язык, Pascal.|  
-|CorSym_LanguageType_ILAssembly|Указывает код сборки Microsoft промежуточного языка MSIL.|  
+|CorSym_LanguageType_Pascal|Указывает на язык Pascal.|  
+|CorSym_LanguageType_ILAssembly|Указывает код сборки кода на языке MSIL.|  
 |CorSym_LanguageType_JScript|Указывает язык JScript.|  
-|CorSym_LanguageType_SMC|Указывает язык SMC.|  
-|CorSym_LanguageType_MCPlusPlus|Указывает язык C++ для .NET Framework.|  
+|CorSym_LanguageType_SMC|Указывает на язык SMC.|  
+|CorSym_LanguageType_MCPlusPlus|Указывает C++ язык, включенный для .NET Framework.|  
   
-## <a name="language-vendor-constants"></a>Константы поставщиков языков  
- Следующая таблица показывает языка константы поставщиков, которые представляют идентификаторы GUID, которые идентифицируют поставщиков языков программирования.  
+## <a name="language-vendor-constants"></a>Константы поставщика языка  
+ В следующей таблице показаны константы поставщика языка, представляющие идентификаторы GUID, которые определяют поставщики языков программирования.  
   
 |Символ|Описание|  
 |------------|-----------------|  
-|CorSym_LanguageVendor_Microsoft|Указывает Microsoft.|  
+|CorSym_LanguageVendor_Microsoft|Указывает Майкрософт.|  
   
-## <a name="document-type-constants"></a>Константы типа документа  
- Следующая таблица показывает документа константы типа, которые представляют идентификаторы GUID, которые идентифицируют типы документов.  
+## <a name="document-type-constants"></a>Константы типов документов  
+ В следующей таблице показаны константы типа документа, представляющие идентификаторы GUID, которые определяют типы документов.  
   
 |Символ|Описание|  
 |------------|-----------------|  
 |CorSym_DocumentType_Text|Указывает текстовый документ.|  
-|CorSym_DocumentType_MC|Указывает не текстовый документ.|  
+|CorSym_DocumentType_MC|Указывает на нетекстовый документ.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по неуправляемым API](../../../docs/framework/unmanaged-api/index.md)
+- [Справочник по неуправляемым API](index.md)

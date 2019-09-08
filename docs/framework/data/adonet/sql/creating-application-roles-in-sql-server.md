@@ -2,12 +2,12 @@
 title: Создание ролей приложений в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961167"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794279"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Создание ролей приложений в SQL Server
 Роли приложения предоставляют возможность назначать разрешения приложению, а не ролям базы данных или пользователям. Пользователи могут соединиться с базой данных, активировать роль приложения и воспользоваться разрешениями, предоставленными приложению. Разрешения, предоставленные роли приложения, действуют в течение всего соединения.  
@@ -47,9 +47,9 @@ ms.locfileid: "69961167"
   
  Можно рассмотреть следующие альтернативные подходы.  
   
-- Используйте переключение контекста с помощью инструкции EXECUTE AS с предложениями NO REVERT и WITH COOKIE. В базе данных можно создать пользовательскую учетную запись, которая не сопоставлена с именем входа. Этой учетной записи присваиваются разрешения. Использование инструкции EXECUTE AS для пользователя, не имеющего имени входа, безопаснее, поскольку этот подход основан на разрешениях, а не на пароле. Дополнительные сведения см. [в разделе Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Используйте переключение контекста с помощью инструкции EXECUTE AS с предложениями NO REVERT и WITH COOKIE. В базе данных можно создать пользовательскую учетную запись, которая не сопоставлена с именем входа. Этой учетной записи присваиваются разрешения. Использование инструкции EXECUTE AS для пользователя, не имеющего имени входа, безопаснее, поскольку этот подход основан на разрешениях, а не на пароле. Дополнительные сведения см. [в разделе Настройка разрешений с олицетворением в SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Подписывайте хранимые процедуры сертификатами, предоставляя разрешение только на выполнение этих процедур. Дополнительные сведения см. [в разделе Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Подписывайте хранимые процедуры сертификатами, предоставляя разрешение только на выполнение этих процедур. Дополнительные сведения см. [в разделе Подписывание хранимых процедур в SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
@@ -60,7 +60,7 @@ ms.locfileid: "69961167"
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Общие сведения о безопасности SQL Server](overview-of-sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

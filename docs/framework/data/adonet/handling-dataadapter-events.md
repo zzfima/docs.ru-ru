@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962759"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783795"
 ---
 # <a name="handling-dataadapter-events"></a>Обработка событий DataAdapter
 В ADO.NET <xref:System.Data.Common.DataAdapter> доступно три события, с помощью которых можно реагировать на изменения, внесенные в источник данных. В следующей таблице показаны события `DataAdapter`.  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>См. также
 
-- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Обработка событий наборов данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [Обработка событий DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Объекты DataAdapter и DataReader](dataadapters-and-datareaders.md)
+- [Обработка событий наборов данных](./dataset-datatable-dataview/handling-dataset-events.md)
+- [Обработка событий DataTable](./dataset-datatable-dataview/handling-datatable-events.md)
 - [События](../../../standard/events/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

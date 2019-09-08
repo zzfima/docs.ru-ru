@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033778"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793757"
 ---
 # <a name="how-to-display-generated-sql"></a>Практическое руководство. Как отобразить сформированный код SQL
 Для просмотра кода SQL, созданного для запросов, и изменения обработки используется свойство <xref:System.Data.Linq.DataContext.Log%2A>. Такой подход может оказаться полезным для получения основных сведений о функциях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и для отладки конкретных проблем.  
@@ -18,7 +18,7 @@ ms.locfileid: "62033778"
 ## <a name="example"></a>Пример  
  В следующем примере для отображения кода SQL в окне консоли перед его выполнением использовано свойство <xref:System.Data.Linq.DataContext.Log%2A>.  Это свойство можно применять с командами выполнения запросов, вставки, обновления и удаления.  
   
- Строки в окне консоли соответствуют результату выполнения Visual Basic или C# следующего кода.  
+ Строки из окна консоли отображаются при выполнении Visual Basic или C# кода, приведенного ниже.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +44,4 @@ SEVES
   
 ## <a name="see-also"></a>См. также
 
-- [Поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Поддержка отладки](debugging-support.md)

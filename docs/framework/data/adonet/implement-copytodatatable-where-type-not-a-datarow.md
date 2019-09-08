@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 120b4bf22e310bee73ba006cfe5a060d0ecd9d65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27df5e88b93914d317f0f59c704382bde67534d2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667019"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794997"
 ---
-# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Практическое руководство. Реализовать метод CopyToDataTable\<T > где универсальный тип T не является DataRow
+# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Практическое руководство. Реализуйте\<CopyToDataTable T >, где универсальный тип T не является DataRow
 Объект <xref:System.Data.DataTable> часто используется для связывания данных. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> принимает результаты запроса и копирует данные в <xref:System.Data.DataTable>, которую в дальнейшем можно использовать для привязки данных. Однако методы <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> работают только с источником, реализующим интерфейс <xref:System.Collections.Generic.IEnumerable%601>, в котором общий параметр `T` принадлежит к типу <xref:System.Data.DataRow>. Хотя это и полезно, это не позволяет создавать таблицы из последовательности скалярных типов, из запросов, проецирующих анонимные типы, или из запросов, содержащих соединение таблиц.  
   
  В этом разделе описано применение пользовательских методов расширений `CopyToDataTable<T>`, принимающих общий параметр `T` типа, отличного от <xref:System.Data.DataRow>. Логика создания объекта <xref:System.Data.DataTable> из источника <xref:System.Collections.Generic.IEnumerable%601> содержится в классе `ObjectShredder<T>`, который затем помещается в два перегруженных метода расширений `CopyToDataTable<T>`. Метод `Shred` класса `ObjectShredder<T>` возвращает заполненный объект <xref:System.Data.DataTable> и принимает три входных параметра: источник <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Data.DataTable> и перечисление <xref:System.Data.LoadOption>. Исходная схема возвращенного объекта <xref:System.Data.DataTable> основана на схеме типа `T`. Если в качестве входных данных используется существующая таблица, ее схема должна быть согласована со схемой типа `T`. Каждое общее свойство и поле типа `T` в возвращенной таблице преобразуется в тип <xref:System.Data.DataColumn>. Если исходная последовательность содержит тип, производный от `T`, то схема возвращенной таблицы расширяется дополнительными общими свойствами и полями.  
   
- Примеры использования пользовательских методов `CopyToDataTable<T>` см. в разделе [Создание таблицы данных из запроса](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+ Примеры использования пользовательских методов `CopyToDataTable<T>` см. в разделе [Создание таблицы данных из запроса](creating-a-datatable-from-a-query-linq-to-dataset.md).  
   
 ### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Реализация в приложении пользовательских методов CopyToDataTable\<T>  
   
@@ -75,5 +75,5 @@ public class ObjectShredder<T>
   
 ## <a name="see-also"></a>См. также
 
-- [Создание DataTable из запроса](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)
-- [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Создание DataTable из запроса](creating-a-datatable-from-a-query-linq-to-dataset.md)
+- [Руководство по программированию](programming-guide-linq-to-dataset.md)

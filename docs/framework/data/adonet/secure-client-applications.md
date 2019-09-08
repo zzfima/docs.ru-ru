@@ -2,12 +2,12 @@
 title: Безопасные клиентские приложения
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963158"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794384"
 ---
 # <a name="secure-client-applications"></a>Безопасные клиентские приложения
 Обычно приложения состоят из многих частей, которые необходимо защищать от уязвимостей, которые могут привести к потере данных или иным образом нарушить безопасность системы. Создавая защищенные пользовательские интерфейсы, можно предотвратить многие проблемы за счет блокирования организаторов атак до того, как они получат доступ к данным или системным ресурсам.  
@@ -24,7 +24,7 @@ ms.locfileid: "69963158"
  [Проверка вводимых пользователем данных в веб-страницы ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Общие сведения о проверке ввода пользователя при помощи элементов управления проверкой ASP.NET.  
   
- [Ввод данных пользователем в Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Ввод данных пользователем в Windows Forms](../../winforms/user-input-in-windows-forms.md)  
  Приводятся ссылки и сведения о проверке действий, произведенных при помощи мыши и клавиатуры, в приложении Windows Forms.  
   
  [Регулярные выражения в .NET Framework](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ ms.locfileid: "69963158"
 ## <a name="windows-applications"></a>Windows-приложения  
  Раньше Windows-приложения обычно выполнялись с полными разрешениями. Платформа .NET Framework предоставляет инфраструктуру для ограничения выполнения кода в Windows-приложении при помощи управления доступом для кода (CAS). Однако только механизма CAS для защиты приложения не достаточно.  
   
- [Безопасность Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Безопасность Windows Forms](../../winforms/windows-forms-security.md)  
  Рассказывается, как защищать приложения Windows Forms. Здесь также приводятся ссылки на связанные разделы.  
   
- [Windows Forms и неуправляемые приложения](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms и неуправляемые приложения](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Описывает, как взаимодействовать с неуправляемыми приложениями в приложении Windows Forms.  
   
  [Развертывание ClickOnce для форм Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -63,12 +63,12 @@ ms.locfileid: "69963158"
 |--------------|-----------------|  
 |[Настройка удаленных приложений](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Обсуждается, как настраивать удаленно взаимодействующие приложения, чтобы избежать обычных проблем.|  
 |[Безопасность при удаленном взаимодействии](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Описывает проверку подлинности и шифрование, а также другие разделы безопасности, имеющие отношение к удаленному взаимодействию.|  
-|[Вопросы безопасности и удаленного взаимодействия](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.|  
+|[Вопросы безопасности и удаленного взаимодействия](../../misc/security-and-remoting-considerations.md)|Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Защита приложений ADO.NET](securing-ado-net-applications.md)
 - [Рекомендации по стратегиям доступа к данным](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Защита приложений](/visualstudio/ide/securing-applications)
-- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита сведений о подключении](protecting-connection-information.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

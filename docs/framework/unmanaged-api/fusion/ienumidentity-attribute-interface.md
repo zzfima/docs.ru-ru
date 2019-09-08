@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697346"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796467"
 ---
-# <a name="ienumidentityattribute-interface"></a>Интерфейс IEnumIDENTITY_ATTRIBUTE
-Служит в качестве перечислителя для атрибутов объекта кода в текущей области.  
+# <a name="ienumidentity_attribute-interface"></a>Интерфейс IEnumIDENTITY_ATTRIBUTE
+Служит в качестве перечислителя для атрибутов объекта Code в текущей области.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Получает указатель интерфейса на новый `IEnumIDENTITY_ATTRIBUTE` , содержащий те же члены, что это `IEnumIDENTITY_ATTRIBUTE`.|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Записывает данные, содержащиеся в элементах этого `IEnumIDENTITY_ATTRIBUTE` для указанного буфера данных.|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|Возвращает заданное число атрибутов, начиная с текущей позиции.|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|Перемещает указатель инструкций в начале `IEnumIDENTITY_ATTRIBUTE`.|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|Перемещает указатель инструкций вперед на указанное число элементов, начиная с текущей позиции.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|Возвращает указатель интерфейса на новый `IEnumIDENTITY_ATTRIBUTE` объект, содержащий те же элементы, что и этот `IEnumIDENTITY_ATTRIBUTE`объект.|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Записывает данные, содержащиеся в элементах `IEnumIDENTITY_ATTRIBUTE` этого объекта, в указанный буфер данных.|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|Возвращает указанное число атрибутов, начиная с текущей позиции.|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|Перемещает указатель инструкций в начало `IEnumIDENTITY_ATTRIBUTE`.|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|Перемещает указатель инструкции вперед на указанное число элементов, начиная с текущей позиции.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Isolation.h  
+ **Заголовок.** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)

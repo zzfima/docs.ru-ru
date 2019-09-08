@@ -2,15 +2,15 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204960"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784702"
 ---
 # <a name="datatables"></a>DataTables
-Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений. В ADO.NET <xref:System.Data.DataTable> объекты используются для представления таблиц в **наборе данных**. Объект **DataTable** представляет одну таблицу реляционных данных в памяти; данные являются локальными для. NET-приложение, в котором оно находится, но может быть заполнено из источника данных, например Microsoft SQL Server помощью **DataAdapter** . Дополнительные сведения см. в разделе Заполнение [набора данных из DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
+Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений. В ADO.NET <xref:System.Data.DataTable> объекты используются для представления таблиц в **наборе данных**. Объект **DataTable** представляет одну таблицу реляционных данных в памяти; данные являются локальными для. NET-приложение, в котором оно находится, но может быть заполнено из источника данных, например Microsoft SQL Server помощью **DataAdapter** . Дополнительные сведения см. в разделе [Заполнение набора данных из DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
   
  Класс **DataTable** является членом пространства имен **System. Data** в библиотеке классов .NET Framework. Можно создавать и использовать **DataTable** независимо или как член **набора данных**, а объекты **DataTable** также можно использовать совместно с другими <xref:System.Data.DataView>.NET Frameworkными объектами, включая. Доступ к коллекции таблиц в **наборе данных** осуществляется через свойство **Tables** объекта **DataSet** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70204960"
  Описывает архитектуру и компоненты ADO.NET, а также их использование для получения доступа к существующим источникам данных и управления данными приложения.  
   
  [Наборы данных, таблицы данных и объекты DataView](index.md)  
- Предоставляет сведения о наборе **данных** ADO.NET, включая создание связей между таблицами.  
+ Предоставляет сведения о **наборе данных** ADO.NET, включая создание связей между таблицами.  
   
  <xref:System.Data.Constraint>  
  Содержит справочные сведения об объекте **constraint** .  
@@ -57,4 +57,4 @@ ms.locfileid: "70204960"
   
 ## <a name="see-also"></a>См. также
 
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

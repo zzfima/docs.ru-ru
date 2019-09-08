@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 15505cd7-0df2-427a-9f86-e0f96f60ee2e
-ms.openlocfilehash: 343cffa9b1c034068e5abcc652e936f89ee6a992
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ef5ba8e975cb1c59720c96b214ae2696cc6356e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903010"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781940"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>Практическое руководство. Как фильтровать данные на уровне DataContext
 Фильтрацию `EntitySets` можно выполнить на уровне `DataContext`. Подобные фильтры применяются ко всем запросам, осуществленным с помощью экземпляра <xref:System.Data.Linq.DataContext>.  
@@ -23,4 +23,4 @@ ms.locfileid: "61903010"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Основные принципы запросов](query-concepts.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037889"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798629"
 ---
 # <a name="formatfromrawvalue-function"></a>Функция FormatFromRawValue
 Преобразует одно значение необработанных данных о производительности в указанный формат или делает это для двух значений, если преобразование формата зависит от времени. 
@@ -89,7 +89,7 @@ int FormatFromRawValue (
 
 ## <a name="requirements"></a>Требования
 
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
  **Библиотечная** Перфкаунтер. dll
 

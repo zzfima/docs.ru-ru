@@ -9,34 +9,34 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: d2d03e11c49d3bde042cc46811f21cc2d899b4b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952257"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779883"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Рекомендации по LINQ (службы WCF Data Services)
-Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Дополнительные сведения о создании и выполнении запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]службе данных на основе служб см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Дополнительные сведения о создании и выполнении запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]службе данных на основе служб см. в разделе [запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Составление LINQ-запросов  
  LINQ позволяет составлять запросы к коллекции объектов, которая реализует <xref:System.Collections.Generic.IEnumerable%601>. Как диалоговое окно **Добавление ссылки на службу** в Visual Studio, так и средство DataSvcUtil. exe используются для создания представления [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы в виде класса контейнера сущностей, наследуемого от <xref:System.Data.Services.Client.DataServiceContext>, а также объектов, представляющих сущности, возвращаемые в веб-каналах. Эти средства также создают свойства для класса контейнера сущностей для коллекций, представляемых службой в виде потоков. Каждое свойство класса, инкапсулирующего службу данных, возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определяемый LINQ, можно составить LINQ-запрос для потоков, предоставляемых службой данных, которые преобразуются клиентской библиотекой в URI-запрос, отправляемый службе данных при выполнении.  
   
 > [!IMPORTANT]
-> Набор запросов, которые можно выразить в синтаксисе LINQ, шире, чем набор запросов, поддерживаемых в URI-синтаксисе на основе технологии [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], используемой в службах данных. Исключение <xref:System.NotSupportedException> возникает, если запрос не может быть сопоставлен с URI в целевой службе данных. Дополнительные сведения см. в разделе [неподдерживаемые методы LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) этой статьи.  
+> Набор запросов, которые можно выразить в синтаксисе LINQ, шире, чем набор запросов, поддерживаемых в URI-синтаксисе на основе технологии [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], используемой в службах данных. Исключение <xref:System.NotSupportedException> возникает, если запрос не может быть сопоставлен с URI в целевой службе данных. Дополнительные сведения см. в разделе [неподдерживаемые методы LINQ](linq-considerations-wcf-data-services.md#unsupportedMethods) этой статьи.  
   
  В следующем примере показан запрос LINQ, который возвращает объекты `Orders` со стоимостью транспортировки более 30 долларов и упорядочивает результаты по дате отправки, начиная с самой последней.  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Этот запрос LINQ преобразуется в следующий универсальный код ресурса (URI) запроса, который выполняется для службы данных [краткого руководства](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) на основе Northwind:  
+ Этот запрос LINQ преобразуется в следующий универсальный код ресурса (URI) запроса, который выполняется для службы данных [краткого руководства](quickstart-wcf-data-services.md) на основе Northwind:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- Дополнительные общие сведения о LINQ см. в [ C# ](../../../csharp/programming-guide/concepts/linq/index.md) разделе LINQ-или [LINQ-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
+ Дополнительные общие сведения о LINQ см. в [разделе C# LINQ-или](../../../csharp/programming-guide/concepts/linq/index.md) [LINQ-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
  LINQ позволяет составлять запросы как с помощью декларативного синтаксиса запросов на основе определенного языка (как показано в предыдущем примере), так и в виде набора методов запроса, известных как стандартные операторы запроса. Запрос, эквивалентный запросу из предыдущего примера, может быть составлен только с помощью синтаксиса на основе методов, как показано в следующем примере.  
   
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Клиент [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] может преобразовать оба вида запросов в URI-запрос, а пользователь может расширить LINQ-запрос путем добавления методов в выражение запроса. При составлении LINQ-запросов путем добавления синтаксиса запросов в выражение запроса или в объект <xref:System.Data.Services.Client.DataServiceQuery%601> операторы добавляются в URI-запрос в порядке вызова методов. Это эквивалентно вызову метода <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> для добавления параметров запроса в URI-запрос.  
   
 ## <a name="executing-linq-queries"></a>Выполнение LINQ-запросов  
- Некоторые методы LINQ-запроса, такие как <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> или <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, приводят к выполнению запроса при добавлении в запрос. Запрос также выполняется, если результаты неявно перечисляются, например в цикле `foreach` или когда запрос приписывается к коллекции `List`. Дополнительные сведения см. [в разделе запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Некоторые методы LINQ-запроса, такие как <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> или <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, приводят к выполнению запроса при добавлении в запрос. Запрос также выполняется, если результаты неявно перечисляются, например в цикле `foreach` или когда запрос приписывается к коллекции `List`. Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
- Клиент выполняет LINQ-запрос в два этапа. По возможности сначала вычисляются LINQ-выражения в запросе на стороне клиента, а затем создается URI-запрос, который будет отправлен службе данных для проведения вычислений по отношению к данным в службе. Дополнительные сведения см. в разделе [клиент и выполнение сервера](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries) в [запросах к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Клиент выполняет LINQ-запрос в два этапа. По возможности сначала вычисляются LINQ-выражения в запросе на стороне клиента, а затем создается URI-запрос, который будет отправлен службе данных для проведения вычислений по отношению к данным в службе. Дополнительные сведения см. в разделе [клиент и выполнение сервера](querying-the-data-service-wcf-data-services.md#executingQueries) в [запросах к службе данных](querying-the-data-service-wcf-data-services.md).  
   
- Если LINQ-запрос нельзя преобразовать в URI-запрос, совместимый с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], при попытке выполнения возникнет исключение. Дополнительные сведения см. [в разделе запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Если LINQ-запрос нельзя преобразовать в URI-запрос, совместимый с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], при попытке выполнения возникнет исключение. Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>Примеры LINQ-запросов  
  Примеры в следующих разделах демонстрируют LINQ-запросы, которые могут быть выполнены для службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -136,7 +136,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Разверните  
- При отправке запроса службе данных [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] можно указать, что сущности, связанные с целевой сущностью, должны быть включены в возвращаемый поток. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> вызывается для <xref:System.Data.Services.Client.DataServiceQuery%601> для набора сущностей, заданного LINQ-запросом, при этом имя связанного набора сущностей предоставляется в виде параметра `path`. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+ При отправке запроса службе данных [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] можно указать, что сущности, связанные с целевой сущностью, должны быть включены в возвращаемый поток. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> вызывается для <xref:System.Data.Services.Client.DataServiceQuery%601> для набора сущностей, заданного LINQ-запросом, при этом имя связанного набора сущностей предоставляется в виде параметра `path`. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).  
   
  В следующих примерах показаны эквивалентные способы использования метода <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> в запросе.  
   
@@ -212,7 +212,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 ## <a name="see-also"></a>См. также
 
-- [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Проекции запросов](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Материализация объектов](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)
+- [Проекции запросов](query-projections-wcf-data-services.md)
+- [Материализация объектов](object-materialization-wcf-data-services.md)
 - [Протокола Соглашения URI](https://go.microsoft.com/fwlink/?LinkID=185564)

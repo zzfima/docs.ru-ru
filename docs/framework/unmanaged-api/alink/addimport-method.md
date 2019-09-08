@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742239"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787665"
 ---
 # <a name="addimport-method"></a>Метод AddImport
-Добавляет импортирует в сборку.  
+Добавляет в сборку импорты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +40,25 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Уникальный идентификатор сборки, которую необходимо дополнить.  
+ Уникальный идентификатор сборки для дополнения.  
   
  `ImportToken`  
- Уникальный идентификатор, полученный из [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), файла для импорта.  
+ Уникальный идентификатор, полученный из [метода ImportFile](importfile-method.md)импортируемого файла.  
   
  `dwFlags`  
- Флаги FileDef COM +, таких как `ffContainsNoMetaData` и `ffWriteable`. `dwFlags` передается [метод DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ филедеф флаги, `ffContainsNoMetaData` такие `ffWriteable`как и. `dwFlags`передается [методу дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- Указатель на маркер, который получает идентификатор для результирующего файла.  
+ Указатель на токен, который получает идентификатор для результирующего файла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

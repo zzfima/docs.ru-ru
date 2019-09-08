@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 2a827e4909b18d9cca74fc20a2d83d2730ea0cd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952288"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790423"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Практическое руководство. Создание клиентских классов службы данных вручную (WCF Data Services)
-WCF Data Services интегрируется с Visual Studio, позволяя автоматически создавать классы клиентских служб данных при использовании диалогового окна **Добавление ссылки на службу** для добавления ссылки на службу данных в проекте Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Добавьте ссылку](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)на службу данных. Эти же клиентские классы службы данных можно сформировать и вручную с помощью программы для формирования кода `DataSvcUtil.exe`. Это средство, которое входит в состав WCF Data Services, создает классы .NET Framework из определения службы данных. Она также может использоваться для формирования классов службы данных из файла концептуальной модели (CSDL) и из файла EDMX, представляющего модель Entity Framework в проекте Visual Studio.
+WCF Data Services интегрируется с Visual Studio, позволяя автоматически создавать классы клиентских служб данных при использовании диалогового окна **Добавление ссылки на службу** для добавления ссылки на службу данных в проекте Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Добавьте ссылку](how-to-add-a-data-service-reference-wcf-data-services.md)на службу данных. Эти же клиентские классы службы данных можно сформировать и вручную с помощью программы для формирования кода `DataSvcUtil.exe`. Это средство, которое входит в состав WCF Data Services, создает классы .NET Framework из определения службы данных. Она также может использоваться для формирования классов службы данных из файла концептуальной модели (CSDL) и из файла EDMX, представляющего модель Entity Framework в проекте Visual Studio.
 
- Пример в этом разделе создает клиентские классы службы данных на основе образца службы данных Northwind. Эта служба создается при завершении краткого [руководства по WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Некоторые примеры в этом разделе требуют наличия файла концептуальной модели для модели Northwind. Дополнительные сведения см. в разделе [Практическое руководство. Используйте EdmGen. exe для создания файлов](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)модели и сопоставления. Некоторые примеры в этом разделе требуют наличия файла EDMX для модели Northwind. Дополнительные сведения см. в разделе [Общие сведения о файле EDMX](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
+ Пример в этом разделе создает клиентские классы службы данных на основе образца службы данных Northwind. Эта служба создается при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md). Некоторые примеры в этом разделе требуют наличия файла концептуальной модели для модели Northwind. Дополнительные сведения см. в разделе [Практическое руководство. Используйте EdmGen. exe для создания файлов](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)модели и сопоставления. Некоторые примеры в этом разделе требуют наличия файла EDMX для модели Northwind. Дополнительные сведения см. в разделе [Общие сведения о файле EDMX](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Формирование классов C#, поддерживающих привязку данных
 
@@ -95,6 +95,6 @@ WCF Data Services интегрируется с Visual Studio, позволяя 
 
 ## <a name="see-also"></a>См. также
 
-- [Создание библиотеки клиентов службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [Практическое руководство. Добавить ссылку на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
-- [Служебная программа клиента службы данных WCF (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+- [Создание библиотеки клиентов службы данных](generating-the-data-service-client-library-wcf-data-services.md)
+- [Практическое руководство. Добавить ссылку на службу данных](how-to-add-a-data-service-reference-wcf-data-services.md)
+- [Служебная программа клиента службы данных WCF (DataSvcUtil.exe)](wcf-data-service-client-utility-datasvcutil-exe.md)

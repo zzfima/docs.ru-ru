@@ -2,12 +2,12 @@
 title: Задание пользовательского алгоритма шифрования
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4b3da82087a6daade9d6b939f3e1aac628cb01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768710"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796888"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Задание пользовательского алгоритма шифрования
 WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей. Для этого выполните следующие действия.  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- В разделе <`cryptoClasses`> создает сопоставление между поставщиком SHA256CryptoServiceProvider и псевдонимом «SHA256CSP». <`nameEntry`> Создает сопоставление между псевдонимом «SHA256CSP» и указанным URL-адрес (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ В разделе элемента > <`cryptoClasses`создается сопоставление между SHA256CryptoServiceProvider и псевдонимом «SHA256CSP». Элемент >`nameEntry`< создает сопоставление между псевдонимом "SHA256CSP" и указанным URL-адресом (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Для регистрации пользовательского алгоритма в коде используйте метод <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Этот метод создает и оба сопоставления. В следующем примере показано, как вызвать этот метод.  
   
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- Полный пример кода, см. в разделе [криптографическая гибкость в системе безопасности WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) образца.  
+ Полный пример кода см. в разделе [гибкость криптографии в WCF Security](../samples/cryptographic-agility-in-wcf-security.md) .  
   
 ## <a name="see-also"></a>См. также
 
-- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Защита служб](../../../../docs/framework/wcf/securing-services.md)
-- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Защита служб и клиентов](../feature-details/securing-services-and-clients.md)
+- [Защита служб](../securing-services.md)
+- [Общие сведения о безопасности](../feature-details/security-overview.md)
+- [Основные понятия безопасности](../feature-details/security-concepts.md)

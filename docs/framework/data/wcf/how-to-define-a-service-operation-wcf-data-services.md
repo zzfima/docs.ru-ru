@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение операции службы (службы данных WCF)
+title: Практическое руководство. Определение операции службы (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: dbd14ba9ed24fb3f18946e817f61f8cbf2e9b1b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936556"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780087"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Практическое руководство. Определение операции службы (службы данных WCF)
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Практическое руководство. Определение операции службы (WCF Data Services)
 
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляют методы, определенные на сервере, в качестве операций службы. Операции службы позволяют службе данных предоставить доступ через URI-адрес метода, который определен на сервере. Чтобы определить операцию службы, примените [`WebGet]` или `[WebInvoke]` к методу атрибут. Для поддержки операторов запросов операция службы должна возвращать <xref:System.Linq.IQueryable%601> экземпляра. Операции службы могут обращаться к базовому источнику данных через свойство <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> объекта <xref:System.Data.Services.DataService%601>. Дополнительные сведения см. в разделе [операций службы](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).
+Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляют методы, определенные на сервере, в качестве операций службы. Операции службы позволяют службе данных предоставлять доступ через универсальный код ресурса (URI) к методу, определенному на сервере. Чтобы определить операцию службы, примените к методу `[WebInvoke]` атрибут [`WebGet]` или. Для поддержки операторов запросов операция службы должна возвращать <xref:System.Linq.IQueryable%601> экземпляр. Операции службы могут обращаться к базовому источнику данных через свойство <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> объекта <xref:System.Data.Services.DataService%601>. Дополнительные сведения см. в разделе [операции службы](service-operations-wcf-data-services.md).
 
-Пример в этом разделе определяет операцию службы с именем `GetOrdersByCity`, возвращающую фильтрованный экземпляр <xref:System.Linq.IQueryable%601>`Orders` и связанные объекты `Order_Details`. Пример обращается к экземпляру <xref:System.Data.Objects.ObjectContext>, являющемуся источником данных для образца службы данных Northwind. Эта служба создается после завершения [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+Пример в этом разделе определяет операцию службы с именем `GetOrdersByCity`, возвращающую фильтрованный экземпляр <xref:System.Linq.IQueryable%601>`Orders` и связанные объекты `Order_Details`. Пример обращается к экземпляру <xref:System.Data.Objects.ObjectContext>, являющемуся источником данных для образца службы данных Northwind. Эта служба создается при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).
 
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Определение операции службы в службе данных Northwind
 
@@ -57,4 +57,4 @@ ms.locfileid: "61936556"
 
 ## <a name="see-also"></a>См. также
 
-- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Определение служб данных WCF](defining-wcf-data-services.md)

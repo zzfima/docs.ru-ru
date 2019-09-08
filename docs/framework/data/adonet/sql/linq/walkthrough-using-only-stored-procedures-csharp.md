@@ -2,19 +2,19 @@
 title: Пошаговое руководство. Применение только хранимых процедур (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 69419dd5bb49c2e47315d0079df3a7b575ad9afd
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: f980402c976db9ee327a7b726e36a0a4d9d6d73f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971778"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792107"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Пошаговое руководство. Применение только хранимых процедур (C#)
 
 В данном пошаговом руководстве представлен основной полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для получения доступа к данным, выполняя только хранимые процедуры. Этот метод часто используется администраторами баз данных для ограничения способов получения доступа к хранилищам данных.
 
 > [!NOTE]
-> Хранимые процедуры можно также использовать в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для переопределения поведения по умолчанию, особенно для процессов `Create`, `Update` и `Delete`. Дополнительные сведения см. в разделе [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).
+> Хранимые процедуры можно также использовать в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для переопределения поведения по умолчанию, особенно для процессов `Create`, `Update` и `Delete`. Дополнительные сведения см. в разделе [Настройка операций вставки, обновления и удаления](customizing-insert-update-and-delete-operations.md).
 
 Для целей данного пошагового руководства будут использованы два метода, которые были сопоставлены с хранимыми процедурами в образце базы данных Northwind: CustOrdersDetail и CustOrderHist. Сопоставление осуществляется при запуске программы командной строки SQLMetal для создания файла C#. Дополнительные сведения см. в разделе "Предварительные требования" далее в этом руководстве.
 
@@ -32,7 +32,7 @@ ms.locfileid: "68971778"
 
 - Наличие учебной базы данных Northwind.
 
-     Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest7.
+     Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка образцов баз данных](downloading-sample-databases.md). После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest7.
 
 - Наличие файла кода C#, созданного из базы данных Northwind.
 
@@ -40,7 +40,7 @@ ms.locfileid: "68971778"
 
      **SQLMetal/Code: "c:\linqtest7\northwind.cs"/Language: CSharp "c:\linqtest7\northwnd.mdf"/спрокс/функтионс/плурализе**
 
-     Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).
+     Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md).
 
 ## <a name="overview"></a>Обзор
 
@@ -66,7 +66,7 @@ ms.locfileid: "68971778"
 
 1. В меню **файл** Visual Studio наведите указатель на пункт **создать**и выберите пункт **проект**.
 
-2. В области **типы проектов** диалогового окна **Новый проект** нажмите кнопку визуальный **C#** элемент.
+2. В области **типы проектов** диалогового окна **Новый проект** нажмите кнопку **визуальный C#** элемент.
 
 3. Выберите **Приложение Windows Forms** в области **Шаблоны**.
 
@@ -199,5 +199,5 @@ ms.locfileid: "68971778"
 
 ## <a name="see-also"></a>См. также
 
-- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Обучение с использованием пошаговых руководств](learning-by-walkthroughs.md)
+- [Хранимые процедуры](stored-procedures.md)

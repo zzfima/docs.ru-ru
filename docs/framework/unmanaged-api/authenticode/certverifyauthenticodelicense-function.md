@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8736da6c8db876b3dadb3b906a586633be176cf6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 3d8ab96c758b946684af78bfa21822fdaf96530a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038329"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786969"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>Функция CertVerifyAuthenticodeLicense
 Проверяет правильность лицензии Authenticode XrML.  
@@ -53,20 +53,20 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- [из] Для получения сведений о подписавшем. Если лицензия не подписана, переменной `dwError` присваивается значение TRUST_E_NOSIGNATURE. Он отвечает за освобождение ресурсов с помощью функции [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) после использования.  
+ [из] Для получения сведений о подписавшем. Если лицензия не подписана, переменной `dwError` присваивается значение TRUST_E_NOSIGNATURE. Он отвечает за освобождение ресурсов с помощью функции [CertFreeAuthenticodeSignerInfo](certfreeauthenticodesignerinfo-function.md) после использования.  
   
- См. раздел [Структура AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).  
+ См. раздел [Структура AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md).  
   
  `pTimestamperInfo`  
- [из] Для получения сведений об отметке времени (если есть). Если отметки времени для лицензии не установлены, переменной `dwError` присваивается значение TRUST_E_NOSIGNATURE. Он отвечает за освобождение ресурсов с помощью функции [цертфриаусентикодетиместамперинфо](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) после использования.  
+ [из] Для получения сведений об отметке времени (если есть). Если отметки времени для лицензии не установлены, переменной `dwError` присваивается значение TRUST_E_NOSIGNATURE. Он отвечает за освобождение ресурсов с помощью функции [цертфриаусентикодетиместамперинфо](certfreeauthenticodetimestamperinfo-function.md) после использования.  
   
- См. раздел [Структура AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).  
+ См. раздел [Структура AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение `S_OK` в случае успешного выполнения. В противном случае возвращается код ошибки.  
   
 ## <a name="see-also"></a>См. также
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
-- [Метод GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Authenticode](index.md)
+- [Метод GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

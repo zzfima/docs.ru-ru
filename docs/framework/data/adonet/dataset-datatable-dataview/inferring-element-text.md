@@ -2,12 +2,12 @@
 title: Определение текста элемента
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203532"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784537"
 ---
 # <a name="inferring-element-text"></a>Определение текста элемента
 Если элемент содержит текст и не имеет дочерних элементов, которые должны выводиться как таблицы (например, элементы с атрибутами или повторяющиеся элементы), в таблицу, выводимую для элемента, будет добавлен новый столбец с именем **TableName_Text** . Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце. Свойству **ColumnMapping** нового столбца будет присвоено значение **MappingType. SimpleContent**.  
@@ -57,4 +57,4 @@ ms.locfileid: "70203532"
 - [Загрузка сведений о схеме DataSet из XML](loading-dataset-schema-information-from-xml.md)
 - [Использование XML в наборах данных](using-xml-in-a-dataset.md)
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

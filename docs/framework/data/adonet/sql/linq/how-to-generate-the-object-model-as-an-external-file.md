@@ -2,15 +2,15 @@
 title: Практическое руководство. Как создать модель объектов в виде внешнего файла
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 7451dfbaf85c1cbd4635ae0cce1219853a2b01a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911941"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793588"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Практическое руководство. Как создать модель объектов в виде внешнего файла
-В качестве альтернативы сопоставления на основе атрибутов с помощью инструмента командной строки SQLMetal можно создать собственную объектную модель в виде внешнего файла XML. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). За счет использования внешнего XML-файла сопоставления можно снизить перегруженность кода. Кроме того, можно изменить поведение, отредактировав внешний файл без повторной компиляции двоичных файлов приложения. Дополнительные сведения см. в разделе [внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+В качестве альтернативы сопоставления на основе атрибутов с помощью инструмента командной строки SQLMetal можно создать собственную объектную модель в виде внешнего файла XML. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md). За счет использования внешнего XML-файла сопоставления можно снизить перегруженность кода. Кроме того, можно изменить поведение, отредактировав внешний файл без повторной компиляции двоичных файлов приложения. Дополнительные сведения см. в разделе [внешнее сопоставление](external-mapping.md).  
   
 > [!NOTE]
 > Реляционный конструктор объектов не поддерживает создание файла внешнего сопоставления.  
@@ -50,6 +50,6 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
   
 ## <a name="see-also"></a>См. также
 
-- [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Практическое руководство. Создание модели объектов на языке Visual Basic или C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Создание модели объектов](creating-the-object-model.md)
+- [Внешнее сопоставление](external-mapping.md)
+- [Практическое руководство. Создание модели объектов на языке Visual Basic или C#](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

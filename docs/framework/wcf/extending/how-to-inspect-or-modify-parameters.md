@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651128"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795596"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Практическое руководство. Проверка или изменение параметров
-Вы может проверять или изменять входящие или исходящие сообщения для отдельной операции в объект клиента Windows Communication Foundation (WCF) или службы WCF, реализовав <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> интерфейса и его вставки в среду выполнения клиента или службы. Как правило, для добавления инспекторов параметров для отдельной операции используется поведение операции; другие поведения могут использоваться для обеспечения быстрого доступа к среде выполнения в более широкой области действия. Дополнительные сведения см. в разделе [расширение клиенты](../../../../docs/framework/wcf/extending/extending-clients.md) и [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+Вы можете проверить или изменить входящие или исходящие сообщения для одной операции в клиентском объекте Windows Communication Foundation (WCF) или WCF, реализовав <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> интерфейс и вставив его в клиентскую среду или службу среды выполнения службы. Как правило, для добавления инспекторов параметров для отдельной операции используется поведение операции; другие поведения могут использоваться для обеспечения быстрого доступа к среде выполнения в более широкой области действия. Дополнительные сведения см. в разделе [расширение клиентов](extending-clients.md) и [Расширение диспетчеров](extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Проверка или изменение параметров  
   
@@ -21,7 +21,7 @@ ms.locfileid: "64651128"
   
 2. Реализуйте поведение <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> (в зависимости от того, какая требуется область действия), чтобы добавить инспектор параметров в свойство <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType>.  
   
-3. Вставьте поведение до вызова метода <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> в производство каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3. Вставьте поведение до вызова метода <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> в производство каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. [в разделе Настройка и расширение среды выполнения с помощью поведений](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Пример  
  В следующих примерах кода показаны, по порядку:  
@@ -42,4 +42,4 @@ ms.locfileid: "64651128"
   
 ## <a name="see-also"></a>См. также
 
-- [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Настройка и расширение среды выполнения с помощью поведений](configuring-and-extending-the-runtime-with-behaviors.md)

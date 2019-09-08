@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930848"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799319"
 ---
 # <a name="string-functions-visual-basic"></a>Строковые функции (Visual Basic)
-В следующей таблице перечислены функции, которые Visual Basic предоставляет для поиска и работы со строками.  
+
+В следующей таблице перечислены функции, которые Visual Basic предоставляет в <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> классе для поиска и работы со строками. Их можно рассматривать как Visual Basic встроенных функций; то есть вам не нужно вызывать их как явные члены класса, как показано в примерах. Дополнительные методы и в некоторых случаях дополняют методы, доступны в <xref:System.String?displayProperty=nameWithType> классе. 
   
 |Метод .NET Framework|Описание|  
 |---------------------------|-----------------|  
@@ -48,33 +49,38 @@ ms.locfileid: "69930848"
   
  Можно использовать инструкцию [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) , чтобы задать, сравниваются ли строки с использованием порядка сортировки текста без учета регистра, определенного языковым стандартом системы`Text`() или внутренними двоичными представлениями символов (`Binary`). Метод сравнения текста по умолчанию — `Binary`.  
   
-## <a name="example"></a>Пример  
- В этом примере `UCase` функция возвращает версию строки в верхнем регистре.  
+## <a name="example-ucase"></a>Пример UCase
+
+В этом примере `UCase` функция возвращает версию строки в верхнем регистре.  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>Пример LTrim
+
+В этом примере `LTrim` функция используется для удаления начальных пробелов `RTrim` и функции для удаления конечных пробелов из строковой переменной. Она использует `Trim` функцию для удаления обоих типов пробелов.  
   
-## <a name="example"></a>Пример  
- В этом примере `LTrim` функция используется для удаления начальных пробелов `RTrim` и функции для удаления конечных пробелов из строковой переменной. Она использует `Trim` функцию для удаления обоих типов пробелов.  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>Пример Mid
+
+В этом примере `Mid` функция используется для возврата указанного числа символов из строки.  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>Пример Len
+
+В этом примере `Len` функция возвращает количество символов в строке.  
   
-## <a name="example"></a>Пример  
- В этом примере `Mid` функция используется для возврата указанного числа символов из строки.  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>Пример InStr
+
+В этом примере `InStr` функция используется для возврата места первого вхождения одной строки в другую.  
   
-## <a name="example"></a>Пример  
- В этом примере `Len` функция возвращает количество символов в строке.  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>Пример  
- В этом примере `InStr` функция используется для возврата места первого вхождения одной строки в другую.  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>Пример  
- В этом примере показаны различные способы применения `Format` функции для форматирования значений с использованием `String` обоих форматов и форматов, определяемых пользователем. Для`/`разделителя даты (), разделителя времени (`:`) и индикаторов AM/PM (`t` и `tt`) фактические отформатированные выходные данные, отображаемые системой, зависят от параметров языкового стандарта, используемых кодом. Если время и даты отображаются в среде разработки, используются короткий формат времени и короткий формат даты языкового стандарта кода.  
+## <a name="example-format"></a>Пример Формат
+
+В этом примере показаны различные способы применения `Format` функции для форматирования значений с использованием `String` обоих форматов и форматов, определяемых пользователем. Для`/`разделителя даты (), разделителя времени (`:`) и индикаторов AM/PM (`t` и `tt`) фактические отформатированные выходные данные, отображаемые системой, зависят от параметров языкового стандарта, используемых кодом. Если время и даты отображаются в среде разработки, используются короткий формат времени и короткий формат даты языкового стандарта кода.  
   
 > [!NOTE]
 > Для национальных настроек, в которых используется 24-часовой формат времени, индикаторы AM/PM`t` ( `tt`и) ничего не отображают.  
@@ -86,3 +92,4 @@ ms.locfileid: "69930848"
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
 - [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Сводка по работе со строками](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [Методы класса System. String]<xref:System.String#methods?displayProperty=nameWithType>

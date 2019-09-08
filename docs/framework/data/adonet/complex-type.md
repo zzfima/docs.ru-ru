@@ -2,34 +2,34 @@
 title: сложный тип
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: a6a7190a144280930d67f179373f29f6b19e98cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0d9b8efd08cc0dfba5b26a70773b614b0d63d74f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583663"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786747"
 ---
 # <a name="complex-type"></a>сложный тип
-Объект *сложного типа* — это шаблон для определения расширенных структурированных свойств в [типы сущностей](../../../../docs/framework/data/adonet/entity-type.md) или на других сложных типов. Каждый шаблон содержит следующие сведения.  
+*Сложный тип* — это шаблон для определения насыщенных структурированных свойств [типов сущностей](entity-type.md) или других сложных типов. Каждый шаблон содержит следующие сведения.  
   
 - Уникальное имя. (Обязательный атрибут).  
   
     > [!NOTE]
-    >  Имя сложного типа не может быть таким же, что и имя типа сущности внутри одного и того же пространства имени.  
+    > Имя сложного типа не может быть таким же, что и имя типа сущности внутри одного и того же пространства имени.  
   
-- Данные в виде одного или нескольких [свойства](../../../../docs/framework/data/adonet/property.md). (Необязательно.)  
+- Данные в форме одного или нескольких [свойств](property.md). (Необязательно.)  
   
     > [!NOTE]
-    >  Свойство сложного типа может быть другим сложным типом.  
+    > Свойство сложного типа может быть другим сложным типом.  
   
  Сложный тип похож на тип сущности тем, что сложный тип может содержать полезные данные в форме свойств примитивного типа или других сложных типов. Однако между сложными типами и типами сущности существуют некоторые ключевые различия.  
   
 - Сложные типы не имеют идентификаторов и поэтому не могут существовать независимо. Сложные типы могут существовать только как свойства типов сущностей или других сложных типов.  
   
-- Сложные типы не могут участвовать в [ассоциации](../../../../docs/framework/data/adonet/association-type.md). Ни один конец ассоциации может быть сложным типом и поэтому [свойства навигации](../../../../docs/framework/data/adonet/navigation-property.md) нельзя определить для сложных типов.  
+- Сложные типы не могут участвовать в [связях](association-type.md). Ни один из окончаний ассоциации не может быть сложным типом, поэтому [Свойства навигации](navigation-property.md) не могут быть определены для сложных типов.  
   
 ## <a name="example"></a>Пример  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Далее на языке CSDL определяется сложный тип, адрес со свойствами примитивного типа `StreetAddress`, `City`, `StateOrProvince`, `Country` и `PostalCode`.  
+ [Entity Framework ADO.NET](./ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](./ef/language-reference/csdl-specification.md)), для определения концептуальных моделей. Далее на языке CSDL определяется сложный тип, адрес со свойствами примитивного типа `StreetAddress`, `City`, `StateOrProvince`, `Country` и `PostalCode`.  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
@@ -39,5 +39,5 @@ ms.locfileid: "64583663"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Основные понятия модели EDM](entity-data-model-key-concepts.md)
+- [Сущностная модель данных](entity-data-model.md)

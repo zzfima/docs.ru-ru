@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 360e4a956aec74b6b71185d6acf2f4071d22e2ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a529cae724d24b47d856f86744eebe87d68cb158
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951211"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783310"
 ---
 # <a name="performance-counters-in-adonet"></a>Счетчики производительности в ADO.NET
 В ADO.NET 2.0 появилась расширенная поддержка счетчиков производительности, включая поддержку как <xref:System.Data.SqlClient>, так и <xref:System.Data.OracleClient>. Счетчики производительности <xref:System.Data.SqlClient> предыдущих версий ADO.NET устарели и заменены новыми счетчиками производительности, которые рассматриваются в этом разделе. Счетчики производительности ADO.NET можно использовать для контроля состояния приложения и используемых им ресурсов соединения. Показания счетчиков производительности можно отслеживать с помощью системного монитора Windows или получить к ним доступ программным путем с помощью класса <xref:System.Diagnostics.PerformanceCounter> в пространстве имен <xref:System.Diagnostics>.  
@@ -396,9 +396,9 @@ class Program
 
 ## <a name="see-also"></a>См. также
 
-- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Подключение к источнику данных](connecting-to-a-data-source.md)
+- [Организация пулов соединений OLE DB, ODBC и Oracle](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Счетчики производительности для ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Профилирование среды выполнения](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Профилирование среды выполнения](../../debug-trace-profile/runtime-profiling.md)
 - [Общие сведения о мониторинге пороговых значений производительности](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Общие сведения об ADO.NET](ado-net-overview.md)

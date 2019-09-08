@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2c5c3bbbcf3cf4b87a5f68006c1625666d13926
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753888"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796607"
 ---
 # <a name="iassemblynamegetname-method"></a>Метод IAssemblyName::GetName
-Получает простое и незашифрованное имя сборки, упоминаемой в этом [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта.  
+Возвращает простое незашифрованное имя сборки, на которую ссылается этот объект [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +38,18 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Параметры  
  `lpcwBuffer`  
- [in, out] Размер `pwzName` из расширенных символов, включая завершающий нуль-символ-символ.  
+ [вход, выход] Размер `pwzName` в расширенных символах, включая символ конца null.  
   
  `pwzName`  
- [out] Буфер для хранения имени сборки, на которую указывает ссылка.  
+ заполняет Буфер для хранения имени сборки, на которую указывает ссылка.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)

@@ -2,12 +2,12 @@
 title: Типизированные наборы данных
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 33876cb9f614a93cab2fa3fd9d056f94dd1e9038
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 7c8111e0e62a57b6745a5ea0387fc65a05839df8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203156"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785839"
 ---
 # <a name="typed-datasets"></a>Типизированные наборы данных
 Наряду с доступом к значениям с поздним связыванием через слабо типизированные переменные, в объекте <xref:System.Data.DataSet> предоставляется доступ к данным на основе принципа строгой типизации. Доступ к таблицам и столбцам, которые являются частью **набора данных** , можно получить с помощью понятных имен и строго типизированных переменных.  
@@ -26,4 +26,4 @@ ms.locfileid: "70203156"
 ## <a name="see-also"></a>См. также
 
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

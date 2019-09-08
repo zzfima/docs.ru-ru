@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 36839574ae8a8acd1cb56fa82ebcfa6bddb0c97e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203869"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785511"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Создание таблицы данных из объекта DataView
 После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если необходимо создать <xref:System.Data.DataTable> новый объект <xref:System.Data.DataView>из <xref:System.Data.DataView.ToTable%2A> , можно использовать метод, чтобы скопировать все строки и столбцы или подмножество данных в новый <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
@@ -209,4 +209,4 @@ Console.WriteLine();
 
 - <xref:System.Data.DataView.ToTable%2A>
 - [Объекты DataView](dataviews.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

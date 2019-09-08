@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026115adc01e7dcdac3012255f0378cff6348f89
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f984d44d0a8acb85562a58653dfd2882053a0ce
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780690"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799287"
 ---
 # <a name="gethashfromassemblyfile-function"></a>Функция GetHashFromAssemblyFile
 Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,31 +42,31 @@ HRESULT GetHashFromAssemblyFile (
   
 ## <a name="parameters"></a>Параметры  
  `szFilePath`  
- [in] Путь к файлу, хэширование которого требуется выполнить.  
+ окне Путь к файлу для хэширования.  
   
  `piHashAlg`  
- [in, out] Константа, указывающая хэш-алгоритм. Использовать нуль для хэш-алгоритм по умолчанию.  
+ [вход, выход] Константа, указывающая хэш-алгоритм. Для алгоритма хэширования по умолчанию используется нуль.  
   
  `pbHash`  
- [out] Буфер, возвращенный хэша.  
+ заполняет Возвращаемый буфер хэша.  
   
  `cchHash`  
- [in] Запрошенный максимальный размер `pbHash`.  
+ окне Запрошенный максимальный размер `pbHash`.  
   
  `pchHash`  
- [out] Размер в байтах, возвращенное `pbHash`.  
+ заполняет Возвращаемый размер (в байтах) `pbHash`для.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [Метод GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [Метод GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

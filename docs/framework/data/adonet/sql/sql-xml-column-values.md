@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 29e9ac5b95b62ef2a4467bf41484c3740d550abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03b09d3a53c725bb0e84ba6b5d98944267bc564c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780802"
 ---
 # <a name="sql-xml-column-values"></a>Значения столбцов XML SQL
 SQL Server поддерживает `xml` тип данных, и разработчики могут извлекать результирующие наборы, включая этот тип, с помощью <xref:System.Data.SqlClient.SqlCommand> стандартного поведения класса. Значения столбца `xml` извлекаются точно так же, как и значения любого столбца (например, в <xref:System.Data.SqlClient.SqlDataReader>), но если с содержимым этого столбца необходимо работать в формате XML, то следует использовать <xref:System.Xml.XmlReader>.  
@@ -27,5 +27,5 @@ SQL Server поддерживает `xml` тип данных, и разрабо
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [Данные XML в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Данные XML в SQL Server](xml-data-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

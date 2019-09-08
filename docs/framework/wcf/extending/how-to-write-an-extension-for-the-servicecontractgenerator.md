@@ -2,12 +2,12 @@
 title: Практическое руководство. Разработка расширения для ServiceContractGenerator
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b13b881a221ae0aa757b04c206125716a55f5b8c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767004"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795523"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Практическое руководство. Разработка расширения для ServiceContractGenerator
 В этом разделе описывается, как разработать расширение для <xref:System.ServiceModel.Description.ServiceContractGenerator>. Это можно сделать путем реализации интерфейса <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> для поведения операции или интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта. Здесь показана реализация интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта.  
@@ -100,5 +100,5 @@ ms.locfileid: "61767004"
   
 ## <a name="see-also"></a>См. также
 
-- [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Практическое руководство. Импорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Метаданные](../feature-details/metadata.md)
+- [Практическое руководство. Импорт пользовательского WSDL](how-to-import-custom-wsdl.md)

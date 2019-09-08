@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 391c071f19149e9690c9121b1094aef5bfa605cd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3e1c31dac458594eee70ddd99469aca7cf63b848
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203841"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785484"
 ---
 # <a name="creating-a-dataview"></a>Создание DataView
 Есть два способа создания представления данных <xref:System.Data.DataView>. Можно использовать конструктор **DataView** или можно создать ссылку на <xref:System.Data.DataTable.DefaultView%2A> свойство объекта. <xref:System.Data.DataTable> Конструктор **DataView** может быть пустым или может принимать либо **DataTable** в виде одного аргумента, либо **DataTable** вместе с условиями фильтра, критерием сортировки и фильтром состояния строки. Дополнительные сведения о дополнительных аргументах, доступных для использования с **DataView**, см. в разделе [Сортировка и фильтрация данных](sorting-and-filtering-data.md).  
@@ -19,7 +19,7 @@ ms.locfileid: "70203841"
   
  Обратите внимание, что при создании **DataView** с помощью конструктора, который не принимает никаких аргументов, вы не сможете использовать **DataView** до тех пор, пока не будет задано свойство **Table** .  
   
- В следующем примере кода показано, как создать объект **DataView** с помощью конструктора **DataView** . **RowFilter**, столбец **сортировки** и **DataViewRowState** предоставляются вместе с таблицей данных.  
+ В следующем примере кода показано, как создать объект **DataView** с помощью конструктора **DataView** . **RowFilter**, столбец **сортировки** и **DataViewRowState** предоставляются вместе с **таблицей**данных.  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -52,4 +52,4 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
 - [Объекты DataView](dataviews.md)
 - [Сортировка и фильтрация данных](sorting-and-filtering-data.md)
 - [DataTables](datatables.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Авторизация и разрешения в SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918102"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782590"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Авторизация и разрешения в SQL Server
 После создания объектов базы данных необходимо явно предоставить разрешения, чтобы сделать их доступными для пользователей. Каждый защищаемый объект имеет разрешения, которые могут быть предоставлены участнику с помощью инструкций разрешения.  
@@ -60,9 +60,9 @@ ms.locfileid: "69918102"
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Роли сервера и базы данных в SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Владение и отделение пользователей от схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)
+- [Проверка подлинности в SQL Server](authentication-in-sql-server.md)
+- [Роли сервера и базы данных в SQL Server](server-and-database-roles-in-sql-server.md)
+- [Владение и отделение пользователей от схем в SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

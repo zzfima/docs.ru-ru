@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a56785d84a07122080efda22d41ec43721474789
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778562"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795262"
 ---
-# <a name="asmcmpflags-enumeration"></a>Перечисление ASM_CMP_FLAGS
-Указывает версии, сборки, язык и региональные параметры и т. д., сборок, сравнить с [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) метод.  
+# <a name="asm_cmp_flags-enumeration"></a>Перечисление ASM_CMP_FLAGS
+Указывает версию, сборку, язык и региональные параметры, сигнатуру и т. д. для двух сборок, сравниваемых методом [IAssemblyName:: Equals](iassemblyname-isequal-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,15 +68,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Перечисления Fusion](fusion-enumerations.md)

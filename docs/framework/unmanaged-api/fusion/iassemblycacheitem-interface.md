@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697983"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796707"
 ---
 # <a name="iassemblycacheitem-interface"></a>Интерфейс IAssemblyCacheItem
-Представляет одну сборку в глобальный кэш сборок.  
+Представляет отдельную сборку в глобальном кэше сборок.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод AbortItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Позволяет сборку в глобальный кэш сборок для выполнения операции очистки, перед выпуском.|  
-|[Метод Commit](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Фиксирует ссылки на сборку, кэшированных в памяти.|  
-|[Метод CreateStream](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Создает поток с указанным именем и формат.|  
+|[Метод AbortItem](iassemblycacheitem-abortitem-method.md)|Позволяет сборке в глобальном кэше сборок выполнять операции очистки до ее освобождения.|  
+|[Метод Commit](iassemblycacheitem-commit-method.md)|Фиксирует в памяти ссылку на кэшированную сборку.|  
+|[Метод CreateStream](iassemblycacheitem-createstream-method.md)|Создает поток с указанными именем и форматом.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
-- [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Глобальный кэш сборок](../../app-domains/gac.md)
+- [Интерфейс IAssemblyCache](iassemblycache-interface.md)

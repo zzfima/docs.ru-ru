@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778724"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796786"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Метод IAssemblyCache::QueryAssemblyInfo
-Получает запрашиваемые данные об указанной сборки.  
+Возвращает запрошенные данные о указанной сборке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,25 +39,25 @@ HRESULT QueryAssemblyInfo (
   
 ## <a name="parameters"></a>Параметры  
  `dwFlags`  
- [in] Флаги, определенные в Fusion.idl. Поддерживаются следующие значения:  
+ окне Флаги, определенные в Fusion. idl. Поддерживаются следующие значения:  
   
 - QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
 - QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in] Имя сборки, для которого будут извлечены данные.  
+ окне Имя сборки, для которой будут получены данные.  
   
  `pAsmInfo`  
- [in, out] [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) структура, содержащая данные о сборке.  
+ [вход, выход] Структура [ASSEMBLY_INFO](assembly-info-structure.md) , содержащая данные о сборке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Интерфейс IAssemblyCache](iassemblycache-interface.md)

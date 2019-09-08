@@ -2,12 +2,12 @@
 title: объявляемая моделью функция
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943916"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794796"
 ---
 # <a name="model-declared-function"></a>объявляемая моделью функция
 *Объявленная моделью функция* — это функция, объявленная в концептуальной модели, но не определенная в этой концептуальной модели. Функция может быть определена в среде размещения или хранения. Например, объявляемая моделью функция может быть сопоставлена функции, определенной в базе данных, экспонируя таким образом функцию в концептуальной модели на стороне сервера.  
@@ -30,5 +30,5 @@ ms.locfileid: "69943916"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Основные понятия модели EDM](entity-data-model-key-concepts.md)
+- [Сущностная модель данных](entity-data-model.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: fc6fafa474805c2644bb2deabdceed192776ac76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de7109e0fed0eb7c1975ad7360a7588ef9b294ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938755"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793142"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Практическое руководство. Как указать, для каких элементов тестируется возникновение конфликтов параллелизма
 Примените одно из трех перечислений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] к <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> свойству <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибута, чтобы указать, какие элементы должны включаться в проверки обновления для обнаружения конфликтов оптимистичного параллелизма.  
   
- Свойство <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> (сопоставляемое во время разработки) используется в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] вместе с возможностями параллелизма времени выполнения. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+ Свойство <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> (сопоставляемое во время разработки) используется в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] вместе с возможностями параллелизма времени выполнения. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > Если ни одному члену не присвоено значение `IsVersion=true`, исходные значения членов сравниваются с текущим состоянием базы данных. Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
@@ -48,5 +48,5 @@ ms.locfileid: "69938755"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Внесение и отправка изменений данных](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Практическое руководство. Управление конфликтами изменений](how-to-manage-change-conflicts.md)
+- [Внесение и отправка изменений данных](making-and-submitting-data-changes.md)

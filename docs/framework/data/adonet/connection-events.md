@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e958c96e304962dace72e90b9266b57943f01ac9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949565"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785733"
 ---
 # <a name="connection-events"></a>События подключения
 Все поставщики данных .NET Framework имеют объекты **соединения** с двумя событиями, которые можно использовать для получения информационных сообщений из источника данных или для определения, изменилось ли состояние **соединения** . В следующей таблице описаны события объекта **Connection** .  
@@ -107,5 +107,5 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>См. также
 
-- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Подключение к источнику данных](connecting-to-a-data-source.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

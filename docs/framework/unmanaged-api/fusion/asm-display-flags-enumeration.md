@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70b40095ffcfea37414b7de2a678ad8555423b12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8befdb454a564ec834532653dd44cf230fa43d79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778556"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795218"
 ---
-# <a name="asmdisplayflags-enumeration"></a>Перечисление ASM_DISPLAY_FLAGS
-Указывает версию, сборки, язык и региональные параметры, подпись и т. д., сборки, отображаемое имя будет использоваться [IAssemblyName::GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) метод.  
+# <a name="asm_display_flags-enumeration"></a>Перечисление ASM_DISPLAY_FLAGS
+Указывает версию, сборку, язык и региональные параметры, сигнатуру и т. д. для сборки, отображаемое имя которого будет извлечено методом [IAssemblyName:: DisplayName](iassemblyname-getdisplayname-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,18 +52,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `ASM_DISPLAYF_FULL` отражает все изменения, внесенные в версию [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта. Не следует предполагать, что возвращаемое значение является неизменяемым.  
+ `ASM_DISPLAYF_FULL`отражает все изменения, внесенные в версию объекта [IAssemblyName](iassemblyname-interface.md) . Не считайте, что возвращаемое значение является неизменяемым.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Перечисления Fusion](fusion-enumerations.md)

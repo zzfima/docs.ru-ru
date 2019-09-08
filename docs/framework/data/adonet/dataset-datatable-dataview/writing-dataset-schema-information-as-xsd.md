@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f86e9100489ddf35d8ef5f98e386306a7dbfd4ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204367"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784180"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Запись сведений о схеме набора данных как XSD
 Можно записать схему набора данных <xref:System.Data.DataSet> в виде схемы на языке XSD, чтобы можно было передать ее в XML-документ с взаимосвязанными данными или без них. XML-схема может быть записана в файл, в поток, <xref:System.Xml.XmlWriter>в или строку; она полезна для создания строго типизированного **набора данных**. Дополнительные сведения о строго типизированных объектах DataSet см. в разделе [типизированные наборы](typed-datasets.md) **данных** .  
@@ -39,7 +39,7 @@ dataSet.WriteXmlSchema(writer);
 writer.Close();  
 ```  
   
- Чтобы получить схему **набора данных** и записать ее в виде строки XML-схемы, используйте метод GetString , как показано в следующем примере.  
+ Чтобы получить схему **набора данных** и записать ее в виде строки XML-схемы, **используйте метод GetString** , как показано в следующем примере.  
   
 ```vb  
 Dim schemaString As String = dataSet.GetXmlSchema()  
@@ -55,4 +55,4 @@ string schemaString = dataSet.GetXmlSchema();
 - [Запись содержимого DataSet как данных XML](writing-dataset-contents-as-xml-data.md)
 - [Типизированные наборы данных](typed-datasets.md)
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

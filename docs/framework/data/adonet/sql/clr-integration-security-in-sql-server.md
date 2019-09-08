@@ -2,12 +2,12 @@
 title: Безопасность интеграции CLR в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4756d13ff52a4c55b48c3ea56d26111029c8a7e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878492"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794568"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Безопасность интеграции CLR в SQL Server
 Microsoft SQL Server обеспечивает интеграцию компонентов среды CLR платформы .NET Framework. Интеграция со средой CLR позволяет записывать хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции и потоковые возвращающие табличное значение функции, используя любой язык NET Framework, например Microsoft Visual Basic .NET или Microsoft Visual C#.  
@@ -17,14 +17,14 @@ Microsoft SQL Server обеспечивает интеграцию компон�
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения об интеграции со средой CLR в SQL Server см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Resource|Описание|  
 |--------------|-----------------|  
-|[Управление доступом для кода](../../../../../docs/framework/misc/code-access-security.md)|Содержит подразделы, описывающие средства CAS на платформе .NET Framework.|  
+|[Управление доступом для кода](../../../misc/code-access-security.md)|Содержит подразделы, описывающие средства CAS на платформе .NET Framework.|  
 |[Безопасность интеграции со средой CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Содержит обсуждение модели безопасности для управляемого кода, выполняемого внутри SQL Server.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Интеграция среды CLR и SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
-- [Общие сведения об ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)
+- [Интеграция среды CLR и SQL Server](sql-server-common-language-runtime-integration.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

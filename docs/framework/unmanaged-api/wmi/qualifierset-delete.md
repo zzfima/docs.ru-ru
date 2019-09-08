@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782600"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798333"
 ---
-# <a name="qualifiersetdelete-function"></a>Функция QualifierSet_Delete
+# <a name="qualifierset_delete-function"></a>Функция QualifierSet_Delete
 Удаляет указанный квалификатор по имени.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,39 +41,39 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`  
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`   
-[in] Указатель на [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) экземпляра.
+окне Указатель на экземпляр [ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`   
-[in] Имя квалификатора, которое необходимо удалить.
+окне Имя удаляемого квалификатора.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр `wszName`. |
-|`WBEM_E_INVALID_OPERATION` | 0x80041016 | Удаление этот квалификатор является недопустимым. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Не удалось найти заданного квалификатора. |
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Локальное переопределение был удален, и исходный квалификатор из родительского объекта была возобновлена области. |
+|`WBEM_E_INVALID_OPERATION` | 0x80041016 | Удаление этого квалификатора недопустимо. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный квалификатор не найден. |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Локальное переопределение удалено, и исходный квалификатор из родительского объекта возобновил область. |
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) метод.
+Эта функция создает оболочку для вызова метода [ивбемкуалифиерсет::D удалить](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-Из-за правила распространения квалификатор определенного квалификатор может были унаследованную от другого объекта и просто переопределен в текущем классе или экземпляре. В этом случае `QualifierSet_Delete` метод сбрасывает квалификатор унаследованные исходное значение. В этом случае, функция возвращает код состояния `WBEM_S_RESET_TO_DEFAULT`.
+Из-за правил распространения квалификаторов определенный квалификатор может быть унаследован от другого объекта и просто переопределен в текущем классе или экземпляре. В этом случае `QualifierSet_Delete` метод сбрасывает квалификатор до исходного наследуемого значения. Функция в этом случае возвращает код `WBEM_S_RESET_TO_DEFAULT`состояния.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

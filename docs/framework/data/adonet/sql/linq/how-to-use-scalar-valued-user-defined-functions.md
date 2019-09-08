@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: 0d757e3c37f347014eb2ef90b4e61ddd205dd012
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938669"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781472"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Практическое руководство. Как применять определяемые пользователем скалярные функции
 Для сопоставления клиентского метода, определенного в классе, с пользовательской функцией используется атрибут <xref:System.Data.Linq.Mapping.FunctionAttribute>. Обратите внимание, что тело метода создает выражение, перехватывающее назначение вызова метода, и передает это выражение в <xref:System.Data.Linq.DataContext> для преобразования и выполнения.  
   
 > [!NOTE]
-> Прямое выполнение возможно только при вызове функции вне запроса. Дополнительные сведения см. в разделе [Практическое руководство. Вызывайте определяемые пользователем функции в](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)строке.  
+> Прямое выполнение возможно только при вызове функции вне запроса. Дополнительные сведения см. в разделе [Практическое руководство. Вызывайте определяемые пользователем функции в](how-to-call-user-defined-functions-inline.md)строке.  
   
 ## <a name="example"></a>Пример  
  В следующем коде SQL представлена скалярная пользовательская функция `ReverseCustName()`.  
@@ -39,4 +39,4 @@ END
   
 ## <a name="see-also"></a>См. также
 
-- [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [Определяемые пользователем функции](user-defined-functions.md)

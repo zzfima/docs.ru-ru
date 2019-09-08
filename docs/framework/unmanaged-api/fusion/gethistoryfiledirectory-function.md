@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778654"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796847"
 ---
 # <a name="gethistoryfiledirectory-function"></a>Функция GetHistoryFileDirectory
-Извлекает путь к каталогу журнала приложения.  
+Возвращает путь к каталогу журнала приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>Параметры  
  `wzDir`  
- [out] Буфер для хранения пути к каталогу журнала приложения.  
+ заполняет Буфер для хранения пути к каталогу журнала приложения.  
   
  `pdwSize`  
- [in, out] Длина буфера.  
+ [вход, выход] Длина буфера.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, а также следующие значения.  
+ Этот метод возвращает коды стандартных ошибок COM, как определено в файле WinError. h, а также следующие значения.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`wzDir` или `pdwSize` имеет значение null, или версии Неверная строка.|  
+|E_INVALIDARG|`wzDir`или `pdwSize` имеет значение null, или строка версии неверна.|  
   
 ## <a name="remarks"></a>Примечания  
- При успешном завершении `pdwSize` аргумент имеет значение длины строки пути.  
+ При успешном завершении `pdwSize` аргументу присваивается длина строки пути.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Fusion.dll и "Mscorwks.dll". Используйте Fusion.dll вместо "Mscorwks.dll", чтобы обеспечить целевых правильную версию платформы .NET Framework.  
+ **Библиотечная** Fusion. dll и mscorwks. dll. Используйте Fusion. dll вместо Mscorwks. dll, чтобы обеспечить правильную версию .NET Framework.  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Функция CreateHistoryReader](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [Функция NukeDownloadedCache](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Функция CreateHistoryReader](createhistoryreader-function.md)
+- [Функция NukeDownloadedCache](nukedownloadedcache-function.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

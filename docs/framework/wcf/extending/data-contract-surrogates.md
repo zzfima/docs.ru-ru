@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587509"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797203"
 ---
 # <a name="data-contract-surrogates"></a>Суррогаты контрактов данных
-Контракт данных *суррогат* является дополнительным, построенных на основе модели контракта данных. Эта возможность предназначена для настройки и подстановки типов, когда необходимо изменить способ сериализации типа, десериализации или преобразования типа в метаданные. Например, суррогат может использоваться в сценариях, когда для типа не задан контракт данных, поля и свойства не помечены атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute> или пользователи хотят динамически создавать вариации схемы.  
+*Суррогат* контракта данных — это расширенная функция, созданная на основе модели контракта данных. Эта возможность предназначена для настройки и подстановки типов, когда необходимо изменить способ сериализации типа, десериализации или преобразования типа в метаданные. Например, суррогат может использоваться в сценариях, когда для типа не задан контракт данных, поля и свойства не помечены атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute> или пользователи хотят динамически создавать вариации схемы.  
   
  Сериализация и десериализация выполняются с суррогатом контракта данных при использовании <xref:System.Runtime.Serialization.DataContractSerializer> для преобразования из .NET Framework в подходящий формат, например XML. Суррогат контракта данных также может использоваться для изменения метаданных, экспортированных для типов, при создании представлений метаданных, например документов схемы XML (XSD). Во время импорта из метаданных создается код, суррогат может также использоваться для настройки создаваемого кода.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64587509"
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  Метод <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> сопоставляет один тип с другим. Этот метод требуется для сериализации, десериализации, импорта и экспорта.  
   
- Первая задача - определить, какие типы будут сопоставляться с другими типами. Пример:  
+ Первая задача - определить, какие типы будут сопоставляться с другими типами. Например:  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -54,15 +54,15 @@ ms.locfileid: "64587509"
 ### <a name="getobjecttoserialize-method"></a>Метод GetObjectToSerialize  
  Метод <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> преобразует экземпляр исходного типа в экземпляр суррогатного типа. Этот метод требуется для сериализации.  
   
- На втором этапе необходимо определить, каким образом физические данные из исходного экземпляра будут преобразовываться в данные суррогатного, при помощи реализации метода <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>. Пример:  
+ На втором этапе необходимо определить, каким образом физические данные из исходного экземпляра будут преобразовываться в данные суррогатного, при помощи реализации метода <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>. Например:  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
  Метод <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> вызывается при сериализации объекта. Этот метод передает данные из исходного типа в поля суррогатного типа. Поля могут быть напрямую сопоставлены с суррогатными полями, либо в суррогате можно сохранить результат манипуляций с исходными данными. Некоторые варианты использования: прямое сопоставление полей; выполнение операций над данными, которые нужно сохранить в суррогатных полях; сохранение XML исходного типа в суррогатном поле.  
   
- Параметр `targetType` относится к объявленному типу элемента. Этот параметр является суррогатным типом, возвращенным методом <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Сериализатор не требует, чтобы возвращенный объект можно было назначить этому типу. `obj` Представляет собой объект для сериализации и будут преобразованы в свой суррогат, при необходимости. Этот метод возвращает входной объект, если суррогатный не обрабатывает этот объект. В противном случае возвращается новый суррогатный объект. Суррогат не вызывается, если объект пустой. Метод позволяет определить несколько суррогатных сопоставлений для различных экземпляров.  
+ Параметр `targetType` относится к объявленному типу элемента. Этот параметр является суррогатным типом, возвращенным методом <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Сериализатор не требует, чтобы возвращенный объект можно было назначить этому типу. `obj` Параметр — это объект для сериализации, который будет преобразован в его суррогат при необходимости. Этот метод возвращает входной объект, если суррогатный не обрабатывает этот объект. В противном случае возвращается новый суррогатный объект. Суррогат не вызывается, если объект пустой. Метод позволяет определить несколько суррогатных сопоставлений для различных экземпляров.  
   
- При создании объекта <xref:System.Runtime.Serialization.DataContractSerializer> можно задать для него сохранение ссылок на объекты. (Дополнительные сведения см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Это можно сделать, указав для параметра `preserveObjectReferences` в его конструкторе значение `true`. В таком случае суррогат вызывается для объекта только один раз, так как все последующие сериализации просто записывают в поток ссылку. Если параметр `preserveObjectReferences` имеет значение `false`, суррогат вызывается для каждого вхождения экземпляра.  
+ При создании объекта <xref:System.Runtime.Serialization.DataContractSerializer> можно задать для него сохранение ссылок на объекты. (Дополнительные сведения см. в разделе [сериализация и десериализация](../feature-details/serialization-and-deserialization.md).) Это можно сделать, указав для параметра `preserveObjectReferences` в его конструкторе значение `true`. В таком случае суррогат вызывается для объекта только один раз, так как все последующие сериализации просто записывают в поток ссылку. Если параметр `preserveObjectReferences` имеет значение `false`, суррогат вызывается для каждого вхождения экземпляра.  
   
  Если тип экземпляра, подвергающегося сериализации, отличается от объявленного типа, сведения о типе записываются в поток (например `xsi:type`), чтобы экземпляр затем можно было десериализовать. Это происходит независимо от того, является объект суррогатным, или нет.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64587509"
 ### <a name="getdeserializedobject-method"></a>Метод GetDeserializedObject  
  Метод <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> преобразует экземпляр суррогатного типа в экземпляр исходного типа. Этот метод требуется для десериализации.  
   
- Следующая задача - определить, каким образом физические данные из суррогатного экземпляра будут сопоставляться с данными исходного экземпляра. Пример:  
+ Следующая задача - определить, каким образом физические данные из суррогатного экземпляра будут сопоставляться с данными исходного экземпляра. Например:  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -84,7 +84,7 @@ ms.locfileid: "64587509"
  В предшествующем примере объекты типа `InventorySurrogated` преобразуются обратно в исходный тип `Inventory`. В данном случае данные напрямую передаются из полей `InventorySurrogated` в соответствующие поля `Inventory`. Так как операций с данными не производилось, все поля элементов будут содержать те же данные, что и до сериализации.  
   
 ### <a name="getcustomdatatoexport-method"></a>Метод GetCustomDataToExport  
- При экспорте схемы метод <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> является необязательным. Он применяется для вставки дополнительных данных или указаний в экспортированную схему. Дополнительные данные могут быть добавлены на уровне элемента или типа. Пример:  
+ При экспорте схемы метод <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> является необязательным. Он применяется для вставки дополнительных данных или указаний в экспортированную схему. Дополнительные данные могут быть добавлены на уровне элемента или типа. Например:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "64587509"
 ### <a name="processimportedtype-method"></a>Метод ProcessImportedType  
  Метод <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> позволяет настроить любой тип, созданный при импорте схемы. Этот метод является необязательным.  
   
- При импорте схемы этот метод позволяет настройку любого импортированного типа и сведений о компиляции. Пример:  
+ При импорте схемы этот метод позволяет настройку любого импортированного типа и сведений о компиляции. Например:  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -131,17 +131,17 @@ ms.locfileid: "64587509"
 ### <a name="getknowncustomdatatypes-method"></a>Метод GetKnownCustomDataTypes  
  Этот метод получает определенные типы пользовательских данных из схемы. Этот метод является необязательным для импорта схем.  
   
- Этот метод вызывается в начале экспорта или импорта схемы. Метод возвращает типы пользовательских данных, которые используются в экспортируемой или импортируемой схеме. Методу передается объект <xref:System.Collections.ObjectModel.Collection%601> (параметр `customDataTypes`), который представляет собой коллекцию типов. Метод добавляет дополнительные известные типы в эту коллекцию. Известные типы пользовательских данных необходимы для сериализации и десериализации пользовательских данных при помощи <xref:System.Runtime.Serialization.DataContractSerializer>. Дополнительные сведения см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Этот метод вызывается в начале экспорта или импорта схемы. Метод возвращает типы пользовательских данных, которые используются в экспортируемой или импортируемой схеме. Методу передается объект <xref:System.Collections.ObjectModel.Collection%601> (параметр `customDataTypes`), который представляет собой коллекцию типов. Метод добавляет дополнительные известные типы в эту коллекцию. Известные типы пользовательских данных необходимы для сериализации и десериализации пользовательских данных при помощи <xref:System.Runtime.Serialization.DataContractSerializer>. Дополнительные сведения см. в статье о [известных типах контрактов данных](../feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Реализация суррогата  
- Чтобы использовать суррогат контракта данных в WCF, необходимо выполнить несколько специальных процедур.  
+ Чтобы использовать суррогат контракта данных в WCF, необходимо выполнить несколько особых процедур.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Использование суррогата для сериализации и десериализации  
  Для выполнения сериализации и десериализации данных с суррогатом используйте <xref:System.Runtime.Serialization.DataContractSerializer>. Объект <xref:System.Runtime.Serialization.DataContractSerializer> создается при помощи <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Необходимо также задать суррогат.  
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Реализация сериализации и десериализации  
   
-1. Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы. Полные инструкции см. в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы. Полные инструкции см. в разделе [Базовая программирование WCF](../basic-wcf-programming.md).  
   
 2. Для каждого объекта <xref:System.ServiceModel.Description.ServiceEndpoint> заданного узла службы найдите соответствующий объект <xref:System.ServiceModel.Description.OperationDescription>.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "64587509"
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Использование суррогата для экспорта метаданных  
- По умолчанию при экспорте метаданных из WCF для службы необходимо создать WSDL и XSD-схемы. Суррогат необходимо добавить в компонент, отвечающий за генерацию XSD-схемы для типов контрактов данных, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Для этого используйте либо поведение, реализующее <xref:System.ServiceModel.Description.IWsdlExportExtension> для изменения <xref:System.ServiceModel.Description.WsdlExporter>, либо напрямую измените объект <xref:System.ServiceModel.Description.WsdlExporter>, который используется для экспорта метаданных.  
+ По умолчанию при экспорте метаданных из WCF для службы необходимо создать схему WSDL и XSD. Суррогат необходимо добавить в компонент, отвечающий за генерацию XSD-схемы для типов контрактов данных, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Для этого используйте либо поведение, реализующее <xref:System.ServiceModel.Description.IWsdlExportExtension> для изменения <xref:System.ServiceModel.Description.WsdlExporter>, либо напрямую измените объект <xref:System.ServiceModel.Description.WsdlExporter>, который используется для экспорта метаданных.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Использование суррогата для экспорта метаданных  
   
@@ -198,4 +198,4 @@ ms.locfileid: "64587509"
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - <xref:System.Runtime.Serialization.ExportOptions>
-- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Использование контрактов данных](../feature-details/using-data-contracts.md)

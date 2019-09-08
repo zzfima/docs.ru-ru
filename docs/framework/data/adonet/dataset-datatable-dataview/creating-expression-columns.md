@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 8ae8c8e020a3d8ada5bdcd5037187e6f3abd33a4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c4e0b368a8eb154207382ae70b9767f5a5fe64d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203829"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785435"
 ---
 # <a name="creating-expression-columns"></a>Создание столбцов выражений
 Можно определить выражение для столбца, позволяя тем самым хранить в нем значение, вычисляемое из значений других столбцов той же строки или из значений столбцов нескольких строк таблицы. Для определения вычисляемого выражения используется свойство <xref:System.Data.DataColumn.Expression%2A> целевого столбца, свойство <xref:System.Data.DataColumn.ColumnName%2A> - для ссылки на другие столбцы в выражении. Тип данных <xref:System.Data.DataColumn.DataType%2A> столбца выражения должен соответствовать типу данных значения, возвращаемого выражением.  
@@ -45,4 +45,4 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
 - <xref:System.Data.DataTable>
 - [Определение схемы DataTable](datatable-schema-definition.md)
 - [DataTables](datatables.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

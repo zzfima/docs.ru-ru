@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934125"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780612"
 ---
 # <a name="updating-data-in-a-data-source"></a>Обновление данных в источнике данных
-Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки. Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки. Чтобы выполнить команды, которые не возвращают строки, создать **команда** объект с соответствующей командой SQL и **подключения**, включающий любую требуемую **параметры**. Выполните команду с **ExecuteNonQuery** метод **команда** объекта.  
+Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки. Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки. Для выполнения команд, которые не возвращают строки, создайте объект **команды** с соответствующей командой SQL и **соединением**, включая все необходимые **Параметры**. Выполните команду с помощью метода **ExecuteNonQuery** объекта **Command** .  
   
- **ExecuteNonQuery** метод возвращает целое число, представляющее число строк, затронутых инструкции или хранимой процедуры, которая была выполнена. Если выполняется несколько инструкций, возвращенное значение является суммой количеств записей, затронутых всеми выполненными инструкциями.  
+ Метод **ExecuteNonQuery** возвращает целое число, представляющее количество строк, затронутых выполняемой инструкцией или хранимой процедурой. Если выполняется несколько инструкций, возвращенное значение является суммой количеств записей, затронутых всеми выполненными инструкциями.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода выполняется инструкция INSERT для вставки записи в базу данных при помощи **ExecuteNonQuery**.  
+ В следующем примере кода инструкция INSERT выполняется для вставки записи в базу данных с помощью **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- В следующем примере кода выполняет хранимую процедуру, созданные в примере кода на [выполнение операций над каталогами](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Строки не возвращаются хранимой процедурой, поэтому **ExecuteNonQuery** метод используется, но хранимая процедура получает входной параметр и возвращает выходной параметр и возвращаемое значение.  
+ В следующем примере кода выполняется хранимая процедура, созданная в примере кода для [выполнения операций с каталогом](performing-catalog-operations.md). Хранимая процедура не возвращает ни одной строки, поэтому используется метод **ExecuteNonQuery** , но хранимая процедура получает входной параметр и возвращает выходной параметр и возвращаемое значение.  
   
- Для <xref:System.Data.OleDb.OleDbCommand> объекта, **ReturnValue** необходимо добавить параметр **параметры** коллекции первого.  
+ Для объекта необходимо сначала добавить параметр **ReturnValue** в коллекцию **Parameters.** <xref:System.Data.OleDb.OleDbCommand>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -93,7 +93,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
   
 ## <a name="see-also"></a>См. также
 
-- [Использование команд для изменения данных](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Использование команд для изменения данных](using-commands-to-modify-data.md)
+- [Обновление источников данных с объектами DataAdapter](updating-data-sources-with-dataadapters.md)
+- [Команды и параметры](commands-and-parameters.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

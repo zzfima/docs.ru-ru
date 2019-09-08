@@ -17,16 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629880"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796740"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>Метод IAssemblyCacheItem::CreateStream
 
-Создает поток с указанным именем и формат.
+Создает поток с указанными именем и форматом.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,28 +44,28 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>Параметры
 
 `dwFlags`\
-[in] Флаги, определенные в Fusion.idl.
+окне Флаги, определенные в Fusion. idl.
 
 `pszStreamName`\
-[in] Имя потока, который должен быть создан.
+окне Имя создаваемого потока.
 
 `dwFormat`\
-[in] Формат файла для потоковой передачи.
+окне Формат файла для потоковой передачи.
 
 `dwFormatFlags`\
-[in] Флаги определенного формата, определенного в Fusion.idl.
+окне Флаги формата, определенные в Fusion. idl.
 
 `ppIStream`\
-[out] Указатель на адрес возвращаемого [IStream](/windows/desktop/api/objidl/nn-objidl-istream) экземпляра.
+заполняет Указатель на адрес возвращенного экземпляра [IStream](/windows/desktop/api/objidl/nn-objidl-istream) .
 
 `puliMaxSize`\
-[in, optional] Максимальный размер потока, который ссылается `ppIStream`.
+[входные, необязательные] Максимальный размер потока, `ppIStream`на который ссылается.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** Fusion.h
+**Заголовок.** Fusion. h
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

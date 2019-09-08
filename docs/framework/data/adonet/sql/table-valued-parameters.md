@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938444"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780687"
 ---
 # <a name="table-valued-parameters"></a>Возвращающие табличное значение параметры
 Возвращающие табличное значение параметры обеспечивают легкий способ упаковки строк данных из клиентского приложения в SQL Server, не требуя многочисленных циклов приема-передачи или специальной логики на стороне сервера для обработки данных. Возвращающие табличное значение параметры можно использовать для инкапсуляции строк данных в клиентском приложении и отправки данных на сервер с помощью одной параметризированной команды. Входящие строки данных сохраняются в табличную переменную, с которой затем можно работать, используя язык Transact-SQL.  
@@ -88,7 +88,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="configuring-a-sqlparameter-example"></a>Пример настройки параметра SqlParameter  
  <xref:System.Data.SqlClient>поддерживает заполнение возвращающих табличное <xref:System.Data.DataTable>значение <xref:System.Data.Common.DbDataReader> параметров <xref:System.Collections.Generic.IEnumerable%601> из объектов или  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> . Необходимо указать имя типа возвращающего табличное значение параметра с помощью свойства <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> объекта <xref:System.Data.SqlClient.SqlParameter>. Значение `TypeName` должно совпадать с именем совместимого типа, созданного ранее на сервере. В приведенном ниже фрагменте кода демонстрируется настройка объекта <xref:System.Data.SqlClient.SqlParameter> для вставки данных.  
  
-В следующем примере `addedCategories` переменная <xref:System.Data.DataTable>содержит. Чтобы увидеть, как заполняется переменная, см. примеры в следующем разделе передача возвращающего табличное значение [параметра хранимой процедуре](#passing).
+В следующем примере `addedCategories` переменная <xref:System.Data.DataTable>содержит. Чтобы увидеть, как заполняется переменная, см. примеры в следующем разделе [передача возвращающего табличное значение параметра хранимой процедуре](#passing).
 
 ```csharp  
 // Configure the command and parameter.  
@@ -274,8 +274,8 @@ insertCommand.ExecuteNonQuery()
   
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Команды и параметры](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Настройка параметров и типы данных параметров](../configuring-parameters-and-parameter-data-types.md)
+- [Команды и параметры](../commands-and-parameters.md)
+- [Параметры DataAdapter](../dataadapter-parameters.md)
+- [Операции данных SQL Server Data в ADO.NET](sql-server-data-operations.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

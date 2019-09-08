@@ -1,6 +1,6 @@
 ---
-title: Удалить функцию (Справочник по неуправляемым API)
-description: Функция удаления удаляет указанное свойство и все его квалификаторы из определения класса CIM.
+title: Функция Delete (Справочник по неуправляемым API)
+description: Функция Delete удаляет указанное свойство и все его квалификаторы из определения класса CIM.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636724"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798669"
 ---
 # <a name="delete-function"></a>Функция Delete
 
@@ -42,42 +42,42 @@ HRESULT Delete (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`\
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`\
-[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
+окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] Имя свойства для удаления. `wszName` должен быть указателем на допустимый `LPCWSTR`.
+окне Имя удаляемого свойства. `wszName`должен быть указателем на допустимый `LPCWSTR`объект.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Не удается удалить свойство. |
+| `WBEM_E_FAILED` | 0x80041001 | Произошла неопределенная ошибка. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Свойство не может быть удалено. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` недопустим. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не существует. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Не хватает памяти для завершения операции. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Свойство наследуется от базового класса. |
-| `WBEM_E_SYSTEM_PROPERTY` | | Свойство является страницей системных свойств. |
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Функция удалить значение override по умолчанию для текущего класса. Значение по умолчанию для этого свойства в родительском классе-родителе возобновлено. |
+| `WBEM_E_SYSTEM_PROPERTY` | | Свойство является системным свойством. |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Функция удалила значение переопределения по умолчанию для текущего класса. Значение по умолчанию для этого свойства в родительском классе было повторно активировано. |
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) метод.
+Эта функция создает оболочку для вызова метода [ивбемклассобжект::D удалить](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) .
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils.idl
+**Заголовок.** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

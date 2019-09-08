@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f274befe78e45be3e53335572fd9c1e0b401fd3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040178"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798803"
 ---
 # <a name="resolvetypelib-method"></a>Метод ResolveTypeLib
 Разрешает простое имя библиотеки типов, возвращая полный путь.  
@@ -61,12 +61,12 @@ HRESULT ResolveTypeLib(
  заполняет Указатель на [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащий полный путь к библиотеке типов с именем в `bstrSimpleName` параметре.  
   
 ## <a name="remarks"></a>Примечания  
- Метод вызывается [функцией LoadTypeLibWithResolver](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) во время обработки программы [Tlbexp. exe (программа экспорта библиотек типов).](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) `ResolveTypeLib`  
+ Метод вызывается [функцией LoadTypeLibWithResolver](loadtypelibwithresolver-function.md) во время обработки программы [Tlbexp. exe (программа экспорта библиотек типов).](../../tools/tlbexp-exe-type-library-exporter.md) `ResolveTypeLib`  
   
  Пользовательские реализации этого интерфейса должны возвращать [строку BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащую полный путь к библиотеке типов с именем в `bstrSimpleName` параметре.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
  **Заголовок.** Тлбреф. idl, Тлбреф. h  
   
@@ -76,5 +76,5 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>См. также
 
-- [Вспомогательные функции Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Вспомогательные функции Tlbexp](index.md)
 - [лоадтипелибекс](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

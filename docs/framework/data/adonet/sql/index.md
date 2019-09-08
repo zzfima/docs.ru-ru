@@ -2,12 +2,12 @@
 title: SQL Server и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: c58c6da7a6028c9167c73af820e922f59b528f15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938086"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782333"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server и ADO.NET
 В данном разделе описываются возможности и поведение, характерное для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).  
@@ -18,22 +18,22 @@ ms.locfileid: "69938086"
 > Чтобы использовать поставщик данных .NET Framework для SQL Server, приложение должно ссылаться на пространство имен <xref:System.Data.SqlClient>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [Безопасность SQL Server](sql-server-security.md)  
  Приводятся общие сведения о возможностях системы безопасности SQL Server, а также сценарии для создания безопасных приложений ADO.NET, предназначенных для работы с SQL Server.  
   
- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [Типы данных SQL Server и ADO.NET](sql-server-data-types.md)  
  Описывается работа с типами данных SQL Server и их взаимодействие с типами данных .NET Framework.  
   
- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [Двоичные данные и данные большого объема SQL Server](sql-server-binary-and-large-value-data.md)  
  Описывается работа в SQL Server с данными большого размера.  
   
- [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [Операции данных SQL Server Data в ADO.NET](sql-server-data-operations.md)  
  Описание работы с данными в SQL Server. Содержит разделы, посвященные операциям массового копирования, MARS, асинхронным операциям и возвращающим табличное значение параметрам.  
   
- [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [Возможности SQL Server и ADO.NET](sql-server-features-and-adonet.md)  
  Описываются возможности SQL Server, полезные для разработчиков приложений ADO.NET.  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](./linq/index.md)  
  Описываются основные стандартные блоки, процессы и методы, необходимые для создания приложений по технологии LINQ to SQL.  
   
  Полную документацию по ядру СУБД SQL Server см. в электронной документации по SQL Server для используемой версии SQL Server.  
@@ -42,8 +42,8 @@ ms.locfileid: "69938086"
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Сопоставления типов данных в ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Сопоставления типов данных в ADO.NET](../data-type-mappings-in-ado-net.md)
+- [Наборы данных, таблицы данных и объекты DataView](../dataset-datatable-dataview/index.md)
+- [Извлечение и изменение данных в ADO.NET](../retrieving-and-modifying-data.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

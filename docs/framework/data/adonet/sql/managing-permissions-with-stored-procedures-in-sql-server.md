@@ -2,12 +2,12 @@
 title: Управление разрешениями с использованием хранимых процедур в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623415"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780950"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Управление разрешениями с использованием хранимых процедур в SQL Server
 Одним из методов создания нескольких линий защиты для базы данных является реализация доступа ко всем данным с помощью хранимых процедур или определяемых пользователем функций. Отменяются или запрещаются разрешения на все базовые объекты (например, таблицы), на хранимые процедуры предоставляются разрешения EXECUTE. Тем самым создается эффективный периметр безопасности вокруг данных и объектов базы данных.  
@@ -32,7 +32,7 @@ ms.locfileid: "64623415"
 ## <a name="stored-procedure-execution"></a>Выполнение хранимых процедур  
  Хранимые процедуры предоставляют доступ к данным с помощью цепочек владения таким образом, чтобы пользователям не требовались явные разрешения для работы с объектами базы данных. Цепочка владения возникает, когда объекты, последовательно получающие доступ друг к другу, принадлежат одному пользователю. Например, хранимая процедура может вызывать другие хранимые процедуры или обращаться к нескольким таблицам. Если все объекты в цепочке владения принадлежат одному владельцу, то SQL Server проверяет только разрешение EXECUTE вызывающего, но не разрешения вызывающего на другие объекты. Поэтому нужно предоставить только разрешения EXECUTE на хранимые процедуры и отменить или запретить все разрешения на базовые таблицы.  
   
-## <a name="best-practices"></a>Рекомендации  
+## <a name="best-practices"></a>Советы и рекомендации  
  Простого написания хранимой процедуры недостаточно для надежной защиты приложения. Необходимо учитывать следующие потенциальные уязвимости защиты.  
   
 - Предоставьте разрешения EXECUTE на хранимые процедуры нужным ролям базы данных для доступа к данным.  
@@ -52,17 +52,17 @@ ms.locfileid: "64623415"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Resource|Описание|  
 |--------------|-----------------|  
 |[Хранимые процедуры](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) и [Внедрение кода SQL](https://go.microsoft.com/fwlink/?LinkId=98234) в электронной документации на SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [Общие сведения о безопасности SQL Server](overview-of-sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)
+- [Написание безопасного динамического кода SQL в SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Подписывание хранимых процедур в SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Настройка разрешений с олицетворением в SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Изменение данных с помощью хранимых процедур](../modifying-data-with-stored-procedures.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

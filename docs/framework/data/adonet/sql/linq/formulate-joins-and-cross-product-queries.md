@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002a644ff5d48b25351228dcd74330707491d6c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032608"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782092"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Практическое руководство. Формулировка запросов-объединений и запросов векторного произведения
 В следующем примере показано, как объединить результаты из нескольких таблиц.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `From` предложение в Visual Basic (`from` предложение в C#) для выбора всех заказов для клиентов в Лондоне.  
+ В следующем примере Навигация по внешнему ключу используется `From` в предложении в`from` Visual Basic ( C#предложение в) для выбора всех заказов для клиентов в Лондоне.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `Where` предложение в Visual Basic (`where` предложение в C#) для фильтрации из за `Products` которого `Supplier` находится в США.  
+ В следующем примере Навигация по внешнему ключу используется `Where` в предложении в`where` Visual Basic ( C#предложение в) для фильтрации находящихся в `Products` наличии `Supplier` данных, которые находятся в США.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `From` предложение в Visual Basic (`from` предложение в C#) для фильтрации сотрудников в Сиэтле и обслуживаемыми ими территориями.  
+ В следующем примере Навигация по внешнему ключу используется `From` в предложении в`from` Visual Basic ( C#предложение в) для фильтрации сотрудников в Сиэтле и для перечисления своих территорий.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется переходы по внешним ключам в `Select` предложение в Visual Basic (`select` предложение в C#) для фильтрации пар сотрудников, где один сотрудник сообщает о другом и оба сотрудника находятся с использованием того же `City`.  
+ В следующем примере Навигация по внешнему ключу используется `Select` в предложении в`select` Visual Basic ( C#предложение в) для фильтрации пар сотрудников, в которых один сотрудник отчитывается друг с другом и `City`когда оба сотрудника совпадают.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере Visual Basic выполняет поиск всех клиентов и заказов, гарантирует, что заказы сопоставляются клиентам и гарантирует, что для каждого клиента в этом списке, предоставляется имя контактного лица.  
+ В следующем Visual Basic примере выполняется поиск всех клиентов и заказов, гарантируется соответствие заказов клиентам и гарантируется, что для каждого клиента в этом списке предоставляется имя контакта.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -81,4 +81,4 @@ ms.locfileid: "62032608"
   
 ## <a name="see-also"></a>См. также
 
-- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Примеры запросов](query-examples.md)

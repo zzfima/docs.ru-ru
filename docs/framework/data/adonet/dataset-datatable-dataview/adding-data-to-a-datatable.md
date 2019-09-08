@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205489"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786594"
 ---
 # <a name="adding-data-to-a-datatable"></a>Добавление данных в таблицу данных
 После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных. Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>. При вызове <xref:System.Data.DataTable.NewRow%2A> метода возвращается новый объект **DataRow** . Затем **Таблица** данных создает объект **DataRow** на основе структуры таблицы, как определено в <xref:System.Data.DataColumnCollection>.  
@@ -92,4 +92,4 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
 - [Управление данными в DataTable](manipulating-data-in-a-datatable.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

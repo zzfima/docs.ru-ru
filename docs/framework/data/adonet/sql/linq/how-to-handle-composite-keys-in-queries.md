@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6c6e7d1c1d29a049b50f4ea9d70ef5cd9e89a44
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033817"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793580"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Практическое руководство. Как обрабатывать составные ключи в запросах
 Некоторые операторы могут принимать только один аргумент. Если аргумент должен содержать несколько столбцов базы данных, необходимо создать анонимный тип для представления комбинации столбцов.  
@@ -29,4 +29,4 @@ ms.locfileid: "62033817"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Основные принципы запросов](query-concepts.md)

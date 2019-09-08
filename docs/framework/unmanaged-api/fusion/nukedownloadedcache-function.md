@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76ada8400573dd61c25e0dce3f49ce66b5fb30c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29f492173a7fd22ab497d6e0096798e164fccf26
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773803"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796308"
 ---
 # <a name="nukedownloadedcache-function"></a>Функция NukeDownloadedCache
-Удаляет кэше загрузки среды выполнения (CLR).  
+Удаляет кэш загрузки среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,22 +35,22 @@ HRESULT NukeDownloadedCache();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, определенные в файле WinError.h.  
+ Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError. h.  
   
 ## <a name="remarks"></a>Примечания  
- Кэш загрузки среды CLR — это область, где хранятся сборки со строгими именами, загруженным из URL-адрес для возможного повторного использования.  
+ Кэш загрузки среды CLR — это область, в которой хранятся сборки со строгими именами, загружаемые из URL-адреса для возможного повторного использования.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Fusion.dll и "Mscorwks.dll". Используйте Fusion.dll вместо "Mscorwks.dll", чтобы обеспечить целевых правильную версию платформы .NET Framework.  
+ **Библиотечная** Fusion. dll и mscorwks. dll. Используйте Fusion. dll вместо Mscorwks. dll, чтобы обеспечить правильную версию .NET Framework.  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Функция CreateHistoryReader](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [Функция GetHistoryFileDirectory](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Функция CreateHistoryReader](createhistoryreader-function.md)
+- [Функция GetHistoryFileDirectory](gethistoryfiledirectory-function.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

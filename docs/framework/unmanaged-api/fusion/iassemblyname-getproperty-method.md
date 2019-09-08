@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744536"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796588"
 ---
 # <a name="iassemblynamegetproperty-method"></a>Метод IAssemblyName::GetProperty
-Возвращает указатель на свойство, заданное с помощью идентификатора указанного свойства.  
+Возвращает указатель на свойство, на которое ссылается указанный идентификатор свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +39,21 @@ HRESULT GetProperty (
   
 ## <a name="parameters"></a>Параметры  
  `PropertyId`  
- [in] Уникальный идентификатор для запрошенного свойства.  
+ окне Уникальный идентификатор запрошенного свойства.  
   
  `pvProperty`  
- [out] Данные, возвращаемое свойство.  
+ заполняет Возвращаемые данные свойства.  
   
  `pcbProperty`  
- [in, out] Размер в байтах из `pvProperty`.  
+ [вход, выход] Размер (в байтах `pvProperty`).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)

@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a084c16b-9b55-4690-aefd-f8e0810a92c3
-ms.openlocfilehash: e50707155d509b8300966cbba8ee885492e5b815
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e2a72a2bb0921828bdd90fe437987fddfc995b5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772285"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783691"
 ---
 # <a name="method-based-query-syntax-examples-conversion-operators-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. операторы преобразования (LINQ to DataSet)
 Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> и <xref:System.Linq.Enumerable.ToList%2A> для немедленного выполнения выражения запроса.  
   
- `FillDataSet` Метод, используемый в этих примерах указывается в [загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ Метод, используемый в этих примерах, задается при [загрузке данных в набор данных.](loading-data-into-a-dataset.md) `FillDataSet`  
   
  В примерах данного раздела используются таблицы Contact, Address, Product, SalesOrderHeader и SalesOrderDetail из образца базы данных AdventureWorks.  
   
- В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
+ В примерах этого раздела используются следующие `using` / `Imports` инструкции:  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Дополнительные сведения см. в разделе [Как Создание проектов LINQ to DataSet в Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Создание проекта LINQ to DataSet в Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="toarray"></a>ToArray  
   
@@ -52,7 +52,7 @@ ms.locfileid: "61772285"
   
 ## <a name="see-also"></a>См. также
 
-- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Загрузка данных в DataSet](loading-data-into-a-dataset.md)
+- [Примеры LINQ to DataSet](linq-to-dataset-examples.md)
 - [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

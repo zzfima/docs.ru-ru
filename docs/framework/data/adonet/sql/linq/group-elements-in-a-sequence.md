@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915052"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782189"
 ---
 # <a name="group-elements-in-a-sequence"></a>Группировка элементов последовательности
 Оператор <xref:System.Linq.Enumerable.GroupBy%2A> группирует элементы последовательности. В следующем примере используется база данных Northwind.  
   
 > [!NOTE]
-> Иногда значения NULL в столбцах в запросах <xref:System.Linq.Enumerable.GroupBy%2A> могут вызывать исключение <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе "GroupBy InvalidOperationException" раздела [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> Иногда значения NULL в столбцах в запросах <xref:System.Linq.Enumerable.GroupBy%2A> могут вызывать исключение <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе "GroupBy InvalidOperationException" раздела [Устранение неполадок](troubleshooting.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример разделяет `Products` по `CategoryID`.  
@@ -74,5 +74,5 @@ ms.locfileid: "69915052"
   
 ## <a name="see-also"></a>См. также
 
-- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Примеры запросов](query-examples.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)

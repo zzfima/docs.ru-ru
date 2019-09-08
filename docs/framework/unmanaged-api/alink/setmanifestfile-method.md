@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741473"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787209"
 ---
 # <a name="setmanifestfile-method"></a>Метод SetManifestFile
-Позволяет задать или сбросить файл манифеста, компоновщик использует при создании сборки.  
+Позволяет указать или сбросить файл манифеста, используемый компоновщиком при создании сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Параметры  
  `pszFile`  
   
- Имя файла манифеста, содержимое которого помещаются в большой двоичный объект ресурсов Win32.  
+ Имя файла манифеста, содержимое которого помещается в большой двоичный объект Win32 Resources.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="remarks"></a>Примечания  
- Вызовите это перед запросом Win32ResBlob. Значение `pszFile` параметр является имя файла манифеста, содержимое которого считывается и помещается в ресурсы Win32 с Идентификатором RT_MANIFEST. При вызове с помощью параметра значение NULL, все ранее считанного манифест очищается. Это позволяет сбросить состояние компоновщика, чтобы во время инициализации.  
+ Вызовите этот метод, прежде чем запрашивать Win32ResBlob. Значение `pszFile` параметра — это имя файла манифеста, содержимое которого считывается и помещается в ресурсы Win32 с идентификатором RT_MANIFEST. При вызове с помощью параметра NULL все ранее прочитанные манифесты очищаются. Это позволяет сбросить состояние компоновщика до значения времени инициализации.  
   
 ## <a name="requirements"></a>Требования  
- Требуется aLink.h  
+ Требуется aLink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Интерфейс IALink3](ialink3-interface.md)
+- [API ALink](index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Al.exe (компоновщик сборок)](../../tools/al-exe-assembly-linker.md)

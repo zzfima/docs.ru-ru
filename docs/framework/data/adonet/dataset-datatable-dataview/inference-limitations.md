@@ -2,12 +2,12 @@
 title: Ограничения определения
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 4e0f63776162b60c9333ba47be58ea78a9b6805d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 10347abc5b01edb4ec6fbf97221d44f4bfb88f54
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204834"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784578"
 ---
 # <a name="inference-limitations"></a>Ограничения определения
 Процесс вывода схемы <xref:System.Data.DataSet> из XML-кода может приводиться в различных схемах в зависимости от XML-элементов в каждом документе. Например, рассмотрим следующие XML-документы.  
@@ -61,4 +61,4 @@ ms.locfileid: "70204834"
 - [Загрузка сведений о схеме DataSet из XML](loading-dataset-schema-information-from-xml.md)
 - [Использование XML в наборах данных](using-xml-in-a-dataset.md)
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

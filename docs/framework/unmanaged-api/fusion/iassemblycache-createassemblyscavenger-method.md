@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 851abcae9c3edea5c971bd2bc4523c3cec757cc9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770980"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796816"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>Метод IAssemblyCache::CreateAssemblyScavenger
-Зарезервировано для внутреннего использования технологией fusion.  
+Зарезервировано для внутреннего использования технологией Fusion.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +37,15 @@ HRESULT CreateAssemblyScavenger (
   
 ## <a name="parameters"></a>Параметры  
  `ppUnkReserved`  
- [out] Возвращенный `IUnknown` указатель.  
+ заполняет Возвращаемый `IUnknown` указатель.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Интерфейс IAssemblyCache](iassemblycache-interface.md)

@@ -2,40 +2,40 @@
 title: Примеры выражений запроса (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: f15e397c711bd01d5770e59c4f2c8227ee2ac7ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dd078c99d545397a032586d6814e0232a7641cc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637666"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783020"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Примеры выражений запроса (LINQ to DataSet)
-Этот раздел содержит LINQ для набора данных примеры программного кода в синтаксисе выражений запросов, использующих стандартные операторы запросов. <xref:System.Data.DataSet> Используется в этих примерах заполняется с помощью `FillDataSet` метод, который указан в параметре [загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) или [Обзор операторов стандартных запросов (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+В этом разделе приводятся LINQ to DataSet примеры программирования в синтаксисе выражений запросов, в которых используются стандартные операторы запросов. Объект <xref:System.Data.DataSet> , используемый в этих примерах, заполняется `FillDataSet` с помощью метода, который задается при [загрузке данных в набор данных](loading-data-into-a-dataset.md). Дополнительные сведения см. в разделе [Общие сведения о стандартныхC#операторах запросов ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) или [Общие сведения о стандартных операторах запросов (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Проекция](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+ [Проекция](query-expression-syntax-examples-projection-linq-to-dataset.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.Select%2A> и <xref:System.Linq.Enumerable.SelectMany%2A> для запроса к <xref:System.Data.DataSet>.  
   
- [Ограничение](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+ [Ограничение](query-expression-syntax-examples-restriction-linq-to-dataset.md)  
  В примерах этого раздела показано, как использовать метод <xref:System.Linq.Enumerable.Where%2A> в запросе к <xref:System.Data.DataSet>.  
   
- [Секционирование](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+ [Секционирование](query-expression-syntax-examples-partitioning.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> для запроса <xref:System.Data.DataSet> и секционирования результатов.  
   
- [Упорядочение](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+ [Упорядочение](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> и <xref:System.Linq.Enumerable.ThenByDescending%2A> для запроса к <xref:System.Data.DataSet> и упорядочения результатов.  
   
- [Операторы элементов](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+ [Операторы элементов](query-expression-syntax-examples-element-operators.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.First%2A> и <xref:System.Linq.Enumerable.ElementAt%2A> для получения элементов <xref:System.Data.DataRow> из <xref:System.Data.DataSet>.  
   
- [Операторы статистических выражений](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+ [Операторы статистических выражений](query-expression-syntax-examples-aggregate-operators.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> и <xref:System.Linq.Enumerable.Sum%2A> для запроса <xref:System.Data.DataSet> и статистической обработки данных.  
   
- [Операторы соединения](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+ [Операторы соединения](query-expression-syntax-examples-join-operators.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.GroupJoin%2A> и <xref:System.Linq.Enumerable.Join%2A> для запроса к <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>См. также
 
-- [Примеры запросов на основе методов](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
-- [Связанные с определенными наборами данных примеры операторов](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
-- [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Примеры запросов на основе методов](method-based-query-examples-linq-to-dataset.md)
+- [Связанные с определенными наборами данных примеры операторов](dataset-specific-operator-examples-linq-to-dataset.md)
+- [Примеры LINQ to DataSet](linq-to-dataset-examples.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761846"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796537"
 ---
 # <a name="iassemblynamesetproperty-method"></a>Метод IAssemblyName::SetProperty
-Задает значение свойства, который ссылается указанный идентификатор свойства.  
+Задает значение свойства, на которое ссылается указанный идентификатор свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>Параметры  
  `PropertyId`  
- [in] Уникальный идентификатор свойства, значение которого будет установлено.  
+ окне Уникальный идентификатор свойства, значение которого будет задано.  
   
  `pvProperty`  
- [in] Значение, которое для свойства ссылается `PropertyId`.  
+ окне Значение, для которого задается свойство, `PropertyId`на которое ссылается.  
   
  `cbProperty`  
- [in] Размер в байтах из `pvProperty`.  
+ окне Размер (в байтах `pvProperty`).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)

@@ -2,12 +2,12 @@
 title: Внешнее сопоставление
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950332"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793990"
 ---
 # <a name="external-mapping"></a>Внешнее сопоставление
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает *внешнее сопоставление*— процесс, в котором используется отдельный XML-файл для указания сопоставления между моделью данных базы данных и объектной моделью. Файл внешнего сопоставления имеет следующие преимущества.  
@@ -23,7 +23,7 @@ ms.locfileid: "69950332"
   
 - Файл сопоставления должен быть файлом XML.  
   
-- Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML. Дополнительные сведения см. в разделе [Практическое руководство. Проверьте DBML и внешние файлы](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)сопоставления.  
+- Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML. Дополнительные сведения см. в разделе [Практическое руководство. Проверьте DBML и внешние файлы](how-to-validate-dbml-and-external-mapping-files.md)сопоставления.  
   
 - Внешнее сопоставление переопределяет сопоставление на основе атрибутов. Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления. Данная модель работает, если класс включен в файл внешнего сопоставления.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "69950332"
 ## <a name="xml-schema-definition-file"></a>Файл определения схемы XML  
  Внешнее сопоставление в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] должно быть проверено на соответствие определению схемы XML.  
   
- Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML-файла. Дополнительные сведения см. [в разделе Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML-файла. Дополнительные сведения см. [в разделе Создание кода в LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Пользователи Visual Studio также будут искать этот XSD-файл в диалоговом окне схемы XML в формате "Линктосклмаппинг. xsd". Чтобы правильно использовать этот файл для проверки внешнего файла сопоставления, см. [раздел как Проверьте DBML и внешние файлы](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)сопоставления.  
+> Пользователи Visual Studio также будут искать этот XSD-файл в диалоговом окне схемы XML в формате "Линктосклмаппинг. xsd". Чтобы правильно использовать этот файл для проверки внешнего файла сопоставления, см. [раздел как Проверьте DBML и внешние файлы](how-to-validate-dbml-and-external-mapping-files.md)сопоставления.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -143,6 +143,6 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>См. также
 
-- [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Практическое руководство. Создать объектную модель как внешний файл](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Создание кода в LINQ to SQL](code-generation-in-linq-to-sql.md)
+- [Ссылки](reference.md)
+- [Практическое руководство. Создать объектную модель как внешний файл](how-to-generate-the-object-model-as-an-external-file.md)

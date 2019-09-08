@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: e1e776a42ca63e4b862e307cbcae1bab2847d0ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b5feb0da86e11485fa7ca1c474a69002c8d43ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587298"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797244"
 ---
 # <a name="creating-user-defined-bindings"></a>Создание пользовательских привязок
 Существует несколько способов создания привязок, не предоставленных системой.  
   
-- Создать пользовательскую привязку на основе класса <xref:System.ServiceModel.Channels.CustomBinding>, который служит контейнером, вмещающим элементы привязки. Впоследствии пользовательская привязка добавляется к конечной точке службы. Для создания пользовательской привязки можно использовать программные методы или файл конфигурации приложения. Для использования элемента привязки из файла конфигурации приложения элемент привязки должен быть производным от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Дополнительные сведения о пользовательских привязках см. в разделе [пользовательских привязок](../../../../docs/framework/wcf/extending/custom-bindings.md) и <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Создать пользовательскую привязку на основе класса <xref:System.ServiceModel.Channels.CustomBinding>, который служит контейнером, вмещающим элементы привязки. Впоследствии пользовательская привязка добавляется к конечной точке службы. Для создания пользовательской привязки можно использовать программные методы или файл конфигурации приложения. Для использования элемента привязки из файла конфигурации приложения элемент привязки должен быть производным от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Дополнительные сведения о пользовательских привязках см. в разделе [пользовательские привязки](custom-bindings.md) и <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 - Создать класс, производный от стандартной привязки. Например, чтобы получить элементы привязки и вставить элемент пользовательской привязки или установить определенное значение для обеспечения безопасности, можно создать класс, производный от <xref:System.ServiceModel.WSHttpBinding>, и переопределить метод <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A>.  
   
@@ -23,13 +23,13 @@ ms.locfileid: "64587298"
 ## <a name="the-order-of-binding-elements"></a>Порядок элементов привязки  
  Каждый элемент привязки представляет собой этап обработки при отправке или получении сообщений. Во время работы элементы привязки создают каналы и прослушиватели, необходимые для построения стеков исходящих и входящих каналов.  
   
- Существует три основных типа элементов привязки: Протокол привязки элементов, для элементов привязки элементов привязки транспорта и кодирования.  
+ Существует три основных типа элементов привязки: Элементы привязки протокола, элементы привязки кодирования и элементы привязки транспорта.  
   
- Элементы привязки протокола - эти элементы представляют собой высокоуровневые этапы обработки сообщений. Каналы и прослушиватели, созданные этими элементами привязки, могут добавлять, удалять или изменять содержание сообщения. Данная привязка может иметь произвольное число элементов привязки протокола, каждый из которых наследуется от <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) включает в себя несколько элементов привязки протокола, в том числе <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> и <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Элементы привязки протокола - эти элементы представляют собой высокоуровневые этапы обработки сообщений. Каналы и прослушиватели, созданные этими элементами привязки, могут добавлять, удалять или изменять содержание сообщения. Данная привязка может иметь произвольное число элементов привязки протокола, каждый из которых наследуется от <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) включает несколько элементов привязки протокола, включая <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>и.  
   
- Элемент привязки кодирования - эти элементы представляют собой преобразования сообщений в кодировку для передачи по сети. Типичные привязки WCF включают в себя ровно один элемент привязки кодирования. Примерами элементов привязки кодирования служат <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> и <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Если для привязки не задан элемент привязки кодирования, используется кодирование по умолчанию. Для передачи по протоколу HTTP по умолчанию используется текстовое кодирование, в остальных случаях - двоичное.  
+ Элемент привязки кодирования - эти элементы представляют собой преобразования сообщений в кодировку для передачи по сети. Типичные привязки WCF включают ровно один элемент привязки кодирования. Примерами элементов привязки кодирования служат <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> и <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Если для привязки не задан элемент привязки кодирования, используется кодирование по умолчанию. Для передачи по протоколу HTTP по умолчанию используется текстовое кодирование, в остальных случаях - двоичное.  
   
- Элементы привязки транспорта - эти элементы представляют собой передачу закодированного сообщения по транспортному протоколу. Типичные привязки WCF включают в себя ровно один элемент привязки транспорта, который наследуется от <xref:System.ServiceModel.Channels.TransportBindingElement>. Примерами элементов привязки транспорта служат <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> и <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Элементы привязки транспорта - эти элементы представляют собой передачу закодированного сообщения по транспортному протоколу. Типичные привязки WCF включают только один элемент привязки транспорта, который наследует от <xref:System.ServiceModel.Channels.TransportBindingElement>. Примерами элементов привязки транспорта служат <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> и <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  При создании новых привязок важно соблюдать порядок вновь добавляемых элементов привязки. При добавлении элементов привязки необходимо соблюдать следующий порядок.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "64587298"
 |Надежность|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|Нет|  
 |Безопасность|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Нет|  
 |Составной дуплексный|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Нет|  
-|кодировка|Текстовая, двоичная, MTOM, пользовательская|Да*|  
+|кодировка|Текстовая, двоичная, MTOM, пользовательская|Да\*|  
 |Transport|TCP, именованные каналы, HTTP, HTTPS, MSMQ, определенный пользователем|Да|  
   
- * Поскольку кодирование обязательно для каждой привязки, если кодировка не задана, WCF добавляет кодирование по умолчанию. Для передачи по протоколам HTTP и HTTPS по умолчанию используется текстовое/XML-кодирование, в остальных случаях - двоичное.  
+\*Поскольку кодировка необходима для каждой привязки, если кодировка не указана, WCF добавляет для вас кодировку по умолчанию. Для передачи по протоколам HTTP и HTTPS по умолчанию используется текстовое/XML-кодирование, в остальных случаях - двоичное.  
   
 ## <a name="creating-a-new-binding-element"></a>Создание нового элемента привязки  
- В дополнение к типам, производным от <xref:System.ServiceModel.Channels.BindingElement> , предоставляемые службами WCF, можно создать собственные элементы привязки. Это позволяет настроить способ создания стека привязок, а также добавления к нему компонентов путем создания собственного класса <xref:System.ServiceModel.Channels.BindingElement>, который может формироваться из других типов элементов стека, предоставляемых системой.  
+ Помимо типов, производных от <xref:System.ServiceModel.Channels.BindingElement> , предоставляемых WCF, можно создавать собственные элементы привязки. Это позволяет настроить способ создания стека привязок, а также добавления к нему компонентов путем создания собственного класса <xref:System.ServiceModel.Channels.BindingElement>, который может формироваться из других типов элементов стека, предоставляемых системой.  
   
  Например, при реализации `LoggingBindingElement`, позволяющего заносить сообщение в базу данных, его необходимо размещать в стеке каналов над транспортным каналом. В этом случае приложение создает пользовательскую привязку, состоящую из `LoggingBindingElement` с `TcpTransportBindingElement`, как показано в примере.  
   
@@ -56,23 +56,23 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- Способ записи нового элемента привязки зависит от его непосредственной функциональности. Один из примеров, [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), дается подробное описание реализации одного вида элементов привязки.  
+ Способ записи нового элемента привязки зависит от его непосредственной функциональности. Один из примеров, [транспорт: Протокол](../samples/transport-udp.md)UDP предоставляет подробное описание того, как реализовать один вид элемента привязки.  
   
 ## <a name="creating-a-new-binding"></a>Создание новой привязки  
  Созданный пользователем элемент привязки можно использовать двумя способами. В предыдущем разделе описан первый способ: посредством пользовательской привязки. Пользовательская привязка позволяет пользователю создать собственную привязку на основе произвольного набора элементов привязки, включающего помимо прочих элементы, созданные пользователем.  
   
- При необходимости использования привязки в нескольких приложениях нужно создать собственную привязку и расширить <xref:System.ServiceModel.Channels.Binding>. Это избавит от необходимости создания пользовательской привязки вручную каждый раз, когда она нужна. Определенные пользователем привязки позволяют определить поведение привязки и включить элементы привязки, определенные пользователем. И это *предварительно упакованные*: у вас нет для перестроения привязки, каждый раз при его использовании.  
+ При необходимости использования привязки в нескольких приложениях нужно создать собственную привязку и расширить <xref:System.ServiceModel.Channels.Binding>. Это избавит от необходимости создания пользовательской привязки вручную каждый раз, когда она нужна. Определенные пользователем привязки позволяют определить поведение привязки и включить элементы привязки, определенные пользователем. И он *предварительно упакован*: вам не нужно перестраивать привязку каждый раз, когда она используется.  
   
  Определенная пользователем привязка должна, как минимум, реализовать метод <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> и свойство <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
- Метод <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> возвращает новую коллекцию <xref:System.ServiceModel.Channels.BindingElementCollection>, содержащую элементы для привязки. Коллекция упорядочена и должна содержать элементы привязки протокола, следующий за ними элемент привязки кодирования и, идущий последним, элемент привязки транспорта. При использовании элементов привязки, предоставляемой системой WCF, необходимо выполнить элемент привязки, порядок правил, заданных в [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md). Эта коллекция не должна ссылаться на объекты, на которые имеются ссылки в пределах класса привязки, определенной пользователем; а, следовательно, авторы привязок должны возвращать `Clone()` коллекции <xref:System.ServiceModel.Channels.BindingElementCollection> при каждом вызове <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ Метод <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> возвращает новую коллекцию <xref:System.ServiceModel.Channels.BindingElementCollection>, содержащую элементы для привязки. Коллекция упорядочена и должна содержать элементы привязки протокола, следующий за ними элемент привязки кодирования и, идущий последним, элемент привязки транспорта. При использовании элементов привязки, предоставляемых системой WCF, необходимо следовать правилам упорядочивания элементов привязки, указанным в [пользовательских привязках](custom-bindings.md). Эта коллекция не должна ссылаться на объекты, на которые имеются ссылки в пределах класса привязки, определенной пользователем; а, следовательно, авторы привязок должны возвращать `Clone()` коллекции <xref:System.ServiceModel.Channels.BindingElementCollection> при каждом вызове <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
- Свойство <xref:System.ServiceModel.Channels.Binding.Scheme%2A> представляет схему универсального кода ресурса (URI) для транспортного протокола, используемого в привязке. Например *WSHttpBinding* и *NetTcpBinding* возвращают «http» и «net.tcp» из соответствующих им <xref:System.ServiceModel.Channels.Binding.Scheme%2A> свойства.  
+ Свойство <xref:System.ServiceModel.Channels.Binding.Scheme%2A> представляет схему универсального кода ресурса (URI) для транспортного протокола, используемого в привязке. Например, *WSHttpBinding* и *NetTcpBinding* возвращают "http" и "net. TCP" из соответствующих <xref:System.ServiceModel.Channels.Binding.Scheme%2A> свойств.  
   
  Полный список необязательных методов и свойств для определяемых пользователем привязок см. в разделе <xref:System.ServiceModel.Channels.Binding>.  
   
 ### <a name="example"></a>Пример  
- В этом примере реализуется профиль привязки в `SampleProfileUdpBinding`, производном от <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` Содержит до четырех элементов привязки: один, созданный пользователем `UdpTransportBindingElement`; и три, предоставленных системой: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, и `ReliableSessionBindingElement`.  
+ В этом примере реализуется профиль привязки в `SampleProfileUdpBinding`, производном от <xref:System.ServiceModel.Channels.Binding>. Объект `SampleProfileUdpBinding` содержит до четырех элементов привязки: один созданный `UdpTransportBindingElement`пользователем; и три предоставленные системой: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`и `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -93,7 +93,7 @@ public override BindingElementCollection CreateBindingElements()
  Не все элементы привязки совместимы друг с другом. В частности, существует несколько ограничений, налагаемых на элементы привязки безопасности, при их использовании с дуплексными контрактами.  
   
 ### <a name="one-shot-security"></a>Одноступенчатый способ обеспечения безопасности  
- Можно реализовать «одноступенчатый способ обеспечения» безопасности, где все необходимые учетные данные безопасности отправляются в одном сообщении, задав `negotiateServiceCredential` атрибут \<сообщения > элемент конфигурации, `false`.  
+ Можно реализовать «однозначный» уровень безопасности, при котором все необходимые учетные данные безопасности отправляются в одном сообщении, задав `negotiateServiceCredential` для `false`атрибута элемента \<«Message > Configuration» значение.  
   
  Одноступенчатая проверка подлинности не работает с дуплексными контрактами.  
   
@@ -121,4 +121,4 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Пользовательские привязки](custom-bindings.md)

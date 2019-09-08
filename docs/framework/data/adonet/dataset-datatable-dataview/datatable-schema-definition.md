@@ -2,12 +2,12 @@
 title: Определение схемы таблицы данных
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d18af8001fd24f3b21c3e7fd13f9dabb2587b322
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204989"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786388"
 ---
 # <a name="datatable-schema-definition"></a>Определение схемы таблицы данных
 Схема, или структура, таблицы представляется столбцами и ограничениями. Схема <xref:System.Data.DataTable> определяется с использованием объектов <xref:System.Data.DataColumn>, а также объектов <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint>. Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.  
@@ -38,4 +38,4 @@ ms.locfileid: "70204989"
 ## <a name="see-also"></a>См. также
 
 - [DataTables](datatables.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)
