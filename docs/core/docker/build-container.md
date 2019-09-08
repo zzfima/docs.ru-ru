@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331044"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253949"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 Дерево папок будет выглядеть следующим образом:
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
 Сохраните файл *Dockerfile*. Структура каталогов рабочей папки должна выглядеть следующим образом. Некоторые файлы и папки на более глубоком уровне были вырезаны для экономии места в статье:
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker предоставляет единую команду `docker run` для создания и запуска контейнера. Она исключает необходимость в поочередном выполнении команд `docker create` и `docker start`. Вы также можете настроить ее для автоматического удаления контейнера при его остановке. Например, команда `docker run -it --rm` выполняет две операции. Сначала она автоматически подключается к контейнеру с помощью текущего терминала, а потом, после завершения работы контейнера, удаляет его:
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 Во время выполнения `docker run -it` команда, вызываемая нажатием клавиш <kbd>CTRL+C</kbd>, остановит процесс, запущенный в контейнере. А это в свою очередь приведет к остановке контейнера. Так как в команде указан параметр `--rm`, контейнер автоматически удалится после остановки процесса. Убедитесь, что он больше не существует:
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```
