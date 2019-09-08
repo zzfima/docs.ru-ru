@@ -2,15 +2,15 @@
 title: Практическое руководство. Как представить столбцы как столбцы отметки времени или версии
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
-ms.openlocfilehash: db73bf4880d8f5556247f7b037fca24b0ddc56d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef99e0420b328f94686e08256ecf229000467810
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037743"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793498"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>Практическое руководство. Как представить столбцы как столбцы отметки времени или версии
-Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> свойство <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибут назначение поля или свойства, представляющего столбец базы данных, содержащий базы данных отметки времени или номера версий.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Используйте<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> свойство атрибута<xref:System.Data.Linq.Mapping.ColumnAttribute> для обозначения поля или свойства, представляющего столбец базы данных, который содержит метки времени базы данных или номера версий.  
   
  Примеры кода см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
@@ -22,6 +22,6 @@ ms.locfileid: "62037743"
   
 ## <a name="see-also"></a>См. также
 
-- [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Практическое руководство. Укажите, каких элементов тестируется возникновение конфликтов параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
-- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Модель объектов LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Практическое руководство. Укажите, какие элементы проверяются на конфликты параллелизма](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
+- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](how-to-customize-entity-classes-by-using-the-code-editor.md)

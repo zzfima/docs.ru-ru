@@ -2,30 +2,30 @@
 title: Подключение к источнику данных в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01e4048fb9c7b53b1b1907d1965f822b9a4644a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879987"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786761"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Подключение к источнику данных в ADO.NET
-В ADO.NET используется **подключения** объекта для подключения к определенному источнику данных, указав необходимые данные для аутентификации в строке подключения. **Подключения** объектом, который используется зависит от типа источника данных.  
+В ADO.NET для подключения к определенному источнику данных используется объект **соединения** путем предоставления необходимых сведений о проверке подлинности в строке подключения. Используемый объект **соединения** зависит от типа источника данных.  
   
  Каждый поставщик данных .NET Framework, входящий в состав .NET Framework, включает объект <xref:System.Data.Common.DbConnection>: поставщик данных .NET Framework для OLE DB содержит объект <xref:System.Data.OleDb.OleDbConnection>, поставщик данных .NET Framework для SQL Server содержит объект <xref:System.Data.SqlClient.SqlConnection>, поставщик данных .NET Framework для ODBC содержит объект <xref:System.Data.Odbc.OdbcConnection>, поставщик данных .NET Framework для Oracle содержит объект <xref:System.Data.OracleClient.OracleConnection>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Установка подключения](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- Описывает использование **подключения** объектов для установления соединения с источником данных.  
+ [Установка подключения](establishing-the-connection.md)  
+ Описывает использование объекта **Connection** для установления соединения с источником данных.  
   
- [События подключения](../../../../docs/framework/data/adonet/connection-events.md)  
- Описывает использование **InfoMessage** событий для получения информационных сообщений из источника данных.  
+ [События подключения](connection-events.md)  
+ Описывает использование события **InfoMessage** для получения информационных сообщений из источника данных.  
   
 ## <a name="see-also"></a>См. также
 
-- [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Объединение подключений в пул](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Строки подключения](connection-strings.md)
+- [Объединение подключений в пул](connection-pooling.md)
+- [Команды и параметры](commands-and-parameters.md)
+- [Объекты DataAdapter и DataReader](dataadapters-and-datareaders.md)
+- [Транзакции и параллельность](transactions-and-concurrency.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

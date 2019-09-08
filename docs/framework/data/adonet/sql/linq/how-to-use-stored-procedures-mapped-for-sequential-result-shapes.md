@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
-ms.openlocfilehash: e51ebacb3f6be849f7b871f2d12db3ea7476b117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bae10e823a274304f21292cf55947a4d4eaccc10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877075"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781460"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Практическое руководство. Как использовать хранимые процедуры, сопоставленные с последовательными результирующими формами
-Этот тип хранимых процедур может создавать несколько результирующих форм, но всегда известно, в каком порядке возвращаются результаты. Этот сценарий противоположен сценарию, в котором порядок возвращения результатов не известен. Дополнительные сведения см. в разделе [Как Использовать хранимые процедуры, сопоставленные с несколькими результирующими формами](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
+Этот тип хранимых процедур может создавать несколько результирующих форм, но всегда известно, в каком порядке возвращаются результаты. Этот сценарий противоположен сценарию, в котором порядок возвращения результатов не известен. Дополнительные сведения см. в разделе [Практическое руководство. Используйте хранимые процедуры, сопоставленные](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)с несколькими результирующими формами.  
   
 ## <a name="example"></a>Пример  
  Ниже представлен код T-SQL для хранимой процедуры, которая последовательно возвращает несколько результирующих наборов.  
@@ -36,4 +36,4 @@ select * from customers
   
 ## <a name="see-also"></a>См. также
 
-- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Хранимые процедуры](stored-procedures.md)

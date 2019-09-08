@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778701"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796744"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>Метод IAssemblyCache::UninstallAssembly
 Удаляет указанную сборку из глобального кэша сборок.  
@@ -40,16 +40,16 @@ HRESULT UninstallAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `dwFlags`  
- [in] Флаги, определенные в Fusion.idl.  
+ окне Флаги, определенные в Fusion. idl.  
   
  `pszAssemblyName`  
- [in] Имя сборки.  
+ окне Имя сборки, которую необходимо удалить.  
   
  `pRefData`  
- [in] Объект [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) структуру, содержащую данные для сборки.  
+ окне Структура [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) , содержащая данные установки для сборки.  
   
  `pulDisposition`  
- [out, optional] Один из методов обработки значений, определенных в Fusion.idl. Ниже приведены возможные значения:  
+ [out, необязательно] Одно из значений метода обработки, определенных в Fusion. idl. Возможны следующие значения:  
   
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,12 +64,12 @@ HRESULT UninstallAssembly (
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Интерфейс IAssemblyCache](iassemblycache-interface.md)

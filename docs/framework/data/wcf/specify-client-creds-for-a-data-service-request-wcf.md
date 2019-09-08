@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Укажите учетные данные клиента для службы данных запросов (службы данных WCF)
+title: Практическое руководство. Указание учетных данных клиента для запроса на обслуживание данных (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: ed32cb7d1c9da8a98333bc7eddd3e5707e4664ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660868"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790322"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Практическое руководство. Укажите учетные данные клиента для службы данных запросов (службы данных WCF)
-По умолчанию клиентская библиотека не поддерживает учетные данные при отправке запроса службе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Тем не менее можно задать отправку учетных данных для проверки подлинности запросов службе данных, указав <xref:System.Net.NetworkCredential> для свойства <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> в контексте <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. в разделе [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). В примере в этом разделе показано, как явно предоставить учетные данные, используемые клиентом [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] при запросе данных из службы данных.  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Практическое руководство. Указание учетных данных клиента для запроса на обслуживание данных (WCF Data Services)
+По умолчанию клиентская библиотека не поддерживает учетные данные при отправке запроса службе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Тем не менее можно задать отправку учетных данных для проверки подлинности запросов службе данных, указав <xref:System.Net.NetworkCredential> для свойства <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> в контексте <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. в разделе [Securing WCF Data Services](securing-wcf-data-services.md). В примере в этом разделе показано, как явно предоставить учетные данные, используемые клиентом [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] при запросе данных из службы данных.  
   
- Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Можно также использовать [образца службы данных Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) , опубликованный на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-сайта этот образец данных служба доступна только для чтения и попытка сохранить изменения возвращает ошибку. Образцы служб данных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-сайт допускают анонимную проверку подлинности.  
+ Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md). Вы также можете использовать [учебную службу данных Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) , опубликованную на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-сайте. Этот образец службы данных доступен только для чтения и попытка сохранить изменения возвращает ошибку. Образец служб данных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-сайте разрешает анонимную проверку подлинности.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен на странице кода для файла расширяемого языка разметки приложений (XAML), который представляет главную страницу приложения Windows Presentation Framework. В этом примере отображается экземпляр `LoginWindow`, получающий учетные данные у пользователя и использующий их при составлении запроса к службе данных.  
+ Следующий пример относится к странице кода программной части для файла XAML (XAML), который является основной страницей приложения Windows Presentation Framework. В этом примере отображается экземпляр `LoginWindow`, получающий учетные данные у пользователя и использующий их при составлении запроса к службе данных.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]
@@ -50,9 +50,9 @@ ms.locfileid: "64660868"
   
 - Данные, отправляемые с помощью базовой и дайджест-проверки подлинности, не шифруются, поэтому злоумышленник может их видеть. Помимо этого, учетные данных обычной проверки подлинности (имя пользователя и пароль) отправляются открытым текстом и могут быть перехвачены.  
   
- Дополнительные сведения см. в разделе [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
+ Дополнительные сведения см. в разделе [Securing WCF Data Services](securing-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Защита служб WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Защита служб WCF Data Services](securing-wcf-data-services.md)
+- [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)

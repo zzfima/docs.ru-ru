@@ -8,70 +8,70 @@ helpviewer_keywords:
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697723"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795318"
 ---
 # <a name="fusion-global-static-functions"></a>Глобальные статические функции Fusion
-В этом разделе описываются неуправляемые глобальные статические функции, используемые API Fusion.  
+В этом разделе описаны неуправляемые глобальные статические функции, используемые API Fusion.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Функция ClearDownloadCache](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
- Очищает глобальный кэш сборок загруженных сборок.  
+ [Функция ClearDownloadCache](cleardownloadcache-function.md)  
+ Очищает глобальный кэш сборок скачанных сборок.  
   
- [Функция CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- Сравнивает два идентификатора сборки, чтобы определить, являются ли они равными.  
+ [Функция CompareAssemblyIdentity](compareassemblyidentity-function.md)  
+ Сравнивает два идентификатора сборки, чтобы определить, являются ли они эквивалентными.  
   
- [Функция CreateApplicationContext](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- Только для внутреннего использования. (Эта функция поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода).  
+ [Функция CreateApplicationContext](createapplicationcontext-function.md)  
+ Только внутренние. (Эта функция поддерживает инфраструктуру .NET Framework и не предназначена для непосредственного использования в коде.)  
   
- [Функция CreateAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
- Возвращает указатель на новый [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) экземпляр, представляющий глобальный кэш сборок.  
+ [Функция CreateAssemblyCache](createassemblycache-function.md)  
+ Возвращает указатель на новый экземпляр [IAssemblyCache](iassemblycache-interface.md) , представляющий глобальный кэш сборок.  
   
- [Функция CreateAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
- Возвращает указатель на [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) экземпляр, который представляет список объектов, существующих в указанной сборке.  
+ [Функция CreateAssemblyEnum](createassemblyenum-function.md)  
+ Возвращает указатель на экземпляр [IAssemblyEnum](iassemblyenum-interface.md) , представляющий список объектов, существующих в указанной сборке.  
   
- [Функция CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- Возвращает указатель на [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) экземпляр, представляющий уникальный идентификатор сборки с указанным именем.  
+ [Функция CreateAssemblyNameObject](createassemblynameobject-function.md)  
+ Возвращает указатель на экземпляр [IAssemblyName](iassemblyname-interface.md) , представляющий уникальный идентификатор сборки с указанным именем.  
   
- [Функция CreateHistoryReader](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
+ [Функция CreateHistoryReader](createhistoryreader-function.md)  
  Создает средство чтения журнала для указанного файла.  
   
- [Функция CreateInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
- Возвращает указатель на [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) экземпляр, который представляет список ссылок на приложения для указанной сборки.  
+ [Функция CreateInstallReferenceEnum](createinstallreferenceenum-function.md)  
+ Возвращает указатель на экземпляр [IInstallReferenceEnum](iinstallreferenceenum-interface.md) , представляющий список ссылок приложения на указанную сборку.  
   
- [Функция GetAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
- Возвращает указатель на [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) экземпляр, который управляет ключами для идентификаторов и ссылок приложения.  
+ [Функция GetAppIdAuthority](getappidauthority-function.md)  
+ Возвращает указатель на экземпляр [иаппидаусорити](iappidauthority-interface.md) , который управляет ключами для удостоверений приложений и ссылок.  
   
- [Функция GetAssemblyIdentityFromFile](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
- Возвращает указатель на `IUnknown` объект с указанным `IID` в сборку по указанному пути.  
+ [Функция GetAssemblyIdentityFromFile](getassemblyidentityfromfile-function.md)  
+ Возвращает указатель на `IUnknown` объект с указанным `IID` в сборке по указанному пути к файлу.  
   
- [Функция GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- Получает путь к кэшированную сборку, используя указанные флаги.  
+ [Функция GetCachePath](getcachepath-function.md)  
+ Возвращает путь к кэшированной сборке с использованием указанных флагов.  
   
- [Функция GetHistoryFileDirectory](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
- Извлекает путь к каталогу журнала приложения.  
+ [Функция GetHistoryFileDirectory](gethistoryfiledirectory-function.md)  
+ Возвращает путь к каталогу журнала приложения.  
   
- [Функция GetIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
- Возвращает указатель на [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) экземпляр, который управляет ключами для объектов кода.  
+ [Функция GetIdentityAuthority](getidentityauthority-function.md)  
+ Возвращает указатель на экземпляр [IIdentityAuthority](iidentityauthority-interface.md) , который управляет ключами для объектов кода.  
   
- [Функция IsFrameworkAssembly](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
- Получает значение, указывающее, управляется ли указанная сборка.  
+ [Функция IsFrameworkAssembly](isframeworkassembly-function.md)  
+ Возвращает значение, указывающее, является ли указанная сборка управляемой.  
   
- [Функция NukeDownloadedCache](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
- Удаляет кэш загрузки среды выполнения языка.  
+ [Функция NukeDownloadedCache](nukedownloadedcache-function.md)  
+ Удаляет кэш загрузки среды CLR.  
   
- [Функция PreBindAssemblyEx](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
- Возвращает после применения политики отображаемое имя сборки.  
+ [Функция PreBindAssemblyEx](prebindassemblyex-function.md)  
+ Возвращает отображаемое имя после применения политики для сборки.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Интерфейсы Fusion](fusion-interfaces.md)  
   
- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
+ [Перечисления Fusion](fusion-enumerations.md)  
   
- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
+ [Структуры Fusion](fusion-structures.md)  
   
- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+ [Глобальный кэш сборок](../../app-domains/gac.md)

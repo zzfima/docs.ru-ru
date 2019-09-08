@@ -2,12 +2,12 @@
 title: Синтаксис строки подключения
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949475"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784913"
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 Каждый поставщик данных платформы .NET Framework имеет объект `Connection`, наследующий из <xref:System.Data.Common.DbConnection>, а также из свойства <xref:System.Data.Common.DbConnection.ConnectionString%2A>, зависящего от поставщика. Конкретный синтаксис строки подключения для каждого поставщика приведен в его свойстве `ConnectionString`. В следующей таблице представлен список четырех поставщиков данных, поставляемых в составе платформы .NET Framework.  
@@ -30,7 +30,7 @@ ms.locfileid: "69949475"
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Построители строк соединения позволяют создавать во время выполнения синтаксически правильные строки соединения, и поэтому в коде не требуется вручную объединять значения строк соединения. Дополнительные сведения см. в статье [Connection String Builders](../../../../docs/framework/data/adonet/connection-string-builders.md) (Построители строк подключения).  
+ Построители строк соединения позволяют создавать во время выполнения синтаксически правильные строки соединения, и поэтому в коде не требуется вручную объединять значения строк соединения. Дополнительные сведения см. в статье [Connection String Builders](connection-string-builders.md) (Построители строк подключения).  
 
 ## <a name="windows-authentication"></a>Проверка подлинности Windows  
  Мы рекомендуем использовать проверку подлинности Windows (иногда называемую *встроенной безопасностью*) для подключения к источникам данных, которые его поддерживают. Синтаксис строки подключения зависит от поставщика. В следующей таблице показан синтаксис проверки подлинности Windows, который используется с поставщиками данных платформы .NET Framework.  
@@ -90,7 +90,7 @@ Data Source=MySqlServer\MSSQL1;"
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Подключение и присоединение к пользовательским экземплярам SQL Server Express  
  Пользовательские экземпляры являются одной из возможностей SQL Server Express. Они дают пользователям под учетной записью с минимальными правами возможность присоединить и запустить базу данных SQL Server без прав администратора. Пользовательский экземпляр выполняется с учетными данными пользователя Windows, а не службы.  
   
- Дополнительные сведения о работе с пользовательскими экземплярами см. в разделе [SQL Server Express User Instances](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Дополнительные сведения о работе с пользовательскими экземплярами см. в разделе [SQL Server Express User Instances](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Использование ключевого слова TrustServerCertificate  
  `TrustServerCertificate` Ключевое слово допустимо только при подключении к экземпляру SQL Server с действительным сертификатом. Если ключевому слову `TrustServerCertificate` присвоено значение `true`, то транспортный уровень будет использовать протокол SSL для шифрования канала и не пойдет по цепочке сертификатов для проверки доверия.  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>См. также
 
-- [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Строки подключения](connection-strings.md)
+- [Подключение к источнику данных](connecting-to-a-data-source.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: ccd2e37457e686bc5faed6d8979c2b266d05c829
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a7eceeec63d9caadefab8d98942f10d82c99ca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943440"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793355"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Практическое руководство. Как разрешать конфликты путем слияния значений базы данных
-Чтобы согласовать различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.KeepChanges> для слияния значений базы данных с текущими значениями члена клиента. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Чтобы согласовать различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.KeepChanges> для слияния значений базы данных с текущими значениями члена клиента. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > Во всех случаях запись на клиенте сначала обновляется путем извлечения обновленных данных из базы данных. Это действие гарантирует успешное выполнение следующей попытки обновления при тех же проверках параллелизма.  
@@ -42,6 +42,6 @@ ms.locfileid: "69943440"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Разрешение конфликтов путем перезаписи значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Практическое руководство. Разрешение конфликтов путем удержания значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Практическое руководство. Разрешение конфликтов путем перезаписи значений базы данных](how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Практическое руководство. Разрешение конфликтов путем удержания значений базы данных](how-to-resolve-conflicts-by-retaining-database-values.md)
+- [Практическое руководство. Управление конфликтами изменений](how-to-manage-change-conflicts.md)

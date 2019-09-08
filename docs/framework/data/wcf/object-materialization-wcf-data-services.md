@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043531"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790390"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Материализация объектов (службы данных WCF)
 
-При использовании диалогового окна **Добавление ссылки на службу** для использования [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] канала в клиентском приложении на основе .NET Framework для каждого типа сущности в модели данных, предоставляемой веб-каналом, создаются эквивалентные классы данных. Дополнительные сведения см. [в разделе Создание клиентской библиотеки службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Данные сущности, возвращаемые запросом, материализуются в экземпляр одного из созданных классов клиентской службы данных. Сведения о параметрах слияния и разрешении идентификаторов для отслеживания объектов см. [в разделе Управление контекстом службы данных](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
+При использовании диалогового окна **Добавление ссылки на службу** для использования [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] канала в клиентском приложении на основе .NET Framework для каждого типа сущности в модели данных, предоставляемой веб-каналом, создаются эквивалентные классы данных. Дополнительные сведения см. [в разделе Создание клиентской библиотеки службы данных](generating-the-data-service-client-library-wcf-data-services.md). Данные сущности, возвращаемые запросом, материализуются в экземпляр одного из созданных классов клиентской службы данных. Сведения о параметрах слияния и разрешении идентификаторов для отслеживания объектов см. [в разделе Управление контекстом службы данных](managing-the-data-service-context-wcf-data-services.md).
 
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют также определять собственные классы клиентской службы данных, а не использовать формируемые средством классы данных. Это позволяет разработчикам использовать собственные классы данных, также называемые классами данных POCO (Plain Old CLR Object). При использовании этих типов пользовательских классов данных следует присвоить классу данных значение <xref:System.Data.Services.Common.DataServiceKeyAttribute> или <xref:System.Data.Services.Common.DataServiceEntityAttribute> и убедиться, что имена типов в клиенте совпадают с именами типов в модели данных службы данных.
 
@@ -38,10 +38,10 @@ ms.locfileid: "70043531"
 
     - Сложным свойствам присваивается новый экземпляр сложного типа, принимающий значения свойств сложного типа из ответа.
 
-    - Свойства навигации, которые возвращают коллекцию связанных сущностей, приравниваются к новому или существующему экземпляру коллекции <xref:System.Collections.Generic.ICollection%601>, где `T` является типом связанной сущности. Эта коллекция будет пустой, если связанные объекты не загружены в объект <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).
+    - Свойства навигации, которые возвращают коллекцию связанных сущностей, приравниваются к новому или существующему экземпляру коллекции <xref:System.Collections.Generic.ICollection%601>, где `T` является типом связанной сущности. Эта коллекция будет пустой, если связанные объекты не загружены в объект <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).
 
       > [!NOTE]
-      > Если созданные классы клиентских данных поддерживают привязку данных, свойства навигации возвращают вместо этого экземпляры класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Дополнительные сведения см. [в разделе Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+      > Если созданные классы клиентских данных поддерживают привязку данных, свойства навигации возвращают вместо этого экземпляры класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Дополнительные сведения см. [в разделе Привязка данных к элементам управления](binding-data-to-controls-wcf-data-services.md).
 
 4. Возникает событие <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity>.
 
@@ -49,5 +49,5 @@ ms.locfileid: "70043531"
 
 ## <a name="see-also"></a>См. также
 
-- [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Проекции запросов](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)
+- [Проекции запросов](query-projections-wcf-data-services.md)

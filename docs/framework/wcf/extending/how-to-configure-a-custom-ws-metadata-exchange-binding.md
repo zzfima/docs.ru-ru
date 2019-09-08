@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991228"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795654"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
-В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Windows Communication Foundation (WCF) включает в себя четыре привязки метаданных, определенные системой, но вы можете публиковать метаданные с помощью любой привязки, которые нужно. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Windows Communication Foundation (WCF) включает четыре определяемые системой привязки метаданных, но метаданные можно публиковать с помощью любой требуемой привязки. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [Начало работы](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Использование файла конфигурации  
   
@@ -115,8 +115,8 @@ ms.locfileid: "61991228"
   
 ## <a name="see-also"></a>См. также
 
-- [Поведение публикации метаданных](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [Извлечение метаданных](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [Публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [Поведение публикации метаданных](../samples/metadata-publishing-behavior.md)
+- [Извлечение метаданных](../samples/retrieve-metadata.md)
+- [Метаданные](../feature-details/metadata.md)
+- [Публикация метаданных](../feature-details/publishing-metadata.md)
+- [Публикация конечных точек метаданных](../publishing-metadata-endpoints.md)

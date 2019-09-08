@@ -2,12 +2,12 @@
 title: Безопасный доступ к данным
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963143"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782773"
 ---
 # <a name="secure-data-access"></a>Безопасный доступ к данным
 Для записи безопасного кода ADO.NET необходимо понять механизмы безопасности, доступные в базовом хранилище данных или базе данных. Также необходимо рассмотреть влияние на безопасность остальных возможностей или компонентов, которые может содержать приложение.  
@@ -23,10 +23,10 @@ ms.locfileid: "69963143"
   
 |Resource|Описание|  
 |--------------|-----------------|  
-|[Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Приводятся рекомендации по безопасности и методы защиты данных подключения, например использование для шифрования строк подключения защищенной конфигурации.|  
+|[Защита сведений о подключении](protecting-connection-information.md)|Приводятся рекомендации по безопасности и методы защиты данных подключения, например использование для шифрования строк подключения защищенной конфигурации.|  
 |[Рекомендации по стратегиям доступа к данным](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Содержит рекомендации для доступа к данным и выполнения операций над базой данных.|  
-|[Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)|Описывает способ построения строк соединения по данным, введенным пользователем во время выполнения.|  
-|[Общие сведения о безопасности SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Описывает архитектуру безопасности SQL Server.|  
+|[Построители строк подключения](connection-string-builders.md)|Описывает способ построения строк соединения по данным, введенным пользователем во время выполнения.|  
+|[Общие сведения о безопасности SQL Server](./sql/overview-of-sql-server-security.md)|Описывает архитектуру безопасности SQL Server.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Параметризованные команды и внедрение кода SQL  
  Использование параметризованных команд помогает защищаться от атак путем внедрения кода SQL, в которых атакующий «внедряет» в инструкцию SQL команду, нарушающую безопасность сервера. Параметризованные команды обеспечивают защиту против атак путем внедрения кода SQL, гарантируя, что данные, полученные от внешнего источника, передаются только как значения, а не как часть инструкции Transact-SQL. В результате команды Transact-SQL, вставленные в значение, не выполняются в источнике данных. Вместо этого они оцениваются только как значение параметра. В дополнение к повышенной безопасности параметризованные команды предоставляют удобный метод организации значений, передаваемых с инструкцией Transact-SQL или в хранимую процедуру.  
@@ -35,9 +35,9 @@ ms.locfileid: "69963143"
   
 |Resource|Описание|  
 |--------------|-----------------|  
-|[Параметры DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Описывает способ использования параметров с `DataAdapter`.|  
-|[Изменение данных с помощью хранимых процедур](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Описывает способ задания параметров и получения возвращаемого значения.|  
-|[Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Описывает способ использования хранимых процедур SQL Server для инкапсуляции доступа к данным.|  
+|[Параметры DataAdapter](dataadapter-parameters.md)|Описывает способ использования параметров с `DataAdapter`.|  
+|[Изменение данных с помощью хранимых процедур](modifying-data-with-stored-procedures.md)|Описывает способ задания параметров и получения возвращаемого значения.|  
+|[Управление разрешениями с использованием хранимых процедур в SQL Server](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Описывает способ использования хранимых процедур SQL Server для инкапсуляции доступа к данным.|  
   
 ## <a name="script-exploits"></a>Эксплойты скриптов  
  Эксплойты скриптов представляют собой еще одну форму внедрения кода, в которой используются вредоносные символы, вставленные в веб-страницу. Браузер не проверяет вставленные символы и обрабатывает их как часть страницы.  
@@ -84,14 +84,14 @@ ms.locfileid: "69963143"
   
 |Resource|Описание|  
 |--------------|-----------------|  
-|[Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)|Содержит подразделы, описывающие представление COM-компонентов платформе .NET Framework и представление компонентов .NET Framework объектам COM.|
+|[Взаимодействие с неуправляемым кодом](../../interop/index.md)|Содержит подразделы, описывающие представление COM-компонентов платформе .NET Framework и представление компонентов .NET Framework объектам COM.|
 |[Расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Содержит расширенные подразделы, такие как основные сборки взаимодействия, организация поточной обработки и пользовательская упаковка и передача.|
 
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Безопасность SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Защита приложений ADO.NET](securing-ado-net-applications.md)
+- [Безопасность SQL Server](./sql/sql-server-security.md)
 - [Рекомендации по стратегиям доступа к данным](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Защита сведений о подключении](protecting-connection-information.md)
+- [Построители строк подключения](connection-string-builders.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

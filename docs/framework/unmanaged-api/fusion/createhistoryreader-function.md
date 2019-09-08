@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778424"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795365"
 ---
 # <a name="createhistoryreader-function"></a>Функция CreateHistoryReader
 Создает средство чтения журнала для указанного файла.  
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>Параметры  
  `wzFilePath`  
- [in] Путь к файлу.  
+ окне Путь к файлу.  
   
  `ppHistoryReader`  
- [out] При успешном завершении содержит указатель на средство чтения журнала.  
+ заполняет При успешном завершении содержит указатель на средство чтения журнала.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо значения, описанные в следующей таблице.  
+ Этот метод возвращает стандартные коды ошибок COM, определенные в файле WinError. h, а также значения, описанные в следующей таблице.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
-|S_OK|Указывает, что метод успешно завершена.|  
-|E_INVALIDARG|Указывает, что `wzFilePath` или `ppHistoryReader` присваивается указатель null.|  
+|S_OK|Указывает, что метод успешно завершен.|  
+|E_INVALIDARG|Указывает, `wzFilePath` что `ppHistoryReader` или задана пустая ссылка.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Библиотека:** Fusion.dll  
+ **Библиотечная** Fusion. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757902"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796379"
 ---
 # <a name="iinstallreferenceitem-interface"></a>Интерфейс IInstallReferenceItem
 Представляет элемент, установленный в глобальном кэше сборок.  
@@ -30,16 +30,16 @@ ms.locfileid: "61757902"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetReference](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Возвращает указатель на `FUSION_INSTALL_REFERENCE` структуры, представленный этим `IInstallReferenceItem`.|  
+|[Метод GetReference](iinstallreferenceitem-getreference-method.md)|Возвращает указатель на `FUSION_INSTALL_REFERENCE` структуру, представленную этим `IInstallReferenceItem`объектом.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Структура FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Структура FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)

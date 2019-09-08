@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938479"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780833"
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательский экземпляр, который доступен только при использовании поставщика данных .NET Framework для SQL Server (`SqlClient`). Пользовательским экземпляром является отдельный экземпляр компонента SQL Server Express Database Engine, который формируется родительским экземпляром. Пользовательские экземпляры позволяют пользователям, не являющимся администраторами на их локальных компьютерах, присоединяться и подключаться к базам данных SQL Server Express. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя, один экземпляр на одного пользователя.  
@@ -152,7 +152,7 @@ private static void OpenSqlConnection()
   
 ## <a name="see-also"></a>См. также
 
-- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Подключение к источнику данных](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server и ADO.NET](index.md)
+- [Строки подключения](../connection-strings.md)
+- [Подключение к источнику данных](../connecting-to-a-data-source.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

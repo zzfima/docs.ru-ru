@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: 156d661fd5602333fae8066f3062b442a1df19af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2407c293de7f11b90586f5a55bd759a4ea734aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951709"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795679"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов
 В данном разделе показано, как реализовать пользовательский проверяющий элемент управления для сертификата и как настроить учетные данные клиента или службы, чтобы заменить логику проверки сертификата по умолчанию пользовательским проверяющим элементом управления для сертификата.  
@@ -35,15 +35,15 @@ ms.locfileid: "69951709"
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>Задание пользовательского проверяющего элемента управления для сертификата в конфигурации службы  
   
-1. Добавьте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) Behaviors > и > serviceBehaviors в [ \<элемент System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. Добавьте элемент [ \<](../../configure-apps/file-schema/wcf/servicebehaviors.md) Behaviors > и > serviceBehaviors в [ \<элемент System. ServiceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../configure-apps/file-schema/wcf/behaviors.md)  
   
-2. Добавьте > `name` поведения и присвойте атрибуту соответствующее значение. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
+2. Добавьте > `name` поведения и присвойте атрибуту соответствующее значение. [ \<](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
   
-3. Добавьте [> ServiceCredentials к элементу. \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) `<behavior>`  
+3. Добавьте [> ServiceCredentials к элементу. \<](../../configure-apps/file-schema/wcf/servicecredentials.md) `<behavior>`  
   
 4. Добавьте элемент `<clientCertificate>` в элемент `<serviceCredentials>`.  
   
-5. Добавьте > проверки подлинности в элемент.`<clientCertificate>` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+5. Добавьте [> проверки подлинности в элемент. \<](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) `<clientCertificate>`  
   
 6. Задайте для атрибута `customCertificateValidatorType` тип проверяющего элемента управления. В следующем примере для атрибута задано значение пространства имен и имени типа.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "69951709"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>Задание пользовательского проверяющего элемента управления для сертификата с использованием конфигурации на стороне клиента  
   
-1. Добавьте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) Behaviors > и > serviceBehaviors в [ \<элемент System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. Добавьте элемент [ \<](../../configure-apps/file-schema/wcf/servicebehaviors.md) Behaviors > и > serviceBehaviors в [ \<элемент System. ServiceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) . [ \<](../../configure-apps/file-schema/wcf/behaviors.md)  
   
-2. Добавьте элемент [> EndpointBehaviors.\<](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)  
+2. Добавьте элемент [> EndpointBehaviors.\<](../../configure-apps/file-schema/wcf/endpointbehaviors.md)  
   
 3. Добавьте элемент `<behavior>` и присвойте атрибуту `name` соответствующее значение.  
   
-4. Добавьте элемент ClientCredentials >. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
+4. Добавьте элемент ClientCredentials >. [ \<](../../configure-apps/file-schema/wcf/clientcredentials.md)  
   
-5. Добавьте > serviceCertificate. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)  
+5. Добавьте > serviceCertificate. [ \<](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)  
   
-6. Добавьте > проверки подлинности, как показано в следующем примере. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+6. Добавьте > проверки подлинности, как показано в следующем примере. [ \<](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 7. Задайте для атрибута `customCertificateValidatorType` тип проверяющего элемента управления.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "69951709"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>Задание пользовательского проверяющего элемента управления для сертификата с использованием кода на стороне клиента  
   
-1. Задайте пользовательский проверяющий элемент управления для сертификата в свойстве <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>. Получить доступ к учетным данным клиента можно с помощью свойства <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>. (Клиентский класс, созданный с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , <xref:System.ServiceModel.ClientBase%601> всегда является производным от класса.)  
+1. Задайте пользовательский проверяющий элемент управления для сертификата в свойстве <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>. Получить доступ к учетным данным клиента можно с помощью свойства <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>. (Клиентский класс, созданный с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , <xref:System.ServiceModel.ClientBase%601> всегда является производным от класса.)  
   
 2. Задайте для свойства <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   

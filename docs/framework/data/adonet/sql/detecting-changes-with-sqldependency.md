@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877673"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782421"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Обнаружение изменений с использованием SqlDependency
 
@@ -18,7 +18,7 @@ ms.locfileid: "61877673"
 
 ## <a name="security-considerations"></a>Вопросы безопасности
 
-Инфраструктура безопасности основана на соединении <xref:System.Data.SqlClient.SqlConnection>, которое открывается при вызове <xref:System.Data.SqlClient.SqlDependency.Start%2A>, чтобы получать уведомления о том, что базовые данные изменились для данной команды. Возможность для клиента инициировать вызов `SqlDependency.Start` регулируется использованием <xref:System.Data.SqlClient.SqlClientPermission> и атрибутами управления доступом для кода. Дополнительные сведения см. в разделе [Включение уведомлений о запросах](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) и [управления доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).
+Инфраструктура безопасности основана на соединении <xref:System.Data.SqlClient.SqlConnection>, которое открывается при вызове <xref:System.Data.SqlClient.SqlDependency.Start%2A>, чтобы получать уведомления о том, что базовые данные изменились для данной команды. Возможность для клиента инициировать вызов `SqlDependency.Start` регулируется использованием <xref:System.Data.SqlClient.SqlClientPermission> и атрибутами управления доступом для кода. Дополнительные сведения см. в разделе [Включение уведомлений о запросах](enabling-query-notifications.md) и [разграничение доступа кода и ADO.NET](../code-access-security.md).
 
 ### <a name="example"></a>Пример
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>См. также
 
-- [Уведомления запросов в SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Уведомления запросов в SQL Server](query-notifications-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

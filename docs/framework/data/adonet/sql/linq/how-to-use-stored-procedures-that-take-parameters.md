@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938702"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793073"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Практическое руководство. Как использовать хранимые процедуры, которые принимают параметры
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет выходные параметры с параметрами, передаваемыми по ссылке, и для типов значений объявляет, что параметры могут принимать значение NULL.  
   
- Пример использования входного параметра в запросе, возвращающем набор строк, см. в разделе [как Возвращает наборы строк](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
+ Пример использования входного параметра в запросе, возвращающем набор строк, см. в разделе [как Возвращает наборы строк](how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере передается один входной параметр (код клиента) и возвращается один выходной параметр (общий объем продаж по этому клиенту).  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>См. также
 
-- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Хранимые процедуры](stored-procedures.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)
 - [Использование допускающих значение NULL типов](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Типы значений, допускающие значение NULL](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

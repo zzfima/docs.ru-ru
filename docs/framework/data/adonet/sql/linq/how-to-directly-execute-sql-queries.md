@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 04353361f8356b1d2b2aa3b930bb9b5ab88b9c0b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a4971bc05b22c38790c5fd1493e70cccf5eaae16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583691"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793780"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Практическое руководство. Как прямо выполнять запросы SQL
 Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует написанные пользователем запросы в параметризованные запросы SQL (в текстовой форме) и отправляет их на сервер SQL для обработки.  
   
- В SQL не может выполняться все разнообразие методов, локально доступных приложению. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] пытается преобразовать эти локальные методы в равноценные операторы и функции среды SQL. Большинство методов и операторы для встроенных типов .NET Framework предусмотрены непосредственные преобразования в команды SQL. Некоторые методы и операторы можно создать из доступных функций, а те, которые не могут быть преобразованы, вызывают исключения во время выполнения. Дополнительные сведения см. в разделе [сопоставления типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ В SQL не может выполняться все разнообразие методов, локально доступных приложению. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] пытается преобразовать эти локальные методы в равноценные операторы и функции среды SQL. Большинство методов и операторов на .NET Framework встроенных типах имеют прямой перевод команд SQL. Некоторые методы и операторы можно создать из доступных функций, а те, которые не могут быть преобразованы, вызывают исключения во время выполнения. Дополнительные сведения см. в разделе [Сопоставление типов SQL-CLR](sql-clr-type-mapping.md).  
   
  В тех случаях, когда запроса [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] недостаточно для выполнения специализированной задачи, можно использовать метод <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> для выполнения запроса SQL и последующего преобразования результата запроса непосредственно в объекты.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "65583691"
  [!code-csharp[DLinqQuerying#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#4)]
  [!code-vb[DLinqQuerying#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#4)]  
   
- До тех пор, пока имена столбцов в табличных результатах соответствуют свойствам столбцов класса сущностей, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объекты вне запроса SQL.  
+ При условии, что имена столбцов в табличных результатах соответствуют свойствам столбца класса сущностей [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , создает объекты из любого SQL запроса.  
   
 ## <a name="example"></a>Пример  
  Метод <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> также допускает использование параметров. Для выполнения параметризованного запроса используется код, аналогичный представленному ниже.  
@@ -33,9 +33,9 @@ ms.locfileid: "65583691"
  [!code-csharp[DLinqQuerying#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#5)]
  [!code-vb[DLinqQuerying#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#5)]  
   
- Параметры записываются в тексте запроса с помощью той же нотации с фигурными скобками, которая используется в методах `Console.WriteLine()` и `String.Format()`. На самом деле `String.Format()` фактически вызывается в строке запроса, вы предоставляете, заменив фигурные скобки параметры на созданные имена параметров, таких как @p0, @p1 ..., @p(n).  
+ Параметры записываются в тексте запроса с помощью той же нотации с фигурными скобками, которая используется в методах `Console.WriteLine()` и `String.Format()`. Фактически вызывается в предоставленной вами строке запроса, заменяя заключенные в фигурные скобки параметры созданными именами параметров, такими @p0как @p1 ,... @p, (n). `String.Format()`  
   
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Основные сведения](background-information.md)
+- [Запрос к базе данных](querying-the-database.md)

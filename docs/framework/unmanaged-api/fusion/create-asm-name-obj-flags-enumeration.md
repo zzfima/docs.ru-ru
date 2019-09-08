@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871ad81cd83c40d7299f39ede404e274b95b2ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778454"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795417"
 ---
-# <a name="createasmnameobjflags-enumeration"></a>Перечисление CREATE_ASM_NAME_OBJ_FLAGS
-Указывает атрибуты [IAssemblyName-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта при построении с [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) функции.  
+# <a name="create_asm_name_obj_flags-enumeration"></a>Перечисление CREATE_ASM_NAME_OBJ_FLAGS
+Задает атрибуты объекта [интерфейса IAssemblyName](iassemblyname-interface.md) при создании с помощью функции [креатеассемблинамеобжект](createassemblynameobject-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,18 +46,18 @@ typedef enum {
 |------------|-----------------|  
 |`CANOF_PARSE_DISPLAY_NAME`|Указывает, что переданный параметр является текстовым идентификатором.|  
 |`CANOF_SET_DEFAULT_VALUES`|Задает несколько значений по умолчанию.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Проверяет правило дружественной сборки (только имя и открытый ключ). Этот член является только для внутреннего использования.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Сочетание `CANOF_PARSE_DISPLAY_NAME` и `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` флаги. Этот член является только для внутреннего использования.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Проверяет правило дружественной сборки (только имя и открытый ключ). Этот член предназначен только для внутреннего использования.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Сочетание `CANOF_PARSE_DISPLAY_NAME` флагов и `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` . Этот член предназначен только для внутреннего использования.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Функция CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Функция CreateAssemblyNameObject](createassemblynameobject-function.md)
+- [Перечисления Fusion](fusion-enumerations.md)

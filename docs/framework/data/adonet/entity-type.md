@@ -2,25 +2,25 @@
 title: тип сущности
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: dd1e8a7605c29b3dacaa7ccf9156af2a9b65d5b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efd3ea0972148e885d4b22b49040640539bb28cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599624"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795121"
 ---
 # <a name="entity-type"></a>тип сущности
-*Тип сущности* — это фундаментальный блок построения для описания структуры данных Entity Data Model (EDM). В концептуальной модели тип сущности представляет структуру основных концептуальных элементов верхнего уровня, таких как клиенты или заказы. Тип сущности - это шаблон для экземпляров типов сущностей. Каждый шаблон содержит следующие сведения.  
+*Тип сущности* является фундаментальным стандартным блоком для описания структуры данных с помощью EDM (EDM). В концептуальной модели тип сущности представляет структуру основных концептуальных элементов верхнего уровня, таких как клиенты или заказы. Тип сущности - это шаблон для экземпляров типов сущностей. Каждый шаблон содержит следующие сведения.  
   
 - Уникальное имя. (Обязательно).  
   
-- [Ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) определяется одно или несколько свойств. (Обязательно).  
+- [Ключ сущности](entity-key.md) , определенный одним или несколькими свойствами. (Обязательно).  
   
-- Данные в виде [свойства](../../../../docs/framework/data/adonet/property.md). (Необязательно.)  
+- Данные в виде [свойств](property.md). (Необязательно.)  
   
-- [Свойства навигации](../../../../docs/framework/data/adonet/navigation-property.md) , которые позволяют переходить от одного [окончания](../../../../docs/framework/data/adonet/association-end.md) из [ассоциации](../../../../docs/framework/data/adonet/association-type.md) к другой стороне. (Необязательный параметр).  
+- [Свойства навигации](navigation-property.md) , позволяющие переходить с одного [конца](association-end.md) [ассоциации](association-type.md) на другой конец. (Необязательный параметр).  
   
- В приложении экземпляр типа сущности представляет определенный объект (например, определенного клиента или заказ). Каждый экземпляр типа сущности должен иметь уникальный [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) в [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md).  
+ В приложении экземпляр типа сущности представляет определенный объект (например, определенного клиента или заказ). Каждый экземпляр типа сущности должен иметь уникальный [ключ сущности](entity-key.md) в [наборе сущностей](entity-set.md).  
   
  Два экземпляра типа сущности считаются равными, только если они являются экземплярами одного типа и значения их ключей сущности равны.  
   
@@ -31,12 +31,12 @@ ms.locfileid: "64599624"
   
  Обратите внимание, что свойства каждого типа сущности, составляющего его ключ сущности, обозначаются знаком «(Ключ)».  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Ниже на языке CSDL определяется тип сущности `Book`, который ранее приводился в схеме.  
+ [Entity Framework ADO.NET](./ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](./ef/language-reference/csdl-specification.md)), для определения концептуальных моделей. Ниже на языке CSDL определяется тип сущности `Book`, который ранее приводился в схеме.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [facet](../../../../docs/framework/data/adonet/facet.md)
+- [Основные понятия модели EDM](entity-data-model-key-concepts.md)
+- [Сущностная модель данных](entity-data-model.md)
+- [facet](facet.md)

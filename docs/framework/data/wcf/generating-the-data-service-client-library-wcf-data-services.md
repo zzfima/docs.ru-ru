@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918641"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780289"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Создание библиотеки клиентов службы данных (службы данных WCF)
 Служба данных, реализующая интерфейс [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , может возвращать документ метаданных службы, описывающий модель данных, предоставляемую [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналом. Дополнительные сведения см. в [разделе OData: Документ](https://go.microsoft.com/fwlink/?LinkId=186070)метаданных службы. Для добавления ссылки на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]службу на основе можно использовать диалоговое окно Добавление ссылки на службу в Visual Studio. При использовании этого средства для добавления ссылки на метаданные, возвращаемые [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналом в клиентский проект, выполняются следующие действия.  
@@ -27,9 +27,9 @@ ms.locfileid: "69918641"
   
 - Добавляет в проект ссылку на сборку `System.Data.Services.Client`.  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Добавьте ссылку](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)на службу данных.  
+ Дополнительные сведения см. в разделе [Практическое руководство. Добавьте ссылку](how-to-add-a-data-service-reference-wcf-data-services.md)на службу данных.  
   
- Классы клиентской службы данных также можно создать с помощью средства [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) из командной строки. Дополнительные сведения см. в разделе [Практическое руководство. Создание классов](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)клиентской службы данных вручную.  
+ Классы клиентской службы данных также можно создать с помощью средства [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) из командной строки. Дополнительные сведения см. в разделе [Практическое руководство. Создание классов](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)клиентской службы данных вручную.  
   
 ## <a name="client-data-type-mapping"></a>Сопоставление клиентских типов данных  
  При использовании диалогового окна **Добавление ссылки на службу** в Visual Studio или `DataSvcUtil.exe` средства для создания клиентских классов данных, основанных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канале, типы данных .NET Framework сопоставляются с типами-примитивами из модели данных следующим образом:  
@@ -54,5 +54,5 @@ ms.locfileid: "69918641"
   
 ## <a name="see-also"></a>См. также
 
-- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
+- [Краткое руководство](quickstart-wcf-data-services.md)

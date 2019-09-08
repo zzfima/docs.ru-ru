@@ -2,12 +2,12 @@
 title: Знакомство с интеграцией CLR в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 380666ae9a3ebc18ef470e5ab719360f40510f41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650599"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782260"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Знакомство с интеграцией CLR в SQL Server
 Среда CLR является сердцем платформы Microsoft .NET Framework и предоставляет среду выполнения для всего кода .NET Framework. Код, выполняемый в среде CLR, называется управляемым кодом. Среда CLR предоставляет различные функции и услуги, требуемые для выполнения программы, включая JIT-компиляцию, распределение и управление памятью, соблюдение безопасности типов, обработку исключений, управление потоками и безопасность.  
@@ -20,7 +20,7 @@ ms.locfileid: "64650599"
   
  **Электронная документация по SQL Server**  
   
-- [Обзор интеграции (CLR) среды CLR](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Общие сведения об интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Включение интеграции со средой CLR  
  Возможность интеграции со средой CLR отключена в Microsoft SQL Server по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR с помощью Transact-SQL, воспользуйтесь параметром `clr enabled` хранимой процедуры `sp_configure`, как показано ниже.  
@@ -45,7 +45,7 @@ GO
   
  **Электронная документация по SQL Server**  
   
-1. [Развертывание объектов базы данных среды CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [Развертывание объектов базы данных CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR  
  Интеграция модели безопасности Microsoft SQL Server со средой Microsoft .NET Framework CLR позволяет поддерживать доступ для различных типов объектов (как CLR, так и не CLR), выполняемых в SQL Server, а также обеспечивать безопасность этого доступа. Для вызова этих объектов может применяться инструкция Transact-SQL или другой объект CLR, выполняемый на сервере.  
@@ -63,9 +63,9 @@ GO
   
  **Электронная документация по SQL Server**  
   
-- [Отладка объектов баз данных CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [Отладка объектов базы данных CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>См. также
 
-- [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управление доступом для кода и ADO.NET](../code-access-security.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

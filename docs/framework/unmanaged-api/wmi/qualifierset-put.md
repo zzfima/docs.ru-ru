@@ -1,6 +1,6 @@
 ---
 title: Функция QualifierSet_Put (Справочник по неуправляемым API)
-description: Эта функция QualifierSet_Put записывает именованного квалификатора и его значение.
+description: Функция QualifierSet_Put записывает именованный квалификатор и его значение.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Put
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377866"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798274"
 ---
-# <a name="qualifiersetput-function"></a>Функция QualifierSet_Put
+# <a name="qualifierset_put-function"></a>Функция QualifierSet_Put
 
 Записывает именованный квалификатор и значение. Новый квалификатор перезаписывает предыдущее значение с тем же именем. Если квалификатор не существует, он создается.
 
@@ -44,52 +44,52 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`\
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`\
-[in] Указатель на [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) экземпляра.
+окне Указатель на экземпляр [ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`\
-[in] Имя квалификатора для записи.
+окне Имя записываемого описателя.
 
 `pVal`\
-[in] Указатель на допустимую `VARIANT` , содержащий квалификатор для записи. Этот параметр не может быть `null`.
+окне Указатель на допустимое `VARIANT` значение, содержащее квалификатор для записи. Этот параметр не может `null`быть.
 
 `lFlavor`\
-[in] Одно из следующих констант, который определяет требуемый квалификаторов для этот квалификатор. Значение по умолчанию — `WBEM_FLAVOR_OVERRIDABLE` (0).
+окне Одна из следующих констант, определяющая нужные флаги квалификаторов для этого квалификатора. Значение по умолчанию `WBEM_FLAVOR_OVERRIDABLE` — (0).
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Квалификатор может переопределяться в производном классе или экземпляре. **Это значение по умолчанию.** |
+| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Квалификатор можно переопределить в производном классе или экземпляре. **Это значение по умолчанию.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Квалификатор распространяется в экземпляры. |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Квалификатор распространяется в производные классы. |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Квалификатор распространяется на производные классы. |
 | `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Квалификатор невозможно переопределить в производном классе или экземпляре. |
-| `WBEM_FLAVOR_AMENDED` | 0x80 | Квалификатор локализуется. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Квалификатор локализован. |
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Возникла Недопустимая попытка указать **ключ** квалификатор для свойства, которое не может быть ключом. Ключи указываются в определении класса объекта и не могут быть изменены для каждого экземпляра. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Параметр не является типом квалификатора. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Невозможно вызвать `QualifierSet_Put` метод квалификатор, так как объект-владелец не разрешает переопределения. |
-| `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Недопустимая попытка указать квалификатор **ключа** для свойства, которое не может быть ключом. Ключи задаются в определении класса для объекта и не могут быть изменены отдельно для каждого экземпляра. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Параметр не является допустимым типом квалификатора. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Невозможно вызвать `QualifierSet_Put` метод квалификатора, так как объект-владелец не допускает переопределения. |
+| `WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) метод.
+Эта функция заключает вызов метода [ивбемкуалифиерсет::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) .
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils.idl
+**Заголовок.** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

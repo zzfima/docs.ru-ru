@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902698"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793104"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Практическое руководство. Как отправить изменения в базу данных
 Независимо от количества изменений, произведенных над объектами, эти изменения выполняются только над репликам, содержащимся в памяти. Фактические данные в базе данных при этом не изменяются. Изменения не передаются на сервер до тех пор, пока не будет явно вызван метод <xref:System.Data.Linq.DataContext.SubmitChanges%2A> класса <xref:System.Data.Linq.DataContext>.  
   
- При вызове этого метода класс <xref:System.Data.Linq.DataContext> пытается преобразовать сделанные изменения в эквивалентные команды SQL. Можно использовать собственную пользовательскую логику для переопределения этих действий, однако порядок отправки управляется службой для <xref:System.Data.Linq.DataContext> называется *обработчиком изменений*. Ниже представлена последовательность событий.  
+ При вызове этого метода класс <xref:System.Data.Linq.DataContext> пытается преобразовать сделанные изменения в эквивалентные команды SQL. Можно использовать собственную пользовательскую логику для переопределения этих действий, но порядок отправки управляется службой, <xref:System.Data.Linq.DataContext> известной как *обработчик изменений*. Ниже представлена последовательность событий.  
   
 1. При вызове метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A> технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает набор известных объектов, чтобы определить, присоединены ли к ним новые экземпляры. При положительном результате новые экземпляры добавляются в набор отслеживаемых объектов.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "61902698"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Обнаруживать и разрешать конфликты отправки](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Внесение и отправка изменений данных](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Практическое руководство. Обнаружение и разрешение конфликтующих отправок](how-to-detect-and-resolve-conflicting-submissions.md)
+- [Практическое руководство. Управление конфликтами изменений](how-to-manage-change-conflicts.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)
+- [Внесение и отправка изменений данных](making-and-submitting-data-changes.md)

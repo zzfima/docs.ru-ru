@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032426"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794148"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Вставка изображения из файла
 Большой двоичный объект (BLOB) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных. BLOB - это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.  
   
- Для записи значения BLOB-ОБЪЕКТОВ к базе данных, выполните соответствующую инструкцию INSERT или UPDATE и передав значение BLOB в качестве входного параметра (см. в разделе [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра. Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
+ Чтобы записать значение большого двоичного объекта в базу данных, выполните соответствующую инструкцию INSERT или UPDATE и передайте значение большого двоичного объекта в качестве входного параметра (см. раздел [Настройка параметров и типов данных параметров](../configuring-parameters-and-parameter-data-types.md)). Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра. Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
   
 ## <a name="example"></a>Пример  
  Следующий пример кода добавляет сведения о сотрудниках в таблицу Employees базы данных Northwind. Фотографии сотрудников считываются из файла и добавляются в поле Photo в таблице, имеющей тип данных image.  
@@ -132,8 +132,8 @@ public static byte[] GetPhoto(string filePath)
   
 ## <a name="see-also"></a>См. также
 
-- [Использование команд для изменения данных](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Извлечение двоичных данных](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
-- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Использование команд для изменения данных](../using-commands-to-modify-data.md)
+- [Извлечение двоичных данных](../retrieving-binary-data.md)
+- [Двоичные данные и данные большого объема SQL Server](sql-server-binary-and-large-value-data.md)
+- [Сопоставления типов данных SQL Server](../sql-server-data-type-mappings.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

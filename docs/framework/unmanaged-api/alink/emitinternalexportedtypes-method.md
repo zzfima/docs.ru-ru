@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04103ad305e0ae97669f3e07e06f03c2cdb4dfbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742105"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787524"
 ---
 # <a name="emitinternalexportedtypes-method"></a>Метод EmitInternalExportedTypes
-Выдает типы, добавленные к сборке. Этот метод после известно, что внутренние типы были добавлены.  
+Выдает типы, добавленные в сборку. Вызовите этот метод после добавления известных внутренних типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ HRESULT EmitInternalExportedTypes(
  Идентификатор сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [API ALink](index.md)

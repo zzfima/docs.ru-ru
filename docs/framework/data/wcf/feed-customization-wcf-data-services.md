@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: baa97bb32f8af4e034a78b44f9776be42c204b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918736"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790862"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Настройка каналов (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] использует для предоставления данных в виде веб-канала. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]поддерживает форматы Atom и нотация объектов JavaScript (JSON) для веб-каналов данных. При использовании веб-канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Atom предоставляет стандартный метод сериализации данных, таких как сущности и связи, в формат XML, который может быть добавлен в текст сообщения HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Определяет сопоставление по умолчанию для свойства сущности между данными, содержащимися в сущностях и элементах Atom. Дополнительные сведения см. в [разделе OData: Формат](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -28,7 +28,7 @@ ms.locfileid: "69918736"
  С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно определить альтернативное сопоставление «сущность-свойство» для полезных данных канала Atom путем применения атрибутов к типам сущностей в модели данных вручную. Поставщик источника данных службы данных определяет метод применения этих атрибутов.  
   
 > [!IMPORTANT]
-> При определении специализированных каналов необходимо убедиться, что все свойства сущности, которые имеют определенные пользовательские сопоставления, включены в проекцию. Если сопоставленное свойство сущности не включено в проекцию, может произойти потеря данных. Дополнительные сведения см. в разделе [проекции запросов](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
+> При определении специализированных каналов необходимо убедиться, что все свойства сущности, которые имеют определенные пользовательские сопоставления, включены в проекцию. Если сопоставленное свойство сущности не включено в проекцию, может произойти потеря данных. Дополнительные сведения см. в разделе [проекции запросов](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Настройка каналов с помощью поставщика Entity Framework  
  Модель данных, используемая с поставщиком [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], представлена в виде XML в EDMX-файле. В данном случае атрибуты, определяющие специализированные каналы, добавляются к элементам `EntityType` и `Property`, представляющим типы сущностей и свойства в модели данных. Эти атрибуты настройки канала не определены в [ \[MC-CSDL\]: Формат](https://go.microsoft.com/fwlink/?LinkId=159072)файла определения концептуальной схемы — формат [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , используемый поставщиком для определения модели данных. Поэтому атрибуты настройки канала должны быть объявлены в специальном пространстве имен схемы, определенном как `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Следующий фрагмент XML иллюстрирует применение атрибутов настройки канала к элементам `Property` типа сущности `Products`, определяющего свойства `ProductName`, `ReorderLevel` и `UnitsInStock`.  
@@ -39,7 +39,7 @@ ms.locfileid: "69918736"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Настройка веб-каналов с помощью](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)поставщика Entity Framework.  
+ Дополнительные сведения см. в разделе [Практическое руководство. Настройка веб-каналов с помощью](how-to-customize-feeds-with-ef-provider-wcf-data-services.md)поставщика Entity Framework.  
   
 > [!NOTE]
 > Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать XML-файл, содержащий модель данных. Дополнительные сведения о EDMX-файле, создаваемом инструментами EDM, см. в разделе [Общие сведения о файле EDMX (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
@@ -63,7 +63,7 @@ ms.locfileid: "69918736"
  Для настройки каналов в модели данных, реализованной с использованием поставщика отражения, добавьте один или несколько экземпляров атрибута <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> к классам, представляющим типы сущностей в модели данных. Свойства класса <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> соответствуют атрибутам настройки канала, описанным в предыдущем разделе. Следующий пример иллюстрирует объявление типа `Order` с сопоставлением специализированного канала, определенным для обоих свойств.  
   
 > [!NOTE]
-> Модель данных для этого примера определяется в разделе [как: Создание службы данных с помощью поставщика](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)отражения.  
+> Модель данных для этого примера определяется в разделе [как: Создание службы данных с помощью поставщика](create-a-data-service-using-rp-wcf-data-services.md)отражения.  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,13 +72,13 @@ ms.locfileid: "69918736"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Настройка веб-каналов с помощью](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)поставщика отражения.  
+ Дополнительные сведения см. в разделе [Практическое руководство. Настройка веб-каналов с помощью](how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)поставщика отражения.  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Настройка каналов с помощью специализированного поставщика служб данных  
- Настройка каналов для модели данных, определенной с использованием специализированного поставщика служб данных, осуществляется для типа ресурса путем вызова метода <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> для типа <xref:System.Data.Services.Providers.ResourceType>, который представляет тип сущности в модели данных. Дополнительные сведения см. в разделе [пользовательские поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
+ Настройка каналов для модели данных, определенной с использованием специализированного поставщика служб данных, осуществляется для типа ресурса путем вызова метода <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> для типа <xref:System.Data.Services.Providers.ResourceType>, который представляет тип сущности в модели данных. Дополнительные сведения см. в разделе [пользовательские поставщики служб данных](custom-data-service-providers-wcf-data-services.md).  
   
 ## <a name="consuming-custom-feeds"></a>Использование специализированных каналов  
- Когда приложение непосредственно использует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал, оно должно иметь возможность обрабатывать любые настраиваемые элементы и атрибуты в возвращенном веб-канале. При реализации специализированных каналов в модели данных, независимо от поставщика службы данных, конечная точка `$metadata` возвращает сведения о специализированном канале в виде атрибутов специализированного канала в формате CSDL. При использовании диалогового окна **Добавление ссылки на службу** или средства [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) для создания классов клиентских служб данных настроенные атрибуты веб-канала используются для обеспечения правильной обработки запросов и ответов службы данных.  
+ Когда приложение непосредственно использует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал, оно должно иметь возможность обрабатывать любые настраиваемые элементы и атрибуты в возвращенном веб-канале. При реализации специализированных каналов в модели данных, независимо от поставщика службы данных, конечная точка `$metadata` возвращает сведения о специализированном канале в виде атрибутов специализированного канала в формате CSDL. При использовании диалогового окна **Добавление ссылки на службу** или средства [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) для создания классов клиентских служб данных настроенные атрибуты веб-канала используются для обеспечения правильной обработки запросов и ответов службы данных.  
   
 ## <a name="feed-customization-considerations"></a>Рекомендации по настройке канала  
  При определении пользовательских сопоставлений канала необходимо учитывать следующее.  
@@ -90,9 +90,9 @@ ms.locfileid: "69918736"
   
 - Для настройки канала требуется, чтобы и клиент, и служба данных поддерживали версию 2.0 протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] и последующие версии.  
   
- Дополнительные сведения см. в разделе [Управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
+ Дополнительные сведения см. в разделе [Управление версиями службы данных](data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Поставщик отражений](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
-- [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Поставщик отражений](reflection-provider-wcf-data-services.md)
+- [Поставщик Entity Framework](entity-framework-provider-wcf-data-services.md)

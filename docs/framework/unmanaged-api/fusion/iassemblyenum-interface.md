@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697437"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796669"
 ---
 # <a name="iassemblyenum-interface"></a>Интерфейс IAssemblyEnum
 Представляет перечислитель для массива `IAssemblyName` объектов.  
@@ -30,18 +30,18 @@ ms.locfileid: "61697437"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Создает неполную копию этого `IAssemblyEnum` объекта.|  
-|[Метод GetNextAssembly](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Получает указатель на следующий `IAssemblyName` , содержащихся в данном `IAssemblyEnum` объекта.|  
-|[Метод Reset](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Сбрасывает этот `IAssemblyEnum` объекта в его начальную позицию.|  
+|[Метод Clone](iassemblyenum-clone-method.md)|Создает неполную копию этого `IAssemblyEnum` объекта.|  
+|[Метод GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Возвращает указатель на следующий `IAssemblyName` объект, содержащийся в этом `IAssemblyEnum` объекте.|  
+|[Метод Reset](iassemblyenum-reset-method.md)|Сбрасывает этот `IAssemblyEnum` объект до начального положения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)

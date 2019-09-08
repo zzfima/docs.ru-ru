@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
-ms.openlocfilehash: 9d63b0b2c7d513d9f4db526b88a7c4e852637343
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40caa07488cb40ca8e9e3eb3a570c325b92de491
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793305"
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a>Практическое руководство. Как получить сведения о конфликтах элементов
-Класс <xref:System.Data.Linq.MemberChangeConflict> можно использовать для получения сведений об отдельных членах конфликта. В этом же контексте можно предусмотреть пользовательскую обработку конфликта для любого члена. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Класс <xref:System.Data.Linq.MemberChangeConflict> можно использовать для получения сведений об отдельных членах конфликта. В этом же контексте можно предусмотреть пользовательскую обработку конфликта для любого члена. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](optimistic-concurrency-overview.md).  
   
 ## <a name="example"></a>Пример  
  Следующий код выполняет итерацию объектов <xref:System.Data.Linq.ObjectChangeConflict>. Итерация выполняется для каждого объекта <xref:System.Data.Linq.MemberChangeConflict>.  
@@ -26,4 +26,4 @@ ms.locfileid: "69928633"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Практическое руководство. Управление конфликтами изменений](how-to-manage-change-conflicts.md)

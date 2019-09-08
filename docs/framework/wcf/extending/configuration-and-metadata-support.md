@@ -2,18 +2,18 @@
 title: Конфигурация и поддержка метаданных
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16c386f8479778c7d2f17fbdfdb95dee558baf52
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587728"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795841"
 ---
 # <a name="configuration-and-metadata-support"></a>Конфигурация и поддержка метаданных
 В этом разделе описывается, как включить поддержку конфигурации и метаданных для привязки и элементов привязки.  
   
 ## <a name="overview-of-configuration-and-metadata"></a>Общие сведения о конфигурации и метаданных  
- В этом разделе рассматриваются следующие задачи, которые представляют собой необязательные пункты 1, 2 и 4 в [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md) списка задач.  
+ В этом разделе обсуждаются следующие задачи, которые являются необязательными элементами 1, 2 и 4 в списке задач " [Разработка каналов](developing-channels.md) ".  
   
 - включение поддержки файла конфигурации для элемента привязки.  
   
@@ -23,15 +23,15 @@ ms.locfileid: "64587728"
   
 - определение вставляемых WSDL-кода и утверждений политики и настройка привязки или элемента привязки.  
   
- Сведения о создании пользовательских привязок и элементов привязки, см. в разделе [параметрах привязок](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) и [Создание элемента привязки BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), соответственно.  
+ Сведения о создании пользовательских привязок и элементов привязки см. в разделе [Создание определяемых пользователем привязок](creating-user-defined-bindings.md) и [Создание элемента BindingElement](creating-a-bindingelement.md)соответственно.  
   
 ## <a name="adding-configuration-support"></a>Добавление поддержки конфигурации  
  Чтобы включить поддержку файла конфигурации для канала, необходимо реализовать два раздела конфигурации: <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> для поддержки конфигурации для элементов привязки и <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> и <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType> для поддержки конфигурации для привязок.  
   
- Более простой способ сделать это является использование [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) пример инструмента для формирования кода конфигурации для привязки и элементы привязки.  
+ Проще всего это сделать с помощью образца средства [конфигуратионкодеженератор](../samples/configurationcodegenerator.md) , чтобы создать код конфигурации для привязок и элементов привязки.  
   
 ### <a name="extending-bindingelementextensionelement"></a>Расширение класса BindingElementExtensionElement  
- В следующем примере кода берется из [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Раздел `UdpTransportElement` - это элемент <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, который предоставляет элемент привязки `UdpTransportBindingElement` к системе конфигурации. С помощью нескольких простых переопределений в образце определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Пользователи могут затем зарегистрировать раздел расширения в файле конфигурации следующим образом.  
+ Следующий пример кода взят из [транспорта: Пример](../samples/transport-udp.md) протокола UDP. Раздел `UdpTransportElement` - это элемент <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, который предоставляет элемент привязки `UdpTransportBindingElement` к системе конфигурации. С помощью нескольких простых переопределений в образце определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Пользователи могут затем зарегистрировать раздел расширения в файле конфигурации следующим образом.  
   
 ```xml  
 <configuration>  
@@ -62,7 +62,7 @@ ms.locfileid: "64587728"
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>Добавление конфигурации для привязки  
- Разделе `SampleProfileUdpBindingCollectionElement` — <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> , предоставляющий `SampleProfileUdpBinding` системе конфигурации. Основная часть реализации делегируется классу `SampleProfileUdpBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>. `SampleProfileUdpBindingConfigurationElement` Имеет свойства, которые соответствуют свойствам в `SampleProfileUdpBinding`и обеспечивает сопоставление `ConfigurationElement` привязки. Наконец, метод `OnApplyConfiguration` в классе `SampleProfileUdpBinding` переопределяется, как показано в следующем образце кода.  
+ Раздел `SampleProfileUdpBindingCollectionElement` представляет собой <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> , который предоставляет `SampleProfileUdpBinding` системе конфигурации. Основная часть реализации делегируется классу `SampleProfileUdpBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>. Имеет свойства, соответствующие `SampleProfileUdpBinding`свойствам, и `ConfigurationElement` функциям, которые сопоставляются с привязкой. `SampleProfileUdpBindingConfigurationElement` Наконец, метод `OnApplyConfiguration` в классе `SampleProfileUdpBinding` переопределяется, как показано в следующем образце кода.  
   
 ```csharp 
 protected override void OnApplyConfiguration(string configurationName)  
@@ -101,7 +101,7 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- Затем можно ссылаться на [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) раздел конфигурации.  
+ Затем на него можно будет ссылаться из [ \<раздела конфигурации System. ServiceModel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) .  
   
 ```xml  
 <configuration>  
@@ -119,13 +119,13 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>Добавление поддержки метаданных для элемента привязки  
- Для интеграции канала в систему метаданных он должен поддерживать как импорт, так и экспорт политики. Это позволяет средствам, такие как [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , формировать клиенты элемента привязки.  
+ Для интеграции канала в систему метаданных он должен поддерживать как импорт, так и экспорт политики. Это позволяет средствам, таким как программа для работы с [метаданными ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , создавать клиенты элемента Binding.  
   
 ### <a name="adding-wsdl-support"></a>Добавление поддержки WSDL  
- За экспорт и импорт адресов в метаданных отвечает элемент привязки транспорта. При использовании привязки протокола SOAP элемент привязки транспорта должен также экспортировать в метаданных правильный URI (универсальный код ресурса) транспорта. В следующем примере кода берется из [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
+ За экспорт и импорт адресов в метаданных отвечает элемент привязки транспорта. При использовании привязки протокола SOAP элемент привязки транспорта должен также экспортировать в метаданных правильный URI (универсальный код ресурса) транспорта. Следующий пример кода взят из [транспорта: Пример](../samples/transport-udp.md) протокола UDP.  
   
 #### <a name="wsdl-export"></a>Экспорт WSDL  
- Для экспорта адресов элемент привязки `UdpTransportBindingElement` реализует <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> интерфейс. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> Метод добавляет правильные адреса порта WSDL.  
+ Чтобы экспортировать сведения об адресации `UdpTransportBindingElement` , <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> класс реализует интерфейс. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> Метод добавляет правильные сведения об адресации в порт WSDL.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -163,11 +163,11 @@ if (soapBinding != null)
   
  При запуске Svcutil.exe существует два варианта обеспечить загрузку программой расширений импорта WSDL:  
   
-1. Указать Svcutil.exe на файл конфигурации, с помощью параметра/svcutilconfig:\<файл >.  
+1. Укажите файл Svcutil. exe в файле конфигурации с помощью/свкутилконфиг:\<File >.  
   
 2. добавить раздел конфигурации в файл Svcutil.exe.config, находящийся в том же каталоге, что и файл Svcutil.exe.  
   
- `UdpBindingElementImporter` Введите реализует <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> интерфейс. Метод `ImportEndpoint` импортирует адрес из порта WSDL:  
+ `UdpBindingElementImporter` Тип<xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> реализует интерфейс. Метод `ImportEndpoint` импортирует адрес из порта WSDL:  
   
 ```csharp  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -179,10 +179,10 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Добавление поддержки политик  
- Пользовательский элемент привязки может экспортировать утверждения политики в привязке WSDL для конечной точки службы, чтобы показать возможности этого элемента привязки. В следующем примере кода берется из [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
+ Пользовательский элемент привязки может экспортировать утверждения политики в привязке WSDL для конечной точки службы, чтобы показать возможности этого элемента привязки. Следующий пример кода взят из [транспорта: Пример](../samples/transport-udp.md) протокола UDP.  
   
 #### <a name="policy-export"></a>Экспорт политики  
- `UdpTransportBindingElement` Введите реализует <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> для добавления поддержки экспорта политик. В результате класс <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> включает элемент `UdpTransportBindingElement` при формировании политики для любой привязки, в которую он входит.  
+ `UdpTransportBindingElement` Тип реализует<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> , чтобы добавить поддержку для политики экспорта. В результате класс <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> включает элемент `UdpTransportBindingElement` при формировании политики для любой привязки, в которую он входит.  
   
  В методе <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> добавьте утверждение для UDP и еще одно утверждение, если канал находится в режиме многоадресной рассылки. Это связано с тем, что режим многоадресной рассылки влияет на построение стека связи и, следовательно, должен быть согласован обеими сторонами.  
   
@@ -223,14 +223,14 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Затем мы реализуем интерфейс <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> из зарегистрированного нами класса (`UdpBindingElementImporter`). В методе <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> рассмотрим утверждения в соответствующем пространстве имен и обработаем те из них, которые предназначены для формирования транспорта и проверки того, является ли он многоадресным. Кроме того, удалим утверждения, обрабатываемые импортером, из списка утверждений привязки. И опять при запуске Svcutil.exe существует два варианта интеграции:  
   
-1. Указать Svcutil.exe на файл конфигурации с помощью параметра/svcutilconfig:\<файл >.  
+1. Укажите файл Svcutil. exe в нашем файле конфигурации с помощью/свкутилконфиг\<: File >.  
   
 2. добавить раздел конфигурации в файл Svcutil.exe.config, находящийся в том же каталоге, что и файл Svcutil.exe.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Добавление пользовательского импортера стандартной привязки  
  Svcutil.exe и тип <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> по умолчанию распознают и импортируют предоставляемые системой привязки. В противном случае привязка импортируется как экземпляр <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Чтобы Svcutil.exe и тип <xref:System.ServiceModel.Description.WsdlImporter> могли импортировать привязку `SampleProfileUdpBinding`, тип `UdpBindingElementImporter` также выступает в качестве пользовательского импортера стандартной привязки.  
   
- Пользовательский импортер стандартной привязки реализует `ImportEndpoint` метод <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> интерфейс изучаемый <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> экземпляра, импортированный из метаданных см. в разделе, если он может быть сформирован определенной стандартной привязкой.  
+ Пользовательский импортер стандартных привязок реализует `ImportEndpoint` метод <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> интерфейса для проверки <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> экземпляра, импортированного из метаданных, чтобы определить, может ли он быть создан конкретной стандартной привязкой.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  

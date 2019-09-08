@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778670"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796907"
 ---
 # <a name="getcachepath-function"></a>Функция GetCachePath
-Получает путь к кэшированную сборку, используя указанные флаги.  
+Возвращает путь к кэшированной сборке с использованием указанных флагов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +40,22 @@ HRESULT GetCachePath (
   
 ## <a name="parameters"></a>Параметры  
  `dwCacheFlags`  
- [in] [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) значение, указывающее источник кэшированную сборку.  
+ окне Значение [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) , указывающее источник кэшированной сборки.  
   
  `pwzCachePath`  
- [out] Возвращаемый указатель на путь.  
+ заполняет Возвращаемый указатель на путь.  
   
  `pcchPath`  
- [in, out] Запрошенный максимальную длину `pwzCachePath`и по возвращении фактическую длину `pwzCachePath`.  
+ [вход, выход] Запрошенная максимальная длина `pwzCachePath`и при возврате фактической `pwzCachePath`длины.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Перечисление ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Перечисление ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

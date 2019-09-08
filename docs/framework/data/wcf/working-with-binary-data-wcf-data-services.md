@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043899"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779630"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Работа с двоичными данными (службы данных WCF)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70043899"
 
 - В качестве отдельного потока двоичных данных. Этот метод рекомендуется использовать для доступа и изменения данных больших двоичных объектов, которые могут представлять фото, видео или другие типы данных с двоичной кодировкой.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]реализует потоковую передачу двоичных данных с помощью HTTP, как определено в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В этом механизме двоичные данные обрабатываются как ресурс мультимедиа, отличный от, но связанный с сущностью, которая называется записью ссылки на носитель. Дополнительные сведения см. в разделе [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]реализует потоковую передачу двоичных данных с помощью HTTP, как определено в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В этом механизме двоичные данные обрабатываются как ресурс мультимедиа, отличный от, но связанный с сущностью, которая называется записью ссылки на носитель. Дополнительные сведения см. в разделе [Streaming Provider](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Пошаговый пример создания клиентского приложения Windows Presentation Foundation (WPF), которое скачивает двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, в которой хранятся фотографии, см. в разделе Post [Data Services Streaming Provider Series — Part. 2: Доступ к потоку ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkId=201637). Чтобы скачать пример кода для службы данных Photo фото, как показано в записи блога, см. [Пример потоковой передачи Photo Data](https://go.microsoft.com/fwlink/?LinkId=198988) Service в коллекции кода MSDN.
@@ -34,7 +34,7 @@ ms.locfileid: "70043899"
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-В остальных примерах этого раздела описываются способы доступа к потоку медиаресурса и его изменения. Полный пример использования потока ресурсов мультимедиа в клиентском приложении .NET Framework с помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентской библиотеки см. в разделе Передача доступа к потоку [ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkID=201637).
+В остальных примерах этого раздела описываются способы доступа к потоку медиаресурса и его изменения. Полный пример использования потока ресурсов мультимедиа в клиентском приложении .NET Framework с помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентской библиотеки см. в разделе Передача доступа к [потоку ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkID=201637).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Получение доступа к потоку двоичных данных
 
@@ -74,5 +74,5 @@ ms.locfileid: "70043899"
 
 ## <a name="see-also"></a>См. также
 
-- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
+- [Привязка данных к элементам управления](binding-data-to-controls-wcf-data-services.md)

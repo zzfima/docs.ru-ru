@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916647"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779775"
 ---
 # <a name="service-operations-wcf-data-services"></a>Операции служб (службы данных WCF)
 
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют определять операции службы над службой данных для предоставления методов сервера. Как и остальные ресурсы службы данных, операции службы адресуются с помощью URI. Операции службы позволяют предоставлять бизнес-логику службы данных, например реализовывать логику проверки, применять правила безопасности на основе ролей и предоставлять специализированные возможности запросов. Операции службы представляют собой методы, добавленные в класс службы данных, производный от класса <xref:System.Data.Services.DataService%601>. Как и остальные ресурсы службы данных, методы операций службы поддерживают передачу параметров. Например, следующий URI операции службы (на основе [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) службы данных) передает значение `London` для `city` параметр:
+Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют определять операции службы над службой данных для предоставления методов сервера. Как и остальные ресурсы службы данных, операции службы адресуются с помощью URI. Операции службы позволяют предоставлять бизнес-логику службы данных, например реализовывать логику проверки, применять правила безопасности на основе ролей и предоставлять специализированные возможности запросов. Операции службы представляют собой методы, добавленные в класс службы данных, производный от класса <xref:System.Data.Services.DataService%601>. Как и остальные ресурсы службы данных, методы операций службы поддерживают передачу параметров. Например, следующий универсальный код ресурса (URI) операции службы (на основе [службы данных быстрого](quickstart-wcf-data-services.md) запуска) `London` передает значение `city` в параметр:
 
 ```
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,9 +28,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-Свойство <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> класса <xref:System.Data.Services.DataService%601> можно использовать для непосредственного обращения к источнику данных при работе со службой данных. Дополнительные сведения см. в разделе [Как Определение операции службы](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).
+Свойство <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> класса <xref:System.Data.Services.DataService%601> можно использовать для непосредственного обращения к источнику данных при работе со службой данных. Дополнительные сведения см. в разделе [Практическое руководство. Определите операцию](how-to-define-a-service-operation-wcf-data-services.md)службы.
 
-Сведения о том, как вызывать операции службы из клиентского приложения .NET Framework, см. в разделе [вызова операций службы](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).
+Сведения о вызове операции службы из клиентского приложения .NET Framework см. в разделе [вызов операций службы](calling-service-operations-wcf-data-services.md).
 
 ## <a name="service-operation-requirements"></a>Требования к операциям службы
 
@@ -100,7 +100,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 > Если операция службы имеет тип возвращаемого значения, скрытый путем ограничения доступа к базовым наборам сущностей, операция службы не будет доступна клиентским приложениям.
 
-Дополнительные сведения см. в разделе [Как Определение операции службы](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).
+Дополнительные сведения см. в разделе [Практическое руководство. Определите операцию](how-to-define-a-service-operation-wcf-data-services.md)службы.
 
 ## <a name="raising-exceptions"></a>Вызов исключений
 
@@ -111,4 +111,4 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 
 ## <a name="see-also"></a>См. также
 
-- [Перехватчики](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+- [Перехватчики](interceptors-wcf-data-services.md)

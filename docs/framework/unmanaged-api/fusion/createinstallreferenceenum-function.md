@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da77d2eb848419c35e57ffacc8bf3d4580106fa5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764327"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795400"
 ---
 # <a name="createinstallreferenceenum-function"></a>Функция CreateInstallReferenceEnum
-Возвращает указатель на [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) экземпляр, который представляет список ссылок на приложения для указанной сборки.  
+Возвращает указатель на экземпляр [IInstallReferenceEnum](iinstallreferenceenum-interface.md) , представляющий список ссылок приложения на указанную сборку.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +41,28 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>Параметры  
  `ppRefEnum`  
- [out] Возвращенный `IInstallReferenceEnum` указатель.  
+ заполняет Возвращаемый `IInstallReferenceEnum` указатель.  
   
  `pName`  
- [in] [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) , определяющий сборку, для которого необходимо перечислить ссылки.  
+ окне Объект [IAssemblyName](iassemblyname-interface.md) , определяющий сборку, для которой перечисляются ссылки.  
   
  `dwFlags`  
- [in] Флаги, которые влияют на поведение перечислителя.  
+ окне Флаги, влияющие на поведение перечислителя.  
   
  `pvReserved`  
- [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Fusion.dll и "Mscorwks.dll". Используйте Fusion.dll вместо "Mscorwks.dll", чтобы обеспечить целевых правильную версию платформы .NET Framework.  
+ **Библиотечная** Fusion. dll и mscorwks. dll. Используйте Fusion. dll вместо Mscorwks. dll, чтобы обеспечить правильную версию .NET Framework.  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Интерфейс IInstallReferenceEnum](iinstallreferenceenum-interface.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

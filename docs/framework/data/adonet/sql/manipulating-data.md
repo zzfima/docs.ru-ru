@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a620b7b15bb876d255fe787dc5d48aef14fb73e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 322325b765f62d04e5713557f2ef9c97e1746ae0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946610"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792055"
 ---
 # <a name="manipulating-data"></a>Управление данными
 До того как был введен в действие режим MARS, для поиска решений в некоторых сценариях разработчикам приходилось использовать либо несколько соединений, либо серверные курсоры. Кроме того, если в транзакционной ситуации было использовано несколько соединений, требуются привязанные соединения (с **sp_getbindtoken** и **sp_bindsession**). В следующих сценариях показано использование соединения с включенным режимом MARS вместо нескольких соединений.  
@@ -404,5 +404,5 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>См. также
 
-- [Несколько активных результирующих наборов (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Несколько активных результирующих наборов (MARS)](multiple-active-result-sets-mars.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

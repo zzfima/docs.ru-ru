@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918191"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782726"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Сортировка с использованием объекта DataView (LINQ to DataSet)
 Возможность сортировки данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> предоставляет несколько способов сортировки и возврата строк данных, упорядоченных по определенным критериям. В дополнение к возможностям <xref:System.Data.DataView> сортировки на основе строк также позволяет использовать [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] выражения для критериев сортировки. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]выражения позволяют выполнять гораздо более сложные и эффективные операции сортировки, чем сортировка на основе строк. В этом разделе описываются оба подхода к сортировке с помощью объекта <xref:System.Data.DataView>.  
@@ -20,7 +20,7 @@ ms.locfileid: "69918191"
   
  Сортировка на основе выражений является более сложной и мощной операцией сортировки, чем более простая сортировка на основе строк. Следует иметь в виду, что сортировки на основе строк и выражений являются взаимоисключающими. Если сортировка на основе строк <xref:System.Data.DataView.Sort%2A> задается после создания объекта <xref:System.Data.DataView> на основе запроса, то выводимый из запроса фильтр на основе выражений удаляется и не восстанавливается.  
   
- Индекс для <xref:System.Data.DataView> формируется как при создании <xref:System.Data.DataView>, так и при изменении каких-либо сведений о сортировке или фильтрации. Вы получаете максимальную производительность, предоставляя критерии сортировки в LINQ to DataSet запросе, который <xref:System.Data.DataView> создается из, и не изменяет сведения о сортировке позже. Дополнительные сведения см. в разделе [производительность DataView](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Индекс для <xref:System.Data.DataView> формируется как при создании <xref:System.Data.DataView>, так и при изменении каких-либо сведений о сортировке или фильтрации. Вы получаете максимальную производительность, предоставляя критерии сортировки в LINQ to DataSet запросе, который <xref:System.Data.DataView> создается из, и не изменяет сведения о сортировке позже. Дополнительные сведения см. в разделе [производительность DataView](dataview-performance.md).  
   
 > [!NOTE]
 > В большинстве случаев выражение, используемое для сортировки, не должно иметь побочных эффектов и должно быть детерминированным. Также эти выражения не должны содержать логику, зависящую от заданного количества выполнений, так как операции сортировки могут выполняться любое количество раз.  
@@ -48,7 +48,7 @@ ms.locfileid: "69918191"
   
  Возможности сортировки на основе строк и выражений являются взаимоисключающими. При задании свойства <xref:System.Data.DataView.Sort%2A> сортировка на основе выражений, унаследованная из запроса, на основе которого был создан объект <xref:System.Data.DataView>, удаляется.  
   
- Дополнительные сведения о фильтрации на основе <xref:System.Data.DataView.Sort%2A> строк см. в разделе [Сортировка и фильтрация данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Дополнительные сведения о фильтрации на основе <xref:System.Data.DataView.Sort%2A> строк см. в разделе [Сортировка и фильтрация данных](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Пример  
  В следующем примере объект <xref:System.Data.DataView> создается на основе таблицы Contact, затем выполняется сортировка по фамилиям в возрастающем порядке, а затем по именам в убывающем порядке:  
@@ -83,6 +83,6 @@ ms.locfileid: "69918191"
   
 ## <a name="see-also"></a>См. также
 
-- [Привязка данных и LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Фильтрация с использованием объекта DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Привязка данных и LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Фильтрация с использованием объекта DataView](filtering-with-dataview-linq-to-dataset.md)
 - [Сортировка данных](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947013"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792039"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Изменение данных больших объемов (max) в ADO.NET
 Типы данных LOB - это типы данных, размер которых превышает максимальный размер строки в 8 килобайт (КБ). В SQL Server для типов данных `max`, `varchar` и `nvarchar` имеется описатель `varbinary`, позволяющий хранить значения размером до 2^32 байт. Столбцы таблицы и переменные языка Transact-SQL могут задавать типы данных `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. В ADO.NET типы данных `max` можно выбрать с помощью объекта `DataReader`, а также их можно задавать в качестве значений входных и выходных параметров без какой-либо специальной обработки. Данные больших типов данных `varchar` можно получать и обновлять добавочно.  
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>См. также
 
-- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Двоичные данные и данные большого объема SQL Server](sql-server-binary-and-large-value-data.md)
+- [Сопоставления типов данных SQL Server](../sql-server-data-type-mappings.md)
+- [Операции данных SQL Server Data в ADO.NET](sql-server-data-operations.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 077cfd9b90df130e0a6090637d5dbd70a70930b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 763b048fcb517987931b0bdb4f5b9c5a613a05e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938190"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794109"
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. Значение Null не является ни пустой строкой (для символьного типа данных или типа данных datetime), ни нулевым значением (для числовых типов данных). Спецификация ANSI SQL-92 устанавливает, что значение NULL должно быть одинаково для всех типов данных, так чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> предоставляет семантику NULL при реализации интерфейса <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет свое собственное свойство `IsNull` и значение `Null`, которое может быть присвоено экземпляру этого типа данных.  
   
 > [!NOTE]
-> В .NET Framework версии 2.0 введена поддержка типов данных, допускающих значения NULL, что дает программистам возможность расширить тип значения, чтобы могли быть представлены все значения базового типа. Эти типы среды CLR, допускающие значения NULL, представляют экземпляр структуры <xref:System.Nullable>. Такая возможность особенно полезна, если для типов значений могут устанавливаться и сниматься флажки, что обеспечивает улучшенную совместимость с типами объектов. Типы среды CLR, допускающие значения NULL, не предназначены для хранения значений NULL базы данных, т. к. поведение значения NULL для ANSI SQL отличается от поведения ссылки `null` (или `Nothing` в Visual Basic). Для работы со значениями NULL ANSI SQL базы данных используйте значения NULL <xref:System.Data.SqlTypes>, а не <xref:System.Nullable>. Дополнительные сведения о работе с типами CLR Nullable в Visual Basic см. в разделе [типы значений](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), допускающих значения NULL, а для C# см. в разделе [Использование типов, допускающих значение NULL](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+> В .NET Framework версии 2.0 введена поддержка типов данных, допускающих значения NULL, что дает программистам возможность расширить тип значения, чтобы могли быть представлены все значения базового типа. Эти типы среды CLR, допускающие значения NULL, представляют экземпляр структуры <xref:System.Nullable>. Такая возможность особенно полезна, если для типов значений могут устанавливаться и сниматься флажки, что обеспечивает улучшенную совместимость с типами объектов. Типы среды CLR, допускающие значения NULL, не предназначены для хранения значений NULL базы данных, т. к. поведение значения NULL для ANSI SQL отличается от поведения ссылки `null` (или `Nothing` в Visual Basic). Для работы со значениями NULL ANSI SQL базы данных используйте значения NULL <xref:System.Data.SqlTypes>, а не <xref:System.Nullable>. Дополнительные сведения о работе с типами CLR Nullable в Visual Basic см. в разделе [типы значений, допускающих значения NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), а для C# см. в разделе [Использование типов, допускающих значение NULL](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
 ## <a name="nulls-and-three-valued-logic"></a>Значения NULL и тройственная логика  
  Разрешение использовать значения NULL в определениях столбцов вводит в приложение тройственную логику. Результатом оценки сравнения может быть одно из трех условий.  
@@ -32,10 +32,10 @@ ms.locfileid: "69938190"
 ## <a name="nulls-and-sqlboolean"></a>Значения NULL и SqlBoolean  
  Сравнение каких-либо <xref:System.Data.SqlTypes> возвратит <xref:System.Data.SqlTypes.SqlBoolean>. Функция `IsNull` для каждого `SqlType` возвращает <xref:System.Data.SqlTypes.SqlBoolean> и может использоваться для проверки значений NULL. Следующие проверки истинности демонстрируют, как операторы AND, OR и NOT функционируют в присутствии значения NULL. (T=true, F=false и U=неизвестно, т.е. NULL).  
   
- ![Таблица истинности](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Таблица истинности](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Основные сведения о параметре ANSI_NULLS  
- <xref:System.Data.SqlTypes> предоставляет ту же семантику, что и в случае, когда параметр ANSI_NULLS установлен в SQL Server. Все арифметические операторы (+,-, *,/,%), битовые операторы (~, & &#124;,) и большинство функций возвращают значение null, если любой из операндов или аргументов имеет значение null, за `IsNull`исключением свойства.  
+ <xref:System.Data.SqlTypes> предоставляет ту же семантику, что и в случае, когда параметр ANSI_NULLS установлен в SQL Server. Все арифметические операторы (+,- \*,,/,%), битовые операторы (~, & \|,) и большинство функций возвращают значение null, если любой из операндов или аргументов имеет значение null, за `IsNull`исключением свойства.  
   
  Стандарт ANSI SQL-92 не поддерживает *ColumnName* = NULL в предложении WHERE. В SQL Server параметр ANSI_NULLS контролирует как допустимость значений NULL по умолчанию, так и оценку сравнений со значениями NULL. Если параметр ANSI_NULLS установлен в значение ON (по умолчанию), в выражениях при проверке на значения NULL должен использоваться оператор IS NULL. Например, при параметре ANSI_NULLS, установленном в значение ON, результатом следующего сравнения всегда является UNKNOWN:  
   
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Кроме того, следующие правила применяются для экземпляра присваивания `DataRow.["columnName"]` значений NULL.  
   
-1. По умолчанию используется `DbNull.Value` значение для всех, кроме строго типизированных столбцов со значением NULL, где это строго типизированное значение null.  
+1. По `DbNull.Value` *умолчанию используется значение для* всех, кроме строго типизированных столбцов со значением NULL, где это строго типизированное значение null.  
   
 2. Значения NULL никогда не записываются в XML-файлы во время сериализации (в виде "xsi:nil").  
   
@@ -143,5 +143,5 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>См. также
 
-- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Типы данных SQL Server и ADO.NET](sql-server-data-types.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

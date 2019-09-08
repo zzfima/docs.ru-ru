@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-ms.openlocfilehash: 17ec1d974332b38bed9c00d57bdacba708d0e64f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1356983361c483170d9d7365932b788f2421bf09
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606349"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795603"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Практическое руководство. Проверка и изменение сообщений в службе
-Может проверять или изменять входящие или исходящие сообщения по всему клиента Windows Communication Foundation (WCF) путем реализации <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> и его вставки в среду выполнения службы. Дополнительные сведения см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
+Вы можете проверять или изменять входящие или исходящие сообщения в клиенте Windows Communication Foundation (WCF), реализовав <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> и вставив его в среду выполнения службы. Дополнительные сведения см. в разделе [Расширение диспетчеров](extending-dispatchers.md). Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Проверка или изменение сообщений  
   
@@ -21,7 +21,7 @@ ms.locfileid: "64606349"
   
 2. Реализуйте интерфейс <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> в зависимости от области, в которую нужно легко вставить инспектор сообщений служб.  
   
-3. Вставьте поведение до вызова метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> в класс <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3. Вставьте поведение до вызова метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> в класс <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>. Дополнительные сведения см. [в разделе Настройка и расширение среды выполнения с помощью поведений](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Пример  
  В следующих примерах кода показаны, по порядку:  
@@ -44,4 +44,4 @@ ms.locfileid: "64606349"
 
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>
-- [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Настройка и расширение среды выполнения с помощью поведений](configuring-and-extending-the-runtime-with-behaviors.md)

@@ -2,12 +2,12 @@
 title: Проблемы безопасности при ведении журналов сообщений
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044259"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795942"
 ---
 # <a name="security-concerns-for-message-logging"></a>Проблемы безопасности при ведении журналов сообщений
 В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.  
@@ -107,9 +107,9 @@ ms.locfileid: "70044259"
   
 - Не допускаются известные персональные данные журнала: Это событие создается, если ведение журнала известных персональных данных не разрешено. Это происходит `true`, когда `logKnownPii` `source` атрибут элемента в файле App. config или Web. config имеет `enableLoggingKnownPii` значение, но атрибут в `machineSettings` элементе файла Machine. config имеет значение `false`. Исключение не возникает.  
   
- Эти события можно просмотреть с помощью средства просмотра событий, входящего в состав Windows. Дополнительные сведения об этом см. в разделе [ведение журнала событий](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Эти события можно просмотреть с помощью средства просмотра событий, входящего в состав Windows. Дополнительные сведения об этом см. в разделе [ведение журнала событий](./event-logging/index.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Проблемы безопасности и полезные советы при трассировке](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Ведение журналов сообщений](message-logging.md)
+- [Проблемы безопасности и полезные советы при трассировке](./tracing/security-concerns-and-useful-tips-for-tracing.md)

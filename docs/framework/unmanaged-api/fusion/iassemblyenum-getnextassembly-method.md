@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57d64096ea693be41359aef63c04674ca77769c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73c531378355100fdfca264ea9f96ff4d7c7ceda
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760978"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796687"
 ---
 # <a name="iassemblyenumgetnextassembly-method"></a>Метод IAssemblyEnum::GetNextAssembly
-Получает указатель на следующий [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) , содержащихся в данном [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) объекта.  
+Возвращает указатель на следующее значение [IAssemblyName](iassemblyname-interface.md) , содержащееся в этом объекте [IAssemblyEnum](iassemblyenum-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +39,22 @@ HRESULT GetNextAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pvReserved`  
- [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
   
  `ppName`  
- [out] Возвращенный `IAssemblyName` указатель.  
+ заполняет Возвращаемый `IAssemblyName` указатель.  
   
  `dwFlags`  
- [in] Зарезервировано для будущего расширения. `dwFlags` должно быть 0 (ноль).  
+ окне Зарезервировано для будущего расширения. `dwFlags`значение должно быть равно 0 (нулю).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Интерфейс IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Интерфейс IAssemblyEnum](iassemblyenum-interface.md)

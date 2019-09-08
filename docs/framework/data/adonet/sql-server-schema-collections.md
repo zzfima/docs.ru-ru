@@ -2,15 +2,15 @@
 title: Коллекции схемы SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794329"
 ---
 # <a name="sql-server-schema-collections"></a>Коллекции схемы SQL Server
-Поставщик данных Microsoft .NET Framework для SQL Server поддерживает дополнительные коллекции схем помимо общих коллекций. Коллекции схем незначительно меняются в зависимости от используемой версии SQL Server. Чтобы определить список поддерживаемых коллекций схем, вызовите **GetSchema** метода без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
+Поставщик данных Microsoft .NET Framework для SQL Server поддерживает дополнительные коллекции схем помимо общих коллекций. Коллекции схем незначительно меняются в зависимости от используемой версии SQL Server. Чтобы определить список поддерживаемых коллекций схем, вызовите метод **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
   
 ## <a name="databases"></a>Базы данных  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61878466"
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|type_desc|String|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕРИЗОВАННЫЙ<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-XML<br />-ПРОСТРАНСТВЕННЫХ|  
+|type_desc|String|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-CLUSTERED<br />— НЕКЛАСТЕРИЗОВАННЫЙ<br />-XML<br />-ПРОСТРАНСТВЕННЫЙ|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -75,9 +75,9 @@ ms.locfileid: "61878466"
 |SPECIFIC_CATALOG|String|Собственное имя для каталога.|  
 |SPECIFIC_SCHEMA|String|Определенное имя схемы.|  
 |SPECIFIC_NAME|String|Определенное имя каталога.|  
-|С ROUTINE_CATALOG|String|Каталог, которому принадлежит хранимая процедура.|  
+|ROUTINE_CATALOG|String|Каталог, которому принадлежит хранимая процедура.|  
 |ROUTINE_SCHEMA|String|Схема, которая содержит хранимую процедуру.|  
-|С ROUTINE_NAME|String|Имя хранимой процедуры.|  
+|ROUTINE_NAME|String|Имя хранимой процедуры.|  
 |ROUTINE_TYPE|String|Возвращает значение PROCEDURE для хранимых процедур и FUNCTION для функций.|  
 |CREATED|DateTime|Время создания процедуры.|  
 |LAST_ALTERED|DateTime|Время последнего изменения процедуры.|  
@@ -212,7 +212,7 @@ ms.locfileid: "61878466"
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |uid|Int16|Идентификатор пользователя, уникальный в этой базе данных. 1 — это владелец базы данных.|  
-|user_name|String|Имя пользователя или имя группы, уникальные в этой базе данных.|  
+|имя_пользователя|String|Имя пользователя или имя группы, уникальные в этой базе данных.|  
 |createdate|DateTime|Дата добавления этой учетной записи.|  
 |updatedate|DateTime|Дата последнего изменения учетной записи.|  
   
@@ -250,12 +250,12 @@ ms.locfileid: "61878466"
 |version_revision|Object|Номер редакции.|  
 |culture_info|Object|Сведения о языке и региональных параметрах, которые связаны с этим определяемым пользователем типом.|  
 |public_key|Object|Открытый ключ, используемый в этой сборке.|  
-|is_fixed_length|Boolean|Указывает, является ли длина данных этого типа всегда равной значению max_length.|  
+|is_fixed_length|логический|Указывает, является ли длина данных этого типа всегда равной значению max_length.|  
 |max_length|Int16|Максимальная длина значения типа в байтах.|  
 |Create_Date|DateTime|Дата создания или регистрации сборки.|  
 |Permission_set_desc|String|Удобное в использовании имя набора разрешений и (или) уровня безопасности для сборки.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Извлечение сведений о схеме базы данных](retrieving-database-schema-information.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

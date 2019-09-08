@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f495500b087b9e24936acd414f1aff463d7f64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781076"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799114"
 ---
 # <a name="strongnameerrorinfo-function"></a>Функция StrongNameErrorInfo
 Получает код последней ошибки, вызванной одной из функций строгого имени.  
@@ -42,13 +42,13 @@ HRESULT StrongNameErrorInfo ();
  Последний код ошибки COM, заданный одной из функций строгого имени.  
   
 ## <a name="remarks"></a>Примечания  
- Большинство методов строгого имени возврата простой `true` или `false` значение, указывающее на успешное завершение. Используйте `StrongNameErrorInfo` функции для получения значение HRESULT, указывающее последней ошибки, возникшей при функций строгого имени.  
+ Большинство методов со строгим именем возвращают простой `true` или `false` индикатор успешного завершения. `StrongNameErrorInfo` Используйте функцию, чтобы получить значение HRESULT, указывающее последнюю ошибку, созданную функциями строгого имени.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

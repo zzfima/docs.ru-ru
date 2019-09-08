@@ -2,15 +2,15 @@
 title: Практическое руководство. Получение метаданных через привязку, не использующую MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766783"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795583"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Практическое руководство. Получение метаданных через привязку, не использующую MEX
-В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом примере основан на [конечной точки метаданных Secure Custom](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) образца.  
+В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом примере основан на образце [пользовательской защищенной конечной точки метаданных](../samples/custom-secure-metadata-endpoint.md) .  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Получение метаданных через привязку, не использующую MEX  
   
@@ -121,8 +121,8 @@ ms.locfileid: "61766783"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. На данном этапе имеется коллекция конечных точек службы. Дополнительные сведения об импорте метаданных см. в разделе [как: Импорт метаданных в конечные точки службы](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5. На данном этапе имеется коллекция конечных точек службы. Дополнительные сведения об импорте метаданных см. [в разделе как Импорт метаданных в конечные](../feature-details/how-to-import-metadata-into-service-endpoints.md)точки службы.  
   
 ## <a name="see-also"></a>См. также
 
-- [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Метаданные](../feature-details/metadata.md)

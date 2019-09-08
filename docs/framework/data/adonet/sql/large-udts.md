@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909873"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794023"
 ---
 # <a name="large-udts"></a>Большие, определяемые пользователем типы
 Определяемые пользователем типы данных (UDT) позволяют разработчику расширить систему скалярных типов путем сохранения в базе данных SQL Server объектов среды CLR. Определяемые пользователем типы могут содержать несколько элементов в отличие от традиционных псевдонимов типов данных, состоящих из одного системного типа данных SQL Server.  
@@ -27,7 +27,7 @@ ms.locfileid: "69909873"
 1. [Определяемые пользователем типы CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Загрузка схем определяемых пользователем типов данных с помощью метода GetSchema  
- Метод <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> класса <xref:System.Data.SqlClient.SqlConnection> возвращает сведения о схеме базы данных в <xref:System.Data.DataTable>. Дополнительные сведения см. в разделе [SQL Server коллекции схем](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ Метод <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> класса <xref:System.Data.SqlClient.SqlConnection> возвращает сведения о схеме базы данных в <xref:System.Data.DataTable>. Дополнительные сведения см. в разделе [SQL Server коллекции схем](../sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>Значения столбца GetSchemaTable для определяемых пользователем типов данных  
  Метод <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> класса <xref:System.Data.SqlClient.SqlDataReader> возвращает объект <xref:System.Data.DataTable> с описанием метаданных столбцов. В приведенной ниже таблице описаны различия метаданных столбцов для определяемых пользователем типов данных в SQL Server 2005 и SQL Server 2008.  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Извлечение сведений о схеме базы данных](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Настройка параметров и типы данных параметров](../configuring-parameters-and-parameter-data-types.md)
+- [Извлечение сведений о схеме базы данных](../retrieving-database-schema-information.md)
+- [Сопоставления типов данных SQL Server](../sql-server-data-type-mappings.md)
+- [Двоичные данные и данные большого объема SQL Server](sql-server-binary-and-large-value-data.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

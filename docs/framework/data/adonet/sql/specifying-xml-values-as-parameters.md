@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964737"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780870"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Указание значений XML как параметров
 Если запросу требуется параметр, значение которого является строкой XML, разработчики могут предоставить это значение с помощью экземпляра типа данных **SQLXML** . В действительности нет никаких взятий; XML-столбцы в SQL Server принимают значения параметров точно так же, как и другие типы данных.  
@@ -162,5 +162,5 @@ class Class1
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [Данные XML в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Данные XML в SQL Server](xml-data-in-sql-server.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: fde1e2ace09e31234d199876ae7f063e01e7a7e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8157d296636d0f8661a35af35de561f5cc49c30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203978"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784819"
 ---
 # <a name="adding-datarelations"></a>Добавление отношений DataRelation
 В наборе <xref:System.Data.DataSet> с несколькими объектами <xref:System.Data.DataTable> можно использовать объекты <xref:System.Data.DataRelation> для связи таблиц друг с другом, для перехода по таблицам, а также для возвращения дочерних или родительских строк из связанной таблицы.  
@@ -33,9 +33,9 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- Объект **DataRelation** также имеет вложенное свойство, которое, если оно имеет значение **true**, приводит к тому, что строки из дочерней таблицы будут вложены в связанную строку из родительской таблицы при <xref:System.Data.DataSet.WriteXml%2A> записи в виде XML-элементов с помощью. Дополнительные сведения см. в статье [Использование XML в наборах данных](using-xml-in-a-dataset.md).  
+ Объект **DataRelation** также имеет **вложенное** свойство, которое, если оно имеет значение **true**, приводит к тому, что строки из дочерней таблицы будут вложены в связанную строку из родительской таблицы при <xref:System.Data.DataSet.WriteXml%2A> записи в виде XML-элементов с помощью. Дополнительные сведения см. в статье [Использование XML в наборах данных](using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

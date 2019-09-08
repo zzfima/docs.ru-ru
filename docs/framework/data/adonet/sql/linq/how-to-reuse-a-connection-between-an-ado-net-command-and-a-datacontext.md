@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e26c7eb-c18a-43b5-a8f0-28fd8b04b0f0
-ms.openlocfilehash: 92b0d8cf2c4904fabc17241ef2c31175f0c87baf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f1ee7726042327eae88e69e9e6d062909c5bc74e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878540"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793288"
 ---
 # <a name="how-to-reuse-a-connection-between-an-adonet-command-and-a-datacontext"></a>Практическое руководство. Как повторно использовать соединение между командой ADO.NET и DataContext
-Так как [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] является частью семейства технологий ADO.NET и основан на службах, предоставляемых с ADO.NET, можно повторно использовать соединение между командой ADO.NET и <xref:System.Data.Linq.DataContext>.  
+Поскольку [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] компонент является частью семейства технологий ADO.NET и основан на службах, предоставляемых ADO.NET, можно повторно использовать подключение между командой ADO.NET <xref:System.Data.Linq.DataContext>и.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как повторно использовать то же подключение между командой ADO.NET и <xref:System.Data.Linq.DataContext>.  
@@ -23,6 +23,6 @@ ms.locfileid: "65878540"
   
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [ADO.NET и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)
-- [Установка связи с базой данных](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [Основные сведения](background-information.md)
+- [ADO.NET и LINQ to SQL](ado-net-and-linq-to-sql.md)
+- [Установка связи с базой данных](communicating-with-the-database.md)

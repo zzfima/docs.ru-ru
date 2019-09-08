@@ -6,30 +6,30 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd745730ca186b9489c547f790c546e95bf96372
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962049"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798088"
 ---
 # <a name="analytic-tracing-with-etw"></a>Аналитическое отслеживание ETW
-Windows Communication Foundation (WCF) аналитическая трассировка обеспечивает отслеживание диагностической информации во время выполнения службы WCF. События аналитического отслеживания WCF, передаваемые в ключевых точках стека WCF и позволяющие отлаживать службы WCF в рабочей среде. Аналитическая трассировка для служб WCF будет оказывать минимальное влияние на производительность рабочего сервера, на котором размещена [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] службы WCF, как эти события эффективно передаются в сеанс Windows (Трассировка событий).  
+Аналитическая трассировка Windows Communication Foundation (WCF) предоставляет способ сбора диагностических сведений во время выполнения службы WCF. События аналитической трассировки WCF создаются в ключевых точках стека WCF, чтобы разрешить устранение неполадок служб WCF в рабочей среде. Аналитическая трассировка служб WCF оказывает минимальное влияние на производительность сервера продукта, на котором размещены [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] службы WCF, так как эти события очень эффективны в сеансе трассировки событий для Windows (ETW).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об аналитическом отслеживании](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- Содержит сведения о работе аналитическая трассировка WCF [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
+ [Общие сведения об аналитическом отслеживании](analytic-tracing-overview.md)  
+ Описывает [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)], как работает аналитическая трассировка WCF.  
   
- [Динамическое включение аналитического отслеживания](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
+ [Динамическое включение аналитического отслеживания](dynamically-enabling-analytic-tracing.md)  
  Описывает, как динамически включить и отключить трассировку с помощью ETW.  
   
- [Настройка отслеживания потока сообщений](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)  
+ [Настройка отслеживания потока сообщений](configuring-message-flow-tracing.md)  
  Описывает процесс настройки трассировки потока сообщений.  
   
- [Ссылка на событие аналитического отслеживания](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
+ [Ссылка на событие аналитического отслеживания](analytic-trace-event-reference.md)  
  Содержит таблицу идентификаторов событий с уровнями событий, сообщениями событий и ключевыми словами.  
   
 ## <a name="see-also"></a>См. также
 
-- [Службы WCF и трассировка событий для Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
-- [Отслеживание событий в системе трассировки событий Windows](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)
+- [Службы WCF и трассировка событий для Windows](../../samples/wcf-services-and-event-tracing-for-windows.md)
+- [Отслеживание событий в системе трассировки событий Windows](../../../windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)

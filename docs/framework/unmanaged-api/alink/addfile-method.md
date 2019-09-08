@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742381"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787690"
 ---
 # <a name="addfile-method"></a>Метод AddFile
-Добавляет файлы в сборку. Может также использоваться для создания несвязанных модулей.  
+Добавляет файлы в сборку. Также можно использовать для создания непривязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +41,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Уникальный идентификатор сборки, которую необходимо дополнить.  
+ Уникальный идентификатор сборки, подлежащая дополну.  
   
  `pszFilename`  
- Полное имя файла для добавления.  
+ Полное имя добавляемого файла.  
   
  `dwFlags`  
- Флаги FileDef COM +, таких как `ffContainsNoMetaData` и `ffWriteable`. `dwFlags` передается [метод DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ филедеф флаги, `ffContainsNoMetaData` такие `ffWriteable`как и. `dwFlags`передается [методу дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) интерфейс, который будет использоваться для выдачи метаданных, при необходимости.  
+ Интерфейс [IMetaDataEmit](../metadata/imetadataemit-interface.md) , используемый для выдачи метаданных при необходимости.  
   
  `pFileToken`  
- Указатель, где будет храниться уникальный идентификатор добавляемого файла.  
+ Указатель на место, где будет храниться уникальный идентификатор добавленного файла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

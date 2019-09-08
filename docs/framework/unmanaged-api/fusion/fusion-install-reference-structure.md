@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e81fb7c99b9fd03a69456a84f2191770f40121d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759361"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795344"
 ---
-# <a name="fusioninstallreference-structure"></a>Структура FUSION_INSTALL_REFERENCE
-Представляет ссылку, когда приложение устанавливает для сборки, приложение, установленной в глобальном кэше сборок.  
+# <a name="fusion_install_reference-structure"></a>Структура FUSION_INSTALL_REFERENCE
+Представляет ссылку, которую приложение делает с сборкой, установленной приложением в глобальном кэше сборок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,19 +43,19 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |Член|Описание|  
 |------------|-----------------|  
 |`cbSize`|Размер структуры в байтах.|  
-|`dwFlags`|Зарезервировано для будущего расширения. Это значение должно быть 0 (ноль).|  
-|`guidScheme`|Добавляет ссылку на сущность. Это поле может иметь одно из следующих значений:<br /><br /> -FUSION_REFCOUNT_MSI_GUID: Ссылка на сборку в приложении, был установлен с помощью установщика Microsoft Windows. `szIdentifier` Полю присваивается `MSI`и `szNonCanonicalData` поля задается значение `Windows Installer`. Эта схема используется для сборок side-by-side Windows.<br />-   FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: Ссылка на сборку приложением, которое отображается в **Add/Remove Programs** интерфейс. `szIdentifier` Поле предоставляет маркер, который регистрирует приложение с **Add/Remove Programs** интерфейс.<br />-FUSION_REFCOUNT_FILEPATH_GUID: Ссылка на сборку приложением, которое представляется с помощью файла в файловой системе. `szIdentifier` Поле предоставляет путь к этому файлу.<br />-   FUSION_REFCOUNT_OPAQUE_STRING_GUID: Приложение, которое представлено только непрозрачная строка ссылается на сборку. `szIdentifier` Поле предоставляет это непрозрачная строка. Глобальный кэш сборок не проверяет наличие непрозрачных ссылок при удалении этого значения.<br />-FUSION_REFCOUNT_OSINSTALL_GUID: Это значение зарезервировано.|  
-|`szIdentifier`|Уникальная строка, определяющая приложения, которые установить сборки в глобальном кэше сборок. Его значение зависит от значения `guidScheme` поля.|  
-|`szNonCanonicalData`|Строка, которая может интерпретировать только сущность, которая добавляет ссылку. Глобальный кэш сборок сохраняет полученную строку, но не использует его.|  
+|`dwFlags`|Зарезервировано для будущего расширения. Это значение должно быть равно 0 (нулю).|  
+|`guidScheme`|Сущность, которая добавляет ссылку. Это поле может иметь одно из следующих значений:<br /><br /> - FUSION_REFCOUNT_MSI_GUID: На сборку ссылается приложение, установленное с помощью установщик Windows Майкрософт. Поле имеет `szNonCanonicalData` значение, а поле имеет значение `Windows Installer`. `MSI` `szIdentifier` Эта схема используется для параллельных сборок Windows.<br />- FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: На сборку ссылается приложение, которое отображается в интерфейсе " **Установка и удаление программ** ". Поле предоставляет маркер, регистрирующий приложение с помощью интерфейса « **Установка и удаление программ».** `szIdentifier`<br />- FUSION_REFCOUNT_FILEPATH_GUID: На сборку ссылается приложение, представленное файлом в файловой системе. `szIdentifier` Поле предоставляет путь к этому файлу.<br />- FUSION_REFCOUNT_OPAQUE_STRING_GUID: На сборку ссылается приложение, представленное только непрозрачной строкой. `szIdentifier` Поле предоставляет эту непрозрачную строку. Глобальный кэш сборок не проверяет наличие непрозрачных ссылок при удалении этого значения.<br />- FUSION_REFCOUNT_OSINSTALL_GUID: Это значение зарезервировано.|  
+|`szIdentifier`|Уникальная строка, идентифицирующая приложение, которое установило сборку в глобальный кэш сборок. Его значение зависит от значения `guidScheme` поля.|  
+|`szNonCanonicalData`|Строка, понятная только сущности, которая добавляет ссылку. Глобальный кэш сборок хранит эту строку, но не использует ее.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+- [Структуры Fusion](fusion-structures.md)
+- [Глобальный кэш сборок](../../app-domains/gac.md)

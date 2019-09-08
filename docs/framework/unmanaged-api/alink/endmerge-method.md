@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8daf76e50b4c584115a55936aa9336c95a3669ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88f594117fffedb6acafef26a9e834dd951ea5bb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742078"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787528"
 ---
 # <a name="endmerge-method"></a>Метод EndMerge
-Указывает, что все настраиваемые атрибуты были объединены в область выдачи.  
+Указывает, что все пользовательские атрибуты были объединены в область действия Emit.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ HRESULT EndMerge(
  Идентификатор сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

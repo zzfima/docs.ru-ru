@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 9e6039feb68d18ff5ce16b7a0532710d672c296e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946965"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792285"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Пошаговое руководство. Обработка данных (Visual Basic)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -25,7 +25,7 @@ ms.locfileid: "69946965"
   
 - Наличие учебной базы данных Northwind.  
   
-     Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest2.  
+     Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка образцов баз данных](downloading-sample-databases.md). После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest2.  
   
 - Наличие файла кода Visual Basic, созданного из базы данных "Борей".  
   
@@ -33,7 +33,7 @@ ms.locfileid: "69946965"
   
      **SQLMetal/Code: "c:\linqtest2\northwind.vb"/Language: VB "C:\linqtest2\northwnd.mdf"/плурализе**  
   
-     Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
@@ -188,4 +188,4 @@ ms.locfileid: "69946965"
   
 ## <a name="see-also"></a>См. также
 
-- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Обучение с использованием пошаговых руководств](learning-by-walkthroughs.md)

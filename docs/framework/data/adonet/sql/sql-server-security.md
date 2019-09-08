@@ -2,12 +2,12 @@
 title: Безопасность SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927605"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791631"
 ---
 # <a name="sql-server-security"></a>Безопасность SQL Server
 SQL Server предоставляет много функций для создания безопасных приложений баз данных.  
@@ -23,23 +23,23 @@ SQL Server предоставляет много функций для созд�
  В этом разделе кратко описываются средства безопасности в SQL Server, которые нужны разработчикам. Здесь также приведены ссылки на соответствующие разделы электронной документации по SQL Server и другие ресурсы, где эти функции описаны более подробно.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Общие сведения о безопасности SQL Server](overview-of-sql-server-security.md)  
  Описание архитектуры и средств безопасности SQL Server.  
   
- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [Сценарии безопасности приложений в SQL Server](application-security-scenarios-in-sql-server.md)  
  Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и SQL Server.  
   
- [Безопасность SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [Безопасность SQL Server Express](sql-server-express-security.md)  
  Описывает вопросы безопасности для SQL Server Express.  
   
 ## <a name="related-sections"></a>Связанные разделы  
-[Центр обеспечения безопасности для ядра СУБД SQL Server и база данных Azure SQL](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-Вопросы безопасности для SQL Server и базы данных SQL Azure.
+[Центр безопасности для SQL Server ядро СУБД и базы данных SQL Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+Описывает вопросы безопасности для SQL Server и базы данных SQL Azure.
 
-[Вопросы безопасности для установки SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-Вопросы безопасности, которые следует учитывать перед установкой SQL Server.
+[Вопросы безопасности при установке SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+Описывает вопросы безопасности, которые следует учитывать перед установкой SQL Server.
 
 ## <a name="see-also"></a>См. также
 
-- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Защита приложений ADO.NET](../securing-ado-net-applications.md)
+- [SQL Server и ADO.NET](index.md)

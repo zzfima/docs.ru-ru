@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21fa2f9e1dc2f255fe94f2420ba90a809ab5b05e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945091"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792661"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Сортировка элементов последовательности
 Для сортировки последовательности по одному или нескольким ключам используется оператор <xref:System.Linq.Enumerable.OrderBy%2A>.  
@@ -90,5 +90,5 @@ ms.locfileid: "69945091"
   
 ## <a name="see-also"></a>См. также
 
-- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Примеры запросов](query-examples.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)

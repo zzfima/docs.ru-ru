@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: ec1acc009e58408fc41c60134538340486f19f75
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed8a1edaae5fab03ad9e78d29803676debd1b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949674"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796914"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Переопределение идентификатора службы для проверки подлинности
-Как правило, нет необходимости задавать удостоверение в службе, поскольку выбор типа учетных данных клиента определяет тип удостоверения, предоставляемого в метаданных службы. Например, следующий код конфигурации использует `clientCredentialType` [ \<элемент привязки wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) и задает для атрибута значение Windows.  
+Как правило, нет необходимости задавать удостоверение в службе, поскольку выбор типа учетных данных клиента определяет тип удостоверения, предоставляемого в метаданных службы. Например, следующий код конфигурации использует `clientCredentialType` [ \<элемент привязки wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md) и задает для атрибута значение Windows.  
 
  В следующем фрагменте WSDL (Web Services Description Language) показано удостоверение для ранее определенной конечной точки. В этом примере служба выполняется как самостоятельная служба с определенной учетной записью пользователя (username@contoso.com), поэтому удостоверение имени участника-пользователя (UPN) содержит имя учетной записи. UPN также известно как имя для входа в систему в домене Windows.  
 
- Пример приложения, демонстрирующий настройку удостоверения, см. в разделе [Пример удостоверения службы](../../../../docs/framework/wcf/samples/service-identity-sample.md). Дополнительные сведения об удостоверении службы см. в статье удостоверение службы [и проверка](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)подлинности.  
+ Пример приложения, демонстрирующий настройку удостоверения, см. в разделе [Пример удостоверения службы](../samples/service-identity-sample.md). Дополнительные сведения об удостоверении службы см. в статье [удостоверение службы и проверка подлинности](../feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Проверка подлинности Kerberos и удостоверение  
- По умолчанию, если служба настроена для использования учетных данных Windows [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) , [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) элемент Identity >, который содержит атрибут userPrincipalName > или ИД элемента >, — это создано в WSDL. Если служба выполняется `LocalSystem`под учетной записью, `NetworkService` `LocalService`или, имя субъекта-службы (SPN) создается по умолчанию в форме `host/` \< *имени узла*>, так как эти учетные записи имеют доступ к данные имени участника-службы компьютера. Если служба выполняется под другой учетной записью, Windows Communication Foundation (WCF) создает имя участника-пользователя в виде \< *имени пользователя*>@<*имя_домена*`>`. Это происходит потому, что проверка подлинности Kerberos требует предоставления клиенту имени участника-пользователя или имени участника-службы для проверки подлинности службы.  
+ По умолчанию, если служба настроена для использования учетных данных Windows [ \<](../../configure-apps/file-schema/wcf/serviceprincipalname.md) , [ \<](../../configure-apps/file-schema/wcf/identity.md) [ \<](../../configure-apps/file-schema/wcf/userprincipalname.md) элемент Identity >, который содержит атрибут userPrincipalName > или ИД элемента >, — это создано в WSDL. Если служба выполняется `LocalSystem`под учетной записью, `NetworkService` `LocalService`или, имя субъекта-службы (SPN) создается по умолчанию в форме `host/` \< *имени узла*>, так как эти учетные записи имеют доступ к данные имени участника-службы компьютера. Если служба выполняется под другой учетной записью, Windows Communication Foundation (WCF) создает имя участника-пользователя в виде \< *имени пользователя*>@<*имя_домена*`>`. Это происходит потому, что проверка подлинности Kerberos требует предоставления клиенту имени участника-пользователя или имени участника-службы для проверки подлинности службы.  
   
  Также для регистрации дополнительного имени участника-службы с учетной записью службы в домене можно использовать средство Setspn.exe. В этом случае имя участника-службы можно использовать в качестве удостоверения службы. Сведения о загрузке средства см. [в разделе Windows 2000 Resource Kit Tool: SetSPN. exe](https://go.microsoft.com/fwlink/?LinkId=91752). Дополнительные сведения об этом средстве см. в разделе [Обзор SetSPN](https://go.microsoft.com/fwlink/?LinkId=61374).  
   
@@ -59,5 +59,5 @@ ms.locfileid: "69949674"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание пользовательского средства проверки удостоверения клиента](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Практическое руководство. Создание пользовательского средства проверки удостоверения клиента](how-to-create-a-custom-client-identity-verifier.md)
+- [Идентификация и проверка подлинности службы](../feature-details/service-identity-and-authentication.md)

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 581c675cfb69503e6366471a469ffed1a2d13b1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2657ac619bb86bc200de9ce229bf82e4339f78d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745228"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796292"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>Функция GetAssemblyIdentityFromFile
-Возвращает указатель на `IUnknown` объект с указанным `IID` в сборку по указанному пути.  
+Возвращает указатель на `IUnknown` объект с указанным `IID` в сборке по указанному пути к файлу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +40,22 @@ HRESULT GetAssemblyIdentityFromFile (
   
 ## <a name="parameters"></a>Параметры  
  `pwzFilePath`  
- [in] Допустимый путь к запрошенной сборке.  
+ окне Допустимый путь к запрошенной сборке.  
   
  `riid`  
- [in] `IID` Интерфейса для возврата.  
+ окне `IID` Возвращаемый интерфейс.  
   
  `ppIdentity`  
- [out] Возвращаемый указатель интерфейса.  
+ заполняет Возвращаемый указатель интерфейса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
 - [IUnknown](/cpp/atl/iunknown)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

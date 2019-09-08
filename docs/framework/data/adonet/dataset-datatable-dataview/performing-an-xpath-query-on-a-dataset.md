@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204540"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784376"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Выполнение запроса XPath к набору данных
-Связь между синхронизированной <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать службы XML, такие как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и могут выполнять определенные функции более удобно, чем доступ к **набору данных** напрямую. Например, вместо использования метода **SELECT** объекта <xref:System.Data.DataTable> для перехода между связями с другими таблицами в наборе **данных**можно выполнить запрос XPath к **XmlDataDocument** , который синхронизируется с **набором данных**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>. Узлы в **XmlNodeList**, приведенные как <xref:System.Xml.XmlElement> узлы, могут затем передаваться в метод **жетровфромелемент** объекта **XmlDataDocument**для возврата совпадающих <xref:System.Data.DataRow> ссылок на строки таблицы в синхронизированном  **Набор данных**.  
+Связь между синхронизированной <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать службы XML, такие как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и могут выполнять определенные функции более удобно, чем доступ к **набору данных** напрямую. Например, вместо использования метода **SELECT** объекта <xref:System.Data.DataTable> для перехода между связями с другими таблицами в **наборе данных**можно выполнить запрос XPath к **XmlDataDocument** , который синхронизируется с **набором данных**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>. Узлы в **XmlNodeList**, приведенные как <xref:System.Xml.XmlElement> узлы, могут затем передаваться в метод **жетровфромелемент** объекта **XmlDataDocument**для возврата совпадающих <xref:System.Data.DataRow> ссылок на строки таблицы в синхронизированном  **Набор данных**.  
   
- Например, следующий образец кода выполняет запрос XPath «по внукам». **Набор данных** заполняется тремя таблицами: **Клиенты**, **заказы**и **OrderDetails**. В примере сначала создается связь «родители-потомки» между таблицами Customers и Orders, а также между таблицами **Orders** и **OrderDetails** . Затем выполняется запрос XPath, возвращающий **XmlNodeList** из узлов **Customers** , где узел внучатый **OrderDetails** имеет узел **ProductID** со значением 43. По сути, в примере используется запрос XPath для определения того, какие клиенты разказали продукт с **ProductID** 43.  
+ Например, следующий образец кода выполняет запрос XPath «по внукам». **Набор данных** заполняется тремя таблицами: **Клиенты**, **заказы**и **OrderDetails**. В примере сначала создается связь «родители-потомки» между таблицами **Customers** и **Orders** , а также между таблицами **Orders** и **OrderDetails** . Затем выполняется запрос XPath, возвращающий **XmlNodeList** из узлов **Customers** , где узел внучатый **OrderDetails** имеет узел **ProductID** со значением 43. По сути, в примере используется запрос XPath для определения того, какие клиенты разказали продукт с **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -104,4 +104,4 @@ foreach (XmlNode xmlNode in nodeList)
 ## <a name="see-also"></a>См. также
 
 - [Синхронизация DataSet и XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

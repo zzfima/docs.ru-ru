@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663882"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797234"
 ---
 # <a name="custom-bindings"></a>Пользовательские привязки
 
-Класс <xref:System.ServiceModel.Channels.CustomBinding> можно использовать, когда ни одна из системных привязок не соответствует требованиям службы. Все привязки создаются из упорядоченных наборов элементов привязки. Пользовательские привязки можно создавать из набора предоставляемых системой элементов привязки или в них можно включать определяемые пользователем элементы привязки. Пользовательские элементы привязки можно применять, например, для использования в конечной точке службы новых транспортов или кодировщиков. Рабочие примеры см. в разделе [примеры привязки Custom](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Дополнительные сведения см. в разделе [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+Класс <xref:System.ServiceModel.Channels.CustomBinding> можно использовать, когда ни одна из системных привязок не соответствует требованиям службы. Все привязки создаются из упорядоченных наборов элементов привязки. Пользовательские привязки можно создавать из набора предоставляемых системой элементов привязки или в них можно включать определяемые пользователем элементы привязки. Пользовательские элементы привязки можно применять, например, для использования в конечной точке службы новых транспортов или кодировщиков. Рабочие примеры см. в разделе [образцы пользовательских привязок](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Дополнительные сведения см. в разделе [ \<CustomBinding >](../../configure-apps/file-schema/wcf/custombinding.md).
 
 ## <a name="construction-of-a-custom-binding"></a>Создание пользовательской привязки
 
@@ -44,7 +44,7 @@ ms.locfileid: "67663882"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-Внизу расположен обязательный элемент транспорта. Можно использовать собственный транспорт или один из следующих элементов привязки транспорта, предоставляемых Windows Communication Foundation (WCF):
+Внизу расположен обязательный элемент транспорта. Вы можете использовать собственный транспорт или один из следующих элементов привязки транспорта Windows Communication Foundation (WCF) предоставляет следующие возможности.
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -76,9 +76,9 @@ ms.locfileid: "67663882"
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о создании конечных точек](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Использование привязок для настройки служб и клиентов](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Практическое руководство. Настройка привязки, предоставляемой системой](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Пользовательская привязка](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [Общие сведения о создании конечных точек](../endpoint-creation-overview.md)
+- [Использование привязок для настройки служб и клиентов](../using-bindings-to-configure-services-and-clients.md)
+- [Привязки, предоставляемые системой](../system-provided-bindings.md)
+- [Практическое руководство. Настройка привязки, предоставляемой системой](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)
+- [Пользовательская привязка](../samples/custom-binding.md)

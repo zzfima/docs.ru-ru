@@ -1,6 +1,6 @@
 ---
-title: Создание приложения WPF в Visual Studio
-ms.date: 03/20/2019
+title: Учебник. Создание первого приложения WPF в Visual Studio 2019 — .NET Framework
+ms.date: 09/06/2019
 dev_langs:
 - csharp
 - vb
@@ -8,44 +8,41 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
+ms.topic: tutorial
+ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.custom: vs-dotnet
-ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254069"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799340"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание классического приложения WPF
+# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Учебник. Создание первого приложения WPF в Visual Studio 2019
 
 В этой статье показано, как разработать классическое приложение Windows Presentation Foundation (WPF), включающее элементы, которые являются общими для большинства приложений WPF: Разметка XAML (XAML), код программной части, определения приложений, элементы управления, макет, привязка данных и стили. Для разработки приложения вы будете использовать Visual Studio. 
 
-Это пошаговое руководство включает следующие шаги:
+В этом руководстве вы узнаете, как:
+> [!div class="checklist"]
+> - Создайте проект WPF.
+> - Используйте XAML для проектирования внешнего вида пользовательского интерфейса приложения.
+> - Напишите код для создания поведения приложения.
+> - Создайте определение приложения для управления приложением.
+> - Добавьте элементы управления и создайте макет, чтобы составить пользовательский интерфейс приложения.
+> - Создание стилей для согласованного внешнего вида в пользовательском интерфейсе приложения.
+> - Привязка пользовательского интерфейса к данным для заполнения пользовательского интерфейса данными и синхронизации данных и пользовательского интерфейса.
 
-- Используйте XAML для проектирования внешнего вида пользовательского интерфейса приложения.
-
-- Напишите код для создания поведения приложения.
-
-- Создайте определение приложения для управления приложением.
-
-- Добавьте элементы управления и создайте макет, чтобы составить пользовательский интерфейс приложения.
-
-- Создание стилей для согласованного внешнего вида в пользовательском интерфейсе приложения.
-
-- Привязка пользовательского интерфейса к данным для заполнения пользовательского интерфейса данными и синхронизации данных и пользовательского интерфейса.
-
-По завершении работы с пошаговым руководством вы создадите автономное приложение Windows, позволяющее пользователям просматривать отчеты о расходах для выбранных лиц. Приложение состоит из нескольких страниц WPF, размещенных в окне в стиле браузера.
+По завершении работы с этим руководством вы создадите автономное приложение Windows, которое позволит пользователям просматривать отчеты о расходах для выбранных лиц. Приложение состоит из нескольких страниц WPF, размещенных в окне в стиле браузера.
 
 > [!TIP]
-> Пример кода, который используется для построения этого пошагового руководства, доступен как для C# Visual Basic, так и в [пошаговом руководстве по примерам кода приложения WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp).
+> Пример кода, используемый в этом руководстве, доступен как для Visual Basic, так и C# в [руководстве по примерам кода приложения WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp).
 >
-> Язык кода образца кода можно переключать между C# и Visual Basic с помощью **\< />** раскрывающегося списка в правой верхней части этой статьи.
+> Язык кода образца кода можно переключать между C# и Visual Basic с помощью селектора языка в верхней части этой страницы.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Visual Studio 2017 или более поздней версии (в этой статье используется Visual Studio 2019)
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) с установленной рабочей нагрузкой " **Разработка классических приложений .NET** ".
 
    Дополнительные сведения об установке последней версии Visual Studio см. в [статье Установка Visual Studio](/visualstudio/install/install-visual-studio).
 
@@ -210,7 +207,7 @@ ms.locfileid: "70254069"
 
     [!code-vb[ExpenseIt#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-1. Добавьте в проект образ с именем *водяной знак. png* . Можно создать собственный образ, скопировать файл из образца кода или получить его [здесь](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png).
+1. Добавьте в проект образ с именем *водяной знак. png* . Вы можете создать собственный образ, скопировать файл из примера кода или получить его из репозитория GitHub [Microsoft/WPF-Samples](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png) .
 
     1. Щелкните правой кнопкой мыши узел проекта и выберите команду **Добавить** > **существующий элемент**или нажмите клавиши **SHIFT**+**ALT**+**A**.
 
@@ -475,11 +472,8 @@ ms.locfileid: "70254069"
 > В этом примере демонстрируется конкретная функция WPF, которая не соответствует всем рекомендациям, таким как безопасность, локализация и специальные возможности. Полный охват WPF и рекомендации по разработке приложений .NET см. в следующих разделах:
 >
 > - [Специальные возможности](../../ui-automation/accessibility-best-practices.md)
->
 > - [Безопасность](../security-wpf.md)
->
 > - [Глобализация и локализация WPF](../advanced/wpf-globalization-and-localization-overview.md)
->
 > - [Производительность WPF](../advanced/optimizing-wpf-application-performance.md)
 
 ## <a name="next-steps"></a>Следующие шаги

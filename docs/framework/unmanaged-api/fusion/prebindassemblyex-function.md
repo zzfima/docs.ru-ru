@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773856"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796328"
 ---
 # <a name="prebindassemblyex-function"></a>Функция PreBindAssemblyEx
-Возвращает после применения политики отображаемое имя сборки.  
+Возвращает отображаемое имя после применения политики для сборки.  
   
- Эта функция поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
+ Эта функция поддерживает .NET Frameworkную инфраструктуру и не предназначена для непосредственного использования в коде.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>Параметры  
  `pAppCtx`  
- [in] Определяет контекст приложения.  
+ окне Определяет контекст приложения.  
   
  `pName`  
- [in] Обозначает имя сборки.  
+ окне Определяет имя сборки.  
   
  `pAsmParent`  
- [in] Идентифицирует родительской сборки. Этот параметр не учитывается.  
+ окне Определяет родительскую сборку. Этот параметр не учитывается.  
   
  `pwzRuntimeVersion`  
- [in] Определяет версию среды выполнения.  
+ окне Определяет версию среды выполнения.  
   
  `ppNamePostPolicy`  
- [out] Содержит имя отображаемое после применения политики.  
+ заполняет Содержит отображаемое имя после применения политики.  
   
  `pvReserved`  
- [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
   
 ## <a name="remarks"></a>Примечания  
- `ppNamePostPolicy` Выходной параметр имеет значение только в том случае, если функция возвращает значение HRESULT FUSION_E_REF_DEF_MISMATCH. В противном случае — значение null.  
+ `ppNamePostPolicy` Выходной параметр задается только в том случае, если функция возвращает значение HRESULT FUSION_E_REF_DEF_MISMATCH. В противном случае он имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

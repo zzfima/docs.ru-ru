@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938198"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782393"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Включение нескольких активных результирующих наборов
 Режим MARS - это новая возможность, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению. Если для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.  
@@ -68,7 +68,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Операции режима MARS не обеспечивают безопасность потока.  
   
 ### <a name="connection-pooling"></a>Объединение подключений в пул  
- Как и любые другие соединения, соединения, для которых включен режим MARS, организуются в пулы. Если приложение открывает два соединения (одно с включенным режимом MARS и другое, для которого режим MARS отключен), два эти соединения помещаются в отдельные пулы. Дополнительные сведения см. в разделе [Пулы подключений SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Как и любые другие соединения, соединения, для которых включен режим MARS, организуются в пулы. Если приложение открывает два соединения (одно с включенным режимом MARS и другое, для которого режим MARS отключен), два эти соединения помещаются в отдельные пулы. Дополнительные сведения см. в разделе [Пулы подключений SQL Server (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Среда выполнения пакетов SQL Server  
  При открытии соединения определяется среда по умолчанию. Затем эта среда копируется в логический сеанс режима MARS.  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>См. также
 
-- [Несколько активных результирующих наборов (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Несколько активных результирующих наборов (MARS)](multiple-active-result-sets-mars.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Объекты DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: f362e4807bce4fb0e3e8c9ae8cdd6b4704fc28aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8a06accb11631f2dce6b0d39587d7274223c0e68
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203803"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786346"
 ---
 # <a name="dataviews"></a>Объекты DataView
 <xref:System.Data.DataView> позволяет создавать различные представления данных, которые хранятся в <xref:System.Data.DataTable>. Эта возможность часто используется в приложениях связывания данных. С помощью **DataView**можно предоставлять данные в таблице с различными порядками сортировки, а данные можно фильтровать по состоянию строки или по критерию фильтра.  
@@ -61,4 +61,4 @@ ms.locfileid: "70203803"
   
 ## <a name="see-also"></a>См. также
 
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

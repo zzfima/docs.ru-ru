@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929909a7f2c4fa1799c8fed94787b8f853c7eac2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697242"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796519"
 ---
 # <a name="idefinitionappid-interface"></a>Интерфейс IDefinitionAppId
-Представляет уникальный идентификатор для кода, который определяет приложение в текущей области.  
+Представляет уникальный идентификатор для кода, определяющего приложение в текущей области.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Возвращает форматированную строку, представляющее код в этом `IDefinitionAppId` объекта.|  
-|`IDefinitionAppId::put_Codebase`|Задает код это `IDefinitionAppId` строковое значение в объект в указанном формате.|  
-|`IDefinitionAppId::EnumAppPath`|Получает указатель интерфейса на [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) , содержащий сборки в путь текущего приложения.|  
-|`IDefinitionAppId::SetAppPath`|Задает путь к приложению для сборки в текущей области к значению, который ссылается заданный [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) объекта.|  
-|`IDefinitionAppId::get_SubscriptionId`|Получает указатель на строковое представление идентификатора маркера для подписки на это `IDefinitionAppId` объекта.|  
-|`IDefinitionAppId::put_SubscriptionId`|Задает идентификатор токена для подписки на это `IDefinitionAppId` объекта указанному строковому значению.|  
+|`IDefinitionAppId::get_Codebase`|Возвращает отформатированную строку, которая представляет код в `IDefinitionAppId` этом объекте.|  
+|`IDefinitionAppId::put_Codebase`|Задает код этого `IDefinitionAppId` объекта в указанном форматированном строковом значении.|  
+|`IDefinitionAppId::EnumAppPath`|Возвращает указатель интерфейса на объект [иенумдефинитионидентити](ienumdefinitionidentity-interface.md) , содержащий сборки в текущем пути приложения.|  
+|`IDefinitionAppId::SetAppPath`|Задает путь приложения для сборки в текущей области к значению, на которое ссылается указанный объект [идефинитионидентити](idefinitionidentity-interface.md) .|  
+|`IDefinitionAppId::get_SubscriptionId`|Возвращает указатель на строковое представление идентификатора маркера для подписки на этот `IDefinitionAppId` объект.|  
+|`IDefinitionAppId::put_SubscriptionId`|Устанавливает идентификатор маркера для подписки на этот `IDefinitionAppId` объект в указанном строковом значении.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Isolation.h  
+ **Заголовок.** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)

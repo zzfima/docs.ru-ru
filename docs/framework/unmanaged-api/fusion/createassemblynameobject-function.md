@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795352"
 ---
 # <a name="createassemblynameobject-function"></a>Функция CreateAssemblyNameObject
-Получает указатель интерфейса на [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) экземпляр, представляющий уникальный идентификатор сборки с указанным именем.  
+Возвращает указатель интерфейса на экземпляр [IAssemblyName](iassemblyname-interface.md) , представляющий уникальный идентификатор сборки с указанным именем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,27 +41,27 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>Параметры  
  `ppAssemblyNameObj`  
- [out] Возвращенный `IAssemblyName`.  
+ заполняет Возвращаемое `IAssemblyName`значение.  
   
  `szAssemblyName`  
- [in] Имя сборки, для которой нужно создать объект `IAssemblyName` экземпляра.  
+ окне Имя сборки, для которой создается новый `IAssemblyName` экземпляр.  
   
  `dwFlags`  
- [in] Флаги для передачи в конструктор объекта.  
+ окне Флаги, передаваемые в конструктор объектов.  
   
  `pvReserved`  
- [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion.h  
+ **Заголовок.** Fusion. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Интерфейс IAssemblyName](iassemblyname-interface.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

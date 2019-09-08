@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959390"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794237"
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -88,7 +88,7 @@ ms.locfileid: "69959390"
   
 |Свойство.|Описание|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL. При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic). Дополнительные сведения о значении NULL базы данных см. в разделе [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL. При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic). Дополнительные сведения о значении NULL базы данных см. в разделе [Handling Null Values](handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Возвращает или задает максимальное количество разрядов, используемых для представления значения. Этот параметр пропускается для типов данных даты и времени.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Возвращает или задает число десятичных разрядов, до которого разрешается временная часть значения для `Time`, `DateTime2`и `DateTimeOffset`. Значение по умолчанию — 0, означающее, что фактический масштаб выводится из значения и отправляется на сервер.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Пропускается для типов данных даты и времени.|  
@@ -101,7 +101,7 @@ ms.locfileid: "69959390"
 ### <a name="creating-parameters"></a>Создание параметров  
  Объект <xref:System.Data.SqlClient.SqlParameter> можно создать с помощью конструктора либо путем добавления этого объекта в коллекцию <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> путем вызова метода `Add` класса <xref:System.Data.SqlClient.SqlParameterCollection>. Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра.  
   
- В следующих подразделах данного раздела приведены примеры указания параметров даты и времени. Дополнительные примеры работы с параметрами см. в разделе [Настройка параметров и типов данных](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) параметров и [параметров DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ В следующих подразделах данного раздела приведены примеры указания параметров даты и времени. Дополнительные примеры работы с параметрами см. в разделе [Настройка параметров и типов данных](../configuring-parameters-and-parameter-data-types.md) параметров и [параметров DataAdapter](../dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Пример работы с типом date  
  В нижеприведенном примере кода показано указание параметра `date`.  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>См. также
 
-- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Сопоставления типов данных SQL Server](../sql-server-data-type-mappings.md)
+- [Настройка параметров и типы данных параметров](../configuring-parameters-and-parameter-data-types.md)
+- [Типы данных SQL Server и ADO.NET](sql-server-data-types.md)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

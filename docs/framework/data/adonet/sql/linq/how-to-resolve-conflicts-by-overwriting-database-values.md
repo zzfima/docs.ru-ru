@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: f6721234d2d3920343bc72889c7683fb6ee662a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1da2abcbbb3b87d44aa99016112d9ef2674912c6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928754"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781716"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Практическое руководство. Как разрешать конфликты путем переписывания значений базы данных
-Чтобы выверить различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> для перезаписи значений базы данных. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Чтобы выверить различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> для перезаписи значений базы данных. Дополнительные сведения см. в [разделе оптимистичный параллелизм. Обзор](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > Во всех случаях запись на клиенте сначала обновляется путем извлечения обновленных данных из базы данных. Это действие гарантирует успешное выполнение следующей попытки обновления при тех же проверках параллелизма.  
@@ -42,4 +42,4 @@ ms.locfileid: "69928754"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Практическое руководство. Управление конфликтами изменений](how-to-manage-change-conflicts.md)

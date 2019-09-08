@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773829"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796314"
 ---
 # <a name="isframeworkassembly-function"></a>Функция IsFrameworkAssembly
-Получает значение, указывающее, управляется ли указанная сборка.  
+Возвращает значение, указывающее, является ли указанная сборка управляемой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,27 +39,27 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pwzAssemblyReference`  
- [in] Имя сборки.  
+ окне Имя проверяемой сборки.  
   
  `pbIsFrameworkAssembly`  
- [out] Логическое значение, указывающее, управляется ли сборка.  
+ заполняет Логическое значение, указывающее, является ли сборка управляемой.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Это uncanonicalized строка, содержащая уникальный идентификатор сборки.  
+ окне Неканоническая строка, содержащая уникальный идентификатор сборки.  
   
  `pccSize`  
  [входной] Размер `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Примечания  
- `pwzAssemblyReference` Параметр является указателем на строку символов, содержащая имя сборки.  
+ `pwzAssemblyReference` Параметр является указателем на символьную строку, содержащую имя сборки.  
   
- Если эта сборка является частью .NET Framework, `pbIsFrameworkAssembly` параметр будет содержать значение типа Boolean `true`.  
+ Если эта сборка является частью .NET Framework, `pbIsFrameworkAssembly` параметр будет содержать логическое `true`значение.  
   
- Если для этого именованную сборку не является частью платформы .NET Framework или `pwzAssemblyReference` параметр не задает имя сборки, `pbIsFrameworkAssembly` будет содержать значение типа Boolean `false`.  
+ Если именованная сборка не является частью .NET Framework или если `pwzAssemblyReference` параметр не имеет имени сборки, `pbIsFrameworkAssembly` то будет `false`содержать логическое значение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Глобальные статические функции Fusion](fusion-global-static-functions.md)

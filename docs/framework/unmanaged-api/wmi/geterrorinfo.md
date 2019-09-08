@@ -1,6 +1,6 @@
 ---
-title: Функция GetErrorInfo (Справочник по неуправляемым API)
-description: Функция GetErrorInfo получает сведения об ошибке из предыдущего вызова функции.
+title: Функция Жетерроринфо (Справочник по неуправляемым API)
+description: Функция Жетерроринфо получает сведения об ошибке из предыдущего вызова функции.
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746544"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798579"
 ---
-# <a name="geterrorinfo-function"></a>GetErrorInfo-функция
+# <a name="geterrorinfo-function"></a>Функция Жетерроринфо
 Получает сведения об ошибках из предыдущего вызова функции.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -36,19 +36,19 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) объекта, если вызов функции завершается успешно, или `null` при сбое.
+Указатель на объект [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) при успешном вызове функции или `null` в случае сбоя.
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) метод.
+Эта функция заключает в оболочку вызов метода [икомсреадингинфо:: жетерроринфо](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils.def  
+ **Заголовок.** WMINet_Utils. def  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

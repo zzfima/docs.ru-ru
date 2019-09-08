@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18e0b7b3547bb246588f6b255483d4c317e0df88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742225"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787609"
 ---
 # <a name="closeassembly-method"></a>Метод CloseAssembly
-Завершает операции сборки. Этот метод вызывается перед началом новой сборки или модуля, не связанного с данными.  
+Завершает операции сборки. Вызовите этот метод перед началом новой сборки или несвязанного модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ HRESULT CloseAssembly(
  Идентификатор сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает S_OK, если метод выполнен успешно.  
+ Если метод завершается с ошибкой, возвращает значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- Требуется alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Интерфейс IALink](ialink-interface.md)
+- [Интерфейс IALink2](ialink2-interface.md)
+- [API ALink](index.md)

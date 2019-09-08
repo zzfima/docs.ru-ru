@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040206"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798895"
 ---
 # <a name="gettypelibinfo-function"></a>Функция GetTypeLibInfo
 Возвращает сведения о указанной библиотеке типов, изучая ее структуру [тлибаттр](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
@@ -59,12 +59,12 @@ HRESULT GetTypeLibInfo(
  заполняет Дополнительный номер версии библиотеки типов. Например, для версии *x. y*дополнительный номер версии — *y*.  
   
 ## <a name="remarks"></a>Примечания  
- Функция вызывается программой [Tlbexp. exe (программа экспорта библиотек типов).](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) `GetTypeLibInfo` Это средство создает библиотеку типов, описывающую типы в сборке среды CLR.  
+ Функция вызывается программой [Tlbexp. exe (программа экспорта библиотек типов).](../../tools/tlbexp-exe-type-library-exporter.md) `GetTypeLibInfo` Это средство создает библиотеку типов, описывающую типы в сборке среды CLR.  
   
  Если какой-либо из параметров имеет значение null, `HRESULT` функция `E_POINTER`возвращает объект. В противном случае она возвращает `S_OK`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
  **Заголовок.** Тлбреф. h  
   
@@ -74,5 +74,5 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="see-also"></a>См. также
 
-- [Вспомогательные функции Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Вспомогательные функции Tlbexp](index.md)
 - [Функция Лоадтипелибекс](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

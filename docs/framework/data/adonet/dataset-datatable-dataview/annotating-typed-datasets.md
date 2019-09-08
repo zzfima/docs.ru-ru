@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205252"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784806"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме приведет к тому, что типизированный **набор данных** будет ссылаться на объекты, не существующие в источнике данных, а также будет потеряна ссылка на объекты, существующие в источнике данных.  
   
- С помощью заметок можно настроить имена объектов в типизированном наборе **данных** с более информативными именами, сделать код более удобочитаемым, а типизированный **набор данных** проще использовать для использования клиентами, при этом не изменяя базовую схему. Например, следующий элемент схемы для таблицы Customers базы данных **Northwind** приведет к появлению <xref:System.Data.DataRowCollection> имени объекта **DataRow** **кустомерсров** и именованных **клиентов**.  
+ С помощью заметок можно настроить имена объектов в типизированном **наборе данных** с более информативными именами, сделать код более удобочитаемым, а типизированный **набор данных** проще использовать для использования клиентами, при этом не изменяя базовую схему. Например, следующий элемент схемы для таблицы **Customers** базы данных **Northwind** приведет к появлению <xref:System.Data.DataRowCollection> имени объекта **DataRow** **кустомерсров** и именованных **клиентов**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -80,7 +80,7 @@ ms.locfileid: "70205252"
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Ниже приведен пример схемы с заметками, которая предоставляет таблицу Customers базы данных **Northwind** с отношением к включенной таблице **Orders** .  
+ Ниже приведен пример схемы с заметками, которая предоставляет таблицу **Customers** базы данных **Northwind** с отношением к включенной таблице **Orders** .  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- В следующем примере кода используется строго типизированный **набор данных** , созданный из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> из них для заполнения таблицы Customers, <xref:System.Data.SqlClient.SqlDataAdapter> а другой — для заполнения таблицы Orders. Строго типизированный **набор данных** определяет **DataRelation**.  
+ В следующем примере кода используется строго типизированный **набор данных** , созданный из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> из них для заполнения таблицы **Customers** , <xref:System.Data.SqlClient.SqlDataAdapter> а другой — для заполнения таблицы **Orders** . Строго типизированный **набор данных** определяет **DataRelation**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Типизированные наборы данных](typed-datasets.md)
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

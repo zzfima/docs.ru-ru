@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697255"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796441"
 ---
 # <a name="ienumreferenceidentity-interface"></a>Интерфейс IEnumReferenceIdentity
 Служит в качестве перечислителя для коллекции `IReferenceIdentity` объектов.  
@@ -30,19 +30,19 @@ ms.locfileid: "61697255"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Получает указатель интерфейса на новый `IEnumReferenceIdentity` , содержащий те же члены, что это `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Next`|Возвращает заданное число `IReferenceIdentity` объектов, начиная с текущей позиции.|  
-|`IEnumReferenceIdentity::Reset`|Перемещает указатель инструкций в начале `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Skip`|Перемещает указатель инструкций вперед на указанное число элементов, начиная с текущей позиции.|  
+|`IEnumReferenceIdentity::Clone`|Возвращает указатель интерфейса на новый `IEnumReferenceIdentity` объект, содержащий те же элементы, что и этот `IEnumReferenceIdentity`объект.|  
+|`IEnumReferenceIdentity::Next`|Возвращает указанное число `IReferenceIdentity` объектов, начиная с текущей позиции.|  
+|`IEnumReferenceIdentity::Reset`|Перемещает указатель инструкций в начало `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Skip`|Перемещает указатель инструкции вперед на указанное число элементов, начиная с текущей позиции.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Isolation.h  
+ **Заголовок.** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Интерфейс IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Интерфейсы Fusion](fusion-interfaces.md)
+- [Интерфейс IReferenceIdentity](ireferenceidentity-interface.md)

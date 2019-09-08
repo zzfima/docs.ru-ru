@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad10557a55b498fe004bff6ce89801e975e7138b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203714"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786319"
 ---
 # <a name="finding-rows"></a>Поиск строк
 При помощи методов <xref:System.Data.DataView.Find%2A> и <xref:System.Data.DataView.FindRows%2A> объекта <xref:System.Data.DataView> можно производить поиск строк по значениям их ключей сортировки. Регистр значений поиска в методах **Find** и **FindRows** определяется свойством **CaseSensitive** базового <xref:System.Data.DataTable>класса. Чтобы был возвращен результат, значения для поиска должны полностью совпадать со значениями ключей сортировки.  
@@ -98,4 +98,4 @@ else
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [Объекты DataView](dataviews.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771907"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799180"
 ---
 # <a name="gethashfromhandle-function"></a>Функция GetHashFromHandle
 Создает хэш содержимого файла с заданным дескриптором файла с помощью указанного хэш-алгоритма.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>Параметры  
  `hFile`  
- [in] Дескриптор файла, хэширование которого требуется выполнить.  
+ окне Описатель файла для хэширования.  
   
  `piHashAlg`  
- [in, out] Константа, указывающая хэш-алгоритм. Использовать нуль для алгоритма по умолчанию.  
+ [вход, выход] Константа, указывающая хэш-алгоритм. Используйте нуль для алгоритма по умолчанию.  
   
  `pbHash`  
- [out] Буфер, возвращенный хэша.  
+ заполняет Возвращаемый буфер хэша.  
   
  `cchHash`  
- [in] Запрошенный максимальный размер `pbHash`.  
+ окне Запрошенный максимальный размер `pbHash`.  
   
  `pchHash`  
- [out] Размер в байтах, возвращаемого `pbHash`.  
+ заполняет Размер возвращаемого `pbHash`объекта (в байтах).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

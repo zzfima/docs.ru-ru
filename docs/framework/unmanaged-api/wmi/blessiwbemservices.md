@@ -1,6 +1,6 @@
 ---
-title: Функция BlessIWbemServices (Справочник по неуправляемым API)
-description: Функция BlessIWbemServices указывает, разрешить ли учетные данные пользователя доступ к классу IWbemServices.
+title: Функция Блессивбемсервицес (Справочник по неуправляемым API)
+description: Функция Блессивбемсервицес указывает, допускают ли учетные данные пользователя доступ к классу IWbemServices.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636508"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799046"
 ---
 # <a name="blessiwbemservices-function"></a>Функция BlessIWbemServices
-Указывает, разрешает ли учетные данные пользователя доступ к указанным [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) класса.   
+Указывает, допускают ли учетные данные пользователя доступ к указанному классу [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) .   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,43 +44,43 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Параметры
 
 `pIWbemServices`\
-[in] Указатель на [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) объекта, для которого требуются разрешения.
+окне Указатель на объект [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) , для которого требуются разрешения.
 
 `strUser`\
-[in] Имя пользователя.
+окне Имя пользователя.
 
 `strPassword`\
-[in] Пароль, связанный с `strUser`.
+окне Пароль, связанный с `strUser`.
 
 `strAuthority`\
-[in] Имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
+окне Доменное имя пользователя. Дополнительные сведения см. в описании функции [коннектсервервми](connectserverwmi.md) .
 
 `impLevel`\
-[in] Уровень олицетворения.
+окне Уровень олицетворения.
 
 `authnLevel`\
-[in] Уровень авторизации.
+окне Уровень авторизации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *Winerror. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов являются недопустимыми. |
+| `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов недопустимы. |
 | `E_POINTER` | 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
-| `E_FAIL` | 0x80000008 | Произошла неизвестная ошибка. |
-| `E_OUTOFMEMORY` | 0x80000002 | Недостаточно памяти для выполнения операции. | 
-| `S_OK` | 0 | Вызов функции был успешным. | 
+| `E_FAIL` | 0x80000008 | Произошла неопределенная ошибка. |
+| `E_OUTOFMEMORY` | 0x80000002 | Недостаточно свободной памяти для выполнения операции. | 
+| `S_OK` | 0 | Вызов функции выполнен успешно. | 
 
 ## <a name="requirements"></a>Требования  
 
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

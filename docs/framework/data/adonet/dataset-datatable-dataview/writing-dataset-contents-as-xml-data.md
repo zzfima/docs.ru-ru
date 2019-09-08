@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf73adff89ca5cad3a71239421ac826105a387cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203110"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785228"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Запись содержимого набора как данных XML
 В ADO.NET можно записать XML-представление объекта <xref:System.Data.DataSet> вместе со схемой или без нее. Если информация схемы встраивается внутрь XML, она записываются на языке XSD. Схема содержит определения таблиц для <xref:System.Data.DataSet>, а также определения связей и ограничений.  
@@ -27,7 +27,7 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXML** возвращает XML-представление <xref:System.Data.DataSet> без сведений о схеме. Чтобы записать сведения о схеме из <xref:System.Data.DataSet> (в виде XML-схемы) в строку, используйтепараметр GetSchema.  
+ **GetXML** возвращает XML-представление <xref:System.Data.DataSet> без сведений о схеме. Чтобы записать сведения о схеме из <xref:System.Data.DataSet> (в виде XML-схемы) в строку, используйте **параметр**GetSchema.  
   
  Для записи <xref:System.Data.DataSet> в файл, поток или **XmlWriter**используйте метод **WriteXml** . Первым параметром, который передается в **WriteXml** , является назначение выходных данных в формате XML. Например, передайте строку, содержащую имя файла, объект **System. IO. TextWriter** и т. д. Можно передать необязательный второй параметр **ксмлвритемоде** , чтобы указать способ записи выходных данных XML.  
   
@@ -80,4 +80,4 @@ xmlSW.Close();
 - [Вложенность объектов DataRelation](nesting-datarelations.md)
 - [Запись сведений о схеме DataSet как XSD](writing-dataset-schema-information-as-xsd.md)
 - [Наборы данных, таблицы данных и объекты DataView](index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../ado-net-overview.md)

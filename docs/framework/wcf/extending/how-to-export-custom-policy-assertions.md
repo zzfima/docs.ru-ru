@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 992133ff9922e36b00683f4f48db88e1c2b91c1d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767173"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795665"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Практическое руководство. Экспорт проверочных утверждений пользовательской политики
-В утверждениях политики описываются возможности и требования конечной точки службы. Приложения-службы могут использовать проверочные утверждения пользовательской политики в метаданных службы для передачи конечной точки, привязки или информации о настройке контракта клиентскому приложению. Windows Communication Foundation (WCF) можно использовать для экспорта проверочных утверждений в выражения политики, прикрепленные в привязках WSDL в конечной точке, операции или темах сообщений, в зависимости от возможностей или требований, которые вы сейчас находитесь.  
+В утверждениях политики описываются возможности и требования конечной точки службы. Приложения-службы могут использовать проверочные утверждения пользовательской политики в метаданных службы для передачи конечной точки, привязки или информации о настройке контракта клиентскому приложению. Windows Communication Foundation (WCF) можно использовать для экспорта утверждений в выражениях политик, присоединенных в привязках WSDL, на конечных точках, операциях или сообщениях в зависимости от возможностей или требований, которые вы обмениваетесь.  
   
  Специальные проверочные утверждения политики экспортируются путем реализации интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> на <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> и либо вставки элемента привязки непосредственно в привязку конечной точки службы, либо регистрации элемента привязки в файле конфигурации приложения. Реализация экспорта политики добавляет проверочное утверждение пользовательской политики как экземпляр <xref:System.Xml.XmlElement?displayProperty=nameWithType> в соответствующую коллекцию <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> в контексте <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType>, переданный методу <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
   
  Кроме этого, необходимо проверить свойство <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> класса <xref:System.ServiceModel.Description.WsdlExporter> и экспортировать вложенные выражения и политики и атрибуты инфраструктуры политики в соответствующее пространство имен в зависимости от указанной версии политики.  
   
- Чтобы импортировать утверждения пользовательской политики, см. в разделе <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> и [как: Импорт утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md).  
+ Сведения об импорте утверждений пользовательской политики <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> см [. в разделе и как Импорт утверждений](how-to-import-custom-policy-assertions.md)пользовательской политики.  
   
 ### <a name="to-export-custom-policy-assertions"></a>Экспорт проверочных утверждений пользовательской политики  
   
@@ -34,7 +34,7 @@ ms.locfileid: "61767173"
   
 1. Реализуйте <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> для элемента привязки проверочного утверждения пользовательской политики.  
   
-2. Добавить расширение элемента привязки в файл конфигурации с помощью [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) элемент.  
+2. Добавьте расширение элемента привязки в файл конфигурации с помощью [ \<элемента биндинжелементекстенсионс >](../../configure-apps/file-schema/wcf/bindingelementextensions.md) .  
   
 3. Создайте специальную привязку с помощью <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
@@ -53,4 +53,4 @@ ms.locfileid: "61767173"
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Практическое руководство. Импорт утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Практическое руководство. Импорт утверждений пользовательской политики](how-to-import-custom-policy-assertions.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041197"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794313"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Объединение подключений в пул в SQL Server (ADO.NET)
 Соединение с сервером базы данных обычно состоит из нескольких длительных шагов. Необходимо установить физический канал, например сокет или именованный канал, выполнить первоначальное подтверждение установления связи с сервером, выполнить синтаксический анализ данных строки соединения, сервер должен проверить подлинность соединения, а также запустить проверку прикреплений в текущей транзакции и т. д.  
@@ -127,11 +127,11 @@ using (SqlConnection connection = new SqlConnection(
  После активации роли приложения SQL Server с помощью вызова системной хранимой процедуры `sp_setapprole` контекст безопасности данного соединения сбросить нельзя. Однако, если использование пула включено, соединение возвращается в пул и при повторном использовании соединения возникает ошибка. Дополнительные сведения см. в статье базы знаний "[ошибки роли приложения SQL с OLE DB пула ресурсов](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Альтернативы ролям приложений  
- Рекомендуется пользоваться преимуществом новых механизмов безопасности, которые пришли на смену ролям приложения. Дополнительные сведения см. [в разделе Создание ролей приложения в SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Рекомендуется пользоваться преимуществом новых механизмов безопасности, которые пришли на смену ролям приложения. Дополнительные сведения см. [в разделе Создание ролей приложения в SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Объединение подключений в пул](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Счетчики производительности](../../../../docs/framework/data/adonet/performance-counters.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Объединение подключений в пул](connection-pooling.md)
+- [SQL Server и ADO.NET](./sql/index.md)
+- [Счетчики производительности](performance-counters.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

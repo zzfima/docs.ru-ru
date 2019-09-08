@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944058"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784862"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Сопоставления DataAdapter DataTable и DataColumn
 Объект **DataAdapter** содержит коллекцию из нуля или более <xref:System.Data.Common.DataTableMapping> объектов в своем свойстве **TableMappings** . **Экземпляр DataTableMapping** предоставляет основное сопоставление данных, возвращенных запросом к источнику данных, и <xref:System.Data.DataTable>. Имя **экземпляр DataTableMapping** может быть передано вместо имени **DataTable** в метод **Fill** объекта **DataAdapter**. В следующем примере создается **экземпляр DataTableMapping** с именем **Аусорсмаппинг** для таблицы **authors** .  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  Если не указать имя **TableName** или **экземпляр DataTableMapping** при вызове метода **Fill** или **Update** объекта **DataAdapter**, то **DataAdapter** ищет **экземпляр DataTableMapping** с именем Table. Если этот **экземпляр DataTableMapping** не существует, то **TableName** объекта **DataTable** имеет значение Table. Можно указать **экземпляр DataTableMapping** по умолчанию, создав **экземпляр DataTableMapping** с именем "Table".  
   
- Следующий пример кода создает **экземпляр DataTableMapping** (из <xref:System.Data.Common> пространства имен) и делает его сопоставлением по умолчанию для указанного **объекта DataAdapter** , присваивая ему имя "Table". Затем в примере сопоставляются столбцы из первой таблицы в результатах запроса (таблица Customers базы данных **Northwind** ) с набором более понятных имен пользователей в таблице <xref:System.Data.DataSet> **"клиенты" Northwind** в. Для столбцов, к которым не применяется сопоставление, используются имена столбцов из источника данных.  
+ Следующий пример кода создает **экземпляр DataTableMapping** (из <xref:System.Data.Common> пространства имен) и делает его сопоставлением по умолчанию для указанного **объекта DataAdapter** , присваивая ему имя "Table". Затем в примере сопоставляются столбцы из первой таблицы в результатах запроса (таблица **Customers** базы данных **Northwind** ) с набором более понятных имен пользователей в таблице <xref:System.Data.DataSet> **"клиенты" Northwind** в. Для столбцов, к которым не применяется сопоставление, используются имена столбцов из источника данных.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -53,7 +53,7 @@ adapter.Fill(custDS);
   
  Если методу **Fill** передается экземпляр **набора данных** и имя **экземпляр DataTableMapping** , если сопоставление с таким именем существует, оно используется; в противном случае используется **Таблица** данных с таким именем.  
   
- В следующих примерах создается **экземпляр DataTableMapping** с именем Customers и **DataTable** с именем **бизталксчема**. Затем в примере сопоставляются строки, возвращенные инструкцией SELECT, с таблицей данных **бизталксчема**.  
+ В следующих примерах создается **экземпляр DataTableMapping** с именем **Customers** и **DataTable** с именем **бизталксчема**. Затем в примере сопоставляются строки, возвращенные инструкцией SELECT, с **таблицей**данных **бизталксчема** .  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -99,6 +99,6 @@ adapter.Fill(customersDataSet, "Customers")
   
 ## <a name="see-also"></a>См. также
 
-- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Объекты DataAdapter и DataReader](dataadapters-and-datareaders.md)
+- [Извлечение и изменение данных в ADO.NET](retrieving-and-modifying-data.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение запросов к службе данных (службы данных WCF)
+title: Практическое руководство. Выполнение запросов службы данных (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 47943392ec6628b6d5a67ac333dd6793f35857b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645676"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780075"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение запросов к службе данных (службы данных WCF)
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение запросов службы данных (WCF Data Services)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют выполнять запросы к службе данных из клиентского приложения на основе .NET Framework с использованием сформированных клиентских классов службы данных. Выполнять запросы можно одним из следующих способов.  
   
 - Выполнение запроса LINQ к именованному объекту <xref:System.Data.Services.Client.DataServiceQuery%601>, который получен из контекста <xref:System.Data.Services.Client.DataServiceContext>, сформированного программой `Add Data Service Reference`.  
@@ -25,9 +25,9 @@ ms.locfileid: "64645676"
   
 - Явный вызов метода <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> с объектом <xref:System.Data.Services.Client.DataServiceQuery%601> или метода <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> для асинхронного выполнения.  
   
- Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
- Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример показывает, как определить и выполнить запрос LINQ, возвращающий все сущности `Customers` в службе данных Northwind.  
@@ -49,4 +49,4 @@ ms.locfileid: "64645676"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Добавление параметров запроса к запросу службы данных](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Практическое руководство. Добавление параметров запроса в запрос службы данных](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

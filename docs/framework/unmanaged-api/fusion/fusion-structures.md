@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb66e0d518abc2d337362affbd2aa951303128f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697736"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795289"
 ---
 # <a name="fusion-structures"></a>Структуры Fusion
-В этом разделе описаны неуправляемые структуры, используемые API Fusion.  
+В этом разделе описываются неуправляемые структуры, используемые API Fusion.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Структура ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- Содержит сведения о сборке, зарегистрированный в глобальном кэше сборок.  
+ [Структура ASSEMBLY_INFO](assembly-info-structure.md)  
+ Содержит сведения о сборке, зарегистрированной в глобальном кэше сборок.  
   
- [Структура FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- Представляет ссылку, когда приложение устанавливает для сборки, приложение, установленной в глобальном кэше сборок.  
+ [Структура FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)  
+ Представляет ссылку, которую приложение делает с сборкой, установленной приложением в глобальном кэше сборок.  
   
- [Структура IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- Содержит сведения об атрибутах метаданных о [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) экземпляра.  
+ [Структура IDENTITY_ATTRIBUTE](identity-attribute-structure.md)  
+ Содержит сведения об атрибутах метаданных для экземпляра [идефинитионидентити](idefinitionidentity-interface.md) .  
   
- [Структура IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- Содержит сведения о смещении для ассоциированного [IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) структуры.  
+ [Структура IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md)  
+ Содержит сведения о смещении для связанной структуры [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) .  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Интерфейсы Fusion](fusion-interfaces.md)  
   
- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Глобальные статические функции Fusion](fusion-global-static-functions.md)  
   
- [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [Перечисления Fusion](fusion-enumerations.md)

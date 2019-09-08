@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781606"
 ---
 # <a name="how-to-return-rowsets"></a>Практическое руководство. Как возвращать наборы строк
 В данном примере показано возвращение набора строк из базы данных и включение входного параметра в результаты фильтрации.  
   
- При выполнении хранимой процедуры, возвращающей набор строк, используйте *результат* класс, который хранит возвращенные хранимой процедуры. Дополнительные сведения см. в разделе [анализ кода LINQ to SQL источника](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
+ При выполнении хранимой процедуры, возвращающей набор строк, используется *результирующий* класс, хранящий возвращаемые результаты из хранимой процедуры. Дополнительные сведения см. в разделе [анализ исходного кода LINQ to SQL](analyzing-linq-to-sql-source-code.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере представлена хранимая процедура, которая возвращает строки клиентов и использует входной параметр для возврата только тех строк, в которых "Лондон" указан как город клиентов. В примере предполагается использование перечислимого класса `CustomersByCityResult`.  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>См. также
 
-- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Хранимые процедуры](stored-procedures.md)
+- [Загрузка примеров баз данных](downloading-sample-databases.md)
