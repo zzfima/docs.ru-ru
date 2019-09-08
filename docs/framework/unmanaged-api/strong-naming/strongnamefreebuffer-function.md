@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cdeb446b18adceb4a8ed306a7934d6c905a90f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 639664c6ce5714b554f30bff2569a12bf48d1671
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778029"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799126"
 ---
-# <a name="strongnamefreebuffer-function"></a><span data-ttu-id="eef09-102">Функция StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="eef09-102">StrongNameFreeBuffer Function</span></span>
-<span data-ttu-id="eef09-103">Освобождает память, выделенную предыдущим вызовом функции строгого имени, такой как [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md) или [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).</span><span class="sxs-lookup"><span data-stu-id="eef09-103">Frees memory that was allocated with a previous call to a strong name function such as [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), or [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).</span></span>  
+# <a name="strongnamefreebuffer-function"></a><span data-ttu-id="61199-102">Функция StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="61199-102">StrongNameFreeBuffer Function</span></span>
+<span data-ttu-id="61199-103">Освобождает память, выделенную предыдущим вызовом функции строгого имени, такой как [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md) или [StrongNameSignatureGeneration ](strongnamesignaturegeneration-function.md).</span><span class="sxs-lookup"><span data-stu-id="61199-103">Frees memory that was allocated with a previous call to a strong name function such as [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md), or [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md).</span></span>  
   
- <span data-ttu-id="eef09-104">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="eef09-104">This function has been deprecated.</span></span> <span data-ttu-id="eef09-105">Используйте [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод вместо этого.</span><span class="sxs-lookup"><span data-stu-id="eef09-105">Use the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method instead.</span></span>  
+ <span data-ttu-id="61199-104">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="61199-104">This function has been deprecated.</span></span> <span data-ttu-id="61199-105">Используйте вместо этого метод [метод iclrstrongname:: StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) .</span><span class="sxs-lookup"><span data-stu-id="61199-105">Use the [ICLRStrongName::StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eef09-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eef09-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61199-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="61199-106">Syntax</span></span>  
   
 ```cpp  
 VOID StrongNameFreeBuffer (   
@@ -40,20 +40,20 @@ VOID StrongNameFreeBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eef09-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="eef09-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61199-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="61199-107">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="eef09-108">[in] Указатель на область памяти для освобождения.</span><span class="sxs-lookup"><span data-stu-id="eef09-108">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="61199-108">окне Указатель на память для освобождения.</span><span class="sxs-lookup"><span data-stu-id="61199-108">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eef09-109">Требования</span><span class="sxs-lookup"><span data-stu-id="eef09-109">Requirements</span></span>  
- <span data-ttu-id="eef09-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eef09-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61199-109">Требования</span><span class="sxs-lookup"><span data-stu-id="61199-109">Requirements</span></span>  
+ <span data-ttu-id="61199-110">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61199-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eef09-111">**Заголовок.** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="eef09-111">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="61199-111">**Заголовок.** StrongName. h</span><span class="sxs-lookup"><span data-stu-id="61199-111">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="eef09-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eef09-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="61199-112">**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="61199-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="eef09-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eef09-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="61199-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61199-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eef09-114">См. также</span><span class="sxs-lookup"><span data-stu-id="eef09-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61199-114">См. также</span><span class="sxs-lookup"><span data-stu-id="61199-114">See also</span></span>
 
-- [<span data-ttu-id="eef09-115">Метод StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="eef09-115">StrongNameFreeBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)
-- [<span data-ttu-id="eef09-116">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="eef09-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="61199-115">Метод StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="61199-115">StrongNameFreeBuffer Method</span></span>](../hosting/iclrstrongname-strongnamefreebuffer-method.md)
+- [<span data-ttu-id="61199-116">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="61199-116">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
