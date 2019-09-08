@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9395fcc6d896114c25770edbc17761323285099f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773947"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796394"
 ---
-# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="2ada0-102">Метод IInstallReferenceItem::GetReference</span><span class="sxs-lookup"><span data-stu-id="2ada0-102">IInstallReferenceItem::GetReference Method</span></span>
-<span data-ttu-id="2ada0-103">Возвращает указатель на [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) структуры, представленный этим [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) объекта.</span><span class="sxs-lookup"><span data-stu-id="2ada0-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
+# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="50c3b-102">Метод IInstallReferenceItem::GetReference</span><span class="sxs-lookup"><span data-stu-id="50c3b-102">IInstallReferenceItem::GetReference Method</span></span>
+<span data-ttu-id="50c3b-103">Возвращает указатель на структуру [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) , представленную этим объектом [IInstallReferenceItem](iinstallreferenceitem-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="50c3b-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](iinstallreferenceitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ada0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2ada0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50c3b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="50c3b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReference (  
@@ -37,24 +37,24 @@ HRESULT GetReference (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2ada0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2ada0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50c3b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="50c3b-105">Parameters</span></span>  
  `ppRefData`  
- <span data-ttu-id="2ada0-106">[out] Возвращенный `FUSION_INSTALL_REFERENCE` указатель.</span><span class="sxs-lookup"><span data-stu-id="2ada0-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
+ <span data-ttu-id="50c3b-106">заполняет Возвращаемый `FUSION_INSTALL_REFERENCE` указатель.</span><span class="sxs-lookup"><span data-stu-id="50c3b-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="2ada0-107">[in] Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="2ada0-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="2ada0-108">`dwFlags` должно быть 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="2ada0-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="50c3b-107">окне Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="50c3b-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="50c3b-108">`dwFlags`значение должно быть равно 0 (нулю).</span><span class="sxs-lookup"><span data-stu-id="50c3b-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="2ada0-109">[in] Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="2ada0-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="2ada0-110">`pvReserved` должен быть пустой ссылкой.</span><span class="sxs-lookup"><span data-stu-id="2ada0-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="50c3b-109">окне Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="50c3b-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="50c3b-110">`pvReserved`должен быть пустой ссылкой.</span><span class="sxs-lookup"><span data-stu-id="50c3b-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2ada0-111">Требования</span><span class="sxs-lookup"><span data-stu-id="2ada0-111">Requirements</span></span>  
- <span data-ttu-id="2ada0-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ada0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50c3b-111">Требования</span><span class="sxs-lookup"><span data-stu-id="50c3b-111">Requirements</span></span>  
+ <span data-ttu-id="50c3b-112">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50c3b-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ada0-113">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2ada0-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="50c3b-113">**Заголовок.** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="50c3b-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="2ada0-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ada0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="50c3b-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50c3b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ada0-115">См. также</span><span class="sxs-lookup"><span data-stu-id="2ada0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50c3b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="50c3b-115">See also</span></span>
 
-- [<span data-ttu-id="2ada0-116">Интерфейс IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="2ada0-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [<span data-ttu-id="2ada0-117">Структура FUSION_INSTALL_REFERENCE</span><span class="sxs-lookup"><span data-stu-id="2ada0-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [<span data-ttu-id="50c3b-116">Интерфейс IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="50c3b-116">IInstallReferenceItem Interface</span></span>](iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="50c3b-117">Структура FUSION_INSTALL_REFERENCE</span><span class="sxs-lookup"><span data-stu-id="50c3b-117">FUSION_INSTALL_REFERENCE Structure</span></span>](fusion-install-reference-structure.md)

@@ -18,32 +18,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fb752822cd406585f7f4a257ea4c51dab7b1f16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778495"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795460"
 ---
-# <a name="cleardownloadcache-function"></a><span data-ttu-id="60295-102">Функция ClearDownloadCache</span><span class="sxs-lookup"><span data-stu-id="60295-102">ClearDownloadCache Function</span></span>
-<span data-ttu-id="60295-103">Очищает глобальный кэш сборок загруженных сборок.</span><span class="sxs-lookup"><span data-stu-id="60295-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
+# <a name="cleardownloadcache-function"></a><span data-ttu-id="dc95d-102">Функция ClearDownloadCache</span><span class="sxs-lookup"><span data-stu-id="dc95d-102">ClearDownloadCache Function</span></span>
+<span data-ttu-id="dc95d-103">Очищает глобальный кэш сборок скачанных сборок.</span><span class="sxs-lookup"><span data-stu-id="dc95d-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60295-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="60295-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc95d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dc95d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ClearDownloadCache ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="60295-105">Требования</span><span class="sxs-lookup"><span data-stu-id="60295-105">Requirements</span></span>  
- <span data-ttu-id="60295-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60295-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc95d-105">Требования</span><span class="sxs-lookup"><span data-stu-id="dc95d-105">Requirements</span></span>  
+ <span data-ttu-id="dc95d-106">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dc95d-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="60295-107">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="60295-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="dc95d-107">**Заголовок.** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="dc95d-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="60295-108">**Библиотека:** Fusion.dll и "Mscorwks.dll".</span><span class="sxs-lookup"><span data-stu-id="60295-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="60295-109">Используйте Fusion.dll вместо "Mscorwks.dll", чтобы обеспечить целевых правильную версию платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="60295-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="dc95d-108">**Библиотечная** Fusion. dll и mscorwks. dll.</span><span class="sxs-lookup"><span data-stu-id="dc95d-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="dc95d-109">Используйте Fusion. dll вместо Mscorwks. dll, чтобы обеспечить правильную версию .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dc95d-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="60295-110">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60295-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dc95d-110">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc95d-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60295-111">См. также</span><span class="sxs-lookup"><span data-stu-id="60295-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc95d-111">См. также</span><span class="sxs-lookup"><span data-stu-id="dc95d-111">See also</span></span>
 
-- [<span data-ttu-id="60295-112">Глобальные статические функции Fusion</span><span class="sxs-lookup"><span data-stu-id="60295-112">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="60295-113">Глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="60295-113">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="dc95d-112">Глобальные статические функции Fusion</span><span class="sxs-lookup"><span data-stu-id="dc95d-112">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="dc95d-113">Глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="dc95d-113">Global Assembly Cache</span></span>](../../app-domains/gac.md)

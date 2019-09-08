@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934125"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780612"
 ---
-# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="13ad7-102">Обновление данных в источнике данных</span><span class="sxs-lookup"><span data-stu-id="13ad7-102">Updating Data in a Data Source</span></span>
-<span data-ttu-id="13ad7-103">Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки.</span><span class="sxs-lookup"><span data-stu-id="13ad7-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="13ad7-104">Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки.</span><span class="sxs-lookup"><span data-stu-id="13ad7-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="13ad7-105">Чтобы выполнить команды, которые не возвращают строки, создать **команда** объект с соответствующей командой SQL и **подключения**, включающий любую требуемую **параметры**.</span><span class="sxs-lookup"><span data-stu-id="13ad7-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="13ad7-106">Выполните команду с **ExecuteNonQuery** метод **команда** объекта.</span><span class="sxs-lookup"><span data-stu-id="13ad7-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="6e744-102">Обновление данных в источнике данных</span><span class="sxs-lookup"><span data-stu-id="6e744-102">Updating Data in a Data Source</span></span>
+<span data-ttu-id="6e744-103">Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки.</span><span class="sxs-lookup"><span data-stu-id="6e744-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="6e744-104">Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки.</span><span class="sxs-lookup"><span data-stu-id="6e744-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="6e744-105">Для выполнения команд, которые не возвращают строки, создайте объект **команды** с соответствующей командой SQL и **соединением**, включая все необходимые **Параметры**.</span><span class="sxs-lookup"><span data-stu-id="6e744-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="6e744-106">Выполните команду с помощью метода **ExecuteNonQuery** объекта **Command** .</span><span class="sxs-lookup"><span data-stu-id="6e744-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="13ad7-107">**ExecuteNonQuery** метод возвращает целое число, представляющее число строк, затронутых инструкции или хранимой процедуры, которая была выполнена.</span><span class="sxs-lookup"><span data-stu-id="13ad7-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="13ad7-108">Если выполняется несколько инструкций, возвращенное значение является суммой количеств записей, затронутых всеми выполненными инструкциями.</span><span class="sxs-lookup"><span data-stu-id="13ad7-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
+ <span data-ttu-id="6e744-107">Метод **ExecuteNonQuery** возвращает целое число, представляющее количество строк, затронутых выполняемой инструкцией или хранимой процедурой.</span><span class="sxs-lookup"><span data-stu-id="6e744-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="6e744-108">Если выполняется несколько инструкций, возвращенное значение является суммой количеств записей, затронутых всеми выполненными инструкциями.</span><span class="sxs-lookup"><span data-stu-id="6e744-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13ad7-109">Пример</span><span class="sxs-lookup"><span data-stu-id="13ad7-109">Example</span></span>  
- <span data-ttu-id="13ad7-110">В следующем примере кода выполняется инструкция INSERT для вставки записи в базу данных при помощи **ExecuteNonQuery**.</span><span class="sxs-lookup"><span data-stu-id="13ad7-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
+## <a name="example"></a><span data-ttu-id="6e744-109">Пример</span><span class="sxs-lookup"><span data-stu-id="6e744-109">Example</span></span>  
+ <span data-ttu-id="6e744-110">В следующем примере кода инструкция INSERT выполняется для вставки записи в базу данных с помощью **ExecuteNonQuery**.</span><span class="sxs-lookup"><span data-stu-id="6e744-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- <span data-ttu-id="13ad7-111">В следующем примере кода выполняет хранимую процедуру, созданные в примере кода на [выполнение операций над каталогами](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span><span class="sxs-lookup"><span data-stu-id="13ad7-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span></span> <span data-ttu-id="13ad7-112">Строки не возвращаются хранимой процедурой, поэтому **ExecuteNonQuery** метод используется, но хранимая процедура получает входной параметр и возвращает выходной параметр и возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="13ad7-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
+ <span data-ttu-id="6e744-111">В следующем примере кода выполняется хранимая процедура, созданная в примере кода для [выполнения операций с каталогом](performing-catalog-operations.md).</span><span class="sxs-lookup"><span data-stu-id="6e744-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](performing-catalog-operations.md).</span></span> <span data-ttu-id="6e744-112">Хранимая процедура не возвращает ни одной строки, поэтому используется метод **ExecuteNonQuery** , но хранимая процедура получает входной параметр и возвращает выходной параметр и возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="6e744-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
   
- <span data-ttu-id="13ad7-113">Для <xref:System.Data.OleDb.OleDbCommand> объекта, **ReturnValue** необходимо добавить параметр **параметры** коллекции первого.</span><span class="sxs-lookup"><span data-stu-id="13ad7-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
+ <span data-ttu-id="6e744-113">Для объекта необходимо сначала добавить параметр **ReturnValue** в коллекцию **Parameters.** <xref:System.Data.OleDb.OleDbCommand></span><span class="sxs-lookup"><span data-stu-id="6e744-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -91,9 +91,9 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="13ad7-114">См. также</span><span class="sxs-lookup"><span data-stu-id="13ad7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e744-114">См. также</span><span class="sxs-lookup"><span data-stu-id="6e744-114">See also</span></span>
 
-- [<span data-ttu-id="13ad7-115">Использование команд для изменения данных</span><span class="sxs-lookup"><span data-stu-id="13ad7-115">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [<span data-ttu-id="13ad7-116">Обновление источников данных с объектами DataAdapter</span><span class="sxs-lookup"><span data-stu-id="13ad7-116">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [<span data-ttu-id="13ad7-117">Команды и параметры</span><span class="sxs-lookup"><span data-stu-id="13ad7-117">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [<span data-ttu-id="13ad7-118">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="13ad7-118">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="6e744-115">Использование команд для изменения данных</span><span class="sxs-lookup"><span data-stu-id="6e744-115">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="6e744-116">Обновление источников данных с объектами DataAdapter</span><span class="sxs-lookup"><span data-stu-id="6e744-116">Updating Data Sources with DataAdapters</span></span>](updating-data-sources-with-dataadapters.md)
+- [<span data-ttu-id="6e744-117">Команды и параметры</span><span class="sxs-lookup"><span data-stu-id="6e744-117">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="6e744-118">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6e744-118">ADO.NET Overview</span></span>](ado-net-overview.md)

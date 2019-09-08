@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dd96b10b5ee2880e0f9ee18048ec8ba2ee0b5ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779059"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796448"
 ---
-# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="fa68b-102">Метод IInstallReferenceEnum::GetNextInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="fa68b-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
-<span data-ttu-id="fa68b-103">Получает указатель на следующий [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) объект, содержащийся в этом [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) объекта.</span><span class="sxs-lookup"><span data-stu-id="fa68b-103">Gets a pointer to the next [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) object.</span></span>  
+# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="02514-102">Метод IInstallReferenceEnum::GetNextInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="02514-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
+<span data-ttu-id="02514-103">Возвращает указатель на следующий объект [IInstallReferenceItem](iinstallreferenceitem-interface.md) , содержащийся в этом объекте [IInstallReferenceEnum](iinstallreferenceenum-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="02514-103">Gets a pointer to the next [IInstallReferenceItem](iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](iinstallreferenceenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa68b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fa68b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02514-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="02514-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNextInstallReferenceItem (  
@@ -37,24 +37,24 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fa68b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fa68b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02514-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="02514-105">Parameters</span></span>  
  `ppRefItem`  
- <span data-ttu-id="fa68b-106">[out] Возвращенный `IInstallReferenceItem` указатель.</span><span class="sxs-lookup"><span data-stu-id="fa68b-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
+ <span data-ttu-id="02514-106">заполняет Возвращаемый `IInstallReferenceItem` указатель.</span><span class="sxs-lookup"><span data-stu-id="02514-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="fa68b-107">[in] Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="fa68b-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="fa68b-108">`dwFlags` должно быть 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="fa68b-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="02514-107">окне Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="02514-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="02514-108">`dwFlags`значение должно быть равно 0 (нулю).</span><span class="sxs-lookup"><span data-stu-id="02514-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="fa68b-109">[in] Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="fa68b-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="fa68b-110">`pvReserved` должен быть пустой ссылкой.</span><span class="sxs-lookup"><span data-stu-id="fa68b-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="02514-109">окне Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="02514-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="02514-110">`pvReserved`должен быть пустой ссылкой.</span><span class="sxs-lookup"><span data-stu-id="02514-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa68b-111">Требования</span><span class="sxs-lookup"><span data-stu-id="fa68b-111">Requirements</span></span>  
- <span data-ttu-id="fa68b-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa68b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02514-111">Требования</span><span class="sxs-lookup"><span data-stu-id="02514-111">Requirements</span></span>  
+ <span data-ttu-id="02514-112">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02514-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa68b-113">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="fa68b-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="02514-113">**Заголовок.** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="02514-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="fa68b-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa68b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="02514-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02514-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa68b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="fa68b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02514-115">См. также</span><span class="sxs-lookup"><span data-stu-id="02514-115">See also</span></span>
 
-- [<span data-ttu-id="fa68b-116">Интерфейс IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="fa68b-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [<span data-ttu-id="fa68b-117">Интерфейс IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="fa68b-117">IInstallReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [<span data-ttu-id="02514-116">Интерфейс IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="02514-116">IInstallReferenceItem Interface</span></span>](iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="02514-117">Интерфейс IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="02514-117">IInstallReferenceEnum Interface</span></span>](iinstallreferenceenum-interface.md)

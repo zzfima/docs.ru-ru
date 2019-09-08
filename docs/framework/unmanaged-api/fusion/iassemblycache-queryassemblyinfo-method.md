@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778724"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796786"
 ---
-# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="c67cd-102">Метод IAssemblyCache::QueryAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="c67cd-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
-<span data-ttu-id="c67cd-103">Получает запрашиваемые данные об указанной сборки.</span><span class="sxs-lookup"><span data-stu-id="c67cd-103">Gets the requested data about the specified assembly.</span></span>  
+# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="4beb7-102">Метод IAssemblyCache::QueryAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="4beb7-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
+<span data-ttu-id="4beb7-103">Возвращает запрошенные данные о указанной сборке.</span><span class="sxs-lookup"><span data-stu-id="4beb7-103">Gets the requested data about the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c67cd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c67cd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4beb7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4beb7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT QueryAssemblyInfo (  
@@ -37,27 +37,27 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c67cd-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c67cd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4beb7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4beb7-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="c67cd-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="c67cd-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="c67cd-107">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="c67cd-107">The following values are supported:</span></span>  
+ <span data-ttu-id="4beb7-106">окне Флаги, определенные в Fusion. idl.</span><span class="sxs-lookup"><span data-stu-id="4beb7-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="4beb7-107">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="4beb7-107">The following values are supported:</span></span>  
   
-- <span data-ttu-id="c67cd-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="c67cd-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
+- <span data-ttu-id="4beb7-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="4beb7-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
   
-- <span data-ttu-id="c67cd-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="c67cd-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
+- <span data-ttu-id="4beb7-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="4beb7-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="c67cd-110">[in] Имя сборки, для которого будут извлечены данные.</span><span class="sxs-lookup"><span data-stu-id="c67cd-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
+ <span data-ttu-id="4beb7-110">окне Имя сборки, для которой будут получены данные.</span><span class="sxs-lookup"><span data-stu-id="4beb7-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
   
  `pAsmInfo`  
- <span data-ttu-id="c67cd-111">[in, out] [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) структура, содержащая данные о сборке.</span><span class="sxs-lookup"><span data-stu-id="c67cd-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
+ <span data-ttu-id="4beb7-111">[вход, выход] Структура [ASSEMBLY_INFO](assembly-info-structure.md) , содержащая данные о сборке.</span><span class="sxs-lookup"><span data-stu-id="4beb7-111">[in, out] An [ASSEMBLY_INFO](assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c67cd-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c67cd-112">Requirements</span></span>  
- <span data-ttu-id="c67cd-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c67cd-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4beb7-112">Требования</span><span class="sxs-lookup"><span data-stu-id="4beb7-112">Requirements</span></span>  
+ <span data-ttu-id="4beb7-113">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4beb7-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c67cd-114">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c67cd-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="4beb7-114">**Заголовок.** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="4beb7-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="c67cd-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c67cd-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4beb7-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4beb7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c67cd-116">См. также</span><span class="sxs-lookup"><span data-stu-id="c67cd-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4beb7-116">См. также</span><span class="sxs-lookup"><span data-stu-id="4beb7-116">See also</span></span>
 
-- [<span data-ttu-id="c67cd-117">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="c67cd-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="4beb7-117">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="4beb7-117">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)

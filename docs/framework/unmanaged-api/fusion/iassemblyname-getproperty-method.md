@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744536"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796588"
 ---
-# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="f7a0d-102">Метод IAssemblyName::GetProperty</span><span class="sxs-lookup"><span data-stu-id="f7a0d-102">IAssemblyName::GetProperty Method</span></span>
-<span data-ttu-id="f7a0d-103">Возвращает указатель на свойство, заданное с помощью идентификатора указанного свойства.</span><span class="sxs-lookup"><span data-stu-id="f7a0d-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
+# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="04767-102">Метод IAssemblyName::GetProperty</span><span class="sxs-lookup"><span data-stu-id="04767-102">IAssemblyName::GetProperty Method</span></span>
+<span data-ttu-id="04767-103">Возвращает указатель на свойство, на которое ссылается указанный идентификатор свойства.</span><span class="sxs-lookup"><span data-stu-id="04767-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7a0d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f7a0d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04767-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="04767-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProperty (  
@@ -37,23 +37,23 @@ HRESULT GetProperty (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f7a0d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f7a0d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="04767-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="04767-105">Parameters</span></span>  
  `PropertyId`  
- <span data-ttu-id="f7a0d-106">[in] Уникальный идентификатор для запрошенного свойства.</span><span class="sxs-lookup"><span data-stu-id="f7a0d-106">[in] The unique identifier for the requested property.</span></span>  
+ <span data-ttu-id="04767-106">окне Уникальный идентификатор запрошенного свойства.</span><span class="sxs-lookup"><span data-stu-id="04767-106">[in] The unique identifier for the requested property.</span></span>  
   
  `pvProperty`  
- <span data-ttu-id="f7a0d-107">[out] Данные, возвращаемое свойство.</span><span class="sxs-lookup"><span data-stu-id="f7a0d-107">[out] The returned property data.</span></span>  
+ <span data-ttu-id="04767-107">заполняет Возвращаемые данные свойства.</span><span class="sxs-lookup"><span data-stu-id="04767-107">[out] The returned property data.</span></span>  
   
  `pcbProperty`  
- <span data-ttu-id="f7a0d-108">[in, out] Размер в байтах из `pvProperty`.</span><span class="sxs-lookup"><span data-stu-id="f7a0d-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
+ <span data-ttu-id="04767-108">[вход, выход] Размер (в байтах `pvProperty`).</span><span class="sxs-lookup"><span data-stu-id="04767-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7a0d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f7a0d-109">Requirements</span></span>  
- <span data-ttu-id="f7a0d-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7a0d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04767-109">Требования</span><span class="sxs-lookup"><span data-stu-id="04767-109">Requirements</span></span>  
+ <span data-ttu-id="04767-110">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04767-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7a0d-111">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f7a0d-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="04767-111">**Заголовок.** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="04767-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f7a0d-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7a0d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="04767-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04767-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7a0d-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f7a0d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04767-113">См. также</span><span class="sxs-lookup"><span data-stu-id="04767-113">See also</span></span>
 
-- [<span data-ttu-id="f7a0d-114">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="f7a0d-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="04767-114">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="04767-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796475"
 ---
-# <a name="ienumdefinitionidentity-interface"></a><span data-ttu-id="33dc0-102">Интерфейс IEnumDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="33dc0-102">IEnumDefinitionIdentity Interface</span></span>
-<span data-ttu-id="33dc0-103">Служит в качестве перечислителя для коллекции `IDefinitionIdentity` объектов.</span><span class="sxs-lookup"><span data-stu-id="33dc0-103">Serves as the enumerator for a collection of `IDefinitionIdentity` objects.</span></span>  
+# <a name="ienumdefinitionidentity-interface"></a><span data-ttu-id="ab1a2-102">Интерфейс IEnumDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="ab1a2-102">IEnumDefinitionIdentity Interface</span></span>
+<span data-ttu-id="ab1a2-103">Служит в качестве перечислителя для коллекции `IDefinitionIdentity` объектов.</span><span class="sxs-lookup"><span data-stu-id="ab1a2-103">Serves as the enumerator for a collection of `IDefinitionIdentity` objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33dc0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="33dc0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab1a2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ab1a2-104">Syntax</span></span>  
   
 ```cpp  
 IEnumDefinitionIdentity : IUnknown {  
@@ -51,23 +51,23 @@ IEnumDefinitionIdentity : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="33dc0-105">Методы</span><span class="sxs-lookup"><span data-stu-id="33dc0-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ab1a2-105">Методы</span><span class="sxs-lookup"><span data-stu-id="ab1a2-105">Methods</span></span>  
   
-|<span data-ttu-id="33dc0-106">Метод</span><span class="sxs-lookup"><span data-stu-id="33dc0-106">Method</span></span>|<span data-ttu-id="33dc0-107">Описание</span><span class="sxs-lookup"><span data-stu-id="33dc0-107">Description</span></span>|  
+|<span data-ttu-id="ab1a2-106">Метод</span><span class="sxs-lookup"><span data-stu-id="ab1a2-106">Method</span></span>|<span data-ttu-id="ab1a2-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ab1a2-107">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|<span data-ttu-id="33dc0-108">Получает указатель интерфейса на новый `IEnumDefinitionIdentity` , содержащий те же члены, что это `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="33dc0-108">Gets an interface pointer to a new `IEnumDefinitionIdentity` object that contains the same members as this `IEnumDefinitionIdentity`.</span></span>|  
-|`IEnumDefinitionIdentity::Next`|<span data-ttu-id="33dc0-109">Возвращает заданное число `IDefinitionIdentity` объектов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="33dc0-109">Gets the specified number of `IDefinitionIdentity` objects, starting at the current position.</span></span>|  
-|`IEnumDefinitionIdentity::Reset`|<span data-ttu-id="33dc0-110">Перемещает указатель инструкций в начале `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="33dc0-110">Moves the instruction pointer to the beginning of this `IEnumDefinitionIdentity`.</span></span>|  
-|`IEnumDefinitionIdentity::Skip`|<span data-ttu-id="33dc0-111">Перемещает указатель инструкций вперед на указанное число элементов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="33dc0-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumDefinitionIdentity::Clone`|<span data-ttu-id="ab1a2-108">Возвращает указатель интерфейса на новый `IEnumDefinitionIdentity` объект, содержащий те же элементы, что и этот. `IEnumDefinitionIdentity`</span><span class="sxs-lookup"><span data-stu-id="ab1a2-108">Gets an interface pointer to a new `IEnumDefinitionIdentity` object that contains the same members as this `IEnumDefinitionIdentity`.</span></span>|  
+|`IEnumDefinitionIdentity::Next`|<span data-ttu-id="ab1a2-109">Возвращает указанное число `IDefinitionIdentity` объектов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="ab1a2-109">Gets the specified number of `IDefinitionIdentity` objects, starting at the current position.</span></span>|  
+|`IEnumDefinitionIdentity::Reset`|<span data-ttu-id="ab1a2-110">Перемещает указатель инструкций в начало `IEnumDefinitionIdentity`.</span><span class="sxs-lookup"><span data-stu-id="ab1a2-110">Moves the instruction pointer to the beginning of this `IEnumDefinitionIdentity`.</span></span>|  
+|`IEnumDefinitionIdentity::Skip`|<span data-ttu-id="ab1a2-111">Перемещает указатель инструкции вперед на указанное число элементов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="ab1a2-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="33dc0-112">Требования</span><span class="sxs-lookup"><span data-stu-id="33dc0-112">Requirements</span></span>  
- <span data-ttu-id="33dc0-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33dc0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab1a2-112">Требования</span><span class="sxs-lookup"><span data-stu-id="ab1a2-112">Requirements</span></span>  
+ <span data-ttu-id="ab1a2-113">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab1a2-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33dc0-114">**Заголовок.** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="33dc0-114">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="ab1a2-114">**Заголовок.** Изоляция. h</span><span class="sxs-lookup"><span data-stu-id="ab1a2-114">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="33dc0-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33dc0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ab1a2-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab1a2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33dc0-116">См. также</span><span class="sxs-lookup"><span data-stu-id="33dc0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab1a2-116">См. также</span><span class="sxs-lookup"><span data-stu-id="ab1a2-116">See also</span></span>
 
-- [<span data-ttu-id="33dc0-117">Интерфейсы Fusion</span><span class="sxs-lookup"><span data-stu-id="33dc0-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="33dc0-118">Интерфейс IDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="33dc0-118">IDefinitionIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [<span data-ttu-id="ab1a2-117">Интерфейсы Fusion</span><span class="sxs-lookup"><span data-stu-id="ab1a2-117">Fusion Interfaces</span></span>](fusion-interfaces.md)
+- [<span data-ttu-id="ab1a2-118">Интерфейс IDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="ab1a2-118">IDefinitionIdentity Interface</span></span>](idefinitionidentity-interface.md)
