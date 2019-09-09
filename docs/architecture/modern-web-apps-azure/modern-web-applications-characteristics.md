@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672911"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374091"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Характеристики современных веб-приложений
 
@@ -24,9 +24,9 @@ ms.locfileid: "68672911"
 
 В этом руководстве показано справочное приложение _eShopOnWeb_, на примере которого демонстрируются некоторые принципы и рекомендации. Это приложение представляет собой простой интернет-магазин, в котором можно просматривать каталог рубашек, кружек и других товаров. Это справочное приложение намеренно упрощено для наилучшего понимания.
 
-**Рис. 2-1.** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**Рис. 2-1.** eShopOnWeb
 
 > ### <a name="reference-application"></a>Справочное приложение
 >

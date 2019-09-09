@@ -2,12 +2,12 @@
 title: Определение многоконтейнерного приложения с помощью docker-compose.yml
 description: Как указать композицию микрослужб для многоконтейнерного приложения с помощью docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6f526a951f50bad673a44cfd6c53664a13211a32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1b88d2267b12a33e125a7a1d2273654a50fd2d0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675961"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253970"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml
 
@@ -406,7 +406,7 @@ IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 
 В следующем примере показан ENV-файл, аналогичный [ENV](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env)-файлу для приложения eShopOnContainers.
 
-```
+```env
 # .env file
 
 ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589440"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253005"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Индексаторы в интерфейсах (Руководство по программированию в C#)
 Индексаторы можно объявлять для [интерфейса](../../language-reference/keywords/interface.md). Методы доступа индексаторов интерфейса отличаются от методов доступа индексаторов [класса](../../language-reference/keywords/class.md) следующим образом:  
@@ -35,7 +35,7 @@ ms.locfileid: "69589440"
   
  В приведенном выше примере можно использовать явную реализацию члена интерфейса с помощью полного имени члена интерфейса. Например:  
   
-```  
+```csharp  
 string ISomeInterface.this[int index]   
 {   
 }   
@@ -43,7 +43,7 @@ string ISomeInterface.this[int index]
   
  Тем не менее полное имя требуется только в целях устранения неоднозначности, если класс реализует более одного интерфейса с одинаковой сигнатурой индексатора. Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых имеют одинаковую сигнатуру индексатора, требуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление индексатора:  
   
-```  
+```csharp  
 string IEmployee.this[int index]   
 {   
 }   
@@ -51,7 +51,7 @@ string IEmployee.this[int index]
   
  реализует индексатор в интерфейсе `IEmployee`, тогда как следующее объявление:  
   
-```  
+```csharp  
 string ICitizen.this[int index]
 {   
 }   

@@ -1,19 +1,19 @@
 ---
-title: Автоматическое создание бинарного классификатора с помощью ML.NET CLI
+title: Анализ тональности с помощью интерфейса командной строки ML.NET
 description: Автоматическое создание модели машинного обучения и связанного кода C# на основе примера набора данных
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107275"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254162"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Автоматическое создание бинарного классификатора с помощью CLI
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Анализ тональности с помощью интерфейса командной строки ML.NET
 
 Узнайте, как с помощью ML.NET CLI автоматически создать модель ML.NET и базовый код C#. Вы предоставите набор данных и задачу машинного обучения, которую требуется реализовать, а CLI с помощью подсистемы AutoML создаст исходный код для формирования и развертывания модели, а также двоичную модель.
 

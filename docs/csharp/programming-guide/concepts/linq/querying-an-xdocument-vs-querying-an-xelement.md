@@ -2,12 +2,12 @@
 title: Сравнение запросов к XML-документам Запросы к XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 9d1e3b54b9d384280cd58aa3ca063f76758fc6fe
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487271"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253129"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Сравнение запросов к XML-документам Запросы к XElement (C#)
 При загрузке документа через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> обратите внимание на то, что запросы придется составлять не так, как при загрузке через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -37,7 +37,7 @@ foreach (XElement e in childList)
   
  Как и ожидается, выполняется вывод следующих данных:  
   
-```  
+```output  
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -67,7 +67,7 @@ foreach (XElement e in childList)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -101,7 +101,7 @@ foreach (XElement e in childList)
   
  Теперь на этот запрос выводятся те же результаты, что и при запросе по дереву, корень которого размещен в <xref:System.Xml.Linq.XElement>. Пример выводит следующие результаты:  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  

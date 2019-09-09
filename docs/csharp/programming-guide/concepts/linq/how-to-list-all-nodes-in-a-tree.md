@@ -2,12 +2,12 @@
 title: Практическое руководство. Перечисление всех узлов в дереве (C#)
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486677"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253569"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Практическое руководство. Перечисление всех узлов в дереве (C#)
 Иногда нужно вывести список всех узлов дерева. Это полезно, если требуется узнать, как метод или свойство повлияли на дерево. Одним из подходов для вывода списка всех узлов в текстовом формате является создание выражения XPath, которое точно определяет каждый конкретный узел дерева.  
@@ -39,7 +39,7 @@ ms.locfileid: "66486677"
   
  Ниже приводится список узлов в XML-дереве, представленном в виде выражений XPath.  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -317,7 +317,7 @@ class Program
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

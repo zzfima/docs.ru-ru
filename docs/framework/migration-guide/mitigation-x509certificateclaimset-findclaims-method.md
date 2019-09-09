@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7fb1eb0c502584caac11ca3dde6e7e646b29cfe
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251093"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70778938"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Устранение рисков. Метод X509CertificateClaimSet.FindClaims
 Начиная с приложений, предназначенных для .NET Framework 4.6.1, метод <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> пытается сопоставить аргумент `claimType` со всеми записями DNS в поле SAN.  
@@ -20,7 +20,7 @@ ms.locfileid: "66251093"
  В приложениях, предназначенных для более ранних версий .NET Framework, метод <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> пытается сопоставить аргумент `claimType` только с последней записью DNS.  
   
 ## <a name="mitigation"></a>Устранение рисков  
- Если это изменение нежелательно, его можно отключить для приложений, предназначенных для версий .NET Framework, начиная с .NET Framework 4.6.1, добавив в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:  
+ Если это изменение нежелательно, его можно отключить для приложений, предназначенных для версий .NET Framework, начиная с .NET Framework 4.6.1, добавив в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:  
   
 ```xml  
 <runtime>  
@@ -28,7 +28,7 @@ ms.locfileid: "66251093"
 </runtime>  
 ```  
   
- Кроме того, это поведение можно включить для приложений, предназначенных для предыдущих версий .NET Framework, но работающих под управлением .NET Framework 4.6.1 и более поздних версий. Для этого добавьте в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:  
+ Кроме того, это поведение можно включить для приложений, предназначенных для предыдущих версий .NET Framework, но работающих под управлением .NET Framework 4.6.1 и более поздних версий. Для этого добавьте в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:  
   
 ```xml  
 <runtime>  
@@ -38,4 +38,4 @@ ms.locfileid: "66251093"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6-1.md)

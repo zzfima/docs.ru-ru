@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание запросов со сложной фильтрацией (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592169"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253195"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Практическое руководство. Создание запросов со сложной фильтрацией (C#)
 Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией. Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением. В этом разделе приводится пример написания запроса с комплексной фильтрацией.  
@@ -37,7 +37,7 @@ foreach (XElement el in purchaseOrders)
   
  Этот код выводит следующие результаты:  
   
-```  
+```output  
 99505  
 ```  
   
@@ -65,7 +65,7 @@ foreach (XElement el in purchaseOrders)
   
  Этот код выводит следующие результаты:  
   
-```  
+```output  
 99505  
 ```  
   

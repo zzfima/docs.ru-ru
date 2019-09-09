@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968525"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779349"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Устранение рисков. Новый 64-разрядный JIT-компилятор
 Начиная с .NET Framework 4.6 среда выполнения включает в себя новый 64-разрядный JIT-компилятор. Это изменение не влияет на компиляцию с помощью 32-разрядного JIT-компилятора.  
@@ -52,7 +52,7 @@ ms.locfileid: "69968525"
 ## <a name="mitigation-of-other-issues"></a>Устранение других проблем  
  При возникновении любых других различий в поведении между кодом, скомпилированным с помощью старого и нового 64-разрядных JIT-компиляторов, или между отладочной и окончательной версиями приложения, которые обе скомпилированы новым 64-разрядным JIT-компилятором, можно выполнить следующие действия для компиляции приложения с помощью старого 64-разрядного JIT-компилятора.  
   
-- Для каждого отдельного приложения можно добавить элемент [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) в файл конфигурации приложения. Следующее действие отключает компиляцию с помощью нового 64-разрядного JIT-компилятора и вместо этого использует устаревший 64-разрядный JIT-компилятор.  
+- Для каждого отдельного приложения можно добавить элемент [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) в файл конфигурации приложения. Следующее действие отключает компиляцию с помощью нового 64-разрядного JIT-компилятора и вместо этого использует устаревший 64-разрядный JIT-компилятор.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ ms.locfileid: "69968525"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [Элемент \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [Изменения среды выполнения](runtime-changes-in-the-net-framework-4-6.md)
+- [Элемент \<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

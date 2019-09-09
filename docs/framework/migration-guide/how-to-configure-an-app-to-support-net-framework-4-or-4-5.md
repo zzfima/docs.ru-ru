@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636109"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779479"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше
 
@@ -22,7 +22,7 @@ ms.locfileid: "65636109"
 
 - Файл конфигурации.
 
-     Если файл конфигурации приложения содержит записи [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), в которых указана одна или несколько версий платформы .NET Framework, и одна из этих версий присутствует на компьютере пользователя, приложение запускается в этой версии. Записи [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) в файле конфигурации считываются в порядке следования, и используется первая указанная версия платформы .NET Framework, которая есть на компьютере пользователя. (Для версии 1.0 используется [элемент \<requiredRuntime>](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)).
+     Если файл конфигурации приложения содержит записи [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), в которых указана одна или несколько версий платформы .NET Framework, и одна из этих версий присутствует на компьютере пользователя, приложение запускается в этой версии. Записи [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) в файле конфигурации считываются в порядке следования, и используется первая указанная версия платформы .NET Framework, которая есть на компьютере пользователя. (Для версии 1.0 используется [элемент \<requiredRuntime>](../configure-apps/file-schema/startup/requiredruntime-element.md)).
 
 - Скомпилированная версия.
 
@@ -30,7 +30,7 @@ ms.locfileid: "65636109"
 
 - Последняя установленная версия.
 
-     Если версия .NET Framework, для которой было собрано приложение, отсутствует, и в файле конфигурации не указана версия в [элементе \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), приложение пытается запуститься в последней версии .NET Framework, присутствующей на компьютере пользователя.
+     Если версия .NET Framework, для которой было собрано приложение, отсутствует, и в файле конфигурации не указана версия в [элементе \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), приложение пытается запуститься в последней версии .NET Framework, присутствующей на компьютере пользователя.
 
      Однако приложения .NET Framework 1.0, 1.1, 2.0, 3.0 и 3.5 не запускаются автоматически в .NET Framework 4 или более поздних версиях, и в некоторых случаях пользователь может получить сообщение об ошибке, и ему будет предложено установить .NET Framework 3.5. Поведение активации может также зависеть от операционной системы пользователя, потому что в состав разных версий Windows входят разные версии .NET Framework. Если приложение поддерживает и .NET Framework 3.5, и .NET Framework 4 или более поздние версии, рекомендуется указывать это путем включения в файл конфигурации нескольких записей во избежание ошибок инициализации .NET Framework. Дополнительные сведения см. в статье [Версии и зависимости платформы .NET Framework](versions-and-dependencies.md).
 
@@ -47,7 +47,7 @@ ms.locfileid: "65636109"
 
      Чтобы добавить файл конфигурации, в строке меню Visual Studio выберите **Проект**, **Добавить новый элемент**. Выберите **Общие** в области слева, а затем выберите **Файл конфигурации**. Назовите файл конфигурации *appName*.exe.config. Для проектов приложений Магазина Windows или Windows Phone эти элементы меню недоступны, поскольку изменить политику активации на этих платформах невозможно.
 
-2. Добавьте в файл конфигурации приложения элемент [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:
+2. Добавьте в файл конфигурации приложения элемент [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:
 
     ```xml
     <configuration>
@@ -67,7 +67,7 @@ ms.locfileid: "65636109"
 
     - .NET Framework 4 и более поздние версии: "v4.0"
 
-     Можно добавить несколько элементов [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), перечислив их в порядке предпочтения, чтобы задать поддержку нескольких версий .NET Framework.
+     Можно добавить несколько элементов [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), перечислив их в порядке предпочтения, чтобы задать поддержку нескольких версий .NET Framework.
 
  В следующей таблице показано, как параметры файла конфигурации приложения и версии платформы .NET Framework, установленные на компьютере, определяют версию, в которой запускается приложение .NET Framework 3.5. Примеры относятся к приложению .NET Framework 3.5, однако аналогичную логику можно использовать для нацеливания приложений, собранных с использованием более ранних версий .NET Framework. Обратите внимание, что для указания .NET Framework 3.5 в файле конфигурации приложения используется номер версии .NET Framework 2.0 (v2.0.50727).
 
@@ -79,7 +79,7 @@ ms.locfileid: "65636109"
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Запускается в 3.5|Запускается в 4 или более поздней версии|Запускается в 4 или более поздней версии|
 |`<supportedRuntime version="v4.0"/>`|Выводит сообщение об ошибке, предлагая пользователю установить нужную версию *|Запускается в 4 или более поздней версии|Запускается в 4 или более поздней версии|
 
- \*Дополнительные сведения об этом сообщении об ошибке и о том, как избежать этой ошибки, см. в статье [Ошибки инициализации платформы .NET Framework: управление пользовательской средой](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).
+ \*Дополнительные сведения об этом сообщении об ошибке и о том, как избежать этой ошибки, см. в статье [Ошибки инициализации платформы .NET Framework: управление пользовательской средой](../deployment/initialization-errors-managing-the-user-experience.md).
 
 ## <a name="see-also"></a>См. также
 

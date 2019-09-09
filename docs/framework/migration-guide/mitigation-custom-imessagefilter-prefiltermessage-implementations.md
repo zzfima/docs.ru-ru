@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251137"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779427"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Устранение рисков. Пользовательские реализации IMessageFilter.PreFilterMessage
 
@@ -31,7 +31,7 @@ ms.locfileid: "66251137"
 
 ## <a name="mitigation"></a>Устранение рисков
 
-Если это изменение нежелательно, его можно отключить для приложений, предназначенных для .NET Framework 4.6.1 или более поздних версий, добавив в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:
+Если это изменение нежелательно, его можно отключить для приложений, предназначенных для .NET Framework 4.6.1 или более поздних версий, добавив в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ ms.locfileid: "66251137"
 </runtime>
 ```
 
-Кроме того, это поведение можно включить для приложений, предназначенных для предыдущих версий .NET Framework, но работающих под управлением .NET Framework 4.6.1 или более поздних версий. Для этого добавьте в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:
+Кроме того, это поведение можно включить для приложений, предназначенных для предыдущих версий .NET Framework, но работающих под управлением .NET Framework 4.6.1 или более поздних версий. Для этого добавьте в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения следующий параметр:
 
 ```xml
 <runtime>
@@ -49,4 +49,4 @@ ms.locfileid: "66251137"
 
 ## <a name="see-also"></a>См. также
 
-- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6-1.md)

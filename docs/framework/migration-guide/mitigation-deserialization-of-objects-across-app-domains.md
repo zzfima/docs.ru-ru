@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648477"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789995"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Устранение рисков. Десериализация объектов между доменами приложений
 В некоторых случаях, когда приложение использует два или большее количество доменов с разными базовыми папками приложения, при попытке выполнить десериализацию объектов в логическом контексте вызова между доменами приложения возникнет исключение.  
@@ -50,4 +50,4 @@ ms.locfileid: "64648477"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+- [Изменения среды выполнения](runtime-changes-in-the-net-framework-4-5-1.md)

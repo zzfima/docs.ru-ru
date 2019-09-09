@@ -3,12 +3,12 @@ title: Начало работы с семантическим анализом
 description: В этом учебнике содержатся общие сведения о работе с семантическим анализом с помощью пакета SDK для компилятора .NET.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611748"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252936"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Начало работы с семантическим анализом
 
@@ -40,7 +40,7 @@ ms.locfileid: "59611748"
 Создайте новый проект C# для **автономного средства анализа кода**:
 
 * В Visual Studio последовательно выберите **Файл** > **Создать** > **Проект**, чтобы открыть диалоговое окно "Новый проект".
-* В разделе **Visual C#** > **Расширяемость** выберите **Автономное средство анализа кода**.
+* В разделе **Visual C#**  > **Расширяемость** выберите **Автономное средство анализа кода**.
 * Присвойте проекту имя "**SemanticQuickStart**" и нажмите кнопку "ОК".
 
 Вы будете анализировать программу "Hello World!", показанную ранее.
@@ -78,7 +78,7 @@ ms.locfileid: "59611748"
 
 Запустите программу. Вы должны увидеть следующие результаты:
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -135,7 +135,7 @@ Press any key to continue . . .
 
 Постройте и запустите программу. Должны выводиться следующие данные:
 
-```
+```output
 Join
 Substring
 Trim

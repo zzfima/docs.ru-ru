@@ -2,12 +2,12 @@
 title: Извлечение абзацев и стилей (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591196"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253075"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Извлечение абзацев и стилей (C#)
 В этом примере составляется запрос, при котором получаются узлы абзацев из документа WordprocessingML. Также идентифицируется стиль каждого абзаца.  
@@ -111,7 +111,7 @@ foreach (var p in paragraphs)
   
  Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
-```  
+```output  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  

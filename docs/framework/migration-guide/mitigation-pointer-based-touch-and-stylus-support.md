@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379891"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779242"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Устранение рисков. Поддержка сенсорного управления и пера на основе указателя
 
@@ -40,7 +40,7 @@ ms.locfileid: "66379891"
 
       Это потенциально может вызвать зависание приложения до обнаружения ввода с помощью мыши. Вместо этого разработчикам следует инициировать перетаскивание с помощью событий мыши.
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Выбор поддержки сенсорного управления и пера на основе WM_POINTER
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Выбор поддержки сенсорного управления и пера на основе WM_POINTER
 
 Разработчики, желающие включить этот стек, могут добавить следующую информацию в файл app.config своего приложения:
 
@@ -56,4 +56,4 @@ ms.locfileid: "66379891"
 
 ## <a name="see-also"></a>См. также
 
-- [Изменения целевой платформы в .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Изменения целевой платформы в .NET Framework 4.7](retargeting-changes-in-the-net-framework-4-7.md)

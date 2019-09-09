@@ -2,12 +2,12 @@
 title: Использование сервера баз данных, работающего в качестве контейнера
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование сервера баз данных, работающего в качестве контейнера? Только для разработки! Давайте поймем, почему.
 ms.date: 10/02/2018
-ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 312f986b5aa710fe51c7c3488776395194526e51
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676201"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253963"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Использование сервера баз данных, работающего в качестве контейнера
 
@@ -31,7 +31,7 @@ ms.locfileid: "68676201"
 
 Аналогичным образом, вместо `docker-compose` используйте следующую команду `docker run` для запуска контейнера:
 
-```
+```console
   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
@@ -167,7 +167,7 @@ Redis предоставляет образ Docker с Redis. Этот образ
 
 Вы можете запустить контейнер Docker Redis напрямую, выполнив следующую команду Docker CLI в командной строке:
 
-```
+```console
   docker run --name some-redis -d redis
 ```
 

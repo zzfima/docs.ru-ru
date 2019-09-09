@@ -2,12 +2,12 @@
 title: Практическое руководство. Объединение двух коллекций (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 82083a24da9a5356a8ff8e8430b61bb5d41f7c72
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593193"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253579"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Практическое руководство. Объединение двух коллекций (LINQ to XML) (C#)
 Элемент или атрибут в XML-документе может иногда относиться к другому элементу или атрибуту. Например, XML-документ из раздела [Пример XML-файла. Заказчики и заказы (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) содержит список заказчиков и список заказов. Каждый элемент `Customer` содержит атрибут `CustomerID`. Каждый элемент `Order` содержит элемент `CustomerID`. Элемент `CustomerID` для каждого заказа ссылается на атрибут `CustomerID`, присвоенный также и клиенту.  
@@ -76,7 +76,7 @@ if (!errors)
   
  Этот код выводит следующие результаты:  
   
-```  
+```output  
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

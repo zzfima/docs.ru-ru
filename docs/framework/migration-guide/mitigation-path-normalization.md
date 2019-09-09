@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251114"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779346"
 ---
 # <a name="mitigation-path-normalization"></a>Устранение рисков. Нормализация путей
 Начиная с приложений, ориентированных на .NET Framework 4.6.2, нормализация путей в .NET Framework изменилась.  
@@ -45,7 +45,7 @@ ms.locfileid: "66251114"
 Это изменение не влияет на приложения, предназначенные для .NET Framework 4.6.1 и более ранних версий, но работающие на платформе .NET Framework 4.6.2 или более новой версии.  
   
 ## <a name="mitigation"></a>Устранение рисков  
- В приложениях, предназначенных для .NET Framework 4.6.2 или более поздней версии, данное изменение можно отключить и использовать устаревшую нормализацию, добавив следующее в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения:  
+ В приложениях, предназначенных для .NET Framework 4.6.2 или более поздней версии, данное изменение можно отключить и использовать устаревшую нормализацию, добавив следующее в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения:  
   
 ```xml  
 <runtime>  
@@ -53,7 +53,7 @@ ms.locfileid: "66251114"
 </runtime>  
 ```  
   
-В приложениях, предназначенных для .NET Framework 4.6.1 или более ранней версии, но работающих на платформе .NET Framework 4.6.2 или более поздней версии, можно включить изменения в нормализацию пути, добавив следующую строку в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения:  
+В приложениях, предназначенных для .NET Framework 4.6.1 или более ранней версии, но работающих на платформе .NET Framework 4.6.2 или более поздней версии, можно включить изменения в нормализацию пути, добавив следующую строку в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения:  
   
 ```xml  
 <runtime>  
@@ -63,4 +63,4 @@ ms.locfileid: "66251114"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6-2.md)

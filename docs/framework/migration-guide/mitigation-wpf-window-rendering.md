@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf951ecb955a6597757387de1119267ebc58fdc
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301451"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789792"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Устранение рисков. Отрисовка окна WPF
 
@@ -43,4 +43,4 @@ ms.locfileid: "66301451"
 
 ## <a name="see-also"></a>См. также
 
-- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Изменения среды выполнения](runtime-changes-in-the-net-framework-4-6.md)

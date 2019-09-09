@@ -2,12 +2,12 @@
 title: Практическое руководство. Работа со словарями с помощью LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55512e6039010d74d390c805c119935c436f9834
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484711"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253239"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Практическое руководство. Работа со словарями с помощью LINQ to XML (C#)
 Часто бывает удобно преобразовать структуры данных в XML, а затем преобразовать XML в другие структуры данных. В этом разделе показана конкретная реализация этого общего подхода на примере преобразования <xref:System.Collections.Generic.Dictionary%602> в XML и обратно.  
@@ -59,10 +59,9 @@ foreach (string str in dict.Keys)
   
  Этот код выводит следующие результаты:  
   
-```  
+```output  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
 Child4:Value4  
 ```  
-  

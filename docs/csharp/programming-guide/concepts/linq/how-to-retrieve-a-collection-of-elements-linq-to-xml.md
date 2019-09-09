@@ -2,12 +2,12 @@
 title: Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: 0ca40b77a78f155292dfbb26471442450bf16b9b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fef12745bd608622f071f72049f242405d17ed7d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592638"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253421"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (C#)
 В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>. Этот метод получает коллекцию дочерних элементов того или иного элемента.  
@@ -28,7 +28,7 @@ foreach (XElement el in childElements)
   
  В этом примере формируются следующие данные:  
   
-```  
+```output  
 Name: Address  
 Name: Address  
 Name: DeliveryNotes  

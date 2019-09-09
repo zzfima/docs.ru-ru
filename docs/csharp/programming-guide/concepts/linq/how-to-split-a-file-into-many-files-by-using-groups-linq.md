@@ -2,12 +2,12 @@
 title: Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592380"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253279"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)
 В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.  
@@ -16,7 +16,7 @@ ms.locfileid: "69592380"
   
 1. Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ ms.locfileid: "69592380"
   
 2. Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта: Обратите внимание, что в этих двух файлах имеются общие имена.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

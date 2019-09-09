@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b21dc73454b96d3a192b47eb439bebf588059c24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599621"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779154"
 ---
 # <a name="mitigation-tls-protocols"></a>Устранение рисков. Протоколы TLS
 Начиная с версии .NET Framework 4.6 классы <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> могут использовать один из трех протоколов: Tls1.0, Tls1.1 или Tls 1.2. Протокол SSL 3.0 и шифрование RC4 не поддерживаются.  
@@ -34,7 +34,7 @@ ms.locfileid: "64599621"
   
      Поскольку объект <xref:System.Net.ServicePointManager> инициализируется только один раз, определение этих параметров совместимости должно быть первым действием приложения.  
   
-- Путем добавления следующей строки в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла app.config:  
+- Путем добавления следующей строки в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла app.config:  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
@@ -44,4 +44,4 @@ ms.locfileid: "64599621"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6.md)

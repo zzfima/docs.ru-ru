@@ -2,12 +2,12 @@
 title: Выбор .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 53164654710775320f023df9fb56a78506bd3a1a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675741"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784087"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -57,7 +57,7 @@ ms.locfileid: "68675741"
 - **Перенос кода в .NET Core из .NET Framework**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **.NET Core в руководстве по Docker** [https://docs.microsoft.com/dotnet/core/docker/intro-net-docker](../../../core/docker/intro-net-docker.md)
+- **.NET Core в руководстве по Docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **Общие сведения о компонентах .NET**  
     [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)

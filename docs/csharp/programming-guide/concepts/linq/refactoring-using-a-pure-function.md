@@ -2,12 +2,12 @@
 title: Рефакторинг с использованием чистых функций (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591313"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253081"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Рефакторинг с использованием чистых функций (C#)
 В приведенном ниже примере выполняется оптимизация кода предыдущего примера [Рефакторинг с использованием метода расширения (C#)](./refactoring-using-an-extension-method.md) для использования чистой функции. При этом код, предназначенный для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.  
@@ -156,7 +156,7 @@ class Program
   
  В этом примере выводятся те же результаты, что и после оптимизации кода:  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

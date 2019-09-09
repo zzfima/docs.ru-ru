@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: d47a2d72efd8891108999d5576da52eb2b6285b1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593434"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253648"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (C#)
 В этом разделе сравнивается ось XPath `preceding-sibling` с дочерней для [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] осью <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
@@ -45,7 +45,7 @@ foreach (XElement el in list2)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 Results are identical  
 <CompanyName>Great Lakes Food Market</CompanyName>  
 <ContactName>Howard Snyder</ContactName>  

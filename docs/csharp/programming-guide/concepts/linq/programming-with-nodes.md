@@ -2,12 +2,12 @@
 title: Программирование с узлами (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 7229b03e1bbb4f7cd861cb946307867b87234a21
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487301"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253145"
 ---
 # <a name="programming-with-nodes-c"></a>Программирование с узлами (C#)
 Разработчикам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], которым требуется написать такие программы, как XML-редактор, система преобразования или модуль формирования отчетов, часто приходится писать программы, которые работают на более высоком уровне гранулярности по сравнению с элементами и атрибутами. Им часто приходится работать на уровне узлов, обрабатывая текстовые узлы, инструкции по обработке и комментарии. В этом разделе приводятся некоторые сведения о программировании на уровне узлов.  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent == null);
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 True  
 True  
 ```  
@@ -54,7 +54,7 @@ Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 1  
 1  
 2  
@@ -76,7 +76,7 @@ Console.WriteLine(">>{0}<<", textNode2);
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 >><<  
 ```  
   
@@ -116,7 +116,7 @@ foreach (XAttribute att in root.Attributes())
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -144,7 +144,7 @@ Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Co
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 3  
 0  
 ```  
@@ -166,7 +166,7 @@ Console.WriteLine(doc.Nodes().Count());
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  

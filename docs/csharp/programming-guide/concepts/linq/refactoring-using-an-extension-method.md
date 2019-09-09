@@ -2,12 +2,12 @@
 title: Рефакторинг с использованием метода расширения (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591298"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253098"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Рефакторинг с использованием метода расширения (C#)
 Этот пример основан на предыдущем примере, [Извлечение текста абзацев (C#)](./retrieving-the-text-of-the-paragraphs.md), и в нем применяется оптимизация кода объединения строк с помощью чистой функции, которая реализуется в виде метода расширения.  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 onetwothree  
 one:two:three:  
 123  
@@ -221,7 +221,7 @@ class Program
   
  Этот пример выводит следующие результаты, будучи примененным к документу, описанному в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md).  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

@@ -2,12 +2,12 @@
 title: Практическое руководство. Получение значения атрибута (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: 54ea4b532669ed2c615fcde02011fdd1228705a3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 635aee3bd08618b94fb5c091f8eef212c067acef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592468"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253386"
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>Практическое руководство. Получение значения атрибута (LINQ to XML) (C#)
 В этом разделе показано получение значений атрибутов. Существует два основных способа. Можно привести <xref:System.Xml.Linq.XAttribute> к требуемому типу, после этого оператор явного преобразования преобразует содержимое элемента или атрибута в указанный тип. Иначе можно использовать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>. Однако приведение, как правило, является лучшим подходом. В частности, становится проще написание кода, обеспечивающего получение значения атрибута, который может существовать или не существовать, после приведения атрибута к типу, допускающему значение NULL. Примеры применения этого способа см. в разделе [Практическое руководство. Извлечение значений элемента (LINQ to XML) (C#)](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
@@ -26,7 +26,7 @@ Console.WriteLine(str);
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 <Root Attr="abcde" />  
 abcde  
 ```  
@@ -45,7 +45,7 @@ Console.WriteLine(str);
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 abcde  
 ```  
   

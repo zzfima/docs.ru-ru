@@ -2,12 +2,12 @@
 title: Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593156"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253549"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
 
@@ -17,7 +17,7 @@ ms.locfileid: "69593156"
   
 1. Скопируйте следующие строки в файл с именем *scores.csv* и сохраните его в папке проекта. Этот файл представляет данные электронной таблицы. Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ ms.locfileid: "69593156"
   
 2. Скопируйте следующие строки в файл с именем *names.csv* и сохраните его в папке проекта. Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

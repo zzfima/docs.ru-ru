@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146150"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394277"
 ---
 # <a name="introducing-pluggable-protocols"></a>Введение в подключаемые протоколы
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. Классы доступа к Интернету в пространствах имен <xref:System.Net> и <xref:System.Net.Sockets> можно использовать для реализации веб-приложений и интернет-приложений.  
@@ -71,4 +71,3 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
 - [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

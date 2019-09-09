@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание запросов к XML в пространствах имен (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: ef7d970b5e34106bd6f17d4a2caf4ca378dd2258
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1ded47ced44bebfda92b96f4dc908f1c1b2bbf6b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709892"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253199"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Практическое руководство. Создание запросов к XML в пространствах имен (C#)
 Для записи XML-запросов в пространстве имен необходимо использовать объекты <xref:System.Xml.Linq.XName> с правильно заданным пространством имен.  
@@ -39,7 +39,7 @@ foreach (XElement el in c1)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 1  
 2  
 3  
@@ -70,7 +70,7 @@ foreach (XElement el in c1)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```output  
 1  
 2  
 3  

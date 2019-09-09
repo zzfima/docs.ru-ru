@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106483"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790122"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Совместимость приложений в .NET Framework
 
@@ -76,6 +76,6 @@ ms.locfileid: "70106483"
 
 ## <a name="see-also"></a>См. также
 
-- [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [Новые возможности](../../../docs/framework/whats-new/index.md)
-- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Версии и зависимости](versions-and-dependencies.md)
+- [Новые возможности](../whats-new/index.md)
+- [Устаревшие классы библиотеки классов](../whats-new/whats-obsolete.md)

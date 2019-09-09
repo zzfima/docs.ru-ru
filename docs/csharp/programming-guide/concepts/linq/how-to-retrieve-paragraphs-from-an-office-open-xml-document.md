@@ -2,12 +2,12 @@
 title: Практическое руководство. Извлечение абзацев из документа в формате Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 352389467bbe3c2a5e7364b081539bad8efc3f3b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253395"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Практическое руководство. Извлечение абзацев из документа в формате Office Open XML (C#)
 В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.  
@@ -165,7 +165,7 @@ class Program
   
  При запуске с образцом документа Open XML, описанным в разделе [Создание исходного документа в формате Office Open XML (C#)](./creating-the-source-office-open-xml-document.md), этот пример выводит следующие результаты:  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

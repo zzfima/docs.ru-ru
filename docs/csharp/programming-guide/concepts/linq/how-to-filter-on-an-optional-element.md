@@ -2,12 +2,12 @@
 title: Практическое руководство. Фильтрация по необязательному элементу (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593794"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253822"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Практическое руководство. Фильтрация по необязательному элементу (C#)
 Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML. Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference. В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  Этот код выводит следующие результаты:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  Этот код выводит следующие результаты:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
