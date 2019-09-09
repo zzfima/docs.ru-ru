@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959872"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
-Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) , которое он изменяет, является асинхронным. `Async` Такие методы называются асинхронными *методами*.  
+Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) , которое он изменяет, является асинхронным. `Async` Такие методы называются *асинхронными методами*.  
   
  Асинхронный метод представляет собой удобный способ для выполнения работы, которая может занять длительное время, без блокировки потока вызывающего объекта. Вызывающий метод асинхронного метода может возобновить свою работу, не дожидаясь завершения асинхронного метода.  
   
 > [!NOTE]
->  Ключевые слова `Async` и `Await` появились в Visual Studio 2012. Общие сведения о асинхронном программировании см. в статье [Асинхронное программирование с использованием Async и await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+> Ключевые слова `Async` и `Await` появились в Visual Studio 2012. Общие сведения о асинхронном программировании см. в статье [Асинхронное программирование с использованием Async и await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  В следующем примере показана структура асинхронного метода. По соглашению имена асинхронных методов заканчиваются на "Async".  
   
@@ -47,7 +47,7 @@ End Function
  `Async` Ключевое слово является незарезервированным ключевым словом. Это ключевое слово при изменении метода или лямбда-выражения. Во всех остальных контекстах он интерпретируется как идентификатор.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Асинхронный метод является либо [подпроцедурой](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) , либо процедурой [функции](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) , имеющей тип возвращаемого <xref:System.Threading.Tasks.Task> значения <xref:System.Threading.Tasks.Task%601>или. Метод не может объявлять никакие параметры [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
+ Асинхронный метод является либо [подпроцедурой, либо процедурой](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) [функции](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) , имеющей тип возвращаемого <xref:System.Threading.Tasks.Task> значения <xref:System.Threading.Tasks.Task%601>или. Метод не может объявлять никакие параметры [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
   
  Указывается `Task(Of TResult)` для возвращаемого типа асинхронного метода, если оператор [return](../../../visual-basic/language-reference/statements/return-statement.md) метода имеет операнд типа TResult. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. Это значит, что `Task`вызов метода возвращает, но `Task` после завершения любая `Await` инструкция, ожидающая `Task` , не формирует результирующее значение.  
   

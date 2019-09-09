@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: da5679c3e69a938e9735922bcf4f912428024610
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929939"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Указывает, что объявление типа — это частичное определение типа.  
@@ -27,7 +27,7 @@ ms.locfileid: "64642788"
  Вы можете разделить определение типа среди нескольких объявлений, используя ключевое слово `Partial`. Можно использовать столько частичных объявлений, сколько необходимо, во множестве исходных файлах. Однако все объявления должны находиться в одной сборке и одном пространстве имен.  
   
 > [!NOTE]
->  Visual Basic поддерживает *разделяемые методы*, которые обычно реализуются в разделяемых классах. Дополнительные сведения см. в разделе [разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) и [оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md).  
+> Visual Basic поддерживает *разделяемые методы*, которые обычно реализуются в разделяемых классах. Дополнительные сведения см. в разделе [разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) и [подоператоры](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,17 +45,17 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Термин|Определение|  
 |---|---|  
-|`attrlist`|Необязательный параметр. Список атрибутов, применяемых к этому событию. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловых скобках (`< >`).|  
+|`attrlist`|Необязательный параметр. Список атрибутов, применяемых к этому событию. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) необходимо заключить в угловые скобки`< >`().|  
 |`accessmodifier`|Необязательный параметр. Указывает, какой код может получить доступ к этому событию. См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный параметр. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Необязательный параметр. См. в разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Необязательный параметр. См. в разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Shadows`|Необязательный параметр. См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Необязательный параметр. См. раздел [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Необязательный параметр. См. [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`name`|Обязательный. Имя данного типа. Оно должно соответствовать имени, определенному в других частичных объявлениях того же типа.|  
-|`Of`|Необязательный параметр. Указывает, что это универсальный тип. См. в разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Требуется при использовании [из](../../../visual-basic/language-reference/statements/of-clause.md). См. в разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательный параметр. См. в разделе [оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Of`|Необязательный параметр. Указывает, что это универсальный тип. См. раздел [универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Требуется [, если используется.](../../../visual-basic/language-reference/statements/of-clause.md) См. [список типов](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Необязательный параметр. См. раздел [оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Обязательный параметр, если используется параметр `Inherits`. Имя класса или интерфейса, от которого наследует этот класс.|  
-|`Implements`|Необязательный параметр. См. в разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Необязательный параметр. См. [инструкцию Implements](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Обязательный параметр, если используется параметр `Implements`. Имена интерфейсов, реализуемых этим типом.|  
 |`variabledeclarations`|Необязательный параметр. Операторы, которые объявляют дополнительные переменные и события для типа.|  
 |`proceduredeclarations`|Необязательный параметр. Операторы, которые объявляют и определяют дополнительные процедуры для типа.|  
@@ -66,7 +66,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Все правила для создания класса, структуры, интерфейса и модуля, например для использования модификатора и наследования, применяются при создании частичного типа.  
   
-## <a name="best-practices"></a>Рекомендации  
+## <a name="best-practices"></a>Советы и рекомендации  
   
 - В обычных условиях не следует разбивать один тип на два или более объявлений. Поэтому в большинстве случаев ключевое `Partial` слово не требуется.  
   
@@ -74,9 +74,9 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="behavior"></a>Поведение  
   
-- **Объявления объединений.** Компилятор рассматривает тип как объединение всех его частичных объявлений. Каждый модификатор из каждого частичного определения применяется ко всему типу, а каждый элемент из каждого частичного определения доступен для всего типа.  
+- **Объединение объявлений.** Компилятор рассматривает тип как объединение всех его частичных объявлений. Каждый модификатор из каждого частичного определения применяется ко всему типу, а каждый элемент из каждого частичного определения доступен для всего типа.  
   
-- **Повышение типа не допускается для частичных типов в модулях.** Если частичное определение находится внутри модуля, повышение типа этого типа автоматически отменяется. В таком случае набор частичных определений может привести к непредсказуемым результатам и даже ошибкам компилятора. Дополнительные сведения см. в разделе [повышение типа](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Повышение типа не допускается для разделяемых типов в модулях.** Если частичное определение находится внутри модуля, повышение типа этого типа автоматически отменяется. В таком случае набор частичных определений может привести к непредсказуемым результатам и даже ошибкам компилятора. Дополнительные сведения см. в разделе [повышение типа](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      Компилятор объединяет частичные определения, только если их полные пути идентичны.  
   

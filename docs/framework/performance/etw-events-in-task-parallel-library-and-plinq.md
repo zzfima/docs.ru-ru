@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955763"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>События трассировки событий Windows в библиотеке параллельных задач и PLINQ
 
-Библиотека параллельных задач и PLINQ создают события трассировки событий Windows (ETW), которые можно использовать для профилирования и устранения неполадок в приложениях с помощью таких средств, как Windows Performance Analyzer. Однако в большинстве случаев лучший способ профилирования параллельного кода приложения является использование [визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer) в Visual Studio.
+Библиотека параллельных задач и PLINQ создают события трассировки событий Windows (ETW), которые можно использовать для профилирования и устранения неполадок в приложениях с помощью таких средств, как Windows Performance Analyzer. Однако в большинстве случаев лучшим способом профилирования параллельного кода приложения является использование [визуализатора параллелизма](/visualstudio/profiling/concurrency-visualizer) в Visual Studio.
 
 ## <a name="task-parallel-library-etw-events"></a>События трассировки событий Windows в библиотеке параллельных задач (TPL)
 
@@ -121,5 +121,5 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="see-also"></a>См. также
 
 - [События трассировки событий Windows в .NET Framework](../../../docs/framework/performance/etw-events.md)
-- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Библиотека параллельных задач (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [Parallel LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)
