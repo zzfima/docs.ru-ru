@@ -2,18 +2,18 @@
 title: Практическое руководство. Проецирование графа объекта (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592988"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253484"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="d5e2b-102">Практическое руководство. Проецирование графа объекта (C#)</span><span class="sxs-lookup"><span data-stu-id="d5e2b-102">How to: Project an Object Graph (C#)</span></span>
-<span data-ttu-id="d5e2b-103">Данный раздел иллюстрирует способ проецирования, или наполнения, из XML графа объектов.</span><span class="sxs-lookup"><span data-stu-id="d5e2b-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="7e1db-102">Практическое руководство. Проецирование графа объекта (C#)</span><span class="sxs-lookup"><span data-stu-id="7e1db-102">How to: Project an Object Graph (C#)</span></span>
+<span data-ttu-id="7e1db-103">Данный раздел иллюстрирует способ проецирования, или наполнения, из XML графа объектов.</span><span class="sxs-lookup"><span data-stu-id="7e1db-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d5e2b-104">Пример</span><span class="sxs-lookup"><span data-stu-id="d5e2b-104">Example</span></span>  
- <span data-ttu-id="d5e2b-105">В следующем коде происходит заполнение графа объектов классами `Address`, `PurchaseOrder` и `PurchaseOrderItem` из раздела [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="d5e2b-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="7e1db-104">Пример</span><span class="sxs-lookup"><span data-stu-id="7e1db-104">Example</span></span>  
+ <span data-ttu-id="7e1db-105">В следующем коде происходит заполнение графа объектов классами `Address`, `PurchaseOrder` и `PurchaseOrderItem` из раздела [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="7e1db-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -214,11 +214,11 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="d5e2b-106">В данном примере результат запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] возвращается в виде <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="d5e2b-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="d5e2b-107">Элементы в классе `PurchaseOrder` относятся к типу <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="d5e2b-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="d5e2b-108">В коде используется метод расширения <xref:System.Linq.Enumerable.ToList%2A> для создания коллекции <xref:System.Collections.Generic.List%601> исходя из результатов запроса.</span><span class="sxs-lookup"><span data-stu-id="d5e2b-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="7e1db-106">В данном примере результат запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] возвращается в виде <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="7e1db-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="7e1db-107">Элементы в классе `PurchaseOrder` относятся к типу <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="7e1db-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="7e1db-108">В коде используется метод расширения <xref:System.Linq.Enumerable.ToList%2A> для создания коллекции <xref:System.Collections.Generic.List%601> исходя из результатов запроса.</span><span class="sxs-lookup"><span data-stu-id="7e1db-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="d5e2b-109">Пример выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="d5e2b-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="7e1db-109">Пример выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="7e1db-109">The example produces the following output:</span></span>  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d5e2b-110">См. также</span><span class="sxs-lookup"><span data-stu-id="d5e2b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e1db-110">См. также</span><span class="sxs-lookup"><span data-stu-id="7e1db-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
