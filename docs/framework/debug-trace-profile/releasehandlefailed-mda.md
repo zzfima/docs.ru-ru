@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad580ecace07d3d6fdf206ff660dc4bac4bceb09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614295"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854035"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 Помощник по отладке управляемого кода (MDA) `releaseHandleFailed` активируется для уведомления разработчиков, когда метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, возвращает значение `false`.  
@@ -53,9 +53,9 @@ ms.locfileid: "64614295"
  Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
 ## <a name="output"></a>Вывод  
- Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Пример:  
+ Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Например:  
   
-```  
+```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
 failed to properly release the handle with value 0x0000BEEF. This   
 usually indicates that the handle was released incorrectly via   
@@ -63,7 +63,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>Параметр Configuration  
+## <a name="configuration"></a>Конфигурация  
   
 ```xml  
 <mdaConfig>  

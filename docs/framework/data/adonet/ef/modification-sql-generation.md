@@ -2,12 +2,12 @@
 title: Создание кода SQL для изменения данных
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248571"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854290"
 ---
 # <a name="modification-sql-generation"></a>Создание кода SQL для изменения данных
 
@@ -27,7 +27,7 @@ DbModificationCommandTree - это представление объектной
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree и его реализации, создаваемые функцией [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , всегда представляют операцию с одной строкой. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.
+DbModificationCommandTree и его реализации, создаваемые Entity Framework, всегда представляют операцию с одной строкой. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.
 
 ![Схема](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Property указывает свойство, которое должно быт
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Создание кода SQL для изменения данных в образце поставщика
 
-В [Entity Framework примере поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) демонстрируются компоненты поставщиков данных ADO.NET, которые поддерживают [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Он предназначен для базы данных SQL Server 2005 и реализован как оболочка на основе поставщика данных System.Data.SqlClient ADO.NET 2.0.
+В [Entity Framework примере поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) демонстрируются компоненты поставщиков данных ADO.NET, которые поддерживают Entity Framework. Он предназначен для базы данных SQL Server 2005 и реализован как оболочка на основе поставщика данных System.Data.SqlClient ADO.NET 2.0.
 
 Модуль создания кода SQL для изменения данных из образца поставщика (который находится в файле SQL Generation\DmlSqlGenerator.cs) принимает входные данные DbModificationCommandTree и вырабатывает одну инструкцию SQL изменения, за которой может следовать инструкция SELECT, обеспечивающая возврат модуля чтения, если это указано в DbModificationCommandTree. Следует отметить, что форма созданных команд зависит от целевой базы данных SQL Server.
 

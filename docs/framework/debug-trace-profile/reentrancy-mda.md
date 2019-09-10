@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874189"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854050"
 ---
 # <a name="reentrancy-mda"></a>MDA с возможностью повторного входа
 Помощник по отладке управляемого кода `reentrancy` (MDA) активируется при попытке выполнить переход из машинного кода в управляемый в тех случаях, когда ранее не был выполнен упорядоченный переход из управляемого кода в машинный.  
@@ -48,7 +48,7 @@ ms.locfileid: "61874189"
 ## <a name="output"></a>Вывод  
  Помощник по отладке управляемого кода сообщает о попытке недопустимого повторного входа.  Проверьте стек потока, чтобы понять, почему это происходит и как решить проблему. Далее приводится образец вывода.  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   
@@ -56,7 +56,7 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a>Параметр Configuration  
+## <a name="configuration"></a>Конфигурация  
   
 ```xml  
 <mdaConfig>  

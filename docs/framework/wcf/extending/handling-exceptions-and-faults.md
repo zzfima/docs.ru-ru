@@ -2,12 +2,12 @@
 title: Обработка исключений и сбоев
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 676ebe999c72ed678b7432ec154b1ec104b4d6cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795695"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851277"
 ---
 # <a name="handling-exceptions-and-faults"></a>Обработка исключений и сбоев
 Исключения используются, чтобы передать сведения об ошибках локально в службе или реализации клиента. С другой стороны, сбои используются, чтобы передать ошибки за пределы службы, например, от сервера клиенту или наоборот. Помимо сбоев каналы транспорта часто используют механизмы, связанные с транспортом, чтобы сообщить об ошибках на транспортном уровне. Например, транспорт HTTP использует коды состояния, такие как «404», чтобы сообщить о несуществующем конечном URL-адресе (отсутствует конечная точка, чтобы вернуть ошибку). Этот документ состоит из трех разделов, в которых содержится руководство для разработчиков пользовательских каналов. В первом разделе содержится руководство о том, когда и как определять и выдавать исключения. Во втором разделе содержится руководство по созданию и использованию ошибок. В третьем разделе разъясняется, как предоставить данные трассировки, которые помогут пользователю созданного канала устранить неполадки в выполняемых приложениях.  
@@ -48,7 +48,7 @@ ms.locfileid: "70795695"
   
  Протокол SOAP определяет сообщение об ошибке, как сообщение, содержащее элемент с ошибкой (элемент с именем `<env:Fault>`), в качестве дочернего элемента `<env:Body>`. Содержимое элемента с ошибкой немного отличается в протоколах SOAP 1.1 и SOAP 1.2, как показано на рисунке 1. Однако класс <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> нормализует эти различия в одной модели объекта:  
   
-```  
+```csharp
 public abstract class MessageFault  
 {  
     protected MessageFault();  
@@ -74,7 +74,7 @@ public abstract class MessageFault
   
  Если требуется различать ошибку программными средствами, необходимо создать новые дополнительные коды ошибок (или новые коды ошибок при использовании протокола SOAP 1.1). Это аналогично созданию нового типа исключения. Не следует использовать запись через точку с кодами ошибок SOAP 1.1. ( [Базовый профиль WS-I](https://go.microsoft.com/fwlink/?LinkId=95177) также не рекомендует использовать нотацию с точкой кода ошибки.)  
   
-```  
+```csharp  
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  Свойство `Reason` соответствует `env:Reason` (или `faultString` в SOAP 1.1), удобному для восприятия описанию ошибки, которое аналогично сообщению исключения. Класс `FaultReason` (и `env:Reason/faultString`в протоколе SOAP) имеет встроенную поддержку нескольких переводов для обеспечения глобализации.  
   
-```  
+```csharp  
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -118,7 +118,7 @@ public class FaultReason
   
  При создании ошибки пользовательский канал должен не отправлять ее напрямую, а вызвать исключение и позволить вышестоящему уровню решить, необходимо ли преобразовывать это исключение в ошибку и как ее отправлять. Для облегчения данного преобразования канал должен предоставить реализацию `FaultConverter`, которая может преобразовать исключение, вызываемое пользовательским каналом, в соответствующую ошибку. `FaultConverter` определяется следующим образом.  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -134,7 +134,7 @@ public class FaultConverter
   
  Каждый канал, создающий пользовательские ошибки, должен реализовать преобразователь `FaultConverter` и вернуть его из вызова в `GetProperty<FaultConverter>`. Пользовательская реализация `OnTryCreateFaultMessage` должна либо преобразовывать исключение в ошибку либо делегировать его в преобразователь `FaultConverter` внутреннего канала. Если канал является транспортным, он должен либо преобразовать исключение или делегировать в кодировщик `FaultConverter` , либо значение по умолчанию `FaultConverter` , предоставленное в WCF. Преобразователь по умолчанию `FaultConverter` преобразует ошибки, соответствующие сообщениям об ошибках, которые указаны в WS-Addressing и SOAP. Ниже приведен пример реализации `OnTryCreateFaultMessage`.  
   
-```  
+```csharp  
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  Приведенные ниже объектные модели поддерживают преобразование сообщений в исключения.  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  Типичная реализация выглядит следующим образом.  
   
-```  
+```csharp  
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -290,7 +290,7 @@ public override bool OnTryCreateException(
   
  Если канал протокола отправляет пользовательский заголовок со значением MustUnderstand=true и получает ошибку `mustUnderstand`, он должен определить, вызвана ли эта ошибка отправленным заголовком. Для этого можно использовать два члена в классе `MessageFault`:  
   
-```  
+```csharp  
 public class MessageFault  
 {  
     ...  
@@ -322,7 +322,7 @@ public class MessageFault
   
  После создания источника трассировки вызываются его методы <xref:System.Diagnostics.TraceSource.TraceData%2A>, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> или <xref:System.Diagnostics.TraceSource.TraceInformation%2A>, чтобы внести записи трассировки в прослушиватели трассировки. Для каждой внесенной записи трассировки необходимо классифицировать тип события как один из типов, определенный в <xref:System.Diagnostics.TraceEventType>. Данная классификация и установка уровня трассировки определяют, выводится ли запись трассировки прослушивателю. Например, установка в конфигурации уровней трассировки `Warning` позволяет записывать трассировки `Warning`, `Error` и `Critical`, но блокировать записи «Данные» и «Подробно». Ниже приведен пример создания источника трассировки и внесения записи на уровне «Данные».  
   
-```  
+```csharp
 using System.Diagnostics;  
 //...  
 TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  

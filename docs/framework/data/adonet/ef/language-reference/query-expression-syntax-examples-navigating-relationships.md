@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: 38a8ddfe4366fefccd0a874a2ad7a20424ef8fac
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a99d7d31ce23629bf7a0f390244c1fe67b4554e3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249470"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854410"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>Примеры синтаксиса выражений запросов. Навигация по связям
-Свойства навигации в модели [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] - это свойства быстрого доступа, используемые для нахождения сущностей в элементах ассоциации. Свойства навигации позволяют пользователю переходить от одной сущности к другой или от сущности к связанным сущностям в наборе ассоциаций. В этом разделе приведены примеры синтаксиса выражений запросов для навигации по связям с помощью свойств навигации в запросах LINQ to Entities.  
+Свойства навигации в Entity Framework являются свойствами ярлыков, используемыми для поиска сущностей на концах ассоциации. Свойства навигации позволяют пользователю переходить от одной сущности к другой или от сущности к связанным сущностям в наборе ассоциаций. В этом разделе приведены примеры синтаксиса выражений запросов для навигации по связям с помощью свойств навигации в запросах LINQ to Entities.  
   
  Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   

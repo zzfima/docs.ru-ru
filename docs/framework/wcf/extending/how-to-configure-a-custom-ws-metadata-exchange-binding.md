@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b4a4005a23c8c74edecb00475669e019b50a17af
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795654"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851224"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
 В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Windows Communication Foundation (WCF) включает четыре определяемые системой привязки метаданных, но метаданные можно публиковать с помощью любой требуемой привязки. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [Начало работы](../samples/getting-started-sample.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "70795654"
   
 5. В методе клиента Main() создайте новый экземпляр <xref:System.ServiceModel.Description.MetadataExchangeClient>, задайте его свойство <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> как `true`, вызовите <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>, а затем выполните итерацию через коллекцию возвращенных метаданных:  
   
-    ```  
+    ```csharp
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
   
     MetadataExchangeClient mexClient = new MetadataExchangeClient("MyMexEndpoint");  
@@ -68,19 +68,19 @@ ms.locfileid: "70795654"
   
 1. Создайте экземпляр привязки <xref:System.ServiceModel.WSHttpBinding>:  
   
-    ```  
+    ```csharp  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
 2. Создайте экземпляр <xref:System.ServiceModel.ServiceHost>:  
   
-    ```  
+    ```csharp  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
     ```  
   
 3. Добавьте конечную точку службы и экземпляр <xref:System.ServiceModel.Description.ServiceMetadataBehavior>:  
   
-    ```  
+    ```csharp  
     serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);  
     ServiceMetadataBehavior smb = new ServiceMetadataBehavior();  
     smb.HttpGetEnabled = true;  
@@ -89,7 +89,7 @@ ms.locfileid: "70795654"
   
 4. Добавьте конечную точку обмена метаданными, указав ранее созданную <xref:System.ServiceModel.WSHttpBinding>:  
   
-    ```  
+    ```csharp  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
@@ -103,7 +103,7 @@ ms.locfileid: "70795654"
   
 6. В методе клиента Main() создайте новый экземпляр <xref:System.ServiceModel.Description.MetadataExchangeClient>, задайте его свойство <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> как `true`, вызовите <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>, а затем выполните итерацию через коллекцию возвращенных метаданных:  
   
-    ```  
+    ```csharp  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
   
     MetadataExchangeClient mexClient = new MetadataExchangeClient("MyMexEndpoint");  

@@ -2,31 +2,33 @@
 title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: e6e567e8a657b4c1683ae4abfb14f96a0f272e4a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1729255c68c75f824b8cd8c87f106a4a9b3550f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934579"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854891"
 ---
 # <a name="udpdiscoveryendpoint"></a>\<Удпдисковерендпоинт >
 Этот элемент конфигурации указывает стандартную конечную точку, которая стандартно используется для операций обнаружения через привязку для многоадресной рассылки UDP. Эта конечная точка имеет фиксированный контракт и поддерживает две версии протокола WS-Discovery. Кроме того, она имеет фиксированную привязку UDP и значение адреса по умолчанию, как определено в спецификациях WS-Discovery (WS-Discovery от апреля 2005 или WS-Discovery версии 1.1).  
   
- \<системой. > ServiceModel  
-\<Стандардендпоинтс >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Стандардендпоинтс >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Удпдисковерендпоинт >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
 <system.serviceModel>
   <standardEndpoints>
-    <discoveryEndpoint>
+    <udpDiscoveryEndpoint>
       <standardEndpoint discoveryMode="Adhoc/Managed"
                         discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxResponseDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
-    </discoveryEndpoint>
+    </udpDiscoveryEndpoint>
   </standardEndpoints>
 </system.serviceModel>
 ```  

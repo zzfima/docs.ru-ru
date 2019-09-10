@@ -6,39 +6,42 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: e0bc019ee361cba6a28ac573da3d2ee09e2168ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 32591edd065a8122b84ff14102f672ccf6001d67
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663301"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855851"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Практическое руководство. Использование триггеров событий для управления раскадровкой после ее запуска
-В этом примере показано, как управлять <xref:System.Windows.Media.Animation.Storyboard> после ее запуска. Чтобы запустить <xref:System.Windows.Media.Animation.Storyboard> с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], использовать <xref:System.Windows.Media.Animation.BeginStoryboard>, которая распределяет анимации объектов и свойств и затем запускает раскадровку. Если вы предоставите <xref:System.Windows.Media.Animation.BeginStoryboard> имя, указав его <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> свойство, можно упростить управляемой раскадровки. Вы можете затем интерактивно управлять раскадровкой после ее запуска.  
-  
- Используйте следующие действия раскадровки вместе с <xref:System.Windows.EventTrigger> объектов для управления раскадровкой.  
-  
-- <xref:System.Windows.Media.Animation.PauseStoryboard>: Приостанавливает раскадровку.  
-  
-- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Возобновляет приостановленную раскадровку.  
-  
-- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Изменяет скорость раскадровки.  
-  
-- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Перемещает раскадровку в конец ее периода заполнения, если он имеется.  
-  
-- <xref:System.Windows.Media.Animation.StopStoryboard>: Останавливает раскадровку.  
-  
-- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Удаляет раскадровку, освобождает ресурсы.  
-  
-## <a name="example"></a>Пример  
- В следующем примере действий для управляемой раскадровки для интерактивного управления раскадровкой.  
-  
- **Примечание.** Пример управления раскадровкой с помощью кода, см. в разделе [управления раскадровки после он начинается с помощью его интерактивных методов](how-to-control-a-storyboard-after-it-starts.md).  
-  
- [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
-  
- Дополнительные примеры см. в разделе [Коллекция примеров анимации](https://go.microsoft.com/fwlink/?LinkID=159969).  
-  
+
+В этом примере показано, <xref:System.Windows.Media.Animation.Storyboard> как управлять после запуска. Чтобы запустить <xref:System.Windows.Media.Animation.Storyboard> с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте <xref:System.Windows.Media.Animation.BeginStoryboard>, который распространяет анимации на объекты и свойства, которые они анимированы, а затем запускает раскадровку. Если вы придаете <xref:System.Windows.Media.Animation.BeginStoryboard> имя, указав <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> его свойство, вы сделаете его управляемой раскадровкой. Затем можно интерактивно управлять раскадровкой после ее запуска.
+
+Используйте следующие действия раскадровки вместе <xref:System.Windows.EventTrigger> с объектами для управления раскадровкой.
+
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Приостанавливает раскадровку.
+
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Возобновляет приостановленную раскадровку.
+
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Изменяет скорость раскадровки.
+
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Перемещает раскадровку в конец периода заполнения, если он имеет значение.
+
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Останавливает раскадровку.
+
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Удаляет раскадровку, освобождая ресурсы.
+
+## <a name="example"></a>Пример
+
+В следующем примере используются управляемые действия раскадровки для интерактивного управления раскадровкой.
+
+> [!NOTE]
+> Пример управления раскадровкой с помощью кода см. в разделе [Управление раскадровкой после ее запуска с помощью интерактивных методов](how-to-control-a-storyboard-after-it-starts.md).
+
+[!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]
+
+Дополнительные примеры см. в разделе [Коллекция примеров анимации](https://go.microsoft.com/fwlink/?LinkID=159969).
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>

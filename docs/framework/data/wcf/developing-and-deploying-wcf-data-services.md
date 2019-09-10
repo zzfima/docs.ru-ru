@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780327"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854066"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Разработка и развертывание WCF Data Services
 
@@ -121,7 +121,7 @@ ms.locfileid: "70780327"
 
 При разработке службы данных необходимо учитывать следующее:
 
-- При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создавать скрипты (SQL-файлы), чтобы сделать это в целевой базе данных, и эти скрипты можно добавить в пакет веб-развертывания приложения ASP.NET. Дополнительные сведения см. в разделе [Практическое руководство. Развертывание базы данных с помощью проекта](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))веб-приложения. Для веб-сайта ASP.NET это можно сделать с помощью **мастера публикации баз данных** в Visual Studio. Дополнительные сведения см. [в разделе Публикация базы данных SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- При развертывании службы данных, которая использует поставщик Entity Framework для доступа к базе данных SQL Server, может также потребоваться распространить структуры данных, данные или и то, и другое вместе с развертыванием службы данных. Visual Studio может автоматически создавать скрипты (SQL-файлы), чтобы сделать это в целевой базе данных, и эти скрипты можно добавить в пакет веб-развертывания приложения ASP.NET. Дополнительные сведения см. в разделе [Практическое руководство. Развертывание базы данных с помощью проекта](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))веб-приложения. Для веб-сайта ASP.NET это можно сделать с помощью **мастера публикации баз данных** в Visual Studio. Дополнительные сведения см. [в разделе Публикация базы данных SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Поскольку WCF Data Services включает базовую реализацию WCF, можно использовать Windows Server AppFabric для мониторинга службы данных, развернутой в службах IIS, работающих на Windows Server. Дополнительные сведения об использовании Windows Server AppFabric для мониторинга службы данных см. в подразделе " [Отслеживание после WCF Data Services с помощью Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005)".
 

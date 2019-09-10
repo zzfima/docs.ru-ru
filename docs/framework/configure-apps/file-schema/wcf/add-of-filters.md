@@ -2,21 +2,22 @@
 title: <add> из <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926689"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850561"
 ---
 # <a name="add-of-filters"></a>\<Добавление > \<фильтров >
 Фильтр XPath, задающий тип сообщений для записи в журнал.  
   
- \<системой. > ServiceModel  
-\<Диагностические >  
-\<Мессажелоггинг >  
-\<Фильтры >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Диагностика >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Мессажелоггинг >** ](messagelogging.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Фильтры >** ](filters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790862"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854184"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Настройка каналов (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] использует для предоставления данных в виде веб-канала. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]поддерживает форматы Atom и нотация объектов JavaScript (JSON) для веб-каналов данных. При использовании веб-канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Atom предоставляет стандартный метод сериализации данных, таких как сущности и связи, в формат XML, который может быть добавлен в текст сообщения HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Определяет сопоставление по умолчанию для свойства сущности между данными, содержащимися в сущностях и элементах Atom. Дополнительные сведения см. в [разделе OData: Формат](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -31,7 +31,7 @@ ms.locfileid: "70790862"
 > При определении специализированных каналов необходимо убедиться, что все свойства сущности, которые имеют определенные пользовательские сопоставления, включены в проекцию. Если сопоставленное свойство сущности не включено в проекцию, может произойти потеря данных. Дополнительные сведения см. в разделе [проекции запросов](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Настройка каналов с помощью поставщика Entity Framework  
- Модель данных, используемая с поставщиком [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], представлена в виде XML в EDMX-файле. В данном случае атрибуты, определяющие специализированные каналы, добавляются к элементам `EntityType` и `Property`, представляющим типы сущностей и свойства в модели данных. Эти атрибуты настройки канала не определены в [ \[MC-CSDL\]: Формат](https://go.microsoft.com/fwlink/?LinkId=159072)файла определения концептуальной схемы — формат [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , используемый поставщиком для определения модели данных. Поэтому атрибуты настройки канала должны быть объявлены в специальном пространстве имен схемы, определенном как `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Следующий фрагмент XML иллюстрирует применение атрибутов настройки канала к элементам `Property` типа сущности `Products`, определяющего свойства `ProductName`, `ReorderLevel` и `UnitsInStock`.  
+ Модель данных, используемая поставщиком Entity Framework, представлена в виде XML в EDMX-файле. В данном случае атрибуты, определяющие специализированные каналы, добавляются к элементам `EntityType` и `Property`, представляющим типы сущностей и свойства в модели данных. Эти атрибуты настройки канала не определены в [ \[MC-CSDL\]: Формат](https://go.microsoft.com/fwlink/?LinkId=159072)файла определения концептуальной схемы, который используется поставщиком Entity Framework для определения модели данных. Поэтому атрибуты настройки канала должны быть объявлены в специальном пространстве имен схемы, определенном как `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Следующий фрагмент XML иллюстрирует применение атрибутов настройки канала к элементам `Property` типа сущности `Products`, определяющего свойства `ProductName`, `ReorderLevel` и `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

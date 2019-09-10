@@ -3,12 +3,12 @@ title: Как создание приложения ASP.NET Web Forms, подд�
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 45ad084013cbcafdf0d7c4ac3e0fd952305232c4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941293"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851557"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Как создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF
 ## <a name="applies-to"></a>Применение  
@@ -138,8 +138,8 @@ ms.locfileid: "69941293"
   
 1. Откройте файл **Default.aspx** в проекте **TestApp** и замените существующую разметку следующей:  
   
-    ```  
-    %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
+    ```aspx-csharp
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
   

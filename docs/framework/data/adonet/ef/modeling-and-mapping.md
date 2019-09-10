@@ -2,15 +2,15 @@
 title: Моделирование и сопоставление
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
-ms.openlocfilehash: 33064d35b7ac4c469df3ca6f0111cc84ef10eb08
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 133539ab1b6d6f2f0ab3f8deed5b22240c2bb07e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248499"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854395"
 ---
 # <a name="modeling-and-mapping"></a>Моделирование и сопоставление
-Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] позволяет определить концептуальную модель, модель хранения и сопоставление между ними, которые оптимальным образом подходят для приложения. Средства EDM в Visual Studio позволяют создавать. [EDMX-файл](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) из базы данных или графической модели, а затем обновляет этот файл при изменении базы данных или модели.  
+В Entity Framework можно определить концептуальную модель, модель хранения и сопоставление между двумя способами, которые лучше всего подходят для вашего приложения. Средства EDM в Visual Studio позволяют создавать. [EDMX-файл](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) из базы данных или графической модели, а затем обновляет этот файл при изменении базы данных или модели.  
   
  Начиная с версии 4.1 платформы Entity Framework модель можно также создавать программно с помощью шаблона разработки Code First. Шаблон разработки Code First имеет два различных сценария. В обоих случаях разработчик определяет модель, задавая в коде определения классов .NET Framework, а затем выборочно определяет дополнительные сопоставления или конфигурации с помощью заметок к данным или fluent API.  
   

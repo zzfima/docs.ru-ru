@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049899"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855709"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>Метод IMetaDataImport2::EnumGenericParams
-Получает перечислитель для массива маркеров параметра универсального типа, связанный с указанным TypeDef или MethodDef маркер.  
+Возвращает перечислитель для массива маркеров универсальных параметров, связанных с указанным маркером TypeDef или MethodDef.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -41,33 +41,33 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [вход, выход] Указатель на перечислитель.  
   
  `tk`  
- [in] Токен TypeDef или MethodDef, которого универсальных параметров, необходимо перечислить.  
+ окне Маркер TypeDef или MethodDef, универсальные параметры которого необходимо перечислить.  
   
  `rGenericParams`  
- [out] Массив универсальных параметров для перечисления.  
+ заполняет Массив универсальных параметров для перечисления.  
   
  `cMax`  
- [in] Максимальное число маркеров для размещения в `rGenericParams`.  
+ окне Запрошенное максимальное число токенов для размещения в `rGenericParams`.  
   
  `pcGenericParams`  
- [out] Возвращенное число маркеров помещаются в `rGenericParams`.  
+ заполняет Возвращенное число токенов, помещенных в `rGenericParams`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` успешно возвращен.|  
-|`S_FALSE`|`phEnum` не имеет члена элементов. В этом случае `pcGenericParams` имеет значение 0 (ноль).|  
+|`S_OK`|`EnumGenericParams`успешно возвращено.|  
+|`S_FALSE`|`phEnum`не содержит элементов Member. В этом случае `pcGenericParams` имеет значение 0 (ноль).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок.** COR. h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Библиотечная** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

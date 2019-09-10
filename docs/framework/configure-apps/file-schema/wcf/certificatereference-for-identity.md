@@ -2,18 +2,22 @@
 title: <certificateReference> для <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 49c731b2637c15e0b968d8c2523c51c8e138e7bf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926174"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849994"
 ---
 # <a name="certificatereference-for-identity"></a>\<> certificateReference для \<> удостоверений
 Задает параметры для проверки сертификата X.509. Клиент Secure Windows Communication Foundation (WCF), который подключается к конечной точке с этим удостоверением, проверяет, что утверждения, представленные сервером, содержат утверждение удостоверения, используемое для создания этого удостоверения.  
   
- \<> удостоверений  
-\<certificateReference >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> клиента**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> конечной точки**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> удостоверений**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certificateReference >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

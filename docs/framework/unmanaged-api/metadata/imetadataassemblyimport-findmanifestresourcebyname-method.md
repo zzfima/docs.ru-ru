@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf61da362251577acadb83915404eba7508b3099
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905071"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855954"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>Метод IMetaDataAssemblyImport::FindManifestResourceByName
 Возвращает указатель на ресурс манифеста с указанным именем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp
 HRESULT FindManifestResourceByName (  
     [in]  LPCWSTR                szName,   
     [out] mdManifestResource     *ptkManifestResource  
@@ -38,20 +38,20 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [in] Имя ресурса.  
+ окне Имя ресурса.  
   
  `ptkManifestResource`  
- [out] Массив, используемый для хранения `mdManifestResource` маркеров метаданных, каждый из которых представляет ресурса манифеста.  
+ заполняет Массив, используемый для хранения `mdManifestResource` маркеров метаданных, каждый из которых представляет ресурс манифеста.  
   
 ## <a name="remarks"></a>Примечания  
- `FindManifestResourceByName` Метод использует стандартные правила, чтобы позволить среда CLR для разрешения ссылок на.  
+ `FindManifestResourceByName` Метод использует стандартные правила, используемые средой CLR для разрешения ссылок.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок.** COR. h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Библиотечная** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

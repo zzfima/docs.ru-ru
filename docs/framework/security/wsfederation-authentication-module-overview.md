@@ -3,12 +3,12 @@ title: Обзор модуля аутентификации WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987696"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851514"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Обзор модуля аутентификации WSFederation
 Windows Identity Foundation (WIF) поддерживает федеративную проверку подлинности в приложениях ASP.NET с помощью модуля проверки подлинности WS-Federated (WS-FAM). В этом разделе объясняются принципы работы федеративной проверки подлинности и способы ее применения.  
@@ -67,7 +67,7 @@ Windows Identity Foundation (WIF) поддерживает федеративн�
   
 - Событие <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> создается, когда инфраструктура ASP.NET впервые вызывает метод <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> для одного из модулей приложения, производных от <xref:System.IdentityModel.Services.HttpModuleBase>. Этот метод обращается к статическому свойству <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>, что приводит к загрузке конфигурации из файла Web.config. Это событие создается только при первом обращении к свойству. Доступ к объекту <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>, который инициализируется на основе конфигурации, возможен посредством свойства <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> в обработчике событий. С помощью этого события можно изменить конфигурацию, прежде чем она будет применена к каким-либо модулям. Обработчик для этого события можно добавить в методе Application_Start:  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

@@ -2,18 +2,22 @@
 title: <discoveryClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-ms.openlocfilehash: 2783796166d56be3d4983ab09a60d62491699fe3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 929c5d170bfc27160e3e15b8bd2f9f26e0ed8975
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925861"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855410"
 ---
 # <a name="discoveryclientsettings"></a>\<Дисковериклиентсеттингс >
 Содержит параметры, необходимые приложению для участия в процессе обнаружения служб в качестве клиента.  
   
-\<системой. > ServiceModel  
-\<Стандардендпоинтс >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Стандардендпоинтс >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Динамицендпоинт >** ](dynamicendpoint.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Стандардендпоинт >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Дисковериклиентсеттингс >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

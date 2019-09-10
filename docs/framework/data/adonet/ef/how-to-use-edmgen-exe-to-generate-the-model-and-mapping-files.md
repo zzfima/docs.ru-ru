@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 04606e23cffd03dea956076a07bb6cf2fadb4c9c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251423"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854568"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
 В этом разделе показано, как с помощью средства «Генератор модели EDM» (EdmGen.exe) на основе базы данных School формируются следующие файлы:  
@@ -24,7 +24,7 @@ ms.locfileid: "70251423"
   
  Средство EdmGen.exe использует ключ /mode:FullGeneration для создания перечисленных выше файлов. Дополнительные сведения о командах EdmGen. exe см. в разделе [генератор EDM (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
- Если для создания файлов модели и сопоставления используется Программа EdmGen. exe, по-прежнему необходимо настроить проект Visual Studio для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Вручную настройте проект](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Entity Framework.  
+ Если для создания файлов модели и сопоставления используется Программа EdmGen. exe, по-прежнему необходимо настроить проект Visual Studio для использования Entity Framework. Дополнительные сведения см. в разделе [Практическое руководство. Вручную настройте проект](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Entity Framework.  
   
 > [!NOTE]
 > Концептуальная модель, созданная с помощью средства EdmGen.exe, включает все объекты базы данных. При необходимости создания концептуальной модели, включающей только определенные объекты, следует использовать мастер моделей EDM. Дополнительные сведения см. в разделе [Практическое руководство. Используйте мастер](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))EDM.  

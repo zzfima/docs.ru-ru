@@ -2,18 +2,18 @@
 title: Создание поставщика данных Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 6c5e6e2859b48db6c982862381d223a4c9deb2c5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 29aa8cb1c6b31d9ada6b01860d76bcf03d37416c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248192"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854159"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Создание поставщика данных Entity Framework
-В этом разделе описывается написание [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика для поддержки источника данных, отличного от SQL Server. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Включает поставщик, который поддерживает SQL Server.  
+В этом разделе описывается написание поставщика Entity Framework для поддержки источника данных, отличного от SQL Server. Entity Framework содержит поставщик, поддерживающий SQL Server.  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>Знакомство с моделью поставщика Entity Framework  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] не зависит от баз данных, написать поставщика для подключения к различным источникам данных можно при помощи модели поставщика ADO.NE.  
+ Entity Framework не зависит от базы данных, и вы можете написать поставщик с помощью модели поставщика ADO.NET для подключения к широкому набору источников данных.  
   
  Поставщик данных Entity Framework (созданный при помощи модели поставщика ADO.NET) выполняет следующие функции.  
   
@@ -21,9 +21,9 @@ ms.locfileid: "70248192"
   
 - Предоставляет функции данного поставщика.  
   
-- Создает команды определенного поставщика для поддержки запросов [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] в данном DbQueryCommandTree.  
+- Создает специальные команды поставщика для данного Дбкуерикоммандтри для поддержки запросов Entity Framework.  
   
-- Формирует команды обновления для определенного поставщика для поддержки обновлений через [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] в данном DbModificationCommandTree.  
+- Создает специфические для поставщика команды обновления для данного DbModificationCommandTree для поддержки обновлений с помощью Entity Framework.  
   
 - Предоставляет файлы сопоставления для определения схемы хранения для поддержки создания основанной на базе данных модели.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "70248192"
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](./media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>Пример  
- Пример[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика, который поддерживает источник данных, отличный от SQL Server, см. в [Entity Framework примере поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) .  
+ Пример поставщика Entity Framework, который поддерживает источник данных, отличный от SQL Server, см. в [Entity Framework примере поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) .  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Создание SQL](sql-generation.md)  

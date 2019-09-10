@@ -2,12 +2,12 @@
 title: Настройка служб WCF в коде
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 699549305ce8ca17480285e33570c01d00c7cb97
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948427"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855643"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде
 Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. WCF также позволяет настраивать службы в коде. В более ранних версиях WCF (4,0 и более ранних версий) Настройка служб в коде была непростой в <xref:System.ServiceModel.ServiceHost> собственных сценариях, класс позволял вам настраивать конечные точки и поведения до вызова ServiceHost. Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с .NET 4,5, WCF предоставляет более простой способ настройки автономных и размещенных в Интернете служб в коде.  
@@ -79,7 +79,7 @@ public class Service1 : IService1
   
  Параметры в разделе <`protocolMappings`> используются только в том случае, если конечные точки приложения не добавляются <xref:System.ServiceModel.ServiceConfiguration> в программный. При необходимости можно загрузить конфигурацию службы из файла конфигурации приложения по умолчанию, вызвав <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , а затем изменив параметры. Класс <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации. В следующем примере кода показано, как это реализовать.  
   
-```  
+```csharp
 public class Service1 : IService1   
 {   
     public void DoWork();   

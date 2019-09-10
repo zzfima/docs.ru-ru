@@ -2,12 +2,12 @@
 title: Создание службы долго выполняющегося рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040418"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856206"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Создание службы долго выполняющегося рабочего процесса
 
@@ -191,7 +191,7 @@ ms.locfileid: "70040418"
 
 5. Выполните построение решения и запустите приложение `OrderClient`. Клиент выведет на экран следующий текст.
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
@@ -201,7 +201,7 @@ ms.locfileid: "70040418"
 
 7. Нажмите клавишу ВВОД, чтобы отправить сообщение о добавлении товара службе рабочего процесса. Клиент выведет на экран следующий текст.
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

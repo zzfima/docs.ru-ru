@@ -2,12 +2,12 @@
 title: Известные проблемы SqlClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c0b7c32e00a0cc90367a559a41f5a7ab59a33a4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 18e3ad59af4014086bd475815011b6008bcb5052
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251395"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854548"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Известные проблемы SqlClient для Entity Framework
 В данном разделе описаны известные проблемы, связанные с поставщиком данных .NET Framework для SQL Server (SqlClient).  
@@ -43,7 +43,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Нацеливание на правильную версию SQL Server  
- Объект [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] предназначен для запроса Transact-SQL на основе версии SQL Server, указанной `ProviderManifestToken` в атрибуте элемента Schema в файле модели хранения (. SSDL). Данная версия может отличаться от фактической версии SQL Server, с которой в данный момент осуществлено соединение. Например, если используется SQL Server 2005, но `ProviderManifestToken` атрибут имеет значение 2008, то созданный запрос Transact-SQL может не выполняться на сервере. Например, запрос, который использует новые типы даты и времени, представленные в SQL Server 2008, не будет выполняться в предыдущих версиях SQL Server. Если используется SQL Server 2005, но `ProviderManifestToken` для атрибута задано значение 2000, то созданный запрос Transact-SQL может быть менее оптимизирован или может возникнуть исключение, сообщающее, что запрос не поддерживается. Дополнительные сведения см. в разделе «Операторы CROSS и OUTER APPLY», приведенном выше в данной теме.  
+ Entity Framework предназначен для запроса Transact-SQL на основе версии SQL Server, указанной в `ProviderManifestToken` атрибуте элемента Schema в файле модели хранения (. SSDL). Данная версия может отличаться от фактической версии SQL Server, с которой в данный момент осуществлено соединение. Например, если используется SQL Server 2005, но `ProviderManifestToken` атрибут имеет значение 2008, то созданный запрос Transact-SQL может не выполняться на сервере. Например, запрос, который использует новые типы даты и времени, представленные в SQL Server 2008, не будет выполняться в предыдущих версиях SQL Server. Если используется SQL Server 2005, но `ProviderManifestToken` для атрибута задано значение 2000, то созданный запрос Transact-SQL может быть менее оптимизирован или может возникнуть исключение, сообщающее, что запрос не поддерживается. Дополнительные сведения см. в разделе «Операторы CROSS и OUTER APPLY», приведенном выше в данной теме.  
   
  Некоторые варианты поведения базы данных зависят от уровня совместимости, установленного на базе данных. `ProviderManifestToken` Если атрибут имеет значение 2005, а версия SQL Server — 2005, но уровень совместимости базы данных имеет значение "80" (SQL Server 2000), то созданный Transact-SQL будет нацелен на SQL Server 2005, но может не выполняться должным образом из-за параметр уровня совместимости. Например, если имя столбца в списке ORDER BY совпадает с именем столбца в селекторе, то можно потерять данные об упорядочивании.  
   
@@ -57,7 +57,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Формируемые сервером значения идентификаторов GUID  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает формируемые сервером значения идентификаторов GUID, однако поставщик должен поддерживать возвращение формируемых сервером значений идентификаторов после вставки строк. Начиная с SQL Server 2005, можно вернуть созданный сервером тип GUID в базе данных SQL Server с помощью [предложения OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
+ Entity Framework поддерживает генерируемые сервером значения идентификаторов типа GUID, но поставщик должен поддерживать возврат сформированного сервером значения идентификатора после вставки строки. Начиная с SQL Server 2005, можно вернуть созданный сервером тип GUID в базе данных SQL Server с помощью [предложения OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>См. также
 

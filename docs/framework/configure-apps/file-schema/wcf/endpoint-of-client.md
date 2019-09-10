@@ -2,19 +2,20 @@
 title: <endpoint> из <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919101"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855320"
 ---
 # <a name="endpoint-of-client"></a>\<Конечная точка \<> клиента >
 Задает свойства контракта, привязки и адреса конечной точки канала, которая используется клиентами для подключения к конечным точкам службы на сервере.  
   
- \<системой. > ServiceModel  
-\<> клиента  
-\<> конечной точки  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> клиента**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> конечной точки**  
   
 ## <a name="syntax"></a>Синтаксис  
   

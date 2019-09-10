@@ -2,19 +2,20 @@
 title: <add> из <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926670"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850379"
 ---
 # <a name="add-of-protocolmapping"></a>\<Добавление > \<> протоколмаппинг
 Представляет сопоставление протокола по умолчанию между схемой транспортного протокола (например, HTTP, net. TCP, net. pipe и т. д.) и привязкой Windows Communication Foundation (WCF). При создании конечных точек по умолчанию во время выполнения WCF проверяет настроенные сопоставления и решает, какая привязка будет использоваться для конкретного адреса на основе.  
   
- \<> System. serviceModel  
-\<Протоколмаппинг >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Протоколмаппинг >** ](protocolmapping.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

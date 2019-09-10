@@ -2,18 +2,20 @@
 title: <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 04f5fb27a0da7e553ff3c0308f7fb2e2df2e0b20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dabf8845126705d082d080b643688ed62883f39
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788262"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854913"
 ---
 # <a name="udpannouncementendpoint"></a>\<udpAnnouncementEndpoint >
 Этот элемент конфигурации определяет стандартную конечную точку, используемую службами для отправки сообщений с объявлениями по привязке UDP. Имеет фиксированный контракт и поддерживает две версии обнаружения. Кроме того, она имеет фиксированную привязку UDP и значение адреса по умолчанию, как определено в спецификациях WS-Discovery (WS-Discovery от апреля 2005 или WS-Discovery версии 1.1). Можно задать многопоточный адрес, который будет использовать для отправки и получения сообщений объявлений.  
   
-\<system.ServiceModel>  
-\<standardEndpoints >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Стандардендпоинтс >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<udpAnnouncementEndpoint >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,13 +48,13 @@ ms.locfileid: "61788262"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<udpTransportSettings >](udptransportsettings.md)|Коллекция параметров, которые позволят настроить транспорт UDP для конечной точки UDP.|  
+|[\<Удптранспортсеттингс >](udptransportsettings.md)|Коллекция параметров, которые позволят настроить транспорт UDP для конечной точки UDP.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](standardendpoints.md)|Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными.|  
+|[\<Стандардендпоинтс >](standardendpoints.md)|Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными.|  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано прослушивание клиентом сообщений с объявлением по многоадресному протоколу UDP с адресом многоадресной рассылки по умолчанию, а также с указанным адресом многоадресной рассылки UDP.  

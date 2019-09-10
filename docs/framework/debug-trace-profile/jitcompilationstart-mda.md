@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80473e01581a372c193c4b816a37166b73d57824
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754275"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854145"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 Помощник по отладке управляемого кода (MDA) `jitCompilationStart` активируется, чтобы сообщить о том, что JIT-компилятор начал компиляцию функции.  
@@ -34,12 +34,12 @@ ms.locfileid: "61754275"
 ## <a name="output"></a>Вывод  
  Ниже приведен пример выходных данных. В этом случае видно, что в сборке Test метод m класса ns2.CO был скомпилирован посредством JIT-компилятора.  
   
-```  
+```output
 method name="Test!ns2.C0::m"  
 ```  
   
-## <a name="configuration"></a>Параметр Configuration  
- Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, что все методы возвратить значение атрибута имени для \*.  
+## <a name="configuration"></a>Конфигурация  
+ Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, чтобы все методы были переданы, задав для \*атрибута Name значение.  
   
 ```xml  
 <mdaConfig>  

@@ -2,19 +2,21 @@
 title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: a982fa87ab84725e36ee913f00200cd34f0b8f6f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 76b3cbf6b867a983c203141bcd901b2b7b4038d5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925578"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855180"
 ---
 # <a name="headers"></a>\<заголовки >
 Помимо базового универсального кода ресурса (URI) к конечной точке можно обратиться по одному или нескольким заголовкам SOAP. К сценариям, в которых это бывает удобно, относятся сценарии с посредниками протокола SOAP, в которых конечная точка требует, чтобы клиенты включали заголовки SOAP, нацеленные на посредники. Данный элемент конфигурации можно использовать для определения подобных пользовательских заголовков адресов. Записи в коллекции заголовков конечной точки являются пользовательскими элементами XML. Каждый элемент должен представлять собой XML-код правильного формата.  
   
- \<системой. > ServiceModel  
-\<> клиента  
-\<> конечной точки  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> клиента**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> конечной точки**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<заголовки >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

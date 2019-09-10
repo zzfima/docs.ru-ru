@@ -3,12 +3,12 @@ title: WIF и веб-фермы
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967190"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851521"
 ---
 # <a name="wif-and-web-farms"></a>WIF и веб-фермы
 Если вы используете Windows Identity Foundation (WIF) для защиты ресурсов приложения проверяющей стороны, развернутого в веб-ферме, необходимо выполнить определенные действия, чтобы платформа WIF могла обрабатывать токены от экземпляров этого приложения, работающих на разных компьютерах в ферме. Обработка включает в себя проверку подписей токенов сеансов, шифрование и расшифровку токенов сеансов, их кэширование, а также обнаружение повторно используемых маркеров безопасности.  
@@ -64,7 +64,7 @@ ms.locfileid: "69967190"
 ## <a name="the-wcf-caching-service"></a>Служба кэширования WCF  
  Приведенный ниже интерфейс определяет контракт между службой кэширования WCF и клиентом WCF, который используется приложением проверяющей стороны для взаимодействия с этой службой. Он предоставляет методы класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> как операции службы.  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  В приведенном ниже коде показана реализация службы кэширования WCF. В этом примере используется кэш токенов сеансов в памяти, реализуемый по умолчанию платформой WIF. В качестве альтернативы можно использовать устойчивый кэш на основе базы данных. `ISessionSecurityTokenCacheService` определяет приведенный выше интерфейс. В этом примере для краткости показаны не все методы, требуемые для реализации интерфейса.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  Этот класс переопределяет метод <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> для получения конечной точки службы из пользовательского дочернего элемента `<cacheServiceAddress>` элемента `<sessionSecurityTokenCache>`. С помощью этой конечной точки инициализируется канал `ISessionSecurityTokenCacheService`, по которому класс может взаимодействовать со службой.  В этом примере для краткости показаны не все методы, требуемые для реализации класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>.  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

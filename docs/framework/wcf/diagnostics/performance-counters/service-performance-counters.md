@@ -2,19 +2,17 @@
 title: Счетчики производительности службы
 ms.date: 03/30/2017
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
-ms.openlocfilehash: 18a9e6336b70341f5da9c7b73cbd3f9bd3f958c7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4ce0efbeb0a1d6f2409bb976102b8ec8821d5cdc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044271"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848994"
 ---
 # <a name="service-performance-counters"></a>Счетчики производительности службы
 Счетчики производительности службы измеряют поведение службы в целом, их можно использовать для диагностики производительности всей службы. При просмотре с помощью системного монитора (Perfmon.exe) счетчики находятся под объектом производительности `ServiceModelService 4.0.0.0`. Экземпляры именуются по следующей схеме:  
   
-```  
-ServiceName@ServiceBaseAddress  
-```  
+`ServiceName@ServiceBaseAddress`
   
 > [!CAUTION]
 > Длина имени экземпляра счетчика производительности ограничена. Если имя экземпляра счетчика Windows Communication Foundation (WCF) превышает максимальную длину, WCF заменяет часть имени экземпляра на хэш-значение.  

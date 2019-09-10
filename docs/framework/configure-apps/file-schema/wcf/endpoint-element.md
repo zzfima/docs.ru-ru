@@ -2,19 +2,21 @@
 title: Элемент <endpoint>
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925824"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855379"
 ---
 # <a name="endpoint-element"></a>\<Элемент > конечной точки
 Задает свойства привязки, контракта и адреса для конечной точки службы, которая используется для предоставления доступа к службам.  
   
- \<системой. > ServiceModel  
-\<> службы  
-\<> конечной точки  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<службы >** ](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> службы**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> конечной точки**  
   
 ## <a name="syntax"></a>Синтаксис  
   

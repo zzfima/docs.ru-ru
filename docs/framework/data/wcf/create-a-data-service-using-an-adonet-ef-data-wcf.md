@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791079"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854123"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с помощью источника данных Entity Framework ADO.NET (WCF Data Services)
 
-WCF Data Services предоставляет данные сущности в качестве службы данных. Эти данные сущности предоставляются ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , если источником данных является реляционная база данных. В этом разделе показано, как создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]модель данных на основе в веб-приложении Visual Studio, основанном на существующей базе данных, и использовать эту модель данных для создания новой службы данных.
+WCF Data Services предоставляет данные сущности в качестве службы данных. Эти данные сущности предоставляются платформой ADO. Нетентити, если источником данных является реляционная база данных. Данный раздел иллюстрирует создание модели данных на основе Entity Framework в веб-приложении Visual Studio, основанном на существующей базе данных, и использование этой модели данных для создания новой службы данных.
 
-Также предоставляет средство командной строки, которое может [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] создавать модель за пределами проекта Visual Studio. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Дополнительные сведения см. в разделе [Практическое руководство. Используйте EdmGen. exe для создания файлов](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)модели и сопоставления.
+Среда Entity Framework предоставляет также программу командной строки, формирующую модель Entity Framework вне проекта Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Используйте EdmGen. exe для создания файлов](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)модели и сопоставления.
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Добавление модели Entity Framework на основе существующей базы данных в существующее веб-приложение
 
@@ -45,7 +45,7 @@ WCF Data Services предоставляет данные сущности в к
 
 9. Нажмите кнопку **Готово** , чтобы завершить работу мастера.
 
-     При этом создается модель данных по умолчанию на основе указанной базы данных. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] позволяет настроить модель данных. Дополнительные сведения см. в разделе [EDM Tools Tasks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     При этом создается модель данных по умолчанию на основе указанной базы данных. Entity Framework позволяет настроить модель данных. Дополнительные сведения см. в разделе [EDM Tools Tasks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Создание службы данных с использованием новой модели данных
 

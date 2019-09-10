@@ -2,12 +2,12 @@
 title: Отличия Entity SQL от Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250864"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854471"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Отличия Entity SQL от Transact-SQL
 В этом разделе описываются различия между [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и Transact-SQL.  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не предоставляет (пока) поддержку функций аналитики.  
   
  Встроенные функции, операторы  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]поддерживает подмножество встроенных функций и операторов Transact-SQL. Вероятно, эти операторы и функции будут реализованы ведущими поставщиками хранилищ. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]использует зависящие от хранилища функции, объявленные в манифесте поставщика. Кроме того, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] позволяет объявлять встроенные и определяемые пользователем существующие функции хранилища для [!INCLUDE[esql](../../../../../../includes/esql-md.md)] использования.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]поддерживает подмножество встроенных функций и операторов Transact-SQL. Вероятно, эти операторы и функции будут реализованы ведущими поставщиками хранилищ. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]использует зависящие от хранилища функции, объявленные в манифесте поставщика. Кроме того, Entity Framework позволяет объявлять встроенные и определяемые пользователем существующие функции хранилища для [!INCLUDE[esql](../../../../../../includes/esql-md.md)] использования.  
   
  Подсказки  
  Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не предоставляет механизм подсказок в запросах.  
