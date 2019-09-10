@@ -1,17 +1,17 @@
 ---
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105514"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374013"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
-Для языка C# представлено множество улучшений, которые вы уже можете опробовать. 
+Для языка C# представлено множество улучшений, которые вы уже можете опробовать.
 
 - [Члены только для чтения](#readonly-members)
 - [Члены интерфейса по умолчанию](#default-interface-members)
@@ -26,6 +26,8 @@ ms.locfileid: "70105514"
 - [Ссылочные типы, допускающие значение NULL](#nullable-reference-types)
 - [Асинхронные потоки](#asynchronous-streams).
 - [Индексы и диапазоны](#indices-and-ranges).
+- [Неуправляемые сконструированные типы](#unmanaged-constructed-types)
+- [Улучшение интерполированных строк verbatim](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Эта статья последний раз обновлялась для предварительной версии 5 C# 8.0.
@@ -376,7 +378,8 @@ await foreach (var number in GenerateSequence())
 
 Диапазоны и индексы обеспечивают лаконичный синтаксис для указания поддиапазонов массива: <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>.
 
-Поддержка языков зависит от двух новых типов и двух новых операторов.
+Поддержка языков опирается на два новых типа и два новых оператора:
+
 - <xref:System.Index?displayProperty=nameWithType> представляет индекс в последовательности.
 - Оператор `^`, который указывает, что индекс указан относительно конца последовательности.
 - <xref:System.Range?displayProperty=nameWithType> представляет вложенный диапазон последовательности.
@@ -444,3 +447,34 @@ var text = words[phrase];
 ```
 
 Вы можете изучить сведения об индексах и диапазонах адресов в руководстве [Индексы и диапазоны](../tutorials/ranges-indexes.md).
+
+## <a name="unmanaged-constructed-types"></a>Неуправляемые сконструированные типы
+
+В C# 7.3 и более ранних версиях сконструированный тип (тип, содержащий по крайней мере один аргумент типа) не может быть [неуправляемым типом](../language-reference/builtin-types/unmanaged-types.md). Начиная с C# 8.0, сконструированный тип значения является неуправляемым, если он содержит поля исключительно неуправляемых типов.
+
+Например, при наличии следующего определения универсального типа `Coords<T>`:
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+тип `Coords<int>` является неуправляемым в C# 8.0 и более поздних версиях. Как и для любого неуправляемого типа, вы можете создать указатель на переменную этого типа или [выделить блок памяти в стеке](../language-reference/operators/stackalloc.md) для экземпляров этого типа:
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+Дополнительные сведения см. в разделе [Неуправляемые типы](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Улучшение интерполированных строк verbatim
+
+Порядок маркеров `$` и `@` в [интерполированных ](../language-reference/tokens/interpolated.md) строках verbatim может быть любым: и `$@"..."`, и `@$"..."` являются допустимыми интерполированными строками verbatim. В более ранних версиях C# маркер`$` должен располагаться перед маркером `@`.

@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037833"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394285"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>Новые возможности .NET Core 3.0 (предварительная версия 8)
+# <a name="whats-new-in-net-core-30-preview-9"></a>Новые возможности .NET Core 3.0 (предварительная версия 9)
 
-В этой статье описываются новые возможности .NET Core 3.0 (вплоть до предварительной версии 8). Одно из основных усовершенствований — это поддержка классических приложений Windows (только Windows). С помощью пакета SDK для .NET Core 3.0 под названием Windows Desktop можно переносить приложения Windows Forms и Windows Presentation Foundation (WPF). Следует уточнить, что компонент Windows Desktop поддерживается и включен только в Windows. Дополнительные сведения см. далее в этой статье, в разделе [Рабочий стол Windows](#windows-desktop).
+В этой статье описываются новые возможности .NET Core 3.0 (вплоть до предварительной версии 9). Одно из основных усовершенствований — это поддержка классических приложений Windows (только Windows). С помощью пакета SDK для .NET Core 3.0 под названием Windows Desktop можно переносить приложения Windows Forms и Windows Presentation Foundation (WPF). Следует уточнить, что компонент Windows Desktop поддерживается и включен только в Windows. Дополнительные сведения см. далее в этой статье, в разделе [Рабочий стол Windows](#windows-desktop).
 
-В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать [последний выпуск Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) или Visual Studio Code с расширением OmniSharp.
+В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется [использовать Visual Studio 2019 16.3 (предварительная версия 3)](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio для Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) или [Visual Studio Code](https://code.visualstudio.com/) с **расширением C#**.
 
-[Скачайте .NET Core 3.0 (предварительная версия 8) и начните работу](https://aka.ms/netcore3download) прямо сейчас в Windows, macOS или Linux.
+[Скачайте .NET Core 3.0 (предварительная версия 9) и начните работу](https://aka.ms/netcore3download) прямо сейчас в Windows, macOS или Linux.
 
 Для получения дополнительных сведений о каждой предварительной версии см. следующие объявления:
 
+- [Объявление о .NET Core 3.0 (предварительная версия 9)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [Объявление о .NET Core 3.0 (предварительная версия 8)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Объявление о .NET Core 3.0 (предварительная версия 7)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Объявление о .NET Core 3.0 (предварительная версия 6)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
@@ -35,13 +36,13 @@ ms.locfileid: "70037833"
 
 ## <a name="production-supported-preview"></a>Предварительная версия с поддержкой рабочей среды
 
-Предварительная версия .NET Core 8 считается готовой к эксплуатации корпорацией Майкрософт и полностью поддерживается. Начиная с версии 7 в выпусках основное внимание уделяется совершенствованию .NET Core 3.0 вместо добавления новых функций. Дополнительные сведения об изменениях в предварительной версии 8 см. в [объявлении о предварительной версии 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/).
+Предварительная версия .NET Core 9 считается корпорацией Майкрософт готовой к эксплуатации и полностью поддерживается. Начиная с версии 7 в выпусках основное внимание уделяется совершенствованию .NET Core 3.0 вместо добавления новых функций. Дополнительные сведения об изменениях в предварительной версии 9 см. в [объявлении о предварительной версии 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
 
-Если вы используете предыдущую предварительную версию, необходимо перейти на предварительную версию 8, чтобы продолжать получать поддержку Go Live.
+Если вы используете предыдущую предварительную версию, необходимо перейти на предварительную версию 9, чтобы продолжать получать поддержку Go Live.
 
 ## <a name="net-core-sdk-windows-installer"></a>Установщик пакета SDK Windows для .NET Core
 
-Начиная с .NET Core 3.0, установщик MSI для Windows был изменен. Установщики пакетов SDK теперь обновляют дополнительные пакеты функций SDK на месте. Пакеты функций определяют *сотни* в обозначении *исправления* в номере версии. Например, в версиях **3.0._101_** и **3.0._201_** пакеты функций различаются, а в версиях **3.0._101_** и **3.0._199_**  — одинаковы. При установке пакета SDK для .NET Core **3.0._101_** пакет SDK для .NET Core **3.0._100_** , если он есть на компьютере, удаляется. Когда на тот же компьютер устанавливается пакет SDK для .NET Core **3.0._200_** , пакет SDK для .NET Core **3.0._101_** удаляться не будет.
+Начиная с .NET Core 3.0, установщик MSI для Windows был изменен. Установщики пакетов SDK теперь обновляют дополнительные пакеты функций SDK на месте. Пакеты функций определяют *сотни* в обозначении *исправления* в номере версии. Например, в версиях **3.0._101_** и **3.0._201_** пакеты функций различаются, а в версиях **3.0._101_** и **3.0._199_**  — одинаковы. При установке пакета SDK для .NET Core **3.0._101_** пакет SDK для .NET Core **3.0._100_**, если он есть на компьютере, удаляется. Когда на тот же компьютер устанавливается пакет SDK для .NET Core **3.0._200_**, пакет SDK для .NET Core **3.0._101_** удаляться не будет.
 
 Дополнительные сведения об управлении версиями см. в разделе [Общие сведения об управлении версиями в .NET Core](../versions/index.md).
 

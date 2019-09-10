@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105452"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373998"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Работа с данными в приложениях ASP.NET Core
 
@@ -76,9 +76,9 @@ services.AddDbContext<CatalogContext>(options =>
 
 Чтобы просмотреть выполнение запросов EF Core, настройте ведение журналов как минимум на уровне информационных сообщений, как показано на рис. 8-1.
 
-![](./media/image8-1.png)
+![Ведение журналов запросов EF Core на консоль](./media/image8-1.png)
 
-Рис. 8-1. Вывод журнала запросов EF Core на консоль
+**Рис. 8-1**. Ведение журналов запросов EF Core на консоль
 
 ### <a name="fetching-and-storing-data"></a>Получение и сохранение данных
 

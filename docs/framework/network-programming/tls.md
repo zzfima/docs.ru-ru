@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038462"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777513"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -66,7 +66,9 @@ ms.locfileid: "69038462"
 
 ### <a name="for-http-networking"></a>Для сетевых подключений по протоколу HTTP
 
-<xref:System.Net.ServicePointManager> (для .NET Framework 4.7 и более поздних версий): по умолчанию операционная система выбирает подходящий протокол безопасности и его версию. Чтобы получить подходящую для ОС версию, по возможности не устанавливайте значение для свойства <xref:System.Net.ServicePointManager.SecurityProtocol>. В противном случае задайте <xref:System.Net.SecurityProtocolType.SystemDefault>.
+<xref:System.Net.ServicePointManager>, используя .NET Framework 4.7 и более поздних версий, будет использоваться протокол безопасности по умолчанию, настроенный в ОС. Чтобы получить выбор ОС по умолчанию, если это возможно, не устанавливайте значение для свойства <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType>, которое по умолчанию равно <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>.
+
+Поскольку параметр <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> предполагает <xref:System.Net.ServicePointManager> использование протокола безопасности по умолчанию, настроенного операционной системой, ваше приложение может работать по-разному в зависимости от ОС, в которой оно запущено. Например, Windows 7 SP1 использует протокол TLS 1.0, а Windows 8 и Windows 10 используют протокол TLS 1.2.
 
 Остальная часть этой статьи не актуальна, если для сетевых подключений по протоколу HTTP используется целевая версия .NET Framework 4.7 или более поздняя версия.
 

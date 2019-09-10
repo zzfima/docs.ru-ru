@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107290"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799252"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -28,7 +28,7 @@ ms.locfileid: "70107290"
 - приложение в настоящий момент использует среду .NET Framework (мы рекомендуем расширять приложения, а не переносить их в другую среду);
 - приложение использует сторонние библиотеки .NET или пакеты NuGet, недоступные для .NET Core;
 - приложение использует технологии .NET, недоступные для .NET Core;
-- приложение использует платформу, не поддерживающую .NET Core.
+- приложение использует платформу, не поддерживающую .NET Core. Windows, macOS, и Linux поддержка .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Случаи использования .NET Core
 
@@ -108,6 +108,6 @@ ms.locfileid: "70107290"
 - [Целевые платформы](frameworks.md)
 - [Руководство по .NET Core](../core/index.md)
 - [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)
-- [Общие сведения о .NET и Docker](../core/docker/intro-net-docker.md)
+- [Общие сведения о .NET и Docker](../core/docker/introduction.md)
 - [Общие сведения о компонентах .NET](components.md)
 - [Микрослужбы .NET: архитектура контейнерных приложений .NET](../architecture/microservices/index.md)

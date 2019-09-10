@@ -7,19 +7,19 @@ author:
 ms.author:
 - MICROSOFT ALIAS OF INTERNAL OWNER
 ms.date:
-- CREATION/UPDATE DATE - mm/dd/yyyy
+- CREATION/UPDATE DATE - MM/dd/yyyy
 ms.topic:
 - TOPIC TYPE
 ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106911"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254016"
 ---
 # <a name="metadata-and-markdown-template"></a>Шаблон метаданных и разметки Markdown
 
@@ -70,10 +70,7 @@ ms.locfileid: "70106911"
 
 ## <a name="headings"></a>Заголовки
 
-Прописные буквы следует использовать как в предложениях. Всегда начинайте с прописной буквы:
-
-- первое слово заголовка;
-- Слово после двоеточия в заголовке или названии (например, How to: Sort an array (Практическое руководство. Сортировка массива).
+Прописные буквы следует использовать как в предложениях. Первое слово заголовка всегда должно начинаться с прописной буквы, но не начинайте с него слово, идущее после двоеточия в заголовке или названии (например, "How to: sort an array").
 
 Заголовки следует оформлять в стиле atx, то есть использовать для указания заголовка 1–6 символов решетки (#) в начале строки, что соответствует уровням заголовков HTML с H1 по H6. Выше приведены примеры заголовков первого и второго уровней.
 

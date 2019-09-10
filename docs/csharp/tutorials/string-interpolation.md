@@ -2,13 +2,13 @@
 title: Интерполяция строк в C#
 description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251030"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252929"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк на C\#
 
@@ -26,7 +26,7 @@ ms.locfileid: "66251030"
 
 Как показано в примере, можно включить выражение в интерполированную строку, заключив его в фигурные скобки:
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ ms.locfileid: "66251030"
 
 Задайте строку формата, которая поддерживается типом результата выражения, указав ее после выражения интерполяции через двоеточие:
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ ms.locfileid: "66251030"
 
 Задайте минимальную ширину поля и выравнивание форматированного результата выражения, указав константное выражение после выражения интерполяции через запятую:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ ms.locfileid: "66251030"
 
 Если вам нужно задать и выравнивание, и строку формата, начните с компонента выравнивания:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ ms.locfileid: "66251030"
 
 Интерполированные строки поддерживают все escape-последовательности, которые могут использоваться в обычных строковых литералах. Дополнительные сведения см. в статье [Escape-последовательности строки](../programming-guide/strings/index.md#string-escape-sequences).
 
-Для литеральной интерпретации escape-последовательности используйте строковый литерал [verbatim](../language-reference/tokens/verbatim.md). В интерполированных строках verbatim используется символ `$`, за которым следует символ `@`.
+Для литеральной интерпретации escape-последовательности используйте строковый литерал [verbatim](../language-reference/tokens/verbatim.md). Интерполированная строка verbatim начинается с символа `$`, за которым следует символ `@`. Начиная с C# 8.0 маркеры `$` и `@` можно использовать в любом порядке: `$@"..."` и `@$"..."` являются допустимыми интерполированными строками verbatim.
 
 В строке результатов указывайте двойную фигурную скобку "{{" или "}}". Дополнительные сведения см. в разделе [escape-скобки](../../standard/base-types/composite-formatting.md#escaping-braces) в статье [Составное форматирование](../../standard/base-types/composite-formatting.md).
 

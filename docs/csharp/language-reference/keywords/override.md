@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: cedce26373c49d33ee17602b621f71ef6732d145
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394234"
 ---
 # <a name="override-c-reference"></a>override (Справочник по C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "67401546"
 
 ## <a name="example"></a>Пример
 
-В этом примере класс `Square` должен предоставить переопределенную реализацию `Area`, так как `Area` является унаследованным от абстрактного класса `ShapesClass`.
+В этом примере класс `Square` должен предоставить переопределенную реализацию `GetArea`, так как `GetArea` является унаследованным от абстрактного класса `Shape`:
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 

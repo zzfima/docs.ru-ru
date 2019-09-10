@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675151"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374051"
 ---
 # <a name="development-process-for-azure"></a>Процесс разработки для Azure
 
@@ -28,7 +28,7 @@ ms.locfileid: "68675151"
 
 **Visual Studio 2017.** При работе с *Visual Studio 2017* вы можете создавать приложения ASP.NET Core благодаря тому, что у вас уже есть установленная рабочая нагрузка *кроссплатформенной разработки .NET Core*. На рис. 10-1 показана соответствующая рабочая нагрузка в диалоговом окне установки Visual Studio 2017.
 
-![](./media/image10-1.png)
+![Установка рабочей нагрузки .NET Core в Visual Studio 2017](./media/image10-1.png)
 
 **Рис. 10-1.** Установка рабочей нагрузки .NET Core в Visual Studio 2017.
 

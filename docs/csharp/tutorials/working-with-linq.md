@@ -3,12 +3,12 @@ title: Работа с LINQ
 description: В этом руководстве мы научим вас создавать последовательности с помощью LINQ, создавать методы для использования в запросах LINQ, а также различать упреждающее и отложенное вычисление.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587176"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785864"
 ---
 # <a name="working-with-linq"></a>Работа с LINQ
 
@@ -30,7 +30,7 @@ ms.locfileid: "69587176"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [.NET Core](https://www.microsoft.com/net/core). Это приложение можно запустить в ОС Windows, Ubuntu Linux, OS X или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
+Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [Загрузка.NET Core](https://dotnet.microsoft.com/download). Это приложение можно запустить в ОС Windows, Ubuntu Linux, OS X или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
 
 ## <a name="create-the-application"></a>Создание приложения
 
