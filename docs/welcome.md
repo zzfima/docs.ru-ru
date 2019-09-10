@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/06/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8407bedc6b7b9e5e3263b37747050eba82eea653
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "68952247"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855478"
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
@@ -68,4 +68,4 @@ ms.locfileid: "68952247"
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-Вы можете присоединиться к активным участникам [сообщества .NET](https://www.microsoft.com/net/community), чтобы узнать новости или обратиться за помощью.
+Вы можете присоединиться к активным участникам [сообщества .NET](https://dotnet.microsoft.com/platform/community), чтобы узнать новости или обратиться за помощью.

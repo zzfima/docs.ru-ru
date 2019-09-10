@@ -2,16 +2,16 @@
 title: Выбор между .NET Core и .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор между .NET Core и .NET Framework для контейнеров Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 771d23cf4610e5778f0a144386754ce10d6ae144
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b01aaf25f4071e8e4a07905a12ec9dd0d89a738d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295219"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849272"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Выбор между .NET Core и .NET Framework для контейнеров Docker
 
-Серверные контейнерные приложения Docker можно разрабатывать на двух поддерживаемых платформах .NET: [.NET Framework и .NET Core](https://www.microsoft.com/net/download). В них используется множество одинаковых компонентов платформы .NET, а код можно использовать как в одной среде, так и в другой. Но между этими двумя платформами также существуют и фундаментальные различия. Поэтому ваш выбор будет зависеть от поставленной задачи. В этом разделе приводятся рекомендации по выбору каждой из платформ.
+Серверные контейнерные приложения Docker можно разрабатывать на двух поддерживаемых платформах .NET: [.NET Framework и .NET Core](https://dotnet.microsoft.com/download). В них используется множество одинаковых компонентов платформы .NET, а код можно использовать как в одной среде, так и в другой. Но между этими двумя платформами также существуют и фундаментальные различия. Поэтому ваш выбор будет зависеть от поставленной задачи. В этом разделе приводятся рекомендации по выбору каждой из платформ.
 
 >[!div class="step-by-step"]
 >[Назад](../container-docker-introduction/docker-containers-images-registries.md)
