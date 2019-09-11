@@ -2,28 +2,29 @@
 title: <bookmarkResumptionQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: ee8457645a0b54e21ef27c2891ebea97d6cc547b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 36d169b78e78692c7b45c75d5d375bddbba1c66f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926360"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850103"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a><span data-ttu-id="7d695-102">\<Букмаркресумптионкуери > WCF</span><span class="sxs-lookup"><span data-stu-id="7d695-102">\<bookmarkResumptionQuery> of WCF</span></span>
+# <a name="bookmarkresumptionquery-of-wcf"></a><span data-ttu-id="11210-102">\<Букмаркресумптионкуери > WCF</span><span class="sxs-lookup"><span data-stu-id="11210-102">\<bookmarkResumptionQuery> of WCF</span></span>
 
-<span data-ttu-id="7d695-103">Представляет запрос, используемый для отслеживания возобновления закладки в экземпляре рабочего потока.</span><span class="sxs-lookup"><span data-stu-id="7d695-103">Represents a query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="7d695-104">Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.</span><span class="sxs-lookup"><span data-stu-id="7d695-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
+<span data-ttu-id="11210-103">Представляет запрос, используемый для отслеживания возобновления закладки в экземпляре рабочего потока.</span><span class="sxs-lookup"><span data-stu-id="11210-103">Represents a query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="11210-104">Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.</span><span class="sxs-lookup"><span data-stu-id="11210-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
   
-<span data-ttu-id="7d695-105">Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .</span><span class="sxs-lookup"><span data-stu-id="7d695-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>
+<span data-ttu-id="11210-105">Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .</span><span class="sxs-lookup"><span data-stu-id="11210-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>
   
-<span data-ttu-id="7d695-106">\<> System. serviceModel</span><span class="sxs-lookup"><span data-stu-id="7d695-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="7d695-107">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="7d695-107">\<tracking></span></span>  
-<span data-ttu-id="7d695-108">\<Профили ></span><span class="sxs-lookup"><span data-stu-id="7d695-108">\<profiles></span></span>  
-<span data-ttu-id="7d695-109">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="7d695-109">\<trackingProfile></span></span>  
-<span data-ttu-id="7d695-110">\<> рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="7d695-110">\<workflow></span></span>  
-<span data-ttu-id="7d695-111">\<Букмаркресумптионкуериес ></span><span class="sxs-lookup"><span data-stu-id="7d695-111">\<bookmarkResumptionQueries></span></span>  
-<span data-ttu-id="7d695-112">\<Букмаркресумптионкуери ></span><span class="sxs-lookup"><span data-stu-id="7d695-112">\<bookmarkResumptionQuery></span></span>  
+<span data-ttu-id="11210-106">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="11210-106">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="11210-107">&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="11210-107">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="11210-108">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Отслеживание >** ](tracking-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="11210-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)</span></span>\
+<span data-ttu-id="11210-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Профили >** </span><span class="sxs-lookup"><span data-stu-id="11210-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**</span></span>\
+<span data-ttu-id="11210-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="11210-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)</span></span>\
+<span data-ttu-id="11210-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> рабочего процесса**](workflow-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="11210-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)</span></span>\
+<span data-ttu-id="11210-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Букмаркресумптионкуериес >** ](bookmarkresumptionqueries-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="11210-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bookmarkResumptionQueries>**](bookmarkresumptionqueries-of-wcf.md)</span></span>\
+<span data-ttu-id="11210-113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Букмаркресумптионкуери >**</span><span class="sxs-lookup"><span data-stu-id="11210-113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bookmarkResumptionQuery>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d695-113">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7d695-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11210-114">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="11210-114">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -39,29 +40,29 @@ ms.locfileid: "69926360"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7d695-114">Элементы и атрибуты</span><span class="sxs-lookup"><span data-stu-id="7d695-114">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="11210-115">Элементы и атрибуты</span><span class="sxs-lookup"><span data-stu-id="11210-115">Attributes and elements</span></span>
 
-<span data-ttu-id="7d695-115">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7d695-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="11210-116">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="11210-116">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7d695-116">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7d695-116">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="11210-117">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="11210-117">Attributes</span></span>  
   
-|<span data-ttu-id="7d695-117">Атрибут</span><span class="sxs-lookup"><span data-stu-id="7d695-117">Attribute</span></span>|<span data-ttu-id="7d695-118">Описание</span><span class="sxs-lookup"><span data-stu-id="7d695-118">Description</span></span>|  
+|<span data-ttu-id="11210-118">Атрибут</span><span class="sxs-lookup"><span data-stu-id="11210-118">Attribute</span></span>|<span data-ttu-id="11210-119">Описание</span><span class="sxs-lookup"><span data-stu-id="11210-119">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="7d695-119">Строка, задающая имя записи закладки, которое используется для подписки.</span><span class="sxs-lookup"><span data-stu-id="7d695-119">A string that specifies the name of the bookmark record to subscribe to.</span></span>|  
+|`name`|<span data-ttu-id="11210-120">Строка, задающая имя записи закладки, которое используется для подписки.</span><span class="sxs-lookup"><span data-stu-id="11210-120">A string that specifies the name of the bookmark record to subscribe to.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7d695-120">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7d695-120">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="11210-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="11210-121">Child elements</span></span>
 
-<span data-ttu-id="7d695-121">Нет.</span><span class="sxs-lookup"><span data-stu-id="7d695-121">None.</span></span>
+<span data-ttu-id="11210-122">Нет.</span><span class="sxs-lookup"><span data-stu-id="11210-122">None.</span></span>
   
-### <a name="parent-elements"></a><span data-ttu-id="7d695-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7d695-122">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="11210-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="11210-123">Parent elements</span></span>  
   
-|<span data-ttu-id="7d695-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="7d695-123">Element</span></span>|<span data-ttu-id="7d695-124">Описание</span><span class="sxs-lookup"><span data-stu-id="7d695-124">Description</span></span>|  
+|<span data-ttu-id="11210-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="11210-124">Element</span></span>|<span data-ttu-id="11210-125">Описание</span><span class="sxs-lookup"><span data-stu-id="11210-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7d695-125">\<Букмаркресумптионкуериес ></span><span class="sxs-lookup"><span data-stu-id="7d695-125">\<bookmarkResumptionQueries></span></span>](bookmarkresumptionqueries-of-wcf.md)|<span data-ttu-id="7d695-126">Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="7d695-126">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span>|  
+|[<span data-ttu-id="11210-126">\<Букмаркресумптионкуериес ></span><span class="sxs-lookup"><span data-stu-id="11210-126">\<bookmarkResumptionQueries></span></span>](bookmarkresumptionqueries-of-wcf.md)|<span data-ttu-id="11210-127">Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="11210-127">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="7d695-127">См. также</span><span class="sxs-lookup"><span data-stu-id="7d695-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11210-128">См. также</span><span class="sxs-lookup"><span data-stu-id="11210-128">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="7d695-128">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="7d695-128">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="7d695-129">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="7d695-129">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="11210-129">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="11210-129">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="11210-130">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="11210-130">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f6ae812b64080a2c4d236a2be02ad81c4a11b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993022"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855539"
 ---
-# <a name="ihostsecuritycontextcapture-method"></a><span data-ttu-id="4066a-102">Метод IHostSecurityContext::Capture</span><span class="sxs-lookup"><span data-stu-id="4066a-102">IHostSecurityContext::Capture Method</span></span>
-<span data-ttu-id="4066a-103">Возвращает точную копию [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) экземпляр, возвращаемый из вызова [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span><span class="sxs-lookup"><span data-stu-id="4066a-103">Gets a clone of the [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>  
+# <a name="ihostsecuritycontextcapture-method"></a><span data-ttu-id="6a62e-102">Метод IHostSecurityContext::Capture</span><span class="sxs-lookup"><span data-stu-id="6a62e-102">IHostSecurityContext::Capture Method</span></span>
+<span data-ttu-id="6a62e-103">Возвращает клон экземпляра [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) , возвращенный из вызова [IHostSecurityManager:: getsecuritycontext-](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span><span class="sxs-lookup"><span data-stu-id="6a62e-103">Gets a clone of the [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4066a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4066a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a62e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6a62e-104">Syntax</span></span>  
   
-```  
+```cpp
 HRESULT Capture (  
     [out] IHostSecurityContext** ppClonedContext  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4066a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4066a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6a62e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6a62e-105">Parameters</span></span>  
  `ppClonedContext`  
- <span data-ttu-id="4066a-106">[out] Указатель на адрес клон `IHostSecurityContext` объекта, которые должны отслеживаться.</span><span class="sxs-lookup"><span data-stu-id="4066a-106">[out] A pointer to the address of a clone of the `IHostSecurityContext` object to be captured.</span></span>  
+ <span data-ttu-id="6a62e-106">заполняет Указатель на адрес клона `IHostSecurityContext` объекта, который необходимо записать.</span><span class="sxs-lookup"><span data-stu-id="6a62e-106">[out] A pointer to the address of a clone of the `IHostSecurityContext` object to be captured.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4066a-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4066a-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6a62e-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6a62e-107">Return Value</span></span>  
   
-|<span data-ttu-id="4066a-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4066a-108">HRESULT</span></span>|<span data-ttu-id="4066a-109">Описание</span><span class="sxs-lookup"><span data-stu-id="4066a-109">Description</span></span>|  
+|<span data-ttu-id="6a62e-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6a62e-108">HRESULT</span></span>|<span data-ttu-id="6a62e-109">Описание</span><span class="sxs-lookup"><span data-stu-id="6a62e-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4066a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="4066a-110">S_OK</span></span>|<span data-ttu-id="4066a-111">`Capture` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="4066a-111">`Capture` returned successfully.</span></span>|  
-|<span data-ttu-id="4066a-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4066a-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4066a-113">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="4066a-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="4066a-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4066a-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4066a-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="4066a-115">The call timed out.</span></span>|  
-|<span data-ttu-id="4066a-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4066a-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4066a-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="4066a-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="4066a-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4066a-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4066a-119">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="4066a-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="4066a-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4066a-120">E_FAIL</span></span>|<span data-ttu-id="4066a-121">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="4066a-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4066a-122">Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="4066a-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4066a-123">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4066a-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="6a62e-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="6a62e-110">S_OK</span></span>|<span data-ttu-id="6a62e-111">`Capture`успешно возвращено.</span><span class="sxs-lookup"><span data-stu-id="6a62e-111">`Capture` returned successfully.</span></span>|  
+|<span data-ttu-id="6a62e-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="6a62e-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="6a62e-113">Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="6a62e-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="6a62e-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="6a62e-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="6a62e-115">Время ожидания вызова истекло.</span><span class="sxs-lookup"><span data-stu-id="6a62e-115">The call timed out.</span></span>|  
+|<span data-ttu-id="6a62e-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="6a62e-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="6a62e-117">Вызывающий объект не владеет блокировкой.</span><span class="sxs-lookup"><span data-stu-id="6a62e-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="6a62e-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="6a62e-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="6a62e-119">Событие было отменено, пока заблокированный поток или волокно ожидают его.</span><span class="sxs-lookup"><span data-stu-id="6a62e-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="6a62e-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="6a62e-120">E_FAIL</span></span>|<span data-ttu-id="6a62e-121">Произошла неизвестная фатальная ошибка.</span><span class="sxs-lookup"><span data-stu-id="6a62e-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="6a62e-122">Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="6a62e-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="6a62e-123">Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="6a62e-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4066a-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="4066a-124">Remarks</span></span>  
- <span data-ttu-id="4066a-125">Указатель интерфейса, возвращенный из `Capture` является клоном захваченном контексте.</span><span class="sxs-lookup"><span data-stu-id="4066a-125">The interface pointer returned from `Capture` is a clone of the captured context.</span></span> <span data-ttu-id="4066a-126">Эти сведения при перемещении между точкой асинхронного кода, его времени существования, отделен от, для которого был выполнен вызов указателя.</span><span class="sxs-lookup"><span data-stu-id="4066a-126">When this information is moved across an asynchronous code point, its lifetime is separated from that of the pointer against which the call was made.</span></span> <span data-ttu-id="4066a-127">Исходный указатель таким образом могут быть сняты.</span><span class="sxs-lookup"><span data-stu-id="4066a-127">The original pointer can therefore be released.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6a62e-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="6a62e-124">Remarks</span></span>  
+ <span data-ttu-id="6a62e-125">Указатель интерфейса, возвращенный `Capture` из, является клоном захваченного контекста.</span><span class="sxs-lookup"><span data-stu-id="6a62e-125">The interface pointer returned from `Capture` is a clone of the captured context.</span></span> <span data-ttu-id="6a62e-126">Когда эта информация перемещается по асинхронной кодовой точке, ее время существования отделяется от указателя, на который был сделан вызов.</span><span class="sxs-lookup"><span data-stu-id="6a62e-126">When this information is moved across an asynchronous code point, its lifetime is separated from that of the pointer against which the call was made.</span></span> <span data-ttu-id="6a62e-127">Таким образом, исходный указатель может быть освобожден.</span><span class="sxs-lookup"><span data-stu-id="6a62e-127">The original pointer can therefore be released.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4066a-128">Требования</span><span class="sxs-lookup"><span data-stu-id="4066a-128">Requirements</span></span>  
- <span data-ttu-id="4066a-129">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4066a-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6a62e-128">Требования</span><span class="sxs-lookup"><span data-stu-id="6a62e-128">Requirements</span></span>  
+ <span data-ttu-id="6a62e-129">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a62e-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4066a-130">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4066a-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6a62e-130">**Заголовок.** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="6a62e-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4066a-131">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4066a-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6a62e-131">**Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="6a62e-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4066a-132">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4066a-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6a62e-132">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a62e-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4066a-133">См. также</span><span class="sxs-lookup"><span data-stu-id="4066a-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a62e-133">См. также</span><span class="sxs-lookup"><span data-stu-id="6a62e-133">See also</span></span>
 
-- [<span data-ttu-id="4066a-134">Интерфейс IHostSecurityContext</span><span class="sxs-lookup"><span data-stu-id="4066a-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="4066a-135">Интерфейс IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="4066a-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="6a62e-134">Интерфейс IHostSecurityContext</span><span class="sxs-lookup"><span data-stu-id="6a62e-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="6a62e-135">Интерфейс IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="6a62e-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

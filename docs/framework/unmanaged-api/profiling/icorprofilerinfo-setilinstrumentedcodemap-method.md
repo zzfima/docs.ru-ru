@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41df91ceb9e4b776c2aa1ce864b7e09ec485fd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65eee2e834251817b461f1cd1debf212696d5a5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661955"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855693"
 ---
-# <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a><span data-ttu-id="83d27-102">Метод ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="83d27-102">ICorProfilerInfo::SetILInstrumentedCodeMap Method</span></span>
+# <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a><span data-ttu-id="1cd75-102">Метод ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="1cd75-102">ICorProfilerInfo::SetILInstrumentedCodeMap Method</span></span>
 
-<span data-ttu-id="83d27-103">Задает карту кода для заданной функции, используя указанные записи карты Microsoft промежуточного языка MSIL.</span><span class="sxs-lookup"><span data-stu-id="83d27-103">Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.</span></span>
+<span data-ttu-id="1cd75-103">Задает карту кода для указанной функции, используя указанные записи о сопоставлении языка MSIL.</span><span class="sxs-lookup"><span data-stu-id="1cd75-103">Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="83d27-104">В .NET Framework версии 2.0, вызвав `SetILInstrumentedCodeMap` на `FunctionID` что представляет универсальный работать в конкретный домен приложения будет влиять на все экземпляры этой функции в домене приложения.</span><span class="sxs-lookup"><span data-stu-id="83d27-104">In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.</span></span>
+> <span data-ttu-id="1cd75-104">В .NET Framework версии 2,0 вызов `SetILInstrumentedCodeMap` `FunctionID` для, представляющий универсальную функцию в конкретном домене приложения, повлияет на все экземпляры этой функции в домене приложения.</span><span class="sxs-lookup"><span data-stu-id="1cd75-104">In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="83d27-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="83d27-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1cd75-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1cd75-105">Syntax</span></span>
 
 ```cpp
 HRESULT SetILInstrumentedCodeMap(
@@ -41,60 +41,62 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="83d27-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="83d27-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="1cd75-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="1cd75-106">Parameters</span></span>
 
 `functionId`\
-<span data-ttu-id="83d27-107">[in] Идентификатор функции, для которого требуется задать карты кода.</span><span class="sxs-lookup"><span data-stu-id="83d27-107">[in] The ID of the function for which to set the code map.</span></span>
+<span data-ttu-id="1cd75-107">окне Идентификатор функции, для которой необходимо задать карту кода.</span><span class="sxs-lookup"><span data-stu-id="1cd75-107">[in] The ID of the function for which to set the code map.</span></span>
 
 `fStartJit`\
-<span data-ttu-id="83d27-108">[in] Логическое значение, указывающее ли вызов `SetILInstrumentedCodeMap` метод является первым для какого-либо `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="83d27-108">[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`.</span></span> <span data-ttu-id="83d27-109">Задайте `fStartJit` для `true` в первом вызове `SetILInstrumentedCodeMap` для заданного `FunctionID`, а в `false` соответственно.</span><span class="sxs-lookup"><span data-stu-id="83d27-109">Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.</span></span>
+<span data-ttu-id="1cd75-108">окне Логическое значение, указывающее, является ли вызов `SetILInstrumentedCodeMap` метода первым для конкретного. `FunctionID`</span><span class="sxs-lookup"><span data-stu-id="1cd75-108">[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`.</span></span> <span data-ttu-id="1cd75-109">Задайте `fStartJit` для `FunctionID` `false` значение в первом вызове для заданного, а затем в. `SetILInstrumentedCodeMap` `true`</span><span class="sxs-lookup"><span data-stu-id="1cd75-109">Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.</span></span>
 
 `cILMapEntries`\
-<span data-ttu-id="83d27-110">[in] Число элементов в `cILMapEntries` массива.</span><span class="sxs-lookup"><span data-stu-id="83d27-110">[in] The number of elements in the `cILMapEntries` array.</span></span>
+<span data-ttu-id="1cd75-110">окне Число элементов в `cILMapEntries` массиве.</span><span class="sxs-lookup"><span data-stu-id="1cd75-110">[in] The number of elements in the `cILMapEntries` array.</span></span>
 
 `rgILMapEntries`\
-<span data-ttu-id="83d27-111">[in] Массив структур COR_IL_MAP, каждый из которых задает смещение MSIL.</span><span class="sxs-lookup"><span data-stu-id="83d27-111">[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.</span></span>
+<span data-ttu-id="1cd75-111">окне Массив структур COR_IL_MAP, каждый из которых задает смещение MSIL.</span><span class="sxs-lookup"><span data-stu-id="1cd75-111">[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="83d27-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="83d27-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1cd75-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="1cd75-112">Remarks</span></span>
 
-<span data-ttu-id="83d27-113">Профилировщик часто вставляет операторы в исходный код метода, позволяющие инструментировать этот метод (например, для уведомления при достижении заданной строки исходного).</span><span class="sxs-lookup"><span data-stu-id="83d27-113">A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached).</span></span> <span data-ttu-id="83d27-114">`SetILInstrumentedCodeMap` позволяет профилировщику для сопоставления исходного инструкций MSIL в новые расположения.</span><span class="sxs-lookup"><span data-stu-id="83d27-114">`SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations.</span></span> <span data-ttu-id="83d27-115">Можно использовать профилировщик [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) метод, чтобы получить исходное смещение MSIL для заданного смещения машинного кода.</span><span class="sxs-lookup"><span data-stu-id="83d27-115">A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.</span></span>
+<span data-ttu-id="1cd75-113">Профилировщик часто вставляет инструкции в исходном коде метода, чтобы инструментировать этот метод (например, уведомлять о достижении данной строки исходного кода).</span><span class="sxs-lookup"><span data-stu-id="1cd75-113">A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached).</span></span> <span data-ttu-id="1cd75-114">`SetILInstrumentedCodeMap`позволяет профилировщику сопоставлять исходные инструкции MSIL с их новыми расположениями.</span><span class="sxs-lookup"><span data-stu-id="1cd75-114">`SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations.</span></span> <span data-ttu-id="1cd75-115">Профилировщик может использовать метод [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , чтобы получить исходное смещение MSIL для заданного смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="1cd75-115">A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.</span></span>
 
-<span data-ttu-id="83d27-116">Отладчик предположит, что каждое старое смещение ссылается на смещение в исходном, неизмененном MSIL-код, и что каждое новое смещение ссылается на смещение MSIL в новом коде инструментированной.</span><span class="sxs-lookup"><span data-stu-id="83d27-116">The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code.</span></span> <span data-ttu-id="83d27-117">Карты должны быть отсортированы в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="83d27-117">The map should be sorted in increasing order.</span></span> <span data-ttu-id="83d27-118">Для начала работы должным образом, придерживайтесь следующих рекомендаций.</span><span class="sxs-lookup"><span data-stu-id="83d27-118">For stepping to work properly, follow these guidelines:</span></span>
+<span data-ttu-id="1cd75-116">Отладчик предполагает, что каждое старое смещение ссылается на смещение MSIL в исходном, неизмененном коде MSIL и что каждое новое смещение ссылается на смещение MSIL в новом, инструментированном коде.</span><span class="sxs-lookup"><span data-stu-id="1cd75-116">The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code.</span></span> <span data-ttu-id="1cd75-117">Карту следует сортировать в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="1cd75-117">The map should be sorted in increasing order.</span></span> <span data-ttu-id="1cd75-118">Чтобы пошаговое выполнение работало правильно, следуйте приведенным ниже рекомендациям.</span><span class="sxs-lookup"><span data-stu-id="1cd75-118">For stepping to work properly, follow these guidelines:</span></span>
 
-- <span data-ttu-id="83d27-119">Не переупорядочивают инструментированный код MSIL.</span><span class="sxs-lookup"><span data-stu-id="83d27-119">Do not reorder instrumented MSIL code.</span></span>
+- <span data-ttu-id="1cd75-119">Не Переупорядочивайте инструментированный код MSIL.</span><span class="sxs-lookup"><span data-stu-id="1cd75-119">Do not reorder instrumented MSIL code.</span></span>
 
-- <span data-ttu-id="83d27-120">Не удаляйте исходный код MSIL.</span><span class="sxs-lookup"><span data-stu-id="83d27-120">Do not remove the original MSIL code.</span></span>
+- <span data-ttu-id="1cd75-120">Не удаляйте исходный код MSIL.</span><span class="sxs-lookup"><span data-stu-id="1cd75-120">Do not remove the original MSIL code.</span></span>
 
-- <span data-ttu-id="83d27-121">Включите записи для всех точек следования из файла базы данных (PDB) программы на карте.</span><span class="sxs-lookup"><span data-stu-id="83d27-121">Include entries for all the sequence points from the program database (PDB) file in the map.</span></span> <span data-ttu-id="83d27-122">Карты не интерполирует недостающие записи.</span><span class="sxs-lookup"><span data-stu-id="83d27-122">The map does not interpolate missing entries.</span></span> <span data-ttu-id="83d27-123">Таким образом Если на следующей карте:</span><span class="sxs-lookup"><span data-stu-id="83d27-123">So, given the following map:</span></span>
+- <span data-ttu-id="1cd75-121">Включить записи для всех точек следования из файла базы данных программы (PDB) на карте.</span><span class="sxs-lookup"><span data-stu-id="1cd75-121">Include entries for all the sequence points from the program database (PDB) file in the map.</span></span> <span data-ttu-id="1cd75-122">На карте не выполняется интерполяция отсутствующих записей.</span><span class="sxs-lookup"><span data-stu-id="1cd75-122">The map does not interpolate missing entries.</span></span> <span data-ttu-id="1cd75-123">Итак, учитывая следующую карту:</span><span class="sxs-lookup"><span data-stu-id="1cd75-123">So, given the following map:</span></span>
 
-  <span data-ttu-id="83d27-124">(0 старое, 0 новое)</span><span class="sxs-lookup"><span data-stu-id="83d27-124">(0 old, 0 new)</span></span>
+  <span data-ttu-id="1cd75-124">(0 старых, 0 новых)</span><span class="sxs-lookup"><span data-stu-id="1cd75-124">(0 old, 0 new)</span></span>
 
-  <span data-ttu-id="83d27-125">(5 старше 10 новых)</span><span class="sxs-lookup"><span data-stu-id="83d27-125">(5 old, 10 new)</span></span>
+  <span data-ttu-id="1cd75-125">(5 старых, 10 новых)</span><span class="sxs-lookup"><span data-stu-id="1cd75-125">(5 old, 10 new)</span></span>
 
-  <span data-ttu-id="83d27-126">(9 старый, 20 новых)</span><span class="sxs-lookup"><span data-stu-id="83d27-126">(9 old, 20 new)</span></span>
+  <span data-ttu-id="1cd75-126">(9 старых, 20 новых)</span><span class="sxs-lookup"><span data-stu-id="1cd75-126">(9 old, 20 new)</span></span>
 
-  - <span data-ttu-id="83d27-127">Старое смещение 0, 1, 2, 3 или 4 будет сопоставляться новое смещение 0.</span><span class="sxs-lookup"><span data-stu-id="83d27-127">An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.</span></span>
+  - <span data-ttu-id="1cd75-127">Старое смещение 0, 1, 2, 3 или 4 будет сопоставлено с новым смещением 0.</span><span class="sxs-lookup"><span data-stu-id="1cd75-127">An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.</span></span>
 
-  - <span data-ttu-id="83d27-128">Старое смещение 5, 6, 7 или 8 будет сопоставляться новое смещение 10.</span><span class="sxs-lookup"><span data-stu-id="83d27-128">An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.</span></span>
+  - <span data-ttu-id="1cd75-128">Старое смещение 5, 6, 7 или 8 будет сопоставлено с новым смещением 10.</span><span class="sxs-lookup"><span data-stu-id="1cd75-128">An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.</span></span>
 
-  - <span data-ttu-id="83d27-129">Старое смещение 9 или более поздней версии будет сопоставляться новое смещение 20.</span><span class="sxs-lookup"><span data-stu-id="83d27-129">An old offset of 9 or higher will be mapped to new offset 20.</span></span>
+  - <span data-ttu-id="1cd75-129">Старое смещение 9 или выше будет сопоставлено с новым смещением 20.</span><span class="sxs-lookup"><span data-stu-id="1cd75-129">An old offset of 9 or higher will be mapped to new offset 20.</span></span>
 
-  - <span data-ttu-id="83d27-130">Новое смещение 0, 1, 2, 3, 4, 5, 6, 7, 8 или 9 будет сопоставлен старое смещение 0.</span><span class="sxs-lookup"><span data-stu-id="83d27-130">A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.</span></span>
+  - <span data-ttu-id="1cd75-130">Новое смещение 0, 1, 2, 3, 4, 5, 6, 7, 8 или 9 будет сопоставлено со старым смещением 0.</span><span class="sxs-lookup"><span data-stu-id="1cd75-130">A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.</span></span>
 
-  - <span data-ttu-id="83d27-131">Новое смещение 10, 11, 12, 13, 14, 15, 16, 17, 18 или 19 будет сопоставлен старое смещение 5.</span><span class="sxs-lookup"><span data-stu-id="83d27-131">A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.</span></span>
+  - <span data-ttu-id="1cd75-131">Новое смещение, равное 10, 11, 12, 13, 14, 15, 16, 17, 18 или 19, будет сопоставлено со старым смещением 5.</span><span class="sxs-lookup"><span data-stu-id="1cd75-131">A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.</span></span>
 
-  - <span data-ttu-id="83d27-132">Новое смещение 20 или более поздней версии будет сопоставлен старое смещение 9.</span><span class="sxs-lookup"><span data-stu-id="83d27-132">A new offset of 20 or higher will be mapped to old offset 9.</span></span>
+  - <span data-ttu-id="1cd75-132">Новое смещение, равное 20 или выше, будет сопоставлено старому смещению 9.</span><span class="sxs-lookup"><span data-stu-id="1cd75-132">A new offset of 20 or higher will be mapped to old offset 9.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="83d27-133">Требования</span><span class="sxs-lookup"><span data-stu-id="83d27-133">Requirements</span></span>
+<span data-ttu-id="1cd75-133">В .NET Framework 3,5 и предыдущих версиях вы выделяете `rgILMapEntries` массив путем вызова метода [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) .</span><span class="sxs-lookup"><span data-stu-id="1cd75-133">In the .NET Framework 3.5 and previous versions, you allocate the `rgILMapEntries` array by calling the [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) method.</span></span> <span data-ttu-id="1cd75-134">Поскольку среда выполнения получает владение этой памятью, профилировщик не должен пытаться освободить его.</span><span class="sxs-lookup"><span data-stu-id="1cd75-134">Because the runtime takes ownership of this memory, the profiler should not attempt to free it.</span></span>
 
-<span data-ttu-id="83d27-134">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83d27-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+## <a name="requirements"></a><span data-ttu-id="1cd75-135">Требования</span><span class="sxs-lookup"><span data-stu-id="1cd75-135">Requirements</span></span>
 
-<span data-ttu-id="83d27-135">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="83d27-135">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="1cd75-136">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1cd75-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="83d27-136">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83d27-136">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="1cd75-137">**Заголовок.** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="1cd75-137">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="83d27-137">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83d27-137">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>
+<span data-ttu-id="1cd75-138">**Библиотечная** Коргуидс. lib</span><span class="sxs-lookup"><span data-stu-id="1cd75-138">**Library:** CorGuids.lib</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="83d27-138">См. также</span><span class="sxs-lookup"><span data-stu-id="83d27-138">See also</span></span>
+<span data-ttu-id="1cd75-139">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1cd75-139">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>
 
-- [<span data-ttu-id="83d27-139">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="83d27-139">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1cd75-140">См. также</span><span class="sxs-lookup"><span data-stu-id="1cd75-140">See also</span></span>
+
+- [<span data-ttu-id="1cd75-141">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="1cd75-141">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

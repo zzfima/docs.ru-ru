@@ -2,19 +2,19 @@
 title: Практическое руководство. Получение метаданных через привязку, не использующую MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795583"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856034"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="84a1f-102">Практическое руководство. Получение метаданных через привязку, не использующую MEX</span><span class="sxs-lookup"><span data-stu-id="84a1f-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
-<span data-ttu-id="84a1f-103">В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX.</span><span class="sxs-lookup"><span data-stu-id="84a1f-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="84a1f-104">Код в этом примере основан на образце [пользовательской защищенной конечной точки метаданных](../samples/custom-secure-metadata-endpoint.md) .</span><span class="sxs-lookup"><span data-stu-id="84a1f-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="d4f15-102">Практическое руководство. Получение метаданных через привязку, не использующую MEX</span><span class="sxs-lookup"><span data-stu-id="d4f15-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
+<span data-ttu-id="d4f15-103">В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX.</span><span class="sxs-lookup"><span data-stu-id="d4f15-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="d4f15-104">Код в этом примере основан на образце [пользовательской защищенной конечной точки метаданных](../samples/custom-secure-metadata-endpoint.md) .</span><span class="sxs-lookup"><span data-stu-id="d4f15-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="84a1f-105">Получение метаданных через привязку, не использующую MEX</span><span class="sxs-lookup"><span data-stu-id="84a1f-105">To retrieve metadata over a non-MEX binding</span></span>  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="d4f15-105">Получение метаданных через привязку, не использующую MEX</span><span class="sxs-lookup"><span data-stu-id="d4f15-105">To retrieve metadata over a non-MEX binding</span></span>  
   
-1. <span data-ttu-id="84a1f-106">Определите привязку, используемую конечной точкой MEX.</span><span class="sxs-lookup"><span data-stu-id="84a1f-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="84a1f-107">Для служб Windows Communication Foundation (WCF) можно определить привязку MEX, обратившись к файлу конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="84a1f-107">For Windows Communication Foundation (WCF) services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="84a1f-108">В этом случае привязка MEX определяется в следующей конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="84a1f-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
+1. <span data-ttu-id="d4f15-106">Определите привязку, используемую конечной точкой MEX.</span><span class="sxs-lookup"><span data-stu-id="d4f15-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="d4f15-107">Для служб Windows Communication Foundation (WCF) можно определить привязку MEX, обратившись к файлу конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="d4f15-107">For Windows Communication Foundation (WCF) services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="d4f15-108">В этом случае привязка MEX определяется в следующей конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="d4f15-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ ms.locfileid: "70795583"
      </bindings>  
     ```  
   
-2. <span data-ttu-id="84a1f-109">В файле конфигурации клиента настройте такую же пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="84a1f-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="84a1f-110">В данном случае для клиента также определено поведение `clientCredentials` - для предоставления сертификата, который будет использоваться для проверки его подлинности службой при запросе метаданных от конечной точки MEX.</span><span class="sxs-lookup"><span data-stu-id="84a1f-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="84a1f-111">При использовании Svcutil.exe для запроса метаданных через пользовательскую привязку необходимо добавить конфигурацию конечной точки MEX в файл конфигурации для Svcutil.exe (Svcutil.exe.config), причем имя конфигурации конечной точки должно соответствовать схеме URI адреса конечной точки MEX, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="84a1f-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
+2. <span data-ttu-id="d4f15-109">В файле конфигурации клиента настройте такую же пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="d4f15-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="d4f15-110">В данном случае для клиента также определено поведение `clientCredentials` - для предоставления сертификата, который будет использоваться для проверки его подлинности службой при запросе метаданных от конечной точки MEX.</span><span class="sxs-lookup"><span data-stu-id="d4f15-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="d4f15-111">При использовании Svcutil.exe для запроса метаданных через пользовательскую привязку необходимо добавить конфигурацию конечной точки MEX в файл конфигурации для Svcutil.exe (Svcutil.exe.config), причем имя конфигурации конечной точки должно соответствовать схеме URI адреса конечной точки MEX, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="d4f15-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -83,9 +83,9 @@ ms.locfileid: "70795583"
     </system.serviceModel>  
     ```  
   
-3. <span data-ttu-id="84a1f-112">Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata`.</span><span class="sxs-lookup"><span data-stu-id="84a1f-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="84a1f-113">Существует два способа это сделать: указать пользовательскую привязку в конфигурации или указать пользовательскую привязку в коде, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="84a1f-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
+3. <span data-ttu-id="d4f15-112">Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata`.</span><span class="sxs-lookup"><span data-stu-id="d4f15-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="d4f15-113">Существует два способа это сделать: указать пользовательскую привязку в конфигурации или указать пользовательскую привязку в коде, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="d4f15-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
   
-    ```  
+    ```csharp
     // The custom binding is specified in configuration.  
     EndpointAddress mexAddress = new EndpointAddress("http://localhost:8000/ServiceModelSamples/Service/mex");  
   
@@ -114,15 +114,15 @@ ms.locfileid: "70795583"
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4. <span data-ttu-id="84a1f-114">Создайте объект `WsdlImporter` и вызовите метод `ImportAllEndpoints`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="84a1f-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
+4. <span data-ttu-id="d4f15-114">Создайте объект `WsdlImporter` и вызовите метод `ImportAllEndpoints`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="d4f15-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
   
-    ```  
+    ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. <span data-ttu-id="84a1f-115">На данном этапе имеется коллекция конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="84a1f-115">At this point, you have a collection of service endpoints.</span></span> <span data-ttu-id="84a1f-116">Дополнительные сведения об импорте метаданных см. [в разделе как Импорт метаданных в конечные](../feature-details/how-to-import-metadata-into-service-endpoints.md)точки службы.</span><span class="sxs-lookup"><span data-stu-id="84a1f-116">For more information about importing metadata, see [How to: Import Metadata into Service Endpoints](../feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
+5. <span data-ttu-id="d4f15-115">На данном этапе имеется коллекция конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="d4f15-115">At this point, you have a collection of service endpoints.</span></span> <span data-ttu-id="d4f15-116">Дополнительные сведения об импорте метаданных см. [в разделе как Импорт метаданных в конечные](../feature-details/how-to-import-metadata-into-service-endpoints.md)точки службы.</span><span class="sxs-lookup"><span data-stu-id="d4f15-116">For more information about importing metadata, see [How to: Import Metadata into Service Endpoints](../feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84a1f-117">См. также</span><span class="sxs-lookup"><span data-stu-id="84a1f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4f15-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d4f15-117">See also</span></span>
 
-- [<span data-ttu-id="84a1f-118">Метаданные</span><span class="sxs-lookup"><span data-stu-id="84a1f-118">Metadata</span></span>](../feature-details/metadata.md)
+- [<span data-ttu-id="d4f15-118">Метаданные</span><span class="sxs-lookup"><span data-stu-id="d4f15-118">Metadata</span></span>](../feature-details/metadata.md)
