@@ -2,20 +2,21 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: d5feab6cb374f98e683cf15f797de4f478e23131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 478211755b9131c03b72777ee95ff7223b9092c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919921"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850269"
 ---
 # <a name="backuplist"></a>\<Баккуплист >
 Представляет раздел конфигурации для определения списка резервных копий, который перечисляет набор конечных точек, которые должны использоваться службой маршрутизации в случае, если основная конечная точка недостижима. Если первая конечная точка в списке недоступна, то служба маршрутизации автоматически переключается на следующую точку в списке.  Этот метод позволяет быстро повысить надежность приложения, не реализуя в клиентском приложении обработку сложных схем и не задавая расположение всех служб.  
   
- \<> System. serviceModel  
-\<> маршрутизации  
-\<Баккуплистс >  
-\<Баккуплист >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> маршрутизации**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Баккуплистс >** ](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Баккуплист >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

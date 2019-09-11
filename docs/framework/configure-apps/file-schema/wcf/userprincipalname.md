@@ -2,20 +2,24 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 423a3249a9298675517f0cff08566c3735fa35f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299af8c4a013d17d7c5b7285f6fb89892c4164a8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940515"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854822"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName >
 Задает имя участника-пользователя (UPN) для службы, подлинность которой должна быть проверена клиентом.  
   
- Дополнительные сведения о настройке имени участника-пользователя см. в статье [удостоверение службы и проверка](../../../wcf/feature-details/service-identity-and-authentication.md)подлинности.  
+Дополнительные сведения о настройке имени участника-пользователя см. в статье [удостоверение службы и проверка подлинности](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-\<> удостоверений  
-\<userPrincipalName >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> клиента**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> конечной точки**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> удостоверений**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<userPrincipalName >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

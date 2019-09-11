@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780435"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854196"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
-С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]помощью можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналы. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]использует поставщики данных для предоставления этих данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](data-services-providers-wcf-data-services.md).  
+С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]помощью можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналы. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]использует поставщики данных для предоставления этих данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят поставщик Entity Framework, поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](data-services-providers-wcf-data-services.md).  
   
  В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] служба данных является классом, унаследованным от класса <xref:System.Data.Services.DataService%601>, в котором тип службы данных является контейнером сущностей моделей данных. Этот контейнер сущностей имеет одно или несколько свойств, возвращающих интерфейс <xref:System.Linq.IQueryable%601>, которые используются для доступа к наборам сущностей модели данных.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70780435"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> \- и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Не поддерживается|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> \- и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|  
   
- <sup>1</sup> в этом примере `Address` представляет свойство сложного `Customers` типа сущности, имеющей свойство с именем `StreetAddress`. Модель, которая используется службой данных Northwind, не определяет этот сложный тип явно. При определении модели данных с помощью [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщика можно использовать средства EDM для определения такого сложного типа. Дополнительные сведения см. в разделе [Практическое руководство. Создание и изменение сложных типов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
+ <sup>1</sup> в этом примере `Address` представляет свойство сложного `Customers` типа сущности, имеющей свойство с именем `StreetAddress`. Модель, которая используется службой данных Northwind, не определяет этот сложный тип явно. Если модель данных определяется с помощью поставщика Entity Framework, такой сложный тип можно определить с помощью средств модели EDM. Дополнительные сведения см. в разделе [Практическое руководство. Создание и изменение сложных типов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> этот URI поддерживается, если свойство, возвращающее большой двоичный объект (BLOB), определено как ресурс мультимедиа, принадлежащий сущности, которая является записью ссылки на носитель, в данном случае — `Customers`. Дополнительные сведения см. в разделе [Streaming Provider](streaming-provider-wcf-data-services.md).  
   

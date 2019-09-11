@@ -2,18 +2,20 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: cc69029d9830fd12df5a4070f11847fadf4c60bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4bc33cf8ff4e703973efe7df49e9f1d2189302e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940407"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854818"
 ---
 # <a name="webscriptendpoint"></a>\<Вебскриптендпоинт >
 Этот элемент конфигурации определяет стандартную конечную точку с [ \<](webhttpbinding.md) фиксированной привязкой > WebHttpBinding [ \<](enablewebscript.md) , которая автоматически добавляет енаблевебскрипт поведение >. Используйте эту конечную точку при написании службы, вызываемой из приложения ASP.NET AJAX.  
   
-\<системой. > ServiceModel  
-\<Стандардендпоинтс >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Стандардендпоинтс >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Вебскриптендпоинт >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

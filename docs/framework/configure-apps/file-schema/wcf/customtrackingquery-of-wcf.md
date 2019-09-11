@@ -2,12 +2,12 @@
 title: <customTrackingQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: b034727dc89b58794ec2834cb0ff39cd7e5f1dca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 204bbb6cf5ebcb30bf92b697885ecbbbd94385e0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919363"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855418"
 ---
 # <a name="customtrackingquery-of-wcf"></a>\<Кустомтраккингкуери > WCF
 
@@ -15,13 +15,14 @@ ms.locfileid: "69919363"
 
 Дополнительные сведения о запросах профиля отслеживания см. в разделе [Профили отслеживания](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<> System. serviceModel  
-\<Отслеживание >  
-\<Профили >  
-\<trackingProfile >  
-\<> рабочего процесса  
-\<Кустомтраккингкуериес >  
-\<Кустомтраккингкуери >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Отслеживание >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Профили >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> рабочего процесса**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Кустомтраккингкуериес >** ](customtrackingqueries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Кустомтраккингкуери >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

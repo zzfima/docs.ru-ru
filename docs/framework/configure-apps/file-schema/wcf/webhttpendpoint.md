@@ -2,18 +2,20 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 866be522cb1c64142227a8d6a1a8f88551ca9105
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d4f55fd5b51ea77839b7fdbb930e937f5700417
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940472"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854798"
 ---
 # <a name="webhttpendpoint"></a>\<Вебхттпендпоинт >
 Этот элемент конфигурации определяет стандартную конечную точку с [ \<](webhttpbinding.md) фиксированной привязкой > WebHttpBinding [ \<](webhttp.md) , которая автоматически добавляет поведение > HTTP. Используйте эту конечную точку при написании службы REST.  
   
-\<системой. > ServiceModel  
-\<Стандардендпоинтс >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Стандардендпоинтс >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Вебхттпендпоинт >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

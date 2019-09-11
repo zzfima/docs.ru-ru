@@ -2,18 +2,20 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: aa4cd8f4d7dcfa438ede71c394f1d0b0ac6faa50
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: decaaa1cea5345ff971b16cbb20a85dd803a52d5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926555"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850286"
 ---
 # <a name="announcementendpoint"></a>\<Аннаунцементендпоинт >
 Этот элемент конфигурации определяет стандартную конечную точку с фиксированным контрактом объявления. Служба может также объявлять свою доступность путем отправки сообщения в режимах «в сети» и «не в сети» соответственно при открытии и закрытии службы. Служба Windows Communication Foundation (WCF) указывает конечные точки объявления в [ \<элементе > сервицедисковери](servicediscovery.md) и использует аннаунцементклиент для выполнения объявлений. Клиент, желающий прослушивать объявление от другой службы, фактически выступает в роли службы WCF. Поэтому необходимо настроить конечные точки объявления для этого клиента в разделе " [ \<службы >](services.md) ".  
   
-\<системой. > ServiceModel  
-\<Стандардендпоинтс >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Стандардендпоинтс >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Аннаунцементендпоинт >**  
   
 ## <a name="syntax"></a>Синтаксис  
   

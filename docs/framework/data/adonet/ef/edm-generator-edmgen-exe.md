@@ -2,18 +2,18 @@
 title: Генератор модели EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251631"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854716"
 ---
 # <a name="edm-generator-edmgenexe"></a>Генератор модели EDM (EdmGen.exe)
 
-EdmGen.exe - программа командной строки, предназначенная для работы с файлами моделей и сопоставлениями [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Средство EdmGen.exe применяется для следующих целей.
+EdmGen. exe — это средство командной строки, используемое для работы с Entity Framework файлов модели и сопоставления. Средство EdmGen.exe применяется для следующих целей.
 
-- Соединения с источником данных с помощью определяемого источником данных поставщика данных .NET Framework, а также формирования файлов концептуальной модели (CSDL), модели хранения (SSDL) и сопоставления (MSL), используемых платформой [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Используйте EdmGen. exe для создания файлов](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)модели и сопоставления.
+- Подключитесь к источнику данных с помощью конкретного .NET Framework поставщика данных и создайте файлы концептуальной модели (CSDL), модели хранения (SSDL) и сопоставления (MSL), используемые Entity Framework. Дополнительные сведения см. в разделе [Практическое руководство. Используйте EdmGen. exe для создания файлов](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)модели и сопоставления.
 
 - проверки существующей модели Дополнительные сведения см. в разделе [Как Используйте программу EdmGen. exe для проверки файлов](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)модели и сопоставления.
 

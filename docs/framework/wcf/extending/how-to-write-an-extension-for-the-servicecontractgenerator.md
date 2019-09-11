@@ -2,12 +2,12 @@
 title: Практическое руководство. Разработка расширения для ServiceContractGenerator
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: b13b881a221ae0aa757b04c206125716a55f5b8c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af23babd9255c45b9fa89b5c167de6960f0f690e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795523"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855723"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Практическое руководство. Разработка расширения для ServiceContractGenerator
 В этом разделе описывается, как разработать расширение для <xref:System.ServiceModel.Description.ServiceContractGenerator>. Это можно сделать путем реализации интерфейса <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> для поведения операции или интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта. Здесь показана реализация интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта.  
@@ -18,7 +18,7 @@ ms.locfileid: "70795523"
   
 1. Реализуйте расширение <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Чтобы изменить сгенерированный контракт службы, воспользуйтесь экземпляром <xref:System.ServiceModel.Description.ServiceContractGenerationContext>, переданным методу <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>.  
   
-    ```  
+    ```csharp
     public void GenerateContract(ServiceContractGenerationContext context)  
     {  
         Console.WriteLine("In generate contract.");  
@@ -28,7 +28,7 @@ ms.locfileid: "70795523"
   
 2. Реализуйте расширение <xref:System.ServiceModel.Description.IWsdlImportExtension> в том же классе. Метод <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> может обработать определенное расширение WSDL (в данном случае заметки WSDL), добавив расширение создания кода в импортированный экземпляр <xref:System.ServiceModel.Description.ContractDescription>.  
   
-    ```  
+    ```csharp
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
        {  
                 // Contract documentation  
@@ -72,7 +72,7 @@ ms.locfileid: "70795523"
   
 4. Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata` в коде клиента.  
   
-    ```  
+    ```csharp  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
     mexClient.ResolveMetadataReferences = true;  
     MetadataSet metaDocs = mexClient.GetMetadata();  
@@ -80,13 +80,13 @@ ms.locfileid: "70795523"
   
 5. Создайте объект `WsdlImporter` и вызовите метод `ImportAllContracts`.  
   
-    ```  
+    ```csharp  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
 6. Создайте объект `ServiceContractGenerator` и вызовите метод `GenerateServiceContractType` для каждого контракта.  
   
-    ```  
+    ```csharp  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
     foreach (ContractDescription contract in contracts)  
     {  

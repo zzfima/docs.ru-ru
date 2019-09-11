@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250501"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854385"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities: рекомендации и известные проблемы
 В этом разделе содержатся сведения об известных проблемах с LINQ to Entities запросами.  
@@ -42,7 +42,7 @@ ms.locfileid: "70250501"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Целые числа без знака не поддерживаются  
- Указание целочисленного типа без знака в LINQ to Entitiesном запросе не поддерживается, так как [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] не поддерживает целые числа без знака. Если указать целое число без знака, <xref:System.ArgumentException> во время преобразования выражения запроса будет создано исключение, как показано в следующем примере. В этом примере производится запрос заказа с идентификатором 48000.  
+ Указание целочисленного типа без знака в LINQ to Entitiesном запросе не поддерживается, так как Entity Framework не поддерживает целые числа без знака. Если указать целое число без знака, <xref:System.ArgumentException> во время преобразования выражения запроса будет создано исключение, как показано в следующем примере. В этом примере производится запрос заказа с идентификатором 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
