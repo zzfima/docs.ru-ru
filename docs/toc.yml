@@ -189,11 +189,7 @@
         - name: "Новые возможности .NET Core\_2.0"
           href: core/whats-new/dotnet-core-2-0.md
     - name: Совместимость приложений
-      items:
-        - name: Оценка критических изменений
-          href: core/compatibility/index.md
-        - name: Категории критических изменений
-          href: core/compatibility/categories.md
+      href: core/compatibility/
     - name: Учебники
       href: core/tutorials/index.md
       items:

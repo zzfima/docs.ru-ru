@@ -1,0 +1,8 @@
+- name: Совместимость приложений
+  items:
+    - name: Оценка критических изменений
+      href: index.md
+    - name: Критические изменения
+      href: breaking-changes.md
+    - name: Категории критических изменений
+      href: categories.md
