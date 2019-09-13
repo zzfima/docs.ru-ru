@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29f6f844c3cdf2d43437aed7fc19492a37f9f8fc
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971567"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894934"
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 
@@ -23,7 +23,7 @@ ms.locfileid: "68971567"
 
 Для регистрации событий среды CLR на компьютере должен быть установлен поставщик среды CLR. Чтобы проверить, установлен ли этот поставщик, введите в командной строке `logman query providers`. Откроется список поставщиков. В этом списке должна находиться следующая запись для поставщика среды CLR.
 
-```
+```output
 Provider                                 GUID
 -------------------------------------------------------------------------------
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
@@ -51,7 +51,7 @@ Provider                                 GUID
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     Здесь:
+     где:
 
     - Параметр `-p` задает GUID поставщика.
 
