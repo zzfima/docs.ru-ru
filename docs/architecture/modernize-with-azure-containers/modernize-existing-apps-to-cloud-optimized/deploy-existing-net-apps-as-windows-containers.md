@@ -2,12 +2,12 @@
 title: Развертывание существующих приложений .NET в качестве контейнеров Windows
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Развертывание существующих приложений .NET как контейнеров Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374019"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926488"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Развертывание существующих приложений .NET в качестве контейнеров Windows
 
@@ -143,6 +143,7 @@ ms.locfileid: "70374019"
 **Рис. 4 — 7,5.** Экосистема контейнеров в Azure
 
 Из экосистемы контейнеров в Azure следующие продукты, поддерживающие контейнеры, которые считаются инфраструктурой:
+
 - **Экземпляры контейнеров Azure (ACI)**
 - **Виртуальные машины Azure** (С поддержкой контейнера)
 - **Масштабируемые наборы виртуальных машин Azure** (С поддержкой контейнера)

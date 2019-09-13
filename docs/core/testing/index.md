@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926296"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
@@ -38,11 +38,13 @@ ms.locfileid: "70373860"
 Дополнительные сведения о модульном тестировании в проектах .NET Core.
 
 Проекты модульных тестов .NET Core поддерживаются для следующих языков:
+
 * [C#](../../csharp/index.md)
 * [F#](../../fsharp/index.md)
 * [Visual Basic](../../visual-basic/index.md) 
 
 Также вы можете выбрать один из следующих вариантов:
+
 * [xUnit](https://xunit.github.io) 
 * [NUnit](https://nunit.org)
 * [MSTest](https://github.com/Microsoft/testfx-docs)

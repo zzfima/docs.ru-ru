@@ -4,12 +4,12 @@ description: Изучите практический подход, обраща�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926468"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Бессерверные сценарии и варианты использования для бизнеса
 
@@ -43,7 +43,7 @@ ms.locfileid: "69577287"
 
 Например, вы можете обучить модель с ориентирами в Орландо, например с глазом в Орландо. Пользовательское визуальное распознавание распознает изображение глаза, и функция создаст мозаику с фотографией, состоящую из результатов поиска изображений Bing для «глаз».
 
-Дополнительные сведения см. в статье генератор для фотомозаики по [функциям Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
+Дополнительные сведения см. в статье [генератор для фотомозаики по функциям Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Перенос существующего приложения в облако
 
@@ -77,7 +77,7 @@ ms.locfileid: "69577287"
 
 ![Пример Power BI](./media/power-bi-example.png)
 
-Полный репозиторий сокращения ссылок с инструкциями можно найти здесь: [Несерверный URL-адрес](https://github.com/jeremylikness/serverless-url-shortener). Более простую версию можно прочитать здесь: Служба [хранилища Azure для безсерверных приложений .NET за считаные минуты](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Полный репозиторий сокращения ссылок с инструкциями можно найти здесь: [Несерверный URL-адрес](https://github.com/jeremylikness/serverless-url-shortener). Более простую версию можно прочитать здесь: Служба [хранилища Azure для безсерверных приложений .NET за считаные минуты](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Проверка подключения устройства с помощью проверки связи
 
@@ -89,7 +89,7 @@ ms.locfileid: "69577287"
 
 * [Генератор фотомозаики по функциям Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Проверка связи с центром Интернета вещей Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Хранилище Azure для безсерверных приложений .NET за считаные минуты](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [Хранилище Azure для безсерверных приложений .NET за считаные минуты](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [Перенесите свое приложение](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [Лаборатория импорта CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Приклеивание сетки событий](https://github.com/JeremyLikness/Event-Grid-Glue)
