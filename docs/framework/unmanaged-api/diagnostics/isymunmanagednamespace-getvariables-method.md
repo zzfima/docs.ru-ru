@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939494"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895049"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>Метод ISymUnmanagedNamespace::GetVariables
-Возвращает все переменные, определенные в глобальной области в этом пространстве имен.  
+Возвращает все переменные, определенные в глобальной области видимости в этом пространстве имен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,19 +39,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Параметры  
  `cVars`  
- [in] Объект `ULONG32` указывает размер `pVars` массива.  
+ окне Значение `ULONG32` типа, указывающее размер `pVars` массива.  
   
  `pcVars`  
- [out] Указатель на `ULONG32` , получающий размер буфера, необходимый для пространства имен.  
+ заполняет Указатель на объект `ULONG32` , который получает размер буфера, необходимого для хранения пространств имен.  
   
  `pVars`  
- [out] Указатель на буфер, содержащий пространства имен.  
+ заполняет Указатель на буфер, содержащий пространства имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок.** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

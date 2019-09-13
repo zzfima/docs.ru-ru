@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910614"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894501"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Пример Обработка исключений при привязке данных
 > [!NOTE]
@@ -17,14 +17,14 @@ ms.locfileid: "69910614"
   
  В следующем примере показано, как разрешить исключение [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) , возникающее, когда приложение, скомпилированное с помощью цепочки инструментов .NET Native, пытается привязать данные. Сведения об исключении:  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
 App.ViewModels.MainPageVM  
 ```  
   
  Ниже приведен связанный стек вызова:  
   
-```  
+```output
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
 Reflection::Core::ReflectionDomain.CreateNonInvokabilityException+0x2e  
 Reflection::Core::Execution::ExecutionEnvironment.+0x316  
@@ -62,4 +62,4 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="see-also"></a>См. также
 
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Пример: Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Пример. Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

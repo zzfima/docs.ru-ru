@@ -2,33 +2,33 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 1517a2eb73da778c9b84ff857f4b8ad2b4334498
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425008"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928647"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` - это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы. Можно выбрать набор контрактов службы и передать его средству с помощью XML-файла. Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
   
 ### <a name="to-build-the-tool"></a>Построение средства  
   
-1. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Построении решения создается три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd. В файле SampleRun.cmd имеется пример командной строки, в котором показано, как использовать это средство для тестирования [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
+2. При построении решения создаются три файла: Кустомчаннелстестер. exe, Тестспек. XML и Самплерун. cmd. Файл самплерун. cmd содержит образец командной строки, который показывает, как использовать это средство для тестирования [транспорта. Пример](../../../../docs/framework/wcf/samples/transport-udp.md) протокола UDP.  
   
 ### <a name="to-run-the-tool"></a>Запуск средства  
   
 - В командной строке введите следующую команду.  
   
-    ```  
+    ```console  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
      Необходимо использовать параметр `/binding`.  
   
-     `/dll` является обязательным, если «привязка» не является предоставляемой системой привязки, предоставляемые Windows Communication Foundation (WCF).  
+     `/dll`требуется, если "Binding" не является предоставляемой системой привязкой, предоставляемой Windows Communication Foundation (WCF).  
   
      Параметр `/testspec` является необязательным.  
   

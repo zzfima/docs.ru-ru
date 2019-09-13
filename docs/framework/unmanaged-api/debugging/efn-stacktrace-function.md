@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738978"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895044"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_функция трассировки стека
+# <a name="_efn_stacktrace-function"></a>\_ЕФН\_StackTrace, функция
 Предоставляет текстовое представление трассировки управляемого стека и массив записей `CONTEXT`, по одной для каждого перехода между неуправляемым и управляемым кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,62 +42,62 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>Параметры  
  `Client`  
- [in] Клиент, для которого выполняется отладка.  
+ окне Отлаживаемый клиент.  
   
  `wszTextOut`  
- [out] Текстовое представление трассировки стека.  
+ заполняет Текстовое представление трассировки стека.  
   
  `puiTextLength`  
- [out] Указатель на число символов в `wszTextOut`.  
+ заполняет Указатель на число символов в `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] Массив контекстов перехода.  
+ заполняет Массив контекстов перехода.  
   
  `puiTransitionContextCount`  
- [out] Указатель на число контекстов перехода в массиве.  
+ заполняет Указатель на число контекстов перехода в массиве.  
   
  `uiSizeOfContext`  
- [in] Размер структуры контекста.  
+ окне Размер структуры контекста.  
   
  `Flags`  
- [in] Значение 0 или SOS_STACKTRACE_SHOWADDRESSES (0x01) для отображения регистр EBP и указатель стека ввод (ESP), перед каждым `module!functionname` строки.  
+ окне Задайте значение 0 или SOS_STACKTRACE_SHOWADDRESSES (0x01), чтобы отобразить регистр ebp и указатель ввода стека (ESP) перед каждой `module!functionname` строкой.  
   
 ## <a name="remarks"></a>Примечания  
- `_EFN_StackTrace` Структуры, которые могут вызываться из WinDbg программный интерфейс. Параметры используются следующим образом:  
+ `_EFN_StackTrace` Структуру можно вызвать из программного интерфейса WinDbg. Параметры используются следующим образом.  
   
-- Если `wszTextOut` имеет значение null и `puiTextLength` — не равно null, функция возвращает длину строки в `puiTextLength`.  
+- Если `wszTextOut` значение равно NULL `puiTextLength` и не равно null, функция возвращает длину строки в `puiTextLength`.  
   
-- Если `wszTextOut` — не равно null, функция сохраняет текст в `wszTextOut` до местоположения, указанного параметром `puiTextLength`. Успешно возвращается, если было достаточно места в буфере, или возвращает значение E_OUTOFMEMORY, если буфер недостаточно длинный.  
+- Если `wszTextOut` параметр не равен null, функция сохраняет текст в `wszTextOut` расположении, указанном параметром `puiTextLength`. Он возвращает значение, если в буфере достаточно места, или значение E_OUTOFMEMORY, если буфер недостаточно длинный.  
   
-- Переход части функции учитывается, если `pTransitionContexts` и `puiTransitionContextCount` оба имеют значение null. В этом случае функция предоставляет вызывающим объектам с помощью текстовых выходных данных только имена функций.  
+- Часть перехода функции игнорируется, если `pTransitionContexts` и `puiTransitionContextCount` равны NULL. В этом случае функция предоставляет вызывающим объектам текстовые выходные данные только имен функций.  
   
-- Если `pTransitionContexts` имеет значение null и `puiTransitionContextCount` — не равно null, функция возвращает необходимое количество записей контекста в `puiTransitionContextCount`.  
+- Если `pTransitionContexts` параметр имеет значение `puiTransitionContextCount` NULL и не равен null, функция возвращает необходимое число контекстных записей в `puiTransitionContextCount`.  
   
-- Если `pTransitionContexts` — не равно null, функция воспринимает его как массив структур длины `puiTransitionContextCount`. Задается размер структуры `uiSizeOfContext`, и должен быть размер [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) или `CONTEXT` для архитектуры.  
+- Если `pTransitionContexts` параметр не равен null, функция обрабатывает ее как массив структур с длиной `puiTransitionContextCount`. Размер структуры определяется параметром `uiSizeOfContext`и должен быть размером [симплеконтекст](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) или `CONTEXT` для архитектуры.  
   
-- `wszTextOut` записывается в следующем формате:  
+- `wszTextOut`записывается в следующем формате:  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- Если смещение в шестнадцатеричном формате 0x0, смещение не записывается.  
+- Если смещение в шестнадцатеричном формате имеет значение 0x0, смещение не записывается.  
   
-- Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает значение SOS_E_NOMANAGEDCODE.  
+- Если в текущем потоке нет управляемого кода, функция возвращает SOS_E_NOMANAGEDCODE.  
   
-- `Flags` Параметр имеет значение 0, или SOS_STACKTRACE_SHOWADDRESSES, чтобы увидеть EBP и ESP перед каждым `module!functionname` строки. По умолчанию — 0.  
+- Параметр имеет значение 0 или SOS_STACKTRACE_SHOWADDRESSES, чтобы видеть ebp и ESP в начале каждой `module!functionname` строки. `Flags` По умолчанию это 0.  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** SOS_Stacktrace.h  
+ **Заголовок.** SOS_Stacktrace. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650782"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894464"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Метод ISymUnmanagedWriter::SetSymAttribute
-Определяет настраиваемый атрибут, в зависимости от его имени. Эти атрибуты хранятся в хранилище символов, в отличие от настраиваемых атрибутов метаданных.  
+Определяет настраиваемый атрибут на основе его имени. Эти атрибуты хранятся в хранилище символов в отличие от пользовательских атрибутов метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] Токен метаданных, для которого определен атрибут.  
+ окне Токен метаданных, для которого определяется атрибут.  
   
  `name`  
- [in] Указатель на `WCHAR` , содержащий имя атрибута.  
+ окне Указатель на объект `WCHAR` , содержащий имя атрибута.  
   
  `cData`  
- [in] Объект `ULONG32` указывает размер `data` массива.  
+ окне Значение `ULONG32` типа, указывающее размер `data` массива.  
   
  `data`  
- [in] Значение атрибута.  
+ окне Значение атрибута.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок.** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

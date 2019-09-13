@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650704"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894451"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>Метод ISymUnmanagedWriter2::DefineGlobalVariable2
 Определяет одну глобальную переменную.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,31 +42,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] Имя глобальной переменной.  
+ окне Имя глобальной переменной.  
   
  `attributes`  
- [in] Атрибутов глобальной переменной.  
+ окне Атрибуты глобальных переменных.  
   
  `sigToken`  
- [in] Маркер метаданных для подписи.  
+ окне Маркер метаданных сигнатуры.  
   
  `addrKind`  
- [in] Тип адреса.  
+ окне Тип адреса.  
   
  `addr1`  
- [in] Первый адрес для спецификации параметра.  
+ окне Первый адрес для спецификации параметра.  
   
  `addr2`  
- [in] Второй адрес для спецификации параметра.  
+ окне Второй адрес для спецификации параметра.  
   
  `addr3`  
- [in] Третий адрес для спецификации параметра.  
+ окне Третий адрес для спецификации параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl  
+ **Заголовок.** Корсим. idl  
   
 ## <a name="see-also"></a>См. также
 

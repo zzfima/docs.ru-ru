@@ -2,12 +2,12 @@
 title: Развертывание службы WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856123"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895109"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 
@@ -49,9 +49,7 @@ ms.locfileid: "70856123"
 
 Службы WCF, размещенные в IIS, представлены в приложении IIS в виде специальных файлов содержимого (SVC-файлов). Эта модель подобна модели, согласно которой страницы ASMX представляются внутри приложения IIS в виде ASMX-файлов. SVC[\@-файл](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)содержит директиву обработки, специфичную для WCF, которая позволяет инфраструктуре размещения WCF активировать размещенные службы в ответ на входящие сообщения. В приведенном ниже операторе показан наиболее распространенный синтаксис SVC-файла.
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 Он состоит из [ \@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директивы ServiceHost и одного атрибута, `Service`. Значение атрибута `Service` - имя типа среды CLR реализации службы. Использование этой директивы по существу эквивалентно созданию основного приложения службы с помощью следующего кода.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 779785e9793939cf121fedf99b23a07288173637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967610"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927045"
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  
@@ -69,7 +69,7 @@ ms.locfileid: "69967610"
   
 - Создайте пользовательский класс, производный от класса <xref:System.Runtime.Caching.ObjectCache>, а затем предоставьте в нем пользовательскую реализацию кэша.  
   
-- Создайте класс, производный от класса <xref:System.Runtime.Caching.MemoryCache>, и настройте или расширьте его. Пример того, как это сделать, см. в записи блога [Кэширование данных приложений с помощью нескольких объектов кэша в приложении ASP.NET](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Создайте класс, производный от класса <xref:System.Runtime.Caching.MemoryCache>, и настройте или расширьте его. Пример того, как это сделать, см. в записи блога [Кэширование данных приложений с помощью нескольких объектов кэша в приложении ASP.NET](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
   
 - Создайте класс, производный от класса <xref:System.Web.Caching.OutputCacheProvider>, и настройте для приложения использование пользовательского поставщика кэша выходных данных.  
   

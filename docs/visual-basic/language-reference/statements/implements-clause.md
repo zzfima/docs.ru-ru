@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929319"
 ---
 # <a name="implements-clause-visual-basic"></a>Предложение Implements (Visual Basic)
 Указывает, что член класса или структуры предоставляет реализацию для члена, определенного в интерфейсе.  
   
 ## <a name="remarks"></a>Примечания  
-`Implements` Ключевое слово не может так же, как [оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Использовании `Implements` инструкцию, чтобы указать, что класс или структура реализует один или несколько интерфейсов, а затем для каждого члена можно использовать `Implements` ключевое слово, чтобы указать, какой интерфейс и какой элемент он реализует.
+Ключевое слово не совпадает с [оператором Implements.](../../../visual-basic/language-reference/statements/implements-statement.md) `Implements` `Implements` Инструкция используется для указания того, что класс или структура реализует один или несколько интерфейсов, а затем для каждого элемента `Implements` используется ключевое слово для указания интерфейса и члена, который он реализует.
 
-Если класс или структура реализует интерфейс, она должна включать `Implements` инструкции сразу после [оператор Class](../../../visual-basic/language-reference/statements/class-statement.md) или [оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md), и он должен реализовывать все члены определенные в интерфейсе.
+Если класс или структура реализует интерфейс, он должен включать `Implements` инструкцию сразу после оператора [Class](../../../visual-basic/language-reference/statements/class-statement.md) или [Structure](../../../visual-basic/language-reference/statements/structure-statement.md), и она должна реализовывать все члены, определенные интерфейсом.
 
-## <a name="reimplementation"></a>Повторная реализация  
-В производном классе может повторно реализовать член интерфейса, который уже реализован базовым классом. Это отличается от переопределения члена базового класса в следующих аспектах:
+## <a name="reimplementation"></a>Воссоздании  
+В производном классе можно повторно реализовать член интерфейса, который уже реализован в базовом классе. Это отличается от переопределения члена базового класса в следующих отношениях.
 
-- Член базового класса не требуется быть [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) чтобы быть воссозданы.
-- Можно реализовать элемент с другим именем.
+- Член базового класса не обязательно должен быть [переопределяемым](../../../visual-basic/language-reference/modifiers/overridable.md) для повторной реализации.
+- Элемент можно повторно реализовать с другим именем.
 
-`Implements` Слово может использоваться в следующих контекстах:
+`Implements` Ключевое слово можно использовать в следующих контекстах:
+
 - [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)

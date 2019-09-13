@@ -9,17 +9,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928436"
 ---
 # <a name="properties-wpf"></a>Свойства (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства среды CLR. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
   
 ## <a name="in-this-section"></a>В этом разделе  
+
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Общие сведения о присоединенных свойствах](attached-properties-overview.md)
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
@@ -50,7 +51,7 @@ ms.locfileid: "68400867"
   [Базовые элементы](base-elements.md)  
   [Дерево элементов и сериализация](element-tree-and-serialization.md)  
   [События](events-wpf.md)  
-  [Ввод](input-wpf.md)  
+  [Входные данные](input-wpf.md)  
   [Ресурсы](resources-wpf.md)  
   [Модель содержимого WPF](../controls/wpf-content-model.md)  
   [Потоковая модель](threading-model.md)

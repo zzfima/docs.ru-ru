@@ -8,15 +8,16 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: 47bd0ff4eb649b4b32113a984f4aa99cd4afc0f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a88e4766a1e774582bcd0356c9b6e77bc31f1960
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665278"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928525"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Практическое руководство. Доступ к коллекциям с ключом в Windows Forms
-- Можно получить доступ к ее отдельные элементы по ключу. Эта функциональность была добавлена для многих классов коллекций, которые обычно используются приложениями Windows Forms. Ниже перечислены некоторые из классов коллекций, имеющих доступны коллекции с ключом.  
+
+- К отдельным элементам коллекции можно обращаться по ключу. Эта функция добавлена во многие классы коллекций, которые обычно используются приложениями Windows Forms. В следующем списке показаны некоторые классы коллекций, имеющие доступные коллекции с ключом:  
   
 - <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
@@ -28,25 +29,25 @@ ms.locfileid: "64665278"
   
 - <xref:System.Windows.Forms.TreeNodeCollection>  
   
- Ключ, связанный с элементом в коллекции, обычно является имя элемента. Следующие процедуры показывают, как использовать классы коллекций для выполнения распространенных задач.  
+ Ключом, связанным с элементом в коллекции, обычно является имя элемента. В следующих процедурах показано, как использовать классы коллекций для выполнения стандартных задач.  
   
-### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>Чтобы найти и передать фокус для вложенного элемента управления в коллекции элементов управления  
+### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>Поиск и передача фокуса вложенному элементу управления в коллекции элементов управления  
   
-- Используйте <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> и <xref:System.Windows.Forms.Control.Focus%2A> методы, чтобы указать имя элемента управления, чтобы найти и передать фокус.  
+- Используйте методы <xref:System.Windows.Forms.Control.Focus%2A> и, чтобы указать имя элемента управления, который нужно найти, и присвоить ему фокус. <xref:System.Windows.Forms.Control.ControlCollection.Find%2A>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
-### <a name="to-access-an-image-in-an-image-collection"></a>Для доступа к изображению в коллекции изображений  
+### <a name="to-access-an-image-in-an-image-collection"></a>Получение доступа к изображению в коллекции изображений  
   
-- Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> свойство, чтобы указать имя образа, необходимо получить доступ.  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> Используйте свойство, чтобы указать имя изображения, к которому требуется получить доступ.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
-### <a name="to-set-a-tab-page-as-the-selected-tab"></a>Чтобы задать страницу вкладки в качестве выбранной вкладки  
+### <a name="to-set-a-tab-page-as-the-selected-tab"></a>Задание страницы вкладки в качестве выбранной вкладки  
   
-- Используйте <xref:System.Windows.Forms.TabControl.SelectedTab%2A> свойство вместе с <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> свойство, чтобы указать имя страницы вкладки, чтобы задать в качестве выбранной вкладки.  
+- Используйте свойство вместе <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> со свойством, чтобы указать имя страницы вкладки, которая будет задана в качестве выбранной вкладки. <xref:System.Windows.Forms.TabControl.SelectedTab%2A>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
@@ -54,4 +55,4 @@ ms.locfileid: "64665278"
 ## <a name="see-also"></a>См. также
 
 - [Приступая к работе с Windows Forms](getting-started-with-windows-forms.md)
-- [Практическое руководство. Добавление или удаление изображений с помощью компонента ImageList в Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Практическое руководство. Добавление или удаление образов с помощью компонента Windows Forms ImageList](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

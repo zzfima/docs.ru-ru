@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003748"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894698"
 ---
 # <a name="clr-etw-providers"></a>Поставщики ETW среды CLR
 В общеязыковой среде выполнения (CLR) представлены два поставщика: поставщик среды выполнения и поставщик очистки.  
   
  Поставщик среды выполнения вызывает события в зависимости от того, какие ключевые слова (категории событий) активированы. Например, с помощью ключевого слова `LoaderKeyword` можно активировать сбор событий загрузчика.  
   
- События трассировки для Windows (ETW) записываются в файл с расширением ETL-файл, который может позже быть преобразован в файлы с разделителями-запятыми (.csv) при необходимости. Дополнительные сведения о преобразовании ETL-файлов в файлы с расширением CSV см. в разделе [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ События трассировки событий Windows регистрируются в файле с расширением ETL, которое впоследствии может быть обработано при необходимости в файлах значений с разделителями-запятыми (CSV). Дополнительные сведения о преобразовании ETL-файлов в файлы с расширением CSV см. в разделе [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Поставщик среды выполнения  
  Поставщик среды выполнения является основным поставщиком трассировки событий Windows в среде CLR.  
@@ -60,7 +60,7 @@ ms.locfileid: "66003748"
   
 1. Включение ведения журнала трассировки событий Windows с использованием поставщика среды выполнения CLR:  
   
-    ```  
+    ```console
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
     ```  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66003748"
   
 2. Чтобы остановить профилирование во время выполнения процесса, запустите поставщик очистки для захвата событий `DCEnd`:  
   
-    ```  
+    ```console
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
     ```  
   
@@ -76,14 +76,14 @@ ms.locfileid: "66003748"
   
 3. Отключение профилирования трассировки всех событий Windows:  
   
-    ```  
+    ```console
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
 4. Объединение профилей в один файл журнала:  
   
-    ```  
+    ```console
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   

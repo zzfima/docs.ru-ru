@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374494"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929332"
 ---
 # <a name="mod-operator-visual-basic"></a>Оператор Mod (Visual Basic)
 
@@ -84,6 +84,7 @@ End Module
 ## <a name="attempted-division-by-zero"></a>Попыток деления на ноль
 
 Если `number2` значение равно нулю, поведение `Mod` оператора зависит от типа данных операндов:
+
 - Целочисленное деление вызывает исключение <xref:System.DivideByZeroException> , если `number2` не может быть определено во время компиляции и вызывает ошибку `BC30542 Division by zero occurred while evaluating this expression` во время компиляции, `number2` если во время компиляции значение равно нулю.
 - Деление с плавающей запятой возвращает <xref:System.Double.NaN?displayProperty=nameWithType>.
 

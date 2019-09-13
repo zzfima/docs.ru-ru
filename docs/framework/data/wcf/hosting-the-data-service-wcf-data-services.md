@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780270"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894330"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Размещение служб данных (службы данных WCF)
 С помощью WCF Data Services можно создать службу, которая предоставляет данные в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала. Эта служба данных определена в качестве класса, наследуемого от <xref:System.Data.Services.DataService%601>. Этот класс предоставляет функции, необходимые для обработки сообщений запросов, выполнения обновлений для источника данных и создания сообщений ответов в соответствии с требованиями OData. Однако службе данных не удается выполнить привязку и прослушивание сетевого сокета для входящих HTTP-запросов. Реализацию этой обязательной функциональности служба данных возлагает на размещающий компонент.
@@ -40,7 +40,7 @@ ms.locfileid: "70780270"
 
 При использовании диалогового окна **Добавление нового элемента** в Visual Studio 2015 для определения службы данных в приложении ASP.NET это средство создает два новых файла в проекте. Первый файл имеет расширение `.svc` и определяет для среды выполнения WCF способ создания экземпляра службы данных. Ниже приведен пример этого файла для образца службы данных Northwind, созданного при выполнении [краткого руководства](quickstart-wcf-data-services.md).
 
-```
+```aspx-csharp
 <%@ ServiceHost Language="C#"
     Factory="System.Data.Services.DataServiceHostFactory,
             System.Data.Services, Version=4.0.0.0,

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce16365f8aa9975a6ccb26415a6d091f65e1eef2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943853"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927101"
 ---
 # <a name="net-framework-performance"></a>Производительность .NET Framework
 Если вы хотите создавать приложения, отличающиеся высокой производительностью, вам следует закладывать эту производительность при планировании и проектировании наравне с другими возможностями приложения. Вы можете использовать средства, предоставляемые корпорацией Майкрософт, для измерения уровня производительности приложения и внесения усовершенствований в использование памяти, пропускную способность кода и скорость реагирования. В этом разделе перечислены средства анализа производительности, предоставляемые корпорацией Майкрософт, и приведены ссылки на другие разделы, описывающие аспекты производительности для разных областей разработки.  
@@ -34,7 +34,7 @@ ms.locfileid: "69943853"
 |----------|-----------------|  
 |Анализ производительности Visual Studio|Используйте для анализа использования ЦП у приложений .NET Framework, которые будут развернуты на компьютерах под управлением операционной системы Windows.<br /><br /> Это средство доступно в меню **Отладка** Visual Studio после открытия проекта. Для получения дополнительной информации см. [Обозреватель производительности](/visualstudio/profiling/performance-explorer). **Примечание.**  Если вы ориентируетесь на Windows Phone, используйте анализ приложения Windows Phone (см. следующую строку).|  
 |Анализ приложения Windows Phone|Используйте для анализа использования ЦП и памяти, скорости передачи данных по сети, скорости реагирования приложения и расхода заряда батареи у своих приложений Windows Phone.<br /><br /> Это средство доступно в меню **Отладка** проекта Windows Phone в Visual Studio после установки [пакета SDK для Windows Phone](https://go.microsoft.com/fwlink/?LinkId=265773). Дополнительные сведения см. в разделе [Профилирование приложений для Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Используйте для определения аспектов производительности, связанных с ЦП и памятью. Это средство использует трассировку событий Windows и API профилирования среды CLR для предоставления расширенного анализа памяти и ЦП, а также сведений о сборке мусора и JIT-компиляции. Дополнительные сведения об использовании PerfView см. в руководствах и файлах справки, входящих в состав приложения, в [видеоруководствах на канале Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) и в [записях в блоге](https://blogs.msdn.com/b/vancem/archive/tags/perfview/).<br /><br /> Вопросы, относящиеся к памяти, см. в разделе [Использование PerfView для анализа памяти](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Используйте для определения аспектов производительности, связанных с ЦП и памятью. Это средство использует трассировку событий Windows и API профилирования среды CLR для предоставления расширенного анализа памяти и ЦП, а также сведений о сборке мусора и JIT-компиляции. Дополнительные сведения об использовании PerfView см. в руководствах и файлах справки, входящих в состав приложения, в [видеоруководствах на канале Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) и в [записях в блоге](https://blogs.msdn.microsoft.com/vancem/tag/perfview/).<br /><br /> Вопросы, относящиеся к памяти, см. в разделе [Использование PerfView для анализа памяти](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Применяйте для определения общей производительности системы, например, использования памяти и хранилища приложением, когда на одном компьютере выполняется несколько приложений. Это средство доступно в Центре загрузки в составе комплекта средств для развертывания и оценки Windows (ADK) для [!INCLUDE[win8](../../../includes/win8-md.md)]. Дополнительные сведения см. в разделе [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Трассировка событий Windows (ETW)  

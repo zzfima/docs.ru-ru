@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988034"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894989"
 ---
 # <a name="icordebugmodulegetname-method"></a>Метод ICorDebugModule::GetName
 Возвращает имя файла модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -42,20 +42,20 @@ HRESULT GetName(
  [in] Размер массива `szName`.  
   
  `pcchName`  
- [in] Указатель на длину возвращаемого имени.  
+ окне Указатель на длину возвращаемого имени.  
   
  `szName`  
- [out] Массив, в котором хранится возвращаемое имя.  
+ заполняет Массив, в котором хранится возвращаемое имя.  
   
 ## <a name="remarks"></a>Примечания  
- `GetName` Метод возвращает значение S_OK HRESULT, если имя файла модуля соответствует имени на диске. `GetName` Возвращает значение HRESULT S_FALSE, если оно создано, например, модуль динамический или в памяти.  
+ `GetName` Метод возвращает значение S_OK HRESULT, если имя файла модуля совпадает с именем на диске. `GetName`Возвращает значение S_FALSE HRESULT, если имя является составным, например, для динамического или в памяти модуля.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

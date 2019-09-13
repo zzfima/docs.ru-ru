@@ -3,12 +3,12 @@ title: Интерфейс ICorProfilerInfo9
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 0ba4f2b4a515143d50bc812f04ea75d821b69471
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: af6bd02c6d4e88c72dca20d2520d1ecc8cf1c421
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68973804"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928788"
 ---
 # <a name="icorprofilerinfo9-interface"></a>Интерфейс ICorProfilerInfo9
 
@@ -26,5 +26,7 @@ ms.locfileid: "68973804"
 **Платформ** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).  
 **Заголовок.** CorProf. idl, CorProf. h  
 **Версии .NET:** [!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
+
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

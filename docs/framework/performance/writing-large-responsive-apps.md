@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915541"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927018"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#. 
@@ -280,7 +280,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **Пример 5. Лямбда-выражения,\<List T > и IEnumerable\<t >**  
   
- В этом примере [LINQ и код в функциональном стиле](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) применяются для поиска символа в модели компилятора при заданной строке имени:  
+ В этом примере [LINQ и код в функциональном стиле](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) применяются для поиска символа в модели компилятора при заданной строке имени:  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- В первой строке [лямбда-выражение](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` закрывается [по](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) локальной переменной `name`. Это означает, что в дополнение к выделению объекта для [делегата](../../csharp/language-reference/keywords/delegate.md), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`. Компилятор формирует код, аналогичный следующему:  
+ В первой строке [лямбда-выражение](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [закрывается по](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) локальной переменной `name`. Это означает, что в дополнение к выделению объекта для [делегата](../../csharp/language-reference/keywords/delegate.md), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`. Компилятор формирует код, аналогичный следующему:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

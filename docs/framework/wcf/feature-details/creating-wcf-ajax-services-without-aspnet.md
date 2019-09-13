@@ -2,12 +2,12 @@
 title: Создание служб WCF AJAX без использования ASP.NET
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: f850d8649f1d67fe916542bfb025afb7cb3f852b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 04d2831407f4aa32c72aabbbff0e6fdde769bd23
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856144"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895089"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Создание служб WCF AJAX без использования ASP.NET
 Доступ к службам AJAX Windows Communication Foundation (WCF) можно получить с любой веб-страницы с поддержкой JavaScript, не требуя ASP.NET AJAX. В этом разделе описывается создание такой службы WCF.  
@@ -25,7 +25,7 @@ ms.locfileid: "70856144"
 ## <a name="creating-an-ajax-endpoint"></a>Создание конечной точки AJAX  
  Самый простой способ включить поддержку AJAX в службе WCF — использовать <xref:System.ServiceModel.Activation.WebServiceHostFactory> в SVC-файле, связанном со службой, как показано в следующем примере.  
   
-```svc
+```text
 <%ServiceHost   
     language=c#  
     Debug="true"  

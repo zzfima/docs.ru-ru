@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Доступ к Интернету с помощью Async и await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106957"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928448"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Пошаговое руководство. Доступ к Интернету с помощью Async и await (Visual Basic)
 
@@ -22,6 +22,7 @@ ms.locfileid: "70106957"
 В этом пошаговом руководстве выполняются следующие задачи.
 
 > [!div class="checklist"]
+>
 > - [Создание приложения WPF](#create-a-wpf-application)
 > - [Проектирование простого WPF MainWindow](#design-a-simple-wpf-mainwindow)
 > - [Добавление ссылки](#add-a-reference)

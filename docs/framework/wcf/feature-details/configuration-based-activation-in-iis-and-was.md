@@ -2,12 +2,12 @@
 title: Активация на основе конфигурации в IIS и WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928772"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Активация на основе конфигурации в IIS и WAS
 
@@ -31,6 +31,7 @@ ms.locfileid: "69909774"
  Такой код, показанный в файле Web.config, позволяет поместить исходный код службы в каталог App_Code приложения или откомпилированную сборку в каталог Bin приложения.
 
 > [!NOTE]
+>
 > - При использовании активации на основе конфигурации, встроенный программный код в SVC-файлах не поддерживается.
 > - Для атрибута необходимо задать относительный адрес, например "\<подкаталог >/сервице.СВК" или "~/\<суб-директори/Service. svc". `relativeAddress`
 > - Если зарегистрирован относительный адрес, который не содержит известного расширения имени, связанного с WCF, то будет создано исключение конфигурации.

@@ -2,12 +2,12 @@
 title: Требования к системе для поставщика данных платформы .NET Framework для Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780574"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894379"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Требования к системе для поставщика данных платформы .NET Framework для Oracle
 Поставщику данных платформы .NET Framework для Oracle требуются компоненты Microsoft Data Access Components (MDAC) версии 2.6 или более поздней версии. Рекомендуется MDAC 2.8 с пакетом обновления 2 (SP1).  
@@ -22,9 +22,7 @@ ms.locfileid: "70780574"
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Установка значения Юникода в атрибуте строки соединения  
  При работе с Oracle можно использовать атрибут строки соединения  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  для инициализации клиентских библиотек Oracle в режиме UTF-16. Тем самым клиентские библиотеки Oracle смогут принимать UTF-16 (очень похожий на UCS-2) вместо многобайтовых строк. Это позволит поставщику данных для Oracle постоянно работать с любыми кодовыми страницами Oracle без дополнительных преобразований. Такая конфигурация работает только если для связи с базой данных Oracle 9i с альтернативной кодировкой AL16UTF16 используются клиенты Oracle 9i. Когда клиент Oracle 9i обменивается данными с сервером Oracle 9i, для **преобразования значений типа** данных в Юникоде в соответствующую многобайтовую кодировку, используемую сервером Oracle9i, требуются дополнительные ресурсы. Этого можно избежать, добавив в строку соединения параметр `Unicode=True`, если известно, что безопасная конфигурация поддерживается.  
   

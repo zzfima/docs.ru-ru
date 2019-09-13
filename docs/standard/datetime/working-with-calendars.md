@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106702"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929133"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
 
@@ -139,6 +139,7 @@ ms.locfileid: "70106702"
 
 > [!IMPORTANT]
 > Эра реива, Новая эра в <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>начинается с 1 мая 2019. Это изменение затрагивает все приложения, использующие эти календари. Дополнительные сведения см. в этих статьях:
+>
 > - [Обработка новой эры в японском календаре в .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), которая документирует функции, добавленные в .NET для поддержки календарей с несколькими Эр, и обсуждаются рекомендации по обработке календарей с несколькими эрами.
 > - [Подготовьте свое приложение к изменению японской эры](/windows/uwp/design/globalizing/japanese-era-change), которое содержит сведения о тестировании приложений в Windows, чтобы гарантировать их готовность к изменению эры.
 > - [Сводка новых обновлений японской эры для .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), в которой перечислены .NET Framework обновления для отдельных версий Windows, связанных с новой эре японского календаря, заметок о новых функциях .NET Framework для поддержки нескольких эпох, а также о том, как Ищите в тестируемых приложениях.
@@ -184,7 +185,7 @@ ms.locfileid: "70106702"
   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
-- Вызовите метод даты и времени, который явно указывает эру. К ним относятся следующие методы.
+- Вызовите метод даты и времени, который явно указывает эру. Включены следующие методы:
 
   - <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> Метод<xref:System.Globalization.JapaneseCalendar> класса или .<xref:System.Globalization.JapaneseLunisolarCalendar>
 

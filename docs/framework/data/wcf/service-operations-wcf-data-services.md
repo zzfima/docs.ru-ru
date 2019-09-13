@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779775"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894268"
 ---
 # <a name="service-operations-wcf-data-services"></a>Операции служб (службы данных WCF)
 
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют определять операции службы над службой данных для предоставления методов сервера. Как и остальные ресурсы службы данных, операции службы адресуются с помощью URI. Операции службы позволяют предоставлять бизнес-логику службы данных, например реализовывать логику проверки, применять правила безопасности на основе ролей и предоставлять специализированные возможности запросов. Операции службы представляют собой методы, добавленные в класс службы данных, производный от класса <xref:System.Data.Services.DataService%601>. Как и остальные ресурсы службы данных, методы операций службы поддерживают передачу параметров. Например, следующий универсальный код ресурса (URI) операции службы (на основе [службы данных быстрого](quickstart-wcf-data-services.md) запуска) `London` передает значение `city` в параметр:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 
 Адресовать операции службы можно, помещая имя метода в первый сегмент пути в URI. Например, следующий URI обращается к операции `GetOrdersByState`, которая возвращает коллекцию <xref:System.Linq.IQueryable%601> объектов `Orders`.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
 
 Дополнительные сегменты пути или параметры запросов добавляются в URI в зависимости от типа возвращаемого значения операции службы. Например, следующий URI обращается к операции `GetOrdersByCity`, которая возвращает коллекцию <xref:System.Linq.IQueryable%601> объектов `Orders`, упорядоченных по значению `RequiredDate` в убывающем порядке, вместе со связанными объектами `Order_Details`:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 
