@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675355"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971929"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Программирование с использованием доменов приложений и сборок
 Такие узлы, как Microsoft Internet Explorer, ASP.NET и оболочки Windows, загружают среду CLR в процесс, создают в этом процессе [домен приложения](../../../docs/framework/app-domains/application-domains.md), а затем загружают и выполняют пользовательский код в этом домене приложения при запуске приложения .NET Framework. В большинстве случаев вам не нужно беспокоиться о создании доменов приложений и загрузке сборок в них, так как эти задачи выполняет хост-приложение среды выполнения.  
@@ -28,14 +28,14 @@ ms.locfileid: "61675355"
  [Использование доменов приложений](../../../docs/framework/app-domains/use.md)  
  Примеры создания, настройки и использования доменов приложений.  
   
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Программирование с использованием сборок](../../standard/assembly/program.md)  
  Описание способов создания, подписи и установки атрибутов сборок.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Описание способов создания динамических сборок.  
   
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Сборки в .NET](../../standard/assembly/index.md)  
  Общие сведения о сборках.  
   
  [Домены приложений](../../../docs/framework/app-domains/application-domains.md)  

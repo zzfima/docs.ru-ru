@@ -1,24 +1,6 @@
 - name: Основные понятия программирования
   href: index.md
   items:
-    - name: Сборки
-      items:
-        - name: Дружественные сборки
-          items:
-            - name: Практическое руководство. Создание неподписанных дружественных сборок
-              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-            - name: Практическое руководство. Создание подписанных дружественных сборок
-              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
-        - name: Практическое руководство. Создание и использование сборок с помощью командной строки
-          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-        - name: 'Практическое руководство. Определение того, является ли файл сборкой'
-          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-        - name: Практическое руководство. Загрузка и выгрузка сборок
-          href: assemblies-gac/how-to-load-and-unload-assemblies.md
-        - name: Практическое руководство. Совместное использование сборки с другими приложениями
-          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-        - name: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio
-          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Асинхронное программирование с использованием ключевых слов async и await
       href: async/
     - name: Атрибуты

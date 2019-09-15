@@ -6,7 +6,7 @@
       tocHref: /dotnet/
       topicHref: /dotnet/index
       items:
-        - name: Браузер API .NET
+        - name: Обозреватель .NET API
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
         - name: Руководство по архитектуре приложений .NET
@@ -106,7 +106,7 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: Инструменты
+            - name: Средства
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
             - name: Совместимость
@@ -446,9 +446,6 @@
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
                   items:
-                    - name: Сборки
-                      tocHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/
-                      topicHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/index
                     - name: Асинхронное программирование
                       tocHref: /dotnet/csharp/programming-guide/concepts/async/
                       topicHref: /dotnet/csharp/programming-guide/concepts/async/index
@@ -542,9 +539,6 @@
               tocHref: /dotnet/visual-basic/programming-guide/concepts/
               topicHref: /dotnet/visual-basic/programming-guide/concepts/index
               items:
-                - name: Сборки
-                  tocHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/
-                  topicHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/index
                 - name: Асинхронное программирование
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/async/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/async/index
