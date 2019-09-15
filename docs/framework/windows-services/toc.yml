@@ -1,4 +1,4 @@
-- name: Приложения служб Windows
+﻿- name: Приложения служб Windows
   href: index.md
   items:
     - name: Знакомство с приложениями служб Windows
@@ -7,26 +7,26 @@
       href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
     - name: Программная архитектура приложений служб
       href: service-application-programming-architecture.md
-    - name: Как выполнить Создание служб Windows
+    - name: Практическое руководство. Создание служб Windows
       href: how-to-create-windows-services.md
       items:
-        - name: Как выполнить Создание службы программным способом
+        - name: Практическое руководство. Создание службы программным способом
           href: how-to-write-services-programmatically.md
-        - name: Как выполнить Добавление установщиков в приложение-службу
+        - name: Практическое руководство. Добавление установщиков в приложение-службу
           href: how-to-add-installers-to-your-service-application.md
-        - name: Как выполнить Назначение службам контекста безопасности
+        - name: Практическое руководство. Назначение службам контекста безопасности
           href: how-to-specify-the-security-context-for-services.md
-        - name: Как выполнить Установка и удаление служб
+        - name: Практическое руководство. Установка и удаление служб
           href: how-to-install-and-uninstall-services.md
-        - name: Как выполнить Запуск служб
+        - name: Практическое руководство. Запуск служб
           href: how-to-start-services.md
-        - name: "Как выполнить Приостановка выполнения службы Windows (Visual\_Basic)"
+        - name: "Практическое руководство. Приостановка выполнения службы Windows (Visual\_Basic)"
           href: how-to-pause-a-windows-service-visual-basic.md
-        - name: Как выполнить Возобновление выполнения службы Windows (Visual Basic)
+        - name: Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)
           href: how-to-continue-a-windows-service-visual-basic.md
-        - name: Как выполнить Отладка приложений служб Windows
+        - name: Практическое руководство. Отладка приложений служб Windows
           href: how-to-debug-windows-service-applications.md
-        - name: Как выполнить Запись сведений о службах в журнал
+        - name: Практическое руководство. Запись сведений о службах в журнал
           href: how-to-log-information-about-services.md
         - name: 'Устранение неполадок: Отладка служб Windows'
           href: troubleshooting-debugging-windows-services.md
