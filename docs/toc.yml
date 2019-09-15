@@ -1,4 +1,4 @@
-- name: Приветствие
+- name: Экран приветствия
   href: welcome.md
 - name: "Руководство по\_.NET"
   href: standard/index.md
@@ -313,7 +313,7 @@
       href: core/rid-catalog.md
     - name: Обзор пакета SDK для .NET Core
       href: core/sdk.md
-    - name: Интерфейс командной строки .NET Core
+    - name: .NET Core CLI
       items:
         - name: Обзор
           href: core/tools/index.md
@@ -470,7 +470,7 @@
   items:
     - name: Новые возможности
       href: framework/whats-new/
-    - name: Приступая к работе
+    - name: Начало работы
       href: framework/get-started/
     - name: Руководство по установке
       href: framework/install/
@@ -483,7 +483,7 @@
           href: framework/app-domains/
         - name: Ресурсы в приложениях для настольных систем
           href: framework/resources/
-        - name: Специальные возможности
+        - name: Возможности доступа
           href: framework/ui-automation/
         - name: Данные и моделирование
           href: framework/data/
@@ -528,14 +528,14 @@
           href: framework/unmanaged-api/
         - name: Службы XAML
           href: framework/xaml-services/
-    - name: Инструменты
+    - name: Средства
       href: framework/tools/
     - name: Дополнительные библиотеки классов и API-интерфейсы
       href: framework/additional-apis/
 - name: 'Руководство по языку C#'
   href: csharp/index.md
   items:
-    - name: Приступая к работе
+    - name: Начало работы
       href: csharp/getting-started/
     - name: Учебники
       items:
@@ -545,7 +545,7 @@
           items:
             - name: Выберите первый урок
               href: csharp/tutorials/intro-to-csharp/index.md
-            - name: 'Здравствуй, мир'
+            - name: Hello World
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Числа в C#'
               href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -643,7 +643,7 @@
           href: csharp/methods.md
         - name: Лямбда-выражения
           href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
-        - name: Свойства
+        - name: properties
           href: csharp/properties.md
         - name: Индексаторы
           href: csharp/indexers.md
@@ -732,7 +732,7 @@
 - name: 'Руководство по языку F#'
   href: fsharp/index.md
   items:
-    - name: Приступая к работе
+    - name: Начало работы
       href: fsharp/get-started/index.md
       items:
         - name: 'Установка F#'
@@ -787,7 +787,7 @@
               href: fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md
             - name: 'Операторы, допускающие значение NULL'
               href: fsharp/language-reference/symbol-and-operator-reference/nullable-operators.md
-        - name: Функции
+        - name: Функции Azure
           href: fsharp/language-reference/functions/index.md
           items:
             - name: Привязки let
@@ -819,7 +819,7 @@
           href: fsharp/language-reference/basic-types.md
         - name: Тип Unit
           href: fsharp/language-reference/unit-type.md
-        - name: Строки
+        - name: строк
           href: fsharp/language-reference/strings.md
         - name: Кортежи
           href: fsharp/language-reference/tuples.md
@@ -877,7 +877,7 @@
               href: fsharp/language-reference/members/let-bindings-in-classes.md
             - name: Привязки do в классах
               href: fsharp/language-reference/members/do-bindings-in-classes.md
-            - name: Свойства
+            - name: properties
               href: fsharp/language-reference/members/properties.md
             - name: Индексированные свойства
               href: fsharp/language-reference/members/indexed-properties.md
@@ -903,7 +903,7 @@
           href: fsharp/language-reference/object-expressions.md
         - name: Приведение и преобразование
           href: fsharp/language-reference/casting-and-conversions.md
-        - name: Управление доступом
+        - name: Контроль доступа
           href: fsharp/language-reference/access-control.md
         - name: Условные выражения. if…then…else
           href: fsharp/language-reference/conditional-expressions-if-then-else.md
@@ -1007,7 +1007,7 @@
   items:
     - name: Новые возможности Visual Basic
       href: visual-basic/getting-started/whats-new.md
-    - name: Приступая к работе
+    - name: Начало работы
       href: visual-basic/getting-started/index.md
       items:
         - name: Критические изменения Visual Basic в Visual Studio
@@ -1031,7 +1031,7 @@
             - name: Доступ к веб-службам приложения
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: Практическое руководство. Асинхронный вызов веб-службы
+                - name: 'Практическое руководство: Асинхронный вызов веб-службы'
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1070,24 +1070,6 @@
     - name: Основные понятия программирования
       href: visual-basic/programming-guide/concepts/index.md
       items:
-        - name: Сборки
-          items:
-            - name: Дружественные сборки
-              items:
-                - name: Практическое руководство. Создание неподписанных дружественных сборок
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-                - name: Практическое руководство. Создание подписанных дружественных сборок
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
-            - name: Практическое руководство. Создание и использование сборок с помощью командной строки
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-            - name: 'Практическое руководство. Определение того, является ли файл сборкой'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-            - name: Практическое руководство. Загрузка и выгрузка сборок
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
-            - name: Практическое руководство. Совместное использование сборки с другими приложениями
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-            - name: Пошаговое руководство. Внедрение типов из управляемых сборок
-              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: Асинхронное программирование с использованием ключевых слов Async и Await
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: Атрибуты
@@ -1127,11 +1109,11 @@
           href: visual-basic/programming-guide/program-structure/coding-conventions.md
         - name: Условная компиляция
           href: visual-basic/programming-guide/program-structure/conditional-compilation.md
-        - name: Практическое руководство. Разбиение и объединение инструкций в коде
+        - name: 'Практическое руководство: Разбиение и объединение инструкций в коде'
           href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
-        - name: Практическое руководство. Сворачивание и скрытие частей кода
+        - name: 'Практическое руководство: Сворачивание и скрытие частей кода'
           href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
-        - name: Практическое руководство. Операторы меток
+        - name: 'Практическое руководство: Операторы меток'
           href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
         - name: Специальные символы в коде
           href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
@@ -1171,14 +1153,14 @@
             - name: Составные типы данных
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: Практическое руководство. Хранение нескольких значений в переменной
+                - name: 'Практическое руководство: Хранение нескольких значений в переменной'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: Универсальные типы
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
-                - name: 'Практическое руководство. Определение класса, реализующего одинаковую функциональность для разных типов данных'
+                - name: 'Практическое руководство: Определение класса, реализующего одинаковую функциональность для разных типов данных'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-                - name: Практическое руководство. Использование универсального класса
+                - name: 'Практическое руководство: Использование универсального класса'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
             - name: Универсальные процедуры
               href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
@@ -1195,14 +1177,14 @@
                   href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
                 - name: Преобразования значений между строковыми и другими типами
                   href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
-                - name: Практическое руководство. Преобразование объекта в другой тип
+                - name: 'Практическое руководство: Преобразование объекта в другой тип'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
                 - name: Преобразования массивов
                   href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
             - name: Структуры
               href: visual-basic/programming-guide/language-features/data-types/structures.md
               items:
-                - name: Практическое руководство. Объявление структуры
+                - name: 'Практическое руководство: Объявление структуры'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
                 - name: Переменные структуры
                   href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
@@ -1229,7 +1211,7 @@
         - name: Интерфейсы
           href: visual-basic/programming-guide/language-features/interfaces/index.md
           items:
-            - name: Пошаговое руководство. Создание и реализация интерфейсов
+            - name: Пошаговое руководство Создание и реализация интерфейсов
               href: visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md
         - name: LINQ
           href: visual-basic/programming-guide/language-features/linq/index.md
@@ -1239,9 +1221,9 @@
           href: visual-basic/programming-guide/language-features/operators-and-expressions/index.md
         - name: Процедуры
           href: visual-basic/programming-guide/language-features/procedures/index.md
-        - name: Операторы
+        - name: Инструкции
           href: visual-basic/programming-guide/language-features/statements.md
-        - name: Строки
+        - name: строк
           href: visual-basic/programming-guide/language-features/strings/index.md
         - name: Переменные
           href: visual-basic/programming-guide/language-features/variables/index.md
@@ -1252,23 +1234,23 @@
       items:
         - name: Знакомство с COM-взаимодействием
           href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
-        - name: Практическое руководство. Ссылка на COM-объекты
+        - name: 'Практическое руководство: Ссылка на COM-объекты'
           href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
-        - name: Практическое руководство. Работа с элементами управления ActiveX
+        - name: 'Практическое руководство: Работа с элементами управления ActiveX'
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
-        - name: Пошаговое руководство. Вызов API Windows
+        - name: Пошаговое руководство Вызов API Windows
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
-        - name: Практическое руководство. Вызов API Windows
+        - name: 'Практическое руководство: Вызов API Windows'
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
-        - name: 'Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа'
+        - name: 'Практическое руководство: Вызов функции Windows, принимающей значение беззнакового типа'
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
-        - name: Пошаговое руководство. Создание COM-объектов
+        - name: Пошаговое руководство Создание COM-объектов
           href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
         - name: Устранение неполадок взаимодействия
           href: visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md
         - name: COM-взаимодействие в приложениях .NET Framework
           href: visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md
-        - name: Пошаговое руководство. Реализация наследования с использованием COM-объектов
+        - name: Пошаговое руководство Реализация наследования с использованием COM-объектов
           href: visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md
     - name: Справочник по языку
       href: visual-basic/language-reference/index.md
@@ -1371,7 +1353,7 @@
               href: visual-basic/language-reference/directives/if-then-else-directives.md
             - name: '#Директива Region'
               href: visual-basic/language-reference/directives/region-directive.md
-        - name: Функции
+        - name: Функции Azure
           href: visual-basic/language-reference/functions/index.md
           items:
             - name: Функции преобразования
@@ -1392,9 +1374,9 @@
           items:
             - name: Ansi
               href: visual-basic/language-reference/modifiers/ansi.md
-            - name: Assembly
+            - name: Сборка
               href: visual-basic/language-reference/modifiers/assembly.md
-            - name: Async
+            - name: Асинхронный режим
               href: visual-basic/language-reference/modifiers/async.md
             - name: Авто
               href: visual-basic/language-reference/modifiers/auto.md
@@ -1402,7 +1384,7 @@
               href: visual-basic/language-reference/modifiers/byref.md
             - name: ByVal
               href: visual-basic/language-reference/modifiers/byval.md
-            - name: Значение по умолчанию
+            - name: значение по умолчанию
               href: visual-basic/language-reference/modifiers/default.md
             - name: Friend
               href: visual-basic/language-reference/modifiers/friend.md
@@ -1412,7 +1394,7 @@
               href: visual-basic/language-reference/modifiers/iterator.md
             - name: Ключ
               href: visual-basic/language-reference/modifiers/key.md
-            - name: Module
+            - name: модуль
               href: visual-basic/language-reference/modifiers/module-keyword.md
             - name: MustInherit
               href: visual-basic/language-reference/modifiers/mustinherit.md
@@ -1424,7 +1406,7 @@
               href: visual-basic/language-reference/modifiers/notinheritable.md
             - name: NotOverridable
               href: visual-basic/language-reference/modifiers/notoverridable.md
-            - name: Optional
+            - name: Необязательно
               href: visual-basic/language-reference/modifiers/optional.md
             - name: out (универсальный модификатор)
               href: visual-basic/language-reference/modifiers/out-generic-modifier.md
@@ -1432,11 +1414,11 @@
               href: visual-basic/language-reference/modifiers/overloads.md
             - name: Overridable
               href: visual-basic/language-reference/modifiers/overridable.md
-            - name: Overrides
+            - name: Переопределения
               href: visual-basic/language-reference/modifiers/overrides.md
             - name: ParamArray
               href: visual-basic/language-reference/modifiers/paramarray.md
-            - name: Partial
+            - name: Частично
               href: visual-basic/language-reference/modifiers/partial.md
             - name: Private
               href: visual-basic/language-reference/modifiers/private.md
@@ -1446,17 +1428,17 @@
               href: visual-basic/language-reference/modifiers/protected.md
             - name: Protected Friend
               href: visual-basic/language-reference/modifiers/protected-friend.md
-            - name: Public
+            - name: Общедоступные
               href: visual-basic/language-reference/modifiers/public.md
             - name: ReadOnly
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Shared
+            - name: Совмещаемая блокировка
               href: visual-basic/language-reference/modifiers/shared.md
-            - name: Static
+            - name: Статическое
               href: visual-basic/language-reference/modifiers/static.md
-            - name: Юникод
+            - name: Unicode
               href: visual-basic/language-reference/modifiers/unicode.md
             - name: Widening
               href: visual-basic/language-reference/modifiers/widening.md
@@ -1628,7 +1610,7 @@
                   href: visual-basic/language-reference/operators/like-operator.md
                 - name: Оператор Mod
                   href: visual-basic/language-reference/operators/mod-operator.md
-                - name: Оператор New
+                - name: Новый оператор
                   href: visual-basic/language-reference/operators/new-operator.md
                 - name: Оператор Not
                   href: visual-basic/language-reference/operators/not-operator.md
@@ -1644,7 +1626,7 @@
                   href: visual-basic/language-reference/operators/typeof-operator.md
                 - name: Оператор Xor
                   href: visual-basic/language-reference/operators/xor-operator.md
-        - name: Свойства
+        - name: properties
           href: visual-basic/language-reference/properties.md
         - name: Запросы
           href: visual-basic/language-reference/queries/index.md
@@ -1679,7 +1661,7 @@
               href: visual-basic/language-reference/queries/take-while-clause.md
             - name: Предложение Where
               href: visual-basic/language-reference/queries/where-clause.md
-        - name: Операторы
+        - name: Инструкции
           href: visual-basic/language-reference/statements/index.md
           items:
             - name: Операторы A-E
@@ -1895,7 +1877,7 @@
               href: visual-basic/language-reference/xml-literals/xml-comment-literal.md
             - name: XML-литерал инструкции обработки
               href: visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md
-        - name: Сообщения об ошибках
+        - name: сообщения об ошибках
           href: visual-basic/language-reference/error-messages/index.md
           items:
             - name: 'Оператору #ElseIf должен предшествовать соответствующий оператор #If или #ElseIf'
@@ -2182,7 +2164,7 @@
               href: visual-basic/language-reference/error-messages/path-not-found.md
             - name: Ошибка доступа к пути к файлу
               href: visual-basic/language-reference/error-messages/path-file-access-error.md
-            - name: В разрешении отказано
+            - name: Отказ в разрешении
               href: visual-basic/language-reference/error-messages/permission-denied.md
             - name: Недопустимый вызов или аргумент процедуры
               href: visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
@@ -2315,7 +2297,7 @@
             - name: Построение из командной строки
               href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
               items:
-                - name: Практическое руководство. Вызов компилятора командной строки
+                - name: 'Практическое руководство: Вызов компилятора командной строки'
                   href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
                 - name: Примеры командных строк компиляции
                   href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md
