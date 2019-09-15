@@ -16,32 +16,32 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd7ac0487a5878122d9b1717a5e5fc8bf21a4ea7
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586295"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972042"
 ---
 # <a name="namespaces-in-visual-basic"></a>Пространства имен в Visual Basic
 Пространства имен упорядочивают объекты, определенные в сборке. Сборки могут содержать несколько пространств имен, которые, в свою очередь, могут содержать другие пространства имен. Пространства имен предотвращают неоднозначность и упрощают ссылки при использовании больших групп объектов, таких как библиотеки классов.  
   
- Например, платформа .NET Framework определяет <xref:System.Windows.Forms.ListBox> в класс <xref:System.Windows.Forms?displayProperty=nameWithType> пространства имен. В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
+ Например, .NET Framework определяет <xref:System.Windows.Forms.ListBox> класс <xref:System.Windows.Forms?displayProperty=nameWithType> в пространстве имен. В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Предотвращение конфликтов имен  
- Пространства имен .NET framework решить проблему, иногда называют *загрязнением пространства имен*, при которой у разработчика библиотеки классов с использованием аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
+ .NET Framework пространства имен устраняют проблему, которая иногда называется *засорением пространства имен*, при которой разработчик библиотеки классов страдает от использования аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
   
- Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Тем не менее если вы хотите использовать .NET Framework <xref:System.Windows.Forms.ListBox> класс в том же проекте, необходимо использовать полную ссылку, чтобы сделать ссылку уникальной. Если ссылка не является уникальным, Visual Basic выводит сообщение об ошибке о том, что имя является неоднозначным. В примере кода ниже показано, как объявить эти объекты:  
+ Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Однако если вы хотите использовать класс .NET Framework <xref:System.Windows.Forms.ListBox> в том же проекте, необходимо использовать полную ссылку, чтобы сделать ссылку уникальной. Если ссылка не является уникальной, Visual Basic выдает ошибку, сообщающую, что имя неоднозначно. В примере кода ниже показано, как объявить эти объекты:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- На следующем рисунке показан две иерархии пространств имен, оба из которых содержится объект с именем `ListBox`:  
+ На следующем рисунке показаны две иерархии пространства имен, содержащие объект с именем `ListBox`:  
   
- ![Снимок экрана, показывающий две иерархии пространств имен.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Снимок экрана, на котором показаны две иерархии пространств имен.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- По умолчанию каждый исполняемый файл, созданный с помощью Visual Basic содержит пространство имен с тем же именем, что и проект. Например, если вы определяете объект в проекте `ListBoxProject`, то исполняемый файл ListBoxProject.exe содержит пространство имен `ListBoxProject`.  
+ По умолчанию каждый исполняемый файл, созданный с помощью Visual Basic, содержит пространство имен с тем же именем, что и у проекта. Например, если вы определяете объект в проекте `ListBoxProject`, то исполняемый файл ListBoxProject.exe содержит пространство имен `ListBoxProject`.  
   
  Несколько сборок могут использовать одно и то же пространство имен. Visual Basic обрабатывает их как единый набор имен. Например, можно определить классы для пространства имен `SomeNameSpace` в сборке `Assemb1`, а также определить дополнительные классы для того же пространства имен из сборки `Assemb2`.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65586295"
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- Если вы попытаетесь использовать `Class1` без полного имени, Visual Basic выводит сообщение об ошибке, о том, что имя `Class1` является неоднозначным.  
+ При попытке использовать `Class1` без полного указания этого имени Visual Basic выдает ошибку, сообщающую, что имя `Class1` неоднозначно.  
   
 ## <a name="namespace-level-statements"></a>Операторы уровня пространства имен  
  В пространстве имен можно определить такие элементы, как модули, интерфейсы, классы, делегаты, перечисления, структуры и другие пространства имен. Вы не можете определить такие элементы, как свойства, процедуры, переменные и события, на уровне пространства имен. Их следует объявить внутри контейнеров, таких как модули, структуры или классы.  
@@ -124,7 +124,6 @@ End Namespace
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
 - [Сборки в .NET](../../../standard/assembly/index.md)
-- [Практическое руководство. Создание и использование сборок с помощью командной строки](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
-- [Ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Ссылки и оператор Imports](references-and-the-imports-statement.md)
+- [Оператор Imports (пространство имен и тип .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

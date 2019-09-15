@@ -2,12 +2,12 @@
 title: Ожидаемые исключения
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039702"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989968"
 ---
 # <a name="expected-exceptions"></a>Ожидаемые исключения
 В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) , который реализует службу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
@@ -54,7 +54,7 @@ catch (CommunicationException exception)
   
  Клиентский процесс выполняет два сценария, каждый из которых пытается выполнить операцию `Add`, а затем операцию `Divide`. Первый сценарий имитирует сбой в работе сети путем прерывания работы клиента перед вызовом `Divide`. Второй сценарий вызывает возникновение таймаута путем задания слишком короткого времени ожидания завершения метода. Ниже представлен ожидаемый результат выполнения клиентского процесса.  
   
-```  
+```output
 Add(100,15.99) = 115.99  
 Simulated network problem occurs...  
 Got System.ServiceModel.CommunicationObjectAbortedException  

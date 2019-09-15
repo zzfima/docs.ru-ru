@@ -2,12 +2,12 @@
 title: Настраиваемое отслеживание
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044300"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989400"
 ---
 # <a name="custom-tracking"></a>Настраиваемое отслеживание
 В данном образце демонстрируется создание настраиваемого участника отслеживания и запись содержимого данных отслеживания в консоль. Помимо этого, в образце демонстрируется создание <xref:System.Activities.Tracking.CustomTrackingRecord> объектов, заполненных определенными пользователем данными. Консольный участник отслеживания фильтрует <xref:System.Activities.Tracking.TrackingRecord> объекты, выпущенные рабочим процессом, используя объект профиля отслеживания, созданный в коде.
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- Полный участник отслеживания реализуется в файле ConsoleTrackingParticipant.cs. Следующий пример кода показывает метод <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> для настраиваемого участника отслеживания.
+ Полный участник отслеживания реализуется в файле ConsoleTrackingParticipant.cs. В следующем примере кода показан <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> метод для настраиваемого участника отслеживания.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)

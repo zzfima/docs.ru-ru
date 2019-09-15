@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934322"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972148"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Практическое руководство. Регистрация и настройка моникера службы
 Перед использованием моникера службы Windows Communication Foundation (WCF) в приложении COM с типизированным контрактом необходимо зарегистрировать необходимые типы с атрибутами в COM и настроить приложение COM и моникер с требуемой привязкой. Настройка.  
@@ -21,7 +21,7 @@ ms.locfileid: "69934322"
   
 2. Убедитесь, что все типы в сборке имеют пометку `ComVisible`. Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.  
   
-    ```  
+    ```csharp
     [assembly: ComVisible(true)]  
     ```  
   
@@ -40,10 +40,8 @@ ms.locfileid: "69934322"
   
      Регистрируется следующий тип.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
-  
-    ...  
   
     [ServiceContract]   
     public interface IMathService   
@@ -57,19 +55,19 @@ ms.locfileid: "69934322"
   
      Доступ к приложению предоставляется через следующую привязку `wsHttpBinding`. Для заданного типа и конфигурации приложения используются следующие примеры строк моникера.  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
     ```  
   
      `or`  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
      Можно использовать любую из этих строк моникера из приложения Visual Basic 6.0 после добавления ссылки на сборку, содержащую типы `IMathService`, как показано в следующем образце кода.  
   
-    ```  
+    ```vb  
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -91,7 +89,7 @@ ms.locfileid: "69934322"
   
      Хотя в этом разделе описывается использование моникера службы из кода VB 6.0, моникер службы можно использовать для любого другого языка. При использовании моникера из кода C++ сбоку, созданную с помощью средства Svcutil.exe, необходимо импортировать с атрибутом "no_namespace named_guids raw_interfaces_only", как показано в следующем примере кода.  
   
-    ```  
+    ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   

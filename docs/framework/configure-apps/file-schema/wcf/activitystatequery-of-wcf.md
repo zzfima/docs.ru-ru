@@ -2,12 +2,12 @@
 title: <activityStateQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 233bd3a2fa161222977902cc1053f964e8171173
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 49c507424e813067e1dad9b08167d9661acef36f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850484"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991216"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<Активитистатекуери > WCF
 
@@ -76,7 +76,7 @@ ms.locfileid: "70850484"
   
 ## <a name="remarks"></a>Примечания
 
-Уникальной возможностью ActivityStateQuery является возможность извлекать данные во время отслеживания выполнения рабочего процесса. Это обеспечивает дополнительный контекст при доступе к записям отслеживания после выполнения. Можно использовать [ \<аргументы >](../windows-workflow-foundation/arguments.md), [ \<состояния >](../windows-workflow-foundation/states.md) и [ \<состояния >](../windows-workflow-foundation/states.md) элементы, чтобы извлечь любую переменную или аргумент из любого действия в рабочем процессе. В следующем примере показан запрос состояния действия, который извлекает переменные и аргументы при выдаче записи `Closed` отслеживания действия. Переменные и аргументы могут извлекаться только с помощью активитистатерекорд, поэтому они подписываются в профиль отслеживания с помощью [ \<активитистатекуери >](../windows-workflow-foundation/activitystatequery.md).  
+Уникальной возможностью ActivityStateQuery является возможность извлекать данные во время отслеживания выполнения рабочего процесса. Это обеспечивает дополнительный контекст при доступе к записям отслеживания после выполнения. Можно использовать [ \<аргументы >](../windows-workflow-foundation/arguments.md), [ \<состояния >](../windows-workflow-foundation/states.md) и [ \<состояния >](../windows-workflow-foundation/states.md) элементы, чтобы извлечь любую переменную или аргумент из любого действия в рабочем процессе. В следующем примере показан запрос состояния действия, который извлекает переменные и аргументы при создании записи отслеживания действия `Closed`. Переменные и аргументы могут извлекаться только с помощью активитистатерекорд, поэтому они подписываются в профиль отслеживания с помощью [ \<активитистатекуери >](../windows-workflow-foundation/activitystatequery.md).  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">

@@ -2,12 +2,12 @@
 title: Пользовательский поставщик маркеров
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928823"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989943"
 ---
 # <a name="durable-issued-token-provider"></a>Пользовательский поставщик маркеров
 Этот пример демонстрирует, как реализовать пользовательский поставщик маркеров, выдаваемых клиенту.  
@@ -120,7 +120,7 @@ ms.locfileid: "70928823"
   
      Для выполнения этой задачи пользовательский поставщик маркеров наследует класс <xref:System.IdentityModel.Selectors.SecurityTokenProvider> и переопределяет метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Этот метод пытается получить маркер из кэша. Если маркер не может быть найден в кэше, метод получает маркер от базового поставщика и кэширует этот маркер. В обоих случаях метод возвращает `SecurityToken`.  
   
-    ```csharp
+    ```csharp  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ ms.locfileid: "70928823"
   
      Класс <xref:System.IdentityModel.Selectors.SecurityTokenManager> используется для создания объекта <xref:System.IdentityModel.Selectors.SecurityTokenProvider> для конкретного конструктора <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, который передается в него в методе `CreateSecurityTokenProvider`. Диспетчер маркеров безопасности также используется для создания структур проверки подлинности маркеров и сериализаторов маркеров, но в этом образце они не представлены. В данном образце пользовательский диспетчер маркеров безопасности наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> и переопределяет метод `CreateSecurityTokenProvider`, возвращающий пользовательский поставщик маркеров, когда переданные требования маркера указывают на запрос выданного маркера.  
   
-    ```csharp
+    ```csharp  
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -166,7 +166,7 @@ ms.locfileid: "70928823"
   
      Класс учетных данных клиента используется для представления учетных данных, которые сконфигурированы для прокси клиента, и создает диспетчер маркеров безопасности, который используется для получения структур проверки подлинности маркеров, поставщиков маркеров и сериализаторов маркеров.  
   
-    ```csharp
+    ```csharp  
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ ms.locfileid: "70928823"
   
 4. Реализация кэша маркера. Образец реализации использует абстрактный базовый класс, через который потребители данного кэша маркера взаимодействуют с кэшем.  
   
-    ```csharp
+    ```csharp  
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ ms.locfileid: "70928823"
   
      Чтобы клиент мог использовать пользовательские учетные данные клиента, образец удаляет класс учетных данных клиента по умолчанию и предоставляет новый класс учетных данных клиента.  
   
-    ```csharp
+    ```csharp  
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  

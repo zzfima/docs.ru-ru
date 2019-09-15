@@ -2,12 +2,12 @@
 title: Инструкции по установке сертификата сервера в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044914"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989852"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Инструкции по установке сертификата сервера в службах IIS
 Чтобы запускать примеры, которые безопасным образом взаимодействуют со службами IIS, необходимо создать и установить сертификат сервера.  
@@ -15,7 +15,7 @@ ms.locfileid: "70044914"
 ## <a name="step-1-creating-certificates"></a>Шаг 1. Создание сертификатов  
  Чтобы создать сертификат для компьютера, откройте Командная строка разработчика для Visual Studio с правами администратора и запустите Setup. bat, который включен в каждый из примеров, использующих безопасное взаимодействие с IIS. Перед запуском пакетного файла убедитесь, что путь включает папку, содержащую программу Makecert.exe. Следующая команда служит для создания сертификата в файле Setup.bat.  
   
-```  
+```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
@@ -49,7 +49,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 > [!IMPORTANT]
 > Этот код необходим только для тестовых сертификатов, наподобие созданных с помощью Makecert.exe. Для кода производственного назначения это делать не рекомендуется.  
   
-```  
+```csharp  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
@@ -76,6 +76,6 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 - Удалите сертификат компьютера с помощью следующей команды.  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:443  
     ```

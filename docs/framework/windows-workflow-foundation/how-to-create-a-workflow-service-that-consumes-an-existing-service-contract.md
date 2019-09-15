@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание службы рабочих процессов, использующей существующий контракт службы
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: f25e71aec03f9808b3263f0353328f92888ccc69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d7fa8c9faa84efc84243387cd27aa264f6155eb
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962319"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989626"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Практическое руководство. Создание службы рабочих процессов, использующей существующий контракт службы
 .NET Framework 4,5 обеспечивает лучшую интеграцию между веб-службами и рабочими процессами в виде разработки рабочих процессов с помощью контрактов. Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте.  
@@ -27,13 +27,13 @@ ms.locfileid: "69962319"
   
 2. В верхней части появившегося окна кода добавьте в `System.Servicemodel` инструкцию Using.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
     ```  
   
 3. Измените образец определения класса на следующее определение интерфейса.  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IBookService  
         {  

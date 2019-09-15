@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039558"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989780"
 ---
 # <a name="jsonp"></a>JSONP
 В этом образце показано, как обеспечить поддержку JSONP(JSON with Padding) в службах WCF REST. JSONP является правилом, используемым для вызова скриптов между доменами путем создания тегов скриптов в текущем документе. Результат возвращается в заданной функции обратного вызова. JSONP основан на идее того, что теги, такие `<script src="http://..." >` как, могут оценивать сценарии из любого домена, а скрипт, полученный этими тегами, вычисляется в области, в которой уже могут быть определены другие функции.
@@ -39,13 +39,13 @@ proxy.GetCustomer(onSuccess, onFail, null);
 
  ScriptManager управляет взаимодействием со службой и устраняет сложности реализации доступа JSONP вручную. Если `crossDomainScriptAccessEnabled` параметр имеет `true` значение и формат ответа для операции — JSON, инфраструктура WCF проверяет URI запроса на наличие параметра строки запроса обратного вызова и заключает ответ JSON в значение строки запроса обратного вызова. параметр. В образце веб-страница вызывает службу WCF REST со следующим URI.
 
-```
+```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
  Поскольку строковый параметр запроса обратного вызова имеет значение `JsonPCallback`, служба WCF возвращает ответ JSONP, показанный в следующем примере.
 
-```
+```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 

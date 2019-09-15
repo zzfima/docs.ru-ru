@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947970"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991376"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-Вызывается программой PresentationHost.exe для получения пользовательских ход выполнения и сообщения об ошибках из узла, если реализовано.  
+Вызывается PresentationHost. exe для получения настраиваемого хода выполнения и сообщений об ошибках с узла, если они реализованы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
 ## <a name="parameters"></a>Параметры  
  `pwzProgressAssemblyName`  
   
- [out] Указатель на сборку, содержащую пользовательский интерфейс хода выполнения, предоставляемую узла.  
+ заполняет Указатель на сборку, содержащую пользовательский интерфейс хода выполнения.  
   
  `pwzProgressClassName`  
   
- [out] Имя класса, пользовательском интерфейсе ход выполнения, предоставляемую узла предпочтительно [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] файл с <xref:System.Windows.Controls.Page> является его элемент верхнего уровня. Этот класс находится в сборке, который задается параметром `pwzProgressAssemblyName`.  
+ заполняет Имя класса, предоставляемого ведущим пользовательским интерфейсом выполнения, предпочтительнее [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] файл с <xref:System.Windows.Controls.Page> элементом верхнего уровня. Этот класс находится в сборке, указанной в параметре `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
- [out] Указатель на сборку, содержащую пользовательский интерфейс об узле.  
+ заполняет Указатель на сборку, содержащую пользовательский интерфейс ошибки, предоставляемый узлом.  
   
  `pwzErrorClassName`  
   
- [out] Имя класса, то есть пользователем узла об интерфейсе, предпочтительно файл XAML с <xref:System.Windows.Controls.Page> является его элемент верхнего уровня. Этот класс находится в сборке, который задается параметром `pwzErrorAssemblyName`.  
+ заполняет Имя класса, предоставляемого ведущим пользовательским интерфейсом ошибок, предпочтительнее XAML-файл с <xref:System.Windows.Controls.Page> элементом верхнего уровня. Этот класс находится в сборке, указанной в параметре `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
  HRESULT: Не обрабатывается.  
   
 ## <a name="remarks"></a>Примечания  
- Ведущее приложение может иметь конкретной темы, могут не соответствовать PresentationHost.exe по умолчанию пользовательские интерфейсы. Если это так, можно реализовать ведущее приложение [GetCustomUI](getcustomui.md) для возврата ход выполнения и ошибки пользовательских интерфейсов PresentationHost.exe. PresentationHost.exe всегда будет вызывать [GetCustomUI](getcustomui.md) перед использованием его пользовательские интерфейсы по умолчанию.  
+ Ведущее приложение может иметь определенную тему, которая может не соответствовать интерфейсу пользователя PresentationHost. exe по умолчанию. В этом случае ведущее приложение может реализовать [GetCustomUI](getcustomui.md) для возврата сведений о ходе выполнения и ошибок пользовательского интерфейса в PresentationHost. exe. PresentationHost. exe всегда будет вызывать [GetCustomUI](getcustomui.md) перед использованием пользовательских интерфейсов по умолчанию.  
   
- Эта функция вызывается один раз во время инициализации процесс PresentationHost элемента.  
+ Эта функция вызывается один раз во время инициализации PresentationHost.  
   
 ## <a name="see-also"></a>См. также
 

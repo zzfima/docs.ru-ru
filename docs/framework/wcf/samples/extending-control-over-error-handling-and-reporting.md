@@ -2,12 +2,12 @@
 title: Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039684"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989932"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 В этом примере показано, как расширить контроль над обработкой ошибок и отчетами об ошибках в службе Windows Communication Foundation <xref:System.ServiceModel.Dispatcher.IErrorHandler> (WCF) с помощью интерфейса. Образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) с дополнительным кодом, добавленным в службу для обработке ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  
@@ -21,7 +21,7 @@ ms.locfileid: "70039684"
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> обработчик `CalculatorErrorHandler` записывает ошибку в текстовый файл Error.txt в папке c:\logs. Обратите внимание, что этот образец регистрирует ошибку в журнале и не подавляет ее, чтобы о ней можно было уведомить клиент.  
   
-```  
+```csharp  
 public class CalculatorErrorHandler : IErrorHandler  
 {  
         // Provide a fault. The Message fault parameter can be replaced, or set to  
@@ -51,7 +51,7 @@ public class CalculatorErrorHandler : IErrorHandler
   
  Атрибут `ErrorBehaviorAttribute` выполняет роль механизма регистрации обработчика ошибок в службе. Этот атрибут принимает параметр единственного типа. Этот тип должен быть реализацией интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler> и должен иметь открытый пустой конструктор. В этом случае атрибут создает экземпляр типа обработчика ошибок и устанавливает его в службе. Для этого он реализует интерфейс <xref:System.ServiceModel.Description.IServiceBehavior> и с помощью метода <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> добавляет экземпляры в обработчик ошибок в службе.  
   
-```  
+```csharp  
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,7 +98,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  Этот образец реализует службу калькулятора. Клиент намеренно вызывает в службе две ошибки путем предоставления параметров с недопустимыми значениями. `CalculatorErrorHandler` с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler> записывает ошибки в локальный файл и позволяет уведомить клиент об этих ошибках. Клиент вызывает ошибки типа "деление на ноль" и "аргумент вне диапазона".  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("Forcing an error in Divide");  
@@ -132,9 +132,9 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Файл c:\logs\errors.txt содержит записанные службой сведения об ошибках. Обратите внимание: чтобы служба могла вести запись в определенном каталоге, у процесса, в котором выполняется служба (обычно это ASP.NET или Network Service) должны быть разрешения на запись для этого каталога.  
+ Файл c:\logs\errors.txt содержит записанные службой сведения об ошибках. Обратите внимание, что для записи в каталог в службе необходимо убедиться в том, что процесс, в котором запущена служба (обычно ASP.NET или Network Service), имеет разрешение на запись в каталог.  
   
-```  
+```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  

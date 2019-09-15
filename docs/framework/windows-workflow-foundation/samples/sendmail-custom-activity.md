@@ -2,12 +2,12 @@
 title: Настраиваемое действие SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038117"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988982"
 ---
 # <a name="sendmail-custom-activity"></a>Настраиваемое действие SendMail
 В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. Настраиваемое действие использует возможности <xref:System.Net.Mail.SmtpClient> для асинхронной отправки электронной почты и отправки почты с проверкой подлинности. При этом также обеспечивается возможность использования таких возможностей конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
@@ -47,7 +47,7 @@ ms.locfileid: "70038117"
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Отправка сообщения электронной почты с использованием маркеров, указанных в тексте сообщения  
  В этом фрагменте кода описывается отправка сообщения электронной почты с маркеров в тексте сообщения. Обратите внимание на то, как маркеры включены в текст сообщения. Значения для этих маркеров предоставлены для свойства маркеров.  
   
-```html  
+```csharp  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
 tokens.Add("@name", "John Doe");  
 tokens.Add("@date", DateTime.Now.ToString());  
@@ -69,7 +69,7 @@ new SendMail
 ### <a name="sending-an-email-using-a-template"></a>Отправка сообщения электронной почты с использованием шаблона  
  В этом фрагменте описывается отправка сообщения электронной почты с использованием маркеров шаблона в тексте. Обратите внимание, что при задании свойства `BodyTemplateFilePath` не нужно указывать значение для свойства Body (содержимое файла шаблона будет скопировано в текст).  
   
-```  
+```csharp  
 new SendMail  
 {    
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
@@ -86,7 +86,7 @@ new SendMail
 ### <a name="sending-mails-in-testing-mode"></a>Отправка сообщений в тестовом режиме  
  В этом фрагменте кода показано, как задать два свойства тестирования: при `TestMailTo` выборе значения все сообщения будут `john.doe@contoso.con` отправляться (без учета значений в, CC, BCC). При задании TestDropPath все исходящие сообщения электронной почты будут также записываться по указанному пути. Эти свойства могут быть заданы независимо (они не связаны друг с другом).  
   
-```  
+```csharp  
 new SendMail  
 {    
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  

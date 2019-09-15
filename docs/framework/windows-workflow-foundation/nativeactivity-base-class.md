@@ -2,12 +2,12 @@
 title: Базовый класс NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637503"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989550"
 ---
 # <a name="nativeactivity-base-class"></a>Базовый класс NativeActivity
 
@@ -34,13 +34,13 @@ ms.locfileid: "65637503"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Создание пользовательского действия, которое наследуется от NativeActivity
 
-1. OpenVisual Studio 2010.
+1. Опенвисуал Studio 2010.
 
-2. Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.
+2. Выберите **файл**, **создать**, а затем **проект**. Выберите **Рабочий процесс 4,0** в поле **визуальный C#**  элемент в окне **типы проектов** и выберите узел **v2010** . В окне **шаблоны** выберите пункт **Библиотека действий** . Задайте имя для нового проекта HelloActivity.
 
-3. Щелкните правой кнопкой мыши Activity1.xaml в проекте HelloActivity и выберите **удалить**.
+3. Щелкните правой кнопкой мыши Activity1. XAML в проекте Хеллоактивити и выберите **Удалить**.
 
-4. Щелкните правой кнопкой мыши проект HelloActivity и выберите **добавить**, а затем **класс**. Задайте имя для нового класса HelloActivity.cs.
+4. Щелкните правой кнопкой мыши проект Хеллоактивити и выберите **Добавить**, а затем — **класс**. Задайте имя для нового класса HelloActivity.cs.
 
 5. В файле HelloActivity.cs добавьте следующие директивы `using`.
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637503"
 
 9. Для планирования закладок используйте объект <xref:System.Activities.NativeActivityContext>. Подробные сведения о том, как создавать, планировать и возобновлять закладки, см. в разделе <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

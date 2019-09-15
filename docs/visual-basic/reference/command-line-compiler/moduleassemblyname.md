@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964680"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972378"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Задает имя сборки, частью которой будет этот модуль.  
@@ -37,14 +37,14 @@ ms.locfileid: "69964680"
   
 - Сборка, на которую указывает ссылка, предоставила дружественной сборке доступ к сборке, в которую будет построен модуль.  
   
- Дополнительные сведения о создании модуля см. в разделе [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Дополнительные сведения о дружественных сборках см. в разделе [дружественные сборки](../../../standard/assembly/friend-assemblies.md).  
+ Дополнительные сведения о создании модуля см. в разделе [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Дополнительные сведения о дружественных сборках см. в разделе [дружественные сборки](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
 > Этот `-moduleassemblyname` параметр недоступен в среде разработки Visual Studio. он доступен только при компиляции из командной строки.  
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание многофайловой сборки](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Практическое руководство. Создание многофайловой сборки](../../../framework/app-domains/build-multifile-assembly.md)
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ ms.locfileid: "69964680"
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Сборки в .NET](../../../standard/assembly/index.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Дружественные сборки](../../../standard/assembly/friend-assemblies.md)
+- [Дружественные сборки](../../../standard/assembly/friend.md)

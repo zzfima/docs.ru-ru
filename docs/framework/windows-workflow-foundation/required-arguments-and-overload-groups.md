@@ -2,12 +2,12 @@
 title: Обязательные аргументы и группы перегруженных аргументов
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964918"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989312"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Обязательные аргументы и группы перегруженных аргументов
 Действия можно настроить таким образом, чтобы для их выполнения требовалась привязка определенных аргументов. Атрибут `RequiredArgument` указывает, что для действия необходимы определенные аргументы, а атрибут `OverloadGroup` используется для группирования категорий необходимых аргументов. С помощью атрибутов авторы действий могут реализовать простые или сложные конфигурации проверки правильности действий.  
@@ -108,8 +108,8 @@ class CreateLocation: Activity
   
  В следующем примере, взятом из примера [действий доступа к базе данных](./samples/database-access-activities.md) , есть две группы перегруженных `ConnectionString` версий `ConfigFileSectionName`: и. Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

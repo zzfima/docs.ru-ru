@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252747"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971891"
 ---
 # <a name="codebase-element"></a>\<Элемент codeBase >
 
@@ -96,5 +96,5 @@ ms.locfileid: "70252747"
 
 - [Схема параметров среды выполнения](index.md)
 - [Схема файла конфигурации](../index.md)
-- [Указание расположения сборки](../../specify-assembly-location.md)
+- [Укажите расположение сборки](../../../../standard/assembly/location.md)
 - [Обнаружение сборок в среде выполнения](../../../deployment/how-the-runtime-locates-assemblies.md)

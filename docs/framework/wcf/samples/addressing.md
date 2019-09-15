@@ -2,12 +2,12 @@
 title: Адресация
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 249060896b97de1694dec121cb25219baccdd88b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045838"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990210"
 ---
 # <a name="addressing"></a>Адресация
 В образце адресации показаны различные аспекты и возможности адресов конечных точек. Образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md). В этом образце служба является резидентной. Как служба, так и клиент являются консольными приложениями. Служба определяет несколько конечных точек, используя сочетание их относительных и абсолютных адресов.  
@@ -83,7 +83,7 @@ ms.locfileid: "70045838"
   
  При запуске образца служба перечисляет адрес, имя привязки и имя контракта для каждой конечной точки. Конечная точка обмена метаданными (MEX) представляет собой лишь другую конечную точку из перспективы ServiceHost, поэтому она показывается в списке.  
   
-```  
+```console  
 Service endpoints:  
 Endpoint - address:  http://localhost:8000/ServiceModelSamples/service  
            binding:  WSHttpBinding  
@@ -107,7 +107,7 @@ Press <ENTER> to terminate service.
   
  При запуске клиента запросы и ответы операций отображаются в окнах консоли как службы, так и клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

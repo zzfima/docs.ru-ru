@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629880"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991460"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Размещение содержимого Win32 в WPF
 
@@ -70,14 +70,14 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 Диалоговое окно можно преобразовать в дочерний HWND с помощью стилей WS_CHILD и DS_CONTROL. Перейдите в файл ресурсов (. RC), в котором определено диалоговое окно, и найдите начало определения диалогового окна:
 
-```
+```text
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 ```
 
 Измените вторую строку на:
 
-```
+```text
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 

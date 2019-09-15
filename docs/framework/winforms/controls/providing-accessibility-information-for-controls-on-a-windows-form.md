@@ -5,13 +5,17 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614746"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991711"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
 Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  
@@ -32,16 +36,17 @@ ms.locfileid: "64614746"
 ## <a name="accessibledefaultactiondescription-property"></a>Свойство AccessibleDefaultActionDescription  
  Эта строка описывает действие элемента управления. Она не отображается в окне "Свойства", и ее можно задать только в коде. В следующем примере это свойство задается для элемента управления "Кнопка".  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-  
-// C#  
+``` 
+
+```csharp  
 Button1.AccessibleDefaultActionDescription =   
    "Closes the application.";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDefaultActionDescription =  
    "Closes the application.";  
 ```  
@@ -49,42 +54,45 @@ button1->AccessibleDefaultActionDescription =
 ## <a name="accessibledescription-property"></a>Свойство AccessibleDescription  
  Эта строка описывает элемент управления. Его можно задать в окне "Свойства" или в коде следующим образом.  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDescription = "A button with text 'Exit'."  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleDescription = "A button with text 'Exit'";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
 ## <a name="accessiblename-property"></a>Свойство AccessibleName  
  Это имя элемента управления, переданное специальным возможностям. Его можно задать в окне "Свойства" или в коде следующим образом.  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleName = "Order"  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleName = "Order";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleName = "Order";  
 ```  
   
 ## <a name="accessiblerole-property"></a>Свойство AccessibleRole  
  Это свойство, содержащее <xref:System.Windows.Forms.AccessibleRole> , описывает роль пользовательского интерфейса для элемента управления. Для нового элемента управления задано значение `Default`. Это означает, что по умолчанию элемент управления **Кнопка** работает как **Кнопка**. Возможно, потребуется сбросить это свойство, если у элемента управления есть другая роль. Например, вы можете использовать элемент управления **PictureBox** в качестве **Chart**и вам может потребоваться, чтобы специальные возможности передавали роль как **Chart**, а не как **PictureBox**. Возможно, вы захотите указать это свойство для разработанных пользовательских элементов управления. Это свойство можно задать в окне "Свойства" или в коде следующим образом.  
   
-```  
-' Visual Basic  
+```vb 
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
-  
-// C#  
+```
+
+```csharp  
 PictureBox1.AccessibleRole = AccessibleRole.Chart;  
-  
-// C++  
+```
+
+```cpp  
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   

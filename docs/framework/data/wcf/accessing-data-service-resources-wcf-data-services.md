@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d18ec4fd57f2437ca936074e8dcf70f17f09b877
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894348"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991116"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Доступ к ресурсам служб данных (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] поддерживает для предоставления данных в виде веб-канала с ресурсами, которые можно использовать для адресации с помощью URI. Эти ресурсы представлены в соответствии с соглашениями об отношениях между сущностями [EDM](../adonet/entity-data-model.md). Сущности в этой модели представляют операционные единицы данных, которые являются типами данных в домене приложений, такими как клиенты, заказы, элементы и продукты. Это позволяет обращаться к данным сущности и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE.  
@@ -21,54 +21,38 @@ ms.locfileid: "70894348"
 ## <a name="addressing-resources"></a>Обращение к ресурсам  
  В службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] обращение к данным, предоставленным моделью данных, осуществляется с использованием URI. Например, следующий URI возвращает веб-канал, который является набором сущностей Customers, который содержит записи для всех экземпляров типа сущности Customer:  
   
-```http
-https://services.odata.org/Northwind/Northwind.svc/Customers  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Customers>
   
  Сущности имеют специальные свойства, называемые ключами сущностей. Ключ сущности используется для уникальной идентификации одной сущности в наборе сущностей. Это позволяет адресовать конкретный экземпляр типа сущности в наборе сущностей. Например, следующий URI возвращает запись для определенного экземпляра типа сущности Customer, имеющего значение ключа `ALFKI`:  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')>
   
  К свойствам примитивного типа и сложным свойствам экземпляра сущности можно обращаться по отдельности. Например, следующий URI возвращает XML-элемент, содержащий значение свойства `ContactName` для конкретной сущности Customer:  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName>
   
  При включении конечной точки `$value` в предыдущий URI в ответном сообщении возвращается только значение свойства примитивного типа. В следующем примере возвращается только строка «Maria Anders» без XML-элемента:  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value>
   
  Связи между сущностями определяются в модели данных с помощью ассоциаций. Эти ассоциации позволяют адресовать набор связанных сущностей с помощью свойств навигации экземпляра сущности. Свойство навигации возвращает либо одну связанную сущность в случае связи «многие к одному», либо набор связанных сущностей в случае связи «один ко многим». Например, следующий URI возвращает канал, который представляет набор всех заказов, связанных с конкретной сущностью Customer:  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders>
   
  Связи, которые обычно являются двунаправленными, представлены парой свойств навигации. В отличие от связей, описанных в предыдущем примере, следующий URI возвращает ссылку на сущность Customer, к которой принадлежит определенная сущность Order:  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer>
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]также позволяет обращаться к ресурсам на основе результатов выражений запросов. Это дает возможность фильтровать наборы ресурсов на основе вычисленного выражения. Например, следующий URI фильтрует для возврата только заказы конкретного клиента, доставленные с 22 сентября 1997 г.  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Customers( "ALFKI")/Orders? $filter = ДатаИсполнения gt DateTime "1997-09-22T00:00:00" >
   
- Дополнительные сведения см. в [разделе OData: Соглашения](https://go.microsoft.com/fwlink/?LinkId=185564)URI.  
+ Дополнительные сведения см. в [разделе OData: Соглашения](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)URI.
   
 ## <a name="system-query-options"></a>Параметры запросов системы  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Определяет набор параметров системных запросов, которые можно использовать для выполнения традиционных операций запросов к ресурсам, таким как фильтрация, сортировка и разбиение на страницы. Например, следующий URI возвращает набор всех `Order` сущностей вместе со связанными `Order_Detail` сущностями, почтовые индексы `100`которых не заканчиваются:  
   
-```http  
-https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Orders? $filter = не EndsWith (ShipPostalCode, "100") & $expand = сведения_о_заказе & $orderby = ShipCity >
   
  Записи в возвращаемом канале упорядочены по значению свойства заказов ShipCity.  
   
@@ -76,26 +60,24 @@ https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(S
   
 |Параметр запроса|Описание|  
 |------------------|-----------------|  
-|`$orderby`|Определяет порядок сортировки по умолчанию для сущностей в возвращенном канале. Следующий запрос упорядочивает возвращаемый канал Customers по странам и городам:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City`<br /><br /> Дополнительные сведения см. в [разделе OData: Параметр запроса системы OrderBy ($orderby)](https://go.microsoft.com/fwlink/?LinkId=186968).|  
-|`$top`|Указывает количество сущностей, которые необходимо включить в возвращаемый канал. В следующем примере пропускаются первые 10 клиентов и возвращаются следующие 10:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> Дополнительные сведения см. в [разделе OData: Параметр "Топ системных запросов" (](https://go.microsoft.com/fwlink/?LinkId=186969)$Top).|  
-|`$skip`|Указывает количество сущностей, которые необходимо пропустить перед возвратом сущностей в канал. В следующем примере пропускаются первые 10 клиентов и возвращаются следующие 10:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> Дополнительные сведения см. в [разделе OData: Параметр системного запроса Skip ($skip)](https://go.microsoft.com/fwlink/?LinkId=186971).|  
-|`$filter`|Определяет выражение, фильтрующее сущности, которые возвращаются в канал на основе определенного критерия. Этот параметр запроса поддерживает набор операторов логического сравнения, арифметических операторов и заранее заданных функций запроса, которые используются для оценки критерия фильтра. В следующем примере возвращаются все заказы, почтовые коды которых не оканчиваются на 100:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`<br /><br /> Дополнительные сведения см. в [разделе OData: Параметр запроса системы фильтра ($filter)](https://go.microsoft.com/fwlink/?LinkId=186972).|  
-|`$expand`|Указываются связанные сущности, возвращаемые запросом. Связанные сущности включаются либо в качестве канала, либо в качестве записи, встроенной в сущность, возвращаемую запросом. В следующем примере возвращается заказ для клиента «ALFKI» вместе со сведениями по всем заказам:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> Дополнительные сведения см. в [разделе OData: Разверните узел Системный параметр запроса ($expand](https://go.microsoft.com/fwlink/?LinkId=186973)).|  
-|`$select`|Указывает проекцию, определяющую свойства сущности, возвращаемые в проекции. По умолчанию в канале возвращаются все свойства сущности. В следующем запросе возвращается только три свойства сущности `Customer`:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> Дополнительные сведения см. в [разделе OData: Выберите параметр "системный запрос" (](https://go.microsoft.com/fwlink/?LinkID=186076)$SELECT).|  
-|`$inlinecount`|Запрашивает включение в поток количества сущностей, возвращаемых в канале. Дополнительные сведения см. в [разделе OData: Параметр системного запроса inlinecount ($inlinecount)](https://go.microsoft.com/fwlink/?LinkId=186975).|  
+|`$orderby`|Определяет порядок сортировки по умолчанию для сущностей в возвращенном канале. Следующий запрос упорядочивает возвращаемый канал Customers по странам и городам:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City>|  
+|`$top`|Указывает количество сущностей, которые необходимо включить в возвращаемый канал. В следующем примере пропускаются первые 10 клиентов и возвращаются следующие 10:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10>|  
+|`$skip`|Указывает количество сущностей, которые необходимо пропустить перед возвратом сущностей в канал. В следующем примере пропускаются первые 10 клиентов и возвращаются следующие 10:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10>|  
+|`$filter`|Определяет выражение, фильтрующее сущности, которые возвращаются в канал на основе определенного критерия. Этот параметр запроса поддерживает набор операторов логического сравнения, арифметических операторов и заранее заданных функций запроса, которые используются для оценки критерия фильтра. В следующем примере возвращаются все заказы, почтовые коды которых не оканчиваются на 100:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Orders? $filter = не EndsWith (ShipPostalCode, "100") >|  
+|`$expand`|Указываются связанные сущности, возвращаемые запросом. Связанные сущности включаются либо в качестве канала, либо в качестве записи, встроенной в сущность, возвращаемую запросом. В следующем примере возвращается заказ для клиента «ALFKI» вместе со сведениями по всем заказам:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details>|  
+|`$select`|Указывает проекцию, определяющую свойства сущности, возвращаемые в проекции. По умолчанию в канале возвращаются все свойства сущности. В следующем запросе возвращается только три свойства сущности `Customer`:<br /><br /> <https://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City>|  
+|`$inlinecount`|Запрашивает включение в поток количества сущностей, возвращаемых в канале.|  
   
 ## <a name="addressing-relationships"></a>Адресация связей  
  Помимо адресации наборов сущностей и экземпляров сущностей [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , также позволяет обращаться к ассоциациям, представляющим отношения между сущностями. Эта функциональность необходима для создания или изменения связей между двумя экземплярами сущностей, таких как поставщик, связанный с данным заказом в образце базы данных Northwind. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]`$link` поддерживает оператор, специально предназначенный для адресации ассоциаций между сущностями. Например, следующий URI задан в сообщении запроса HTTP PUT для изменения поставщика конкретного заказа на нового.  
   
-```http 
-https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
-```  
+<https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper>
   
- Дополнительные сведения см. в [разделе OData: Адресация ссылок между](https://go.microsoft.com/fwlink/?LinkId=187351)записями.  
+ Дополнительные сведения см. в разделе `3.2. Addressing Links between Entries` в [OData: Соглашения](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)URI.
   
 ## <a name="consuming-the-returned-feed"></a>Использование возвращаемого канала  
  URI [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ресурса позволяет обращаться к данным сущности, предоставляемым службой. При вводе URI в поле адреса веб-браузера [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] возвращается представление запрошенного ресурса. Дополнительные сведения см. в [кратком руководстве по WCF Data Services](quickstart-wcf-data-services.md). Хотя веб-браузер может быть полезен для тестирования того, что ресурс службы данных возвращает ожидаемые данные, рабочие службы данных, которые также могут создавать, обновлять и удалять данные, обычно обращаются к коду приложения или языкам сценариев на веб-странице. Дополнительные сведения см. [в разделе Использование службы данных в клиентском приложении](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)
+- [Веб-сайт протокола Open Data Protocol](https://www.odata.org/)

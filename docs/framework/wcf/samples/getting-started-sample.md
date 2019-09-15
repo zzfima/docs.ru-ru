@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: b249137117f970a14284beb6439e501a3004eee1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051979"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989921"
 ---
 # <a name="getting-started-sample"></a>Пример для начала работы
 
-Пример начала показано, как реализовать типовую службу и типовой клиент с помощью Windows Communication Foundation (WCF). Этот образец является основой для всех остальных базовых образцов технологий.
+В начало работы примере демонстрируется реализация типичной службы и стандартного клиента с помощью Windows Communication Foundation (WCF). Этот образец является основой для всех остальных базовых образцов технологий.
 
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.
@@ -26,18 +26,18 @@ ms.locfileid: "62051979"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
 Служба описывает операции, выполняемые ею в контракте службы, который она открыто предоставляет как метаданные. Служба также содержит код для реализации операций.
 
-Клиент содержит определение контракта службы и прокси-класс для доступа к службе. Код прокси создается из метаданных службы с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+Клиент содержит определение контракта службы и прокси-класс для доступа к службе. Код прокси-сервера создается на основе метаданных службы с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
 В [!INCLUDE[wv](../../../../includes/wv-md.md)] служба размещается в службе активации Windows (WAS). В [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] она размещается в службах IIS и ASP.NET. Размещение службы в IIS или WAS позволяет активировать службу автоматически при первом доступе к ней.
 
 > [!NOTE]
-> Если вы хотите использовать приступить к работе с примером, размещающего службу в консольном приложении, а не IIS, см. в разделе [резидентного размещения](../../../../docs/framework/wcf/samples/self-host.md) образца.
+> Если вы предпочитаете приступить к работе с примером, в котором размещена служба, в консольном приложении, а не IIS, см. пример с помощью [узла для самостоятельного размещения](../../../../docs/framework/wcf/samples/self-host.md) .
 
 Служба и клиент указывают данные для доступа в параметрах файла конфигурации, что обеспечивает гибкость при развертывании. Эти данные включают определение конечной точки, задающей адрес, привязку и контракт. Привязка определяет транспорт и детали обеспечения безопасности, касающиеся доступа к службе.
 
@@ -142,9 +142,9 @@ public class CalculatorService : ICalculator
 
 Служба предоставляет конечную точку по базовому адресу, который предоставляется узлом IIS или WAS. Привязка настраивается с использованием стандартного объекта <xref:System.ServiceModel.WSHttpBinding>, обеспечивающего взаимодействие по протоколу HTTP и стандартному протоколу веб-служб для адресации и безопасности. Контрактом является интерфейс `ICalculator`, реализуемый службой.
 
-Настроенный таким образом, служба может осуществляться с `http://localhost/servicemodelsamples/service.svc` клиентом на одном компьютере. Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.
+Как настроено, доступ к службе может осуществляться `http://localhost/servicemodelsamples/service.svc` клиентом на том же компьютере. Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.
 
-По умолчанию платформа не предоставляет никаких метаданных. Таким образом, служба включает <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и предоставляет конечную точку метаданных exchange (MEX), по `http://localhost/servicemodelsamples/service.svc/mex`. Это демонстрируется в следующей конфигурации.
+По умолчанию платформа не предоставляет никаких метаданных. Таким образом, служба включает <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и предоставляет конечную точку обмена метаданными (MEX) в. `http://localhost/servicemodelsamples/service.svc/mex` Это демонстрируется в следующей конфигурации.
 
 ```xaml
 <system.serviceModel>
@@ -174,11 +174,11 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
-Клиент взаимодействует по заданному контракту с помощью клиентского класса, созданного [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Этот созданный клиент содержится в файлах generatedClient.cs или generatedClient.vb. Это средство извлекает метаданные для заданной службы и создает клиент, который будет использоваться клиентским приложением для взаимодействия по заданному контракту. Размещенная служба должна быть доступна для создания кода клиента, поскольку служба используется для извлечения обновленных метаданных.
+Клиент обменивается данными с использованием заданного типа контракта с помощью клиентского класса, созданного [средством служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Этот созданный клиент содержится в файлах generatedClient.cs или generatedClient.vb. Это средство извлекает метаданные для заданной службы и создает клиент, который будет использоваться клиентским приложением для взаимодействия по заданному контракту. Размещенная служба должна быть доступна для создания кода клиента, поскольку служба используется для извлечения обновленных метаданных.
 
  Чтобы создать типизированный прокси, выполните следующую команду из командной строки SDK в каталоге клиента.
 
-```
+```console
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
 ```
 
@@ -264,7 +264,7 @@ client.Close();
 
 При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.
 
-```
+```output
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -273,15 +273,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-В образце "Начало работы" показан стандартный способ создания службы и клиента. Другой [основные](../../../../docs/framework/wcf/samples/basic-sample.md) сборки на данном образце и демонстрируют конкретные функции продукта.
+В образце "Начало работы" показан стандартный способ создания службы и клиента. Другой [базовый](../../../../docs/framework/wcf/samples/basic-sample.md) пример сборки этого образца для демонстрации конкретных функций продукта.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ## <a name="see-also"></a>См. также
 

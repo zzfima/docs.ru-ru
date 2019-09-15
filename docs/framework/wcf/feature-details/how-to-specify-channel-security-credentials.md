@@ -2,12 +2,12 @@
 title: Практическое руководство. Задание учетных данных безопасности канала
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933451"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972448"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Практическое руководство. Задание учетных данных безопасности канала
 Моникер службы Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинству служб WCF требуется, чтобы клиент указал учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс для указания учетных данных. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
@@ -31,7 +31,7 @@ ms.locfileid: "69933451"
   
 6. Откройте Visual Basic 6.0 и создайте новый стандартный EXE-файл. Добавьте в форму кнопку и дважды щелкните ее, чтобы добавить следующий код в обработчик щелчка.  
   
-    ```  
+    ```vb  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -52,7 +52,7 @@ ms.locfileid: "69933451"
   
      Приложение Visual Basic отобразит окно сообщений с результатом вызова Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> или <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> также можно использовать вместо <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> для задания сертификата клиента:  
   
-    ```  
+    ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69933451"
 
 3. Откройте Visual Basic 6.0 и создайте новый стандартный EXE-файл. Добавьте в форму кнопку и дважды щелкните ее, чтобы добавить следующий код в обработчик щелчка.  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -95,7 +95,7 @@ ms.locfileid: "69933451"
 
 2. Откройте Visual Basic 6.0 и создайте новый стандартный EXE-файл. Добавьте в форму кнопку и дважды щелкните ее, чтобы добавить следующий код в обработчик щелчка.  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -119,7 +119,7 @@ ms.locfileid: "69933451"
   
      В следующем примере кода Visual Basic показано, как вызывать метод <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
-    ```  
+    ```vb
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/SomeService/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://SomeService.Samples"  

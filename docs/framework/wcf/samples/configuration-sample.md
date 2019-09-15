@@ -2,12 +2,12 @@
 title: Образец конфигурации
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040095"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990070"
 ---
 # <a name="configuration-sample"></a>Образец конфигурации
 Этот образец демонстрирует, как при помощи файла конфигурации можно сделать службу доступной для обнаружения.  
@@ -67,9 +67,7 @@ ms.locfileid: "70040095"
   
  Можно не ограничиваться приведенными простыми шагами и изменить в файле конфигурации дополнительные поведения. Информацией, относящейся к обнаружению, можно управлять с использованием определенных конечных точек. Таким образом пользователь может указать, доступна ли конечная точка для обнаружения, а также пометить ее атрибутом <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> и добавить пользовательские XML-метаданные. Для этого необходимо добавить в конечную точку приложения свойство `behaviorConfiguration`. В этом случае в конечную точку приложения добавляется следующее свойство.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  Теперь с помощью элемента конфигурации поведения можно управлять атрибутами, связанными с обнаружением. В этом случае в конечную точку приложения добавляются две области.  
   

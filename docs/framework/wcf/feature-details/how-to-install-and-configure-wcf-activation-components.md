@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: aed6cb71ac3ccd7af5423cdb8ccc43133bbe5337
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972027"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972183"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
 
@@ -37,7 +37,7 @@ ms.locfileid: "68972027"
 
 1. Для поддержки активации по net.tcp веб-узел по умолчанию необходимо сначала привязать к порту net.tcp. Это можно сделать с помощью Appcmd. exe, который устанавливается вместе с набором средств управления IIS 7,0. В окне командной строки с правами администратора выполните следующую команду.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
     ```
 
@@ -46,7 +46,7 @@ ms.locfileid: "68972027"
 
 2. Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.tcp, включать поддержку net.tcp можно для каждого приложения отдельно. Для включения протокола net.tcp для данного приложения необходимо выполнить следующую команду из командной строки с правами администратора.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set app
     "Default Web Site/<WCF Application>" /enabledProtocols:http,net.tcp
     ```
@@ -60,7 +60,7 @@ ms.locfileid: "68972027"
 
     1. Удалите протокол net.tcp из списка разрешенных протоколов, выполнив следующую команду в окне командной строки с правами администратора.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app
         "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http
         ```
@@ -70,7 +70,7 @@ ms.locfileid: "68972027"
 
     2. Удалите привязку узла к протоколу net.tcp, выполнив следующую команду в окне командной строки с повышенными привилегиями:
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
         --bindings.[protocol='net.tcp',bindingInformation='808:*']
         ```
@@ -82,7 +82,7 @@ ms.locfileid: "68972027"
 
 1. Для того чтобы удалить протокол net.tcp из списка разрешенных протоколов, необходимо выполнить следующую команду в окне командной строки с правами администратора.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http
     ```
 
@@ -93,7 +93,7 @@ ms.locfileid: "68972027"
 
 1. Для того чтобы удалить привязку узла к протоколу net.tcp, необходимо выполнить следующую команду в окне командной строки с правами администратора:
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
     -bindings.[protocol='net.tcp',bindingInformation='808:*']
     ```

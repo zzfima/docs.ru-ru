@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400620"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991448"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако при наличии значительных инвестиций в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код может оказаться более эффективным расширение существующего [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , а не переписывание его с нуля. Распространенный сценарий заключается в том, что необходимо внедрить один или несколько элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , реализованных в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF см. в разделе [Настройка элемента управления](../controls/control-customization.md).  
@@ -116,7 +116,7 @@ ms.locfileid: "68400620"
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Базовая структура файла кода программной части  
  Файл кода программной части состоит из одного пространства имен `MyControls`, которое будет содержать два класса: `MyControl1` и `MyControlEventArgs`.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -256,7 +256,7 @@ namespace MyControls
     |groupBox4|radioFamilyOriginal|До преобразования|  
     |groupBox4|radioFamilyTimes|Times New Roman Cyr|  
     |groupBox4|radioFamilyWingDings|WingDings|  
-    |groupBox5|radioStyleOriginal|Норм.|  
+    |groupBox5|radioStyleOriginal|Обычный|  
     |groupBox5|radioStyleItalic|Italic|  
     |groupBox6|radioWeightOriginal|До преобразования|  
     |groupBox6|radioWeightBold|Полужирный|  
@@ -305,7 +305,7 @@ namespace MyControls
 ### <a name="handling-onbuttonclick"></a>Обработка события OnButtonClick  
  Это `OnButtonClick` событие возникает при нажатии пользователем кнопки **ОК** или **Отмена** .  
   
- Обработчик событий проверяет `IsOK` поле аргумента события, чтобы определить, какая кнопка была нажата. Переменные данных соответствуют  элементамуправления,которыебылирассмотрены<xref:System.Windows.Forms.Label>ранее. `lbl` Если пользователь нажимает кнопку « **ОК** », данные из <xref:System.Windows.Controls.TextBox> элементов управления элемента управления назначаются соответствующему <xref:System.Windows.Forms.Label> элементу управления. Если пользователь нажимает кнопку **Отмена**, <xref:System.Windows.Forms.Label.Text%2A> значения задаются в виде строк по умолчанию.  
+ Обработчик событий проверяет `IsOK` поле аргумента события, чтобы определить, какая кнопка была нажата. Переменные данных соответствуют элементамуправления,которыебылирассмотрены<xref:System.Windows.Forms.Label>ранее. `lbl` Если пользователь нажимает кнопку « **ОК** », данные из <xref:System.Windows.Controls.TextBox> элементов управления элемента управления назначаются соответствующему <xref:System.Windows.Forms.Label> элементу управления. Если пользователь нажимает кнопку **Отмена**, <xref:System.Windows.Forms.Label.Text%2A> значения задаются в виде строк по умолчанию.  
   
  Добавьте следующий код обработчика событий нажатием кнопки в `Form1` класс.  
   

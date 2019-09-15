@@ -2,12 +2,12 @@
 title: Метаданные инфраструктуры службы
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780803"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991200"
 ---
 # <a name="service-framework-metadata"></a>Метаданные инфраструктуры службы
 В этом разделе перечислены все исключения, вызываемые метаданными инфраструктуры службы.  
@@ -18,7 +18,7 @@ ms.locfileid: "61780803"
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|Асинхронный метод End вызван для неправильного канала.|  
 |AsyncEndCalledWithAnIAsyncResult|Асинхронный метод End вызван с использованием IAsyncResult из другого метода Begin.|  
-|AttemptedToGetContractTypeForButThatTypeIs1|Предпринята попытка получить тип контракта для указанного объекта. Этот тип отличен от типа ServiceContract и не наследуется от ServiceContract.|  
+|AttemptedToGetContractTypeForButThatTypeIs1|Попытка получить тип контракта для указанного. Тип не является ServiceContract и не наследует ServiceContract.|  
 |CannotHaveTwoOperationsWithTheSameName3|В одном контракте не допускается иметь две операции с одинаковым именем. Указанные методы в указанном типе нарушают это правило. Измените имя одной из операций путем изменения имени метода или с помощью свойства Name атрибута OperationContractAttribute.|  
 |CannotInheritTwoOperationsWithTheSameName3|Нельзя наследовать две различные операции с одинаковым именем. Указанная операция из указанных контрактов нарушает это правило. Измените имя одной из операций путем изменения имени метода или с помощью свойства Name атрибута OperationContractAttribute.|  
 |CantCreateChannelWithManualAddressing|Не удается создать канал для контракта, который требует запрос-ответ и привязку с ручной адресацией, но поддерживает только дуплексную связь.|  

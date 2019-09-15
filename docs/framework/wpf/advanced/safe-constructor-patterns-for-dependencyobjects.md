@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364246"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991822"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Шаблоны безопасного конструктора для DependencyObjects
 Как правило, конструкторы классов не должны выполнять обратные вызовы, такие как виртуальные методы или делегаты, поскольку конструкторы могут вызываться в качестве базовой инициализации конструкторов для производного класса. Ввод виртуального объекта может выполняться в состоянии незавершенной инициализации любого заданного объекта. Однако сама система свойств внутренне вызывает и предоставляет обратные вызовы как часть системы свойств зависимостей. Как простая операция, как установка значения свойства зависимостей с помощью <xref:System.Windows.DependencyObject.SetValue%2A> вызова, потенциально включает обратный вызов в процессе определения. По этой причине следует соблюдать осторожность при установке значений свойств зависимостей в теле конструктора, что может стать проблемой, если тип используется в качестве базового класса. Существует определенный шаблон для реализации <xref:System.Windows.DependencyObject> конструкторов, который позволяет избежать определенных проблем с состояниями свойств зависимостей и встроенных обратных вызовов, описанных здесь.  
@@ -35,7 +35,7 @@ ms.locfileid: "68364246"
   
  Следующий пример кода (и последующие примеры) представляет собой пример псевдокода C#, который нарушает это правило и объясняет проблему.  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>Конструкторы без параметров, вызывающие базовую инициализацию  
  Реализуйте эти конструкторы, вызывающие базовое значение по умолчанию.  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Нестандартные (удобные) конструкторы, не соответствующие базовым сигнатурам  
  Если эти конструкторы используют параметры для установки свойств зависимостей в инициализации, сначала следует вызвать собственный конструктор без параметров класса для инициализации, а затем использовать параметры для установки свойств зависимостей. Это могут быть либо свойства зависимостей, определенные вашим классом, либо свойства зависимостей, унаследованные от базовых классов, но в любом случае используйте следующий шаблон:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

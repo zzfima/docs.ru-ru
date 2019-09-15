@@ -2,12 +2,12 @@
 title: Свойства выполнения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913613"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988588"
 ---
 # <a name="workflow-execution-properties"></a>Свойства выполнения рабочего процесса
 Через локальную память потока (TLS) CLR поддерживает контекст выполнения для каждого потока. Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  При вызове рабочего процесса в окне консоли записываются следующие выходные данные.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

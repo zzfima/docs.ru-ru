@@ -2,12 +2,12 @@
 title: Инициализация создания экземпляров
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 4d6fdfedad9d522230a35014c0ee164e8b24fcfb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ca135aca8f84ddf79ec7447e7fa7814f61984419
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039601"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989840"
 ---
 # <a name="instancing-initialization"></a>Инициализация создания экземпляров
 Этот пример расширяет пример использования [пулов](../../../../docs/framework/wcf/samples/pooling.md) путем определения интерфейса, `IObjectControl`который настраивает инициализацию объекта путем его активации и деактивации. Клиент вызывает методы, которые возвращают объект в пул и не возвращают объект в пул.  
@@ -30,7 +30,7 @@ ms.locfileid: "70039601"
 ## <a name="the-object-pool"></a>Пул объектов  
  Класс `ObjectPoolInstanceProvider` содержит реализацию пула объектов. Этот класс реализует интерфейс <xref:System.ServiceModel.Dispatcher.IInstanceProvider> для взаимодействия с уровнем модели службы. Когда EndpointDispatcher вызывает метод <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, вместо создания нового экземпляра, пользовательская реализация находит существующий объект в находящемся в памяти пуле. Если такой объект доступен, метод возвращает его. В противном случае `ObjectPoolInstanceProvider` проверяет, не достигло ли свойство `ActiveObjectsCount` (количество возвращенных из пула объектов) максимального размера пула. Если нет, то создается и возвращается вызывающей стороне новый экземпляр, а значение `ActiveObjectsCount` увеличивается на единицу. В противном случае запрос на создание объекта помещается в очередь на заданное время. Реализация метода `GetObjectFromThePool` показана в следующем образце кода.  
   
-```  
+```csharp  
 private object GetObjectFromThePool()  
 {  
     bool didNotTimeout =   
@@ -74,7 +74,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
   
  Пользовательская реализация `ReleaseInstance` добавляет освободившийся экземпляр обратно в пул и уменьшает значение `ActiveObjectsCount` на единицу. EndpointDispatcher может вызывать эти методы из различных потоков, поэтому требуется синхронизированный доступ к членам уровня класса в классе `ObjectPoolInstanceProvider`.  
   
-```  
+```csharp  
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
 {  
     lock (poolLock)  
@@ -127,7 +127,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
   
  Метод предоставляет функцию *инициализации очистки.* `ReleaseInstance` Обычно пул поддерживает минимальное число объектов в течение времени существования пула. Однако возможны периоды интенсивного использования, когда требуется создавать в пуле дополнительные объекты, пока не будет достигнуто заданное в конфигурации максимальное значение. В конце концов, когда активность пула снизится, эти дополнительные объекты могут стать излишней нагрузкой. Поэтому когда значение `activeObjectsCount` достигает нуля, запускается таймер бездействия, по истечении времени ожидания которого выполняется цикл очистки.  
   
-```  
+```csharp  
 if (activeObjectsCount == 0)  
 {  
     idleTimer.Start();   
@@ -162,7 +162,7 @@ if (activeObjectsCount == 0)
   
  В пользовательской реализации <xref:System.ServiceModel.Description.IServiceBehavior> создается новый экземпляр `ObjectPoolInstanceProvider`, который присваивается свойству <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> в каждом объекте <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, прикрепленном к <xref:System.ServiceModel.ServiceHostBase>.  
   
-```  
+```csharp  
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
 {  
     if (enabled)  
@@ -192,7 +192,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Поведение пула объектов теперь можно добавить в службу WCF, заменив в реализации службы только что созданный настраиваемый `ObjectPooling` атрибут.  
   
-```  
+```csharp  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
 public class PoolService : IPoolService  
 {  
@@ -207,7 +207,7 @@ public class PoolService : IPoolService
   
  Чтобы сымитировать эту функциональность, в этом образце объявляется открытый интерфейс (`IObjectControl`), имеющий указанные выше члены. Затем этот интерфейс реализуется классами службы, предназначенными для инициализации с учетом контекста. Реализацию <xref:System.ServiceModel.Dispatcher.IInstanceProvider> необходимо изменить, чтобы она удовлетворяла этим требованиям. Теперь каждый раз, когда вы получаете объект путем вызова `GetInstance` метода, необходимо проверить, реализует `IObjectControl.` ли объект метод, если он это делает, то необходимо вызвать `Activate` его соответствующим образом.  
   
-```  
+```csharp  
 if (obj is IObjectControl)  
 {  
     ((IObjectControl)obj).Activate();  
@@ -216,7 +216,7 @@ if (obj is IObjectControl)
   
  При возврате объекта в пул необходимо проверить свойство `CanBePooled`, прежде чем добавлять объект обратно в пул.  
   
-```  
+```csharp  
 if (instance is IObjectControl)  
 {  
     IObjectControl objectControl = (IObjectControl)instance;  
@@ -230,7 +230,7 @@ if (instance is IObjectControl)
   
  Поскольку разработчик может решать, можно ли помещать объект в пул, в определенный момент значение счетчика объектов в пуле может оказаться меньше минимального размера пула. Поэтому необходимо сравнивать число объектов с минимальным размером и при необходимости выполнять инициализацию в процедуре очистки.  
   
-```  
+```csharp  
 // Remove the surplus objects.  
 if (pool.Count > minPoolSize)  
 {  

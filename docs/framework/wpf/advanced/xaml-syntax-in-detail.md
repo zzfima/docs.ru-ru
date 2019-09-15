@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168989"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991418"
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, используемые для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации как для документации по WPF, так и для других платформ, использующих XAML, или базовых понятий XAML, включенных в поддержку языка XAML на уровне System. XAML. Этот раздел расширяет базовую терминологию, представленную в разделе [Общие сведения о XAML (WPF)](xaml-overview-wpf.md).  
@@ -112,7 +112,7 @@ ms.locfileid: "70168989"
   
  Для перечислений флагового поведение основано на <xref:System.Enum.Parse%2A?displayProperty=nameWithType> методе. Можно указать несколько значений для перечисления флагового, разделяя каждое значение запятой. Однако нельзя сочетать значения перечисления, которые не являются флагового. Например, нельзя использовать синтаксис с запятой для создания объекта <xref:System.Windows.Trigger> , который обрабатывает несколько условий перечисления, не являющегося флагом:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ ms.locfileid: "70168989"
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>Значения свойств содержимого XAML должны быть непрерывными  
  Значение свойства содержимого XAML должно быть задано либо полностью до, либо полностью после любых других элементов свойств в этом элементе Object. Это справедливо, если значение свойства содержимого XAML указано как строка или как один или несколько объектов. Например, следующая разметка не выполняет синтаксический анализ:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ ms.locfileid: "70168989"
   
  Это недопустимо, поскольку если этот синтаксис был сделан явным с помощью синтаксиса элемента свойства для свойства содержимого, свойство Content будет установлено дважды:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ ms.locfileid: "70168989"
   
  Аналогичным образом является недопустимый пример, если свойство Content является коллекцией, а дочерние элементы помещаются в элементы свойств:  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  

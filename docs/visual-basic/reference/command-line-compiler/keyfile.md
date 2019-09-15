@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: b2084a1c0ee30478cdc9193cdfcb19476499ee93
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30b890cf3d523d1e33b433a1ff6109759bd9a5e3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924869"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972331"
 ---
 # <a name="-keyfile"></a>-keyfile
 Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.  
@@ -39,7 +39,7 @@ ms.locfileid: "69924869"
   
  Обратите внимание, что файл ключей может содержать только открытый ключ.  
   
- Дополнительные сведения о подписывании сборки см. в разделе [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) .  
+ Дополнительные сведения о подписывании сборки см. в разделе [Создание и использование сборок со строгими именами](../../../standard/assembly/create-use-strong-named.md) .  
   
 > [!NOTE]
 > Этот `-keyfile` параметр недоступен в среде разработки Visual Studio; он доступен только при компиляции из командной строки.  

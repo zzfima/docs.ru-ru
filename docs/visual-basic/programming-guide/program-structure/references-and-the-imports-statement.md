@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: 99afa42994dd09d0b5faaeaf534fbc4b41816998
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b810af86f8659ffbe27d23d36aece408516a9bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962483"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972056"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Ссылки и оператор Imports (Visual Basic)
 Можно сделать внешние объекты доступными для проекта, выбрав команду **Добавить ссылку** в меню **проект** . Ссылки в Visual Basic могут указывать на сборки, которые подобны библиотекам типов, но содержат дополнительные сведения.  
@@ -52,7 +52,6 @@ ms.locfileid: "69962483"
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Пространства имен в Visual Basic](namespaces.md)
 - [Сборки в .NET](../../../standard/assembly/index.md)
-- [Практическое руководство. Создание и использование сборок с помощью командной строки](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
-- [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Оператор Imports (пространство имен и тип .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

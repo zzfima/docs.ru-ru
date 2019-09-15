@@ -2,12 +2,12 @@
 title: Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: 54e6f33801788c6c992ca3cefee1390e28291a44
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045634"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990017"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки
 В этом образце показано использование безопасности транспорта SSL с надежными сеансами. Надежные сеансы реализуют протокол WS-ReliableMessaging. Чтобы создать безопасный надежный сеанс, можно объединить протокол WS-Security с надежными сеансами. Но в некоторых случаях может потребоваться использовать безопасность транспорта HTTP с протоколом SSL.  
@@ -111,7 +111,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
 
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -124,7 +124,7 @@ Press <ENTER> to terminate client.
   
 1. Установите ASP.NET 4,0 с помощью следующей команды.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

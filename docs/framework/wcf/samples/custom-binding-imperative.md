@@ -2,12 +2,12 @@
 title: Императивные пользовательские привязки
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045666"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990039"
 ---
 # <a name="custom-binding-imperative"></a>Императивные пользовательские привязки
 В примере показано, как написать императивный код для определения и использования пользовательских привязок без использования файла конфигурации или клиента, созданного Windows Communication Foundation (WCF). Этот образец объединяет возможности, предоставляемые транспортом HTTP, и канал надежного сеанса, создавая надежную привязку на основе HTTP. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) , который реализует службу калькулятора.  
@@ -54,7 +54,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

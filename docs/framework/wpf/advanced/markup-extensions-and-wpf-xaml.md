@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965275"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991835"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Расширения разметки и XAML WPF
 В этом разделе рассматриваются концепции расширений разметки для XAML, включая их синтаксические правила, назначение и формирующую их объектную модель классов. Расширения разметки — это общая функция языка XAML и реализация служб XAML платформы .NET. В этом разделе рассматриваются расширения разметки для использования в XAML WPF.  
@@ -104,7 +104,7 @@ ms.locfileid: "69965275"
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Вложенные расширения разметки при использовании XAML  
  Поддерживается вложение нескольких расширений разметки, и каждое расширение разметки будет вычисляться последовательно, начиная с самого глубокого. Рассмотрим следующий пример.  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  

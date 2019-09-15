@@ -2,12 +2,12 @@
 title: Трассировка ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c484e3438ad3512bd6186297f3edf8068a60795e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fb1a1dc77ee6a7be25aade18f76f89464bef0387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045007"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989960"
 ---
 # <a name="etw-tracing"></a>Трассировка ETW
 В этом примере показано, как реализовать сквозную трассировку (E2E) с помощью трассировки событий для Windows (трассировка событий Windows) и `ETWTraceListener`, предоставляемого с этим примером. Образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) и включает трассировку ETW.  
@@ -56,7 +56,7 @@ ms.locfileid: "70045007"
   
  Прослушиватель трассировки событий Windows поддерживает циклическое ведение журнала. Чтобы включить эту функцию, перейдите в раздел **Пуск**, **запустите** и `cmd` введите, чтобы запустить консоль командной строки. В следующей команде замените параметр `<logfilename>` на имя требуемого файла журнала.  
   
-```  
+```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
@@ -64,14 +64,14 @@ logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b4109170
   
  Для запуска сеанса введите следующую команду:  
   
-```  
-Logman start Wcf  
+```console  
+logman start Wcf  
 ```  
   
  По завершении ведения журнала можно остановить сеанс с помощью следующей команды.  
   
-```  
-Logman stop Wcf  
+```console  
+logman stop Wcf  
 ```  
   
  Этот процесс создает двоичные циклические журналы, которые можно обработать с помощью выбранного инструмента, включая [средство Service Trace Viewer (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) или Tracerpt.  

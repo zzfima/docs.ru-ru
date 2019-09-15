@@ -2,12 +2,12 @@
 title: Пример слабо типизированных расширений
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 21690aebca250880a8eb51aee0821220a00bc0c0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6cfdef1d083a25999f62c23667c9c6ea00326dca
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039472"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989793"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Пример слабо типизированных расширений
 Объектная модель синдикации обеспечивает широкую поддержку работы с данными расширения - информацией, присутствующей в XML-представлении канала синдикации, но не предоставляемой в явном виде такими классами, как <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>. Этот пример иллюстрирует основные приемы работы с данными расширения.  
@@ -67,7 +67,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 ## <a name="writing-extension-data"></a>Запись данных расширений  
  Расширения атрибутов создаются путем добавления записей в коллекцию <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>, как показано в следующем образце кода.  
   
-```  
+```csharp  
 //Attribute extensions are stored in a dictionary indexed by   
 // XmlQualifiedName  
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
@@ -77,7 +77,7 @@ feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue
   
  В следующем примере кода создается элемент расширения с именем `simpleString`.  
   
-```  
+```csharp  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
@@ -85,7 +85,7 @@ feed.ElementExtensions.Add("simpleString", "", "hello, world!");
   
  Одним из способов создания расширений сложных элементов, содержащий много вложенных элементов, является использование для сериализации интерфейсов API платформы .NET Framework (поддерживаются как <xref:System.Runtime.Serialization.DataContractSerializer>, так и <xref:System.Xml.Serialization.XmlSerializer>), как показано в следующих примерах.  
   
-```  
+```csharp  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
@@ -94,7 +94,7 @@ feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 },
   
  Класс <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> также может использоваться для создания расширений элементов из экземпляра <xref:System.Xml.XmlReader>. Это обеспечивает простую интеграцию с интерфейсами API, обрабатывающими XML, такими как <xref:System.Xml.Linq.XElement>, как показано в следующем образце кода.  
   
-```  
+```csharp  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
         new XElement("Key", new XAttribute("attr1", "someValue"), "Z"),  
         new XElement("Value", new XAttribute("attr1", "someValue"),   
@@ -104,13 +104,13 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ## <a name="reading-extension-data"></a>Чтение данных расширений  
  Значения для расширений атрибутов можно получить, произведя поиск атрибута в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> по его имени <xref:System.Xml.XmlQualifiedName>, как показано в следующем образце кода.  
   
-```  
+```csharp  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
 ```  
   
  Для доступа к расширениям элементов служит метод `ReadElementExtensions<T>`.  
   
-```  
+```csharp  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
 {  
     Console.WriteLine(s);  
@@ -130,7 +130,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
   
  Можно также получить средство чтения `XmlReader` для расширений отдельных элементов с помощью метода <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader>.  
   
-```  
+```csharp  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
 {  
     XNode xelement = XElement.ReadFrom(extension.GetReader());  

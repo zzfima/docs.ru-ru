@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948029"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971563"
 ---
 # <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 
@@ -157,8 +157,8 @@ ms.locfileid: "69948029"
 - [Практическое руководство. Включение и отключение автоматического перенаправления привязки](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<Элемент bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)
 - [Разрешение безопасности перенаправления привязки сборок](assembly-binding-redirection-security-permission.md)
-- [Сборки в среде CLR](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Программирование с использованием сборок](../app-domains/programming-with-assemblies.md)
+- [Сборки в .NET](../../standard/assembly/index.md)
+- [Программирование с использованием сборок](../../standard/assembly/program.md)
 - [Обнаружение сборок в среде выполнения](../deployment/how-the-runtime-locates-assemblies.md)
 - [Настройка приложений](index.md)
 - [Схема параметров среды выполнения](./file-schema/runtime/index.md)

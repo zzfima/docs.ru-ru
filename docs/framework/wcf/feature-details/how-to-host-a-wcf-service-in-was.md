@@ -2,12 +2,12 @@
 title: Практическое руководство. Размещение службы WCF в WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: cdab0876b65c190cd5d46f82218eb9fbb8234298
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988195"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972210"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
 В этом разделе описаны основные шаги, необходимые для создания службы активации процессов Windows (также известной как WAS), размещенной Windows Communication Foundation служб (WCF). WAS является службой активации нового процесса, представляющей собой обобщение возможностей Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. WCF использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются WCF, такие как TCP, именованные каналы и очередь сообщений.  
@@ -66,9 +66,9 @@ ms.locfileid: "69988195"
   
 4. Создайте файл Service.svc, содержащий следующий код.  
   
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
+   ```
+   <%@ServiceHost language=c# Service="CalculatorService" %>
+   ```
   
 5. Разместите файл Service.svc в виртуальном каталоге своего IIS.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "69988195"
   
 1. Используйте [служебную программу метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из командной строки для создания кода из метаданных службы.  
   
-    ```  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
+    ```console
+    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
 2. Создаваемый клиент содержит интерфейс `ICalculator`, определяющий контракт службы, которому должна удовлетворять реализация клиента.  

@@ -2,12 +2,12 @@
 title: Выражения — WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 93d437ae6d20f5d31d80ef3a40f409c589ae084e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c79d4294ce1e7d6f6fc13e8220f88919c8f6021
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962422"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989750"
 ---
 # <a name="expressions"></a>Выражения
 Выражение Windows Workflow Foundation (WF) — это любое действие, возвращающее результат. Все действия выражений косвенно наследуются от класса <xref:System.Activities.Activity%601>, который содержит свойство <xref:System.Activities.OutArgument> с именем <xref:System.Activities.Activity%601.Result%2A> в качестве значения, возвращаемого действием. [!INCLUDE[wf1](../../../includes/wf1-md.md)] поставляется с множеством действий выражений от таких простых, как <xref:System.Activities.Expressions.VariableValue%601> и <xref:System.Activities.Expressions.VariableReference%601>, для доступа к одной переменной рабочего процесса с помощью действий оператора до таких сложных, как <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> и <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, которые обеспечивают доступ ко всем возможностям языка Visual Basic для получения результата. Дополнительные действия выражения можно создать путем наследования от <xref:System.Activities.CodeActivity%601> или <xref:System.Activities.NativeActivity%601>.  
@@ -41,7 +41,7 @@ ms.locfileid: "69962422"
   
  При определении рабочего процесса в коде можно использовать любое действие выражения. В следующем примере показано использование способа создания действий оператора для сложения трех чисел.  
   
-```  
+```csharp  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  
@@ -70,7 +70,7 @@ Sequence w = new Sequence
   
  Этот же рабочий процесс может быть выражен более компактно с помощью лямбда-выражений C#, как показано в следующем примере.  
   
-```  
+```csharp  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  
@@ -91,7 +91,7 @@ Sequence w = new Sequence
   
  Также рабочий процесс можно выразить с помощью действий выражений Visual Basic, как показано в следующем примере.  
   
-```  
+```vb  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  
@@ -113,7 +113,7 @@ Sequence w = new Sequence
 ## <a name="extending-available-expressions-with-custom-expression-activities"></a>Расширение доступных выражений с помощью настраиваемых действий выражения  
  Выражения в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] можно расширить, что позволит создавать дополнительные действия выражения. В следующем примере показано действие, которое возвращает сумму трех целочисленных значений.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -140,7 +140,7 @@ namespace ExpressionsDemo
   
  С помощью этого нового действия можно переписать предыдущий рабочий процесс, в котором складывались три значения, как показано в следующем примере.  
   
-```  
+```csharp  
 Variable<int> a = new Variable<int>("a", 1);  
 Variable<int> b = new Variable<int>("b", 2);  
 Variable<int> c = new Variable<int>("c", 3);  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 3e30267c8aa11ce97b3b3064ff0954378dab57af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a5a2d6b9d99693a551480fa047cedf42888fdf3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959804"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969053"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Указывает, что один или несколько объявленных программных элементов доступны только в пределах сборки, содержащей их объявление.  
@@ -35,8 +35,8 @@ ms.locfileid: "69959804"
  Сравнение `Friend` и других модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
-> Можно указать, что другая сборка является дружественной, что позволяет ей получить доступ ко всем типам и членам, помеченным как `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend-assemblies.md).  
-  
+> Можно указать, что другая сборка является дружественной, что позволяет ей получить доступ ко всем типам и членам, помеченным как `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend.md).
+
 ## <a name="example"></a>Пример  
  Следующий класс использует `Friend` модификатор, чтобы разрешить другим элементам программирования в той же сборке доступ к определенным элементам.  
   

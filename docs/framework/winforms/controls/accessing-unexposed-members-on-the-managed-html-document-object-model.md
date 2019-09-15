@@ -8,20 +8,20 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 525ef52ecbbc61fba787fa8286c56c638d837faf
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959629"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988401"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Доступ к членам управляемой объектной модели документов HTML, доступ к которым не предоставляется явно
-Управляемые объектной модели (DOM) HTML документа содержит класс с именем <xref:System.Windows.Forms.HtmlElement> , предоставляющая свойства, методы и события, общие для всех элементов HTML. Иногда тем не менее, необходимо будет получить доступ к членам, которые управляемый интерфейс не предоставляется напрямую. В этом разделе рассматриваются два способа получения доступа к членам, не предоставленным явно, включая функции JScript и VBScript, определенные внутри веб-страницы.  
+Управляемый HTML-модель DOM (DOM) содержит класс с <xref:System.Windows.Forms.HtmlElement> именем, который предоставляет свойства, методы и события, общие для всех элементов HTML. Тем не менее иногда требуется доступ к членам, которые управляемый интерфейс не предоставляет напрямую. В этом разделе рассматриваются два способа доступа к неоткрытым членам, в том числе функции JScript и VBScript, определенные в веб-странице.  
   
-## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Доступ к членам, не предоставленным явно с помощью управляемых интерфейсов  
- <xref:System.Windows.Forms.HtmlDocument> и <xref:System.Windows.Forms.HtmlElement> предоставляют четыре метода, которые обеспечивают доступ к членам, не предоставленным явно. Ниже приведены типы и соответствующие методы.  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Доступ к неоткрытым членам через управляемые интерфейсы  
+ <xref:System.Windows.Forms.HtmlDocument>и <xref:System.Windows.Forms.HtmlElement> предоставляют четыре метода, которые обеспечивают доступ к неоткрытым членам. В следующей таблице показаны типы и соответствующие им методы.  
   
-|Тип члена|Методы|  
+|Тип члена|Метод (ы)|  
 |-----------------|-----------------|  
 |Свойства (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
 |Методы|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
@@ -29,9 +29,9 @@ ms.locfileid: "65959629"
 |События (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
 |События (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- При использовании этих методов, предполагается, что имеется элемент Неправильный базовый тип. Предположим, что требуется ожидать передачи данных для `Submit` событие `FORM` на HTML-странице, чтобы выполнить предварительную обработку `FORM`его значения перед их отправкой на сервер. В идеале, если у вас есть контроль над HTML, необходимо определить `FORM` уникальный `ID` атрибута.  
+ При использовании этих методов предполагается, что у вас есть элемент правильного базового типа. Предположим, что необходимо прослушивать `Submit` событие `FORM` элемента на HTML-странице, чтобы можно было выполнить `FORM`предварительную обработку значений до того, как пользователь отправит их на сервер. В идеале, если вы управляете HTML, определите `FORM` для атрибута значение Unique. `ID`  
   
-```  
+```html  
 <HTML>  
   
     <HEAD>  
@@ -47,15 +47,15 @@ ms.locfileid: "65959629"
 </HTML>  
 ```  
   
- После загрузки этой страницы в <xref:System.Windows.Forms.WebBrowser> элемента управления, можно использовать <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> метод для извлечения `FORM` во время выполнения с помощью `form1` в качестве аргумента.  
+ После <xref:System.Windows.Forms.WebBrowser> загрузки этой страницы в элемент управления можно <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> использовать метод для получения `FORM` во время выполнения, используя `form1` в качестве аргумента.  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
 ## <a name="accessing-unmanaged-interfaces"></a>Доступ к неуправляемым интерфейсам  
- Можно также получить доступ к членов, не предоставленные явно в управляемая модель HTML DOM, используя неуправляемые интерфейсы компонента объекта модели (COM), предоставляемых каждый класс DOM. Это рекомендуется, если у вас есть несколько вызовов к которым не предоставляется явно членов или не предоставленным явно члены возвращают неуправляемые интерфейсы, не заключаются в оболочку управляемому HTML DOM  
+ Вы также можете получить доступ к неоткрытым членам управляемой модели HTML DOM с помощью неуправляемых интерфейсов COM, предоставляемых каждым классом DOM. Это рекомендуется делать, если необходимо выполнить несколько вызовов для невидимых членов или если непредоставленные члены возвращают другие неуправляемые интерфейсы, не инкапсулированные управляемой моделью HTML DOM.  
   
- В следующей таблице показаны все неуправляемые интерфейсы, предоставляемые через управляемому HTML DOM Щелкните ссылку Описание его использования и пример кода.  
+ В следующей таблице показаны все неуправляемые интерфейсы, предоставляемые через управляемую модель DOM HTML. Щелкните каждую ссылку, чтобы получить объяснение его использования и пример кода.  
   
 |Тип|Неуправляемый интерфейс|  
 |----------|-------------------------|  
@@ -64,12 +64,12 @@ ms.locfileid: "65959629"
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- Самый простой способ использования интерфейсов COM является добавление ссылки на неуправляемую библиотеку HTML DOM (MSHTML.dll) из своего приложения, несмотря на то, что это не поддерживается. Дополнительные сведения см. в разделе [934368 статьи базы знаний](https://support.microsoft.com/kb/934368).  
+ Самый простой способ использования интерфейсов COM — добавить ссылку на неуправляемую библиотеку DOM HTML (MSHTML. dll) из приложения, хотя это не поддерживается. Дополнительные сведения см. в [статье базы знаний 934368](https://support.microsoft.com/kb/934368).  
   
-## <a name="accessing-script-functions"></a>Функции доступа к скрипту  
- HTML-страницы можно определить одну или несколько функций при помощи языка сценариев, таких как JScript или VBScript. Эти функции помещаются внутри `SCRIPT` страницы на странице и могут выполняться по запросу или в ответ на событие в модели DOM.  
+## <a name="accessing-script-functions"></a>Доступ к функциям скрипта  
+ HTML-страница может определять одну или несколько функций с помощью языка сценариев, такого как JScript или VBScript. Эти функции помещаются внутри `SCRIPT` страницы страницы и могут выполняться по требованию или в ответ на событие в модели DOM.  
   
- Можно вызвать любую функцию скрипта, определяются в HTML-страницы с использованием <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> метод. Если в метод скрипта возвращает HTML-элемент, можно использовать приведение преобразовать этот возвращаемый результат <xref:System.Windows.Forms.HtmlElement>. Дополнительные сведения и пример кода, см. в разделе <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ Вы можете вызывать любые функции скриптов, определенные на HTML-странице, с <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> помощью метода. Если метод скрипта возвращает HTML-элемент, можно использовать приведение для преобразования возвращаемого результата в <xref:System.Windows.Forms.HtmlElement>. Дополнительные сведения и примеры кода см. <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>в разделе.  
   
 ## <a name="see-also"></a>См. также
 

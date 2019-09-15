@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790241"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991103"
 ---
 # <a name="wcf-data-services-overview"></a>Общие сведения о службах данных WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]обеспечивает создание и использование служб данных для Интернета или интрасети с помощью [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]позволяет предоставлять данные как ресурсы, которые можно использовать для адресации с помощью URI. Это позволяет обращаться к данным и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE. В этом разделе приведены общие сведения о шаблонах и методиках, определенных службами [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], а также о функциях, предоставляемых службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для использования [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в приложениях на базе .NET Framework.  
@@ -18,9 +18,9 @@ ms.locfileid: "70790241"
 ## <a name="address-data-as-resources"></a>Адресация данных в виде ресурсов  
  Службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляют данные как ресурсы, адресуемые с помощью URI. Пути к ресурсам формируются на основе соглашений о связи сущностей, описанных в модели EDM. В этой модели сущности представляют операционные единицы данных в домене приложения, такие как клиенты, заказы, элементы и продукты. Дополнительные сведения см. в разделе [EDM](../adonet/entity-data-model.md).  
   
- Адресация ресурсов сущностей в службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] осуществляется в виде набора сущностей, содержащего экземпляры типов сущностей. Например, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` возвращает все заказы `Northwind` из службы данных, связанные с клиентом, со `CustomerID` значением`ALFKI.`  
+ Адресация ресурсов сущностей в службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] осуществляется в виде набора сущностей, содержащего экземпляры типов сущностей. Например, URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> возвращает все заказы `Northwind` из службы данных, связанные с клиентом, со `CustomerID` значением`ALFKI.`  
   
- Выражения запросов позволяют выполнять традиционные операции с запросами к ресурсам, такие как фильтрация, сортировка и подкачка страниц. Например, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` фильтрует ресурсы, возвращая только заказы со стоимостью транспортировки, превышающей 50 долларов. Дополнительные сведения см. в разделе [доступ к ресурсам службы данных](accessing-data-service-resources-wcf-data-services.md).  
+ Выражения запросов позволяют выполнять традиционные операции с запросами к ресурсам, такие как фильтрация, сортировка и подкачка страниц. Например, URI <https://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI")/Orders? $Filter = фрахт gt 50 > фильтрует ресурсы, чтобы возвращались только заказы со стоимостью доставки более $50. Дополнительные сведения см. в разделе [доступ к ресурсам службы данных](accessing-data-service-resources-wcf-data-services.md).  
   
 ## <a name="interoperable-data-access"></a>Доступ к данным с возможностью взаимодействия  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]основан на стандартных протоколах Интернета для обеспечения взаимодействия служб данных с приложениями, которые не используют .NET Framework. Так как для адресации данных можно использовать стандартные универсальные коды ресурсов (URI), приложение может получать доступ к данным и изменять их с помощью семантики передачи состояния, в частности стандартных HTTP-глаголов GET, WHERE, POST и DELETE. Это позволяет обращаться к службам из любого клиента, поддерживающего синтаксический анализ и доступ к данным, передаваемым по стандартным протоколам HTTP.  

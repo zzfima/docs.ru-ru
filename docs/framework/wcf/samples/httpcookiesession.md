@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 71147d98ada3d9814cdbcc8d3e7e85cad4dee0f2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044928"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989872"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 В этом образце показано, как построить пользовательский канал протокола, который использует для управления сеансами протокол HTTP. Этот канал обеспечивает взаимодействие между службами Windows Communication Foundation (WCF) и клиентами ASMX или между клиентами WCF и службами ASMX.  
@@ -41,7 +41,7 @@ ms.locfileid: "70044928"
   
 - Когда открывается прослушиватель канала, он принимает от своего внутреннего прослушивателя внутренний канал. Поскольку внутренний прослушиватель является прослушивателем датаграмм, а время существования принятого канала вычитается из времени существования прослушивателя, можно закрыть внутренний прослушиватель и работать только с внутренним каналом.  
   
-    ```  
+    ```csharp  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
     this.innerChannel = this.innerChannelListener.AcceptChannel(timeoutHelper.RemainingTime());  
     this.innerChannel.Open(timeoutHelper.RemainingTime());  
@@ -50,7 +50,7 @@ ms.locfileid: "70044928"
   
 - После завершения процесса открытия мы настраиваем цикл сообщений, чтобы получать сообщения от внутреннего канала.  
   
-    ```  
+    ```csharp  
     IAsyncResult result = BeginInnerReceiveRequest();  
     if (result != null && result.CompletedSynchronously)  
     {  
@@ -65,13 +65,13 @@ ms.locfileid: "70044928"
   
 - Когда сообщение прибывает, канал службы проверяет идентификатор сеанса и демультиплексирует его в соответствующий канал сеанса. Прослушиватель канала поддерживает словарь, который сопоставляет идентификаторы сеансов с экземплярами каналов сеансов.  
   
-    ```  
+    ```csharp  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
  `HttpCookieReplySessionChannel` Класс реализует<xref:System.ServiceModel.Channels.IReplySessionChannel>. Более высокие уровня стека каналов вызывают метод <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> для чтения запросов для этого сеанса. У каждого канала сеанса имеется закрытая очередь сообщений, заполняемая каналом службы.  
   
-```  
+```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
@@ -137,7 +137,7 @@ InputQueue<RequestContext> requestQueue;
   
  При запуске примера результат должен выглядеть следующим образом:  
   
-```  
+```console  
 Simple binding:  
 AddItem(10000,2): ItemCount=2  
 AddItem(10550,5): ItemCount=7  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 1. Установите ASP.NET 4,0 с помощью следующей команды.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

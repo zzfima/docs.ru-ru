@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 616e405e191cb264a002e903bed60cf04559a675
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6776c89db474668b3aed0e38a3e18359bf93399d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964899"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991485"
 ---
 # <a name="binding-markup-extension"></a>Привязка расширения разметки
 Откладывает значение свойства на значение, привязанное к данным, создавая объект промежуточного выражения и обрабатывая контекст данных, который применяется к элементу и его привязке во время выполнения.  
   
 ## <a name="binding-expression-usage"></a>Использование выражений привязки  
   
-```  
+```xaml  
 <object property="{Binding}" .../>  
 -or-  
 <object property="{Binding  bindProp1=value1[, bindPropN=valueN]*}" ...  
@@ -40,7 +40,7 @@ ms.locfileid: "69964899"
 |||  
 |-|-|  
 |`bindProp1, bindPropN`|Имя <xref:System.Windows.Data.Binding> свойства или <xref:System.Windows.Data.BindingBase> , которое необходимо задать. Не все <xref:System.Windows.Data.Binding> свойства можно задать `Binding` с помощью расширения, а некоторые `Binding` свойства могут быть заданы в выражении только с помощью вложенных расширений разметки. См. раздел "Свойства привязки, которые могут быть установлены с помощью расширения привязки".|  
-|`value1, valueN`|Значение, которое нужно присвоить свойству. Обработка значения атрибута в конечном итоге зависит от типа и логики <xref:System.Windows.Data.Binding> устанавливаемого свойства.|  
+|`value1, valueN`|Значение, которое следует задать для свойства. Обработка значения атрибута в конечном итоге зависит от типа и логики <xref:System.Windows.Data.Binding> устанавливаемого свойства.|  
 |`path`|Строка пути, которая задает неявное <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> свойство. См. также [синтаксис PropertyPath языка XAML](propertypath-xaml-syntax.md).|  
   
 ## <a name="unqualified-binding"></a>Неквалифицированная {Binding}  
@@ -58,7 +58,7 @@ ms.locfileid: "69964899"
   
 - <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
-- <xref:System.Windows.Data.Binding.Converter%2A>: может быть `bindProp` задан как = `value` строка в выражении, но для этого требуется ссылка на объект для значения, например расширение разметки [StaticResource](staticresource-markup-extension.md). Значение в этом случае является экземпляром пользовательского класса преобразователя.  
+- <xref:System.Windows.Data.Binding.Converter%2A>: может быть `bindProp` задан как = `value` строка в выражении, но для этого требуется ссылка на объект для значения, например [расширение разметки StaticResource](staticresource-markup-extension.md). Значение в этом случае является экземпляром пользовательского класса преобразователя.  
   
 - <xref:System.Windows.Data.Binding.ConverterCulture%2A>: задается в выражении как идентификатор на основе стандартов; см. справочный раздел <xref:System.Windows.Data.Binding.ConverterCulture%2A>по.  
   

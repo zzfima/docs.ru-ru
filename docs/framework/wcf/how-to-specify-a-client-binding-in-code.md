@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c95e30c65c6096140fca0c1241e76fbc7af4df3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37769a84ca623e2f7f246d36180aa17537e90bfa
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929133"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990234"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Практическое руководство. Задание привязки клиента в коде
 В этом примере создается клиент, предназначенный для использования службы калькулятора, и привязка этого клиента задается императивно в коде. Клиент обращается к службе `CalculatorService`, которая реализует интерфейс `ICalculator`; как служба, так и клиент используют класс <xref:System.ServiceModel.BasicHttpBinding>.  
   
- В приведенной процедуре предполагается, что служба калькулятора выполняется. Сведения о создании службы, см. в разделе [как: Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Он также использует [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) предоставляет для автоматического создания компонентов клиента. Этот инструмент создает код клиента для доступа к службе.  
+ В приведенной процедуре предполагается, что служба калькулятора выполняется. Сведения о создании службы см. в разделе [как Укажите привязку службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Он также использует [средство служебной программы метаданных ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF), которое позволяет автоматически создавать клиентские компоненты. Этот инструмент создает код клиента для доступа к службе.  
   
  Клиент создается в два этапа. Программа Svcutil.exe генерирует класс `ClientCalculator`, реализующий интерфейс `ICalculator`. Затем данное клиентское приложение создается путем создания экземпляра класса `ClientCalculator` и задания привязки и адреса для службы в коде.  
   
- Копию исходного кода в этом примере, см. в разделе [basicbinding обеспечением](../../../docs/framework/wcf/samples/basicbinding.md) образца.  
+ Исходный экземпляр этого примера см. в примере [басикбиндинг](../../../docs/framework/wcf/samples/basicbinding.md) .  
   
 ### <a name="to-specify-a-custom-binding-in-code"></a>Задание пользовательской привязки в коде  
   
 1. Из командной строки запустите программу Svcutil.exe, чтобы создать код из метаданных службы.  
   
-    ```  
+    ```console  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   

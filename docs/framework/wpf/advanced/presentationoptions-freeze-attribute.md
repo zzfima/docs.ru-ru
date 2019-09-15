@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3e0cee293a9585b972b0145da953976ed94b74c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772844"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991426"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>Атрибут PresentationOptions:Freeze
-Наборы <xref:System.Windows.Freezable.IsFrozen%2A> состояние `true` в содержащем <xref:System.Windows.Freezable> элемент. Поведение по умолчанию для <xref:System.Windows.Freezable> без `PresentationOptions:Freeze` указан атрибут является то, что <xref:System.Windows.Freezable.IsFrozen%2A> — `false` во время загрузки и в зависимости от Общие <xref:System.Windows.Freezable> поведению во время выполнения.  
+<xref:System.Windows.Freezable.IsFrozen%2A> Задает <xref:System.Windows.Freezable> состояние вэлементе,содержащемэлемент.`true` Поведение по умолчанию <xref:System.Windows.Freezable> для `PresentationOptions:Freeze` без <xref:System.Windows.Freezable.IsFrozen%2A> `false` атрибута задается во время загрузки и зависит от общего <xref:System.Windows.Freezable> поведения во время выполнения.  
   
 ## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
-```  
+```xaml  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -31,15 +31,15 @@ ms.locfileid: "61772844"
   
 |||  
 |-|-|  
-|`PresentationOptions`|Префикс пространства имен XML, который может быть любая строка допустимый префикс, в соответствии со спецификацией XML 1.0. Префикс `PresentationOptions` используется для идентификации в этой документации.|  
-|`freezableElement`|Элемент, который создает экземпляр любой производный класс <xref:System.Windows.Freezable>.|  
+|`PresentationOptions`|Префикс пространства имен XML, который может быть любой допустимой строкой префикса, согласно спецификации XML 1,0. Префикс `PresentationOptions` используется для идентификации в этой документации.|  
+|`freezableElement`|Элемент, создающий экземпляр любого производного класса <xref:System.Windows.Freezable>.|  
   
 ## <a name="remarks"></a>Примечания  
- `Freeze` Атрибут является единственным атрибутом или другого элемента программирования, определенного в `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` пространство имен XML. `Freeze` Атрибут существует в этом специальном пространстве имен, поэтому он может быть назначен в качестве игнорируемого, используя [mc: Ignorable-атрибут](mc-ignorable-attribute.md) как часть объявлений корневого элемента. Причина, `Freeze` должен иметь возможность быть ignorable — так как не все [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] реализаций обработчиков может замораживать <xref:System.Windows.Freezable> во время загрузки; эта возможность не является частью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] спецификации.  
+ Атрибут является единственным атрибутом или другим программным элементом, определенным `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` в пространстве имен XML. `Freeze` Атрибут существует в этом специальном пространстве имен, поэтому его можно назначить как игнорируемый, используя [атрибут MC: Ignorable](mc-ignorable-attribute.md) как часть объявлений корневого элемента. `Freeze` Причина, по `Freeze` которой должна быть возможна возможность пропуска, заключается в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] том, что не все реализации процессоров <xref:System.Windows.Freezable> способны заморозить во время загрузки. Эта возможность не [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] входит в спецификацию.  
   
- Возможность обработки `Freeze` атрибут специально встроен в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессором, который обрабатывает [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для скомпилированных приложений. Атрибут не поддерживается для любого класса, и синтаксис атрибута не является расширяемым или модифицируемым. Если вы реализуете собственный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора, вы можете параллельная замораживания поведение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора при обработке `Freeze` атрибут <xref:System.Windows.Freezable> элементов во время загрузки.  
+ Возможность обработки `Freeze` атрибута в частности встроена в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессор, обрабатывающий [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] скомпилированные приложения. Атрибут не поддерживается ни одним классом, а синтаксис атрибутов не является расширяемым или изменяемым. При реализации [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] собственного процессора можно выбрать параллельное поведение [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] при фиксации процессора при обработке `Freeze` атрибута <xref:System.Windows.Freezable> элементов во время загрузки.  
   
- Любое значение для `Freeze` отличное от атрибута `true` (без учета регистра) вызывает ошибку времени загрузки. (Указание `Freeze` атрибут как `false` не является ошибкой, но это уже по умолчанию, поэтому `false` не выполняет никаких действий).  
+ Любое значение атрибута, `Freeze` `true` Кроме (без учета регистра), приводит к ошибке времени загрузки. (Указание `Freeze` атрибута как `false` не является ошибкой, но он уже является значением по умолчанию, поэтому параметру `false` не требуется ничего).  
   
 ## <a name="see-also"></a>См. также
 

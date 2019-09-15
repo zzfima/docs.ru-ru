@@ -2,12 +2,12 @@
 title: Надежный сеанс с использованием пользовательской привязки
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: a68acc29629a47c2c4a3263f04ec4f6e32a7173c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040068"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989997"
 ---
 # <a name="custom-binding-reliable-session"></a>Надежный сеанс с использованием пользовательской привязки
 
@@ -92,7 +92,7 @@ ms.locfileid: "70040068"
 
 При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -105,7 +105,7 @@ Press <ENTER> to terminate client.
 
 1. Установите ASP.NET 4,0 с помощью следующей команды:
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

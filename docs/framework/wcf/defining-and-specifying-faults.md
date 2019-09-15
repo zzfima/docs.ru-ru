@@ -8,15 +8,15 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37ded0aad547df616d2b8b73e7cb145514da080d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785051"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972369"
 ---
 # <a name="defining-and-specifying-faults"></a>Определение и задание сбоев
-Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. В этом разделе описано, как и когда можно определить содержимое пользовательских ошибок и задать операции, которые могут возвратить это содержимое. Дополнительные сведения о том, как служба или дуплексный клиент могут отправлять такие ошибки и как это приложение клиента или службы обрабатывает эти ошибки, см. в разделе [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Обзор обработки ошибок в приложениях Windows Communication Foundation (WCF), см. в разделе [задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. В этом разделе описано, как и когда можно определить содержимое пользовательских ошибок и задать операции, которые могут возвратить это содержимое. Дополнительные сведения о том, как служба или дуплексный клиент могут отправлять эти ошибки, а также о том, как клиент или приложение службы обрабатывает эти ошибки, см. в разделе [Отправка и получение ошибок](../../../docs/framework/wcf/sending-and-receiving-faults.md). Общие сведения об обработке ошибок в приложениях Windows Communication Foundation (WCF) см. в разделе [Указание и обработка ошибок в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Обзор  
  Объявленные ошибки SOAP - это ошибки, в которых в операции имеется атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>, указывающий пользовательский тип ошибки SOAP. Необъявленные ошибки SOAP - это ошибки, не указанные в контракте операции. Изучение этого раздела поможет определять такие состояния ошибки и создать для своей службы контракт ошибок, который может использоваться клиентами для правильной обработки состояния ошибки при уведомлении о пользовательской ошибке SOAP. Необходимо решить следующие основные задачи (порядок имеет значение):  
@@ -28,7 +28,7 @@ ms.locfileid: "61785051"
 3. Отметить операции, чтобы создаваемые ими определенные ошибки SOAP предоставлялись клиентам в формате WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Определение состояний ошибки, о которых должен знать клиент  
- Ошибки SOAP - это общедоступные сообщения, содержащие сведения об ошибке определенной операции. Так как они описаны вместе с другими сообщениями операций в WSDL, клиенты знают о них и, следовательно, готовы обрабатывать такие ошибки при вызове операции. Но так как службы WCF написаны в управляемом коде, выбор, какая именно ошибка условия в управляемом коде, должны преобразовываться в ошибки и возвращается клиенту предоставляет возможность отделить ошибки и сбои службы от формального ошибки беседы у клиента.  
+ Ошибки SOAP - это общедоступные сообщения, содержащие сведения об ошибке определенной операции. Так как они описаны вместе с другими сообщениями операций в WSDL, клиенты знают о них и, следовательно, готовы обрабатывать такие ошибки при вызове операции. Но поскольку службы WCF написаны на управляемом коде, решение о том, какие условия ошибок в управляемом коде следует преобразовать в ошибки и возвращены клиенту, дает возможность разделять ошибки и ошибки в службе от формальной ошибки. Беседа с клиентом.  
   
  Например, в следующем примере кода показана операция, которая принимает два целых числа и возвращает другое целое число. Здесь может быть создано несколько исключений, поэтому при разработке контракта ошибок нужно определить, какие состояния ошибки важны для клиента. В этом случае служба должна обнаруживать исключение <xref:System.DivideByZeroException?displayProperty=nameWithType>.  
   
@@ -45,18 +45,16 @@ public class CalculatorService
 }  
 ```  
   
-```vb  
-<ServiceContract> _  
-Public Class CalculatorService  
-    <OperationContract]> _  
-    Public Function Divide(ByVal a As Integer, ByVal b As Integer) _  
-       As Integer  
-      If (b==0) Then   
-            Throw New Exception("Division by zero!")  
-      Return a/b  
-    End Function  
-End Class  
-```  
+```vb
+<ServiceContract> _
+Public Class CalculatorService
+    <OperationContract> _
+    Public Function Divide(a As Integer, b As Integer) As Integer
+        If b = 0 Then Throw New DivideByZeroException("Division by zero!")
+        Return a / b
+    End Function
+End Class
+```
   
  В данном примере операция может вернуть пользовательскую ошибку SOAP о делении на ноль, пользовательскую ошибку, связанную с математическими операциями, но содержащую сведения о делении на ноль, несколько ошибок для различных ситуаций с ошибками или не возвращать ошибок SOAP.  
   
@@ -66,7 +64,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- Дополнительные сведения о том, как сделать данные сериализуемыми, см. в разделе [Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Список сериализации поддерживают <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> предоставляет, см. в разделе [Types Supported by the Data Contract Serializer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Дополнительные сведения о том, как обеспечить сериализацию данных, см. [в разделе указание передача данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Список поддерживаемых <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> сериализации см. в статье [типы, поддерживаемые сериализатором контрактов данных](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Разметка операций для установления контракта ошибок  
  После определения сериализуемой структуры данных, которая возвращается как часть пользовательской ошибки SOAP, нужно отметить контракт операции, как создающий ошибку SOAP этого типа. Для этого следует использовать атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> и передать тип созданного пользовательского типа данных. В следующем примере кода показано, как с помощью атрибута <xref:System.ServiceModel.FaultContractAttribute> указать, что операция `Divide` может возвращать ошибку SOAP типа `MathFault`. Другие математические операции теперь тоже могут указывать, что могут вернуть ошибку `MathFault`.  
@@ -76,7 +74,7 @@ End Class
   
  Операция может указывать, что возвращает несколько пользовательских ошибок, если она отмечена несколькими атрибутами <xref:System.ServiceModel.FaultContractAttribute>.  
   
- Следующий шаг, чтобы реализовать контракт ошибок в реализации операции, описан в разделе [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Следующий шаг для реализации контракта сбоя в реализации операции описан в разделе [Отправка и получение ошибок](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>Вопросы SOAP, WSDL и взаимодействия  
  В некоторых ситуациях, особенно при взаимодействиях с другими платформами, может быть важно контролировать представление ошибки в сообщении SOAP или способ ее описания в метаданных WSDL.  
@@ -85,7 +83,7 @@ End Class
   
  В соответствии со стандартом SOAP для ошибки могут указываться атрибуты `Action`, `Code` и `Reason`. `Action` контролируется свойством <xref:System.ServiceModel.FaultContractAttribute.Action%2A>. Свойства <xref:System.ServiceModel.FaultException.Code%2A> и<xref:System.ServiceModel.FaultException.Reason%2A> - свойства класса <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>, родительского класса универсального класса <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. Свойство `Code` включает член <xref:System.ServiceModel.FaultCode.SubCode%2A>.  
   
- Существуют некоторые ограничения доступа к службам, создающим ошибки. WCF поддерживает только ошибки с типами сведений, в схеме и совместимыми с контрактами данных. Например как упоминалось выше, WCF не поддерживает ошибки, использующие в типах сведений атрибуты XML, а также ошибки с более чем один элемент верхнего уровня в области сведений.  
+ Существуют некоторые ограничения доступа к службам, создающим ошибки. WCF поддерживает только ошибки с типами сведений, которые описываются в схеме и совместимы с контрактами данных. Например, как упоминалось выше, WCF не поддерживает ошибки, которые используют атрибуты XML в их типах сведений, или ошибки с несколькими элементами верхнего уровня в разделе сведений.  
   
 ## <a name="see-also"></a>См. также
 
@@ -94,7 +92,7 @@ End Class
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Сбои при отправке и получении](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [Практическое руководство. Объявление сбоев в контрактах служб](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [Практическое руководство. Объявить ошибки в контрактах служб](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)
 - [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Задание передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

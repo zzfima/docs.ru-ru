@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 5892baaa2732d95cfe698147e06b914af968adc5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab81642cd756bfdf525f34ac675173600de5b104
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929427"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972339"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.  
@@ -37,7 +37,7 @@ ms.locfileid: "69929427"
   
  Также можно передать сведения о шифровании компилятору с помощью параметра [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Если требуется использовать частично подписанную сборку, применяйте параметр [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md).  
   
- Дополнительные сведения о подписывании сборки см. в разделе [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) .  
+ Дополнительные сведения о подписывании сборки см. в разделе [Создание и использование сборок со строгими именами](../../../standard/assembly/create-use-strong-named.md) .  
   
 > [!NOTE]
 > Этот `-keycontainer` параметр недоступен в среде разработки Visual Studio; он доступен только при компиляции из командной строки.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169168"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991562"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определяются в .NET в <xref:System.Globalization> пространстве имен.
@@ -39,7 +39,7 @@ ms.locfileid: "70169168"
 ### <a name="encoding"></a>кодировка
  Кодировка, поддерживаемая [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , — [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] это ASCII, UTF-16 и UTF-8. Оператор Encoding находится в начале [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] документа. Если атрибут кодировки и порядок байтов отсутствуют, по умолчанию в средстве синтаксического анализа используется кодировка UTF-8. Предпочтительные кодировки: UTF-8 и UTF-16. UTF-7 не поддерживается. В следующем примере показано, как задать кодировку UTF-8 в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файле.
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70169168"
 
  В следующем [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] примере `fr-CA` используется атрибут Language для указания канадского французского языка.
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -173,7 +173,7 @@ ms.locfileid: "70169168"
 
  Чтобы решить эту проблему, можно задать резервный атрибут нейтрального языка. Разработчик приложения может при необходимости удалить ресурсы из основной сборки и указать, что ресурсы можно найти во вспомогательной сборке, соответствующей определенной культуре. Для управления этим процессом используйте <xref:System.Resources.NeutralResourcesLanguageAttribute>. Конструктор <xref:System.Resources.NeutralResourcesLanguageAttribute> класса имеет две сигнатуры, один из которых <xref:System.Resources.UltimateResourceFallbackLocation> принимает параметр, чтобы <xref:System.Resources.ResourceManager> указать расположение, куда должны извлекаться резервные ресурсы: основная или вспомогательная сборка. В следующем примере показано использование атрибута. Для окончательного резервного расположения код вызывает <xref:System.Resources.ResourceManager> Поиск ресурсов в подкаталоге "de" каталога выполняемой в данный момент сборки.
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
