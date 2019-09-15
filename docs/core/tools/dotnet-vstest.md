@@ -3,12 +3,12 @@ title: Команда dotnet vstest
 description: Команда dotnet vstest выполняет сборку проекта и всех его зависимостей.
 author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 4630982ba21ab37b051895faf3dc0fcd8784cb18
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: da18fda6419cb9eaa1f488a3576161c3054b4426
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202776"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969818"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -19,6 +19,8 @@ ms.locfileid: "70202776"
 `dotnet-vstest` — запускает тесты из указанных файлов.
 
 ## <a name="synopsis"></a>Краткий обзор
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

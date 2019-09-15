@@ -1,15 +1,16 @@
 ---
-ms.openlocfilehash: cb8cc6574caad6da25b3fced70c58175a33ec896
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68616334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929180"
 ---
 # <a name="voice-and-tone-guidelines"></a>Рекомендации по стилю
 
 Вашу документацию будут читать разные люди, включая ИТ-специалистов и разработчиков, чтобы изучать .NET и использовать его в своей повседневной работе.
 Ваша цель — создавать отличные статьи, которые помогут читателям в освоении технологий. Наши рекомендации соответствуют этой цели. Руководство по стилю содержит следующие рекомендации:
+
 - [Используйте естественный стиль речи](#use-a-conversational-tone)
 - [Используйте форму обращения к читателю](#write-in-2nd-person)
 - [Используйте действительный залог](#use-active-voice)

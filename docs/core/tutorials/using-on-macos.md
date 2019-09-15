@@ -4,12 +4,12 @@ description: В этом документе приводится обзор де
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373789"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849356"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Начало работы с .NET Core в macOS
 
@@ -20,7 +20,7 @@ ms.locfileid: "70373789"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/core). Пакет SDK для .NET Core содержит последний выпуск платформы и среды выполнения .NET Core.
+Установите [пакета SDK для .NET Core](https://dotnet.microsoft.com/download). Пакет SDK для .NET Core содержит последний выпуск платформы и среды выполнения .NET Core.
 
 Установите [Visual Studio Code](https://code.visualstudio.com). В ходе этой статьи вы также установите расширения Visual Studio Code, которые улучшат возможности разработки .NET Core.
 

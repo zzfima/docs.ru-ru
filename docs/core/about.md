@@ -3,12 +3,12 @@ title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ea9253bacf2bcee63430cd45f2a9ed412ce629e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421877"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849140"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -20,7 +20,7 @@ ms.locfileid: "67421877"
 - **Гибкая разработка.** Может включаться в приложение или устанавливаться параллельно (на уровне пользователя или системы). Возможность использования с [контейнерами Docker](docker/index.md).
 - **Совместимость.** Платформа .NET Core совместима с .NET Framework, Xamarin и Mono благодаря [.NET Standard](../standard/net-standard.md).
 - **Открытый код.** Платформа .NET Core имеет открытый код и распространяется по лицензиям MIT и Apache 2. .NET Core является проектом [.NET Foundation](https://dotnetfoundation.org/).
-- **Поддержка от Майкрософт.** Корпорация Майкрософт предоставляет [поддержку .NET Core](https://www.microsoft.com/net/core/support/).
+- **Поддержка от Майкрософт.** Корпорация Майкрософт предоставляет [поддержку .NET Core](https://dotnet.microsoft.com/platform/support/policy).
 
 ## <a name="languages"></a>Языки
 
@@ -57,11 +57,11 @@ ms.locfileid: "67421877"
 
 Эти компоненты распределены следующим образом:
 
-- [Среда выполнения .NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1) — включает среду выполнения .NET Core и библиотеки платформы.
-- [Среда выполнения ASP.NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1) — включает среды выполнения ASP.NET Core и .NET Core, а также библиотеки платформы.
-- [Пакет SDK для .NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1) — включает средства CLI .NET, среду выполнения ASP.NET Core, а также платформу и среду выполнения .NET Core.
+- [Среда выполнения .NET Core](https://dotnet.microsoft.com/download) — включает среду выполнения .NET Core и библиотеки платформы.
+- [Среда выполнения ASP.NET Core](https://dotnet.microsoft.com/download) — включает среды выполнения ASP.NET Core и .NET Core, а также библиотеки платформы.
+- [Пакет SDK для .NET Core](https://dotnet.microsoft.com/download) — включает средства CLI .NET, среду выполнения ASP.NET Core, а также платформу и среду выполнения .NET Core.
 
-### <a name="open-source"></a>Открытый исходный код
+### <a name="open-source"></a>Открытый код
 
 Платформа [.NET Core](https://github.com/dotnet/core) имеет открытый исходный код ([по лицензии MIT](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) и была передана корпорацией Майкрософт в фонд [.NET Foundation](https://dotnetfoundation.org) в 2014 году. Теперь это один из самых активно развивающихся проектов .NET Foundation. Частные лица и организации могут свободно использовать платформу в личных, образовательных или коммерческих целях. Многие компании используют .NET Core в составе своих приложений, средств, новых платформ и услуг размещения. Некоторые из них вносят существенный вклад в проект .NET Core на портале GitHub и участвуют в управлении его развитием в рамках [Координационного совета .NET Foundation](https://dotnetfoundation.org/blog/tsg-welcome).
 

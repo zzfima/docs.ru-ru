@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870613"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926154"
 ---
 # <a name="tutorial-create-an-item-template"></a>Учебник. Создание шаблона элемента
 
@@ -19,6 +19,7 @@ ms.locfileid: "67870613"
 Из этой части вы узнаете, как выполнять такие задачи:
 
 > [!div class="checklist"]
+>
 > * создание класса для шаблона элемента;
 > * создание папки и файла конфигурации шаблона;
 > * установка шаблона из файла;
@@ -27,7 +28,7 @@ ms.locfileid: "67870613"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Пакет SDK для .NET Core 2.2](https://www.microsoft.com/net/core) или более поздней версии.
+* [Пакет SDK для .NET Core 2.2](https://dotnet.microsoft.com/download) или более поздней версии.
 * Ознакомьтесь со статьей справки [Пользовательские шаблоны для команды dotnet new](../tools/custom-templates.md).
 
   В ней приведены общие сведения о шаблонах и о способах их создания. Некоторые сведения будут повторены и здесь.

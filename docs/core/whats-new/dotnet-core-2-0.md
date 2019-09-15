@@ -4,12 +4,12 @@ description: Дополнительные сведения о новых воз�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626361"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849938"
 ---
 # <a name="whats-new-in-net-core-20"></a>Новые возможности .NET Core 2.0
 
@@ -154,7 +154,7 @@ ms.locfileid: "68626361"
 
 ### <a name="net-application-architecture"></a>Архитектура приложений .NET
 
-Благодаря [архитектуре приложений .NET](https://www.microsoft.com/net/learn/architecture) вы получаете доступ к набору электронных книг, в которых представлены инструкции, рекомендации и примеры приложений при использовании .NET для сборки:
+Благодаря [архитектуре приложений .NET](https://dotnet.microsoft.com/learn/dotnet/architecture-guides) вы получаете доступ к набору электронных книг, в которых представлены инструкции, рекомендации и примеры приложений при использовании .NET для сборки:
 
 - [Микрослужбы и контейнеры Docker](../../architecture/microservices/index.md)
 - [Разработка веб-приложений с помощью ASP.NET](../../architecture/modern-web-apps-azure/index.md)

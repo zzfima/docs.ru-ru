@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 33574eeac5b1f7aa2067b1974f3f2e68fb22e8ff
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577176"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849028"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Предоставление доступа к компонентам .NET Core для COM
 
@@ -25,7 +25,7 @@ ms.locfileid: "69577176"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Установите [пакет SDK для .NET Core 3.0 (предварительная версия 7)](https://www.microsoft.com/net/core) или более новой версии.
+- Установите [пакет SDK для .NET Core 3.0 (предварительная версия 7)](https://dotnet.microsoft.com/download) или более новой версии.
 
 ## <a name="create-the-library"></a>Создание библиотеки
 

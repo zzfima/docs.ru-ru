@@ -2,12 +2,12 @@
 title: Команда dotnet run
 description: Команда dotnet run — это удобное средство для запуска приложения из исходного кода.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202806"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969748"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202806"
 `dotnet run` — выполняет исходный код без дополнительных явных команд компиляции или запуска.
 
 ## <a name="synopsis"></a>Краткий обзор
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

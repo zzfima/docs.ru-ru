@@ -2,12 +2,12 @@
 title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373749"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969781"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -18,6 +18,8 @@ ms.locfileid: "70373749"
 `dotnet` — средство для управления исходным кодом .NET и двоичными объектами.
 
 ## <a name="synopsis"></a>Краткий обзор
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -94,6 +96,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 `--roll-forward-on-no-candidate-fx <N>`
 
 Определяет поведение, когда требуемая общая платформа недоступна. Параметр `N` может принимать следующие значения:
+
 - `0` — отключает увеличение дополнительных версий.
 - `1` — позволяет увеличивать дополнительный номер версии, но не основной. Это поведение установлено по умолчанию.
 - `2` — включает увеличение основных и дополнительных версий.

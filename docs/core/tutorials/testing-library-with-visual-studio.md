@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402206"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970654"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки .NET Standard с помощью .NET Core в Visual Studio 2017
 
@@ -23,7 +23,10 @@ ms.locfileid: "67402206"
 
 Чтобы создать проект модульного теста, выполните следующие действия.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. В **обозревателе решений** откройте контекстное меню для узла решения **ClassLibraryProjects** и выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#** . Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)** . В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
@@ -52,7 +55,9 @@ ms.locfileid: "67402206"
 1. В диалоговом окне **Диспетчер ссылок** разверните узел **Проекты** и установите флажок рядом с пунктом **StringLibrary**. Добавление ссылки на сборку `StringLibrary` позволяет компилятору находить методы **StringLibrary**. Нажмите кнопку **OK**. Это действие добавляет ссылку на ваш проект библиотеки классов (`StringLibrary`).
 
    ![Диалоговое окно добавления ссылок на проект в Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. В **обозревателе решений** откройте контекстное меню для узла решения **ClassLibraryProjects** и выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**. Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)** . В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
@@ -81,6 +86,7 @@ ms.locfileid: "67402206"
 1. В диалоговом окне **Диспетчер ссылок** разверните узел **Проекты** и установите флажок рядом с пунктом **StringLibrary**. Добавление ссылки на сборку `StringLibrary` позволяет компилятору находить методы **StringLibrary**. Нажмите кнопку **OK**. Это действие добавляет ссылку на ваш проект библиотеки классов (`StringLibrary`).
 
    ![Диалоговое окно добавления ссылок на проект в Visual Studio (Visual Basic)](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Добавление и выполнение методов модульных тестов
@@ -106,7 +112,8 @@ ms.locfileid: "67402206"
 
 Создание методов теста:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. В окне кода *UnitTest1.cs* замените отображаемый код на следующий текст:
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
@@ -116,7 +123,9 @@ ms.locfileid: "67402206"
 1. В строке меню выберите **Файл** > **Сохранить UnitTest1.cs как**. В диалоговом окне **Сохранить файл как** щелкните стрелку рядом с кнопкой **Сохранить** и выберите вариант **Сохранить с кодировкой**.
 
    ![Диалоговое окно "Сохранить файл как" в Visual Studio (C#)](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. В окне кода *UnitTest1.vb* замените отображаемый код на следующий текст:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -126,6 +135,7 @@ ms.locfileid: "67402206"
 1. В строке меню выберите **Файл** > **Сохранить UnitTest1.vb как**. В диалоговом окне **Сохранить файл как** щелкните стрелку рядом с кнопкой **Сохранить** и выберите вариант **Сохранить с кодировкой**.
 
    ![Диалоговое окно "Сохранить файл как" в Visual Studio (Visual Basic)](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
 1. В диалоговом окне **Подтверждение сохранения** нажмите кнопку **Да**, чтобы сохранить файл.

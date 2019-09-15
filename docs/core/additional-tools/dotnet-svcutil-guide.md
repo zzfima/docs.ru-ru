@@ -4,12 +4,12 @@ description: Обзор инструмента Microsoft WCF dotnet-svcutil, к�
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063294"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969938"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Средство WCF dotnet-svcutil для .NET Core
 
@@ -24,11 +24,15 @@ ms.locfileid: "65063294"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 * [пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии;
 * Любой редактор кода
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 * [пакет SDK для .NET Core 1.0.4](https://dotnet.microsoft.com/download) или более поздней версии;
 * Любой редактор кода
 

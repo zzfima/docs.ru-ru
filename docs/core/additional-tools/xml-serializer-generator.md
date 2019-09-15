@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 74d10b0fb27a4acf477fc66451a5cf6fc1f4317c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631697"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926601"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Использование генератора XML-сериализатора Майкрософт в .NET Core
 
 Это руководство описывает использование генератора XML-сериализатора Майкрософт в приложении .NET Core на языке C#. В ходе работы с этим руководством вы:
 
 > [!div class="checklist"]
+>
 > * как создать приложение .NET Core;
 > * как добавить ссылку на пакет Microsoft.XmlSerializer.Generator;
 > * как изменить MyApp.csproj для добавления зависимостей;
@@ -29,7 +30,7 @@ ms.locfileid: "65631697"
 
 Для работы с этим руководством вам понадобится следующее:
 
-* [пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии;
+* [пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии;
 * любой редактор кода.
 
 > [!TIP]
@@ -120,6 +121,7 @@ dotnet run
 
 Поздравляем! Вы только что:
 > [!div class="checklist"]
+>
 > * создали приложение .NET Core;
 > * добавили ссылку на пакет Microsoft.XmlSerializer.Generator;
 > * изменили MyApp.csproj для добавления зависимостей;

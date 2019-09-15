@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331085"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925722"
 ---
 # <a name="whats-new-in-net-core-21"></a>Новые возможности .NET Core 2.1
 
@@ -99,6 +99,7 @@ dotnet tool install -g dotnetsay
 > Стратегия наката не применяется к предварительным версиям. По умолчанию она также не применяется к основным версиям, однако это поведение можно изменить с помощью показанных ниже параметров.
 
 С помощью этого параметра вы можете изменить это поведение для выполнения наката при отсутствии подходящей общей платформы. Доступные параметры:
+
 - `0`. Отключает накат для дополнительных версий. Если задано это значение, для приложения для .NET Core 2.0.0 будет выполняться накат до версии .NET Core 2.0.1, но не до версии .NET Core 2.2.0 или .NET Core 3.0.0.
 - `1`. Включает накат для дополнительных версий. Это значение параметра по умолчанию. Если задано это значение, для приложения для .NET Core 2.0.0 будет выполняться накат либо до версии .NET Core 2.0.1, либо до версии .NET Core 2.2.0 (в зависимости от установленной версии), но не до версии .NET Core 3.0.0.
 - `2`. Включает накат для дополнительных и основных версий. Если установлено это значение, учитываются разные основные версии, поэтому для приложения для .NET Core 2.0.0 будет выполняться накат до версии .NET Core 3.0.0.
@@ -178,15 +179,17 @@ dotnet tool install -g dotnetsay
 
 В следующем примере экземпляр <xref:System.Span%601> и <xref:System.Memory%601> используется для создания виртуального представления 10 элементов массива.
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Сжатие Brotli
 
 В .NET Core 2.1 добавлена поддержка сжатия и распаковки Brotli. Brotli — это универсальный алгоритм сжатия данных без потерь, который определен в [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) и поддерживается большинством веб-браузеров и всеми основными веб-серверами. Вы можете использовать потоковый класс <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> или высокопроизводительные классы <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> и <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> на основе диапазонов. Следующий пример демонстрирует сжатие с применением класса <xref:System.IO.Compression.BrotliStream>.
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> действует так же, как <xref:System.IO.Compression.DeflateStream> и <xref:System.IO.Compression.GZipStream>, что позволяет легко преобразовать в <xref:System.IO.Compression.BrotliStream> код, вызывающий эти API-интерфейсы.
 

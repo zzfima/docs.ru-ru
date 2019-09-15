@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660571"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969295"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Использование библиотеки .NET Standard в Visual Studio 2017
 
@@ -27,7 +27,10 @@ ms.locfileid: "69660571"
 
 Ранее вы включали модульные тесты в решение библиотеки классов. Теперь можно точно так же включить в это решение новое приложение. Например, библиотеку классов можно использовать в консольном приложении, которое будет предлагать пользователю ввести строку и определять, является ли первый символ этой строки символом верхнего регистра:
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Откройте решение `ClassLibraryProjects`, созданное в рамках статьи [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](./library-with-visual-studio.md). В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#** , выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
@@ -57,7 +60,9 @@ ms.locfileid: "69660571"
 1. При необходимости можно изменить режим на панели инструментов, чтобы скомпилировать **отладочную** версию проекта `ShowCase`. Скомпилируйте и запустите программу, нажав зеленую стрелку на кнопке **ShowCase**.
 
    ![Панель инструментов проекта в Visual Studio с кнопкой отладки (C#)](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Откройте решение `ClassLibraryProjects`, созданное в рамках статьи [Создание библиотеки классов на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md). В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
@@ -87,6 +92,7 @@ ms.locfileid: "69660571"
 1. При необходимости можно изменить режим на панели инструментов, чтобы скомпилировать **отладочную** версию проекта `ShowCase`. Скомпилируйте и запустите программу, нажав зеленую стрелку на кнопке **ShowCase**.
 
    ![Режим отладки на панели инструментов (Visual Basic)](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 Чтобы отладить и опубликовать приложение, которое использует эту библиотеку, выполните действия из статей [Отладка приложения Hello World в Visual Studio 2017](debugging-with-visual-studio.md) и [Публикация приложения Hello World в Visual Studio 2017](publishing-with-visual-studio.md).

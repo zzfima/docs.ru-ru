@@ -4,12 +4,12 @@ description: Сведения о концепциях модульного те�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374130"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849664"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Модульное тестирование кода C# с использованием NUnit и .NET Core
 
@@ -19,7 +19,7 @@ ms.locfileid: "70374130"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии.
+- [Пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии.
 - Текстовый редактор или редактор кода по вашему выбору.
 
 ## <a name="creating-the-source-project"></a>Создание исходного проекта
