@@ -2,29 +2,29 @@
 title: Использование модулей действий
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669515"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988635"
 ---
-# <a name="using-activity-extensions"></a><span data-ttu-id="40659-102">Использование модулей действий</span><span class="sxs-lookup"><span data-stu-id="40659-102">Using Activity Extensions</span></span>
-<span data-ttu-id="40659-103">Действия могут взаимодействовать с расширениями приложений рабочих процессов. Благодаря этому узел может предоставлять дополнительные возможности, которые не были явно смоделированы в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="40659-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="40659-104">В этом разделе описывается создание расширений для подсчета количества выполнений действия.</span><span class="sxs-lookup"><span data-stu-id="40659-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
+# <a name="using-activity-extensions"></a><span data-ttu-id="33476-102">Использование модулей действий</span><span class="sxs-lookup"><span data-stu-id="33476-102">Using Activity Extensions</span></span>
+<span data-ttu-id="33476-103">Действия могут взаимодействовать с расширениями приложений рабочих процессов. Благодаря этому узел может предоставлять дополнительные возможности, которые не были явно смоделированы в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="33476-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="33476-104">В этом разделе описывается создание расширений для подсчета количества выполнений действия.</span><span class="sxs-lookup"><span data-stu-id="33476-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="40659-105">Использования расширения действия для подсчета выполнений</span><span class="sxs-lookup"><span data-stu-id="40659-105">To use an activity extension to count executions</span></span>
+### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="33476-105">Использования расширения действия для подсчета выполнений</span><span class="sxs-lookup"><span data-stu-id="33476-105">To use an activity extension to count executions</span></span>
 
-1. <span data-ttu-id="40659-106">Откройте Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="40659-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="40659-107">Выберите **новый**, **проекта**.</span><span class="sxs-lookup"><span data-stu-id="40659-107">Select **New**, **Project**.</span></span> <span data-ttu-id="40659-108">В разделе **Visual C#** выберите **рабочего процесса**.</span><span class="sxs-lookup"><span data-stu-id="40659-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="40659-109">Выберите **консольное приложение рабочего процесса** из списка шаблонов.</span><span class="sxs-lookup"><span data-stu-id="40659-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="40659-110">Задайте для проекта имя `Extensions`.</span><span class="sxs-lookup"><span data-stu-id="40659-110">Name the project `Extensions`.</span></span> <span data-ttu-id="40659-111">Нажмите кнопку **ОК**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="40659-111">Click **OK** to create the project.</span></span>
+1. <span data-ttu-id="33476-106">Откройте Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="33476-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="33476-107">Выберите **создать**, **проект**.</span><span class="sxs-lookup"><span data-stu-id="33476-107">Select **New**, **Project**.</span></span> <span data-ttu-id="33476-108">В узле **визуальный C#**  элемент выберите **Рабочий процесс**.</span><span class="sxs-lookup"><span data-stu-id="33476-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="33476-109">Выберите **консольное приложение рабочего процесса** из списка шаблонов.</span><span class="sxs-lookup"><span data-stu-id="33476-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="33476-110">Задайте для проекта имя `Extensions`.</span><span class="sxs-lookup"><span data-stu-id="33476-110">Name the project `Extensions`.</span></span> <span data-ttu-id="33476-111">Нажмите кнопку **ОК**, чтобы создать проект.</span><span class="sxs-lookup"><span data-stu-id="33476-111">Click **OK** to create the project.</span></span>
 
-2. <span data-ttu-id="40659-112">Добавить `using` инструкции в файл Program.cs для **System.Collections.Generic** пространства имен.</span><span class="sxs-lookup"><span data-stu-id="40659-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
+2. <span data-ttu-id="33476-112">Добавьте инструкцию в файл Program.cs для пространства имен **System. Collections. Generic.** `using`</span><span class="sxs-lookup"><span data-stu-id="33476-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
 
-    ```
+    ```csharp
     using System.Collections.Generic;
     ```
 
-3. <span data-ttu-id="40659-113">В файле Program.cs создайте новый класс с именем **ExecutionCountExtension**.</span><span class="sxs-lookup"><span data-stu-id="40659-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="40659-114">В следующем коде создается расширение рабочего процесса, отслеживающее идентификаторы экземпляра при его **зарегистрировать** вызывается метод.</span><span class="sxs-lookup"><span data-stu-id="40659-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
+3. <span data-ttu-id="33476-113">В файле Program.cs создайте новый класс с именем **ексекутионкаунтекстенсион**.</span><span class="sxs-lookup"><span data-stu-id="33476-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="33476-114">Следующий код создает расширение рабочего процесса, которое отслеживает идентификаторы экземпляров при вызове метода **Register** .</span><span class="sxs-lookup"><span data-stu-id="33476-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
 
-    ```
+    ```csharp
     // This extension collects a list of workflow Ids
     public class ExecutionCountExtension
     {
@@ -56,9 +56,9 @@ ms.locfileid: "61669515"
     }
     ```
 
-4. <span data-ttu-id="40659-115">Создать действие, использующее **ExecutionCountExtension**.</span><span class="sxs-lookup"><span data-stu-id="40659-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="40659-116">В следующем коде определяется действие, извлекающее **ExecutionCountExtension** объекта из среды выполнения и вызывает его **зарегистрировать** метод при выполнении действия.</span><span class="sxs-lookup"><span data-stu-id="40659-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
+4. <span data-ttu-id="33476-115">Создайте действие, которое использует **ексекутионкаунтекстенсион**.</span><span class="sxs-lookup"><span data-stu-id="33476-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="33476-116">В следующем коде определяется действие, которое получает объект **ексекутионкаунтекстенсион** из среды выполнения и вызывает его метод **Register** при выполнении действия.</span><span class="sxs-lookup"><span data-stu-id="33476-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
 
-    ```
+    ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
     // in the context, it will invoke (in this case, registers the Id of the executing workflow)
     public class MyActivity: CodeActivity
@@ -75,9 +75,9 @@ ms.locfileid: "61669515"
     }
     ```
 
-5. <span data-ttu-id="40659-117">Реализуйте действие в **Main** метод файла program.cs.</span><span class="sxs-lookup"><span data-stu-id="40659-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="40659-118">В следующем коде содержатся методы для создания двух различных рабочих процессов, выполнения всех процессов по несколько раз и отображения полученных данных, содержащихся в расширении.</span><span class="sxs-lookup"><span data-stu-id="40659-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
+5. <span data-ttu-id="33476-117">Реализуйте действие в методе **Main** файла Program.cs.</span><span class="sxs-lookup"><span data-stu-id="33476-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="33476-118">В следующем коде содержатся методы для создания двух различных рабочих процессов, выполнения всех процессов по несколько раз и отображения полученных данных, содержащихся в расширении.</span><span class="sxs-lookup"><span data-stu-id="33476-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
 
-    ```
+    ```csharp
     class Program
     {
         // Creates a workflow that uses the activity that consumes the extension
