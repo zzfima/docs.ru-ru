@@ -5,12 +5,12 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: a81569b8475d6d9990d628121766a4c34c5df396
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: d0ee776fce94988478c8432e265c834ff2082ef0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267930"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853884"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Установка .NET Framework в Windows 8 и Windows Server 2012
 
@@ -18,7 +18,7 @@ ms.locfileid: "67267930"
 
 ![Не удалось запустить это приложение.](./media/this-application-could-not-be-started.png)
 
-Эти инструкции помогут вам установить необходимые версии .NET Framework. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) является самой новой версией. Она поддерживается в Windows Server 2012, но не в Windows 8. Она входит в состав [обновления Windows 10 за май 2019 г.](https://support.microsoft.com/help/4028685/windows-10-get-the-update).
+Эти инструкции помогут вам установить необходимые версии .NET Framework. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) является самой новой версией. Она поддерживается в Windows Server 2012, но не в Windows 8. Она входит в состав [обновления Windows 10 за май 2019 г.](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 ## <a name="net-framework-48"></a>.NET Framework 4.8
 
@@ -47,6 +47,6 @@ ms.locfileid: "67267930"
 
 ## <a name="see-also"></a>См. также
 
-- [Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Скачивание .NET Framework](https://dotnet.microsoft.com/download)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Установка .NET Framework для разработчиков](guide-for-developers.md)

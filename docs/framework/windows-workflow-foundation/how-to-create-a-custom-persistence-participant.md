@@ -2,48 +2,58 @@
 title: Практическое руководство. Создание настраиваемого участника сохраняемости
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 1de2abb8ababd794cd644733b6e4ab0ed42b1810
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47283375b618422d91a6279ee9049fae469f540a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773398"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989666"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Практическое руководство. Создание настраиваемого участника сохраняемости
-В следующей процедуре содержаться шаги для создания участника сохраняемости. См. в разделе [участие в сохраняемости](https://go.microsoft.com/fwlink/?LinkID=177735) пример и [расширяемости Store](store-extensibility.md) разделе Примеры реализации участников сохраняемости.  
+В следующей процедуре содержаться шаги для создания участника сохраняемости. Примеры реализаций участников сохраняемости см. в разделе участие в примерах использования [сохраняемости](https://go.microsoft.com/fwlink/?LinkID=177735) и [сохранении расширяемости](store-extensibility.md) .  
   
-1. Создайте класс, который происходит от класса <xref:System.Activities.Persistence.PersistenceParticipant> или <xref:System.Activities.Persistence.PersistenceIOParticipant>. Класс PersistenceIOParticipant предлагает же точки расширяемости, что класс PersistenceParticipant, кроме того, что может участвовать в операциях ввода-вывода. Выполните один или несколько следующих шагов.  
+1. Создайте класс, который происходит от класса <xref:System.Activities.Persistence.PersistenceParticipant> или <xref:System.Activities.Persistence.PersistenceIOParticipant>. Класс PersistenceIOParticipant предлагает те же точки расширения, что и класс PersistenceParticipant, а также возможность участвовать в операциях ввода-вывода. Выполните один или несколько следующих шагов.  
   
-2. Выполните метод <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>. **CollectValues** метод имеет два словарных параметра, один для хранения значений для чтения и записи и другой для хранения только для записи значений (используется в дальнейшем в запросах). В этом методе необходимо заполнить словари данными, соответствующими участнику сохраняемости. Каждый словарь содержит имя значения в качестве ключа и само значение в качестве объекта <xref:System.Runtime.DurableInstancing.InstanceValue>.  
+2. Выполните метод <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>. Метод **CollectValues** имеет два параметра словаря: один для хранения значений чтения и записи, а другой — для хранения значений только для записи (используется позднее в запросах). В этом методе необходимо заполнить словари данными, соответствующими участнику сохраняемости. Каждый словарь содержит имя значения в качестве ключа и само значение в качестве объекта <xref:System.Runtime.DurableInstancing.InstanceValue>.  
   
-     Значения в словаре readWriteValues упаковываются в виде **InstanceValue** объектов. Значения в словаре только для записи упаковываются в виде **InstanceValue** объектов с заданными параметрами InstanceValueOptions.Optional и InstanceValueOption.WriteOnly. Каждый **InstanceValue** предоставляемые **CollectValues** реализации для всех участников сохраняемости, должен иметь уникальное имя.  
+    Значения в словаре Реадвритевалуес упаковываются как объекты **InstanceValue** . Значения в словаре, доступном только для записи, упаковываются в объекты **InstanceValue** с Инстанцевалуеоптионс. Optional и Инстанцевалуеоптион. WriteOnly Set. Каждый **InstanceValue** , предоставляемый реализациями **CollectValues** во всех участниках сохраняемости, должен иметь уникальное имя.
   
+    ```csharp  
+    protected virtual void CollectValues(out IDictionary<XName,Object> readWriteValues, out IDictionary<XName,Object> writeOnlyValues)
+    {
+    }
     ```  
-    protected virtual void CollectValues (out IDictionary<XName,Object> readWriteValues, out IDictionary<XName,Object> writeOnlyValues)  
-    ```  
   
-3. Выполните метод <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A>. **MapValues** метод принимает два параметра, которые похожи на параметры, **CollectValues** метод получает. Все значения, собранные в **CollectValues** этап передаются посредством этих словарных параметров. Новые значения, добавленные **MapValues** этапа добавляются значения только для записи.  Доступный только на запись словарь используется для передачи данных во внешний источник данных, не связанный напрямую со значениями экземпляра. Каждого значения, предоставленные реализациями **MapValues** метод для всех участников сохраняемости, должен иметь уникальное имя.  
+3. Выполните метод <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A>. Метод **MapValues** принимает два параметра, аналогичные параметрам, получаемым методом **CollectValues** . Все значения, собранные на этапе **CollectValues** , передаются через эти параметры словаря. Новые значения, добавленные на этапе **MapValues** , добавляются к значениям только для записи.  Доступный только на запись словарь используется для передачи данных во внешний источник данных, не связанный напрямую со значениями экземпляра. Каждое значение, предоставляемое реализациями метода **MapValues** для всех участников сохраняемости, должно иметь уникальное имя.  
   
-    ```  
-    protected virtual IDictionary<XName,Object> MapValues (IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)  
+    ```csharp  
+    protected virtual IDictionary<XName,Object> MapValues(IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)
+    {
+    }
     ```  
   
      Метод <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> предоставляет функциональность, не реализуемую <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>, а именно допускает зависимость от другого значения, предоставленного другим участником сохраняемости, который еще не был обработан <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>.  
   
-4. Реализуйте **PublishValues** метод. **PublishValues** метод получает словарь, содержащий все значения, загруженные из хранилища сохраняемости.  
+4. Реализуйте метод **PublishValues** . Метод **PublishValues** получает словарь, содержащий все значения, загруженные из хранилища сохраняемости.  
   
-    ```  
-    protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
-    ```  
-  
-5. Реализуйте **BeginOnSave** метод, если участник является участником сохраняемости ввода-вывода. Метод вызывается во время создания сохранения. В этом методе необходимо выполнить дополнительные операции ввода-вывода для сохранения (экземпляров рабочих процессов сохранение).  Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current.  Помимо этого, PersistenceIOParticipants могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если такая транзакция не будет использована иначе.  
-  
-    ```  
-    protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
+    ```csharp  
+    protected virtual void PublishValues(IDictionary<XName,Object> readWriteValues)
+    {
+    }
     ```  
   
-6. Реализуйте **BeginOnLoad** метод, если участник является участником сохраняемости ввода-вывода. Метод вызывается во время создания загрузки. В этом методе необходимо выполнить дополнительные операции ввода-вывода и загрузки экземпляров рабочего процесса. Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current. Кроме того участники ввода-вывода сохраняемости могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если один в противном случае не будут использоваться.  
+5. Реализуйте метод **бегинонсаве** , если участник является участником сохраняемого ввода-вывода. Метод вызывается во время создания сохранения. В этом методе следует выполнять операции ввода-вывода дополнения в сохраняемые (сохраняемые) экземпляры рабочих процессов.  Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current.  Помимо этого, PersistenceIOParticipants могут объявить о требовании к совместимости транзакций, в случае чего узел создаст транзакцию для сеанса сохраняемости, если такая транзакция не будет использована иначе.  
   
+    ```csharp  
+    protected virtual IAsyncResult BeginOnSave(IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)
+    {
+    }
     ```  
-    protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  
+  
+6. Реализуйте метод **бегинонлоад** , если участник является участником сохраняемого ввода-вывода. Метод вызывается во время создания загрузки. В этом методе следует выполнять операции ввода-вывода дополнения для загрузки экземпляров рабочего процесса. Если узел использует транзакцию для соответствующей команды сохраняемости, та же самая транзакция используется в Transaction.Current. Кроме того, участники сохраняемости ввода-вывода могут объявить о требованиях к согласованности транзакций. в этом случае узел создает транзакцию для эпизода сохраняемости, если она не используется иным образом.  
+  
+    ```csharp  
+    protected virtual IAsyncResult BeginOnLoad(IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)
+    {
+    }
     ```

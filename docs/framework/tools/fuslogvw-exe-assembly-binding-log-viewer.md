@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041418"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851248"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (средство просмотра журнала привязки сборок)
 
@@ -29,7 +29,7 @@ ms.locfileid: "70041418"
 
 В командной строке введите следующее.
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ fuslogvw
 
 Приведенная ниже запись журнала содержит подробные сведения об ошибке привязки сборки.
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ LOG: All probing URLs attempted and failed.
 
 Следующий журнал иллюстрирует ошибку, вызванную зависимостью, которая не существовала в момент создания для приложения машинного образа. Если зависимости во время выполнения отличаются от зависимостей при выполнении Ngen.exe, привязка к машинному образу не допускается.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 Следующий журнал иллюстрирует ошибку привязки машинного образа, вызванную различиями в настройках параметров безопасности при выполнении приложения и при создании машинного образа.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.
