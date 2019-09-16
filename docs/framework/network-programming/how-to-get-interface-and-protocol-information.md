@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 231d658cf13d27936b7b362ef8b4ccad78614b73
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624579"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894725"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="ec563-102">Практическое руководство. Получение информации об интерфейсах и протоколах</span><span class="sxs-lookup"><span data-stu-id="ec563-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="ec563-103">В этом примере показано, как считать статистику TCP сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ec563-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="32642-102">Практическое руководство. Получение информации об интерфейсах и протоколах</span><span class="sxs-lookup"><span data-stu-id="32642-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="32642-103">В этом примере показано, как считать статистику TCP сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="32642-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ec563-104">Пример</span><span class="sxs-lookup"><span data-stu-id="ec563-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="32642-104">Пример</span><span class="sxs-lookup"><span data-stu-id="32642-104">Example</span></span>  
   
-```  
+```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
 {  
     IPGlobalProperties properties =  
@@ -69,7 +69,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ec563-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="ec563-105">Compiling the Code</span></span>  
- <span data-ttu-id="ec563-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="ec563-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="32642-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="32642-105">Compiling the Code</span></span>  
+ <span data-ttu-id="32642-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="32642-106">This example requires:</span></span>  
   
-- <span data-ttu-id="ec563-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="ec563-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="32642-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="32642-107">References to the **System.Net** namespace.</span></span>
