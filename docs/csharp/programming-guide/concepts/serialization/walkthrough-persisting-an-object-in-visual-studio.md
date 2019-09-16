@@ -1,12 +1,12 @@
 ---
 title: Пошаговое руководство. Сохранение объекта с помощью C#
 ms.date: 04/26/2018
-ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105927"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851043"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Пошаговое руководство. Сохранение объекта с помощью C\#
 
@@ -22,7 +22,7 @@ ms.locfileid: "70105927"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Для сборки и запуска установите [пакет SDK для .NET Core](https://www.microsoft.com/net/core).
+- Для сборки и запуска установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download).
 
 - Установите любой привычный для вас редактор кода, если еще не сделали этого.
 

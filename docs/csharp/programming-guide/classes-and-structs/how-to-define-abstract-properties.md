@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596866"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970902"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Практическое руководство. Определение абстрактных свойств (руководство по программированию на C#)
 В следующем примере показано, как определять [абстрактные](../../language-reference/keywords/abstract.md) свойства. В объявлении абстрактного свойства не предоставляется реализация методов доступа к свойству. В нем объявляется, что класс поддерживает свойства, однако реализация методов доступа к ним передается в производные классы. В следующем примере показано, как реализовать абстрактные свойства, наследуемые от базового класса.  
@@ -59,4 +59,3 @@ ms.locfileid: "69596866"
 - [Классы и структуры](./index.md)
 - [Абстрактные и запечатанные классы и члены классов](./abstract-and-sealed-classes-and-class-members.md)
 - [Свойства](./properties.md)
-- [Практическое руководство. Создание и использование сборок с помощью командной строки](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

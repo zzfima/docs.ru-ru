@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34cb8b0cebc64bf7244c522066700c94d33986a9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957998"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894804"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -43,13 +43,13 @@ ms.locfileid: "69957998"
   
  Чтобы получить справочные сведения по синтаксису команд и параметрам программы Resgen.exe, можно ввести следующую команду без параметров.  
   
-```  
+```console  
 resgen  
 ```  
   
  Также можно использовать ключ `/?`.  
   
-```  
+```console  
 resgen /?  
 ```  
   
@@ -61,11 +61,11 @@ resgen /?
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
-```  
+```console  
 resgen filename.extension [outputDirectory]  
 ```  
   
@@ -134,7 +134,7 @@ resgen filename.extension [outputDirectory]
   
  Синтаксис компиляции файла ресурсов выглядит следующим образом.  
   
-```  
+```console  
 resgen inputFilename [outputFilename]   
 ```  
   
@@ -150,19 +150,19 @@ resgen inputFilename [outputFilename]
   
  Следующая команда считывает пары имя/значение из файла "Resources.txt" и создает двоичный RESOURCES-файл с именем "Resources.resources". Поскольку имя выходного файла не указано явным образом, его имя по умолчанию аналогично имени входного файла.  
   
-```  
+```console  
 resgen Resources.txt   
 ```  
   
  Следующая команда считывает пары имя/значение из файла "Resources.restext" и создает двоичный файл ресурсов с именем "StringResources.resources".  
   
-```  
+```console  
 resgen Resources.restext StringResources.resources  
 ```  
   
  Следующая команда считывает входной файл на основе XML "Resources.resx" и создает двоичный RESOURCES-файл с именем "Resources.resources".  
   
-```  
+```console  
 resgen Resources.resx Resources.resources  
 ```  
   
@@ -184,19 +184,19 @@ resgen Resources.resx Resources.resources
   
  Следующая команда считывает двоичный файл ресурсов "Resources.resources" и создает выходной файл на основе XML с именем "Resources.resx".  
   
-```  
+```console  
 resgen Resources.resources Resources.resx  
 ```  
   
  Следующая команда считывает файл ресурсов на основе текста "StringResources.txt" и создает файл ресурсов на основе XML с именем "LibraryResources.resx". Помимо хранения строковых ресурсов RESX-файл можно также использовать для хранения нестроковых ресурсов.  
   
-```  
+```console  
 resgen StringResources.txt LibraryResources.resx  
 ```  
   
  Следующие две команды считывают файл ресурсов на основе XML "Resources.resx" и создают текстовые файлы с именами "Resources.txt" и "Resources.restext". Следует заметить, что если RESX-файл содержит внедренные объекты, они будут неправильно преобразованы в текстовые файлы.  
   
-```  
+```console  
 resgen Resources.resx Resources.txt  
 resgen Resources.resx Resources.restext  
 ```  
@@ -205,13 +205,13 @@ resgen Resources.resx Resources.restext
 ### <a name="compiling-or-converting-multiple-files"></a>Компиляция или преобразование нескольких файлов  
  С помощью ключа `/compile` можно преобразовать список файлов ресурсов из одного формата в другой за одну операцию. Синтаксис выглядит следующим образом.  
   
-```  
+```console  
 resgen /compile filename.extension [filename.extension...]  
 ```  
   
  Следующая команда компилирует три файла — "StringResources.txt", "TableResources.resw" и "ImageResources.resw" — в отдельные RESOURCES-файлы с именами "StringResources.resources", "TableResources.resources" и "ImageResources.resources".  
   
-```  
+```console  
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
@@ -224,7 +224,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
  Синтаксис для создания RESW-файлов из сборки выглядит следующим образом.  
   
-```  
+```console  
 resgen filename.extension  [outputDirectory]  
 ```  
   
@@ -238,7 +238,7 @@ resgen filename.extension  [outputDirectory]
   
  Следующая команда создает RESW-файл в каталоге "Win8Resources" для каждого RESOURCES-файла, внедренного в приложение MyApp.exe.  
   
-```  
+```console  
 resgen MyApp.exe Win8Resources  
 ```  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
  Например, следующий файл с именем "UIResources.rext" содержит строковый ресурс с именем `AppTitle`, который может принимать одно из трех значений в зависимости от заданного символа: `PRODUCTION`, `CONSULT` или `RETAIL`.  
   
-```  
+```text
 #ifdef PRODUCTION  
 AppTitle=My Software Company Project Manager   
 #endif  
@@ -265,7 +265,7 @@ FileMenuName=File
   
  После этого файл можно скомпилировать в двоичный RESOURCES-файл с помощью следующей команды.  
   
-```  
+```console  
 resgen /define:CONSULT UIResources.restext  
 ```  
   
@@ -277,7 +277,7 @@ resgen /define:CONSULT UIResources.restext
   
  Синтаксис для создания ресурса со строгой типизацией выглядит следующим образом.  
   
-```  
+```console  
 resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filename]]] [/publicClass]  
 ```  
   
@@ -325,7 +325,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Например, при выполнении следующей команды выполняется компиляция файла ресурсов с именем "StringResources.txt" в "StringResources.resources" и создается класс с именем `StringResources` в файле исходного кода Visual Basic с именем "StringResources.vb", который можно использовать для доступа к диспетчеру ресурсов.  
   
-```  
+```console  
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   

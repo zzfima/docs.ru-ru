@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988157"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969064"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Упаковка сборки .NET Framework для COM
 
@@ -45,7 +45,7 @@ ms.locfileid: "69988157"
 
   Сборки со строгими именами, подписанные издателем, могут устанавливаться в глобальный кэш сборок. Неподписанные сборки необходимо устанавливать на компьютер пользователя в виде частных сборок.
 
-  Дополнительные сведения см. в разделе [Вопросы безопасности сборок](../app-domains/assembly-security-considerations.md).
+  Дополнительные сведения см. в разделе [Вопросы безопасности сборок](../../standard/assembly/security-considerations.md).
 
 - Включение библиотеки типов
 
@@ -96,7 +96,7 @@ ms.locfileid: "69988157"
 - [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
 - [Oпределение типов .NET для взаимодействия](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Introducing the class interface](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
-- [Вопросы безопасности сборок](../app-domains/assembly-security-considerations.md)
+- [Вопросы безопасности сборок](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Регистрация сборок в COM](registering-assemblies-with-com.md)
 - [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

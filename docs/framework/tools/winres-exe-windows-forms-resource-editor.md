@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937924"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894571"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (редактор для локализации ресурсов Windows)
 
@@ -28,7 +28,7 @@ ms.locfileid: "69937924"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```console
 winres resourceFile
 winres /?
 ```
@@ -116,13 +116,13 @@ winres /?
 
      Следующая команда запускает программу Winres.exe и загружает форму, связанную с файлом `TestApp.resx`, в конструктор форм.
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      Следующая команда запускает программу Winres.exe и загружает форму, связанную с файлом `TestApp.resources`, в конструктор форм.
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 

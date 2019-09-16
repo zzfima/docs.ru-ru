@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374519"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929094"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Учебник. Обнаружение объектов с помощью ONNX в ML.NET
 
@@ -21,6 +21,7 @@ ms.locfileid: "70374519"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
+>
 > - Определение проблемы
 > - Узнайте, что такое ONNX и как он работает с ML.NET
 > - Общие сведения о модели
@@ -710,6 +711,7 @@ person and its Confidence score: 0.5551759
 
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
+>
 > - Определение проблемы
 > - Узнайте, что такое ONNX и как он работает с ML.NET
 > - Общие сведения о модели

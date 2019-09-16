@@ -5,12 +5,12 @@ author: briacht
 ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929484"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Учебник. Создание приложения для рекомендации фильмов с помощью ML.NET
 
@@ -18,6 +18,7 @@ ms.locfileid: "70107257"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
+>
 > * выбрать алгоритм машинного обучения;
 > * подготовить и загрузить данные;
 > * создать и обучить модель;
@@ -467,6 +468,7 @@ var options = new MatrixFactorizationTrainer.Options
 В этом руководстве вы узнали, как:
 
 > [!div class="checklist"]
+>
 > * выбрать алгоритм машинного обучения;
 > * подготовить и загрузить данные;
 > * создать и обучить модель;

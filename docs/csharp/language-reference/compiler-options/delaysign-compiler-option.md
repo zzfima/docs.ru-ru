@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603022"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970445"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (параметры компилятора C#)
 
@@ -41,7 +41,7 @@ ms.locfileid: "69603022"
 
 Например, чтобы поместить сборку в глобальный кэш для тестирования, используйте параметр **-delaysign+** . После тестирования можно полностью подписать сборку, поместив в нее закрытый ключ с помощью [компоновщика сборок](../../../framework/tools/al-exe-assembly-linker.md).
 
-Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).
+Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../standard/assembly/create-use-strong-named.md) и [Отложенная подпись сборки](../../../standard/assembly/delay-sign.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 

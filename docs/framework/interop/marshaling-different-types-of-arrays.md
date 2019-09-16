@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648595"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894164"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Маршалинг различных типов массивов
 Массив является ссылочным типом в управляемом коде, содержащим один или несколько элементов одного и того же типа. Несмотря на то, что массивы являются ссылочными типами, они передаются в неуправляемые функции в виде параметров In. Это поведение не согласуется со способом передачи управляемых массивов в управляемые объекты в виде параметров In/Out. Подробнее см. в разделе [Копирование и закрепление](copying-and-pinning.md).  
   
  В таблице ниже перечислены параметры маршалинга для массивов и описывается их использование.  
   
-|Массив|Описание|  
+|Массив|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |Целые числа по значению.|Передает массив целых чисел в виде параметра In.|  
 |Целые числа по ссылке.|Передает массив целых чисел в виде параметра In/Out.|  
@@ -52,43 +52,43 @@ ms.locfileid: "64648595"
   
 - Функция**TestArrayOfInts** , экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
 - Функция**TestRefArrayOfInts** , экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
 - Функция**TestMatrixOfInts** , экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
 - Функция**TestArrayOfStrings** , экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
 - Функция**TestArrayOfStructs** , экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
 - Функция**TestArrayOfStructs2** , экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) — это пользовательская неуправляемая библиотека, содержащая реализации ранее описанных функций и две переменные структуры: **MYPOINT** и **MYPERSON**. Структуры содержат следующие элементы:  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

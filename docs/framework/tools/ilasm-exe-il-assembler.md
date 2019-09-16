@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933655"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894683"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (ассемблер IL)
 
@@ -110,7 +110,7 @@ ilasm [options] filename [[options]filename...]
 
 Начиная с .NET Framework 4.5 к реализации интерфейса можно добавить свой атрибут с помощью кода, похожего на следующий:
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ ilasm [options] filename [[options]filename...]
 
 Начиная с .NET Framework 4.5 можно указать произвольный большой двоичный объект (BLOB) маршала с помощью необработанного двоичного представления, как показано в следующем коде:
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 Следующий пример кода IL соответствует предыдущему примеру кода на C#. Можно скомпилировать этот код в сборку с помощью ассемблера IL. В обоих примерах кода (на IL и C#) на консоли отображается в консоль.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

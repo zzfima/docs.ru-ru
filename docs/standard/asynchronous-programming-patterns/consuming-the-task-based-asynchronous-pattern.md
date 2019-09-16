@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169138"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929010"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
 
@@ -727,7 +727,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- Класс [AsyncCache\<TKey,TValue](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) в качестве делегата своего конструктора принимает функцию, которая принимает значение `TKey` и возвращает значение <xref:System.Threading.Tasks.Task%601>.  Ранее запрошенные из кэша значения хранятся во внутреннем словаре, и `AsyncCache` гарантирует, что для одного ключа создается только одна задача, даже при одновременном доступе к кэшу.
+ Класс [AsyncCache\<TKey,TValue](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) в качестве делегата своего конструктора принимает функцию, которая принимает значение `TKey` и возвращает значение <xref:System.Threading.Tasks.Task%601>.  Ранее запрошенные из кэша значения хранятся во внутреннем словаре, и `AsyncCache` гарантирует, что для одного ключа создается только одна задача, даже при одновременном доступе к кэшу.
 
  Например, можно создать кэш для загруженных веб-страниц.
 

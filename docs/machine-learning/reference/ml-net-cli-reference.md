@@ -3,12 +3,12 @@ title: Команда auto-train в программе командной стр
 description: Обзор, примеры и справочник по командам auto-train в программе командной строки ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397662"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929199"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Команда auto-train в интерфейсе командной строки ML.NET
 
@@ -217,6 +217,7 @@ ms.locfileid: "67397662"
 
 Укажите, содержат ли файлы набора данных строку заголовка.
 Доступны следующие значения:
+
 - `true`
 - `false`
 

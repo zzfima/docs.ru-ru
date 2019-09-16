@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e6f9f553af4899d502584cbde5341f7061f169d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937956"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894776"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
 Программа экспорта метаданных среды выполнения Windows (Winmdexp.exe) преобразует модуль .NET Framework в файл, содержащий метаданные среды выполнения Windows. Несмотря на то что сборки .NET Framework и файлы метаданных среды выполнения Windows используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно без преобразования использовать как компоненты среды выполнения Windows. Процесс преобразования модуля .NET Framework в компонент среды выполнения Windows называется *экспортированием*. В .NET Framework 4.5 и .NET Framework 4.5.1 конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
@@ -25,7 +25,7 @@ ms.locfileid: "69937956"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 winmdexp [options] winmdmodule  
 ```  
   

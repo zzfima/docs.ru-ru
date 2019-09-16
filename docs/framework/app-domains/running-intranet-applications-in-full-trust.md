@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1996c8b317bbfed6362c759a257cafef8400e919
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592764"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971913"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Выполнение приложений интранета с полным доверием
 Начиная с платформы .NET Framework версии 3.5 с пакетом обновления 1 (SP1) приложения и их сборки библиотек можно запускать как сборки с полным доверием из сетевой папки. В сборки, загружаемые из папки в интрасети, автоматически добавляется свидетельство зоны <xref:System.Security.SecurityZone.MyComputer>. Это свидетельство дает таким сборкам тот же набор разрешений (обычно это полное доверие), которым обладают сборки, расположенные на компьютере. Эта функция не относится к приложениям ClickOnce и к приложениям, предназначенным для запуска на узле.  
@@ -36,4 +36,4 @@ ms.locfileid: "64592764"
   
 ## <a name="see-also"></a>См. также
 
-- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Программирование с использованием сборок](../../standard/assembly/program.md)

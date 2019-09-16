@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71d7bb4cc85b0388e18cc7304dfa8c7951eab629
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648591"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894161"
 ---
 # <a name="msgbox-sample"></a>Пример MsgBox
 В этом примере демонстрируется, как передавать строковые типы по значению в качестве параметров ввода и когда следует использовать поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> и <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -25,7 +25,7 @@ ms.locfileid: "64648591"
   
 - **MessageBox** экспортируется из User32.dll.  
   
-    ```  
+    ```cpp
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
        UINT uType);  
     ```  

@@ -4,12 +4,12 @@ description: Из этой статьи вы узнаете, как повтор
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804760"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929242"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Учебник. Повторное обучение классификатора изображений TensorFlow с помощью передачи обучения и ML.NET
 
@@ -19,6 +19,7 @@ ms.locfileid: "67804760"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
+>
 > * Определение проблемы
 > * повторно использовать и настраивать предварительно обученную модель;
 > * классифицировать изображения.
@@ -480,6 +481,7 @@ Press any key to close this window . . .
 
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
+>
 > * Определение проблемы
 > * повторно использовать и настраивать предварительно обученную модель;
 > * классифицировать изображения с помощью загруженной модели.

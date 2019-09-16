@@ -3,12 +3,12 @@ title: Интерпретация выражений
 description: Сведения о том, как написать код для проверки структуры дерева выражений.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202969"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925688"
 ---
 # <a name="interpreting-expressions"></a>Интерпретация выражений
 
@@ -357,6 +357,7 @@ Expression<Func<int, int>> factorial = (n) =>
 Это можно было бы сделать, если бы уже имелся делегат, но его нельзя вызвать в форме дерева выражения. В разделе о [построении деревьев выражений](expression-trees-building.md) вы узнаете о том, как преодолеть эти ограничения.
 
 В этом выражении вы встретите узлы всех указанных далее типов:
+
 1. Equal (двоичное выражение)
 2. Multiply (двоичное выражение)
 3. Conditional (выражение ? :)

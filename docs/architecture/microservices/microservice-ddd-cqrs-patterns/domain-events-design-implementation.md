@@ -2,12 +2,12 @@
 title: События предметной области. Проектирование и реализация
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Подробный обзор событий предметной области, ключевая концепция для установления связи между агрегатами.
 ms.date: 10/08/2018
-ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926547"
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -375,7 +375,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Сезар де ла Торре (Cesar de la Torre). События предметной области Интеграция событий в DDD и архитектуры микрослужб** \
-  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
+  <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[Назад](client-side-validation.md)

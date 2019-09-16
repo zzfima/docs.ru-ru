@@ -4,12 +4,12 @@ description: Практические рекомендации по исполь
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9d3e2b0b3aedbab150072bf6eebff4acb5f8a0b7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211677"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928987"
 ---
 # <a name="source-link"></a>Source Link
 
@@ -31,6 +31,7 @@ Source Link — это технология, которая дает возмо
 
 > [!TIP]
 > Вы можете дополнительно повысить эффективность отладки путем добавления атрибутов отладчика в типы.
+>
 > * <xref:System.Diagnostics.DebuggerDisplayAttribute> может определять, как класс или поле будет отображаться в окнах переменных отладчика.
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> дает отладчику указание о сквозной обработке кода (вместо выполнения по шагам).
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> определяет, будет ли член отображаться в окнах переменных отладчика.

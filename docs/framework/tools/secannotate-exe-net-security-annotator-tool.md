@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469278"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894768"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (средство создания заметок безопасности .NET)
 Средство создания заметок безопасности .NET Security Annotator (SecAnnotate.exe) — это приложение командной строки, определяющее части `SecurityCritical` и `SecuritySafeCritical` одной или нескольких сборок.  
@@ -25,13 +25,13 @@ ms.locfileid: "57469278"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|ОПИСАНИЕ|  
 |------------|-----------------|  
 |`/a`<br /><br /> или<br /><br /> `/showstatistics`|Показывает статистику использования прозрачности в анализируемых сборках.|  
 |`/d:` *каталог*<br /><br /> или<br /><br /> `/referencedir:` *каталог*|Указывает каталог для поиска зависимых сборок во время создания заметок.|  

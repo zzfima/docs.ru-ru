@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948588"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851380"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (средство диспетчера сертификатов)
 Диспетчер сертификатов (Certmgr.exe) предназначен для управления сертификатами, списками доверия сертификатов (CTL) и списками отзыва сертификатов (CRL).  
@@ -38,7 +38,7 @@ ms.locfileid: "69948588"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -97,43 +97,43 @@ ms.locfileid: "69948588"
 ## <a name="examples"></a>Примеры  
  Следующая команда выводит подробные сведения о содержимом системного хранилища `my`, используемого по умолчанию.  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  Следующая команда добавляет все сертификаты из файла `myFile.ext` в новый файл `newFile.ext`.  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  Следующая команда добавляет сертификат в файле `testcert.cer` в хранилище системы `my`.  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  Следующая команда добавляет сертификат в файле `TrustedCert.cer` в хранилище корневых сертификатов.  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  Следующая команда сохраняет сертификат с общим именем `myCert` в системном хранилище `my` в файл `newCert.cer`.  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  Следующая команда удаляет все CTL из системного хранилища `my` и сохраняет полученное хранилище в файл `newStore.str`.  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  Следующая команда сохраняет сертификат в системном хранилище `my` в файл `newFile`. Программа запросит у пользователя номер сертификата из хранилища `my`, который следует поместить в файл `newFile`.  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

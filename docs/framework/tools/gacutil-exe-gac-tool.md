@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d0aba8be60611527d6216227a6c4939479fc38
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613048"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926877"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (программа глобального кэша сборок)
 
@@ -36,19 +36,19 @@ ms.locfileid: "59613048"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 ```
 
 ## <a name="parameters"></a>Параметры
 
-|Аргумент|Описание|
+|Аргумент|ОПИСАНИЕ|
 |--------------|-----------------|
 |*имя_сборки*|Имя сборки. Можно предоставить либо частично указанное имя сборки, например `myAssembly`, либо полное имя сборки, например `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|
 |*assemblyPath*|Имя файла, содержащего манифест сборки.|
 |*assemblyListFile*|Путь к текстовому файлу ANSI, в котором перечислены устанавливаемые или удаляемые сборки. Чтобы использовать текстовый файл для установки сборок, укажите путь к каждой сборке в отдельной строке файла. Программа интерпретирует относительные пути относительно расположения *assemblyListFile*. Чтобы использовать текстовый файл для удаления сборок, укажите в нем полное имя каждой сборки в отдельной строке. Примеры содержимого списка *assemblyListFile* приведены ниже в этом разделе.|
 
-|Параметр|Описание|
+|Параметр|ОПИСАНИЕ|
 |------------|-----------------|
 |**/cdl**|Удаляет содержимое кэша загрузки.|
 |**/f**|Чтобы принудительно переустановить сборку, укажите этот параметр с ключом **/i** или **/il**. Если сборка с этим именем уже существует в глобальном кэше сборок, она будет перезаписана.|
@@ -81,7 +81,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 Для установки или удаления списка сборок, хранящегося в текстовом файле ANSI, укажите параметры **/il** или **/ul**. Содержимое текстового файла должно иметь правильный формат. Чтобы использовать текстовый файл для установки сборок, укажите путь к каждой сборке в отдельной строке файла. Ниже приведен пример содержимого файла со списком устанавливаемых сборок.
 
-```
+```text
 myAssembly1.dll
 myAssembly2.dll
 myAssembly3.dll
@@ -89,7 +89,7 @@ myAssembly3.dll
 
 Чтобы использовать текстовый файл для удаления сборок, укажите в нем полное имя каждой сборки в отдельной строке. Ниже приведен пример содержимого файла со списком удаляемых сборок.
 
-```
+```text
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
@@ -98,11 +98,12 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > [!NOTE]
 > Попытка установить сборку с именем, количество символов в котором превышает 79 и 91 символ (включая расширение файла), может привести к следующей ошибке:
 >
-> ```
+> ```output
 > Failure adding assembly to the cache:   The file name is too long.
 > ```
 >
 > Это вызвано тем, что Gacutil.exe конструирует путь длиной до числа символов, определяемого значением MAX_PATH. Этот путь состоит из следующих элементов:
+>
 > - GAC Root — 34 символа (например, `C:\Windows\Microsoft.NET\assembly\`);
 > - Architecture — 7 или 9 символов (например, `GAC_32\`, `GAC_64\`, `GAC_MSIL`);
 > - AssemblyName — до 91 символа в зависимости от размера других элементов (например, `System.Xml.Linq\`)
@@ -117,13 +118,13 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 
 Следующая команда устанавливает сборку `mydll.dll` в глобальный кэш сборок.
 
-```
+```console
 gacutil /i mydll.dll
 ```
 
 Следующая команда удаляет сборку `hello` из глобального кэша сборок, если для нее не существует подсчет ссылок.
 
-```
+```console
 gacutil /u hello
 ```
 
@@ -131,49 +132,49 @@ gacutil /u hello
 
 В следующем примере рассмотрена команда, позволяющая избежать удаления нескольких сборок. Эта команда удаляет только ту версию сборки `hello`, которая соответствует заданным полному номеру версии, языку и региональным параметрам, и открытому ключу.
 
-```
+```console
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
 ```
 
 Следующая команда устанавливает сборки, перечисленные в файле `assemblyList.txt`, в глобальный кэш сборок.
 
-```
+```console
 gacutil /il assemblyList.txt
 ```
 
 Следующая команда удаляет сборки, перечисленные в файле `assemblyList.txt`, из глобального кэша сборок.
 
-```
+```console
 gacutil /ul assemblyList.txt
 ```
 
 Следующая команда устанавливает `myDll.dll` в глобальный кэш сборок и добавляет ссылку для счетчика. Сборка `myDll.dll` используется приложением `MyApp`. Параметр `UNINSTALL_KEY MyApp` задает раздел реестра, который добавляет приложение `MyApp` в компонент "Установка и удаление программ" в ОС Windows. Параметр описания указывается как `My Application Description`.
 
-```
+```console
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"
 ```
 
 Следующая команда устанавливает `myDll.dll` в глобальный кэш сборок и добавляет ссылку для счетчика. Значение параметра "scheme" `FILEPATH` и значение параметра "id" `c:\applications\myApp\myApp.exe` задают путь к приложению, которое устанавливает `myDll.dll.`. Значение параметра "description" — `MyApp`.
 
-```
+```console
 gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 Следующая команда устанавливает `myDll.dll` в глобальный кэш сборок и добавляет ссылку для счетчика. Значение параметра "scheme", заданное как `OPAQUE`, позволяет указывать любые значения для параметров "id" и "description".
 
-```
+```console
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"
 ```
 
 Следующая команда удаляет ссылку на `myDll.dll` из приложения `myApp`. Если это последняя ссылка на сборку, сборка будет удалена из глобального кэша сборок.
 
-```
+```console
 gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 Следующая команда выводит содержимое глобального кэша сборок.
 
-```
+```console
 gacutil /l
 ```
 

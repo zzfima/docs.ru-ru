@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928422"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -32,6 +32,7 @@ ms.locfileid: "69968262"
 > В каждой новой версии платформы .NET Framework сохранены функции предыдущих версий и добавлены новые функции. Можно загружать несколько версий платформы .NET Framework на одном компьютере одновременно. Это значит, что можно установить платформу .NET Framework, не удаляя предыдущие версии. Обычно не рекомендуется удалять предыдущие версии .NET Framework, так как используемое приложение может зависеть от конкретной версии .NET Framework и удаление платформы приведет к сбою в его работе.
 >
 > Существует разница между версией .NET Framework и версией общеязыковой среды выполнения (CLR).
+>
 > - Версия .NET Framework зависит от набора сборок, которые образуют библиотеку классов .NET Framework. Например, версии .NET Framework включают в себя 4.5, 4.6.1 и 4.7.2.
 >- Версия среды CLR зависит от среды выполнения, в которой выполняются приложения .NET Framework. Одна версия среды CLR обычно поддерживает несколько версий .NET Framework. Например, среда CLR версии 4.0.30319.*xxxxx* поддерживает .NET Framework версии с 4 по 4.5.2, где *xxxxx* меньше 42000, а среда CLR версии 4.0.30319.42000 поддерживает .NET Framework, начиная с версии 4.6.
 >

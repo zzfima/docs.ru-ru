@@ -2,12 +2,12 @@
 title: Отражение (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 9b4322d83ad43cd3e49647df49c15bb5c917e1be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7906ca6f02a369e6f4d51f11f96616b6a89f48c5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924092"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971663"
 ---
 # <a name="reflection-c"></a>Отражение (C#)
 Механизм отражения позволяет получать объекты (типа <xref:System.Type>), которые описывают сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение обеспечивает доступ к ним. Дополнительные сведения см. в разделе [Атрибуты](../../../standard/attributes/index.md).  
@@ -67,4 +67,4 @@ System.Console.WriteLine(info);
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
-- [Сборки в среде CLR](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Сборки в .NET](../../../standard/assembly/index.md)

@@ -3,12 +3,12 @@ title: Глоссарий по .NET
 description: Узнайте значение выбранных терминов, используемых в документации по .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106925"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929083"
 ---
 # <a name="net-glossary"></a>Глоссарий по .NET
 
@@ -85,6 +85,7 @@ ms.locfileid: "70106925"
 Обычно это всеобъемлющая коллекция API-интерфейсов, которая упрощает разработку и развертывание приложений, основанных на определенной технологии. В этом общем смысле ASP.NET Core и Windows Forms являются примерами платформ приложений. См. также [библиотека](#library).
 
 Слово "платформа" имеет более специфичное техническое значение в следующих терминах.
+
 - [.NET Framework](#net-framework)
 - [целевая платформа](#target-framework)
 - [TFM (моникер целевой платформы)](#tfm)

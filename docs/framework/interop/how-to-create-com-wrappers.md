@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946461"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971837"
 ---
 # <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
 
@@ -55,7 +55,7 @@ ms.locfileid: "69946461"
   
 1. Создайте проект библиотеки классов для управляемого класса, который требуется выполнять в машинном коде. Класс должен содержать конструктор без параметров.  
   
-     Убедитесь, что в файле AssemblyInfo присутствует полный номер версии сборки, состоящий из четырех частей. Этот номер необходим для управления версиями в реестре Windows. Дополнительные сведения о номерах версий см. в разделе [Управление версиями сборки](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Убедитесь, что в файле AssemblyInfo присутствует полный номер версии сборки, состоящий из четырех частей. Этот номер необходим для управления версиями в реестре Windows. Дополнительные сведения о номерах версий см. в разделе [Управление версиями сборки](../../standard/assembly/versioning.md).  
   
 2. В меню **Проект** выберите пункт **Свойства**.  
   

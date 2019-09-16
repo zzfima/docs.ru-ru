@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 037891abe18d1e119ea1d84a9840ece58b5b3c3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969665"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929292"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Дополнительные сведения (параллельное программирование)
 
@@ -22,7 +22,7 @@ ms.locfileid: "56969665"
 
 - В книге [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) (Шаблоны разработки для декомпозиции и координации многоядерных архитектур) описаны шаблоны с поддержкой параллельного программирования, представленные в .NET Framework 4.
 
-- [Блог параллельного программирования на .NET](https://blogs.msdn.microsoft.com/pfxteam/) содержит множество подробных статей о параллельном программировании на .NET.
+- [Блог параллельного программирования на .NET](https://devblogs.microsoft.com/pfxteam/) содержит множество подробных статей о параллельном программировании на .NET.
 
 - На странице с [примерами параллельного программирования с помощью .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) демонстрируется использование методов параллельного программирования на среднем и продвинутом уровнях сложности.
 

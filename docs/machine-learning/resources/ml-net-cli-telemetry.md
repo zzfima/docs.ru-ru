@@ -4,12 +4,12 @@ description: Узнайте о функциях телеметрии в инте
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253998"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929279"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Сбор данных телеметрии интерфейсом командной строки ML.NET
 
@@ -58,6 +58,7 @@ ms.locfileid: "70253998"
 
 ### <a name="data-points-not-collected"></a>Не собираемые точки данных
 Функция телеметрии *не* собирает:
+
 - персональные данные, такие как имена пользователей;
 - имена файлов наборов данных;
 - данные из файлов наборов данных.
@@ -73,6 +74,7 @@ ms.locfileid: "70253998"
 При первом выполнении [команды интерфейса командной строки ML.NET](../reference/ml-net-cli-reference.md), такой как `mlnet auto-train`, интерфейс командной строки ML.NET отображает текстовое сообщение о том, как отказаться от телеметрии. Оно может немного отличаться в зависимости от используемой версии интерфейса командной строки.
 
 ## <a name="see-also"></a>См. также
+
 - [Справочник по интерфейсу командной строки ML.NET](../reference/ml-net-cli-reference.md)
 - [Условия лицензии на программное обеспечение Майкрософт: библиотека Microsoft .NET](https://aka.ms/dotnet-core-eula)
 - [Конфиденциальность в корпорации Майкрософт](https://www.microsoft.com/trustcenter/privacy/)

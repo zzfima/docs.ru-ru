@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602598"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970382"
 ---
 # <a name="-out-c-compiler-options"></a>-out (параметры компилятора C#)
 Параметр **-out** задает имя выходного файла.  
@@ -45,7 +45,7 @@ ms.locfileid: "69602598"
   
  Все модули, созданные в процессе компиляции, будут связаны со сборкой, полученной в результате этого процесса. С помощью [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) можно просмотреть связанные файлы в манифесте сборки.  
   
- Параметр компилятора -out обязателен, если требуется установить EXE-файл в качестве целевого для дружественной сборки. Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend-assemblies.md).  
+ Параметр компилятора -out обязателен, если требуется установить EXE-файл в качестве целевого для дружественной сборки. Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>См. также
 
 - [Параметры компилятора C# ](./index.md)
-- [Дружественные сборки](../../../standard/assembly/friend-assemblies.md)
+- [Дружественные сборки](../../../standard/assembly/friend.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

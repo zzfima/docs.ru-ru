@@ -1,5 +1,5 @@
 ---
-title: глобальный кэш сборок
+title: Глобальный кэш сборок
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921589"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972023"
 ---
-# <a name="global-assembly-cache"></a>глобальный кэш сборок
+# <a name="global-assembly-cache"></a>Глобальный кэш сборок
 На каждом компьютере с установленной средой CLR имеется кэш кода на уровне компьютера, называемый глобальным кэшем сборок. В глобальном кэше сборок сохраняются сборки, специально предназначенные для совместного использования на компьютере несколькими приложениями.  
   
  Организовывать совместное использование сборок путем установки их в глобальный кэш следует только при необходимости. Как правило, зависимости между сборками следует сохранять закрытыми, а сами сборки нужно размещать в папке приложения, если они не предназначены для совместного использования. Кроме того, не обязательно устанавливать сборки в глобальный кэш сборок для доступа к ним из COM-взаимодействия или из неуправляемого кода.  
@@ -44,6 +44,6 @@ ms.locfileid: "69921589"
   
 ## <a name="see-also"></a>См. также
 
-- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Сборки в .NET](../../standard/assembly/index.md)
 - [Работа со сборками и глобальным кэшем сборок](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Сборки со строгими именами](../../standard/assembly/strong-named.md)

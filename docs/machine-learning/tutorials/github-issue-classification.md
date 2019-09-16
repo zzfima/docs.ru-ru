@@ -4,12 +4,12 @@ description: Узнайте, как использовать ML.NET для сц�
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710308"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929227"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Учебник. Классификация заявок на поддержку с использованием мультиклассовой классификации с помощью ML .NET
 
@@ -17,6 +17,7 @@ ms.locfileid: "68710308"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
+>
 > * подготавливать данные;
 > * Преобразование данных
 > * Обучение модели
@@ -372,6 +373,7 @@ private static void PredictIssue()
 
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
+>
 > * подготавливать данные;
 > * Преобразование данных
 > * Обучение модели

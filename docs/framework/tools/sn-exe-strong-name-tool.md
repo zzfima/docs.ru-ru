@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938016"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971844"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (средство строгих имен)
-Программа строгих имен (Sn.exe) позволяет подписывать сборки [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md). Программа Sn.exe предусматривает параметры для управления ключами, создания подписи и ее проверки.  
+Программа строгих имен (Sn.exe) позволяет подписывать сборки [строгими именами](../../standard/assembly/strong-named.md). Программа Sn.exe предусматривает параметры для управления ключами, создания подписи и ее проверки.  
   
 > [!WARNING]
 > Строгие имена не являются средством обеспечения безопасности. Они служат только для однозначной идентификации.
 
- Дополнительные сведения о строгом именовании и сборках со строгими именами см. в разделах [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md) и [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
+ Дополнительные сведения о строгом именовании и сборках со строгими именами см. в разделах [Сборки со строгими именами](../../standard/assembly/strong-named.md) и [Практическое руководство. Подписание сборки строгим именем](../../standard/assembly/sign-strong-name.md).  
   
  Программа строгих имен автоматически устанавливается вместе с Visual Studio. Программу можно запустить из командной строки разработчика (или из командной строки Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
@@ -36,7 +36,7 @@ ms.locfileid: "69938016"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -90,37 +90,37 @@ sn [-quiet][option [parameter(s)]]
 ## <a name="examples"></a>Примеры  
  Следующая команда создает новую пару случайных ключей, которая сохраняется в файле `keyPair.snk`.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  Следующая команда сохраняет ключ из файла `keyPair.snk` в контейнере `MyContainer` поставщика служб шифрования со строгими именами.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  Следующая команда извлекает открытый ключ из файла `keyPair.snk` и сохраняет его в файле `publicKey.snk`.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  Следующая команда отображает открытый ключ и его токен, которые содержатся в файле `publicKey.snk`.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  Следующая команда проверяет сборку `MyAsm.dll`.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  Следующая команда удаляет `MyContainer` из поставщика служб шифрования со строгими именами, используемого по умолчанию.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Сборки со строгими именами](../../standard/assembly/strong-named.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

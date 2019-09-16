@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364020"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894651"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (генератор строго типизированных классов управления)
 Генератор классов управления со строгим типом позволяет быстро создавать управляемые классы с ранней привязкой для указанного класса инструментария управления Windows (WMI). Создаваемый класс упрощает код, необходимый для доступа к экземпляру класса WMI.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>Примеры  
  При выполнении следующей команды создается управляемый класс на языке C# для класса WMI **Win32_LogicalDisk** в пространстве имен **Root\cimv2**. Программа записывает управляемый класс в исходный файл, расположенный в "c:\disk.cs", в пространстве имен **ROOT.CIMV2.Win32**.  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5059f629a341bb4689428855807fb3c66b0949b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567277"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969072"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Предоставление клиентам .NET Framework доступа к COM-компонентам
 В этом разделе описывается процесс, в рамках которого существующий COM-компонент предоставляется управляемому коду. Сведения о разработке COM-серверов, которые тесно интегрируются с платформой .NET Framework, см. в разделе [Вопросы разработки для взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -36,7 +36,7 @@ ms.locfileid: "69567277"
   
 4. [Развертывание приложения взаимодействия](deploying-an-interop-application.md).  
   
-     Приложения взаимодействия рекомендуется развертывать в виде подписанных сборок со [строгими именами](../app-domains/strong-named-assemblies.md) в глобальном кэше сборок.  
+     Приложения взаимодействия рекомендуется развертывать в виде подписанных сборок со [строгими именами](../../standard/assembly/strong-named.md) в глобальном кэше сборок.  
   
 ## <a name="see-also"></a>См. также
 

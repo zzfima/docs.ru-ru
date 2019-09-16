@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374051"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849586"
 ---
 # <a name="development-process-for-azure"></a>Процесс разработки для Azure
 
@@ -36,7 +36,7 @@ ms.locfileid: "70374051"
 
 **Visual Studio Code и dotnet CLI** (кроссплатформенные средства для Mac, Linux и Windows). Если вам нужен упрощенный кроссплатформенный редактор, поддерживающий любой язык программирования, вы можете использовать Microsoft Visual Studio Code и dotnet CLI. Эти решения обеспечивают простой, но в то же время эффективный рабочий процесс разработки. Кроме того, Visual Studio Code поддерживает расширения для C\# и веб-разработки с функциями IntelliSense и ярлыками задач в редакторе.
 
-[Скачать пакет SDK .NET Core](https://www.microsoft.com/net/download/core)
+[Скачать пакет SDK .NET Core](https://dotnet.microsoft.com/download)
 
 [Скачать Visual Studio Code](https://code.visualstudio.com/download)
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946574"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853836"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
@@ -189,7 +189,7 @@ class PInvokeScenario
   
  В приведенных ниже объявлениях интерфейса COM-взаимодействия модификаторы `Assert`, `Deny` и `PermitOnly` не учитываются по аналогии с примерами вызовов неуправляемого кода в предыдущем разделе.  
   
-```  
+```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IAssertStubsItf  
 {  
@@ -220,7 +220,7 @@ interface IAssertStubsItf
   
  Кроме того, модификатор `Demand` недопустим в сценариях объявления интерфейса COM-взаимодействия, как показано ниже.  
   
-```  
+```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IDemandStubsItf  
 {  

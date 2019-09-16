@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197657"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929309"
 ---
 # <a name="the-net-framework-analyzer"></a>Анализатор .NET Framework
 
@@ -23,6 +23,7 @@ ms.locfileid: "59197657"
 Анализаторы безопасности .NET устанавливаются в виде пакета NuGet в каждом проекте, где они будут запускаться. Добавлять их в проект должен один разработчик. Пакет анализатора является зависимостью проекта и будет выполняться на каждом компьютере разработчика с обновленным решением.
 
 Анализатор .NET Framework входит в пакет NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Этот пакет содержит только анализаторы, соответствующие .NET Framework, в число которых входят анализаторы безопасности. В большинстве случаев требуется пакет NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). Пакет FxCopAnalyzers содержит все анализаторы платформы, включенные в пакет Framework.Analyzers, а также следующие анализаторы:
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): предоставляет общие рекомендации и инструкции по стандартным API .NET Standard.
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): предоставляет анализаторы, соответствующие API .NET Core.
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): предоставляет рекомендации по тексту, включаемому в виде кода, а также комментарии.

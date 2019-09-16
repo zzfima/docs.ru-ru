@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e932481496aef7fd0533054316deb32f65e95deb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9e1eff9d1ef9f36c80f71e738fdd4dc56a9b6ec6
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063174"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894140"
 ---
 # <a name="passing-structures"></a>Передача структур
 В качестве параметров во многие неуправляемые функции должны передаваться члены, структуры (определяемые пользователем типы в Visual Basic) или члены классов, которые определяются в управляемом коде. При передаче структур или классов в неуправляемый код посредством вызовов неуправляемого кода необходимо указать дополнительную информацию для сохранения исходного размещения и выравнивания. В этом разделе описывается атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute>, который используется для определения форматированных типов. Для управляемых структур и классов можно выбрать любое из нескольких предсказуемых поведений размещения в перечислении **LayoutKind**.  
@@ -38,7 +38,7 @@ ms.locfileid: "65063174"
 ## <a name="declaring-and-passing-structures"></a>Объявление и передача структур  
  В следующем примере демонстрируется, как определить структуры `Point` и `Rect` в управляемом коде и передать типы в качестве параметров в функцию **PtInRect** в файле User32.dll. Функция **PtInRect** имеет следующую неуправляемую сигнатуру:  
   
-```  
+```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
@@ -92,7 +92,7 @@ internal static class NativeMethods
 ## <a name="declaring-and-passing-classes"></a>Объявление и передача классов  
  Члены класса можно передавать в неуправляемую функцию DLL при условии, что класс имеет фиксированное размещение членов. В следующем примере демонстрируется, как передать члены класса `MySystemTime`, которые определяются последовательно, в функцию **GetSystemTime** в файле User32.dll. Функция **GetSystemTime** имеет следующую неуправляемую сигнатуру:  
   
-```  
+```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   

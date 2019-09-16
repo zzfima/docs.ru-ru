@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: eef843c87b8f1993c3419b261894a6df31096294
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bf271cc6b6887e930911071d4603b51daed55e61
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606887"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970258"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (параметры компилятора C#)
 Задает имя файла, содержащего криптографический ключ.  
@@ -41,7 +41,7 @@ ms.locfileid: "69606887"
   
  Обратите внимание, что файл ключей может содержать только открытый ключ.  
   
- Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).  
+ Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../standard/assembly/create-use-strong-named.md) и [Отложенная подпись сборки](../../../standard/assembly/delay-sign.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221080"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854003"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Практическое руководство. Отладка проблем при активации CLR
 
@@ -35,19 +35,19 @@ ms.locfileid: "54221080"
 
 - Задайте в переменной среды `COMPLUS_CLRLoadLogDir` строку, представляющую полный путь к существующему каталогу, в котором будут храниться журналы активации среды CLR.
 
-     Способ задания переменной среды определяет ее область действия:
+    Способ задания переменной среды определяет ее область действия:
 
-    - Если переменная задается на уровне системы, ведение журналов активации включается для всех приложений платформы .NET Framework на этом компьютере до тех пор, пока переменная среды не будет удалена.
+  - Если переменная задается на уровне системы, ведение журналов активации включается для всех приложений платформы .NET Framework на этом компьютере до тех пор, пока переменная среды не будет удалена.
 
-    - Если она задана на уровне пользователя, ведение журналов активации включается только для учетной записи текущего пользователя. Ведение журналов продолжается до тех пор, пока переменная среды не будет удалена.
+  - Если она задана на уровне пользователя, ведение журналов активации включается только для учетной записи текущего пользователя. Ведение журналов продолжается до тех пор, пока переменная среды не будет удалена.
 
-    - Если переменная задается из процесса перед загрузкой среды CLR, журналы активации будут вестись до завершения процесса.
+  - Если переменная задается из процесса перед загрузкой среды CLR, журналы активации будут вестись до завершения процесса.
 
-    - Если переменная задана из командной строки перед запуском приложения, журналы активации будут вестись для всех приложений, запущенных из этой командной строки.
+  - Если переменная задана из командной строки перед запуском приложения, журналы активации будут вестись для всех приложений, запущенных из этой командной строки.
 
-     Например, чтобы хранить журналы активации в каталоге c:\clrloadlogs с областью действия уровня процесса, следует открыть окно командной строки и ввести следующую строку перед запуском приложения:
+    Например, чтобы хранить журналы активации в каталоге c:\clrloadlogs с областью действия уровня процесса, следует открыть окно командной строки и ввести следующую строку перед запуском приложения:
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
@@ -65,56 +65,56 @@ ms.locfileid: "54221080"
 
 В следующем примере журналов активации наиболее полезные сведения выделены и описаны после журнала.
 
-```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+```output
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
 - **CLR Loading log** указывает путь до исполняемого файла, запустившего процесс, который загружает управляемый код. Обратите внимание, что это может быть собственное основное приложение.
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
 - **Installed Runtime** — набор версий среды CLR, установленных на компьютере, являющихся кандидатами для запроса активации.
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
 - **built with version** — версия среды CLR, которая использовалась для построения бинарного файла, который был предоставлен методу, подобному [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
 - **feature-on-demand installation** указывает на включение .NET Framework 3.5 в Windows 8. См. в разделе [Ошибки инициализации платформы .NET Framework: управление пользовательской средой](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) дополнительные сведения об этом случае.
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 

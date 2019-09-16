@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753958"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929140"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Куча больших объектов в системах Windows
 
@@ -132,7 +132,7 @@ ms.locfileid: "64753958"
 
 2. Исследовать другие известные области и не найти в них причину проблемы с производительностью.
 
-Дополнительные сведения об основах памяти и ЦП см. в блоге [Понять проблемы, прежде чем пытаться найти решение](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/).
+Дополнительные сведения об основах памяти и ЦП см. в блоге [Понять проблемы, прежде чем пытаться найти решение](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/).
 
 Для сбора данных о производительности кучи больших объектов можно использовать следующие средства:
 
@@ -168,13 +168,13 @@ ms.locfileid: "64753958"
 
 Сборщик мусора предоставляет широкий набор событий трассировки событий Windows, помогая разобраться в функциях кучи. В следующих записях блога описывается, как собирать и интерпретировать события сборки мусора с помощью трассировки событий Windows:
 
-- [События сборки мусора в трассировке событий Windows — 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [События сборки мусора в трассировке событий Windows — 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [События сборки мусора в трассировке событий Windows — 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [События сборки мусора в трассировке событий Windows — 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [События сборки мусора в трассировке событий Windows — 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [События сборки мусора в трассировке событий Windows — 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [События сборки мусора в трассировке событий Windows — 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [События сборки мусора в трассировке событий Windows — 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 Чтобы выявить чрезмерную сборку мусора поколения 2, вызванную временными распределениями кучи больших объектов, ищите сборку мусора в столбце "Причина активации". Чтобы провести простой тест и распределить только временные большие объекты, соберите информацию о событиях трассировки событий Windows с помощью следующей командной строки [PerfView](https://www.microsoft.com/download/details.aspx?id=28567):
 

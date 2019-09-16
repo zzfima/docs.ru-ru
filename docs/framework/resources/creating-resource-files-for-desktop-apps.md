@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313662"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851574"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Создание файлов ресурсов для приложений .NET
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  В текстовых файлах допускаются пустые строки (то есть, ресурсы, значение которых равно <xref:System.String.Empty?displayProperty=nameWithType>). Например:
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  Если вы используете C# и файл исходного кода называется Greeting.cs, исполняемый файл, содержащий внедренный RESOURCES-файл, создается с помощью следующей команды:
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

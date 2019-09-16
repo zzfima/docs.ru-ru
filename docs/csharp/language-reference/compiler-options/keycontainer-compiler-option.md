@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 0d4ca602859c4f7f80a8fcdc09182c7da8a5fb31
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fead2d4296cfa6fb0195cb4b43f6448c0fc7e6a9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602851"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970138"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (параметры компилятора C#)
 Задает имя контейнера криптографического ключа.  
@@ -37,7 +37,7 @@ ms.locfileid: "69602851"
   
  Также можно передать сведения о шифровании компилятору с помощью параметра [-keyfile](./keyfile-compiler-option.md). Если нужно добавить в манифест сборки открытый ключ, но при этом отложить подпись сборки до завершения ее тестирования, используйте параметр [-delaysign](./delaysign-compiler-option.md).  
   
- Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).  
+ Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../standard/assembly/create-use-strong-named.md) и [Отложенная подпись сборки](../../../standard/assembly/delay-sign.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   

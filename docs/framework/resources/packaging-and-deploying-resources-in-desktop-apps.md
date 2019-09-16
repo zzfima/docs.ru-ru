@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105916"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851596"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Упаковка и развертывание ресурсов в приложениях .NET
 
@@ -176,13 +176,13 @@ ms.locfileid: "70105916"
 
 В следующем примере .NET Framework используется атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute> для хранения резервных ресурсов приложения во вспомогательной сборке для французского языка (`fr`). Пример содержит два текстовых файла ресурсов, которые определяют один строковой ресурс `Greeting`. Первый файл resources.fr.txt содержит французский языковой ресурс.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 Второй файл resources.ru.txt содержит русский языковой ресурс.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ vbc Example1.vb
 
 При запуске примера из системы, язык которой является отличным от русского языка, он выводит следующие результаты:
 
-```
+```output
 Bon jour!
 ```
 

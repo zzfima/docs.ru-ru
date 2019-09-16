@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 559d6962873540836a49da04bc271857edfa1157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 767382f27a96e8aacce4cc625de610949b3f02a3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663478"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971040"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Предоставление динамических методов и сборок
 В этом разделе описывается набор управляемых типов в пространстве имен <xref:System.Reflection.Emit>, позволяющий компилятору или средству порождать метаданные и код MSIL во время выполнения, а также при необходимости создавать переносимый исполняемый (PE) файл на диске. Основными пользователями этого пространства имен являются обработчики скриптов и компиляторы. В этом разделе функциональные возможности, предоставляемые пространством имен <xref:System.Reflection.Emit>, называются порождением отражения.  
@@ -54,7 +54,7 @@ ms.locfileid: "64663478"
 [Забираемые сборки для динамической генерации типа](collectible-assemblies.md)   
 Представляет забираемые сборки, то есть динамические сборки, которые можно выгрузить без выгрузки домена приложения, в котором они были созданы.
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Reflection.Emit.OpCodes>  
  Каталог кодов инструкций MSIL, которые можно использовать для построения тел методов.  
   
@@ -71,5 +71,5 @@ ms.locfileid: "64663478"
  [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Описываются способы просмотра метаданных и управляемого кода.  
   
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Сборки в .NET](../../standard/assembly/index.md)  
  Предоставляет обзор сборок в реализациях .NET.

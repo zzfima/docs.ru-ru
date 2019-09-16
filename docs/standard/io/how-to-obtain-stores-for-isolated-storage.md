@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622693"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969261"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Практическое руководство. Получение хранилищ для изолированного хранения
 Изолированное хранилище предоставляет виртуальную файловую систему в секции данных. Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> предоставляет ряд методов для взаимодействия с изолированным хранилищем. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> содержит три статических метода, позволяющих создать и получить хранилище:  
@@ -62,4 +62,4 @@ ms.locfileid: "64622693"
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
 - [Типы изоляции](../../../docs/standard/io/types-of-isolation.md)
-- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Сборки в .NET](../assembly/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Реализация функций обратного вызова
+title: Практическое руководство. Реализация функций обратного вызова
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331329"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894195"
 ---
-# <a name="how-to-implement-callback-functions"></a>Как выполнить Реализация функций обратного вызова
+# <a name="how-to-implement-callback-functions"></a>Практическое руководство. Реализация функций обратного вызова
 В приведенных ниже процедуре и примере показано, как, используя вызов неуправляемого кода, можно напечатать из управляемого приложения значение дескриптора для каждого окна на локальном компьютере. В частности, для печати значения дескриптора окна в процедуре и примере используется функция **EnumWindows**, которая просматривает список окон, и управляемая функция обратного вызова CallBack.  
   
 ### <a name="to-implement-a-callback-function"></a>Реализация функции обратного вызова  
   
 1. Прежде чем приступить к реализации, обратите внимание на сигнатуру функции **EnumWindows**. Функция **EnumWindows** имеет следующую сигнатуру:  
   
-    ```  
-    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
-    ```  
+    ```cpp
+    BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
+    ```
   
      Признаком необходимости обратного вызова для функции является наличие аргумента **lpEnumFunc**. Обычно в именах аргументов, которые принимают указатель на функцию обратного вызова, присутствует префикс **lp** (long pointer, длинный указатель) и суффикс **Func**. Документацию по функциям Win32 см. в Microsoft Platform SDK.  
   

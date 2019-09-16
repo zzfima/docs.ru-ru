@@ -4,12 +4,12 @@ description: В этом учебнике описано, как с помощь
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666623"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929450"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Учебник. Прогнозирование цен с помощью регрессии с ML.NET
 
@@ -17,6 +17,7 @@ ms.locfileid: "69666623"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
+>
 > * Подготовка и анализ данных
 > * Загрузка и преобразование данных
 > * Выбор алгоритма обучения
@@ -269,6 +270,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 В этом руководстве вы узнали, как:
 
 > [!div class="checklist"]
+>
 > * Подготовка и анализ данных
 > * Создание конвейера обучения
 > * Загрузка и преобразование данных

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: d6e3667861c2b1ac9a84ca7b4e2cabb5784d793d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421742"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970048"
 ---
 # <a name="using-directive-c-reference"></a>Директива using (справочник по C#)
 
@@ -75,8 +75,6 @@ using s.RegularExpressions;
 Создайте директиву `using`, чтобы использовать типы в пространстве имен без необходимости указания этого пространства имен. Директива `using` не предоставляет доступ к пространствам имен, вложенным в указанное пространство имен.
 
 Пространства имен делятся на две категории: пользовательские и системные. Пользовательские пространства имен задаются в вашем коде. Список системных пространств имен см. в разделе [Браузер API .NET](../../../../api/index.md).
-
-Примеры ссылочных методов в других сборках см. в разделе [Создание и использование сборок в командной строке](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
 
 ## <a name="example-1"></a>Пример 1
 

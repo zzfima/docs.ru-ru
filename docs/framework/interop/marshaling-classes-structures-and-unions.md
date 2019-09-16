@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469729"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894180"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Маршалинг классов, структур и объединений
 Классы и структуры в .NET Framework похожи. И те и другие могут иметь поля, свойства и события. Они также могут иметь статические и нестатические методы. Примечательным отличием является то, что структуры являются типами значений, а классы — ссылочными типами.  
   
  В таблице ниже представлены варианты маршалинга классов, структур и объединений, описывается их применение и приводятся ссылки на соответствующие примеры вызова неуправляемого кода.  
   
-|Тип|Описание|Пример|  
+|Тип|ОПИСАНИЕ|Пример|  
 |----------|-----------------|------------|  
 |Класс по значению.|Передает класс с целочисленными членами в качестве параметра In или Out (как и в случае управляемого класса).|Пример SysTime|  
 |Структура по значению.|Передает структуры в качестве параметров In.|Пример структур|  
@@ -52,25 +52,25 @@ ms.locfileid: "65469729"
   
 - функция **TestStructInStruct**, экспортированная из PinvokeLib.dll;  
   
-    ```  
+    ```cpp  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
 - функция **TestStructInStruct3**, экспортированная из PinvokeLib.dll;  
   
-    ```  
+    ```cpp  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
 - функция **TestArrayInStruct**, экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) — это пользовательская неуправляемая библиотека, содержащая реализацию вышеуказанных функций и четырех структур: **MYPERSON**, **MYPERSON2**, **MYPERSON3** и **MYARRAYSTRUCT**. Эти структуры содержат следующие элементы:  
   
-```  
+```cpp  
 typedef struct _MYPERSON  
 {  
    char* first;   
@@ -135,13 +135,13 @@ typedef struct _MYARRAYSTRUCT
   
 - функция **FindFirstFile**, экспортированная из Kernel32.dll.  
   
-    ```  
+    ```cpp
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
     ```  
   
  Исходная структура, переданная в функцию, содержит следующие элементы:  
   
-```  
+```cpp
 typedef struct _WIN32_FIND_DATA   
 {  
   DWORD    dwFileAttributes;   
@@ -178,13 +178,13 @@ typedef struct _WIN32_FIND_DATA
   
 - функция **TestUnion**, экспортированная из PinvokeLib.dll.  
   
-    ```  
+    ```cpp
     void TestUnion(MYUNION u, int type);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) — это пользовательская неуправляемая библиотека, содержащая реализацию указанной выше функции и два объединения: **MYUNION** и **MYUNION2**. Объединение содержит следующие элементы:  
   
-```  
+```cpp
 union MYUNION  
 {  
     int number;  
@@ -221,13 +221,13 @@ union MYUNION2
   
 - функция **GetSystemTime**, экспортированная из Kernel32.dll.  
   
-    ```  
+    ```cpp
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
     ```  
   
  Исходная структура, переданная в функцию, содержит следующие элементы:  
   
-```  
+```cpp
 typedef struct _SYSTEMTIME {   
     WORD wYear;   
     WORD wMonth;   
@@ -249,14 +249,14 @@ typedef struct _SYSTEMTIME {
  [!code-csharp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/systime.cs#25)]
  [!code-vb[Conceptual.Interop.Marshaling#25](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/systime.vb#25)]  
   
-## <a name="outarrayofstructs-sample"></a>Пример OutArrayOfStructs   
+## <a name="outarrayofstructs-sample"></a>Пример OutArrayOfStructs  
  В этом примере показано, как передать в неуправляемую функцию массив структур, содержащий целочисленные значения и строки, в виде параметров Out.  
   
  В этом примере демонстрируется, как вызывать собственную функцию с помощью класса <xref:System.Runtime.InteropServices.Marshal> и небезопасного кода.  
   
  В примере используются функции-оболочки и вызовы неуправляемого кода, определенные в библиотеке [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) и содержащиеся в исходных файлах. В нем используется функция `TestOutArrayOfStructs` и структура `MYSTRSTRUCT2`. Структура содержит следующие элементы:  
   
-```  
+```cpp
 typedef struct _MYSTRSTRUCT2  
 {  
    char* buffer;  

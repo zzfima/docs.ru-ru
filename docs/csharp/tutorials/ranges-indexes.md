@@ -3,12 +3,12 @@ title: Анализ диапазонов данных с помощью инде
 description: В этом учебнике подробно рассказывается, как анализировать данные с помощью индексов и диапазонов и, таким образом, изучать срезы последовательного набора данных.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105784"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926639"
 ---
 # <a name="indices-and-ranges"></a>Индексы и диапазоны
 
@@ -17,6 +17,7 @@ ms.locfileid: "70105784"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
+>
 > - Использовать этот синтаксис для диапазонов в последовательности.
 > - Проектировать начало и конец каждой последовательности.
 > - Составлять сценарии для типов <xref:System.Index> и <xref:System.Range>.
@@ -24,6 +25,7 @@ ms.locfileid: "70105784"
 ## <a name="language-support-for-indices-and-ranges"></a>Поддержка языков для индексов и диапазонов
 
 Поддержка языков зависит от двух новых типов и двух новых операторов.
+
 - <xref:System.Index?displayProperty=nameWithType> представляет индекс в последовательности.
 - Оператор `^`, который указывает, что индекс указан относительно конца последовательности.
 - <xref:System.Range?displayProperty=nameWithType> представляет вложенный диапазон последовательности.

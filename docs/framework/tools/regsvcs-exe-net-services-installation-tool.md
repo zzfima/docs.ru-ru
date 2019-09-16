@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623412"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971801"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (программа установки служб .NET)
 Программа установки служб .NET выполняет следующие действия.  
@@ -33,7 +33,7 @@ ms.locfileid: "64623412"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
 [/nologo] [/quiet]assemblyFile.dll   
@@ -41,11 +41,11 @@ ms.locfileid: "64623412"
   
 ## <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание|  
+|Аргумент|ОПИСАНИЕ|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|Исходный файл сборки. Сборка должна быть подписана с использованием строгого имени. Дополнительные сведения см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|*assemblyFile.dll*|Исходный файл сборки. Сборка должна быть подписана с использованием строгого имени. Дополнительные сведения см. в разделе [Подпись сборки строгим именем](../../standard/assembly/sign-strong-name.md).|  
   
-|Параметр|Описание|  
+|Параметр|ОПИСАНИЕ|  
 |------------|-----------------|  
 |**/appdir:** *path*|Определяет корневой каталог приложения.|  
 |**/appname:** *applicationName*|Задает имя приложения COM+, которое следует найти или создать.|  
@@ -65,7 +65,7 @@ ms.locfileid: "64623412"
 |**/?**|Отображает синтаксис команд и параметров программы.|  
   
 ## <a name="remarks"></a>Примечания  
- Программе Regsvcs.exe требуется исходный файл сборки, заданный библиотекой *assemblyFile.dll*. Эта сборка должна быть подписана с использованием строгого имени. Дополнительные сведения о подписи с использованием строгого имени см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Имена конечного приложения и файла библиотеки типов не являются обязательными. Аргумент *applicationName* может быть создан из исходного файла сборки, и в случае его отсутствия он будет создан программой Regsvcs.exe. Аргумент *typelibraryfile* может задавать имя библиотеки типов. Если имя библиотеки типов не указано, программа Regsvcs.exe по умолчанию использует имя сборки.  
+ Программе Regsvcs.exe требуется исходный файл сборки, заданный библиотекой *assemblyFile.dll*. Эта сборка должна быть подписана с использованием строгого имени. Дополнительные сведения о подписи с использованием строгого имени см. в разделе [Подпись сборки строгим именем](../../standard/assembly/sign-strong-name.md). Имена конечного приложения и файла библиотеки типов не являются обязательными. Аргумент *applicationName* может быть создан из исходного файла сборки, и в случае его отсутствия он будет создан программой Regsvcs.exe. Аргумент *typelibraryfile* может задавать имя библиотеки типов. Если имя библиотеки типов не указано, программа Regsvcs.exe по умолчанию использует имя сборки.  
   
  Когда программа Regsvcs.exe регистрирует методы компонента, к ней применяются [требования](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) и [требования ссылки](../../../docs/framework/misc/link-demands.md) для этих методов. Поскольку эта программа выполняется в полностью доверенной среде, большинство требований на получение разрешения удовлетворяется. Однако программа Regsvcs.exe не может регистрировать компоненты с помощью методов, защищенных требованием или требованием связи для <xref:System.Security.Permissions.StrongNameIdentityPermission> или <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
@@ -76,18 +76,18 @@ ms.locfileid: "64623412"
 ## <a name="examples"></a>Примеры  
  Следующая команда добавляет все открытые классы, содержащиеся в `myTest.dll`, в `myTargetApp` (существующее приложение COM+) и создает библиотеку типов `myTest.tlb`.  
   
-```  
+```console  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
  Следующая команда добавляет все открытые классы, содержащиеся в `myTest.dll`, в `myTargetApp` (существующее приложение COM+) и создает библиотеку типов `newTest.tlb`.  
   
-```  
+```console  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
 ## <a name="see-also"></a>См. также
 
 - [Инструменты](../../../docs/framework/tools/index.md)
-- [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Практическое руководство. Подписание сборки строгим именем](../../standard/assembly/sign-strong-name.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -2,12 +2,12 @@
 title: Разработка приложения на основе микрослужб
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Понимание преимуществ и недостатков приложения на основе микрослужб для принятия взвешенного решения.
 ms.date: 10/02/2018
-ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675971"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926539"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Разработка приложения на основе микрослужб
 
@@ -158,7 +158,7 @@ ms.locfileid: "68675971"
 
 - [Классическая многоуровневая архитектура](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
-- [Многоуровневая архитектура с предметно-ориентированным проектированием](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+- [Многоуровневая архитектура с предметно-ориентированным проектированием](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
 - [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (как используется в [eShopOnWeb](https://aka.ms/WebAppArchitecture)).
 

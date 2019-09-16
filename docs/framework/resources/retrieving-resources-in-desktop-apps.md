@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941460"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971168"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Извлечение ресурсов в приложениях для настольных систем
 При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  Сведения об извлечении ресурсов в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. на странице [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) в центре разработки для Windows.  
@@ -43,19 +43,19 @@ ms.locfileid: "69941460"
 ### <a name="retrieving-string-data-an-example"></a>Извлечение строковых данных. Пример  
  В следующем примере вызывается метод <xref:System.Resources.ResourceManager.GetString%28System.String%29> для извлечения строковых ресурсов текущего языка и региональных параметров пользовательского интерфейса. Он включает нейтральный строковый ресурс для английского языка (США) и локализованные ресурсы для французского (Франция) и русского (Россия) языков и соответствующих региональных параметров. Следующий ресурс для английского языка (США) находится в файле Strings.txt:  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  Ресурс для французского языка (Франция) находится в файле Strings.fr-FR.txt:  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  Ресурс для русского языка (Россия) находится в файле Strings.ru-RU-txt:  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  Следующий пакетный файл (BAT) компилирует этот пример и создает вспомогательные сборки в соответствующих каталогах. Команды приведены для языка и компилятора C#. Для Visual Basic замените `csc` на `vbc`и `GetString.cs` на `GetString.vb`.  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Для сборки примера на C# можно использовать приведенный ниже пакетный файл. Для Visual Basic замените `csc` на `vbc`, а также расширение файла исходного кода `.cs` на `.vb`.  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  Создать нужный файл ресурсов, сборки и запустить приложение можно, запустив следующий пакетный файл. Необходимо использовать параметр `/r` , чтобы предоставить Resgen.exe ссылку на UIElements.dll для доступа к информации о структуре `PersonTable` . Если используется C#, замените имя компилятора `vbc` на `csc`и расширение `.vb` на `.cs`.  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -142,7 +142,7 @@ GetObject.exe
   
  Чтобы включить полную поддержку управления версиями сборок, рекомендуется развернуть сборки со строгими именами в [глобальном кэше сборок](../../../docs/framework/app-domains/gac.md) , а сборки без строгих имен — в каталоге приложения. Если вы хотите развернуть сборки со строгими именами в каталоге приложения, то при обновлении сборки не сможете увеличить номер версии для вспомогательной сборки. Вместо этого необходимо выполнить обновление на месте, при котором вы заменяете существующий код обновленным, сохраняя тот же номер версии. Например, если вы хотите обновить версию 1.0.0.0 вспомогательной сборки с полностью заданным именем "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a", перезапишите ее обновленным файлом myApp.resources.dll, скомпилированным с использованием того же полностью заданного имени сборки "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a". Обратите внимание, что использование обновления на месте для файлов вспомогательных сборок затрудняет приложению задачу по корректному определению версии вспомогательной сборки.  
   
- Дополнительные сведения об управлении версиями сборок см. в разделах [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md) и [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Дополнительные сведения об управлении версиями сборок см. в разделах [Управление версиями сборок](../../standard/assembly/versioning.md) и [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Извлечение ресурсов из файлов RESOURCES  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>Пример  
  В следующем примере показано, как диспетчер ресурсов получает ресурсы непосредственно из RESOURCES-файлов. Пример состоит из трех текстовых файлов ресурсов для английского (США), французского (Франция) и русского (Россия) языков и соответствующих региональных параметров. В этом примере по умолчанию задан английский язык (США). Его ресурсы хранятся в файле с именем Strings.txt:  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  Ресурсы для французского языка (Франция) хранятся в следующем файле с именем Strings.fr-FR.txt:  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  Ресурсы для русского языка (Россия) хранятся в следующем файле с именем Strings.ru-RU.txt:  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  Версию примера на языке C# можно скомпилировать, запустив следующий пакетный файл. Если используется Visual Basic, замените `csc` на `vbc` и расширение `.cs` на `.vb`.  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

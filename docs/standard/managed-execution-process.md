@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593450"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969031"
 ---
 # <a name="managed-execution-process"></a>процесс управляемого выполнения
 <a name="introduction"></a> Процесс управляемого исполнения включает следующие шаги, которые подробно разбираются позднее в этом разделе:  
@@ -116,5 +116,5 @@ ms.locfileid: "65593450"
 - [Безопасность](../../docs/standard/security/index.md)
 - [Взаимодействие с неуправляемым кодом](../../docs/framework/interop/index.md)
 - [Развертывание](../../docs/framework/deployment/net-framework-applications.md)
-- [Сборки в среде CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Сборки в .NET](assembly/index.md)
 - [Домены приложений](../../docs/framework/app-domains/application-domains.md)

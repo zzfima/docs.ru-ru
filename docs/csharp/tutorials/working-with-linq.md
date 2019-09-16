@@ -3,12 +3,12 @@ title: Работа с LINQ
 description: В этом руководстве мы научим вас создавать последовательности с помощью LINQ, создавать методы для использования в запросах LINQ, а также различать упреждающее и отложенное вычисление.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926618"
 ---
 # <a name="working-with-linq"></a>Работа с LINQ
 
@@ -339,6 +339,7 @@ public static void Main(string[] args)
 ## <a name="conclusion"></a>Заключение
 
 В этом проекте вы изучили:
+
 - использование запросов LINQ для агрегирования данных в осмысленную последовательность;
 - запись методов расширения для добавления собственных пользовательских функций в запросы LINQ;
 - поиск областей в коде, где могут возникнуть проблемы с производительностью наших запросов LINQ, например снижение скорости;
@@ -347,6 +348,7 @@ public static void Main(string[] args)
 Помимо LINQ вы узнали об использовании метода, который иллюзионисты используют для карточных фокусов. Они используют тасовку по методу Фаро, потому что она позволяет хорошо контролировать положение каждой карты в колоде. Теперь, когда вы все это знаете, не рассказывайте это остальным!
 
 Дополнительные сведения о LINQ см. в следующих статьях:
+
 - [LINQ](../programming-guide/concepts/linq/index.md)
   - [Введение в LINQ](../programming-guide/concepts/linq/index.md)
   - [Основные операции запросов LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 753312005cd60b5be6bf5504fa9b7f14bd6367fe
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298972"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894675"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (компилятор лицензий)
 Компилятор лицензий считывает текстовые файлы, содержащие сведения о лицензиях, и создает двоичный файл, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.  
@@ -32,13 +32,13 @@ ms.locfileid: "59298972"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console
       lc /target:  
-      targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [/outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
-|Параметр|Описание|  
+|Параметр|ОПИСАНИЕ|  
 |------------|-----------------|  
 |**/complist:** *имя_файла*|Задает имя файла, который содержит список лицензируемых компонентов, включаемых в LICENSES-файл. Для каждого компонента указывается его полное имя, в одной строке содержится только один компонент.<br /><br /> Пользователи, работающие с программой из командной строки, могут указать отдельный файл для каждой формы, входящей в проект. Программа Lc.exe принимает несколько входных файлов и создает один LICENSES-файл.|  
 |**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
@@ -52,34 +52,34 @@ ms.locfileid: "59298972"
   
 ## <a name="example"></a>Пример  
   
-1. Если применяется лицензированный элемент управления `MyCompany.Samples.LicControl1`, который содержится в библиотеке `Samples.DLL` приложения `HostApp.exe`*, `HostAppLic.txt` можно создать файл* , содержащий указанные ниже сведения.  
+1. Если применяется лицензированный элемент управления `MyCompany.Samples.LicControl1`, который содержится в библиотеке `Samples.DLL` приложения `HostApp.exe` *, `HostAppLic.txt` можно создать файл* , содержащий указанные ниже сведения.  
   
-    ```  
+    ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
 2. Создайте LICENSES-файл с именем `HostApp.exe.licenses`, используя следующую команду.  
   
-    ```  
+    ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
 3. Создайте `HostApp.exe`, включив в него LICENSES-файл в качестве ресурса. Для создания приложения на языке C# используется следующая команда.  
   
-    ```  
+    ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
  Следующая команда компилирует `myApp.licenses` из списков лицензированных компонентов, указанных файлами `hostapplic.txt` `hostapplic2.txt` и `hostapplic3.txt`. Аргумент `modulesList` задает модули, в которых содержатся лицензируемые компоненты.  
   
-```  
+```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
 ## <a name="response-file-example"></a>Пример файла ответов  
  Ниже приведен пример файла ответов `response.rsp`. Подробнее о файлах ответов см. в разделе [Файлы ответов](/visualstudio/msbuild/msbuild-response-files).  
   
-```  
+```text  
 /target:hostapp.exe  
 /complist:hostapplic.txt   
 /i:WFCPrj.dll   
@@ -88,7 +88,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
  В приведенной ниже команде используется файл `response.rsp`.  
   
-```  
+```console  
 lc @response.rsp  
 ```  
   

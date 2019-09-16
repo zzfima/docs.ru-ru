@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373799"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926684"
 ---
 # <a name="common-web-application-architectures"></a>Общие архитектуры веб-приложений
 
@@ -292,16 +292,17 @@ ENTRYPOINT ["dotnet", "Web.dll"]
 Если вы хотите добавить поддержку Docker в приложение с помощью Visual Studio, убедитесь, что Docker Desktop при этом запущен. Если при запуске мастера средство Docker Desktop не выполняется, мастер будет работать неправильно. Кроме того, мастер проверяет выбранные контейнеры, чтобы правильно реализовать поддержку Docker. Чтобы добавить поддержку контейнеров Windows, при запуске мастера должно выполняться средство Docker Desktop с настроенными контейнерами Windows. Чтобы добавить поддержку контейнеров Linux, при запуске мастера должно выполняться средство Docker с настроенными контейнерами Linux.
 
 ### <a name="references--common-web-architectures"></a>Ссылки — общие архитектуры веб-приложений
-> - **Чистая архитектура**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **Многослойная архитектура**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Шаблон репозитория**  
->   <https://deviq.com/repository-pattern/>
-> - **Пример решения с чистой архитектурой**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **Электронная книга по разработке архитектуры микрослужб**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **Чистая архитектура**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **Многослойная архитектура**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **Шаблон репозитория**  
+  <https://deviq.com/repository-pattern/>
+- **Пример решения с чистой архитектурой**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **Электронная книга по разработке архитектуры микрослужб**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[Назад](architectural-principles.md)

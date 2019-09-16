@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915425"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970596"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (программа импорта элементов ActiveX форм Windows)
 Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.  
@@ -30,7 +30,7 @@ ms.locfileid: "69915425"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |Параметр|ОПИСАНИЕ|  
 |------------|-----------------|  
-|`/delaysign`|Указывает программе Aximp.exe подписывать полученный элемент управления отложенной подписью. Этот параметр необходимо задавать вместе с параметром `/keycontainer:`, `/keyfile:` или `/publickey:`. Дополнительные сведения о процессе отложенной подписи см. в разделе [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|`/delaysign`|Указывает программе Aximp.exe подписывать полученный элемент управления отложенной подписью. Этот параметр необходимо задавать вместе с параметром `/keycontainer:`, `/keyfile:` или `/publickey:`. Дополнительные сведения о процессе отложенной подписи см. в разделе [Отложенная подпись сборки](../../standard/assembly/delay-sign.md).|  
 |`/help`|Отображает синтаксис команд и параметров программы.|  
 |`/keycontainer:` *containerName*|Подписывает результирующий элемент управления строгим именем, используя пару ключей (открытый/закрытый) из контейнера ключей, заданного аргументом *containerName*.|  
 |`/keyfile:` *filename*|Подписывает полученный элемент управления строгим именем, используя официальную пару ключей издателя (открытый-закрытый) из *filename*.|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Пример  
  При выполнении указанной ниже команды создаются библиотеки "MediaPlayer.dll" и "AxMediaPlayer.dll" для элемента управления Media Player `msdxm.ocx`.  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

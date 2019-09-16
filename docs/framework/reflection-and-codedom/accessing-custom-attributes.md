@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6955c24c12936ef37bedea2a1dd290bac45a5a2e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321735"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894909"
 ---
 # <a name="accessing-custom-attributes"></a>Доступ к пользовательским атрибутам
 После того как с элементами программы связаны атрибуты, можно использовать отражение для проверки их существования и получения значений. В .NET Framework версии 1.0 и 1.1 пользовательские атрибуты проверяются в контексте выполнения. Платформа .NET Framework версии 2.0 предоставляет новый контекст загрузки — контекст только для отражения, используемый для проверки кода, который не может быть загружен для выполнения.  
@@ -34,7 +34,7 @@ ms.locfileid: "59321735"
   
  В следующем примере C# показан типичный способ задания пользовательского атрибута. Этот пример иллюстрирует модель отражения пользовательских атрибутов во время выполнения.  
   
-```  
+```csharp
 System.DLL  
 public class DescriptionAttribute : Attribute  
 {  

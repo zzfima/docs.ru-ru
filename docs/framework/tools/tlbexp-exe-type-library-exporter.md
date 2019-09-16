@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937989"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894751"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (программа экспорта библиотек типов)
 Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
@@ -26,7 +26,7 @@ ms.locfileid: "69937989"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  Если с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute> в качестве значения поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> задается `VT_UNKOWN` или `VT_DISPATCH`, программа Tlbexp.exe игнорирует все последующие случаи использования поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>. Например, для следующих подписей:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  создается следующая библиотека типов.  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Примеры  
  Следующая команда создает библиотеку типов с таким же именем, что и у сборки, найденной в `myTest.dll`.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  Следующая команда создает библиотеку типов с именем `clipper.tlb`.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Сначала с помощью программы Tlbimp.exe импортируйте библиотеку типов `myLib.tlb` и сохраните ее как `myLib.dll`.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  Следующая команда использует компилятор C# для компиляции библиотеки `Sample.dll,`, которая ссылается на библиотеку `myLib.dll`, созданную в предыдущем примере.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  Следующая команда создает библиотеку типов для файла `Sample.dll`, ссылающегося на `myLib.dll`.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

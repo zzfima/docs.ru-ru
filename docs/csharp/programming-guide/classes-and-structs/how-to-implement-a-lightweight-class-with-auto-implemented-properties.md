@@ -6,18 +6,19 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596902"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926756"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Практическое руководство. Реализация упрощенного класса с автоматически реализуемыми свойствами (руководство по программированию на C#)
 
 В этом примере показано, как создать неизменяемый упрощенный класс, служащий исключительно для инкапсуляции набора автоматически реализуемых свойств. Используйте такую конструкцию вместо структуры, когда требуется использовать семантику ссылочного типа.
 
 Неизменяемое свойство можно создать двумя способами.
+
 - Можно объявить метод доступа [set](../../language-reference/keywords/set.md) как [private](../../language-reference/keywords/private.md).  Свойство можно задать только в типе, но оно является неизменяемым для потребителей.
 
   При объявлении закрытого метода доступа `set` для инициализации свойства нельзя использовать инициализатор объекта. Необходимо использовать конструктор или фабричный метод.

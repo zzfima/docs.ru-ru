@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378662"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851285"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (средство преобразования CorFlags)
 Средство преобразования CorFlags позволяет настраивать раздел CorFlags в заголовке переносимого исполняемого образа.  
@@ -24,17 +24,17 @@ ms.locfileid: "66378662"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
 ## <a name="parameters"></a>Параметры  
   
-|Обязательный параметр|Описание|  
+|Обязательный параметр|ОПИСАНИЕ|  
 |------------------------|-----------------|  
 |`assembly`|Имя сборки, для которой требуется настроить раздел CorFlags.|  
   
-|Параметр|Описание|  
+|Параметр|ОПИСАНИЕ|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Устанавливает флаг 32BITREQUIRED.|  
 |**/32BIT[REQ]-**|Снимает флаг 32BITREQUIRED.|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957973"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894828"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (средство PEVerify)
 Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов. Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции. При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов. В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.  
@@ -28,7 +28,7 @@ ms.locfileid: "69957973"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 peverify filename [options]  
 ```  
   
@@ -68,25 +68,25 @@ peverify filename [options]
 ## <a name="examples"></a>Примеры  
  Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il  
 ```  
   
  После успешного завершения обработки этого запроса Peverify.exe отображает следующее сообщение.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 ```  
   
  Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`. Средство отображает затраченное на проверку время.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
  После успешного завершения обработки этого запроса Peverify.exe отображает следующее сообщение.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 Timing: Total run     320 msec  
         MD Val.cycle  40 msec  
@@ -97,25 +97,25 @@ Timing: Total run     320 msec
   
  Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`. Однако Peverify.exe останавливается, если число ошибок достигло максимального — то есть 100. Средство также игнорирует ошибки с заданными кодами.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
  Следующая команда дает тот же результат, что и команда из предыдущего примера, но коды игнорируемых ошибок извлекаются из файла ответов `ignoreErrors.rsp`.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
  Файл ответов содержит список кодов ошибок, разделенных запятыми.  
   
-```  
+```text
 0x12345678, 0xABCD1234  
 ```  
   
  Ошибки в файле ответов можно также задавать по одной в строке.  
   
-```  
+```text
 0x12345678  
 0xABCD1234  
 ```  

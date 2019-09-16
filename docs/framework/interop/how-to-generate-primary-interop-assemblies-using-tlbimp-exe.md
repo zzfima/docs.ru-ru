@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67b9b48587802b43e90a7f35ab8cbb3b2ee025b0
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567263"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971782"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Практическое руководство. Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
 
@@ -33,7 +33,7 @@ ms.locfileid: "69567263"
 
 - Создание основных сборок взаимодействия в исходном коде вручную с помощью языка, совместимого со спецификацией CLS, например C#. Этот подход полезен, когда библиотека типов недоступна.
 
-Для подписи сборки строгим именем необходимо иметь пару криптографических ключей. Подробнее см. в разделе [Создание пары ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).
+Для подписи сборки строгим именем необходимо иметь пару криптографических ключей. Подробнее см. в разделе [Создание пары ключей](../../standard/assembly/create-public-private-key-pair.md).
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
 
@@ -53,19 +53,19 @@ ms.locfileid: "69567263"
 
 В приведенном ниже примере выполняется импорт библиотеки типов COM `LibUtil.tlb` и подписание сборки `LibUtil.dll` строгим именем с помощью файла ключа `CompanyA.snk`. Так как имя пространства имен не указано, в этом примере создается пространство имен по умолчанию (`LibUtil`).
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 ```
 
 Чтобы имя было более понятным (соответствовало правилу именования *ИмяПоставщика*.*ИмяБиблиотеки*), в приведенном ниже примере переопределяются имена файла сборки и пространства имен, используемые по умолчанию.
 
-```
+```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
 В приведенном ниже примере выполняется импорт библиотеки `MyLib.tlb`, которая ссылается на `CompanyA.LibUtil.dll`, и подписание сборки `CompanyB.MyLib.dll` строгим именем с помощью файла ключа `CompanyB.snk`. Пространство имен `CompanyB.MyLib` переопределяет пространство имен по умолчанию.
 
-```
+```console
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 
