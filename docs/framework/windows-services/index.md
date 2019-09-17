@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008711"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053546"
 ---
 # <a name="develop-windows-service-apps"></a>Разработка приложений службы Windows
 
@@ -27,19 +27,19 @@ ms.locfileid: "62008711"
 
 ## <a name="in-this-section"></a>Содержание раздела
 
-[Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Знакомство с приложениями служб Windows](introduction-to-windows-service-applications.md)
 
 Сведения о приложениях служб Windows, времени существования служб и отличиях приложений служб от распространенных типов проектов.
 
-[Пошаговое руководство: Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Пошаговое руководство: Создание приложения служб Windows в конструкторе компонентов](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Пример создания службы на Visual Basic и Visual C#.
 
-[Программная архитектура приложений служб](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[Программная архитектура приложений служб](service-application-programming-architecture.md)
 
 Описание элементов языка, используемых при создании служб.
 
-[Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[Практическое руководство. Создание служб Windows](how-to-create-windows-services.md)
 
 Создание и настройка служб Windows с помощью шаблона проекта службы Windows.
 

@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a190e238992313e498e28217587029041f386040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d34c52294ab662f757de9efb52ba18cc96423af6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045969"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Динамическое программирование в .NET Framework
 Этот раздел документации содержит сведения о динамическом программировании на платформе .NET Framework.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ [Отражение](reflection.md)  
  Описание использования отражения для работы с объектами во время выполнения.  
   
- [Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ [Предоставление динамических методов и сборок](emitting-dynamic-methods-and-assemblies.md)  
  Описание способов создания методов и сборок во время выполнения с помощью Reflection.Emit.  
   
- [Общие сведения о среде DLR](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ [Общие сведения о среде DLR](dynamic-language-runtime-overview.md)  
  Описание возможностей динамической среды выполнения.  
   
- [Динамическое создание и компиляция исходного кода](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [Динамическое создание и компиляция исходного кода](dynamic-source-code-generation-and-compilation.md)  
  Описание способов создания и компиляции динамического исходного кода.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Руководство по разработке](../../../docs/framework/development-guide.md)  
+ [Руководство по разработке](../development-guide.md)  
