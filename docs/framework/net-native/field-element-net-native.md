@@ -1,17 +1,17 @@
 ---
-title: <Field> Элемент (машинный код .NET)
+title: <Field>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c58be27334bcb862367464475a4eade5e01bdbb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868553"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049776"
 ---
-# <a name="field-element-net-native"></a>\<Поле > элемент (машинный код .NET)
+# <a name="field-element-net-native"></a>\<Элемент > поля (.NET Native)
 Применяет политику отражения среды выполнения к полю.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -30,7 +30,7 @@ ms.locfileid: "61868553"
   
 |Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие|Обязательный атрибут. Определяет имя поля.|  
+|`Name`|Общее|Обязательный атрибут. Определяет имя поля.|  
 |`Browse`|Отражение|Необязательный атрибут. Определяет запрос для получения сведений о поле или перечисляет поле, но не включает динамический доступ во время выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к полю для включения динамического программирования. Эта политика гарантирует, что поле можно задать или получить динамически во время выполнения.|  
 |`Serialize`|Сериализация|Необязательный атрибут. Управляет доступом среды выполнения к полю, чтобы включить экземпляры типов, предназначенных для сериализации в таких библиотеках, как, например, сериализатор Newtonsoft JSON или для привязки данных.|  
@@ -39,29 +39,29 @@ ms.locfileid: "61868553"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*method_name*|Имя поля. Тип поля определяется родительским элементом [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) или [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
+|*method_name*|Имя поля. Тип поля определяется родительским элементом [\<Type>](type-element-net-native.md) или [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый к этому типу политики для поля. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый к этому типу политики для поля. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
 ## <a name="remarks"></a>Примечания  
  Если политика поля не определена явно, оно наследует политику среды выполнения своего родительского элемента.  
   
 ## <a name="see-also"></a>См. также
 
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md)

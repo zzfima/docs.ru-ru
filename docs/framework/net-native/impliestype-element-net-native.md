@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType> Элемент (машинный код .NET)
+title: <ImpliesType>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616687"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049665"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType > элемент (машинный код .NET)
+# <a name="impliestype-element-net-native"></a>\<Элемент > Имплиестипе (.NET Native)
 Применяет политику к типу, если политика была применена к содержащему типу или методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -37,7 +37,7 @@ ms.locfileid: "64616687"
   
 |Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие|Обязательный атрибут. Задает имя типа.|  
+|`Name`|Общее|Обязательный атрибут. Задает имя типа.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
@@ -59,18 +59,18 @@ ms.locfileid: "64616687"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения к методу.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
+|[\<Method>](method-element-net-native.md)|Применяет политику отражения к методу.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<ImpliesType>` в основном предназначен для использования в библиотеках. Он используется в следующем сценарии:  
@@ -99,7 +99,7 @@ ms.locfileid: "64616687"
 </Type>  
 ```  
   
- Элемент `<ImpliesType>` может также отображаться в элементе `<Method>`, так как в некоторых случаях создание экземпляров универсального метода подразумевает отражение на экземпляре типа. Например, представьте универсальный метод `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` , заданная библиотека будет обращаться динамически вместе со связанными <xref:System.Collections.Generic.List%601> и <xref:System.Array> типов. Это можно выразить следующим образом:  
+ Элемент `<ImpliesType>` может также отображаться в элементе `<Method>`, так как в некоторых случаях создание экземпляров универсального метода подразумевает отражение на экземпляре типа. Например, представьте себе универсальный метод `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` , к которому заданная библиотека будет обращаться динамически вместе со связанными <xref:System.Collections.Generic.List%601> типами и <xref:System.Array> . Это можно выразить следующим образом:  
   
 ```xml  
 <Type Name="MyType">  
@@ -112,6 +112,6 @@ ms.locfileid: "64616687"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 27d5bcee34bcbfa101f381a569428a64a45da0b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954094"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040502"
 ---
 # <a name="ui-automation-text-pattern"></a>Шаблон текста модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "69954094"
  Этот раздел содержит обзоры и практические руководства, которые помогут приступить к программированию для текстовых элементов в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об объекте TextPattern модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [Общие сведения об объектах TextPattern и Embedded](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Разделы практического руководства](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [Общие сведения об объекте TextPattern модели автоматизации пользовательского интерфейса](ui-automation-textpattern-overview.md)  
+ [Общие сведения об объектах TextPattern и Embedded](textpattern-and-embedded-objects-overview.md)  
+ [Разделы практического руководства](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>См. также
 
-- [Шаблоны модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Шаблоны модели автоматизации пользовательского интерфейса](ui-automation-control-patterns.md)
+- [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](ui-automation-control-patterns-for-clients.md)

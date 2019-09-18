@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927045"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046791"
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  
@@ -41,7 +41,7 @@ ms.locfileid: "70927045"
 > [!NOTE]
 > Класс <xref:System.Runtime.Caching.MemoryCache> моделируется на основе объекта кэша ASP.NET, определенного в пространстве имен <xref:System.Web.Caching>. Следовательно, внутренняя логика кэширования подобна логике, предоставляемой в более ранних версиях ASP.NET.  
   
- Пример использования для кэширования в приложении WPF см. в разделе [пошаговое руководство. Кэширование данных приложения в приложении](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)WPF.  
+ Пример использования для кэширования в приложении WPF см. в разделе [пошаговое руководство. Кэширование данных приложения в приложении](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)WPF.  
   
 ## <a name="caching-in-aspnet-applications"></a>Кэширование в приложениях ASP.NET  
  Классы кэширования в пространстве имен <xref:System.Runtime.Caching> предоставляют функциональные возможности кэширования данных в ASP.NET.  
@@ -79,5 +79,5 @@ ms.locfileid: "70927045"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Пошаговое руководство: Кэширование данных приложения в приложении WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: Кэширование данных приложения в приложении WPF](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Пошаговое руководство: Кэширование данных приложения в ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

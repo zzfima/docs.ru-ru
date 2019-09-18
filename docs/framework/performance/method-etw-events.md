@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949257"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046377"
 ---
 # <a name="method-etw-events"></a>События методов (трассировка событий Windows)
 
@@ -36,7 +36,7 @@ ms.locfileid: "61949257"
 
 ## <a name="clr-method-events"></a>События методов среды CLR
 
-В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)
+В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)
 
 |Ключевое слово для вызова события|Уровень|
 |-----------------------------------|-----------|
@@ -63,7 +63,7 @@ ms.locfileid: "61949257"
 |MethodStartAddress|win:UInt64|Начальный адрес метода.|
 |MethodSize|win:UInt32|Размер метода.|
 |MethodToken|win:UInt32|0 для динамических методов и вспомогательных методов JIT.|
-|MethodFlags|win:UInt32|0x1: Динамический метод.<br /><br /> 0x2: Универсальный метод.<br /><br /> 0x4: Метод JIT-скомпилированный код (в противном случае машинный код образа NGEN).<br /><br /> 0x8: Вспомогательный метод.|
+|MethodFlags|win:UInt32|0x1 Динамический метод.<br /><br /> 0x2 Универсальный метод.<br /><br /> 0x4 JIT-скомпилированный метод кода (в противном случае — машинный код образа NGEN).<br /><br /> 0x8 Вспомогательный метод.|
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|
 
 [К началу](#top)
@@ -130,7 +130,7 @@ ms.locfileid: "61949257"
 |MethodStartAddress|win:UInt64|Начальный адрес.|
 |MethodSize|win:UInt32|Длина метода.|
 |MethodToken|win:UInt32|0 для динамических методов и вспомогательных методов JIT.|
-|MethodFlags|win:UInt32|0x1: Динамический метод.<br /><br /> 0x2: Универсальный метод.<br /><br /> 0x4: Метод, JIT-компиляции (в противном случае созданный программой NGen.exe)<br /><br /> 0x8: Вспомогательный метод.|
+|MethodFlags|win:UInt32|0x1 Динамический метод.<br /><br /> 0x2 Универсальный метод.<br /><br /> 0x4 JIT-скомпилированный метод (в противном случае созданный программой NGen. exe)<br /><br /> 0x8 Вспомогательный метод.|
 |MethodNameSpace|win:UnicodeString|Полное имя пространства имен, связанного с методом.|
 |MethodName|win:UnicodeString|Полное имя класса, связанного с методом.|
 |MethodSignature|win:UnicodeString|Сигнатура метода (разделенный запятыми список имен типов).|
@@ -172,4 +172,4 @@ ms.locfileid: "61949257"
 
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

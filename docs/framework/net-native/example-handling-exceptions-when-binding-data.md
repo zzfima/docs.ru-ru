@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894501"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049892"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Пример Обработка исключений при привязке данных
 > [!NOTE]
 > В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
   
- В следующем примере показано, как разрешить исключение [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) , возникающее, когда приложение, скомпилированное с помощью цепочки инструментов .NET Native, пытается привязать данные. Сведения об исключении:  
+ В следующем примере показано, как разрешить исключение [MissingMetadataException](missingmetadataexception-class-net-native.md) , возникающее, когда приложение, скомпилированное с помощью цепочки инструментов .NET Native, пытается привязать данные. Сведения об исключении:  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>См. также
 
-- [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Пример. Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Начало работы](getting-started-with-net-native.md)
+- [Пример. Устранение неполадок динамического программирования](example-troubleshooting-dynamic-programming.md)

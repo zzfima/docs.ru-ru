@@ -1,17 +1,17 @@
 ---
-title: <MethodInstantiation> Элемент (машинный код .NET)
+title: <MethodInstantiation>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2c0354853e4725ba3e673fb9142c4a7a85d2121
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867085"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049622"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > элемент (машинный код .NET)
+# <a name="methodinstantiation-element-net-native"></a>\<Элемент > MethodInstantiation (.NET Native)
 Применяет политику отражения среды выполнения к сконструированному универсальному методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -31,9 +31,9 @@ ms.locfileid: "61867085"
   
 |Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие|Обязательный атрибут. Задает имя метода.|  
-|`Signature`|Общие|Необязательный атрибут. Определяет именованные параметры метода. Несколько именованных параметров разделяются запятыми. Атрибут `Signature` позволяет различать перегруженные методы.|  
-|`Arguments`|Общие|Обязательный атрибут. Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми.|  
+|`Name`|Общее|Обязательный атрибут. Задает имя метода.|  
+|`Signature`|Общее|Необязательный атрибут. Определяет именованные параметры метода. Несколько именованных параметров разделяются запятыми. Атрибут `Signature` позволяет различать перегруженные методы.|  
+|`Arguments`|Общее|Обязательный атрибут. Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми.|  
 |`Browse`|Отражение|Необязательный атрибут. Определяет запрос для получения сведений о методе или перечисляет методы, но не включает динамический вызов во время выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструктору или методу для включения динамического программирования. Эта политика гарантирует, что член может быть вызван динамически во время выполнения.|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "61867085"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*method_name*|Имя метода. Тип метода определяется родительским элементом [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) или [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
+|*method_name*|Имя метода. Тип метода определяется родительским элементом [\<Type>](type-element-net-native.md) или [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Сигнатура атрибута  
   
@@ -59,24 +59,24 @@ ms.locfileid: "61867085"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый к этому типу политики для метода. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый к этому типу политики для метода. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<MethodInstantiation>`  переопределяет политику отражения среды выполнения его соответствующего открытого универсального метода.  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md)
+- [Элемент \<Method>](method-element-net-native.md)

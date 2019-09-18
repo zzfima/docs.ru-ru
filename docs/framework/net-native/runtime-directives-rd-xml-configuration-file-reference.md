@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988295"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049141"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Ссылка на файл конфигурации директив среды выполнения (rd.xml)
 
@@ -37,35 +37,35 @@ ms.locfileid: "69988295"
 
 Файл директив среды выполнения использует пространство имен `http://schemas.microsoft.com/netfx/2013/01/metadata`.
 
-Корневой элемент — элемент [Directives](../../../docs/framework/net-native/directives-element-net-native.md). Он может содержать ноль или больше элементов [Library](../../../docs/framework/net-native/library-element-net-native.md) и ноль или один элемент [Application](../../../docs/framework/net-native/application-element-net-native.md), как показано в следующей структуре. Атрибуты элемента [Application](../../../docs/framework/net-native/application-element-net-native.md) могут определять политику отражения среды выполнения для приложения или служить контейнером для дочерних элементов. Элемент [Library](../../../docs/framework/net-native/library-element-net-native.md), с другой стороны, это просто контейнер. Дочерние элементы элементов [Application](../../../docs/framework/net-native/application-element-net-native.md) и [Library](../../../docs/framework/net-native/library-element-net-native.md) определяют типы, методы, поля, свойства и события, доступные для отражения.
+Корневой элемент — элемент [Directives](directives-element-net-native.md). Он может содержать ноль или больше элементов [Library](library-element-net-native.md) и ноль или один элемент [Application](application-element-net-native.md), как показано в следующей структуре. Атрибуты элемента [Application](application-element-net-native.md) могут определять политику отражения среды выполнения для приложения или служить контейнером для дочерних элементов. Элемент [Library](library-element-net-native.md), с другой стороны, это просто контейнер. Дочерние элементы элементов [Application](application-element-net-native.md) и [Library](library-element-net-native.md) определяют типы, методы, поля, свойства и события, доступные для отражения.
 
-Для получения справочной информации выберите элементы из приведенной ниже структуры или см. раздел [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md). В следующей иерархии многоточие отмечает рекурсивную структуру. Информация в скобках указывает, является этот элемент необязательным или обязательным, и если он используется, сколько экземпляров (один или несколько) разрешено.
+Для получения справочной информации выберите элементы из приведенной ниже структуры или см. раздел [Элементы директив среды выполнения](runtime-directive-elements.md). В следующей иерархии многоточие отмечает рекурсивную структуру. Информация в скобках указывает, является этот элемент необязательным или обязательным, и если он используется, сколько экземпляров (один или несколько) разрешено.
 
-[Директивы](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [приложение](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [Сборка](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [пространство имен](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
-[Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Пространство имен](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Пространство имен](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Подтипы](../../../docs/framework/net-native/subtypes-element-net-native.md) (подклассов содержащего типа) O:1 [Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (содержащий тип является атрибутом) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Метод](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Параметр](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter находится вне](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Поле](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Событие](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M] [Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Метод](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Параметр](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter находится вне](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Поле](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Событие](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Библиотека](../../../docs/framework/net-native/library-element-net-native.md) [0: M] [Сборка](../../../docs/framework/net-native/assembly-element-net-native.md) [0: M] [Пространство имен](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Пространство имен](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Пространство имен](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Подтипы](../../../docs/framework/net-native/subtypes-element-net-native.md) (подклассов содержащего типа) O:1 [Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (содержащий тип является атрибутом) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Метод](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Поле](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Событие](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M] [Тип](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Метод](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Поле](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Событие](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
+[Директивы](directives-element-net-native.md) [1:1] [приложение](application-element-net-native.md) [0:1] [Сборка](assembly-element-net-native.md) [0: m] [пространство имен](namespace-element-net-native.md) [0: m]. . .
+[Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[Пространство имен](namespace-element-net-native.md) [0: M] [Пространство имен](namespace-element-net-native.md) [0: M]. . .
+[Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[Тип](type-element-net-native.md) [0: M] [Подтипы](subtypes-element-net-native.md) (подклассов содержащего типа) O:1 [Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (содержащий тип является атрибутом) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [Метод](method-element-net-native.md) [0: M] [Параметр](parameter-element-net-native.md) [0: M] [Typeparameter находится вне](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M] [Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[Метод](method-element-net-native.md) [0: M] [Параметр](parameter-element-net-native.md) [0: M] [Typeparameter находится вне](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M] [Библиотека](library-element-net-native.md) [0: M] [Сборка](assembly-element-net-native.md) [0: M] [Пространство имен](namespace-element-net-native.md) [0: M]. . .
+[Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[Пространство имен](namespace-element-net-native.md) [0: M] [Пространство имен](namespace-element-net-native.md) [0: M]. . .
+[Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[Тип](type-element-net-native.md) [0: M] [Подтипы](subtypes-element-net-native.md) (подклассов содержащего типа) O:1 [Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (содержащий тип является атрибутом) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [Метод](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M] [Тип](type-element-net-native.md) [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
+[Метод](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M]
 
-Элемент [Application](../../../docs/framework/net-native/application-element-net-native.md) может не иметь атрибутов или иметь атрибуты политики, рассмотренные в разделе [Директивы и политика среды выполнения](#Directives).
+Элемент [Application](application-element-net-native.md) может не иметь атрибутов или иметь атрибуты политики, рассмотренные в разделе [Директивы и политика среды выполнения](#Directives).
 
-Элемент [Library](../../../docs/framework/net-native/library-element-net-native.md) имеет один атрибут `Name`, который определяет имя библиотеки или сборки без расширения файла. Например, следующий элемент [Library](../../../docs/framework/net-native/library-element-net-native.md) применяется к сборке с именем Extensions.dll.
+Элемент [Library](library-element-net-native.md) имеет один атрибут `Name`, который определяет имя библиотеки или сборки без расширения файла. Например, следующий элемент [Library](library-element-net-native.md) применяется к сборке с именем Extensions.dll.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -82,15 +82,15 @@ ms.locfileid: "69988295"
 
 ## <a name="runtime-directives-and-policy"></a>Директивы и политики среды выполнения
 
-Сам элемент [Application](../../../docs/framework/net-native/application-element-net-native.md), а также дочерние элементы элементов [Library](../../../docs/framework/net-native/library-element-net-native.md) и [Application](../../../docs/framework/net-native/application-element-net-native.md) определяют политику, то есть способ, с помощью которого приложение может применять отражение к программному элементу. Тип политики определяется с помощью атрибута элемента (например, `Serialize`). Значение политики определяется значением атрибута (например, `Serialize="Required"`).
+Сам элемент [Application](application-element-net-native.md), а также дочерние элементы элементов [Library](library-element-net-native.md) и [Application](application-element-net-native.md) определяют политику, то есть способ, с помощью которого приложение может применять отражение к программному элементу. Тип политики определяется с помощью атрибута элемента (например, `Serialize`). Значение политики определяется значением атрибута (например, `Serialize="Required"`).
 
-Любая политика, заданная с помощью атрибута элемента применяется ко всем дочерним элементам, которые не определяют значение этой политики. Например, если политика определяется элементом [Type](../../../docs/framework/net-native/type-element-net-native.md), эта политика применяется для всех вложенных типов и членов, для которых политика не указана явно.
+Любая политика, заданная с помощью атрибута элемента применяется ко всем дочерним элементам, которые не определяют значение этой политики. Например, если политика определяется элементом [Type](type-element-net-native.md), эта политика применяется для всех вложенных типов и членов, для которых политика не указана явно.
 
-Политика, которая может быть определена элементами [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) и [Type](../../../docs/framework/net-native/type-element-net-native.md), отличается от политики, которая может быть определена для отдельных членов (элементами [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) и [Event](../../../docs/framework/net-native/event-element-net-native.md)).
+Политика, которая может быть определена элементами [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) и [Type](type-element-net-native.md), отличается от политики, которая может быть определена для отдельных членов (элементами [Method](method-element-net-native.md), [Property](property-element-net-native.md), [Field](field-element-net-native.md) и [Event](event-element-net-native.md)).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Задание политики для сборок, пространств имен и типов
 
-Элементы [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) и [Type](../../../docs/framework/net-native/type-element-net-native.md) поддерживают следующие типы политик:
+Элементы [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) и [Type](type-element-net-native.md) поддерживают следующие типы политик:
 
 - `Activate`. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.
 
@@ -147,7 +147,7 @@ ms.locfileid: "69988295"
 
 ### <a name="specifying-policy-for-members"></a>Задание политики для членов
 
-Элементы [Property](../../../docs/framework/net-native/property-element-net-native.md) и [Field](../../../docs/framework/net-native/field-element-net-native.md) поддерживают следующие типы политик:
+Элементы [Property](property-element-net-native.md) и [Field](field-element-net-native.md) поддерживают следующие типы политик:
 
 - `Browse` — Управляет запросами для получения сведений о члене, но не включает доступ среды выполнения.
 
@@ -155,7 +155,7 @@ ms.locfileid: "69988295"
 
 - `Serialize` — Управляет доступом среды выполнения к членам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек, как, например, сериализатор Newtonsoft JSON. Эта политика может применяться для конструкторов, полей и свойств.
 
-Элементы [Method](../../../docs/framework/net-native/method-element-net-native.md) и [Event](../../../docs/framework/net-native/event-element-net-native.md) поддерживают следующие типы политик:
+Элементы [Method](method-element-net-native.md) и [Event](event-element-net-native.md) поддерживают следующие типы политик:
 
 - `Browse` — Управляет запросами для получения сведений о члене, но не включает доступ среды выполнения.
 
@@ -173,9 +173,9 @@ ms.locfileid: "69988295"
 
 ## <a name="runtime-directives-file-semantics"></a>Семантика файла директив среды выполнения
 
-Политики могут быть определены одновременно для элементов более высокого уровня и более низкого уровня. Например, можно определить политики для сборки, а также для некоторых типов, содержащегося в этой сборке. Если конкретный элемент нижнего уровня не представлен, он наследует политику родительского элемента. Например, если элемент `Assembly` присутствует, а элементы `Type` нет, то политика, указанная в элементе `Assembly`, применяется для каждого типа в сборке. Несколько элементов могут также применить политику к одному и тому же программному элементу. Например, отдельные элементы [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) могут определять один и тот же элемент политики для одной сборки по-разному. В следующих разделах объясняется, как политики для конкретного типа разрешается в таких случаях.
+Политики могут быть определены одновременно для элементов более высокого уровня и более низкого уровня. Например, можно определить политики для сборки, а также для некоторых типов, содержащегося в этой сборке. Если конкретный элемент нижнего уровня не представлен, он наследует политику родительского элемента. Например, если элемент `Assembly` присутствует, а элементы `Type` нет, то политика, указанная в элементе `Assembly`, применяется для каждого типа в сборке. Несколько элементов могут также применить политику к одному и тому же программному элементу. Например, отдельные элементы [Assembly](assembly-element-net-native.md) могут определять один и тот же элемент политики для одной сборки по-разному. В следующих разделах объясняется, как политики для конкретного типа разрешается в таких случаях.
 
-Элемент [Type](../../../docs/framework/net-native/type-element-net-native.md) или [Method](../../../docs/framework/net-native/method-element-net-native.md) универсального типа или метода применяет свою политику для всех экземпляров, которые не имеют собственной политики. Например, элемент `Type`, который определяет политику для <xref:System.Collections.Generic.List%601>, применяется для всех сконструированных экземпляров универсального типа, если только он переопределяется для определенного сконструированного универсального типа (например, `List<Int32>`) элементом `TypeInstantiation` . В противном случае, элементы определяют политику для именованного программного элемента.
+Элемент [Type](type-element-net-native.md) или [Method](method-element-net-native.md) универсального типа или метода применяет свою политику для всех экземпляров, которые не имеют собственной политики. Например, элемент `Type`, который определяет политику для <xref:System.Collections.Generic.List%601>, применяется для всех сконструированных экземпляров универсального типа, если только он переопределяется для определенного сконструированного универсального типа (например, `List<Int32>`) элементом `TypeInstantiation` . В противном случае, элементы определяют политику для именованного программного элемента.
 
 Если элемент является неоднозначным, ядро ищет совпадения и при обнаружении точного совпадения, будет ее использовать. При обнаружении нескольких совпадений будет предупреждение или ошибка.
 
@@ -411,9 +411,9 @@ ms.locfileid: "69988295"
 
 Эти политики не оказывают влияния на методы или поля.
 
-Подробнее см. в подразделе "Различия в сериализаторах" раздела [Миграция приложения для Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+Подробнее см. в подразделе "Различия в сериализаторах" раздела [Миграция приложения для Магазина Windows в .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Отражение и .NET Native](reflection-and-net-native.md)

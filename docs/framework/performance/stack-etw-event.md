@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dc23f5105b589d5b74c9ea6b7f40b84c2b04e6a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949153"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046158"
 ---
 # <a name="stack-etw-event"></a>События стека (трассировка событий Windows)
 Событие стека должно использоваться вместе с другими событиями для создания трассировок стека после вызова события. Оно регистрируется при включенном поставщике среды выполнения. Это очень часто случающееся событие, так как оно сопровождает создание другого события времени выполнения. По этой причине рекомендуется использовать его с осторожностью.  
   
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -41,4 +41,4 @@ ms.locfileid: "61949153"
   
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

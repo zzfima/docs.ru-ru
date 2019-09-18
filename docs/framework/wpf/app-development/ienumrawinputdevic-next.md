@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7450a9ababa9cf3cb02d572f5ed84f0791d74e4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949582"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053401"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
-Перечисляет следующие `celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice) структуры в списке перечислителя, возвращая их в `rgelt` вместе с фактическое число перечисляемых элементов в `pceltFetched`.  
+Перечисляет следующие `celt` структуры [равинпутдевице](/windows/desktop/api/winuser/ns-winuser-rawinputdevice) в списке перечислителя, возвращая их в `rgelt` вместе с фактическим числом перечисляемых элементов в. `pceltFetched`  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT Next(  
       [in] ULONG celt,  
       [out, size_is(celt), length_is(*pceltFetched)] RAWINPUTDEVICE *rgelt,  
@@ -26,7 +26,7 @@ HRESULT Next(
 ## <a name="parameters"></a>Параметры  
  `celt`  
   
- [in] Число [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice) структур, возвращаемые в `rgelt`.  
+ окне Число структур [равинпутдевице](/windows/desktop/api/winuser/ns-winuser-rawinputdevice) , возвращаемых `rgelt`в.  
   
  `rgelt`  
   
@@ -37,4 +37,4 @@ HRESULT Next(
  [out] Указатель на количество элементов, фактически представленных в `rgelt`. Вызывающий объект может передать `NULL`, если `rgelt` — один.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
- HRESULT: Значение S_OK, если число предоставленных элементов является `celt`; В противном случае значение S_FALSE.
+ HRESULT: S_OK, если число представленных элементов равно `celt`; S_FALSE в противном случае.

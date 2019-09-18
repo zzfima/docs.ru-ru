@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875086"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052946"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -46,7 +46,7 @@ ms.locfileid: "61875086"
 
 - Определите причину, используя данные, предоставленные помощником по отладке управляемого кода `bindingFailure`:
 
-  - Запустите программу [Fuslogvw.exe (средство просмотра журнала привязки сборок)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) для чтения журналов ошибок, создаваемых средством привязки сборок.
+  - Запустите программу [Fuslogvw.exe (средство просмотра журнала привязки сборок)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) для чтения журналов ошибок, создаваемых средством привязки сборок.
 
   - Определите, находится ли запрошенная сборка в указанном месте. В случае методов <xref:System.Reflection.Assembly.LoadFrom%2A> и <xref:System.Reflection.Assembly.LoadFile%2A> запрошенное расположение можно легко определить. При использовании метода <xref:System.Reflection.Assembly.Load%2A>, который осуществляет привязку по удостоверению сборки, необходимо определить сборки, соответствующие этому удостоверению, в пути пробы свойства <xref:System.AppDomain.BaseDirectory%2A> домена приложений и глобальном кэше сборок.
 
@@ -70,7 +70,7 @@ ms.locfileid: "61875086"
 
 Если среде CLR недоступны соответствующие данные, отображаемое имя и запрошенный путь могут быть пустыми. Если сбоем завершается вызов метода <xref:System.Reflection.Assembly.Load%2A>, чаще всего среде выполнения не удается определить отображаемое имя сборки.
 
-## <a name="configuration"></a>Параметр Configuration
+## <a name="configuration"></a>Конфигурация
 
 ```xml
 <mdaConfig>
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>См. также
 
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

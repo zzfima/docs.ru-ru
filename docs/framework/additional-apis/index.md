@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675368"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053246"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
-.NET Framework постоянно развивается. Для улучшения кросс платформенной разработки и добавления новых функциональных возможностей раньше, новых функций представлены в виде внештатных выпусков (OOB). В этом разделе перечислены внештатные проекты, для которых мы предоставляем документацию.  
+.NET Framework постоянно развивается. Для улучшения разработки кросс-платформенного процесса и появления новых функций на ранних этапах новые функции выпускаются с использованием аппаратного контроллера управления (OOB). В этом разделе перечислены внештатные проекты, для которых мы предоставляем документацию.  
   
-Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например <xref:System.Text.CodePagesEncodingProvider> класс делает кодировок кодовых страниц доступными для приложений универсальной платформы Windows, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
+Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например, <xref:System.Text.CodePagesEncodingProvider> класс делает кодировки кодовых страниц доступными для приложений UWP, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
   
 ## <a name="oob-projects"></a>Встроенные проекты
   
@@ -36,7 +36,7 @@ ms.locfileid: "61675368"
   
 | Проект | Описание |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Расширяет <xref:System.Text.EncodingProvider> класса, чтобы сделать кодировки кодовых страниц доступными для приложений, предназначенных для универсальной платформы Windows. |  
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> Расширяет класс, чтобы сделать кодировки кодовых страниц доступными для приложений, предназначенных для универсальная платформа Windows. |  
   
 ## <a name="private-apis"></a>Частные интерфейсы API  
 
@@ -44,22 +44,22 @@ ms.locfileid: "61675368"
   
 | Имя API |
 | -------- |
-| [Класс System.Net.Connection](../../../docs/framework/additional-apis/connection.md) |
-| [System.Net.Connection.m\_WriteList поля](../../../docs/framework/additional-apis/m_writelist.md) |
-| [Класс System.Net.ConnectionGroup](../../../docs/framework/additional-apis/connectiongroup.md) |
-| [System.Net.ConnectionGroup.m\_ConnectionList поля](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [Класс System.Net.CoreResponseData](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders поля](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_поле StatusCode](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest. \_AutoRedirects поля](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest.\_CoreResponse Field](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest.\_HttpResponse Field](../../../docs/framework/additional-apis/_httpresponse.md) |
-| [System.Net.ServicePoint.m\_ConnectionGroupList поля](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
-| [System.Net.ServicePointManager.s\_ServicePointTable поля](../../../docs/framework/additional-apis/s_servicepointtable.md) |
-| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes поля](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [Класс System.Windows.Forms.Design.DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
-| [Класс System.Windows.Forms.Design.DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
+| [Класс System .NET. Connection](connection.md) |
+| [Поле системы .NET. Connection.\_m врителист](m_writelist.md) |
+| [Класс System .NET. Коннектионграуп](connectiongroup.md) |
+| [System .NET. коннектионграуп. m\_коннектионлист, поле](m_connectionlist.md) |
+| [Класс System .NET. Коререспонседата](coreresponsedata.md) |
+| [System .NET. коререспонседата. m\_ResponseHeaders, поле](coreresponsedata_m_responseheaders.md) |
+| [Поле StatusCode System .NET. коререспонседата\_. m](coreresponsedata_m_statuscode.md) |
+| [System .NET. HttpWebRequest. \_Поле перенаправлений](_autoredirects.md) |
+| [System .NET. HttpWebRequest. \_Поле коререспонсе](httpwebrequest__coreresponse.md) |
+| [System .NET. HttpWebRequest. \_Поле HttpResponse](_httpresponse.md) |
+| [System .NET. ServicePoint. m\_коннектионграуплист, поле](m_connectiongrouplist.md) |
+| [Поле System .NET. ServicePointManager.\_s сервицепоинттабле](s_servicepointtable.md) |
+| [System. Windows. Diagnostics. висуалдиагностикс. s\_исдебугжерчеккдисабледфортестпурпосес, поле](s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [Класс System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md) |
+| [Класс System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>См. также
 
-- [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [.NET Framework и отдельные выпуски](../get-started/the-net-framework-and-out-of-band-releases.md)

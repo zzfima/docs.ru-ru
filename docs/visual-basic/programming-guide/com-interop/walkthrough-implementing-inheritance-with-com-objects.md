@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627035"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053337"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Пошаговое руководство. Реализация наследования с помощью COM-объектов (Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "68627035"
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Построение COM-объекта, используемого в этом пошаговом руководстве
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Построение COM-объекта, используемого в этом пошаговом руководстве
 
 1. В Visual Basic 6,0 откройте новый проект ActiveX DLL. Будет создан проект `Project1` с именем. Он имеет класс с именем `Class1`.
 
@@ -76,7 +76,7 @@ ms.locfileid: "68627035"
 
 В следующей процедуре будет создана сборка взаимодействия, которая выступает в качестве моста между неуправляемым кодом (например, COM-объектом) и управляемым кодом, используемым Visual Studio. Сборка взаимодействия, которую Visual Basic создает, обрабатывает множество деталей работы с COM-объектами, например *Маршалинг взаимодействия*, процесс упаковки параметров и возвращаемые значения в эквивалентные типы данных при их перемещении в COM-объекты и из них. Ссылка в приложении Visual Basic указывает на сборку взаимодействия, а не на фактический COM-объект.
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Использование COM-объекта с Visual Basic 2005 и более поздними версиями
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Использование COM-объекта с Visual Basic 2005 и более поздними версиями
 
 1. Откройте новый проект приложения Windows на Visual Basic.
 
@@ -108,7 +108,7 @@ ms.locfileid: "68627035"
 
 Новый класс наследует свойства базового класса в COM-объекте, перегружает метод и определяет новый метод для расширения класса.
 
-#### <a name="to-test-the-inherited-class"></a>Тестирование наследуемого класса
+### <a name="to-test-the-inherited-class"></a>Тестирование наследуемого класса
 
 1. Добавьте кнопку в форму запуска, а затем дважды щелкните ее, чтобы просмотреть ее код.
 

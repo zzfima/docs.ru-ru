@@ -1,17 +1,17 @@
 ---
-title: <Library> Элемент (машинный код .NET)
+title: <Library>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: bc3c85ab99574c96d8a68d4221f218a1340e4122
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422539"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049649"
 ---
-# <a name="library-element-net-native"></a>\<Библиотека > элемент (машинный код .NET)
+# <a name="library-element-net-native"></a>\<Элемент > библиотеки (.NET Native)
 Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения.  
   
  Элемент \<Directives>  
@@ -42,23 +42,23 @@ ms.locfileid: "67422539"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику для конкретного типа, например, класса или структуры.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному типу. Например, элемент [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) можно использовать для определения политики для типа `List<String>`.|  
+|[\<Assembly>](assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
+|[\<Namespace>](namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику для конкретного типа, например, класса или структуры.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному типу. Например, элемент [\<TypeInstantiation>](typeinstantiation-element-net-native.md) можно использовать для определения политики для типа `List<String>`.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
+|[\<Directives>](directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) может иметь ноль, один или более элементов `<Library>`.  
+ Элемент [\<Directives>](directives-element-net-native.md) может иметь ноль, один или более элементов `<Library>`.  
   
- Элемент `<Library>` используется как контейнер для определения программных элементов, метаданные которых требуются во время выполнения. Этот элемент не выражают политики. Во время компиляции средства компилятора осуществляют поиск только в библиотеке, назначенной с помощью элемента `<Library>`, на наличие программных элементов, определенных его дочерними элементами. Напротив, средства компилятора проверяют все библиотеки, в том числе основные библиотеки .NET Framework, на наличие программных элементов, которые определяются дочерними элементами элемента [\<Application>](../../../docs/framework/net-native/application-element-net-native.md).  
+ Элемент `<Library>` используется как контейнер для определения программных элементов, метаданные которых требуются во время выполнения. Этот элемент не выражают политики. Во время компиляции средства компилятора осуществляют поиск только в библиотеке, назначенной с помощью элемента `<Library>`, на наличие программных элементов, определенных его дочерними элементами. Напротив, средства компилятора проверяют все библиотеки, в том числе основные библиотеки .NET Framework, на наличие программных элементов, которые определяются дочерними элементами элемента [\<Application>](application-element-net-native.md).  
   
- Директивы `<Library>` могут использоваться условно. Если имя `<Library>` начинается и заканчивается звездочкой (\*), `<Library>` директива действует только в том случае, если ссылку на его сборку, указанную между звездочками. Например следующая директива среды выполнения применяется только в том случае, если приложение ссылается сборка "Utilities.dll".  
+ Директивы `<Library>` могут использоваться условно. Если имя `<Library>` элемента начинается и заканчивается звездочкой (\*), `<Library>` директива действует только в том случае, если приложение ссылается на сборку, указанную между звездочками. Например, следующая директива среды выполнения применяется только в том случае, если приложение ссылается на сборку Utilities. dll.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -70,7 +70,7 @@ ms.locfileid: "67422539"
   
 ## <a name="see-also"></a>См. также
 
-- [\<Приложение > элемент](../../../docs/framework/net-native/application-element-net-native.md)
-- [\<Директивы > элемент](../../../docs/framework/net-native/directives-element-net-native.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Элемент > приложения](application-element-net-native.md)
+- [\<Директивы > элемент](directives-element-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)

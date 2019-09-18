@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754236"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052548"
 ---
 # <a name="loaderlock-mda"></a>Помощник по отладке управляемого кода loaderLock
 Помощник по отладке управляемого кода `loaderLock` (MDA) определяет попытки выполнения управляемого кода в потоке, который удерживает блокировку загрузчика операционной системы Microsoft Windows.  Любое подобное выполнение кода недопустимо, поскольку оно может привести к взаимоблокировке и использованию библиотек DLL до того, как они будут инициализированы загрузчиком операционной системы.  
@@ -45,7 +45,7 @@ ms.locfileid: "61754236"
 ## <a name="output"></a>Вывод  
  Помощник по отладке управляемого кода сообщает о попытке недопустимого выполнения управляемого кода.  Изучите стек потока, чтобы понять, почему происходит блокировка загрузчика и как решить эту проблему.  
   
-## <a name="configuration"></a>Параметр Configuration  
+## <a name="configuration"></a>Конфигурация  
   
 ```xml  
 <mdaConfig>  
@@ -57,4 +57,4 @@ ms.locfileid: "61754236"
   
 ## <a name="see-also"></a>См. также
 
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](diagnosing-errors-with-managed-debugging-assistants.md)

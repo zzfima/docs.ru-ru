@@ -3,17 +3,17 @@ title: WIF и веб-фермы
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851521"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045254"
 ---
 # <a name="wif-and-web-farms"></a>WIF и веб-фермы
 Если вы используете Windows Identity Foundation (WIF) для защиты ресурсов приложения проверяющей стороны, развернутого в веб-ферме, необходимо выполнить определенные действия, чтобы платформа WIF могла обрабатывать токены от экземпляров этого приложения, работающих на разных компьютерах в ферме. Обработка включает в себя проверку подписей токенов сеансов, шифрование и расшифровку токенов сеансов, их кэширование, а также обнаружение повторно используемых маркеров безопасности.  
   
- Как правило, при использовании WIF для защиты ресурсов приложения проверяющей стороны, которая может размещаться на отдельном компьютере или в веб-ферме, сеанс с клиентом устанавливается на основе токена безопасности, полученного из службы маркеров безопасности (STS). Благодаря этому клиенту не приходится проходить проверку подлинности в службе STS при каждом запросе ресурса приложения, находящегося под защитой WIF. Дополнительные сведения о том, как WIF работает с сеансами, см. в разделе [Управление сеансами WIF](../../../docs/framework/security/wif-session-management.md).  
+ Как правило, при использовании WIF для защиты ресурсов приложения проверяющей стороны, которая может размещаться на отдельном компьютере или в веб-ферме, сеанс с клиентом устанавливается на основе токена безопасности, полученного из службы маркеров безопасности (STS). Благодаря этому клиенту не приходится проходить проверку подлинности в службе STS при каждом запросе ресурса приложения, находящегося под защитой WIF. Дополнительные сведения о том, как WIF работает с сеансами, см. в разделе [Управление сеансами WIF](wif-session-management.md).  
   
  При использовании параметров по умолчанию WIF выполняет указанные ниже действия.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70851521"
     </securityTokenHandlers>  
     ```  
   
-- Выполните наследование от класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> и реализуйте распределенное кэширование, то есть кэш, доступный со всех компьютеров в ферме, на которых может размещаться проверяющая сторона. Настройте проверяющую сторону так, чтобы она использовала распределенный кэш, добавив элемент [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) в файл конфигурации. Вы можете переопределить метод <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> в производном классе, чтобы реализовать дочерние элементы элемента `<sessionSecurityTokenCache>`, если они необходимы.  
+- Выполните наследование от класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> и реализуйте распределенное кэширование, то есть кэш, доступный со всех компьютеров в ферме, на которых может размещаться проверяющая сторона. Настройте проверяющую сторону так, чтобы она использовала распределенный кэш, добавив элемент [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) в файл конфигурации. Вы можете переопределить метод <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> в производном классе, чтобы реализовать дочерние элементы элемента `<sessionSecurityTokenCache>`, если они необходимы.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ ms.locfileid: "70851521"
   
      Один из способов реализации распределенного кэширования — предоставить внешний интерфейс WCF для пользовательского кэша. Дополнительные сведения о реализации службы кэширования WCF см. в разделе [Служба кэширования WCF](#BKMK_TheWCFCachingService). Дополнительные сведения о реализации клиента WCF, который приложение проверяющей стороны может использовать для вызова службы кэширования, см. в разделе [Клиент кэширования WCF](#BKMK_TheWCFClient).  
   
-- Если приложение обнаруживает воспроизводимые токены, необходимо использовать аналогичный подход, реализовав распределенное кэширование для кэша воспроизведения токенов. Для этого выполните наследование от класса <xref:System.IdentityModel.Tokens.TokenReplayCache> и укажите службу кэширования воспроизводимых токенов в элементе конфигурации [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
+- Если приложение обнаруживает воспроизводимые токены, необходимо использовать аналогичный подход, реализовав распределенное кэширование для кэша воспроизведения токенов. Для этого выполните наследование от класса <xref:System.IdentityModel.Tokens.TokenReplayCache> и укажите службу кэширования воспроизводимых токенов в элементе конфигурации [\<tokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
 > Все примеры XML и код в этом разделе взяты из примера [клаимсаваревебфарм](https://go.microsoft.com/fwlink/?LinkID=248408) .  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>Клиент кэширования WCF  
- В этом разделе показана реализация класса, производного от <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>, который делегирует вызовы к службе кэширования. Чтобы настроить приложение для использования этого класса, используется элемент [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md), как показано в приведенном ниже коде XML.  
+ В этом разделе показана реализация класса, производного от <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>, который делегирует вызовы к службе кэширования. Чтобы настроить приложение для использования этого класса, используется элемент [\<sessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md), как показано в приведенном ниже коде XML.  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [Управление сеансами WIF](../../../docs/framework/security/wif-session-management.md)
+- [Управление сеансами WIF](wif-session-management.md)

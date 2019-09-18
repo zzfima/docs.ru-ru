@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953197"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042510"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Клиенты автоматизации пользовательского интерфейса для управляемого кода
 > [!NOTE]
@@ -21,16 +21,16 @@ ms.locfileid: "69953197"
  В этом разделе содержатся обзоры и практические руководства, помогающие разрабатывать клиенты автоматизации пользовательского интерфейса.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Модель автоматизации пользовательского интерфейса и масштабирование экрана](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [События модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Кэширование в клиентах автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Свойства автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Получение элементов модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Проблемы потока модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [Разделы практического руководства](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [Модель автоматизации пользовательского интерфейса и масштабирование экрана](ui-automation-and-screen-scaling.md)  
+ [Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления](ui-automation-support-for-standard-controls.md)  
+ [События модели автоматизации пользовательского интерфейса для клиентов](ui-automation-events-for-clients.md)  
+ [Кэширование в клиентах автоматизации пользовательского интерфейса](caching-in-ui-automation-clients.md)  
+ [Свойства автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md)  
+ [Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса](control-pattern-mapping-for-ui-automation-clients.md)  
+ [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](ui-automation-control-patterns-for-clients.md)  
+ [Получение элементов модели автоматизации пользовательского интерфейса](obtaining-ui-automation-elements.md)  
+ [Проблемы потока модели автоматизации пользовательского интерфейса](ui-automation-threading-issues.md)  
+ [Разделы практического руководства](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Automation>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015113"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043949"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Реализация клиентского поставщика автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015113"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]предоставляет поставщики для стандартных [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] и Windows Forms элементов управления. Кроме того, резервный поставщик обеспечивает частичную [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] поддержку для любого элемента управления, который не обслуживается другим поставщиком или прокси на стороне сервера, но имеет реализацию Microsoft Active Accessibility. Все эти поставщики автоматически загружаются и доступны для клиентских приложений.  
   
- Дополнительные сведения о поддержке [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] элементов управления и Windows Forms см. в разделе [Поддержка модели автоматизации пользовательского интерфейса для стандартных элементов управления](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Дополнительные сведения о поддержке [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] элементов управления и Windows Forms см. в разделе [Поддержка модели автоматизации пользовательского интерфейса для стандартных элементов управления](ui-automation-support-for-standard-controls.md).  
   
  Приложения также могут регистрировать другие поставщики на стороне клиента.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015113"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание поставщика автоматизации пользовательского интерфейса на стороне клиента](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Реализация поставщиков автоматизации пользовательского интерфейса в приложении клиента](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [Создание поставщика автоматизации пользовательского интерфейса на стороне клиента](create-a-client-side-ui-automation-provider.md)
+- [Реализация поставщиков автоматизации пользовательского интерфейса в приложении клиента](implement-ui-automation-providers-in-a-client-application.md)

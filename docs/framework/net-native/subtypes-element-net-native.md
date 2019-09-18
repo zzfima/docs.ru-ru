@@ -1,17 +1,17 @@
 ---
-title: <Subtypes> Элемент (машинный код .NET)
+title: <Subtypes>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866859"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049129"
 ---
-# <a name="subtypes-element-net-native"></a>\<Подтипы > элемент (машинный код .NET)
+# <a name="subtypes-element-net-native"></a>\<Подтипы > элемент (.NET Native)
 Применяет политику среды выполнения для всех классов, унаследованных из содержащего типа.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,16 +51,16 @@ ms.locfileid: "61866859"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+ Нет.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<Subtypes>` применяет политику ко всем подтипам его содержащего типа. Используется для применения различных политик для производных типов и их базовых классов.  
@@ -91,7 +91,7 @@ ms.locfileid: "61866859"
   
 ## <a name="see-also"></a>См. также
 
-- [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Элемент > типа](type-element-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md)

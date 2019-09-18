@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941699"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049546"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Класс MissingInteropDataException (машинный код .NET)
 **.NET для приложений Windows для Windows 10, только .NET Native**  
@@ -22,7 +22,7 @@ ms.locfileid: "69941699"
  **Пространство имен:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException` Класс предназначен исключительно для внутреннего использования в цепочке инструментов .NET Native. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".  
+> `MissingInteropDataException` Класс предназначен исключительно для внутреннего использования в цепочке инструментов .NET Native. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".  
   
 ## <a name="syntax"></a>Синтаксис  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -72,7 +72,7 @@ ms.locfileid: "69941699"
 ## <a name="usage-details"></a>Сведения об использовании  
  Исключение `MissingInteropDataException` возникает, если вызов метода в компонент COM или среду выполнения Windows не удается выполнить успешно, поскольку информация о типе недоступна.  
   
- Метаданные, доступные для приложения во время выполнения, определяются в файле конфигурации директив среды выполнения (XML), \*Rd. XML. Чтобы избежать возникновения этого исключения приложения, необходимо изменить этот файл для определения метаданных, которые должны присутствовать во время выполнения. Чаще всего, можно устранить эту ошибку путем добавления атрибута `MarshalObject`, `MarshalDelegate`, или `MarshalStructure` к соответствующему программному элементу файла директив среды выполнения. Сведения о формате этого файла см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Метаданные, доступные для приложения во время выполнения, определяются в файле конфигурации директив среды выполнения (XML), \*Rd. XML. Чтобы избежать возникновения этого исключения приложения, необходимо изменить этот файл для определения метаданных, которые должны присутствовать во время выполнения. Чаще всего, можно устранить эту ошибку путем добавления атрибута `MarshalObject`, `MarshalDelegate`, или `MarshalStructure` к соответствующему программному элементу файла директив среды выполнения. Сведения о формате этого файла см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Так как это исключение указывает, что метаданные, необходимые для приложения, недоступны во время выполнения, не следует обрабатывать это исключение в блоке `try`/`catch`. Вместо этого следует выяснить причину возникновения исключения и устранить ее, добавив соответствующую запись в файл директив среды выполнения.  
@@ -82,5 +82,5 @@ ms.locfileid: "69941699"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Exception?displayProperty=nameWithType>
-- [Класс MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Класс MissingMetadataException](missingmetadataexception-class-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

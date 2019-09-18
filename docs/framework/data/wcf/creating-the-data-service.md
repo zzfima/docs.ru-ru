@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780410"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052984"
 ---
 # <a name="create-the-data-service"></a>Создание службы данных
 
@@ -68,7 +68,7 @@ ms.locfileid: "70780410"
 
 2. В диалоговом окне **Добавление нового элемента** выберите шаблон элемента **службы данных WCF** из категории **веб** .
 
-   ![Шаблон элемента службы данных WCF в Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Шаблон элемента службы данных WCF в Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017.

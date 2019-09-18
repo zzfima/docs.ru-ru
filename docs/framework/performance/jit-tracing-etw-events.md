@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616389"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046415"
 ---
 # <a name="jit-tracing-etw-events"></a>События трассировки JIT-компилятора (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.  
@@ -27,7 +27,7 @@ ms.locfileid: "64616389"
 ## <a name="jit-inlining-events"></a>События встраивания кода JIT  
   
 ### <a name="methodjitinliningfailed-event"></a>Событие MethodJitInliningFailed  
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -151,4 +151,4 @@ ms.locfileid: "64616389"
   
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

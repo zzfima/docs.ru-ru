@@ -6,12 +6,12 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960244"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053437"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
 Прежде чем администраторы смогут развертывать приложения Microsoft .NET Framework в системе, они должны сначала убедиться в наличии среды выполнения .NET Framework. В этом разделе содержится сценарий, написанный на языке HTML/JavaScript, который администраторы могут использовать для определения наличия .NET Framework в системе.  
@@ -23,7 +23,7 @@ ms.locfileid: "69960244"
 ## <a name="detect-the-net-clr-user-agent-string"></a>Определение строки агента пользователя ".NET CLR"  
  При установке .NET Framework MSI добавляет ".NET CLR" и номер версии в строку UserAgent. В следующем примере показан сценарий, внедренный в простую HTML-страницу. Сценарий выполняет поиск строки UserAgent, чтобы определить, установлена ли .NET Framework, и отображает сообщение о состоянии для результатов поиска.  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  

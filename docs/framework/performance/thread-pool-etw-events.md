@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624292"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046189"
 ---
 # <a name="thread-pool-etw-events"></a>События пула потоков (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения о рабочих потоках и потоках ввода-вывода.  
@@ -28,7 +28,7 @@ ms.locfileid: "64624292"
  Эти события связаны с пулом рабочих потоков среды выполнения и содержат уведомления о событиях потоков (например, когда поток создается или останавливается). Пул рабочих потоков использует адаптивный алгоритм для управления параллелизмом, в соответствии с которым число потоков рассчитывается в зависимости от измеренной пропускной способности. С помощью событий пула рабочих потоков можно понять, как приложение использует пул потоков, и оценить влияние конкретных нагрузок на управление параллелизмом.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart и ThreadPoolWorkerThreadStop  
- В таблице ниже показаны ключевые слова и уровни для этих событий. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ В таблице ниже показаны ключевые слова и уровни для этих событий. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -131,7 +131,7 @@ ms.locfileid: "64624292"
 ## <a name="io-thread-events"></a>События потоков ввода-вывода  
  Эти события пула потоков создаются для потоков в пуле потоков ввода-вывода (порты завершения), который является асинхронным.  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -152,7 +152,7 @@ ms.locfileid: "64624292"
 |NumRetired|win:UInt64|Число завершенных рабочих потоков.|  
 |ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -173,7 +173,7 @@ ms.locfileid: "64624292"
 |NumRetired|win:UInt64|Число завершенных потоков ввода-вывода.|  
 |ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -217,4 +217,4 @@ ms.locfileid: "64624292"
   
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913804"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049172"
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
 
@@ -22,7 +22,7 @@ ms.locfileid: "69913804"
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Сериализаторы сторонних поставщиков
 
- Сериализаторы сторонних поставщиков, включая Newtonsoft.JSON, обычно основаны на отражении. Учитывая большой двоичный объект (BLOB) из сериализованных данных, поля данных назначаются конкретному типу путем поиска полей типа целевого объекта по имени. Как минимум, использование этих библиотек приводит к исключениям [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) для каждого объекта <xref:System.Type> при попытке сериализации или десериализации в коллекции `List<Type>`.  
+ Сериализаторы сторонних поставщиков, включая Newtonsoft.JSON, обычно основаны на отражении. Учитывая большой двоичный объект (BLOB) из сериализованных данных, поля данных назначаются конкретному типу путем поиска полей типа целевого объекта по имени. Как минимум, использование этих библиотек приводит к исключениям [MissingMetadataException](missingmetadataexception-class-net-native.md) для каждого объекта <xref:System.Type> при попытке сериализации или десериализации в коллекции `List<Type>`.  
   
  Самый простой способ решения проблем, вызванных отсутствующими метаданными для этих сериализаторов, состоит в сборе типов, которые будут использоваться при сериализации в одном пространстве имен (например, `App.Models`) и применить к нему директиву метаданных `Serialize`:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69913804"
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Информацию о синтаксисе, используемом в примере, см. в разделе [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md).  
+ Информацию о синтаксисе, используемом в примере, см. в разделе [Элемент \<Namespace>](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Сериализаторы Microsoft
@@ -67,11 +67,11 @@ ms.locfileid: "69913804"
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Информацию о синтаксисе, используемом в примере, см. в разделе [Элемент \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
+ Информацию о синтаксисе, используемом в примере, см. в разделе [Элемент \<Type>](type-element-net-native.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<Элемент > типа](../../../docs/framework/net-native/type-element-net-native.md)
-- [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [\<Элемент > типа](type-element-net-native.md)
+- [Элемент \<Namespace>](namespace-element-net-native.md)

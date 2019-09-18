@@ -1,17 +1,17 @@
 ---
-title: <TypeInstantiation> Элемент (машинный код .NET)
+title: <TypeInstantiation>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052365"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049114"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > элемент (машинный код .NET)
+# <a name="typeinstantiation-element-net-native"></a>\<Элемент > TypeInstantiation (.NET Native)
 Применяет политику отражения среды применения к сконструированному универсальному типу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,8 +38,8 @@ ms.locfileid: "66052365"
   
 |Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие|Обязательный атрибут. Задает имя типа.|  
-|`Arguments`|Общие|Обязательный атрибут. Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми.|  
+|`Name`|Общее|Обязательный атрибут. Задает имя типа.|  
+|`Arguments`|Общее|Обязательный атрибут. Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
@@ -55,7 +55,7 @@ ms.locfileid: "66052365"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*type_name*|Имя типа. Если этот элемент `<TypeInstantiation>` является дочерним элементом элемента [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) или другого элемента `<TypeInstantiation>`, *type_name* может определять имя типа без его пространства имен. В противном случае атрибут *type_name* должен содержать полное имя типа. Имя типа не является внутренним. Например, для объекта <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> элемент `<TypeInstantiation>` может выглядеть следующим образом:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|Имя типа. Если этот элемент `<TypeInstantiation>` является дочерним элементом элемента [\<Namespace>](namespace-element-net-native.md), [\<Type>](type-element-net-native.md) или другого элемента `<TypeInstantiation>`, *type_name* может определять имя типа без его пространства имен. В противном случае атрибут *type_name* должен содержать полное имя типа. Имя типа не является внутренним. Например, для объекта <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> элемент `<TypeInstantiation>` может выглядеть следующим образом:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Атрибут аргументов  
   
@@ -67,43 +67,43 @@ ms.locfileid: "66052365"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Значение для применения к этому типу политики для сконструированного универсального типа. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Значение для применения к этому типу политики для сконструированного универсального типа. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Применяет политику отражения события, относящегося к этому типу.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Применяет политику отражения поля, относящегося к этому типу.|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Применяет политику к типу, если политика была применена для типа, представленного содержащим элементом `<TypeInstantiation>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения метода, относящегося к этому типу.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному методу, относящемуся к этому типу.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Применяет политику отражения к свойству, относящемуся к этому типу.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к вложенному типу.|  
+|[\<Event>](event-element-net-native.md)|Применяет политику отражения события, относящегося к этому типу.|  
+|[\<Field>](field-element-net-native.md)|Применяет политику отражения поля, относящегося к этому типу.|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|Применяет политику к типу, если политика была применена для типа, представленного содержащим элементом `<TypeInstantiation>`.|  
+|[\<Method>](method-element-net-native.md)|Применяет политику отражения метода, относящегося к этому типу.|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному методу, относящемуся к этому типу.|  
+|[\<Property>](property-element-net-native.md)|Применяет политику отражения к свойству, относящемуся к этому типу.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику отражения к вложенному типу.|  
 |`<TypeInstantiation>`|Применяет политику отражения к вложенному сконструированному универсальному типу.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения ко всем типам в указанной сборке.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Применяет политику отражения ко всем типам в пространстве имен.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<Application>](application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения.|  
+|[\<Assembly>](assembly-element-net-native.md)|Применяет политику отражения ко всем типам в указанной сборке.|  
+|[\<Library>](library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения.|  
+|[\<Namespace>](namespace-element-net-native.md)|Применяет политику отражения ко всем типам в пространстве имен.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
 |`<TypeInstantiation>`|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
 ## <a name="remarks"></a>Примечания  
  Атрибуты отражения, сериализации и взаимодействия являются необязательными. Тем не менее, по крайней мере один должен присутствовать.  
   
- Если элемент `<TypeInstantiation>` является дочерним элементом элемента [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) или [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), он переопределяет параметры политики, определенные родительским элементом. Если элемент [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) определяет соответствующее определение универсального типа, элемент `<TypeInstantiation>` переопределяет политику отражения среды выполнения только для экземпляров указанного сконструированного универсального типа.  
+ Если элемент `<TypeInstantiation>` является дочерним элементом элемента [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md) или [\<Type>](type-element-net-native.md), он переопределяет параметры политики, определенные родительским элементом. Если элемент [\<Type>](type-element-net-native.md) определяет соответствующее определение универсального типа, элемент `<TypeInstantiation>` переопределяет политику отражения среды выполнения только для экземпляров указанного сконструированного универсального типа.  
   
 ## <a name="example"></a>Пример  
- В следующем примере отражение используется для получения определения универсального типа из сконструированного объекта <xref:System.Collections.Generic.Dictionary%602>. Отражение используется также для отображения сведений об объектах<xref:System.Type>, представляющих сконструированные универсальные типы и определения универсальных типов. Переменная `b` в примере является <xref:Windows.UI.Xaml.Controls.TextBlock> элемента управления.  
+ В следующем примере отражение используется для получения определения универсального типа из сконструированного объекта <xref:System.Collections.Generic.Dictionary%602>. Отражение используется также для отображения сведений об объектах<xref:System.Type>, представляющих сконструированные универсальные типы и определения универсальных типов. Переменная `b` в примере <xref:Windows.UI.Xaml.Controls.TextBlock> является элементом управления.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- В примере после компиляции с помощью цепочки инструментов .NET Native, возникает исключение [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) исключение на строку, которая вызывает <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> метод. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<TypeInstantiation>` элемент в файл директив среды выполнения:  
+ После компиляции с помощью цепочки инструментов .NET Native в примере создается исключение [MissingMetadataException](missingmetadataexception-class-net-native.md) в строке, которая вызывает <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> метод. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<TypeInstantiation>` элемент в файл директив среды выполнения:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -118,6 +118,6 @@ ms.locfileid: "66052365"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md)

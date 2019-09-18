@@ -2,12 +2,12 @@
 title: Развертывание службы WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895109"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053312"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 
@@ -29,7 +29,7 @@ ms.locfileid: "70895109"
 
 Для правильной работы служб WCF, размещенных в IIS, необходимо установить WCF, IIS и ASP.NET. Процедуры установки WCF (в составе .NET Framework), ASP.NET и IIS зависят от операционной системы. Дополнительные сведения об установке WCF и .NET Framework см. в [статье установка .NET Framework для разработчиков](../../install/guide-for-developers.md). Чтобы установить службы IIS в Windows 10, откройте " **программы и компоненты** " на **панели управления** , а затем выберите **включить или отключить компоненты Windows**. В окне **компоненты Windows**выберите **службы IIS** и нажмите кнопку **ОК**.
 
-![Компоненты Windows с выделенными службами IIS](media/windows-features-iis.png)
+![Компоненты Windows с выделенными службами IIS](./media/windows-features-iis.png)
 
 Инструкции по установке служб IIS в других операционных системах можно найти в [статье Установка IIS в Windows Vista и Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) и [Установка IIS 8,5 на Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 

@@ -1,17 +1,17 @@
 ---
-title: <Application> Элемент (машинный код .NET)
+title: <Application>Элемент (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657190"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049933"
 ---
-# <a name="application-element-net-native"></a>\<Приложение > элемент (машинный код .NET)
+# <a name="application-element-net-native"></a>\<Элемент > приложения (.NET Native)
 Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения и применяет политику отражения среды выполнения ко всем программным элементам приложения.  
   
  Элемент \<Directives>  
@@ -54,40 +54,40 @@ ms.locfileid: "64657190"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр для этой политики, относящихся к типам в приложении. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр для этой политики, относящихся к типам в приложении. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику для конкретного типа, например, класса или структуры.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному типу. Например, элемент [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) можно использовать для определения политики для типа `List<String>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику к методу определенного типа.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному методу.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Применяет политику к свойству определенного типа.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Применяет политику к полю определенного типа.|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Применяет политику к событию определенного типа.|  
+|[\<Assembly>](assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
+|[\<Namespace>](namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
+|[\<Type>](type-element-net-native.md)|Применяет политику для конкретного типа, например, класса или структуры.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному типу. Например, элемент [\<TypeInstantiation>](typeinstantiation-element-net-native.md) можно использовать для определения политики для типа `List<String>`.|  
+|[\<Method>](method-element-net-native.md)|Применяет политику к методу определенного типа.|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному методу.|  
+|[\<Property>](property-element-net-native.md)|Применяет политику к свойству определенного типа.|  
+|[\<Field>](field-element-net-native.md)|Применяет политику к полю определенного типа.|  
+|[\<Event>](event-element-net-native.md)|Применяет политику к событию определенного типа.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
+|[\<Directives>](directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) может содержать ноль или один элемент `<Application>`. Несколько элементов `<Application>` в одном файле директив отражения не поддерживаются.  
+ Элемент [\<Directives>](directives-element-net-native.md) может содержать ноль или один элемент `<Application>`. Несколько элементов `<Application>` в одном файле директив отражения не поддерживаются.  
   
  Элемент `<Application>` можно использовать одним из двух способов:  
   
-- В качестве контейнера для определения программных элементов, метаданные которых требуются во время выполнения. В этом случае элементу `<Application>` необязательно иметь какие-либо атрибуты. Во время компиляции средства компилятора выполняют поиск всех библиотек, в том числе основных библиотек .NET Framework, на наличие программных элементов, определенных дочерними элементами элемента `<Application>`. В отличие от этого, средства компилятора выполняют поиск только тех библиотек, которые назначены элементом [\<Library>](../../../docs/framework/net-native/library-element-net-native.md), на наличие программных элементов, определенных дочерними элементами элемента [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+- В качестве контейнера для определения программных элементов, метаданные которых требуются во время выполнения. В этом случае элементу `<Application>` необязательно иметь какие-либо атрибуты. Во время компиляции средства компилятора выполняют поиск всех библиотек, в том числе основных библиотек .NET Framework, на наличие программных элементов, определенных дочерними элементами элемента `<Application>`. В отличие от этого, средства компилятора выполняют поиск только тех библиотек, которые назначены элементом [\<Library>](library-element-net-native.md), на наличие программных элементов, определенных дочерними элементами элемента [\<Library>](library-element-net-native.md).  
   
-- Как элемент, который задает политику уровня приложения для отражения, сериализации и взаимодействия. Атрибуты элемента `<Application>` определяют политику уровня приложения, которая может быть переопределена дочерними элементами элементов `<Application>` или [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+- Как элемент, который задает политику уровня приложения для отражения, сериализации и взаимодействия. Атрибуты элемента `<Application>` определяют политику уровня приложения, которая может быть переопределена дочерними элементами элементов `<Application>` или [\<Library>](library-element-net-native.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [\<Библиотека > элемент](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Директивы > элемент](../../../docs/framework/net-native/directives-element-net-native.md)
-- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Элемент > библиотеки](library-element-net-native.md)
+- [\<Директивы > элемент](directives-element-net-native.md)
+- [Элементы директив среды выполнения](runtime-directive-elements.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

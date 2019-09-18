@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042537"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Практические руководства, посвященные клиентам автоматизации пользовательского интерфейса для управляемого кода
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935116"
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] В этом разделе содержатся подробные сведения о реализации функций в клиентском приложении.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Нахождение элемента модели автоматизации пользовательского интерфейса для элемента списка](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [Получение свойств элементов модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Подписка на события модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [Регистрация сборки поставщика на стороне клиента](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [Использование свойства AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Нахождение элемента модели автоматизации пользовательского интерфейса для элемента списка](find-a-ui-automation-element-for-a-list-item.md)  
+ [Получение свойств элементов модели автоматизации пользовательского интерфейса](get-ui-automation-element-properties.md)  
+ [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)  
+ [Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md)  
+ [Регистрация сборки поставщика на стороне клиента](register-a-client-side-provider-assembly.md)  
+ [Использование свойства AutomationID](use-the-automationid-property.md)

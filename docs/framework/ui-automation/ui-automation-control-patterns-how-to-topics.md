@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5d75eddd5314067a364bc8e76108ee7794bcfda
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953101"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042369"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Разделы руководства, посвященные шаблонам элементов управления для автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -21,8 +21,8 @@ ms.locfileid: "69953101"
  В этом разделе содержатся подробные сведения о реализации шаблонов элементов управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Получение шаблонов элементов управления, поддерживающих модель автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [Получение состояния флажка с использованием модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Получение шаблонов элементов управления, поддерживающих модель автоматизации пользовательского интерфейса](get-supported-ui-automation-control-patterns.md)  
+ [Получение состояния флажка с использованием модели автоматизации пользовательского интерфейса](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)

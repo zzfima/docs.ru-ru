@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914379"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042044"
 ---
 # <a name="ui-automation-providers-overview"></a>Общие сведения о поставщиках автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "69914379"
 ### <a name="navigation"></a>Навигация  
  Элементы[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляются клиентам в виде дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] создает это дерево путем перемещения от одного элемента к другому. Поставщики разрешают навигацию для всех элементов, каждый из которых может указывать на родительский элемент, одноуровневые элементы и дочерние элементы.  
   
- Дополнительные сведения о клиентском представлении дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Дополнительные сведения о клиентском представлении дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 ### <a name="views"></a>Представления  
  Клиент может видеть дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в трех различных представлениях, как показано в следующей таблице.  
@@ -57,7 +57,7 @@ ms.locfileid: "69914379"
 |Представление элемента управления|Содержит элементы, которые являются элементами управления.|  
 |Представление содержимого|Содержит элементы, которые имеют содержимое.|  
   
- Дополнительные сведения о клиентских представлениях дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Дополнительные сведения о клиентских представлениях дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
  Поставщик в своей реализации определяет элемент как элемент содержимого или элемент управления. Элементы управления могут быть или не быть также и элементами содержимого, но все элементы содержимого являются элементами управления.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69914379"
   
 ## <a name="see-also"></a>См. также
 
-- [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](server-side-ui-automation-provider-implementation.md)

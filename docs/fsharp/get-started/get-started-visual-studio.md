@@ -2,12 +2,12 @@
 title: Начало работы с F# Visual Studio
 description: Узнайте, как использовать F# с Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629771"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082696"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Начало работы с F# Visual Studio
 
@@ -51,7 +51,7 @@ val square: x:int -> int
 
 Теперь в окне консоли, которое было извлечено Visual Studio, должны отобразиться следующие сведения:
 
-```
+```console
 12 squared is 144!
 ```
 

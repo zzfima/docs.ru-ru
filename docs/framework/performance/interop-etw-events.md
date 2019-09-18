@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422414"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046437"
 ---
 # <a name="interop-etw-events"></a>События взаимодействия (трассировка событий Windows)
 <a name="top"></a> С помощью событий взаимодействия регистрируются сведения о создании заглушек и кэшировании MSIL.  
@@ -25,7 +25,7 @@ ms.locfileid: "67422414"
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>Событие ILStubGenerated  
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -43,7 +43,7 @@ ms.locfileid: "67422414"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Идентификатор модуля.|  
 |StubMethodID|win:UInt64|Идентификатор метода-заглушки.|  
-|StubFlags|win:UInt64|Флаги для заглушки:<br /><br /> 0x1 — обратное взаимодействие;<br /><br /> 0x2 — COM-взаимодействие;<br /><br /> 0x4 — заглушка, созданная программой NGen.exe;<br /><br /> 0x8 — делегат;<br /><br /> 0x10 — переменный аргумент.<br /><br /> 0x20 — неуправляемый вызываемый метод.|  
+|StubFlags|win:UInt64|Флаги для заглушки:<br /><br /> 0x1 — обратное взаимодействие;<br /><br /> 0x2 — COM-взаимодействие;<br /><br /> 0x4 — заглушка, созданная программой NGen.exe;<br /><br /> 0x8 — делегат;<br /><br /> 0x10 — аргумент переменной.<br /><br /> 0x20 — неуправляемый вызываемый метод.|  
 |ManagedInteropMethodToken|win:UInt32|Токен управляемого метода взаимодействия.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Пространство имен управляемого метода взаимодействия.|  
 |ManagedInteropMethodName|win:UnicodeString|Имя управляемого метода взаимодействия.|  
@@ -85,4 +85,4 @@ ms.locfileid: "67422414"
   
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

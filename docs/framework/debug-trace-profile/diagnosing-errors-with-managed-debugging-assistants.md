@@ -31,59 +31,59 @@ helpviewer_keywords:
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874629"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052892"
 ---
-# <a name="diagnose-errors-with-managed-debugging-assistants"></a>Диагностика ошибок посредством управляемых помощников по отладке
+# <a name="diagnose-errors-with-managed-debugging-assistants"></a>Диагностика ошибок с помощью помощников по отладке управляемого кода
 
 Помощники отладки управляемого кода (MDA) — это вспомогательные средства отладки, которые работают совместно со средой CLR для предоставления информации о состоянии времени выполнения. Эти помощники формируют информационные сообщения о событиях времени выполнения, которые вы не можете зафиксировать иными средствами. Вы можете использовать помощники отладки управляемого кода для изоляции тяжело обнаружимых ошибок приложения, возникающих при переходе между управляемым и неуправляемым кодом.
 
-Вы можете [включить или отключить](#enable-and-disable-mdas) все помощники, добавив раздел в реестре Windows, или задав переменную среды. Вы можете включить отдельные помощники, используя параметры конфигурации приложения. Вы можете задать дополнительные параметры для некоторых отдельных помощников в файле конфигурации приложения. Поскольку эти файлы конфигурации анализируются при загрузке среды выполнения, следует включить помощник до запуска управляемого приложения. Вы не сможете включить его для уже запущенных приложений.
+Вы можете [включить или отключить](#enable-and-disable-mdas) все MDA, добавив ключ в реестр Windows или задав переменную среды. Вы можете включить отдельные помощники, используя параметры конфигурации приложения. Вы можете задать дополнительные параметры для некоторых отдельных помощников в файле конфигурации приложения. Поскольку эти файлы конфигурации анализируются при загрузке среды выполнения, следует включить помощник до запуска управляемого приложения. Вы не сможете включить его для уже запущенных приложений.
 
-В следующей таблице перечислены Помощники отладки управляемого кода, поставляемых вместе с .NET Framework:
+В следующей таблице перечислены MDA, поставляемые с .NET Framework.
 
 |||
 |-|-|
-|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|
-|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|
-|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|
-|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|
-|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|
-|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|
-|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|
-|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|
-|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|
-|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|
-|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|
-|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|
-|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|
-|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|
-|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|
-|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|
-|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|
-|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|
-|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|
-|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|
+|[asynchronousThreadAbort](asynchronousthreadabort-mda.md)|[bindingFailure](bindingfailure-mda.md)|
+|[callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](contextswitchdeadlock-mda.md)|
+|[dangerousThreadingAPI](dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](datetimeinvalidlocalformat-mda.md)|
+|[dirtyCastAndCallOnInterface](dirtycastandcalloninterface-mda.md)|[disconnectedContext](disconnectedcontext-mda.md)|
+|[dllMainReturnsFalse](dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](exceptionswallowedoncallfromcom-mda.md)|
+|[failedQI](failedqi-mda.md)|[fatalExecutionEngineError](fatalexecutionengineerror-mda.md)|
+|[gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)|
+|[illegalPrepareConstrainedRegion](illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](invalidapartmentstatechange-mda.md)|
+|[invalidCERCall](invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)|
+|[invalidGCHandleCookie](invalidgchandlecookie-mda.md)|[invalidIUnknown](invalidiunknown-mda.md)|
+|[invalidMemberDeclaration](invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)|
+|[invalidVariant](invalidvariant-mda.md)|[jitCompilationStart](jitcompilationstart-mda.md)|
+|[loaderLock](loaderlock-mda.md)|[loadFromContext](loadfromcontext-mda.md)|
+|[marshalCleanupError](marshalcleanuperror-mda.md)|[marshaling](marshaling-mda.md)|
+|[memberInfoCacheCreation](memberinfocachecreation-mda.md)|[moduloObjectHashcode](moduloobjecthashcode-mda.md)|
+|[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
+|[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
+|[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
+|[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-По умолчанию .NET Framework активирует подмножество помощников отладки управляемого кода для всех управляемых отладчиков. Можно просмотреть набор по умолчанию в Visual Studio, выбрав **Windows** > **параметры исключений** на **Отладка** меню, а затем развернуть **Помощники отладки управляемого кода** списка.
+По умолчанию .NET Framework активирует подмножество помощников отладки управляемого кода для всех управляемых отладчиков. Вы можете просмотреть набор по умолчанию в Visual Studio, выбрав пункт**параметры исключений** **Windows** > в меню **Отладка** , а затем развернув список **помощники по отладке управляемого** кода.
 
-![Окно параметров исключений в Visual Studio](media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
+![Окно параметров исключений в Visual Studio](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
-## <a name="enable-and-disable-mdas"></a>Включение и отключение помощников отладки управляемого кода
+## <a name="enable-and-disable-mdas"></a>Включение и отключение MDA
 
 Вы можете включать и отключать помощники отладки управляемого кода с помощью раздела реестра, переменной среды и параметров конфигурации приложения. Чтобы воспользоваться параметрами конфигурации приложения, вы должны включить раздел реестра или переменную среды.
 
 > [!TIP]
-> Вместо отключения Помощники отладки управляемого кода, можно запретить отображение диалогового окна MDA при получении уведомления от Помощника Visual Studio. Чтобы сделать это, выберите **Windows** > **параметры исключений** на **Отладка** меню разверните **Помощники отладки управляемого кода**список, а затем установите или снимите **прервать при исключение** флажок для отдельного Помощника.
+> Вместо отключения MDA можно запретить Visual Studio отображать диалоговое окно MDA при получении уведомления MDA. Для этого выберите**параметры исключений** **Windows** > в меню **Отладка** , разверните список **помощники по отладке управляемого** кода, а затем установите или снимите флажок **прерывать при возникновении** для отдельного MDA.
 
 ### <a name="registry-key"></a>Раздел реестра .
 
-Чтобы включить Помощники отладки управляемого кода, добавьте **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\MDA** раздел реестра Windows (тип REG_SZ, значение 1). Скопируйте следующий пример в текстовый файл с именем *MDAEnable.reg*. Откройте редактор реестра Windows (RegEdit.exe) и из **файл** меню выберите команду **импорта**. Выберите *MDAEnable.reg* файл, чтобы включить Помощники отладки управляемого кода на этом компьютере. Установка для подраздела строкового значения **1** (не значения DWORD, равного **1**) позволяет считывать параметры Помощника из *имяПриложения.суффикс*. mda.config файл. Например файл конфигурации Помощника для блокнота бы имя notepad.exe.mda.config.
+Чтобы включить MDA, добавьте **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Подраздел Нетфрамеворк\мда** (введите REG_SZ, значение 1) в реестре Windows. Скопируйте следующий пример в текстовый файл с именем *мдаенабле. reg*. Откройте редактор реестра Windows (regedit. exe) и в меню **файл** выберите пункт **Импорт**. Выберите файл *мдаенабле. reg* , чтобы включить MDA на этом компьютере. При установке подраздела в строковое значение **1** (а не значение DWORD, равное **1**) включает чтение параметров MDA из файла *ApplicationName. суффикс*. MDA. config. Например, файл конфигурации MDA для блокнота будет называться Notepad. exe. MDA. config.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -101,11 +101,11 @@ Windows Registry Editor Version 5.00
 "MDA"="1"
 ```
 
-См. в разделе [параметров конфигурации конкретных приложений](#application-specific-configuration-settings) Дополнительные сведения. Этот параметр реестра может быть перезаписан переменной среды COMPLUS_MDA. См. в разделе [переменной среды](#environment-variable) Дополнительные сведения.
+Дополнительные сведения см. в разделе [Параметры конфигурации, относящиеся к приложению](#application-specific-configuration-settings) . Этот параметр реестра может быть перезаписан переменной среды COMPLUS_MDA. Дополнительные сведения см. в разделе [переменная среды](#environment-variable) .
 
-Чтобы отключить Помощники отладки управляемого кода, задайте для подраздела Помощников **0** (ноль), с помощью редактора реестра Windows.
+Чтобы отключить MDA, присвойте подразделу MDA значение **0** (ноль) с помощью редактора реестра Windows.
 
-По умолчанию некоторые помощники отладки управляемого кода включаются при запуске приложения, подключенного к отладчику, даже без добавления раздела реестра. Эти помощники можно отключить, выполнив *MDADisable.reg* файл, как описано выше в этом разделе.
+По умолчанию некоторые помощники отладки управляемого кода включаются при запуске приложения, подключенного к отладчику, даже без добавления раздела реестра. Эти помощники можно отключить, запустив файл *мдадисабле. reg* , как описано выше в этом разделе.
 
 ### <a name="environment-variable"></a>Переменная среды
 
@@ -131,7 +131,7 @@ Windows Registry Editor Version 5.00
 
 Вы можете включать, отключать и настраивать некоторые помощники по отдельности в файле конфигурации помощников отладки управляемого кода для данного приложения. Чтобы разрешить использование файла конфигурации приложения для настройки помощников, необходимо задать раздел реестра или переменную среды COMPLUS_MDA. Файл конфигурации приложения обычно находится в одном каталоге с исполняемым файлом (EXE) приложения. Имя файла имеет следующий вид *ИмяПриложения*.mda.config, например notepad.exe.mda.config. Помощники, включенные в файле конфигурации приложения, могут иметь атрибуты или элементы, предназначенные специально для управления данным аспектом работы помощника.
 
-В следующем примере показано, как включить и настроить [маршалинг](../../../docs/framework/debug-trace-profile/marshaling-mda.md):
+В следующем примере показано, как включить и настроить [упаковку](marshaling-mda.md):
 
 ```xml
 <mdaConfig>
@@ -148,9 +148,9 @@ Windows Registry Editor Version 5.00
 </mdaConfig>
 ```
 
-Помощник отладки управляемого кода `Marshaling` выдает информацию об управляемом типе, который маршалируется в неуправляемый тип для каждого перехода между управляемым и неуправляемым кодом в приложении. `Marshaling` MDA можно также фильтровать имена метода и структурным полям **methodFilter** и **fieldFilter** дочерние элементы, соответственно.
+Помощник отладки управляемого кода `Marshaling` выдает информацию об управляемом типе, который маршалируется в неуправляемый тип для каждого перехода между управляемым и неуправляемым кодом в приложении. MDA также может фильтровать имена методов и полей структуры, предоставляемых в дочерних элементах **месодфилтер** и **фиелдфилтер соответственно.** `Marshaling`
 
-В следующем примере показано, как включить несколько помощников отладки управляемого кода с помощью их параметров по умолчанию:
+В следующем примере показано, как включить несколько MDA с помощью параметров по умолчанию.
 
 ```xml
 <mdaConfig>
@@ -166,18 +166,18 @@ Windows Registry Editor Version 5.00
 > [!IMPORTANT]
 > При указании нескольких помощников в файле конфигурации их следует перечислять в алфавитном порядке. Например, если вы хотите включить помощники `virtualCERCall` и `invalidCERCall`, необходимо добавить запись `<invalidCERCall />` перед записью `<virtualCERCall />`. Если записи расположены не в алфавитном порядке, отображается сообщение о необработанном исключении недопустимого файла конфигурации.
 
-## <a name="mda-exceptions"></a>Исключения по отладке управляемого кода
+## <a name="mda-exceptions"></a>Исключения MDA
 
-Если MDA включен, он остается активным даже когда ваш код не выполняется в режиме отладки. Если событие помощника отладки управляемого кода возникает при отсутствии отладчика, сообщений события выводится в диалоговом окне необработанного исключения, хотя оно и не является необработанным исключением. Чтобы предотвратить появление диалогового окна, удаляйте параметр, отвечающий за включение помощника, когда ваш код не выполняется в среде отладки.
+Если MDA включен, он активен даже в том случае, если код не выполняется в отладчике. Если событие помощника отладки управляемого кода возникает при отсутствии отладчика, сообщений события выводится в диалоговом окне необработанного исключения, хотя оно и не является необработанным исключением. Чтобы предотвратить появление диалогового окна, удаляйте параметр, отвечающий за включение помощника, когда ваш код не выполняется в среде отладки.
 
-Если код выполняется в среде разработки Visual Studio (IDE), можно предотвратить диалоговое окно исключения, который отображается для определенных событий по отладке управляемого кода. Для этого на **Отладка** меню, выберите **Windows** > **параметры исключений**. В **параметры исключений** окне разверните **Помощники отладки управляемого кода** списке, а затем снимите **прервать при исключение** флажок для отдельного Помощника. Можно также использовать это диалоговое окно, чтобы *включить* отображение диалоговых окон исключений по отладке управляемого кода.
+Когда код выполняется в интегрированной среде разработки Visual Studio (IDE), можно избежать диалогового окна исключения, которое отображается для конкретных событий MDA. Для этого в меню **Отладка** выберите пункт**параметры исключений** **Windows** > . В окне **параметры исключений** разверните список **помощники по отладке управляемого** кода, а затем снимите флажок **прерывать при возникновении** для отдельного MDA. Это диалоговое окно также можно использовать, чтобы *включить* отображение диалоговых окон исключений MDA.
 
 ## <a name="mda-output"></a>Выходные данные помощников
 
-MDA результат аналогичен приведенному в следующем примере показаны выходные данные `PInvokeStackImbalance` по отладке управляемого кода:
+Выходные данные MDA похожи на приведенный ниже пример, который показывает выходные данные `PInvokeStackImbalance` помощника по отладке управляемого кода:
 
-**Вызов функции PInvoke "MDATest! MDATest.Program::StdCall "внесла дисбаланс в стек. Это обусловлено тем, скорее всего, управляемая сигнатура PInvoke не соответствует сигнатуре неуправляемого целевой. Проверьте, что соглашение о вызовах и параметры подписи PInvoke соответствовать неуправляемой сигнатуре целевой объект.**
+**Вызов функции PInvoke "Мдатест! Мдатест. Program:: StdCall ' имеет несбалансированный стек. Скорее всего, это связано с тем, что управляемая сигнатура PInvoke не соответствует неуправляемой сигнатуре целевого объекта. Убедитесь, что соглашение о вызовах и параметры сигнатуры PInvoke соответствуют целевой неуправляемой подписи.**
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка, трассировка и профилирование](../../../docs/framework/debug-trace-profile/index.md)
+- [Отладка, трассировка и профилирование](index.md)

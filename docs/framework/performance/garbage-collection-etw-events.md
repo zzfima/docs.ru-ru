@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616421"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046498"
 ---
 # <a name="garbage-collection-etw-events"></a>События сборки мусора (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, относящиеся к сборке мусора. Они помогают при диагностике и отладке, в том числе позволяют определить, сколько раз осуществлялась сборка мусора, какой объем памяти был освобожден в ходе сборки мусора и т. д.  
@@ -49,8 +49,8 @@ ms.locfileid: "64616421"
 - [Событие GCTerminateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## <a name="gcstartv1-event"></a>Событие GCStart_V1  
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+## <a name="gcstart_v1-event"></a>Событие GCStart_V1  
+ В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -75,7 +75,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcend_v1_event"></a>   
-## <a name="gcendv1-event"></a>Событие GCEnd_V1  
+## <a name="gcend_v1-event"></a>Событие GCEnd_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -99,7 +99,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstatsv1-event"></a>Событие GCHeapStats_V1  
+## <a name="gcheapstats_v1-event"></a>Событие GCHeapStats_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -134,7 +134,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegmentv1-event"></a>Событие GCCreateSegment_V1  
+## <a name="gccreatesegment_v1-event"></a>Событие GCCreateSegment_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -161,7 +161,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegmentv1-event"></a>Событие GCFreeSegment_V1  
+## <a name="gcfreesegment_v1-event"></a>Событие GCFreeSegment_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -184,7 +184,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebeginv1-event"></a>Событие GCRestartEEBegin_V1  
+## <a name="gcrestarteebegin_v1-event"></a>Событие GCRestartEEBegin_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -202,7 +202,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeendv1-event"></a>Событие GCRestartEEEnd_V1  
+## <a name="gcrestarteeend_v1-event"></a>Событие GCRestartEEEnd_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -220,7 +220,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendeev1-event"></a>Событие GCSuspendEE_V1  
+## <a name="gcsuspendee_v1-event"></a>Событие GCSuspendEE_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -244,7 +244,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeendv1-event"></a>Событие GCSuspendEEEnd_V1  
+## <a name="gcsuspendeeend_v1-event"></a>Событие GCSuspendEEEnd_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -262,7 +262,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtickv2-event"></a>Событие GCAllocationTick_V2  
+## <a name="gcallocationtick_v2-event"></a>Событие GCAllocationTick_V2  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -290,7 +290,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbeginv1-event"></a>Событие GCFinalizersBegin_V1  
+## <a name="gcfinalizersbegin_v1-event"></a>Событие GCFinalizersBegin_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -308,7 +308,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersendv1-event"></a>Событие GCFinalizersEnd_V1  
+## <a name="gcfinalizersend_v1-event"></a>Событие GCFinalizersEnd_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -331,7 +331,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthreadv1-event"></a>Событие GCCreateConcurrentThread_V1  
+## <a name="gccreateconcurrentthread_v1-event"></a>Событие GCCreateConcurrentThread_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -350,7 +350,7 @@ ms.locfileid: "64616421"
  [К началу](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthreadv1-event"></a>Событие GCTerminateConcurrentThread_V1  
+## <a name="gcterminateconcurrentthread_v1-event"></a>Событие GCTerminateConcurrentThread_V1  
  В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -368,4 +368,4 @@ ms.locfileid: "64616421"
   
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

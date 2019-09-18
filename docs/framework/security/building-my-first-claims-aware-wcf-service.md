@@ -3,12 +3,12 @@ title: Создание первой службы WCF на основе утве
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: f242de43f1917dd6b01e15914359049ee754aa92
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 330d785721cb434f74ec746310a71bfd39fefd0b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690173"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045555"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Создание первой службы WCF на основе утверждений
 ## <a name="applies-to"></a>Применение  
@@ -20,7 +20,7 @@ ms.locfileid: "66690173"
 ## <a name="overview"></a>Обзор  
  В этом разделе представлен сценарий создания служб WCF, поддерживающих утверждения, при помощи WIF. Обычно существует три участника сценария для веб-службы, поддерживающей утверждения: сама веб-служба, пользователь и служба маркеров безопасности (STS). Данный сценарий представлен на иллюстрации ниже:  
   
- ![Схема, показывающая компоненты WIF базовой утверждений виду службы WCF.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
+ ![Схема, демонстрирующая компоненты службы WCF WIF Basic с поддержкой утверждений.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1. Клиент службы WCF (который иногда называют агентом) использует WIF для отправки учетных данных в службу STS. После успешной аутентификации служба STS создает токен для данного агента.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66690173"
   
  STS — это служба, использующая токены после успешной аутентификации. Microsoft предлагает две службы STS, соответствующие отраслевым стандартам:  
   
-- [Службы федерации Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Службы федерации Active Directory (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
+- [Служба контроля доступа Microsoft Azure (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
   
- AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. Контроль доступа Azure Active Directory (также называемый службой контроля доступа или ACS) — это облачная служба, входящая в состав Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать STS локальной разработки, который является частью [Identity and Access Tool для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) которая доступна через Интернет.  
+ AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. Контроль доступа Azure Active Directory (также называемый службой контроля доступа или ACS) — это облачная служба, входящая в состав Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать локальную службу STS, которая является частью [средства идентификации и доступа для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , которая свободно доступна в Интернете.  
   
- Чтобы построить на основе утверждений первой службы WCF, с помощью WIF, см. в разделе [How To: Включение WIF для веб-службы приложения WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Чтобы создать первую службу WCF с поддержкой утверждений с помощью WIF, [см. раздел как Включите WIF для приложения](how-to-enable-wif-for-a-wcf-web-service-application.md)веб-службы WCF.
   
 ## <a name="see-also"></a>См. также
 
-- [Приступая к работе с WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Приступая к работе с WIF](getting-started-with-wif.md)

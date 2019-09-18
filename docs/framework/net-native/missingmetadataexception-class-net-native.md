@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb9300917f06ec8e48f2dd412e008efec4dc6917
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 251d63fe8e025fe73b148c7deb368ab95ca3b1f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941673"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049470"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Класс MissingMetadataException (машинный код .NET)
 
@@ -20,7 +20,7 @@ ms.locfileid: "69941673"
 **Пространство имен:** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` Класс предназначен исключительно для внутреннего использования в цепочке инструментов .NET Native. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".
+> `MissingMetadataException` Класс предназначен исключительно для внутреннего использования в цепочке инструментов .NET Native. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -74,7 +74,7 @@ ms.locfileid: "69941673"
 
 Исключение`MissingMetadataException` возникает, если использовать отражение для доступа к метаданным, которые не доступны в сборке.
 
-Метаданные, доступные для приложения во время выполнения, определяются в файле конфигурации директив среды выполнения (XML), \*Rd. XML. Чтобы избежать возникновения этого исключения в приложении, необходимо изменить файл \*.rd.xml, чтобы определить метаданные, которые должны быть доступны во время выполнения. Сведения о формате файла rd.xml \* см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
+Метаданные, доступные для приложения во время выполнения, определяются в файле конфигурации директив среды выполнения (XML), \*Rd. XML. Чтобы избежать возникновения этого исключения в приложении, необходимо изменить файл \*.rd.xml, чтобы определить метаданные, которые должны быть доступны во время выполнения. Сведения о формате файла rd.xml \* см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 > [!IMPORTANT]
 > Так как это исключение указывает, что метаданные, необходимые для приложения, недоступны во время выполнения, не следует обрабатывать это исключение в блоке `try`/`catch`. Вместо этого следует выяснить причины возникновения исключения и устранить ее с помощью файла директив среды выполнения. Чтобы получить запись, которую можно добавить в файл директив среды выполнения, устраняющий исключение, можно использовать одно из двух средств устранения неполадок.
@@ -88,6 +88,6 @@ ms.locfileid: "69941673"
 
 - <xref:System.Exception?displayProperty=nameWithType>
 - <xref:System.TypeAccessException>
-- [Класс MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
-- [Класс MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Класс MissingInteropDataException](missinginteropdataexception-class-net-native.md)
+- [Класс MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

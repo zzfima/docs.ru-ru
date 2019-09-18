@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: ca4fdfabc4202ae9c9a36d4c511ebefc3ddd058d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2b9fb1ffe4b20074de66afe6d418a7cf5d39be0c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969019"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043716"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Нахождение элемента автоматизации пользовательского интерфейса для элемента списка
 > [!NOTE]
@@ -32,4 +32,4 @@ ms.locfileid: "69969019"
   
 ## <a name="see-also"></a>См. также
 
-- [Получение элементов модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+- [Получение элементов модели автоматизации пользовательского интерфейса](obtaining-ui-automation-elements.md)

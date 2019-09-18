@@ -2,12 +2,12 @@
 title: Гибкие типы
 description: Узнайте, как использовать F# гибкую аннотацию типа, которая указывает, что параметр, переменная или значение имеют тип, совместимый с указанным типом.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630260"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083066"
 ---
 # <a name="flexible-types"></a>Гибкие типы
 
@@ -57,7 +57,7 @@ val concat: sequences:seq<#seq<'T>> -> seq<'T>
 
 Выходные данные выглядят следующим образом.
 
-```
+```console
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]

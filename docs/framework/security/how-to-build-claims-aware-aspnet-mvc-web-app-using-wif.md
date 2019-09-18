@@ -1,16 +1,16 @@
 ---
-title: 'Как выполнить: создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF'
+title: Как создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626122"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045450"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Как выполнить: создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Как создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF
 ## <a name="applies-to"></a>Применение  
   
 - Microsoft® Windows® Identity Foundation (WIF)  
@@ -70,7 +70,7 @@ ms.locfileid: "64626122"
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
   
-1. Добавьте в файл конфигурации *Web.config* следующие определения разделов конфигурации. Они определяют разделы конфигурации, которые используются платформой Windows Identity Foundation. Определения необходимо добавлять непосредственно после открывающего элемента **\<configuration>**:  
+1. Добавьте в файл конфигурации *Web.config* следующие определения разделов конфигурации. Они определяют разделы конфигурации, которые используются платформой Windows Identity Foundation. Определения необходимо добавлять непосредственно после открывающего элемента **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "64626122"
     </configSections>  
     ```  
   
-2. Добавьте элемент **\<location>**, который обеспечивает доступ к метаданным федерации приложения:  
+2. Добавьте элемент **\<location>** , который обеспечивает доступ к метаданным федерации приложения:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "64626122"
     </location>  
     ```  
   
-3. Добавьте следующие записи конфигурации в элементы **\<system.web>**, чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.  
+3. Добавьте следующие записи конфигурации в элементы **\<system.web>** , чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "64626122"
     <authentication mode="None" />  
     ```  
   
-4. Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>**, атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>**. Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).  
+4. Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>** , атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>** . Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -218,4 +218,4 @@ ms.locfileid: "64626122"
   
 ## <a name="related-items"></a>Связанные элементы:  
   
-- [Практическое руководство. Создание приложения с поддержкой утверждений ASP.NET Web Forms, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Практическое руководство. Создание приложения веб-форм ASP.NET с поддержкой утверждений с помощью WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

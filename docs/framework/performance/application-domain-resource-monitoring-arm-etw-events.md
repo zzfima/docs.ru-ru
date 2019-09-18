@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616633"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046771"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>События отслеживания ресурсов домена приложения (трассировка событий Windows)
 <a name="top"></a> Эти события предоставляют подробные диагностические сведения о состоянии домена приложения. Эти события и функция отслеживания ресурсов домена приложения позволяют получить одни и те же сведения.  
@@ -33,7 +33,7 @@ ms.locfileid: "64616633"
 ## <a name="threadcreated-event"></a>Событие ThreadCreated  
  Это событие также создается при использовании поставщика очистки как `ThreadDC` (при ключевом слове `AppDomainResourceManagementRundownKeyword` ). Это единственное событие этой категории, создаваемое при использовании поставщика очистки.  
   
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616633"
   
 ## <a name="see-also"></a>См. также
 
-- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [События трассировки событий Windows в среде CLR](clr-etw-events.md)

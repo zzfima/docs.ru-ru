@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044155"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042767"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 
@@ -34,7 +34,7 @@ ms.locfileid: "70044155"
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Реализация поставщика элементами Windows Presentation Foundation
 
-Дополнительные сведения по этой теме см. в разделе [Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Дополнительные сведения по этой теме см. в разделе [Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ ms.locfileid: "70044155"
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> обычно предоставляется поставщиком главного окна. Например, если пользовательский элемент управления является производным от <xref:System.Windows.Forms.Control>, имя будет производным от свойства `Text` элемента управления.
 
-Пример кода см. в разделе [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).
+Пример кода см. в разделе [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ ms.locfileid: "70044155"
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о поставщиках автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Предоставление серверного поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Возврат свойств от поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Вызов событий из поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Включение навигации в поставщике фрагментов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Общие сведения о поставщиках автоматизации пользовательского интерфейса](ui-automation-providers-overview.md)
+- [Предоставление серверного поставщика автоматизации пользовательского интерфейса](expose-a-server-side-ui-automation-provider.md)
+- [Возврат свойств от поставщика автоматизации пользовательского интерфейса](return-properties-from-a-ui-automation-provider.md)
+- [Вызов событий из поставщика автоматизации пользовательского интерфейса](raise-events-from-a-ui-automation-provider.md)
+- [Включение навигации в поставщике фрагментов автоматизации пользовательского интерфейса](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

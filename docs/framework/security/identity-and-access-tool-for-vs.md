@@ -3,15 +3,15 @@ title: Средство Identity and Access Tool для Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 999b85576c52d065075cad105c3212c1b034084f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d58cca13dc3ac67742e5371aed628a6a680e61e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626038"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045417"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Средство Identity and Access Tool для Visual Studio 2012
-В этом разделе представлены сведения о новом средстве Identity and Access Tool для Visual Studio 11. Это средство можно загрузить со следующего URL: <https://go.microsoft.com/fwlink/?LinkID=245849> или непосредственно из Visual Studio 11, выполнив поиск «identity» в диспетчере расширений.  
+В этом разделе представлены сведения о новом средстве Identity and Access Tool для Visual Studio 11. Этот инструмент можно загрузить по следующему URL-адресу <https://go.microsoft.com/fwlink/?LinkID=245849> : или непосредственно в Visual Studio 11, выполнив поиск по слову "Identity" непосредственно в диспетчере расширений.  
   
  Средство Identity and Access Tool для Visual Studio 11 предлагает существенно упрощенную среду для разработки. Особенности данной среды:  
   
@@ -25,8 +25,8 @@ ms.locfileid: "64626038"
   
 - Можно создать федерацию со службами федерации Active Directory (AD FS) 2.0 (или другими поставщиками WS-Federation) на одном экране.  
   
-- Данный инструмент применяет возможности службы контроля доступа (ACS) Azure Windows с помощью простой список флажков для всех поставщиков удостоверений, которые вы хотите использовать: Facebook, Google, Live ID, Yahoo!, любой поставщик OpenID и любым поставщиком WS-Federation. Выберите поставщиков удостоверений, нажмите кнопку OK, а затем клавишу F5. Ваше приложение и ACS будут автоматически настроены, после чего тестовое приложение будет поддерживать службу ACS.  
+- Средство использует возможности службы контроля доступа Windows Azure (ACS) с простым списком флажков для всех поставщиков удостоверений, которые вы хотите использовать. Facebook, Google, Live ID, Yahoo!, любой поставщик OpenID Connect и любой поставщик WS-Federation. Выберите поставщиков удостоверений, нажмите кнопку OK, а затем клавишу F5. Ваше приложение и ACS будут автоматически настроены, после чего тестовое приложение будет поддерживать службу ACS.  
   
 ## <a name="see-also"></a>См. также
 
-- [Возможности WIF](../../../docs/framework/security/wif-features.md)
+- [Возможности WIF](wif-features.md)
