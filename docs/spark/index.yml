@@ -1,33 +1,56 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Документация по .NET для Apache Spark
+summary: Сведения об использовании .NET для Apache Spark для обработки пакетов данных, потоков в реальном времени, процессов машинного обучения и специальных запросов при написании кода .NET.
 metadata:
-  document_id: na
-  title: Документация по .NET для Apache Spark. Руководства и справочники по API
-  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
-  ms.prod: dotnet-spark
+  title: Документация по .NET для Apache Spark
+  description: Сведения об использовании .NET для Apache Spark для обработки пакетов данных, потоков в реальном времени, процессов машинного обучения и специальных запросов при написании кода .NET.
+  services: service
+  ms.service: dotnet-spark
   ms.topic: landing-page
-  ms.date: 05/17/2019
-  ms.author: mamccrea
+  ms.collection: collection
   author: mamccrea
-abstract:
-  description: 'Узнайте, как использовать .NET для Apache Spark, привязки .NET для Spark, написанные на уровне взаимодействия Spark. С помощью Apache Spark можно обрабатывать пакеты данных, потоки в реальном времени, процессы машинного обучения и специальные запросы при написании кода .NET. Учебники, примеры кода, справочник по API и другая документация покажут вам, как это сделать.'
-sections:
-  - title: Пошаговые руководства
-    items:
-      - type: paragraph
-        text: 'Предоставьте возможности Apache Spark приложениям .NET:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/spark/tutorials/get-started">Начало работы с .NET для Apache Spark</a>
-          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Развертывание приложения .NET для Apache Spark в Azure HDInsight</a>
-          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Развертывание приложения .NET для Apache Spark в Amazon EMR Spark</a>
-          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Развертывание приложения .NET для Apache Spark в Databricks</a>
-  - title: Ссылки и ресурсы
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/?view=spark-dotnet">API .NET для Apache Spark</a>
-          - html: '<a href="https://github.com/dotnet/spark">.NET для Apache Spark в GitHub</a>'
+  ms.author: mamccrea
+  ms.date: 09/11/2019
+  ms.openlocfilehash: 9836e97aa2a958792fe95c8a1241d284ef860c45
+  ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/12/2019
+  ms.locfileid: "70928512"
+landingContent:
+- title: Сведения о .NET для Apache Spark
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое .NET для Apache Spark?
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: Справочник по интерфейсам API
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: Начало работы
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Начало работы с .NET для Apache Spark
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: 10-минутное руководство по началу работы в Windows или Linux
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: Развертывание приложения .NET для Apache Spark
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Развертывание в Azure HDInsight
+      url: tutorials/hdinsight-deployment.md
+    - text: Развертывание в AWS EMR Spark
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: Развертывание в Databricks
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: Отладка приложения
+      url: how-to-guides/debug.md

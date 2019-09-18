@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: Обнаружение объектов на изображениях (обнаружение объектов)
           href: tutorials/object-detection-onnx.md
+        - name: Классификация тональности с помощью TensorFlow (классификация текста)
+          href: tutorials/text-classification-tf.md
     - name: Инструменты
       items:
         - name: Прогнозирование цен с помощью построителя моделей
           href: tutorials/predict-prices-with-model-builder.md
         - name: Анализ тональности с помощью интерфейса командной строки ML.NET
           href: tutorials/mlnet-cli.md
+        - name: Анализ тональности с помощью построителя моделей и Razor Pages
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: Основные понятия
   items:
     - name: Задачи ML.NET (типы моделей)

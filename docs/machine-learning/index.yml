@@ -23,7 +23,7 @@ sections:
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Анализ тональности с использованием двоичной классификации</a>
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Классификация проблем на GitHub с использованием многоклассовой классификации</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Прогнозирование цен на нью-йоркское такси с использованием регрессии</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Прогнозирование цен с помощью регрессии</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Классификация цветов на основе характеристик с использованием кластеризации</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Рекомендации фильмов на основе матричной факторизации</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Создание специализированного классификатора изображений с помощью TensorFlow</a>
