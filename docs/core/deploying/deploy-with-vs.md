@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698028"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969956"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Развертывание приложений .NET Core с помощью Visual Studio
 
@@ -89,7 +89,7 @@ ms.locfileid: "54698028"
 
 1. Добавление исходного кода приложения.
 
-   Откройте файл *Program.cs* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
+   Откройте файл *Program.cs* или *Program.vb* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -109,6 +109,8 @@ ms.locfileid: "54698028"
    Если вы включили инвариантный режим глобализации, обязательно проверьте, подходит ли отсутствие данных, зависящих от языка и региональных параметров, для вашего приложения.
 
 Когда вы закончите отладку, вы можете опубликовать автономное развертывание.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 и более ранние версии](#tab/vs156)
 

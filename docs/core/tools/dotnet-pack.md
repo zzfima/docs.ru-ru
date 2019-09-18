@@ -1,17 +1,21 @@
 ---
 title: Команда dotnet pack
 description: Команда dotnet pack создает пакеты NuGet для проекта .NET Core.
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202839"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990413"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**Этот раздел относится к: ✓** пакету SDK для .NET Core 1.x и более поздних версий
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202839"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>ОПИСАНИЕ
 
-Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet. При наличии параметра `--include-symbols` создается другой пакет, содержащий отладочные символы.
+Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet (то есть файл *NUPKG*). 
+
+Если вы хотите создать пакет, содержащий отладочные символы, доступны два варианта:
+
+- `--include-symbols` — создает пакет символов.
+- `--include-source` — создает пакет символов с папкой `src`, содержащей исходные файлы.
 
 Зависимости NuGet упакованного проекта добавляются в файл *NUSPEC*, чтобы их можно было разрешить при установке пакета. Межпроектные ссылки не упаковываются в проекте. Сейчас при наличии межпроектных зависимостей требуется один пакет на каждый проект.
 
@@ -59,13 +57,11 @@ dotnet pack [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  Упаковываемый проект. Это путь к файлу [CSPROJ](csproj.md) или каталогу. Если значение не задано, по умолчанию используется текущий каталог.
+  Проект или решение для упаковки. Это путь к файлу [CSPROJ](csproj.md), файлу решения или каталогу. Если он не указан, команда ищет текущий каталог для файла решения или проекта.
 
 ## <a name="options"></a>Параметры
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ dotnet pack [-h|--help]
 
 * **`--force`**
 
-  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
+  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*. Параметр доступен, начиная с пакета SDK для .NET Core 2.0.
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ dotnet pack [-h|--help]
 
 * **`--include-source`**
 
-  Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`.
+  Включает пакеты NuGet отладочных символов в дополнение к обычным пакетам NuGet в выходном каталоге. Исходные файлы включены в папку `src` пакета символов.
 
 * **`--include-symbols`**
 
-  Создает символы `nupkg`.
+  Включает пакеты NuGet отладочных символов в дополнение к обычным пакетам NuGet в выходном каталоге.
+
+* **`--interactive`**
+
+  Позволяет остановить команду и дождаться, пока пользователь введет данные или выполнит действие (например, завершит проверку подлинности). Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ dotnet pack [-h|--help]
 
 * **`--no-dependencies`**
 
-  Межпроектные ссылки игнорируются, и восстанавливается только корневой проект.
+  Межпроектные ссылки игнорируются, и восстанавливается только корневой проект. Параметр доступен, начиная с пакета SDK для .NET Core 2.0.
 
 * **`--no-restore`**
 
-  Не выполняет неявное восстановление при выполнении команды.
+  Не выполняет неявное восстановление при выполнении команды. Параметр доступен, начиная с пакета SDK для .NET Core 2.0.
+
+* **`--nologo`**
+
+  Скрывает загрузочный баннер или сообщение об авторских правах. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ dotnet pack [-h|--help]
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
+  Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md). Параметр доступен, начиная с пакета SDK для .NET Core 2.0.
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ dotnet pack [-h|--help]
 * **`-v|--verbosity <LEVEL>`**
 
   Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
-
-* **`-h|--help`**
-
-  Выводит краткую справку по команде.
-
-* **`--include-source`**
-
-  Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`.
-
-* **`--include-symbols`**
-
-  Создает символы `nupkg`.
-
-* **`--no-build`**
-
-  Не выполняет сборку проекта перед упаковкой.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Собранные пакеты помещаются в указанный каталог.
-
-* **`-s|--serviceable`**
-
-  Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
-
----
 
 ## <a name="examples"></a>Примеры
 
@@ -212,5 +176,5 @@ dotnet pack [-h|--help]
 * Упакуйте проект с помощью [NUSPEC-файла](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

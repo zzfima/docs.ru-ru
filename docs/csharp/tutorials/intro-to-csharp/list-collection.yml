@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880561"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850739"
 items:
 - durationInMinutes: 1
   content: >
@@ -227,7 +227,7 @@ items:
 
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Вы выполнили все задачи в интерактивном руководстве. Это последний документ из серии интерактивных вводных руководств по C#. Вы можете скачать пакет SDK для .NET Core на [сайте .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), создать проект на своем компьютере и продолжать писать код. На шаге "Продолжение обучения" вы вернетесь к этим учебникам, чтобы создавать проекты на своем компьютере.
+    Вы выполнили все задачи в интерактивном руководстве. Это последний документ из серии интерактивных вводных руководств по C#. Вы можете скачать пакет SDK для .NET Core на [сайте .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), создать проект на своем компьютере и продолжать писать код. В разделе "Дальнейшие действия" вы вернетесь к этим учебникам.
 
 
     Дополнительные сведения о [коллекциях .NET](../../../standard/collections/index.md) см. в следующих статьях:

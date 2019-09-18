@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370323"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850794"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Вы ознакомились с учебником по основам C#. Вы можете выбрать ссылку **Числа в C#** ниже, чтобы запустить следующий интерактивный учебник, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. На шаге "Продолжение обучения" вы вернетесь к этим учебникам.
+    Вы ознакомились с учебником по основам C#. Вы можете выбрать ссылку **Числа в C#** ниже, чтобы запустить следующий интерактивный учебник, либо посетить [сайт .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. В разделе "Дальнейшие действия" вы вернетесь к этим учебникам.
 
 
     Дополнительные сведения о типе `string`:

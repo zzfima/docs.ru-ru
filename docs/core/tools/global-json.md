@@ -3,12 +3,12 @@ title: Обзор global.json
 description: Узнайте, как использовать файл global.json, чтобы задать версию пакета SDK для .NET Core при выполнении команд .NET Core CLI.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: a3d90e39401ece8d106d89a7533b7c1e1e4433cd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632400"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849594"
 ---
 # <a name="globaljson-overview"></a>Обзор global.json
 
@@ -51,13 +51,13 @@ ms.locfileid: "65632400"
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json и .NET Core CLI
 
-Полезно знать, какие версии доступны, чтобы задать нужную в файле *global.json*. Полный список поддерживаемых доступных пакетов SDK вы найдете на сайте [Загрузки .NET](https://www.microsoft.com/net/download/all). Начиная с пакета SDK для .NET Core 2.1 можно выполнить следующую команду, чтобы проверить, какие версии пакета SDK уже установлены на вашем компьютере:
+Полезно знать, какие версии доступны, чтобы задать нужную в файле *global.json*. Полный список поддерживаемых доступных пакетов SDK вы найдете на странице [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download/dotnet-core). Начиная с пакета SDK для .NET Core 2.1 можно выполнить следующую команду, чтобы проверить, какие версии пакета SDK уже установлены на вашем компьютере:
 
 ```console
 dotnet --list-sdks
 ```
 
-Чтобы установить дополнительные версии пакета SDK для .NET Core на компьютере, посетите сайт [Загрузки .NET](https://www.microsoft.com/net/download/all).
+Чтобы установить дополнительные версии пакета SDK для .NET Core на компьютере, посетите страницу [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 Вы можете создать новый файл *global.json* в текущем каталоге, выполнив команду [dotnet new](dotnet-new.md), как в следующем примере:
 

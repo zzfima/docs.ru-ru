@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666866"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895260"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -21,9 +21,12 @@ ms.locfileid: "69666866"
 
 ## <a name="current-version"></a>Текущая версия
 
-Visual Basic 15.8 и Visual Studio 2017 версии 15.8 См. описание новых функций [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 16.0/Visual Studio 2019 версии 16.0  
+Описание новых функций см. в статье [Visual Basic 16.0](#visual-basic-160)
 
 ## <a name="previous-versions"></a>Предыдущие версии
+
+Visual Basic 15.8 и Visual Studio 2017 версии 15.8 См. описание новых функций [Visual Basic 15.8](#visual-basic-158)
 
 Visual Basic 15.5 и Visual Studio 2017 версии 15.5 См. описание новых функций [Visual Basic 15.5](#visual-basic-155)
 
@@ -46,6 +49,21 @@ Visual Basic и Visual Studio 2005 Тип `My` и вспомогательны�
 Visual Basic и Visual Studio .NET 2003 Операторы поразрядного сдвига, объявление переменных цикла
 
 Visual Basic и Visual Studio .NET 2002 Первый выпуск Visual Basic .NET
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Visual Basic 16.0 фокусируется на предоставлении большего числа функций среды выполнения Visual Basic (microsoft.visualbasic.dll) в .NET Core и является первой версией Visual Basic, ориентированной на .NET Core. Многие части среды выполнения Visual Basic зависят от WinForms и будут добавлены в более поздней версии Visual Basic. 
+
+**Комментарии можно использовать в большем количестве мест внутри операторов**. В Visual Basic 15.8 и более ранних версиях комментарии можно использовать только в пустых строках, в конце оператора или в определенных местах внутри оператора, где разрешено неявное продолжение строки. Начиная с Visual Basic 16.0 комментарии также допускаются после явных продолжений строк и внутри оператора в строке, начинающейся с пробела, за которым следует символ подчеркивания.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

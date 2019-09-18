@@ -1,7 +1,7 @@
 ---
-title: Руководство по программированию на C#. Создание первой программы Hello World
+title: Руководство по программированию на C#. Создание первой программы Hello World с помощью Visual Studio в Windows или Mac
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 09/12/2019
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
@@ -9,135 +9,123 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589372"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991330"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a>Руководство по программированию на C#. Создание первой программы Hello World
+# <a name="hello-world----your-first-program"></a>Hello World — создаем первую программу
 
-В следующей процедуре создается версия традиционной программы "Hello World!" в C#. Программа отображает строку `Hello World!`
-
-Дополнительные примеры основных понятий см. в разделе [Приступая к работе с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).
+В этой статье вы будете использовать Visual Studio для создания традиционной программы "Hello World!" в C#. Visual Studio — это профессиональная интегрированная среда разработки (IDE) с множеством функций, предназначенных для разработки в среде .NET. Для создания этой программы вы будете использовать лишь некоторые функции Visual Studio. Дополнительные сведения о Visual Studio см. в разделе [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-and-run-a-console-application"></a>Создание и запуск консольного приложения
+## <a name="create-a-new-application"></a>Создание приложения
 
-1. Запустите Visual Studio.
+<!-- markdownlint-disable MD025 -->
 
-2. В строке меню выберите **Файл**, **Создать**, **Проект**.
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-     Откроется диалоговое окно **Новый проект** .
+Запустите Visual Studio. В Windows вы увидите следующее изображение:
 
-3. Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#** , а затем выберите **Консольное приложение**.
+![Экран приветствия Visual Studio в Windows](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-4. В текстовом поле **Имя** введите имя проекта и нажмите кнопку **ОК**.
+Выберите **Создать проект** в правом нижнем углу изображения. В Visual Studio отображается диалоговое окно **Новый проект**:
 
-     В **обозревателе решений** появится новый проект.
+![Экран нового проекта Visual Studio в Windows](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
-5. Если файл Program.cs не открыт в **редакторе кода**, откройте контекстное меню для **Program.cs** в **обозревателе решений** и нажмите кнопку **Просмотреть код**.
+> [!NOTE]
+> Если вы запустили Visual Studio впервые, список **Последние шаблоны проектов** будет пустым.
 
-6. Замените содержимое Program.cs кодом из этого примера.
+В диалоговом окне "Новый проект" выберите "Консольное приложение (.NET Core)" и нажмите кнопку **Далее**. Присвойте проекту имя, например "HelloWorld", а затем нажмите кнопку **Создать**.
 
-     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
+Проект открывается в Visual Studio. Он уже является базовым примером Hello, World! Нажмите клавиши `Ctrl` + `F5` для запуска проекта. Visual Studio выполняет сборку проекта, преобразуя исходный код в исполняемый файл. Затем запускается командное окно, запускающее новое приложение. В окне должен отображаться следующий текст:
 
-7. Нажмите клавишу F5, чтобы запустить проект. Откроется окно командной строки, содержащее строку `Hello World!`
+```console
+Hello World!
 
-Далее рассматриваются важные части этой программы.
+C:\Program Files\dotnet\dotnet.exe (process 11964) exited with code 0.
+Press any key to close this window . . .
+```
 
-## <a name="comments"></a>Комментарии
+Нажмите любую клавишу, чтобы закрыть окно.
 
-Первая строка содержит комментарий. Символы `//` преобразуют остальную часть строки в комментарий.
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
- [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
+Запустите Visual Studio для Mac. В Mac вы увидите следующее изображение:
+
+![Экран приветствия Visual Studio в Mac](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
+
+> [!NOTE]
+> Если вы запустили Visual Studio для Mac впервые, список **Последние проекты** будет пустым.
+
+Выберите **Создать** в правом верхнем углу изображения. В Visual Studio для Mac отображается диалоговое окно **Новый проект**:
+
+![Экран нового проекта Visual Studio в Mac](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
+
+В диалоговом окне "Новый проект" выберите ".NET Core" и "Консольное приложение" и затем нажмите кнопку **Далее**. Вам потребуется выбрать целевую платформу. Значение по умолчанию подходит, поэтому нажмите кнопку "Далее". Присвойте проекту имя, например "HelloWorld", а затем нажмите кнопку **Создать**. Вы можете использовать расположение проекта по умолчанию. Не добавляйте этот проект в систему управления версиями.
+
+Проект открывается в Visual Studio для Mac. Он уже является базовым примером Hello, World! Нажмите клавиши `Ctrl` + `Fn` + `F5` для запуска проекта. Visual Studio для Mac выполняет сборку проекта, преобразуя исходный код в исполняемый файл. Затем запускается командное окно, запускающее новое приложение. В окне должен отображаться следующий текст:
+
+```console
+Hello World!
+
+Press any key to close this window . . .
+```
+
+Нажмите клавишу, чтобы завершить сеанс.
+
+---
+
+## <a name="elements-of-a-c-program"></a>Элементы программы C#
+
+Давайте рассмотрим важные части этой программы. Первая строка содержит комментарий. Символы `//` преобразуют остальную часть строки в комментарий.
+
+[!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
 Вы можете также закомментировать блок текста, заключив его между символами `/*` и `*/`. Эти действия показаны в следующем примере.
 
- [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
-
-## <a name="main-method"></a>Main - метод
+[!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
 Консольное приложение C# должно содержать метод `Main`, в котором начинается и заканчивается управление. В методе `Main` создаются объекты и выполняются другие методы.
 
 Метод `Main` является [статическим](../../language-reference/keywords/static.md) методом, расположенным внутри класса или структуры. В предыдущем примере "Hello World!" он размещается в классе с именем `Hello`. Вы можете объявить метод `Main` одним из следующих способов.
 
-- Он может возвращать значение `void`.
+- Он может возвращать значение `void`. Это означает, что программа не возвращает значение.
 
-     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+[!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-- Он также может возвращать целое число.
+- Он также может возвращать целое число. Данное целое число — это **код выхода** для приложения.
 
-     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+[!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
 - С любым из типов возвращаемых значений он может принимать аргументы.
 
-     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
+[!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-     -или-
+-или-
 
-     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
+[!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы. В отличие от C++, массив не содержит имя исполняемого файла (EXE).
+Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы.
 
-Дополнительные сведения об использовании командной строки см. в примерах в описании [Main() и аргументов командной строки](../main-and-command-args/index.md) и практическом руководстве по [ созданию и использованию сборок с помощью командной строки](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
-
-Вызов <xref:System.Console.ReadKey%2A> в конце метода `Main` предотвращает закрытие окна консоли, чтобы вы успели прочитать выходные данные, когда запускаете программу в режиме отладки с помощью клавиши F5.
+Дополнительные сведения об использовании аргументов командной строки см. в примерах в разделе [Main() и аргументы командной строки](../main-and-command-args/index.md).
 
 ## <a name="input-and-output"></a>Ввод и вывод
 
 Программы на C#, как правило, используют службы ввода-вывода, предоставляемые библиотекой времени выполнения в .NET Framework. Инструкция `System.Console.WriteLine("Hello World!");` использует метод <xref:System.Console.WriteLine%2A>. Это один из методов вывода класса <xref:System.Console> в библиотеке времени выполнения. Он отображает свой строковый параметр в стандартном потоке вывода, за которым следует новая строка. Существуют и другие методы <xref:System.Console> для разных операций ввода и вывода. Если вы добавите в начало программы директиву `using System;`, классы и методы <xref:System> можно использовать напрямую, не указывая их полные имена. Например, можно вызвать `Console.WriteLine` вместо `System.Console.WriteLine`:
 
- [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
+[!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
- [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
 Дополнительные сведения о методах ввода-вывода см. в описании <xref:System.IO>.
-
-## <a name="command-line-compilation-and-execution"></a>Компиляция и выполнение из командной строки
-
-Программу "Hello World!" можно скомпилировать, используя командную строку вместо интегрированной среды разработки Visual Studio.
-
-### <a name="to-compile-and-run-from-a-command-prompt"></a>Компиляция и выполнение программы из командной строки
-
-1. Вставьте код из предыдущей процедуры в любой текстовый редактор и сохраните файл как текстовый файл. Назовите файл `Hello.cs`. Для файлов исходного кода C# используется расширение `.cs`.
-
-2. Выполните одно из следующих действий, чтобы открыть окно командной строки.
-
-    - В меню **Пуск** Windows 10 введите `Developer Command Prompt` в строке поиска, а затем выберите пункт **Командная строка разработчика для VS 2017**.
-
-         Откроется окно "Командная строка разработчика".
-
-    - В Windows 7 откройте меню **Пуск**, разверните папку текущей версии Visual Studio, откройте контекстное меню **Инструменты Visual Studio** и выберите пункт **Командная строка разработчика для VS 2017**.
-
-         Откроется окно "Командная строка разработчика".
-
-    - Включите сборки из командной строки из стандартного окна командной строки.
-
-         См. практическое руководство по [ настройке переменных среды для командной строки Visual Studio](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
-
-3. В окне командной строки перейдите к папке, содержащей файл `Hello.cs`.
-
-4. Введите следующую команду для компиляции `Hello.cs`.
-
-     `csc Hello.cs`
-
-     Если для программы не выдаются ошибки компиляции, создается исполняемый файл с именем `Hello.exe`.
-
-5. В окне командной строки введите следующую команду, чтобы запустить программу:
-
-     `Hello`
-
- Дополнительные сведения о компиляторе C# и его параметрах см. в разделе [Параметры компилятора C#](../../language-reference/compiler-options/index.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
-- [Структура программы C#](./index.md)
-- [Строки](../strings/index.md)
 - [Примеры и руководства](../../../samples-and-tutorials/index.md)
-- [Справочник по C#](../../language-reference/index.md)
 - [Main() и аргументы командной строки](../main-and-command-args/index.md)
 - [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

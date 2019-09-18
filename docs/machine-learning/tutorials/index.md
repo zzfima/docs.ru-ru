@@ -3,12 +3,12 @@ title: Руководства по ML.NET
 description: Наши руководства по ML.NET помогут вам научиться создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: dfc4779a94ae74e35095f654571c6e7c43f295a0
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671880"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054013"
 ---
 # <a name="mlnet-tutorials"></a>Руководства по ML.NET 
 
@@ -22,6 +22,7 @@ ms.locfileid: "68671880"
 - [Классификация изображений.](image-classification.md) Здесь показано, как переобучить существующую модель Tensorflow для создания классификатора пользовательских изображений с помощью ML.NET.
 - [Обнаружение аномалий.](sales-anomaly-detection.md) Здесь вы узнаете, как создать приложение для обнаружения аномалий в анализе данных о продажах товаров.
 - [Обнаружение объектов на изображениях.](object-detection-onnx.md) Здесь описан способ обнаружения объектов на изображениях с помощью предварительно обученной модели ONNX.
+- [Классификация тональностей обзоров фильмов](text-classification-tf.md): узнайте, как загрузить предварительно обученную модель TensorFlow, чтобы классифицировать тональности обзоров фильмов.
 
 ## <a name="next-steps"></a>Следующие шаги
 

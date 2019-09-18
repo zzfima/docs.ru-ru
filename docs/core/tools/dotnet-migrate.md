@@ -1,28 +1,21 @@
 ---
 title: Команда dotnet migrate
 description: Команда dotnet migrate переносит проект и все его зависимости.
-ms.date: 06/26/2019
-ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202533"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990433"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Этот раздел относится к: ✓** пакету SDK для .NET Core 1.x и более поздних версий
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Эта статья применима к: ✓**Пакет SDK для .NET Core 1.x **✓**Пакет SDK для .NET Core 2.x
 
 ## <a name="name"></a>name
 
 `dotnet migrate` — перемещает проект .NET Core предварительной версии 2 в проект в стиле пакета SDK для .NET Core.
-
-> [!NOTE]
-> `dotnet migrate` будет удален из пакета SDK для .NET Core 3.0 в следующем выпуске предварительной версии.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -49,6 +42,8 @@ dotnet migrate [-h|--help]
 По умолчанию операция миграции выводит состояние процесса миграции в стандартный вывод (STDOUT). Если вы используете параметр `--report-file <REPORT_FILE>`, выходные данные сохраняются в указанном файле.
 
 Команда `dotnet migrate` поддерживает только допустимые проекты предварительной версии 2 на основе *project.json*. Это означает, что она не позволяет перенести проекты DNX или проекты предварительной версии 1 на базе *project.json* непосредственно в проекты MSBuild/CSPROJ. Сначала нужно вручную перенести проект в проект версии 2 на основе *project.json*, а затем воспользоваться командой `dotnet migrate` для переноса проекта.
+
+Команда `dotnet migrate` недоступна начиная с пакета SDK для .NET Core 3.0.
 
 ## <a name="arguments"></a>Аргументы
 

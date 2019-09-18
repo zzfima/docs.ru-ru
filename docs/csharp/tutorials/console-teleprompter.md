@@ -3,12 +3,12 @@ title: Консольное приложение
 description: Это руководство раскроет для вас некоторые возможности .NET Core и языка C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348834"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851020"
 ---
 # <a name="console-application"></a>Консольное приложение
 
@@ -26,7 +26,7 @@ ms.locfileid: "58348834"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [.NET Core](https://www.microsoft.com/net/core). Это приложение можно запустить в ОС Windows, Linux, macOS или в контейнере Docker.
+Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download). Это приложение можно запустить в ОС Windows, Linux, macOS или в контейнере Docker.
 Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас.
 
 ## <a name="create-the-application"></a>Создание приложения

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463817"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850989"
 ---
 # <a name="inheritance-in-c-and-net"></a>Наследование в C# и .NET
 
@@ -18,7 +18,7 @@ ms.locfileid: "58463817"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-В этом руководстве предполагается, что вы уже установили .NET Core. Инструкции по установке см. в [руководстве по установке .NET Core](https://www.microsoft.com/net/core). Также вам потребуется редактор кода. В этом руководстве используется [Visual Studio Code](https://code.visualstudio.com), но вы можете использовать любой другой редактор на свой выбор.
+В этом руководстве предполагается, что вы уже установили пакет SDK для .NET Core. Чтобы скачать его, перейдите на страницу [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download). Также вам потребуется редактор кода. В этом руководстве используется [Visual Studio Code](https://code.visualstudio.com), но вы можете использовать любой другой редактор на свой выбор.
 
 ## <a name="running-the-examples"></a>Выполнение примеров
 
@@ -142,10 +142,10 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 | Категория типа | Неявно наследует от                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| класс         | <xref:System.Object>                                                          |
-| структура        | <xref:System.ValueType>, <xref:System.Object>                                 |
-| перечисление          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| делегат      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
+| class         | <xref:System.Object>                                                          |
+| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
+| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
+| delegate      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>Наследование и связь "является"
 

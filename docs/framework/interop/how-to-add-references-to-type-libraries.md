@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f0f254b7794ce1cd4c765bee70c78e3c60a14aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946495"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971894"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Практическое руководство. Добавление ссылок на библиотеки типов
 При добавлении ссылки на библиотеку типов Visual Studio генерирует сборку взаимодействия, в которой содержатся метаданные. Если первичная сборка взаимодействия доступна, Visual Studio обращается к существующей сборке, прежде чем генерировать новую.  
@@ -48,7 +48,6 @@ ms.locfileid: "69946495"
 
 - [Импорт библиотеки типов в виде сборки](importing-a-type-library-as-an-assembly.md)
 - [Предоставление COM-компонентов платформе .NET Framework](exposing-com-components.md)
-- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio в C#](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
-- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
 - [/link (параметры компилятора C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c2eecdee3448b59422a8c6c73fc85745b41c52b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626107"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853958"
 ---
 # <a name="net-core-and-open-source"></a>Ядро .NET и открытый исходный код
 В этом разделе приводится краткий обзор .NET Core и указываются ресурсы с дополнительными сведениями. Полный список разделов по .NET Core см. в [Руководстве по .NET Core](../../core/index.md).
@@ -18,7 +18,7 @@ ms.locfileid: "64626107"
 ## <a name="what-is-net-core"></a>Что такое .NET Core?  
  .NET Core — это универсальная, модульная, кроссплатформенная и открытая версия платформы .NET Standard. Она содержит большую часть тех же интерфейсов API, что и платформа .NET Framework (но .NET Core включает меньший набор API) и включает компоненты среды выполнения, платформы и компилятора, а также инструменты, поддерживающие различные операционные системы и компоненты оборудования. Создание платформы .NET Core было вызвано необходимостью использовать рабочие нагрузки ASP.NET Core, а также необходимостью получить более современную реализацию платформы. Ее можно использовать при работе с устройствами, облаком, а также в сценариях внедрения и Интернета вещей.  
   
- Чтобы приступить к работе с .NET Core, посетите [домашнюю страницу .NET Core](https://www.microsoft.com/net/core).  
+ Чтобы приступить к работе с .NET Core, посетите учебник по .NET о [создании программы Hello World за 10 минут](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
   
  Ниже перечислены основные характеристики .NET Core.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "64626107"
   
 ## <a name="see-also"></a>См. также
 
-- [Домашняя страница .NET Core](https://www.microsoft.com/net/core)
+- [Руководство по .NET — создание программы Hello World за 10 минут](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [Руководство по .NET Core](../../core/index.md)
 - [Документация по ASP.NET Core](/aspnet/core/)

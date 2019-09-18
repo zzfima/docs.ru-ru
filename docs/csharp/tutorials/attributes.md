@@ -4,12 +4,12 @@ description: Узнайте, как работают атрибуты в C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481235"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851004"
 ---
 # <a name="using-attributes-in-c"></a>Использование атрибутов в C\#
 
@@ -20,7 +20,7 @@ ms.locfileid: "59481235"
 В этом руководстве мы покажем вам, как можно добавить атрибуты в код, как создавать и применять собственные атрибуты, а также использовать некоторые встроенные атрибуты .NET Core.
 
 ## <a name="prerequisites"></a>Предварительные требования
-Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [.NET Core](https://www.microsoft.com/net/core).
+Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download).
 Это приложение можно запустить в ОС Windows, Ubuntu Linux, macOS или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
 
 ## <a name="create-the-application"></a>Создание приложения

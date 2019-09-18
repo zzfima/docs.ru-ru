@@ -2,19 +2,19 @@
 title: Знакомство со средствами разработки. Вводное руководство по C#
 description: Эта статья содержит базовое описание средств разработки, которые вы будете использовать для создания приложений C# и .NET на локальном компьютере.
 ms.date: 10/23/2018
-ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920666"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850751"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Знакомство со средствами разработки для .NET
 
 Для выполнения этого руководства прежде всего нужно настроить на компьютере среду разработки.
-В руководстве по [началу работы с .NET за 10 минут](https://www.microsoft.com/net/core) содержатся инструкции по настройке локальной среды разработки на компьютерах Mac, Windows или Linux.
+В руководстве по [созданию программы Hello World за 10 минут](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) содержатся инструкции по настройке локальной среды разработки на компьютерах Mac, Windows или Linux.
 
-Кроме того, вы можете установить [пакет SDK для .NET Core](https://www.microsoft.com/net/download) и [Visual Studio Code](https://code.visualstudio.com/).
+Кроме того, вы можете установить [пакет SDK для .NET Core](https://dotnet.microsoft.com/download) и [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="basic-application-development-flow"></a>Базовый поток разработки приложения
 

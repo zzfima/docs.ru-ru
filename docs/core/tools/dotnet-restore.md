@@ -2,12 +2,12 @@
 title: Команда dotnet restore
 description: Вы узнаете, как восстановить зависимости и связанные с проектом средства при помощи команды dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202820"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969768"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202820"
 `dotnet restore` — восстанавливает зависимости и средства проекта.
 
 ## <a name="synopsis"></a>Краткий обзор
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -177,7 +179,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-Указывает источник пакета NuGet для использования во время операции восстановления. Переопределяет все источники, указанные в файлах *nuget.config*. Чтобы указать несколько источников, задайте этот параметр несколько раз.
+Указывает источник пакета NuGet для использования во время операции восстановления. Это переопределяет все источники, указанные в файлах *nuget.config*, фактически файл *nuget.config* считывается так, как если бы элемент `<packageSource>` отсутствовал. Чтобы указать несколько источников, задайте этот параметр несколько раз.
 
 `--verbosity <LEVEL>`
 

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Ветви и циклы в C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661020"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850683"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Вы выполнили все задачи в интерактивном руководстве "Числа в C#". Вы можете выбрать ссылку **Ветви и циклы** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. На шаге "Продолжение обучения" вы вернетесь к этим учебникам.
+    Вы выполнили все задачи в интерактивном руководстве "Числа в C#". Вы можете выбрать ссылку **Ветви и циклы** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. В разделе "Дальнейшие действия" вы вернетесь к этим учебникам.
 
 
     Дополнительные сведения о числах в C# см. в следующих статьях:

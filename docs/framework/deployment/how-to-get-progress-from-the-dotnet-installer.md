@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379933"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853970"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
 
@@ -24,13 +24,11 @@ ms.locfileid: "66379933"
 
     1. Вызовите распространяемую программу .NET Framework 4.5:
 
-        ```
-        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
-        ```
+        `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
         Где *section name* — любое имя, которое вы хотите использовать для идентификации приложения. Установка .NET Framework выполняет чтение из раздела MMIO и запись в раздел MMIO асинхронно, поэтому в течение этого времени удобно использовать события и сообщения. В этом примере процесс установки .NET Framework создан конструктором, который выделяет раздел MMIO (`TheSectionName`) и указывает событие (`TheEventName`):
 
-        ```
+        ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 

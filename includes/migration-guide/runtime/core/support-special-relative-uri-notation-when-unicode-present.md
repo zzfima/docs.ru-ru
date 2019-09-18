@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8a6870a9d34889dd8f5305035744bfc63be6af6
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 841cb06bf94844d9f4da9dc33e60bad0d43dcd84
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67857001"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997702"
 ---
 ### <a name="support-special-relative-uri-notation-when-unicode-is-present"></a>Поддержка нотации специального относительного URI при наличии символов Юникода
 
@@ -16,4 +16,3 @@ ms.locfileid: "67857001"
 |Версия|4.7.2|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.Uri.TryCreate(System.Uri,System.Uri,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.String,System.UriKind,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.Uri,System.String,System.Uri@)?displayProperty=nameWithType></li></ul>|
-

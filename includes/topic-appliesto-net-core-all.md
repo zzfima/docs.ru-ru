@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8c3f07a481ec366234c90eea67743bdd27637655
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8d02633b652157afe4d5c6dc2d122781b895587b
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631714"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988551"
 ---
-**Этот раздел применим к: ✓**Пакет SDK для .NET Core 1.x**✓**Пакет SDK для .NET Core 2.x
+**Эта статья применима к: ✓**Пакет SDK для .NET Core 1.x **✓**Пакет SDK для .NET Core 2.x

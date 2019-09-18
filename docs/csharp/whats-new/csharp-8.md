@@ -1,13 +1,13 @@
 ---
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926529"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -26,6 +26,7 @@ ms.locfileid: "70374013"
 - [Ссылочные типы, допускающие значение NULL](#nullable-reference-types)
 - [Асинхронные потоки](#asynchronous-streams).
 - [Индексы и диапазоны](#indices-and-ranges).
+- [Присваивание объединения со значением NULL](#null-coalescing-assignment)
 - [Неуправляемые сконструированные типы](#unmanaged-constructed-types)
 - [Улучшение интерполированных строк verbatim](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 Вы можете изучить сведения об индексах и диапазонах адресов в руководстве [Индексы и диапазоны](../tutorials/ranges-indexes.md).
+
+## <a name="null-coalescing-assignment"></a>Присваивание объединения со значением NULL
+
+В C# 8.0 появился оператор присваивания объединения со значением NULL `??=`. Оператор `??=` можно использовать для присваивания значения правого операнда левому операнду только в том случае, если левый операнд принимает значение `null`.
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+Дополнительные сведения см. в статье [Операторы ?? и ??=](../language-reference/operators/null-coalescing-operator.md).
 
 ## <a name="unmanaged-constructed-types"></a>Неуправляемые сконструированные типы
 

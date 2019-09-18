@@ -1,14 +1,16 @@
 ---
 title: Загрузка данных из файлов и других источников
 description: В этой инструкции показано, как загружать данные для обработки и обучения в ML.NET. Изначально данные хранились в файлах или других источниках данных, таких как базы данных, JSON, XML или коллекции в памяти.
-ms.date: 08/01/2019
+ms.date: 09/11/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733375"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991366"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Загрузка данных из файлов и других источников
 
@@ -31,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -51,7 +53,8 @@ public class HousingData
 > [!IMPORTANT]
 > [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) требуется только при загрузке данных из файла.
 
-Загрузите столбцы как: 
+Загрузите столбцы как:
+
 - Отдельные столбцы, например `Size` и `CurrentPrices` в классе `HousingData`.
 - Несколько столбцов за раз в виде вектора, например `HistoricalPrices` в классе `HousingData`.
 
@@ -102,13 +105,65 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
+## <a name="load-data-from-a-relational-database"></a>Загрузка данных из реляционной базы данных
+
+> [!NOTE]
+> Сейчас DatabaseLoader находится на этапе предварительной версии. Его можно использовать, указав ссылки на пакеты NuGet [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) и [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1).
+
+ML.NET поддерживает загрузку данных из различных реляционных баз данных , поддерживаемых [`System.Data`](xref:System.Data), включая SQL Server, базу данных SQL Azure, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 и многие другие.
+
+Имеется база данных с таблицей `House` и следующей схемой:
+
+```SQL
+CREATE TABLE [House] (
+    [HouseId] int NOT NULL IDENTITY,
+    [Size] real NOT NULL,
+    [Price] real NOT NULL
+    CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
+);
+```
+
+Можно моделировать данные с помощью класса, например `HouseData`.
+
+```csharp
+public class HouseData
+{
+    public float Size { get; set; }
+
+    public float Price { get; set; }
+}
+```
+
+Затем в приложении создайте `DatabaseLoader`.
+
+```csharp
+MLContext mlContext = new MLContext();
+
+DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
+```
+
+Определите строку подключения, а также команду SQL для выполнения в базе данных и создайте экземпляр `DatabaseSource`. В этом примере используется база данных LocalDB SQL Server с путем к файлу. Однако DatabaseLoader поддерживает любые другие допустимые строки подключения для баз данных в локальной среде и в облаке.
+
+```csharp
+string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
+
+string sqlCommand = "SELECT Size,Price FROM House";
+
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+```
+
+Наконец, используйте метод `Load` для загрузки данных в [`IDataView`](xref:Microsoft.ML.IDataView).
+
+```csharp
+IDataView data = loader.Load(dbSource);
+```
+
 ## <a name="load-data-from-other-sources"></a>Загрузка данных из других источников
 
 Помимо загрузки данных, хранящихся в файлах, ML.NET позволяет загружать данные из таких источников, как, помимо прочего:
 
 - Коллекции оперативной памяти
 - располагаться в коде JSON или XML;
-- Базы данных
 
 Обратите внимание на то, что при работе с источниками потоковой передачи данных ML.NET ожидает получить данные в виде коллекции в памяти. Это значит, что при работе с такими источниками, как JSON/XML, данные должны быть переведены в формат коллекции в памяти.
 
@@ -141,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 Загрузите эту коллекцию в памяти в [`IDataView`](xref:Microsoft.ML.IDataView) с помощью метода [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) предполагает, что [`IEnumerable`](xref:System.Collections.IEnumerable), откуда он загружается, является потокобезопасным. 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) предполагает, что [`IEnumerable`](xref:System.Collections.IEnumerable), откуда он загружается, является потокобезопасным.
 
 ```csharp
 // Create MLContext

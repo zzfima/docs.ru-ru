@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
-  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/24/2019
-  ms.locfileid: "66195950"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850956"
 items:
 - durationInMinutes: 2
   content: >
@@ -125,7 +125,7 @@ items:
 
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Вы завершили работу с интерактивным руководством по интерполяции строк. Вы можете выбрать ссылку **Коллекции в C#** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. На шаге "Продолжение обучения" вы вернетесь к этим учебникам.
+    Вы завершили работу с интерактивным руководством по интерполяции строк. Вы можете выбрать ссылку **Коллекции в C#** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. В разделе "Дальнейшие действия" вы вернетесь к этим учебникам.
 
 
     Дополнительные сведения см. в разделе [Интерполяция строк](../../language-reference/tokens/interpolated.md).
