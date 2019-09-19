@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044092"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040342"
 ---
 # <a name="use-the-automationid-property"></a>Использование свойства AutomationID
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044092"
   
  В этом разделе содержатся сценарии и примеры кода, которые показывают, как и когда можно использовать <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> для поиска элемента в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> уникально идентифицирует элемент модели автоматизации пользовательского интерфейса среди элементов того же уровня. Дополнительные сведения об идентификаторах свойств, связанных с идентификацией элементов управления, см. в разделе [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> уникально идентифицирует элемент модели автоматизации пользовательского интерфейса среди элементов того же уровня. Дополнительные сведения об идентификаторах свойств, связанных с идентификацией элементов управления, см. в разделе [UI Automation Properties Overview](ui-automation-properties-overview.md).  
   
 > [!NOTE]
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> не гарантирует уникальную идентификацию по всему дереву; обычно для его использования требуются сведения о контейнере и области. Например, приложение может содержать элемент управления меню с несколькими пунктами меню верхнего уровня, которые, в свою очередь, имеют несколько дочерних пунктов меню. Эти пункты меню второго уровня могут идентифицироваться по универсальной схеме, такой как "элемент1", "элемент2" и т. д., что допускает повторяющиеся идентификаторы дочерних элементов в разных пунктах меню верхнего уровня.  
@@ -59,5 +59,5 @@ ms.locfileid: "70044092"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)
+- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](find-a-ui-automation-element-based-on-a-property-condition.md)

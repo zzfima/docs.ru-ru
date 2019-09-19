@@ -3,12 +3,12 @@ title: WSTrustChannelFactory и WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633174"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044914"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory и WSTrustChannel
 Если вы уже знакомы с платформой Windows Communication Foundation (WCF), значит вам также известно, что клиент WCF уже включает возможности федерации. Путем настройки клиента WCF с привязкой <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязкой можно включить федеративную проверку подлинности для службы.
@@ -25,7 +25,7 @@ ms.locfileid: "65633174"
 
 - использование WIF для получения токена от службы STS и настройки клиента WCF для проверки подлинности с данным токеном. Дополнительные сведения см. в описании примера [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Первый вариант — говорит само за себя: Существующие клиенты WCF будут продолжать работать с проверяющими сторонами WIF и серверами службы токенов безопасности. В данном же разделе рассматриваются два других сценария.
+ Первый сценарий является самим пояснениями: Существующие клиенты WCF продолжат работать с проверяющими сторонами WIF и службы маркеров безопасности. В данном же разделе рассматриваются два других сценария.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Расширение возможностей существующего клиента WCF за счет элементов ActAs и OnBehalfOf
 В типичном сценарии делегирования удостоверения клиент обращается к службе среднего уровня, которая, в свою очередь, обращается к серверной службе. Служба среднего уровня действует в качестве клиента или от его лица.
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 Обратите внимание, что параметр `out` в методе <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> разрешает доступ к ответу токена безопасности запроса для проверки на стороне клиента.
 
-На данный момент вы видели только как для получения маркера. Токен, возвращаемый из объекта <xref:System.ServiceModel.Security.WSTrustChannel>, представляет собой токен `GenericXmlSecurityToken`, содержащий все данные, необходимые для проверки подлинности проверяющей стороной. В приведенном ниже примере кода показано, как используется этот токен.
+До сих пор вы видели, как получить маркер. Токен, возвращаемый из объекта <xref:System.ServiceModel.Security.WSTrustChannel>, представляет собой токен `GenericXmlSecurityToken`, содержащий все данные, необходимые для проверки подлинности проверяющей стороной. В приведенном ниже примере кода показано, как используется этот токен.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ serviceChannel.Hello("Hi!");
 
 ## <a name="see-also"></a>См. также
 
-- [Возможности WIF](../../../docs/framework/security/wif-features.md)
+- [Возможности WIF](wif-features.md)

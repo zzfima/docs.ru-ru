@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954086"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040429"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Разделы руководства по автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954086"
  В этом разделе содержатся разделы, в которых объясняется, как использовать шаблон текста модели автоматизации пользовательского интерфейса.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Добавление содержимого в текстовое поле с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [Получение атрибутов текста с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [Получение сведений об атрибутах смешанного текста с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [Проход по тексту с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Доступ ко внедренным объектам с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [Добавление содержимого в текстовое поле с помощью модели автоматизации пользовательского интерфейса](add-content-to-a-text-box-using-ui-automation.md)  
+ [Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса](find-and-highlight-text-using-ui-automation.md)  
+ [Получение атрибутов текста с помощью модели автоматизации пользовательского интерфейса](obtain-text-attributes-using-ui-automation.md)  
+ [Получение сведений об атрибутах смешанного текста с помощью модели автоматизации пользовательского интерфейса](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [Проход по тексту с помощью модели автоматизации пользовательского интерфейса](traverse-text-using-ui-automation.md)  
+ [Доступ ко внедренным объектам с помощью модели автоматизации пользовательского интерфейса](access-embedded-objects-using-ui-automation.md)

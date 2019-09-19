@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adcd224e30d541f27b1583389ca63b6f8a32fc38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939712"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053856"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Общие сведения о расширениях разметки для XAML
 Расширения разметки — это методика языка XAML для получения значения, которое не является ни примитивом, ни определенным типом XAML. Для использования атрибутов расширения разметки используют известную последовательность символов из открывающей фигурной скобки `{` для входа в область расширения разметки и закрывающей фигурной скобки `}` для выхода из нее. При использовании служб XAML .NET Framework можно применять некоторые предопределенные расширения разметки языка XAML из сборки System.Xaml. Можно также создать подкласс из класса <xref:System.Windows.Markup.MarkupExtension> , определенного в System.Xaml, и определить собственные расширения разметки. Или же можно использовать расширения разметки, определенные конкретной платформой, если вы уже ссылаетесь на нее.  
@@ -73,7 +73,7 @@ ms.locfileid: "69939712"
   
  Например, предположим, что расширение разметки `Collate` предназначено только для поддержки режима с одним позиционным аргументом, представляющий этот режим, который задан как константа перечисления `CollationMode` . В этом случае должен быть конструктор следующего вида:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode) {...}  
 ```  
   
@@ -91,7 +91,7 @@ public Collate(CollationMode collationMode) {...}
   
  Аргументы называются позиционными, поскольку порядок, в котором маркеры указываются в использовании, соответствует позиции параметра конструктора, которому они назначены. Например, рассмотрим следующую сигнатуру конструктора:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode, object collateThis) {...}  
 ```  
   

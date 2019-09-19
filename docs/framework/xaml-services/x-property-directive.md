@@ -2,22 +2,22 @@
 title: Директива x:Property
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
-ms.openlocfilehash: ab25381769e7001f7f48d73e717b5f495da90dfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7624014e0cd9ddd47cc84ee9686a6f11c27d1843
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796452"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053926"
 ---
 # <a name="xproperty-directive"></a>Директива x:Property
 Объявляет свойство XAML в разметке.  
   
 ## <a name="xaml-object-element-usage"></a>Использование элемента объекта XAML  
   
-```  
+```xaml  
 <object x:Class="className">  
   <x:Members>  
-    <x:Property Name="propertyName" Type="propertyType/>  
+    <x:Property Name="propertyName" Type="propertyType"/>  
     additionalProperties  
   </x:Members>  
 </object>  
@@ -39,4 +39,4 @@ ms.locfileid: "61796452"
  Для поддержки практического использования `x:Members` как средства указания определений членов в разметке эти члены должны быть связаны с классом, который может быть изменен. Предполагаемая модель состоит в том, что `x:Members` существует в качестве члена типа, указывающего `x:Class`. Однако механизм для сопоставления типов и членов или для создания определений динамических членов не поддерживается на уровне служб XAML .NET Framework. Это отводится отдельным платформам, имеющим модели приложений, поддерживающие определения членов из XAML. Как правило, для поддержки этой функции требуются действия MSBUILD при построении, которые компилируют разметку XAML и либо интегрируют его с выделенным кодом, либо создают чистые сборки из XAML.  
   
 ## <a name="xproperty-for-windows-workflow-foundation"></a>x:Property для Windows Workflow Foundation  
- Для Windows Workflow Foundation `x:Property` определяет члены пользовательского действия, составленного полностью в XAML, или заданные XAML динамические члены для конструктора действий с выделенным кодом. `x:Class` также должен быть указан в корневом элементе рабочей среды XAML. Это не является обязательным на уровне служб XAML .NET Framework, но становится обязательным при загрузке рабочей среды XAML с помощью действий MSBUILD при построении, которые поддерживают пользовательские действия и Windows Workflow Foundation XAML в целом. Windows Workflow Foundation не использует имя типа чистого XAML в качестве его предполагаемого значения для `x:Property` `Type` атрибут и вместо этого использует соглашение, которое не описано здесь. Дополнительные сведения см. в разделе [Создание действия DynamicActivity](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).
+ Для Windows Workflow Foundation `x:Property` определяет члены пользовательского действия, составленного полностью в XAML, или заданные XAML динамические члены для конструктора действий с выделенным кодом. `x:Class` также должен быть указан в корневом элементе рабочей среды XAML. Это не является обязательным на уровне служб XAML .NET Framework, но становится обязательным при загрузке рабочей среды XAML с помощью действий MSBUILD при построении, которые поддерживают пользовательские действия и Windows Workflow Foundation XAML в целом. Windows Workflow Foundation не использует чистое имя типа XAML в качестве предполагаемого значения `x:Property` `Type` атрибута, а вместо этого использует соглашение, не описанное здесь. Дополнительные сведения см. в разделе [Создание DynamicActivity](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).

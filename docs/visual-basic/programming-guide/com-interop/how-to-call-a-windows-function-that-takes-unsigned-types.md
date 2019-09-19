@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+title: Практическое руководство. Вызов функции Windows, которая принимает неподписанные типы (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022367"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053328"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, которая принимает неподписанные типы (Visual Basic)
 
-При использовании класса, модуля или структура, которая содержит члены типов целое число без знака, можно получить доступ к этим членам с помощью Visual Basic.
+При использовании класса, модуля или структуры, имеющей члены целочисленных типов без знака, можно получить доступ к этим членам с помощью Visual Basic.
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Для вызова функции Windows, принимающей тип без знака
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Вызов функции Windows, которая принимает неподписанный тип
 
-1. Используйте [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) сообщить Visual Basic, какая из библиотек содержит функцию его имя, что последовательность вызова и как преобразовать строки, при его вызове.
+1. Используйте [инструкцию Declare](../../../visual-basic/language-reference/statements/declare-statement.md) , чтобы сообщить Visual Basic, какая библиотека содержит функцию, ее имя в этой библиотеке, последовательность вызова и способ преобразования строк при вызове.
 
-2. В `Declare` выражение use `UInteger`, `ULong`, `UShort`, или `Byte` соответствующим образом для каждого параметра с типом без знака.
+2. `UInteger`В инструкции используйте ,`ULong` ,`UShort`или в`Byte` соответствии с соответствующими параметрами для каждого параметра с типом без знака. `Declare`
 
-3. См. в документации для функции Windows, чтобы найти имена и значения констант, используемых при вызове. Многие из них определяются в файле WinUser.h.
+3. Обратитесь к документации по функции Windows, которую вы вызываете, чтобы найти имена и значения используемых констант. Многие из них определены в файле WinUser. h.
 
-4. Объявите необходимые константы в коде. Многие константы Windows-32-разрядных неподписанных значений, их следует объявлять `As UInteger`.
+4. Объявите необходимые константы в коде. Многие константы Windows представляют собой 32-разрядные значения без знака, и их следует `As UInteger`объявлять.
 
-5. Вызовите функцию обычным способом. В следующем примере вызывается функция Windows `MessageBox`, который принимает в качестве аргумента целого числа без знака.
+5. Вызовите функцию обычным образом. В следующем примере вызывается функция `MessageBox`Windows, которая принимает беззнаковый целочисленный аргумент.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "62022367"
     End Class
     ```
 
-     Можно протестировать функцию `messageThroughWindows` следующим кодом.
+     Функцию `messageThroughWindows` можно проверить с помощью следующего кода.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ ms.locfileid: "62022367"
     ```
 
     > [!CAUTION]
-    > `UInteger`, `ULong`, `UShort`, И `SByte` типы данных не являются частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который они используются.
+    > `ULong`Типы данных `UInteger`, ,`UShort` и`SByte` не являются частью [независимость от языка и независимых от языка компонентов](../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимый код не может использовать компонент, который их использует.
 
     > [!IMPORTANT]
-    > Вызов неуправляемого кода, таких как интерфейс (API), Windows предоставляет код, чтобы потенциальные угрозы безопасности.
+    > Вызов неуправляемого кода, например программного интерфейса Windows (API), предоставляет ваш код потенциальным угрозам безопасности.
 
     > [!IMPORTANT]
-    > Вызов Windows API требует разрешение неуправляемого кода, которое может повлиять на выполнение в ситуациях частичного доверия. Дополнительные сведения см. в разделе <xref:System.Security.Permissions.SecurityPermission> и [разрешений доступа к коду](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Для вызова API Windows требуется разрешение неуправляемого кода, которое может повлиять на его выполнение в ситуациях частичного доверия. Дополнительные сведения см. в <xref:System.Security.Permissions.SecurityPermission> разделе и [разрешения на доступ к коду](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>См. также
 

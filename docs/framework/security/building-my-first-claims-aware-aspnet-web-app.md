@@ -3,12 +3,12 @@ title: Создание первого веб-приложения ASP.NET с п
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422396"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045593"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Создание первого веб-приложения ASP.NET с поддержкой утверждений
 ## <a name="applies-to"></a>Применение  
@@ -19,7 +19,7 @@ ms.locfileid: "67422396"
   
  В этом разделе представлен сценарий создания веб-приложений ASP.NET с учетом утверждений при помощи WIF. Обычно существует три участника сценария для приложения с учетом утверждений: само приложение, пользователь и служба маркеров безопасности (STS). Данный сценарий представлен на иллюстрации ниже:  
   
- ![Схема, показывающая компоненты WIF базовое веб-приложение.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![Схема, на которой показаны компоненты веб-приложения WIF Basic.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. Приложение, поддерживающее утверждения, использует WIF для идентификации запросов, не прошедших аутентификацию, и для перенаправления этих запросов в STS.  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422396"
   
  STS — это служба, использующая токены после успешной аутентификации. Microsoft предлагает две службы STS, соответствующие отраслевым стандартам:  
   
-- [Службы федерации Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Службы федерации Active Directory (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Служба контроля доступа Microsoft Azure (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. ACS — это облачная служба, предлагаемая в составе платформы Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать STS локальной разработки, который является частью [Identity and Access Tool для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) которая доступна через Интернет.  
+ AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. ACS — это облачная служба, предлагаемая в составе платформы Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать локальную службу STS, которая является частью [средства идентификации и доступа для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , которая свободно доступна в Интернете.  
   
  Чтобы создать первое приложение ASP.NET, поддерживающее утверждения, с помощью WIF, выполните инструкции, представленные в одном из нижеперечисленных разделов:  
   
-- [Практическое руководство. Создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [Практическое руководство. Создание веб-приложения ASP.NET MVC с поддержкой утверждений с помощью WIF](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [Практическое руководство. Создание приложения с поддержкой утверждений ASP.NET Web Forms, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [Практическое руководство. Создание приложения веб-форм ASP.NET с поддержкой утверждений с помощью WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, с использованием проверки подлинности на основе форм](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [Практическое руководство. Создание приложения ASP.NET с поддержкой утверждений с использованием проверки подлинности на основе форм](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Приступая к работе с WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Приступая к работе с WIF](getting-started-with-wif.md)
