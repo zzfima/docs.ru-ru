@@ -20,9 +20,9 @@
           href: how-to-install-and-uninstall-services.md
         - name: Практическое руководство. Запуск служб
           href: how-to-start-services.md
-        - name: "Практическое руководство. Приостановка выполнения службы Windows (Visual\_Basic)"
+        - name: "Практическое руководство. Приостановка работы службы Windows (Visual\_Basic)"
           href: how-to-pause-a-windows-service-visual-basic.md
-        - name: Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)
+        - name: Практическое руководство. Возобновление работы службы Windows (Visual Basic)
           href: how-to-continue-a-windows-service-visual-basic.md
         - name: Практическое руководство. Отладка приложений служб Windows
           href: how-to-debug-windows-service-applications.md
