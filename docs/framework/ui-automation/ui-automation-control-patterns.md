@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: d4b4817c9b5cd59486c0ce5288d7860933405664
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75ce2d997efbc465c8a98bce1d42296b37f84f64
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941283"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042329"
 ---
 # <a name="ui-automation-control-patterns"></a>Шаблоны модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -21,21 +21,21 @@ ms.locfileid: "69941283"
  В этом разделе содержатся подробные сведения об использовании [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] шаблонов элементов управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Реализация шаблона элемента управления Dock модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
- [Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
- [Реализация шаблона элемента управления Grid модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
- [Реализация шаблона элемента управления GridItem модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [Реализация шаблона элемента управления Invoke модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern.md)  
- [Реализация шаблона элемента управления MultipleView модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-multipleview-control-pattern.md)  
- [Реализация шаблона элемента управления RangeValue модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-rangevalue-control-pattern.md)  
- [Реализация шаблона элемента управления Scroll модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-scroll-control-pattern.md)  
- [Реализация шаблона элемента управления ScrollItem модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-scrollitem-control-pattern.md)  
- [Реализация шаблона элемента управления Selection модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [Реализация шаблона элемента управления SelectionItem модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
- [Реализация шаблона элемента управления Table модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [Реализация шаблона элемента управления TableItem модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
- [Реализация шаблона элемента управления Toggle модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)  
- [Реализация шаблона элемента управления Transform модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
- [Реализация шаблона элемента управления Value модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
- [Реализация шаблона элемента управления Window модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [Разделы практического руководства](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [Реализация шаблона элемента управления Dock модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-dock-control-pattern.md)  
+ [Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
+ [Реализация шаблона элемента управления Grid модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-grid-control-pattern.md)  
+ [Реализация шаблона элемента управления GridItem модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-griditem-control-pattern.md)  
+ [Реализация шаблона элемента управления Invoke модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-invoke-control-pattern.md)  
+ [Реализация шаблона элемента управления MultipleView модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-multipleview-control-pattern.md)  
+ [Реализация шаблона элемента управления RangeValue модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-rangevalue-control-pattern.md)  
+ [Реализация шаблона элемента управления Scroll модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-scroll-control-pattern.md)  
+ [Реализация шаблона элемента управления ScrollItem модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-scrollitem-control-pattern.md)  
+ [Реализация шаблона элемента управления Selection модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-selection-control-pattern.md)  
+ [Реализация шаблона элемента управления SelectionItem модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [Реализация шаблона элемента управления Table модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-table-control-pattern.md)  
+ [Реализация шаблона элемента управления TableItem модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [Реализация шаблона элемента управления Toggle модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-toggle-control-pattern.md)  
+ [Реализация шаблона элемента управления Transform модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-transform-control-pattern.md)  
+ [Реализация шаблона элемента управления Value модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-value-control-pattern.md)  
+ [Реализация шаблона элемента управления Window модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-window-control-pattern.md)  
+ [Разделы практического руководства](ui-automation-control-patterns-how-to-topics.md)

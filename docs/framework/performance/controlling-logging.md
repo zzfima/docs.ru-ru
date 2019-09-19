@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894934"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046677"
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 
@@ -85,7 +85,7 @@ Provider                                 GUID
 
 ## <a name="viewing-clr-etw-events"></a>Просмотр событий ETW среды CLR
 
-Перечисленные ниже команды используются для просмотра событий ETW среды CLR. Описание событий см. в разделе [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md).
+Перечисленные ниже команды используются для просмотра событий ETW среды CLR. Описание событий см. в разделе [События трассировки событий Windows в среде CLR](clr-etw-events.md).
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Просмотр событий ETW среды CLR с помощью программы Tracerpt
 
@@ -114,4 +114,4 @@ Provider                                 GUID
 ## <a name="see-also"></a>См. также
 
 - [Набор средств производительности Windows](/windows-hardware/test/wpt/)
-- [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [События в среде CLR (трассировка событий Windows)](etw-events-in-the-common-language-runtime.md)
