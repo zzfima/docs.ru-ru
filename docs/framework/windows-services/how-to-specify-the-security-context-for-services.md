@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 88dc9c40a2b8ff0ac9bba26c991ba2a4ac2dcb43
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952436"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053582"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Практическое руководство. Назначение службам контекста безопасности
 По умолчанию службы работают в контексте безопасности, отличном от того, в котором работает вошедший в систему пользователь. Службы работают в контексте стандартной системной учетной записи с именем `LocalSystem`. Она дает им другие права на доступ к системным ресурсам (не такие, как у пользователя). Эту ситуацию можно изменить, указав другую учетную запись пользователя, под которой будет работать служба.  
@@ -35,7 +35,7 @@ ms.locfileid: "69952436"
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Назначение службам контекста безопасности  
   
-1. Создав службу, добавьте для нее необходимые установщики. Дополнительные сведения см. в разделе [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Создав службу, добавьте для нее необходимые установщики. Дополнительные сведения см. в разделе [Практическое руководство. Добавление установщиков в приложение-службу](how-to-add-installers-to-your-service-application.md).  
   
 2. В конструкторе откройте класс `ProjectInstaller` и щелкните установщик процессов службы, с которой вы работаете.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "69952436"
   
 ## <a name="see-also"></a>См. также
 
-- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Знакомство с приложениями служб Windows](introduction-to-windows-service-applications.md)
+- [Практическое руководство. Добавление установщиков в приложение-службу](how-to-add-installers-to-your-service-application.md)
+- [Практическое руководство. Создание служб Windows](how-to-create-windows-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545325"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053481"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Учебник. Создание приложения службы Windows
 
@@ -28,7 +28,7 @@ ms.locfileid: "69545325"
 
 2. Найдите и выберите шаблон проекта **Служба Windows (.NET Framework)** . Чтобы найти его, разверните узел **Установленные**, затем узел **Visual C#** или **Visual Basic** и выберите **Рабочий стол Windows**. Можно также ввести запрос *Служба Windows* в поле поиска в правом верхнем углу и нажать клавишу **ВВОД**.
 
-   ![Шаблон приложения Windows в диалоговом окне нового проекта Visual Studio](media/new-project-dialog.png)
+   ![Шаблон приложения Windows в диалоговом окне нового проекта Visual Studio](./media/new-project-dialog.png)
 
    > [!NOTE]
    > Если вы не видите здесь шаблон **Служба Windows**, попробуйте установить рабочую нагрузку **Разработка классических приложений .NET**.
@@ -51,11 +51,11 @@ ms.locfileid: "69545325"
 
 2. Выберите **Да**.
 
-    ![Запрос на переименование](media/windows-service-rename.png "Запрос на переименование службы Windows")
+    ![Запрос на переименование](./media/windows-service-rename.png "Запрос на переименование службы Windows")
 
 3. На вкладке **Проект** выберите в контекстном меню пункт **Свойства**. В окне **Свойства** измените значение **ServiceName** на *MyNewService*.
 
-    ![Свойства службы](media/windows-service-properties.png "Свойства службы Windows")
+    ![Свойства службы](./media/windows-service-properties.png "Свойства службы Windows")
 
 4. В меню **Файл** выберите команду **Сохранить все**.
 
@@ -162,7 +162,7 @@ ms.locfileid: "69545325"
    Private eventId As Integer = 1
    ```
 
-Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Дополнительные сведения можно найти по адресу: <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Дополнительные сведения см. в разделе <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Определение действий при остановке службы
 
@@ -340,7 +340,7 @@ ms.locfileid: "69545325"
 
      Этот текст отображается в столбце **Описание** в окне **Службы** и помогает пользователю понять, для чего служба нужна.
 
-    ![Описание службы в окне "Службы".](media/windows-service-description.png "Описание службы")
+    ![Описание службы в окне "Службы".](./media/windows-service-description.png "Описание службы")
 
 6. Введите текст для свойства <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, например *Отображаемое имя MyNewService*.
 
@@ -350,7 +350,7 @@ ms.locfileid: "69545325"
 
 8. В итоге окно **Свойства** должно выглядеть так:
 
-     ![Свойства установщика для службы Windows](media/windows-service-installer-properties.png "Свойства установщика службы Windows")
+     ![Свойства установщика для службы Windows](./media/windows-service-installer-properties.png "Свойства установщика службы Windows")
 
 9. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceProcessInstaller1** для проекта Visual C# или **ServiceProcessInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**. Выберите для свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> значение <xref:System.ServiceProcess.ServiceAccount.LocalSystem> в раскрывающемся списке.
 
@@ -497,7 +497,7 @@ ms.locfileid: "69545325"
 
      Заданное вами отображаемое имя службы отобразится в списке **Службы**, представленном в алфавитном порядке.
 
-     ![MyNewService в окне "Службы".](media/windowsservices-serviceswindow.PNG)
+     ![MyNewService в окне "Службы".](./media/windowsservices-serviceswindow.PNG)
 
 2. Чтобы запустить службу, в ее контекстном меню выберите пункт **Запустить**.
 
@@ -516,7 +516,7 @@ ms.locfileid: "69545325"
 
 3. Найдите в списке элемент **MyNewLog** (или **MyLogFile1**, если вы использовали процедуру добавления аргументов командной строки) и разверните его. Вы увидите записи для двух действий (запуск и остановка), которые выполнила ваша служба.
 
-     ![Просмотр записей в журнале событий с помощью компонента "Просмотр событий"](media/windows-service-event-viewer.png)
+     ![Просмотр записей в журнале событий с помощью компонента "Просмотр событий"](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
@@ -542,7 +542,7 @@ ms.locfileid: "69545325"
 
 - Изучите возможности компонента <xref:System.ServiceProcess.ServiceController>, который позволяет отправлять команды в установленную службу.
 
-- Для создания журнала событий при установке приложения, а не во время его запуска, можно воспользоваться установщиком. В этом случае журнал событий удаляется установщиком при удалении приложения. Дополнительные сведения можно найти по адресу: <xref:System.Diagnostics.EventLogInstaller>.
+- Для создания журнала событий при установке приложения, а не во время его запуска, можно воспользоваться установщиком. В этом случае журнал событий удаляется установщиком при удалении приложения. Дополнительные сведения см. в разделе <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>См. также
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626294"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051756"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодом в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
@@ -20,9 +20,9 @@ ms.locfileid: "64626294"
   
 - Удаленная служба возвращает клиенту объект по ссылке.  
   
- По соображениям безопасности отправка объекта по ссылке от клиента службе в WCF запрещена. Сценарий, при котором клиенту и серверу необходимо обмениваться сообщениями друг с другом, можно реализовать в WCF с помощью дуплексной службы.  Дополнительные сведения о дуплексных службах см. в разделе [Дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+ По соображениям безопасности отправка объекта по ссылке от клиента службе в WCF запрещена. Сценарий, при котором клиенту и серверу необходимо обмениваться сообщениями друг с другом, можно реализовать в WCF с помощью дуплексной службы.  Дополнительные сведения о дуплексных службах см. в разделе [Дуплексные службы](../wcf/feature-details/duplex-services.md).  
   
- Дополнительные сведения о создании служб WCF и клиентов для них см. в разделах [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md), [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md), а также [Создание клиентов](../../../docs/framework/wcf/building-clients.md).  
+ Дополнительные сведения о создании служб WCF и клиентов для них см. в разделах [Базовое программирование для WCF](../wcf/basic-wcf-programming.md), [Проектирование и реализация служб](../wcf/designing-and-implementing-services.md), а также [Создание клиентов](../wcf/building-clients.md).  
   
 ## <a name="dcom-example-code"></a>Пример кода DCOM  
  Для этих сценариев интерфейсы DCOM, проиллюстрированные с помощью WCF, имеют приведенную ниже структуру.  
@@ -82,7 +82,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>Шаг 2. Определение контракта данных  
  Далее следует создать для службы контракт данных, описывающий то, как будет происходить обмен данными между службой и клиентами.  Классы, описываемые в контракте данных, следует пометить атрибутом [<xref:System.Runtime.Serialization.DataContractAttribute>]. Отдельные свойства или поля, которые должны быть видны и для клиента, и для сервера, отмечаются атрибутом [<xref:System.Runtime.Serialization.DataMemberAttribute>]. Чтобы разрешить использование типов, производных от класса, в контракте данных, их следует указать с помощью атрибута [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. WCF сериализует и десериализует только те типы, которые входят в интерфейс службы или определены как известные. При попытке использовать неизвестный тип возникнет исключение.  
   
- Дополнительные сведения о контрактах данных см. в разделе [Контракты данных](../../../docs/framework/wcf/samples/data-contracts.md).  
+ Дополнительные сведения о контрактах данных см. в разделе [Контракты данных](../wcf/samples/data-contracts.md).  
   
 ```csharp  
 [DataContract]  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>Шаг 5. Запуск службы  
- Наконец, вы можете произвести резидентное размещение в консольном приложении, добавив в приложение службы приведенные ниже строки и запустив его. Дополнительные сведения о других способах размещения приложения службы WCF см. в разделе [Размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ Наконец, вы можете произвести резидентное размещение в консольном приложении, добавив в приложение службы приведенные ниже строки и запустив его. Дополнительные сведения о других способах размещения приложения службы WCF см. в разделе [Размещение служб](../wcf/hosting-services.md).  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>См. также
 
-- [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)
-- [Дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Базовое программирование для WCF](../wcf/basic-wcf-programming.md)
+- [Проектирование и реализация служб](../wcf/designing-and-implementing-services.md)
+- [Создание клиентов](../wcf/building-clients.md)
+- [Дуплексные службы](../wcf/feature-details/duplex-services.md)

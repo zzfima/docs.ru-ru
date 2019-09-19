@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648663"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051729"
 ---
 # <a name="identifying-functions-in-dlls"></a>Идентификация функций в библиотеках DLL
 Идентификатор функции DLL состоит из следующих элементов:  
@@ -31,7 +31,7 @@ ms.locfileid: "64648663"
   
  **MessageBoxA** — это точка входа ANSI для функции **MessageBox**; **MessageBoxW** — версия для Юникода. Чтобы получить список имен функций в конкретной библиотеке DLL, например user32.dll, можно воспользоваться различными средствами командной строки. Например, для получения имен функций можно воспользоваться `dumpbin /exports user32.dll` или `link /dump /exports user32.dll`.  
   
- Неуправляемую функцию в коде можно переименовать, при условии что новое имя функции соответствует исходной точке входа в библиотеке DLL. Инструкции по переименованию неуправляемой функции DLL в управляемом исходном коде см. в разделе [Указание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ Неуправляемую функцию в коде можно переименовать, при условии что новое имя функции соответствует исходной точке входа в библиотеке DLL. Инструкции по переименованию неуправляемой функции DLL в управляемом исходном коде см. в разделе [Указание точки входа](specifying-an-entry-point.md).  
   
  Вызов неуправляемого кода позволяет управлять значительной частью операционной системы с помощью вызова функций в API Windows и других библиотеках DLL. Наряду с API Windows существует несколько других API и библиотек DLL, для которых доступен вызов неуправляемого кода.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "64648663"
 |Kernel32.dll|Низкоуровневые функции операционной системы для управления памятью и обработки ресурсов.|  
 |User32.dll|Функции управления Windows для обработки сообщений, таймеров, меню и обмена данными.|  
   
- Полную документацию по API Windows см. в разделе "Пакет SDK платформы". Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Полную документацию по API Windows см. в разделе "Пакет SDK платформы". Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Использование неуправляемых функций DLL](consuming-unmanaged-dll-functions.md)
+- [Задание точки входа](specifying-an-entry-point.md)
+- [Создание класса, содержащего функции DLL](creating-a-class-to-hold-dll-functions.md)
+- [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)
+- [Вызов функции DLL](calling-a-dll-function.md)

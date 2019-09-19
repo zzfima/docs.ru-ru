@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041467"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045755"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Пошаговое руководство. Выпуск кода в сценариях частичного доверия
 
@@ -35,13 +35,13 @@ ms.locfileid: "70041467"
 - [Настройка простой песочницы для проверки кода с частичным доверием](#Setting_up).
 
   > [!IMPORTANT]
-  > Это простой способ поэкспериментировать с кодом с частичным доверием. Сведения о выполнении кода, поступившего из ненадежных расположений, см. в разделе [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+  > Это простой способ поэкспериментировать с кодом с частичным доверием. Сведения о выполнении кода, поступившего из ненадежных расположений, см. в разделе [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 - [Выполнение кода в доменах приложений с частичным доверием](#Running_code).
 
 - [Использование анонимно размещенных динамических методов для порождения и выполнения кода при частичном доверии](#Using_methods).
 
-Дополнительные сведения о порождении кода в сценариях с частичным доверием см. в разделе [Вопросы безопасности в порождаемом отражении](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).
+Дополнительные сведения о порождении кода в сценариях с частичным доверием см. в разделе [Вопросы безопасности в порождаемом отражении](security-issues-in-reflection-emit.md).
 
 Полный код, показанный в данных процедурах, см. в разделе [Пример](#Example) в конце этого руководства.
 
@@ -71,7 +71,7 @@ ms.locfileid: "70041467"
 2. Создайте объект <xref:System.AppDomainSetup> для инициализации домена приложения с помощью пути к приложению.
 
     > [!IMPORTANT]
-    > Для простоты в этом примере кода используется текущая папка. Для выполнения кода, поступившего из Интернета, используйте отдельную папку для ненадежного кода, как описано в разделе [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+    > Для простоты в этом примере кода используется текущая папка. Для выполнения кода, поступившего из Интернета, используйте отдельную папку для ненадежного кода, как описано в разделе [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -194,7 +194,7 @@ ms.locfileid: "70041467"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>ОПИСАНИЕ
+### <a name="description"></a>Описание
 
 В следующем примере кода демонстрируется использование флага <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> для разрешения пропуска проверок видимости, выполняемых JIT-компилятором, анонимно размещенными динамическими методами, но только в тех случаях, когда уровень доверия целевого члена не превышает уровень доверия сборки, порождающей код.
 
@@ -225,5 +225,5 @@ ms.locfileid: "70041467"
 
 ## <a name="see-also"></a>См. также
 
-- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Вопросы безопасности в порождении отражения](security-issues-in-reflection-emit.md)
+- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

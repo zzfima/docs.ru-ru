@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967207"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045922"
 ---
 # <a name="reflection-and-generic-types"></a>Отражение и универсальные типы
 <a name="top"></a> С точки зрения отражения различие между универсальным типом и обычным заключается в том, что с универсальным типом связан набор параметров типа (если это определение универсального типа) или аргументы типа (если это сконструированный тип). Универсальный метод отличается от обычного тем же.  
@@ -38,7 +38,7 @@ ms.locfileid: "69967207"
   
  Отражение предоставляет методы <xref:System.Type> и <xref:System.Reflection.MethodInfo>, которые позволяют получить доступ к массиву параметров типа и определить, представляет ли экземпляр <xref:System.Type> параметр типа или фактический тип.  
   
- Пример кода, демонстрирующего описанные здесь методы, см. в статье [Руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+ Пример кода, демонстрирующего описанные здесь методы, см. в статье [Руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  В следующем обсуждении предполагается, что вы знакомы с терминологией универсальности, то есть понимаете различия между параметрами типа и аргументами, а также открытыми и закрытыми сконструированными типами. Дополнительные сведения см. в статье [Универсальные шаблоны](../../standard/generics/index.md).  
   
@@ -147,9 +147,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
+|[Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
 |[Универсальные шаблоны](../../standard/generics/index.md)|Описана универсальность и поддержка этой технологии в .NET Framework.|  
-|[Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Показано использование порождения отражения для создания универсальных типов в динамических сборках.|  
-|[Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|
+|[Практическое руководство. Определение универсального типа с порождаемым отражением](how-to-define-a-generic-type-with-reflection-emit.md)|Показано использование порождения отражения для создания универсальных типов в динамических сборках.|  
+|[Просмотр сведений о типах](viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|

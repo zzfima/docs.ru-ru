@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894901"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046047"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Практическое руководство. Создание класса с помощью CodeDOM
 В следующих процедурах демонстрируется создание и компиляция графа CodeDOM, который создает класс, содержащий два поля, три свойства, метод, конструктор и точку входа.  
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>См. также
 
-- [Использование CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [Создание и компиляция исходного кода из графа CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [Использование CodeDOM](using-the-codedom.md)
+- [Создание и компиляция исходного кода из графа CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)

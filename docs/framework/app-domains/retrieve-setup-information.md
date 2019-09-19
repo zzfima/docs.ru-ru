@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 719ea15de135d8bbeb7bb88ea3d5b5874e30b5d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108957"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053108"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Извлечение сведений о настройке из домена приложения
 Каждый экземпляр домена приложения содержит свойства и сведения <xref:System.AppDomainSetup>. Сведения о настройке можно получить из домена приложения с помощью класса <xref:System.AppDomain?displayProperty=nameWithType>. Этот класс предоставляет несколько членов, извлекающих сведения конфигурации домена приложения.  
@@ -39,4 +39,4 @@ ms.locfileid: "59108957"
 ## <a name="see-also"></a>См. также
 
 - [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)
-- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
+- [Использование доменов приложений](use.md)

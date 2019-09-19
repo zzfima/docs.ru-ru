@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935712"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045979"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Практическое руководство. Подключение делегата с помощью отражения
 При использовании отражения для загрузки и запуска сборок невозможно использовать функциональные возможности языка, такие как оператор C# `+=` или [оператор AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) в Visual Basic. В следующих процедурах показано, как подключить существующий метод к событию посредством получения всех необходимых типов через отражение и как создать динамический метод с помощью порожденного отражения и подключить этот метод к событию.  
@@ -80,7 +80,7 @@ ms.locfileid: "69935712"
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Создайте основную часть метода. Этот метод загружает строку, вызывает перегрузку метода <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>, которая принимает строку, берет возвращаемое значение из стека (потому что обработчик не имеет типа возвращаемого значения) и возвращается. Дополнительные сведения о выпуске динамических методов см. в разделе [Практическое руководство. Определение и выполнение динамических методов](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md).  
+2. Создайте основную часть метода. Этот метод загружает строку, вызывает перегрузку метода <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>, которая принимает строку, берет возвращаемое значение из стека (потому что обработчик не имеет типа возвращаемого значения) и возвращается. Дополнительные сведения о выпуске динамических методов см. в разделе [Практическое руководство. Определение и выполнение динамических методов](how-to-define-and-execute-dynamic-methods.md).  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -111,5 +111,5 @@ ms.locfileid: "69935712"
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [Практическое руководство. Определение и выполнение динамических методов](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Практическое руководство. Определение и выполнение динамических методов](how-to-define-and-execute-dynamic-methods.md)
+- [Отражение](reflection.md)

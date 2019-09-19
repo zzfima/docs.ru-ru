@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956711"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045888"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 
@@ -61,7 +61,7 @@ ms.locfileid: "69956711"
 
 Код приложения, который запускается из командной строки, выполняется с полным доверием. Если код не помечен как прозрачный, он может использовать отражение для доступа к членам, критическим с точки зрения безопасности. При выполнении того же кода с частичным доверием (например, в изолированном домене приложения) уровень доверия сборки определяет, может ли она получить доступ к коду, критическому с точки зрения безопасности: если сборка имеет строгое имя и установлена в глобальном кэше сборок, она является доверенной и может вызывать члены, критические с точки зрения безопасности. Если код не является доверенным, он становится прозрачным даже в том случае, если не был помечен как прозрачный, и не может получить доступ к членам, критическим с точки зрения безопасности.
 
-Подробнее о модели безопасности в .NET Framework 4 см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).
+Подробнее о модели безопасности в .NET Framework 4 см. в разделе [Изменения системы безопасности](../security/security-changes.md).
 
 ## <a name="reflection-and-transparency"></a>Отражение и прозрачность
 
@@ -117,9 +117,9 @@ ms.locfileid: "69956711"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Изменения системы безопасности](../../../docs/framework/security/security-changes.md)
-- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)
-- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Изменения системы безопасности](../security/security-changes.md)
+- [Управление доступом для кода](../misc/code-access-security.md)
+- [Вопросы безопасности в порождении отражения](security-issues-in-reflection-emit.md)
+- [Просмотр сведений о типах](viewing-type-information.md)
 - [Применение атрибутов](../../standard/attributes/applying-attributes.md)
-- [Доступ к пользовательским атрибутам](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [Доступ к пользовательским атрибутам](accessing-custom-attributes.md)

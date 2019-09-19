@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197000"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051911"
 ---
 # <a name="callback-functions"></a>Функции обратного вызова
 Функция обратного вызова — это программный код в управляемом приложении, который помогает неуправляемой функции DLL выполнить задачу. Вызовы функции обратного вызова косвенно, через функцию DLL, передаются из управляемого приложения и возвращаются в управляемую реализацию. Лишь некоторые из многих функций DLL, вызываемых в вызове неуправляемого кода, требуют для своего выполнения наличия в управляемом коде функции обратного вызова.  
@@ -25,9 +25,9 @@ ms.locfileid: "59197000"
   
  ![Схема, иллюстрирующая процесс обратного вызова неуправляемого кода.](./media/callback-functions/platform-invoke-callback-process.gif)  
   
- Функции обратного вызова — идеальное средство для многократного выполнения некоторой задачи. Другая область их применения — с функциями перечисления API Windows, такими как **EnumFontFamilies**, **EnumPrinters** и **EnumWindows**. Функция **EnumWindows** выполняет перечисление всех существующих на компьютере окон, используя функцию обратного вызова, чтобы выполнить задачу для каждого окна. Инструкции и примеры см. в разделе [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
+ Функции обратного вызова — идеальное средство для многократного выполнения некоторой задачи. Другая область их применения — с функциями перечисления API Windows, такими как **EnumFontFamilies**, **EnumPrinters** и **EnumWindows**. Функция **EnumWindows** выполняет перечисление всех существующих на компьютере окон, используя функцию обратного вызова, чтобы выполнить задачу для каждого окна. Инструкции и примеры см. в разделе [Практическое руководство. Реализация функций обратного вызова](how-to-implement-callback-functions.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md)
-- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Практическое руководство. Реализация функций обратного вызова](how-to-implement-callback-functions.md)
+- [Вызов функции DLL](calling-a-dll-function.md)

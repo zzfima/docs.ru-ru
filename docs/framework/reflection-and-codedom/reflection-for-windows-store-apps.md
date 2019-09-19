@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5503d8a474d7f19348b9342bc02e216bd987223
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: c9edab859900bf2001956045a5285801bb61d310
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378609"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045943"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Отражение в .NET Framework для приложений для Магазина Windows
 Начиная с версии .NET Framework 4.5 платформа .NET Framework включает набор типов и членов отражения для использования в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Эти типы и члены доступны в полной версии платформы .NET Framework, а также в [.NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/?LinkID=225700). В этом документе описаны основные отличия между ними и их аналогами в платформе .NET Framework версии 4 и более ранних версий.  
@@ -43,5 +43,5 @@ ms.locfileid: "66378609"
   
 ## <a name="see-also"></a>См. также
 
-- [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Отражение](reflection.md)
 - [Поддерживаемые API .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/?LinkID=225700)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205813"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051820"
 ---
 # <a name="exposing-net-components-to-com"></a>Предоставление доступа к компонентам .NET для COM
 
@@ -27,7 +27,7 @@ ms.locfileid: "70205813"
 
      С помощью настраиваемых атрибутов в управляемом коде можно расширять возможности взаимодействия для компонента.
 
-- [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Упаковка сборки для модели COM](packaging-an-assembly-for-com.md).
 
      Разработчикам COM-приложений могут потребоваться общие сведения о шагах, которые необходимо выполнить для развертывания ваших сборок и использования ссылок на них.
 
@@ -35,11 +35,11 @@ ms.locfileid: "70205813"
 
 ## <a name="to-consume-a-managed-type-from-com"></a>Использование управляемого типа из модели COM
 
-1. [Регистрация сборок в COM](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [Регистрация сборок в COM](registering-assemblies-with-com.md).
 
      Типы в сборке и библиотеке типов необходимо регистрировать во время разработки. Если установщик не регистрирует сборку, необходимо предоставить разработчикам COM-приложений инструкции по использованию программы Regasm.exe.
 
-2. [Создание ссылки на типы .NET из COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Создание ссылки на типы .NET из COM](how-to-reference-net-types-from-com.md).
 
      Разработчики COM-приложений могут использовать доступные средства и методы для ссылки на типы в сборке.
 
@@ -53,5 +53,5 @@ ms.locfileid: "70205813"
 
 ## <a name="see-also"></a>См. также
 
-- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)
-- [Пример COM-взаимодействия. COM-клиент и сервер .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Взаимодействие с неуправляемым кодом](index.md)
+- [Пример COM-взаимодействия. COM-клиент и сервер .NET](com-interop-sample-com-client-and-net-server.md)

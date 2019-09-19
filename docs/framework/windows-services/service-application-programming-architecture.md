@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935444"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053489"
 ---
 # <a name="service-application-programming-architecture"></a>Программная архитектура приложений служб
 В основе приложений-служб Windows лежит класс, наследуемый от класса <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Вы можете переопределить методы из этого класса и определить функции для них, чтобы настроить поведение службы.  
@@ -57,7 +57,7 @@ ms.locfileid: "69935444"
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > В этих примерах используется массив типа <xref:System.ServiceProcess.ServiceBase>. В него можно добавить каждую службу, которую содержит приложение, а затем запустить все службы одновременно. Если создается только одна служба, вы можете не использовать массив, а просто объявить и запустить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase>. Пример см. в статье [Практическое руководство. Создание служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > В этих примерах используется массив типа <xref:System.ServiceProcess.ServiceBase>. В него можно добавить каждую службу, которую содержит приложение, а затем запустить все службы одновременно. Если создается только одна служба, вы можете не использовать массив, а просто объявить и запустить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase>. Пример см. в статье [Практическое руководство. Создание служб программным способом](how-to-write-services-programmatically.md).  
   
 - Наборы свойств в классе <xref:System.ServiceProcess.ServiceBase>. Они определяют, какие методы могут вызываться в службе. Например, если свойству <xref:System.ServiceProcess.ServiceBase.CanStop%2A> задать значение `true`, в службе можно вызвать метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>. Если свойству <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> задать значение `true`, в службе можно вызвать методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A> и <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>. Если одному из этих свойств задать значение `true`, необходимо переопределить и реализовать обработку для соответствующих методов.  
   
@@ -68,5 +68,5 @@ ms.locfileid: "69935444"
   
 ## <a name="see-also"></a>См. также
 
-- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Знакомство с приложениями служб Windows](introduction-to-windows-service-applications.md)
+- [Практическое руководство. Создание служб Windows](how-to-create-windows-services.md)

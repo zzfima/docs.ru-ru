@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
+ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220313"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046105"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Динамическое создание и компиляция исходного кода
 В среду .NET Framework включен механизм, который называется Code Document Object Model (CodeDOM). Он позволяет разработчикам программ, порождающих исходный код, создавать код на нескольких языках программирования во время выполнения на основе единой модели, представляющей код для визуализации.  
@@ -31,19 +31,19 @@ ms.locfileid: "56220313"
  В платформе .NET Framework имеются генераторы и компиляторы кода для языков <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider> и <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Использование CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
+ [Использование CodeDOM](using-the-codedom.md)  
  Описываются общие случаи применения, а также демонстрируется создание простого графа объектов с использованием CodeDOM.  
   
- [Создание исходного кода и компиляция программы из графа CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
+ [Создание исходного кода и компиляция программы из графа CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
  Описание способов формирования исходного кода и его компиляции внешним компилятором с использованием классов, определенных в пространстве имен `System.CodeDom.Compiler`.  
   
- [Практическое руководство. Создание XML-файла документации с использованием CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [Практическое руководство. Создание XML-файла документации с использованием CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
  Описание использования CodeDOM для формирования кода с комментариями к XML-документации и компиляции сформированного кода для создания XML-документации.  
   
- [Практическое руководство. Создание класса с помощью CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [Практическое руководство. Создание класса с помощью CodeDOM](how-to-create-a-class-using-codedom.md)  
  Описание использования CodeDOM для создания класса, содержащего поля, свойства, метод, конструктор и точку входа.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.CodeDom>  
  Определяет элементы, представляющие элементы кода на языках программирования, предназначенных для среды CLR.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971837"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051808"
 ---
 # <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
 
@@ -45,7 +45,7 @@ ms.locfileid: "70971837"
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Создание вызываемой оболочки времени выполнения с использованием средств платформы .NET Framework  
   
-- Запустите средство [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+- Запустите средство [Tlbimp.exe (программа экспорта библиотек типов)](../tools/tlbimp-exe-type-library-importer.md).  
   
  Это средство создает сборку, которая содержит метаданные времени выполнения для типов, определенных в исходной библиотеке типов.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "70971837"
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Создание вызываемой оболочки COM с использованием средств платформы .NET Framework  
   
-Запустите программу [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+Запустите программу [Regasm.exe (средство регистрации сборок)](../tools/regasm-exe-assembly-registration-tool.md).  
   
 Это средство считывает метаданные сборки и добавляет в реестр необходимые записи. В результате этого клиенты COM получают возможность прозрачно создавать классы .NET Framework. Сборку можно использовать так, как если бы она была собственным COM-классом.  
   
-Программу Regasm.exe можно запускать для сборки, расположенной в любом каталоге. После этого необходимо запустить [Gacutil.exe (программу глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), чтобы перенести ее в глобальный кэш сборок. При переносе сборки записи расположения в реестре сохраняют силу, поскольку во всех случаях, когда сборка не найдена, проверяется глобальный кэш сборок.  
+Программу Regasm.exe можно запускать для сборки, расположенной в любом каталоге. После этого необходимо запустить [Gacutil.exe (программу глобального кэша сборок)](../tools/gacutil-exe-gac-tool.md), чтобы перенести ее в глобальный кэш сборок. При переносе сборки записи расположения в реестре сохраняют силу, поскольку во всех случаях, когда сборка не найдена, проверяется глобальный кэш сборок.  
   
 ## <a name="see-also"></a>См. также
 

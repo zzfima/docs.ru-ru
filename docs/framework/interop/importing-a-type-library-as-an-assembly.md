@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662396"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051707"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Импорт библиотеки типов в виде сборки
 
@@ -36,7 +36,7 @@ ms.locfileid: "67662396"
 
 При использовании сборок взаимодействия только во время разработки можно внедрить сведения о типе из основной сборки взаимодействия, опубликованной автором COM-компонента. Однако не требуется развертывать основную сборку взаимодействия с приложением.
 
-Использование сборок взаимодействия только во время разработки приводит к уменьшению размера приложения, так как большинство приложений используют не все функции COM-компонента. Компилятор очень эффективен при внедрении сведений о типе. Если приложение использует только некоторые методы в COM-интерфейсе, компилятор не внедряет неиспользуемые методы. Когда приложение, содержащее внедренные сведения о типах, взаимодействует с другим таким приложением или с приложением, использующим основную сборку взаимодействия, среда CLR применяет правила эквивалентности типов, чтобы определить, представляют ли два типа с одинаковым именем один и тот же COM-тип. Чтобы использовать COM-объекты, знать эти правила не требуется. Однако если вас интересуют правила, см. раздел [Эквивалентность типов и внедренные типы взаимодействия](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md).
+Использование сборок взаимодействия только во время разработки приводит к уменьшению размера приложения, так как большинство приложений используют не все функции COM-компонента. Компилятор очень эффективен при внедрении сведений о типе. Если приложение использует только некоторые методы в COM-интерфейсе, компилятор не внедряет неиспользуемые методы. Когда приложение, содержащее внедренные сведения о типах, взаимодействует с другим таким приложением или с приложением, использующим основную сборку взаимодействия, среда CLR применяет правила эквивалентности типов, чтобы определить, представляют ли два типа с одинаковым именем один и тот же COM-тип. Чтобы использовать COM-объекты, знать эти правила не требуется. Однако если вас интересуют правила, см. раздел [Эквивалентность типов и внедренные типы взаимодействия](type-equivalence-and-embedded-interop-types.md).
 
 ## <a name="generating-metadata"></a>Создание метаданных
 
@@ -46,11 +46,11 @@ ms.locfileid: "67662396"
 
 - Visual Studio
 
-  Visual Studio 2005 автоматически преобразует COM-типы библиотеки типов в метаданные сборки. Инструкции см. в разделе [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).
+  Visual Studio 2005 автоматически преобразует COM-типы библиотеки типов в метаданные сборки. Инструкции см. в разделе [Практическое руководство. Добавление ссылок на библиотеки типов](how-to-add-references-to-type-libraries.md).
 
-- [Программа импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Программа импорта библиотек типов (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
-  Программа экспорта библиотек типов предоставляет параметры командной строки для настройки метаданных в результирующем файле взаимодействия, импортирует типы из существующей библиотеки типов и создает сборку взаимодействия и пространство имен. Инструкции см. в разделе [Практическое руководство. Создание сборок взаимодействия из библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).
+  Программа экспорта библиотек типов предоставляет параметры командной строки для настройки метаданных в результирующем файле взаимодействия, импортирует типы из существующей библиотеки типов и создает сборку взаимодействия и пространство имен. Инструкции см. в разделе [Практическое руководство. Создание сборок взаимодействия из библиотек типов](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - Класс <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>
 
@@ -75,12 +75,12 @@ ms.locfileid: "67662396"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Предоставление COM-компонентов платформе .NET Framework](exposing-com-components.md)
 - [Общие сведения о преобразовании библиотеки типов в сборку](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (программа экспорта библиотек типов)](../tools/tlbimp-exe-type-library-importer.md)
 - [Customizing Standard Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)) (Настройка стандартных оболочек)
 - [Using COM Types in Managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)) (Использование COM-типов в управляемом коде)
-- [Компиляция проекта, использующего взаимодействие](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [Практическое руководство. Создание сборок взаимодействия из библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Компиляция проекта, использующего взаимодействие](compiling-an-interop-project.md)
+- [Развертывание приложения взаимодействия](deploying-an-interop-application.md)
+- [Практическое руководство. Добавление ссылок на библиотеки типов](how-to-add-references-to-type-libraries.md)
+- [Практическое руководство. Создание сборок взаимодействия из библиотек типов](how-to-generate-interop-assemblies-from-type-libraries.md)

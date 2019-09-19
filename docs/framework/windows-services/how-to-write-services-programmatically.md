@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 29e0b95ad91c93f3a23246daf2be128b10d7e2ce
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952409"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053561"
 ---
 # <a name="how-to-write-services-programmatically"></a>Практическое руководство. Создание службы программным способом
 Если вы решили не использовать шаблон проекта "Служба Windows", для создания собственной службы вам придется настроить наследование и другие элементы инфраструктуры самостоятельно. Создавая службу программным способом, вам необходимо выполнить несколько действий, которые в случае с шаблоном выполняются автоматически.  
@@ -59,21 +59,21 @@ ms.locfileid: "69952409"
   
 6. Переопределите все прочие методы, для которых нужно задать определенную обработку, и напишите код, благодаря которому служба будет понимать, что нужно делать в каждом случае.  
   
-7. Добавить установщики, необходимые для приложения службы. Дополнительные сведения см. в разделе [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7. Добавить установщики, необходимые для приложения службы. Дополнительные сведения см. в разделе [Практическое руководство. Добавление установщиков в приложение-службу](how-to-add-installers-to-your-service-application.md).  
   
 8. Скомпилируйте проект, выбрав в меню **Сборка** пункт **Собрать решение**.  
   
     > [!NOTE]
     > Не нажимайте клавишу F5 для запуска проекта — таким способом нельзя запустить проект службы.  
   
-9. Создайте проект установки и настраиваемые действия для установки службы. Пример см. в разделе [Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+9. Создайте проект установки и настраиваемые действия для установки службы. Пример см. в разделе [Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Установите службу. Дополнительные сведения см. в разделе [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+10. Установите службу. Дополнительные сведения см. в разделе [Практическое руководство. Установка и удаление служб](how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Практическое руководство. Запись сведений о службах в журнал](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
-- [Пошаговое руководство: Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Знакомство с приложениями служб Windows](introduction-to-windows-service-applications.md)
+- [Практическое руководство. Создание служб Windows](how-to-create-windows-services.md)
+- [Практическое руководство. Добавление установщиков в приложение-службу](how-to-add-installers-to-your-service-application.md)
+- [Практическое руководство. Запись сведений о службах в журнал](how-to-log-information-about-services.md)
+- [Пошаговое руководство: Создание приложения служб Windows в конструкторе компонентов](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

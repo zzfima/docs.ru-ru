@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
+title: Практическое руководство. Приостановка работы службы Windows (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: 20bc177ccf2646f79994553803568531233ea5c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 166eda4a9348188fa6e5048fd3ce41645cde4816
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935485"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053594"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
 В этом примере для приостановки работы службы администрирования IIS на локальном компьютере используется компонент <xref:System.ServiceProcess.ServiceController>.  
@@ -52,4 +52,4 @@ ms.locfileid: "69935485"
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+- [Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971782"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051781"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Практическое руководство. Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
 
 Существует два способа создания основной сборки взаимодействия.
 
-- С помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), предоставляемой Windows SDK.
+- С помощью [программы импорта библиотек типов (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md), предоставляемой Windows SDK.
 
-  Использование [программы Tlbimp.exe](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) — это самый простой способ создания основных сборок взаимодействия. Эта программа предоставляет следующие меры безопасности:
+  Использование [программы Tlbimp.exe](../tools/tlbimp-exe-type-library-importer.md) — это самый простой способ создания основных сборок взаимодействия. Эта программа предоставляет следующие меры безопасности:
 
   - перед созданием сборок взаимодействия для ссылок на любые вложенные библиотеки типов проверяет наличие других зарегистрированных основных сборок взаимодействия;
 
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Регистрация основных сборок взаимодействия](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [Практическое руководство. Регистрация основных сборок взаимодействия](how-to-register-primary-interop-assemblies.md)

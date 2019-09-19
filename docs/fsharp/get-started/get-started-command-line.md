@@ -2,12 +2,12 @@
 title: Приступая к F# работе со средствами командной строки
 description: Узнайте, как создать простое многопроектное решение на F# основе .NET Core CLI в любой операционной системе (Windows, MacOs или Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f9177e653273e5a2191407c4fb22343ded11fece
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855822"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117925"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы F# с .NET Core CLI
 
@@ -23,7 +23,7 @@ ms.locfileid: "70855822"
 
 Откройте командную строку или терминал и выполните команду [DotNet New](../../core/tools/dotnet-new.md) , чтобы создать новый файл решения с `FSNetCore`именем:
 
-```console
+```dotnetcli
 dotnet new sln -o FSNetCore
 ```
 
@@ -40,7 +40,7 @@ FSNetCore
 
 Используйте команду, чтобы создать проект библиотеки классов в папке src с именем Library. `dotnet new`
 
-```console
+```dotnetcli
 dotnet new classlib -lang F# -o src/Library
 ```
 
@@ -68,13 +68,13 @@ let getJsonNetJson value =
 
 Добавьте пакет NuGet Newtonsoft. JSON в проект библиотеки.
 
-```console
+```dotnetcli
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
 Добавьте проект в решение с помощью команды [DotNet SLN Add:](../../core/tools/dotnet-sln.md) `FSNetCore` `Library`
 
-```console
+```dotnetcli
 dotnet sln add src/Library/Library.fsproj
 ```
 
@@ -84,7 +84,7 @@ dotnet sln add src/Library/Library.fsproj
 
 Используйте команду, чтобы создать консольное приложение в папке src с именем App. `dotnet new`
 
-```console
+```dotnetcli
 dotnet new console -lang F# -o src/App
 ```
 
@@ -121,13 +121,13 @@ let main argv =
 
 Добавьте ссылку на `Library` проект с помощью команды [DotNet Add](../../core/tools/dotnet-add-reference.md).
 
-```console
+```dotnetcli
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
 Добавьте проект в решение с помощью `dotnet sln add` команды: `FSNetCore` `App`
 
-```console
+```dotnetcli
 dotnet sln add src/App/App.fsproj
 ```
 

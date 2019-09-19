@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb7223d2356ebec54ddd64dee514f1c8785e2d17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 06883646982aa6bd642dc4fce7881a289dad5901
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921565"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053194"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Практическое руководство. Настройка домена приложения
 Сведения о настройке нового домена приложения среде CLR можно предоставить с помощью класса <xref:System.AppDomainSetup>. При создании собственных доменов приложений наиболее важным свойством является <xref:System.AppDomainSetup.ApplicationBase%2A>. Другие свойства **AppDomainSetup** используются главным образом узлами среды выполнения для настройки определенного домена приложения.  
@@ -36,4 +36,4 @@ ms.locfileid: "69921565"
 ## <a name="see-also"></a>См. также
 
 - [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)
-- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
+- [Использование доменов приложений](use.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972023"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053184"
 ---
 # <a name="global-assembly-cache"></a>Глобальный кэш сборок
 На каждом компьютере с установленной средой CLR имеется кэш кода на уровне компьютера, называемый глобальным кэшем сборок. В глобальном кэше сборок сохраняются сборки, специально предназначенные для совместного использования на компьютере несколькими приложениями.  
@@ -31,7 +31,7 @@ ms.locfileid: "70972023"
   
 - Использование программы установки, предназначенной для работы с глобальным кэшем сборок. Данный подход является предпочтительным при установке сборок в глобальный кэш.  
   
-- Используйте инструмент разработчика под названием [средство глобального кэша сборок (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) из Windows SDK.  
+- Используйте инструмент разработчика под названием [средство глобального кэша сборок (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) из Windows SDK.  
   
     > [!NOTE]
     > В сценариях развертывания для установки сборок в глобальный кэш используйте установщик Windows. Средство глобального кэша сборок используйте только при разработке, поскольку оно не обеспечивает подсчет ссылок на сборку и другие возможности, предоставляемые при использовании установщика Windows.  
@@ -45,5 +45,5 @@ ms.locfileid: "70972023"
 ## <a name="see-also"></a>См. также
 
 - [Сборки в .NET](../../standard/assembly/index.md)
-- [Работа со сборками и глобальным кэшем сборок](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Работа со сборками и глобальным кэшем сборок](working-with-assemblies-and-the-gac.md)
 - [Сборки со строгими именами](../../standard/assembly/strong-named.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6517edcc2784b7d70c08c4d15d837fc1f209c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928242"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046016"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
 Сведения об универсальных типах получаются аналогично сведениям о других типах: путем изучения объекта <xref:System.Type>, который представляет универсальный тип. Принципиальная разница заключается в том, что универсальный тип имеет список объектов <xref:System.Type>, представляющих его параметры универсального типа. В первой процедуре данного раздела изучаются универсальные типы.  
@@ -119,6 +119,6 @@ ms.locfileid: "69928242"
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Отражение и универсальные типы](reflection-and-generic-types.md)
+- [Просмотр сведений о типах](viewing-type-information.md)
 - [Универсальные шаблоны](../../standard/generics/index.md)

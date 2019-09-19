@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946848"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051843"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Использование неуправляемых функций DLL
 Вызов неуправляемого кода — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек API Windows. Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия.  
@@ -29,15 +29,15 @@ ms.locfileid: "69946848"
   
 #### <a name="to-consume-exported-dll-functions"></a>Использование экспортированных функций DLL  
   
-1. [Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Идентификация функций в библиотеках DLL](identifying-functions-in-dlls.md).  
   
      Как минимум, необходимо указать имя функции и имя библиотеки DLL, содержащей ее.  
   
-2. [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Создание класса, содержащего функции DLL](creating-a-class-to-hold-dll-functions.md).  
   
      Можно использовать существующий класс, создать отдельный класс для каждой неуправляемой функции или создать один класс, содержащий набор связанных неуправляемых функций.  
   
-3. [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Используйте оператор **Declare** с ключевыми словами **Function** и **Lib**. В редких случаях можно использовать атрибут **DllImportAttribute** с ключевыми словами **Shared Function**. Такие случаи рассматриваются далее в этом разделе.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "69946848"
   
      [C++] Используйте атрибут **DllImportAttribute** для идентификации библиотеки DLL и функции. Пометьте метод или функцию оболочки модификатором **extern "C"** .  
   
-4. [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Вызов функции DLL](calling-a-dll-function.md).  
   
-     Вызовите метод управляемого класса так же, как и любой другой управляемый метод. [Передача структур](../../../docs/framework/interop/passing-structures.md) и [реализация функций обратного вызова](../../../docs/framework/interop/callback-functions.md) представляют собой особые случаи.  
+     Вызовите метод управляемого класса так же, как и любой другой управляемый метод. [Передача структур](passing-structures.md) и [реализация функций обратного вызова](callback-functions.md) представляют собой особые случаи.  
   
- Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Подробный обзор вызова неуправляемого кода  
  Вызов неуправляемого кода использует метаданные для нахождения экспортированных функций и маршалинга их аргументов во время выполнения. Данный процесс показан на следующем рисунке.  
@@ -73,6 +73,6 @@ ms.locfileid: "69946848"
 
 ## <a name="see-also"></a>См. также
 
-- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)
-- [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+- [Взаимодействие с неуправляемым кодом](index.md)
+- [Примеры вызовов неуправляемого кода](platform-invoke-examples.md)
+- [Маршалинг взаимодействия](interop-marshaling.md)

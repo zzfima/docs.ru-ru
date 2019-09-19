@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043730"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046061"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Практическое руководство. Определение универсального метода с порождаемым отражением
 
@@ -27,7 +27,7 @@ ms.locfileid: "70043730"
 В третьей процедуре показано, как вызывать универсальный метод.
 
 > [!IMPORTANT]
-> Метод не может являться универсальным только потому, что он принадлежит универсальному типу и использует параметры этого типа. Метод является универсальным только в том случае, если он имеет свой собственный список параметров типа. Универсальный метод может появиться в неуниверсальном типе, как показано в этом примере. Пример использования неуниверсального метода для универсального типа см. в разделе [Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+> Метод не может являться универсальным только потому, что он принадлежит универсальному типу и использует параметры этого типа. Метод является универсальным только в том случае, если он имеет свой собственный список параметров типа. Универсальный метод может появиться в неуниверсальном типе, как показано в этом примере. Пример использования неуниверсального метода для универсального типа см. в разделе [Практическое руководство. Определение универсального типа с порождаемым отражением](how-to-define-a-generic-type-with-reflection-emit.md)
 
 ### <a name="to-define-a-generic-method"></a>Определение универсального метода
 
@@ -36,7 +36,7 @@ ms.locfileid: "70043730"
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. Определите динамическую сборку и динамический модуль, содержащие тип, которому принадлежит универсальный метод. В этом случае сборка имеет только один модуль, который называется `DemoMethodBuilder1`. Имя модуля является идентичным имени сборки с добавленным расширением. В этом примере сборка сохраняется на диск и также выполняется, поэтому указывается <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. Можно использовать [Ildasm.exe (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) для проверки DemoMethodBuilder1.dll и сравнения этой библиотеки с языком MSIL для метода, показанного на этапе 1.
+2. Определите динамическую сборку и динамический модуль, содержащие тип, которому принадлежит универсальный метод. В этом случае сборка имеет только один модуль, который называется `DemoMethodBuilder1`. Имя модуля является идентичным имени сборки с добавленным расширением. В этом примере сборка сохраняется на диск и также выполняется, поэтому указывается <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. Можно использовать [Ildasm.exe (дизассемблер IL)](../tools/ildasm-exe-il-disassembler.md) для проверки DemoMethodBuilder1.dll и сравнения этой библиотеки с языком MSIL для метода, показанного на этапе 1.
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ ms.locfileid: "70043730"
 
 Этот метод имеет один формальный параметр, который является массивом `TInput`. Метод возвращает экземпляр класса `TOutput`, содержащий все элементы входного массива. Экземпляр класса `TOutput` может быть любым универсальным типом коллекции, реализующим универсальный интерфейс <xref:System.Collections.Generic.ICollection%601>.
 
-При выполнении этого кода динамическая сборка сохраняется как DemoGenericMethod1.dll и может быть проанализирована с помощью [Ildasm.exe (дизассемблера IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+При выполнении этого кода динамическая сборка сохраняется как DemoGenericMethod1.dll и может быть проанализирована с помощью [Ildasm.exe (дизассемблера IL)](../tools/ildasm-exe-il-disassembler.md).
 
 > [!NOTE]
 > Хорошим способом изучения способов выпуска кода является написание программы на языке Visual Basic, C# или Visual C++, которая будет выполнять программу и использовать дизассемблер для изучения MSIL, созданного компилятором.
@@ -169,4 +169,4 @@ ms.locfileid: "70043730"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Практическое руководство. Определение универсального типа с порождаемым отражением](how-to-define-a-generic-type-with-reflection-emit.md)

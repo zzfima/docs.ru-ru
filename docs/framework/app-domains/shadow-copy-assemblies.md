@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040724"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053073"
 ---
 # <a name="shadow-copying-assemblies"></a>Теневое копирование сборок
 
@@ -76,7 +76,7 @@ ms.locfileid: "70040724"
 
 Начиная с .NET Framework 4 при запуске по умолчанию происходит прямое сравнение даты и времени файла каждой сборки в каталоге приложения с датой и временем копии файла в каталоге теневого копирования. Если сборка была обновлена, она копируется с использованием той же процедуры, что и в более ранних версиях .NET Framework; в противном случае загружается копия из каталога теневого копирования.
 
-Повышение итоговой производительности является наибольшим для приложений, сборки которых меняются нечасто, а изменения обычно появляются в небольшом подмножестве сборок. Если большинство сборок приложения меняется часто, новое поведение по умолчанию может явиться причиной снижения производительности. Можно восстановить поведение при запуске предыдущих версий .NET Framework, добавив [элемент \<shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) в файл конфигурации с логическим значением `enabled="false"`.
+Повышение итоговой производительности является наибольшим для приложений, сборки которых меняются нечасто, а изменения обычно появляются в небольшом подмножестве сборок. Если большинство сборок приложения меняется часто, новое поведение по умолчанию может явиться причиной снижения производительности. Можно восстановить поведение при запуске предыдущих версий .NET Framework, добавив [элемент \<shadowCopyVerifyByTimestamp>](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) в файл конфигурации с логическим значением `enabled="false"`.
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ ms.locfileid: "70040724"
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [Элемент \<shadowCopyVerifyByTimeStamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [Элемент \<shadowCopyVerifyByTimeStamp>](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
