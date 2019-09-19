@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817941"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053366"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Интерфейсы API для поддержки размещения в собственном браузере WPF
 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Размещение приложений в веб-браузерах упрощается с помощью активного сервера документов (также известного как DocObject), зарегистрированного из узла WPF. Internet Explorer может напрямую активировать и интегрироваться с активным документом. Для размещения XBAP и свободных документов XAML в браузерах [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Mozilla предоставляет подключаемый модуль NPAPI, который обеспечивает аналогичную среду размещения для сервера активного документа, как это [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] делает Internet Explorer. Однако самый простой способ размещения XBAP и документов XAML в других браузерах и автономных приложениях — с помощью элемента управления веб-обозревателя Internet Explorer. Элемент управления "веб-браузер" предоставляет сложную среду размещения сервера Active Document, но она позволяет собственному узлу настраивать и расширять эту среду и напрямую взаимодействовать с текущим объектом активного документа.  
@@ -22,7 +22,7 @@ ms.locfileid: "68817941"
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  Реализация [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) сервера WPF Active Document Server поддерживает многочисленные команды, связанные с навигацией и конкретными обозревателями стандартной группы команд OLE (с идентификатором GUID группы команд null). Кроме того, он распознает пользовательскую группу команд с именем CGID_PresentationHost. Сейчас в этой группе определена только одна команда.  
   
-```  
+```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
 enum PresentationHostCommands {   
    PHCMDID_TABINTO = 1   

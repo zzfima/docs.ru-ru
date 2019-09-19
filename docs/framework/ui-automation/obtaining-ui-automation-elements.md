@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044146"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042889"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Получение элементов автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70044146"
  В этом разделе описываются различные способы получения объектов <xref:System.Windows.Automation.AutomationElement> для элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
 > [!CAUTION]
-> Если клиентское приложение может пытаться искать элементы в собственном пользовательском интерфейсе, вы должны выполнять все вызовы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в отдельном потоке. Для получения дополнительной информации см. [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Если клиентское приложение может пытаться искать элементы в собственном пользовательском интерфейсе, вы должны выполнять все вызовы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в отдельном потоке. Для получения дополнительной информации см. [UI Automation Threading Issues](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Корневой элемент  
@@ -85,7 +85,7 @@ ms.locfileid: "70044146"
 ### <a name="from-an-event"></a>Из события  
  Когда приложение получает событие [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , в качестве исходного объекта в обработчик событий передается <xref:System.Windows.Automation.AutomationElement>. Например, если вы подписаны на события изменения фокуса, в качестве исходного объекта в ваш <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> передается элемент, который получил фокус.  
   
- Дополнительные сведения см. в разделе [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
+ Дополнительные сведения см. в разделе [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
   
 ### <a name="from-a-point"></a>Из точки  
  Если имеются координаты экрана (например, позиция курсора), можно получить <xref:System.Windows.Automation.AutomationElement> с помощью статического метода <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> .  
@@ -98,6 +98,6 @@ ms.locfileid: "70044146"
   
 ## <a name="see-also"></a>См. также
 
-- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
+- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)
