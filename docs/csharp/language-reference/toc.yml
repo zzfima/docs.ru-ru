@@ -116,7 +116,7 @@
       items:
         - name: Категории операторов
           href: keywords/statement-keywords.md
-        - name: Операторы выбора
+        - name: Инструкции выбора
           items:
             - name: if-else
               href: keywords/if-else.md
@@ -152,7 +152,7 @@
               href: keywords/try-finally.md
             - name: try-catch-finally
               href: keywords/try-catch-finally.md
-        - name: Операторы checked и unchecked
+        - name: Checked и Unchecked
           items:
             - name: Обзор
               href: keywords/checked-and-unchecked.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Операторы доступа к членам
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: Операторы приведения и тестирования типов
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
@@ -321,7 +321,7 @@
     - name: Оператор =>
       href: operators/lambda-operator.md
       displayName: lambda
-    - name: 'Оператор ::'
+    - name: ':: - оператор'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
     - name: оператор await

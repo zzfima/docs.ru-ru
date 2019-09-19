@@ -3,12 +3,12 @@ title: Средства интерфейса командной строки (CL
 description: Обзор средств и возможностей интерфейса командной строки (CLI)NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969881"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117397"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Средства интерфейса командной строки (CLI) .NET Core
 
@@ -23,17 +23,17 @@ ms.locfileid: "70969881"
 
 По умолчанию интерфейс выполняет установку параллельно, чтобы на одном компьютере могли сосуществовать разные версии средств CLI. Сведения о том, как определить, какая из нескольких версий используется на компьютере, см. в разделе [Драйвер](#driver).
 
-## <a name="cli-commands"></a>Команды интерфейса командной строки
+## <a name="cli-commands"></a>Команды CLI
 
 По умолчанию устанавливаются следующие команды:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x).
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 **Основные команды**
 
-- [новую](dotnet-new.md)
+- [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
 - [publish](dotnet-publish.md)
@@ -41,7 +41,7 @@ ms.locfileid: "70969881"
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [миграции](dotnet-migrate.md)
+- [migrate](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [help](dotnet-help.md)
@@ -67,7 +67,7 @@ ms.locfileid: "70969881"
 
 **Основные команды**
 
-- [новую](dotnet-new.md)
+- [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
 - [publish](dotnet-publish.md)
@@ -75,7 +75,7 @@ ms.locfileid: "70969881"
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [миграции](dotnet-migrate.md)
+- [migrate](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 
@@ -103,9 +103,9 @@ ms.locfileid: "70969881"
 
 Структура команд CLI состоит из [драйвера ("dotnet")](#driver), [самой команды](#command) и ее возможных [аргументов](#arguments) и [параметров](#options). Этот шаблон используется в большинстве операций интерфейса командной строки, таких как создание консольного приложения и его запуск из командной строки, как показывают следующие команды при выполнении из каталога *my_app*:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x).
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
@@ -113,7 +113,7 @@ dotnet /build_output/my_app.dll
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet restore
 dotnet build --output /build_output
@@ -130,8 +130,8 @@ dotnet /build_output/my_app.dll
 
 При указании команды для драйвера `dotnet.exe` запускает процесс выполнения команды CLI. Например:
 
-```bash
-> dotnet build
+```dotnetcli
+dotnet build
 ```
 
 Сначала драйвер определяет нужную версию пакета SDK. Если файл ["global.json"](global-json.md) отсутствует, используется последняя доступная версия пакета SDK. Это может быть предварительная или стабильная версия, в зависимости от того, какая версия является последней на компьютере.  После определения версии пакета SDK он выполняет команду.
