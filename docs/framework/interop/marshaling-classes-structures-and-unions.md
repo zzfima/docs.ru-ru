@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
-ms.translationtype: HT
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894180"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151766"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Маршалинг классов, структур и объединений
 Классы и структуры в .NET Framework похожи. И те и другие могут иметь поля, свойства и события. Они также могут иметь статические и нестатические методы. Примечательным отличием является то, что структуры являются типами значений, а классы — ссылочными типами.  
   
  В таблице ниже представлены варианты маршалинга классов, структур и объединений, описывается их применение и приводятся ссылки на соответствующие примеры вызова неуправляемого кода.  
   
-|Тип|ОПИСАНИЕ|Пример|  
+|Тип|Описание|Пример|  
 |----------|-----------------|------------|  
 |Класс по значению.|Передает класс с целочисленными членами в качестве параметра In или Out (как и в случае управляемого класса).|Пример SysTime|  
 |Структура по значению.|Передает структуры в качестве параметров In.|Пример структур|  
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  Для всех структур в этом примере применяется атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute>, гарантирующий последовательное размещение элементов в памяти в порядке их появления.  
   
- Класс `LibWrap` содержит управляемые прототипы методов `TestStructInStruct`, `TestStructInStruct3` и `TestArrayInStruct`, вызываемые классом `App`. Каждый прототип объявляет один параметр указанным ниже способом.  
+ Класс `NativeMethods` содержит управляемые прототипы методов `TestStructInStruct`, `TestStructInStruct3` и `TestArrayInStruct`, вызываемые классом `App`. Каждый прототип объявляет один параметр указанным ниже способом.  
   
 - `TestStructInStruct` объявляет в качестве своего параметра ссылку на тип `MyPerson2`.  
   
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  В этом примере класс `FindData` содержит члены данных, соответствующие каждому элементу исходной и внедренной структур. Вместо двух исходных символьных буферов класс подставляет строки. Атрибут **MarshalAsAttribute** задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValTStr**, которое используется для идентификации встроенных символьных массивов фиксированной длины в неуправляемых структурах.  
   
- Класс `LibWrap` содержит управляемый прототип метода `FindFirstFile`, передающий класс `FindData` в качестве параметра. Этот параметр должен быть объявлен с атрибутами <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute>, так как классы, являющиеся ссылочными типами, по умолчанию передаются как параметры In.  
+ Класс `NativeMethods` содержит управляемый прототип метода `FindFirstFile`, передающий класс `FindData` в качестве параметра. Этот параметр должен быть объявлен с атрибутами <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute>, так как классы, являющиеся ссылочными типами, по умолчанию передаются как параметры In.  
   
 ### <a name="declaring-prototypes"></a>Объявление прототипов  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -202,7 +202,7 @@ union MYUNION2
   
  Объединения `MyUnion2_1` и `MyUnion2_2` содержат тип значения (целое число) и строку соответственно. В управляемом коде типы значений и ссылочные типы не могут перекрываться. Чтобы при вызове одной и той же неуправляемой функции вызывающий объект мог использовать оба типа, в этом примере применяется перегрузка метода. Структура `MyUnion2_1` задана явным образом и имеет точное значение смещения. Напротив, `MyUnion2_2` имеет последовательную структуру, так как структуры, заданные явным образом, нельзя использовать со ссылочными типами. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValTStr**, которое используется для идентификации встроенных символьных массивов фиксированной длины в неуправляемом представлении объединения.  
   
- Класс `LibWrap` содержит прототипы для методов `TestUnion` и `TestUnion2`. `TestUnion2` перегружается для объявления `MyUnion2_1` или `MyUnion2_2` в качестве параметров.  
+ Класс `NativeMethods` содержит прототипы для методов `TestUnion` и `TestUnion2`. `TestUnion2` перегружается для объявления `MyUnion2_1` или `MyUnion2_2` в качестве параметров.  
   
 ### <a name="declaring-prototypes"></a>Объявление прототипов  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  В этом примере класс `SystemTime` содержит элементы исходной структуры, представленные в виде членов класса. Чтобы гарантировать последовательное размещение членов в памяти в порядке их появления, применяется атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> .  
   
- Класс `LibWrap` содержит управляемый прототип метода `GetSystemTime`, который по умолчанию передает класс `SystemTime` в качестве параметра In или Out. Этот параметр должен быть объявлен с атрибутами <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute>, так как классы, являющиеся ссылочными типами, по умолчанию передаются как параметры In. Чтобы вызывающий объект получал результаты, необходимо явным образом применить [атрибуты направления](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). Класс `App` создает экземпляр класса `SystemTime` и осуществляет доступ к его полям данных.  
+ Класс `NativeMethods` содержит управляемый прототип метода `GetSystemTime`, который по умолчанию передает класс `SystemTime` в качестве параметра In или Out. Этот параметр должен быть объявлен с атрибутами <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute>, так как классы, являющиеся ссылочными типами, по умолчанию передаются как параметры In. Чтобы вызывающий объект получал результаты, необходимо явным образом применить [атрибуты направления](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). Класс `App` создает экземпляр класса `SystemTime` и осуществляет доступ к его полям данных.  
   
 ### <a name="code-samples"></a>Примеры кода  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  Класс `MyStruct` содержит строковый объект из символов ANSI. Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> определяет формат ANSI. `MyUnsafeStruct` — это структура, содержащая тип <xref:System.IntPtr> вместо строки.  
   
- Класс `LibWrap` содержит перегруженный метод прототипа `TestOutArrayOfStructs`. Если в качестве параметра метод объявляет указатель, класс должен быть помечен зарезервированным словом `unsafe`. Так как Visual Basic не может использовать небезопасный код, перегруженный метод, модификатор unsafe и структуры `MyUnsafeStruct` не нужны.  
+ Класс `NativeMethods` содержит перегруженный метод прототипа `TestOutArrayOfStructs`. Если в качестве параметра метод объявляет указатель, класс должен быть помечен зарезервированным словом `unsafe`. Так как Visual Basic не может использовать небезопасный код, перегруженный метод, модификатор unsafe и структуры `MyUnsafeStruct` не нужны.  
   
  Класс `App` реализует метод `UsingMarshaling`, который выполняет все задачи, необходимые для передачи массива. Чтобы указать, что данные передаются от вызываемого объекта к вызывающему, массив помечается зарезервированным словом `out` (`ByRef` в Visual Basic). Реализация использует следующие методы класса <xref:System.Runtime.InteropServices.Marshal>:  
   
