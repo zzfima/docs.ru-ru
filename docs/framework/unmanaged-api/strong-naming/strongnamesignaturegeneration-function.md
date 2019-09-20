@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1abb7efe0f30ff14d51f9486d6d5b04d2faa053
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48cdd550e5d8c7c75a603d74456e99a066d5c599
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773749"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798976"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>Функция StrongNameSignatureGeneration
 Создает подпись строгого имени для указанной сборки.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,52 +42,52 @@ BOOLEAN StrongNameSignatureGeneration (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к файлу, содержащему манифест сборки, для которого требуется создать подпись строгого имени.  
+ окне Путь к файлу, содержащему манифест сборки, для которой будет создана подпись строгого имени.  
   
  `wszKeyContainer`  
- [in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей.  
+ окне Имя контейнера ключей, содержащего пару открытого и закрытого ключей.  
   
- Если `pbKeyBlob` имеет значение null, `wszKeyContainer` необходимо указать допустимый контейнер в поставщик служб шифрования (CSP). В этом случае для подписывания файла используется пара ключей, хранящихся в контейнере.  
+ Если `pbKeyBlob` параметр имеет значение `wszKeyContainer` null, необходимо указать допустимый контейнер в поставщике служб шифрования (CSP). В этом случае для подписания файла используется пара ключей, хранящаяся в контейнере.  
   
- Если `pbKeyBlob` не равно null, предполагается, что пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).  
+ Если `pbKeyBlob` значение не равно null, предполагается, что пара ключей содержится в большом двоичном объекте Key (BLOB).  
   
- Ключи должны быть Rivest-Шамир-Adleman 1024-разрядный (RSA) ключи подписывания. Другие типы ключей не поддерживаются в настоящее время.  
+ Ключи должны состоять из 1024-разрядных ключей подписывания Ривест-Шамир-Адельман (RSA). В настоящее время не поддерживаются никакие другие типы ключей.  
   
  `pbKeyBlob`  
- [in] Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданные Win32 `CryptExportKey` функции. Если `pbKeyBlob` имеет значение null, контейнере ключей `wszKeyContainer` предполагается, что содержит пару ключей.  
+ окне Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданный функцией Win32 `CryptExportKey` . Если `pbKeyBlob` аргумент имеет значение null, предполагается, `wszKeyContainer` что контейнер ключей, заданный параметром, содержит пару ключей.  
   
  `cbKeyBlob`  
- [in] Размер в байтах из `pbKeyBlob`.  
+ окне Размер (в байтах `pbKeyBlob`).  
   
  `ppbSignatureBlob`  
- [out] Указатель на расположение, к которому среда CLR возвращает подпись. Если `ppbSignatureBlob` имеет значение null, среда выполнения сохраняет подпись в файл, указанный параметром `wszFilePath`.  
+ заполняет Указатель на расположение, в которое среда CLR возвращает подпись. Если `ppbSignatureBlob` параметр имеет значение null, среда выполнения сохраняет подпись в файле, указанном параметром `wszFilePath`.  
   
- Если `ppbSignatureBlob` — не равно null, среда CLR выделяет место для возвращения подписи. Вызывающий объект должен освободить это пространство с помощью [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) функции.  
+ Если `ppbSignatureBlob` значение не равно null, среда CLR выделяет пространство, в которое возвращается подпись. Вызывающий объект должен освободить это пространство с помощью функции [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbSignatureBlob`  
- [out] Размер в байтах, возвращаемой сигнатуры.  
+ заполняет Размер возвращенной сигнатуры в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Укажите значение null для `wszFilePath` для вычисления размера подписи без создания подписи.  
+ Укажите значение NULL `wszFilePath` для, чтобы вычислить размер подписи без создания подписи.  
   
- Подписи могут быть сохранены либо непосредственно в файле или возвращается вызывающей стороне.  
+ Подпись может храниться непосредственно в файле или возвращаться вызывающему объекту.  
   
- Если `StrongNameSignatureGeneration` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameSignatureGeneration` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [Метод StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [Метод StrongNameSignatureGenerationEx](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

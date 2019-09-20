@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7121ace6777e7cf947fcc6ff30b1ea314851feff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636707"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798994"
 ---
 # <a name="strongnamekeyinstall-function"></a>Функция StrongNameKeyInstall
 
 Импортирует пару открытого и закрытого ключей в контейнер.
 
-Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md) метод вместо этого.
+Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,31 +42,31 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Параметры
 
 `wszKeyContainer`\
-[in] Имя контейнера ключа. `wszKeyContainer` должен быть непустой строкой.
+окне Имя контейнера ключей. `wszKeyContainer`значение должно быть непустой строкой.
 
 `pbKeyBlob`\
-[in] Двоичный пару ключей.
+окне Пара двоичных ключей.
 
 `cbKeyBlob`\
-[in] Размер в байтах из `pbKeyBlob`.
+окне Размер (в байтах `pbKeyBlob`).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true` После успешного выполнения; в противном случае `false`.
+`true`При успешном завершении; в противном случае —. `false`
 
 ## <a name="remarks"></a>Примечания
 
-Используйте [StrongNameKeyDelete](strongnamekeydelete-function.md) функции, чтобы удалить контейнер ключей.
+Чтобы удалить контейнер ключей, используйте функцию [StrongNameKeyDelete](strongnamekeydelete-function.md) .
 
-Если `StrongNameKeyInstall` функция не завершена, вызвать [StrongNameErrorInfo](strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.
+Если функция `StrongNameKeyInstall` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** StrongName.h
+**Заголовок.** StrongName. h
 
-**Библиотека:** Включена как ресурс в MsCorEE.dll
+**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

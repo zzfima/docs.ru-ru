@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df2eb9d454f2037ef5f2a09d1309d52a8365e715
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c22339b7d48e89f99d1500cfdda53f00f1234b80
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782689"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799077"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>Функция StrongNameSignatureVerificationFromImage
 Проверяет допустимость сборки, которая уже была сопоставлена с памятью, для связанного открытого ключа.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: стронгнамеверификатионфромимаже](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,47 +41,47 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
 ## <a name="parameters"></a>Параметры  
  `pbBase`  
- [in] Относительный виртуальный адрес сопоставленные манифест.  
+ окне Относительный виртуальный адрес сопоставленного манифеста сборки.  
   
  `dwLength`  
- [in] Размер в байтах, сопоставленные изображения.  
+ окне Размер сопоставленного изображения в байтах.  
   
  `dwInFlags`  
- [in] Флаги, которые влияют на поведение проверки. Поддерживаются следующие значения:  
+ окне Флаги, влияющие на поведение при проверке. Поддерживаются следующие значения:  
   
-- `SN_INFLAG_FORCE_VER` (0x00000001) — проверка производится, даже если это необходимо переопределить параметры реестра.  
+- `SN_INFLAG_FORCE_VER`(0x00000001) — принудительная проверка, даже если необходимо переопределить параметры реестра.  
   
-- `SN_INFLAG_INSTALL` (0x00000002) — указывает, что это первая проверка, выполняемая в этом образе.  
+- `SN_INFLAG_INSTALL`(0x00000002) — указывает, что это первая проверка, выполняемая на этом образе.  
   
-- `SN_INFLAG_ADMIN_ACCESS` (0x00000004) — указывает, что кэш будет предоставлять доступ только к пользователям, имеющим права администратора.  
+- `SN_INFLAG_ADMIN_ACCESS`(0x00000004) — указывает, что кэш будет разрешать доступ только тем пользователям, у которых есть права администратора.  
   
-- `SN_INFLAG_USER_ACCESS` (0x00000008) — указывает, что сборка будет доступен только для текущего пользователя.  
+- `SN_INFLAG_USER_ACCESS`(0x00000008) — указывает, что сборка будет доступна только текущему пользователю.  
   
-- `SN_INFLAG_ALL_ACCESS` (0x00000010) — указывает, что кэш будет предоставлять никаких гарантий, ограничения доступа.  
+- `SN_INFLAG_ALL_ACCESS`(0x00000010) — указывает, что кэш не предоставляет никаких гарантий ограничения доступа.  
   
-- `SN_INFLAG_RUNTIME` (0x80000000) — зарезервировано для внутренней отладки.  
+- `SN_INFLAG_RUNTIME`(0x80000000) — зарезервировано для внутренней отладки.  
   
  `pdwOutFlags`  
- [out] Флаг, Дополнительные выходные сведения. Поддерживается следующее значение:  
+ заполняет Флаг для дополнительных выходных данных. Поддерживается следующее значение:  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) — это значение присваивается `false` для указания, что проверка выполнена успешно из-за параметров реестра.  
+- `SN_OUTFLAG_WAS_VERIFIED`(0x00000001) — это значение `false` указывает, что проверка прошла удачно из-за параметров реестра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Если `StrongNameSignatureVerificationFromImage` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameSignatureVerificationFromImage` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в mscoree.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку Mscoree. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameSignatureVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод StrongNameSignatureVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

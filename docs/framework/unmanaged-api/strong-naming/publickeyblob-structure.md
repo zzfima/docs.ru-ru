@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774582"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799161"
 ---
 # <a name="publickeyblob-structure"></a>Структура PublicKeyBlob
-Представляет открытый ключ из пары открытого и закрытого ключей в двоичном формате.  
+Представляет в двоичном формате открытый ключ пары открытого и закрытого ключей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,24 +41,24 @@ typedef struct {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`SigAlgId`|Идентификатор алгоритма подписи (типа `ALG_ID`, как определено в WinCrypt.h) открытого ключа.|  
-|`HashAlgId`|Идентификатор хэш-алгоритма (типа `ALG_ID`, как определено в WinCrypt.h) открытого ключа.|  
+|`SigAlgId`|Идентификатор для алгоритма подписи (типа `ALG_ID`, как определено в винкрипт. h) открытого ключа.|  
+|`HashAlgId`|Идентификатор для хэш-алгоритма (типа `ALG_ID`, как определено в винкрипт. h) открытого ключа.|  
 |`cbPublicKey`|Длина ключа в байтах.|  
-|`PublicKey`|Массив байтов переменной длины, содержащий значение ключа в формате, возвращенном CryptoAPI.|  
+|`PublicKey`|Массив байтов переменной длины, который содержит значение ключа в формате, возвращенном CryptoAPI.|  
   
 ## <a name="remarks"></a>Примечания  
- `PublicKeyBlob` Структура используется [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)и другие функции строгого имени для представления открытый ключ из пары открытого и закрытого ключей.  
+ Структура `PublicKeyBlob` используется [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md) и другими функциями строгого имени для представления открытого ключа пары открытого и закрытого ключей.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Функция StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [Функция StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [Функция StrongNameGetPublicKey](strongnamegetpublickey-function.md)
+- [Функция StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)

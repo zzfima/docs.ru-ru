@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 484dacd4d9803139edf3fd5bad22c164d50de3dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 71058a1ff82335b2a341904805d06738e662c296
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757242"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798873"
 ---
 # <a name="strongnametokenfromassembly-function"></a>Функция StrongNameTokenFromAssembly
 Создает маркер строгого имени из указанного файла сборки.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,35 +40,35 @@ BOOLEAN StrongNameTokenFromAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к переносимого исполняемого (PE) файла для сборки.  
+ окне Путь к переносимому исполняемому файлу (PE) для сборки.  
   
  `ppbStrongNameToken`  
- [out] Токен, возвращенный строгого имени.  
+ заполняет Возвращенный маркер строгого имени.  
   
  `pcbStrongNameToken`  
- [out] Размер в байтах, строгое имя маркера.  
+ заполняет Размер (в байтах) маркера строгого имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Маркер строгого имени — это сокращенная форма открытого ключа. Токен является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки. Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.  
+ Маркер строгого имени — это сокращенная форма открытого ключа. Маркер представляет собой 64-разрядный хэш, созданный из открытого ключа, используемого для подписания сборки. Токен является частью строгого имени сборки и может быть считан из метаданных сборки.  
   
- После создания маркера необходимо вызвать [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) функции, чтобы освободить выделенную память.  
+ После создания маркера необходимо вызвать функцию [StrongNameFreeBuffer](strongnamefreebuffer-function.md) , чтобы освободить выделенную память.  
   
- Если `StrongNameTokenFromAssembly` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameTokenFromAssembly` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в mscoree.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку Mscoree. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [Метод StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [Метод StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

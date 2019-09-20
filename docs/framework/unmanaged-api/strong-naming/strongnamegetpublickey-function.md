@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae87ebd0b8225f14ca029fac80528d47f5a866cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780114"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799059"
 ---
 # <a name="strongnamegetpublickey-function"></a>Функция StrongNameGetPublicKey
-Получает открытый ключ из пары закрытого и открытого ключей. Пару ключей можно указать как имя контейнера ключей в поставщике служб шифрования (CSP) или как коллекция необработанных байтов.  
+Получает открытый ключ из пары закрытого и открытого ключей. Пара ключей может быть задана как имя контейнера ключей в поставщике служб шифрования (CSP) или как необработанная коллекция байтов.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,44 +43,44 @@ BOOLEAN StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>Параметры  
  `szKeyContainer`  
- [in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей. Если `pbKeyBlob` имеет значение null, `szKeyContainer` необходимо указать допустимый контейнер в CSP. В этом случае `StrongNameGetPublicKey` извлекает открытый ключ из пары ключей, хранящихся в контейнере.  
+ окне Имя контейнера ключей, содержащего пару открытого и закрытого ключей. Если `pbKeyBlob` значение равно NULL `szKeyContainer` , необходимо указать допустимый контейнер в CSP. В этом случае `StrongNameGetPublicKey` извлекает открытый ключ из пары ключей, хранящейся в контейнере.  
   
- Если `pbKeyBlob` не равно null, предполагается, что пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).  
+ Если `pbKeyBlob` значение не равно null, предполагается, что пара ключей содержится в большом двоичном объекте Key (BLOB).  
   
- Ключи должны быть Rivest-Шамир-Adleman 1024-разрядный (RSA) ключи подписывания. Другие типы ключей не поддерживаются в настоящее время.  
+ Ключи должны состоять из 1024-разрядных ключей подписывания Ривест-Шамир-Адельман (RSA). В настоящее время не поддерживаются никакие другие типы ключей.  
   
  `pbKeyBlob`  
- [in] Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданные Win32 `CryptExportKey` функции. Если `pbKeyBlob` имеет значение null, контейнере ключей `szKeyContainer` предполагается, что содержит пару ключей.  
+ окне Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданный функцией Win32 `CryptExportKey` . Если `pbKeyBlob` аргумент имеет значение null, предполагается, `szKeyContainer` что контейнер ключей, заданный параметром, содержит пару ключей.  
   
  `cbKeyBlob`  
- [in] Размер в байтах из `pbKeyBlob`.  
+ окне Размер (в байтах `pbKeyBlob`).  
   
  `ppbPublicKeyBlob`  
- [out] Возвращаемый открытый ключ BLOB-ОБЪЕКТОВ. `ppbPublicKeyBlob` Параметра выделяется, среда CLR и возвращается вызывающей стороне. Вызывающий объект должен освободить память с помощью [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) функции.  
+ заполняет Возвращенный большой двоичный объект открытого ключа. `ppbPublicKeyBlob` Параметр выделяется средой CLR и возвращается вызывающему объекту. Вызывающий объект должен освободить память с помощью функции [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbPublicKeyBlob`  
- [out] Размер возвращаемого большой двоичный объект открытого ключа.  
+ заполняет Размер возвращенного большого двоичного объекта открытого ключа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Открытый ключ, содержащийся в [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) структуры.  
+ Открытый ключ содержится в структуре [публиккэйблоб](publickeyblob-structure.md) .  
   
- Если `StrongNameGetPublicKey` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameGetPublicKey` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [Структура PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [Метод StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [Метод StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)
+- [Структура PublicKeyBlob](publickeyblob-structure.md)

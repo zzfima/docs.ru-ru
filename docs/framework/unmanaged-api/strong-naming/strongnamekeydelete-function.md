@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636740"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799022"
 ---
 # <a name="strongnamekeydelete-function"></a>Функция StrongNameKeyDelete
 
 Удаляет указанный контейнер ключей.
 
-Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) метод вместо этого.
+Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,25 +40,25 @@ BOOLEAN StrongNameKeyDelete (
 ## <a name="parameters"></a>Параметры
 
 `wszKeyContainer`\
-[in] Имя контейнера ключа для удаления.
+окне Имя удаляемого контейнера ключей.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true` После успешного выполнения; в противном случае `false`.
+`true`При успешном завершении; в противном случае —. `false`
 
 ## <a name="remarks"></a>Примечания
 
-Используйте [StrongNameKeyInstall](strongnamekeyinstall-function.md) для импорта пару открытого и закрытого ключей в контейнер.
+Используйте функцию [StrongNameKeyInstall](strongnamekeyinstall-function.md) для импорта пары открытого и закрытого ключей в контейнер.
 
-Если `StrongNameKeyDelete` функция не завершена, вызвать [StrongNameErrorInfo](strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.
+Если функция `StrongNameKeyDelete` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** StrongName.h
+**Заголовок.** StrongName. h
 
-**Библиотека:** Включена как ресурс в MsCorEE.dll
+**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

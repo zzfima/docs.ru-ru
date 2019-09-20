@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68be16c559431de871dc9ddb1963897b0927d49a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 197504cbb0dd66c0cf43dee718026fc63e918d60
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783163"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798852"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Функция StrongNameTokenFromPublicKey
 Получает маркер, представляющий открытый ключ. Маркер строгого имени — это сокращенная форма открытого ключа.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,36 +45,36 @@ BOOLEANStrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Параметры  
  `pbPublicKeyBlob`  
- [in] Структура типа [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащий открытую часть пары ключей, использованного для создания подписи строгого имени.  
+ окне Структура типа [публиккэйблоб](publickeyblob-structure.md) , содержащая открытую часть пары ключей, используемую для создания подписи строгого имени.  
   
  `cbPublicKeyBlob`  
- [in] Размер в байтах из `pbPublicKeyBlob`.  
+ окне Размер (в байтах `pbPublicKeyBlob`).  
   
  `ppbStrongNameToken`  
- [out] Токен строгое имя, соответствующее ключу, переданный в `pbPublicKeyBlob`. Среда CLR выделяет память, в котором для возврата токена. Вызывающий объект должен освободить эту память с помощью [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) функции.  
+ заполняет Маркер строгого имени, соответствующий переданному `pbPublicKeyBlob`ключу. Среда CLR выделяет память, в которую возвращается маркер. Вызывающий объект должен освободить эту память с помощью функции [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbStrongNameToken`  
- [out] Размер в байтах, возвращенный строгое имя маркера.  
+ заполняет Размер возвращенного маркера строгого имени в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Маркер строгого имени — это сокращенная форма открытого ключа, используемого для экономии места, при сохранении информации ключа в метаданных. В частности маркеры строгого имени используются в ссылках сборок для ссылки на зависимые сборки.  
+ Маркер строгого имени — это сокращенная форма открытого ключа, используемая для экономии места при хранении ключевых сведений в метаданных. В частности, маркеры строгого имени используются в ссылках на сборки для ссылки на зависимую сборку.  
   
- Если `StrongNameTokenFromPublicKey` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameTokenFromPublicKey` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в mscoree.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку Mscoree. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [Метод StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [Структура PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [Метод StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [Метод StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [Структура PublicKeyBlob](publickeyblob-structure.md)

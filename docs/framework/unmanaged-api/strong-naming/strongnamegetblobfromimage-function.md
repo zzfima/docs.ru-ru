@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b076c39ccf40ca5b613cab94ecc75716158d97a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b99b29a85f498a6bfa0363a446bf589876bff9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780129"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799085"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>Функция StrongNameGetBlobFromImage
 Получает двоичное представление образа сборки по указанному адресу памяти.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,34 +41,34 @@ BOOLEAN StrongNameGetBlobFromImage (
   
 ## <a name="parameters"></a>Параметры  
  `pbBase`  
- [in] Адрес памяти, сопоставленной сборки манифеста.  
+ окне Адрес сопоставленного манифеста сборки в памяти.  
   
  `dwLength`  
- [in] Размер в байтах, изображения в `pbBase`.  
+ окне Размер изображения `pbBase`в байтах в.  
   
  `pbBlob`  
- [in] Буфер, содержащий двоичное представление изображения.  
+ окне Буфер для хранения двоичного представления изображения.  
   
  `pcbBlob`  
- [in, out] Максимальный размер в байтах, запрошенную `pbBlob`. По возвращении фактический размер в байтах из `pbBlob`.  
+ [вход, выход] Запрошенный максимальный размер (в байтах `pbBlob`). При возврате фактический размер (в байтах) `pbBlob`для.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Если `StrongNameGetBlobFromImage` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameGetBlobFromImage` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [Метод StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [Метод StrongNameGetBlob](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2ed9ba4b580b8f64fc05dbb429742442a36acf5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f9ab908866402bd7a883114466f32921321a5ee6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757464"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799015"
 ---
 # <a name="strongnamekeygenex-function"></a>Функция StrongNameKeyGenEx
-Создает новую пару открытого и закрытого ключа с заданным размером ключа, для использования строгого имени.  
+Создает новую пару открытого и закрытого ключей с указанным размером ключа для использования строгого имени.  
   
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) метод вместо этого.  
+ Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,45 +42,45 @@ BOOLEAN StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>Параметры  
  `wszKeyContainer`  
- [in] Имя запрошенного контейнера ключа. `wszKeyContainer` должен быть непустой строкой, или значение null для создания временного имени.  
+ окне Запрошенное имя контейнера ключей. `wszKeyContainer`должен быть непустой строкой или иметь значение NULL для создания временного имени.  
   
  `dwFlags`  
- [in] Указывает, следует ли оставить ключ зарегистрирован. Поддерживаются следующие значения:  
+ окне Указывает, следует ли оставить зарегистрированный ключ. Поддерживаются следующие значения:  
   
-- 0x00000000 — используется, когда `wszKeyContainer` имеет значение null, если для создания временного имени контейнера ключа.  
+- 0x00000000 — используется, `wszKeyContainer` если параметр имеет значение null, чтобы создать имя контейнера временного ключа.  
   
 - 0x00000001 (`SN_LEAVE_KEY`) — указывает, что ключ должен оставаться зарегистрированным.  
   
  `dwKeySize`  
- [in] Запрошенный размер ключа в битах.  
+ окне Запрошенный размер ключа в битах.  
   
  `ppbKeyBlob`  
- [out] Возвращаемый ключа пары открытого и закрытого.  
+ заполняет Возвращаемая пара открытого и закрытого ключей.  
   
  `pcbKeyBlob`  
- [out] Размер в байтах из `ppbKeyBlob`.  
+ заполняет Размер (в байтах `ppbKeyBlob`).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
+ `true`При успешном завершении; в противном случае —. `false`  
   
 ## <a name="remarks"></a>Примечания  
- Требуется .NET Framework версий 1.0 и 1.1 `dwKeySize` 1024 бит для подписи сборки строгим именем; версии 2.0 добавлена поддержка 2048-разрядные ключи.  
+ Для подписывания сборки строгим именем в `dwKeySize` .NET Framework версиях 1,0 и 1,1 требуется a из 1024 бит. в версии 2,0 добавлена поддержка для 2048-разрядных ключей.  
   
- После извлечения ключа должно вызвать [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) функции, чтобы освободить выделенную память.  
+ После извлечения ключа необходимо вызвать функцию [StrongNameFreeBuffer](strongnamefreebuffer-function.md) , чтобы освободить выделенную память.  
   
- Если `StrongNameKeyGenEx` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если функция `StrongNameKeyGenEx` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName.h  
+ **Заголовок.** StrongName. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [Метод StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Метод StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [Метод StrongNameKeyGen](../hosting/iclrstrongname-strongnamekeygen-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

@@ -1,42 +1,42 @@
 ---
-title: Создание проектов LINQ to DataSet в Visual Studio
+title: Создание проекта LINQ to DataSet в Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b905c65575c3c567459d843b2a5d1606bc63228
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667055"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783776"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Практическое руководство. Создание проектов LINQ to DataSet в Visual Studio
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Практическое руководство. Создание проекта LINQ to DataSet в Visual Studio
 
-Различные типы проектов LINQ требуются некоторые ссылки на сборки и импортируемых пространств имен (Visual Basic) или [с помощью](../../../csharp/language-reference/keywords/using-directive.md) директивы (C#). Минимальным требованием для LINQ — это ссылка на *System.Core.dll* и `using` директив для <xref:System.Linq>.
+Для различных типов проектов LINQ требуются определенные ссылки на сборки и импортированные пространства имен (Visual Basic) или директивы [using](../../../csharp/language-reference/keywords/using-directive.md) (C#). Минимальным требованием для LINQ является ссылка на *библиотеку System. Core. dll* и `using` директиву <xref:System.Linq>для.
 
-Эти требования предоставляются по умолчанию при создании C# консольного приложения проекта в Visual Studio 2017. Если вы обновляете проект с более ранней версии Visual Studio, может потребоваться вручную ввести эти ссылки, связанные с LINQ.
+Эти требования предоставляются по умолчанию при создании нового C# проекта консольного приложения в Visual Studio 2017. Если вы обновляете проект с более ранней версии Visual Studio, вам может потребоваться предоставить эти ссылки, связанные с LINQ, вручную.
 
-LINQ to DataSet требуются две дополнительные ссылки на *System.Data.dll* и *System.Data.DataSetExtensions.dll*.
+LINQ to DataSet требуется две дополнительные ссылки на *System. Data. dll* и *System. Data. DataSetExtensions. dll*.
 
 > [!NOTE]
-> Если вы выполняете сборку из командной строки, необходимо вручную указать связанные с LINQ библиотеки DLL в *%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.5*.
+> При построении из командной строки необходимо вручную ссылаться на библиотеки DLL, связанные с LINQ, в *%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.5*.
 
 ## <a name="to-enable-linq-to-dataset-functionality"></a>Включение функциональности LINQ to DataSet
 
-Выполните следующие шаги для включения функциональных возможностей набора данных в существующий проект LINQ.
+Выполните следующие действия, чтобы включить LINQ to DataSet функциональности в существующем проекте.
 
-1. Добавьте ссылки на **System.Core**, **System.Data**, и **System.Data.DataSetExtensions**.
+1. Добавьте ссылки на **System. Core**, **System. Data**и **System. Data. DataSetExtensions**.
 
-   В **обозревателе решений**, щелкните правой кнопкой мыши **ссылки** узел и выберите **добавить ссылку**. В **диспетчер ссылок** выберите **System.Core**, **System.Data**, и **System.Data.DataSetExtensions**. Нажмите кнопку **ОК**.
+   В **Обозреватель решений**щелкните правой кнопкой мыши узел **ссылки** и выберите команду **Добавить ссылку**. В диалоговом окне **Диспетчер ссылок** выберите **System. Core**, **System. Data**и **System. Data. DataSetExtensions**. Нажмите кнопку **ОК**.
 
-1. Добавить [с помощью](../../../csharp/language-reference/keywords/using-directive.md) директивы (или [инструкции импорта](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) в Visual Basic) для **System.Data** и **System.Linq**.
+1. Добавьте директивы [using](../../../csharp/language-reference/keywords/using-directive.md) (или [импортирует операторы](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) в Visual Basic) для **System. Data** и **System. LINQ**.
 
    ```csharp
    using System.Data;
    using System.Linq;
    ```
 
-1. При необходимости добавьте `using` директивы (или `Imports` инструкции) для **System.Data.Common** или **System.Data.SqlClient**, в зависимости от способа подключения к базе данных.
+1. При необходимости `using` добавьте директиву ( `Imports` или оператор) для **System. Data. Common** или **System. Data. SqlClient**в зависимости от способа подключения к базе данных.
 
 ## <a name="see-also"></a>См. также
 
-- [Начало работы с LINQ to DataSet](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+- [Начало работы с LINQ to DataSet](getting-started-linq-to-dataset.md)
