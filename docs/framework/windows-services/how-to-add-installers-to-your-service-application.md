@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952511"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053655"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Практическое руководство. Добавление установщиков в приложение-службу
 В состав Visual Studio входят компоненты установки, которые могут устанавливать ресурсы, связанные с приложениями-службами. Компоненты установки регистрируют отдельную службу в целевой системе и сообщают диспетчеру служб об этой службе. При работе с приложением-службой можно выбрать ссылку в окне свойств для автоматического добавления соответствующих установщиков в проект.  
@@ -47,11 +47,11 @@ ms.locfileid: "69952511"
   
     |Значение|Результат|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Служба должна быть запущена вручную после установки. Дополнительные сведения см. в разделе [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Служба должна быть запущена вручную после установки. Дополнительные сведения см. в разделе [Практическое руководство. Запуск служб](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Служба будет запускаться сама при перезагрузке компьютера.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Запуск службы невозможен.|  
   
-6. Чтобы определить контекст безопасности, в котором будет запущена служба, щелкните компонент <xref:System.ServiceProcess.ServiceProcessInstaller> и задайте соответствующие значения свойств. Дополнительные сведения см. в разделе [Практическое руководство. Назначение службам контекста безопасности](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Чтобы определить контекст безопасности, в котором будет запущена служба, щелкните компонент <xref:System.ServiceProcess.ServiceProcessInstaller> и задайте соответствующие значения свойств. Дополнительные сведения см. в разделе [Практическое руководство. Назначение службам контекста безопасности](how-to-specify-the-security-context-for-services.md).  
   
 7. Переопределите все методы, для которых нужно выполнить дополнительную обработку.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69952511"
   
 ## <a name="see-also"></a>См. также
 
-- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Практическое руководство. Назначение службам контекста безопасности](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [Знакомство с приложениями служб Windows](introduction-to-windows-service-applications.md)
+- [Практическое руководство. Установка и удаление служб](how-to-install-and-uninstall-services.md)
+- [Практическое руководство. Запуск служб](how-to-start-services.md)
+- [Практическое руководство. Назначение службам контекста безопасности](how-to-specify-the-security-context-for-services.md)
