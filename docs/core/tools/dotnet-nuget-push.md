@@ -3,12 +3,12 @@ title: Команда dotnet nuget push
 description: Команда dotnet nuget push отправляет пакет на сервер и публикует его.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202543"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117491"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202543"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```console
+```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
@@ -90,37 +90,37 @@ dotnet nuget push [-h|--help]
 
 * Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию, предоставляя ключ API:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
 * Отправляет *foo.nupkg* в пользовательский источник push-уведомлений `https://customsource`, предоставляя ключ API:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
 * Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
 * Отправляет *foo.symbols.nupkg* в источник символов по умолчанию.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
 * Отправляет *foo.nupkg* в источник push-уведомлений по умолчанию, указав время ожидания 360 секунд:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
 * Отправляет все файлы *NUPKG* из текущего каталога в источник push-уведомлений по умолчанию.
 
-  ```console
+  ```dotnetcli
   dotnet nuget push *.nupkg
   ```
   

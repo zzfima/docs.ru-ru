@@ -3,12 +3,12 @@ title: Использование dotnet-svcutil.xmlserializer в .NET Core
 description: Узнайте, как использовать пакет NuGet `dotnet-svcutil.xmlserializer`, чтобы предварительно генерировать сборку сериализации для проектов .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848965"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117271"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Использование dotnet-svcutil.xmlserializer в .NET Core
 
@@ -39,7 +39,7 @@ ms.locfileid: "70848965"
 
 2. Для этого создайте консольное приложение .NET Core как клиентское приложение WCF, ориентированное на .NET Core 2.1 или более поздних версий. Например, с помощью приведенной ниже команды создайте приложение с именем MyWCFClient.
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "70848965"
 
 3. Добавьте ссылку на пакет в `System.ServiceModel.Http`, выполнив приведенную ниже команду.
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ ms.locfileid: "70848965"
 
 5. Добавьте ссылку на пакет `dotnet-svcutil.xmlserializer`, выполнив приведенную ниже команду.
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 

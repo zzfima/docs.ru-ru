@@ -2,12 +2,12 @@
 title: Команда dotnet build
 description: Команда dotnet build выполняет сборку проекта и всех его зависимостей.
 ms.date: 08/08/2019
-ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988522"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117761"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,7 +23,7 @@ ms.locfileid: "70988522"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```console
+```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
@@ -122,30 +122,30 @@ dotnet build [-h|--help]
 
 * Сборка проекта и его зависимостей:
 
-  ```console
+  ```dotnetcli
   dotnet build
   ```
 
 * Сборка проекта и его зависимостей с помощью конфигурации Release:
 
-  ```console
+  ```dotnetcli
   dotnet build --configuration Release
   ```
 
 * Сборка проекта и его зависимостей для конкретной среды выполнения (в данном примере Ubuntu 18.04):
 
-  ```console
+  ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Выполните сборку проекта и используйте указанный источник пакета NuGet во время операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).
 
-  ```console
+  ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
 * Выполните сборку проекта и задайте версию 1.2.3.4 для сборки с помощью [параметра MSBuild](#msbuild) `-p`:
 
-  ```console
+  ```dotnetcli
   dotnet build -p:Version=1.2.3.4
   ```

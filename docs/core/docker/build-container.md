@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926306"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116565"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -55,7 +55,7 @@ ms.locfileid: "70926306"
 
 Вам нужно создать приложение .NET Core для выполнения контейнера Docker. Откройте терминал, создайте рабочую папку, если вы еще этого не сделали, и войдите в нее. Выполните следующую команду в рабочей папке, чтобы создать проект в подпапке с именем app:
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Counter: 4
 
 Из рабочей папки перейдите в папку **app** с примером исходного кода и выполните следующую команду:
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

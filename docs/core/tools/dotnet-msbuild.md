@@ -2,12 +2,12 @@
 title: Команда dotnet msbuild
 description: Команда dotnet msbuild обеспечивает доступ к командной строке MSBuild.
 ms.date: 12/03/2018
-ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b83f1272cdd4c5fcdb6b1e34aef7692e9acc01cd
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632031"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117700"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -21,7 +21,7 @@ ms.locfileid: "65632031"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a>ОПИСАНИЕ
 
 Команда `dotnet msbuild` предоставляет доступ к полнофункциональной системе MSBuild.
 
@@ -33,24 +33,24 @@ ms.locfileid: "65632031"
 
 * Сборка проекта и его зависимостей:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild
   ```
 
 * Сборка проекта и его зависимостей с помощью конфигурации Release:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -p:Configuration=Release
   ```
 
 * Запустите цель публикации и публикацию для RID `osx.10.11-x64`:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
   ```
 
 * Весь проект со всеми целевыми объектами, включенными в пакет SDK:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -pp
   ```

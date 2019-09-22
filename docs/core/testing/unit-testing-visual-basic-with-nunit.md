@@ -4,12 +4,12 @@ description: Сведения о концепциях модульного те�
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 97902bbfb035d3403d3e7236a0c67fa60d7d9d94
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849681"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117337"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit
 
@@ -26,7 +26,7 @@ ms.locfileid: "70849681"
 
 Откройте окно оболочки. Создайте каталог с именем *unit-testing-vb-nunit* для хранения решения. В этом каталоге выполните следующую команду, чтобы создать файл решения для библиотеки классов и тестового проекта:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
@@ -40,7 +40,7 @@ dotnet new sln
 
 Перейдите в каталог *PrimeService* и выполните следующую команду, чтобы создать исходный проект:
 
-```console
+```dotnetcli
 dotnet new classlib -lang VB
 ```
 
@@ -60,7 +60,7 @@ End Namespace
 
 Вернитесь в каталог *unit-testing-vb-using-mstest*. Чтобы добавить проект библиотеки классов в решение, выполните следующую команду:
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService\PrimeService.vbproj
 ```
 
@@ -79,7 +79,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 Перейдите в каталог *PrimeService.Tests* и создайте проект, выполнив следующую команду:
 
-```console
+```dotnetcli
 dotnet new nunit -lang VB
 ```
 
@@ -89,7 +89,7 @@ dotnet new nunit -lang VB
 
 Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда `dotnet new` на предыдущем шаге добавляет NUnit и адаптер тестирования NUnit. Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -110,7 +110,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 Выполните следующую команду в каталоге *unit-testing-vb-nunit*:
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 ```
 

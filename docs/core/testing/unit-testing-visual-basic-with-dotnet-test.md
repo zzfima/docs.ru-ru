@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 63898f23f7c70a96409c6de9029fb0c067223016
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 1738aa805947fbe0c1b7c2c770947ce650692b5f
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373882"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117056"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и xUnit
 
@@ -24,7 +24,7 @@ ms.locfileid: "70373882"
 В этом каталоге выполните команду выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать решение. Этот метод упрощает управление библиотекой классов и проектом модульного теста.
 В каталоге решения создайте каталог *PrimeService*. На данный момент структура каталогов и файлов выглядит следующим образом:
 
-```console
+```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -48,7 +48,7 @@ End Namespace
 
 Затем создайте каталог *PrimeService.Tests*. Ниже представлена структура каталогов:
 
-```console
+```
 /unit-testing-vb-using-dotnet-test
     unit-testing-vb-using-dotnet-test.sln
     /PrimeService
@@ -69,7 +69,7 @@ End Namespace
 
 Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда В предыдущем шаге `dotnet new` добавила пакет xUnit и средство запуска xUnit. Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -77,7 +77,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 Ниже показана окончательная структура папок:
 
-```console
+```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService

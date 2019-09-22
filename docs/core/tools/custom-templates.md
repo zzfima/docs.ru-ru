@@ -3,12 +3,12 @@ title: Пользовательские шаблоны для команды dot
 description: Сведения о пользовательских шаблонах для проектов или файлов .NET любых типов.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849844"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117805"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
@@ -24,7 +24,7 @@ ms.locfileid: "70849844"
 
 При установке [пакета SDK для .NET Core](https://dotnet.microsoft.com/download) вы получаете более десяти встроенных шаблонов для создания проектов и файлов, включая консольные приложения, библиотеки классов, проекты модульных тестов, приложения ASP.NET Core (в том числе проекты [Angular](https://angular.io/) и [React](https://facebook.github.io/react/)) и файлы конфигурации. Чтобы получить список встроенных шаблонов, выполните команду `dotnet new` с параметром `-l|--list`.
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
@@ -170,7 +170,7 @@ project_folder
 
 Для установки пакета шаблонов используйте идентификатор пакета NuGet.
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 Укажите путь к файлу *.nupkg* пакета NuGet.
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 Шаблоны можно установить из папки шаблонов, например из папки *mytemplate1* в приведенном выше примере. Укажите путь к папке *.template.config*. Не обязательно указывать абсолютный путь к каталогу шаблонов. Но для удаления шаблона, который был установлен из папки, требуется абсолютный путь.
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 Команда удаления (uninstall) без дополнительных параметров возвращает полный список установленных шаблонов.
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Currently installed items:
 
 Если пакет был установлен веб-каналом NuGet или напрямую из файла *.nupkg*, вам нужно предоставить идентификатор для него.
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 Если пакет был установлен указанием пути к папке *.template.config*, используйте тот же **абсолютный** путь для удаления пакета. Абсолютный путь к шаблону можно найти в выходных данных команды `dotnet new -u`. Дополнительные сведения см. выше в разделе [Получение списка установленных шаблонов](#get-a-list-of-installed-templates).
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 После установки шаблона для его использования выполните команду `dotnet new <TEMPLATE>` так же, как и в случае с любым другим предустановленным шаблоном. Кроме того, можно указать [параметры](dotnet-new.md#options) для команды `dotnet new`, в том числе относящиеся к шаблону параметры, заданные в настройках шаблона. Укажите короткое имя шаблона непосредственно в команде.
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

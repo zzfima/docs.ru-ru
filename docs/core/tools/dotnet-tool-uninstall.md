@@ -2,12 +2,12 @@
 title: Команда dotnet tool uninstall
 description: Команда dotnet tool uninstall удаляет указанное глобальное средство .NET Core с компьютера.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4d53d305131e3399ab5d9c19f9319f3ba3544c19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 033753f44464e78b826e908e0b6cdf276da8a179
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680927"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117542"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -19,13 +19,13 @@ ms.locfileid: "54680927"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```console
+```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>ОПИСАНИЕ
 
 Команда `dotnet tool uninstall` позволяет удалить глобальные средства .NET Core с компьютера. Чтобы использовать эту команду, укажите, что хотите удалить средство на уровне пользователя, с помощью параметра `--global`, или укажите путь к расположению средства с помощью параметра `--tool-path`.
 

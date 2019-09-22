@@ -2,12 +2,12 @@
 title: Команда dotnet new
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 ms.date: 05/06/2019
-ms.openlocfilehash: 57b198d13984fb4585e1df6303afe481e7e0552d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969735"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117667"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -23,7 +23,7 @@ ms.locfileid: "70969735"
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -31,7 +31,7 @@ dotnet new [-h|--help]
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -39,7 +39,7 @@ dotnet new [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -47,7 +47,7 @@ dotnet new [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
@@ -74,7 +74,7 @@ dotnet new [-h|--help]
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.2.100. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-| Шаблоны                                    | Краткое имя        | Язык     | Теги                                  |
+| Шаблоны                                    | Краткое имя        | Язык     | Tags                                  |
 |----------------------------------------------|-------------------|--------------|---------------------------------------|
 | Консольное приложение                          | `console`         | [C#], F#, VB | Общее/консоль                        |
 | Библиотека классов                                | `classlib`        | [C#], F#, VB | Общее/библиотека                        |
@@ -102,7 +102,7 @@ dotnet new [-h|--help]
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.1.300. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-| Шаблоны                                    | Краткое имя      | Язык     | Теги                                  |
+| Шаблоны                                    | Краткое имя      | Язык     | Tags                                  |
 |----------------------------------------------|-----------------|--------------|---------------------------------------|
 | Консольное приложение                          | `console`       | [C#], F#, VB | Общее/консоль                        |
 | Библиотека классов                                | `classlib`      | [C#], F#, VB | Общее/библиотека                        |
@@ -128,7 +128,7 @@ dotnet new [-h|--help]
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются с пакетом SDK для .NET Core 2.0.0. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-| Шаблоны                                    | Краткое имя    | Язык     | Теги                |
+| Шаблоны                                    | Краткое имя    | Язык     | Tags                |
 |----------------------------------------------|---------------|--------------|---------------------|
 | Консольное приложение                          | `console`     | [C#], F#, VB | Общее/консоль      |
 | Библиотека классов                                | `classlib`    | [C#], F#, VB | Общее/библиотека      |
@@ -153,7 +153,7 @@ dotnet new [-h|--help]
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -all`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются с пакетом SDK для .NET Core 1.0.1. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-| Шаблоны            | Краткое имя    | Язык | Теги           |
+| Шаблоны            | Краткое имя    | Язык | Tags           |
 |----------------------|---------------|----------|----------------|
 | Консольное приложение  | `console`     | [C#], F# | Общее/консоль |
 | Библиотека классов        | `classlib`    | [C#], F# | Общее/библиотека |

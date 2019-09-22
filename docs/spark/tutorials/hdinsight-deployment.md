@@ -4,12 +4,12 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928472"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117981"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Развертывание приложения .NET для Apache Spark в Azure HDInsight
 
@@ -49,7 +49,7 @@ ms.locfileid: "70928472"
 
    В Linux можно выполнить приведенную ниже команду.
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
@@ -63,7 +63,7 @@ ms.locfileid: "70928472"
 
 4. Передайте в распределенную файловую систему (например, HDFS, WASB или ADLS), к которой есть доступ у кластера, следующие файлы:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`. Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
    * `<your app>.zip`
    * Файлы (например, файлы зависимостей или общие данные, доступные каждой рабочей роли) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции, или библиотеки, от которых зависит `app`), которые необходимо поместить в рабочий каталог каждого исполнителя.
 
@@ -84,7 +84,7 @@ ms.locfileid: "70928472"
 |-------|-----|
 |Тип скрипта|Другой|
 |name|Установка Microsoft.Spark.Worker|
-|URI bash-скрипта|Универсальный код ресурса (URI), по которому был отправлен файл `install-worker.sh`. Например `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`.|
+|URI bash-скрипта|Универсальный код ресурса (URI), по которому был отправлен файл `install-worker.sh`. Например: `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
 |Типы узлов|Рабочий узел|
 |Параметры|Параметры скрипта `install-worker.sh`. Например, если файл `install-worker.sh` был отправлен в Azure Data Lake 2-го поколения, параметры будут следующими: `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.|
 

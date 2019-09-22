@@ -4,19 +4,19 @@ description: Поддерживаемые версии Linux и зависимо
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969869"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116589"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
 В этой статье описываются зависимости, необходимые для разработки приложений .NET Core в Linux. Поддерживаемые дистрибутивы и версии Linux, а также перечисленные ниже зависимости относятся к двум способам разработки приложений .NET Core в Linux:
 
 * [командная строка и любой редактор;](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code.](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > Пакет SDK для .NET Core не требуется для рабочих серверов и сред. Для приложений, развертываемых в рабочих средах, требуется только пакет среды выполнения .NET Core. Среда выполнения .NET Core развертывается вместе с приложениями в рамках автономного развертывания, однако для приложений, зависимых от платформы, ее необходимо развертывать отдельно. Дополнительные сведения о зависимых от платформы и автономных типах развертывания см. в статье [Развертывание приложений .NET Core](./deploying/index.md). Также см. статью [Автономные приложения Linux](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
@@ -150,7 +150,7 @@ Alpine Linux                  | 3.8+                  | x64, ARM64
 
 Скрипт по умолчанию устанавливает последнюю версию LTS. В данный момент это .NET Core 1.1. Чтобы установить .NET Core 2.1, запустите скрипт с таким параметром.
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 

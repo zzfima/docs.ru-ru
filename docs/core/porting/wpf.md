@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512283"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117072"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Практическое руководство. Портирование классического приложения WPF в .NET Core
 
@@ -94,7 +94,7 @@ SolutionFolder
 
 Если вы не хотите вручную создавать файл проекта, можно воспользоваться Visual Studio или пакетом SDK для .NET Core. Но необходимо удалить все остальные файлы, созданные с помощью шаблона проекта, за исключением файла проекта. Чтобы использовать пакет SDK, выполните следующую команду из каталога **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
@@ -111,7 +111,7 @@ SolutionFolder
 
 С помощью Visual Studio или .NET Core CLI проект **MyWPFCore.csproj** необходимо добавить в файл **MyApps.sln** из каталога **SolutionFolder**.
 
-```cli
+```dotnetcli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
@@ -187,7 +187,7 @@ dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 
 В вашем WPF-приложении для .NET Framework, скорее всего, есть файл **packages.config**, содержащий список всех пакетов NuGet, на которые ссылается проект. Этот список поможет вам определить, какие пакеты NuGet нужно добавить в проект .NET Core. Например, если проект .NET Framework ссылается на пакет `MahApps.Metro` в NuGet, добавьте его в проект с помощью Visual Studio. Ссылку можно также добавить с помощью .NET Core CLI из каталога **SolutionFolder**.
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
@@ -203,7 +203,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0
 
 Если возникают проблемы при сборке проектов, причина может быть в том, что вы используете некоторые API только для Windows, которые доступны в .NET Framework, но недоступны в .NET Core. Попробуйте добавить в свой проект такой пакет NuGet, как [пакет обеспечения совместимости Windows][compat-pack]. Этот пакет выполняется только в среде Windows и добавляет около 20 000 API Windows в проекты .NET Core и .NET Standard.
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 

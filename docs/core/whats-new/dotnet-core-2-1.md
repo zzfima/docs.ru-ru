@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925722"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116214"
 ---
 # <a name="whats-new-in-net-core-21"></a>Новые возможности .NET Core 2.1
 
@@ -39,7 +39,7 @@ ms.locfileid: "70925722"
 
 - использование серверов сборки SDK длительного выполнения, которые не завершаются после каждого отдельного вызова `dotnet build`. Это позволяет не применять JIT-компиляцию для больших блоков кода при каждом вызове `dotnet build`. Процессы серверов сборки можно автоматически завершить с помощью следующей команды:
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ ms.locfileid: "70925722"
 
 - `dotnet watch` предоставляет наблюдатель файловой системы, который ожидает изменений в файле и выполняет для него указанный набор команд. Например, следующая команда автоматически перестраивает текущий проект и выводит подробные результаты при любом изменении файла в проекте:
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ ms.locfileid: "70925722"
 
 Чтобы установить глобальные инструменты, выполните команду [dotnet tool install](../tools/dotnet-tool-install.md). Например:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ dotnet tool install -g dotnetsay
 
 - При использовании [средств интерфейса командной строки .NET Core](../tools/index.md) включить следующий параметр с нужным значением помощью команды .NET Core, например `run`:
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 

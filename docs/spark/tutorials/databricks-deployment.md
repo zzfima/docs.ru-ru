@@ -4,12 +4,12 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db374a47140392577872f6635eb7275682a7a547
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928553"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117936"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Развертывание приложения .NET для Apache Spark в Databricks
 
@@ -49,7 +49,7 @@ ms.locfileid: "70928553"
 
    В Linux можно выполнить приведенную ниже команду.
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
@@ -63,7 +63,7 @@ ms.locfileid: "70928553"
 
 4. Передайте в распределенную файловую систему (например, DBFS), к которой есть доступ у кластера, следующие файлы:
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`. Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.
    - `<your app>.zip`
    - Файлы (например, файлы зависимостей или общие данные, доступные каждой рабочей роли) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции, или библиотеки, от которых зависит приложение), которые необходимо поместить в рабочий каталог каждого исполнителя.
 

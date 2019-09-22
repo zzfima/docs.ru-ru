@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926081"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117405"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Учебник. Создание пакета шаблонов
 
@@ -45,7 +45,7 @@ ms.locfileid: "70926081"
 
 В окне терминала перейдите к папке _working_. Создайте проект, задайте ему имя `templatepack` и укажите текущую папку в качестве целевой.
 
-```console
+```dotnetcli
 dotnet new console -n templatepack -o .
 ```
 
@@ -103,7 +103,7 @@ Restore succeeded.
 
 Сохраните этот файл, а затем выполните команду pack.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 

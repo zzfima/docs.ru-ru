@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849342"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117358"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
@@ -30,7 +30,7 @@ ms.locfileid: "70849342"
 
 Откройте командную строку и создайте папку с именем *Hello*. Перейдите в созданную папку и введите следующую команду:
 
-```console
+```dotnetcli
 dotnet new console
 dotnet run
 ```

@@ -3,12 +3,12 @@ title: Обзор global.json
 description: Узнайте, как использовать файл global.json, чтобы задать версию пакета SDK для .NET Core при выполнении команд .NET Core CLI.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849594"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117436"
 ---
 # <a name="globaljson-overview"></a>Обзор global.json
 
@@ -30,7 +30,7 @@ ms.locfileid: "70849594"
 
 #### <a name="version"></a>version
 
-Тип: String
+Тип: Строковое
 
 Версия пакета SDK для .NET Core для использования.
 
@@ -53,7 +53,7 @@ ms.locfileid: "70849594"
 
 Полезно знать, какие версии доступны, чтобы задать нужную в файле *global.json*. Полный список поддерживаемых доступных пакетов SDK вы найдете на странице [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download/dotnet-core). Начиная с пакета SDK для .NET Core 2.1 можно выполнить следующую команду, чтобы проверить, какие версии пакета SDK уже установлены на вашем компьютере:
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
@@ -61,7 +61,7 @@ dotnet --list-sdks
 
 Вы можете создать новый файл *global.json* в текущем каталоге, выполнив команду [dotnet new](dotnet-new.md), как в следующем примере:
 
-```console
+```dotnetcli
 dotnet new globaljson --sdk-version 2.2.100
 ```
 

@@ -2,12 +2,12 @@
 title: Команда dotnet list reference
 description: Команду dotnet list reference удобно использовать для перечисления ссылок между проектами.
 ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421831"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117683"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -45,12 +45,12 @@ ms.locfileid: "67421831"
 
 * Перечисление ссылок на проекты для указанного проекта:
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
 * Перечисление ссылок на проекты для проекта в текущем каталоге:
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```
