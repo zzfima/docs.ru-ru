@@ -2,12 +2,12 @@
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926529"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117821"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -377,7 +377,7 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>Индексы и диапазоны
 
-Диапазоны и индексы обеспечивают лаконичный синтаксис для указания поддиапазонов массива: <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>.
+Диапазоны и индексы обеспечивают лаконичный синтаксис для указания поддиапазонов массива: [string](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>.
 
 Поддержка языков опирается на два новых типа и два новых оператора:
 
