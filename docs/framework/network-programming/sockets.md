@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136049"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047257"
 ---
 # <a name="sockets"></a>сокеты
 Пространство имен <xref:System.Net.Sockets> содержит управляемую реализацию интерфейса Windows Sockets. Все остальные классы для доступа к сети в пространстве имен <xref:System.Net> основываются на этой реализации сокетов.  
@@ -31,6 +31,6 @@ ms.locfileid: "59136049"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание сокета](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Практическое руководство. Создание сокета](how-to-create-a-socket.md)
 
-- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Использование протоколов приложений](using-application-protocols.md)

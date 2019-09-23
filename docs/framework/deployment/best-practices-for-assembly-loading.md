@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614139"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052220"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Рекомендации для загрузки сборок
 В этой статье рассматриваются способы избежания проблем с идентификацией типов, способных привести к исключениям <xref:System.InvalidCastException>, <xref:System.MissingMethodException> и другим ошибкам. В статье рассматриваются следующие рекомендации:  
@@ -44,7 +44,7 @@ ms.locfileid: "64614139"
   
 - Контекст, из которого ведется загрузка, содержит сборки из расположений, в которых загрузчик не ведет поиск. Например, надстройки могут устанавливаться в каталоге, не относящемся к пути приложения. К примерам методов, которые выполняют загрузку по указанному пути, относятся методы <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> и <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>.  
   
-- Контекст только для отражения содержит сборки, загружаемые с помощью методов <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> и <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Код, загруженный в этом контексте, не может быть выполнен, поэтому далее он не рассматривается. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Контекст только для отражения содержит сборки, загружаемые с помощью методов <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> и <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Код, загруженный в этом контексте, не может быть выполнен, поэтому далее он не рассматривается. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - В случае создания временной динамической сборки с помощью эмиссии отражения сборка не попадет ни в один контекст. Кроме того, большинство сборок, загружаемых с помощью метода <xref:System.Reflection.Assembly.LoadFile%2A>, загружаются без контекста, а сборки, загружаемые из байтовых массивов, также загружаются без контекста, если только их идентификаторы (после применения политики) не указывают на то, что они расположены в глобальном кэше сборок.  
   

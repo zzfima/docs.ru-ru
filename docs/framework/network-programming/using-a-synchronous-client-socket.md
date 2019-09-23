@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105785"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047073"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Использование синхронного сокета клиента
 Синхронный сокет клиента приостанавливает работу программы, пока выполняется сетевая операция. Синхронные сокеты не подходят для приложений, которые сильно загружают сеть своими операциями, но они могут обеспечивать простой доступ к сетевым службам для других приложений.  
@@ -72,6 +72,6 @@ s.Close();
   
 ## <a name="see-also"></a>См. также
 
-- [Использование асинхронных сокетов клиента](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
-- [Пример синхронного сокета клиента](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+- [Использование асинхронных сокетов клиента](using-an-asynchronous-client-socket.md)
+- [Прослушивание с помощью сокетов](listening-with-sockets.md)
+- [Пример синхронного сокета клиента](synchronous-client-socket-example.md)

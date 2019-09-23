@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379939"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052062"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework: управление пользовательской средой
 
 Система активации среды CLR определяет версию среды CLR, которая будет использоваться для выполнения управляемого кода приложения. В некоторых случаях система активации может не найти версию среды CLR для загрузки. Эта ситуация обычно возникает в том случае, если приложение требует версии среды CLR, которая недопустима или не установлена на данном компьютере. Если запрошенная версия не найдена, то система активации среды CLR получает код ошибки HRESULT из вызванных функции или интерфейса и может отобразить сообщение об ошибке для пользователя, запустившего приложение. В этой статье приводится список кодов HRESULT и объясняется, как можно запретить отображение сообщения об ошибке.
 
-Среда CLR предоставляет инфраструктуру ведения журнала для облегчения отладки проблем активации среды CLR, как описано в разделе [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md). Эту инфраструктуру не следует путать с [журналами привязки сборок](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), которая полностью отличается.
+Среда CLR предоставляет инфраструктуру ведения журнала для облегчения отладки проблем активации среды CLR, как описано в разделе [Практическое руководство. Отладка проблем при активации среды CLR](how-to-debug-clr-activation-issues.md). Эту инфраструктуру не следует путать с [журналами привязки сборок](../tools/fuslogvw-exe-assembly-binding-log-viewer.md), которая полностью отличается.
 
 ## <a name="clr-activation-hresult-codes"></a>Коды HRESULT активации CLR
 
@@ -49,23 +49,23 @@ ms.locfileid: "66379939"
 
 Для разрешения проблем и наилучшего взаимодействия с пользователем (меньшее количество сообщений об ошибках), рекомендуется следующее:
 
-- Для приложений на .NET Framework 3.5 (и более ранних версий): настройте приложение для поддержки .NET Framework 4 или более поздней версии (см. раздел [Инструкции](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).
+- Для приложений на .NET Framework 3.5 (и более ранних версий): настройте приложение для поддержки .NET Framework 4 или более поздней версии (см. раздел [Инструкции](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)).
 
-- Для приложений .NET Framework версии 4: установите распространяемый пакет платформы .NET Framework 4 в составе установки приложения. См. раздел [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md).
+- Для приложений .NET Framework версии 4: установите распространяемый пакет платформы .NET Framework 4 в составе установки приложения. См. раздел [Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md).
 
 ## <a name="controlling-the-error-message"></a>Управление сообщениями об ошибках
 
 Отображение сообщения об ошибках для уведомления о том, что запрошенная версия платформы .NET Framework не найдена, можно рассматривать как полезную услугу или источник раздражения для пользователя. В любом случае этим пользовательским интерфейсом можно управлять, передавая флаги в API активации.
 
-Метод [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) принимает в качестве входных данных элемент перечисления [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md). Можно включить флаг METAHOST_POLICY_SHOW_ERROR_DIALOG для запроса сообщения об ошибке, если запрошенная версия среды CLR не будет найдена. По умолчанию сообщение об ошибке не отображается. (Метод [ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) не поддерживает этот флаг и не предоставляет иных способов отобразить сообщение об ошибке.)
+Метод [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) принимает в качестве входных данных элемент перечисления [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md). Можно включить флаг METAHOST_POLICY_SHOW_ERROR_DIALOG для запроса сообщения об ошибке, если запрошенная версия среды CLR не будет найдена. По умолчанию сообщение об ошибке не отображается. (Метод [ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) не поддерживает этот флаг и не предоставляет иных способов отобразить сообщение об ошибке.)
 
 Windows предоставляет функцию [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242), с помощью которой можно объявить, должны ли сообщения об ошибках отображаться как результат выполнения кода, выполняемого внутри процесса. Можно указать флаг SEM_FAILCRITICALERRORS, чтобы запретить отображение сообщения об ошибке.
 
 Но в некоторых случаях важно переопределить параметр SEM_FAILCRITICALERRORS, установленный процессом приложения. Например, если имеется собственный компонент COM, в котором находится среда CLR и расположенный в процессе, для которого установлен флаг SEM_FAILCRITICALERRORS, можно переопределить флаг в зависимости от влияния отображения сообщений об ошибках в пределах данного процесса приложения. В этом случае для переопределения SEM_FAILCRITICALERRORS можно воспользоваться одним из следующих флагов:
 
-- Используйте METAHOST_POLICY_IGNORE_ERROR_MODE с методом [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
+- Используйте METAHOST_POLICY_IGNORE_ERROR_MODE с методом [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
 
-- Используйте RUNTIME_INFO_IGNORE_ERROR_MODE с функцией [GetRequestedRuntimeInfo](../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md).
+- Используйте RUNTIME_INFO_IGNORE_ERROR_MODE с функцией [GetRequestedRuntimeInfo](../unmanaged-api/hosting/getrequestedruntimeinfo-function.md).
 
 ## <a name="ui-policy-for-clr-provided-hosts"></a>Политика пользовательского интерфейса для узлов в среде CLR
 
@@ -80,20 +80,20 @@ Windows предоставляет функцию [SetErrorMode](https://go.micr
 
 ## <a name="windows-8-behavior-and-ui"></a>Поведение и пользовательский интерфейс Windows 8
 
-Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в [!INCLUDE[win8](../../../includes/win8-md.md)], как и в других версиях операционной системы Windows, за исключением случаев возникновения проблем при загрузке CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] включает в себя .NET Framework 4.5, использующий среду CLR 4.5. Но [!INCLUDE[win8](../../../includes/win8-md.md)] не включает в себя .NET Framework 2.0, 3.0 или 3.5, где используется среда CLR 2.0. В результате приложения, зависящие от среды CLR 2.0, по умолчанию не будут работать в [!INCLUDE[win8](../../../includes/win8-md.md)]. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).
+Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в [!INCLUDE[win8](../../../includes/win8-md.md)], как и в других версиях операционной системы Windows, за исключением случаев возникновения проблем при загрузке CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] включает в себя .NET Framework 4.5, использующий среду CLR 4.5. Но [!INCLUDE[win8](../../../includes/win8-md.md)] не включает в себя .NET Framework 2.0, 3.0 или 3.5, где используется среда CLR 2.0. В результате приложения, зависящие от среды CLR 2.0, по умолчанию не будут работать в [!INCLUDE[win8](../../../includes/win8-md.md)]. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../install/dotnet-35-windows-10.md).
 
 ![Диалоговое окно для установки версии 3.5 в Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Запрос на установку .NET Framework 3.5 по запросу")
 
 > [!NOTE]
 > .NET Framework 4.5 заменяет .NET Framework 4 (среда CLR 4) на компьютере пользователя. Поэтому приложения платформы .NET Framework версии 4 без проблем выполняются в [!INCLUDE[win8](../../../includes/win8-md.md)] без отображения этого диалогового окна.
 
-В случае установки .NET Framework 3.5 пользователи могут запускать на своих компьютерах с [!INCLUDE[win8](../../../includes/win8-md.md)] приложения, которые зависят от платформ .NET Framework 2.0, 3.0 или 3.5. Они также могут запускать приложения платформы .NET Framework 1.0 и 1.1, если эти приложения не настроены явным образом для запуска только на платформе .NET Framework 1.0 или 1.1. См. раздел [Миграция с платформы .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
+В случае установки .NET Framework 3.5 пользователи могут запускать на своих компьютерах с [!INCLUDE[win8](../../../includes/win8-md.md)] приложения, которые зависят от платформ .NET Framework 2.0, 3.0 или 3.5. Они также могут запускать приложения платформы .NET Framework 1.0 и 1.1, если эти приложения не настроены явным образом для запуска только на платформе .NET Framework 1.0 или 1.1. См. раздел [Миграция с платформы .NET Framework 1.1](../migration-guide/migrating-from-the-net-framework-1-1.md).
 
-Начиная с .NET Framework 4.5 ведение журналов активации среды CLR было улучшено для включения записей журнала, которые регистрируют, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+Начиная с .NET Framework 4.5 ведение журналов активации среды CLR было улучшено для включения записей журнала, которые регистрируют, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации среды CLR](how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)
-- [Установка .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md)
+- [Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Практическое руководство. Отладка проблем при активации среды CLR](how-to-debug-clr-activation-issues.md)
+- [Установка .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8](../install/dotnet-35-windows-10.md)

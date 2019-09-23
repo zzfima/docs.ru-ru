@@ -2,12 +2,12 @@
 title: Улучшения производительности сокетов в версии 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333292"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047242"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Улучшения производительности сокетов в версии 3.5
 Класс <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> был оптимизирован в версии 3.5 для обеспечения максимальной производительности приложений, которые используют асинхронные операции ввода-вывода по сети. В рамках набора усовершенствований класса <xref:System.Net.Sockets.Socket>, предоставляющих альтернативный шаблон асинхронной модели, который может использоваться специализированными высокопроизводительными приложениями сокетов, был добавлен ряд новых классов. Эти усовершенствования были специально разработаны для сетевых серверных приложений, требующих высокой производительности. Приложение может быть основано исключительно на улучшенном шаблоне асинхронной модели или может использовать его только в определенных областях (например, при получении больших объемов данных).  
@@ -39,5 +39,5 @@ ms.locfileid: "59333292"
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Примеры сетевого программирования](network-programming-samples.md)
 - [Примеры кода сокетов](socket-code-examples.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911588"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044365"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (генератор образов в машинном коде)
 
@@ -59,7 +59,7 @@ ms.locfileid: "69911588"
 > [!NOTE]
 > Синтаксис Ngen.exe для .NET Framework версий 1.0 и 1.1 см. в разделе [Генератор образов в машинном коде (Ngen.exe), традиционный синтаксис](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100)).
 
-Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).
 
 В командной строке введите следующее.
 
@@ -392,7 +392,7 @@ using namespace System::Runtime::CompilerServices;
 
      Изменение политики безопасности на компьютере, сопровождающееся отменой разрешений, выданных сборке ранее, может привести к устареванию ранее скомпилированного образа сборки.
 
-     Подробную информацию об управлении доступом для кода в среде CLR и об использовании разрешений см. в разделе [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md).
+     Подробную информацию об управлении доступом для кода в среде CLR и об использовании разрешений см. в разделе [Управление доступом для кода](../misc/code-access-security.md).
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ using namespace System::Runtime::CompilerServices;
 
 ### <a name="assembly-binding-log-viewer"></a>средство просмотра журнала привязки сборок
 
-Проверить, используются ли в приложении образы в машинном коде, можно с помощью [Fuslogvw.exe (средства просмотра журнала привязок сборки)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Выберите **Образы в машинном коде** в поле **Категории журнала** в окне средства просмотра журнала привязок. Программа Fuslogvw.exe предоставляет сведения о причинах отклонения образа в машинном коде.
+Проверить, используются ли в приложении образы в машинном коде, можно с помощью [Fuslogvw.exe (средства просмотра журнала привязок сборки)](fuslogvw-exe-assembly-binding-log-viewer.md). Выберите **Образы в машинном коде** в поле **Категории журнала** в окне средства просмотра журнала привязок. Программа Fuslogvw.exe предоставляет сведения о причинах отклонения образа в машинном коде.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>Помощник по отладке управляемого кода JITCompilationStart
 
-Чтобы определить, когда JIT-компилятор начинает компиляцию функции, можно использовать помощник по отладке управляемого кода [jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md).
+Чтобы определить, когда JIT-компилятор начинает компиляцию функции, можно использовать помощник по отладке управляемого кода [jitCompilationStart](../debug-trace-profile/jitcompilationstart-mda.md).
 
 <a name="OptOut"></a>
 
@@ -562,7 +562,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 ## <a name="native-image-task"></a>Задача образов в машинном коде
 
-Задача образов в машинном коде — это задача Windows, которая создает и поддерживает образы в машинном коде. Задача образов в машинном коде автоматически создает и освобождает образы в машинном коде в поддерживаемых сценариях. Она также позволяет установщикам использовать программу [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) для отложенного создания и обновления образов в машинном коде.
+Задача образов в машинном коде — это задача Windows, которая создает и поддерживает образы в машинном коде. Задача образов в машинном коде автоматически создает и освобождает образы в машинном коде в поддерживаемых сценариях. Она также позволяет установщикам использовать программу [Ngen.exe (генератор образов в машинном коде)](ngen-exe-native-image-generator.md) для отложенного создания и обновления образов в машинном коде.
 
 Задача образов в машинном коде регистрируется однократно для каждой архитектуры ЦП, поддерживаемой на компьютере, чтобы обеспечить компиляцию приложений для каждой целевой архитектуры.
 
@@ -639,7 +639,7 @@ ngen executeQueuedItems
 
 ## <a name="see-also"></a>См. также
 
-- [Инструменты](../../../docs/framework/tools/index.md)
+- [Инструменты](index.md)
 - [Процесс управляемого выполнения](../../standard/managed-execution-process.md)
-- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Обнаружение сборок в среде выполнения](../deployment/how-the-runtime-locates-assemblies.md)
+- [Командные строки](developer-command-prompt-for-vs.md)

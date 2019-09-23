@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851380"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044810"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (средство диспетчера сертификатов)
 Диспетчер сертификатов (Certmgr.exe) предназначен для управления сертификатами, списками доверия сертификатов (CTL) и списками отзыва сертификатов (CRL).  
   
- Диспетчер сертификатов устанавливается автоматически вместе с Visual Studio. Для запуска программы используйте [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Диспетчер сертификатов устанавливается автоматически вместе с Visual Studio. Для запуска программы используйте [Командные строки](developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
 > Диспетчер сертификатов (Certmgr.exe) является служебной программой командной строки, в то время как сертификаты (Certmgr.msc) — это оснастка консоли управления (MMC). Поскольку файл Certmgr.msc обычно находится в системном каталоге Windows, при вводе `certmgr` в командной строке может загрузиться оснастка консоли управления (MMC) "Сертификаты", даже если открыта командная строка разработчика для Visual Studio. Это происходит потому, что путь к оснастке предшествует пути к диспетчеру сертификатов в переменной среды PATH. При возникновении этой проблемы команды Certmgr.exe можно выполнить, указав путь к исполняемому файлу.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
   
- Общие сведения о сертификатах X.509 см. в разделе [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Общие сведения о сертификатах X.509 см. в разделе [Работа с сертификатами](../wcf/feature-details/working-with-certificates.md).  
   
  В командной строке введите следующее.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "70851380"
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- Дополнительные сведения см. в разделе [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Дополнительные сведения см. в разделе [Работа с сертификатами](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующая команда выводит подробные сведения о содержимом системного хранилища `my`, используемого по умолчанию.  
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>См. также
 
-- [Инструменты](../../../docs/framework/tools/index.md)
+- [Инструменты](index.md)
 - [Makecert.exe (средство создания сертификатов)](/windows/desktop/SecCrypto/makecert)
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Командные строки](developer-command-prompt-for-vs.md)

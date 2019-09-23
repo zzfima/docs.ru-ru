@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6f867b53f168a394515a1b1eaa6575a72dfb8d91
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106514"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052013"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106514"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Сведения о скачивании и ссылки для скачивания см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).
+Сведения о скачивании и ссылки для скачивания см. в разделе [Установка .NET Framework для разработчиков](../install/guide-for-developers.md).
 
 Сведения о жизненном цикле поддержки версий .NET Framework см. в разделе [Политика жизненного цикла поддержки продуктов Майкрософт](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
@@ -112,6 +112,6 @@ ms.locfileid: "70106514"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по установке](../../../docs/framework/install/index.md)
-- [Начало работы](../../../docs/framework/get-started/index.md)
-- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Руководство по установке](../install/index.md)
+- [Начало работы](index.md)
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

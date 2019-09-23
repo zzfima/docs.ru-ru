@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877040"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044730"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Командная строка разработчика для Visual Studio
 
@@ -88,9 +88,9 @@ ms.locfileid: "65877040"
 
    Новый элемент добавляется в меню, и вы можете вызывать командную строку из меню **Инструменты**.
 
-   ![Пункт меню "Командная строка" в Visual Studio](media/command-prompt-vs-menu.png)
+   ![Пункт меню "Командная строка" в Visual Studio](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>См. также
 
-- [Инструменты](../../../docs/framework/tools/index.md)
+- [Инструменты](index.md)
 - [Управление внешними инструментами](/visualstudio/ide/managing-external-tools)

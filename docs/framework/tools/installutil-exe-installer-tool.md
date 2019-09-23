@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496703"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044541"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (инструмент для установки)
 
 Программа для установки является программой командной строки, с помощью которой можно устанавливать и удалять ресурсы сервера путем выполнения компонентов установщика в соответствующих сборках. Эта программа работает совместно с классами в пространстве имен <xref:System.Configuration.Install>.
 
-Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).
 
 В командной строке введите следующее.
 
@@ -38,7 +38,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Параметры
 
-|Аргумент|Описание|
+|Аргумент|ОПИСАНИЕ|
 |--------------|-----------------|
 |`assembly`|Имя файла сборки, в которой должны выполняться компоненты установщика. Пропустите этот параметр, если указывается строгое имя сборки с помощью параметра `/AssemblyName`.|
 
@@ -46,10 +46,10 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|ОПИСАНИЕ|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> - или -<br /><br /> `/?`|Отображает синтаксис команд и параметров программы.|
-|`/help` *сборка*<br /><br /> - или -<br /><br /> `/?` *сборка*|Отображает дополнительные параметры, распознаваемые отдельными установщиками в пределах указанной сборки, вместе с синтаксисом команд и параметров для программы InstallUtil.exe. Этот параметр добавляет текст, возвращенный каждым свойством компонента установщика <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>, в текст справки программы InstallUtil.exe.|
+|`/h[elp]`<br /><br /> -или-<br /><br /> `/?`|Отображает синтаксис команд и параметров программы.|
+|`/help` *сборка*<br /><br /> -или-<br /><br /> `/?` *сборка*|Отображает дополнительные параметры, распознаваемые отдельными установщиками в пределах указанной сборки, вместе с синтаксисом команд и параметров для программы InstallUtil.exe. Этот параметр добавляет текст, возвращенный каждым свойством компонента установщика <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>, в текст справки программы InstallUtil.exe.|
 |`/AssemblyName` "*имя_сборки*,<br /><br /> Version = *основная.дополнительная.сборка.редакция*,<br /><br /> Culture = *языковой стандарт*,<br /><br /> PublicKeyToken = *publicKeyToken*"|Задает строгое имя сборки, которое требуется зарегистрировать в глобальном кэше сборок. Имя сборки должно содержать версию, язык и региональные параметры, а также токен открытого ключа сборки. Полное имя должно быть заключено в кавычки.<br /><br /> Например, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" — это полное имя сборки.|
 |`/InstallStateDir=[` *имя_каталога* `]`|Задает каталог InstallState-файла, содержащего данные, которые используются для удаления сборки. По умолчанию используется каталог, содержащий сборку.|
 |`/LogFile=`[*имя_файла*]|Задает имя файла журнала, в который записывается ход установки. По умолчанию, если параметр `/LogFile` не указан, создается файл журнала с именем *имя_сборки*.InstallLog. Если параметр *имя_файла* не указан, файл журнала не создается.|
@@ -170,5 +170,5 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Configuration.Install>
-- [Инструменты](../../../docs/framework/tools/index.md)
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Инструменты](index.md)
+- [Командные строки](developer-command-prompt-for-vs.md)

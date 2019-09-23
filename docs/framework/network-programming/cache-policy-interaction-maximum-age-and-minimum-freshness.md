@@ -10,12 +10,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: 8d4071a7f8dbb1cca1440fa69ae40df17330b060
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ec958cc035ac62086cdd3e2844811accc181d47
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624659"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048818"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность
 Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований к повторной проверке сервера всегда применяется наиболее консервативная политика кэша. Все примеры в этом разделе иллюстрируют политику кэша для ресурса, который кэшируется 1 января и срок действия которого истекает 4 января.  
@@ -30,9 +30,9 @@ ms.locfileid: "64624659"
   
 ## <a name="see-also"></a>См. также
 
-- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
-- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [Взаимодействие с политикой кэша: максимальный возраст и устаревание](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
+- [Управление кэшем для сетевых приложений](cache-management-for-network-applications.md)
+- [Политика кэша](cache-policy.md)
+- [Политики кэша на основе расположения](location-based-cache-policies.md)
+- [Политики кэша на основе времени](time-based-cache-policies.md)
+- [Настройка кэширования в сетевых приложениях](configuring-caching-in-network-applications.md)
+- [Взаимодействие с политикой кэша: максимальный возраст и устаревание](cache-policy-interaction-maximum-age-and-maximum-staleness.md)

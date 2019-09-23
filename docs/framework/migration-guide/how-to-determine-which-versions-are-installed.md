@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928422"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051590"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -72,7 +72,7 @@ ms.locfileid: "70928422"
 
 3. Проверьте значение DWORD с именем **Release**. Если оно имеется, платформа .NET Framework 4.5 или более поздней версии установлена. Это значение является разделом выпуска, который соответствует определенной версии .NET Framework. Например, на приведенном ниже рисунке значение параметра **Release** равно *378389*, что является разделом выпуска для .NET Framework 4.5.
 
-     ![Запись реестра для .NET Framework 4.5](media/clr-installdir.png "Запись реестра для .NET Framework 4.5")
+     ![Запись реестра для .NET Framework 4.5](./media/clr-installdir.png "Запись реестра для .NET Framework 4.5")
 
 В следующей таблице перечислены значение DWORD **Release** в отдельных операционных системах для .NET Framework 4.5 и более поздних версий.
 
@@ -163,7 +163,7 @@ ms.locfileid: "70928422"
 
     На приведенном ниже рисунке показан подраздел для версии .NET Framework 3.5 вместе с параметром **Version**.
 
-    ![Запись реестра для .NET Framework 3.5](media/net-4-and-earlier.png ".NET Framework 3.5 и более ранних версий")
+    ![Запись реестра для .NET Framework 3.5](./media/net-4-and-earlier.png ".NET Framework 3.5 и более ранних версий")
 
 <a name="net_c"></a>
 

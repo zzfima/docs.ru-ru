@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664034"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054067"
 ---
 # <a name="garbage-collection-and-performance"></a>Сборка мусора и производительность
 
@@ -249,7 +249,7 @@ ms.locfileid: "67664034"
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Задание точки останова в конце сборки мусора
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Задание точки останова в конце сборки мусора
 
 - В WinDbg с загруженным расширением отладчика SOS введите следующую команду:
 
@@ -301,7 +301,7 @@ ms.locfileid: "67664034"
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Чтобы определить, вызвана ли проблема сборкой мусора, выполните следующие действия.
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Чтобы определить, вызвана ли проблема сборкой мусора, выполните следующие действия.
 
 - Проверьте следующие два счетчика производительности памяти:
 
@@ -313,7 +313,7 @@ ms.locfileid: "67664034"
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Чтобы определить, является ли исключение нехватки памяти управляемым, выполните следующие действия.
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Чтобы определить, является ли исключение нехватки памяти управляемым, выполните следующие действия.
 
 1. В отладчике Visual Studio или WinDbg с загруженным расширением отладчика SOS введите команду печати исключения (**pe**).
 
@@ -347,7 +347,7 @@ ms.locfileid: "67664034"
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Чтобы определить, сколько виртуальной памяти можно зарезервировать, выполните следующие действия.
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Чтобы определить, сколько виртуальной памяти можно зарезервировать, выполните следующие действия.
 
 - В WinDbg с загруженным расширением отладчика SOS введите следующую команду, чтобы получить самую крупную свободную область:
 
@@ -381,7 +381,7 @@ ms.locfileid: "67664034"
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Чтобы определить, имеется ли достаточный объем физической памяти, выполните следующие действия.
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Чтобы определить, имеется ли достаточный объем физической памяти, выполните следующие действия.
 
 1. Запустите диспетчер задач Windows.
 
@@ -391,7 +391,7 @@ ms.locfileid: "67664034"
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Чтобы определить объем памяти, зафиксированный управляемой кучей, выполните следующие действия.
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Чтобы определить объем памяти, зафиксированный управляемой кучей, выполните следующие действия.
 
 - Используйте счетчик производительности памяти `# Total committed bytes`, чтобы получить число байтов, фиксируемых управляемой кучей. Сборщик мусора выделяет фрагменты в сегменте по мере необходимости, но не все одновременно.
 
@@ -400,7 +400,7 @@ ms.locfileid: "67664034"
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Чтобы определить объем памяти, зарезервированный управляемой кучей, выполните следующие действия.
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Чтобы определить объем памяти, зарезервированный управляемой кучей, выполните следующие действия.
 
 - Используйте счетчик производительности памяти `# Total reserved bytes`.
 
@@ -449,7 +449,7 @@ ms.locfileid: "67664034"
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>Чтобы определить большие объекты в поколении 2, выполните следующие действия.
+### <a name="to-determine-large-objects-in-generation-2"></a>Чтобы определить большие объекты в поколении 2, выполните следующие действия.
 
 - В отладчике Visual Studio или WinDbg с загруженным расширением отладчика SOS введите следующую команду:
 
@@ -489,7 +489,7 @@ ms.locfileid: "67664034"
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>Чтобы определить ссылки на объекты, выполните следующие действия.
+### <a name="to-determine-references-to-objects"></a>Чтобы определить ссылки на объекты, выполните следующие действия.
 
 - В WinDbg с загруженным расширением отладчика SOS введите следующую команду, чтобы получить список ссылок на объекты:
 
@@ -523,7 +523,7 @@ ms.locfileid: "67664034"
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Чтобы определить, выполнялся ли метод завершения, выполните следующие действия.
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Чтобы определить, выполнялся ли метод завершения, выполните следующие действия.
 
 - Запустите тестовую программу, содержащую следующий код:
 
@@ -537,7 +537,7 @@ ms.locfileid: "67664034"
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Чтобы определить наличие объектов, ожидающих завершения, выполните следующие действия.
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Чтобы определить наличие объектов, ожидающих завершения, выполните следующие действия.
 
 1. В отладчике Visual Studio или WinDbg с загруженным расширением отладчика SOS введите следующую команду:
 
@@ -562,7 +562,7 @@ ms.locfileid: "67664034"
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Чтобы определить объем свободного пространства в управляемой куче, выполните следующие действия.
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Чтобы определить объем свободного пространства в управляемой куче, выполните следующие действия.
 
 - В отладчике Visual Studio или WinDbg с загруженным расширением отладчика SOS введите следующую команду:
 
@@ -639,7 +639,7 @@ ms.locfileid: "67664034"
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>Чтобы определить количество закрепленных объектов, выполните следующие действия.
+### <a name="to-determine-the-number-of-pinned-objects"></a>Чтобы определить количество закрепленных объектов, выполните следующие действия.
 
 - В отладчике Visual Studio или WinDbg с загруженным расширением отладчика SOS введите следующую команду:
 
@@ -655,7 +655,7 @@ ms.locfileid: "67664034"
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Чтобы определить продолжительность сборки мусора, выполните следующие действия.
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Чтобы определить продолжительность сборки мусора, выполните следующие действия.
 
 - Проверьте счетчик производительности памяти `% Time in GC`.
 
@@ -743,7 +743,7 @@ ms.locfileid: "67664034"
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Чтобы определить, что активировало сборку мусора, выполните следующие действия.
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>Чтобы определить, что активировало сборку мусора, выполните следующие действия.
 
 - В отладчике Visual Studio или WinDbg с загруженным расширением отладчика SOS введите следующую команду, чтобы вывести на экран все потоки со стеками вызовов:
 
@@ -822,7 +822,7 @@ ms.locfileid: "67664034"
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Чтобы определить, вызвана ли высокая загрузка ЦП сборкой мусора, выполните следующие действия.
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Чтобы определить, вызвана ли высокая загрузка ЦП сборкой мусора, выполните следующие действия.
 
 - Сопоставьте значение счетчика производительности памяти `% Time in GC` с временем обработки.
 

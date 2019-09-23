@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853970"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052088"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853970"
 
 ## <a name="chainer-sample"></a>Пример формирователя цепочки
 
-Пример формирователя цепочки автоматически запускает и отслеживает установку .NET Framework 4.5, при этом отображая ход выполнения. Этот пример похож на пример формирователя цепочки, предоставленный для платформы .NET Framework 4. Кроме того, он может избежать перезапуска системы путем обработки диалогового окна закрытия приложения платформы .NET Framework 4. Дополнительные сведения об этом окне сообщения см. в разделе [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md). Этот пример можно использовать и с установщиком платформы .NET Framework 4; в этом случае сообщение просто не будет отправлено.
+Пример формирователя цепочки автоматически запускает и отслеживает установку .NET Framework 4.5, при этом отображая ход выполнения. Этот пример похож на пример формирователя цепочки, предоставленный для платформы .NET Framework 4. Кроме того, он может избежать перезапуска системы путем обработки диалогового окна закрытия приложения платформы .NET Framework 4. Дополнительные сведения об этом окне сообщения см. в разделе [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](reducing-system-restarts.md). Этот пример можно использовать и с установщиком платформы .NET Framework 4; в этом случае сообщение просто не будет отправлено.
 
 > [!WARNING]
 > Этот пример следует запускать от имени администратора.
@@ -311,5 +311,5 @@ ms.locfileid: "70853970"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Развертывание](../../../docs/framework/deployment/index.md)
+- [Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md)
+- [Развертывание](index.md)

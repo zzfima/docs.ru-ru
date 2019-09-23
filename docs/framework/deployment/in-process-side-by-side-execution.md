@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052104"
 ---
 # <a name="in-process-side-by-side-execution"></a>Внутрипроцессное параллельное выполнение
 Начиная с .NET Framework 4, разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  
@@ -60,7 +60,7 @@ ms.locfileid: "69911115"
   
      Установленные версии платформы .NET Framework. Более ранняя версия .NET Framework и .NET Framework 4.  
   
-     Необходимые действия: откройте [файл конфигурации приложения](../../../docs/framework/configure-apps/index.md) в каталоге приложения и используйте [элемент \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) и [элемент \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:  
+     Необходимые действия: откройте [файл конфигурации приложения](../configure-apps/index.md) в каталоге приложения и используйте [элемент \<startup>](../configure-apps/file-schema/startup/startup-element.md) и [элемент \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>См. также
 
-- [Элемент \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<Поддерживаемый элемент среды выполнения](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [Элемент \<startup>](../configure-apps/file-schema/startup/startup-element.md)
+- [\<Поддерживаемый элемент среды выполнения](../configure-apps/file-schema/startup/supportedruntime-element.md)

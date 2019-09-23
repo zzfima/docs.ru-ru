@@ -11,27 +11,27 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624638"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048522"
 ---
 # <a name="enabling-network-tracing"></a>Включение сетевой трассировки
 Трассировка сети предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Чтобы включить трассировку сети в приложении, выполните следующие действия:  
   
-- Скомпилируйте код с включенной трассировкой. См. практическое руководство по [ Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+- Скомпилируйте код с включенной трассировкой. См. практическое руководство по [ Условная компиляция с использованием атрибутов Trace и Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
 - Укажите назначение для выходных данных трассировки.  
   
-- Настройте поведение трассировки сети. См. практическое руководство по [ Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
+- Настройте поведение трассировки сети. См. практическое руководство по [ Настройка трассировки сети](how-to-configure-network-tracing.md).  
   
  Чаще всего в качестве назначений для трассировки сети (прослушивателей трассировки) выступают прослушиватели по умолчанию и файлы журнала.  
   
  Если прослушиватель трассировки не указан, используется прослушиватель по умолчанию. Вы можете просматривать сообщения, отправляемые в прослушиватель по умолчанию при выполнении кода в отладчике с поддержкой управляемого кода, такого как отладчик среды CLR из состава пакета .NET Framework SDK или DBwin32.exe из пакета Windows SDK. При использовании отладчика среды CLR сообщения трассировки появляются в окне **Выходные данные**.  
   
- Если вы хотите записывать результаты трассировки в файл, укажите файл журнала в параметрах конфигурации, как показано в следующем примере. (Общие сведения о файлах конфигурации см. в разделе [Файлы конфигурации](../../../docs/framework/configure-apps/index.md).)  
+ Если вы хотите записывать результаты трассировки в файл, укажите файл журнала в параметрах конфигурации, как показано в следующем примере. (Общие сведения о файлах конфигурации см. в разделе [Файлы конфигурации](../configure-apps/index.md).)  
   
  Чтобы отправлять сообщения трассировки в файл журнала, добавьте следующий узел в узел `<system.diagnostics>` соответствующего файла конфигурации приложения или компьютера. При необходимости имя файла (trace.log) можно изменить.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "64624638"
   
 ## <a name="see-also"></a>См. также
 
-- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Интерпретация трассировки сети](interpreting-network-tracing.md)
+- [Трассировка сети в .NET Framework](network-tracing.md)
+- [Трассировка и инструментирование приложений](../debug-trace-profile/tracing-and-instrumenting-applications.md)

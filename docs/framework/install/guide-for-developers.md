@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949122"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051946"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -28,7 +28,7 @@ ms.locfileid: "69949122"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Дополнительные сведения о версиях .NET Framework и проверке установленных на компьютере версий см. в разделах [Версии и зависимости](../migration-guide/versions-and-dependencies.md) или [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Дополнительные сведения о версиях .NET Framework и проверке установленных на компьютере версий см. в разделах [Версии и зависимости](../migration-guide/versions-and-dependencies.md) или [Практическое руководство. Определение установленных версий платформы .NET Framework](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!NOTE]
 > Сведения о .NET Framework 3.5 см. в разделе [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](dotnet-35-windows-10.md).
@@ -227,7 +227,7 @@ ms.locfileid: "69949122"
 
 - Если у вас отсутствует опыт работы с .NET Framework, см. [обзор](../get-started/overview.md), содержащий вводные сведения о ключевых понятиях и компонентах.
 
-- Сведения о новых функциях и улучшениях в .NET Framework 4.5 и более поздних версиях см. в разделе [Новые возможности](../../../docs/framework/whats-new/index.md).
+- Сведения о новых функциях и улучшениях в .NET Framework 4.5 и более поздних версиях см. в разделе [Новые возможности](../whats-new/index.md).
 
 - Подробные сведения о развертывании .NET Framework в приложении см. в разделе [Руководство по развертыванию для разработчиков](../deployment/deployment-guide-for-developers.md).
 

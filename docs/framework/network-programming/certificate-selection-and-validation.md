@@ -2,12 +2,12 @@
 title: Выбор и проверка сертификата
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318355"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048748"
 ---
 # <a name="certificate-selection-and-validation"></a>Выбор и проверка сертификата
 Классы <xref:System.Net> поддерживают несколько способов выбора и проверки <xref:System.Security.Cryptography.X509Certificates> для подключений SSL. Клиент может выбрать один или несколько сертификатов для прохождения проверки подлинности на сервере. Сервер может потребовать наличия в сертификате клиента одного или нескольких атрибутов для проверки подлинности.  
@@ -54,5 +54,5 @@ ms.locfileid: "59318355"
   
 ## <a name="see-also"></a>См. также
 
-- [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Безопасность в сетевом программировании](security-in-network-programming.md)
+- [Сетевое программирование в .NET Framework](index.md)

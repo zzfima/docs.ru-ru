@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание сокета
+title: Практическое руководство. Создание сокета
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101124"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048386"
 ---
-# <a name="how-to-create-a-socket"></a>Как выполнить Создание сокета
+# <a name="how-to-create-a-socket"></a>Практическое руководство. Создание сокета
 Перед использованием сокета для связи с удаленными устройствами необходимо инициализировать сокет, указав протокол и сведения о сетевом адресе. Конструктор класса <xref:System.Net.Sockets.Socket> имеет параметры, которые определяют семейство адресов, тип сокета и тип протокола, которые сокет использует для подключения.  
   
 ## <a name="example"></a>Пример  
@@ -62,5 +62,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
 ## <a name="see-also"></a>См. также
 
-- [Использование сокетов клиента](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Использование сокетов клиента](using-client-sockets.md)
+- [Прослушивание с помощью сокетов](listening-with-sockets.md)

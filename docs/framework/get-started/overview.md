@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917971"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052004"
 ---
 # <a name="overview-of-the-net-framework"></a>Общие сведения о платформе .NET Framework
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917971"
 - Взаимодействие на основе промышленных стандартов, которое гарантирует интеграцию кода платформы .NET Framework с любым другим кодом.
 
 > [!NOTE]
-> Общие сведения о платформе .NET Framework для пользователей и разработчиков см. в разделе [Начало работы](../../../docs/framework/get-started/index.md).
+> Общие сведения о платформе .NET Framework для пользователей и разработчиков см. в разделе [Начало работы](index.md).
 
 Платформа .NET Framework состоит из общеязыковой среды выполнения (среды CLR) и библиотеки классов .NET Framework. Основой платформы .NET Framework является среда CLR. Среду выполнения можно считать агентом, который управляет кодом во время выполнения и предоставляет основные службы, такие как управление памятью, управление потоками и удаленное взаимодействие. При этом средой накладываются условия строгой типизации и другие виды проверки точности кода, обеспечивающие безопасность и надежность. Фактически основной задачей среды выполнения является управление кодом. Код, который обращается к среде выполнения, называют управляемым кодом, а код, который не обращается к среде выполнения, называют неуправляемым кодом. Библиотека классов является комплексной объектно-ориентированной коллекцией повторно используемых типов, которые применяются для разработки приложений — начиная с обычных приложений, запускаемых из командной строки, и приложений с графическим интерфейсом (GUI) и заканчивая приложениями, использующими последние технологические возможности ASP.NET, такие как веб-формы и веб-службы XML.
 
@@ -77,15 +77,15 @@ ms.locfileid: "69917971"
 
 - Консольные приложения. См. статью [Построение консольных приложений](../../standard/building-console-apps.md).
 
-- Приложения с графическим интерфейсом Windows (Windows Forms). См. статью [Windows Forms](../../../docs/framework/winforms/index.md).
+- Приложения с графическим интерфейсом Windows (Windows Forms). См. статью [Windows Forms](../winforms/index.md).
 
-- Приложения Windows Presentation Foundation (WPF). См. статью [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
+- Приложения Windows Presentation Foundation (WPF). См. статью [Windows Presentation Foundation](../wpf/index.md).
 
-- Приложения ASP.NET. См. статью [Разработка веб-приложений с помощью ASP.NET](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- Приложения ASP.NET. См. статью [Разработка веб-приложений с помощью ASP.NET](../develop-web-apps-with-aspnet.md).
 
-- службы Windows; См. [основные сведения о приложениях служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- службы Windows; См. [основные сведения о приложениях служб Windows](../windows-services/introduction-to-windows-service-applications.md).
 
-- Сервисноориентированные приложения, использующие Windows Communication Foundation (WCF). См. статью [Разработка сервисноориентированных приложений с помощью WCF](../../../docs/framework/wcf/index.md).
+- Сервисноориентированные приложения, использующие Windows Communication Foundation (WCF). См. статью [Разработка сервисноориентированных приложений с помощью WCF](../wcf/index.md).
 
 - Приложения, поддерживающие бизнес-процессы Windows Workflow Foundation (WF). См. [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
@@ -93,9 +93,9 @@ ms.locfileid: "69917971"
 
 ## <a name="see-also"></a>См. также
 
-- [Требования к системе](../../../docs/framework/get-started/system-requirements.md)
-- [Руководство по установке](../../../docs/framework/install/index.md)
-- [Руководство по разработке](../../../docs/framework/development-guide.md)
-- [Инструменты](../../../docs/framework/tools/index.md)
+- [Требования к системе](system-requirements.md)
+- [Руководство по установке](../install/index.md)
+- [Руководство по разработке](../development-guide.md)
+- [Инструменты](../tools/index.md)
 - [Примеры и руководства .NET](../../samples-and-tutorials/index.md)
 - [Библиотека классов .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

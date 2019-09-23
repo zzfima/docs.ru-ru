@@ -19,12 +19,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 029243f9f8b02275c0f0a6ec1a74a9a2ca198d9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048903"
 ---
 # <a name="basic-and-digest-authentication"></a>Обычная и дайджест-аутентификация
 Реализация базовой аутентификации и аутентификации с использованием дайджеста в <xref:System.Net> соответствует требованиям документа RFC2617 – HTTP Authentication: Basic and Digest Authentication (RFC2617 — аутентификация HTTP: базовая аутентификация и аутентификация с использованием дайджеста), который доступен на веб-сайте [консорциума World Wide Web](https://www.w3.org).  
@@ -48,5 +48,5 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
   
 ## <a name="see-also"></a>См. также
 
-- [Проверка подлинности NTLM и Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [Проверка подлинности в Интернете](../../../docs/framework/network-programming/internet-authentication.md)
+- [Проверка подлинности NTLM и Kerberos](ntlm-and-kerberos-authentication.md)
+- [Проверка подлинности в Интернете](internet-authentication.md)

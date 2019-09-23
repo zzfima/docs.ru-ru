@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457287"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052203"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework (клиентский профиль)
 Клиентский профиль .NET — это подмножество платформы .NET Framework, которое предоставлялось с .NET Framework 4 и более ранними версиями и было оптимизировано для клиентских приложений. .NET Framework — это платформа разработки для Windows, Windows Phone и Microsoft Azure, которая включает в себя управляемую среду выполнения приложений и библиотеку классов .NET Framework. В .NET Framework 4 и более ранних версиях предоставлялось два варианта развертывания: полная платформа .NET Framework и клиентский профиль. Клиентский профиль позволял ускорить развертывание и уменьшить установочные пакеты приложений по сравнению с полной платформой .NET Framework.  
@@ -25,7 +25,7 @@ ms.locfileid: "66457287"
   
  Но если приложение предназначено для .NET Framework 4 или 3.5 и вы хотите больше узнать о клиентском профиле и его использовании, см. раздел [Клиентский профиль .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) в документации по платформе .NET Framework 4.  
   
- При установке .NET Framework 4.5 клиентский профиль платформы .NET Framework 4 обновляется до полной версии платформы .NET Framework. Сведения об установке .NET Framework 4.5 см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
+ При установке .NET Framework 4.5 клиентский профиль платформы .NET Framework 4 обновляется до полной версии платформы .NET Framework. Сведения об установке .NET Framework 4.5 см. в разделе [Установка .NET Framework для разработчиков](../install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>См. также
 

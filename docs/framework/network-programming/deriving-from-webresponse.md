@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226049"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048583"
 ---
 # <a name="deriving-from-webresponse"></a>Наследование от класса WebResponse
 <xref:System.Net.WebResponse> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика ответов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс <xref:System.Net.WebRequest> для запроса данных ресурсов, получают ответы в **WebResponse**. Потомки класса **WebResponse** для определенных протоколов должны реализовывать абстрактные члены класса **WebResponse**.  
@@ -43,5 +43,5 @@ ms.locfileid: "59226049"
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Программирование подключаемых протоколов](programming-pluggable-protocols.md)
+- [Наследование от WebResponse](deriving-from-webrequest.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228514"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047318"
 ---
 # <a name="requesting-data"></a>Запрос данных
 Для разработки современных интернет-приложений, выполняющихся в распределенной операционной среде, требуется простой и эффективный способ извлечения данных из ресурсов любого типа. Благодаря подключаемым протоколам можно разрабатывать приложения, использующие единый интерфейс для извлечения данных из нескольких интернет-протоколов.  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>См. также
 
-- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Практическое руководство. Запрос веб-страницы и получение результатов в виде потока](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Сетевое программирование в .NET Framework](index.md)
+- [Практическое руководство. Запрос веб-страницы и получение результатов в виде потока](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

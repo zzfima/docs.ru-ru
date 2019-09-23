@@ -2,12 +2,12 @@
 title: Облака PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623031"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047376"
 ---
 # <a name="pnrp-clouds"></a>Облака PNRP
 "Облако" PNRP представляет собой набор узлов, которые могут взаимодействовать друг с другом по сети. Синонимами термина "облако" являются "одноранговая сеть" и "одноранговый граф".  
@@ -34,4 +34,4 @@ ms.locfileid: "64623031"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Net.PeerToPeer.Cloud>
-- [Протокол PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [Протокол PNRP](peer-name-resolution-protocol.md)

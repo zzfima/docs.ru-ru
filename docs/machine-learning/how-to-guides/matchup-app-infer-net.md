@@ -3,12 +3,12 @@ title: Создание приложения со списком матчей с
 description: Узнайте, как использовать вероятностное программирование и Infer.NET для создания приложения со списком матчей на основе упрощенной версии TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855785"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117991"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Создание приложения со списком матчей с помощью Infer.NET и вероятностного программирования
 
@@ -28,7 +28,7 @@ ms.locfileid: "70855785"
 
 1. Откройте новое окно командной строки и выполните следующие команды:
 
-```console
+```dotnetcli
 dotnet new console -o myApp
 cd myApp
 ```
@@ -39,7 +39,7 @@ cd myApp
 
 Чтобы использовать Infer.NET, необходимо установить пакет `Microsoft.ML.Probabilistic.Compiler`. В командной строке выполните следующую команду:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.ML.Probabilistic.Compiler
 ```
 
@@ -130,7 +130,7 @@ namespace myApp
 
 В командной строке выполните следующую команду:
 
-```console
+```dotnetcli
 dotnet run
 ```
 

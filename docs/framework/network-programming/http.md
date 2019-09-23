@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170603"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048011"
 ---
 # <a name="http"></a>HTTP
 Платформа .NET предоставляет полную поддержку протокола HTTP, на который приходит большая часть интернет-трафика, с помощью классов <xref:System.Net.HttpWebRequest> и <xref:System.Net.HttpWebResponse>. Эти классы, производные от <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, возвращаются по умолчанию всякий раз, когда статический метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> обнаруживает URI, начинающийся с "http" или "https". В большинстве случаев классы **WebRequest** и **WebResponse** предоставляют все необходимое для выполнения запроса, но если вам необходим доступ к возможностям HTTP-протокола, представленным в виде свойств, можно выполнить приведение этих классов к **HttpWebRequest** или **HttpWebResponse**.  
@@ -33,6 +33,6 @@ ms.locfileid: "59170603"
   
 ## <a name="see-also"></a>См. также
 
-- [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Практическое руководство. Доступ к свойствам, относящимся к HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Доступ к Интернету через прокси-сервер](accessing-the-internet-through-a-proxy.md)
+- [Использование протоколов приложений](using-application-protocols.md)
+- [Практическое руководство. Доступ к свойствам, относящимся к HTTP](how-to-access-http-specific-properties.md)

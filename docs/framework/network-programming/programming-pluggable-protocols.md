@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072345"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047392"
 ---
 # <a name="programming-pluggable-protocols"></a>программирование подключаемых протоколов
 Абстрактные классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> реализуют основу для подключаемых протоколов. Создавая производные классы для определенных протоколов на основе классов <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, приложение может запрашивать данные интернет-ресурса и считывать ответ, не указывая используемый протокол.  
@@ -33,7 +33,7 @@ ms.locfileid: "59072345"
   
 ## <a name="see-also"></a>См. также
 
-- [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [Наследование от класса WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Наследование от WebResponse](deriving-from-webrequest.md)
+- [Наследование от класса WebResponse](deriving-from-webresponse.md)
+- [Сетевое программирование в .NET Framework](index.md)
+- [Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

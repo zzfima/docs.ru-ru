@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851248"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044683"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (средство просмотра журнала привязки сборок)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70851248"
 > [!IMPORTANT]
 > Средство просмотра Fuslogvw.exe необходимо запускать с правами администратора.
 
-Эта программа автоматически устанавливается вместе с Visual Studio. Запускайте его из командной строки разработчика для Visual Studio (или командной строки в Windows 7), используя учетные данные администратора. Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Эта программа автоматически устанавливается вместе с Visual Studio. Запускайте его из командной строки разработчика для Visual Studio (или командной строки в Windows 7), используя учетные данные администратора. Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).
 
 В командной строке введите следующее.
 
@@ -60,7 +60,7 @@ fuslogvw
 
     - описание любых примененных политик версий приложения, издателя и администратора;
 
-    - сведения о том, была ли обнаружена сборка в [глобальном кэше сборок](../../../docs/framework/app-domains/gac.md);
+    - сведения о том, была ли обнаружена сборка в [глобальном кэше сборок](../app-domains/gac.md);
 
     - список всех проверенных URL-адресов.
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>Журналы привязки машинных образов
 
-По умолчанию средство Fuslogvw.exe записывает в журнал обычные запросы на привязку сборок. В журнал также можно включить привязки сборок для образов в машинном коде, созданных с помощью программы [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).
+По умолчанию средство Fuslogvw.exe записывает в журнал обычные запросы на привязку сборок. В журнал также можно включить привязки сборок для образов в машинном коде, созданных с помощью программы [Ngen.exe (генератор образов в машинном коде)](ngen-exe-native-image-generator.md).
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>Запись в журнал привязок сборок машинных образов
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. Введите путь в текстовом поле **Пользовательский путь к журналу**.
 
 > [!NOTE]
-> [Средство просмотра журнала привязки сборок (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) сохраняет журнал привязок в кэше Internet Explorer. Из-за возможных повреждений кэша Internet Explorer в окне [средства просмотра журнала привязок сборки (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) перестают отображаться новые журналы привязок. В результате таких сбоев инфраструктура привязки в платформе .NET (fusion) не может выполнять запись в журнал привязки и считывание из него. (Эта проблема не возникает при выборе пользовательского пути к журналу).  Чтобы fusion-журнал снова отображал привязки, очистите кэш IE. Для этого удалите временные файлы Интернета в диалоговом окне "Свойства обозревателя".
+> [Средство просмотра журнала привязки сборок (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) сохраняет журнал привязок в кэше Internet Explorer. Из-за возможных повреждений кэша Internet Explorer в окне [средства просмотра журнала привязок сборки (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) перестают отображаться новые журналы привязок. В результате таких сбоев инфраструктура привязки в платформе .NET (fusion) не может выполнять запись в журнал привязки и считывание из него. (Эта проблема не возникает при выборе пользовательского пути к журналу).  Чтобы fusion-журнал снова отображал привязки, очистите кэш IE. Для этого удалите временные файлы Интернета в диалоговом окне "Свойства обозревателя".
 >
 > Если неуправляемое приложение размещает среду CLR посредством реализации интерфейсов `IHostAssemblyManager` и `IHostAssemblyStore`, хранение записей журнала в кэше WinINet невозможно.  Чтобы просматривать записи журнала основных пользовательских приложений, которые реализуют эти интерфейсы, необходимо задать альтернативный путь к журналу.
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>См. также
 
 - <xref:System.TypeLoadException>
-- [Инструменты](../../../docs/framework/tools/index.md)
-- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
-- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Инструменты](index.md)
+- [Глобальный кэш сборок](../app-domains/gac.md)
+- [Обнаружение сборок в среде выполнения](../deployment/how-the-runtime-locates-assemblies.md)
+- [Командные строки](developer-command-prompt-for-vs.md)

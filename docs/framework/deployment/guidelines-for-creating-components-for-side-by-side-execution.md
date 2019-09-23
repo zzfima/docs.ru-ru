@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614093"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052144"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Рекомендации по созданию компонентов для параллельного выполнения
 Выполните эти общие рекомендации для создания управляемых приложений или компонентов для параллельного выполнения.  
@@ -60,9 +60,9 @@ ms.locfileid: "64614093"
   
  Версия сборки используется средой выполнения для привязки сборок. Две одинаковые сборки с разными номерами версий рассматриваются средой выполнения как две разные сборки.  
   
- [Средство глобального кэша сборок (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) позволяет заменить сборку, если более новым является только номер версии файла. Установщик обычно переустанавливает сборку только в том случае, если номер версии сборки больше.   
+ [Средство глобального кэша сборок (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) позволяет заменить сборку, если более новым является только номер версии файла. Установщик обычно переустанавливает сборку только в том случае, если номер версии сборки больше.  
   
 ## <a name="see-also"></a>См. также
 
-- [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)
-- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Параллельное выполнение](side-by-side-execution.md)
+- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

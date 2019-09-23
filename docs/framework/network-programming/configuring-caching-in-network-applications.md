@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-ms.openlocfilehash: dcdb7659e322769b3eb234980415473e711568e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8ff64e4ab42283732d7f632efab6b4e9afad0a0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624627"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048706"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Настройка кэширования в сетевых приложениях
 Чтобы настроить кэширование, необходимо указать политику кэширования на уровне приложения или <xref:System.Net.WebRequest>. В следующих разделах приводятся примеры кода, которые демонстрируют настройку приложений и запросов для использования кэширования.  
   
-- [Практическое руководство. Установка политики кэша для приложения на основе расположения](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+- [Практическое руководство. Установка политики кэша для приложения на основе расположения](how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
-- [Практическое руководство. Установка политики кэша для приложения на основе времени по умолчанию](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+- [Практическое руководство. Установка политики кэша для приложения на основе времени по умолчанию](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [Практическое руководство. Настройка политики кэша на основе времени](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+- [Практическое руководство. Настройка политики кэша на основе времени](how-to-customize-a-time-based-cache-policy.md)  
   
-- [Практическое руководство. Задание политики кэширования для запроса](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+- [Практическое руководство. Задание политики кэширования для запроса](how-to-set-cache-policy-for-a-request.md)  
   
- Также для настройки политики кэширования можно использовать файлы конфигурации приложения или компьютера. Дополнительные сведения см. в разделе [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+ Также для настройки политики кэширования можно использовать файлы конфигурации приложения или компьютера. Дополнительные сведения см. в разделе [Элемент \<requestCaching> (сетевые параметры)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
-- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Управление кэшем для сетевых приложений](cache-management-for-network-applications.md)
+- [Политика кэша](cache-policy.md)
+- [Политики кэша на основе расположения](location-based-cache-policies.md)
+- [Политики кэша на основе времени](time-based-cache-policies.md)

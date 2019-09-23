@@ -3,12 +3,12 @@ title: Установка средства ML.NET CLI
 description: Обзор и установка средства ML.NET CLI.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106899"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117999"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Установка средства ML.NET CLI
 
@@ -33,7 +33,7 @@ ms.locfileid: "70106899"
 
 В примере ниже показано, как установить ML.NET CLI в расположении веб-канала NuGet по умолчанию.
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ mlnet
 
 Если вам необходимо установить предварительную или конкретную версию средства, можно указать [платформу](../../standard/frameworks.md), используя следующий формат:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Вы также можете проверить, был ли пакет установлен правильно, введя следующую команду:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 Введите следующую команду, чтобы удалить пакет с локального компьютера:
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 Введите следующую команду, чтобы обновить пакет на локальном компьютере:
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ dotnet tool update -g mlnet
 
 1. Установите глобальное средство `dotnet-suggest`, запустив следующую команду:
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 
@@ -120,7 +120,7 @@ dotnet tool update -g mlnet
 
 ML.NET CLI можно установить в каталоге по умолчанию или в выбранном вами расположении. Каталоги по умолчанию:
 
-| Операционная система          | Путь                          |
+| Операционная система          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |

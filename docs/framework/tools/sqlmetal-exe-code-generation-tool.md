@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894607"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044081"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (средство создания кода)
 Средство командной строки SqlMetal создает код и сопоставление для компонента [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] платформы .NET Framework. С помощью описанных ниже параметров можно настраивать SqlMetal на выполнение различных действий, включая следующие.  
@@ -30,7 +30,7 @@ ms.locfileid: "70894607"
 > [!NOTE]
 > Разработчики, работающие в Visual Studio, также могут использовать реляционный конструктор объектов для создания классов сущностей. Командная строка удобна при работе с большими базами данных. Поскольку SqlMetal представляет собой программу командной строки, ее можно использовать в процессе построения.  
   
- Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Подробнее см. в разделе [Командная строка](../../../docs/framework/tools/developer-command-prompt-for-vs.md). В командной строке введите следующее:  
+ Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Подробнее см. в разделе [Командная строка](developer-command-prompt-for-vs.md). В командной строке введите следующее:  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -77,7 +77,7 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<тип>*|Задает имя класса контекста данных. Значение по умолчанию: определяется по имени базы данных.|  
 |**/entitybase:** *\<тип>*|Задает базовый класс для классов сущностей в сгенерированном коде. Значение по умолчанию: базовый класс для сущностей не определяется.|  
 |**/pluralize**|Автоматически преобразует имена классов и членов в форму множественного или единственного числа.<br /><br /> Этот вариант доступен только в английской версии (США).|  
-|**/serialization:** *\<параметр>*|Создает сериализуемые классы.<br /><br /> Допустимый *\<параметр>* : нет, однонаправленный. Значение по умолчанию: Отсутствует.<br /><br /> Дополнительные сведения см. в разделе [Сериализация](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<параметр>*|Создает сериализуемые классы.<br /><br /> Допустимый *\<параметр>* : нет, однонаправленный. Значение по умолчанию: Отсутствует.<br /><br /> Дополнительные сведения см. в разделе [Сериализация](../data/adonet/sql/linq/serialization.md).|  
   
  **Входной файл**  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание модели объектов на языке Visual Basic или C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [Создание кода в LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Внешнее сопоставление](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Практическое руководство. Создание модели объектов на языке Visual Basic или C#](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Создание кода в LINQ to SQL](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Внешнее сопоставление](../data/adonet/sql/linq/external-mapping.md)

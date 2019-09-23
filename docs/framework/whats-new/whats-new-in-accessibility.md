@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952827"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053727"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
@@ -169,7 +169,7 @@ if (raiseMethod != null) {
 
 На изображении ниже показана подсказка, появляющаяся, когда пользователь выбирает кнопку с помощью клавиатуры.
 
-![Подсказка, появляющаяся, когда пользователь переходит к кнопке с помощью клавиатуры](media/tooltip.png)
+![Подсказка, появляющаяся, когда пользователь переходит к кнопке с помощью клавиатуры](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ if (raiseMethod != null) {
 
 Чтобы использовать это свойство, просто добавьте его в код XAML и примените соответствующую кисть или привязку. В итоге выделенный текст выглядит так:
 
-![Подсказка, появляющаяся, когда пользователь переходит к кнопке с помощью клавиатуры](media/selectiontextbrush-property.png)
+![Подсказка, появляющаяся, когда пользователь переходит к кнопке с помощью клавиатуры](./media/selectiontextbrush-property.png)
 
 Свойства `SelectionBrush` и `SelectionTextBrush` можно использовать вместе, чтобы получить любую требуемую комбинацию цветов фона и переднего плана.
 
@@ -482,11 +482,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   До: 
 
-  ![Элемент управления Expander с фокусом до внесения улучшений](media/expander-before.png)
+  ![Элемент управления Expander с фокусом до внесения улучшений](./media/expander-before.png)
 
   После: 
 
-  ![Элемент управления Expander с фокусом после внесения улучшений](media/expander-after.png)
+  ![Элемент управления Expander с фокусом после внесения улучшений](./media/expander-after.png)
 
 - Элементы управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton>
 
@@ -494,11 +494,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   До: 
 
-  ![Переключатель высокой контрастности до внесения улучшений](media/radio-button-before.png)
+  ![Переключатель высокой контрастности до внесения улучшений](./media/radio-button-before.png)
 
   После: 
 
-  ![Переключатель высокой контрастности после внесения улучшений](media/radio-button-after.png)
+  ![Переключатель высокой контрастности после внесения улучшений](./media/radio-button-after.png)
 
 - Элемент управления <xref:System.Windows.Controls.ComboBox>
 
@@ -506,31 +506,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   До: 
 
-  ![Отключенная граница и текст поля со списком до внесения улучшений](media/combo-disabled-before.png)
+  ![Отключенная граница и текст поля со списком до внесения улучшений](./media/combo-disabled-before.png)
 
   После:   
 
-  ![Отключенная граница и текст поля со списком после внесения улучшений](media/combo-disabled-after.png)
+  ![Отключенная граница и текст поля со списком после внесения улучшений](./media/combo-disabled-after.png)
 
   Кроме того, отключенные и находящиеся в фокусе кнопки используют правильный цвет темы.
 
   До:
 
-  ![Цвета темы для кнопок до внесения улучшений](media/button-themes-before.png) 
+  ![Цвета темы для кнопок до внесения улучшений](./media/button-themes-before.png) 
 
   После: 
 
-  ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
+  ![Цвета темы для кнопок после внесения улучшений](./media/button-themes-after.png) 
 
   Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1 эта проблема устранена. Например:
 
   До: 
 
-  ![Toolbar.ComboBoxStyleKey до внесения улучшений](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey до внесения улучшений](./media/comboboxstylekey-before.png) 
 
   После: 
 
-  ![Toolbar.ComboBoxStyleKey после внесения улучшений](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey после внесения улучшений](./media/comboboxstylekey-after.png) 
 
 - Элемент управления <xref:System.Windows.Controls.DataGrid>
 
@@ -538,21 +538,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   До: 
 
-  ![Стрелка индикатора сортировки до внесения улучшений](media/sort-indicator-before.png) 
+  ![Стрелка индикатора сортировки до внесения улучшений](./media/sort-indicator-before.png) 
 
   После:   
 
-  ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
+  ![Стрелка индикатора сортировки после внесения улучшений](./media/sort-indicator-after.png) 
 
   Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1 эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры начиная с .NET Framework 4.7.1.
 
   До: 
 
-  ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](media/default-link-style-before.png) 
+  ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](./media/default-link-style-before.png) 
 
   После:    
 
-  ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png) 
+  ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](./media/default-link-style-after.png) 
 
 Дополнительные сведения об улучшениях специальных возможностей WPF в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -583,11 +583,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   До:
 
-  ![Отключенный текст до внесения улучшений](media/wf-disabled-before.png) 
+  ![Отключенный текст до внесения улучшений](./media/wf-disabled-before.png) 
 
   После:
 
-  ![Отключенный текст после внесения улучшений](media/wf-disabled-after.png) 
+  ![Отключенный текст после внесения улучшений](./media/wf-disabled-after.png) 
 
 - Усовершенствования режима высокой контрастности в диалоговом окне исключения потока.
 

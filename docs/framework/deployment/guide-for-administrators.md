@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379958"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052159"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 
-В этой статье представлено пошаговое описание развертывания администратором платформы .NET Framework 4.5 и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки .NET Framework 4.5 см. в разделе [Системные требования](../../../docs/framework/get-started/system-requirements.md).
+В этой статье представлено пошаговое описание развертывания администратором платформы .NET Framework 4.5 и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки .NET Framework 4.5 см. в разделе [Системные требования](../get-started/system-requirements.md).
 
 > [!NOTE]
 > Упоминаемое в этом документе программное обеспечение, в том числе .NET Framework 4.5, System Center Configuration Manager и Active Directory, используется в соответствии с условиями лицензионного соглашения. В приведенных здесь инструкциях предполагается, что эти условия лицензионного соглашения были прочитаны и приняты соответствующими приобретателями лицензий на программное обеспечение. Данные инструкции не предполагают отказа от каких-либо условий этих лицензионных соглашений.
@@ -280,5 +280,5 @@ ms.locfileid: "66379958"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Требования к системе](../../../docs/framework/get-started/system-requirements.md)
+- [Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md)
+- [Требования к системе](../get-started/system-requirements.md)

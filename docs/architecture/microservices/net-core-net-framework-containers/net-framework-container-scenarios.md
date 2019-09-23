@@ -2,12 +2,12 @@
 title: Выбор .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784087"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039642"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -45,22 +45,22 @@ ms.locfileid: "70784087"
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Использование платформы или API, не поддерживающей .NET Core
 
-Некоторые платформы Майкрософт и платформы сторонних разработчиков не поддерживают среду .NET Core. Например, некоторые другие службы Azure предоставляют пакеты SDK, которые пока невозможно использовать в среде .NET Core. Эта ситуация временная. Все службы Azure в конечном итоге будут использовать .NET Core. Например, [Пакет SDK Azure DocumentDB для .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) был выпущен в виде предварительной версии 16 ноября 2016 г. В настоящее время имеется его общедоступная стабильная версия.
+Некоторые платформы Майкрософт и платформы сторонних разработчиков не поддерживают среду .NET Core. Например, некоторые другие службы Azure предоставляют пакеты SDK, которые пока невозможно использовать в среде .NET Core. Эта ситуация временная. Все службы Azure в конечном итоге будут использовать .NET Core. Например, [Пакет SDK Azure DocumentDB для .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) был выпущен в виде предварительной версии 16 ноября 2016 г. В настоящее время имеется его общедоступная стабильная версия.
 
 В течение этого переходного периода, если окажется, что какая-либо платформа или служба в Azure пока еще не поддерживает среду .NET Core с ее клиентским API, вы можете использовать аналогичный интерфейс REST API службы Azure или пакет SDK для клиента на платформе .NET Framework.
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Руководство по .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **Перенос кода в .NET Core из .NET Framework**  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **.NET Core в руководстве по Docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **Общие сведения о компонентах .NET**  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[Назад](net-core-container-scenarios.md)

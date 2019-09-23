@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894751"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043997"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (программа экспорта библиотек типов)
 Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  Вся сборка преобразуется целиком. Программу Tlbexp.exe нельзя использовать с целью генерации сведений о типах для подмножества типов, определенных в сборке.  
   
- Программа Tlbexp.exe не может использоваться для создания библиотеки типов из сборки, импортированной с помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Вместо этого следует указать исходную библиотеку типов, импортированную с помощью программы Tlbimp.exe. Библиотеку типов можно экспортировать из сборки, содержащей ссылки на сборки, импортированные с помощью программы Tlbimp.exe. См. раздел примеров ниже.  
+ Программа Tlbexp.exe не может использоваться для создания библиотеки типов из сборки, импортированной с помощью [программы импорта библиотек типов (Tlbimp.exe)](tlbimp-exe-type-library-importer.md). Вместо этого следует указать исходную библиотеку типов, импортированную с помощью программы Tlbimp.exe. Библиотеку типов можно экспортировать из сборки, содержащей ссылки на сборки, импортированные с помощью программы Tlbimp.exe. См. раздел примеров ниже.  
   
  Программа Tlbexp.exe размещает созданные библиотеки типов в текущем рабочем каталоге или каталоге, заданном для выходного файла. Из одной сборки можно создать несколько библиотек типов.  
   
- Программа Tlbexp.exe создает библиотеки типов, но не регистрирует их. В этом состоит ее отличие от [программы регистрации сборок (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), которая и создает библиотеку типов, и регистрирует ее. Чтобы создать и зарегистрировать библиотеку типов в COM, используйте программу Regasm.exe.  
+ Программа Tlbexp.exe создает библиотеки типов, но не регистрирует их. В этом состоит ее отличие от [программы регистрации сборок (Regasm.exe)](regasm-exe-assembly-registration-tool.md), которая и создает библиотеку типов, и регистрирует ее. Чтобы создать и зарегистрировать библиотеку типов в COM, используйте программу Regasm.exe.  
   
  Если параметры `/win32` и `/win64` не заданы, программа Tlbexp.exe создает 32-разрядную или 64-разрядную библиотеку типов в соответствии с типом компьютера, на котором выполняется компиляция (32-разрядный или 64-разрядный компьютер). Для перекрестной компиляции можно задать параметр `/win64` на 32-разрядном компьютере, чтобы создать 64-разрядную библиотеку типов, или параметр `/win32` на 64-разрядном компьютере, чтобы создать 32-разрядную библиотеки типов. В 32-разрядных библиотеках типов значение <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> задается как <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>. В 64-разрядных библиотеках типов значение параметра <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> равно <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>. Все преобразования типов данных (например, типы данных с размером указателя, такие как `IntPtr` и `UIntPtr`) производятся соответствующим образом.  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Инструменты](../../../docs/framework/tools/index.md)
-- [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Инструменты](index.md)
+- [Regasm.exe (средство регистрации сборок)](regasm-exe-assembly-registration-tool.md)
 - [Общие сведения о преобразовании сборки в библиотеку типов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (программа экспорта библиотек типов)](tlbimp-exe-type-library-importer.md)
+- [Командные строки](developer-command-prompt-for-vs.md)

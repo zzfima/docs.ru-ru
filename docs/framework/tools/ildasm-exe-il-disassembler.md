@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894869"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044648"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (дизассемблер IL)
 
 Дизассемблер IL является сопутствующим инструментом ассемблера IL (*Ilasm.exe*). *Ildasm.exe* принимает переносимый исполняемый файл (PE-файл), содержащий код на промежуточном языке (IL), и создает на его основе текстовый файл, который может служить входным файлом для *Ilasm.exe*.
 
-Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).
 
 В командной строке введите следующее.
 
@@ -186,7 +186,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>См. также
 
-- [Инструменты](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (ассемблер IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Инструменты](index.md)
+- [Ilasm.exe (ассемблер IL)](ilasm-exe-il-assembler.md)
 - [Процесс управляемого выполнения](../../standard/managed-execution-process.md)
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Командные строки](developer-command-prompt-for-vs.md)

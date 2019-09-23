@@ -2,12 +2,12 @@
 title: Автоматическая настройка IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647326"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047808"
 ---
 # <a name="ipv6-auto-configuration"></a>Автоматическая настройка IPv6
 Одна из важнейших целей IPv6 заключается в поддержке самонастраивающегося узла. То есть можно подключить узел к сети IPv6 и автоматически настроить его без вмешательства человека.  
@@ -26,5 +26,5 @@ ms.locfileid: "64647326"
   
 ## <a name="see-also"></a>См. также
 
-- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+- [Протокол IP версии 6](internet-protocol-version-6.md)
+- [Сокеты](sockets.md)

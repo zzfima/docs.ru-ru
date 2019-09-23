@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109958"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047769"
 ---
 # <a name="listening-with-sockets"></a>прослушивание с помощью сокетов
 Сокеты прослушивателя и сервера открывают порт в сети и ожидают, когда клиент подключится к этому порту. В этом примере показано, как создать удаленную службу для сети TCP/IP (хотя существуют и другие семейства сетевых адресов и протоколов).  
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>См. также
 
-- [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Использование сокетов клиента](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Практическое руководство. Создание сокета](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+- [Использование синхронного сокета сервера](using-a-synchronous-server-socket.md)
+- [Использование асинхронных сокетов сервера](using-an-asynchronous-server-socket.md)
+- [Использование сокетов клиента](using-client-sockets.md)
+- [Практическое руководство. Создание сокета](how-to-create-a-socket.md)
+- [Сокеты](sockets.md)

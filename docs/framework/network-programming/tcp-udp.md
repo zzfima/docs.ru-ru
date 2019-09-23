@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172553"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047112"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Приложения могут использовать службы TCP и UDP с классами <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> и <xref:System.Net.Sockets.UdpClient>. Эти классы протоколов основаны на классе <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> и управляют различными аспектами передачи данных.  
@@ -34,9 +34,9 @@ ms.locfileid: "59172553"
   
 ## <a name="see-also"></a>См. также
 
-- [Использование служб TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Использование служб UDP](../../../docs/framework/network-programming/using-udp-services.md)
-- [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Использование асинхронных сокетов клиента](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Использование служб TCP](using-tcp-services.md)
+- [Использование служб UDP](using-udp-services.md)
+- [Использование потоков в сети](using-streams-on-the-network.md)
+- [Использование асинхронных сокетов сервера](using-an-asynchronous-server-socket.md)
+- [Использование асинхронных сокетов клиента](using-an-asynchronous-client-socket.md)
+- [Использование протоколов приложений](using-application-protocols.md)
