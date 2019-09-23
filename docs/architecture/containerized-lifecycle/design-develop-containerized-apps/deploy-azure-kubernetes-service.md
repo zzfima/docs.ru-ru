@@ -2,12 +2,12 @@
 title: Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 description: Сведения о развертывании приложения с помощью службы Azure Kubernetes.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672631"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182372"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Развертывание в службе Azure Kubernetes (AKS)
 
@@ -19,12 +19,12 @@ ms.locfileid: "68672631"
 - Компьютер разработки Windows
   - Включенный режим разработчика в Windows
   - Подсистема Windows для Linux
-- Интерфейс Azure CLI, установленный в [Windows, Mac или Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+- Интерфейс Azure CLI, установленный в [Windows, Mac или Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 > [!NOTE]
 > На следующих страницах можно найти полную информацию об этих компонентах:
 >
-> Azure CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure CLI: <https://docs.microsoft.com/cli/azure/index>
 >
 > Подсистема Windows для Linux: <https://docs.microsoft.com/windows/wsl/about>
 
