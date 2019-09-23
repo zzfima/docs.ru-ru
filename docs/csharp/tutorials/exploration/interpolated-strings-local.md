@@ -4,12 +4,12 @@ description: В этом руководстве показано, как исп�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850925"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117851"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Создание форматированных строк с помощью интерполяции
 
@@ -21,7 +21,7 @@ ms.locfileid: "70850925"
 
 Создайте каталог с именем **interpolated**. Сделайте его текущим, выполнив следующую команду в окне консоли:
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
