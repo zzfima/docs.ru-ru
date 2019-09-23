@@ -3,12 +3,12 @@ title: Начало работы с хранилищем таблиц Azure с �
 description: Храните структурированные данные в облаке с помощью хранилища таблиц Azure или Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928993"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182599"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Приступая к работе с хранилищем таблиц Azure и Azure Cosmos DB API таблиц с помощью F\#
 
@@ -192,7 +192,7 @@ Azure Cosmos DB предоставляет API таблиц для прилож�
 Теперь, когда вы узнали основные сведения о хранилище таблиц, перейдите по следующим ссылкам, чтобы узнать о более сложных задачах хранилища и Azure Cosmos DB API таблиц.
 
 - [Общие сведения о Azure Cosmos DB API таблиц](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Справочник по клиентской библиотеке хранилища для .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Справочник по клиентской библиотеке хранилища для .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Поставщик типов службы хранилища Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Блог команды разработчиков службы хранилища Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Настройка строк подключения](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

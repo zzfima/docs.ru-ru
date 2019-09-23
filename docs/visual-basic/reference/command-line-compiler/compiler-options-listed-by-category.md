@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331545"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182564"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic параметров компилятора, перечисленных по категориям
 Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компиляции программ из интегрированной среды разработки (IDE) Visual Studio. Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональным категориям.  
@@ -72,7 +72,7 @@ ms.locfileid: "68331545"
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Приравнивает предупреждения к ошибкам.|  
 |`-ruleset:<file>`|Укажите файл набора правил, который отключает определенные диагностики.|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>Справка  
   
 |Параметр|Цель|  
 |---|---|  
@@ -129,4 +129,4 @@ ms.locfileid: "68331545"
 ## <a name="see-also"></a>См. также
 
 - [Параметры компилятора Visual Basic в алфавитном порядке](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401708"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182544"
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401708"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Знание модели надстройки .NET Framework является обязательным. Дополнительные сведения см. в разделе [Надстройки и расширяемость](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+Знание модели надстройки .NET Framework является обязательным. Дополнительные сведения см. в разделе [Надстройки и расширяемость](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -61,12 +61,12 @@ ms.locfileid: "68401708"
 
 - **Управление жизненным циклом**: Загрузка и выгрузка доменов приложений и процессов с помощью четкого прогнозируемого способа (см. [домены приложений](../../app-domains/application-domains.md)).
 
-- **Управление версиями**: Убедитесь, что ведущие приложения и надстройки по-прежнему могут взаимодействовать при создании новых версий.
+- **Управление версиями**. Убедитесь, что ведущие приложения и надстройки по-прежнему могут взаимодействовать при создании новых версий.
 
 В конечном счете разработка надежной модели надстройки является нетривиальный задачей. По этой причине .NET Framework предоставляет инфраструктуру для создания моделей надстроек.
 
 > [!NOTE]
-> Более подробные сведения о надстройках см. в разделе [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Более подробные сведения о надстройках см. в разделе [Надстройки и расширения среды](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ WPF, в сочетании с моделью надстройки .NET Framework
 
 Чтобы надстройка возвращала пользовательский интерфейс ведущему приложению, необходимо следующее:
 
-1. Необходимо создать ведущее приложение, надстройку и конвейер, как описано в документации [надстройки и расширения](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .NET Framework.
+1. Необходимо создать ведущее приложение, надстройку и конвейер, как описано в документации [надстройки и расширения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .NET Framework.
 
 2. Контракт должен реализовать <xref:System.AddIn.Contract.IContract> и, чтобы получить пользовательский интерфейс, контракт должен объявить метод с возвращаемым значением типа <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -147,7 +147,7 @@ WPF, в сочетании с моделью надстройки .NET Framework
 
 Если надстройка является пользовательским интерфейсом, требуются следующие условия.
 
-1. Необходимо создать ведущее приложение, надстройку и конвейер, как описано в документации [надстройки и расширения](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .NET Framework.
+1. Необходимо создать ведущее приложение, надстройку и конвейер, как описано в документации [надстройки и расширения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .NET Framework.
 
 2. Интерфейс контракта для надстройки должен реализовывать <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -311,7 +311,7 @@ WPF, в сочетании с моделью надстройки .NET Framework
 ## <a name="see-also"></a>См. также
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Надстройки и расширения среды](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Домены приложений](../../app-domains/application-domains.md)
 - [Общие сведения об удаленном взаимодействии .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Обеспечение удаленного взаимодействия объектов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

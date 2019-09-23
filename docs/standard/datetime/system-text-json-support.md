@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151825"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182576"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Поддержка DateTime и DateTimeOffset в System.Text.Json
 
 Библиотека System. Text. JSON выполняет синтаксический анализ и <xref:System.DateTime> запись <xref:System.DateTimeOffset> и значения в соответствии с расширенным профилем ISO 8601:-2019.
-[Преобразователи](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) обеспечивают пользовательскую поддержку сериализации и десериализации с <xref:System.Text.Json.JsonSerializer>помощью.
+[Преобразователи](xref:System.Text.Json.Serialization.JsonConverter%601) обеспечивают пользовательскую поддержку сериализации и десериализации с <xref:System.Text.Json.JsonSerializer>помощью.
 Пользовательская поддержка также может быть реализована <xref:System.Text.Json.Utf8JsonReader> при <xref:System.Text.Json.Utf8JsonWriter>использовании и.
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>Поддержка формата ISO 8601-1:2019
@@ -67,7 +67,7 @@ ms.locfileid: "71151825"
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>При использовании<xref:System.Text.Json.JsonSerializer>
 
-Если вы хотите, чтобы сериализатор выполнял пользовательское синтаксический анализ или форматирование, можно реализовать [пользовательские преобразователи](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0).
+Если вы хотите, чтобы сериализатор выполнял пользовательское синтаксический анализ или форматирование, можно реализовать [пользовательские преобразователи](xref:System.Text.Json.Serialization.JsonConverter%601).
 Вот несколько примеров:
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Использование `DateTime(Offset).Parse` и`DateTime(Offset).ToString`

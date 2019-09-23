@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373684"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182626"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Пошаговое руководство. Сериализация коллекций стандартных типов
 
 Иногда пользовательские элементы управления предоставляют коллекцию в качестве свойства. В этом пошаговом руководстве показано <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> , как использовать класс для управления сериализацией коллекции во время разработки. <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Применение значения к свойству коллекции гарантирует, что свойство будет сериализовано.
 
-Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Сериализация коллекций стандартных типов с помощью Десигнерсериализатионвисибилитяттрибуте](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Сериализация коллекций стандартных типов с помощью Десигнерсериализатионвисибилитяттрибуте](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -129,11 +129,11 @@ ms.locfileid: "70373684"
 
 Когда вы узнаете, как сериализовать коллекцию стандартных типов, рассмотрите возможность интеграции пользовательских элементов управления более глубоко в среду времени разработки. В следующих разделах описывается, как улучшить интеграцию пользовательских элементов управления во время разработки:
 
-- [Архитектура времени разработки](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Архитектура времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Атрибуты в элементах управления Windows Forms](attributes-in-windows-forms-controls.md)
 
-- [Общие сведения о сериализации конструктора](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Общие сведения о сериализации конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [Пошаговое руководство: Создание элемента управления Windows Forms, который использует преимущества функций времени разработки Visual Studio](creating-a-wf-control-design-time-features.md)
 
