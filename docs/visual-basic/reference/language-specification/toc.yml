@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: Комментарии для документации
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: Разрешение перегрузки
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: Грамматика
       items:
         - name: vb.html
