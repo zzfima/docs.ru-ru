@@ -2,12 +2,12 @@
 title: События
 description: Узнайте, F# как события позволяют связывать вызовы функций с действиями пользователя, которые важны для программирования GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917280"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216459"
 ---
 # <a name="events"></a>События
 
@@ -36,7 +36,7 @@ F#события представлены F# классом [событий](htt
 
 Выходные данные выглядят следующим образом.
 
-```
+```console
 Event1 occurred! Object data: Hello World!
 ```
 
@@ -46,7 +46,7 @@ Event1 occurred! Object data: Hello World!
 
 Результат выполнения приведенного кода будет следующим.
 
-```
+```console
 Event occurred.
 Given a value: Event occurred.
 ```

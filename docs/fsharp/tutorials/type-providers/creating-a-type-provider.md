@@ -2,12 +2,12 @@
 title: Учебник. Создание поставщика типов
 description: Узнайте, как создавать собственные F# поставщики типов в F# 3,0, изучив несколько поставщиков простых типов, чтобы продемонстрировать основные понятия.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991869"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214271"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Учебник. Создание поставщика типов
 
@@ -152,13 +152,13 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 Чтобы отладить этот поставщик с помощью инструкций Print, создайте сценарий, который предоставляет проблему с поставщиком, а затем используйте следующий код:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Чтобы отладить этот поставщик с помощью Visual Studio, откройте Командная строка разработчика для Visual Studio с учетными данными администратора и выполните следующую команду:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Ниже приведен образ результирующего кода, декомпилированного с помощью Ildasm. exe:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ IL_0017:  ret
 
 **Поставщики протоколов подключения** Как правило, имена большинства библиотек DLL поставщика для протоколов подключения к данным и служб, таких как подключения OData или SQL, должны `TypeProvider` заканчиваться на или `TypeProviders`. Например, используйте имя библиотеки DLL, которое напоминает следующую строку:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Убедитесь, что предоставленные типы являются членами соответствующего пространства имен, и укажите протокол подключения, который вы реализовали:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 Часто отладку поставщиков типов можно упростить с помощью FSC. exe в файле скрипта теста (например, Script. fsx). Отладчик можно запустить из командной строки.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   Можно использовать ведение журнала печати в stdout.

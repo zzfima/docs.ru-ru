@@ -2,12 +2,12 @@
 title: 'Циклы: выражение for...in'
 description: См. раздел F# о... в циклической конструкции выражения используется для перебора совпадений шаблона в перечислимой коллекции.
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630713"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216444"
 ---
 # <a name="loops-forin-expression"></a>Циклы: выражение for...in
 
@@ -44,7 +44,7 @@ for pattern in enumerable-expression do
 
 Выходные данные выглядят следующим образом.
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ for pattern in enumerable-expression do
 
 Выходные данные выглядят следующим образом.
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ for pattern in enumerable-expression do
 
 Выходные данные функция1 выглядят следующим образом.
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ for pattern in enumerable-expression do
 
 Выходные данные `function2` имеют следующий вид.
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ for pattern in enumerable-expression do
 
 Выходные данные `function3` имеют следующий вид.
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 Выходные данные `function4` имеют следующий вид.
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 Выходные данные `function5` со следующими входными данными выглядят следующим образом.
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,7 +127,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 Выходные данные выглядят следующим образом.
 
-```
+```console
 Number of elements in list1: 5
 ```
 

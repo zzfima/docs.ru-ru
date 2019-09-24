@@ -2,12 +2,12 @@
 title: Единицы измерения
 description: Узнайте, как значения с плавающей запятой и F# целым числом со знаком в могут иметь связанные единицы измерения, которые обычно используются для обозначения длины, объема и массы.
 ms.date: 05/16/2016
-ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a81f7760301dc580e333d4659a72e6259d2c916b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630159"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216687"
 ---
 # <a name="units-of-measure"></a>Единицы измерения
 
@@ -81,7 +81,7 @@ let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 
 В следующем примере сеанса показаны выходные данные и входные данные этого кода.
 
-```
+```console
 Enter a temperature in degrees Fahrenheit.
 90
 That temperature in degrees Celsius is    32.22.

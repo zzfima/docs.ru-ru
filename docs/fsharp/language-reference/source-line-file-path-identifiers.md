@@ -2,12 +2,12 @@
 title: Идентификаторы Source Line, File и Path
 description: Узнайте, как использовать встроенные значения F# идентификатора, которые позволяют получить доступ к номеру строки исходного кода, каталогу и имени файла в коде.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f22c3dfb3cb106fbe45883ffd7de01feac30db00
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627113"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216748"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Идентификаторы Source Line, File и Path
 
@@ -43,7 +43,7 @@ __SOURCE_FILE__
 
 Результат
 
-```
+```console
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
 Source File: Program.fs

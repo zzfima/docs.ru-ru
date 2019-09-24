@@ -1,20 +1,20 @@
 ---
 title: Выражения запросов
-description: Дополнительные сведения о поддержке выражения запроса LINQ в F# языка программирования.
+description: Сведения о поддержке выражений запросов для LINQ в языке F# программирования.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc077bfbe25f88104e89508ef6283a5bc42eddbd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6eaac16336cca752eaac355276300c6809c570a8
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645347"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216810"
 ---
 # <a name="query-expressions"></a>Выражения запросов
 
 > [!NOTE]
 > Ссылки на справочник по API в этой статье ведут на сайт MSDN.  Работа над справочником по API docs.microsoft.com не завершена.
 
-Выражения запросов позволяют выполнять запросы к источнику данных и поместить их в нужную форму. Выражения запросов обеспечивают поддержку LINQ в F#.
+Выражения запросов позволяют запрашивать источник данных и размещать данные в нужной форме. Выражения запросов обеспечивают поддержку LINQ в F#.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Примечания
 
-Выражения запроса — это разновидность вычислительного выражения, аналогичную выражениям последовательности. Так же, как задать последовательность, указав код в выражении последовательности, можно указать набор данных, предоставляя код в выражении запроса. В выражении последовательности `yield` ключевое слово определяет данные, возвращаемые как часть результирующей последовательности. В выражениях запросов `select` ключевое слово выполняет ту же функцию. В дополнение к `select` ключевое слово, F# также поддерживает несколько операторов запроса, во многом похожи на части инструкции SQL SELECT. Ниже приведен пример простое выражение запроса, а также код, который подключается к источнику Northwind OData.
+Выражения запросов — это тип вычислительного выражения, аналогичный выражениям последовательности. Точно так же, как вы указываете последовательность, предоставляя код в выражении последовательности, вы указываете набор данных, предоставляя код в выражении запроса. В выражении `yield` последовательности ключевое слово определяет данные, возвращаемые как часть результирующей последовательности. В выражениях `select` запросов ключевое слово выполняет ту же функцию. Помимо `select` ключевого слова, F# также поддерживает ряд операторов запросов, которые во многом аналогичны частям инструкции SQL SELECT. Ниже приведен пример простого выражения запроса вместе с кодом, который подключается к источнику OData базы данных Northwind.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,23 +46,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-В предыдущем примере кода выражение запроса является в фигурные скобки. Значение кода в выражении, вернет каждого клиента в таблице Customers в базе данных в результатах запроса. Выражения запроса возвращают тип, реализующий <xref:System.Linq.IQueryable%601> и <xref:System.Collections.Generic.IEnumerable%601>, и поэтому они могут быть итерация с помощью [Seq-модуль](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) как показано в примере.
+В предыдущем примере кода выражение запроса заключено в фигурные скобки. Значение кода в выражении — возвращает каждого клиента в таблице Customers в базе данных в результатах запроса. Выражения запроса возвращают тип, который <xref:System.Linq.IQueryable%601> реализует <xref:System.Collections.Generic.IEnumerable%601>и, и поэтому их можно перебирать с помощью [модуля seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , как показано в примере.
 
-Каждый тип выражения вычисления построена на основе класс построителя. Класс построителя для вычисления выражения запроса является `QueryBuilder`. Дополнительные сведения см. в разделе [выражения вычисления](computation-expressions.md) и [класс Linq.QueryBuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Каждый тип вычислительного выражения строится на основе класса построителя. Класс построителя для выражения вычисления запроса имеет значение `QueryBuilder`. Дополнительные сведения см. в разделе [выражения вычислений](computation-expressions.md) и [класс LINQ. QueryBuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
 
 ## <a name="query-operators"></a>Операторы запроса
 
-Операторы запросов позволяют указать сведения о запросе, например, для помещения критерии для возвращаемых записей или укажите порядок сортировки результатов. Источник запроса должен поддерживать оператор запроса. Если вы попытаетесь использовать оператор запроса не поддерживается, `System.NotSupportedException` будет создано.
+Операторы запросов позволяют указать сведения о запросе, например, чтобы задать условия для возвращаемых записей, или указать порядок сортировки результатов. Источник запроса должен поддерживать оператор запроса. При попытке использовать неподдерживаемый оператор `System.NotSupportedException` запроса будет создано исключение.
 
-В выражениях запросов допускаются только выражения, которые могут быть преобразованы в SQL. Например, вызовы функции не допускаются в выражениях при использовании `where` оператор запроса.
+В выражениях запросов допускаются только выражения, которые могут быть преобразованы в SQL. Например, при использовании `where` оператора запроса в выражениях не допускаются вызовы функций.
 
-В таблице 1 показаны доступные операторы запроса. Кроме того, см. в разделе Table2, который сравнивает запросы SQL и их эквиваленты F# выражения далее в этом разделе запроса. Некоторые операторы запросов не поддерживаются некоторые поставщики типов. В частности поставщик типов OData имеет ограничения в операторах запросов, которые она поддерживает из-за ограничений в OData. Дополнительные сведения см. в разделе [поставщик типов ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+В таблице 1 показаны доступные операторы запросов. Кроме того, см. раздел Table2, в котором сравниваются SQL запросы F# и эквивалентные выражения запросов далее в этом разделе. Некоторые поставщики типов не поддерживают некоторые операторы запросов. В частности, поставщик типов OData ограничен в операторах запросов, которые он поддерживает, из-за ограничений в OData. Дополнительные сведения см. в разделе [ODataService Type ProviderF#()](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
-В этой таблице предполагается, что базу данных в следующей форме:
+В этой таблице предполагается, что база данных имеет следующий вид:
 
-![Схема, показывающая пример базы данных.](./media/query-expressions/student-course-database.png)
+![Схема, на которой показан образец базы данных.](./media/query-expressions/student-course-database.png)
 
-Код в приведенных далее таблицах также предполагается, что следующий код подключения базы данных. Проекты следует добавить ссылки на сборки System.Data, System.Data.Linq и FSharp.Data.TypeProviders. Код, который создает эту базу данных приведен в конце этого раздела.
+Код в приведенных ниже таблицах также предполагает наличие следующего кода подключения к базе данных. Проекты должны добавлять ссылки на сборки System. Data, System. Data. LINQ и FSharp. Data. TypeProviders. Код, создающий эту базу данных, содержится в конце этого раздела.
 
 ```fsharp
 open System
@@ -88,7 +88,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
   </tr>
   <tr>
   <td><code>contains</code></td>
-<td>Определяет, включать ли выбранные элементы указанный элемент.<br/><br/>
+<td>Определяет, включает ли выбранные элементы указанный элемент.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -101,7 +101,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </tr>
 
 <tr>
-  <td><code>count</code></td><td>Возвращает количество выбранных элементов.<br/><br/>
+  <td><code>count</code></td><td>Возвращает число выбранных элементов.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -112,7 +112,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>last</code></td><td>Выбирает последний элемент из выбранных в настоящее время.<br/><br/>
+<td><code>last</code></td><td>Выбирает последний элемент выбранных на данный момент элементов.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -122,7 +122,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>lastOrDefault</code></td><td>Выбирает последний элемент из выбранных в настоящее время, или значение по умолчанию, если элемент не найден.<br/><br/>
+<td><code>lastOrDefault</code></td><td>Выбирает последний элемент выбранных до сих пор или значение по умолчанию, если элемент не найден.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -132,7 +132,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td>Выбирает один, конкретный элемент, выбранный на данный момент. Если несколько элементов, создается исключение.<br/><br/>
+<td><code>exactlyOne</code></td><td>Выбирает один конкретный элемент, выбранный на данный момент. Если имеется несколько элементов, возникает исключение.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -143,7 +143,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td>Выбирает один, конкретный элемент из выбранных в настоящее время, или значение по умолчанию, если этот элемент не найден.<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>Выбирает один конкретный элемент выбранных выше или значение по умолчанию, если этот элемент не найден.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -154,7 +154,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td>Выбирает первый элемент из выбранных в настоящее время, или значение по умолчанию, если последовательность не содержит элементов.<br/><br/>
+<td><code>headOrDefault</code></td><td>Выбирает первый элемент выбранных до сих пор или значение по умолчанию, если последовательность не содержит элементов.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -164,7 +164,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>select</code></td><td>Проецирует каждый элемент, выбранный на данный момент.<br/><br/>
+<td><code>select</code></td><td>Проецирует каждый из элементов, выбранных на данный момент.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -173,7 +173,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td>Выбирает элементы, на основе заданного предиката.<br/><br/>
+<td><code>where</code></td><td>Выбирает элементы на основе указанного предиката.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -183,7 +183,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td>Выбирает значение для каждого элемента, выбранного в данный момент и возвращает минимальное результирующее значение.<br/><br/>
+<td><code>minBy</code></td><td>Выбирает значение для каждого выбранного элемента на данный момент и возвращает минимальное результирующее значение.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -192,7 +192,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td>Выбирает значение для каждого элемента, выбранного в данный момент и возвращает максимальное результирующее значение.<br/><br/>
+<td><code>maxBy</code></td><td>Выбирает значение для каждого выбранного элемента на данный момент и возвращает максимальное результирующее значение.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -201,7 +201,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td>Группирует элементы, выбранные на данный момент согласно заданному селектору ключа.<br/><br/>
+<td><code>groupBy</code></td><td>Группирует элементы, выбранные на данный момент, в соответствии с заданным селектором ключа.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -211,7 +211,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td>Сортирует элементы, выбранные на данный момент в порядке возрастания по заданному ключу сортировки.<br/><br/>
+<td><code>sortBy</code></td><td>Сортирует выбранные элементы в порядке возрастания по заданному ключу сортировки.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -221,7 +221,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td>Сортирует элементы, выбранные на данный момент в порядке убывания по заданному ключу сортировки.<br/><br/>
+<td><code>sortByDescending</code></td><td>Сортирует выбранные элементы на данный момент в порядке убывания по заданному ключу сортировки.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>Выполняет дополнительное упорядочение элементов, выбранного в данный момент в порядке возрастания по заданному ключу сортировки. Этот оператор может использоваться только после <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, или <code>thenByDescending</code>.<br/><br/>
+<td><code>thenBy</code></td><td>Выполняет последующее упорядочение элементов, выбранных на данный момент в возрастающем порядке по заданному ключу сортировки. Этот оператор может использоваться только <code>sortBy</code>после, <code>sortByDescending</code>, <code>thenBy</code>или <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>Выполняет дополнительное упорядочение элементов, выбранного в данный момент в порядке убывания по заданному ключу сортировки. Этот оператор может использоваться только после <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, или <code>thenByDescending</code>.<br/><br/>
+<td><code>thenByDescending</code></td><td>Выполняет последующее упорядочение элементов, выбранных на данный момент в порядке убывания по заданному ключу сортировки. Этот оператор может использоваться только <code>sortBy</code>после, <code>sortByDescending</code>, <code>thenBy</code>или <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -255,7 +255,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td>Выбирает значение для каждого элемента, выбранного в данный момент и группирует элементы по заданному ключу.<br/><br/>
+<td><code>groupValBy</code></td><td>Выбирает значение для каждого выбранного элемента на данный момент и группирует элементы по заданному ключу.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>Сопоставляет два множества выбранных значений на основе сопоставления ключей. Обратите внимание, что порядок следования ключей вокруг = вход в выражении соединения имеет значение. В все соединения, если строка разбивается после <code>-&gt;</code> символом, Величина отступа должна быть с отступом по крайней мере вплоть до ключевого слова <code>for</code>.<br/><br/>
+<td><code>join</code></td><td>Сопоставляет два набора выбранных значений на основе совпадающих ключей. Обратите внимание, что порядок клавиш вокруг знака = в выражении Join является существенным. Во всех объединениях, если строка разбивается после <code>-&gt;</code> символа, отступ должен иметь отступ по крайней мере до ключевого слова. <code>for</code><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -276,7 +276,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td>Сопоставляет два множества выбранных значений по совпадающим ключам и группирует результаты. Обратите внимание, что порядок следования ключей вокруг = вход в выражении соединения имеет значение.<br/><br/>
+<td><code>groupJoin</code></td><td>Сопоставляет два набора выбранных значений на основе совпадающих ключей и группирует результаты. Обратите внимание, что порядок клавиш вокруг знака = в выражении Join является существенным.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -290,7 +290,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td>Сопоставляет два множества выбранных значений по совпадающим ключам и группирует результаты. Если любая группа пуста, вместо него используется группа с одним значением по умолчанию. Обратите внимание, что порядок следования ключей вокруг = вход в выражении соединения имеет значение.<br/><br/>
+<td><code>leftOuterJoin</code></td><td>Сопоставляет два набора выбранных значений на основе совпадающих ключей и группирует результаты. Если какая-либо из групп пуста, вместо нее используется группа с одним значением по умолчанию. Обратите внимание, что порядок клавиш вокруг знака = в выражении Join является существенным.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -302,7 +302,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td>Выбирает значение, допускающее значение NULL для каждого элемента, выбранного в данный момент и возвращает сумму этих значений. Если любой допускающий значение NULL не имеет значения, он игнорируется.<br/><br/>
+<td><code>sumByNullable</code></td><td>Выбирает значение, допускающее значение null, для каждого выбранного элемента на данный момент и возвращает сумму этих значений. Если значение NULL не имеет значения, оно игнорируется.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -311,7 +311,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td>Выбирает значение, допускающее значение NULL для каждого элемента, выбранного в данный момент и возвращает минимальное из этих значений. Если любой допускающий значение NULL не имеет значения, он игнорируется.<br/><br/>
+<td><code>minByNullable</code></td><td>Выбирает значение, допускающее значение null, для каждого выбранного элемента до настоящего момента и возвращает минимальное из этих значений. Если значение NULL не имеет значения, оно игнорируется.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -320,7 +320,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td>Выбирает значение, допускающее значение NULL для каждого элемента, выбранного в данный момент и возвращает максимальное из этих значений. Если любой допускающий значение NULL не имеет значения, он игнорируется.<br/><br/>
+<td><code>maxByNullable</code></td><td>Выбирает значение, допускающее значение null, для каждого выбранного элемента на данный момент и возвращает максимальное из этих значений. Если значение NULL не имеет значения, оно игнорируется.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -329,7 +329,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td>Выбирает значение, допускающее значение NULL для каждого элемента, выбранного в данный момент и возвращает среднее этих значений. Если любой допускающий значение NULL не имеет значения, он игнорируется.<br/><br/>
+<td><code>averageByNullable</code></td><td>Выбирает значение, допускающее значение null, для каждого выбранного элемента на данный момент и возвращает среднее из этих значений. Если значение NULL не имеет значения, оно игнорируется.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -338,7 +338,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td>Выбирает значение для каждого элемента, выбранного в данный момент и возвращает среднее этих значений.<br/><br/>
+<td><code>averageBy</code></td><td>Выбирает значение для каждого выбранного элемента на данный момент и возвращает среднее из этих значений.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -347,7 +347,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td>Выбирает конкретные элементы из элементов, выбранных на данный момент.<br/><br/>
+<td><code>distinct</code></td><td>Выбирает отдельные элементы из выбранных ранее элементов.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -358,7 +358,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exists</code></td><td>Определяет, удовлетворяет ли любого элемента, выбранного в данный момент условие.<br/><br/>
+<td><code>exists</code></td><td>Определяет, удовлетворяет ли ни одному элементу, выбранному до сих пор условие.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -371,7 +371,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td>Выбирает первый элемент, выбранного в данный момент, который удовлетворяет заданному условию.<br/><br/>
+<td><code>find</code></td><td>Выбирает первый выбранный элемент, удовлетворяющий указанному условию.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -380,7 +380,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td>Определяет, удовлетворяют ли все элементы, выбранные на данный момент условию.<br/><br/>
+<td><code>all</code></td><td>Определяет, соответствуют ли все элементы, выбранные на данный момент, определенному условию.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -389,7 +389,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td>Выбирает первый элемент из выбранных в настоящее время.<br/><br/>
+<td><code>head</code></td><td>Выбирает первый элемент из выбранных на данный момент элементов.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -398,7 +398,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td>Выбирает элемент с указанным индексом среди выбранных данный момент.<br/><br/>
+<td><code>nth</code></td><td>Выбирает элемент по указанному индексу среди выбранных до сих пор.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -407,7 +407,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td>Пропускает указанное число элементов, выбранных на данный момент и затем выбирает оставшиеся элементы.<br/><br/>
+<td><code>skip</code></td><td>Обходит указанное число выбранных элементов на данный момент, а затем выбирает оставшиеся элементы.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -416,7 +416,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td>Пропускает элементы в последовательности, пока заданное условие имеет значение true, а затем выбирает оставшиеся элементы.<br/><br/>
+<td><code>skipWhile</code></td><td>Обходит элементы в последовательности, пока заданное условие имеет значение true, а затем выбирает оставшиеся элементы.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -426,7 +426,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td>Выбирает значение для каждого элемента, выбранного в данный момент и возвращает сумму этих значений.<br/><br/>
+<td><code>sumBy</code></td><td>Выбирает значение для каждого выбранного элемента на данный момент и возвращает сумму этих значений.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -435,7 +435,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td>До сих выбирает указанное число идущих подряд элементов из выбранных.<br/><br/>
+<td><code>take</code></td><td>Выбирает указанное количество смежных элементов из выбранных выше.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -445,7 +445,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td>Выбирает элементы из последовательности, пока заданное условие имеет значение true и затем пропускает оставшиеся элементы.<br/><br/>
+<td><code>takeWhile</code></td><td>Выбирает элементы из последовательности, пока заданное условие имеет значение true, а затем пропускает оставшиеся элементы.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -454,7 +454,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td>Сортирует элементы, выбранные на данный момент в порядке возрастания по заданному ключу сортировки допускает значения NULL.<br/><br/>
+<td><code>sortByNullable</code></td><td>Сортирует выбранные элементы на данный момент в порядке возрастания по заданному ключу сортировки, допускающему значение null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -464,7 +464,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td>Сортирует элементы, выбранные на данный момент в порядке убывания по заданному ключу сортировки допускает значения NULL.<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>Сортирует элементы, выбранные на данный момент в порядке убывания, по заданному ключу сортировки, допускающему значение null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>Выполняет дополнительное упорядочение элементов, выбранного в данный момент в порядке возрастания по заданному ключу сортировки допускает значения NULL. Этот оператор может использоваться только сразу после <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, или <code>thenByDescending</code>, или их модификаций, допускающий значение NULL.<br/><br/>
+<td><code>thenByNullable</code></td><td>Выполняет последующее упорядочение элементов, выбранных на данный момент в возрастающем порядке по заданному ключу сортировки, допускающему значение null. Этот оператор может использоваться только <code>sortBy</code>сразу после <code>thenBy</code>,,, <code>sortByDescending</code>или <code>thenByDescending</code>их вариантов, допускающих значение null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>Выполняет дополнительное упорядочение элементов, выбранного в данный момент в порядке убывания по заданному ключу сортировки допускает значения NULL. Этот оператор может использоваться только сразу после <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, или <code>thenByDescending</code>, или их модификаций, допускающий значение NULL.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Выполняет последующее упорядочение элементов, выбранных на данный момент в убывающем порядке по заданному ключу сортировки, допускающему значение null. Этот оператор может использоваться только <code>sortBy</code>сразу после <code>thenBy</code>,,, <code>sortByDescending</code>или <code>thenByDescending</code>их вариантов, допускающих значение null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -499,17 +499,17 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Сравнение выражений запросов Transact-SQL и F#
-В следующей таблице показаны некоторые стандартные запросы Transact-SQL и их эквиваленты в F#. В этой таблице также предполагается той же базе данных, как в предыдущей таблице и тот же исходный код для настройки поставщика типов.
+В следующей таблице показаны некоторые распространенные запросы Transact-SQL и их эквиваленты F#в. Код в этой таблице также предполагает ту же базу данных, что и Предыдущая таблица, и тот же начальный код для настройки поставщика типов.
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Таблица 2. Выражения запросов Transact-SQL и F#
 
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (без учета регистра)</th>
-    <th>F#(С учетом регистра) выражение запроса</th>
+    <th>F#Выражение запроса (с учетом регистра)</th>
   </tr>
 <tr><td>
-Выберите все поля из таблицы.<br>
+Выбрать все поля из таблицы.<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -524,7 +524,7 @@ query {
 
 </td></tr>
 <tr><td>
-Число записей в таблице.<br/>
+Подсчет записей в таблице.<br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -585,7 +585,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-Группа с условием.<br/>
+Группирование с условием.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -605,7 +605,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Группа с условием count.<br/>
+Группирование с условием подсчета.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -649,7 +649,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Группирование, подсчет и упорядочение по количеству.<br/>
+Группирование, подсчет и упорядочивание по количеству.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
@@ -673,7 +673,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code> набор указанных значений<br/>
+<code>IN</code>набор указанных значений<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -714,7 +714,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> с шаблоном соответствовать набору.<br/>
+<code>LIKE</code>с набором совпадений шаблона.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -731,7 +731,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> с шаблоном набор исключений.<br/>
+<code>LIKE</code>с шаблоном исключения Set.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -750,7 +750,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> на одном поле, но выберите другое поле.<br/>
+<code>LIKE</code>в одном поле, но выберите другое поле.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -765,7 +765,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><code>LIKE</code>, с помощью поиск подстроки.<br/>
+</td></tr><tr><td><code>LIKE</code>, с поиском подстроки.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -800,7 +800,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code> с двумя таблицами.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>с двумя таблицами.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> с помощью <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code>учет<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -853,7 +853,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>Подсчет различных объектов.<br/>
+</td></tr><tr><td>Число различных объектов.<br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT COUNT(StudentID) FROM CourseSelection
 </code></pre>
@@ -902,7 +902,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code> При заказе<br/>
+</td></tr><tr><td><code>OR</code>с упорядочением<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -920,7 +920,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>, <code>OR</code>и порядок.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code>и упорядочение.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -942,7 +942,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code> двух запросов.<br/>
+</td></tr><tr><td><code>UNION</code>двух запросов.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -991,7 +991,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code> условие.<br/>
+</td></tr><tr><td><code>CASE</code>выполняет.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1054,7 +1054,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>Несколько соединений.<br/>
+</td></tr><tr><td>Множественные объединения.<br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1104,7 +1104,7 @@ query {
 
 </td></tr></table>
 
-Следующий код может использоваться для создания образца базы данных для этих примеров.
+Следующий код можно использовать для создания образца базы данных для этих примеров.
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1226,7 +1226,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-Следующий код содержит пример кода, который отображается в этом разделе.
+Следующий код содержит образец кода, представленный в этом разделе.
 
 ```fsharp
 #if INTERACTIVE
@@ -1860,9 +1860,9 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-А вот все выходные данные при выполнении этого кода F# интерактивного обучения.
+Ниже приведен полный результат выполнения этого кода в F# интерактивном режиме.
 
-```
+```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
 
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
@@ -2424,5 +2424,5 @@ end
 ## <a name="see-also"></a>См. также
 
 - [Справочник по языку F#](index.md)
-- [Класс Linq.QueryBuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [Класс LINQ. QueryBuilder](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Выражения вычисления](Computation-Expressions.md)
