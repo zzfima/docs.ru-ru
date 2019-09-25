@@ -5,13 +5,13 @@ hide_bc: true
 title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928946"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216698"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928946"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "70928946"
         <h1>Документация по .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Документация</a>
+                <a data-default="true" href="#docs">Документы</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">Руководства по .NET</a>
@@ -330,7 +330,7 @@ ms.locfileid: "70928946"
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Интернет</a>
+                        <a href="#web">Веб-приложения</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
