@@ -4,5 +4,33 @@
       href: index.md
     - name: Категории критических изменений
       href: categories.md
-    - name: Критические изменения
+    - name: 'Селектор: критические изменения'
       href: breaking-changes.md
+    - name: По версии
+      items:
+        - name: ".NET Framework\_— .NET Core"
+          href: framework-core.md
+        - name: "2.2\_— 3.0"
+          href: 2.2-3.0.md
+        - name: "3.0, предварительная версия\_6\_— 3.0, предварительная версия\_7"
+          href: 3.0.6-3.0.7.md
+        - name: "3.0, предварительная версия\_7\_— 3.0, предварительная версия\_8"
+          href: 3.0.7-3.0.8.md
+        - name: "3.0, предварительная версия\_8\_— 3.0, предварительная версия\_9"
+          href: 3.0.8-3.0.9.md
+    - name: По категории
+      items:
+        - name: CoreFX
+          href: corefx.md
+        - name: Шифрование
+          href: cryptography.md
+        - name: Глобализация
+          href: globalization.md
+        - name: Visual Basic
+          href: visualbasic.md
+        - name: ASP.NET Core (на GitHub)
+          href: 'https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0'
+        - name: Entity Framework Core
+          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+        - name: Windows Forms
+          href: winforms.md
