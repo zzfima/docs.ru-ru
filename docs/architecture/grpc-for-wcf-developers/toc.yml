@@ -1,0 +1,89 @@
+- name: gRPC для разработчиков WCF
+  href: index.md
+  items:
+    - name: Вступление
+      href: introduction.md
+    - name: Обзор gRPC
+      href: grpc-overview.md
+      items:
+        - name: Как gRPC работает с RPC
+          href: approach.md
+        - name: Язык IDL
+          href: interface-definition-language.md
+        - name: Сетевые протоколы
+          href: network-protocols.md
+        - name: Почему gRPC рекомендуется для разработчиков WCF
+          href: Why-grpc.md
+    - name: Protocol Buffers
+      href: protocol-buffers.md
+      items:
+        - name: Сообщения Protobuf
+          href: protobuf-messages.md
+        - name: Скалярные типы данных Protobuf
+          href: protobuf-data-types.md
+        - name: Вложенные типы Protobuf
+          href: protobuf-nested-types.md
+        - name: Повторяющиеся поля для списков и массивов
+          href: protobuf-repeated.md
+        - name: Зарезервированные поля Protobuf
+          href: protobuf-reserved.md
+        - name: Поля Any и OneOf Protobuf для типов Variant
+          href: protobuf-any-oneof.md
+        - name: Перечисления Protobuf
+          href: protobuf-enums.md
+        - name: Карты Protobuf для словарей
+          href: protobuf-maps.md
+    - name: Сравнение служб WCF с gRPC
+      href: wcf-services-to-grpc-comparison.md
+      items:
+        - name: Конечные точки WCF и методы gRPC
+          href: wcf-endpoints-grpc-methods.md
+        - name: Привязки и транспорты WCF
+          href: wcf-bindings.md
+        - name: Типы RPC
+          href: rpc-types.md
+        - name: Метаданные
+          href: metadata.md
+        - name: Обработка ошибок
+          href: error-handling.md
+        - name: Протоколы WS-*
+          href: ws-protocols.md
+    - name: Перенос решения WCF в gRPC
+      href: migrate-wcf-to-grpc.md
+      items:
+        - name: Создание проекта ASP.NET Core gRPC
+          href: create-project.md
+        - name: Перенос службы типа "запрос-ответ" WCF в gRPC
+          href: migrate-request-reply.md
+        - name: Перенос дуплексных служб WCF в gRPC
+          href: migrate-duplex-services.md
+        - name: Сравнение повторяющихся полей и служб потоковой передачи gRPC
+          href: streaming-versus-repeated.md
+        - name: Клиентские библиотеки
+          href: client-libraries.md
+    - name: Безопасность в приложениях gRPC
+      href: security.md
+      items:
+        - name: Учетные данные вызова
+          href: call-credentials.md
+        - name: Учетные данные канала
+          href: channel-credentials.md
+        - name: Шифрование
+          href: encryption.md
+    - name: gRPC в рабочей среде
+      href: grpc-in-production.md
+      items:
+        - name: Локальные приложения
+          href: self-hosted.md
+        - name: Docker
+          href: docker.md
+        - name: Kubernetes
+          href: kubernetes.md
+        - name: gRPC и слой взаимодействия между службами
+          href: service-mesh.md
+        - name: Балансировка нагрузки
+          href: load-balancing.md
+        - name: Управление производительностью приложений
+          href: application-performance-management.md
+    - name: Приложение
+      href: appendix.md
