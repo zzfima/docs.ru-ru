@@ -2,18 +2,18 @@
 title: Официальные .NET-образы Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Официальные .NET-образы Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675711"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039639"
 ---
 # <a name="official-net-docker-images"></a>Официальные .NET-образы Docker
 
 Официальные .NET-образы Docker — это образы Docker, оптимизированные Майкрософт. Они доступны для всех в репозиториях Майкрософт в [Центре Docker](https://hub.docker.com/u/microsoft/). Каждый репозиторий может содержать несколько образов, в зависимости от версии платформы .NET и операционной системы (Linux Debian, Linux Alpine, Windows Nano Server, Windows Server Core и т. д.).
 
-Начиная с версии .NET Core 2.1, все образы .NET Core, в том числе для ASP.NET Core, можно найти в репозитории образов .NET Core на сайте Docker Hub: https://hub.docker.com/_/microsoft-dotnet-core/
+Начиная с версии .NET Core 2.1, все образы .NET Core, в том числе для ASP.NET Core, можно найти в репозитории образов .NET Core на сайте Docker Hub: <https://hub.docker.com/\_/microsoft-dotnet-core/>.
 
 Большинство репозиториев образов предоставляют широкие возможности по использованию тегов, чтобы облегчить выбор не только конкретной версии платформы, но и ОС (дистрибутива Linux или версии Windows).
 
@@ -43,10 +43,10 @@ ms.locfileid: "68675711"
 
 При просмотре репозиториев .NET-образов в центре Docker вы найдете несколько версий, классифицированных или помеченных тегами. Эти теги помогают определить, какую версию использовать, как показано в таблице:
 
-| Изображение                                       | Комментарии                                                                                          |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Изображение | Комментарии |
+|-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2.2** | ASP.NET Core только со средой выполнения и оптимизацией ASP.NET Core в Linux и Windows (для разных архитектур) |
-| mcr.microsoft.com/dotnet/core/sdk:**2.2**    | .NET Core с пакетами SDK в Linux и Windows (для разных архитектур)                                  |
+| mcr.microsoft.com/dotnet/core/sdk:**2.2** | .NET Core с пакетами SDK в Linux и Windows (для разных архитектур) |
 
 > [!div class="step-by-step"]
 > [Назад](net-container-os-targets.md)

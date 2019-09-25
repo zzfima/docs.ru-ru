@@ -1,0 +1,31 @@
+- name: 'Электронная книга: Blazor для разработчиков ASP.NET Web Forms'
+  href: index.md
+  items:
+    - name: Вступление
+      href: introduction.md
+    - name: Сравнение архитектуры
+      href: architecture-comparison.md
+    - name: Модели размещения
+      href: hosting-models.md
+    - name: Структура проекта
+      href: project-structure.md
+    - name: Запуск
+      href: app-startup.md
+    - name: Компоненты
+      href: components.md
+    - name: 'Страницы, маршрутизация и макеты'
+      href: pages-routing-layouts.md
+    - name: Управление состоянием
+      href: state-management.md
+    - name: Формы и проверка
+      href: forms-validation.md
+    - name: Работа с данными
+      href: data.md
+    - name: ПО промежуточного слоя
+      href: middleware.md
+    - name: Параметр Configuration
+      href: config.md
+    - name: Безопасность
+      href: security-authentication-authorization.md
+    - name: Миграция
+      href: migration.md

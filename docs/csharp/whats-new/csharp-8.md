@@ -1,13 +1,13 @@
 ---
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/20/2019
+ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117821"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182410"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -28,6 +28,7 @@ ms.locfileid: "71117821"
 - [Индексы и диапазоны](#indices-and-ranges).
 - [Присваивание объединения со значением NULL](#null-coalescing-assignment)
 - [Неуправляемые сконструированные типы](#unmanaged-constructed-types)
+- [Выражение stackalloc во вложенных выражениях](#stackalloc-in-nested-expressions)
 - [Улучшение интерполированных строк verbatim](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -493,6 +494,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 Дополнительные сведения см. в разделе [Неуправляемые типы](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="stackalloc-in-nested-expressions"></a>Выражение stackalloc во вложенных выражениях
+
+Начиная с C# 8.0, если результат выражения [stackalloc](../language-reference/operators/stackalloc.md) имеет тип <xref:System.Span%601?displayProperty=nameWithType> или <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, можно использовать выражение `stackalloc` в других выражениях:
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Улучшение интерполированных строк verbatim
 

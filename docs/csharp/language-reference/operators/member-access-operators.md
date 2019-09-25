@@ -1,12 +1,14 @@
 ---
 title: Операторы доступа к членам. Справочник по C#
 description: Дополнительные сведения об операторах C#, которые можно использовать для доступа к членам типа.
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924642"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116131"
 ---
 # <a name="member-access-operators-c-reference"></a>Операторы доступа к членам (справочник по C#)
 
@@ -40,6 +47,8 @@ ms.locfileid: "69924642"
 - [`[]` (элемент массива или индексатор доступа) ](#indexer-operator-): для доступа к элементу массива или индексатору типа;
 - [`?.` и `?[]` (null-условные операторы)](#null-conditional-operators--and-): для выполнения операции доступа члена или элемента только в том случае, если операнд не равен null;
 - [`()` (вызов) ](#invocation-operator-): для вызова метода или делегата.
+- [`^` (индекс от конца) ](#index-from-end-operator-): для определения того, что расположение элемента находится в конце последовательности.
+- [`..` (диапазон)](#range-operator-): для определения диапазона индексов, которые можно использовать для получения диапазона элементов последовательности.
 
 ## <a name="member-access-operator-"></a>Оператор доступа к элементу .
 
@@ -149,9 +158,37 @@ if (handler != null)
 
 В [выражениях приведения](type-testing-and-cast.md#cast-operator-), которые выполняют явные преобразования типов, также используйте круглые скобки.
 
+## <a name="index-from-end-operator-"></a>Индекс от конца: оператор ^
+
+Оператор `^`, доступный в C# 8.0 и последующих версиях, определяет расположение элемента от конца последовательности. Для последовательности длины `length` `^n` указывает на элемент с `length - n` смещения от начала последовательности. Например, `^1` указывает на последний элемент последовательности, а `^length` — на первый элемент последовательности.
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+В предыдущем примере выражение `^e` имеет тип <xref:System.Index?displayProperty=nameWithType>. В выражении `^e` результат `e` должен быть неявно преобразован в `int`.
+
+Можно также использовать `^` оператор с [оператором диапазона](#range-operator-) для создания диапазона индексов. См. сведения в [руководстве по диапазонам и индексам](../../tutorials/ranges-indexes.md).
+
+## <a name="range-operator-"></a>Диапазон: оператор ..
+
+Оператор диапазона `..`, доступный в C# 8.0 и последующих версиях, определяет начало и конец диапазона индексов в качестве своих операндов. Левый операнд является *инклюзивным* началом диапазона. Правый операнд является *инклюзивным* концом диапазона. Любой из операндов может быть индексом от начала или конца последовательности, как показано в следующем примере:
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+В предыдущем примере выражение `a..b` имеет тип <xref:System.Range?displayProperty=nameWithType>. В выражении `a..b` результаты `a` и `b` должны быть неявно преобразованы в `int` или <xref:System.Index>.
+
+Можно проигнорировать любой из операндов оператора `..`, чтобы получить открытый диапазон:
+
+- `a..` — это эквивалент `a..^0`
+- `..b` — это эквивалент `0..b`
+- `..` — это эквивалент `0..^0`
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+См. сведения в [руководстве по диапазонам и индексам](../../tutorials/ranges-indexes.md).
+
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
-Операторы `.` и `()` не могут быть перегружены. Оператор `[]` также считается неперегружаемым. Используйте [индексаторы](../../programming-guide/indexers/index.md) для поддержки индексирования с помощью определяемых пользователем типов.
+Операторы `.`, `()`, `^` и `..` перегрузить нельзя. Оператор `[]` также считается неперегружаемым. Используйте [индексаторы](../../programming-guide/indexers/index.md) для поддержки индексирования с помощью определяемых пользователем типов.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 

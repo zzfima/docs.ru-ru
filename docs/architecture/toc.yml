@@ -5,11 +5,17 @@
   items:
     - name: Разработка современных веб-приложений с помощью ASP.NET Core и Microsoft Azure
       href: modern-web-apps-azure/
+    - name: Разработка ориентированных на облако приложений .NET для Azure
+      href: cloud-native/
     - name: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows
       href: modernize-with-azure-containers/
     - name: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
       href: containerized-lifecycle/
-    - name: 'Микрослужбы .NET: Архитектура контейнерных приложений .NET'
+    - name: 'Микрослужбы .NET: архитектура контейнерных приложений .NET'
       href: microservices/
     - name: 'Бессерверные приложения: Архитектура, шаблоны и реализация в Azure'
       href: serverless/
+    - name: Blazor для разработчиков ASP.NET Web Forms
+      href: blazor-for-web-forms-developers/
+    - name: ASP.NET Core gRPC для разработчиков WCF
+      href: grpc-for-wcf-developers/
