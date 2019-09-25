@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Указание планировщика задач в блоке потока данных
+title: Практическое руководство. Указание планировщика задач в блоке потока данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,7 +19,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345850"
 ---
-# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Как выполнить Указание планировщика задач в блоке потока данных
+# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Практическое руководство. Указание планировщика задач в блоке потока данных
 В этом документе приводятся способы привязки определенного планировщика задач при использовании потока данных в приложении. В этом пример используется класс <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> в приложении Windows Forms для указания того, когда активна задача чтения и когда активна задача записи. Здесь также используется метод <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>, чтобы позволить блоку потока данных выполняться в потоке пользовательского интерфейса.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

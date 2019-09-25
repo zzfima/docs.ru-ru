@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427361"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Как выполнить написание простого цикла Parallel.ForEach
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Практическое руководство. Написание простого цикла Parallel.ForEach
 
 В этом примере показано, как использовать цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для включения параллелизма данных в любом источнике данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 

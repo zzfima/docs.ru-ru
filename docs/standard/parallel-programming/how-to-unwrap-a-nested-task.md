@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Извлечение вложенной задачи из оболочки
+title: Практическое руководство. Извлечение вложенной задачи из оболочки
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54602056"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a>Как выполнить Извлечение вложенной задачи из оболочки
+# <a name="how-to-unwrap-a-nested-task"></a>Практическое руководство. Извлечение вложенной задачи из оболочки
 Вы можете вернуть задачу из метода, и затем ожидать ее выполнения или продолжить работу после нее, как показано в следующем примере.  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]

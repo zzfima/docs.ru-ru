@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отмена цикла Parallel.For или Parallel.ForEach
+title: Практическое руководство. Отмена цикла Parallel.For или Parallel.ForEach
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54618082"
 ---
-# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Как выполнить Отмена цикла Parallel.For или Parallel.ForEach
+# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Практическое руководство. Отмена цикла Parallel.For или Parallel.ForEach
 Метод <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> поддерживают отмену с применением маркеров отмены. Дополнительные сведения о механизмах отмены в целом см. в [этой статье](../../../docs/standard/threading/cancellation-in-managed-threads.md). В параллельном цикле <xref:System.Threading.CancellationToken> передается в методу через параметр <xref:System.Threading.Tasks.ParallelOptions>, и этот параллельный вызов заключен в блок try-catch.  
   
 ## <a name="example"></a>Пример  
