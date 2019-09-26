@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928926"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151836"
 ---
 # <a name="metadata-and-markdown-template"></a>Шаблон метаданных и разметки Markdown
 
@@ -254,9 +254,9 @@ ms.locfileid: "70928926"
   - Используется совместно для указания способа извлечения кода из файла:
     - `#`: `#L{startlinenumber}-L{endlinenumber}` (диапазон строк) *или* `#{tagname}` (имя тега).
     Мы не рекомендуем использовать номера строк, так отдельные строки слишком отрывочны. Лучше используйте имя тега для ссылки на фрагменты кода.
-    - `range`: `?range=1,3-5` Диапазон строк. Этот пример включает строки 1, 3, 4 и 5.
-    - `dedent`: `?dedent=8` Укорачивает строки на число пробелов — в данном случае 8. Это можно сочетать с `range` и другими параметрами запросов, которые выбирают подмножество строк файла.
-    - `outdent`: `?outdent=8` Отменяет отступ строк на число пробелов — в данном случае 8. Это можно сочетать с `range` и другими параметрами запросов, которые выбирают подмножество строк файла.
+    - `range`. `?range=1,3-5` Диапазон строк. Этот пример включает строки 1, 3, 4 и 5.
+    - `dedent`. `?dedent=8` Укорачивает строки на число пробелов — в данном случае 8. Это можно сочетать с `range` и другими параметрами запросов, которые выбирают подмножество строк файла.
+    - `outdent`. `?outdent=8` Отменяет отступ строк на число пробелов — в данном случае 8. Это можно сочетать с `range` и другими параметрами запросов, которые выбирают подмножество строк файла.
 
 По возможности рекомендуется использовать параметр имени тега. Имя тега — это имя региона или комментария к коду в формате `Snippettagname`, присутствующее в исходном коде. В приведенном ниже примере показано, как ссылаться на имя тега `1`:
 
@@ -276,26 +276,45 @@ ms.locfileid: "70928926"
 
 |name|Метка Markdown|
 |-----|-------|
-|ASP.NET с C#|aspx-csharp|
-|ASP.NET с VB|aspx-vb|
+|Консоль .NET|dotnetcli|
+|ASP.NET (C#)|aspx-csharp|
+|ASP.NET (VB)|aspx-vb|
 |Инфраструктура CLI Azure|azurecli|
 |AzCopy|azcopy|
+|Azure PowerShell|azurepowershell|
+|Bash|bash|
 |C++|cpp|
+|C++/CX|cppcx|
+|C++/WinRT|cppwinrt|
 |C#|csharp|
 |C# в браузере|csharp-interactive|
 |Консоль|console|
+|CSHTML|cshtml|
+|DAX|dax|
+|Dockerfile|dockerfile|
 |F#|fsharp|
+|Go|go|
+|HTML|html|
+|HTTP|http|
 |Java|java|
 |JavaScript|javascript|
 |JSON|json|
+|Язык запросов Kusto|kusto|
+|Markdown|md|
 |Node.js|nodejs|
 |Objective-C|objc|
+|OData|odata|
 |PHP|php|
+|PowerApps (десятичный разделитель — точка)|powerapps-dot|
+|PowerApps (десятичный разделитель — запятая)|powerapps-comma|
 |PowerShell|powershell|
 |Python|python|
+|Q#|qsharp|
+|R|процедура|
 |Ruby|ruby|
 |SQL-код|sql|
 |Swift|swift|
+|TypeScript|typescript|
 |VB|vb|
 |XAML|xaml|
 |XML|xml|
