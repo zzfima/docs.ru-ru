@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740990"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274267"
 ---
 # <a name="clrdatacreateinstance-function"></a>Функция CLRDataCreateInstance
-Создает объект интерфейса для заданного целевого элемента.  
+Создает объект интерфейса для указанного целевого элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT CLRDataCreateInstance (
   
 ## <a name="parameters"></a>Параметры  
  `iid`  
- [in] Идентификатор интерфейса для создания экземпляра.  
+ окне Идентификатор интерфейса, для которого создается экземпляр.  
   
  `target`  
- [in] Указатель на реализуется пользователем [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
+ окне Указатель на реализуемый пользователем объект [ICLRDataTarget](iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
   
  `iface`  
- [out] Указатель на адрес объекта возвращенный интерфейс.  
+ заполняет Указатель на адрес возвращенного объекта интерфейса.  
   
 ## <a name="remarks"></a>Примечания  
- `ICLRDataTarget` Объект реализуется разработчиком отладки приложения. Реализация зависит от тип представляемого целевого элемента. Конечный элемент может быть процесс, дамп памяти, удаленный компьютер и т. д.  
+ `ICLRDataTarget` Объект реализуется модулем записи приложения отладки. Реализация зависит от типа представляемого целевого элемента. Целевой элемент может быть процессом, дампом памяти, удаленным компьютером и т. д.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl  
+ **Заголовок.** Клрдата. idl  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Глобальные статические функции отладки](debugging-global-static-functions.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: eaf92bea30b80a47d0f623e38eed7768bccdbb6a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928500"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273138"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928500"
 
 Предоставление реляционных данных из базы данных в качестве [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала.
 
-- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Краткое руководство](quickstart-wcf-data-services.md)
 
 - [Предоставление данных как службы](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -26,7 +26,7 @@ ms.locfileid: "70928500"
 
 Предоставление произвольных классов данных CLR в качестве канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].
 
-- [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [Предоставление данных как службы](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [Практическое руководство. Создание службы данных с помощью поставщика отражения](create-a-data-service-using-rp-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70928500"
 
 Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении .NET Framework.
 
-- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Краткое руководство](quickstart-wcf-data-services.md)
 
 - [Использование служб данных в клиентском приложении](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "70928500"
 
 Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении AJAX.
 
-- [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+- [Использование служб данных в клиентском приложении](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [Протокола Соглашения URI](https://go.microsoft.com/fwlink/?LinkId=185564)
 
@@ -58,7 +58,7 @@ ms.locfileid: "70928500"
 
 Создайте комплексное решение для данных, которое использует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] для обмена данными между клиентом и сервером.
 
-- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Краткое руководство](quickstart-wcf-data-services.md)
 
 - [Использование служб данных в клиентском приложении](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -66,7 +66,7 @@ ms.locfileid: "70928500"
 
 Создание клиентского приложения .NET Framework, обращающегося к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] асинхронно, чтобы избежать проблем с задержкой на клиенте.
 
-- [Практическое руководство. Выполнение запросов асинхронных служб данных](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [Практическое руководство. Выполнение запросов асинхронных служб данных](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [Асинхронные операции](asynchronous-operations-wcf-data-services.md)
 
@@ -74,13 +74,13 @@ ms.locfileid: "70928500"
 
 Предоставление и использование [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала с большим двоичным объектом, доступ к которому и изменение которого осуществляется в виде потока.
 
-- [Поставщик потоковых данных](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+- [Поставщик потоковых данных](streaming-provider-wcf-data-services.md)
 
 - [Работа с двоичными данными](working-with-binary-data-wcf-data-services.md)
 
 Привязка [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов к элементам управления в приложении Windows Presentation Framework (WPF).
 
-- [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Привязка данных к элементам управления](binding-data-to-controls-wcf-data-services.md)
 
 - [Практическое руководство. Привязка данных к Windows Presentation Foundation элементам](bind-data-to-wpf-elements-wcf-data-services.md)
 
@@ -88,13 +88,13 @@ ms.locfileid: "70928500"
 
 Перехватывайте входящие сообщения к службе данных для выполнения проверки данных и фильтрации запросов на основе ролей.
 
-- [Практическое руководство. Перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+- [Практическое руководство. Перехват сообщений службы данных](how-to-intercept-data-service-messages-wcf-data-services.md)
 
 - [Перехватчики](interceptors-wcf-data-services.md)
 
 Создайте конечные точки службы данных для включения специализированного поведения службы.
 
-- [Практическое руководство. Определение операции службы](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Практическое руководство. Определение операции службы](how-to-define-a-service-operation-wcf-data-services.md)
 
 - [Операции служб](service-operations-wcf-data-services.md)
 

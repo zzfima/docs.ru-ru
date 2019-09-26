@@ -1,5 +1,5 @@
 ---
-title: Перечисление CLRDataSourceType
+title: Перечисление Клрдатасаурцетипе
 ms.date: 01/16/2019
 api.name:
 - CLRDataSourceType Enumeration
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d26cf45a0243d61757af5d9d0c00cf135ae15bdf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740869"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274097"
 ---
-# <a name="clrdatasourcetype-enumeration"></a>Перечисление CLRDataSourceType
+# <a name="clrdatasourcetype-enumeration"></a>Перечисление Клрдатасаурцетипе
 
-Предоставляет значения, которые используются в структуре CLRDATA_IL_ADDRESS_MAP.
+Предоставляет значения, используемые структурой CLRDATA_IL_ADDRESS_MAP.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,20 +41,20 @@ typedef enum
 
 | Член                        | Описание                           |
 | ----------------------------- | ------------------------------------- |
-| `CLRDATA_SOURCE_TYPE_INVALID` | Чтобы указать, что ничего применяется |
+| `CLRDATA_SOURCE_TYPE_INVALID` | Указание того, что ничего еще не применимо |
 
 ## <a name="remarks"></a>Примечания
 
-Это перечисление находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Чтобы использовать его, определите перечисление, как указано выше, в коде. Это также псевдонимом `CLRDATA_ENUM` как уже упоминалось в [общие типы данных](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md).
+Это перечисление находится внутри среды выполнения и не предоставляется через заголовки или файлы библиотек. Чтобы использовать его, определите перечисление, как определено выше в коде. Это также называется псевдонимом `CLRDATA_ENUM` , как упоминалось в [общих типах данных](../common-data-types-unmanaged-api-reference.md).
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** None  
-**Библиотека:** None  
+**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+**Заголовок.** Отсутствуют  
+**Библиотечная** Отсутствуют  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Отладка](index.md)
+- [Перечисления отладки](debugging-enumerations.md)

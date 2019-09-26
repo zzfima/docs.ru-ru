@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67b85917be590bdba7ed3f10972ad39b731dbcdd
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740982"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274242"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>Перечисление CLRDataEnumMemoryFlags
-Указывает области памяти вызов [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) должен включать метод.  
+Указывает, к каким областям памяти должен быть вызван вызов метода [иклрдатаенуммеморирегионс:: енуммеморирегионс](iclrdataenummemoryregions-enummemoryregions-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +40,18 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|Минидамп, дамп разреженной памяти.|  
-|`CLRDATA_ENUM_MEM_HEAP`|Дамп полной кучи.|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|Мини-дамп, то есть дамп разреженной памяти.|  
+|`CLRDATA_ENUM_MEM_HEAP`|Полный дамп кучи.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок.** Клрдата. idl, Клрдата. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

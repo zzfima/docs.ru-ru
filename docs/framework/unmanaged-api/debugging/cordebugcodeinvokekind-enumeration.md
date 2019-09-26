@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fa8de1a561e59e00d5bd9e78172d78b417aeff0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22eeb8aba318d53efbc699d4492a86b2667bcfff
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951971"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274125"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>Перечисление CorDebugCodeInvokeKind
 Описывает, каким образом экспортируемая функция вызывает управляемый код.  
@@ -42,13 +42,13 @@ typedef enum CorDebugCodeInvokeKind
 |`CODE_INVOKE_KIND_TAILCALL`|Этот метод будет вызывать управляемый код с помощью вызова с префиксом tail. Пошаговый режим и режим пропуска любых инструкций вызова должны поступать в управляемый код.|  
   
 ## <a name="remarks"></a>Примечания  
- Это перечисление используется методом [ICorDebugProcess6:: жетекспортстепинфо](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) для предоставления сведений о пошаговом выполнении управляемого кода.  
+ Это перечисление используется методом [ICorDebugProcess6:: жетекспортстепинфо](icordebugprocess6-getexportstepinfo-method.md) для предоставления сведений о пошаговом выполнении управляемого кода.  
   
 > [!NOTE]
 > Это перечисление предназначено для использования только в сценариях отладки .NET Native.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
  **Заголовок.** CorDebug. idl, CorDebug. h  
   
@@ -58,5 +58,5 @@ typedef enum CorDebugCodeInvokeKind
   
 ## <a name="see-also"></a>См. также
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Перечисления отладки](debugging-enumerations.md)
+- [Отладка](index.md)

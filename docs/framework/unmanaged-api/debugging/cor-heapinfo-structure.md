@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740657"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274194"
 ---
-# <a name="corheapinfo-structure"></a>Структура COR_HEAPINFO
+# <a name="cor_heapinfo-structure"></a>Структура COR_HEAPINFO
 Содержит общие сведения о куче для сборки мусора и указывает, является ли она перечислимой.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,27 +42,27 @@ typedef struct _COR_HEAPINFO {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` Если структурами для сборки мусора являются допустимыми и могут быть перечислены кучи; в противном случае `false`.|  
-|`pointerSize`|Размер в байтах, указателей в целевой архитектуре.|  
-|`numHeaps`|Количество логических мусора кучи в процессе.|  
-|`concurrent`|`TRUE` Если параллельный сбор мусора (фон) включена; в противном случае `FALSE`.|  
-|`gcType`|Является членом [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) перечисление, указывающее, выполняется ли сборщик мусора на рабочей станции или сервера.|  
+|`areGCStructuresValid`|`true`значение, если структуры сборки мусора являются допустимыми и можно перечислить в куче. в противном случае —. `false`|  
+|`pointerSize`|Размер указателей в байтах в целевой архитектуре.|  
+|`numHeaps`|Количество куч логической сборки мусора в процессе.|  
+|`concurrent`|`TRUE`Если включена одновременная (фоновая) сборка мусора; в противном случае —. `FALSE`|  
+|`gcType`|Член перечисления [CorDebugGCType](cordebuggctype-enumeration.md) , указывающий, работает ли сборщик мусора на рабочей станции или сервере.|  
   
 ## <a name="remarks"></a>Примечания  
- Экземпляр `COR_HEAPINFO` структура возвращается путем вызова [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) метод.  
+ Экземпляр `COR_HEAPINFO` структуры возвращается путем вызова метода [метод ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Прежде чем перечисление объектов в куче сбора мусора, всегда необходимо проверять `areGCStructuresValid` чтобы убедиться, что кучи находится в состоянии перечисляемый. Дополнительные сведения см. в разделе [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) метод.  
+ Перед перечислением объектов в куче сборки мусора необходимо всегда проверять `areGCStructuresValid` поле, чтобы убедиться в том, что куча находится в перечислимом состоянии. Дополнительные сведения см. в описании метода [метод ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

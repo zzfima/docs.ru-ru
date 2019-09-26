@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69039402"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора
@@ -28,7 +28,7 @@ ms.locfileid: "69039402"
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>Добавление или удаление групп в конструкторе
 
-1. В окне **"свойства** " нажмите кнопку **с** многоточием![(...) в окно свойств кнопки Visual Studio <xref:System.Windows.Forms.ListView.Groups%2A> .](./media/visual-studio-ellipsis-button.png)) рядом со свойством.
+1. В окне " **Свойства** " нажмите кнопку **с многоточием** (![...) в окно свойств кнопки Visual Studio <xref:System.Windows.Forms.ListView.Groups%2A> .](./media/visual-studio-ellipsis-button.png)) рядом со свойством.
 
      Откроется **Редактор коллекции листвиевграуп** .
 
@@ -36,7 +36,7 @@ ms.locfileid: "69039402"
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>Назначение элементов группам в конструкторе
 
-1. В окне **"свойства** " нажмите кнопку **с** многоточием![(...) в окно свойств кнопки Visual Studio <xref:System.Windows.Forms.ListView.Items%2A> .](./media/visual-studio-ellipsis-button.png)) рядом со свойством.
+1. В окне " **Свойства** " нажмите кнопку **с многоточием** (![...) в окно свойств кнопки Visual Studio <xref:System.Windows.Forms.ListView.Items%2A> .](./media/visual-studio-ellipsis-button.png)) рядом со свойством.
 
      Откроется **Редактор коллекции ListViewItem** .
 

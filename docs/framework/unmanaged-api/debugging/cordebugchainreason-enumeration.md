@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740362"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273980"
 ---
 # <a name="cordebugchainreason-enumeration"></a>Перечисление CorDebugChainReason
 Указывает причину или причины запуска цепочки вызовов.  
@@ -65,17 +65,17 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|Цепочка была инициирована оценкой функции.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) метод для выяснения причины инициирования цепочки вызовов.  
+ Используйте метод [ICorDebugChain::-Reason](icordebugchain-getreason-method.md) , чтобы определить причины инициации цепочки вызовов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Перечисления отладки](debugging-enumerations.md)

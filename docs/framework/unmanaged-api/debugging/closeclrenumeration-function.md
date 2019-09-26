@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741083"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274283"
 ---
 # <a name="closeclrenumeration-function"></a>Функция CloseCLREnumeration
-Закрывает любой допустимый событий среды CLR (CLR) продолжения запуска находятся в массиве дескрипторов, возвращенном [функция EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)и освобождает память для массивов дескрипторов и строк пути.  
+Закрывает все допустимые события продолжения запуска среды CLR, расположенные в массиве дескрипторов, возвращаемых [функцией EnumerateCLRs](enumerateclrs-function.md), и освобождает память для массивов дескрипторов и строковых путей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,17 +40,17 @@ HRESULT CloseCLREnumeration (
   
 ## <a name="parameters"></a>Параметры  
  `pHandleArray`  
- [in] Указатель на массив дескрипторов событий, возвращенных из [функция EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ окне Указатель на массив дескрипторов событий, возвращаемых [функцией EnumerateCLRs](enumerateclrs-function.md).  
   
  `pStringArray`  
- [in] Указатель на массив путей строки среды CLR, возвращенный [функция EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ окне Указатель на массив строковых путей среды CLR, возвращенных [функцией EnumerateCLRs](enumerateclrs-function.md).  
   
  `dwArrayLength`  
  [in] Значение DWORD, содержащее размер (длину) массива `pHandleArray` или `pStringArray` (они одинаковые).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- Дескрипторы, открытые [функция EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) будут закрыты, и освободить память, выделенная для массивов дескрипторов и строк.  
+ Дескрипторы, открытые [функцией EnumerateCLRs](enumerateclrs-function.md) , закрываются, а память, выделенная для дескрипторов и массивов строк, освобождается.  
   
  E_INVALIDARG  
  Длина массива `pHandleArray` не соответствует длине, переданной в `dwArrayLength`.  
@@ -59,10 +59,10 @@ HRESULT CloseCLREnumeration (
  Функции не удалось освободить память для массивов `pHandleArray` и `pStringArray`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок:** dbgshim.h  
+ **Заголовок:** dbgshim. h  
   
- **Библиотека:** dbgshim.dll  
+ **Библиотека:** dbgshim. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3.5 с пакетом обновления 1 (SP1)

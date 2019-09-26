@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740736"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274058"
 ---
-# <a name="corfield-structure"></a>Структура COR_FIELD
+# <a name="cor_field-structure"></a>Структура COR_FIELD
 Предоставляет сведения о поле в объекте.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,23 +41,23 @@ typedef struct COR_FIELD{
   
 |Член|Описание|  
 |------------|-----------------|  
-|`token`|`mdFieldDef` Токен, который может использоваться для получения сведений о поле.|  
-|`offset`|Смещение в байтах к данным поля в объекте.|  
-|`id`|Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) значение, определяющее тип этого поля.|  
-|`fieldType`|CorElementType значение перечисления, указывающее тип поля.|  
+|`token`|`mdFieldDef` Токен, который можно использовать для получения сведений о полях.|  
+|`offset`|Смещение в байтах для данных поля в объекте.|  
+|`id`|Значение [COR_TYPEID](cor-typeid-structure.md) , определяющее тип этого поля.|  
+|`fieldType`|Значение перечисления Корелементтипе, указывающее тип поля.|  
   
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

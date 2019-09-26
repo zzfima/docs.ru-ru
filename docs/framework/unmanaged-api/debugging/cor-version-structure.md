@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740568"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274174"
 ---
-# <a name="corversion-structure"></a>Структура COR_VERSION
+# <a name="cor_version-structure"></a>Структура COR_VERSION
 Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,21 +44,21 @@ typedef struct _COR_VERSION {
 |`dwMajor`|Основной номер версии.|  
 |`dwMinor`|Дополнительный номер версии.|  
 |`dwBuild`|Номер сборки.|  
-|`dwSubBuild`|Номер вложенного построения.|  
+|`dwSubBuild`|Номер подсборки.|  
   
 ## <a name="remarks"></a>Примечания  
- Если номер версии равен 1.0.3705.288, 1 — номер основной версии, 0 — это дополнительный номер версии, 3705 — номер сборки и 288 — номер вложенного построения.  
+ Если номер версии — 1.0.3705.288, то 1 — основной номер версии, 0 — дополнительный номер версии, 3705 — номер сборки, а 288 — номер подсборки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl  
+ **Заголовок.** CorDebug. idl  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740780"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274074"
 ---
-# <a name="cordebugiltonativemap-structure"></a>Структура COR_DEBUG_IL_TO_NATIVE_MAP
+# <a name="cor_debug_il_to_native_map-structure"></a>Структура COR_DEBUG_IL_TO_NATIVE_MAP
 Содержит смещения, которые используются для сопоставления кода MSIL с машинным кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,22 +40,22 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`ilOffset`|Смещение MSIL-код.|  
+|`ilOffset`|Смещение кода MSIL.|  
 |`nativeStartOffset`|Смещение начала машинного кода.|  
 |`nativeEndOffset`|Смещение конца машинного кода.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorDebug.idl  
+ **Заголовок.** CorProf. idl, CorDebug. idl  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [Метод GetILToNativeMapping](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Метод GetILToNativeMapping](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [Метод GetILToNativeMapping](icordebugcode-getiltonativemapping-method.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

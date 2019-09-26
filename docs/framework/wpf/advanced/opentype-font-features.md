@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70016140"
 ---
 # <a name="opentype-font-features"></a>Возможности шрифта OpenType
@@ -71,7 +71,7 @@ ms.locfileid: "70016140"
   
  Следующий текст демонстрирует подстрочные знаки для шрифта Palatino Linotype.  
   
- ![Текст] , использующий индексы OpenType (./media/opentype-font-features/opentype-subscripts.gif "Текст") , использующий индексы OpenType  
+ ![Текст, использующий индексы OpenType](./media/opentype-font-features/opentype-subscripts.gif "Текст, использующий индексы OpenType")  
   
  В следующем примере разметки показано, как определить индексы для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "70016140"
   
  Следующий текст демонстрирует глифы дискретных лигатур для шрифта Pericles.  
   
- ![Текст] , использующий дискреционные лигатуры OpenType (./media/opentype-font-features/opentype-discretionary-ligatures.gif "Текст") , использующий дискреционные лигатуры OpenType  
+ ![Текст, использующий дискреционные лигатуры OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "Текст, использующий дискреционные лигатуры OpenType")  
   
  В следующем примере разметки показано, как определить дискреционные глифы лигатуры для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "70016140"
 ### <a name="contextual-swashes"></a>Контекстные орнаментированные глифы  
  Некоторые комбинации орнаментированных глифов могут приводить к непривлекательному результату, например когда перекрываются подстрочные элементы на соседних буквах. Контекстные орнаментированные глифы позволяют использовать замещающий орнаментированный глиф, улучшающий внешний вид. Следующий текст показывает одно и то же слово до и после применения контекстного орнаментированного глифа.  
   
- ![Текст] , использующий контекстные глифы OpenType (./media/opentype-font-features/opentype-contextual-swashes.gif "Текст") , использующий контекстные глифы OpenType  
+ ![Текст, использующий контекстные глифы OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "Текст, использующий контекстные глифы OpenType")  
   
  В следующем примере разметки показано, как определить контекстные шлейфы для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -289,7 +289,7 @@ ms.locfileid: "70016140"
 ### <a name="typography-class-properties"></a>Свойства класса Typography  
  В следующей таблице перечислены свойства, значения и параметры по умолчанию для <xref:System.Windows.Documents.Typography> объекта.  
   
-|Свойство.|Значения|Default Value|  
+|Свойство.|Значения|Значение по умолчанию|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Числовое значение — байт|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
