@@ -7,20 +7,20 @@ helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
 ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "71263363"
 ---
-# <a name="adorners"></a><span data-ttu-id="d430e-102">Декоративные элементы</span><span class="sxs-lookup"><span data-stu-id="d430e-102">Adorners</span></span>
-<span data-ttu-id="d430e-103">Этот раздел содержит сведения о декоративных элементах и [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework декоративного элемента.</span><span class="sxs-lookup"><span data-stu-id="d430e-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
+# <a name="adorners"></a><span data-ttu-id="5a9ad-102">Декоративные элементы</span><span class="sxs-lookup"><span data-stu-id="5a9ad-102">Adorners</span></span>
+<span data-ttu-id="5a9ad-103">В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] этом разделе содержатся сведения о декоративных элементах и платформе декоративных элементов.</span><span class="sxs-lookup"><span data-stu-id="5a9ad-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d430e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d430e-104">In This Section</span></span>  
- [<span data-ttu-id="d430e-105">Общие сведения о декоративных элементах</span><span class="sxs-lookup"><span data-stu-id="d430e-105">Adorners Overview</span></span>](adorners-overview.md)  
- [<span data-ttu-id="d430e-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="d430e-106">How-to Topics</span></span>](adorners-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5a9ad-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5a9ad-104">In This Section</span></span>  
+ [<span data-ttu-id="5a9ad-105">Общие сведения о декоративных элементах</span><span class="sxs-lookup"><span data-stu-id="5a9ad-105">Adorners Overview</span></span>](adorners-overview.md)  
+ [<span data-ttu-id="5a9ad-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="5a9ad-106">How-to Topics</span></span>](adorners-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d430e-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d430e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5a9ad-107">Справочник</span><span class="sxs-lookup"><span data-stu-id="5a9ad-107">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -31,4 +31,4 @@ ms.locfileid: "57378921"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="d430e-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d430e-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5a9ad-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5a9ad-108">Related Sections</span></span>
