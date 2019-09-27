@@ -6,14 +6,15 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 7a7a9d16d9f69071e9d1dacb0558f7ca92e1d21e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631033"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332760"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
+
 Методы расширения позволяют добавлять методы в существующий класс. Метод расширения можно вызвать так, как если бы он был экземпляром этого класса.
 
 ### <a name="to-define-an-extension-method"></a>Определение метода расширения
@@ -36,13 +37,14 @@ ms.locfileid: "68631033"
 
     ```vb
     <Extension()>
-    Public Sub SubName (ByVal para1 As ExtendedType, <other parameters>)
+    Public Sub SubName(para1 As ExtendedType, <other parameters>)
          ' < Body of the method >
     End Sub
     ```
 
 ## <a name="example"></a>Пример
- В следующем примере объявляется метод расширения в модуле `StringExtensions`. Второй модуль, `Module1`, импортирует `StringExtensions` и вызывает метод. Метод расширения должен находиться в области видимости при его вызове. Метод `PrintAndPunctuate` расширения<xref:System.String> расширяет класс с помощью метода, который отображает экземпляр строки, за которым следует строка символов пунктуации, отправленная в в качестве параметра.
+
+ В следующем примере объявляется метод расширения в модуле `StringExtensions`. Второй модуль, `Module1`, импортирует `StringExtensions` и вызывает метод. Метод расширения должен находиться в области видимости при его вызове. Метод расширения `PrintAndPunctuate` расширяет класс <xref:System.String> с помощью метода, который отображает экземпляр строки, за которым следует строка символов пунктуации, отправленная в качестве параметра.
   
 ```vb
 ' Declarations will typically be in a separate module.
@@ -50,8 +52,7 @@ Imports System.Runtime.CompilerServices
 
 Module StringExtensions
     <Extension()>
-    Public Sub PrintAndPunctuate(ByVal aString As String,
-                                 ByVal punc As String)
+    Public Sub PrintAndPunctuate(aString As String, punc As String)
         Console.WriteLine(aString & punc)
     End Sub
 
@@ -75,16 +76,17 @@ Module Module1
 End Module
 ```
   
- Обратите внимание, что метод определен с двумя параметрами и вызывается только с одним. Первый параметр, `aString`, в определении метода, привязан к `example`экземпляру `String` , который вызывает метод. Выходные данные примера могут быть следующими:
+ Обратите внимание, что метод определен с двумя параметрами и вызывается только с одним. Первый параметр, `aString`, в определении метода привязан к `example`, экземпляру `String`, который вызывает метод. Выходные данные примера могут быть следующими:
   
- `Hello?`  
-  
- `Hello!!!!`  
+ ```console
+ Hello?
+ Hello!!!!
+ ```
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Методы расширения](./extension-methods.md)
-- [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
-- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Методы расширения](extension-methods.md)
+- [Оператор Module](../../../language-reference/statements/module-statement.md)
+- [Параметры и аргументы процедуры](procedure-parameters-and-arguments.md)
+- [Область в Visual Basic](../declared-elements/scope.md)
