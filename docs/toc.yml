@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: Дополнительные библиотеки классов и API-интерфейсы
       href: framework/additional-apis/
+- name: "Руководство по классическим приложениям .NET\_— WPF"
+  href: desktop-wpf/
 - name: 'Руководство по языку C#'
   href: csharp/index.md
   items:
