@@ -374,6 +374,19 @@
             - name: Службы XAML
               tocHref: /dotnet/framework/xaml-services/
               topicHref: /dotnet/framework/xaml-services/index
+        - name: "Руководство по классическим приложениям\_— WPF"
+          tocHref: /dotnet/desktop-wpf/
+          topicHref: /dotnet/desktop-wpf/index
+          items:
+            - name: Начало работы
+              tocHref: /visualstudio/get-started/csharp/tutorial-wpf
+              topicHref: /dotnet/desktop-wpf/getting-started/index
+            - name: Миграция
+              tocHref: /dotnet/desktop-wpf/migration
+              topicHref: /dotnet/desktop-wpf/migration/index
+            - name: Привязка данных
+              tocHref: /dotnet/desktop-wpf/data
+              topicHref: /dotnet/desktop-wpf/data/index
         - name: 'Руководство по языку C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
