@@ -2,18 +2,18 @@
 title: Пример отложенного выполнения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d1f66cbe246b609f634989625688965dd4e5c93
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977633"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351801"
 ---
-# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="a8f94-102">Пример отложенного выполнения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8f94-102">Deferred Execution Example (Visual Basic)</span></span>
-<span data-ttu-id="a8f94-103">В данном разделе показано влияние отложенного выполнения и отложенного вычисления на запросы LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="a8f94-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="7dadc-102">Пример отложенного выполнения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7dadc-102">Deferred Execution Example (Visual Basic)</span></span>
+<span data-ttu-id="7dadc-103">В данном разделе показано влияние отложенного выполнения и отложенного вычисления на запросы LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="7dadc-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a8f94-104">Пример</span><span class="sxs-lookup"><span data-stu-id="a8f94-104">Example</span></span>  
- <span data-ttu-id="a8f94-105">В следующем примере демонстрируется порядок выполнения при использовании метода расширения, в котором применяется отложенное выполнение.</span><span class="sxs-lookup"><span data-stu-id="a8f94-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="a8f94-106">В этом примере объявляется массив из трех строк.</span><span class="sxs-lookup"><span data-stu-id="a8f94-106">The example declares an array of three strings.</span></span> <span data-ttu-id="a8f94-107">Затем в нем производится итерация по коллекции, возвращенной `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="a8f94-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
+## <a name="example"></a><span data-ttu-id="7dadc-104">Пример</span><span class="sxs-lookup"><span data-stu-id="7dadc-104">Example</span></span>  
+ <span data-ttu-id="7dadc-105">В следующем примере демонстрируется порядок выполнения при использовании метода расширения, в котором применяется отложенное выполнение.</span><span class="sxs-lookup"><span data-stu-id="7dadc-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="7dadc-106">В этом примере объявляется массив из трех строк.</span><span class="sxs-lookup"><span data-stu-id="7dadc-106">The example declares an array of three strings.</span></span> <span data-ttu-id="7dadc-107">Затем в нем производится итерация по коллекции, возвращенной `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="7dadc-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -44,9 +44,9 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="a8f94-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a8f94-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="7dadc-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="7dadc-108">This example produces the following output:</span></span>  
   
-```  
+```console  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  
@@ -55,10 +55,10 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- <span data-ttu-id="a8f94-109">Обратите внимание, что во время итерации по коллекции, возвращенной `ConvertCollectionToUpperCase`, происходит получение каждого элемента из исходного массива строк и преобразование символов в верхний регистр до получения следующего элемента из исходного массива строк.</span><span class="sxs-lookup"><span data-stu-id="a8f94-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
+ <span data-ttu-id="7dadc-109">Обратите внимание, что во время итерации по коллекции, возвращенной `ConvertCollectionToUpperCase`, происходит получение каждого элемента из исходного массива строк и преобразование символов в верхний регистр до получения следующего элемента из исходного массива строк.</span><span class="sxs-lookup"><span data-stu-id="7dadc-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- <span data-ttu-id="a8f94-110">Видно, что весь массив строк не преобразуется в символы верхнего регистра, пока каждый элемент возвращенной коллекции не будет обработан циклом `foreach` в `Main`.</span><span class="sxs-lookup"><span data-stu-id="a8f94-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
+ <span data-ttu-id="7dadc-110">Видно, что весь массив строк не преобразуется в символы верхнего регистра, пока каждый элемент возвращенной коллекции не будет обработан циклом `foreach` в `Main`.</span><span class="sxs-lookup"><span data-stu-id="7dadc-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8f94-111">См. также</span><span class="sxs-lookup"><span data-stu-id="a8f94-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7dadc-111">См. также</span><span class="sxs-lookup"><span data-stu-id="7dadc-111">See also</span></span>
 
-- [<span data-ttu-id="a8f94-112">Учебник. Отложенное выполнение (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8f94-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [<span data-ttu-id="7dadc-112">Учебник. Отложенное выполнение (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="7dadc-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
