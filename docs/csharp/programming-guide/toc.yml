@@ -31,7 +31,7 @@
       href: generics/
     - name: Пространства имен
       href: namespaces/
-    - name: 'Типы, допускающие значения NULL'
+    - name: 'Типы значений, допускающие значение NULL'
       href: nullable-types/
     - name: Небезопасный код и указатели
       href: unsafe-code-pointers/
