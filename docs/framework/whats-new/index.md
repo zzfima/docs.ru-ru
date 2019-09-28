@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3acfa0da0caa29b503f47f23b0e9042d73ef0657
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374449"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353386"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -111,10 +111,7 @@ ms.locfileid: "70374449"
                      new Uri("http://contoso:81/Service1"));
   ServiceHealthBehavior healthBehavior =
       host.Description.Behaviors.Find<ServiceHealthBehavior>();
-  if (healthBehavior == null)
-  {
-     healthBehavior = new ServiceHealthBehavior();
-  }
+  healthBehavior ??= new ServiceHealthBehavior();
   host.Description.Behaviors.Add(healthBehavior);
   ```
 
@@ -439,7 +436,7 @@ c.SameSite = SameSiteMode.Lax
 
 <a name="net472" />
 
-#### <a name="networking"></a>Сетевое взаимодействие
+#### <a name="networking"></a>Сети
 
 **Реализация свойств HttpClientHandler**
 
@@ -635,7 +632,7 @@ End Class
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Сетевое взаимодействие
+#### <a name="networking"></a>Сети
 
 **Поддержка SHA-2 Message.HashAlgorithm**
 
@@ -704,7 +701,7 @@ ASP.NET обрабатывает запросы в предопределенн�
 
 <a name="net47" />
 
-#### <a name="networking"></a>Сетевое взаимодействие
+#### <a name="networking"></a>Сети
 
 В .NET Framework 4.7 добавлена следующая сетевая функция:
 
