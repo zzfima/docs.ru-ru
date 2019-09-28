@@ -2,12 +2,12 @@
 title: Пример отложенного выполнения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d1f66cbe246b609f634989625688965dd4e5c93
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977633"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351801"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Пример отложенного выполнения (Visual Basic)
 В данном разделе показано влияние отложенного выполнения и отложенного вычисления на запросы LINQ to XML.  
@@ -46,7 +46,7 @@ End Module
   
  В этом примере выводятся следующие данные:  
   
-```  
+```console  
 ToUpper: source abc  
 Main: str ABC  
 ToUpper: source def  
@@ -61,4 +61,4 @@ Main: str GHI
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Отложенное выполнение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Учебник. Отложенное выполнение (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

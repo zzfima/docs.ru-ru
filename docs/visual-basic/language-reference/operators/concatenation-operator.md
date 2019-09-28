@@ -10,25 +10,25 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: d387b2dfdbb3fefe357364f7b2a3dde155cbd489
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aaa7c1b9ab7f6c920180d97b55c3bdeb23f00e02
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968358"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592245"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;Оператор (Visual Basic)
 Формирует объединение строк двух выражений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 result = expression1 & expression2  
 ```  
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательный. Любая `String` переменная `Object` или.  
+ Обязательный. Любая переменная `String` или `Object`.  
   
  `expression1`  
  Обязательный. Любое выражение с типом данных, которое расширяется до `String`.  
@@ -37,18 +37,18 @@ result = expression1 & expression2
  Обязательный. Любое выражение с типом данных, которое расширяется до `String`.  
   
 ## <a name="remarks"></a>Примечания  
- `expression1` Если тип `String`данных или `expression2` не `String` имеет значение, а расширяется до `String`, то он преобразуется в. Если один из типов данных не расширяется до `String`, компилятор выдает ошибку.  
+ Если тип данных `expression1` или `expression2` не `String`, но расширяется до `String`, он преобразуется в `String`. Если любой из типов данных не расширяется до `String`, компилятор выдает ошибку.  
   
- Тип `result` данных — `String`. Если одно или оба выражения имеют значение [Nothing](../../../visual-basic/language-reference/nothing.md) или не имеют значения <xref:System.DBNull.Value?displayProperty=nameWithType>, они обрабатываются как строка со значением "".  
+ Тип данных `result` — `String`. Если одно или оба выражения имеют значение [Nothing](../../../visual-basic/language-reference/nothing.md) или не имеют значения <xref:System.DBNull.Value?displayProperty=nameWithType>, они обрабатываются как строка со значением "".  
   
 > [!NOTE]
-> Оператор можно перегрузить, что означает, что класс или структура может переопределить свое поведение, когда операнд имеет тип этого класса или структуры. `&` Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Оператор `&` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 > [!NOTE]
 > Символ амперсанда (&) также можно использовать для задания переменных в качестве типа `Long`. Дополнительные сведения см. в разделе [символы типа](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере `&` оператор используется для принудительного сцепления строк. Результатом является строковое значение, представляющее объединение двух строковых операндов.  
+ В этом примере для принудительного сцепления строк используется оператор `&`. Результатом является строковое значение, представляющее объединение двух строковых операндов.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   

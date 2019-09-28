@@ -2,12 +2,12 @@
 title: Образец технологии базовой сериализации
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663772"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353143"
 ---
 # <a name="basic-serialization-technology-sample"></a>Образец технологии базовой сериализации
 
@@ -25,7 +25,7 @@ ms.locfileid: "67663772"
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>Сборка образца с использованием Visual Studio
 
-1. Откройте проводник и перейдите к одной из примера, соответствующей выбранному языку.
+1. Откройте проводник и перейдите к одному из вложенных каталогов, относящихся к конкретному языку, для примера.
 
 2. Дважды щелкните значок файла SerializationCS.sln, SerializationJSL.sln или SerializationVB.sln file, в зависимости от выбранного языка программирования, чтобы открыть файл в Visual Studio.
 
@@ -48,7 +48,7 @@ ms.locfileid: "67663772"
 
 Пример.
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Serialize.exe -sx Test.xml 10
 
 Пример.
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ Serialize.exe -dx Test.xml
 
 Пример.
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 
@@ -72,11 +72,11 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - Сериализация во время выполнения
 
-  - <xref:System.Runtime.Serialization.IFormatter> Используется для ссылки на <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> объекта.
+  - <xref:System.Runtime.Serialization.IFormatter> используется для ссылки на объект <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Используется для сериализации связанного списка в поток в двоичном формате. Двоичный модуль форматирования использует формат, который понятен только типу <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Однако данные являются краткими.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> используется для сериализации связанного списка в поток в двоичном формате. Двоичный модуль форматирования использует формат, который понятен только типу <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Однако данные являются краткими.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Используется для сериализации связанного списка в поток формата SOAP. SOAP является стандартным форматом.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> используется для сериализации связанного списка в поток в формате SOAP. SOAP является стандартным форматом.
 
 - Потоковый ввод-вывод
 

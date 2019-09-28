@@ -2,12 +2,12 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789120"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351828"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Определяет, как можно использовать пользовательский класс атрибутов. Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута. При явном применении параметры по умолчанию выглядят следующим образом:  
@@ -151,7 +151,7 @@ End Class
   
 ## <a name="sample-output"></a>Пример результатов выполнения  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  

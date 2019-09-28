@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Перехват анализа ошибок (Visual Basic)
+title: Практическое руководство. Ошибки при анализе перехвата (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855644"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352941"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Практическое руководство. Перехват анализа ошибок (Visual Basic)
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Практическое руководство. Ошибки при анализе перехвата (Visual Basic)
 В этом разделе показано, как обнаружить код XML, имеющий неправильный формат или не прошедший проверку правильности.  
   
  Технология [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] реализуется с помощью объекта <xref:System.Xml.XmlReader>. Если средствам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] передается код XML, имеющий неправильный формат или не прошедший проверку правильности, то в базовом классе <xref:System.Xml.XmlReader> активизируется исключение. Различные методы, выполняющие синтаксический анализ XML, например <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, не перехватывают это исключение; его можно перехватить позднее в приложении.  
@@ -35,7 +35,7 @@ End Try
   
  При выполнении этого кода активизируется следующее исключение.  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   

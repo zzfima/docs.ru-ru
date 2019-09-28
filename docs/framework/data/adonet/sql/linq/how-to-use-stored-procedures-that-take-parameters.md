@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793073"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353016"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Практическое руководство. Как использовать хранимые процедуры, которые принимают параметры
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет выходные параметры с параметрами, передаваемыми по ссылке, и для типов значений объявляет, что параметры могут принимать значение NULL.  
   
- Пример использования входного параметра в запросе, возвращающем набор строк, см. в разделе [как Возвращает наборы строк](how-to-return-rowsets.md).  
+ Пример использования входного параметра в запросе, возвращающем набор строк, см. в разделе [How to: Возвращает наборы строк @ no__t-0.  
   
 ## <a name="example"></a>Пример  
  В следующем примере передается один входной параметр (код клиента) и возвращается один выходной параметр (общий объем продаж по этому клиенту).  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Хранимые процедуры](stored-procedures.md)
 - [Загрузка примеров баз данных](downloading-sample-databases.md)
-- [Использование допускающих значение NULL типов](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Использование типов значений, допускающих значения NULL](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Типы значений, допускающие значение NULL](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

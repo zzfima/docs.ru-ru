@@ -2,16 +2,16 @@
 title: Практическое руководство. Как реализовать прокси-сервер обнаружения
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 350baa6047d11a2d262e4a6c1d54cc874939ed9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045929"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351579"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Практическое руководство. Как реализовать прокси-сервер обнаружения
 
-В этом разделе приведены сведения о реализации прокси-сервера обнаружения. Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF) см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. Дополнительные сведения <xref:System.IAsyncResult> см. в разделе [интерфейс System. IAsyncResult](xref:System.IAsyncResult).
+В этом разделе приведены сведения о реализации прокси-сервера обнаружения. Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF) см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. Дополнительные сведения о <xref:System.IAsyncResult> см. в статье [интерфейс System. IAsyncResult](xref:System.IAsyncResult).
 
  В данном разделе реализация прокси-сервера обнаружения разделена на три основные части.
 
@@ -374,10 +374,7 @@ ms.locfileid: "70045929"
                 }
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
                 return manualResetEvent;
             }
@@ -549,7 +546,7 @@ ms.locfileid: "70045929"
     }
     ```
 
-Реализация прокси-сервера обнаружения завершена. Перейдите к [процедуре: Реализуйте обнаруживаемую службу, которая регистрируется в прокси-](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)сервере обнаружения.
+Реализация прокси-сервера обнаружения завершена. Перейдите к [How: Реализуйте обнаруживаемую службу, которая регистрируется в прокси-сервере обнаружения @ no__t-0.
 
 ## <a name="example"></a>Пример
 
@@ -803,10 +800,7 @@ namespace Microsoft.Samples.Discovery
                 }
                 lock (ThisLock)
                 {
-                    if (manualResetEvent == null)
-                    {
-                        manualResetEvent = new ManualResetEvent(isCompleted);
-                    }
+                    manualResetEvent ??= new ManualResetEvent(isCompleted);
                 }
                 return manualResetEvent;
             }
@@ -982,6 +976,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Практическое руководство. Реализация обнаруживаемой службы, которая регистрируется в прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Практическое руководство. Реализация клиентского приложения, использующего прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Практическое руководство. Тестирование прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Практическое руководство. Реализация обнаруживаемой службы, которая регистрируется с прокси-сервером обнаружения @ no__t-0
+- [Практическое руководство. Реализация клиентского приложения, использующего прокси-сервер обнаружения для поиска службы @ no__t-0
+- [Практическое руководство. Тестирование прокси-сервера обнаружения @ no__t-0

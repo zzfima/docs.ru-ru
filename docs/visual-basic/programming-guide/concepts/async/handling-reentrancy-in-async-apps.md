@@ -2,12 +2,12 @@
 title: Обработка повторного входа в асинхронных приложениях (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630937"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352002"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "68630937"
 
 В следующем примере показаны ожидаемые выходные данные, если пользователь нажимает кнопку **Start** только один раз. На экран выводится список загруженных веб-сайтов, размер которых указан в байтах. Общее число байтов отображается в конце списка.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -37,7 +37,7 @@ TOTAL bytes returned:  890591
 
 Однако если пользователь нажимает кнопку больше одного раза, обработчик событий вызывается несколько раз и процесс загрузки будет каждый раз выполняться повторно. В результате одновременно запускается несколько асинхронных операций, получаемые выходные данные чередуются и счетчик общего числа байтов выдает неоднозначные результаты.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -94,7 +94,7 @@ TOTAL bytes returned:  890591
 
 Можно заблокировать кнопку **Start`StartButton_Click` во время операции, отключив кнопку в верхней части обработчика событий** . Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.
 
-В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение из [асинхронных примеров: Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
+В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение из примеров [Async: Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -136,7 +136,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` равно `Nothing`, операция уже не активна. Если значение не `Nothing`равно, операция, которая уже выполняется, отменяется.
+2. В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` равно `Nothing`, операция уже не активна. Если значение не `Nothing`, операция, которая уже выполняется, отменяется.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ End Sub
     cts = newCTS
     ```
 
-4. В конце `StartButton_Click`, текущий процесс завершен, поэтому установите `cts` значение обратно на `Nothing`.
+4. В конце `StartButton_Click` текущий процесс завершен, поэтому установите значение `cts` обратно в `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -245,9 +245,9 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-При многократном нажатии кнопки **Start** во время выполнения этого приложения код должен создать результаты, похожие на следующие выходные данные.
+Если вы наберете кнопку **запустить** несколько раз во время выполнения этого приложения, оно должно вывести результаты, аналогичные приведенным ниже.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -285,7 +285,7 @@ TOTAL bytes returned:  890591
 
 Ниже показаны выходные данные, отображаемые в результате нажатия кнопки **Start** только один раз. Метка A указывает, что это результат первого нажатия кнопки **Start**. Нумерация показывает порядок отображения URL-адресов в списке целевых объектов для загрузки.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -305,7 +305,7 @@ TOTAL bytes returned:  918876
 
 Если пользователь нажимает кнопку **Start** три раза, приложение выдает результат, похожий на приведенный ниже. Информационные строки, начинающиеся с символа #, отслеживают ход выполнения приложения.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -479,7 +479,7 @@ End Function
 
 - Группу можно запустить, когда предыдущая группа отображает свои выходные данные, но отображение выходных данных предыдущей группы не прерывается.
 
-  ```
+  ```console
   #Starting group A.
   #Task assigned for group A. Download tasks are active.
 
@@ -513,11 +513,11 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- Задача находится `Nothing` в начале`FinishOneGroupAsync` только для группы A, которая была запущена первой. `pendingWork` Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.
+- Задача `pendingWork` `Nothing` в начале `FinishOneGroupAsync` только для группы A, которая была запущена первой. Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.
 
 - Следующие две строки всегда отображаются в выходных данных вместе. Код не прерывается нигде между запуском операции группы в обработчике `StartButton_Click` и назначением задачи для группы в `pendingWork`.
 
-  ```
+  ```console
   #Starting group B.
   #Task assigned for group B. Download tasks are active.
   ```
@@ -677,5 +677,5 @@ End Function
 
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

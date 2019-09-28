@@ -2,12 +2,12 @@
 title: Асинхронные типы возвращаемых значения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 387b75db3078afb92e6fc3ad7607b293abb0c851
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988833"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351946"
 ---
 # <a name="async-return-types-visual-basic"></a>Асинхронные типы возвращаемых значения (Visual Basic)
 Асинхронные методы имеют три возможных типа возврата: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> и void. В Visual Basic тип возвращаемого значения void записывается как процедура [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Дополнительные сведения о асинхронных методах см. [в разделе Асинхронное программирование с использованием Async и await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -18,7 +18,7 @@ ms.locfileid: "69988833"
 > Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.  
   
 ## <a name="BKMK_TaskTReturnType"></a> Тип возвращаемого значения Task(T)  
- Тип <xref:System.Threading.Tasks.Task%601> возвращаемого значения используется для асинхронного метода, содержащего оператор [return](../../../../visual-basic/language-reference/statements/return-statement.md) , в котором операнд имеет тип `TResult`.  
+ Возвращаемый тип <xref:System.Threading.Tasks.Task%601> используется для асинхронного метода, содержащего оператор [return](../../../../visual-basic/language-reference/statements/return-statement.md) , в котором операнд имеет тип `TResult`.  
   
  В следующем примере асинхронный метод `TaskOfT_MethodAsync` содержит оператор return, который возвращает целое число. Поэтому в объявлении метода должен указываться тип возвращаемого значения `Task(Of Integer)`.  
   
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` вызывается и ожидается с помощью оператора await (вместо выражения await), похожего на оператор вызова для синхронного метода, возвращающего `Sub` или void. Применение `Await` оператора в данном случае не приводит к созданию значения.  
+ `Task_MethodAsync` вызывается и ожидается с помощью оператора await (вместо выражения await), похожего на оператор вызова для синхронного метода, возвращающего `Sub` или void. В этом случае в приложении оператора `Await` не создается значение.  
   
  В следующем коде вызывается и ожидается метод `Task_MethodAsync`.  
   
@@ -107,7 +107,7 @@ End Function
 Await Task_MethodAsync()  
 ```  
   
- Как и в предыдущем <xref:System.Threading.Tasks.Task%601> примере, можно разделить `Task_MethodAsync` вызов `Await` из приложения оператора, как показано в следующем коде. Однако следует помнить, что `Task` не содержит свойство `Result`, и при применении оператора await к `Task` никакое значение не создается.  
+ Как и в предыдущем примере <xref:System.Threading.Tasks.Task%601>, можно отделить вызов `Task_MethodAsync` от применения оператора `Await`, как показано в следующем коде. Однако следует помнить, что `Task` не содержит свойство `Result`, и при применении оператора await к `Task` никакое значение не создается.  
   
  В следующем коде вызов `Task_MethodAsync` отделяется от ожидания задачи, которая возвращает `Task_MethodAsync`.  
   
@@ -122,7 +122,7 @@ Await simpleTask
 ```  
   
 ## <a name="BKMK_VoidReturnType"></a> Тип возвращаемого значения Void  
- `Sub` Процедуры в основном используются в обработчиках событий, где нет возвращаемого типа (называемого типом возвращаемого значения void в других языках). Тип возврата void также можно использовать для переопределения методов, возвращающих void, или для методов, выполняющих действия, которые можно классифицировать как "запустить и забыть". Тем не менее вы должны возвращать `Task` везде, где это возможно, поскольку нельзя ожидать асинхронный метод, возвращающий void. Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.  
+ Основное использование процедур `Sub` заключается в обработчиках событий, где нет возвращаемого типа (называемого типом возвращаемого значения void в других языках). Тип возврата void также можно использовать для переопределения методов, возвращающих void, или для методов, выполняющих действия, которые можно классифицировать как "запустить и забыть". Тем не менее вы должны возвращать `Task` везде, где это возможно, поскольку нельзя ожидать асинхронный метод, возвращающий void. Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.  
   
  Вызывающий объект асинхронного метода, возвращающего void, не может перехватывать исключения, создаваемые методом, и такие необработанные исключения могут привести к сбою приложения. Если исключение возникает в асинхронном методе, который возвращает <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, исключение хранится в возвращенной задаче и повторно вызывается при ожидании задачи. Поэтому убедитесь, что любой асинхронный метод, который может вызвать исключение, имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> и что вызовы метода являются ожидаемыми.  
   
@@ -274,9 +274,9 @@ End Sub
   
 9. Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
   
-     Должен появиться следующий результат.  
+     Должны отобразиться следующие выходные данные:  
   
-    ```  
+    ```console  
     Application can continue working while the Task<T> runs. . . .   
   
     Value of result1 variable:   5  
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах (Visual Basic))
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)

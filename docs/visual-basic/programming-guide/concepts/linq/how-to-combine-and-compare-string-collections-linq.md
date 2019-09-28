@@ -2,12 +2,12 @@
 title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631039"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352879"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "68631039"
 
 1. Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ ms.locfileid: "68631039"
 
 2. Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта. Обратите внимание, что в этих двух файлах имеются общие имена.
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,7 +165,7 @@ End Class
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET с `Imports` инструкцией для пространства имен System. LINQ.
+Создайте проект консольного приложения VB.NET с инструкцией `Imports` для пространства имен System. LINQ.
 
 ## <a name="see-also"></a>См. также
 
