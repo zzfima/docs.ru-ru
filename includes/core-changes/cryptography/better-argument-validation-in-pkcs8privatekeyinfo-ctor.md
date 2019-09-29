@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: f72a9f60d0adcace2df6f1761940f8d8cd33d3af
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a9b6af31b68c25ab58c52757f48ed23cca3f5a35
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119092"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263307"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Улучшенная проверка аргументов в конструкторе Pkcs8PrivateKeyInfo
 
-Начиная с .NET Core 3.0, предварительная версия 9, конструктор `Pkcs8PrivateKeyInfo` проверяет параметр `algorithmParameters` как одно значение в кодировке BER. 
+Начиная с .NET Core 3.0, предварительная версия 9, конструктор `Pkcs8PrivateKeyInfo` проверяет параметр `algorithmParameters` как одно значение в кодировке BER.
 
 #### <a name="change-description"></a>Описание изменений
 

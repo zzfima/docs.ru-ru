@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: b4b49b55cda26ac9d9760f93e9758aab940ad135
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4075eadf7cfb39c913b7657d43335bae5497deff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117251"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216933"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Пользовательские экземпляры EncoderFallbackBuffer не поддерживают рекурсивный откат
 
-Пользовательские экземпляры <xref:System.Text.EncoderFallbackBuffer> не поддерживают рекурсивный откат. В результате реализации <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> должна быть создана последовательность символов, которая преобразуется в целевую кодировку. В противном случае возникает исключение. 
+Пользовательские экземпляры <xref:System.Text.EncoderFallbackBuffer> не поддерживают рекурсивный откат. В результате реализации <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> должна быть создана последовательность символов, которая преобразуется в целевую кодировку. В противном случае возникает исключение.
 
-#### <a name="details"></a>Подробные сведения
+#### <a name="details"></a>Сведения
 
 При перекодировании символов в байты среда выполнения обнаруживает некорректные или непреобразуемые последовательности UTF-16 и передает эти символы методу <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>. Метод `Fallback` определяет, какие символы следует заменить в исходных непреобразуемых данных, и эти символы удаляются путем вызова <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> в цикле.
 
-Затем среда выполнения пытается перекодировать эти символы подстановки в целевую кодировку. Если это удалось выполнить, среда выполнения продолжит перекодировку с того места, где она остановилась на исходной входной строке. 
+Затем среда выполнения пытается перекодировать эти символы подстановки в целевую кодировку. Если это удалось выполнить, среда выполнения продолжит перекодировку с того места, где она остановилась на исходной входной строке.
 
 В предварительной версии .NET Core 7 и более ранних версиях пользовательские реализации <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> могут возвращать последовательности символов, которые нельзя преобразовать в целевую кодировку. Если подставляемые символы не поддерживают такое преобразование, среда выполнения снова вызовет метод <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> с символами подстановки, ожидая, что метод <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> вернет новую последовательность символов подстановки. Этот процесс продолжится до тех пор, пока среда выполнения не увидит правильно сформированную и преобразуемую последовательность символов подстановки или пока не будет достигнуто максимальное число рекурсий.
 
-Начиная с версии .NET Core 3.0, пользовательские реализации <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> должны возвращать последовательности символов, преобразуемые в целевую кодировку. Если подставляемые символы нельзя перекодировать в целевую кодировку, создается исключение <xref:System.ArgumentException>. Среда выполнения больше не будет выполнять рекурсивные вызовы к экземпляру <xref:System.Text.EncoderFallbackBuffer>. 
+Начиная с версии .NET Core 3.0, пользовательские реализации <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> должны возвращать последовательности символов, преобразуемые в целевую кодировку. Если подставляемые символы нельзя перекодировать в целевую кодировку, создается исключение <xref:System.ArgumentException>. Среда выполнения больше не будет выполнять рекурсивные вызовы к экземпляру <xref:System.Text.EncoderFallbackBuffer>.
 
 Такой подход применяется только в том случае, если выполнены все следующие три условия:
 

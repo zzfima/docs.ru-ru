@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6643f64010332cf14d466cbba28a1c3cca671ac3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0795ee244bf3d1261bbe61dc0c67c3936f427f04
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117164"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216329"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>В .NET Core 3.0 применяются рекомендации по Юникоду при замене некорректных последовательностей байтов UTF-8
 
@@ -12,7 +12,7 @@ ms.locfileid: "71117164"
 
 Это лишь часть больших усилий улучшить обработку данных в формате UTF-8 в .NET, включая новые типы <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> и <xref:System.Text.Rune?displayProperty=nameWithType>. Для типа <xref:System.Text.UTF8Encoding> предоставлен улучшенный механизм обработки ошибок, чтобы его выходные данные соответствовали новым типам.
 
-#### <a name="details"></a>Подробные сведения
+#### <a name="details"></a>Сведения
 
 Начиная с .NET Core 3.0, при перекодировании байтов в символы класс <xref:System.Text.UTF8Encoding> выполняет подстановку символов на основе рекомендаций по Юникоду. Используемый механизм подстановки описан в [документе по стандарту "Юникод" версии 12.0, раздел 3.9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) с заголовком _U+FFFD Substitution of Maximal Subparts_ (Замена наибольшей части неправильной последовательности символом U+FFFD).
 
@@ -44,7 +44,7 @@ CoreFX
 - <xref:System.Text.UTF8Encoding.GetChars%2A?displayProperty=nameWithType>
 - <xref:System.Text.UTF8Encoding.GetString(System.Byte[],System.Int32,System.Int32)?displayProperty=nameWithType>
 
-<!-- 
+<!--
 
 ### Affected APIs
 
@@ -53,4 +53,3 @@ CoreFX
 - `M:System.Text.UTF8Encoding.GetString(System.Byte[],System.Int32,System.Int32)`
 
 -->
-

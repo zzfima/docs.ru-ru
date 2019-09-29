@@ -2,18 +2,18 @@
 title: Команда dotnet test
 description: Команда dotnet test служит для выполнения модульных тестов в проекте.
 ms.date: 05/29/2018
-ms.openlocfilehash: 306b6f8d890e567afc419b0408d7e683baaa814d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117575"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182517"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>ИМЯ
 
 `dotnet test` — драйвер тестов .NET, используемый для проведения модульных тестов.
 
@@ -122,7 +122,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -192,7 +192,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -242,7 +242,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Файл `.runsettings`, который необходимо использовать для проведения тестов. [Настройка модульных тестов с помощью файла `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -278,7 +278,7 @@ dotnet test [-h|--help]
 
 | Тестовая платформа | Поддерживаемые свойства                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>Приоритет</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>ИМЯ</li><li>ClassName</li><li>Приоритет</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Признаки</li></ul>                                   |
 
 `<operator>` описывает связь между свойством и значением:
@@ -298,7 +298,7 @@ dotnet test [-h|--help]
 | Оператор            | Функция |
 | ------------------- | -------- |
 | <code>&#124;</code> | OR       |
-| `&`                 | AND      |
+| `&`                 | И      |
 
 При использовании условных операторов выражения можно заключать в скобки (например, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
