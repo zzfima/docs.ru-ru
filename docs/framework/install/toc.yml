@@ -19,6 +19,8 @@
       href: repair.md
     - name: Устранение неполадок заблокированных установок и удалений .NET Framework
       href: troubleshoot-blocked-installations-and-uninstallations.md
+    - name: Устранение неполадок при получении сообщения "Не удалось запустить это приложение"
+      href: application-not-started.md
     - name: "Установка платформы .NET Framework\_3.5 на Windows\_10, Windows\_8.1 и Windows\_8"
       href: dotnet-35-windows-10.md
     - name: "Выполнение приложений .NET Framework\_1.1 в Windows\_8, Windows\_8.1 или Windows\_10"
