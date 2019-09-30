@@ -80,7 +80,7 @@ ms.locfileid: "69950631"
   
 ### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>Настройка IssuedTokenClientCredential в конфигурации  
   
-1. Создайте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) [> issuedTokenкакдочернийэлемент>элементаissuedTokenвповеденииконечнойточки.\<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)  
+1. Создайте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) [\<issuedTokenкакдочернийэлемент>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)элементаissuedTokenвповеденииконечнойточки.  
   
 2. Если кэширование маркеров не требуется, задайте `cacheIssuedTokens` атрибуту (элемента > <`issuedToken`) `false`значение.  
   

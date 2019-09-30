@@ -291,7 +291,7 @@ public void ConfigureServices(IServiceCollection services)
 - **Мичелл Аникас (Michell Anicas). An Introduction to OAuth 2 (Введение в OAuth 2)**  \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
-- **AspNet.Security.OAuth.Providers** (репозиторий GitHub для поставщиков OAuth в ASP.NET)
+- **репозиторий GitHub для поставщиков OAuth в ASP.NET**
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
 - **Дэнни Строкис (Danny Strockis). Integrating Azure AD into an ASP.NET Core Web App (Интеграция Azure AD в веб-приложение ASP.NET Core)**  \
