@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c796a93f7ea5ad4664f35788b766117c712b9766
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 80eb5fd8b6c3b9ca8473efd1cab23a406280f1fa
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487056"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392904"
 ---
 # <a name="memory-mapped-files"></a>Сопоставленные в памяти файлы
 Отображаемый в память файл содержит содержимое файла в виртуальной памяти. Отображение файла в области памяти позволяет приложению, содержащему несколько процессов, взаимодействовать с файлом путем чтения этой памяти и записи в нее. Начиная с версии .NET Framework 4, вы можете использовать управляемый код для доступа к отображенным в память файлам тем же способом, что и собственные функции Windows. Описание этого механизма можно найти на странице [Managing Memory-Mapped File](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Управление отображенными в память файлами).  
@@ -122,7 +122,7 @@ ms.locfileid: "66487056"
   
  Выходные данные `Process A` выглядят следующим образом:  
   
-```  
+```console  
 Start Process B and press ENTER to continue.  
 Start Process C and press ENTER to continue.  
 Process A says: True  

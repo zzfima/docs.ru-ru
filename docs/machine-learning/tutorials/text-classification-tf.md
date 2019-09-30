@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054264"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216893"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Учебник. Анализ тональности отзывов о фильмах с помощью предварительно обученной модели TensorFlow в ML.NET
 
@@ -21,6 +21,7 @@ ms.locfileid: "71054264"
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
+>
 > * Загрузить предварительно обученную модель TensorFlow.
 > * Преобразовать текст комментария на веб-сайте в признаки, пригодные для модели.
 > * Использование модели для прогноза
@@ -120,7 +121,7 @@ ms.locfileid: "71054264"
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction` — этот класс прогноза используется после обучения модели. `MovieReviewSentimentPrediction` имеет один массив `float` (`Prediction`) и атрибут `VectorType`.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Создание MLContext, словаря подстановки и действия для изменения размера признаков
 
 [Класс MLContext](xref:Microsoft.ML.MLContext) является отправной точкой для всех операций ML.NET. Инициализация `mlContext` создает новую среду ML.NET, которую могут совместно использовать объекты рабочего процесса создания модели. По существу он аналогичен классу `DBContext` в Entity Framework.
@@ -191,7 +192,7 @@ ms.locfileid: "71054264"
 
 1. Добавьте код для создания модели из конвейера:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     Модель ML.NET создается из цепочки средств оценки в конвейере с помощью вызова метода `Fit`. В этом случае мы не будем подбирать данные для создания модели, так как модель TensorFlow уже обучена. Мы предоставим пустой объект представления данных в соответствии с требованиями метода `Fit`.
 
@@ -200,10 +201,10 @@ ms.locfileid: "71054264"
 1. Добавьте метод `PredictSentiment` под методом `Main`.
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. Добавьте следующий код в качестве первой строки в методе `PredictSentiment()` для создания `PredictionEngine`:
@@ -241,8 +242,8 @@ ms.locfileid: "71054264"
 Результаты выполнения должны выглядеть примерно так, как показано ниже. Во время обработки отображаются сообщения. Вы можете видеть предупреждения или обработанные сообщения. Для удобства эти сообщения удалены из следующих результатов.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 Поздравляем! Вы успешно создали модель машинного обучения для классификации и прогнозирования тональности сообщений с помощью предварительно обученной модели `TensorFlow` в ML.NET.
@@ -251,6 +252,7 @@ ms.locfileid: "71054264"
 
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
+>
 > * Загрузить предварительно обученную модель TensorFlow.
 > * Преобразовать текст комментария на веб-сайте в признаки, пригодные для модели.
 > * Использование модели для прогноза

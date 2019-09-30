@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605947"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353768"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
@@ -51,5 +51,4 @@ ms.locfileid: "69605947"
 - [Таблица встроенных типов](./built-in-types-table.md)
 - [Таблица неявных числовых преобразований](./implicit-numeric-conversions-table.md)
 - [Таблица явных числовых преобразований](./explicit-numeric-conversions-table.md)
-- [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md)
 - [Строки](../../programming-guide/strings/index.md)

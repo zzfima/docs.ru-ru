@@ -2,18 +2,18 @@
 title: Официальные .NET-образы Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Официальные .NET-образы Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43b2f47912e38e99926d7f06c3cda72f17d0e3fc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039639"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353869"
 ---
 # <a name="official-net-docker-images"></a>Официальные .NET-образы Docker
 
 Официальные .NET-образы Docker — это образы Docker, оптимизированные Майкрософт. Они доступны для всех в репозиториях Майкрософт в [Центре Docker](https://hub.docker.com/u/microsoft/). Каждый репозиторий может содержать несколько образов, в зависимости от версии платформы .NET и операционной системы (Linux Debian, Linux Alpine, Windows Nano Server, Windows Server Core и т. д.).
 
-Начиная с версии .NET Core 2.1, все образы .NET Core, в том числе для ASP.NET Core, можно найти в репозитории образов .NET Core на сайте Docker Hub: <https://hub.docker.com/\_/microsoft-dotnet-core/>.
+Начиная с версии .NET Core 2.1, все образы .NET Core, в том числе для ASP.NET Core, можно найти в репозитории образов .NET Core на сайте Docker Hub: <https://hub.docker.com/_/microsoft-dotnet-core/>.
 
 Большинство репозиториев образов предоставляют широкие возможности по использованию тегов, чтобы облегчить выбор не только конкретной версии платформы, но и ОС (дистрибутива Linux или версии Windows).
 
