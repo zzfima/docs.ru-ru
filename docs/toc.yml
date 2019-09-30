@@ -317,13 +317,18 @@
       items:
         - name: Обзор
           href: core/tools/index.md
-        - name: Глобальные инструменты
+        - name: Инструменты
           expanded: true
           items:
-            - name: Обзор
-              href: core/tools/global-tools.md
-            - name: Создание глобального инструмента
-              href: core/tools/global-tools-how-to-create.md
+            - name: Глобальные инструменты
+              expanded: true
+              items:
+                - name: Обзор
+                  href: core/tools/global-tools.md
+                - name: Создание глобального инструмента
+                  href: core/tools/global-tools-how-to-create.md
+            - name: Устранение неполадок инструмента
+              href: core/tools/troubleshoot-usage-issues.md
         - name: Повышенные права доступа
           href: core/tools/elevated-access.md
         - name: Модель расширяемости
