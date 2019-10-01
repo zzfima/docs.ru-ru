@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664236"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698429"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="d51bf-102">\<Добавление элемента > для authenticationModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="d51bf-102">\<add> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="d51bf-103">Добавляет модуль проверки подлинности в приложение.</span><span class="sxs-lookup"><span data-stu-id="d51bf-103">Adds an authentication module to the application.</span></span>  
+# <a name="add-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="efd7f-102">Элемент > @no__t 0add для authenticationModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="efd7f-102">\<add> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="efd7f-103">Добавляет модуль проверки подлинности в приложение.</span><span class="sxs-lookup"><span data-stu-id="efd7f-103">Adds an authentication module to the application.</span></span>  
   
- <span data-ttu-id="d51bf-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d51bf-104">\<configuration></span></span>  
-<span data-ttu-id="d51bf-105">\<> System. NET</span><span class="sxs-lookup"><span data-stu-id="d51bf-105">\<system.net></span></span>  
-<span data-ttu-id="d51bf-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="d51bf-106">\<authenticationModules></span></span>  
-<span data-ttu-id="d51bf-107">\<add></span><span class="sxs-lookup"><span data-stu-id="d51bf-107">\<add></span></span>  
+[<span data-ttu-id="efd7f-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="efd7f-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="efd7f-105">&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="efd7f-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>  
+<span data-ttu-id="efd7f-106">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="efd7f-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)</span></span>  
+<span data-ttu-id="efd7f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**</span><span class="sxs-lookup"><span data-stu-id="efd7f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d51bf-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d51bf-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efd7f-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="efd7f-108">Syntax</span></span>  
   
 ```xml  
 <add
@@ -33,34 +33,34 @@ ms.locfileid: "69664236"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d51bf-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="d51bf-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d51bf-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="d51bf-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="efd7f-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="efd7f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="efd7f-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="efd7f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d51bf-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="d51bf-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="efd7f-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="efd7f-111">Attributes</span></span>  
   
-|<span data-ttu-id="d51bf-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="d51bf-112">**Attribute**</span></span>|<span data-ttu-id="d51bf-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="d51bf-113">**Description**</span></span>|  
+|<span data-ttu-id="efd7f-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="efd7f-112">**Attribute**</span></span>|<span data-ttu-id="efd7f-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="efd7f-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|<span data-ttu-id="d51bf-114">Полное имя типа (обозначенное <xref:System.Type.FullName%2A> свойством) и имя сборки (указывается <xref:System.Reflection.Assembly.FullName%2A> свойством), разделенные запятыми.</span><span class="sxs-lookup"><span data-stu-id="d51bf-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
+|`type`|<span data-ttu-id="efd7f-114">Полное имя типа (указанное свойством <xref:System.Type.FullName%2A>) и имя сборки (обозначенное свойством <xref:System.Reflection.Assembly.FullName%2A>), разделенные запятыми.</span><span class="sxs-lookup"><span data-stu-id="efd7f-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d51bf-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="d51bf-115">Child Elements</span></span>  
- <span data-ttu-id="d51bf-116">Нет.</span><span class="sxs-lookup"><span data-stu-id="d51bf-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="efd7f-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="efd7f-115">Child Elements</span></span>  
+ <span data-ttu-id="efd7f-116">Нет.</span><span class="sxs-lookup"><span data-stu-id="efd7f-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d51bf-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="d51bf-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="efd7f-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="efd7f-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="d51bf-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="d51bf-118">**Element**</span></span>|<span data-ttu-id="d51bf-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="d51bf-119">**Description**</span></span>|  
+|<span data-ttu-id="efd7f-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="efd7f-118">**Element**</span></span>|<span data-ttu-id="efd7f-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="efd7f-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="d51bf-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="d51bf-120">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="d51bf-121">Указывает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="d51bf-121">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="efd7f-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="efd7f-120">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="efd7f-121">Указывает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="efd7f-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d51bf-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="d51bf-122">Remarks</span></span>  
- <span data-ttu-id="d51bf-123">Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="d51bf-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="d51bf-124">Модули проверки подлинности вызываются в том порядке, в котором они были добавлены в список.</span><span class="sxs-lookup"><span data-stu-id="d51bf-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="efd7f-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="efd7f-122">Remarks</span></span>  
+ <span data-ttu-id="efd7f-123">Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="efd7f-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="efd7f-124">Модули проверки подлинности вызываются в том порядке, в котором они были добавлены в список.</span><span class="sxs-lookup"><span data-stu-id="efd7f-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- <span data-ttu-id="d51bf-125">Значением `type` атрибута должно быть допустимое имя типа и соответствующее имя сборки, разделенные запятыми.</span><span class="sxs-lookup"><span data-stu-id="d51bf-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
+ <span data-ttu-id="efd7f-125">Значением атрибута `type` должно быть допустимое имя типа и соответствующее имя сборки, разделенные запятыми.</span><span class="sxs-lookup"><span data-stu-id="efd7f-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="d51bf-126">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="d51bf-126">Configuration Files</span></span>  
- <span data-ttu-id="d51bf-127">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="d51bf-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="efd7f-126">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="efd7f-126">Configuration Files</span></span>  
+ <span data-ttu-id="efd7f-127">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="efd7f-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d51bf-128">Пример</span><span class="sxs-lookup"><span data-stu-id="d51bf-128">Example</span></span>  
- <span data-ttu-id="d51bf-129">В следующем примере включаются модули проверки подлинности по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d51bf-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="d51bf-130">Необходимо заменить значения для Version и PublicKeyToken правильными значениями для указанного модуля.</span><span class="sxs-lookup"><span data-stu-id="d51bf-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="efd7f-128">Пример</span><span class="sxs-lookup"><span data-stu-id="efd7f-128">Example</span></span>  
+ <span data-ttu-id="efd7f-129">В следующем примере включаются модули проверки подлинности по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="efd7f-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="efd7f-130">Необходимо заменить значения для Version и PublicKeyToken правильными значениями для указанного модуля.</span><span class="sxs-lookup"><span data-stu-id="efd7f-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,8 +81,8 @@ ms.locfileid: "69664236"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d51bf-131">См. также</span><span class="sxs-lookup"><span data-stu-id="d51bf-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efd7f-131">См. также</span><span class="sxs-lookup"><span data-stu-id="efd7f-131">See also</span></span>
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="d51bf-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="d51bf-132">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="efd7f-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="efd7f-132">Network Settings Schema</span></span>](index.md)

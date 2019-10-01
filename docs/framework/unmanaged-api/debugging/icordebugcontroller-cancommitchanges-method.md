@@ -17,14 +17,13 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a9bea6a89d7684d1f3524e4105da81f11e00a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a0b35b4782ca173133523aa9e9d0fe48ea728d0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749648"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700765"
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="4f406-102">Метод ICorDebugController::CanCommitChanges</span><span class="sxs-lookup"><span data-stu-id="4f406-102">ICorDebugController::CanCommitChanges Method</span></span>
-<span data-ttu-id="4f406-103">`CanCommitChanges` устарел.</span><span class="sxs-lookup"><span data-stu-id="4f406-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="4f406-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="4f406-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="4f406-105">См. также</span><span class="sxs-lookup"><span data-stu-id="4f406-105">See also</span></span>
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="ed27a-102">Метод ICorDebugController::CanCommitChanges</span><span class="sxs-lookup"><span data-stu-id="ed27a-102">ICorDebugController::CanCommitChanges Method</span></span>
+
+<span data-ttu-id="ed27a-103">`CanCommitChanges` устарел.</span><span class="sxs-lookup"><span data-stu-id="ed27a-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="ed27a-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="ed27a-104">Do not call this method.</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdf8649e3cb2221e5c74eefd22959dc4b382236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7df668487601e4278b56e196a43d1154b643fd29
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747695"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700735"
 ---
-# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="54a62-102">Метод ICorDebugCode::GetAddress</span><span class="sxs-lookup"><span data-stu-id="54a62-102">ICorDebugCode::GetAddress Method</span></span>
-<span data-ttu-id="54a62-103">Возвращает относительный виртуальный адрес (RVA) сегмента кода, представляющий этот интерфейс «ICorDebugCode».</span><span class="sxs-lookup"><span data-stu-id="54a62-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
+# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="b9c69-102">Метод ICorDebugCode::GetAddress</span><span class="sxs-lookup"><span data-stu-id="b9c69-102">ICorDebugCode::GetAddress Method</span></span>
+<span data-ttu-id="b9c69-103">Возвращает относительный виртуальный адрес (RVA) сегмента кода, который представляет этот интерфейс ICorDebugCode.</span><span class="sxs-lookup"><span data-stu-id="b9c69-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54a62-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="54a62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9c69-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b9c69-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -35,17 +35,15 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54a62-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="54a62-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b9c69-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b9c69-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="54a62-106">[out] Указатель на относительный виртуальный адрес сегмента кода.</span><span class="sxs-lookup"><span data-stu-id="54a62-106">[out] A pointer to the RVA of the code segment.</span></span>  
+ <span data-ttu-id="b9c69-106">заполняет Указатель на RVA для сегмента кода.</span><span class="sxs-lookup"><span data-stu-id="b9c69-106">[out] A pointer to the RVA of the code segment.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54a62-107">Требования</span><span class="sxs-lookup"><span data-stu-id="54a62-107">Requirements</span></span>  
- <span data-ttu-id="54a62-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54a62-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b9c69-107">Требования</span><span class="sxs-lookup"><span data-stu-id="b9c69-107">Requirements</span></span>  
+ <span data-ttu-id="b9c69-108">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9c69-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54a62-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54a62-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b9c69-109">**Заголовок.** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b9c69-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="54a62-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54a62-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b9c69-110">**Библиотечная** Коргуидс. lib</span><span class="sxs-lookup"><span data-stu-id="b9c69-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54a62-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54a62-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="54a62-112">См. также</span><span class="sxs-lookup"><span data-stu-id="54a62-112">See also</span></span>
+ <span data-ttu-id="b9c69-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9c69-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
