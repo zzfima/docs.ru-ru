@@ -12,15 +12,17 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 0f5d762a2b688bebcb7c027be6c639b6d64c069d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664109"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698149"
 ---
 # <a name="network-settings-schema"></a>Схема параметров сети
-Параметры сети определяют способ подключения .NET Framework к Интернету. В приведенной ниже таблице описывается назначение каждого дочернего элемента конфигурации для [элемента \<system.Net> (параметры сети)](system-net-element-network-settings.md).  
+Параметры сети определяют способ подключения .NET Framework к Интернету.
+
+Параметры @no__t -0system. NET > указывают, как .NET Framework подключается к сети. В приведенной ниже таблице описывается назначение каждого дочернего элемента конфигурации для [элемента \<system.Net> (параметры сети)](system-net-element-network-settings.md).  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
@@ -31,7 +33,7 @@ ms.locfileid: "69664109"
 |[Элемент \<requestCaching> (сетевые параметры)](requestcaching-element-network-settings.md)|Управляет механизмом кэширования для сетевых запросов.|  
 |[Элемент \<webRequestModules> (параметры сети)](webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от узлов в Интернете.|  
   
- Параметры универсальных кодов ресурсов (URI) определяют, как платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием URI. В приведенной ниже таблице описывается назначение каждого дочернего элемента конфигурации для [элемента \<Uri> (параметры URI)](uri-element-uri-settings.md).  
+Параметры \<uri > определяют, как .NET Framework обрабатывает веб-адреса, выраженные с помощью универсальных идентификаторов ресурсов (URI). В следующей таблице описывается функция каждого дочернего элемента конфигурации в [элементе \<uri > (Параметры URI)](uri-element-uri-settings.md).  
   
 |Элемент|Описание|  
 |-------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: <filter><add> Элемент для<listeners> для<trace>
+title: Элемент <filter> для <add> для <listeners> для <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: afde5381a7dd7dfe6a1a9d238a2029511bd9bae2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6b1ec99c5aab8e85df7f1920aca32f49a5be066
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927137"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699362"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<элемент Filter > для \<добавления > для \<прослушивателей > \<для трассировки >
-Добавляет фильтр в прослушиватель в `Listeners` коллекции для трассировки.  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>Элемент \<filter > для > \<Add для \<listeners > @no__t 3trace
+Добавляет фильтр в прослушиватель в коллекции `Listeners` для трассировки.  
   
- \<configuration>  
-\<> System. Diagnostics  
-\<> трассировки  
-\<прослушиватели >  
-\<add>  
-\<> фильтра  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0add >** ](add-element-for-listeners-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1filter >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69927137"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`type`|Обязательный атрибут.<br /><br /> Указывает тип фильтра, который должен наследоваться от <xref:System.Diagnostics.TraceFilter> класса. Можно использовать имя, уточненное пространством имен типа, которое соответствует <xref:System.Type.FullName%2A> свойству типа, или можно использовать полное имя типа, включая сведения о сборке, соответствующие <xref:System.Type.AssemblyQualifiedName%2A> свойству. Дополнительные сведения о полных именах типов см. в разделе Указание полных [имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Обязательный атрибут.<br /><br /> Указывает тип фильтра, который должен наследовать от класса <xref:System.Diagnostics.TraceFilter>. Можно использовать имя, уточненное пространством имен типа, которое соответствует свойству <xref:System.Type.FullName%2A> типа, или можно использовать полное имя типа, включая сведения о сборке, соответствующие свойству <xref:System.Type.AssemblyQualifiedName%2A>. Дополнительные сведения о полных именах типов см. в разделе Указание полных [имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая конструктору для указанного класса фильтра.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -57,12 +57,12 @@ ms.locfileid: "69927137"
 |`add`|Добавляет прослушиватель в коллекцию `Listeners`.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент должен содержаться `<add>` в элементе для прослушивателя трассировки, который указывает тип прослушивателя, а не только имя прослушивателя, определенного в [ \<шаредлистенерс >.](sharedlisteners-element.md) `<filter>` Если прослушиватель определен в [ \<> шаредлистенерс](sharedlisteners-element.md), то фильтр для этого прослушивателя должен быть определен в этом элементе.  
+ Элемент `<filter>` должен содержаться в элементе `<add>` для прослушивателя трассировки, который указывает тип прослушивателя, а не только имя прослушивателя, определенного в [@no__t 3sharedListeners >](sharedlisteners-element.md). Если прослушиватель определен в [@no__t >](sharedlisteners-element.md), то фильтр для этого прослушивателя должен быть определен в этом элементе.  
   
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как с помощью `<filter>` элемента добавить фильтр в прослушиватель `console` в `Listeners` коллекции для трассировки, указав уровень события фильтра в качестве `Error`.  
+ В следующем примере показано, как с помощью элемента `<filter>` Добавить фильтр в прослушиватель `console` в коллекции `Listeners` для трассировки, указав уровень событий фильтра `Error`.  
   
 ```xml  
 <configuration>  

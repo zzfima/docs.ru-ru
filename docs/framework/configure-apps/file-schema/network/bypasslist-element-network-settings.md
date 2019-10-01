@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927479"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699540"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<Элемент > бипасслист (параметры сети)
+# <a name="bypasslist-element-network-settings"></a>Элемент > @no__t 0bypasslist (параметры сети)
 Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.  
   
- \<configuration>  
-\<> System. NET  
-\<defaultProxy >  
-\<бипасслист >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,9 +51,9 @@ ms.locfileid: "69927479"
 |[defaultProxy](defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
 ## <a name="remarks"></a>Примечания  
- Список обхода содержит регулярные выражения, описывающие URI, <xref:System.Net.WebRequest> которые обращаются к экземплярам напрямую, а не через прокси-сервер.  
+ Список обхода содержит регулярные выражения, описывающие URI, которые <xref:System.Net.WebRequest> обращаются напрямую, а не через прокси-сервер.  
   
- При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
+ При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] + @no__t -0.contoso\\.com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
   
  Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../standard/base-types/regular-expressions.md).  
   

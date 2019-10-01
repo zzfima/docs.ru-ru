@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: cb5191442ed8d3ee47c5116b10740e277ffa5bac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661917"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700899"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>"\<имя_члена >" не может представлять тип "\<typename >" вне проекта посредством \<containertype > "\<containertypename >"
-Переменная, параметр процедуры или возвращаемое значение функции предоставляется вне контейнера, но он объявлен как тип, который может быть предоставлен вне контейнера.  
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>"\<membername >" не может представлять тип "\<typename >" за пределами проекта с помощью \<containertype > "\<containertypename >"
+Переменная, параметр процедуры или возвращаемое значение функции предоставляется за пределами своего контейнера, но она объявляется как тип, который не должен предоставляться за пределами контейнера.  
   
- Следующий код демонстрирует ситуацию, которая создает эту ошибку.  
+ В приведенном ниже коде показана ситуация, которая приводит к возникновению этой ошибки.  
   
-```  
+```vb  
 Private Class privateClass  
 End Class  
 Public Class mainClass  
@@ -27,13 +27,13 @@ Public Class mainClass
 End Class  
 ```  
   
- Тип, объявленный `Protected`, `Friend`, `Protected Friend`, или `Private` должен иметь ограниченный доступ вне контекста его объявления. Используя в качестве данных тип переменной с меньшими ограничениями доступа будет достижению этой цели. В приведенном выше коде `exposedVar` — `Public` и предоставит `privateClass` в код, который не должны иметь доступ к нему.  
+ Тип, объявленный `Protected`, `Friend`, `Protected Friend` или `Private`, должен иметь ограниченный доступ за пределами контекста объявления. Использование его в качестве типа данных переменной с меньшим доступом было бы непреднамеренно. В приведенном выше скелете кода `exposedVar` имеет `Public` и будет предоставлять `privateClass` коду, который не должен иметь к нему доступа.  
   
  **Идентификатор ошибки:** BC30909  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Изменение уровня доступа к переменной, параметр процедуры или функции возвращают быть менее строгий уровень доступа соответствующего типа данных.  
+- Измените уровень доступа переменной, параметра процедуры или функции, чтобы он был по крайней мере ограничен уровнем доступа его типа данных.  
   
 ## <a name="see-also"></a>См. также
 
