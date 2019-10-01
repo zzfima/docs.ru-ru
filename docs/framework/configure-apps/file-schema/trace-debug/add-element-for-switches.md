@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2edc890049d62913d693ad61d8d814d012c0f482
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920548"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697180"
 ---
-# <a name="add-element-for-switches"></a>\<Добавьте элемент > для \<переключателей >
+# <a name="add-element-for-switches"></a>Элемент > @no__t 0add для \<switches >
 Задает уровень, на котором установлен ключ трассировки.  
   
- \<configuration>  
-\<> System. Diagnostics  
-\<переключатели >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<switches >** ](switches-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,10 +51,10 @@ ms.locfileid: "69920548"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Уровень переключателя трассировки можно изменить, поместив его в файл конфигурации. Если параметр имеет <xref:System.Diagnostics.BooleanSwitch>значение, его можно включить и отключить. Если параметр имеет <xref:System.Diagnostics.TraceSwitch>значение, можно назначить для него разные уровни, чтобы указать типы трассировки или сообщения отладки, выданные приложением.  
+ Уровень переключателя трассировки можно изменить, поместив его в файл конфигурации. Если параметр имеет значение <xref:System.Diagnostics.BooleanSwitch>, его можно включить и отключить. Если параметр имеет значение <xref:System.Diagnostics.TraceSwitch>, можно назначить ему разные уровни, чтобы указать типы трассировки или сообщения отладки, выданные приложением.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано <xref:System.Diagnostics.TraceLevel> использование `Data` `General`  **\<элемента Add >** для задания переключателя трассировки на уровне и включения логического переключателя трассировки.  
+ В следующем примере показано, как использовать элемент **\<add >** , чтобы задать параметр трассировки `General` на уровне <xref:System.Diagnostics.TraceLevel> и включить логический коммутатор трассировки `Data`.  
   
 ```xml  
 <configuration>  

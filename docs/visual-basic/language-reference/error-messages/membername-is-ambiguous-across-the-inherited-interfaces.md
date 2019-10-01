@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06e0d8863c74041f81977b3187fe99a1d05bcd53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622657"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700884"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>"\<имя_члена >" является неоднозначным в наследуемых интерфейсах\<имя_интерфейса1 > "и"\<имя_интерфейса2 > "
-Этот интерфейс наследует два или несколько членов с таким именем несколько интерфейсов.  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>"\<membername >" является неоднозначным по отношению к унаследованным интерфейсам "\<interfacename1 >" и "\<interfacename2 >"
+Интерфейс наследует два или более членов с одинаковым именем из нескольких интерфейсов.  
   
  **Идентификатор ошибки:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Приведение значения к базовому интерфейсу, который вы хотите использовать; Например:  
+- Приведите значение к базовому интерфейсу, который необходимо использовать; Например:  
   
-    ```  
+    ```vb  
     Interface Left  
         Sub MySub()  
     End Interface  

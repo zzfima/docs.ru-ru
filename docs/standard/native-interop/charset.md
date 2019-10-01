@@ -4,16 +4,16 @@ description: Узнайте, как различные значения коди
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
-ms.translationtype: HT
+ms.openlocfilehash: 301fa3d8bd379e76a0e751c3a20d0d8be37d9ac0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817850"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700927"
 ---
 # <a name="charsets-and-marshaling"></a>Кодировки и маршалинг
 
-Способ маршалирования значений `char`, объектов `string` и объектов `System.Text.StringBuilder` зависит от значения, заданного в поле `CharSet` P/Invoke или структуры. Для P/Invoke можно указать `CharSet`, задав в поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> при объявлении P/Invoke. Чтобы указать `CharSet` для структуры, задайте <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> в поле объявления структуры. Если эти поля атрибута не заданы, используемое значение `CharSet` определяется компилятором языка. В C# и Visual Basic по умолчанию используется кодировка <xref:System.Runtime.InteropServices.CharSet.Ansi>.
+Способ маршалирования значений `char`, объектов `string` и объектов `System.Text.StringBuilder` зависит от значения, заданного в поле `CharSet` P/Invoke или структуры. Для P/Invoke можно указать `CharSet`, задав в поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> при объявлении P/Invoke. Чтобы задать `CharSet` для типа, установите поле <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> в объявлении класса или структуры. Если эти поля атрибута не заданы, используемое значение `CharSet` определяется компилятором языка. В C# и Visual Basic по умолчанию используется кодировка <xref:System.Runtime.InteropServices.CharSet.Ansi>.
 
 В следующей таблице показаны кодировки и способ представления символа или строки при маршалировании в этой кодировке.
 

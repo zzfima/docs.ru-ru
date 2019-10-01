@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664156"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698268"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<Элемент > Дефаулсттпкачеполици (параметры сети)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>Элемент > @no__t 0defaultHttpCachePolicy (параметры сети)
 Описывает, активно ли кэширование HTTP и описывает политику кэширования по умолчанию.  
   
- \<configuration>  
-\<> System. NET  
-\<Элемент requestcaching >  
-\<defaultHttpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69664156"
 |`policyLevel`|Указывает, является ли политика кэширования автоматическим, или же кэш будет пропущен. Значение по умолчанию — `BypassCache`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствуют  
+ None  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -56,9 +56,9 @@ ms.locfileid: "69664156"
 |[Элемент requestcaching](requestcaching-element-network-settings.md)|Управляет механизмом кэширования для сетевых запросов.|  
   
 ## <a name="remarks"></a>Примечания  
- Значение `policyLevel` атрибута может быть `BypassCache` или `Default`.  
+ Значением атрибута `policyLevel` может быть `BypassCache` или `Default`.  
   
- Значения для `maximumAge`элементов, `maximumStale`и `minimumFresh` являются либо явным временным интервалом с форматом *d*. *чч*:*мм*:*СС* (дни, часы, минуты и секунды), константы `minValue` или `maxValue`(при необходимости).  
+ Значения для элементов `maximumAge`, `maximumStale` и `minimumFresh` являются либо явным интервалом времени, форматом *d*. *чч*:*мм*:*СС* (дни, часы, минуты и секунды) или константы `minValue` или `maxValue`, в зависимости от ситуации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

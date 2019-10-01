@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927482"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699614"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Добавление элемента > для бипасслист (параметры сети)
+# <a name="add-element-for-bypasslist-network-settings"></a>Элемент > @no__t 0add для бипасслист (параметры сети)
 Добавление в список обхода прокси IP-адреса или DNS-имени.  
   
- \<configuration>  
-\<> System. NET  
-\<defaultProxy >  
-\<бипасслист >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,11 +53,11 @@ ms.locfileid: "69927482"
 |[бипасслист](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
 ## <a name="remarks"></a>Примечания  
- `add` Элемент вставляет регулярные выражения, описывающие IP-адреса или имена DNS-серверов, в список адресов, которые обходят прокси-сервер.  
+ Элемент `add` вставляет регулярные выражения, описывающие IP-адреса или имена DNS-серверов, в список адресов, которые обходят прокси-сервер.  
   
- Значение `address` атрибута должно быть регулярным выражением, описывающим набор IP-адресов или имен узлов.  
+ Значение атрибута `address` должно быть регулярным выражением, описывающим набор IP-адресов или имен узлов.  
   
- При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
+ При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] + @no__t -0.contoso\\.com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
   
  Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../standard/base-types/regular-expressions.md).  
   

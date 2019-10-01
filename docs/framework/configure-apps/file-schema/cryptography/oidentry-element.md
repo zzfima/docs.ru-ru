@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921048"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699771"
 ---
-# <a name="oidentry-element"></a>\<Элемент > Оидентри
+# <a name="oidentry-element"></a>Элемент > @no__t 0oidEntry
 Сопоставляет идентификатор объекта (OID) ASN.1 с понятным именем.  
   
- \<configuration>  
-\<> mscorlib  
-\<Криптографисеттингс >  
-\<Оидмап >  
-\<Оидентри >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69921048"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |**КОДА**|Обязательный атрибут.<br /><br /> Указывает идентификатор объекта ASN. 1, соответствующий алгоритму, реализуемому вашим классом.|  
-|**name**|Обязательный атрибут.<br /><br /> Задает значение для атрибута **Name** в [ \<теге элементе nameentry >](nameentry-element.md) .|  
+|**name**|Обязательный атрибут.<br /><br /> Задает значение для атрибута **Name** в теге [\<nameEntry >](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет.  
@@ -56,7 +56,7 @@ ms.locfileid: "69921048"
  Идентификаторы объектов ASN. 1 обозначают алгоритмы в некоторых криптографических форматах. Сопоставьте идентификаторы объектов с понятными именами для алгоритмов, которые необходимо опознать.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано,  **\<** как использовать элемент оидентри >, чтобы связать идентификатор объекта для алгоритма хэширования RIPEMD-160 с реализацией этого хэш-алгоритма.  
+ В следующем примере показано, как использовать элемент **\<oidEntry >** , чтобы связать идентификатор объекта для алгоритма хэширования RIPEMD-160 с реализацией этого хэш-алгоритма.  
   
 ```xml  
 <configuration>  

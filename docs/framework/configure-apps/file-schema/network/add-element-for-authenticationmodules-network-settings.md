@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664236"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698429"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Добавление элемента > для authenticationModules (параметры сети)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>Элемент > @no__t 0add для authenticationModules (параметры сети)
 Добавляет модуль проверки подлинности в приложение.  
   
- \<configuration>  
-\<> System. NET  
-\<authenticationModules >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69664236"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`type`|Полное имя типа (обозначенное <xref:System.Type.FullName%2A> свойством) и имя сборки (указывается <xref:System.Reflection.Assembly.FullName%2A> свойством), разделенные запятыми.|  
+|`type`|Полное имя типа (указанное свойством <xref:System.Type.FullName%2A>) и имя сборки (обозначенное свойством <xref:System.Reflection.Assembly.FullName%2A>), разделенные запятыми.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет.  
@@ -54,7 +54,7 @@ ms.locfileid: "69664236"
 ## <a name="remarks"></a>Примечания  
  Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности. Модули проверки подлинности вызываются в том порядке, в котором они были добавлены в список.  
   
- Значением `type` атрибута должно быть допустимое имя типа и соответствующее имя сборки, разделенные запятыми.  
+ Значением атрибута `type` должно быть допустимое имя типа и соответствующее имя сборки, разделенные запятыми.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

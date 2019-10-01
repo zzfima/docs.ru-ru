@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921066"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699735"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<Элемент > mscorlib для параметров шифрования
-Содержит [элемент > криптографисеттингс.\<](cryptographysettings-element.md)  
+# <a name="mscorlib-element-for-cryptography-settings"></a>Элемент > @no__t 0mscorlib для параметров шифрования
+Содержит [элемент > @no__t 1cryptographySettings](cryptographysettings-element.md).  
   
- \<configuration>  
-\<> mscorlib  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<mscorlib >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69921066"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<элемент mscorlib >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать элемент **\<mscorlib >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для возврата объекта `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  

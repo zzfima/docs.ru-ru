@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664064"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698002"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<Элемент performanceCounter > (параметры сети)
+# <a name="performancecounter-element-network-settings"></a>Элемент > @no__t 0performanceCounter (параметры сети)
 Включает или отключает счетчики производительности сети.  
   
- \<configuration>  
-\<> System. NET  
-\<> параметров  
-\<Счетчики производительности >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,7 +56,7 @@ ms.locfileid: "69664064"
   
  Значение по умолчанию — сетевые счетчики производительности отключены.  
   
- Свойство можно использовать для получения текущего значения атрибута enabled из применимых файлов конфигурации. <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+ Свойство <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> можно использовать для получения текущего значения атрибута **Enabled** из применимых файлов конфигурации.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как настроить <xref:System.Net> и связанные пространства имен для включения сетевых счетчиков производительности.  

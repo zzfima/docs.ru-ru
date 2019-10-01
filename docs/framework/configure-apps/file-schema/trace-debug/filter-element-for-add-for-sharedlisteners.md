@@ -1,5 +1,5 @@
 ---
-title: <filter>Элемент для <add> для<sharedListeners>
+title: Элемент <filter> для <add> для <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920513"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697322"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<элемент Filter > для \<добавления > для \<шаредлистенерс >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>Элемент \<filter > для > \<Add для \<sharedListeners >
 Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.  
   
- \<configuration>  
-\<> System. Diagnostics  
-\<Элемент > Шаредлистенерс  
-\<add>  
-\<> фильтра  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sharedListeners >** ](sharedlisteners-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<add >** ](add-element-for-sharedlisteners.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69920513"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**type**|Обязательный атрибут.<br /><br /> Указывает тип фильтра. Можно использовать только полное имя типа (в формате <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойства) или можно использовать полное имя типа, включая сведения о сборке (в формате <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> свойства). Сведения о создании полного имени типа см. в разделе [Указание полных имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Обязательный атрибут.<br /><br /> Указывает тип фильтра. Можно использовать только полное имя типа (в формате свойства <xref:System.Type.FullName%2A?displayProperty=nameWithType>) или можно использовать полное имя типа, включая сведения о сборке (в формате свойства <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>). Сведения о создании полного имени типа см. в разделе [Указание полных имен типов](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Необязательный атрибут.<br /><br /> Строка, передаваемая конструктору для указанного класса.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -56,12 +56,12 @@ ms.locfileid: "69920513"
 |`add`|Добавляет прослушиватель в коллекцию **шаредлистенерс** .|  
   
 ## <a name="remarks"></a>Примечания  
- Если `<add>` прослушиватель определен в элементе `<sharedListeners>` элемента, то фильтр для этого прослушивателя `<filter>` должен быть определен в элементе, который является дочерним по отношению к `<add>` элементу.  
+ Если прослушиватель определен в элементе `<add>` элемента `<sharedListeners>`, то фильтр для этого прослушивателя должен быть определен в элементе `<filter>`, который является дочерним по отношению к элементу `<add>`.  
   
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<filter>` элемент для добавления фильтра в прослушиватель `console` трассировки в `sharedListeners` коллекции.  
+ В следующем примере показано, как использовать элемент `<filter>` для добавления фильтра в прослушиватель трассировки `console` в коллекции `sharedListeners`.  
   
 ```xml  
 <configuration>  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07f8be1a1831bc00eea3cfb659b46b67b6a78711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ec7d615b99ac301948d7ea25318115713ce06ea
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747732"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700845"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>Метод ICorDebugCode::CreateBreakpoint
-Создает точку останова в этом сегменте кода, начиная с указанной позиции.  
+Создает точку останова в этом сегменте кода в указанном смещении.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,23 +38,21 @@ HRESULT CreateBreakpoint (
   
 ## <a name="parameters"></a>Параметры  
  `offset`  
- [in] Смещение, с которой будет создана точка останова.  
+ окне Смещение для создания точки останова.  
   
  `ppBreakpoint`  
- [out] Указатель на адрес объекта «ICorDebugFunctionBreakpoint», который представляет точку останова.  
+ заполняет Указатель на адрес объекта "ICorDebugFunctionBreakpoint", представляющего точку останова.  
   
 ## <a name="remarks"></a>Примечания  
- Прежде чем точка останова не активна, его необходимо добавить в объект процесса.  
+ Прежде чем точка останова станет активной, ее необходимо добавить в объект Process.  
   
- Если этот код является код на промежуточном языке (MSIL), которая существует just-in-time (JIT)-компиляции, машинная версия кода, точка останова будет применяться в коде, а также JIT-компиляции. (То же самое значение true, если код является JIT-компиляции позже).  
+ Если этот код является кодом на языке MSIL и имеется JIT-скомпилированная собственная версия кода, то точка останова будет применена и в JIT-скомпилированном коде. (То же самое верно, если код компилируется позже.)  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>См. также
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

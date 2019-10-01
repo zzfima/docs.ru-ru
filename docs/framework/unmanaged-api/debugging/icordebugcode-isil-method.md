@@ -17,35 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1257c870371895cec89996be0e94906597b09ed8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747451"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700798"
 ---
 # <a name="icordebugcodeisil-method"></a>Метод ICorDebugCode::IsIL
-Получает значение, указывающее, представляет ли этот «ICorDebugCode» код, который был скомпилирован в промежуточный язык Майкрософт (MSIL).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-HRESULT IsIL (  
-    [out] BOOL       *pbIL  
-);  
-```  
-  
-## <a name="parameters"></a>Параметры  
+
+Возвращает значение, указывающее, представляет ли этот "ICorDebugCode" код, скомпилированный на языке MSIL.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT IsIL (
+    [out] BOOL       *pbIL
+);
+```
+
+## <a name="parameters"></a>Параметры
  `pbIL`  
- [out] `true` Если `ICorDebugCode` представляет код, скомпилированные в MSIL; в противном случае — значение `false`.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** CorDebug.idl, CorDebug.h  
-  
- **Библиотека:** CorGuids.lib  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>См. также
+ [out] `true`, если этот `ICorDebugCode` представляет код, скомпилированный в MSIL; в противном случае `false`.
+
+## <a name="requirements"></a>Требования
+
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+
+ **Заголовок.** CorDebug. idl, CorDebug. h  
+
+ **Библиотечная** Коргуидс. lib  
+
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

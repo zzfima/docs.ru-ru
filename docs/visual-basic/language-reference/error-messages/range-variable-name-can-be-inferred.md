@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f448f34dc5909b9128fc700abab5b4f00e911edf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934281"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701012"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Имя переменной диапазона может быть выведено только из простого или полного имени без аргументов
-Программный элемент, который принимает один или несколько аргументов включается в запрос LINQ. Компилятор не может определить переменную диапазона из этого элемента программирования.  
+В запрос LINQ входит программный элемент, который принимает один или несколько аргументов. Компилятору не удается вывести переменную диапазона из этого программного элемента.  
   
  **Идентификатор ошибки:** BC36599  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Предоставьте явное имя переменной для элемента программирования, как показано в следующем коде:  
+1. Укажите явное имя переменной для программного элемента, как показано в следующем коде:  
   
-```  
+```vb  
 Dim query = From var1 In collection1   
             Select VariableAlias= SampleFunction(var1), var1  
 ```  

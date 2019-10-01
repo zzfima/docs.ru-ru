@@ -2,20 +2,20 @@
 title: Элемент <clear> для schemeSettings (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 51c669aff767948523172aa075677ad3fb6478a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664178"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699444"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<Очистка элемента > для schemeSettings (Параметры URI)
+# <a name="clear-element-for-schemesettings-uri-settings"></a>Элемент > @no__t 0clear для schemeSettings (Параметры URI)
 Удаляет все существующие параметры схемы.  
   
- \<configuration>  
-\<> URI  
-\<schemeSettings >  
-\<очистить >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69664178"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
+ По этой причине класс <xref:System.Uri?displayProperty=nameWithType> сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в конструктор класса <xref:System.Uri?displayProperty=nameWithType> приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69664178"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана конфигурация, используемая <xref:System.Uri> классом, который очищает все параметры схемы и добавляет поддержку для разделителей пути, не экранированных в процентах, для схемы HTTP.  
+ В следующем примере показана конфигурация, используемая классом <xref:System.Uri>, которая очищает все параметры схемы, а затем добавляет поддержку для разделителей пути, не экранированных в процентах, для схемы HTTP.  
   
 ```xml  
 <configuration>  

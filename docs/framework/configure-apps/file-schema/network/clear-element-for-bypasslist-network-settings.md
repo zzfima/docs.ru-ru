@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664188"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699503"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<Очистка элемента > для бипасслист (параметры сети)
+# <a name="clear-element-for-bypasslist-network-settings"></a>Элемент > @no__t 0clear для бипасслист (параметры сети)
 Очищает список обхода прокси-сервера.  
   
- \<configuration>  
-\<> System. NET  
-\<defaultProxy >  
-\<бипасслист >  
-\<очистить >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69664188"
 |[бипасслист](bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
 ## <a name="remarks"></a>Примечания  
- `clear` Элемент удаляет все записи из списка обхода.  
+ Элемент `clear` удаляет все записи из списка обхода.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

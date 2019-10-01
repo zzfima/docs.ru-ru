@@ -2,19 +2,19 @@
 title: Элемент <schemeSettings> (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 46012b15d41422fb3357e57438e320136809ef41
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 498aef77a1dfd8cffcac73b704b8d1bb6df5d165
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664008"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697761"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<Элемент > schemeSettings (Параметры URI)
+# <a name="schemesettings-element-uri-settings"></a>Элемент > @no__t 0schemeSettings (Параметры URI)
 Определяет, как <xref:System.Uri> анализируется для определенных схем.  
   
- \<configuration>  
-\<> URI  
-\<schemeSettings >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemeSettings >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,7 +27,7 @@ ms.locfileid: "69664008"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Отсутствуют  
+ None  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69664008"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
+ По этой причине класс <xref:System.Uri?displayProperty=nameWithType> сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в конструктор класса <xref:System.Uri?displayProperty=nameWithType> приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69664008"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана конфигурация, используемая <xref:System.Uri> классом для поддержки неэкранированных разделителей пути в кодировке% для схемы HTTP.  
+ В следующем примере показана конфигурация, используемая классом <xref:System.Uri> для поддержки не экранирования разделителей пути в кодировке% для схемы HTTP.  
   
 ```xml  
 <configuration>  

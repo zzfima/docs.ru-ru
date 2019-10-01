@@ -1,5 +1,5 @@
 ---
-title: Преобразование между строками и другими типами данных в Visual Basic
+title: Преобразование строк и других типов данных в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -7,25 +7,33 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - string conversion [Visual Basic], Visual Basic
 ms.assetid: 06085ed5-191d-4930-8fbc-da63930da400
-ms.openlocfilehash: dbd563b01fc7c3afbfc558a277f17a4318f5c634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 040e22ab75ef144f0572fc682e3e182f4b06b25e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054072"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700079"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Преобразование между строками и другими типами данных в Visual Basic
-В этом разделе описывается, как преобразования строк в другие типы данных.  
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Преобразование строк и других типов данных в Visual Basic
+
+В этом разделе описывается преобразование строк в другие типы данных.
+
+## <a name="in-this-section"></a>в этом разделе
+
+ [Практическое руководство. Преобразование массива байтов в строку в Visual Basic @ no__t-0  
+ Преобразование байтов из массива байтов в строку.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Преобразовать массив байтов в строку в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)  
- Как преобразовать байты из массива байтов в строку.  
+ [Практическое руководство. Преобразование строк в массив байтов в Visual Basic @ no__t-0  
+ Преобразование строки в массив байтов.  
   
- [Практическое руководство. Преобразование строки в массив байтов в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)  
- Как преобразовать строку в массив байтов.  
+ [Практическое руководство. Создание строки из массива значений Char @ no__t-0  
+ Создание строки "abcd" из отдельных символов.  
   
- [Практическое руководство. Создать строку из массива значений типа Char](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-a-string-from-an-array-of-char-values.md)  
- Способы создания строки «abcd» из отдельных символов.  
-  
- [Практическое руководство. Преобразование шестнадцатеричных строк в числа](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-hexadecimal-strings-to-numbers.md)  
- Как преобразовать в целое число в шестнадцатеричную строку.
+ [Практическое руководство. Преобразование шестнадцатеричных строк в числа @ no__t-0  
+ Преобразование шестнадцатеричной строки в целое число.
+ 
+ [Практическое руководство. Преобразование строки в массив символов в Visual Basic @ no__t-0  
+ Преобразование строки в массив символов.
+ 
+ [Практическое руководство. Доступ к символам в строках в Visual Basic @ no__t-0  
+ Как получить доступ к символу в строке по его индексу.

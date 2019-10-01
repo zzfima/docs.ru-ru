@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659144"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697712"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<Элемент > servicePointManager (параметры сети)
+# <a name="servicepointmanager-element-network-settings"></a>Элемент > @no__t 0servicePointManager (параметры сети)
 Настраивает подключения к сетевым ресурсам.  
   
- \<configuration>  
-\<> System. NET  
-\<> параметров  
-\<servicePointManager >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicePointManager >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,8 +48,8 @@ ms.locfileid: "69659144"
 |`checkCertificateRevocationList`|Указывает, должна ли система проверять, отозван ли сертификат перед использованием сертификата. Значение по умолчанию — `false`.|  
 |`dnsRefreshTimeout`|Указывает, как долго кэшируются разрешения службы доменных имен (DNS) в сочетании с параметром циклического перебора DNS в миллисекундах. По умолчанию установлено значение 120 000 миллисекунд (2 минуты).|  
 |`enableDnsRoundRobin`|Указывает, должны ли разрешения DNS имен узлов с несколькими IP-адресами возвращать все адреса или только первый из них. Значение по умолчанию — `false`.|  
-|`encryptionPolicy`|Указывает политику шифрования, применяемую к сеансу SSL/TLS в <xref:System.Net.ServicePointManager> экземпляре. Возможные значения эквивалентны значениям <xref:System.Net.Security.EncryptionPolicy> перечисления. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> является обязательным, если для `NoEncryption`политики шифрования задано значение. Значение по умолчанию — `RequireEncryption`.|  
-|`expect100Continue`|Указывает, должны ли методы POST рассчитывать на получение `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
+|`encryptionPolicy`|Указывает политику шифрования, применяемую к сеансу SSL/TLS на экземпляре <xref:System.Net.ServicePointManager>. Возможные значения эквивалентны значениям перечисления <xref:System.Net.Security.EncryptionPolicy>. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> обязательно, если для политики шифрования задано значение `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
+|`expect100Continue`|Указывает, должны ли методы POST принимать ответ `100-continue` от сервера. Значение по умолчанию — `true`.|  
 |`useNagleAlgorithm`|Указывает, используют ли подключения, управляемые диспетчером точек обслуживания, алгоритм Nagle. Значение по умолчанию — `true`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
