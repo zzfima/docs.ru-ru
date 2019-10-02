@@ -2,12 +2,12 @@
 title: Таблица принятия решений. Использование платформ .NET для Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Таблица принятия решений. Использование платформ .NET для Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 96b2750e52d64b06444b7f87dea624879f37d3d7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675821"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039678"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Таблица для принятия решений. Использование платформ .NET для Docker
 
@@ -16,74 +16,18 @@ ms.locfileid: "68675821"
 > [!IMPORTANT]
 > На компьютерах разработки выполняется один узел Docker: Linux или Windows. Все связанные микрослужбы, которые должны запускаться и тестироваться вместе в рамках одного решения, должны выполняться на одной платформе контейнеров.
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>Архитектура или тип приложения</strong></th>
-<th><strong>Контейнеры Linux</strong></th>
-<th><strong>Контейнеры Windows</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Микрослужбы в контейнерах</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>Монолитные приложения</td>
-<td>.NET Core</td>
-<td><p>.NET Framework</p>
-<p>.NET Core</p></td>
-</tr>
-<tr class="odd">
-<td>Достижение высочайшей производительности и масштабируемости</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>Перенос имеющихся (устаревших) приложений Windows Server в контейнеры</td>
-<td>--</td>
-<td>.NET Framework</td>
-</tr>
-<tr class="odd">
-<td>Разработка новых приложений на основе контейнеров (с нуля)</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>ASP.NET Core</td>
-<td>.NET Core</td>
-<td><p>.NET Core (рекомендуется)</p>
-<p>.NET Framework</p></td>
-</tr>
-<tr class="odd">
-<td>ASP.NET 4 (MVC 5, веб-API 2 и веб-формы)</td>
-<td>--</td>
-<td>.NET Framework</td>
-</tr>
-<tr class="even">
-<td>Службы SignalR</td>
-<td>.NET Core 2.1 или более поздней версии</td>
-<td><p>.NET Framework</p>
-<p>.NET Core 2.1 или более поздней версии</p></td>
-</tr>
-<tr class="odd">
-<td>WCF, WF и другие устаревшие платформы</td>
-<td>WCF в .NET Core (только клиентская библиотека WCF)</td>
-<td><p>.NET Framework</p>
-<p>WCF в .NET Core (только клиентская библиотека WCF)</p></td>
-</tr>
-<tr class="even">
-<td>Использование служб Azure</td>
-<td><p>.NET Core</p>
-<p>(В конечном итоге все службы Azure будут предоставлять клиентские пакеты SDK для .NET Core)</p></td>
-<td><p>.NET Framework</p>
-<p>.NET Core</p>
-<p>(В конечном итоге все службы Azure будут предоставлять клиентские пакеты SDK для .NET Core)</p></td>
-</tr>
-</tbody>
-</table>
+| Архитектура и тип приложения | Контейнеры Linux | Контейнеры Windows |
+|-------------------------|------------------|--------------------|
+| Микрослужбы в контейнерах | .NET Core | .NET Core |
+| Монолитные приложения | .NET Core | .NET Framework <br/> .NET Core |
+| Достижение высочайшей производительности и масштабируемости | .NET Core | .NET Core |
+| Перенос имеющихся (устаревших) приложений Windows Server в контейнеры | -- | .NET Framework |
+| Разработка новых приложений на основе контейнеров (с нуля) | .NET Core | .NET Core |
+| ASP.NET Core | .NET Core | .NET Core (рекомендуется) <br/> .NET Framework |
+| ASP.NET 4 (MVC 5, веб-API 2 и веб-формы) | -- | .NET Framework |
+| Службы SignalR | .NET Core 2.1 или более поздней версии | .NET Framework <br/> .NET Core 2.1 или более поздней версии |
+| WCF, WF и другие устаревшие платформы | WCF в .NET Core (только клиентская библиотека) | .NET Framework <br/> WCF в .NET Core (только клиентская библиотека) |
+| Использование служб Azure | .NET Core <br/> (В конечном итоге все службы Azure будут предоставлять клиентские пакеты SDK для .NET Core) | .NET Framework <br/> .NET Core <br/> (В конечном итоге все службы Azure будут предоставлять клиентские пакеты SDK для .NET Core) |
 
 >[!div class="step-by-step"]
 >[Назад](net-framework-container-scenarios.md)

@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 2a0ebcf61fd96df6d2235962c1f1e9cac3fb22e6
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117105"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181967"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine устарела
 
-Константа <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> помечена как [Obsolete](xref:System.ObsoleteAttribute) (Устаревшая) в .NET Framework, но ранее соответствующий атрибут отсутствовал в библиотеке .NET Core 3.0.
+Начиная с .NET Core 3.0 (предварительная версия 8), константа <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> помечена как [Obsolete](xref:System.ObsoleteAttribute).
 
 #### <a name="version-introduced"></a>Представленная версия
 
 .NET Core 3.0 (предварительная версия 8)
 
-#### <a name="details"></a>Подробные сведения
+#### <a name="details"></a>Сведения
 
-Начиная с .NET Core 3.0 (предварительная версия 8) атрибут [Obsolete](xref:System.ObsoleteAttribute) был применен к константе <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> для обеспечения соответствия `vbNewLine` в .NET Framework. При использовании константы `vbNewLine` выдается предупреждение компилятора. 
+Начиная с .NET Core 3.0 (предварительная версия 8), к константе <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> применяется атрибут [Obsolete](xref:System.ObsoleteAttribute). При использовании константы выдается предупреждение компилятора. В предыдущих версиях .NET Core и .NET Framework она не была помечена как нерекомендуемая.
 
-В предыдущих версиях .NET Core `vbNewLine` не вызывает предупреждение компилятора.
-
+Это изменение было внесено для поддержки Visual Basic в качестве языка для разработки на нескольких платформах. Константа `vbNewLine` эквивалентна `\r\n`, последовательности символов новой строки в Windows. В системах на основе Unix символ новой строки — `\n`.
+ 
 #### <a name="recommended-action"></a>Рекомендуемое действие
 
 Сообщение атрибута [Obsolete](xref:System.ObsoleteAttribute) для `vbNewLine` включает следующие рекомендации:

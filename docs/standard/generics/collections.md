@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948928"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353942"
 ---
 # <a name="generic-collections-in-net"></a>Универсальные коллекции в .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "69948928"
  Универсальная структура <xref:System.Nullable%601> позволяет использовать типы значений так, как будто им могут быть присвоены значения `null`. Это может быть полезно при работе с запросами к базе данных, где поля, содержащие типы значений, могут опускаться. Параметр универсального типа может принимать значения любого типа.  
   
 > [!NOTE]
-> В C# и Visual Basic нет необходимости явно использовать <xref:System.Nullable%601>, так как язык имеет синтаксис для типов, допускающий значение null. См. статьи о [типах, допускающих значение null (руководство по программированию на C#)](../../csharp/programming-guide/nullable-types/index.md) или [типах значений, допускающих значение null (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> В C# и Visual Basic нет необходимости явно использовать <xref:System.Nullable%601>, так как язык имеет синтаксис для типов, допускающий значение null. См. статьи о [типах значений, допускающих значение NULL (руководство по программированию на C#)](../../csharp/programming-guide/nullable-types/index.md) или [типах значений, допускающих значение NULL (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
   
  Универсальная структура <xref:System.ArraySegment%601> предоставляет способ выделения диапазона элементов в одномерном массиве любого типа, начинающемся с нуля. Параметр универсального типа является типом элементов массива.  
   

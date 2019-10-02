@@ -2,20 +2,20 @@
 title: Элемент <remove> для schemeSettings (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 4a891eb8a2fd2d66b6435e2ae774ecd4a157c0f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0dc8c6111157ba1f23d4a0449bee8f6626027e23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659222"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697852"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>\<Удаление элемента > для schemeSettings (Параметры URI)
+# <a name="remove-element-for-schemesettings-uri-settings"></a>Элемент > @no__t 0remove для schemeSettings (Параметры URI)
 Удаляет параметр схемы для имени схемы.  
   
- \<configuration>  
-\<> URI  
-\<schemeSettings >  
-\<Удалить >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69659222"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
+ По этой причине класс <xref:System.Uri?displayProperty=nameWithType> сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в конструктор класса <xref:System.Uri?displayProperty=nameWithType> приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69659222"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана конфигурация, используемая <xref:System.Uri> классом, который удаляет все параметры схемы для схемы HTTP.  
+ В следующем примере показана конфигурация, используемая классом <xref:System.Uri>, которая удаляет все параметры схемы для схемы HTTP.  
   
 ```xml  
 <configuration>  

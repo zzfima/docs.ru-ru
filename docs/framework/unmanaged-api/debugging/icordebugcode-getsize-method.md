@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747493"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700800"
 ---
 # <a name="icordebugcodegetsize-method"></a>Метод ICorDebugCode::GetSize
-Получает размер в байтах двоичного кода, представленного «ICorDebugCode».  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a>Параметры  
+
+Возвращает размер двоичного кода, представленного этим "ICorDebugCode", в байтах.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a>Параметры
+
  `pcBytes`  
- [out] Указатель на размер в байтах двоичного файла кода, что этот `ICorDebugCode` представляет объект.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** CorDebug.idl, CorDebug.h  
-  
- **Библиотека:** CorGuids.lib  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>См. также
+ заполняет Указатель на размер двоичного кода, который представляет этот объект `ICorDebugCode`, в байтах.
+
+## <a name="requirements"></a>Требования
+
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+
+ **Заголовок.** CorDebug. idl, CorDebug. h
+
+ **Библиотечная** Коргуидс. lib
+
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

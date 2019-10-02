@@ -2,12 +2,12 @@
 title: Новые возможности C# 7.2
 description: Обзор новых возможностей в C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d559f07c501b2a79472d01e2815b50cd8f0f57a5
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105746"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332317"
 ---
 # <a name="whats-new-in-c-72"></a>Новые возможности C# 7.2
 
@@ -63,7 +63,7 @@ ms.locfileid: "70105746"
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="_private-protected_-access-modifier"></a>_private protected_ — модификатор доступа
+## <a name="private-protected-access-modifier"></a>*private protected* — модификатор доступа
 
 Новый составной модификатор доступа `private protected` указывает, что доступ к члену может осуществляться содержащим классом или производными классами, которые объявлены в рамках одной сборки. В отличие от модификатора `protected internal`, который разрешает доступ производным классам или классам из той же сборки, `private protected` ограничивает доступ только для производных классов, объявленных в рамках одной сборки.
 

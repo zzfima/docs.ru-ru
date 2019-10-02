@@ -1,0 +1,93 @@
+- name: Разработка ориентированных на облако приложений .NET для Azure
+  href: index.md
+  items:
+    - name: 'Общие сведения о приложениях, ориентированных на облако'
+      href: introduction.md
+      items:
+        - name: Определение ориентации на облако
+          href: definition.md
+        - name: Приложения-кандидаты для ориентации на облако
+          href: candidate-apps.md
+    - name: Знакомство с эталонным приложением eShopOnContainers
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: Сопоставление eShopOnContainers со службами Azure
+          href: map-eshoponcontainers-azure-services.md
+        - name: Развертывание eShopOnContainers в Azure
+          href: deploy-eshoponcontainers-azure.md
+        - name: Централизованная конфигурация
+          href: centralized-configuration.md
+    - name: 'Масштабирование приложений .NET, ориентированных на облако'
+      href: scale-applications.md
+      items:
+        - name: Использование контейнеров и оркестраторов
+          href: leverage-containers-orchestrators.md
+        - name: Использование бессерверных функций
+          href: leverage-serverless-functions.md
+        - name: Сочетание контейнеров и бессерверных подходов
+          href: combine-containers-serverless-approaches.md
+        - name: Развертывание контейнеров в Azure
+          href: deploy-containers-azure.md
+        - name: Масштабирование контейнеров и бессерверных приложений
+          href: scale-containers-serverless.md
+        - name: Другие варианты развертывания
+          href: other-deployment-options.md
+    - name: 'Модели связи, ориентированные на облако'
+      href: communication-patterns.md
+      items:
+        - name: Взаимодействие с внешними клиентами
+          href: front-end-communication.md
+        - name: Связь между службами
+          href: service-to-service-communication.md
+        - name: REST и gRPC
+          href: rest-grpc.md
+        - name: Инфраструктура связи для слоя взаимодействия между службами
+          href: service-mesh-communication-infrastructure.md
+    - name: Распределенные данные
+      href: distributed-data.md
+      items:
+        - name: 'Шаблоны данных, ориентированные на облако'
+          href: data-patterns.md
+        - name: Хранилище данных в Azure
+          href: azure-data-storage.md
+    - name: 'Устойчивость, ориентированная на облако'
+      href: resiliency.md
+      items:
+        - name: Шаблоны устойчивости приложения
+          href: application-resiliency-patterns.md
+        - name: Устойчивость облачной инфраструктуры с Azure
+          href: infrastructure-resiliency-azure.md
+        - name: Устойчивое взаимодействие
+          href: resilient-communications.md
+    - name: Мониторинг и работоспособность
+      href: monitoring-health.md
+      items:
+        - name: Шаблоны наблюдаемости
+          href: observability-patterns.md
+        - name: Ведение журналов с использованием эластичного стека
+          href: logging-with-elastic-stack.md
+        - name: Мониторинг в Службах Azure Kubernetes
+          href: monitoring-azure-kubernetes.md
+        - name: Azure Monitor
+          href: azure-monitor.md
+    - name: идентификации
+      href: identity.md
+      items:
+        - name: 'Проверка подлинности и авторизация в приложениях, ориентированных на облако'
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: Сервер удостоверений
+          href: identity-server.md
+    - name: Безопасность
+      href: security.md
+      items:
+        - name: 'Безопасность Azure для приложений, ориентированных на облако'
+          href: azure-security.md
+    - name: 'Средства DevOps, ориентированные на облако'
+      href: devops.md
+      items:
+        - name: Инфраструктура как код
+          href: infrastructure-as-code.md
+        - name: 'Пакеты приложений, ориентированных на облако'
+          href: application-bundles.md

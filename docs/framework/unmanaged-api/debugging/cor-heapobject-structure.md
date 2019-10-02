@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a236103b8ca1501ae4c9109c1fd9e78865ab9c9c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740599"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274037"
 ---
-# <a name="corheapobject-structure"></a>Структура COR_HEAPOBJECT
+# <a name="cor_heapobject-structure"></a>Структура COR_HEAPOBJECT
 Предоставляет сведения об объекте, находящемся в управляемой куче.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,30 +41,30 @@ typedef struct _COR_HEAPOBJECT {
 |Член|Описание|  
 |------------|-----------------|  
 |`address`|Адрес объекта в памяти.|  
-|`size`|Общий размер объекта, в байтах.|  
-|`type`|Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) токен, представляющий тип объекта.|  
+|`size`|Общий размер объекта в байтах.|  
+|`type`|Токен [COR_TYPEID](cor-typeid-structure.md) , представляющий тип объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `COR_HEAPOBJECT` экземпляры можно получить посредством перечисления [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) объект интерфейса, который заполняется путем вызова [ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) метод.  
+ `COR_HEAPOBJECT`экземпляры можно получить, перечисляя объект интерфейса [икордебугхеапенум](icordebugheapenum-interface.md) , который заполняется путем вызова метода [метод ICorDebugProcess5:: енумератехеап](icordebugprocess5-enumerateheap-method.md) .  
   
- Объект `COR_HEAPOBJECT` экземпляр предоставляет сведения о активный объект в управляемой куче, либо об объекте, который не является корневым, любой объект, но еще не были собраны сборщик мусора.  
+ `COR_HEAPOBJECT` Экземпляр предоставляет сведения об активном объекте в управляемой куче или об объекте, который не является корневым для какого-либо объекта, но еще не был собран сборщиком мусора.  
   
- Для повышения производительности `COR_HEAPOBJECT.address` поле является `CORDB_ADDRESS` значение вместо ICorDebugValue интерфейс значение, используемое во многом API отладки. Чтобы получить объект ICorDebugValue для адреса заданного объекта, можно передать `CORDB_ADDRESS` значение [ICorDebugProcess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) метод.  
+ Для повышения производительности `COR_HEAPOBJECT.address` поле `CORDB_ADDRESS` является значением, а не значением интерфейса ICorDebugValue, которое используется в большинстве API отладки. Чтобы получить объект ICorDebugValue для заданного адреса объекта, можно передать `CORDB_ADDRESS` значение в метод [метод ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
   
- Для повышения производительности `COR_HEAPOBJECT.type` поле является `COR_TYPEID` значение вместо ICorDebugType интерфейс значение, используемое во многом API отладки. Чтобы получить объект ICorDebugType идентификатора заданного типа, можно передать `COR_TYPEID` значение [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) метод.  
+ Для повышения производительности `COR_HEAPOBJECT.type` поле `COR_TYPEID` является значением, а не значением интерфейса ICorDebugType, которое используется в большинстве API отладки. Чтобы получить объект ICorDebugType для заданного идентификатора типа, можно передать `COR_TYPEID` значение в метод [метод ICorDebugProcess5:: жеттипефортипеид](icordebugprocess5-gettypefortypeid-method.md) .  
   
- `COR_HEAPOBJECT` Структура включает в себя COM-интерфейса с подсчетом ссылок. Если вы получите `COR_HEAPOBJECT` экземпляр из перечислителя, вызвав [ICorDebugHeapEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) метод, впоследствии необходимо освободить ссылку.  
+ Структура `COR_HEAPOBJECT` включает в себя COM-интерфейс, подсчитанный по ссылке. При извлечении `COR_HEAPOBJECT` экземпляра из перечислителя путем вызова метода [икордебугхеапенум:: Next](icordebugheapenum-next-method.md) необходимо впоследствии освободить ссылку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

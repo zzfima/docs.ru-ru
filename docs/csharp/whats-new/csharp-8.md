@@ -1,17 +1,17 @@
 ---
-title: Новые возможности C# 8.0. Руководство по языку C#
-description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+title: Новые возможности в C# 8.0. Руководство по языку C#
+description: Обзор новых функций, доступных в C# 8.0.
+ms.date: 09/20/2019
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117821"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396037"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
-Для языка C# представлено множество улучшений, которые вы уже можете опробовать.
+В C# 8.0 добавлены следующие функции и улучшения языка C#:
 
 - [Члены только для чтения](#readonly-members)
 - [Члены интерфейса по умолчанию](#default-interface-members)
@@ -28,10 +28,8 @@ ms.locfileid: "71117821"
 - [Индексы и диапазоны](#indices-and-ranges).
 - [Присваивание объединения со значением NULL](#null-coalescing-assignment)
 - [Неуправляемые сконструированные типы](#unmanaged-constructed-types)
+- [Выражение stackalloc во вложенных выражениях](#stackalloc-in-nested-expressions)
 - [Улучшение интерполированных строк verbatim](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Эта статья последний раз обновлялась для предварительной версии 5 C# 8.0.
 
 В остальных разделах этой статьи кратко описываются эти возможности. Здесь приведены ссылки на эти подробные руководства и обзоры (если они доступны). Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`:
 
@@ -377,18 +375,18 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>Индексы и диапазоны
 
-Диапазоны и индексы обеспечивают лаконичный синтаксис для указания поддиапазонов массива: [string](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>.
+Диапазоны и индексы обеспечивают лаконичный синтаксис для доступа к отдельным элементам или диапазонам в последовательности.
 
 Поддержка языков опирается на два новых типа и два новых оператора:
 
 - <xref:System.Index?displayProperty=nameWithType> представляет индекс в последовательности.
-- Оператор `^`, который указывает, что индекс указан относительно конца последовательности.
+- Оператор `^` (индекс с конца), который указывает, что индекс указан относительно конца последовательности.
 - <xref:System.Range?displayProperty=nameWithType> представляет вложенный диапазон последовательности.
-- Оператор диапазона (`..`), который задает начало и конец диапазона в качестве своих операндов.
+- Оператор диапазона `..`, который задает начало и конец диапазона в качестве своих операндов.
 
 Начнем с правил для использования в индексах. Рассмотрим массив `sequence`. Индекс `0` совпадает с `sequence[0]`. Индекс `^0` совпадает с `sequence[sequence.Length]`. Обратите внимание, что `sequence[^0]` создает исключение так же, как и `sequence[sequence.Length]`. Для любого числа `n` индекс `^n` совпадает с `sequence.Length - n`.
 
-Диапазон указывает *начало* и *конец* диапазона. Начало диапазона включается, а окончание — исключается, то есть *start* входит в диапазон, а *end* — не входит. Диапазон `[0..^0]` представляет весь диапазон так же, как `[0..sequence.Length]` представляет весь диапазон. 
+Диапазон указывает *начало* и *конец* диапазона. Начало диапазона включается, а окончание — исключается, то есть *start* входит в диапазон, а *end* — не входит. Диапазон `[0..^0]` представляет весь диапазон так же, как `[0..sequence.Length]` представляет весь диапазон.
 
 Рассмотрим несколько примеров. Обратите внимание на следующий массив, который помечен индексом от начала и от конца:
 
@@ -447,6 +445,8 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
+Индексы и диапазоны поддерживаются не только массивами. Кроме того, можно использовать индексы и диапазоны со [строкой](../language-reference/builtin-types/reference-types.md#the-string-type) (<xref:System.Span%601> или <xref:System.ReadOnlySpan%601>). Дополнительные сведения см. в разделе [Поддержка типа для индексов и диапазонов](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+
 Вы можете изучить сведения об индексах и диапазонах адресов в руководстве [Индексы и диапазоны](../tutorials/ranges-indexes.md).
 
 ## <a name="null-coalescing-assignment"></a>Присваивание объединения со значением NULL
@@ -493,6 +493,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 Дополнительные сведения см. в разделе [Неуправляемые типы](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="stackalloc-in-nested-expressions"></a>Выражение stackalloc во вложенных выражениях
+
+Начиная с C# 8.0, если результат выражения [stackalloc](../language-reference/operators/stackalloc.md) имеет тип <xref:System.Span%601?displayProperty=nameWithType> или <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, можно использовать выражение `stackalloc` в других выражениях:
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Улучшение интерполированных строк verbatim
 

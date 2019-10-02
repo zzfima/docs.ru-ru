@@ -2,14 +2,14 @@
 title: Руководство по .NET Core
 description: .NET Core — это модульная высокопроизводительная реализация .NET для создания приложений Windows, Linux и Mac. Для начала получите дополнительную информацию о .NET Core.
 author: richlander
-ms.date: 08/01/2018
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117084"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216218"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
@@ -19,19 +19,19 @@ ms.locfileid: "71117084"
 
 Просмотрите [руководства по .NET Core](tutorials/index.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут. Если вы хотите попробовать поработать с .NET Core в браузере, перейдите на страницу онлайн-руководства [Числа в C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="download-net-core-22"></a>Скачать .NET Core 2.2
+## <a name="download-net-core"></a>Скачать .NET Core
 
-Скачайте [пакет SDK для .NET Core 2.2](https://dotnet.microsoft.com/download), чтобы опробовать .NET Core на компьютере под управлением Windows, macOS или Linux. Если вы предпочитаете использовать контейнеры Docker, перейдите на страницу [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/).
+Скачайте [пакет SDK для .NET Core](https://www.microsoft.com/net/download), чтобы поработать с .NET Core на компьютере Windows, macOS или Linux. Если вы предпочитаете использовать контейнеры Docker, перейдите на страницу[.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 Если вам нужна другая версия .NET Core, все версии доступны на [странице скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-## <a name="net-core-22"></a>.NET Core 2.2
+## <a name="net-core-30"></a>.NET Core 3.0
 
-[.NET Core 2.2](whats-new/dotnet-core-2-2.md) — самая новая версия .NET Core. Ее новые возможности: развертывание с учетом платформ, перехватчики при запуске, проверка подлинности AAD в Azure SQL и поддержка Windows ARM32.
+.NET Core 3.0 является последней версией. Новые возможности включают поддержку Windows Desktop в Windows Presentation Foundation (WPF) и Windows Forms, комплексную разработку веб-приложений C# с помощью Blazor, новые усовершенствования SignalR и службы SignalR Azure, новые функции языка C# 8 и многое другое. См. [полный список новых возможностей .NET Core 3.0](./whats-new/dotnet-core-3-0.md).
 
 ## <a name="create-your-first-application"></a>Создание первого приложения
 
-После установки пакета SDK для .NET Core откройте командную строку. Для создания и запуска приложения C# введите следующие команды `dotnet`.
+После установки пакета SDK для .NET Core откройте командную строку. Для создания и запуска приложения C# введите следующие команды `dotnet`:
 
 ```dotnetcli
 dotnet new console
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>Поддержка
 
-Поддержкой платформы .NET Core занимается [корпорация Майкрософт](https://dotnet.microsoft.com/platform/support/policy). Поддержка предоставляется для операционных систем Windows, macOS и Linux. Для повышения безопасности и качества платформа обновляется несколько раз в год, обычно ежемесячно.
+Поддержку платформы .NET Core реализует [корпорация Майкрософт](https://dotnet.microsoft.com/platform/support/policy). Поддержка предоставляется для операционных систем Windows, macOS и Linux. Для повышения безопасности и качества платформа обновляется несколько раз в год, обычно ежемесячно.
 
 Двоичные дистрибутивы .NET Core собираются и тестируются в Azure на серверах Майкрософт и поддерживаются наравне с другими продуктами Майкрософт.
 

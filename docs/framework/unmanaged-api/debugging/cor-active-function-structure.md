@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740821"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274146"
 ---
-# <a name="coractivefunction-structure"></a>Структура COR_ACTIVE_FUNCTION
-Содержит сведения о функциях, которые в данный момент активны в кадрах потока. Эта структура используется [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) метод.  
+# <a name="cor_active_function-structure"></a>Структура COR_ACTIVE_FUNCTION
+Содержит сведения о функциях, которые в данный момент активны в кадрах потока. Эта структура используется методом [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,22 +42,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`pAppDomain`|Указатель на владельца домена приложения `ilOffset` поля.|  
-|`pModule`|Указатель на владельца модуля `ilOffset` поля.|  
-|`pFunction`|Указатель на владельца функции `ilOffset` поля.|  
-|`ilOffset`|Смещение промежуточного языка MSIL Microsoft кадра.|  
+|`pAppDomain`|Указатель на владельца `ilOffset` домена приложения для поля.|  
+|`pModule`|Указатель на владельца `ilOffset` поля.|  
+|`pFunction`|Указатель на владельца `ilOffset` функции поля.|  
+|`ilOffset`|Смещение кадра на языке MSIL.|  
 |`flags`|Зарезервировано для будущего расширения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl  
+ **Заголовок.** CorDebug. idl  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

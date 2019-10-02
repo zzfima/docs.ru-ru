@@ -1,17 +1,16 @@
 ---
-title: Начало работы с .NET Core в macOS
+title: Учебник. Создание решения .NET Core в macOS с помощью Visual Studio Code
 description: В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core в Visual Studio Code.
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849356"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117370"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>Начало работы с .NET Core в macOS
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Учебник. Создание решения .NET Core в macOS с помощью Visual Studio Code
 
 В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core для macOS. Вы узнаете, как создавать проекты и модульные тесты, использовать средства отладки и включать библиотеки сторонних разработчиков с помощью [NuGet](https://www.nuget.org/).
 
@@ -32,21 +31,21 @@ ms.locfileid: "70849356"
 
 Запустите Visual Studio Code. Нажмите клавишу <kbd>CTRL</kbd>+<kbd>\`</kbd> (символ обратной кавычки или обратного апострофа) или выберите **Вид > Встроенный терминал**, чтобы открыть встроенный терминал в Visual Studio Code. Если вы предпочитаете работать не в среде Visual Studio Code, можете открыть внешнюю оболочку в Explorer, выбрав пункт меню проводника **Открыть в командной строке** (в Mac и Linux — **Открыть в терминале**).
 
-Для начала нужно создать файл решения, который выступает в качестве контейнера для одного или нескольких проектов .NET Core. В терминале создайте папку *golden* и откройте ее. Эта папка — корневой каталог вашего решения. Запустите команду [`dotnet new`](../tools/dotnet-new.md), чтобы создать новое решение — *golden.sln*:
+Для начала нужно создать файл решения, который выступает в качестве контейнера для одного или нескольких проектов .NET Core. В окне терминала выполните команду [`dotnet new`](../tools/dotnet-new.md), чтобы создать новое решение *golden.sln* в новой папке с именем *golden*:
 
-```console
-dotnet new sln
+```dotnetcli
+dotnet new sln -o golden
 ```
 
-Из папки *golden* выполните следующую команду, чтобы создать проект библиотеки. Эта команда создает два файла *library.csproj* и *Class1.cs* в папке *library*:
+Перейдите в новую папку *golden* и выполните следующую команду, чтобы создать проект библиотеки. Эта команда создает два файла — *library.csproj* и *Class1.cs* — в папке *library*:
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 Выполните команду [`dotnet sln`](../tools/dotnet-sln.md), чтобы добавить только что созданный проект *library.csproj* в решение:
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -64,7 +63,7 @@ dotnet sln add library/library.csproj
 
 Наши библиотечные методы сериализуют и десериализуют объекты в формате JSON. Для поддержки сериализации и десериализации JSON добавьте ссылку на пакет NuGet `Newtonsoft.Json`. Команда `dotnet add` добавляет в проект новые элементы. Чтобы добавить ссылку на пакет NuGet, выполните команду [`dotnet add package`](../tools/dotnet-add-package.md), указав имя пакета:
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -78,7 +77,7 @@ dotnet add library package Newtonsoft.Json
 
 Выполните команду [`dotnet restore`](../tools/dotnet-restore.md) ([см. примечание](#dotnet-restore-note)), которая восстанавливает зависимости и создает подкаталог *obj* в каталоге *library*. Этот подкаталог содержит три файла, в том числе файл *project.assets.json*:
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -101,7 +100,7 @@ namespace Library
 
 Соберите библиотеку, выполнив команду [`dotnet build`](../tools/dotnet-build.md). Эта команда создает файл *library.dll* в каталоге *golden/library/bin/Debug/netstandard1.4*:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -109,19 +108,19 @@ dotnet build
 
 Создайте тестовый проект для библиотеки. Из папки *golden* создайте тестовый проект:
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 Добавьте тестовый проект в решение:
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 Добавьте ссылку на проект библиотеки, созданной в предыдущем разделе, чтобы компилятор мог найти и использовать проект библиотеки. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -155,7 +154,7 @@ namespace TestApp
 
 Из папки *golden* выполните следующие команды:
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -164,7 +163,7 @@ dotnet test test-library/test-library.csproj
 
 Откройте файл *UnitTest1.cs* и измените проверочное утверждение с `Assert.NotEqual` на `Assert.Equal`. Выполните следующую команду из папки *golden*, чтобы повторно запустить тест, который на этот раз завершится успешно:
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -174,19 +173,19 @@ dotnet test test-library/test-library.csproj
 
 Создайте новое консольное приложение из папки *golden*:
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 Добавьте проект консольного приложения в решение:
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 Создайте зависимость от библиотеки, выполнив команду `dotnet add reference`:
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -205,7 +204,7 @@ using Library;
 
 Выполните следующую команду `dotnet run`, чтобы запустить исполняемый файл. Значение `dotnet run` параметра `-p` указывает проект для основного приложения. Приложение выводит строку "The answer is 42".
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740772"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274207"
 ---
-# <a name="cordebugsteprange-structure"></a>Структура COR_DEBUG_STEP_RANGE
+# <a name="cor_debug_step_range-structure"></a>Структура COR_DEBUG_STEP_RANGE
 Содержит сведения о смещении для диапазона кода.  
   
- Эта структура используется [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) метод.  
+ Эта структура используется методом [ICorDebugStepper:: степранже](icordebugstepper-steprange-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,16 +45,16 @@ typedef struct {
 |`endOffset`|Смещение конца диапазона.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl  
+ **Заголовок.** CorDebug. idl  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Метод StepRange](icordebugstepper-steprange-method.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

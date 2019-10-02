@@ -21,7 +21,7 @@
               href: how-to-handle-exceptions-in-parallel-loops.md
             - name: Практическое руководство. Повышение скорости выполнения небольших тел циклов
               href: how-to-speed-up-small-loop-bodies.md
-            - name: Как выполнить перебор каталогов с файлами с помощью параллельного класса
+            - name: Практическое руководство. перебор каталогов с файлами с помощью параллельного класса
               href: how-to-iterate-file-directories-with-the-parallel-class.md
         - name: Асинхронное программирование на основе задач
           href: task-based-asynchronous-programming.md
@@ -34,7 +34,7 @@
               href: task-cancellation.md
             - name: Обработка исключений
               href: exception-handling-task-parallel-library.md
-            - name: Практическое руководство. Использование функции Parallel.Invoke для выполнения параллельных операций
+            - name: Практическое руководство. Использование Parallel.Invoke для выполнения параллельных операций
               href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
             - name: Практическое руководство. Возврат значения из задачи
               href: how-to-return-a-value-from-a-task.md
@@ -44,7 +44,7 @@
               href: how-to-create-pre-computed-tasks.md
             - name: Практическое руководство. Переход по двоичному дереву с помощью параллельных задач
               href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
-            - name: Практическое руководство. Извлечение вложенной задачи из оболочки
+            - name: Практическое руководство. Извлечение вложенной задачи
               href: how-to-unwrap-a-nested-task.md
             - name: Практическое руководство. Запрет присоединения дочерней задачи к ее родительской задаче
               href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
@@ -53,13 +53,13 @@
           items:
             - name: Практическое руководство. Запись и чтение сообщений в блоке потока данных
               href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
-            - name: Практическое руководство. Реализация шаблона потока данных "производитель-получатель"
+            - name: Практическое руководство. Реализация шаблона потока данных "производитель-потребитель"
               href: how-to-implement-a-producer-consumer-dataflow-pattern.md
             - name: Практическое руководство. Выполнение действий при получении данных блоком потоков данных
               href: how-to-perform-action-when-a-dataflow-block-receives-data.md
             - name: Пошаговое руководство. Создание конвейера потока данных
               href: walkthrough-creating-a-dataflow-pipeline.md
-            - name: Практическое руководство. Удаление связей с блоками потоков данных
+            - name: Практическое руководство.  Удаление связей с блоками потоков данных
               href: how-to-unlink-dataflow-blocks.md
             - name: Пошаговое руководство. Использование потока данных в приложении Windows Forms
               href: walkthrough-using-dataflow-in-a-windows-forms-application.md

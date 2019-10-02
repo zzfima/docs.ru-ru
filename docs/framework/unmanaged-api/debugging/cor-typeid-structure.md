@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 426420175a7d05f39859b9e217a888a8c01b6d63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740499"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273998"
 ---
-# <a name="cortypeid-structure"></a>Структура COR_TYPEID
+# <a name="cor_typeid-structure"></a>Структура COR_TYPEID
 Содержит идентификатор типа.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,23 +40,23 @@ typedef struct COR_TYPEID{
 |Член|Описание|  
 |------------|-----------------|  
 |`token1`|Первый токен.|  
-|`token2`|Второй маркер.|  
+|`token2`|Второй токен.|  
   
 ## <a name="remarks"></a>Примечания  
- `COR_TYPEID` Структура возвращается несколько методов отладки, которые предоставляют сведения об объектах, чтобы участвовать в сборе мусора. Он может затем передается как аргумент, другие методы отладки, предоставляющие дополнительные сведения об этом элементе. Например, путем перечисления [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) объекта, вы можете извлечь отдельные [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) объекты, представляющие отдельные объекты в управляемой куче. Затем можно передать `COR_TYPEID` значение из `COR_HEAPOBJECT.type` поле [ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) метод для извлечения ICorDebugType объект, предоставляющий сведения о типе об объекте.  
+ `COR_TYPEID` Структура возвращается несколькими методами отладки, которые предоставляют сведения об объектах, которые должны быть собраны в мусор. Затем его можно передать в качестве аргумента другим методам отладки, которые предоставляют дополнительные сведения об этом элементе. Например, при перечислении объекта [икордебугхеапенум](icordebugheapenum-interface.md) можно получить отдельные объекты [COR_HEAPOBJECT](cor-heapobject-structure.md) , представляющие отдельные объекты в управляемой куче. Затем можно передать `COR_TYPEID` значение `COR_HEAPOBJECT.type` из поля в метод [метод ICorDebugProcess5:: жеттипефортипеид](icordebugprocess5-gettypefortypeid-method.md) , чтобы получить объект ICorDebugType, предоставляющий сведения о типе объекта.  
   
- Объект `COR_TYPEID` объект должен быть непрозрачным. Не следует получить доступ к его отдельных полей или управления этим состоянием. Его единственная используется как идентификатор, который предоставляется в качестве `out` параметр в вызов метода и который может в свою очередь, можно передать в другие методы для предоставления дополнительных сведений.  
+ `COR_TYPEID` Объект должен быть непрозрачным. Доступ к отдельным полям не должен осуществляться или манипулировать им. Его единственное использование — это идентификатор, предоставляемый как `out` параметр в вызове метода, который, в свою очередь, может быть передан другим методам для предоставления дополнительных сведений.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

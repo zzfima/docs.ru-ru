@@ -23,7 +23,7 @@ ms.locfileid: "70046190"
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Ссылка на веб-страницу с помощью элемента управления RichTextBox
 
-1. Задайте для http://www.microsoft.com/ свойства строку, содержащую допустимый URL-адрес (например, ""). <xref:System.Windows.Forms.RichTextBox.Text%2A>
+1. Задайте для"http://www.microsoft.com/"свойства строку, содержащую допустимый URL-адрес (например, ). <xref:System.Windows.Forms.RichTextBox.Text%2A>
 
 2. Убедитесь, <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> что свойство имеет `true` значение (по умолчанию).
 

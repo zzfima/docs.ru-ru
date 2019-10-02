@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 88212fb2c04eab61b719a161ae01ccdda9a6110d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95a67a552efacf9e77dc3ebc3e0187817a6d82e2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640723"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698582"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>Атрибут Extension может быть применен только к объявлениям Module, Sub или Function
-Единственный способ расширения типа данных в Visual Basic является определение метода расширения внутри стандартного модуля. Метод расширения может быть `Sub` процедуры или `Function` процедуры. Все методы расширения должны быть помечены атрибутом расширения, `<Extension()>`, из <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> пространства имен. Кроме того модуль, содержащий метод расширения может быть помечен таким же образом. Не используется атрибут расширения является допустимым.  
+Единственным способом расширения типа данных в Visual Basic является определение метода расширения внутри стандартного модуля. Метод расширения может быть процедурой `Sub` или `Function`. Все методы расширения должны быть помечены атрибутом расширения, `<Extension()>`, из пространства имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. При необходимости модуль, содержащий метод расширения, может быть помечен таким же образом. Использование атрибута расширения другим образом не допускается.  
   
  **Идентификатор ошибки:** BC36550  
   
@@ -23,12 +23,12 @@ ms.locfileid: "64640723"
   
 - Удалите атрибут расширения.  
   
-- Измените расширение в качестве метода, определенного в заключающего модуля.  
+- Перепроектирование расширения как метода, определенного во внешнем модуле.  
   
 ## <a name="example"></a>Пример  
- В следующем примере определяется `Print` метод `String` тип данных.  
+ В следующем примере определяется метод `Print` для типа данных `String`.  
   
-```  
+```vb  
 Imports StringUtility  
 Imports System.Runtime.CompilerServices  
 Namespace StringUtility  

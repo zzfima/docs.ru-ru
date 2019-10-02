@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: bb545d9da73154c237f55809a3a72ff0f121ce1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5c36639d76a6fbd4e36f39486369a55a56a6e3ea
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253019"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396280"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ограничения параметров типа (руководство по программированию на C#)
 
@@ -20,7 +20,7 @@ ms.locfileid: "70253019"
 
 |Ограничение|ОПИСАНИЕ|
 |----------------|-----------------|
-|`where T : struct`|Аргумент типа должен быть типом значения. Допускается задание любого типа значения, кроме <xref:System.Nullable%601>. См. дополнительные сведения о [типах, допускающих значение NULL](../nullable-types/index.md).|
+|`where T : struct`|Аргумент типа должен быть типом значения. Допускается задание любого типа значения, кроме <xref:System.Nullable%601>. См. дополнительные сведения о [типах значений, допускающих значение NULL](../nullable-types/index.md).|
 |`where T : class`|Аргумент типа должен быть ссылочным типом. Это ограничение также применяется к любому типу класса, интерфейса, делегата или массива.|
 |`where T : notnull`|Аргумент типа должен быть типом, не допускающим значения NULL. Аргумент может быть ссылочным типом, не допускающим значения NULL в C# 8.0 или более поздней версии или типом значения, не допускающим значения NULL. Это ограничение также применяется к любому типу класса, интерфейса, делегата или массива.|
 |`where T : unmanaged`|Аргумент типа должен быть [неуправляемым типом](../../language-reference/builtin-types/unmanaged-types.md).|

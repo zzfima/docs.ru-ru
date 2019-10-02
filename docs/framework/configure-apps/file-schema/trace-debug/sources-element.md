@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926959"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699209"
 ---
-# <a name="sources-element"></a>\<sources >, элемент
+# <a name="sources-element"></a>Элемент > @no__t 0sources
 Указывает источники трассировки, инициирующие сообщения трассировки.  
   
- \<configuration>  
-\<> System. Diagnostics  
-\<источники >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sources >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69926959"
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как с помощью `<sources>` элемента добавить источник `mySource` трассировки и задать уровень для коммутатора источника с именем `sourceSwitch`. Добавляется прослушиватель трассировки консоли, который записывает данные трассировки на консоль.  
+ В следующем примере показано, как использовать элемент `<sources>`, чтобы добавить источник трассировки `mySource` и задать уровень для коммутатора источника с именем `sourceSwitch`. Добавляется прослушиватель трассировки консоли, который записывает данные трассировки на консоль.  
   
 ```xml  
 <configuration>  

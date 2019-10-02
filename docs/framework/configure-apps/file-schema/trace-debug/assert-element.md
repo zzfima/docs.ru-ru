@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30ec24aefcf8c4d1e110238a2c60a958eded5545
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927186"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699389"
 ---
-# <a name="assert-element"></a>\<Assert >, элемент
+# <a name="assert-element"></a>Элемент > @no__t 0assert
 Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.  
   
- \<configuration>  
-\<> System. Diagnostics  
-\<утверждение >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<assert >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,7 +56,7 @@ ms.locfileid: "69927186"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Оба атрибута в  **\<элементе Assert >** являются необязательными. Можно отключить окна сообщений, не указывая файл для записи в него, или указать файл для записи сообщений при включении входящих в него окон сообщений.  
+ Оба атрибута в элементе **\<assert >** являются необязательными. Можно отключить окна сообщений, не указывая файл для записи в него, или указать файл для записи сообщений при включении входящих в него окон сообщений.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как отключить отображение окон сообщений при вызове **Debug. Assert** и записи сообщений в `c:\log.txt`.  

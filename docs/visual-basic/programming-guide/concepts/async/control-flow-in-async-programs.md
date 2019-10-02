@@ -2,12 +2,12 @@
 title: Поток управления в асинхронных программах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 265efde93cec87594a0407309b58b6bdf11817af
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74942ec3d293485ea6aae3940d1715af8de67c90
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630607"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352117"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Поток управления в асинхронных программах (Visual Basic)
 
@@ -64,7 +64,7 @@ End Class
 
 Каждое из расположений, обозначенное от одного до шести, отображает сведения о текущем состоянии программы. Выводятся следующие результаты.
 
-```
+```console
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -220,9 +220,9 @@ Length of the downloaded string: 33946.
 
 10. Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .
 
-    Должен появиться следующий результат.
+    Должны отобразиться следующие выходные данные:
 
-    ```
+    ```console
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -274,7 +274,7 @@ Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.micro
 
 Можно представить себе задачу как обещание `client.GetStringAsync` создать в конечном итоге фактическую строку. В то же время, если у `AccessTheWebAsync` есть работа, не зависящая от обещанной строки, от `client.GetStringAsync`, эта работа будет продолжена во время ожидания `client.GetStringAsync`. В этом примере следующие строки вывода, которые обозначены как "THREE", представляют возможность сделать независимую работу.
 
-```
+```console
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -286,7 +286,7 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask
 ```
 
-На следующем рисунке показан поток управления `client.GetStringAsync` путем к `getStringTask` назначению `getStringTask` и из создания в приложение оператора await.
+На следующем рисунке показан поток управления от `client.GetStringAsync` до присваивания `getStringTask` и создания `getStringTask` в приложении оператора await.
 
 ![Шаг THREE (три)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
 
@@ -307,9 +307,9 @@ Dim urlContents As String = Await getStringTask
 Dim getLengthTask As Task(Of Integer) = AccessTheWebAsync()
 ```
 
-Как и в `AccessTheWebAsync`, `startButton_Click` может продолжать работу, которая не зависит от результатов асинхронной задачи (`getLengthTask`), во время ожидания задачи. Следующие выходные строки представляют такую работу.
+Как и в `AccessTheWebAsync`, `startButton_Click` может продолжать работу, которая не зависит от результатов асинхронной задачи (`getLengthTask`), во время ожидания задачи. Следующие выходные строки представляют эту работу:
 
-```
+```console
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -327,9 +327,9 @@ Dim contentLength As Integer = Await getLengthTask
 
 ### <a name="step-five"></a>Шаг ПЯТЬ
 
-Когда `client.GetStringAsync` уведомляет о завершении, обработка в `AccessTheWebAsync` возобновляется и может продолжаться после оператора await. Приведенные ниже строки выходных данных представляют возобновление обработки.
+Когда `client.GetStringAsync` уведомляет о завершении, обработка в `AccessTheWebAsync` возобновляется и может продолжаться после оператора await. Следующие строки выходных данных представляют возобновление обработки:
 
-```
+```console
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -350,7 +350,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 Приведенные ниже строки выходных данных представляют возобновление обработки в `startButton_Async`:
 
-```
+```console
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.
@@ -371,5 +371,5 @@ Dim contentLength As Integer = Await getLengthTask
 
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))
-- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Пример использования Async. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

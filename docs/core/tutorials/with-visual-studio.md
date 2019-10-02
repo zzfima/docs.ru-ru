@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660448"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039599"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Создание приложения Hello World на C# с помощью пакета SDK для .NET Core в Visual Studio 2017
 
@@ -18,7 +18,7 @@ ms.locfileid: "69660448"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core". Приложение можно разрабатывать с помощью .NET Core 1.1 или .NET Core 2.0.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core". Приложение можно разработать с помощью .NET Core версии 2.1 или выше.
 
 Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Windows](../windows-prerequisites.md).
 

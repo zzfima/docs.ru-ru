@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619563"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701196"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.
 Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен. Рассмотрите возможность применения оператора Await к результату вызова.  
@@ -83,7 +83,7 @@ ms.locfileid: "64619563"
   
      В этом примере при выборе Call #1 или Call #2, неожидаемый асинхронный метод (`CalledMethodAsync`) завершается после того, как завершатся вызвавший его метод (`CallingMethodAsync`) и метод, вызвавший этот метод (`StartButton_Click`). Последняя строка в следующем выводе показывает, когда завершается вызванный метод. Вход и выход из обработчика событий, который вызывает `CallingMethodAsync` , в полном примере помечены в выводе.  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664032"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697846"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<Удаление элемента > для элемент connectionManagement (параметры сети)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>Элемент > @no__t 0remove для элемент connectionManagement (параметры сети)
 Удаляет IP-адрес или DNS-имя из списка управления подключениями.  
   
- \<configuration>  
-\<> System. NET  
-\<Элемент connectionManagement >  
-\<Удалить >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,15 +52,15 @@ ms.locfileid: "69664032"
 |[Элемент connectionManagement](connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
   
 ## <a name="remarks"></a>Примечания  
- `remove` Элемент удаляет запись списка управления подключениями для указанного сервера.  
+ Элемент `remove` удаляет запись списка управления подключениями для указанного сервера.  
   
- Значение `address` атрибута должно быть допустимым IP-адресом или именем узла.  
+ Значение атрибута `address` должно быть допустимым IP-адресом или именем узла.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляются все записи списка управления подключениями для `www.adventure-works.com` сервера, а затем настраивается приложение для использования четырех подключений к `www.contoso.com` серверу и двух подключений ко всем остальным серверам.  
+ В следующем примере удаляются все записи списка управления подключениями для сервера `www.adventure-works.com`, а затем приложение настраивается для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
   
 ```xml  
 <configuration>  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b419ecf451b79808e545525c7b8761175f390200
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926984"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699293"
 ---
-# <a name="sharedlisteners-element"></a>\<Элемент > Шаредлистенерс
+# <a name="sharedlisteners-element"></a>Элемент > @no__t 0sharedListeners
 Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  По умолчанию эти прослушиватели не получают никаких трассировок, поэтому невозможно получить эти прослушиватели во время выполнения. Прослушиватели, идентифицированные как общие прослушиватели, можно добавлять в источники или трассировки по имени.  
   
- \<configuration>  
-\<> System. Diagnostics  
-\<Шаредлистенерс >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,12 +53,12 @@ ms.locfileid: "69926984"
 |`system.diagnostics`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
   
 ## <a name="remarks"></a>Примечания  
- Добавление прослушивателя в коллекцию общих прослушивателей не сделает его активным прослушивателем. Он по-прежнему должен быть добавлен в источник трассировки или в трассировку путем добавления в `Listeners` коллекцию для этого элемента Trace. Классы прослушивателей в .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.  
+ Добавление прослушивателя в коллекцию общих прослушивателей не сделает его активным прослушивателем. Он по-прежнему должен быть добавлен в источник трассировки или в трассировку путем добавления его в коллекцию `Listeners` для этого элемента Trace. Классы прослушивателей в .NET Framework являются производными от класса <xref:System.Diagnostics.TraceListener>.  
   
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<sharedListeners>` элемент для добавления прослушивателя `console` в `Listeners` коллекцию для <xref:System.Diagnostics.TraceSource> классов и <xref:System.Diagnostics.Trace> . Прослушиватель трассировки консоли записывает данные трассировки в консоль с помощью вызовов либо <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>к, либо к.  
+ В следующем примере показано, как использовать элемент `<sharedListeners>` для добавления прослушивателя `console` в коллекцию `Listeners` для классов <xref:System.Diagnostics.TraceSource> и <xref:System.Diagnostics.Trace>. Прослушиватель трассировки консоли записывает данные трассировки в консоль с помощью вызовов либо <xref:System.Diagnostics.TraceSource>, либо <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  

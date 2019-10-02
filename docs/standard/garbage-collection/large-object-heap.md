@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4663c42b784334f66318c61d531ab4cee2f8b02e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929140"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354055"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Куча больших объектов в системах Windows
 
@@ -211,7 +211,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 Ниже приведен пример выходных данных анализа кучи больших объектов:
 
-```
+```console
 0:003> .loadby sos mscorwks
 0:003> !eeheap -gc
 Number of GC Heaps: 1
@@ -252,7 +252,7 @@ Total 133 objects
 
    Ниже приведен пример фрагментации в пространстве виртуальной памяти:
 
-   ```
+   ```console
    0:000> !address
    00000000 : 00000000 - 00010000
    Type     00000000

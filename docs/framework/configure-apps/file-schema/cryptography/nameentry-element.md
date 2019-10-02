@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: d8f4d4aa9c80990cdf858da9fcdf6465438866cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927559"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699777"
 ---
-# <a name="nameentry-element"></a>\<Элемент > элементе nameentry
+# <a name="nameentry-element"></a>Элемент > @no__t 0nameEntry
 Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.  
   
- \<configuration>  
-\<> mscorlib  
-\<Криптографисеттингс >  
-\<Криптонамемаппинг >  
-\<Элементе nameentry >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69927559"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, реализуемого криптографическим классом.|  
-|**class**|Обязательный атрибут.<br /><br /> Задает значение для атрибута **Name** в [ \<элементе > cryptoClass](cryptoclass-element.md) .|  
+|**class**|Обязательный атрибут.<br /><br /> Задает значение для атрибута **Name** в элементе [\<cryptoClass >](cryptoclass-element.md) .|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет.  
@@ -51,10 +51,10 @@ ms.locfileid: "69927559"
 |`system.web`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
   
 ## <a name="remarks"></a>Примечания  
- Атрибут **Name** может быть именем одного из абстрактных классов, <xref:System.Security.Cryptography> найденных в пространстве имен. При вызове метода **CREATE** для абстрактного криптографического класса имя абстрактного класса передается <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> в метод. **CreateFromName** возвращает экземпляр типа, указанного атрибутом **класса** . Если атрибут **Name** имеет короткое имя, например RSA, это имя можно использовать при вызове метода **CreateFromName** .  
+ Атрибут **Name** может быть именем одного из абстрактных классов, найденных в пространстве имен <xref:System.Security.Cryptography>. При вызове метода **CREATE** для абстрактного криптографического класса имя абстрактного класса передается методу <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>. **CreateFromName** возвращает экземпляр типа, указанного атрибутом **класса** . Если атрибут **Name** имеет короткое имя, например RSA, это имя можно использовать при вызове метода **CreateFromName** .  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<элемент элементе nameentry >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку "RSA" в <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> использовать метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать элемент **\<nameEntry >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для возврата объекта `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 3366a0d1a90667cf1d9b58b211892ad264849c59
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e3e05973f2ef72fef5e429bc98cc58b4b21f2c2
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633231"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592153"
 ---
 # <a name="gettype-operator-visual-basic"></a>Оператор GetType (Visual Basic)
-Возвращает <xref:System.Type> объекта для указанного типа. <xref:System.Type> Объект предоставляет сведения о типе, например его свойства, методы и события.  
+Возвращает объект <xref:System.Type> для указанного типа. Объект <xref:System.Type> предоставляет сведения о типе, например его свойствах, методах и событиях.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 GetType(typename)  
 ```  
   
@@ -27,33 +27,33 @@ GetType(typename)
   
 |Параметр|Описание|  
 |---|---|  
-|`typename`|Имя типа, для которого необходимы сведения.|  
+|`typename`|Имя типа, для которого требуется получить сведения.|  
   
 ## <a name="remarks"></a>Примечания  
- `GetType` Оператор возвращает <xref:System.Type> для указанного `typename`. Можно передать имя любого типа в `typename`. Это поведение характеризуется следующим образом.  
+ Оператор `GetType` возвращает объект <xref:System.Type> для указанного `typename`. Имя любого определенного типа можно передать в `typename`. Это поведение характеризуется следующим образом.  
   
-- Любой Visual Basic тип данных, таких как `Boolean` или `Date`.  
+- Любой тип данных Visual Basic, например `Boolean` или `Date`.  
   
-- Любой платформы .NET Framework класс, структура, модуль или интерфейс, такие как <xref:System.ArgumentException?displayProperty=nameWithType> или <xref:System.Double?displayProperty=nameWithType>.  
+- Любой .NET Framework класс, структура, модуль или интерфейс, например <xref:System.ArgumentException?displayProperty=nameWithType> или <xref:System.Double?displayProperty=nameWithType>.  
   
-- Любой класс, структура, модуль или интерфейс, определяемый приложением.  
+- Любой класс, структура, модуль или интерфейс, определенный приложением.  
   
-- Любой массив, определяемый приложением.  
+- Любой массив, определенный приложением.  
   
-- Любому делегату, заданных вашим приложением.  
+- Любой делегат, определенный приложением.  
   
-- Любое перечисление, определенное в Visual Basic, .NET Framework или приложения.  
+- Любое перечисление, определенное Visual Basic, .NET Framework или вашего приложения.  
   
- Если вы хотите получить объект типа переменной объекта, используйте <xref:System.Type.GetType%2A?displayProperty=nameWithType> метод.  
+ Если требуется получить объект типа объектной переменной, используйте метод <xref:System.Type.GetType%2A?displayProperty=nameWithType>.  
   
- `GetType` Оператор может быть полезно в следующих случаях:  
+ Оператор `GetType` может быть полезен в следующих случаях:  
   
-- Доступ к метаданным для типа необходимо во время выполнения. <xref:System.Type> Предоставляет метаданные, такие как члены типа и сведения о развертывании. Это необходимо, например, чтобы отобразить сборку. Дополнительные сведения см. в разделе <xref:System.Reflection?displayProperty=nameWithType>.  
+- Необходимо получить доступ к метаданным для типа во время выполнения. Объект <xref:System.Type> предоставляет метаданные, такие как члены типов и сведения о развертывании. Это необходимо, например, для отражения сборки. Дополнительные сведения см. в разделе <xref:System.Reflection?displayProperty=nameWithType>.  
   
-- Вы хотите сравнить две объектные ссылки, чтобы увидеть, если они относятся к экземплярам того же типа. Если это так, `GetType` возвращает ссылки на один и тот же <xref:System.Type> объекта.  
+- Необходимо сравнить две ссылки на объект, чтобы определить, ссылаются ли они на экземпляры одного типа. В противном случае `GetType` возвращает ссылки на один и тот же объект <xref:System.Type>.  
   
 ## <a name="example"></a>Пример  
- В приведенных ниже примерах `GetType` оператор используется.  
+ В следующих примерах показано использование оператора `GetType`.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   

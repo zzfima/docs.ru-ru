@@ -1,5 +1,5 @@
 ---
-title: '&amp;= Оператор (Visual Basic)'
+title: Оператор &amp; = (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82d791e5d66c301442c99d2cc73e3172c3e30f17
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608441"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591628"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= Оператор (Visual Basic)
-Сцепляет `String` выражение `String` переменной или свойства и присваивает результат переменной или свойству.  
+# <a name="amp-operator-visual-basic"></a>Оператор &amp; = (Visual Basic)
+Сцепляет выражение `String` к переменной или свойству `String` и присваивает результат переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 variableorproperty &= expression  
 ```  
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Любой `String` переменной или свойству.  
+ Обязательный. Любая переменная или свойство `String`.  
   
  `expression`  
  Обязательный. Произвольное выражение `String` .  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, на левой стороне `&=` оператор может быть простой скалярной переменной, свойства или элемента массива. Не может быть переменной или свойству [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). `&=` Оператор объединяет `String` выражение, право на `String` переменной или свойству слева от него и присваивает результат переменной или свойству слева от него.  
+ Элемент в левой части оператора `&=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). Оператор `&=` объединяет выражение `String` непосредственно с переменной или свойством `String` слева и присваивает результат переменной или свойству слева.  
   
 ## <a name="overloading"></a>Перегрузка  
- [& Оператор](../../../visual-basic/language-reference/operators/concatenation-operator.md) может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Перегрузка `&` оператор влияет на поведение `&=` оператор. Если код использует `&=` для класса или структуры, перегружающей `&`, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Оператор &](../../../visual-basic/language-reference/operators/concatenation-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `&` влияет на поведение оператора `&=`. Если в коде используется `&=` для класса или структуры, которая перегружает `&`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `&=` оператор для объединения двух `String` переменные и назначает полученное значение первой переменной.  
+ В следующем примере оператор `&=` используется для сцепления двух переменных `String` и присваивания результата первой переменной.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   

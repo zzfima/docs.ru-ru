@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743847"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392453"
 ---
 # <a name="structs-c-programming-guide"></a>Структуры (Руководство по программированию на C#)
 
@@ -29,14 +29,14 @@ ms.locfileid: "67743847"
 - Структуры могут объявлять конструкторы, имеющие параметры.
 - Структура не может наследовать от другой структуры или класса и не может быть базовой для класса. Все структуры наследуют непосредственно от <xref:System.ValueType>, который наследует от <xref:System.Object>.  
 - Структуры могут реализовывать интерфейсы.
-- Структура не может быть `null`, а переменная структуры не может быть назначена `null`, если переменная не объявлена как тип, допускающий значение null.
+- Структура не может быть `null`, а переменная структуры не может быть назначена `null`, если переменная не объявлена как тип, допускающий значение NULL.
   
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
 - [Классы и структуры](index.md)
 - [Классы](classes.md)
-- [Типы, допускающие значения NULL](../nullable-types/index.md)
+- [Типы значений, допускающие значение NULL](../nullable-types/index.md)
 - [Имена идентификаторов](../inside-a-program/identifier-names.md)
 - [Использование структур](using-structs.md)
 - [Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (Руководство по программированию на C#)](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

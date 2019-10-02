@@ -9,33 +9,33 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-ms.openlocfilehash: 96f846db3f705972a4749460bf2c410483258572
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: dbe34cba8f01320fbf37beea65ed95656e09395c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238425"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697146"
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>Практическое руководство. Привязка к источнику данных ADO.NET
 
-В этом примере показано, как привязать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> управления ADO.NET `DataSet`.
+В этом примере показано, как привязать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> элемент управления к ADO.NET `DataSet`.
 
 ## <a name="example"></a>Пример
 
-В этом примере объект `OleDbConnection` используется для подключения к источнику данных, который представляет собой файл `Access MDB`, указанный в строке подключения. После установления соединения создается объект `OleDbDataAdapter`. Объект `OleDbDataAdapter` выполняет запрос select [!INCLUDE[TLA#tla_sql](../../../../includes/tlasharptla-sql-md.md)] для извлечения набора записей из базы данных. Результаты выполнения команды [!INCLUDE[TLA2#tla_sql](../../../../includes/tla2sharptla-sql-md.md)] хранятся в `DataTable` элементе `DataSet` путем вызова метода `Fill` класса `OleDbDataAdapter`. `DataTable` в этом примере назван `BookTable`. Задается <xref:System.Windows.FrameworkElement.DataContext%2A> свойство <xref:System.Windows.Controls.ListBox> для `DataSet` объекта.
+В этом примере объект `OleDbConnection` используется для подключения к источнику данных, который представляет собой файл `Access MDB`, указанный в строке подключения. После установления соединения создается объект `OleDbDataAdapter`. Объект `OleDbDataAdapter` выполняет инструкцию SELECT язык SQL (SQL) для получения набора записей из базы данных. Результаты выполнения команды SQL хранятся в `DataTable` `DataSet` путем вызова метода `Fill` `OleDbDataAdapter`. `DataTable` в этом примере назван `BookTable`. Затем в примере задается свойство <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Controls.ListBox> для объекта `DataSet`.
 
 [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
 [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]
 
-Мы можем затем привязать <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство <xref:System.Windows.Controls.ListBox> для `BookTable` из `DataSet`:
+Затем можно привязать свойство <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> <xref:System.Windows.Controls.ListBox> к `BookTable` `DataSet`:
 
 [!code-xaml[ADODataSet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]
 
-`BookItemTemplate` является <xref:System.Windows.DataTemplate> , определяющий способ отображения данных:
+`BookItemTemplate` — <xref:System.Windows.DataTemplate>, определяющая, как отображаются данные:
 
 [!code-xaml[ADODataSet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#3)]
 
-`IntColorConverter` преобразует `int` в цвет. С помощью этого преобразователя <xref:System.Windows.Controls.TextBlock.Background%2A> цвет третьего <xref:System.Windows.Controls.TextBlock> отображается зеленым Если значение `NumPages` является менее 350 и красное, в противном случае. Здесь не приведена реализация преобразователя.
+`IntColorConverter` преобразует `int` в цвет. При использовании этого преобразователя цвет <xref:System.Windows.Controls.TextBlock.Background%2A> третьего <xref:System.Windows.Controls.TextBlock> отображается зеленым, если значение `NumPages` меньше 350 и красный в противном случае. Здесь не приведена реализация преобразователя.
 
 ## <a name="see-also"></a>См. также
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929939"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592117"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Указывает, что объявление типа — это частичное определение типа.  
@@ -31,7 +31,7 @@ ms.locfileid: "69929939"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
 Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]  
     [ Inherits classname ]  
@@ -45,7 +45,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Термин|Определение|  
 |---|---|  
-|`attrlist`|Необязательный параметр. Список атрибутов, применяемых к этому событию. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) необходимо заключить в угловые скобки`< >`().|  
+|`attrlist`|Необязательный параметр. Список атрибутов, применяемых к этому событию. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) необходимо заключить в угловые скобки (`< >`).|  
 |`accessmodifier`|Необязательный параметр. Указывает, какой код может получить доступ к этому событию. См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Необязательный параметр. См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Необязательный параметр. См. раздел [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
@@ -66,7 +66,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Все правила для создания класса, структуры, интерфейса и модуля, например для использования модификатора и наследования, применяются при создании частичного типа.  
   
-## <a name="best-practices"></a>Советы и рекомендации  
+## <a name="best-practices"></a>Рекомендации  
   
 - В обычных условиях не следует разбивать один тип на два или более объявлений. Поэтому в большинстве случаев ключевое `Partial` слово не требуется.  
   

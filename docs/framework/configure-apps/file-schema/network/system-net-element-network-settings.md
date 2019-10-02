@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663960"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697508"
 ---
 # <a name="systemnet-element-network-settings"></a>Элемент \<system.Net> (сетевые параметры)
 Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.  
   
- \<configuration>  
-\<> System. NET  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. net >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,10 +53,10 @@ ms.locfileid: "69663960"
 |[Настройка](../configuration-element.md)|Содержит параметры для всех пространств имен.|  
   
 ## <a name="remarks"></a>Примечания  
- <xref:System.Net> [ ЭлементSystem.NET>содержитпараметрыдляклассоввсвязанных\<](system-net-element-network-settings.md) дочерних пространствах имен. Параметры настройки модулей проверки подлинности, управления подключениями, параметров почты, прокси-сервера и модулей запросов Интернета для получения данных от узлов Интернета.  
+ Элемент [@no__t -1system. net >](system-net-element-network-settings.md) содержит параметры для классов в <xref:System.Net> и связанных дочерних пространствах имен. Параметры настройки модулей проверки подлинности, управления подключениями, параметров почты, прокси-сервера и модулей запросов Интернета для получения данных от узлов Интернета.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана типичная конфигурация, <xref:System.Net> используемая классами.  
+ В следующем примере показана типичная конфигурация, используемая классами <xref:System.Net>.  
   
 ```xml  
 <configuration>  

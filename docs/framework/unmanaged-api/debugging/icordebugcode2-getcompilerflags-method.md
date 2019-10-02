@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ba19ae908dbf37052c0a74ef8f99090f3313ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1605ee92c8743606ff0e958f112a2d90af43e03a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748577"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700718"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>Метод ICorDebugCode2::GetCompilerFlags
-Получает флаги, задающие условия, при которых этот объект кода был либо just-in-time (JIT) скомпилированы или созданы с помощью генератора образов в машинном коде (Ngen.exe).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-HRESULT GetCompilerFlags (  
-    [out] DWORD *pdwFlags  
-);  
-```  
-  
-## <a name="parameters"></a>Параметры  
+
+Возвращает флаги, указывающие условия, при которых этот объект кода был либо JIT-скомпилирован, либо создан с помощью генератора образов в машинном коде (Ngen. exe).
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT GetCompilerFlags (
+    [out] DWORD *pdwFlags
+);
+```
+
+## <a name="parameters"></a>Параметры
+
  `pdwFlags`  
- [out] Указатель на значение [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) перечисление, указывающее поведение JIT-компилятора или генератора образов в машинном коде.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** CorDebug.idl, CorDebug.h  
-  
- **Библиотека:** CorGuids.lib  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>См. также
+ заполняет Указатель на значение перечисления [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) , которое указывает поведение JIT-компилятора или генератора образов в машинном код.
+
+## <a name="requirements"></a>Требования
+
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Заголовок.** CorDebug. idl, CorDebug. h
+
+ **Библиотечная** Коргуидс. lib
+
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ 

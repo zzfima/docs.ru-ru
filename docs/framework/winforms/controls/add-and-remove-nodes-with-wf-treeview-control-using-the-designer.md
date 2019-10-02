@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040077"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Практическое руководство. Добавление и удаление узлов с использованием элемента управления TreeView в формах Windows Forms с помощью конструктора
@@ -24,11 +24,11 @@ ms.locfileid: "69040077"
 
 1. Выберите элемент управления <xref:System.Windows.Forms.TreeView>.
 
-2. В окне **"свойства** " нажмите кнопку **с** многоточием![(...) в окно свойств кнопки Visual Studio <xref:System.Windows.Forms.TreeView.Nodes%2A> .](./media/visual-studio-ellipsis-button.png)) рядом со свойством.
+2. В окне " **Свойства** " нажмите кнопку **с многоточием** (![...) в окно свойств кнопки Visual Studio <xref:System.Windows.Forms.TreeView.Nodes%2A> .](./media/visual-studio-ellipsis-button.png)) рядом со свойством.
 
      Откроется **Редактор TreeNode** .
 
-3. Для добавления узлов должен существовать корневой узел. Если он не существует, необходимо сначала добавить корень, нажав кнопку **Добавить корень** . Затем можно добавить дочерние узлы, выбрав корень или любой другой узел и нажав кнопку **Добавить** дочерний элемент.
+3. Для добавления узлов должен существовать корневой узел. Если он не существует, необходимо сначала добавить корень, нажав кнопку **Добавить корень** . Затем можно добавить дочерние узлы, выбрав корень или любой другой узел и нажав кнопку **Добавить дочерний** элемент.
 
 4. Чтобы удалить узлы, выберите узел для удаления и нажмите кнопку **Удалить** .
 

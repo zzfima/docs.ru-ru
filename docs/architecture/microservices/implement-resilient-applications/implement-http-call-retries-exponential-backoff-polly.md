@@ -2,12 +2,12 @@
 title: Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки Polly
 description: Узнайте, как обрабатывать сбои HTTP-запросов с помощью Polly и HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674571"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331980"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly
 
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 С помощью Polly вы определяете политику повтора с числом повторных попыток, конфигурацией экспоненциальной задержки и действиями, которые необходимо выполнить в случае исключения HTTP (например, запись ошибки в журнал). В этом случае политика настроена на шесть попыток с экспоненциальной выдержкой, начиная с двух секунд. 
-
-Будет предпринято шесть попыток, и период между попытками будет экспоненциально возрастать начиная с двух секунд.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Добавление стратегии обработки колебания задержки в политику повтора
 

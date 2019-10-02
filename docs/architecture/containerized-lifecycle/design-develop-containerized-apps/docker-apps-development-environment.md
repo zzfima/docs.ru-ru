@@ -2,12 +2,12 @@
 title: Среда разработки приложений Docker
 description: Ознакомьтесь с наиболее важными средствами разработки, поддерживающими жизненный цикл разработки Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672431"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214303"
 ---
 # <a name="development-environment-for-docker-apps"></a>Среда разработки приложений Docker
 
@@ -20,7 +20,6 @@ ms.locfileid: "68672431"
 Если вам нужен упрощенный кроссплатформенный редактор, поддерживающий любой язык программирования, вы можете использовать Visual Studio Code и CLI Docker. Эти решения обеспечивают простой, но в то же время эффективный рабочий процесс разработки. Установив Docker для Mac или Docker для Windows (среду разработки), разработчики приложений Docker могут использовать единый интерфейс CLI Docker (среду выполнения), чтобы создавать приложения как для Windows, так и для Linux. Кроме того, Visual Studio Code поддерживает расширения для Docker с IntelliSense для файлов Dockerfile и ярлыками для выполнения команд Docker из редактора.
 
 > [!NOTE]
->
 > Чтобы скачать Visual Studio Code, перейдите на страницу <https://code.visualstudio.com/download>.
 >
 > Чтобы скачать Docker для Mac и Windows, перейдите на страницу <https://www.docker.com/products/docker>.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017986"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392861"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Практическое руководство. Использование инструмента определения схемы XML для создания классов и документов схемы XML
 С помощью инструмента определения схемы XML (Xsd.exe) можно создать схему XML, которая описывает класс, или создать класс, определенный схемой XML. В процедурах ниже показана методика выполнения таких операций.  
@@ -23,11 +23,11 @@ ms.locfileid: "62017986"
   
 2. Передайте схему XML как аргумент в инструмент определения схемы XML, который создаст набор классов, точно соответствующих схеме XML, например:  
   
-    ```  
+    ```console  
     xsd mySchema.xsd  
     ```  
   
-     Средство может обрабатывать только схемы, которые ссылаются на спецификацию XML консорциума W3C от 16 марта 2001 г. Другими словами, пространство имен схемы XML должно быть "http://www.w3.org/2001/XMLSchema" как показано в следующем примере.  
+     Средство может обрабатывать только схемы, которые ссылаются на спецификацию XML консорциума W3C от 16 марта 2001 г. Иными словами, пространство имен XML-схемы должно иметь значение "http://www.w3.org/2001/XMLSchema", как показано в следующем примере.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -46,7 +46,7 @@ ms.locfileid: "62017986"
   
 3. Передайте библиотеку DLL как аргумент в Xsd.exe, например:  
   
-    ```  
+    ```console  
     xsd MyFile.dll  
     ```  
   
@@ -59,5 +59,5 @@ ms.locfileid: "62017986"
 - [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Инструмент определения схемы XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Практическое руководство. Сериализация объекта @ no__t-0
+- [Практическое руководство. Десериализация объекта @ no__t-0

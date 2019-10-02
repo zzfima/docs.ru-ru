@@ -2,12 +2,12 @@
 title: Отмена асинхронной задачи или списка задач (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630953"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353128"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
 
@@ -125,16 +125,16 @@ ms.locfileid: "68630953"
     End Function
     ```
 
-5. Если программа не отменяется, она выдает представленный ниже результат.
+5. Если вы не отмените работу программы, она выдаст следующие выходные данные:
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Если вы нажмете кнопку **Отмена**, прежде чем программа завершит загрузку содержимого, будет выдан представленный ниже результат.
+    Если нажать кнопку **Отмена** до того, как программа закончит загрузку содержимого, программа выдаст следующие выходные данные:
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
@@ -222,9 +222,9 @@ ms.locfileid: "68630953"
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Если программа не отменяется, она выдает представленный ниже результат.
+5. Если вы не отмените работу программы, она выдаст следующие выходные данные:
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ ms.locfileid: "68630953"
 
     При нажатии кнопки **Отмена** до завершения загрузки выходные данные будут включать объем данных, загруженных до отмены.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.

@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957197"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306338"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей
 
@@ -73,13 +76,13 @@ ms.locfileid: "69957197"
    |Form1|AccessibleDescription|Форма заказа|
    ||AccessibleName|Форма заказа|
    ||Размер шрифта|10|
-   ||Текст|Форма заказа пиццы|
+   ||Text|Форма заказа пиццы|
    |PictureBox|name|logo|
    ||AccessibleDescription|Порция пиццы|
    ||AccessibleName|Логотип компании|
-   ||Изображение|Любой значок или растровое изображение|
+   ||Image|Любой значок или растровое изображение|
    |Метка|name|companyLabel|
-   ||Текст|Вкусная пицца|
+   ||Text|Вкусная пицца|
    ||TabIndex|1|
    ||AccessibleDescription|Название компании|
    ||AccessibleName|Название компании|
@@ -87,34 +90,34 @@ ms.locfileid: "69957197"
    ||Forecolor|Желтый|
    ||Font size|18|
    |Метка|name|customerLabel|
-   ||Текст|&Имя|
+   ||Text|&Имя|
    ||TabIndex|2|
    ||AccessibleDescription|Подпись имени заказчика|
    ||AccessibleName|Подпись имени заказчика|
    ||UseMnemonic|True|
    |TextBox|name|customerName|
-   ||Текст|(нет)|
+   ||Text|(нет)|
    ||TabIndex|3|
    ||AccessibleDescription|Имя заказчика|
    ||AccessibleName|Имя заказчика|
    |GroupBox|name|sizeOptions|
    ||AccessibleDescription|Размеры порции пиццы|
    ||AccessibleName|Размеры порции пиццы|
-   ||Текст|Размер пиццы|
+   ||Text|Размер пиццы|
    ||TabIndex|4|
    |RadioButton|name|smallPizza|
-   ||Текст|&Маленькая 300 р.|
+   ||Text|&Маленькая 300 р.|
    ||Установлен|True|
    ||TabIndex|0|
    ||AccessibleDescription|Маленькая пицца|
    ||AccessibleName|Маленькая пицца|
    |RadioButton|name|largePizza|
-   ||Текст|&Большая 500 р.|
+   ||Text|&Большая 500 р.|
    ||TabIndex|1|
    ||AccessibleDescription|Большая пицца|
    ||AccessibleName|Большая пицца|
    |Метка|name|toppingsLabel|
-   ||Текст|&Начинки (40 р. за каждую)|
+   ||Text|&Начинки (40 р. за каждую)|
    ||TabIndex|5|
    ||AccessibleDescription|Метка начинки|
    ||AccessibleName|Метка начинки|
@@ -125,20 +128,20 @@ ms.locfileid: "69957197"
    ||AccessibleName|Выбор начинок|
    ||Элементы|Пепперони, колбаса, грибы|
    |Кнопка|name|порядок|
-   ||Текст|&Порядок|
+   ||Text|&Порядок|
    ||TabIndex|7|
    ||AccessibleDescription|Сумма заказа|
    ||AccessibleName|Сумма заказа|
    |Кнопка|name|cancel|
-   ||Текст|О&тмена|
+   ||Text|О&тмена|
    ||TabIndex|8|
    ||AccessibleDescription|Отмена заказа|
    ||AccessibleName|Отмена заказа|
    |MainMenu|name|theMainMenu|
    |MenuItem|name|fileCommands|
-   ||Текст|&Файл|
+   ||Text|&Файл|
    |MenuItem|name|exitApp|
-   ||Текст|Вы&ход|
+   ||Text|Вы&ход|
 
    Форма будет выглядеть примерно так, как на следующем рисунке:
 
@@ -165,96 +168,88 @@ ms.locfileid: "69957197"
 1. Создайте метод, задающий для метки системные цвета.
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. Вызовите процедуру `SetColorScheme` в конструкторе форм (`Public Sub New()` в Visual Basic; `public class Form1` в Visual C#). Чтобы получить доступ к конструктору в Visual Basic, необходимо развернуть область с меткой **Код, автоматически созданный конструктором форм Windows**.
+2. Вызовите процедуру `SetColorScheme` в конструкторе форм (`Public Sub New()` в Visual Basic; `public Form1()` в Visual C#). Чтобы получить доступ к конструктору в Visual Basic, необходимо развернуть область с меткой **Код, автоматически созданный конструктором форм Windows**.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. Создайте процедуру обработки события с соответствующей подписью для реагирования на событие <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. Добавьте код в конструктор форм после вызова метода `InitializeComponents`, чтобы подключить процедуру обработки событий к системному событию. Этот метод вызывает процедуру `SetColorScheme`.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ ms.locfileid: "69957197"
     > Код системного события выполняется в потоке, отдельном от основного приложения. Если не освободить событие, то код, связанный с событием, будет выполняться даже после закрытия программы.
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 

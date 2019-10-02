@@ -5,13 +5,13 @@ hide_bc: true
 title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: f58e1c03f529629556f79881aebd69afc9ed9bde
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928946"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351655"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928946"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "70928946"
         <h1>Документация по .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Документация</a>
+                <a data-default="true" href="#docs">Документы</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">Руководства по .NET</a>
@@ -118,6 +118,7 @@ ms.locfileid: "70928946"
                                                 <p><a href="/dotnet/core/porting/">Перенос из .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
                                                 <p><a href="/ef/core/">EF Core</a></p>
+                                                <p><a href="/dotnet/desktop-wpf/">Руководство по классическим приложениям — WPF</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -330,7 +331,7 @@ ms.locfileid: "70928946"
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Интернет</a>
+                        <a href="#web">Веб-приложения</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
@@ -581,17 +582,37 @@ ms.locfileid: "70928946"
                                 </a>
                             </li>
                             <li>
+                                <a href="/dotnet/desktop-wpf/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Windows Presentation Foundation (.NET Core)</h3>
+                                                    <p>WPF предоставляет разработчикам модель на основе XAML для создания классических приложений на Windows.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                        <img src="/dotnet/images/hub/net-docs-desktop-2-framework.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Windows Presentation Foundation (WPF)</h3>
+                                                    <h3>Windows Presentation Foundation (.NET Framework)</h3>
                                                     <p>WPF предоставляет разработчикам модель на основе XAML для создания классических приложений на Windows.
                                                     </p>
                                                 </div>

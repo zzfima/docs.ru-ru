@@ -4,16 +4,16 @@ description: Узнайте, как создать приложение .NET Cor
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849448"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216255"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Создание приложения .NET Core с подключаемыми модулями
 
-В этом учебнике демонстрируется выполнение следующих действий:
+В этом учебнике описаны следующие процедуры.
 
 - Создание структуры проекта для поддержки подключаемых модулей.
 - Создание пользовательского <xref:System.Runtime.Loader.AssemblyLoadContext> для загрузки каждого подключаемого модуля.
@@ -22,15 +22,29 @@ ms.locfileid: "70849448"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Установите [пакет SDK для .NET Core 3.0, предварительная версия 2](https://dotnet.microsoft.com/download) или более новой версии.
+- Установите [.NET Core 3.0](https://dotnet.microsoft.com/download) или более позднюю версию.
 
 ## <a name="create-the-application"></a>Создание приложения
 
 Первым шагом является создание приложения:
 
-1. Создайте новую папку и в этой папке выполните `dotnet new console -o AppWithPlugin`. 
-2. Чтобы упросить создание проекта, создайте файл решения Visual Studio. Запустите `dotnet new sln` в этой же папке. 
-3. Запустите `dotnet sln add AppWithPlugin/AppWithPlugin.csproj`, чтобы добавить проект приложения в решение.
+1. Создайте новую папку и в этой папке выполните следующую команду.
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. Чтобы упросить создание проекта, создайте файл решения Visual Studio. В той же папке выполните следующую команду.
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. Чтобы добавить проект приложения в решение, выполните следующую команду.
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 Теперь можно заполнить каркас нашего приложения. В файле *AppWithPlugin/Program.cs* замените существующий код следующим кодом:
 
@@ -203,8 +217,18 @@ static Assembly LoadPlugin(string relativePath)
 
 В корневой папке сделайте следующее:
 
-1. Запустите `dotnet new classlib -o HelloPlugin`, чтобы создать новый проект библиотеки классов с именем `HelloPlugin`.
-2. Запустите `dotnet sln add HelloPlugin/HelloPlugin.csproj`, чтобы добавить проект в решение `AppWithPlugin`. 
+1. Выполните следующую команду, чтобы создать проект библиотеки классов с именем `HelloPlugin`.
+    
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. Чтобы добавить проект в решение `AppWithPlugin`, выполните следующую команду.
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. Замените файл *HelloPlugin/Class1.cs* на файл с именем *HelloCommand.cs* со следующим содержимым:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]

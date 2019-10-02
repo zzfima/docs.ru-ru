@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927023"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699352"
 ---
-# <a name="listeners-element-for-trace"></a>\<Listeners > элемент \<для > трассировки
+# <a name="listeners-element-for-trace"></a>Элемент > @no__t 0listeners для \<trace >
 Указывает прослушиватель, который собирает, хранит и маршрутизирует сообщения. Прослушиватели направляют выходные данные трассировки в соответствующий целевой объект.  
   
- \<Элемент Configuration >  
-\<Элемент System. Diagnostics >  
-\<Элемент > трассировки  
-\<Listeners > элемент \<для > трассировки  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69927023"
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Очищает коллекцию `Listeners` для трассировки.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Удаляет прослушиватель из `Listeners` коллекции.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Удаляет прослушиватель из коллекции `Listeners`.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,13 +55,13 @@ ms.locfileid: "69927023"
 |`trace`|Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Классы <xref:System.Diagnostics.Debug> и <xref:System.Diagnostics.Trace> совместно используют одну и ту же коллекцию Listeners. При добавлении объекта прослушивателя в коллекцию в одном из этих классов другой класс использует тот же прослушиватель. Классы прослушивателей, поставляемые с .NET Framework, являются производными от <xref:System.Diagnostics.TraceListener> класса.  
+ Классы <xref:System.Diagnostics.Debug> и <xref:System.Diagnostics.Trace> используют одну и ту же коллекцию **прослушивателей** . При добавлении объекта прослушивателя в коллекцию в одном из этих классов другой класс использует тот же прослушиватель. Классы прослушивателей, поставляемые с .NET Framework, являются производными от класса <xref:System.Diagnostics.TraceListener>.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, `MyListener` `MyEventListener`  **\<** как использовать элемент Listeners > для добавления прослушивателей и в коллекцию Listeners. `MyListener`создает файл с именем `MyListener.log` и записывает выходные данные в файл. `MyEventListener`создает запись в журнале событий.  
+ В следующем примере показано, как использовать элемент **\<listeners >** для добавления прослушивателей `MyListener` и `MyEventListener` в коллекцию **Listeners** . `MyListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл. `MyEventListener` создает запись в журнале событий.  
   
 ```xml  
 <configuration>  

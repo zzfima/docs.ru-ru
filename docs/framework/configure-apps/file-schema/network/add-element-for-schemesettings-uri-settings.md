@@ -2,20 +2,20 @@
 title: Элемент <add> для schemeSettings (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 027c7aaffea7950739f532309255d77afa031ada
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: efd52557ea8b617a39e685ff8ad69bab01322a7a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659544"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699598"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<Добавление элемента > для schemeSettings (Параметры URI)
+# <a name="add-element-for-schemesettings-uri-settings"></a>Элемент > @no__t 0add для schemeSettings (Параметры URI)
 Добавляет параметр схемы для имени схемы.  
   
- \<configuration>  
-\<> URI  
-\<schemeSettings >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69659544"
 |женерикурипарсероптионс|Параметры средства синтаксического анализа для этой схемы. Единственное поддерживаемое значение — Женерикурипарсероптионс = "Донтунескапепасдотсандслашес".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Отсутствуют  
+ None  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69659544"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
+ По этой причине класс <xref:System.Uri?displayProperty=nameWithType> сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в конструктор класса <xref:System.Uri?displayProperty=nameWithType> приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69659544"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана конфигурация, используемая <xref:System.Uri> классом для поддержки неэкранированных разделителей пути в кодировке% для схемы HTTP.  
+ В следующем примере показана конфигурация, используемая классом <xref:System.Uri> для поддержки не экранирования разделителей пути в кодировке% для схемы HTTP.  
   
 ```xml  
 <configuration>  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664231"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698390"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Добавление элемента > для элемент connectionManagement (параметры сети)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>Элемент > @no__t 0add для элемент connectionManagement (параметры сети)
 Добавляет IP-адрес или DNS-имя в список управления подключениями.  
   
- \<configuration>  
-\<> System. NET  
-\<Элемент connectionManagement >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ ms.locfileid: "69664231"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере приложение настраивается для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
+ В следующем примере приложение настраивается для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем другим серверам.  
   
 ```xml  
 <configuration>  

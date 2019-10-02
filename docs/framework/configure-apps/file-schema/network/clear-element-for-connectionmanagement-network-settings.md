@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17b380b12977423669fd413132d69a3082daca41
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659446"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698359"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Очистка элемента > для элемент connectionManagement (параметры сети)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>Элемент > @no__t 0clear для элемент connectionManagement (параметры сети)
 Очищает список управления подключениями.  
   
- \<configuration>  
-\<> System. NET  
-\<Элемент connectionManagement >  
-\<очистить >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69659446"
 |[Элемент connectionManagement](connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
   
 ## <a name="remarks"></a>Примечания  
- `clear` Элемент удаляет все записи из списка управления подключениями.  
+ Элемент `clear` удаляет все записи из списка управления подключениями.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере очищается список управления подключениями, а затем добавляются новые записи управления подключениями `www.contoso.com` для сервера и всех остальных сетевых узлов.  
+ В следующем примере очищается список управления подключениями, а затем добавляются новые записи управления подключениями для сервера `www.contoso.com` и всех остальных сетевых узлов.  
   
 ```xml  
 <configuration>  

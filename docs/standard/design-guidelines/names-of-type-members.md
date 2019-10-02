@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757499"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353701"
 ---
 # <a name="names-of-type-members"></a>Имена членов типа
 Типы состоят из элементов: методов, свойств, событий, конструкторов и полей. В следующих разделах приведены рекомендации по именованию элементов типа.  
@@ -28,7 +28,7 @@ ms.locfileid: "61757499"
   
  **✓ DO**: давайте методам имена на основе глаголов или глагольных фраз.  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -56,7 +56,7 @@ public class String {
   
  Например, следующее свойство должным образом получает и задает значение перечисления с именем `Color`, поэтому свойство имеет имя `Color`:  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -99,7 +99,7 @@ public class Control {
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
+ *Reprinted по разрешениям Пирсона для образовательных учреждений, Inc. из руководства по проектированию [Framework: Соглашения, идиомы и закономерности для многократно используемых библиотек .NET, 2-го выпуска @ no__t – 0 на Крзисзтоф Квалина и Михаил Abrams), опубликован 22 октября 2008 by Addison-Wesley Professional в рамках серии разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

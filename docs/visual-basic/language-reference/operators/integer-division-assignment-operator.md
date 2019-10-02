@@ -1,5 +1,5 @@
 ---
-title: '\= Operator (Visual Basic)'
+title: '\=Оператор (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,48 +11,48 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 377a14a76f67e938f24c973b5946abd63f851bfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7b4a6946cc38984272a6b63e14e8c1db2825a5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768357"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700680"
 ---
-# <a name="-operator"></a>\\= Оператор
+# <a name="-operator"></a>\\ = оператор
 Делит значение переменной или свойства на значение выражения и присваивает целочисленный результат переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 variableorproperty \= expression  
 ```  
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Любой числовой переменной или свойства.  
+ Обязательный. Любая числовая переменная или свойство.  
   
  `expression`  
  Обязательный. Произвольное числовое выражение.  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, на левой стороне `\=` оператор может быть простой скалярной переменной, свойства или элемента массива. Не может быть переменной или свойству [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Элемент в левой части оператора `\=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `\=` Оператор делит значение переменной или свойства слева от него значение справа и присваивает целочисленный результат переменной или свойству слева от него  
+ Оператор `\=` делит значение переменной или свойства слева на значение справа, а целочисленный результат присваивается переменной или свойству слева.  
   
- Для получения дополнительных сведений при целочисленном делении см. в разделе [\ оператора (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
+ Дополнительные сведения о целочисленном делении см. в разделе [оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
 ## <a name="overloading"></a>Перегрузка  
- `\` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Перегрузка `\` оператор влияет на поведение `\=` оператор. Если код использует `\=` для класса или структуры, перегружающей `\`, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Оператор `\` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `\` влияет на поведение оператора `\=`. Если в коде используется `\=` для класса или структуры, которая перегружает `\`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `\=` оператор деления для деления одного `Integer` переменных в секунду и назначить результат целое число в первой переменной.  
+ В следующем примере оператор `\=` используется для деления одной переменной `Integer` на вторую и присваивания целочисленного результата первой переменной.  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>См. также
 
-- [\ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
-- [/ =-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Оператор/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

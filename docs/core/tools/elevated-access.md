@@ -3,12 +3,12 @@ title: Повышенные права доступа для команд dotnet
 description: Рекомендации по использованию команд dotnet, которым требуются повышенные права доступа.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969851"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216304"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Повышенные права доступа для команд dotnet
 
@@ -41,7 +41,7 @@ ms.locfileid: "70969851"
 
 Чтобы установить средства, выполните в командной строке с повышенными привилегиями приведенную ниже команду. Во время установки будет создана папка *dotnet-tools*.
 
-```cmd
+```dotnetcli
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 ```
 
@@ -69,7 +69,7 @@ TOOLCOMMAND
 
 В командной строке с повышенными привилегиями введите следующую команду:
 
-```cmd
+```dotnetcli
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 

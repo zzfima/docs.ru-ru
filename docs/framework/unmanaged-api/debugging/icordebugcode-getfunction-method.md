@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10ab92c660353bea85bbd0918a25f716898ef837
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 825840536968562a53d9e05b8a4628a1df79407d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747534"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700837"
 ---
 # <a name="icordebugcodegetfunction-method"></a>Метод ICorDebugCode::GetFunction
-Возвращает «ICorDebugFunction», связанный с «ICorDebugCode».  
+Возвращает "ICorDebugFunction", связанный с этим "ICorDebugCode".  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +37,16 @@ HRESULT GetFunction (
   
 ## <a name="parameters"></a>Параметры  
  `ppFunction`  
- [out] Указатель на адрес функции.  
+ заполняет Указатель на адрес функции.  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugCode` и `ICorDebugFunction` Ведение взаимно-однозначной связи.  
+ `ICorDebugCode` и `ICorDebugFunction` поддерживают связь "один к одному".  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>См. также
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

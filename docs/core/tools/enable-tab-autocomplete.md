@@ -4,12 +4,12 @@ description: В этой статье объясняется, как включ�
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202500"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182455"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Автодополнение клавишей TAB для .NET Core CLI
 
@@ -44,7 +44,7 @@ pack
 
 ## <a name="powershell"></a>PowerShell
 
-Чтобы добавить автодополнение клавишей TAB для .NET Core CLI в **PowerShell**, создайте или измените профиль, хранящийся в переменной `$PROFILE`. Дополнительные сведения см. в разделах [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile) (Как создать свой профиль) и [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy) (Профили и политика выполнения). 
+Чтобы добавить автодополнение клавишей TAB для .NET Core CLI в **PowerShell**, создайте или измените профиль, хранящийся в переменной `$PROFILE`. Дополнительные сведения см. в разделах [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) (Как создать свой профиль) и [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy) (Профили и политика выполнения). 
 
 Добавьте в свой профиль представленный ниже код:
 

@@ -2,14 +2,14 @@
 title: Что такое F#
 description: Узнайте о том, F# что такое язык программирования и F# как его можно программировать. Узнайте о типах данных, функциях и способах их совместного размещения.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630459"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332736"
 ---
-# <a name="what-is-f"></a>Что такое F\#
+# <a name="what-is-f"></a>Что такое F @ no__t-0
 
 F#— Это функциональный язык программирования, упрощающий написание правильного и сопровождаемого кода.
 
@@ -45,7 +45,7 @@ F#содержит множество функций, включая:
 * Регулярные выражения
 * Асинхронное программирование
 
-Полный набор функций приведен в справочнике по [ F# языку](./language-reference/index.md).
+Полный набор функций приведен в [ F# справочнике по языку](./language-reference/index.md).
 
 ## <a name="rich-data-types"></a>Типы данных с богатыми возможностями
 
@@ -100,7 +100,7 @@ F#функции являются также первыми классами, т
 F#обладает полной поддержкой объектов, которые являются полезными типами данных, когда требуется смешивать данные и функциональность. F#функции используются для работы с объектами.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 

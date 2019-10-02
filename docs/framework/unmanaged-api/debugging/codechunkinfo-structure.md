@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740880"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274259"
 ---
 # <a name="codechunkinfo-structure"></a>Структура CodeChunkInfo
 
@@ -40,23 +40,23 @@ typedef struct _CodeChunkInfo {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`startAddr`|Объект `CORDB_ADDRESS` значение, указывающее начальный адрес фрагмента данных.|  
-|`length`|Размер в байтах блока.|  
+|`startAddr`|`CORDB_ADDRESS` Значение, указывающее начальный адрес фрагмента.|  
+|`length`|Размер блока в байтах.|  
   
 ## <a name="remarks"></a>Примечания  
- Отдельный блок кода — это область машинного кода, который является частью объекта кода, например, функция.  
+ Единственный фрагмент кода — это область машинного кода, которая является частью объекта кода, например функции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl  
+ **Заголовок.** CorDebug. idl  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Метод GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Метод GetCodeChunks](icordebugcode2-getcodechunks-method.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

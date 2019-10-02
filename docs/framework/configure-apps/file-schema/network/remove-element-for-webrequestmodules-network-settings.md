@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664021"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697822"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<Удаление элемента > для webRequestModules (параметры сети)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>Элемент > @no__t 0remove для webRequestModules (параметры сети)
 Удаляет пользовательский модуль веб-запросов из приложения.  
   
- \<configuration>  
-\<> System. NET  
-\<webRequestModules >  
-\<Удалить >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,16 +52,16 @@ ms.locfileid: "69664021"
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса сведений от сетевых узлов.|  
   
 ## <a name="remarks"></a>Примечания  
- `remove` Элемент удаляет зарегистрированный модуль веб-запросов для указанного префикса URI.  
+ Элемент `remove` удаляет зарегистрированный модуль веб-запросов для указанного префикса URI.  
   
- Значение `prefix` атрибута должно быть начальными символами допустимого универсального кода ресурса (URI), например`http`"" или "`http://www.contoso.com`".  
+ Значение атрибута `prefix` должно быть начальным символом допустимого URI-типа, например "`http`" или "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
 
-В следующем примере удаляется существующий модуль веб-запросов для HTTP, а затем регистрируется новый пользовательский модуль веб-запросов для `www.contoso.com`HTTP-запросов к.
+В следующем примере удаляется существующий модуль веб-запросов для HTTP, а затем регистрируется новый пользовательский модуль веб-запросов для запросов HTTP к `www.contoso.com`.
   
 ```xml  
 <configuration>  

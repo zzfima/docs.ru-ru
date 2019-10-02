@@ -1,67 +1,97 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Документация по ML.NET
+summary: Узнайте, как использовать ML.NET с открытым кодом для создания решений машинного обучения и их интеграции в приложения. Учебники, примеры кода и многое другое.
 metadata:
-  document_id: na
   title: Документация по ML.NET — руководства и справочники по API
-  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  description: Узнайте, как использовать ML.NET с открытым кодом для создания решений машинного обучения и их интеграции в приложения. Учебники, примеры кода и многое другое.
+  ms.prod: dotnet-ml
   ms.topic: landing-page
-  ms.date: 08/15/2019
-  ms.author: nakersha
+  ms.collection: collection
   author: natke
-abstract:
-  description: "Узнайте, как использовать ML.NET\_— бесплатную кроссплатформенную платформу машинного обучения с открытым кодом для создания специализированных решений машинного обучения и их интеграции в приложения\_.NET. Учебники, примеры кода, справочник по API и другая документация покажут вам, как это сделать."
-sections:
-  - title: Пошаговые руководства
-    items:
-      - type: paragraph
-        text: 'Узнайте, как создавать общие решения с помощью ML.NET:'
-      - type: paragraph
-        text: '<b>Разработка с использованием API ML.NET</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Анализ тональности с использованием двоичной классификации</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Классификация проблем на GitHub с использованием многоклассовой классификации</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Прогнозирование цен с помощью регрессии</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Классификация цветов на основе характеристик с использованием кластеризации</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Рекомендации фильмов на основе матричной факторизации</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Создание специализированного классификатора изображений с помощью TensorFlow</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Обнаружение объектов на изображениях с помощью ONNX</a>
-      - type: paragraph
-        text: "<b>Используйте \"Построитель моделей\"</b>\_— графическое расширение Visual Studio:"
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">Прогнозирование цен с помощью Построителя моделей</a>
-      - type: paragraph
-        text: '<b>Запустите ML.NET CLI</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">Проанализируйте тональность с помощью ML.NET CLI</a>
-  - title: Примеры
-    items:
-      - type: paragraph
-        text: 'Для приложений в C# и F# смотрите <a href="https://github.com/dotnet/machinelearning-samples">примеры репозитория</a> на GitHub.'
-  - title: Справочник
-    items:
-      - type: paragraph
-        text: "<b>ML.NET\_API</b>"
-      - type: list
-        style: unordered
-        items:
-          - html: "<a href=\"/dotnet/api/?view=ml-dotnet\">Обновление ML.NET\_API</a> содержит компоненты для обработки данных, алгоритмы двоичной и многоклассовой классификации, регрессии, обнаружения аномалий, временных рядов и прогнозирования, ранжирования, сохранения и загрузки моделей, обработки моделей ONNX и TensorFlow и многое другое!"
-          - html: "<a href=\"/dotnet/api/?view=ml-dotnet-preview\">Предварительная версия ML.NET\_API</a> содержит алгоритмы для выполнения задач рекомендаций и поддержку стандартных моделей глубокого обучения."
-      - type: paragraph
-        text: <b>AutoML API</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/index?view=automl-dotnet">API Auto ML</a>
-      - type: paragraph
-        text: <b>Справочник по интерфейсу командной строки ML.NET</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">Справочник по командам интерфейса командной строки ML.NET</a>
+  ms.author: nakersha
+  ms.date: 09/23/2019
+  ms.openlocfilehash: f6f4d0c516a1310df5c497a3f4e7331877f3c5a9
+  ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71216642"
+landingContent:
+- title: Сведения о ML.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения об ML.NET
+      url: how-does-mldotnet-work.md
+  - linkListType: concept
+    links:
+    - text: Типы моделей машинного обучения
+      url: resources/tasks.md
+    - text: Выбор алгоритма
+      url: how-to-choose-an-ml-net-algorithm.md
+    - text: Преобразования данных
+      url: resources/transforms.md
+- title: Использование построителя моделей
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что собой представляет построитель моделей?
+      url: automate-training-with-model-builder.md
+  - linkListType: quickstart
+    links:
+    - text: Установить построитель моделей
+      url: how-to-guides/install-model-builder.md
+  - linkListType: tutorial
+    links:
+    - text: Прогнозирование цен с помощью построителя моделей
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: Создание веб-приложения Razor Pages для анализа тональности
+      url: tutorials/sentiment-analysis-model-builder.md
+- title: Начало работы с API-интерфейсом
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Создание классификатора изображений TensorFlow с помощью передачи обучения
+      url: tutorials/image-classification.md
+    - text: Анализ тональности комментариев веб-сайта
+      url: tutorials/sentiment-analysis.md
+    - text: Обнаружение объектов на изображениях с помощью ONNX
+      url: tutorials/object-detection-onnx.md
+  - linkListType: how-to-guide
+    links:
+    - text: Загрузка данных из различных источников
+      url: how-to-guides/load-data-ml-net.md
+    - text: Подготовка данных для построения модели
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: Обучение и оценка модели
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: Прогнозирование с помощью обученной модели
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: Сохранение и загрузка обученной модели
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+- title: Использование интерфейса командной строки ML.NET
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Автоматизация обучения модели с помощью ML.NET CLI
+      url: automate-training-with-cli.md
+  - linkListType: quickstart
+    links:
+    - text: Установка ML.NET CLI
+      url: how-to-guides/install-ml-net-cli.md
+  - linkListType: tutorial
+    links:
+    - text: Анализ тональности — ML.NET CLI и AutoML
+      url: tutorials/mlnet-cli.md
+- title: Справочник по интерфейсам API
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по ML.NET API
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: Справочник по API ML.NET (предварительная версия)
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
+    - text: Справочник по интерфейсу командной строки ML.NET
+      url: reference/ml-net-cli-reference.md
+    - text: Справочник по API AutoML
+      url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet

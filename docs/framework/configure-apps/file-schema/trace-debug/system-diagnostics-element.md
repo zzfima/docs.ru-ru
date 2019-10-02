@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926936"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699197"
 ---
-# <a name="systemdiagnostics-element"></a>\<Элемент System. Diagnostics >
+# <a name="systemdiagnostics-element"></a>Элемент > @no__t 0system. Diagnostics
 Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.  
   
- \<configuration>  
-\<> System. Diagnostics  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<system. diagnostics >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,10 +52,10 @@ ms.locfileid: "69926936"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как внедрить переключатель трассировки и прослушиватель  **\<трассировки в элемент System. Diagnostics >** . Параметр трассировки имеет значение <xref:System.Diagnostics.TraceLevel>Level. `General` Прослушиватель `myListener` трассировки создает файл с именем `MyListener.log` и записывает выходные данные в файл.  
+ В следующем примере показано, как внедрить переключатель трассировки и прослушиватель трассировки в элемент **\<system. diagnostics >** . Для параметра трассировки `General` задан уровень <xref:System.Diagnostics.TraceLevel>. Прослушиватель трассировки `myListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл.  
   
 > [!NOTE]
-> В .NET Framework версии 2.0 для указания значения переключателя можно использовать текст. `true` Например, можно указать <xref:System.Diagnostics.BooleanSwitch> для или использовать текст, представляющий значение перечисления, например `Error` , <xref:System.Diagnostics.TraceSwitch>для. Строка `<add name="myTraceSwitch" value="Error" />` эквивалентна `<add name="myTraceSwitch" value="1" />`.  
+> В .NET Framework версии 2.0 для указания значения переключателя можно использовать текст. Например, можно указать `true` для <xref:System.Diagnostics.BooleanSwitch> или использовать текст, представляющий значение перечисления, например `Error` для <xref:System.Diagnostics.TraceSwitch>. Строка `<add name="myTraceSwitch" value="Error" />` эквивалентна `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

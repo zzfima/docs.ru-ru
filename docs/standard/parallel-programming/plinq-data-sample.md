@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946456"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353157"
 ---
 # <a name="plinq-data-sample"></a>Пример данных PLINQ
 Этот пример содержит тестовые данные в формате CSV и несколько методов, которые преобразуют эти данные в коллекции в памяти (клиенты, продукты, заказы и сведения о заказе). Чтобы поэкспериментировать с PLINQ, вы можете вставить в этот код примеры кода из других статей и вызвать его из метода `Main`. Также вы можете применить собственные запросы PLINQ к этим данным.  
@@ -35,7 +35,7 @@ ms.locfileid: "69946456"
   
 4. Нажмите клавишу F5 и убедитесь, что проект правильно компилируется и выполняется. В окне консоли вы увидите такие выходные данные, как показано ниже.  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -48,7 +48,7 @@ ms.locfileid: "69946456"
   
 ## <a name="data"></a>Данные  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

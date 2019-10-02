@@ -1,19 +1,21 @@
 ---
 title: Анализатор переносимости .NET
 description: Сведения о том, как применять анализатор переносимости .NET для оценки переносимости кода в разных реализациях .NET, включая .NET Core, .NET Standard, UWP и Xamarin.
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107501"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054006"
 ---
 # <a name="the-net-portability-analyzer"></a>Анализатор переносимости .NET
 
-Хотите, чтобы ваши библиотеки поддерживали несколько платформ? Хотите понять, как обеспечить поддержку совместимости приложения с другими реализациями и профилями .NET, включая .NET Core, .NET Standard, UWP и Xamarin для Mac, iOS и Android? [Анализатор переносимости .NET](https://github.com/microsoft/dotnet-apiport) — это средство формирования подробного отчета об уровне гибкости программы в рамках реализаций .NET на основе данных анализа сборок. Анализатор переносимости предлагается как [расширение Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), которое анализирует сборку для отдельных проектов, и как [консольное приложение ApiPort](https://aka.ms/apiportdownload), которое анализирует сборки по указанным файлам или каталогам.
+Хотите, чтобы ваши библиотеки поддерживали несколько платформ? Хотите узнать, какой объем работ требуется проделать, чтобы ваше приложение .NET Framework работало в .NET Core?  [Анализатор переносимости .NET](https://github.com/microsoft/dotnet-apiport) — это средство, которое предоставляет подробный отчет об отсутствующих API-интерфейсах .NET для приложений или библиотек, которые переносятся на заданные целевые платформы .NET, с помощью анализа сборок. Анализатор переносимости предлагается как [расширение Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), которое анализирует сборку для отдельных проектов, и как [консольное приложение ApiPort](https://aka.ms/apiportdownload), которое анализирует сборки по указанным файлам или каталогам.
+
+После преобразования проекта для целевой платформы, например .NET Core, вы можете использовать [анализатор API] на основе Roslyn ([https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer](api-analyzer.md)) для определения API, вызывающих исключение PlatformNotSupportedException, и некоторых других проблем совместимости.
 
 ## <a name="common-targets"></a>Стандартные целевые платформы
 
@@ -58,7 +60,7 @@ ms.locfileid: "70107501"
 
 ![Сведения о переносимости](./media/portability-analyzer/portabilitydetails.png)
 
-Раздел сведений в отчете указывает API, отсутствующие на одной из целевых платформ. 
+В разделе **Details** (Подробные сведения) в отчете указываются API, отсутствующие на любой из выбранных **целевых платформ**. 
 
 - Тип целевого объекта: в типе есть API, отсутствующие на целевой платформе. 
 - Член целевого объекта: метод отсутствует на целевой платформе. 

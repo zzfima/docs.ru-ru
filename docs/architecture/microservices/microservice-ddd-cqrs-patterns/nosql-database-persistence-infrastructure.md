@@ -2,12 +2,12 @@
 title: Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSql в целом и в Azure Cosmos DB в частности для реализации сохраняемости.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374028"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039947"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-Переменная среды `ConnectionString` разрешается следующим образом: если в файле `.env` определена глобальная переменная `ESHOP_AZURE_COSMOSDB` со строкой подключения Azure Cosmos DB, эта строка подключения будет использована для обращения к базе данных Azure Cosmos DB в облаке. Если она не определена, будет использоваться значение mongodb://nosql.data и контейнер разработки mongodb.
+Переменная среды `ConnectionString` разрешается следующим образом: если в файле `.env` определена глобальная переменная `ESHOP_AZURE_COSMOSDB` со строкой подключения Azure Cosmos DB, эта строка подключения будет использована для обращения к базе данных Azure Cosmos DB в облаке. Если она не определена, будет использоваться значение `mongodb://nosql.data` и контейнер разработки mongodb.
 
 В следующем коде показан файл `.env` с глобальной переменной среды для строки подключения Azure Cosmos DB, так, как это было реализовано в решении eShopOnContainers:
 
@@ -324,7 +324,7 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB. Разработка веб-приложения API MongoDB с помощью .NET и портала Azure**  \
-  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **Использование эмулятора Azure Cosmos DB для разработки и тестирования в локальной среде**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>
@@ -332,10 +332,10 @@ services:
 - **Подключение приложения MongoDB к Azure Cosmos DB**  \
   <https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account>
 
-- **Образ Docker эмулятора Cosmos DB (контейнер для Windows)**  \
+- **Образ Docker эмулятора Cosmos DB (контейнер для Windows)**   \
   <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
-- **Образ Docker MongoDB (контейнер для Linux и Windows)**  \
+- **Образ Docker MongoDB (контейнер для Linux и Windows)**   \
   <https://hub.docker.com/_/mongo/>
 
 - **Использование MongoChef (Studio 3T) с Azure Cosmos DB: API для учетной записи MongoDB**  \

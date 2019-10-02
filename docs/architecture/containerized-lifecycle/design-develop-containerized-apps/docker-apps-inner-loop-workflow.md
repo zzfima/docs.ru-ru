@@ -2,12 +2,12 @@
 title: Рабочий процесс внутреннего цикла разработки для приложений Docker
 description: Сведения о рабочем процессе "внутреннего цикла" при разработке приложений Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673981"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214352"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Рабочий процесс внутреннего цикла разработки для приложений Docker
 
@@ -47,8 +47,7 @@ ms.locfileid: "68673981"
 
 С помощью последних версий Docker для Mac и Windows разрабатывать приложения Docker стало еще легче. Настройка очень проста.
 
-> [ИНФОРМАЦИЯ!]
->
+> [!TIP]
 > Инструкции по настройке Docker для Windows см. на странице <https://docs.docker.com/docker-for-windows/>.
 >
 >Инструкции по настройке Docker для Mac см. на странице <https://docs.docker.com/docker-for-mac/>.
@@ -57,8 +56,7 @@ ms.locfileid: "68673981"
 
 Корпорация Майкрософт предлагает Visual Studio Code, простой редактор кода, который поддерживается в Mac, Windows и Linux. Он предоставляет технологию IntelliSense с [поддержкой множества языков](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python и большинства современных языков), возможность [отладки](https://code.visualstudio.com/Docs/editor/debugging), [интеграцию с Git](https://code.visualstudio.com/Docs/editor/versioncontrol) и [поддержку расширений](https://code.visualstudio.com/docs/extensions/overview). Это средство отлично подойдет разработчикам, использующим Mac и Linux. В Windows можно также использовать полнофункциональную среду Visual Studio.
 
-> [ИНФОРМАЦИЯ!]
->
+> [!TIP]
 > Инструкции по установке Visual Studio Code для Windows, Mac или Linux см. на странице <https://code.visualstudio.com/docs/setup/setup-overview/>.
 >
 > Инструкции по настройке Docker для Mac см. на странице <https://docs.docker.com/docker-for-mac/>.
@@ -94,7 +92,6 @@ ms.locfileid: "68673981"
 Файл `DockerFile` обычно находится в корневой папке приложения или службы и содержит команды, которые требуются Docker для настройки и запуска приложения или службы. Вы можете создать файл `DockerFile` самостоятельно и добавить его в проект вместе с кодом (node.js, .NET Core и т. д.) или, если у вас нет опыта работы со средой, воспользоваться приведенным ниже советом.
 
 > [!TIP]
->
 > При использовании файлов `Dockerfile` и `docker-compose.yml`, связанных с контейнерами Docker, можно следовать указаниям, которые предоставляются расширением Docker. Вероятно, в дальнейшем вы будете создавать эти файлы, не прибегая к помощи данного средства, но поначалу оно позволяет ускорить обучение.
 
 На рисунке 4-24 показано, как добавляется файл docker-compose с помощью расширения Docker для VS Code.
@@ -133,8 +130,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 В Dockerfile можно задать дополнительные параметры конфигурации, в зависимости от используемого языка и платформы. Например, строка `ENTRYPOINT` со значением `["dotnet", "MySingleContainerWebApp.dll"]` указывает Docker запускать приложение .NET Core. Если для создания и запуска приложения .NET используется пакет SDK и .NET Core CLI (`dotnet CLI`), этот параметр будет другим. Ключевой момент здесь заключается в том, что строка ENTRYPOINT и другие параметры зависят от языка и платформы, выбранных для приложения.
 
-> [ИНФОРМАЦИЯ!]
->
+> [!TIP]
 > Дополнительные сведения о создании образов Docker для приложений .NET Core см. на странице <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 >
 > Дополнительные сведения о создании собственных образов см. на странице <https://docs.docker.com/engine/tutorials/dockerimages/>.
@@ -149,12 +145,11 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 Вы можете создать собственный базовый образ Docker с нуля, как описано в этой [статье](https://docs.docker.com/engine/userguide/eng-image/baseimages/). Этот сценарий, вероятно, будет не самым лучшим для тех, кто только начинает работать с Docker, но если вы хотите задать определенные биты базового образа, это можно сделать.
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Шаг 3. Создание пользовательских образов Docker и внедрение в них собственных служб
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Шаг 3. Создание пользовательских образов Docker и внедрение в них собственных служб
 
 Для каждой пользовательской службы в приложении необходимо создать связанный образ. Если приложение состоит из одной службы или веб-приложения, достаточно одного образа.
 
 > [!NOTE]
->
 > В рамках "рабочего процесса внешнего цикла DevOps" образы создаются автоматическим процессом сборки при отправке исходного кода в репозиторий Git (непрерывная интеграция), поэтому образы будут создаваться в этой глобальной среде из вашего исходного кода.
 >
 > Однако перед переходом к этому внешнему циклу необходимо убедиться в том, что приложение Docker действительно работает правильно, чтобы в систему управления версиями (Git и т. д.) не передавался неправильно работающий код.

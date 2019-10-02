@@ -3,14 +3,14 @@ title: Добро пожаловать в .NET
 description: Начало работы с семейством технологий .NET
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855478"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274336"
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
@@ -29,9 +29,9 @@ ms.locfileid: "70855478"
 
 Также следите за последними событиями, связанными с .NET:
 
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 
 Сведения о последних функциях, добавленных в реализации .NET, и поддерживаемых языках см. в следующих статьях:
 
@@ -52,8 +52,15 @@ ms.locfileid: "70855478"
 - [Руководство по Visual Basic](visual-basic/index.md)
 - [Руководство по ML.NET](machine-learning/index.yml)
 - [.NET для Apache Spark](spark/index.yml)
+- [Архитектура приложений .NET](architecture/index.yml)
 
 Кроме того, можете обратиться к [Справочнику по API .NET](/dotnet/api).
+
+## <a name="videos"></a>Видеоролики
+
+Изучите видео в Интернете о мобильных и классических приложениях, приложениях C#, машинном обучении, контейнерах, Docker, доступе к данным и т. д.
+
+[Серия видеоматериалов о .NET (101)](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>Открытый код
 

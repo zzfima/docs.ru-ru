@@ -16,19 +16,19 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: d30d871d48bc87e050a072cd01a38065be20616c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 238c062b2dd0744ba96cf9ba8591c0ef39f81bb3
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933261"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592193"
 ---
 # <a name="-operator-visual-basic"></a>Оператор / (Visual Basic)
 Делит два числа и возвращает результат с плавающей точкой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 expression1 / expression2  
 ```  
   
@@ -40,10 +40,10 @@ expression1 / expression2
  Обязательный. Произвольное числовое выражение.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
- Все числовые типы, включая неподписанные и типы с плавающей запятой `Decimal`, и.  
+ Все числовые типы, включая неподписанные и типы с плавающей запятой, а также `Decimal`.  
   
 ## <a name="result"></a>Результат  
- Результатом является полное частное от `expression1` `expression2`деления на, включая остаток.  
+ Результатом является полное частное от `expression1`, разделенное на `expression2`, включая остаток.  
   
  [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) возвращает целочисленное частное, которое удаляет остаток.  
   
@@ -62,23 +62,23 @@ expression1 / expression2
  Если `expression1` или`expression2` имеет значение [Nothing](../../../visual-basic/language-reference/nothing.md), оно считается нулевым.  
   
 ## <a name="attempted-division-by-zero"></a>Попыток деления на ноль  
- Если `expression2` значение равно нулю `/` , оператор ведет себя по-разному для разных типов данных операндов. В следующей таблице показаны возможные варианты поведения.  
+ Если `expression2` равняется нулю, оператор `/` ведет себя по-разному для разных типов данных операндов. В следующей таблице показаны возможные варианты поведения.  
   
-|Типы данных операндов|Поведение, `expression2` если равно нулю|  
+|Типы данных операндов|Поведение, если `expression2` равно нулю|  
 |------------------------|---------------------------------------|  
-|С плавающей запятой`Single` ( `Double`или)|Возвращает бесконечное<xref:System.Double.PositiveInfinity> значение <xref:System.Double.NegativeInfinity>(или) <xref:System.Double.NaN> или (не число), `expression1` если равно нулю|  
-|`Decimal`|Создает<xref:System.DivideByZeroException>|  
-|Интеграл (со знаком или без знака)|Попытка преобразования обратно в целочисленный тип <xref:System.OverflowException> вызывается из-за <xref:System.Double.PositiveInfinity>того <xref:System.Double.NegativeInfinity>, что целочисленные типы не могут принимать, или<xref:System.Double.NaN>|  
+|С плавающей запятой (`Single` или `Double`)|Возвращает бесконечность (<xref:System.Double.PositiveInfinity> или <xref:System.Double.NegativeInfinity>) или <xref:System.Double.NaN> (не число), если `expression1` также равно нулю|  
+|`Decimal`|Вызывает <xref:System.DivideByZeroException>|  
+|Интеграл (со знаком или без знака)|Попытка преобразования обратно в целочисленный тип вызывает <xref:System.OverflowException>, так как целочисленные типы не могут принимать <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity> или <xref:System.Double.NaN>|  
   
 > [!NOTE]
-> Оператор можно перегрузить, что означает, что класс или структура может переопределить свое поведение, когда операнд имеет тип этого класса или структуры. `/` Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Оператор `/` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере `/` оператор используется для выполнения деления с плавающей запятой. Результатом является частное двух операндов.  
+ В этом примере оператор `/` используется для выполнения деления с плавающей запятой. Результатом является частное двух операндов.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- Выражения в предыдущем примере возвращают значения 2,5 и 3,333333. Обратите внимание, что результат всегда имеет тип с`Double`плавающей запятой (), хотя оба операнда являются целочисленными константами.  
+ Выражения в предыдущем примере возвращают значения 2,5 и 3,333333. Обратите внимание, что результат всегда имеет тип с плавающей запятой (`Double`), хотя оба операнда являются целочисленными константами.  
   
 ## <a name="see-also"></a>См. также
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a9a235da06427e12bb5866a48f76f9c5896a572
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 1e3f9ff82bdc4f35232c4ea1162050e216a9cc21
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168744"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353419"
 ---
 # <a name="throw-c-reference"></a>throw (Справочник по C#)
 
@@ -28,22 +28,22 @@ ms.locfileid: "70168744"
 Синтаксис `throw` выглядит следующим образом:
 
 ```csharp
-throw [e]
+throw [e];
 ```
 
 где `e` — это экземпляр класса, производного от <xref:System.Exception?displayProperty=nameWithType>. В следующем примере используется оператор `throw` для создания <xref:System.IndexOutOfRangeException>, если аргумент, переданный в метод с именем `GetNumber`, не соответствует допустимому индексу внутреннего массива.
 
-[!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
+[!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]
 
 Затем вызывающие объекты метода используют блок `try-catch` или `try-catch-finally` для обработки исключения. В следующем примере показана обработка исключения, созданного методом `GetNumber`.
 
-[!code-csharp[csrefKeyword#2](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#2)]  
+[!code-csharp[csrefKeyword#2](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#2)]
 
 ## <a name="re-throwing-an-exception"></a>Повторное создание исключения
 
 `throw` можно также использовать в блоке `catch` для повторного создания исключения, обрабатываемого в блоке `catch`.  В этом случае оператор `throw` не принимает операнд исключения. Это наиболее полезно, когда метод передает аргумент от вызывающего объекта в другой метод библиотеки, а метод библиотеки создает исключение, которое должно быть передано вызывающему объекту. Например, в следующем примере повторно создается исключение <xref:System.NullReferenceException>, возникающее при попытке получить первый символ неинициализированной строки.
 
-[!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]  
+[!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
 > [!IMPORTANT]
 > Можно также использовать синтаксис `throw e` в блоке `catch`, чтобы создать исключение, которое будет передано вызывающему объекту. В этом случае трассировка стека исходного исключения, которое доступно из свойства <xref:System.Exception.StackTrace>, не сохраняется.
@@ -54,20 +54,20 @@ throw [e]
 
 - [Условный оператор](../operators/conditional-operator.md). В следующем примере используется исключение `throw` для создания <xref:System.ArgumentException>, если методу передается массив пустых строк. До выхода C# 7.0 эта логика должна была отображаться в операторе `if`/`else`.
 
-   [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
-  
+   [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]
+
 - [Оператор объединения с NULL](../operators/null-coalescing-operator.md). В следующем примере выражение `throw` используется с оператором, принимающим значение NULL, для создания исключения, если строка, назначенная свойству `Name` является `null`.
 
-   [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
+   [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
 - Метод или [лямбда](../../programming-guide/statements-expressions-operators/lambda-expressions.md), воплощающие выражение. В следующем примере показан метод, воплощающий выражение, который создает <xref:System.InvalidCastException>, так как преобразование в значение <xref:System.DateTime> не поддерживается.
 
-   [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]  
+   [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../index.md)

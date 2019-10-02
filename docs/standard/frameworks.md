@@ -1,17 +1,17 @@
 ---
 title: Требуемые версии .NET Framework
 description: Сведения о целевых версиях платформы для приложений и библиотек .NET Core.
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 04/02/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666511"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216654"
 ---
 # <a name="target-frameworks"></a>Требуемые версии .NET Framework
 
@@ -31,8 +31,8 @@ ms.locfileid: "69666511"
 
 | Требуемая версия .NET Framework      | Последняя версия <br/> Стабильная версия | Моникер целевой платформы (TFM) | Реализовано <br/> Версия .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0                         | netstandard2.0                 | Н/Д                                     |
-| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | Н/Д                                     |
+| .NET Core             | 3.0                         | netcoreapp3.0                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Поддерживаемые версии целевой платформы
@@ -41,8 +41,8 @@ ms.locfileid: "69666511"
 
 | Требуемая версия .NET Framework           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Магазин Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ ms.locfileid: "69666511"
 
 ## <a name="how-to-specify-target-frameworks"></a>Как указать целевые платформы
 
-Целевые платформы указываются в файле проекта. Если указана одна целевая платформа, используйте элемент **TargetFramework**. В следующем файле проекта консольного приложения показано, как указать целевую платформу .NET Core 2.2:
+Целевые платформы указываются в файле проекта. Если указана одна целевая платформа, используйте элемент **TargetFramework**. В следующем файле проекта консольного приложения показано, как указать целевую платформу .NET Core 3.0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -112,7 +112,7 @@ public class MyClass
 
 Полный список символов препроцессора для целевой платформы .NET Core.
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
 ## <a name="deprecated-target-frameworks"></a>Неподдерживаемые целевые платформы
 

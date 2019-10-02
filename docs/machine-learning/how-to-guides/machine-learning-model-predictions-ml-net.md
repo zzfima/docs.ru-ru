@@ -1,16 +1,16 @@
 ---
 title: Прогнозирование с помощью обученной модели
 description: Сведения о прогнозировании с помощью обученной модели
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307399"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118017"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Прогнозирование с помощью обученной модели
 
@@ -43,14 +43,12 @@ public class HousingData
 Так как в этом примере используется алгоритм линейной регрессии, имя по умолчанию выходного столбца имеет значение `Score`, которое определяется атрибутом [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) в свойстве `PredictedPrice`.
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-Модель данных `HousingPrediction` наследует от `HousingData`, чтобы упростить процесс визуализации исходных входных данных, а также выходных данных модели.  
 
 ## <a name="set-up-a-prediction-pipeline"></a>Настройка конвейера прогнозирования
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 При обращении к свойству `Score` объекта `prediction` вы должны получить значение, аналогичное `150079`.
 
-## <a name="batch-prediction"></a>Пакетный прогноз
+## <a name="multiple-predictions"></a>Множественное прогнозирование
 
 Получив следующие данные, загрузите их в [`IDataView`](xref:Microsoft.ML.IDataView). В этом случае имя [`IDataView`](xref:Microsoft.ML.IDataView) — `inputData`. Так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.
 

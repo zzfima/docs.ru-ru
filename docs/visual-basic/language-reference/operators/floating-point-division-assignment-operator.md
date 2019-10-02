@@ -10,48 +10,48 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4855e8270a329f9345339060a323b5ca9cd9792
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778473"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592175"
 ---
 # <a name="-operator-visual-basic"></a>Оператор /= (Visual Basic)
 Делит значение переменной или свойства на значение выражения и присваивает результат с плавающей запятой переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 variableorproperty /= expression  
 ```  
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Любой числовой переменной или свойства.  
+ Обязательный. Любая числовая переменная или свойство.  
   
  `expression`  
  Обязательный. Произвольное числовое выражение.  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, на левой стороне `/=` оператор может быть простой скалярной переменной, свойства или элемента массива. Не может быть переменной или свойству [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Элемент в левой части оператора `/=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `/=` Оператор сначала делит значение переменной или свойства (в левой части оператора) значение выражения (в области справа от оператора). Затем оператор присваивает результат этой операции с плавающей запятой к переменной или свойству.  
+ Оператор `/=` вначале делит значение переменной или свойства (в левой части оператора) на значение выражения (в правой части оператора), равное. Затем оператор присваивает результат операции с плавающей запятой переменной или свойству.  
   
- Эта инструкция присваивает `Double` значение переменной или свойства в левой части. Если `Option Strict` — `On`, `variableorproperty` должно быть `Double`. Если `Option Strict` — `Off`, Visual Basic выполняет неявное преобразование, а затем присваивает результирующее значение `variableorproperty`, возможные ошибки во время выполнения. Дополнительные сведения см. в разделе [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ Эта инструкция присваивает значение `Double` переменной или свойству слева. Если `Option Strict` равно `On`, `variableorproperty` должно быть `Double`. Если `Option Strict` равно `Off`, Visual Basic выполняет неявное преобразование и присваивает полученное значение `variableorproperty` с возможной ошибкой во время выполнения. Дополнительные сведения см. в разделе [расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [Option](../../../visual-basic/language-reference/statements/option-strict-statement.md)parallelism.  
   
 ## <a name="overloading"></a>Перегрузка  
- [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Перегрузка `/` оператор влияет на поведение `/=` оператор. Если код использует `/=` для класса или структуры, перегружающей `/`, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Оператор/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, когда операнд имеет тип этого класса или структуры. Перегрузка оператора `/` влияет на поведение оператора `/=`. Если в коде используется `/=` для класса или структуры, которая перегружает `/`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `/=` оператор деления для деления одного `Integer` переменных в секунду и назначить частное первой переменной.  
+ В следующем примере оператор `/=` используется для деления одной переменной `Integer` на вторую и присваивания значения частного для первой переменной.  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>См. также
 
-- [/ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\= Оператор](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [Оператор/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [\\ = оператор](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

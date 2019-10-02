@@ -2,12 +2,12 @@
 title: Практическое руководство. Вычислить промежуточные значения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: d3af616fc3de4baa4bb42d9f9c04d654b7438ab0
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 63067c42da37d71ad0fc5488c68d296ac7589aec
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710475"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352910"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>Практическое руководство. Вычислить промежуточные значения (Visual Basic)
 В этом примере показано, как вычислять промежуточные значения, которые используются в сортировке, фильтрации и выборке.  
@@ -32,7 +32,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 55.92  
 73.50  
 89.99  
@@ -66,7 +66,7 @@ End Module
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 55.92  
 73.50  
 89.99  

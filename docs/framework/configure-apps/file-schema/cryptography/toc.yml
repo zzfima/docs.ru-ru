@@ -1,19 +1,24 @@
 - name: Схема параметров криптографии
   href: index.md
   items:
-    - name: Элемент <cryptoClasses>
-      href: cryptoclasses-element.md
-    - name: Элемент <cryptoClass>
-      href: cryptoclass-element.md
-    - name: Элемент <cryptographySettings>
-      href: cryptographysettings-element.md
-    - name: Элемент <cryptoNameMapping>
-      href: cryptonamemapping-element.md
     - name: Элемент <mscorlib> для параметров шифрования
       href: mscorlib-element-for-cryptography-settings.md
-    - name: Элемент <nameEntry>
-      href: nameentry-element.md
-    - name: Элемент <oidEntry>
-      href: oidentry-element.md
-    - name: Элемент <oidMap>
-      href: oidmap-element.md
+      items:
+        - name: Элемент <cryptographySettings>
+          href: cryptographysettings-element.md
+          items:
+            - name: Элемент <cryptoNameMapping>
+              href: cryptonamemapping-element.md
+              items:
+                - name: Элемент <cryptoClasses>
+                  href: cryptoclasses-element.md
+                  items:
+                    - name: Элемент <cryptoClass>
+                      href: cryptoclass-element.md
+                - name: Элемент <nameEntry>
+                  href: nameentry-element.md
+            - name: Элемент <oidMap>
+              href: oidmap-element.md
+              items:
+                - name: Элемент <oidEntry>
+                  href: oidentry-element.md
