@@ -4,12 +4,12 @@ description: В этом разделе рассматривается созд�
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: ff508bbe8d72a88ea32adfbed984d4e9e8b8e7ca
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77e676c327b62369e7ddb9444bf8f246d3c5c2e8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925827"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182501"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
 
@@ -25,7 +25,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
 См. раздел с перечислением [необходимых компонентов для .NET Core в Mac](../macos-prerequisites.md).
 
-Просмотрите руководство по [поддержке .NET Core](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) и убедитесь, что вы используете поддерживаемую версию .NET Core.
+Просмотрите статью о [поддержке .NET Core](/visualstudio/mac/net-core-support) и убедитесь в том, что вы используете поддерживаемую версию .NET Core.
 
 ## <a name="get-started"></a>Начало работы
 
@@ -53,7 +53,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
    ![Главное окно с открытым файлом Program.cs](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
-## <a name="run-the-application"></a>Запуск приложения
+## <a name="run-the-application"></a>Выполнение приложения
 
 Запустите приложение в режиме отладки, нажав клавиши ⌘ ↵ (Command + ВВОД), или в режиме выпуска, нажав клавиши ⌥ ⌘ ↵ (Option + Command + ВВОД).
 

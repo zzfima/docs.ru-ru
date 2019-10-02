@@ -3,12 +3,12 @@ title: Использование функций сопоставления ша
 description: Этом руководстве показано, как использовать методы сопоставления шаблонов для создания функций с помощью данных и алгоритмов, которые создаются отдельно.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926651"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332355"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Учебник. Использование функций сопоставления шаблонов для расширения типов данных
 
@@ -24,7 +24,7 @@ ms.locfileid: "70926651"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Вам нужно настроить свой компьютер для работы с .NET Core, включая предварительную версию компилятора C# 8.0. Предварительная версия компилятора C# 8 доступна с последней версией [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) или [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Вам нужно настроить свой компьютер для выполнения .NET Core, включая компилятор C# 8.0. Компилятор C# 8 доступен, начиная с [версии 16.3 Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) или [в пакете SDK .NET Core 3.0](https://dotnet.microsoft.com/download).
 
 В этом руководстве предполагается, что вы знакомы с C# и .NET, включая Visual Studio или .NET Core CLI.
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
@@ -294,7 +297,7 @@ public decimal CalculateToll(object vehicle) =>
 
 В таблице ниже показаны комбинации входных значений и множителя для цены в часы пик:
 
-| Day        | Время         | Направление | Премиум |
+| День        | Time         | Направление | Премиум |
 | ---------- | ------------ | --------- |--------:|
 | День недели    | Утренний час пик | Въезд   | x 2,00  |
 | День недели    | Утренний час пик | Выезд  | x 1,00  |

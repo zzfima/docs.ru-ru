@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 34157b19e342d4e10ac652aaf46c7186c4a19358
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421987"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353437"
 ---
 # <a name="null-c-reference"></a>null (справочник по C#)
 
-Ключевое слово `null` является литералом, представляющим пустую ссылку, которая не ссылается на объект. `null` является значением по умолчанию для переменных ссылочного типа. Обычные типы значений не могут принимать значение NULL. Однако в C# 2.0 представлены типы значений, допускающие значение NULL. См. раздел [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md).
+Ключевое слово `null` является литералом, представляющим пустую ссылку, которая не ссылается на объект. `null` является значением по умолчанию для переменных ссылочного типа. Обычные типы значений не могут иметь значение NULL, за исключением [типов значений, допускающих значение NULL](../../programming-guide/nullable-types/index.md).
 
 В следующем примере показано возможное поведение ключевого слова null:
 
@@ -29,8 +29,7 @@ ms.locfileid: "66421987"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../language-reference/index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Ключевые слова в C#](index.md)
+- [справочник по C#](../../language-reference/index.md)
+- [Ключевые слова C#](index.md)
 - [Таблица значений по умолчанию](default-values-table.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Nothing (Visual Basic)](../../../visual-basic/language-reference/nothing.md)

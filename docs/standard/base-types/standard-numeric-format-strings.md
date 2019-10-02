@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374498"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216710"
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 
@@ -56,10 +56,10 @@ ms.locfileid: "70374498"
 |Описатель формата|name|ОПИСАНИЕ|Примеры|
 |----------------------|----------|-----------------|--------------|
 |"C" или "c"|Валюта|Результат: ; значение валюты.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: число десятичных разрядов.<br /><br /> Описатель точности по умолчанию: Определяется в <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительная информация: [Описатель формата валюты ("C")](#CFormatString).|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
-|"D" или "d"|Десятичное число|Результат: ; целочисленные цифры с необязательным отрицательным знаком.<br /><br /> Поддерживается в: только целочисленные типы.<br /><br /> Описатель точности: минимальное число разрядов.<br /><br /> Описатель точности по умолчанию: минимальное требуемое число разрядов.<br /><br /> Дополнительная информация: [Описатель десятичного формата ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
+|"D" или "d"|Decimal|Результат: ; целочисленные цифры с необязательным отрицательным знаком.<br /><br /> Поддерживается в: только целочисленные типы.<br /><br /> Описатель точности: минимальное число разрядов.<br /><br /> Описатель точности по умолчанию: минимальное требуемое число разрядов.<br /><br /> Дополнительная информация: [Описатель десятичного формата ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" или "e"|Экспоненциальный (научный)|Результат: ; экспоненциальная нотация.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: число десятичных разрядов.<br /><br /> Описатель точности по умолчанию: 6.<br /><br /> Дополнительная информация: [Описатель экспоненциального формата ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> –1052.0329112756 ("E2", fr-FR) -> –1,05E+003|
 |"F" или "f"|С фиксированной запятой|Результат: ; цифры целой и дробной частей с необязательным отрицательным знаком.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: число десятичных разрядов.<br /><br /> Описатель точности по умолчанию: Определяется в <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительная информация: [Описатель формата с фиксированной запятой ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
-|"G" или "g"|Общие|Результат: ; наиболее компактная запись из двух вариантов — экспоненциального и с фиксированной запятой.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: количество значащих цифр.<br /><br /> Описатель точности по умолчанию: зависит от числового типа.<br /><br /> Дополнительная информация: [Описатель общего формата ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
+|"G" или "g"|Общее|Результат: ; наиболее компактная запись из двух вариантов — экспоненциального и с фиксированной запятой.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: количество значащих цифр.<br /><br /> Описатель точности по умолчанию: зависит от числового типа.<br /><br /> Дополнительная информация: [Описатель общего формата ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
 |"N" или "n"|Число|Результат: ; цифры целой и дробной частей, разделители групп и разделитель целой и дробной частей с необязательным отрицательным знаком.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: желаемое число десятичных разрядов.<br /><br /> Описатель точности по умолчанию: Определяется в <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительная информация: [Описатель числового формата ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
 |"P" или "p"|Процент|Результат: ; число, умноженное на 100 и отображаемое с символом процента.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: желаемое число десятичных разрядов.<br /><br /> Описатель точности по умолчанию: Определяется в <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительная информация: [Описатель формата процента ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
 |"R" или "r"|Приемо-передача|Результат: ; строка, дающая при обратном преобразовании идентичное число.<br /><br /> Поддерживается: <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.<br /><br /> Примечание. Мы рекомендуем использовать только для типа <xref:System.Numerics.BigInteger>. Для типов <xref:System.Double> используйте "G17", а для типов <xref:System.Single> — "G9". <br> Описатель точности: Не обрабатывается.<br /><br /> Дополнительная информация: [Описатель формата обратного преобразования ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
@@ -117,10 +117,10 @@ ms.locfileid: "70374498"
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Определяет строку, разделяющую группы цифр целой части.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Определяет число целочисленных цифр, входящих в группу.|
 
-В следующем примере значение <xref:System.Double> форматируется с помощью спецификатора денежного формата.
+В следующем примере значение <xref:System.Double> форматируется с помощью описателя денежного формата:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+[!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
 [К таблице](#table)
@@ -168,7 +168,7 @@ ms.locfileid: "70374498"
 В следующем примере значение <xref:System.Double> форматируется с помощью описателя экспоненциального формата.
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+[!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
 [К таблице](#table)
@@ -189,10 +189,10 @@ ms.locfileid: "70374498"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Определяет количество цифр дробной части по умолчанию. Это значение можно переопределить с помощью описателя точности.|
 
-В следующем примере значение <xref:System.Double> и значение <xref:System.Int32> форматируются с помощью спецификатора формата с фиксированной точкой.
+В следующем примере значение <xref:System.Double> и значение <xref:System.Int32> форматируются с помощью описателя формата с фиксированной точкой.
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+[!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
 [К таблице](#table)
@@ -236,10 +236,10 @@ ms.locfileid: "70374498"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Определяет строку, указывающую, что экспонента является положительной.|
 
-В следующем примере различные значения с плавающей запятой форматируются с помощью спецификатора общего формата.
+В следующем примере различные значения с плавающей запятой форматируются с помощью описателя общего формата.
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+[!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
 [К таблице](#table)
@@ -261,10 +261,10 @@ ms.locfileid: "70374498"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Определяет количество цифр дробной части по умолчанию. Это значение можно переопределить с помощью описателя точности.|
 
-В следующем примере различные значения с плавающей запятой форматируются с помощью спецификатора числового формата.
+В следующем примере различные значения с плавающей запятой форматируются с помощью описателя числового формата.
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+[!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
 [К таблице](#table)
@@ -288,10 +288,10 @@ ms.locfileid: "70374498"
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|Определяет строку, разделяющую группы цифр целой части.|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|Определяет число целочисленных цифр, входящих в группу.|
 
-В следующем примере значения с плавающей запятой форматируются с помощью спецификатора процентного формата.
+В следующем примере значения с плавающей запятой форматируются с помощью описателя процентного формата.
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+[!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
 [К таблице](#table)
@@ -324,9 +324,9 @@ ms.locfileid: "70374498"
 > [!IMPORTANT]
 > В некоторых случаях для значений <xref:System.Double>, отформатированных с использованием строки стандартного числового формата "R", не удается успешно выполнить обратное преобразование при компиляции с использованием параметра `/platform:x64` или `/platform:anycpu` и запуска в 64-разрядных системах. Дополнительные сведения см. в следующем абзаце.
 
-Чтобы избежать проблемы со значениями <xref:System.Double>, отформатированными с использованием строки стандартного числового формата R, для которых не удалось выполнить обратное преобразование при компиляции с использованием параметра `/platform:x64` или `/platform:anycpu` в 64-разрядных системах, можно отформатировать значения <xref:System.Double> с помощью строки стандартного числового формата G17. В примере ниже используется строка формата "R" со значением <xref:System.Double>, для которого не удается выполнить обратное преобразование, а также строка формата "G17" для успешного обратного преобразования исходного значения.
+Чтобы избежать проблемы со значениями <xref:System.Double>, отформатированными с использованием строки стандартного числового формата R, для которых не удалось выполнить обратное преобразование при компиляции с использованием параметра `/platform:x64` или `/platform:anycpu` в 64-разрядных системах, можно отформатировать значения <xref:System.Double> с помощью строки стандартного числового формата G17. В примере ниже используется строка формата "R" со значением <xref:System.Double>, для которого не удается выполнить обратное преобразование, а также строка формата "G17" для успешного обратного преобразования исходного значения:
 
-[!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
+[!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
 [К таблице](#table)
@@ -380,7 +380,7 @@ ms.locfileid: "70374498"
 
 В следующем примере с помощью языка и региональных параметров "en-US" и всех описателей стандартных числовых форматов форматируется целочисленное значение и числовое значение с плавающей запятой. В этом примере используются два числовых типа (<xref:System.Double> и <xref:System.Int32>), но аналогичные результаты были бы получены для любых других числовых типов (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> и <xref:System.Single>).
 
-[!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
+[!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
 ## <a name="see-also"></a>См. также

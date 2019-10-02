@@ -1,16 +1,16 @@
 ---
 title: Развертывание модели в веб-API ASP.NET Core
 description: Использование модели машинного обучения ML.NET для анализа тональности через Интернет с помощью веб-API ASP.NET Core
-ms.date: 08/20/2019
+ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182551"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332689"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Развертывание модели в веб-API ASP.NET Core
 
@@ -103,9 +103,9 @@ ms.locfileid: "71182551"
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Регистрация класса PredictionEnginePool для использования в приложении
 
-Чтобы сделать один прогноз, можно использовать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Чтобы использовать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) в приложении, следует создать его при необходимости. В этом случае рекомендуется внедрить зависимости.
+Для формирования одного прогноза необходимо создать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Кроме того, необходимо создать его экземпляр везде, где он понадобится в вашем приложении. По мере увеличения размера приложения этот процесс может стать неуправляемым. Для улучшенной производительности и потокобезопасности используйте сочетание внедрения зависимостей и службы `PredictionEnginePool`, которое создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении.
 
-См. дополнительные сведения о [внедрении зависимостей в ASP.NET Core](/aspnet/core/fundamentals/dependency-injection).
+См. дополнительные сведения о [внедрении зависимостей в ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
 1. Откройте класс *Startup.cs* и добавьте в начало файла следующий оператор using:
 
@@ -126,14 +126,19 @@ ms.locfileid: "71182551"
     {
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile("MLModels/sentiment_model.zip");
+            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     }
     ```
 
-Вкратце, этот код инициализирует объекты и службы автоматически по запросу приложения, вместо того, чтобы вы делали это вручную.
+Вкратце, этот код инициализирует объекты и службы автоматически для использования в дальнейшем по запросу приложения, вместо того чтобы вы делали это вручную. 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Для повышения производительности и безопасности потока используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) из объектов `PredictionEngine` для использования приложений. Прочтите следующую запись блога, чтобы узнать о [создании и использовании пулов объектов `PredictionEngine` в ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).  
+Модели машинного обучения не являются статическими. По мере появления новых данных для обучения модель переобучается и развертывается повторно. Одним из способов получения последней версии модели в приложении является повторное развертывание всего приложения. Однако это приводит к простою приложения. Служба `PredictionEnginePool` предоставляет механизм перезагрузки обновленной модели без отключения приложения. 
+
+Задайте для параметра `watchForChanges` значение `true`. В таком случае `PredictionEnginePool` запустит объект [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher), который прослушивает уведомления об изменениях файловой системы и вызывает события при изменении файла. При наличии изменений `PredictionEnginePool` автоматически перезагружает модель.
+
+Модель определяется параметром `modelName`, поэтому при изменении может быть перезагружено несколько моделей на одно приложение. 
+
+Кроме того, можно использовать метод `FromUri` при работе с моделями, сохраненными удаленно. Вместо наблюдения за событиями изменения файлов `FromUri` опрашивает удаленное расположение на предмет изменений. Интервал опроса по умолчанию равен 5 минутам. Вы можете увеличить или уменьшить интервал опроса в зависимости от требований вашего приложения.
 
 ## <a name="create-predict-controller"></a>Создание контроллера прогнозирования
 
@@ -170,7 +175,7 @@ ms.locfileid: "71182551"
                 return BadRequest();
             }
 
-            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
+            SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: input);
 
             string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
@@ -179,7 +184,7 @@ ms.locfileid: "71182551"
     }
     ```
 
-Этот код назначает класс `PredictionEnginePool`, передав его в конструктор контроллера, который можно получить путем внедрения зависимостей. После этого метод `Post` контроллера `Predict` использует `PredictionEnginePool` для создания прогнозов. Он возвращает результаты пользователю при успешном выполнении запроса.
+Этот код назначает класс `PredictionEnginePool`, передав его в конструктор контроллера, который можно получить путем внедрения зависимостей. Затем метод `Post` контроллера `Predict` использует `PredictionEnginePool` для формирования прогнозов с помощью модели `SentimentAnalysisModel`, зарегистрированной в классе `Startup`, и возвращает результаты пользователю в случае успеха.
 
 ## <a name="test-web-api-locally"></a>Тестирование веб-API на локальном компьютере
 

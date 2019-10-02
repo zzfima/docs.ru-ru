@@ -1,15 +1,15 @@
 ---
 title: Необходимые компоненты для .NET Core в Linux
 description: Поддерживаемые версии Linux и зависимости .NET Core для разработки, развертывания и запуска приложений .NET Core на компьютерах с Linux.
-author: thraka
-ms.author: adegeo
-ms.date: 12/14/2018
-ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+author: leecow
+ms.author: leecow
+ms.date: 09/25/2019
+ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116589"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591700"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
@@ -25,69 +25,82 @@ ms.locfileid: "71116589"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 2.x воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux. 
-
-Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания для [.NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2) или [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
-
-.NET Core 2.x поддерживается в следующих дистрибутивах и версиях Linux:
-
-* Red Hat Enterprise Linux 7, 6 — 64-разрядная версия (`x86_64` или `amd64`);
-* CentOS 7 — 64-разрядная версия (`x86_64` или `amd64`); 
-* Oracle Linux 7 — 64-разрядная версия (`x86_64` или `amd64`); 
-* Fedora 28, 27 — 64-разрядная версия (`x86_64` или `amd64`); 
-* Debian 9 (64-разрядная версия, версия `arm32`), а также версия 8.7 или более поздние для 64-разрядных платформ — (`x86_64` или `amd64`)
-* Ubuntu 18.04 (64-разрядная версия, версия `arm32`), а также версии 16.04 и 14.04 для 64-разрядных платформ (`x86_64` или `amd64`)
-* Linux Mint 18, 17 — 64-разрядная версия (`x86_64` или `amd64`);
-* openSUSE 42.3 или более поздней версии — 64-разрядная версия (`x86_64` или `amd64`);
-* SUSE Enterprise Linux (SLES) 12 с пакетом обновления 2 (SP2) или более поздней версии — 64-разрядная версия (`x86_64` или `amd64`);
-* Alpine Linux 3.7 или более поздней версии — 64-разрядная версия (`x86_64` или `amd64`).
-
-Полный список операционных систем, дистрибутивов, версий, поддерживаемых .NET Core 2.1 и .NET Core 2.2, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на соответствующих страницах для [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) и [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания для [.NET Core 1.1](https://dotnet.microsoft.com/download/dotnet-core/1.1) или [.NET Core 1.0](https://dotnet.microsoft.com/download/dotnet-core/1.0).
-
-.NET Core 1.x поддерживается в следующих дистрибутивах и версиях 64-разрядной версии Linux (`x86_64` или `amd64`):
-
-* Red Hat Enterprise Linux 7
-* CentOS 7
-* Oracle Linux 7
-* Fedora 28 (.NET Core 1.1), 27
-* Debian 8.2 или более поздней версии
-* Ubuntu 18.04 (.NET Core 1.1), 16.04, 14.04
-* Linux Mint 17
-* openSUSE 42.3 или более поздней версии (.NET Core 1.1)
-
-Полный список операционных систем, поддерживаемых .NET Core 1.x, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md).
-
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 (предварительная версия 1)](#tab/netcore30)
-
-.NET Core 3.0 (предварительная версия 1) воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux. 
+.NET Core 3.0 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux. 
 
 Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
-.NET Core 3.0 (предварительная версия 1) поддерживается в следующих дистрибутивах и версиях Linux: 
+.NET Core 3.0 поддерживается в следующих дистрибутивах и версиях Linux.
 
-Операционная система                            | Версия               | Архитектуры  
-------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux      | 6                     | X64
-Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
-Fedora                        | 28                    | X64
-Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
-Linux Mint                    | 18                    | X64
-openSUSE                      | 42.3+                 | X64
-SUSE Enterprise Linux (SLES)  | 12 с пакетом обновления 2+               | X64
-Alpine Linux                  | 3.8+                  | x64, ARM64
+> [!NOTE]
+> Символ `+` представляет минимальную версию.
 
-\* Поддержка ARM32 и ARM64 начинается с Debian 9 и Ubuntu 16.04. Более ранние версии этих дистрибутивов не поддерживаются на микросхемах ARM.
+| Операционная система                             | Version               | Архитектуры    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6+, 7                 | X64 |
+| Oracle Linux                   | 7                     | X64 |
+| CentOS                         | 7                     | X64 |
+| Fedora                         | 29+                   | X64 |
+| Debian                         | 9+                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
+| Linux Mint                     | 18+                   | X64 |
+| openSUSE                       | 15+                   | X64 |
+| SUSE Enterprise Linux (SLES)   | 12 с пакетом обновления 2+               | X64 |
+| Alpine Linux                   | 3.8+                  | x64, ARM64 |
 
 Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 3.0, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [версий ОС, поддерживаемых .NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
 Дополнительные сведения об установке .NET Core 3.0 в ARM64 см. в [этой статье](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+.NET Core 2.2 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
+
+Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания [.NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2).
+
+.NET Core 2.2 поддерживается в следующих дистрибутивах и версиях Linux.
+
+> [!NOTE]
+> Символ `+` представляет минимальную версию.
+
+| Операционная система                             |  Version                |  Архитектуры   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7                   | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  15+                    | X64 |
+| SUSE Enterprise Linux (SLES)   |  12 с пакетом обновления 2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 2.2, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [версий ОС, поддерживаемых .NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+.NET Core 2.1 воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
+
+Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+
+.NET Core 2.1 поддерживается в следующих дистрибутивах и версиях Linux.
+
+| Операционная система                             |  Version                |  Архитектуры   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 19.04    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  42.3+                  | X64 |
+| SUSE Enterprise Linux (SLES)   |  12 с пакетом обновления 2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 2.1, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
 ---
 

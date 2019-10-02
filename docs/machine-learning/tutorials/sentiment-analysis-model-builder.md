@@ -1,17 +1,17 @@
 ---
 title: Учебник. Анализ тональности (двоичная классификация)
 description: В этом руководстве показано, как создать консольное приложение Razor Pages, которое определяет тональность комментариев на веб-сайте, и предпринимает соответствующие действия. Двоичный классификатор тональности использует построитель моделей в Visual Studio.
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6184e097daf4604173db9e2a34606e68eb0fdc8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054276"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332578"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Учебник. Анализ тональности комментариев на веб-сайте в веб-приложении с помощью построителя моделей ML.NET
 
@@ -22,13 +22,14 @@ ms.locfileid: "71054276"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
-> * Создание приложения Razor Pages ASP.NET Core
-> * Подготовка и анализ данных
-> * Выбор сценария
-> * Загрузка данных
-> * Обучение модели
-> * Оценка модели
-> * Использование модели для прогнозирования
+>
+> - Создание приложения Razor Pages ASP.NET Core
+> - Подготовка и анализ данных
+> - Выбор сценария
+> - Загрузка данных
+> - Обучение модели
+> - Оценка модели
+> - Использование модели для прогнозирования
 
 > [!NOTE]
 > Построитель моделей в настоящее время находится на этапе предварительной версии.
@@ -43,17 +44,17 @@ ms.locfileid: "71054276"
 
 1. Создайте **приложение ASP.NET Core Razor Pages**.
 
-    1. Откройте Visual Studio и выберите **Файл > Создать > Проект** в строке меню. 
-    1. В диалоговом окне "Новый проект" щелкните узел **Visual C#** , а затем — **Веб**. 
-    1. Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**. 
+    1. Откройте Visual Studio и выберите **Файл > Создать > Проект** в строке меню.
+    1. В диалоговом окне "Новый проект" щелкните узел **Visual C#** , а затем — **Веб**.
+    1. Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**.
     1. В текстовом поле **Имя** введите SentimentRazor.
-    1. Флажок **Создать каталог для решения** должен быть установлен по умолчанию. Если это не так, установите его. 
+    1. Флажок **Создать каталог для решения** должен быть установлен по умолчанию. Если это не так, установите его.
     1. Нажмите кнопку **OK**.
     1. Выберите **Web Application** (Веб-приложение) в окне с разными типами проектов ASP.NET Core и нажмите кнопку **ОК**.
 
 ## <a name="prepare-and-understand-the-data"></a>Подготовка и анализ данных
 
-Скачайте [набор данных Wikipedia Detox](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Щелкните открывшуюся веб-страницу правой кнопкой мыши, выберите **Сохранить как** и сохраните файл на компьютере. 
+Скачайте [набор данных Wikipedia Detox](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Щелкните открывшуюся веб-страницу правой кнопкой мыши, выберите **Сохранить как** и сохраните файл на компьютере.
 
 Каждая строка в наборе данных *wikipedia-detox-250-line-data.tsv* содержит сообщение, оставленное пользователем Википедии. Первый столбец представляет тональность текста (0 — нетоксичный, 1 — токсичный), а второй столбец включает сам комментарий, оставленный пользователем. Столбцы разделены пробелами. Данные выглядят так:
 
@@ -65,9 +66,9 @@ ms.locfileid: "71054276"
 
 ## <a name="choose-a-scenario"></a>Выбор сценария
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Мастер построителя моделей в Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-Чтобы обучить модель, нужно выбрать один из доступных сценариев машинного обучения в построителе моделей. 
+Чтобы обучить модель, нужно выбрать один из доступных сценариев машинного обучения в построителе моделей.
 
 1. В **обозревателе решений** щелкните правой кнопкой мыши проект *SentimentRazor* и выберите **Добавить** > **Машинное обучение**.
 1. В этом примере сценарий включает анализ тональности. На шаге *Сценарий* средства построителя моделей выберите сценарий **Анализ тональности**.
@@ -78,14 +79,15 @@ ms.locfileid: "71054276"
 
 1. На этапе добавления данных выберите в раскрывающемся списке источников данных пункт **Прогнозирование цен**.
 1. Нажмите кнопку рядом с текстовым полем **Выберите файл** и щелкните в проводнике файл *wikipedia-detox-250-line-data.tsv*.
-1. Выберите **Тональность** в раскрывающемся списке **Метка или столбец для прогнозирования**.
+1. Выберите **Тональность** в раскрывающемся списке **Метка для прогнозирования (или столбец)** .
+1. Оставьте значения по умолчанию для раскрывающегося списка **Входные столбцы (компоненты)** .
 1. Щелкните ссылку **Обучение**, чтобы перейти к следующему шагу в средстве построителя моделей.
 
 ## <a name="train-the-model"></a>Обучение модели
 
 Задачей машинного обучения, используемой в этом руководстве для обучения модели прогнозирования цен, является бинарная классификация. В процессе обучения построитель моделей обучает отдельные модели с помощью различных алгоритмов и параметров бинарной классификации, определяя оптимальную модель для вашего набора данных.
 
-Время, требуемое для обучения модели, пропорционально объему данных. Построитель моделей автоматически выбирает значение по умолчанию для параметра **Time to train (seconds)** (Время обучения в секундах) в зависимости от размера источника данных. 
+Время, требуемое для обучения модели, пропорционально объему данных. Построитель моделей автоматически выбирает значение по умолчанию для параметра **Time to train (seconds)** (Время обучения в секундах) в зависимости от размера источника данных.
 
 1. Хотя построитель моделей задает для параметра **Время обучения (в секундах)** значение 10 секунд, увеличьте его до 30 секунд. Обучение в течение более длительного периода времени позволяет построителю моделей исследовать большее количество алгоритмов и комбинаций параметров, чтобы определить наилучшую модель.
 1. Выберите **Начать обучение**.
@@ -120,33 +122,23 @@ ms.locfileid: "71054276"
 
     В этом руководстве используется только проект *SentimentRazorML.Model*, так как прогнозы будут выполняться в веб-приложении *SentimentRazor*, а не в консоли. Хотя проект *SentimentRazorML.ConsoleApp* не будет использоваться для оценки, его можно применить для переобучения модели в будущем с помощью новых данных. Вопросы, связанные с переобучением, выходят за рамки этого руководства.
 
-1. Чтобы использовать обученную модель в приложении Razor Pages, добавьте ссылку на проект *SentimentRazorML.Model*.
-
-    1. Щелкните проект **SentimentRazor** правой кнопкой мыши. 
-    1. Выберите **Добавить > Ссылка**. 
-    1. Выберите узел **Проекты > Решение**, и установите в списке флажок рядом с проектом **SentimentRazorML.Model**.
-    1. Нажмите кнопку **ОК**.
-
 ### <a name="configure-the-predictionengine-pool"></a>Настройка пула PredictionEngine
 
-Чтобы сделать один прогноз, можно использовать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). При необходимости создайте [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для дальнейшего использования в приложении. В этом случае рекомендуется внедрить зависимости.
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Для повышения производительности и безопасности потока используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) из объектов `PredictionEngine` для использования приложений. Прочтите следующую запись блога, чтобы узнать о [создании и использовании пулов объектов `PredictionEngine` в ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
+Для формирования одного прогноза необходимо создать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Кроме того, необходимо создать его экземпляр везде, где он понадобится в вашем приложении. По мере увеличения размера приложения этот процесс может стать неуправляемым. Для улучшенной производительности и потокобезопасности используйте сочетание внедрения зависимостей и службы `PredictionEnginePool`, которое создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении.
 
 1. Установите пакет NuGet *Microsoft.Extensions.ML*:
 
-    1. В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. 
-    1. Выберите nuget.org в качестве источника пакета. 
-    1. Откройте вкладку **Обзор** и найдите **Microsoft.Extensions.ML**. 
-    1. Выберите пакет в списке и нажмите кнопку **Установить**. 
+    1. В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**.
+    1. Выберите nuget.org в качестве источника пакета.
+    1. Откройте вкладку **Обзор** и найдите **Microsoft.Extensions.ML**.
+    1. Выберите пакет в списке и нажмите кнопку **Установить**.
     1. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**.
-    1. Нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с условиями лицензионного соглашения для указанных пакетов. 
+    1. Нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с условиями лицензионного соглашения для указанных пакетов.
 
 1. Откройте файл *Startup.cs* в проекте *SentimentRazor*.
 1. Добавьте следующие операторы using, ссылающиеся на пакет NuGet *Microsoft.Extensions.ML* и проект *SentimentRazorML.Model*:
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]        
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
 
 1. Создайте глобальную переменную для хранения расположения файла обученной модели.
 
@@ -172,7 +164,7 @@ ms.locfileid: "71054276"
 
     [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
 
-    Чтобы использовать службу `PredictionEnginePool`, настроенную в классе `Startup`, необходимо внедрить ее в конструктор модели для дальнейшего использования. 
+    Чтобы использовать службу `PredictionEnginePool`, настроенную в классе `Startup`, необходимо внедрить ее в конструктор модели для дальнейшего использования.
 
 1. Добавьте переменную для создания ссылки на `PredictionEnginePool` в классе `IndexModel`.
 
@@ -195,15 +187,15 @@ ms.locfileid: "71054276"
 
     1. Внутри метода `OnGetAnalyzeSentiment` передайте тональность *Neutral* (Нейтрально), если входные данные пользователя пусты или имеют значение NULL.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)] 
-    
-    1. При наличии допустимых входных данных создайте новый экземпляр `ModelInput`. 
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)] 
+    1. При наличии допустимых входных данных создайте новый экземпляр `ModelInput`.
+
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
 
     1. Используйте `PredictionEnginePool` для прогнозирования тональности.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)] 
+        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
 
     1. Преобразуйте прогнозируемое значение `bool` в токсичное или нетоксичное с помощью следующего кода.
 
@@ -217,7 +209,7 @@ ms.locfileid: "71054276"
 
 Результаты, возвращаемые `OnGetAnalyzeSentiment`, будут динамически отображаться на веб-странице `Index`.
 
-1. Откройте файл *Index.cshtml* в каталоге *Pages* и замените его содержимое следующим кодом: 
+1. Откройте файл *Index.cshtml* в каталоге *Pages* и замените его содержимое следующим кодом:
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
@@ -249,7 +241,7 @@ ms.locfileid: "71054276"
 
 Когда приложение запустится, введите *Model Builder is cool!* (Построитель моделей — это круто!) в текстовом поле. Отобразится прогнозируемая тональность — *Not Toxic* (Нетоксично).
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![Окно выполнения с окном прогнозируемой тональности](./media/sentiment-analysis-model-builder/web-app.png)
 
 В будущем вам может потребоваться создать ссылку на проекты, созданные с помощью построителя моделей, для использования в другом решении. В таком случае их можно найти в каталоге `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
@@ -257,13 +249,14 @@ ms.locfileid: "71054276"
 
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
-> * Создание приложения Razor Pages ASP.NET Core
-> * Подготовка и анализ данных
-> * Выбор сценария
-> * Загрузка данных
-> * Обучение модели
-> * Оценка модели
-> * Использование модели для прогнозирования
+>
+> - Создание приложения Razor Pages ASP.NET Core
+> - Подготовка и анализ данных
+> - Выбор сценария
+> - Загрузка данных
+> - Обучение модели
+> - Оценка модели
+> - Использование модели для прогнозирования
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 

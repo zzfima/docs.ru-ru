@@ -1,18 +1,18 @@
 ---
 title: Анализ диапазонов данных с помощью индексов и диапазонов
 description: В этом учебнике подробно рассказывается, как анализировать данные с помощью индексов и диапазонов и, таким образом, изучать срезы последовательного набора данных.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117836"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391964"
 ---
 # <a name="indices-and-ranges"></a>Индексы и диапазоны
 
-Диапазоны и индексы обеспечивают лаконичный синтаксис для доступа к отдельным элементам или диапазонам в <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>. Благодаря этим функциям синтаксис для доступа к отдельным элементам или диапазонам элементов в последовательности становится более четким и понятным.
+Диапазоны и индексы обеспечивают лаконичный синтаксис для доступа к отдельным элементам или диапазонам в последовательности.
 
 В этом руководстве вы узнаете, как:
 
@@ -74,6 +74,14 @@ string[] words = new string[]
 Следующий пример демонстрирует многие возможные причины для таких решений. Измените `x`, `y` и `z` и опробуйте различные комбинации. Поэкспериментируйте со значениями, у которых `x` меньше `y`, а `y` меньше, чем `z` для допустимых сочетаний. Добавьте в новый метод приведенный ниже код. Опробуйте различные комбинации:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>Поддержка типов для индексов и диапазонов
+
+Если тип предоставляет [индексатор](../programming-guide/indexers/index.md) с параметром <xref:System.Index> или <xref:System.Range>, он явно поддерживает индексы или диапазоны соответственно.
+
+Тип является **счетным**, если у него есть свойство с именем `Length` или `Count` с доступным методом получения и типом возвращаемого значения `int`. Счетный тип, который не поддерживает индексы или диапазоны явным образом, может предоставить неявную поддержку для них. Дополнительные сведения см. в разделах о [поддержке неявного индекса](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) и [неявного диапазона](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) в [примечании к предлагаемой функции](~/_csharplang/proposals/csharp-8.0/ranges.md).
+
+Например, следующие типы .NET поддерживают как индексы, так и диапазоны: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> и <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> поддерживает индексы, но не поддерживает диапазоны.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Сценарии для индексов и диапазонов
 

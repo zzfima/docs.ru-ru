@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 7682eae5a28d4ef87d6622b775e0f2f9408bcbae
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b965c3a975b0f2cadd906799fef1665261d96d6e
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117141"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181977"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>Для EnvelopedCms по умолчанию используется шифрование AES-256
 
 Алгоритм симметричного шифрования по умолчанию, используемый `EnvelopedCms`, изменен с TripleDES на AES-256.
 
-#### <a name="details"></a>Подробные сведения
+#### <a name="details"></a>Сведения
 
 Когда в предварительной версии .NET Core 7 и более ранних версиях использовался <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> для шифрования данных без указания алгоритма симметричного шифрования с помощью перегрузки конструктора, данные зашифровывались с помощью алгоритма TripleDES/3DES/3DEA/DES3-EDE.
 

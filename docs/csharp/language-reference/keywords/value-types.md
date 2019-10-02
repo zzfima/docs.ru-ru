@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608380"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353754"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -32,7 +32,7 @@ ms.locfileid: "69608380"
 
 В отличие от ссылочных типов, создать новый производный от типа значения тип нельзя. Тем не менее, как и ссылочные типы, структуры могут реализовывать интерфейсы.
 
-Переменные типа значения не могут иметь значение `null` по умолчанию. Однако переменные соответствующих [типов, допускающих значение null](../../programming-guide/nullable-types/index.md), могут иметь значение `null`.
+Переменные типа значения не могут иметь значение `null` по умолчанию. Однако переменные соответствующих [типов, допускающих значение NULL](../../programming-guide/nullable-types/index.md), могут иметь значение `null`.
 
 Каждый тип значения имеет неявный конструктор без параметров, который инициализирует значение по умолчанию этого типа. Дополнительные сведения о значениях по умолчанию для типов значений см. в разделе [Таблица значений по умолчанию (справочник по C#)](default-values-table.md).
 
@@ -109,4 +109,4 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [Ключевые слова в C#](index.md)
 - [Типы](types.md)
 - [Ссылочные типы](reference-types.md)
-- [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md)
+- [Типы значений, допускающие значение NULL](../../programming-guide/nullable-types/index.md)

@@ -7,21 +7,21 @@
         - name: Параллелизм данных
           href: data-parallelism-task-parallel-library.md
           items:
-            - name: Как выполнить Написание простого цикла Parallel.For
+            - name: Практическое руководство. Написание простого цикла Parallel.For
               href: how-to-write-a-simple-parallel-for-loop.md
-            - name: Как выполнить Написание простого цикла Parallel.ForEach
+            - name: Практическое руководство. Написание простого цикла Parallel.ForEach
               href: how-to-write-a-simple-parallel-foreach-loop.md
-            - name: Как выполнить Написание цикла Parallel.For и локальными переменными потока
+            - name: Практическое руководство. Написание цикла Parallel.For и локальными переменными потока
               href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
-            - name: Как выполнить Написание цикла Parallel.ForEach c локальными переменными раздела
+            - name: Практическое руководство. Написание цикла Parallel.ForEach c локальными переменными раздела
               href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
-            - name: Как выполнить Отмена цикла Parallel.For или Parallel.ForEach
+            - name: Практическое руководство. Отмена цикла Parallel.For или Parallel.ForEach
               href: how-to-cancel-a-parallel-for-or-foreach-loop.md
-            - name: Как выполнить Обработка исключений в параллельных циклах
+            - name: Практическое руководство. Обработка исключений в параллельных циклах
               href: how-to-handle-exceptions-in-parallel-loops.md
-            - name: Как выполнить Повышение скорости выполнения небольших тел циклов
+            - name: Практическое руководство. Повышение скорости выполнения небольших тел циклов
               href: how-to-speed-up-small-loop-bodies.md
-            - name: Как выполнить перебор каталогов с файлами с помощью параллельного класса
+            - name: Практическое руководство. перебор каталогов с файлами с помощью параллельного класса
               href: how-to-iterate-file-directories-with-the-parallel-class.md
         - name: Асинхронное программирование на основе задач
           href: task-based-asynchronous-programming.md
@@ -34,44 +34,44 @@
               href: task-cancellation.md
             - name: Обработка исключений
               href: exception-handling-task-parallel-library.md
-            - name: Как выполнить Использование функции Parallel.Invoke для выполнения параллельных операций
+            - name: Практическое руководство. Использование Parallel.Invoke для выполнения параллельных операций
               href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
-            - name: Как выполнить Возвращение значения из задачи
+            - name: Практическое руководство. Возврат значения из задачи
               href: how-to-return-a-value-from-a-task.md
-            - name: Как выполнить Отмена задачи и ее дочерних элементов
+            - name: Практическое руководство. Отмена задачи и ее дочерних элементов
               href: how-to-cancel-a-task-and-its-children.md
-            - name: Как выполнить Создание предварительно вычисленных задач
+            - name: Практическое руководство. Создание предварительно вычисленных задач
               href: how-to-create-pre-computed-tasks.md
-            - name: Как выполнить Переход по двоичному дереву с помощью параллельных задач
+            - name: Практическое руководство. Переход по двоичному дереву с помощью параллельных задач
               href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
-            - name: Как выполнить Извлечение вложенной задачи из оболочки
+            - name: Практическое руководство. Извлечение вложенной задачи
               href: how-to-unwrap-a-nested-task.md
-            - name: Как выполнить Запрет присоединения дочерней задачи к ее родительской задаче
+            - name: Практическое руководство. Запрет присоединения дочерней задачи к ее родительской задаче
               href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
         - name: Поток данных
           href: dataflow-task-parallel-library.md
           items:
-            - name: Как выполнить Запись и чтение сообщений в блоке потока данных
+            - name: Практическое руководство. Запись и чтение сообщений в блоке потока данных
               href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
-            - name: Как выполнить Реализация шаблона потока данных "производитель-получатель"
+            - name: Практическое руководство. Реализация шаблона потока данных "производитель-потребитель"
               href: how-to-implement-a-producer-consumer-dataflow-pattern.md
-            - name: Как выполнить Выполнение действий при получении данных блоком потоков данных
+            - name: Практическое руководство. Выполнение действий при получении данных блоком потоков данных
               href: how-to-perform-action-when-a-dataflow-block-receives-data.md
             - name: Пошаговое руководство. Создание конвейера потока данных
               href: walkthrough-creating-a-dataflow-pipeline.md
-            - name: Как выполнить Удаление связей с блоками потоков данных
+            - name: Практическое руководство.  Удаление связей с блоками потоков данных
               href: how-to-unlink-dataflow-blocks.md
             - name: Пошаговое руководство. Использование потока данных в приложении Windows Forms
               href: walkthrough-using-dataflow-in-a-windows-forms-application.md
-            - name: Как выполнить Отмена блока потока данных
+            - name: Практическое руководство. Отмена блока потока данных
               href: how-to-cancel-a-dataflow-block.md
             - name: Пошаговое руководство. Создание пользовательского типа блока потока данных
               href: walkthrough-creating-a-custom-dataflow-block-type.md
-            - name: Как выполнить Использование JoinBlock для чтения данных из нескольких источников
+            - name: Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников
               href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
-            - name: Как выполнить Указание степени параллелизма в блоке потока данных
+            - name: Практическое руководство. Указание степени параллелизма в блоке потока данных
               href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
-            - name: Как выполнить Указание планировщика задач в блоке потока данных
+            - name: Практическое руководство. Указание планировщика задач в блоке потока данных
               href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
             - name: Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock
               href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
@@ -80,7 +80,7 @@
           items:
             - name: Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework
               href: tpl-and-traditional-async-programming.md
-            - name: Как выполнить Создание задачи-оболочки для шаблонов EAP
+            - name: Практическое руководство. Создание задачи-оболочки для шаблонов EAP
               href: how-to-wrap-eap-patterns-in-a-task.md
         - name: 'Потенциальные ошибки, связанные с параллелизмом данных и задач'
           href: potential-pitfalls-in-data-and-task-parallelism.md
@@ -97,25 +97,25 @@
           href: merge-options-in-plinq.md
         - name: 'Потенциальные ошибки, связанные с PLINQ'
           href: potential-pitfalls-with-plinq.md
-        - name: Как выполнить Создание и выполнение простого запроса PLINQ
+        - name: Практическое руководство. Создание и выполнение простого запроса PLINQ
           href: how-to-create-and-execute-a-simple-plinq-query.md
-        - name: Как выполнить Управление порядком в запросе PLINQ
+        - name: Практическое руководство. Управление порядком в запросе PLINQ
           href: how-to-control-ordering-in-a-plinq-query.md
-        - name: Как выполнить Объединение параллельных и последовательных запросов LINQ
+        - name: Практическое руководство. Объединение параллельных и последовательных запросов LINQ
           href: how-to-combine-parallel-and-sequential-linq-queries.md
-        - name: Как выполнить Обработка исключений в запросе PLINQ
+        - name: Практическое руководство. Обработка исключений в запросе PLINQ
           href: how-to-handle-exceptions-in-a-plinq-query.md
-        - name: Как выполнить Отмена запроса PLINQ
+        - name: Практическое руководство. Отмена запроса PLINQ
           href: how-to-cancel-a-plinq-query.md
-        - name: Как выполнить Написание пользовательской агрегатной функции PLINQ
+        - name: Практическое руководство. Написание пользовательской агрегатной функции PLINQ
           href: how-to-write-a-custom-plinq-aggregate-function.md
-        - name: Как выполнить Задание режима выполнения в PLINQ
+        - name: Практическое руководство. Задание режима выполнения в PLINQ
           href: how-to-specify-the-execution-mode-in-plinq.md
-        - name: Как выполнить Задание параметров слияния в PLINQ
+        - name: Практическое руководство. Задание параметров слияния в PLINQ
           href: how-to-specify-merge-options-in-plinq.md
-        - name: Как выполнить Перебор каталогов с файлами с помощью PLINQ
+        - name: Практическое руководство. Перебор каталогов с файлами с помощью PLINQ
           href: how-to-iterate-file-directories-with-plinq.md
-        - name: Как выполнить Измерение производительности запросов PLINQ
+        - name: Практическое руководство. Измерение производительности запросов PLINQ
           href: how-to-measure-plinq-query-performance.md
         - name: Пример данных PLINQ
           href: plinq-data-sample.md
@@ -126,9 +126,9 @@
     - name: Пользовательские разделители для PLINQ и TPL
       href: custom-partitioners-for-plinq-and-tpl.md
       items:
-        - name: Как выполнить Реализация динамических секций
+        - name: Практическое руководство. Реализация динамических секций
           href: how-to-implement-dynamic-partitions.md
-        - name: Как выполнить Реализация разделителя для статического секционирования
+        - name: Практическое руководство. Реализация разделителя для статического секционирования
           href: how-to-implement-a-partitioner-for-static-partitioning.md
     - name: Лямбда-выражения в PLINQ и библиотеке параллельных задач
       href: lambda-expressions-in-plinq-and-tpl.md
