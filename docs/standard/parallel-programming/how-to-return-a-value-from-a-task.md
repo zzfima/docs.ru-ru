@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Возвращение значения из задачи
+title: Практическое руководство. Возврат значения из задачи
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54741789"
 ---
-# <a name="how-to-return-a-value-from-a-task"></a>Как выполнить Возвращение значения из задачи
+# <a name="how-to-return-a-value-from-a-task"></a>Практическое руководство. Возврат значения из задачи
 В этом примере показано, как использовать тип <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> для возврата значения из свойства <xref:System.Threading.Tasks.Task%601.Result%2A>. Здесь требуется, чтобы каталог C:\Users\Public\Pictures\Sample Pictures\ существовал и содержал файлы.  
   
 ## <a name="example"></a>Пример  

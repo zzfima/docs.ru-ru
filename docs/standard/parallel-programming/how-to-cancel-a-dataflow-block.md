@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отмена блока потока данных
+title: Практическое руководство. Отмена блока потока данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,7 +19,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345200"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>Как выполнить Отмена блока потока данных
+# <a name="how-to-cancel-a-dataflow-block"></a>Практическое руководство. Отмена блока потока данных
 В этом документе показано, как включить отмену в приложении. В этом примере используется Windows Forms для отображения позиции активности рабочих элементов в конвейере потока данных, а также последствий отмены.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

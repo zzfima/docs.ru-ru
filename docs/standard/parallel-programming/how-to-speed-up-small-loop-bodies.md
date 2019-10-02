@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Повышение скорости выполнения небольших тел циклов
+title: Практическое руководство. Повышение скорости выполнения небольших тел циклов
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 02/28/2019
 ms.locfileid: "56965583"
 ---
-# <a name="how-to-speed-up-small-loop-bodies"></a>Как выполнить Повышение скорости выполнения небольших тел циклов
+# <a name="how-to-speed-up-small-loop-bodies"></a>Практическое руководство. Повышение скорости выполнения небольших тел циклов
 Когда цикл <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> имеет небольшое тело, он может выполняться значительно медленнее, чем эквивалентный последовательный цикл, такой как цикл [for](../../csharp/language-reference/keywords/for.md) в C# и цикл [For](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) в Visual Basic. Снижение производительности происходит вследствие нагрузки, связанной с секционированием данных и стоимостью вызова делегата в каждой итерации цикла. Для разрешения таких сценариев класс <xref:System.Collections.Concurrent.Partitioner> предоставляет метод <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType>, который позволяет выполнять последовательный цикл для тела делегата, чтобы делегат вызывался только один раз для каждой секции, а не по разу в каждой итерации. Дополнительные сведения см. в разделе [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="example"></a>Пример  
