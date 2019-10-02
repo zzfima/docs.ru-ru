@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Написание простого цикла Parallel.For
+title: Практическое руководство. Написание простого цикла Parallel.For
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,7 +19,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54574928"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Как выполнить Написание простого цикла Parallel.For
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Практическое руководство. Написание простого цикла Parallel.For
 
 Этот раздел содержит два примера, иллюстрирующих использование метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Первый использует перегрузку метода <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, а второй — перегрузку <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, которые являются двумя простейшими перегрузками метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Эти две перегрузки метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> можно использовать, когда не требуется отменять цикл, прерывать итерации цикла или сохранять локальное состояние по отношению к потоку.
 
