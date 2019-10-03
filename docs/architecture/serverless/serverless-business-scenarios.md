@@ -4,12 +4,12 @@ description: Изучите практический подход, обраща�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926468"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834298"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Бессерверные сценарии и варианты использования для бизнеса
 
@@ -33,7 +33,7 @@ ms.locfileid: "70926468"
 
 Узнайте, как реализовать простую бессерверную функцию Azure на веб-портале Azure или в Visual Studio. Создание клиента с помощью Xamarin. Forms, работающего в Android, iOS и Windows. После этого приложение будет оптимизировано для использования нотация объектов JavaScript (JSON) в качестве носителя обмена данными между сервером и мобильными клиентами с серверной внутренней службой.
 
-Дополнительные сведения см. в статье [Реализация простой функции Azure с помощью клиента Xamarin. Forms.](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+Дополнительные сведения см. в статье [Реализация простой функции Azure с помощью клиента Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Создание мозаики для фотографий с помощью распознавания несерверных изображений
 
