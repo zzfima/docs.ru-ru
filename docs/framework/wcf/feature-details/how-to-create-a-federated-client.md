@@ -18,7 +18,7 @@ ms.locfileid: "69950631"
 # <a name="how-to-create-a-federated-client"></a>Практическое руководство. Создание федеративного клиента
 В Windows Communication Foundation (WCF) создание клиента для *федеративной службы* состоит из трех основных этапов:  
   
-1. Настройте > WSFederationHttpBinding или аналогичную пользовательскую привязку. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) Дополнительные сведения о создании подходящей привязки см. в [разделе как Создайте WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Кроме того, запустите [средство служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в конечной точке метаданных федеративной службы, чтобы создать файл конфигурации для взаимодействия с федеративной службой и одной или нескольких служб маркеров безопасности.  
+1. Настройте [\<WSFederationHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или аналогичную пользовательскую привязку. Дополнительные сведения о создании подходящей привязки см. в [разделе как Создайте WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Кроме того, запустите [средство служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в конечной точке метаданных федеративной службы, чтобы создать файл конфигурации для взаимодействия с федеративной службой и одной или нескольких служб маркеров безопасности.  
   
 2. Задайте свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential>, управляющие различными аспектами взаимодействия клиента со службой маркеров безопасности.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "69950631"
   
 ### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>Настройка IssuedTokenClientCredential в конфигурации  
   
-1. Создайте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) [\<issuedTokenкакдочернийэлемент>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)элементаissuedTokenвповеденииконечнойточки.  
+1. Создайте элемент [\<issuedToken](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)какдочернийэлемент[\<issuedToken>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)элементы в поведении конечной точки.  
   
 2. Если кэширование маркеров не требуется, задайте `cacheIssuedTokens` атрибуту (элемента > <`issuedToken`) `false`значение.  
   
