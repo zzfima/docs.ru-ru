@@ -5,24 +5,24 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: f6facc047d87c503313015eff4e869861cd6b301
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835503"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956997"
 ---
-# <a name="xpath-namespace-navigation"></a><span data-ttu-id="eded7-102">Навигация по пространствам имен XPath</span><span class="sxs-lookup"><span data-stu-id="eded7-102">XPath Namespace Navigation</span></span>
-<span data-ttu-id="eded7-103">Для использования запросов XPath с XML-документами необходимо правильно задавать адреса пространств имен XML и элементов, содержащихся в этих пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="eded7-103">To use XPath queries with XML documents, you have to correctly address XML namespaces and the elements contained by namespaces.</span></span> <span data-ttu-id="eded7-104">Использование пространств имен устраняет неоднозначность, возникающую, когда имена используются в нескольких контекстах. Например, имя `ID` может относиться к нескольким идентификаторам, связанным с различными элементами XML-документа.</span><span class="sxs-lookup"><span data-stu-id="eded7-104">Namespaces prevent ambiguities that can occur when names are used in more than one context; for example, the name `ID` may refer to more than one identifier associated with different elements of an XML document.</span></span> <span data-ttu-id="eded7-105">В синтаксисе пространств имен задаются URI, имена и префиксы, по которым различаются элементы XML-документа.</span><span class="sxs-lookup"><span data-stu-id="eded7-105">Namespace syntax specifies URIs, names, and prefixes that distinguish the elements of an XML document.</span></span>  
+# <a name="xpath-namespace-navigation"></a><span data-ttu-id="74270-102">Навигация по пространствам имен XPath</span><span class="sxs-lookup"><span data-stu-id="74270-102">XPath Namespace Navigation</span></span>
+<span data-ttu-id="74270-103">Для использования запросов XPath с XML-документами необходимо правильно задавать адреса пространств имен XML и элементов, содержащихся в этих пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="74270-103">To use XPath queries with XML documents, you have to correctly address XML namespaces and the elements contained by namespaces.</span></span> <span data-ttu-id="74270-104">Использование пространств имен устраняет неоднозначность, возникающую, когда имена используются в нескольких контекстах. Например, имя `ID` может относиться к нескольким идентификаторам, связанным с различными элементами XML-документа.</span><span class="sxs-lookup"><span data-stu-id="74270-104">Namespaces prevent ambiguities that can occur when names are used in more than one context; for example, the name `ID` may refer to more than one identifier associated with different elements of an XML document.</span></span> <span data-ttu-id="74270-105">В синтаксисе пространств имен задаются URI, имена и префиксы, по которым различаются элементы XML-документа.</span><span class="sxs-lookup"><span data-stu-id="74270-105">Namespace syntax specifies URIs, names, and prefixes that distinguish the elements of an XML document.</span></span>  
   
- <span data-ttu-id="eded7-106">В примере из этого раздела показано использование префиксов для навигации по XML-документу с помощью <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="eded7-106">The example in this topic demonstrates the use of prefixes in navigating an XML document with <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="eded7-107">Дополнительные сведения о пространствах имен и синтаксисе см. в разделе [Файл XML: общие сведения о пространствах имен XML](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).</span><span class="sxs-lookup"><span data-stu-id="eded7-107">For more information about namespaces and syntax, see [XML Files: Understanding XML Namespaces](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).</span></span>  
+ <span data-ttu-id="74270-106">В примере из этого раздела показано использование префиксов для навигации по XML-документу с помощью <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="74270-106">The example in this topic demonstrates the use of prefixes in navigating an XML document with <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="74270-107">Дополнительные сведения о пространствах имен и синтаксисе см. в разделе [Файл XML: общие сведения о пространствах имен XML](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).</span><span class="sxs-lookup"><span data-stu-id="74270-107">For more information about namespaces and syntax, see [XML Files: Understanding XML Namespaces](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).</span></span>  
   
-## <a name="namespace-declarations"></a><span data-ttu-id="eded7-108">Объявление пространств имен</span><span class="sxs-lookup"><span data-stu-id="eded7-108">Namespace Declarations</span></span>  
- <span data-ttu-id="eded7-109">Объявление пространств имен позволяет различать элементы XML-документа и обращаться к ним при использовании экземпляра <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="eded7-109">Namespace declarations make the elements of an XML document distinguishable and addressable when using an instance of <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="eded7-110">Префиксы пространств имен представляют сокращенный синтаксис для адресации пространств имен.</span><span class="sxs-lookup"><span data-stu-id="eded7-110">Namespace prefixes provide a brief syntax for addressing namespaces.</span></span>  
+## <a name="namespace-declarations"></a><span data-ttu-id="74270-108">Объявление пространств имен</span><span class="sxs-lookup"><span data-stu-id="74270-108">Namespace Declarations</span></span>  
+ <span data-ttu-id="74270-109">Объявление пространств имен позволяет различать элементы XML-документа и обращаться к ним при использовании экземпляра <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="74270-109">Namespace declarations make the elements of an XML document distinguishable and addressable when using an instance of <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="74270-110">Префиксы пространств имен представляют сокращенный синтаксис для адресации пространств имен.</span><span class="sxs-lookup"><span data-stu-id="74270-110">Namespace prefixes provide a brief syntax for addressing namespaces.</span></span>  
   
- <span data-ttu-id="eded7-111">Префиксы определяются в следующей форме. `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` В этом синтаксисе префикс `e` представляет сокращение формального URI пространства имен.</span><span class="sxs-lookup"><span data-stu-id="eded7-111">Prefixes are defined by the form: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In this syntax the prefix "`e`" is an abbreviation for the formal URI of the namespace.</span></span> <span data-ttu-id="eded7-112">Элемент `Body` можно определить как элемент пространства имен `Envelope`, используя синтаксис `e:Body`.</span><span class="sxs-lookup"><span data-stu-id="eded7-112">You can identify the `Body` element as a member of the `Envelope` namespace by using the syntax: `e:Body`.</span></span>  
+ <span data-ttu-id="74270-111">Префиксы определяются в следующей форме. `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` В этом синтаксисе префикс `e` представляет сокращение формального URI пространства имен.</span><span class="sxs-lookup"><span data-stu-id="74270-111">Prefixes are defined by the form: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In this syntax the prefix "`e`" is an abbreviation for the formal URI of the namespace.</span></span> <span data-ttu-id="74270-112">Элемент `Body` можно определить как элемент пространства имен `Envelope`, используя синтаксис `e:Body`.</span><span class="sxs-lookup"><span data-stu-id="74270-112">You can identify the `Body` element as a member of the `Envelope` namespace by using the syntax: `e:Body`.</span></span>  
   
- <span data-ttu-id="eded7-113">Следующий XML-документ в примере навигации из следующего раздела будет упоминаться как `response.xml`.</span><span class="sxs-lookup"><span data-stu-id="eded7-113">The following XML document will be referenced as `response.xml` in the navigation example in the next section.</span></span>  
+ <span data-ttu-id="74270-113">Следующий XML-документ в примере навигации из следующего раздела будет упоминаться как `response.xml`.</span><span class="sxs-lookup"><span data-stu-id="74270-113">The following XML document will be referenced as `response.xml` in the navigation example in the next section.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -37,40 +37,34 @@ ms.locfileid: "56835503"
 </e:Envelope>  
 ```  
   
-## <a name="navigation-by-namespace-prefix"></a><span data-ttu-id="eded7-114">Навигация по префиксу пространства имен</span><span class="sxs-lookup"><span data-stu-id="eded7-114">Navigation by Namespace Prefix</span></span>  
- <span data-ttu-id="eded7-115">В коде из этого раздела используются объекты <xref:System.Xml.XPath.XPathNavigator> и <xref:System.Xml.XmlNamespaceManager>, чтобы выбрать элемент `Search` из XML-документа в предыдущем разделе.</span><span class="sxs-lookup"><span data-stu-id="eded7-115">The code in this section uses <xref:System.Xml.XPath.XPathNavigator> and <xref:System.Xml.XmlNamespaceManager> objects to select the `Search` element from the XML document in the previous section.</span></span> <span data-ttu-id="eded7-116">Запрос `xpath` содержит префиксы пространства имен в каждом элементе пути.</span><span class="sxs-lookup"><span data-stu-id="eded7-116">The query `xpath` includes namespace prefixes on each element in the path.</span></span> <span data-ttu-id="eded7-117">Указание точного идентификатора пространства имен, которое содержит каждый элемент, гарантирует правильную навигацию к элементу `Search` методом <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.</span><span class="sxs-lookup"><span data-stu-id="eded7-117">Specifying the precise identity of the namespaces that contain each element assures correct navigation to the `Search` element by the <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> method.</span></span>  
+## <a name="navigation-by-namespace-prefix"></a><span data-ttu-id="74270-114">Навигация по префиксу пространства имен</span><span class="sxs-lookup"><span data-stu-id="74270-114">Navigation by Namespace Prefix</span></span>  
+ <span data-ttu-id="74270-115">В коде из этого раздела используются объекты <xref:System.Xml.XPath.XPathNavigator> и <xref:System.Xml.XmlNamespaceManager>, чтобы выбрать элемент `Search` из XML-документа в предыдущем разделе.</span><span class="sxs-lookup"><span data-stu-id="74270-115">The code in this section uses <xref:System.Xml.XPath.XPathNavigator> and <xref:System.Xml.XmlNamespaceManager> objects to select the `Search` element from the XML document in the previous section.</span></span> <span data-ttu-id="74270-116">Запрос `xpath` содержит префиксы пространства имен в каждом элементе пути.</span><span class="sxs-lookup"><span data-stu-id="74270-116">The query `xpath` includes namespace prefixes on each element in the path.</span></span> <span data-ttu-id="74270-117">Указание точного идентификатора пространства имен, которое содержит каждый элемент, гарантирует правильную навигацию к элементу `Search` методом <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.</span><span class="sxs-lookup"><span data-stu-id="74270-117">Specifying the precise identity of the namespaces that contain each element assures correct navigation to the `Search` element by the <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> method.</span></span>  
   
-```  
+```csharp  
 using (XmlReader reader = XmlReader.Create("response.xml"))  
-            {  
-                XPathDocument doc = new XPathDocument(reader);  
-                XPathNavigator nav = doc.CreateNavigator();  
-                XmlNamespaceManager nsmgr =  
-                         new XmlNamespaceManager(nav.NameTable);  
-                nsmgr.AddNamespace("e",   
-                         @"http://schemas.xmlsoap.org/soap/envelope/");  
-                nsmgr.AddNamespace("s",   
-                            @"http://schemas.microsoft.com/v1/Search");  
-                nsmgr.AddNamespace("r",   
-                   @"http://schemas.microsoft.com/v1/Search/metadata");  
-                nsmgr.AddNamespace("i",   
-                         @"http://www.w3.org/2001/XMLSchema-instance");  
+{  
+    XPathDocument doc = new XPathDocument(reader);  
+    XPathNavigator nav = doc.CreateNavigator();
   
-                string xpath = "/e:Envelope/e:Body/s:Search";  
+    XmlNamespaceManager nsmgr = new XmlNamespaceManager(nav.NameTable);  
+    nsmgr.AddNamespace("e", @"http://schemas.xmlsoap.org/soap/envelope/");  
+    nsmgr.AddNamespace("s", @"http://schemas.microsoft.com/v1/Search");  
+    nsmgr.AddNamespace("r", @"http://schemas.microsoft.com/v1/Search/metadata");  
+    nsmgr.AddNamespace("i", @"http://www.w3.org/2001/XMLSchema-instance");  
   
-                XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
+    string xpath = "/e:Envelope/e:Body/s:Search";  
   
-                Console.WriteLine("Element Prefix:" + element.Prefix +   
-                           " Local name:" + element.LocalName);  
-                Console.WriteLine("Namespace URI: " +   
-                            element.NamespaceURI);  
+    XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-            }  
+    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    " Local name:" + element.LocalName);  
+    Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
+}  
 ```  
   
- <span data-ttu-id="eded7-118">Точность полного указания имен и пространств имен дает не просто удобство.</span><span class="sxs-lookup"><span data-stu-id="eded7-118">The precision of fully qualifying namespaces and names is more than a convenience.</span></span> <span data-ttu-id="eded7-119">Небольшой эксперимент с определением документа и кодом из предыдущих примеров может подтвердить, что навигация без полных имен элементов вызывает исключения.</span><span class="sxs-lookup"><span data-stu-id="eded7-119">A little experimentation with the document definition and code in the previous examples will verify that navigation without fully qualified element names throws exceptions.</span></span> <span data-ttu-id="eded7-120">Например, если указать определение элемента `<Search xmlns="http://schemas.microsoft.com/v1/Search">` и строку запроса `xpath = "/s:Envelope/s:Body/Search";` без префикса пространства имен в элементе `Search`, то вместо элемента `null` будет возвращено значение `Search`.</span><span class="sxs-lookup"><span data-stu-id="eded7-120">For example, the element definition: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`, and query: string `xpath = "/s:Envelope/s:Body/Search";` without the namespace prefix on the `Search` element returns `null` instead of the `Search` element.</span></span>  
+ <span data-ttu-id="74270-118">Точность полного указания имен и пространств имен дает не просто удобство.</span><span class="sxs-lookup"><span data-stu-id="74270-118">The precision of fully qualifying namespaces and names is more than a convenience.</span></span> <span data-ttu-id="74270-119">Небольшой эксперимент с определением документа и кодом из предыдущих примеров может подтвердить, что навигация без полных имен элементов вызывает исключения.</span><span class="sxs-lookup"><span data-stu-id="74270-119">A little experimentation with the document definition and code in the previous examples will verify that navigation without fully qualified element names throws exceptions.</span></span> <span data-ttu-id="74270-120">Например, если указать определение элемента `<Search xmlns="http://schemas.microsoft.com/v1/Search">` и строку запроса `xpath = "/s:Envelope/s:Body/Search";` без префикса пространства имен в элементе `Search`, то вместо элемента `null` будет возвращено значение `Search`.</span><span class="sxs-lookup"><span data-stu-id="74270-120">For example, the element definition: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`, and query: string `xpath = "/s:Envelope/s:Body/Search";` without the namespace prefix on the `Search` element returns `null` instead of the `Search` element.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eded7-121">См. также</span><span class="sxs-lookup"><span data-stu-id="eded7-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74270-121">См. также</span><span class="sxs-lookup"><span data-stu-id="74270-121">See also</span></span>
 
-- [<span data-ttu-id="eded7-122">Доступ к XML-данным с помощью класса XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="eded7-122">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [<span data-ttu-id="eded7-123">Выбор, вычисление и отбор XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="eded7-123">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+- [<span data-ttu-id="74270-122">Доступ к XML-данным с помощью класса XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="74270-122">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
+- [<span data-ttu-id="74270-123">Выбор, вычисление и отбор XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="74270-123">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
