@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: f6facc047d87c503313015eff4e869861cd6b301
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835503"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956997"
 ---
 # <a name="xpath-namespace-navigation"></a>Навигация по пространствам имен XPath
 Для использования запросов XPath с XML-документами необходимо правильно задавать адреса пространств имен XML и элементов, содержащихся в этих пространствах имен. Использование пространств имен устраняет неоднозначность, возникающую, когда имена используются в нескольких контекстах. Например, имя `ID` может относиться к нескольким идентификаторам, связанным с различными элементами XML-документа. В синтаксисе пространств имен задаются URI, имена и префиксы, по которым различаются элементы XML-документа.  
@@ -40,32 +40,26 @@ ms.locfileid: "56835503"
 ## <a name="navigation-by-namespace-prefix"></a>Навигация по префиксу пространства имен  
  В коде из этого раздела используются объекты <xref:System.Xml.XPath.XPathNavigator> и <xref:System.Xml.XmlNamespaceManager>, чтобы выбрать элемент `Search` из XML-документа в предыдущем разделе. Запрос `xpath` содержит префиксы пространства имен в каждом элементе пути. Указание точного идентификатора пространства имен, которое содержит каждый элемент, гарантирует правильную навигацию к элементу `Search` методом <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.  
   
-```  
+```csharp  
 using (XmlReader reader = XmlReader.Create("response.xml"))  
-            {  
-                XPathDocument doc = new XPathDocument(reader);  
-                XPathNavigator nav = doc.CreateNavigator();  
-                XmlNamespaceManager nsmgr =  
-                         new XmlNamespaceManager(nav.NameTable);  
-                nsmgr.AddNamespace("e",   
-                         @"http://schemas.xmlsoap.org/soap/envelope/");  
-                nsmgr.AddNamespace("s",   
-                            @"http://schemas.microsoft.com/v1/Search");  
-                nsmgr.AddNamespace("r",   
-                   @"http://schemas.microsoft.com/v1/Search/metadata");  
-                nsmgr.AddNamespace("i",   
-                         @"http://www.w3.org/2001/XMLSchema-instance");  
+{  
+    XPathDocument doc = new XPathDocument(reader);  
+    XPathNavigator nav = doc.CreateNavigator();
   
-                string xpath = "/e:Envelope/e:Body/s:Search";  
+    XmlNamespaceManager nsmgr = new XmlNamespaceManager(nav.NameTable);  
+    nsmgr.AddNamespace("e", @"http://schemas.xmlsoap.org/soap/envelope/");  
+    nsmgr.AddNamespace("s", @"http://schemas.microsoft.com/v1/Search");  
+    nsmgr.AddNamespace("r", @"http://schemas.microsoft.com/v1/Search/metadata");  
+    nsmgr.AddNamespace("i", @"http://www.w3.org/2001/XMLSchema-instance");  
   
-                XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
+    string xpath = "/e:Envelope/e:Body/s:Search";  
   
-                Console.WriteLine("Element Prefix:" + element.Prefix +   
-                           " Local name:" + element.LocalName);  
-                Console.WriteLine("Namespace URI: " +   
-                            element.NamespaceURI);  
+    XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-            }  
+    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    " Local name:" + element.LocalName);  
+    Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
+}  
 ```  
   
  Точность полного указания имен и пространств имен дает не просто удобство. Небольшой эксперимент с определением документа и кодом из предыдущих примеров может подтвердить, что навигация без полных имен элементов вызывает исключения. Например, если указать определение элемента `<Search xmlns="http://schemas.microsoft.com/v1/Search">` и строку запроса `xpath = "/s:Envelope/s:Body/Search";` без префикса пространства имен в элементе `Search`, то вместо элемента `null` будет возвращено значение `Search`.  

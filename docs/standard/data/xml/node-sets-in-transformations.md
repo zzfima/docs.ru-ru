@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a84234ee797dac7487492dc92af2de4fa7ef503
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962552"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957034"
 ---
 # <a name="node-sets-in-transformations"></a>Наборы узлов в преобразованиях
 Наборы узлов - это один из четырех базовых типов данных, возвращаемых из выражений на языке XPath. Набор узлов, представляющий собой неупорядоченную коллекцию узлов без повторов, созданную в порядке документа, может быть назначен переменной в таблице стилей.  
@@ -40,7 +40,7 @@ ms.locfileid: "69962552"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>Входные данные  
+## <a name="input"></a>Ввод  
   
 ```xml  
 <bookstore>  
@@ -58,9 +58,9 @@ ms.locfileid: "69962552"
 </bookstore>  
 ```  
   
-## <a name="output"></a>Вывод  
+## <a name="output"></a>Output  
   
-```  
+```output  
 ******  
 Seven Years in Trenton  
 ******  

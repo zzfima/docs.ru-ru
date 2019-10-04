@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923287"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956995"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-компилятор (xsltc.exe)
 XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку. Скомпилированную таблицу стилей можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Подписанные сборки не могут создаваться с помощью xsltc.exe.  
@@ -19,19 +19,19 @@ XSLT-компилятор (xsltc.exe) компилирует таблицы ст
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
 ## <a name="argument"></a>Аргумент  
   
-|Аргумент|ОПИСАНИЕ|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
 |`sourceFile`|Задает имя таблицы стилей. Таблица стилей должна быть локальным файлом или располагаться в интрасети.|  
   
 ## <a name="options"></a>Параметры  
   
-|Параметр|ОПИСАНИЕ|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Задает имя класса для следующей таблицы стилей. Имя класса может быть полным.<br /><br /> По умолчанию для имени класса используется имя таблицы стилей. Например, если компилируется таблица стилей customers.xsl, по умолчанию используется имя класса customers.|  
 |`/debug[`+&#124;-`]`|Указывает, создаются ли отладочные сведения.<br /><br /> Задание значения `+` или `/debug` включает создание компилятором отладочных сведений, которые размещаются в файле базы данных программы (PDB). Создаваемый PDB-файл получает имя `assemblyName`.pdb.<br /><br /> Если задано значение `-`, которое действует, если не указан параметр `/debug`, то отладочные данные не создаются. Создается конечная версия сборки. **Примечание.**  Компиляция в режиме отладки может значительно снизить производительность XSLT.|  
@@ -54,31 +54,31 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 ## <a name="examples"></a>Примеры  
  Следующая команда компилирует таблицу стилей и создает сборку с именем booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  Следующая команда компилирует таблицу стилей и создает сборку и PDB-файл, которые называются booksort.dll и booksort.pdb соответственно.  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  Следующая команда компилирует таблицу стилей, содержащую элемент msxsl:script, и создает две сборки с именами calc.dll и calc_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  Следующая команда включает обработку DTD и поддержку скриптов, а затем создает две сборки с именами myTest.dll и myTest_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  Следующая команда компилирует два модуля таблицы стилей и создает одну сборку с именем booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   

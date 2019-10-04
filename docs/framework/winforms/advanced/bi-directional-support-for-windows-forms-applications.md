@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5615ec6125cf622d4d6cd72d219d13be4bd5b096
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: bb97d545da422a129ece1f432b3120e1a994c453
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040401"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956930"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, поддерживающих двунаправленные (справа налево) языки, такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.
@@ -23,7 +23,7 @@ Visual Studio можно использовать для создания при
  Язык и региональные параметры, в том числе язык и региональные параметры пользовательского интерфейса, определяют способы обработки приложением дат, времени, валют и других данных. Поддержка языка и региональных параметров, в том числе языка и региональных параметров пользовательского интерфейса, для языков с двунаправленным письмом соответствует поддержке для любых других языков. Дополнительные сведения см. в разделе [классы, зависящие от языка и региональных параметров, для глобальных форм Windows Forms и веб-форм](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Свойства RightToLeft и RightToLeftLayout
- Базовый класс <xref:System.Windows.Forms.Control>, от которого наследуются формы, включает свойство <xref:System.Windows.Forms.Control.RightToLeft%2A>, которое можно задать, чтобы изменить порядок чтения формы и ее элементов управления. Если задать свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> формы, по умолчанию элементы управления формы будут наследовать этот параметр. Однако свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> можно также задать по отдельности для большинства элементов управления. Также см. раздел [Как Отображение текста справа налево в Windows Forms для глобализации](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).
+ Базовый класс <xref:System.Windows.Forms.Control>, от которого наследуются формы, включает свойство <xref:System.Windows.Forms.Control.RightToLeft%2A>, которое можно задать, чтобы изменить порядок чтения формы и ее элементов управления. Если задать свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> формы, по умолчанию элементы управления формы будут наследовать этот параметр. Однако свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> можно также задать по отдельности для большинства элементов управления. Также см. раздел [Как Отображение текста справа налево в Windows Forms для глобализации @ no__t-0.
 
  Результат применения свойства <xref:System.Windows.Forms.Control.RightToLeft%2A> может отличаться в разных элементах управления. В некоторых элементах управления это свойство устанавливает только порядок чтения, например в элементах управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ToolTip>. В других элементах управления свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> изменяет порядок чтения и макет. К ним относятся элементы управления <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.CheckBox>. Другие элементы управления требуют применения свойства <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> для зеркального отражения расположения справа налево. В следующей таблице приведены сведения о том, как свойства <xref:System.Windows.Forms.Control.RightToLeft%2A> и <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> влияют на отдельные элементы управления Windows Forms.
 
@@ -54,7 +54,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.MonthCalendar>|Не меняется; зависит от языка операционной системы.|Зеркально отражает элемент управления.|Да|
 |<xref:System.Windows.Forms.NotifyIcon>|Не поддерживается|Не поддерживается|Нет|
 |<xref:System.Windows.Forms.NumericUpDown>|Выравнивание кнопок "вверх" и "вниз" по левому краю.|Не влияет.|Нет|
-|<xref:System.Windows.Forms.OpenFileDialog>|В операционных системах с письмом справа налево установка <xref:System.Windows.Forms.Control.RightToLeft> свойства содержащего формы для <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> локализации диалогового окна |Не влияет.|Нет|
+|<xref:System.Windows.Forms.OpenFileDialog>|В операционных системах с письмом справа налево установка свойства <xref:System.Windows.Forms.Control.RightToLeft> в форме <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> позволяет локализовать диалоговое окно. |Не влияет.|Нет|
 |<xref:System.Windows.Forms.PageSetupDialog>|Не меняется; зависит от языка операционной системы.|Не влияет.|Нет|
 |<xref:System.Windows.Forms.Panel>|Дочерние элементы управления могут наследовать это свойство.|Используйте <xref:System.Windows.Forms.TableLayoutPanel> в элементе управления для поддержки отображения справа налево.|Да|
 |<xref:System.Windows.Forms.PictureBox>|Не поддерживается|Не влияет.|Нет|
@@ -79,7 +79,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.VScrollBar>|Отображается не в правой, а в левой части элементов управления с прокруткой.|Не влияет.|Нет|
 
 ## <a name="encoding"></a>кодировка
- Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах. Дополнительные сведения см. в разделе [Кодировка и глобализация Windows Forms](encoding-and-windows-forms-globalization.md).
+ Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах.
 
 ## <a name="gdi"></a>GDI+
  С помощью GDI+ можно рисовать текст с порядком чтения справа налево. Метод <xref:System.Drawing.Graphics.DrawString%2A>, используемый для отрисовки текста, поддерживает параметр `StringFormat`, который можно задать для члена <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> перечисления <xref:System.Drawing.StringFormatFlags>, чтобы обратить точку начала координат для текста.
@@ -120,4 +120,3 @@ Visual Studio можно использовать для создания при
 ## <a name="see-also"></a>См. также
 
 - [Двухсторонний режим для веб-приложений ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))
-- [Глобализация Windows Forms приложений](globalizing-windows-forms.md)

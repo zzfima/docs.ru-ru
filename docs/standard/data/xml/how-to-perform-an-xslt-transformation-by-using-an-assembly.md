@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666532"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957146"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Практическое руководство. Выполнение XSLT-преобразования с помощью сборки
 XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку. Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -134,15 +134,15 @@ XSLT-компилятор (xsltc.exe) компилирует таблицы ст
   
 1. При выполнении следующей команды из командной строки создаются две сборки с именами `Transform.dll` и `Transform_Script1.dll` (это действие выполняется по умолчанию. Если не указано иное, имя класса и сборки по умолчанию совпадает с именем главной таблицы стилей):  
   
-    ```  
+    ```console  
     xsltc /settings:script+ Transform.xsl  
+    ```
+  
+    Следующая команда явно задает имя класса Transform:  
+  
+    ```console  
+    xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
-  
- Следующая команда явно задает имя класса Transform:  
-  
-```  
-xsltc /settings:script+ /class:Transform Transform.xsl  
-```  
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Включение скомпилированной сборки в виде ссылки во время компиляции кода  
   
@@ -150,36 +150,36 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 2. Если используется язык C#, введите в командной строке следующее:  
   
-    ```  
+    ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 3. Если используется язык Visual Basic, введите в командной строке следующее:  
   
-    ```  
+    ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Использование скомпилированной сборки в коде  
   
-1. В следующем примере показано, как выполнить преобразование XSLT, используя скомпилированную таблицу стилей.  
+В следующем примере показано, как выполнить преобразование XSLT, используя скомпилированную таблицу стилей.  
   
- [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
- [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
+[!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
+[!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Чтобы создать динамическую ссылку на скомпилированную сборку, замените  
+Чтобы создать динамическую ссылку на скомпилированную сборку, замените
   
-```  
-xslt.Load(typeof(Transform))  
-```  
-  
- на  
-  
-```  
-xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
+```csharp  
+xslt.Load(typeof(Transform));  
 ```  
   
- в примере выше. Дополнительные сведения о методе Assembly.Load см. в коде <xref:System.Reflection.Assembly.Load%2A>  
+на  
+  
+```csharp 
+xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
+``` 
+  
+в примере выше. Дополнительные сведения о методе Assembly. Load см. в разделе <xref:System.Reflection.Assembly.Load%2A>.  
   
 ## <a name="see-also"></a>См. также
 
