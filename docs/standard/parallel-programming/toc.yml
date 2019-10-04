@@ -11,7 +11,7 @@
               href: how-to-write-a-simple-parallel-for-loop.md
             - name: Практическое руководство. Написание простого цикла Parallel.ForEach
               href: how-to-write-a-simple-parallel-foreach-loop.md
-            - name: Практическое руководство. Написание цикла Parallel.For и локальными переменными потока
+            - name: Практическое руководство. Написание цикла Parallel.For с локальными переменными потока
               href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
             - name: Практическое руководство. Написание цикла Parallel.ForEach c локальными переменными раздела
               href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
