@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856188"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834751"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
 
@@ -178,7 +178,7 @@ ms.locfileid: "70856188"
 
 Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] продолжает эту традицию и добавляет новые возможности, позволяющие пользователю более точно определять, когда и как должна применяться подстановка. Эта функция может использоваться со всеми языками, но особенно полезна она в обработке двунаправленного содержимого, когда представление чисел для разных региональных стандартов становится проблемой для разработчиков приложений, предназначенных для использования в разных странах.
 
-Основным свойством, определяющим [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> , как работает подстановка чисел, является свойство зависимостей. <xref:System.Windows.Media.NumberSubstitution> Класс определяет, как должны отображаться числа в тексте. Он имеет три открытых свойства, определяющих его поведение. Ниже приведен краткий обзор каждого из свойств.
+Основным свойством, определяющим [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> , как работает подстановка чисел, является свойство зависимостей. <xref:System.Windows.Media.NumberSubstitution> Класс определяет, как должны отображаться числа в тексте. Он имеет три открытых свойства, определяющих его поведение. Ниже приведена сводка по каждому из свойств.
 
 **CultureSource.**
 
@@ -198,15 +198,15 @@ ms.locfileid: "70856188"
 
 Это свойство определяет выполняемый тип подстановки чисел. Он принимает одно из следующих <xref:System.Windows.Media.NumberSubstitutionMethod> значений перечисления:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Метод подстановки определяется на основе <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> свойства Number языка и региональных параметров. Это значение по умолчанию.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>. Метод подстановки определяется на основе <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> свойства Number языка и региональных параметров. Это значение по умолчанию.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Если язык и региональные параметры имеют арабский или Персидский язык, он указывает, что цифры зависят от контекста.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>. Если язык и региональные параметры имеют арабский или Персидский язык, он указывает, что цифры зависят от контекста.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Числа всегда отображаются в виде европейских цифр.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>. Числа всегда отображаются в виде европейских цифр.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Числа отображаются с использованием национальных цифр для языка и региональных параметров числа, как указано в языке и <xref:System.Globalization.CultureInfo.NumberFormat%2A>региональных параметрах.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Числа отображаются с использованием национальных цифр для языка и региональных параметров числа, как указано в языке и <xref:System.Globalization.CultureInfo.NumberFormat%2A>региональных параметрах.
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Числа отображаются с использованием традиционных цифр для языка и региональных параметров числа. Для большинства языков и региональных параметров это то же <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>самое, что. Однако в некоторых языках и региональных параметрах для арабского языка выводятсяцифрылатинскогоалфавита,тогдакакэтозначениедаетарабскиецифрыдлявсехязыковирегиональныхпараметров.<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>. Числа отображаются с использованием традиционных цифр для языка и региональных параметров числа. Для большинства языков и региональных параметров это то же <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>самое, что. Однако в некоторых языках и региональных параметрах для арабского языка выводятсяцифрылатинскогоалфавита,тогдакакэтозначениедаетарабскиецифрыдлявсехязыковирегиональныхпараметров.<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>
 
 О чем говорят эти значения разработчикам двунаправленного содержимого? В большинстве <xref:System.Windows.FlowDirection> случаев разработчику может потребоваться только определить и язык для каждого текстового [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемента <xref:System.Windows.Media.NumberSubstitution> , например `Language="ar-SA"` , и логика позаботится о том, чтобы отобразить числа в соответствии с правильным [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]значением. В следующем примере демонстрируется использование арабских и английских чисел [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в приложении, работающем в арабской версии Windows.
 
@@ -226,7 +226,7 @@ ms.locfileid: "70856188"
 
 Сначала задайте компонент `NumberSubstitution.CultureSource="Text"`приложения. Использование этого параметра гарантирует, что параметры не поступают из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для текстовых элементов, которые имеют значение по умолчанию "User", <xref:System.Windows.Controls.TextBlock>например.
 
-Например:
+Пример:
 
 ```xaml
 <TextBlock

@@ -1,15 +1,15 @@
 ---
-title: Сравнение запросов к XML-документам Запросы к XElement (Visual Basic)
+title: Сравнение запросов к XML-документам Запрос XElement (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 500b1e58663ef6aca052850ad7994687e2cc36f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aba08319abeb21de79b3b8511044b8272402984
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766497"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834936"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Сравнение запросов к XML-документам Запросы к XElement (Visual Basic)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Сравнение запросов к XML-документам Запрос XElement (Visual Basic)
 При загрузке документа через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> обратите внимание на то, что запросы придется составлять не так, как при загрузке через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Сравнение XDocument.Load и XElement.Load  
@@ -38,7 +38,7 @@ Next
   
  Как и ожидается, выполняется вывод следующих данных:  
   
-```  
+```console
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -69,7 +69,7 @@ Next
   
  В этом примере выводятся следующие данные:  
   
-```  
+```console
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -104,7 +104,7 @@ Next
   
  Теперь на этот запрос выводятся те же результаты, что и при запросе по дереву, корень которого размещен в <xref:System.Xml.Linq.XElement>. Пример выводит следующие результаты:  
   
-```  
+```console
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  
@@ -114,4 +114,4 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>См. также
 
-- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

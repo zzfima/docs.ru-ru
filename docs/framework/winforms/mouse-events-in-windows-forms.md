@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949916"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834598"
 ---
 # <a name="mouse-events-in-windows-forms"></a>События мыши в формах Windows Forms
 
@@ -48,7 +48,7 @@ ms.locfileid: "69949916"
 
 4. Событие<xref:System.Windows.Forms.Control.MouseUp> .
 
-Ниже приведен порядок событий, вызываемых двойным щелчком мыши.
+Ниже приведен порядок событий, вызванных нажатием кнопки мыши двойным щелчком.
 
 1. Событие<xref:System.Windows.Forms.Control.MouseDown> .
 
@@ -66,13 +66,16 @@ ms.locfileid: "69949916"
 
 8. Событие<xref:System.Windows.Forms.Control.MouseUp> .
 
-Пример кода, демонстрирующий порядок событий щелчка мыши, см. в разделе [как Обрабатывает события пользовательского ввода в элементах](how-to-handle-user-input-events-in-windows-forms-controls.md)управления Windows Forms.
+Пример кода, демонстрирующий порядок событий щелчка мыши, см. в разделе [How to: Обрабатывает события пользовательского ввода в Windows Forms элементы управления @ no__t-0.
 
 ### <a name="individual-controls"></a>Особые элементы управления
 
 Поведение перечисленных ниже элементов управления при щелчке мыши не соответствует стандартному.
 
-- Элементы управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.RadioButton>
+- <xref:System.Windows.Forms.Button>
+- <xref:System.Windows.Forms.CheckBox>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
   > Если пользователь щелкает поле редактирования, кнопку или элемент в списке, то для элемента управления <xref:System.Windows.Forms.ComboBox> возникают описанные ниже события.
@@ -124,7 +127,7 @@ ms.locfileid: "69949916"
 
   - Двойной щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-### <a name="painting-behavior-of-toggle-controls"></a>Поведение отрисовки для переключателей
+### <a name="painting-behavior-of-toggle-controls"></a>Поведение рисования переключателей
 
 Переключатели, такие как элементы управления, производные от класса <xref:System.Windows.Forms.ButtonBase>, имеют описанное ниже нестандартное поведение отрисовки в сочетании с событиями щелчка.
 

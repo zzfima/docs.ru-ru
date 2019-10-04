@@ -2,12 +2,12 @@
 title: События LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: dcdaf321cfb75ca77e1d8b3f5a541a9418c3f512
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021275"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834985"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>События LINQ to XML (Visual Basic)
 События [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяют получать уведомления, когда изменяется дерево XML.  
@@ -19,7 +19,7 @@ ms.locfileid: "62021275"
 ## <a name="types-and-events"></a>Типы и события  
  Используйте следующие типы при работе с событиями.  
   
-|Тип|Описание|  
+|Type|Описание|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Задает тип события, когда событие вызывается объектом <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Предоставляет данные для событий <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.|  
@@ -95,7 +95,7 @@ End Module
 ### <a name="comments"></a>Комментарии  
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XText Remove  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>См. также
 
-- [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

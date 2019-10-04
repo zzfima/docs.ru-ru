@@ -2,12 +2,12 @@
 title: Как Динамическое обновление
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972080"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834725"
 ---
 # <a name="how-to-dynamic-update"></a>Как Динамическое обновление
 В этом разделе описаны основные действия по созданию и динамическому обновлению конфигурации маршрутизации. В данном примере первоначальная конфигурация маршрутизации получена из файла конфигурации, согласно этой конфигурации все сообщения направляются службе калькулятора regularCalc. Однако впоследствии она будет программно обновлена, чтобы изменить конечную точку назначения на службу roundingCalc.  
@@ -163,7 +163,8 @@ ms.locfileid: "70972080"
     > Поскольку метод для предоставления новой конфигурации маршрутизации содержится в расширении службы RoutingExtension, новые объекты RoutingConfiguration могут быть предоставлены в любом месте модели расширяемости WCF, которая имеет или может получить ссылку на ServiceHost или ServiceExtensions (например, в другом ServiceExtension).
   
 ## <a name="example"></a>Пример  
- Далее приведен полный листинг консольного приложения, используемого в этом примере.  
+
+Ниже приведен полный список консольного приложения, используемого в этом примере.
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Пример  
- Далее приведен полный листинг файла конфигурации, используемого в этом примере.  
+ 
+Ниже приведен полный список файлов конфигурации, используемых в этом примере.
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,4 +300,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>См. также
 
-- [Службы маршрутизации](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Службы маршрутизации](../samples/routing-services.md)

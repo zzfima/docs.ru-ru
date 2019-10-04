@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: c6439187560e15ec10f1eea4e1731421904e8643
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee64e53f49e15059c91982f2e64879b9f4c76d78
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045287"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834679"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Практическое руководство. Защита конечных точек метаданных
 
 Метаданные для службы могут содержать конфиденциальные сведения о приложении, которые могут быть использованы злоумышленником. Потребителям службы может также потребоваться безопасный механизм получения метаданных о службе. Поэтому необходимо время от времени публиковать метаданные с помощью защищенной конечной точки.
 
-Конечные точки метаданных обычно защищаются с помощью стандартных механизмов безопасности, определенных в Windows Communication Foundation (WCF) для защиты конечных точек приложений. (Дополнительные сведения см. в разделе [Обзор безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).)
+Конечные точки метаданных обычно защищаются с помощью стандартных механизмов безопасности, определенных в Windows Communication Foundation (WCF) для защиты конечных точек приложений. Дополнительные сведения см. в разделе [Общие сведения о безопасности](security-overview.md).
 
 В этом разделе содержится пошаговое руководство по созданию конечной точки, безопасность которой обеспечивается SSL-сертификатом, то есть конечной точкой HTTPS.
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Добавление защищенной конечной точки метаданных HTTPS GET в код
 
-1. Настройте порт с соответствующим сертификатом X.509. Сертификат должен быть получен из надежного центра сертификации и должен предназначаться для авторизации службы. Для привязки сертификата к конкретному порту используйте средство HttpCfg.exe. См. практическое руководство по [ Настройте порт с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).
+1. Настройте порт с соответствующим сертификатом X.509. Сертификат должен быть получен из надежного центра сертификации и должен предназначаться для авторизации службы. Для привязки сертификата к конкретному порту используйте средство HttpCfg.exe. См. практическое руководство по [ Настройте порт с сертификатом SSL @ no__t-0.
 
     > [!IMPORTANT]
     > Субъект сертификата или его служба доменных имен (DNS) должны соответствовать имени компьютера. Это важно, так как одним из первых шагов механизма HTTPS является проверка соответствия сертификата универсальному коду ресурса (URI) и адресу, для которого он вызван.
@@ -40,21 +40,21 @@ ms.locfileid: "70045287"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Добавление защищенной конечной точки метаданных HTTPS GET в конфигурацию
 
-1. Добавьте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Behaviors > в элемент System. ServiceModel > файла конфигурации службы. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+1. Добавьте элемент [\<behaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) в элемент [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) файла конфигурации службы.
 
-2. Добавьте элемент [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) [> serviceBehaviorsвэлементBehaviors>.\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)
+2. Добавьте элемент [\<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) в элемент [> \<behaviors](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) .
 
-3. Добавьте элемент`<serviceBehaviors>` [Behavior > в элемент. \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)
+3. Добавьте элемент [\<behavior >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) в элемент `<serviceBehaviors>`.
 
 4. Задайте атрибуту `name` элемента `<behavior>` соответствующее значение. Атрибут `name` является обязательным. В приведенном ниже примере используется значение `mySvcBehavior`.
 
-5. Добавьте [> serviceMetadata к элементу. \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) `<behavior>`
+5. Добавьте [> \<serviceMetadata](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) в элемент `<behavior>`.
 
 6. Задайте атрибуту `httpsGetEnabled` элемента `<serviceMetadata>` значение `true`.
 
 7. Задайте атрибуту `httpsGetUrl` элемента `<serviceMetadata>` соответствующее значение. Обратите внимание, что при указании абсолютного адреса URL-адрес должен начинаться со схемы "https://". При указании относительного адреса необходимо определить базовый адрес HTTPS узла службы. Если это свойство службы не задано, за адрес по умолчанию принимается "" или непосредственно базовый адрес HTTPS службы.
 
-8. Чтобы использовать поведение службы, установите `behaviorConfiguration` атрибут [ \<элемента Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) в значение атрибута Name элемента Behavior. В следующем примере приводится полный код конфигурации.
+8. Чтобы использовать поведение со службой, установите атрибут `behaviorConfiguration` элемента [\<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) в значение атрибута Name элемента Behavior. В следующем примере приводится полный код конфигурации.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -100,7 +100,7 @@ ms.locfileid: "70045287"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Практическое руководство. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Практическое руководство. Настройка порта с помощью сертификата SSL @ no__t-0
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

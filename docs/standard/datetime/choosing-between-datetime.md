@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107083"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835301"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo
 
@@ -40,14 +40,14 @@ ms.locfileid: "70107083"
 
 - для выполнения арифметических операций с датой и временем, возможно, с результатом, однозначно определяющим момент времени.
 
-.NET включает <xref:System.DateTime>типы, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>и <xref:System.TimeZoneInfo> , все из которых можно использовать для создания приложений, работающих с датами и временем.
+.NET включает типы <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> и <xref:System.TimeZoneInfo>, которые можно использовать для создания приложений, работающих с датами и временем.
 
 > [!NOTE]
-> Этот раздел не обсуждает <xref:System.TimeZone> , так как его функциональность почти полностью включена <xref:System.TimeZoneInfo> в класс. Везде, где это <xref:System.TimeZoneInfo> <xref:System.TimeZone> возможно, используйте класс вместо класса.
+> В этом разделе не рассматривается <xref:System.TimeZone>, так как его функциональность практически полностью включена в класс <xref:System.TimeZoneInfo>. Везде, где это возможно, используйте класс <xref:System.TimeZoneInfo> вместо класса <xref:System.TimeZone>.
 
 ## <a name="the-datetime-structure"></a>Структура DateTime
 
-Значение <xref:System.DateTime> определяет конкретную дату и время. Он включает <xref:System.DateTime.Kind%2A> свойство, которое предоставляет ограниченные сведения о часовом поясе, к которому относится эта дата и время. Значение <xref:System.DateTimeKind> , возвращаемое свойством <xref:System.DateTime.Kind%2A> , указывает, представляет ли значение <xref:System.DateTime> местное время (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), время в формате UTC (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) или неопределенное время (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Значение <xref:System.DateTime> определяет конкретную дату и время. Он включает свойство <xref:System.DateTime.Kind%2A>, которое предоставляет ограниченные сведения о часовом поясе, к которому относится эта дата и время. Значение <xref:System.DateTimeKind> , возвращаемое свойством <xref:System.DateTime.Kind%2A> , указывает, представляет ли значение <xref:System.DateTime> местное время (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), время в формате UTC (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) или неопределенное время (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 Структура <xref:System.DateTime> подходит для приложений, которые:
 
@@ -90,7 +90,7 @@ ms.locfileid: "70107083"
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-Выходные данные показывают, что все значения даты и времени в этом примере могут принадлежать по крайней мере трем разным часовым поясам. Значение <xref:System.DateTimeOffset> 6/10/2007 показывает, что если значение даты и времени представляет летнее время, его смещение от времени UTC необязательно соответствует базовому смещению UTC исходного часового пояса или смещению от времени UTC, указанному в его отображаемом имени. Это означает, что, так как одно значение <xref:System.DateTimeOffset> не является тесно связанным с его часовым поясом, оно не может отражать переход часового пояса с летнего на зимнее время и обратно. Это может быть особенно проблематичным, когда используются арифметические операции со значением <xref:System.DateTimeOffset> . (Описание способов выполнения арифметических операций с датой и временем с учетом правил коррекции часового пояса см. в разделе [Performing arithmetic operations with dates and times](../../../docs/standard/datetime/performing-arithmetic-operations.md).)
+Выходные данные показывают, что все значения даты и времени в этом примере могут принадлежать по крайней мере трем разным часовым поясам. Значение <xref:System.DateTimeOffset> 6/10/2007 показывает, что если значение даты и времени представляет летнее время, его смещение от времени UTC необязательно соответствует базовому смещению UTC исходного часового пояса или смещению от времени UTC, указанному в его отображаемом имени. Это означает, что, так как одно значение <xref:System.DateTimeOffset> не является тесно связанным с его часовым поясом, оно не может отражать переход часового пояса с летнего на зимнее время и обратно. Это может быть особенно проблематичным, когда используются арифметические операции со значением <xref:System.DateTimeOffset> . Описание способов выполнения арифметических операций с датой и временем с учетом правил коррекции часового пояса см. в разделе [Выполнение арифметических операций с датами и временем](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>Структура TimeSpan
 
@@ -98,9 +98,9 @@ ms.locfileid: "70107083"
 
 - для отражения интервала времени между двумя значениями даты и времени (например, при вычитании одного значения <xref:System.DateTime> из другого возвращается значение <xref:System.TimeSpan> );
 
-- для измерения прошедшего времени. Например, <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> свойство <xref:System.TimeSpan> возвращает значение, отражающее интервал времени, прошедший с момента <xref:System.Diagnostics.Stopwatch> вызова одного из методов, которые начинают измерять прошедшее время.
+- для измерения прошедшего времени. Например, свойство <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> возвращает значение <xref:System.TimeSpan>, отражающее интервал времени, прошедший с момента вызова одного из методов <xref:System.Diagnostics.Stopwatch>, которые начинают измерять прошедшее время.
 
-Значение может также использоваться в качестве замены <xref:System.DateTime> значения, когда это значение отражает время без ссылки на конкретный день. <xref:System.TimeSpan> Это использование аналогично <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> свойствам и, возвращающим значение,котороепредставляетвремябезссылкинадату.<xref:System.TimeSpan> Например, структуру <xref:System.TimeSpan> можно использовать для представления ежедневного времени открытия или закрытия магазина или времени, в которое происходит любое регулярное событие.
+Значение <xref:System.TimeSpan> также может использоваться в качестве замены для значения <xref:System.DateTime>, если это значение отражает время без ссылки на конкретный день. Это использование аналогично свойствам <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, которые возвращают значение <xref:System.TimeSpan>, которое представляет время без ссылки на дату. Например, структуру <xref:System.TimeSpan> можно использовать для представления ежедневного времени открытия или закрытия магазина или времени, в которое происходит любое регулярное событие.
 
 В примере ниже определяется структура `StoreInfo` , которая включает объекты <xref:System.TimeSpan> , представляющие время закрытия и открытия магазина, а также объект <xref:System.TimeZoneInfo> , представляющий часовой пояс магазина. Структура также включает два метода, `IsOpenNow` и `IsOpenAt`, указывающие, открыт ли магазин в то время, которое указал пользователь, предположительно находящийся в местном часовом поясе.
 

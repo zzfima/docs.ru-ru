@@ -2,19 +2,19 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: fe8a177b83932c1c7607f8444c05292c0ee29684
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 97ed6e06241804bf2f576c910a2235b0cb570bbb
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250849"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833736"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Задает условие поиска для группы или статистического выражения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 [ HAVING search_condition ]  
 ```  
   
@@ -28,9 +28,9 @@ ms.locfileid: "70250849"
 > [!NOTE]
 > HAVING можно использовать только с инструкцией [SELECT](select-entity-sql.md) . Если [Group By](group-by-entity-sql.md) не используется, то ведет себя как предложение WHERE.  
   
- Предложение HAVING работает точно так же, как и предложение WHERE, за исключением того, что применяется после операции GROUP BY. Это означает, что предложение HAVING может ссылаться только на псевдонимы и статистические выражения группирования, как показано в следующем примере.  
+Предложение HAVING работает точно так же, как и предложение WHERE, за исключением того, что применяется после операции GROUP BY. Это означает, что предложение HAVING может создавать ссылки только на псевдонимы и агрегаты группирования, как показано в следующем примере:
   
-```  
+```sql  
 SELECT Name, SUM(o.Price * o.Quantity) AS Total FROM orderLines AS o GROUP BY o.Product AS Name  
 HAVING SUM(o.Quantity) > 1  
 ```  
@@ -40,11 +40,11 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL операторы HAVING и GROUP BY задают условие поиска для группы или статистического выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
+1. Выполните процедуру, описанную в разделе [How: Выполните запрос, возвращающий тип PrimitiveType Results @ no__t-0.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
+ [!code-sql[DP EntityServices Concepts#HAVING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#having)]  
   
 ## <a name="see-also"></a>См. также
 

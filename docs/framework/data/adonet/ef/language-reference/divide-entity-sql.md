@@ -2,19 +2,19 @@
 title: '- Деление (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: d4e4c1449b665e6dea22bfcc0ee2277478b4da1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 79fdbebc648daac4f695387d52d2a915383f99ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251056"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833892"
 ---
 # <a name="-divide-entity-sql"></a>/ (деление) (Entity SQL)
 Делит одно число на другое.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 dividend / divisor  
 ```  
   
@@ -31,11 +31,11 @@ dividend / divisor
 ## <a name="example"></a>Пример  
  Следующий Entity SQL запрос использует арифметический оператор/для деления одного числа на другое. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру, описанную в разделе [How: Выполните запрос, возвращающий Структуралтипе Results @ no__t-0.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#DIVIDE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#divide)]  
+ [!code-sql[DP EntityServices Concepts#DIVIDE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#divide)]  
   
 ## <a name="see-also"></a>См. также
 

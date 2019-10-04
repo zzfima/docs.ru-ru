@@ -2,18 +2,18 @@
 title: Практическое руководство. Работа со словарями с помощью LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614149"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835081"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Практическое руководство. Работа со словарями с помощью LINQ to XML (Visual Basic)
 Часто бывает удобно преобразовать структуры данных в XML, а затем преобразовать XML в другие структуры данных. В этом разделе показана конкретная реализация этого общего подхода на примере преобразования <xref:System.Collections.Generic.Dictionary%602> в XML и обратно.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется XML-литералы и запрос во внедренном выражении. Запрос проецирует новые <xref:System.Xml.Linq.XElement> объектов, который затем становятся новым содержимым для `Root` <xref:System.Xml.Linq.XElement> объекта.  
+ В этом примере используются литералы XML и запрос во внедренном выражении. Запрос проецирует новые объекты <xref:System.Xml.Linq.XElement>, которые затем становятся новым содержимым для объекта `Root` <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -63,7 +63,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  

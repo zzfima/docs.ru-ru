@@ -2,12 +2,12 @@
 title: Практическое руководство. Написание запросов со сложной фильтрацией (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 0459c9549238257c0a76276a1d10f6d370144214
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 41b967e2876be98016b48da5122478f63385c6a8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709856"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834971"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Практическое руководство. Написание запросов со сложной фильтрацией (Visual Basic)
 Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией. Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением. В этом разделе приводится пример написания запроса с комплексной фильтрацией.  
@@ -17,7 +17,7 @@ ms.locfileid: "68709856"
   
  В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Дополнительные сведения об операторе `Any` см. в разделе [операции квантификатора (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ Дополнительные сведения о операторе `Any` см. в разделе [операции квантификатора (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -38,7 +38,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 99505  
 ```  
   
@@ -72,7 +72,7 @@ End Module
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 99505  
 ```  
   

@@ -1,22 +1,22 @@
 ---
-title: Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
+title: Практическое руководство. Разбиение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e12de7380ca34478506fde98aecae2501d2529ee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592476"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835114"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Практическое руководство. Разбиение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
 В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.  
   
 ### <a name="to-create-the-data-files"></a>Создание файлов данных  
   
 1. Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ ms.locfileid: "65592476"
   
 2. Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта: Обратите внимание, что в этих двух файлах имеются общие имена.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -116,7 +116,7 @@ End Class
  Программа записывает отдельный файл для каждой группы в ту же папку, где находятся файлы данных.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
-Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.
+Создайте проект консольного приложения VB.NET с инструкцией `Imports` для пространства имен System. LINQ.
   
 ## <a name="see-also"></a>См. также
 

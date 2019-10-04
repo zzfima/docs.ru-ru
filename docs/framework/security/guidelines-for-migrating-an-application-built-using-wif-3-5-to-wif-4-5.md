@@ -3,12 +3,12 @@ title: Рекомендации по миграции приложения, со
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 645fd09de91d8190384faea9df2ef18511162c2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045483"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834526"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5
 
@@ -110,7 +110,7 @@ ms.locfileid: "71045483"
 
 - В версии WIF 4.5 недоступна автономная служебная программа федерации (FedUtil). С помощью средства Identity and Access Tool можно изменить файлы конфигурации для передачи функций управления удостоверениями службе маркеров безопасности.
 
-Дополнительные сведения см. в разделе [Средство Identity and Access Tool для Visual Studio 2012](identity-and-access-tool-for-vs.md).
+Дополнительные сведения о средстве идентификации и доступа см. в разделе [средство идентификации и доступа для Visual Studio 2012](identity-and-access-tool-for-vs.md).
 
 <a name="BKMK_ToolingChanges"></a>
 

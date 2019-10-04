@@ -2,12 +2,12 @@
 title: Семантика сравнения (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: da7b8f662d10376abd649e674701b43b7b740a6f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251185"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833935"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Семантика сравнения (Entity SQL)
 Выполнение любого следующего оператора [!INCLUDE[esql](../../../../../../includes/esql-md.md)] подразумевает сравнение типов экземпляров.  
@@ -78,7 +78,7 @@ ms.locfileid: "70251185"
   
  <sup>1</sup> Ссылки на заданные экземпляры типа сущности неявно сравниваются, как показано в следующем примере:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   
@@ -87,7 +87,7 @@ WHERE p1 != p2 OR p1 IS NULL
   
  Экземпляр сущности нельзя сравнивать с явной ссылкой. При попытке такого сравнения возникнет исключение. Например, следующий запрос вызовет исключение:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   

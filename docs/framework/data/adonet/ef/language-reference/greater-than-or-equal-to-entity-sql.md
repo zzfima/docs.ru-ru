@@ -2,19 +2,19 @@
 title: '>= (Больше или равно) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: fb97786687616ff92f0e4402c86aef02de2e70c9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9e1d7e92097713ebdaf15523a5f99f98ed8be0b3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250871"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833742"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (больше или равно) (Entity SQL)
 Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 expression >= expression  
 ```  
   
@@ -28,11 +28,11 @@ expression >= expression
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор сравнения >= для сравнения двух выражений и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру, описанную в разделе [How: Выполните запрос, возвращающий Структуралтипе Results @ no__t-0.  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#GREATER_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater_or_equals)]  
+ [!code-sql[DP EntityServices Concepts#GREATER_OR_EQUALS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#greater_or_equals)]  
   
 ## <a name="see-also"></a>См. также
 

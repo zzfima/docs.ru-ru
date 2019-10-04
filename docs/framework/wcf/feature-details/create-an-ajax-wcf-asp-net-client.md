@@ -2,12 +2,12 @@
 title: Создание службы WCF с поддержкой AJAX и клиента ASP.NET в Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053684"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834789"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET, обращающегося к службе
 
@@ -104,9 +104,9 @@ ms.locfileid: "71053684"
 
 ## <a name="run-the-program"></a>Запуск программы
 
-Убедитесь, что в элементе *WebForm1. aspx* установлен фокус, а затем нажмите кнопку **запустить** , чтобы запустить веб-клиент. Кнопка имеет зеленый треугольник и говорит нечто вроде **IIS Express (Microsoft ребр)** . Можно также нажать клавишу **F5**. Чтобы создать ожидаемый результат "3,75", нажмите кнопку **Цена, равную 3 бутерброды** .
+Убедитесь, что в элементе *WebForm1. aspx* установлен фокус, а затем нажмите кнопку **запустить** , чтобы запустить веб-клиент. Кнопка имеет зеленый треугольник и говорит нечто вроде **IIS Express (Microsoft ребр)** . Можно также нажать клавишу <kbd>F5</kbd>. Чтобы создать ожидаемый результат "3,75", нажмите кнопку **Цена, равную 3 бутерброды** .
 
-## <a name="example-code"></a>пример кода
+## <a name="example"></a>Пример
 
 Ниже приведен полный код в файле *CostService.svc.CS* :
 

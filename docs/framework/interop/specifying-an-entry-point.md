@@ -8,17 +8,18 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051607"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833609"
 ---
 # <a name="specifying-an-entry-point"></a>Задание точки входа
+
 Точка входа определяет расположение функции в библиотеке DLL. В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия. Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.  
   
- Ниже перечислено, зачем может потребоваться переименовывать функции DLL:  
+ Ниже приведен список возможных причин переименования функции DLL.  
   
 - чтобы избежать использования имен функций API, в которых учитывается регистр символов;  
   
@@ -31,7 +32,8 @@ ms.locfileid: "71051607"
  В этом разделе показано, как переименовать функцию DLL в управляемом коде.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Переименование функции в Visual Basic  
- В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> используется ключевое слово **Function** в операторе **Declare**. В приведенном ниже примере показан базовый вариант объявления.  
+ 
+В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> используется ключевое слово **Function** в операторе **Declare**. В приведенном ниже примере показан базовый вариант объявления.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- Как показано в следующем примере, можно заменить точку входа **MessageBox** на **MsgBox**, включив в определение ключевое слово **Alias**. В обоих примерах ключевое слово **Auto** позволяет не указывать версию кодировки для точки входа. Дополнительные сведения о выборе кодировки см. в разделе [Определение кодировки](specifying-a-character-set.md).  
+Как показано в следующем примере, можно заменить точку входа **MessageBox** на **MsgBox**, включив в определение ключевое слово **Alias**. В обоих примерах ключевое слово **Auto** позволяет не указывать версию кодировки для точки входа. Дополнительные сведения о выборе кодировки см. в разделе [Определение кодировки](specifying-a-character-set.md).  
   
 ```vb
 Friend Class NativeMethods

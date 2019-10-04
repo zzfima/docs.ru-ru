@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051756"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833632"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодом в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
@@ -121,7 +121,7 @@ public class Address
 }  
 ```  
   
-### <a name="step-3-implement-the-wcf-service"></a>Шаг 3. Реализация службы WCF  
+### <a name="step-3-implement-the-wcf-service"></a>Шаг 3. Реализация службы WCF  
  Далее следует реализовать класс службы WCF, который реализует интерфейс, определенный в предыдущем шаге.  
   
 ```csharp  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Ниже показана реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов, связанных с сеансами.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.  
+ Ниже приведена реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов, связанных с сеансами.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -322,14 +322,14 @@ public class SessionBoundFactory : ISessionBoundFactory
     }  
 ```  
   
-### <a name="step-3-configure-and-start-the-wcf-services"></a>Шаг 3. Настройка и запуск служб WCF  
+### <a name="step-3-configure-and-start-the-wcf-services"></a>Шаг 3. Настройка и запуск служб WCF  
  Для размещения этих служб необходимо добавить указанные ниже записи в файл конфигурации сервера (web.config).  
   
 1. Добавьте раздел `<client>`, который описывает конечную точку для объекта сеанса.  В этом сценарии сервер также выступает в роли клиента, и его нужно настроить соответствующим образом.  
   
 2. В разделе `<services>` объявите конечные точки службы для фабрики и объекта сеанса.  Это позволит клиенту связаться с конечными точками службы, получить адрес <xref:System.ServiceModel.EndpointAddress10> и создать канал сеанса.  
   
- Ниже приведен пример файла конфигурации с этими настройками.  
+ Ниже приведен пример файла конфигурации с этими параметрами.  
   
 ```xml  
 <configuration>  

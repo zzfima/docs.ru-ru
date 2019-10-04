@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046377"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834548"
 ---
 # <a name="method-etw-events"></a>События методов (трассировка событий Windows)
 
@@ -36,7 +36,7 @@ ms.locfileid: "71046377"
 
 ## <a name="clr-method-events"></a>События методов среды CLR
 
-В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)
+В таблице ниже показаны ключевое слово и уровень. Дополнительные сведения см. в разделе [Ключевые слова и уровни ETW среды CLR](clr-etw-keywords-and-levels.md).
 
 |Ключевое слово для вызова события|Уровень|
 |-----------------------------------|-----------|

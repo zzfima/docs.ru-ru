@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781014"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833684"
 ---
 # <a name="standard-query-operator-translation"></a>Трансляция стандартных операторов запросов
 
@@ -38,12 +38,12 @@ SQL работает преимущественно с *неупорядочен
 
 ### <a name="take-skip"></a>Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A>методы <xref:System.Linq.Enumerable.Skip%2A> и хорошо определяются только для *упорядоченных наборов*. Семантика для неупорядоченных наборов или мультинаборов не определена.
+методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> хорошо определены только для *упорядоченных наборов*. Семантика для неупорядоченных наборов или мультинаборов не определена.
 
 > [!NOTE]
 > На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи "пропуск и получение исключений в SQL Server 2000" раздела [Устранение неполадок](troubleshooting.md).
 
-Из-за ограничений по упорядочению в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL, пытается переместить порядок аргументов этих методов в результат метода. Рассмотрим, например, следующий запрос [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
+Из-за ограничений по упорядочению в SQL @no__t – 0 пытается переместить порядок аргументов этих методов в результат метода. Рассмотрим, например, следующий запрос [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -94,7 +94,7 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="aggregates"></a>Агрегатные выражения
 
-Агрегатный метод <xref:System.Linq.Enumerable.Sum%2A>, который входит в состав стандартных операторов запросов, выполняет сравнение с нулем для поиска пустой последовательности или последовательности, содержащей только значения NULL. В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]семантика SQL остается неизменной и <xref:System.Linq.Enumerable.Sum%2A> принимает `null` значение вместо нуля для пустой последовательности или для последовательности, содержащей только значения NULL.
+Агрегатный метод <xref:System.Linq.Enumerable.Sum%2A>, который входит в состав стандартных операторов запросов, выполняет сравнение с нулем для поиска пустой последовательности или последовательности, содержащей только значения NULL. В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] семантика SQL остается неизменной, а <xref:System.Linq.Enumerable.Sum%2A> вычисляется до `null` вместо нуля для пустой последовательности или для последовательности, содержащей только значения NULL.
 
 Ограничения SQL для промежуточных результатов применяются к агрегатным выражениям в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Результат метода <xref:System.Linq.Enumerable.Sum%2A>, суммирующего 32-разрядные целые значения, вычисляется не на основе 64-разрядных результатов. При преобразовании [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для метода <xref:System.Linq.Enumerable.Sum%2A> может произойти переполнение даже в том случае, если выполнение реализации стандартного оператора запроса для соответствующей последовательности в памяти не приводит к переполнению.
 
@@ -102,7 +102,7 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="entity-arguments"></a>Аргументы сущностей
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]позволяет использовать типы сущностей в <xref:System.Linq.Enumerable.GroupBy%2A> методах и. <xref:System.Linq.Enumerable.OrderBy%2A> При преобразовании этих операторов использование аргумента типа рассматривается как указание всех членов данного типа. Ниже приведены примеры эквивалентного кода.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] позволяет использовать типы сущностей в методах <xref:System.Linq.Enumerable.GroupBy%2A> и <xref:System.Linq.Enumerable.OrderBy%2A>. При преобразовании этих операторов использование аргумента типа рассматривается как указание всех членов данного типа. Ниже приведены примеры эквивалентного кода.
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -121,17 +121,17 @@ ORDER BY [t0].[CustomerID]
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает равенство и сравнение для *неструктурированных* аргументов, но не для аргументов, которые являются или содержат последовательности. Плоский аргумент представляет собой тип, который можно сопоставить со строкой SQL. Проекция одного или нескольких типов сущностей, которые можно статически определить как не содержащие последовательностей, считается плоским аргументом.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает равенство и сравнение для *неструктурированных* аргументов, но не для аргументов, которые являются или содержат последовательности. Плоский аргумент представляет собой тип, который можно сопоставить со строкой SQL. Проекция одного или нескольких типов сущностей, которые можно статически определить как не содержащие последовательностей, считается плоским аргументом.
 
-Ниже представлены примеры плоских аргументов.
+Ниже приведены примеры неструктурированных аргументов.
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-Ниже представлены примеры аргументов, не являющихся плоскими (иерархических аргументов).
+Ниже приведены примеры неструктурированных (иерархических) аргументов.
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Преобразование функций Visual Basic
 
@@ -158,7 +158,7 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="inheritance-mapping-restrictions"></a>Ограничения сопоставления при наследовании
 
-Дополнительные сведения см. в разделе [Практическое руководство. Иерархия наследования](how-to-map-inheritance-hierarchies.md)карт.
+Дополнительные сведения см. в разделе [Практическое руководство. Сопоставьте иерархии наследования @ no__t-0.
 
 ### <a name="inheritance-in-queries"></a>Наследование в запросах
 
@@ -198,7 +198,7 @@ ORDER BY [t0].[CustomerID]
 
 ## <a name="sql-server-2000-support"></a>Поддержка SQL Server 2000
 
-Следующие ограничения SQL Server 2000 (по сравнению с Microsoft SQL Server 2005) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] влияют на поддержку.
+Следующие ограничения SQL Server 2000 (по сравнению с Microsoft SQL Server 2005) влияют на поддержку [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Операторы «Cross Apply» и «Outer Apply»
 
@@ -208,13 +208,13 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="text--ntext"></a>text / ntext
 
-Типы `text` `varchar(max)` `nvarchar(max)`  / данных не могут использоваться в определенных операциях запросов к, которые поддерживаются Microsoft SQL Server 2005.  /  `ntext`
+Типы данных `text` @ no__t-1 @ no__t-2 не могут использоваться в определенных операциях запроса для `varchar(max)` @ no__t-4 @ no__t-5, которые поддерживаются Microsoft SQL Server 2005.
 
 Способов разрешения проблем, связанных с этим ограничением, не существует. В частности, метод `Distinct()` нельзя использовать для результата, который содержит члены, сопоставленные с `text` или `ntext`.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Поведение, инициируемое вложенными запросами
 
-Связыватель SQL Server 2000 (до SP4) имеет некоторые особенности, активируемые вложенными запросами. Набор запросов SQL, которые инициируют эти особенности, не является правильно определенным. По этой причине нельзя определить набор [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросов, которые могут вызвать исключения SQL Server.
+Связыватель SQL Server 2000 (до SP4) имеет некоторые особенности, активируемые вложенными запросами. Набор запросов SQL, которые инициируют эти особенности, не является правильно определенным. По этой причине нельзя определить набор запросов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], которые могут вызвать SQL Server исключения.
 
 ### <a name="skip-and-take-operators"></a>Операторы «Skip» и «Take»
 
@@ -232,7 +232,7 @@ ORDER BY [t0].[CustomerID]
 
   - Приведения типов в проекциях
 
-- Методы, которые следуют <xref:System.Linq.Enumerable.AsEnumerable%2A> за методом, *выполняются локально*. Этот метод не приводит к немедленному выполнению.
+- Методы, следующие за методом <xref:System.Linq.Enumerable.AsEnumerable%2A>, *выполняются локально*. Этот метод не приводит к немедленному выполнению.
 
 - В качестве типа возвращаемых данных результата запроса или члена типа результата можно использовать значение `struct`. Сущности должны быть классами. Анонимные типы материализуются как экземпляры классов, но в проекциях можно использовать структуры (не сущности).
 

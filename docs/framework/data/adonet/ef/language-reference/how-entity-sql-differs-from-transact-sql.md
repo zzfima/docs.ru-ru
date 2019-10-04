@@ -2,12 +2,12 @@
 title: Отличия Entity SQL от Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e0af0a415d812337d6abf449e9ee170526c3df0c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854471"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833712"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Отличия Entity SQL от Transact-SQL
 В этом разделе описываются различия между [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и Transact-SQL.  
@@ -18,7 +18,7 @@ ms.locfileid: "70854471"
  При работе с наследованием часто полезно выбрать экземпляры подтипа из коллекции экземпляров супертипа. Оператор [OFTYPE](oftype-entity-sql.md) в [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (аналогично `oftype` в C# последовательности) предоставляет такую возможность.  
   
 ## <a name="support-for-collections"></a>Поддержка коллекций  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]обрабатывает коллекции как сущности первого класса. Например:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]обрабатывает коллекции как сущности первого класса. Пример:  
   
 - Выражения коллекций допускаются в предложении `from`.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70854471"
   
  Допустимы все приведенные ниже запросы [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
+```sql  
 1+2 *3  
 "abc"  
 row(1 as a, 2 as b)  
@@ -72,33 +72,33 @@ set(e1)
   
  В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] также налагаются дополнительные ограничения на запросы, включающие предложения `group by`. Выражения в `select` предложении и `having` предложении таких запросов `group by` могут ссылаться только на ключи через их псевдонимы. Следующая конструкция допустима в Transact-SQL, но не в [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
-select t.x + t.y from T as t group by t.x + t.y  
+```sql  
+SELECT t.x + t.y FROM T AS t group BY t.x + t.y
 ```  
   
  На языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] необходимо написать:  
   
-```  
-select k from T as t group by (t.x + t.y) as k  
+```sql  
+SELET k FROM T AS t GROUP BY (t.x + t.y) AS k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>Ссылочные столбцы (свойства) таблиц (коллекций)  
  Все ссылочные столбцы в языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] должны быть квалифицированы с псевдонимом таблицы. Следующая конструкция (при условии `a` , что является допустимым столбцом таблицы `T`) допустима в Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)]но не в.  
   
-```  
-select a from T  
+```sql  
+SELECT a FROM T
 ```  
   
  Форма [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
-select t.a as A from T as t  
+```sql  
+SELECT t.a AS A FROM T AS t
 ```  
   
  Псевдонимы таблицы в предложении `from` необязательны. Имя таблицы используется как неявный псевдоним. В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] допустима также следующая форма:  
   
-```  
-select Tab.a from Tab  
+```sql  
+SELET Tab.a FROM Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>Перемещение по объектам  
@@ -106,7 +106,7 @@ select Tab.a from Tab
   
  Например, если `p` - выражение типа Person, с помощью следующего синтаксиса [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно ссылаться на город в его адресе.  
   
-```  
+```sql  
 p.Address.City   
 ```  
   
@@ -120,46 +120,46 @@ p.Address.City
 ## <a name="changes-to-group-by"></a>Изменения на предложение Group By  
  Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает псевдонимы ключей `group by`. Выражения в предложении `select` и предложении `having` таких запросов должны ссылаться на ключи `group by` через псевдонимы. Например, синтаксическая конструкция [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
-```  
-select k1, count(t.a), sum(t.a)  
-from T as t  
-group by t.b + t.c as k1  
+```sql  
+SELECT k1, count(t.a), sum(t.a)
+FROM T AS t
+GROUP BY t.b + t.c AS k1
 ```  
   
  ... эквивалентен следующему языку Transact-SQL:  
   
-```  
-select b + c, count(*), sum(a)   
-from T  
-group by b + c  
+```sql  
+SELECT b + c, count(*), sum(a)
+FROM T
+GROUP BY b + c
 ```  
   
 ## <a name="collection-based-aggregates"></a>Статистические функции на основе коллекций  
  Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает два типа статистических функций.  
   
- Статистические функции на основе коллекций работают с коллекциями и возвращают результат статистической обработки. Они могут применяться в любом месте в запросе и не требуют предложения `group by`. Например:  
+ Статистические функции на основе коллекций работают с коллекциями и возвращают результат статистической обработки. Они могут применяться в любом месте в запросе и не требуют предложения `group by`. Пример:  
   
-```  
-select t.a as a, count({1,2,3}) as b from T as t     
+```sql  
+SELECT t.a AS a, count({1,2,3}) AS b FROM T AS t
 ```  
   
- Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] также поддерживает статистические функции в стиле SQL. Например:  
+ Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] также поддерживает статистические функции в стиле SQL. Пример:  
   
-```  
-select a, sum(t.b) from T as t group by t.a as a  
+```sql  
+SELECT a, sum(t.b) FROM T AS t GROUP BY t.a AS a
 ```  
   
 ## <a name="order-by-clause-usage"></a>Использование предложения ORDER BY  
- Transact-SQL позволяет указывать предложения ORDER BY только в самом верхнем выпуске SELECT.. FROM . WHERE. В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно использовать вложенное выражение ORDER BY, которое может быть размещено в любом месте запроса, однако упорядочение во вложенном запросе не сохраняется.  
+Transact-SQL позволяет указать предложения `ORDER BY` только в самом верхнем блоке `SELECT .. FROM .. WHERE`. В [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно использовать вложенное выражение `ORDER BY`, которое может быть помещено в любом месте запроса, но упорядочение во вложенном запросе не сохраняется.  
   
-```  
+```sql  
 -- The following query will order the results by the last name  
 SELECT C1.FirstName, C1.LastName  
-        FROM AdventureWorks.Contact as C1  
+        FROM AdventureWorks.Contact AS C1
         ORDER BY C1.LastName  
 ```  
   
-```  
+```sql  
 -- In the following query ordering of the nested query is ignored.  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
@@ -197,16 +197,16 @@ SELECT C2.FirstName, C2.LastName
  Пакетирование результатов запроса  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не поддерживает пакетирование результатов запросов. Например, ниже приведен допустимый Transact-SQL (отправка в виде пакета):  
   
-```  
-select * from products;  
-select * from catagories;  
+```sql  
+SELECT * FROM products;
+SELECT * FROM catagories;
 ```  
   
  Однако эквивалент [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не поддерживается.  
   
-```  
-Select value p from Products as p;  
-Select value c from Categories as c;  
+```sql  
+SELECT value p FROM Products AS p;
+SELECT value c FROM Categories AS c;
 ```  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает только запросы, которые выдают один результат на одну команду.  

@@ -1,16 +1,16 @@
 ---
-title: Рефакторинг с использованием метода расширения (Visual Basic)
+title: Рефакторинг с помощью метода расширения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 360b723fd8ef63338213dfcaa2c00f659ba3e74a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6ed0e81a7139411507d8f3c16b34a50b2e7aebf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666080"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834903"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Рефакторинг с использованием метода расширения (Visual Basic)
-Этот пример основан на предыдущем примере [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), рефакторингом объединения строк с помощью чистой функции, которая реализуется как метод расширения.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Рефакторинг с помощью метода расширения (Visual Basic)
+Этот пример строится на предыдущем примере, [получая текст абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)путем рефакторинга сцепления строк с помощью чистой функции, реализованной как метод расширения.  
   
  В предыдущем примере использовался стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A> для объединения нескольких строк в одну. Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.  
   
@@ -19,7 +19,7 @@ ms.locfileid: "64666080"
   
  В примере представлено несколько перегруженных вариантов метода `StringConcatenate`.  
   
- Вы найдете инструкции по созданию исходного документа для этого примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера можно найти в статье [Создание исходного документа Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -82,7 +82,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), 
   
  В этом примере выводятся следующие данные:  
   
-```  
+```console  
 onetwothree  
 one:two:three:  
 123  
@@ -216,9 +216,9 @@ Module Module1
 End Module  
 ```  
   
- Этот пример выводит следующие результаты, будучи примененным к документу, описанному в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ В этом примере при применении к документу, описанному в разделе [Создание исходного документа Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md), выводится следующий результат.
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -245,5 +245,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Учебник. Обработка содержимого в документе WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

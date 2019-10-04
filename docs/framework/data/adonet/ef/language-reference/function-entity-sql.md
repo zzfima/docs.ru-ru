@@ -2,19 +2,19 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250935"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833792"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Определяет функцию в рамках команды запроса Entity SQL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 FUNCTION function-name  
 ( [ { parameter_name <type_definition>   
         [ ,...n ]  
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Имя поддерживаемого типа.  
   
- Коллекция (< type_definition`>` )  
+ Коллекция (< type_definition @ no__t-0)  
  Выражение, возвращающее коллекцию поддерживаемых типов, строк или ссылок.  
   
  REF **(** `data_type` **)**  
@@ -61,19 +61,19 @@ FUNCTION function-name
   
  `A()`  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Вызов определяемой пользователем функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Вызовите определяемую пользователем функцию @ no__t-0.  
   
  Функции также могут быть объявлены внутри самой модели. Функции, объявленные в модели, выполняются так же, как и функции, объявленные встроенными в команде. Дополнительные сведения см. в разделе [определяемые пользователем функции](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
  В следующей команде Entity SQL определяется функция `Products` , использующая целочисленное значение для фильтрации возвращаемых продуктов.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Пример  
  В следующей команде Entity SQL определяется функция `StringReturnsCollection` , использующая коллекцию строк для фильтрации возвращаемых контактов.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
 ## <a name="see-also"></a>См. также
 

@@ -21,24 +21,24 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f8686a189883bed782cdde80e56c87ab6dbe404a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914104"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835016"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
 
 ## <a name="wpf-imaging-component"></a>Компонент обработки изображений WPF  
- Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет значительные расширения возможностей в обработке изображений в [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Возможности работы с образами, такие как отображение точечного рисунка или использование изображения в стандартном элементе управления, ранее были связаны с библиотеками Microsoft Windows интерфейс графических устройств (GDI) или Microsoft Windows GDI+. Эти API предоставляют базовые функции создания образов, но не имеют таких функций, как поддержка расширения кодека и поддержка изображений высокого качества. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]предназначен для преодоления недостатков GDI и GDI+ и предоставления нового набора API для вывода и использования изображений в приложениях.  
+ Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет значительные расширения возможностей в обработке изображений в [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Возможности работы с образами, такие как отображение точечного рисунка или использование изображения в стандартном элементе управления, ранее были связаны с библиотеками Microsoft Windows интерфейс графических устройств (GDI) или Microsoft Windows GDI+. Эти API предоставляют базовые функции создания образов, но не имеют таких функций, как поддержка расширения кодека и поддержка изображений высокого качества. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предназначен для преодоления недостатков GDI и GDI+ и предоставления нового набора API для вывода и использования изображений в приложениях.  
   
  Существует два способа доступа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] к API — управляемому компоненту и неуправляемому компоненту. Неуправляемый компонент предоставляет следующие возможности.  
   
 - Модель расширяемости для новых или собственных форматов изображений.  
   
-- Улучшенная производительность и безопасность в собственных форматах образов, включая точечные рисунки (BMP), группу экспертов по образам (JPEG), PNG [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)],,, формат GIF и значок (ICO).  
+- Улучшена производительность и безопасность в собственных форматах образов, включая точечные рисунки (BMP), Объединенные специалисты по образам (JPEG), PNG-файл, формат TIFF, [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], формат GIF и значок (ICO).  
   
 - Сохранение изображений с большой глубиной цвета — до 8 бит на канал (32 бита на пиксель).  
   
@@ -56,13 +56,13 @@ ms.locfileid: "69914104"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Форматы изображений в WPF  
- Для кодирования и декодирования конкретного формата мультимедиа используются кодеки. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]включает кодек для форматов изображений BMP, JPEG, PNG [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF и Icon. Каждый из этих кодеков позволяет приложениям декодировать и, за исключением формата ICON, кодировать изображения соответствующих форматов.  
+ Для кодирования и декодирования конкретного формата мультимедиа используются кодеки. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] включает кодек для форматов изображений BMP, JPEG, PNG, TIFF, [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF и ICON. Каждый из этих кодеков позволяет приложениям декодировать и, за исключением формата ICON, кодировать изображения соответствующих форматов.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>является важным классом, используемым при декодировании и кодировании образов. Это основной строительный блок конвейера [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]. Он представляет отдельный постоянный набор точек определенного размера и разрешения. Может быть отдельным кадром изображения в нескольких кадрах или результатом преобразования, выполненного <xref:System.Windows.Media.Imaging.BitmapSource>в. <xref:System.Windows.Media.Imaging.BitmapSource> Он является родительским для многих основных классов, используемых в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] создании образов, таких как. <xref:System.Windows.Media.Imaging.BitmapFrame>  
   
- <xref:System.Windows.Media.Imaging.BitmapFrame> Используется для хранения данных о фактическом растровом изображении формата изображения. Многие форматы изображений поддерживают только один <xref:System.Windows.Media.Imaging.BitmapFrame>формат, хотя такие форматы, как GIF, и [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] поддерживают несколько кадров на изображение. Кадры используются декодерами в качестве входных данных и передаются кодировщикам для создания файлов изображений.  
+ <xref:System.Windows.Media.Imaging.BitmapFrame> Используется для хранения данных о фактическом растровом изображении формата изображения. Многие форматы изображений поддерживают только один <xref:System.Windows.Media.Imaging.BitmapFrame>, хотя форматы, такие как GIF и TIFF, поддерживают несколько кадров на изображение. Кадры используются декодерами в качестве входных данных и передаются кодировщикам для создания файлов изображений.  
   
- В следующем примере показано, как <xref:System.Windows.Media.Imaging.BitmapFrame> создается объект <xref:System.Windows.Media.Imaging.BitmapSource> из, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] а затем добавляется в изображение.  
+ В следующем примере показано, как <xref:System.Windows.Media.Imaging.BitmapFrame> создается из <xref:System.Windows.Media.Imaging.BitmapSource>, а затем добавляется в изображение TIFF.  
   
  [!code-csharp[BitmapFrameExample#10](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
@@ -131,13 +131,13 @@ ms.locfileid: "69914104"
 #### <a name="stretching-images"></a>Растягивание изображений  
  <xref:System.Windows.Controls.Image.Stretch%2A> Свойство определяет способ растяжения изображения для заполнения его контейнера. Свойство принимает следующие значения, определяемые <xref:System.Windows.Media.Stretch> перечислением: <xref:System.Windows.Controls.Image.Stretch%2A>  
   
-- <xref:System.Windows.Media.Stretch.None>: Изображение не растягивается для заполнения области вывода. Если изображение больше, чем область вывода, изображение заполняет область вывода с обрезкой тех частей, которые не входят.  
+- <xref:System.Windows.Media.Stretch.None>. Изображение не растягивается для заполнения области вывода. Если изображение больше, чем область вывода, изображение заполняет область вывода с обрезкой тех частей, которые не входят.  
   
-- <xref:System.Windows.Media.Stretch.Fill>: Изображение масштабируется в соответствии с областью вывода. Так как высота и ширина изображения масштабируются независимо друг от друга, исходные пропорции изображения могут не сохраниться. То есть изображение может быть деформировано для полного заполнения контейнера вывода.  
+- <xref:System.Windows.Media.Stretch.Fill>. Изображение масштабируется в соответствии с областью вывода. Так как высота и ширина изображения масштабируются независимо друг от друга, исходные пропорции изображения могут не сохраниться. То есть изображение может быть деформировано для полного заполнения контейнера вывода.  
   
-- <xref:System.Windows.Media.Stretch.Uniform>: Изображение масштабируется таким образом, чтобы оно полностью поместилось в область вывода. Пропорции изображения сохраняются.  
+- <xref:System.Windows.Media.Stretch.Uniform>. Изображение масштабируется таким образом, чтобы оно полностью поместилось в область вывода. Пропорции изображения сохраняются.  
   
-- <xref:System.Windows.Media.Stretch.UniformToFill>: Изображение масштабируется таким образом, чтобы полностью заполнить область вывода с сохранением исходного пропорций изображения.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>. Изображение масштабируется таким образом, чтобы полностью заполнить область вывода с сохранением исходного пропорций изображения.  
   
  В следующем примере каждое из доступных <xref:System.Windows.Media.Stretch> перечислений применяется <xref:System.Windows.Controls.Image>к.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "69914104"
 ## <a name="image-metadata"></a>Метаданные изображений  
  Некоторые файлы изображений содержат метаданные, описывающие содержимое или характеристики файла. Например, большинство цифровых фотоаппаратов создают изображения, содержащие метаданные об изготовителе и модели фотоаппарата, использованного для создания изображения. В разных форматах изображения метаданные обрабатываются по-разному. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет универсальный способ хранения и извлечения метаданных для всех поддерживаемых форматов изображения.  
   
- Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> возвращает объект, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]поддерживает следующие схемы метаданных изображения: Файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), Международный совет по Прессским коммуникациям (IPTC [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]) и.  
+ Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> возвращает объект, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] поддерживает следующие схемы метаданных образа: Файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), Международный совет по Прессским коммуникациям (IPTC) и [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Чтобы упростить процесс чтения метаданных <xref:System.Windows.Media.Imaging.BitmapMetadata> , предоставляет несколько именованных свойств, которые можно легко получить, <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>например, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, и <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Многие из этих именованных свойств могут также использоваться для записи метаданных. Дополнительная поддержка чтения метаданных обеспечивается благодаря использованию считывателя запросов метаданных. Метод используется для получения считывателя запросов метаданных путем предоставления строкового запроса, например *"/APP1/EXIF/".* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> В следующем примере <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения текста, хранящегося в расположении *"/Text/Description"* .  
   
