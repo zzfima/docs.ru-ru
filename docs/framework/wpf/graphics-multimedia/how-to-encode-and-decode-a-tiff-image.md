@@ -13,30 +13,30 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - TIFF decoding [WPF]
 ms.assetid: 1dfe3209-fc73-40e6-ad1c-71c1c58b3364
-ms.openlocfilehash: 0b2b638d3aa81e48a1378794435d59da1b323aa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 173a30e785b16a3617b82b771c463083356d6e6e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947554"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835292"
 ---
-# <a name="how-to-encode-and-decode-a-tiff-image"></a><span data-ttu-id="13665-102">Практическое руководство. Кодирование и декодирование изображения в формате TIFF</span><span class="sxs-lookup"><span data-stu-id="13665-102">How to: Encode and Decode a TIFF Image</span></span>
-<span data-ttu-id="13665-103">Следующие примеры показывают, как декодировать и кодировать [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] изображений, используя заданный <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> и <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> объектов.</span><span class="sxs-lookup"><span data-stu-id="13665-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] image using the specific <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> and <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> objects.</span></span>  
+# <a name="how-to-encode-and-decode-a-tiff-image"></a><span data-ttu-id="517e5-102">Практическое руководство. Кодирование и декодирование изображения в формате TIFF</span><span class="sxs-lookup"><span data-stu-id="517e5-102">How to: Encode and Decode a TIFF Image</span></span>
+<span data-ttu-id="517e5-103">В следующих примерах показано, как декодировать и кодировать изображение в формате TIFF с помощью конкретных объектов <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> и <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span><span class="sxs-lookup"><span data-stu-id="517e5-103">The following examples show how to decode and encode a Tagged Image File Format (TIFF) image using the specific <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> and <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13665-104">Пример</span><span class="sxs-lookup"><span data-stu-id="13665-104">Example</span></span>  
- <span data-ttu-id="13665-105">В этом примере показано, как декодировать [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] изображений с помощью <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> из <xref:System.Uri>.</span><span class="sxs-lookup"><span data-stu-id="13665-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image using a <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> from a <xref:System.Uri>.</span></span>  
+## <a name="example"></a><span data-ttu-id="517e5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="517e5-104">Example</span></span>  
+ <span data-ttu-id="517e5-105">В этом примере показано, как декодировать изображение TIFF с помощью <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> из <xref:System.Uri>.</span><span class="sxs-lookup"><span data-stu-id="517e5-105">This example demonstrates how to decode a TIFF image using a <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> from a <xref:System.Uri>.</span></span>  
   
  [!code-cpp[TiffBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#1)]
  [!code-csharp[TiffBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#1)]
  [!code-vb[TiffBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="13665-106">Пример</span><span class="sxs-lookup"><span data-stu-id="13665-106">Example</span></span>  
- <span data-ttu-id="13665-107">В этом примере показаны способы кодирования <xref:System.Windows.Media.Imaging.BitmapSource> в [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] изображений с помощью <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span><span class="sxs-lookup"><span data-stu-id="13665-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image using a <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span></span>  
+## <a name="example"></a><span data-ttu-id="517e5-106">Пример</span><span class="sxs-lookup"><span data-stu-id="517e5-106">Example</span></span>  
+ <span data-ttu-id="517e5-107">В этом примере показано, как кодировать <xref:System.Windows.Media.Imaging.BitmapSource> в изображение TIFF с помощью <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span><span class="sxs-lookup"><span data-stu-id="517e5-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a TIFF image using a <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span></span>  
   
  [!code-cpp[TiffBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#4)]
  [!code-csharp[TiffBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#4)]
  [!code-vb[TiffBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="13665-108">См. также</span><span class="sxs-lookup"><span data-stu-id="13665-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="517e5-108">См. также</span><span class="sxs-lookup"><span data-stu-id="517e5-108">See also</span></span>
 
-- [<span data-ttu-id="13665-109">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="13665-109">Imaging Overview</span></span>](imaging-overview.md)
+- [<span data-ttu-id="517e5-109">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="517e5-109">Imaging Overview</span></span>](imaging-overview.md)
