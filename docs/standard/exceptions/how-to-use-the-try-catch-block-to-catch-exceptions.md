@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  использование блока try/catch для перехвата исключений
+title: Практическое руководство. использование блока try/catch для перехвата исключений
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092752"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696720"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Использование блока try/catch для перехвата исключений
 
@@ -27,7 +27,7 @@ ms.locfileid: "56092752"
 В следующем примере <xref:System.IO.StreamReader> открывает файл с именем *data.txt* и извлекает строку из файла. Так как код может вызывать любое из трех исключений, он помещается в блок `try`. Три блока `catch` перехватывают исключения и обрабатывают их, отображая результаты в консоли.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
-[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
 Среда CLR перехватывает исключения, не обрабатываемые блоками `catch`. Если исключение перехватывается в среде CLR, в зависимости от конфигурации среды CLR может возникнуть один из следующих результатов:
 
@@ -40,5 +40,5 @@ ms.locfileid: "56092752"
 
 ## <a name="see-also"></a>См. также
 
-[Исключения](index.md)  
-[Обработка ошибок ввода-вывода в .NET](../io/handling-io-errors.md)
+- [Исключения](index.md)
+- [Обработка ошибок ввода-вывода в .NET](../io/handling-io-errors.md)

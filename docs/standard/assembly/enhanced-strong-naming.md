@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f9a5c848a8a46b72fb39865ffa861424107438
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972717"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834891"
 ---
 # <a name="enhanced-strong-naming"></a>Усовершенствованное строгое именование
 Подпись строгого имени — это механизм идентификации сборок в .NET Framework. Это цифровая подпись с открытым ключом, которая обычно используется для проверки целостности данных, передаваемых от инициатора (подписывающего) к получателю (проверяющему). Эта подпись используется в виде уникального идентификатора сборки и гарантирует, что ссылки на сборку не являются неоднозначными. Подписывание сборки является частью процесса сборки, что затем проверяется при ее загрузке.  
@@ -43,25 +43,25 @@ ms.locfileid: "70972717"
   
 1. Создайте ключ удостоверения (если необходимо).  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     ```  
   
 2. Извлеките открытый ключ удостоверения и укажите, что при подписывании этим ключом необходимо использовать алгоритм SHA-2.  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
 3. Используйте отложенную подпись сборки с помощью файла с открытым ключом удостоверения.  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 4. Повторно подпишите сборку с помощью полной пары ключей удостоверения.  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
@@ -70,32 +70,32 @@ ms.locfileid: "70972717"
   
 1. Создайте пару ключей удостоверения и подписи (если необходимо).  
   
-    ```  
+    ```console  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
 2. Извлеките открытый ключ подписи и укажите, что при подписывании этим ключом необходимо использовать алгоритм SHA-2.  
   
-    ```  
+    ```console  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
 3. Извлеките открытый ключ удостоверения, определяющий хэш-алгоритм, с помощью которого создается подпись другой стороны.  
   
-    ```  
+    ```console  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
 4. Создайте параметры для атрибута <xref:System.Reflection.AssemblySignatureKeyAttribute> и прикрепите атрибут к сборке.  
   
-    ```  
+    ```console  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
 
     Вы увидите приблизительно следующее.
 
-    ```
+    ```output
     Information for key migration attribute.
     (System.Reflection.AssemblySignatureKeyAttribute):
     publicKey=
@@ -123,13 +123,13 @@ ms.locfileid: "70972717"
   
 5. Используйте отложенную подпись сборки с помощью открытого ключа удостоверения.  
   
-    ```  
+    ```console  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
 6. Подпишите сборку с помощью полной пары ключей удостоверения.  
   
-    ```  
+    ```console  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   

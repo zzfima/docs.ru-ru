@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968583"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957342"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Извлечение информации, сохраненной в атрибуте
 Извлечение пользовательских атрибутов не представляет никакой сложности. Сначала объявите экземпляр атрибута, который вам нужно получить. Затем вызовите метод <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>, чтобы инициализировать новый атрибут тем значением, которое вы хотите получить. После инициализации нового атрибута обращайтесь к его свойствам, чтобы получить значения.  
@@ -44,7 +44,7 @@ ms.locfileid: "69968583"
   
  Эта программа при выполнении выводит следующий текст.  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  Если атрибут не найден, метод **GetCustomAttribute** инициализирует атрибут `MyAttribute` значением NULL. Этот пример проверяет наличие такого экземпляра в `MyAttribute` и уведомляет пользователя, если атрибут не найден. Если `DeveloperAttribute` не найден в области класса, на консоль выводится следующее сообщение.  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   

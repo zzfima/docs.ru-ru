@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b4e9072100a25c297dbf3bfb70a928e16b06da4
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959483"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956891"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Другие конструкции в регулярных выражениях
 Регулярные выражения в .NET поддерживают три различные языковые конструкции. Одна позволяет включать или отключать определенные параметры соответствия в середине шаблона регулярного выражения. Оставшиеся две позволяют включать комментарии в регулярное выражение.  
@@ -25,9 +25,7 @@ ms.locfileid: "69959483"
 ## <a name="inline-options"></a>Встроенные параметры  
  С помощью синтаксиса можно задать или отключить конкретные параметры сопоставления шаблонов для части регулярного выражения.  
   
-```  
-(?imnsx-imnsx)  
-```  
+`(?imnsx-imnsx)`  
   
  Параметры, которые нужно включить, указываются после вопросительного знака, а параметры, которые требуется отключить, перечисляются после знака минус. В таблице ниже представлено описание каждого из этих параметров. Дополнительные сведения о каждом параметре см. в разделе [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
   
