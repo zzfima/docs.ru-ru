@@ -3,12 +3,12 @@ title: Анализ диапазонов данных с помощью инде
 description: В этом учебнике подробно рассказывается, как анализировать данные с помощью индексов и диапазонов и, таким образом, изучать срезы последовательного набора данных.
 ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391964"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699939"
 ---
 # <a name="indices-and-ranges"></a>Индексы и диапазоны
 
@@ -33,7 +33,7 @@ ms.locfileid: "71391964"
 
 Начнем с правил для использования в индексах. Рассмотрим массив `sequence`. Индекс `0` совпадает с `sequence[0]`. Индекс `^0` совпадает с `sequence[sequence.Length]`. Обратите внимание, что `sequence[^0]` создает исключение так же, как и `sequence[sequence.Length]`. Для любого числа `n` индекс `^n` совпадает с `sequence[sequence.Length - n]`.
 
-```csharp-interactive
+```csharp
 string[] words = new string[]
 {
                 // index from start    index from end

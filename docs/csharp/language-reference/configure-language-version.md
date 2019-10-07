@@ -2,12 +2,12 @@
 title: Управление версиями языка C# — руководство по C#
 description: Дополнительные сведения о том, как версия языка C# определяется на основе вашего проекта и какие значения можно настроить вручную.
 ms.date: 07/10/2019
-ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040353"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698810"
 ---
 # <a name="c-language-versioning"></a>Управление версиями языка C#
 
@@ -23,7 +23,9 @@ ms.locfileid: "70040353"
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET Standard|все|C# 7.3|
+|.NET Standard|2.1|C# 8.0|
+|.NET Standard|2.0|C# 7.3|
+|.NET Standard|1.x|C# 7.3|
 |.NET Framework|все|C# 7.3|
 
 ## <a name="default-for-previews"></a>Параметры по умолчанию для предварительных версий

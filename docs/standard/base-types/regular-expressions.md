@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423780"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736855"
 ---
 # <a name="net-regular-expressions"></a>Регулярные выражения в .NET
 Регулярные выражения предоставляют мощный, гибкий и эффективный способ обработки текста. Комплексная нотация сопоставления шаблонов регулярных выражений позволяет быстро анализировать большие объемы текста для поиска определенных шаблонов символов, проверять текст на соответствие предопределенному шаблону (например, адресу электронной почты), извлекать, изменять, заменять и удалять текстовые подстроки, а также добавлять извлеченные строки в коллекцию для создания отчета. Для многих приложений, которые работают со строками или анализируют большие блоки текста, регулярные выражения — незаменимый инструмент.  
@@ -37,21 +37,21 @@ ms.locfileid: "66423780"
   
 - Шаблон регулярного выражения для определения текста.  
   
-     В .NET шаблоны регулярных выражений определяются специальным синтаксисом или языком, который совместим с регулярными выражениями Perl 5 и добавляет дополнительные возможности, например сопоставление справа налево. Дополнительные сведения см. в разделе [Элементы языка регулярных выражений. Краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).  
+     В .NET шаблоны регулярных выражений определяются специальным синтаксисом или языком, который совместим с регулярными выражениями Perl 5 и добавляет дополнительные возможности, например сопоставление справа налево. Дополнительные сведения см. в разделе [Элементы языка регулярных выражений. Краткий справочник](regular-expression-language-quick-reference.md).  
   
 - Текст, который будет проанализирован на соответствие шаблону регулярного выражения.  
   
  Методы класса <xref:System.Text.RegularExpressions.Regex> позволяют выполнять следующие операции:  
   
-- Определить, входит ли шаблон регулярного выражения во входной текст, с помощью метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Пример использования метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> для проверки текста см. в разделе [Руководство. Проверка строк на соответствие формату электронной почты](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Определить, входит ли шаблон регулярного выражения во входной текст, с помощью метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Пример использования метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> для проверки текста см. в разделе [Руководство. Проверка строк на соответствие формату электронной почты](how-to-verify-that-strings-are-in-valid-email-format.md).  
   
 - Получить один или все экземпляры текста, соответствующего шаблону регулярного выражения с помощью метода <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Первый метод возвращает объект <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType>, который предоставляет сведения о соответствующем тексте. Второй метод возвращает объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий один объект <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> для каждого соответствия, обнаруженного в обработанном тексте.  
   
-- Заменить текст, соответствующий шаблону регулярного выражения, с помощью метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Примеры использования метода <xref:System.Text.RegularExpressions.Regex.Replace%2A> для изменения форматов даты и удаления недопустимых символов из строки см. в разделах [Руководство. Исключение недопустимых символов из строки](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) и [Руководство. Изменение форматов даты](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
+- Заменить текст, соответствующий шаблону регулярного выражения, с помощью метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Примеры использования метода <xref:System.Text.RegularExpressions.Regex.Replace%2A> для изменения форматов даты и удаления недопустимых символов из строки см. в разделах [Руководство. Исключение недопустимых символов из строки](how-to-strip-invalid-characters-from-a-string.md) и [Руководство. Изменение форматов даты](regular-expression-example-changing-date-formats.md).  
   
- Обзор объектной модели регулярных выражений см. в разделе [Объектная модель регулярных выражений](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
+ Обзор объектной модели регулярных выражений см. в разделе [Объектная модель регулярных выражений](the-regular-expression-object-model.md).  
   
- Дополнительные сведения о языке регулярных выражений см. в [кратком справочнике по элементам языка регулярных выражений](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) или в одной из следующих брошюр, который вы можете скачать и распечатать:  
+ Дополнительные сведения о языке регулярных выражений см. в [кратком справочнике по элементам языка регулярных выражений](regular-expression-language-quick-reference.md) или в одной из следующих брошюр, который вы можете скачать и распечатать:  
   
  [Краткий справочник в формате Word (DOCX)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx);  
  [Краткий справочник в формате PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf).  
@@ -62,16 +62,16 @@ ms.locfileid: "66423780"
 ### <a name="example-1-replacing-substrings"></a>Пример 1: Замена подстрок  
  Предположим, что список рассылки содержит имена, в которые иногда входит обращение (Mr., Mrs., Miss или Ms.) в дополнение к имени и фамилии. Если вы не хотите включать обращения при создании этикеток для конвертов из списка, с помощью регулярного выражения их можно удалить, как показано в следующем примере.  
   
- [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
- [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
+ [!code-csharp[Conceptual.Regex#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
+ [!code-vb[Conceptual.Regex#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- Шаблон регулярного выражения `(Mr\.? |Mrs\.? |Miss |Ms\.? )` сопоставляет любые вхождения строк "Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms" и (или) "Ms.". После вызова метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> сопоставленная строка заменяется на <xref:System.String.Empty?displayProperty=nameWithType>; другими словами, она удаляется из исходной строки.  
+ Шаблон регулярного выражения `(Mr\.? |Mrs\.? |Miss |Ms\.? )` сопоставляет все вхождения строк "Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms" или "Ms.". После вызова метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> сопоставленная строка заменяется на <xref:System.String.Empty?displayProperty=nameWithType>; другими словами, она удаляется из исходной строки.  
   
 ### <a name="example-2-identifying-duplicated-words"></a>Пример 2: Поиск повторяющихся слов  
  Случайный повтор слов — это распространенная ошибка при написании текстов. Регулярное выражение можно использовать для определения повторяющихся слов, как показано в следующем примере.  
   
- [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
- [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
+ [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
+ [!code-vb[Conceptual.Regex#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
  Шаблон регулярного выражения `\b(\w+?)\s\1\b` интерпретируется следующим образом:  
   
@@ -90,8 +90,8 @@ ms.locfileid: "66423780"
 ### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Пример 3. Динамическое создание регулярного выражения с учетом языка и региональных параметров  
  Следующий пример демонстрирует преимущества использования регулярных выражений с гибкими возможностями глобализации .NET. В примере объект <xref:System.Globalization.NumberFormatInfo> применяется для определения формата денежных значений в текущих региональных стандартах системы. Затем эти данные используются для динамического создания регулярного выражения, которое извлекает денежные значения из текста. Для каждого совпадения извлекается подгруппа, содержащая только числовые строки, которая преобразуется в значение <xref:System.Decimal>, после чего рассчитывается промежуточный итог.  
   
- [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
- [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
+ [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
+ [!code-vb[Conceptual.Regex#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
  На компьютере с региональными параметрами "English - United States (en-US)" пример динамически создает регулярное выражение `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`. Шаблон регулярного выражения интерпретируется следующим образом:  
   
@@ -111,14 +111,14 @@ ms.locfileid: "66423780"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
-|[Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Сведения о наборе символов, операторов и конструкций, которые можно использовать для определения регулярных выражений.|  
-|[Объектная модель регулярных выражений](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Сведения об использовании классов регулярных выражений и примеры кода.|  
-|[Подробные сведения о поведении регулярных выражений](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Сведения о возможностях и поведении регулярных выражений платформы .NET.|  
-|[Примеры регулярных выражений](../../../docs/standard/base-types/regular-expression-examples.md)|Примеры кода, демонстрирующие типичное применение регулярных выражений.|  
+|[Элементы языка регулярных выражений — краткий справочник](regular-expression-language-quick-reference.md)|Сведения о наборе символов, операторов и конструкций, которые можно использовать для определения регулярных выражений.|  
+|[Объектная модель регулярных выражений](the-regular-expression-object-model.md)|Сведения об использовании классов регулярных выражений и примеры кода.|  
+|[Подробные сведения о поведении регулярных выражений](details-of-regular-expression-behavior.md)|Сведения о возможностях и поведении регулярных выражений платформы .NET.|  
+|[Примеры регулярных выражений](regular-expression-examples.md)|Примеры кода, демонстрирующие типичное применение регулярных выражений.|  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
