@@ -115,6 +115,8 @@
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
 - name: Ресурсы
   items:
+    - name: Обзор
+      href: resources/index.md
     - name: Глоссарий
       href: resources/glossary.md
     - name: Телеметрия CLI
