@@ -1,4 +1,4 @@
-- name: Приветствие
+﻿- name: Приветствие
   href: welcome.md
 - name: "Руководство по\_.NET"
   href: standard/index.md
@@ -122,7 +122,7 @@
       href: standard/datetime/
     - name: События
       href: standard/events/
-    - name: процесс управляемого выполнения
+    - name: Процесс управляемого выполнения
       href: standard/managed-execution-process.md
     - name: Метаданные и компоненты с самоописанием
       href: standard/metadata-and-self-describing-components.md

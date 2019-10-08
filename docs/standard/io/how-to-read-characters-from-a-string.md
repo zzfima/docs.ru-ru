@@ -1,5 +1,5 @@
----
-title: Как выполнить Считывание символов из строки
+﻿---
+title: Практическое руководство. Считывание символов из строки
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 02/26/2019
 ms.locfileid: "56835204"
 ---
-# <a name="how-to-read-characters-from-a-string"></a>Как выполнить Считывание символов из строки
+# <a name="how-to-read-characters-from-a-string"></a>Практическое руководство. Считывание символов из строки
 Следующий пример кода демонстрирует синхронное и асинхронное чтение символов из строки.  
   
 ## <a name="example-read-characters-synchronously"></a>Пример Синхронное чтение символов 

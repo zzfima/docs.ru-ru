@@ -1,5 +1,5 @@
----
-title: Как выполнить Считывание из файлов и запись в файлы в изолированном хранилище
+﻿---
+title: Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,7 +25,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54491529"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Как выполнить Считывание из файлов и запись в файлы в изолированном хранилище
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище
 Для чтения из файла или записи в файл в изолированном хранилище используется объект <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> с модулем чтения потока (объект <xref:System.IO.StreamReader> ) или модулем записи в поток (объект <xref:System.IO.StreamWriter>).  
   
 ## <a name="example"></a>Пример  

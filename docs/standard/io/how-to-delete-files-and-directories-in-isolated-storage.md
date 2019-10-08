@@ -1,5 +1,5 @@
----
-title: Как выполнить Удаление файлов и каталогов из изолированного хранилища
+﻿---
+title: Практическое руководство. Удаление файлов и каталогов из изолированного хранилища
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -26,7 +26,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54538028"
 ---
-# <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Как выполнить Удаление файлов и каталогов из изолированного хранилища
+# <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Практическое руководство. Удаление файлов и каталогов из изолированного хранилища
 Вы можете удалять файлы и папки из файла изолированного хранилища. В хранилище имена файлов и каталогов зависят от используемой операционной системы, а путь к ним указывается относительно корня виртуальной файловой системы. В операционных системах Windows регистр в именах файлов не учитывается.  
   
  Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> предоставляет два метода для удаления каталогов и файлов: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> и <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. При попытке удалить несуществующий файл или каталог создается исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException>. Если в имени будет указан подстановочный знак, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> создает исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException>, а <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> создает исключение <xref:System.ArgumentException>.  
