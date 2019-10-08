@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627403"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004594"
 ---
 # <a name="commanding-overview"></a>Общие сведения о системе команд
 Система команд <a name="introduction"></a> представляет собой механизм ввода в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], обеспечивающий обработку входных данных на более семантическом уровне по сравнению с вводом устройств. Примеры команд включают операции **Копировать**, **Вырезать** и **Вставить**, доступные во многих приложениях.  
@@ -173,7 +173,7 @@ ms.locfileid: "64627403"
 ## <a name="command-library"></a>Библиотека команд  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет набор стандартных команд.  Библиотека команд включает следующие классы: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> и <xref:System.Windows.Input.ComponentCommands>.  Эти классы предоставляют команды, такие как <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> и <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> и <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Многие из этих команд содержат набор привязок ввода по умолчанию.  Например, если вы задаете обработку приложением команды копирования, вы автоматически получаете привязку CTRL+C. Кроме того, вы получаете привязки для других устройств ввода, таких как ввод с помощью пера и голосовых данных [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)].  
+ Многие из этих команд содержат набор привязок ввода по умолчанию.  Например, если вы укажете, что приложение обрабатывает команду копирования, вы автоматически получаете привязку клавиатуры "CTRL + C", а также получаете привязки для других устройств ввода, таких как жесты пера планшетного ПК и речевые сведения.  
   
  При ссылке на команды в различных библиотеках команд с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], обычно можно опустить имя класса библиотеки, который предоставляет статическое свойство команды. Как правило, имена команд задаются однозначно в виде строк и существуют типы владельца, которые обеспечивает логическую группировку команд, однако они не являются необходимыми для устранения неоднозначности. Например, можно указать `Command="Cut"` вместо более подробной команды `Command="ApplicationCommands.Cut"`. Этот удобный механизм встроен в обработчик команд [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (точнее, это поведение преобразователя типов <xref:System.Windows.Input.ICommand>, на который обработчик [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ссылается во время загрузки).  
   
@@ -192,5 +192,5 @@ ms.locfileid: "64627403"
 - [Общие сведения о входных данных](input-overview.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
 - [Реализация ICommandSource](how-to-implement-icommandsource.md)
-- [Практическое руководство. Добавление команды в объект MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [Практическое руководство. Добавление команды в MenuItem @ no__t-0
 - [Создание примера настраиваемой команды RoutedCommand](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

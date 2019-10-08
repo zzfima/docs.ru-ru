@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b394c4bbb294f9eb09666cf3e2223f897abd09b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928436"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003141"
 ---
 # <a name="properties-wpf"></a>Свойства (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства среды CLR. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые можно использовать для расширения функциональности свойства среды CLR. В совокупности эти службы обычно называются системой свойств WPF. Свойство, поддерживаемое системой свойств WPF, называется свойством зависимостей.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Общие сведения о присоединенных свойствах](attached-properties-overview.md)
@@ -51,7 +51,7 @@ ms.locfileid: "70928436"
   [Базовые элементы](base-elements.md)  
   [Дерево элементов и сериализация](element-tree-and-serialization.md)  
   [События](events-wpf.md)  
-  [Входные данные](input-wpf.md)  
+  [Ввод](input-wpf.md)  
   [Ресурсы](resources-wpf.md)  
   [Модель содержимого WPF](../controls/wpf-content-model.md)  
   [Потоковая модель](threading-model.md)

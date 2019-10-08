@@ -9,47 +9,47 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: fd26643c2c289459b1e7b158952c402e42bae39b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee130073b95dfbab5616a54c188b09fa92ccc930
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639880"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005359"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Задает способ сравнения строк.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 -optioncompare:{binary | text}  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Можно указать `-optioncompare` в одну из двух форм: `-optioncompare:binary` использовать двоичное сравнение строк, и `-optioncompare:text` использовать текстовое сравнение строк. По умолчанию компилятор использует `-optioncompare:binary`.  
+ Можно указать `-optioncompare` в одной из двух форм: `-optioncompare:binary`, чтобы использовать двоичные сравнения строк, а `-optioncompare:text` — для сравнения текстовых строк. По умолчанию компилятор использует `-optioncompare:binary`.  
   
- В Microsoft Windows текущая кодовая страница определяет двоичный порядок сортировки. Ниже приведен типичный двоичный порядок сортировки:  
+ В Microsoft Windows Текущая кодовая страница определяет двоичный порядок сортировки. Типичный порядок двоичной сортировки выглядит следующим образом:  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Сравнение текстовых строк основано на порядок сортировки текста без учета регистра, определяемого языком вашей системы. Порядок сортировки текста обычно выглядит следующим образом:  
+ Текстовые сравнения строк основаны на порядке сортировки текста без учета регистра, который определяется языковым стандартом системы. Типичный порядок сортировки текста выглядит следующим образом:  
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Чтобы задать - optioncompare в Интегрированной среде разработки Visual Studio  
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Установка параметра-оптионкомпаре в интегрированной среде разработки Visual Studio  
   
 1. Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
   
 2. Откройте вкладку **Компиляция**.  
   
-3. Измените значение в **Option Compare** поле.  
+3. Измените значение в поле **параметр сравнения** .  
   
-### <a name="to-set--optioncompare-programmatically"></a>Чтобы установить - optioncompare программными средствами  
+### <a name="to-set--optioncompare-programmatically"></a>Установка параметра-оптионкомпаре программными средствами  
   
-- См. в разделе [оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+- См. [инструкции Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `ProjFile.vb` и используются двоичные сравнения строк.  
+ Следующий код компилирует `ProjFile.vb` и использует двоичные сравнения строк.  
   
 ```console
 vbc -optioncompare:binary projFile.vb  

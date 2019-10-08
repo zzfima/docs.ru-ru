@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792285"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003393"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Пошаговое руководство. Обработка данных (Visual Basic)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -38,7 +38,7 @@ ms.locfileid: "70792285"
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Создание решения в Visual Studio.  
+- Создание решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в Visual Studio.  
   
 - Добавление файла кода базы данных в проект.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70792285"
 - Отправка внесенных изменений в базу данных Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
- В этой первой задаче вы создадите решение Visual Studio, содержащее необходимые ссылки для сборки и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
+ В этой первой задаче вы создадите решение Visual Studio, содержащее необходимые ссылки для сборки и запуска проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
   
@@ -66,7 +66,7 @@ ms.locfileid: "70792285"
 5. Нажмите кнопку **ОК**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Добавление ссылок и директив LINQ  
- В этом пошаговом руководстве используются сборки, которые могут быть не установлены по умолчанию в проект. Если `System.Data.Linq` в проекте нет списка (щелкните **Показывать все файлы** в **Обозреватель решений** и разверните узел **ссылки** ), добавьте его, как описано в следующих шагах.  
+ В этом пошаговом руководстве используются сборки, которые могут быть не установлены по умолчанию в проект. Если `System.Data.Linq` не указан в качестве ссылки в проекте (щелкните **Показывать все файлы** в **Обозреватель решений** и разверните узел **ссылки** ), добавьте его, как описано в следующих шагах.  
   
 #### <a name="to-add-systemdatalinq"></a>Добавление сборки System.Data.Linq  
   
@@ -168,7 +168,7 @@ ms.locfileid: "70792285"
   
      Появится окно консоли со следующими данными.  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627308"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005703"
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
-Элементы управления Windows Presentation Foundation (WPF) могут быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
+Элементы управления Windows Presentation Foundation (WPF) можно логически сгруппировать в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
   
 ## <a name="layout"></a>Макет  
  Элементы управления макета используются для управления размером, измерениями, размещением и расположением дочерних элементов.  
@@ -56,7 +56,7 @@ ms.locfileid: "64627308"
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Кнопки  
- Кнопки являются одним из основных элементов управления пользовательского интерфейса. Приложения обычно выполняют определенную задачу в <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, когда пользователь щелкает их.  
+ Кнопки являются одним из основных элементов управления пользовательского интерфейса. Приложения обычно выполняют определенную задачу в событии <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, когда пользователь щелкает их.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -139,7 +139,7 @@ ms.locfileid: "64627308"
   
 - <xref:System.Windows.Controls.ToolTip>  
   
-## <a name="documents"></a>Документы  
+## <a name="documents"></a>Documents  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает несколько специализированных элементов управления для просмотра документов. Эти элементы управления оптимизируют процесс чтения, основываясь на целевом пользовательском сценарии.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
@@ -152,7 +152,7 @@ ms.locfileid: "64627308"
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Входные данные  
+## <a name="input"></a>Ввод  
  Элементы управления вводом позволяют пользователю вводить текст и другое содержимое.  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -171,7 +171,7 @@ ms.locfileid: "64627308"
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Рукописный ввод  
- Элементы управления рукописным вводом обеспечивают интегрированную поддержку функций [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], таких как просмотр и рукописный ввод.  
+ Элементы управления цифровыми рукописным вводом обеспечивают интегрированную поддержку функций Tablet PC, таких как просмотр рукописных данных и ввод рукописных данных.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

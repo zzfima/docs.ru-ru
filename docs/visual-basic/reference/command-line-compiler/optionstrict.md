@@ -8,49 +8,49 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d281fe07754f0471f8d6c0e31cf3ea890060504
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625897"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005348"
 ---
 # <a name="-optionstrict"></a>-optionstrict
-Требовать строгой семантики для ограничения неявного преобразования типов.  
+Обеспечивает строгую семантику типов для ограничения неявных преобразований типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
  `+` &#124; `-`  
- Необязательный параметр. `-optionstrict+` Ограничивает неявное преобразование типов. Значение по умолчанию для этого параметра — `-optionstrict-`. `-optionstrict+` Параметр совпадает со значением `-optionstrict`. Можно использовать как для разрешающей семантики.  
+ Необязательный параметр. Параметр `-optionstrict+` позволяет ограничивать неявное преобразование типов. Значение по умолчанию для этого параметра — `-optionstrict-`. Параметр `-optionstrict+` аналогичен `-optionstrict`. Для разрешительной семантики типов можно использовать и то, и другое.  
   
  `custom`  
- Обязательный. Предупреждать, когда не накладывается ограничение на строгую семантику языка.  
+ Обязательный. Предупреждать, если не учитывается превышена семантика языка.  
   
 ## <a name="remarks"></a>Примечания  
- Когда `-optionstrict+` по сути, является неявно могут выполняться только расширяющие преобразования типа. Неявные преобразования типов, например назначение `Decimal` введите в объект типа integer, которые выводятся как ошибки.  
+ Если действует значение `-optionstrict+`, только расширяющие преобразования типов могут быть сделаны неявно. Неявные сужающие преобразования типов, такие как присваивание типа `Decimal` объекту целочисленного типа, выводятся как ошибки.  
   
- Чтобы создать предупреждения для неявных сужающих преобразований типа, используйте `-optionstrict:custom`. Используйте `-nowarn:numberlist` для игнорирования определенных предупреждений и `-warnaserror:numberlist` для конкретного предупреждения обрабатываются как ошибки.  
+ Чтобы создать предупреждения для неявных сужающих преобразований типов, используйте `-optionstrict:custom`. Используйте `-nowarn:numberlist` для пропуска определенных предупреждений и `-warnaserror:numberlist`, чтобы обрабатывать определенные предупреждения как ошибки.  
   
-### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Чтобы задать - optionstrict в Интегрированной среде разработки Visual Studio  
+### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Установка параметра-оптионстрикт в интегрированной среде разработки Visual Studio  
   
-1. Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства.**   
+1. Выберите проект в **Обозревателе решений**. В меню **проект** выберите пункт **Свойства.**   
   
 2. Откройте вкладку **Компиляция**.  
   
-3. Измените значение в **Option Strict** поле.  
+3. Измените значение в поле **Option** ЗНАЧ.  
   
-### <a name="to-set--optionstrict-programmatically"></a>Чтобы установить - optionstrict программными средствами  
+### <a name="to-set--optionstrict-programmatically"></a>Установка параметра-оптионстрикт программными средствами  
   
-- См. в разделе [Option Strict-оператор](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- См. [оператор Option Case](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `Test.vb` с помощью строгой семантики.  
+ Следующий код компилирует `Test.vb` с использованием строгой семантики типов.  
   
 ```console
 vbc -optionstrict+ test.vb  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5b26e36346858d95526f5d5ce7d4645bea1dbe05
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972378"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005478"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Задает имя сборки, частью которой будет этот модуль.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 -moduleassemblyname:assembly_name  
 ```  
   
@@ -29,18 +29,18 @@ ms.locfileid: "70972378"
 |`assembly_name`|Имя сборки, частью которой будет этот модуль.|  
   
 ## <a name="remarks"></a>Примечания  
- Компилятор обрабатывает `-moduleassemblyname` параметр, только `-target:module` если указан параметр. В результате компилятор создаст модуль. Модуль, созданный компилятором, действителен только для сборки, указанной с помощью `-moduleassemblyname` параметра. Если модуль размещается в другой сборке, возникнут ошибки во время выполнения.  
+ Компилятор обрабатывает параметр `-moduleassemblyname` только в том случае, если указан параметр `-target:module`. В результате компилятор создаст модуль. Модуль, созданный компилятором, действителен только для сборки, указанной с параметром `-moduleassemblyname`. Если модуль размещается в другой сборке, возникнут ошибки во время выполнения.  
   
- Этот `-moduleassemblyname` параметр необходим только в том случае, если выполняются следующие условия.  
+ Параметр `-moduleassemblyname` необходим только в том случае, если выполняются следующие условия.  
   
-- Для типа данных в модуле требуется доступ к `Friend` типу в сборке, на которую имеется ссылка.  
+- Для типа данных в модуле требуется доступ к типу `Friend` в сборке, на которую имеется ссылка.  
   
 - Сборка, на которую указывает ссылка, предоставила дружественной сборке доступ к сборке, в которую будет построен модуль.  
   
  Дополнительные сведения о создании модуля см. в разделе [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Дополнительные сведения о дружественных сборках см. в разделе [дружественные сборки](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
-> Этот `-moduleassemblyname` параметр недоступен в среде разработки Visual Studio. он доступен только при компиляции из командной строки.  
+> Параметр `-moduleassemblyname` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,24 +1,24 @@
 ---
-title: -imports (Visual Basic)
+title: -Imports (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663249"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005571"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Импорт пространства имен из указанной сборки.  
+# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
+Импортирует пространства имен из указанной сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
@@ -29,16 +29,16 @@ ms.locfileid: "61663249"
 |`namespaceList`|Обязательный. Разделенный запятыми список пространств имен для импорта.|  
   
 ## <a name="remarks"></a>Примечания  
- `-imports` Параметр импортирует любое пространство имен, определенные в текущем наборе исходных файлов или из любой сборки, на которую указывает ссылка.  
+ Параметр `-imports` импортирует любое пространство имен, определенное в текущем наборе исходных файлов или в любой связанной сборке.  
   
- Члены пространства имен, указанные с помощью `-imports` доступны для всех файлов исходного кода при компиляции. Используйте [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для использования пространства имен в файле одного исходного кода.  
+ Элементы в пространстве имен, заданном параметром `-imports`, доступны для всех файлов исходного кода в компиляции. Используйте [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , чтобы использовать пространство имен в одном файле исходного кода.  
   
-|Чтобы задать/imports в среде разработки Visual Studio|  
+|Установка/Imports в интегрированной среде разработки Visual Studio|  
 |---|  
-|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Перейдите на вкладку **Ссылки**.<br />3.  Введите имя пространства имен в поле рядом с **добавить пользовательский импорт** кнопки.<br />4.  Нажмите кнопку **добавить пользовательский импорт** кнопки.|  
+|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Перейдите на вкладку **Ссылки**.<br />3.  Введите имя пространства имен в поле рядом с кнопкой **Добавить пользовательский импорт** .<br />4.  Нажмите кнопку **Добавить пользовательский импорт** .|  
   
 ## <a name="example"></a>Пример  
- Следующий код компилируется при `/imports:system.globalization` указан. Без него, что требует успешной компиляции `Imports System.Globalization` инструкции быть включены в начале файла исходного кода, или свойство быть полным как `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Следующий код компилируется при указании `/imports:system.globalization`. В противном случае для успешной компиляции требуется, чтобы инструкция `Imports System.Globalization` была включена в начало файла исходного кода или что свойство полностью определено как `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

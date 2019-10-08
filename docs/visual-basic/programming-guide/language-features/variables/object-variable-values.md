@@ -7,37 +7,37 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728f097b3c084e5292cb2d2bf5a0c1d20bdad922
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054189"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004583"
 ---
 # <a name="object-variable-values-visual-basic"></a>Значения объектных переменных (Visual Basic)
-Переменная [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) может ссылаться на данные любого типа. Значение, сохраненное в `Object` переменной хранится в памяти, а сама переменная содержит указатель на данные.  
+Переменная [типа данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) может ссылаться на данные любого типа. Значение, сохраняемое в переменной `Object`, хранится в любом месте в памяти, а сама переменная содержит указатель на данные.  
   
-## <a name="object-classifier-functions"></a>Объект функции-классификаторы  
- Visual Basic предоставляет функции, возвращающие сведения о том, что `Object` ссылается переменная, как показано в следующей таблице.  
+## <a name="object-classifier-functions"></a>Функции-классификаторы объектов  
+ Visual Basic предоставляет функции, возвращающие сведения о том, на что ссылается переменная `Object`, как показано в следующей таблице.  
   
-|Функция|Возвращает значение True, если переменная объекта ссылается на|  
+|Функция|Возвращает значение true, если объектная переменная ссылается на|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Массив значений, а не одно значение|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Объект [тип данных Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) значением или строкой, которая может быть интерпретирована как значение даты и времени|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Объект типа <xref:System.DBNull>, представляющий данные отсутствуют или не существует|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Объект исключения, который является производным от <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Ничего не](../../../../visual-basic/language-reference/nothing.md), то есть объект не назначено в настоящий момент в переменную|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Число или строку, которая может быть интерпретирована как число|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Ссылочный тип (например, строка, массив, делегата или тип класса)|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Значение [типа данных Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) или строка, которая может быть интерпретирована как значение даты и времени|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Объект типа <xref:System.DBNull>, представляющий отсутствующие или несуществующие данные|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Объект Exception, производный от <xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Ничего](../../../../visual-basic/language-reference/nothing.md), т. е. в данный момент ни один объект не назначен переменной|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Число или строка, которую можно интерпретировать как число|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Ссылочный тип (например, строка, массив, делегат или тип класса);|  
   
- Эти функции позволяют избежать передачи недопустимое значение для операции или процедуры.  
+ Эти функции можно использовать, чтобы избежать отправки недопустимого значения в операцию или процедуру.  
   
 ## <a name="typeof-operator"></a>Оператор TypeOf  
- Можно также использовать [оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) для определения, ссылается ли в данный момент переменной объекта на определенный тип данных. `TypeOf`... `Is` выражение, результатом которого является `True` Если тип операнда во время выполнения является производным от указанного типа или реализует.  
+ [Оператор typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) также можно использовать для определения того, относится ли переменная объекта к конкретному типу данных. Выражение `TypeOf`... `Is` принимает значение `True`, если тип времени выполнения операнда является производным от или реализует указанный тип.  
   
- В следующем примере используется `TypeOf` на объектные переменные, ссылающиеся на типы значений и ссылок.  
+ В следующем примере `TypeOf` используется для переменных объекта, ссылающихся на значения и ссылочные типы.  
   
-```  
+```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
 Dim num As Object = 10  
 ' The following statement puts a reference type (Form) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- Предыдущий пример записывает следующие строки, чтобы **Отладка** окна:  
+ В предыдущем примере в окно **отладки** записываются следующие строки:  
   
  `num is Integer`  
   
@@ -61,18 +61,18 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- Переменная объекта `num` ссылается на данные типа `Integer`, и `frm` ссылается на объект класса <xref:System.Windows.Forms.Form>.  
+ Объектная переменная `num` ссылается на данные типа `Integer`, а `frm` — на объект класса <xref:System.Windows.Forms.Form>.  
   
 ## <a name="object-arrays"></a>Массивы объектов  
- Можно объявить и использовать массив `Object` переменные. Это полезно в тех случаях, когда вам нужно обрабатывать различные типы данных и классы объектов. Все элементы в массиве, должны иметь тот же объявленный тип данных. Объявление этого типа данных как `Object` позволяет хранить объекты и экземпляры класса вместе с другими типами данных в массиве.  
+ Можно объявить и использовать массив переменных типа `Object`. Это полезно, когда необходимо управлять множеством типов данных и классов объектов. Все элементы в массиве должны иметь один и тот же объявленный тип данных. Объявление этого типа данных как `Object` позволяет хранить объекты и экземпляры классов вместе с другими типами данных в массиве.  
   
 ## <a name="see-also"></a>См. также
 
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Объявление объектной переменной](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Присваивание объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [Практическое руководство. Ссылка на текущий экземпляр объекта](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
-- [Практическое руководство. Определить, какой тип, переменная объекта ссылается на](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
-- [Практическое руководство. Определение связи между двумя объектами](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Практическое руководство. Определение идентичности двух объектов](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Практическое руководство. Ссылка на текущий экземпляр объекта @ no__t-0
+- [Практическое руководство. Определение типа, на который ссылается объектная переменная, в значение @ no__t-0
+- [Практическое руководство. Определить, связаны ли два объекта, @ no__t-0
+- [Практическое руководство. Определить, идентичны ли два объекта @ no__t-0
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

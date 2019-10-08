@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c98681493738b4e94ed14417fa1437efb6c12ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792752"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003306"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Возврат или пропуск элементов последовательности
 Для возвращения заданного числа элементов последовательности и пропуска оставшихся используется оператор <xref:System.Linq.Queryable.Take%2A>.  
@@ -20,7 +20,7 @@ ms.locfileid: "70792752"
 > [!NOTE]
 > На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи "пропуск и получение исключений в SQL Server 2000" раздела [Устранение неполадок](troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Преобразует <xref:System.Linq.Queryable.Skip%2A> с помощью вложенного запроса с предложением SQL `NOT EXISTS` . Это преобразование имеет следующие ограничения.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует <xref:System.Linq.Queryable.Skip%2A> с помощью вложенного запроса с предложением SQL `NOT EXISTS`. Это преобразование имеет следующие ограничения.  
   
 - Необходимо задать значение аргумента. Не поддерживаются множественные наборы, даже упорядоченные.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "70792752"
 > [!NOTE]
 > Преобразование отличается для SQL Server 2000 и SQL Server 2005. Если вы планируете использовать <xref:System.Linq.Queryable.Skip%2A> с запросом любой сложности, используйте SQL Server 2005.  
   
- Рассмотрим следующий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запрос для SQL Server 2000:  
+ Рассмотрим следующий запрос [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] перемещает упорядочение в конец кода SQL, как показано далее.  
   
-```  
+```sql
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
 FROM [Customers] AS [t0]  
 WHERE (NOT (EXISTS(  

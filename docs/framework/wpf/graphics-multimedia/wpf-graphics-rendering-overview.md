@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: ea219d653e6f41f9ebeceb8f33803ebb9246d8bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962856"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004166"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Общие сведения об отрисовке графики в WPF
 В этом разделе приведены общие сведения о визуальном слое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Основное внимание в нем уделено роли класса <xref:System.Windows.Media.Visual> в поддержке отрисовки в модели [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -65,7 +65,7 @@ ms.locfileid: "69962856"
 |Тип содержимого для отрисовки|Описание|  
 |--------------------------|-----------------|  
 |Векторная графика|Представляет векторные графические данные и все связанные сведения о <xref:System.Windows.Media.Brush> и <xref:System.Windows.Media.Pen>.|  
-|Изображение|Представляет изображение в регионе, определенном <xref:System.Windows.Rect>.|  
+|Image|Представляет изображение в регионе, определенном <xref:System.Windows.Rect>.|  
 |Глиф|Представляет рисунок, отображающий объект <xref:System.Windows.Media.GlyphRun>, который представляет собой последовательность глифов для указанного ресурса шрифта. Таким образом представляется текст.|  
 |Видео|Представляет рисунок, отображающий видео.|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "69962856"
   
  При создании элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например <xref:System.Windows.Controls.Button>, элемент управления неявно создает данные для своей отрисовки. Например, установка свойства <xref:System.Windows.Controls.ContentControl.Content%2A> элемента управления <xref:System.Windows.Controls.Button> заставляет его сохранить представление отрисовки для глифа.  
   
- Объект <xref:System.Windows.Media.Visual> описывает свое содержимое в виде одного или нескольких объектов <xref:System.Windows.Media.Drawing>, содержащихся в <xref:System.Windows.Media.DrawingGroup>. В <xref:System.Windows.Media.DrawingGroup> также описываются маски непрозрачности, преобразования, эффекты точечного рисунка и другие операции, применяемые к его содержимому. При отрисовке содержимого операции <xref:System.Windows.Media.DrawingGroup> применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Объект <xref:System.Windows.Media.Visual> описывает свое содержимое в виде одного или нескольких объектов <xref:System.Windows.Media.Drawing>, содержащихся в <xref:System.Windows.Media.DrawingGroup>. @No__t-0 также описывает маски непрозрачности, преобразования, эффекты точечного рисунка и другие операции, применяемые к его содержимому. При отрисовке содержимого операции <xref:System.Windows.Media.DrawingGroup> применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  Ниже показан порядок, в котором операции <xref:System.Windows.Media.DrawingGroup> применяются при отрисовке.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69962856"
 ### <a name="control-templates"></a>Шаблоны элементов управления  
  Ключевую роль в развертывании элементов управления в иерархию играет <xref:System.Windows.Controls.ControlTemplate>. Шаблон элемента управления определяет его визуальную иерархию по умолчанию. При явной ссылке на элемент управления вы неявно ссылаетесь на его визуальную иерархию. Для изменения внешнего вида элемента управления вы можете переопределить значения по умолчанию для его шаблона. Например, можно изменить значение цвета фона элемента управления <xref:System.Windows.Controls.Button> так, чтобы использовалось значение линейного градиента цвета вместо значения сплошного цвета. Дополнительные сведения см. в разделе [Стили и шаблоны кнопок](../controls/button-styles-and-templates.md).  
   
- Элемент пользовательского интерфейса, например <xref:System.Windows.Controls.Button> элемент управления, содержит несколько списков инструкций векторной графики, описывающих все определение отрисовки элемента управления. В следующем коде показано определение элемента управления <xref:System.Windows.Controls.Button> в разметке.  
+ Элемент пользовательского интерфейса, например элемент управления <xref:System.Windows.Controls.Button>, содержит несколько списков инструкций векторной графики, описывающих все определение отрисовки элемента управления. В следующем коде показано определение элемента управления <xref:System.Windows.Controls.Button> в разметке.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
   
@@ -123,7 +123,7 @@ ms.locfileid: "69962856"
   
  ![Схема визуального дерева и отрисовки данных](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
- Элемент управления <xref:System.Windows.Controls.Button> содержит элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, который, в свою очередь, содержит элемент <xref:System.Windows.Controls.ContentPresenter>. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Элемент отвечает за рисование всех дискретных графических элементов, составляющих границу и фон кнопки. Элемент <xref:System.Windows.Controls.ContentPresenter> отвечает за отображение содержимого <xref:System.Windows.Controls.Button>. В этом случае, поскольку отображается изображение, <xref:System.Windows.Controls.ContentPresenter> элемент <xref:System.Windows.Controls.Image> содержит элемент.  
+ Элемент управления <xref:System.Windows.Controls.Button> содержит элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, который, в свою очередь, содержит элемент <xref:System.Windows.Controls.ContentPresenter>. Элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> отвечает за рисование всех дискретных графических элементов, составляющих границу и фон кнопки. Элемент <xref:System.Windows.Controls.ContentPresenter> отвечает за отображение содержимого <xref:System.Windows.Controls.Button>. В этом случае, поскольку отображается изображение, элемент <xref:System.Windows.Controls.ContentPresenter> содержит элемент <xref:System.Windows.Controls.Image>.  
   
  При работе с иерархией визуальных объектов и списками инструкций векторной графики следует учитывать несколько моментов.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "69962856"
   
  Если перечислить логические объекты, которые составляют элемент <xref:System.Windows.Controls.DockPanel> в примере разметки, обнаружится иерархия логических объектов, показанная ниже:  
   
- ![Схема дерева](./media/tree1-wcp.gif "Tree1_wcp")  
+ ![Дерево схемы](./media/tree1-wcp.gif "Tree1_wcp")  
 Схема логического дерева  
   
  Визуальное дерево и логическое дерево синхронизируются с текущим набором элементов приложения, отражая добавление, удаление или изменение элементов. Однако эти деревья отражают различные представления приложения. В отличие от визуального дерева, в логическом дереве не ракрываются <xref:System.Windows.Controls.ContentPresenter> элементов управления. Это означает, что между логическим деревом и визуальным деревом для одного и того же набора объектов нет прямого однозначного соответствия. На самом деле, вызов метода <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> объекта **LogicalTreeHelper** и метода <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> объекта **VisualTreeHelper** с одним и тем же элементом в качестве параметра дает разные результаты.  
@@ -170,7 +170,7 @@ ms.locfileid: "69962856"
  Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../advanced/trees-in-wpf.md).  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Просмотр визуального дерева с помощью XamlPad  
- Средство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XamlPad позволяет просматривать и изучать визуальное дерево, соответствующее текущему содержимому [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Для отображения визуального дерева нажмите кнопку **Показать визуальное дерево**. Ниже показано расширение содержимого [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] в узлы визуального дерева на панели **Обозреватель визуального дерева** XamlPad.  
+ Средство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XamlPad, предоставляет возможность просмотра и исследования визуального дерева, соответствующего определенному в настоящий момент содержимому XAML. Для отображения визуального дерева нажмите кнопку **Показать визуальное дерево**. Ниже показано, как раскрытие содержимого XAML в узлах визуального дерева на панели **обозревателя визуального дерева** XamlPad:  
   
  ![Панель обозревателя визуального дерева в XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
 
@@ -179,7 +179,7 @@ ms.locfileid: "69962856"
 ### <a name="profiling-visual-performance"></a>Профилирование производительности для объекта Visual  
  В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. Средство Visual Profiler предоставляет подробные данные о производительности в удобном графическом формате, сопоставляя их напрямую с визуальным деревом приложения. На этом снимке экрана показан раздел **Использование ЦП** средства Visual Profiler. В этом разделе вы можете получить точное представление об использовании объектом служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], таких как отрисовка и разметка.  
   
- ![Отображение выходных данных визуального профилировщика](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Отображение выходных](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04") в Visual Profiler  
 Отображение данных Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
@@ -233,7 +233,7 @@ ms.locfileid: "69962856"
  Дополнительные сведения о проверке нажатия см. в разделе [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md).  
   
 ### <a name="enumerating-the-visual-tree"></a>Перечисление визуального дерева  
- Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет функциональные возможности для перечисления элементов визуального дерева. Чтобы извлечь родительский объект, вызовите метод <xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>. Чтобы получить дочерний элемент или прямого потомка визуального объекта, вызовите метод <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>. Этот метод возвращает дочерний <xref:System.Windows.Media.Visual> элемент родителя по указанному индексу.  
+ Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет функциональные возможности для перечисления элементов визуального дерева. Чтобы извлечь родительский объект, вызовите метод <xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>. Чтобы получить дочерний элемент или прямого потомка визуального объекта, вызовите метод <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>. Этот метод возвращает дочерний элемент <xref:System.Windows.Media.Visual> родительского элемента по указанному индексу.  
   
  В следующем примере показано, как перечислить всех потомков визуального объекта. Этот метод можно использовать для сериализации всех данных отрисовки в иерархии визуального объекта.  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4df4e74fc13c922f51f5b74c3c152bdea28b4431
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639039"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005213"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 Задает пространство имен для всех объявлений типов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 -rootnamespace:namespace  
 ```  
   
@@ -29,19 +29,19 @@ ms.locfileid: "61639039"
   
 |Термин|Определение|  
 |---|---|  
-|`namespace`|Имя пространства имен, в котором находятся все объявления типов для текущего проекта.|  
+|`namespace`|Имя пространства имен, в котором должны быть заключены все объявления типов для текущего проекта.|  
   
 ## <a name="remarks"></a>Примечания  
- При использовании исполняемого файла Visual Studio (Devenv.exe) для компиляции в проект, созданный в среде разработки Visual Studio, используйте `-rootnamespace` для указания значения <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> свойство. См. в разделе [командной строки devenv](/visualstudio/ide/reference/devenv-command-line-switches) Дополнительные сведения.  
+ Если вы используете исполняемый файл Visual Studio (devenv. exe) для компиляции проекта, созданного в интегрированной среде разработки Visual Studio, используйте `-rootnamespace`, чтобы указать значение свойства <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>. Дополнительные сведения см. в разделе [devenv параметры командной строки](/visualstudio/ide/reference/devenv-command-line-switches) .  
   
- Используйте среду дизассемблера MSIL (`Ildasm.exe`) для просмотра имен пространств имен в выходном файле.  
+ Используйте дизассемблер MSIL среды CLR (`Ildasm.exe`) для просмотра имен пространств имен в выходном файле.  
   
-|Чтобы задать - rootnamespace в среде разработки Visual Studio|  
+|Установка параметра-RootNamespace в интегрированной среде разработки Visual Studio|  
 |---|  
-|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Перейдите на вкладку **Приложение** .<br />3.  Измените значение в **корневое пространство имен** поле.|  
+|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Перейдите на вкладку **Приложение** .<br />3.  Измените значение в поле **корневое пространство имен** .|  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `In.vb` и помещает все объявления типов в пространстве имен `mynamespace`.  
+ Следующий код компилирует `In.vb` и заключает все объявления типов в пространство имен `mynamespace`.  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  

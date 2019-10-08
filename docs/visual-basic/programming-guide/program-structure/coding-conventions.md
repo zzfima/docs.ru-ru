@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433815"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003121"
 ---
 # <a name="visual-basic-coding-conventions"></a>Соглашения о написании кода в Visual Basic
 Корпорация Майкрософт разрабатывает образцы и документацию, которые соответствуют рекомендациям, приведенным в этом разделе. Если следовать тем же соглашениям о написании кода, вы можете получить следующие преимущества:  
@@ -28,7 +28,7 @@ ms.locfileid: "68433815"
   
 - Сведения о правилах именования см. в разделе [рекомендации по именованию](../../../standard/design-guidelines/naming-guidelines.md) .  
   
-- Не используйте "My" или "My" как часть имени переменной. Такой подход создает путаницу с `My` объектами.  
+- Не используйте "My" или "My" как часть имени переменной. Такой подход создает путаницу с объектами `My`.  
   
 - Не нужно изменять имена объектов в автоматически создаваемом коде, чтобы они соответствовали рекомендациям.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68433815"
   
 - Вставьте табуляцию в качестве пробелов и используйте интеллектуальные отступы с отступами в четырех пробелах.  
   
-- Чтобы  переформатировать код в редакторе кода, используйте достаточное переформатирование. Дополнительные сведения см. в разделе [Параметры, текстовый редактор, базовый (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Чтобы переформатировать код в редакторе кода, используйте **достаточное переформатирование** . Дополнительные сведения см. в разделе [Параметры, текстовый редактор, базовый (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
 - Используйте только один оператор в строке. Не используйте Visual Basic символ разделителя строки (:).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68433815"
   
 - Если **Перечисление (переформатирование) кода** не приводит к автоматическому форматированию строк продолжения, следует вручную задать отступ для строк продолжения на одну позицию табуляции. Однако всегда выровняйте элементы в списке по левому краю.  
   
-    ```  
+    ```vb  
     a As Integer,  
     b As Integer  
     ```  
@@ -67,7 +67,7 @@ ms.locfileid: "68433815"
   
 ## <a name="program-structure"></a>Структура программы  
   
-- При использовании `Main` метода используйте конструкцию по умолчанию для новых консольных приложений и используйте `My` для аргументов командной строки.  
+- При использовании метода `Main` используйте конструкцию по умолчанию для новых консольных приложений и используйте `My` для аргументов командной строки.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68433815"
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- Чтобы добавить строки в циклы, используйте <xref:System.Text.StringBuilder> объект.  
+- Чтобы добавить строки в циклы, используйте объект <xref:System.Text.StringBuilder>.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68433815"
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>Использование ключевого слова WITH  
- При выполнении серии вызовов одного объекта рассмотрите возможность использования `With` ключевого слова:  
+ При выполнении серии вызовов одного объекта рассмотрите возможность использования ключевого слова `With`:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68433815"
  Не используйте `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Использование ключевого слова IsNot  
- Используйте ключевое слово `Not...Is Nothing`вместо. `IsNot`  
+ Вместо `Not...Is Nothing` используйте ключевое слово `IsNot`.  
   
 ### <a name="new-keyword"></a>Создать ключевое слово  
   
@@ -147,11 +147,11 @@ ms.locfileid: "68433815"
   
 ### <a name="event-handling"></a>Обработка событий  
   
-- `Handles` Используйте`AddHandler`вместо:  
+- Используйте `Handles` вместо `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- Используйте `AddressOf`и не создавайте делегата явным образом:  
+- Используйте `AddressOf` и не создавайте делегата явным образом:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,10 +159,10 @@ ms.locfileid: "68433815"
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- Не следует проверять, имеет `Nothing` ли событие значение (null) перед `RaiseEvent` вызовом метода. `RaiseEvent``Nothing` проверяет перед тем, как он вызывает событие.  
+- Не проверяйте, является ли событие `Nothing` (null) перед вызовом метода `RaiseEvent`. `RaiseEvent` проверяет наличие `Nothing` перед вызовом события.  
   
 ### <a name="using-shared-members"></a>Использование общих членов  
- Вызывайте `Shared` члены с помощью имени класса, а не из переменной экземпляра.  
+ Вызовите `Shared` членов с помощью имени класса, а не из переменной экземпляра.  
   
 ### <a name="use-xml-literals"></a>Использовать литералы XML  
  XML-литералы упрощают наиболее распространенные задачи, возникающие при работе с XML (например, Загрузка, запрос и преобразование). При разработке с использованием XML-кода следуйте приведенным ниже рекомендациям.  
@@ -173,7 +173,7 @@ ms.locfileid: "68433815"
   
 - Используйте свойства осей XML для доступа к элементам и атрибутам в XML-документе.  
   
-- Используйте внедренные выражения для включения значений и создания XML на основе существующих значений вместо использования вызовов API, таких как `Add` метод.  
+- Используйте внедренные выражения для включения значений и создания XML на основе существующих значений вместо использования вызовов API, таких как метод `Add`:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68433815"
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- Переименуйте свойства, если имена свойств в результате могут быть неоднозначными. Например, если запрос возвращает имя клиента и идентификатор заказа, переименуйте их вместо того, чтобы покинуть их как `Name` и `ID` в результате:  
+- Переименуйте свойства, если имена свойств в результате могут быть неоднозначными. Например, если запрос возвращает имя клиента и идентификатор заказа, переименуйте их вместо того, чтобы не выходить из них как `Name` и `ID` в результате:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
@@ -195,15 +195,15 @@ ms.locfileid: "68433815"
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Выровняйте предложения запроса в `From` операторе:  
+- Выровняйте предложения запроса в операторе `From`:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Используйте `Where` предложения перед другими предложениями запроса, чтобы последующие предложения запроса работали с отфильтрованным набором данных:  
+- Используйте предложения `Where` перед другими предложениями запроса, чтобы последующие предложения запроса работали с отфильтрованным набором данных:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Используйте предложение для явного определения операции JOIN вместо `Where` использования предложения для неявного определения операции объединения: `Join`  
+- Используйте предложение `Join`, чтобы явно определить операцию объединения вместо использования предложения `Where` для неявного определения операции объединения:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

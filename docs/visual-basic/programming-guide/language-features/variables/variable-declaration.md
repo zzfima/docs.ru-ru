@@ -17,70 +17,70 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 726347efc2e12100f7d89348a316037babc785e5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583386"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003300"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
-Можно объявить переменную, чтобы указать ее имя и характеристики. Оператор объявления переменных — [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Определить характеристики переменной, ее расположение и содержимое.  
+Переменная объявляется для указания ее имени и характеристик. Оператор объявления для переменных является [оператором Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Его расположение и содержимое определяют характеристики переменной.  
   
- Правила именования переменных и рекомендации, см. в разделе [имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Правила именования переменных и рекомендации см. в разделе [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="declaration-levels"></a>Уровни объявления  
   
-### <a name="local-and-member-variables"></a>Локальный и переменные-члены  
- Объект *локальной переменной* —, объявленная внутри процедуры. Объект *переменной-члена* является членом типа Visual Basic; он объявлен на уровне модуля, внутри класса, структуры или модуля, но не внутри любых процедур для этого класса, структуры или модуля.  
+### <a name="local-and-member-variables"></a>Локальные и переменные членов  
+ *Локальная переменная* — это одна из процедур, объявленная в процедуре. *Переменная-член* является членом типа Visual Basic; Он объявляется на уровне модуля, внутри класса, структуры или модуля, но не внутри какой-либо процедуры, внутренней для этого класса, структуры или модуля.  
   
-### <a name="shared-and-instance-variables"></a>Экземпляров и общие переменные  
- В классе или структуре категории переменной-члена зависит от того, ли он является общим. Если он объявляется с [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) слова *общей переменной*, и существует в единственном экземпляре, общим для всех экземпляров класса или структуры.  
+### <a name="shared-and-instance-variables"></a>Переменные Shared и instance  
+ В классе или структуре категория переменной-члена зависит от того, является ли она общей. Если он объявлен с ключевым словом [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) , то это *Общая переменная*, которая существует в одной копии, совместно используемой всеми экземплярами класса или структуры.  
   
- В противном случае это *переменная экземпляра*, и отдельную копию создается для каждого экземпляра класса или структуры. Каждая копия переменной экземпляра доступна только к экземпляру класса или структуры, в котором он был создан. Он не зависит от копию переменной экземпляра в любом экземпляре класса или структуры.  
+ В противном случае это *переменная экземпляра*, и ее отдельная копия создается для каждого экземпляра класса или структуры. Данная копия переменной экземпляра доступна только для экземпляра класса или структуры, в которой он был создан. Он не зависит от копии переменной экземпляра в любом другом экземпляре класса или структуры.  
   
 ## <a name="declaring-data-type"></a>Объявление типа данных  
- [Как](../../../../visual-basic/language-reference/statements/as-clause.md) предложение в операторе объявления позволяет определить тип данных или тип объекта объявляемой переменной. Можно указать любой из следующих типов для переменной:  
+ Предложение [as](../../../../visual-basic/language-reference/statements/as-clause.md) в операторе объявления позволяет определить тип данных или тип объекта объявляемой переменной. Для переменной можно указать любой из следующих типов:  
   
-- Простой тип данных, таких как `Boolean`, `Long`, или `Decimal`  
+- Простейший тип данных, например `Boolean`, `Long` или `Decimal`  
   
-- Составные типы данных, например массив или структура.  
+- Составной тип данных, например массив или структура  
   
-- Тип объекта или класса, определенного в приложении или в другом приложении  
+- Тип объекта или класс, определенный либо в приложении, либо в другом приложении  
   
 - Класс .NET Framework, например <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
   
-- Тип интерфейса, такие как <xref:System.IComparable> или <xref:System.IDisposable>  
+- Тип интерфейса, например <xref:System.IComparable> или <xref:System.IDisposable>  
   
- Можно объявить несколько переменных в одном операторе без повторения типа данных. В приведенных ниже инструкциях, переменные `i`, `j`, и `k` объявляются как тип `Integer`, `l` и `m` как `Long`, и `x` и `y` как `Single`:  
+ В одной инструкции можно объявить несколько переменных без повторения типа данных. В следующих инструкциях переменные `i`, `j` и `k` объявляются как тип `Integer`, `l` и `m` как `Long`, и `x` и `y` как `Single`.  
   
-```  
+```vb  
 Dim i, j, k As Integer  
 ' All three variables in the preceding statement are declared as Integer.  
 Dim l, m As Long, x, y As Single  
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Дополнительные сведения о типах данных см. в разделе [типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Дополнительные сведения об объектах см. в разделе [объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) и [программирование с использованием компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Дополнительные сведения о типах данных см. в разделе [типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Дополнительные сведения об объектах см. в разделе [объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) и [программирование с помощью компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Вывод локального типа  
- *Определение типа* используется для определения типов данных локальных переменных, объявленных без `As` предложение. Компилятор выводит тип переменной из типа выражения инициализации. Это позволяет объявлять переменные без явного указания типа. В следующем примере оба `num1` и `num2` являются строго типизированными как целые числа.  
+ *Определение типа* используется для определения типов данных локальных переменных, объявленных без предложения `As`. Компилятор выводит тип переменной из типа выражения инициализации. Это позволяет объявлять переменные без явного указания типа. В следующем примере как `num1`, так `num2` строго типизированы как целые числа.  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
- Если вы хотите использовать вывод локального типа `Option Infer` должно быть присвоено `On`. Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Если вы хотите использовать вывод локального типа, для параметра `Option Infer` необходимо задать значение `On`. Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
 ## <a name="characteristics-of-declared-variables"></a>Характеристики объявленных переменных  
- *Время существования* переменной представляет собой период времени, во время которого он доступен для использования. В общем случае переменная существует до тех пор, пока продолжает существовать элемент, объявляющий его (например, процедура или класс). Если переменная не требуется прекратиться после окончания времени существования содержащего ее элемента, вы не обязательно должны делать ничего особенного в объявлении. Если переменная должна существовать дольше, чем содержащий ее элемент, можно включить `Static` или `Shared` ключевого слова в ее `Dim` инструкции. Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+ Время *существования* переменной — это период времени, в течение которого она доступна для использования. Как правило, переменная существует, пока не будет существовать элемент, объявляющий ее (например, процедуру или класс). Если переменная не должна продолжаться за пределами времени существования содержащего его элемента, не нужно делать ничего особенного в объявлении. Если переменная должна продолжать существовать дольше, чем содержащая ее элемент, можно включить ключевое слово `Static` или `Shared` в его инструкцию @no__t 2. Дополнительные сведения см. [в разделе время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- *Область* переменной представляет собой набор весь код, к ней можно обратиться без указания полного имени. Область переменной определяется котором она была объявлена. Код, расположенный в определенном регионе может использовать переменные, определенные в этом регионе, не определяя их имена. Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ *Областью действия* переменной является набор всего кода, который может ссылаться на него без уточнения его имени. Область переменной определяется тем, где она объявлена. Код, расположенный в данном регионе, может использовать переменные, определенные в этом регионе, без уточнения их имен. Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
- Переменной *уровень доступа* указывает объем кода, которая имеет разрешение на доступ к нему. Это определяется параметром модификатор доступа (такие как [открытый](../../../../visual-basic/language-reference/modifiers/public.md) или [частного](../../../../visual-basic/language-reference/modifiers/private.md)), используемом в `Dim` инструкции. Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ *Уровень доступа* переменной — это область кода, имеющая разрешение на доступ к нему. Это определяется модификатором доступа (например, [Public](../../../../visual-basic/language-reference/modifiers/public.md) или [Private](../../../../visual-basic/language-reference/modifiers/private.md)), который используется в инструкции `Dim`. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание новой переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [Практическое руководство. Перемещение данных в действие и из переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Практическое руководство. Создать новую переменную @ no__t-0
+- [Практическое руководство. Перемещение данных в переменную @ no__t-0 и из нее
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Как создать модель объектов в виде внешнего файла
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793588"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002741"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Практическое руководство. Как создать модель объектов в виде внешнего файла
 В качестве альтернативы сопоставления на основе атрибутов с помощью инструмента командной строки SQLMetal можно создать собственную объектную модель в виде внешнего файла XML. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../tools/sqlmetal-exe-code-generation-tool.md). За счет использования внешнего XML-файла сопоставления можно снизить перегруженность кода. Кроме того, можно изменить поведение, отредактировав внешний файл без повторной компиляции двоичных файлов приложения. Дополнительные сведения см. в разделе [внешнее сопоставление](external-mapping.md).  
@@ -18,7 +18,7 @@ ms.locfileid: "70793588"
 ## <a name="example"></a>Пример  
  Следующая команда формирует внешний файл сопоставления из образца базы данных Northwind.  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   

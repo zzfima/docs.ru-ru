@@ -11,21 +11,25 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e131b39e05badf0bb90fbbb14761571003156f85
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972309"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005510"
 ---
 # <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 -link:fileList  
-' -or-  
+```
+
+или  
+
+```console
 -l:fileList  
 ```  
   
@@ -55,7 +59,7 @@ ms.locfileid: "70972309"
   
  Используйте параметр [-libpath](libpath.md) , чтобы указать каталог, в котором находится одна или несколько ссылок на сборки.  
   
- Как и параметр компилятора [/Reference](reference.md) , `-link` параметр компилятора использует файл ответов Vbc. rsp, который ссылается на часто используемые .NET Framework сборки. Если вы не хотите, чтобы компилятор использовал файл Vbc. rsp, используйте параметр компилятора [-config](noconfig.md) .  
+ Как и параметр компилятора [/Reference](reference.md) , параметр компилятора `-link` использует файл ответов Vbc. rsp, который ссылается на часто используемые .NET Framework сборки. Если вы не хотите, чтобы компилятор использовал файл Vbc. rsp, используйте параметр компилятора [-config](noconfig.md) .  
   
  Краткой формой `-link` является `-l`.  
   
@@ -79,7 +83,7 @@ ms.locfileid: "70972309"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Пример  
- Следующая `OfficeApp.vb` Командная строка компилирует исходный файл и эталонные сборки из `COMData1.dll` и `COMData2.dll` для создания. `OfficeApp.exe`  
+ Следующая командная строка компилирует исходный файл `OfficeApp.vb` и ссылочные сборки из `COMData1.dll` и `COMData2.dll` для создания `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

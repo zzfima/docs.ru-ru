@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 31797ae7d0fe23227cc4af733fbceac5d474f779
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781447"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003187"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Практическое руководство. Как применять определяемые пользователем возвращающие табличное значение функции
 Табличная функция возвращает один набор строк (в отличие от хранимых процедур, которые могут возвращать несколько результирующих форм). Поскольку типом возвращаемого значения табличной функции является `Table`, эту функцию можно использовать в SQL там, где будет выполняться работа с таблицей. Кроме того, табличную функцию можно считать аналогом таблицы.  
@@ -18,7 +18,7 @@ ms.locfileid: "70781447"
 ## <a name="example"></a>Пример  
  Следующая функция SQL явно указывает возвращаемое значение: `TABLE`. Поэтому структура возвращаемого набора строк является неявно определенной.  
   
-```  
+```sql
 CREATE FUNCTION ProductsCostingMoreThan(@cost money)  
 RETURNS TABLE  
 AS  
@@ -36,7 +36,7 @@ RETURN
 ## <a name="example"></a>Пример  
  В следующем коде SQL показана возможность соединения с таблицей, возвращаемой функцией, и, в противном случае, обработать ее как любую другую таблицу.  
   
-```  
+```sql
 SELECT p2.ProductName, p1.UnitPrice  
 FROM dbo.ProductsCostingMoreThan(80.50)  
 AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID  

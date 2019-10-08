@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332760"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004614"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
 
@@ -27,11 +27,13 @@ ms.locfileid: "71332760"
     Imports System.Runtime.CompilerServices
     ```
 
-3. В модуле в новом или существующем приложении приступите к определению метода с помощью атрибута extension:
+3. В модуле в новом или существующем приложении приступите к определению метода с атрибутом [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) :
 
     ```vb
     <Extension()>
     ```
+ 
+   Обратите внимание, что атрибут `Extension` можно применить только к методу (процедура `Sub` или `Function`) в [модуле](../../../language-reference/statements/module-statement.md)Visual Basic. Если применить его к методу в `Class` или `Structure`, компилятор Visual Basic создает ошибку [BC36551](../../../misc/bc36551.md), "методы расширения могут быть определены только в модулях".
 
 4. Объявите метод обычным способом, за исключением того, что тип первого параметра должен быть типом данных, который требуется расширить.
 

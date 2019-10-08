@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991376"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005709"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Вызывается PresentationHost. exe для получения настраиваемого хода выполнения и сообщений об ошибках с узла, если они реализованы.  
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- заполняет Имя класса, предоставляемого ведущим пользовательским интерфейсом выполнения, предпочтительнее [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] файл с <xref:System.Windows.Controls.Page> элементом верхнего уровня. Этот класс находится в сборке, указанной в параметре `pwzProgressAssemblyName`.  
+ заполняет Имя класса, предоставляемого ведущим пользовательским интерфейсом, предпочтительнее XAML-файл с @no__t – 0 — его элемент верхнего уровня. Этот класс находится в сборке, заданной `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- заполняет Имя класса, предоставляемого ведущим пользовательским интерфейсом ошибок, предпочтительнее XAML-файл с <xref:System.Windows.Controls.Page> элементом верхнего уровня. Этот класс находится в сборке, указанной в параметре `pwzErrorAssemblyName`.  
+ заполняет Имя класса, предоставляемого ведущим пользовательским интерфейсом ошибок, предпочтительнее XAML-файл с @no__t – 0 — его элемент верхнего уровня. Этот класс находится в сборке, заданной `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
  HRESULT: Не обрабатывается.  
