@@ -4,12 +4,12 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117936"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957251"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Развертывание приложения .NET для Apache Spark в Databricks
 
@@ -119,11 +119,11 @@ Databricks позволяет отправлять приложения .NET д�
 
 3. Задайте необходимые параметры.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | Параметр   | Значение                                                |
+   |-------------|------------------------------------------------------|
+   | Основной класс  | org.apache.spark.deploy.dotnet.DotnetRunner          |
+   | Аргументы   | /dbfs/apps/<your-app-name>.zip <your-app-main-class> |
+
 4. Настройте параметр **Кластер** так, чтобы он указывал на существующий кластер, для которого в предыдущем разделе был создан **скрипт инициализации**.
 
 #### <a name="publish-and-run-your-app"></a>Публикация и запуск приложения

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c8b4c60eb4ea09c8b10bd0b2fffc803d0a5fb6e0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181504"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834285"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Публикации приложений .NET Core с помощью интерфейса командной строки
 
@@ -29,7 +29,7 @@ ms.locfileid: "71181504"
 | Исполняемый файл, зависящий от платформы | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
 |                                | 3.0* | `dotnet publish -c Release` |
-| автономное развертывание;      | 2,1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+| автономное развертывание;      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
@@ -137,7 +137,7 @@ End Module
 Если вы используете [пример приложения](#sample-app), запустите `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Эта команда создает следующий исполняемый файл: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Можно уменьшить размер развертывания, включив **инвариантный режим глобализации**. Он подходит для приложений, которые не имеют глобальных параметров и могут использовать соглашения о форматировании, соглашения о регистре, сравнение строк и порядок сортировки для [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture). Дополнительные сведения об **инвариантном режиме глобализации** и том, как его включить, см. в разделе [Инвариантный режим глобализации .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
+> Можно уменьшить размер развертывания, включив **инвариантный режим глобализации**. Он подходит для приложений, которые не имеют глобальных параметров и могут использовать соглашения о форматировании, соглашения о регистре, сравнение строк и порядок сортировки для [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture). Дополнительные сведения об **инвариантном режиме глобализации** и том, как его включить, см. в статье об [инвариантном режиме глобализации .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>автономное развертывание;
 
@@ -152,7 +152,7 @@ End Module
 - `--self-contained true` — этот параметр указывает пакету SDK для .NET Core, что исполняемый файл нужно создать как SCD.
 
 > [!NOTE]
-> Можно уменьшить размер развертывания, включив **инвариантный режим глобализации**. Он подходит для приложений, которые не имеют глобальных параметров и могут использовать соглашения о форматировании, соглашения о регистре, сравнение строк и порядок сортировки для [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture). Дополнительные сведения об **инвариантном режиме глобализации** и том, как его включить, см. в разделе [Инвариантный режим глобализации .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
+> Можно уменьшить размер развертывания, включив **инвариантный режим глобализации**. Он подходит для приложений, которые не имеют глобальных параметров и могут использовать соглашения о форматировании, соглашения о регистре, сравнение строк и порядок сортировки для [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture). Дополнительные сведения об **инвариантном режиме глобализации** и том, как его включить, см. в статье об [инвариантном режиме глобализации .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>См. также
 

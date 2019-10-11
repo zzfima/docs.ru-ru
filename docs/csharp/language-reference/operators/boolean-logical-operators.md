@@ -1,7 +1,7 @@
 ---
 title: Логические операторы. Справочник по C#
 description: Узнайте об операторах C#, которые выполняют такие логические операции, как отрицание, конъюнкция (И), а также инклюзивная и эксклюзивная дизъюнкция (ИЛИ), с использованием соответствующих операндов.
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353362"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698681"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Логические операторы (справочник по C#)
 
@@ -54,6 +54,8 @@ ms.locfileid: "71353362"
 Оператор `!` выполняет логическое отрицание операнда, возвращая `true`, если операнд имеет значение `false`, и `false`, если операнд имеет значение `true`.
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+Начиная с C# 8.0, унарный постфиксный оператор `!` допускает значение null. При включенном контексте аннотаций, допускающем значение null, он используется для объявления того, что выражение `x` для ссылочного типа, допускающего значение null, не равно нулю: `x!`. Дополнительные сведения см. в статье [Ссылочные типы, допускающие значение NULL](../../nullable-references.md).
 
 ## <a name="logical-and-operator-"></a> Оператор логического И &amp;
 

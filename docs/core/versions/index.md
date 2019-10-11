@@ -4,12 +4,12 @@ description: В этой статье описано, как осуществл�
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849283"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179960"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Общие сведения об управлении версиями в .NET Core
 
@@ -103,6 +103,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 1.0       | до 1.6     |
 | 2.0       | до 2.0     |
 | 2.1       | до 2.0     |
+| 2.2       | до 2.0     |
+| 3.0       | до 2.1     |
 
 ## <a name="see-also"></a>См. также
 

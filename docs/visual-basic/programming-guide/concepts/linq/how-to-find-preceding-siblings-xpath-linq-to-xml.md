@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (Visual Basic)
+title: Практическое руководство. Найти предшествующие родственные элементы (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 4584a84df0e25b451a440c33e17c14cd78fc78bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ad57c1b6f06843bd757257c8ecda637ad0e71b6
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021639"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250091"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Найти предшествующие родственные элементы (XPath-LINQ to XML) (Visual Basic)
 В этом разделе сравнивается ось XPath `preceding-sibling` с дочерней для [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] осью <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
   
  Выражение XPath:  
@@ -47,7 +47,7 @@ Next
   
  В этом примере выводятся следующие данные:  
   
-```  
+```console
 Results are identical  
 <CompanyName>Great Lakes Food Market</CompanyName>  
 <ContactName>Howard Snyder</ContactName>  

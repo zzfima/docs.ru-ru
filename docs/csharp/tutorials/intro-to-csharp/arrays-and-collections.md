@@ -3,24 +3,24 @@ title: Работа с коллекциями. Вводное руководст
 description: Это руководство по C# предоставляет для изучения примере коллекции списков.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850878"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834151"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Научитесь управлять коллекциями данных с использованием универсального типа списка
 
 Это вводное руководство содержит общие сведения о языке C# и классе <xref:System.Collections.Generic.List%601>.
 
-Для работы с этим руководством вам потребуется компьютер, который можно использовать для разработки. В руководстве по [созданию программы Hello World за 10 минут](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) содержатся инструкции по настройке локальной среды разработки на компьютерах Mac, Windows или Linux. Краткий обзор команд, которые будут здесь использоваться, и ссылки на дополнительные сведения представлены в статье [Become familiar with the .NET development tools](local-environment.md) (Знакомство со средствами разработки для .NET).
+Для работы с этим руководством вам потребуется компьютер, который можно использовать для разработки. В руководстве .NET по созданию программы [Hello World за 10 минут](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) содержатся инструкции по настройке локальной среды разработки в macOS, Windows или Linux. Краткий обзор команд, которые будут здесь использоваться, и ссылки на дополнительные сведения представлены в статье [Become familiar with the .NET development tools](local-environment.md) (Знакомство со средствами разработки для .NET).
 
 ## <a name="a-basic-list-example"></a>Пример простого списка
 
-Создайте каталог с именем **list-tutorial**. Откройте этот каталог и выполните команду `dotnet new console`.
+Создайте каталог с именем *list-tutorial*. Откройте этот каталог и выполните команду `dotnet new console`.
 
-Откройте **Program.cs** в любом редакторе и замените существующий код следующим:
+Откройте *Program.cs* в любом редакторе и замените существующий код следующим:
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-Замените `<name>` собственным именем. Сохраните **Program.cs**. Введите в окне консоли команду `dotnet run` для тестирования.
+Замените `<name>` собственным именем. Сохраните *Program.cs*. Введите в окне консоли команду `dotnet run` для тестирования.
 
 Вы создали список строк, добавили в него три имени и вывели имена с преобразованием всех букв в прописные. Для циклического прохода по списку вы примените концепции, которые изучили в предыдущих руководствах.
 

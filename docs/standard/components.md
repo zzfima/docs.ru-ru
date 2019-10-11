@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70014948"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835284"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -83,6 +83,26 @@ UWP представляет собой реализацию .NET, котора�
 - [MSBuild](/visualstudio/msbuild/msbuild), обработчик для сборки проектов;
 - [NuGet](/nuget/), диспетчер пакетов корпорации Майкрософт для .NET;
 - инструменты для управления сборкой с открытым исходным кодом, например [CAKE](https://cakebuild.net/) и [FAKE](https://fake.build/).
+
+## <a name="applicable-standards"></a>Применимые стандарты
+
+Спецификации языка C# и Common Language Infrastructure (CLI) стандартизированы в [Ecma International®](https://www.ecma-international.org/). Первые выпуски этих стандартов были опубликованы в Ecma в декабре 2001 г.
+
+Последующие редакции стандартов были разработаны группами задач TC49-TG2 (C#) и TC49-TG3 (CLI) в рамках технического комитета по языкам программирования ([TC49](https://www.ecma-international.org/memento/tc49.htm)) и приняты в Генеральной ассамблее Ecma и затем в ISO/IEC JTC 1 в рамках процесса ISO Fast-Track.
+
+### <a name="latest-standards"></a>Новейшие стандарты
+
+Следующие официальные документы Ecma доступны для [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) и [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
+
+- **Стандарт языка C# (версия 5.0)**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **Common Language Infrastructure**: Доступно в форматах [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) и [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip).
+- **Сведения, полученные из файла XML раздела IV**: Доступно в форматах [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) и [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip).
+ 
+Официальные документы ISO/IEC доступны на странице [общедоступных стандартов](https://standards.iso.org/ittf/PubliclyAvailableStandards/) ISO/IEC. Эти ссылки указываются непосредственно на этой странице:
+
+- **Информационные технологии — языки программирования — C#**: [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **Информационные технологии — Common Language Infrastructure (CLI), разделы I–VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Информационные технологии — Common Language Infrastructure (CLI) — технический отчет о данных, полученных из файла XML раздела IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>См. также
 

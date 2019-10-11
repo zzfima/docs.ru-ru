@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895260"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835254"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -22,19 +22,19 @@ ms.locfileid: "70895260"
 ## <a name="current-version"></a>Текущая версия
 
 Visual Basic 16.0/Visual Studio 2019 версии 16.0  
-Описание новых функций см. в статье [Visual Basic 16.0](#visual-basic-160)
+Описание новых функций см. в статье о [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
-Visual Basic 15.8 и Visual Studio 2017 версии 15.8 См. описание новых функций [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 15.8 и Visual Studio 2017 версии 15.8. Описание новых функций см. в статье о [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5 и Visual Studio 2017 версии 15.5 См. описание новых функций [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.5 и Visual Studio 2017 версии 15.5. Описание новых функций см. в статье о [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3 и Visual Studio 2017 версии 15.3 См. описание новых функций [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15.3 и Visual Studio 2017 версии 15.3. Описание новых функций см. в статье о [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017 и Visual Studio 2017 См. описание новых функций [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017 и Visual Studio 2017. Описание новых функций см. в статье о [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic и Visual Studio 2015 См. описание новых функций [Visual Basic 14](#visual-basic-14)
+Visual Basic и Visual Studio 2015. Описание новых функций см. в статье о [Visual Basic 14](#visual-basic-14).
 
 Visual Basic и Visual Studio 2013 CTP-версии .NET Compiler Platform (Roslyn)
 
@@ -140,7 +140,7 @@ Dim number As Integer = &H_C305_F860
 
 **Дополнительные параметры компилятора**
 
-Теперь компилятор командной строки Visual Basic поддерживает параметры [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) и [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) для управления выводом базовых сборок. **-refout** определяет выходной каталог базовой сборки, а **-refonly** указывает, что в результате компиляции будет выводиться только базовая сборка.
+Теперь компилятор командной строки Visual Basic поддерживает параметры [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) и [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) для управления выводом базовых сборок. **-refout** определяет выходной каталог базовой сборки, а **-refonly** указывает, что в результате компиляции будет выводиться только базовая сборка.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
