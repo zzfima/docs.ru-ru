@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск потомков с указанным именем элемента (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710259"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249682"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Практическое руководство. Поиск потомков с указанным именем элемента (Visual Basic)
 Иногда возникает необходимость найти всех потомков с определенным именем. В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -49,7 +49,7 @@ Console.WriteLine(str)
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -96,7 +96,7 @@ End Module
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   

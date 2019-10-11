@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051946"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833655"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -155,7 +155,7 @@ ms.locfileid: "71051946"
 
 - Платформа .NET Framework 4.5 и ее доработанные выпуски, .NET Framework 4.6 и ее доработанные выпуски, .NET Framework 4.7 и ее доработанные выпуски, а также .NET Framework 4.8 заменяют .NET Framework 4. При установке этих версий в системе, где установлена версия .NET Framework 4, сборки заменяются.
 
-- При удалении платформы .NET Framework 4.5 и ее доработанных выпусков, .NET Framework 4.6 и ее доработанных выпусков, .NET Framework 4.7 и ее доработанных выпусков или .NET Framework 4.8 также удаляются более ранние файлы .NET Framework 4. Если вам нужно вернуться к .NET Framework 4, ее придется полностью переустановить со всеми обновлениями. (См. раздел [Установка платформы .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).)
+- При удалении платформы .NET Framework 4.5 и ее доработанных выпусков, .NET Framework 4.6 и ее доработанных выпусков, .NET Framework 4.7 и ее доработанных выпусков или .NET Framework 4.8 также удаляются более ранние файлы .NET Framework 4. Если вам нужно вернуться к .NET Framework 4, ее придется полностью переустановить со всеми обновлениями. Ознакомьтесь со статьей [Installing the .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=230665) (Установка платформы .NET Framework).
 
 - Для установки платформы .NET Framework 4.5 и ее доработанных выпусков, .NET Framework 4.6 и ее доработанных выпусков, .NET Framework 4.7 и ее доработанных выпусков или .NET Framework 4.8 требуются права администратора.
 

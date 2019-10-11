@@ -2,15 +2,15 @@
 title: Учебник. Классификация цветов ириса — кластеризация k-средних
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
-ms.date: 05/16/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e360cf2418e2003f9f40628c714e9e8ebd7c3e40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929100"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698562"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Учебник. Категоризация цветов ириса с использованием кластеризации k-средних в ML.NET
 
@@ -41,7 +41,7 @@ ms.locfileid: "70929100"
 
 ## <a name="create-a-console-application"></a>Создание консольного приложения
 
-1. Запустите Visual Studio. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#** , а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "IrisFlowerClustering", а затем нажмите кнопку **OK**.
+1. Запустите Visual Studio. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "IrisFlowerClustering", а затем нажмите кнопку **OK**.
 
 1. Создайте каталог с именем *Data* в папке проекта, чтобы хранить в нем наборы данных и файлы модели:
 
@@ -156,6 +156,11 @@ ms.locfileid: "70929100"
 Чтобы получить прогноз, используйте класс <xref:Microsoft.ML.PredictionEngine%602>, который принимает экземпляры входного типа через конвейер преобразователя и создает экземпляры выходного типа. Добавьте следующую строку к методу `Main` для создания экземпляра этого класса:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
+
+Класс [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) представляет собой удобный API, позволяющий осуществить прогнозирование на основе единственного экземпляра данных. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Допустимо использовать в средах прототипов или средах с одним потоком. Для улучшенной производительности и потокобезопасности в рабочей среде используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении. Ознакомьтесь с этим руководством о том, как [использовать `PredictionEnginePool` в ASP.NET Core Web API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+> [!NOTE]
+> Расширение службы `PredictionEnginePool` сейчас доступно в предварительной версии.
 
 Создание класса `TestIrisData` для размещения тестовых экземпляров данных:
 

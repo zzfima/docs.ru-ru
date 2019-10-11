@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427361"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835260"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Практическое руководство. Написание простого цикла Parallel.ForEach
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Практическое руководство. написание простого цикла Parallel.ForEach
 
 В этом примере показано, как использовать цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для включения параллелизма данных в любом источнике данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -32,7 +32,7 @@ ms.locfileid: "59427361"
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-Цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> действует как цикл <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Цикл разделяет исходную коллекцию на секции и распределяет задачи по нескольким потокам с учетом доступной среды системы. Чем больше в системе процессоров, тем быстрее выполняются параллельные методы. Для некоторых исходных коллекций, в зависимости от размера источника и типа выполняемых работ, последовательный цикл может оказаться быстрее. Дополнительные сведения о производительности см. в статье [Потенциальные ошибки, связанные с параллелизмом данных и задач](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md).
+Цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> действует как цикл <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Цикл разделяет исходную коллекцию на секции и распределяет задачи по нескольким потокам с учетом доступной среды системы. Чем больше в системе процессоров, тем быстрее выполняются параллельные методы. Для некоторых исходных коллекций, в зависимости от размера источника и типа выполняемых работ, последовательный цикл может оказаться быстрее. Дополнительные сведения о производительности см. в статье [Потенциальные ошибки, связанные с параллелизмом данных и задач](potential-pitfalls-in-data-and-task-parallelism.md).
 
 Дополнительные сведения о параллельных циклах см. в статье [Практическое руководство. Написание простого цикла Parallel.For](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 

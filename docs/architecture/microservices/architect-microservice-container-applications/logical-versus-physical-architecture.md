@@ -2,12 +2,12 @@
 title: Логическая и физическая архитектура
 description: Общие сведения о различиях между логическими и физическими архитектурами.
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673061"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834404"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Логическая и физическая архитектура
 
@@ -25,7 +25,7 @@ ms.locfileid: "68673061"
 
 Как показано на рис. 4-8, микрослужба каталога может состоять из нескольких служб или процессов. Это может быть несколько служб на основе веб-интерфейсов API ASP.NET или любых других служб, использующих протокол HTTP либо иной протокол. Более того, эти службы могут использовать одни и те же данные при условии, что они связаны с одной предметной областью.
 
-![Схема микрослужбы каталога, содержащей службу API, службу поиска и базу данных SQL Server.](./media/image8.png)
+![Схема бизнес-микрослужбы каталога с физическими серверами.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Рис. 4-8**. Бизнес-микрослужба с несколькими физическими службами
 

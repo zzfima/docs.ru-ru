@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512750"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250372"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Неоднозначность доступа к свойству по умолчанию между\<унаследованными членами интерфейса "дефаултпропертинаме\<>" интерфейса "interfacename1\<>" и "дефаултпропертинаме >\< " интерфейса " interfacename2 > "
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Неоднозначность доступа к свойству по умолчанию между унаследованными членами интерфейса "\<defaultpropertyname >" интерфейса "\<interfacename1 >" и "\<defaultpropertyname >" интерфейса "\<interfacename2 >"
 
 Интерфейс наследует от двух интерфейсов, каждый из которых объявляет свойство по умолчанию с тем же именем. Компилятор не может разрешить доступ к этому свойству по умолчанию без уточнения. Это показано в следующем примере.
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-При указании `testObj(1)`компилятор пытается разрешить его в свойство по умолчанию. Однако существует два возможных свойства по умолчанию из-за наследуемых интерфейсов, поэтому компилятор сообщает об этой ошибке.
+При указании `testObj(1)` компилятор пытается разрешить его в свойство по умолчанию. Однако существует два возможных свойства по умолчанию из-за наследуемых интерфейсов, поэтому компилятор сообщает об этой ошибке.
 
 **Идентификатор ошибки:** BC30686
 
 ## <a name="to-correct-this-error"></a>Исправление ошибки
 
-- Избегайте наследования членов с одинаковыми именами. В предыдущем примере, если `testObj` не требуется ни один из членов, скажем, `Iface2`, объявить его следующим образом:
+- Избегайте наследования членов с одинаковыми именами. В предыдущем примере, если `testObj` не требуется ни один из членов, скажем, `Iface2`, объявите его следующим образом:
 
   ```vb
   Dim testObj As Iface1
@@ -66,4 +66,4 @@ End Class
 
 ## <a name="see-also"></a>См. также
 
-- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Интерфейсы](../../programming-guide/language-features/interfaces/index.md)
