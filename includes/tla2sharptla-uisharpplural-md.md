@@ -1,9 +1,0 @@
----
-ms.openlocfilehash: 9fca57010a5b3decffd947726f98875a45b80156
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65671251"
----
-<span data-ttu-id="4dbe3-101">Пользовательские интерфейсы</span><span class="sxs-lookup"><span data-stu-id="4dbe3-101">UIs</span></span>
