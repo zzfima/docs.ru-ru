@@ -2,21 +2,21 @@
 title: Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586627"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291569"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
-В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца.  
+В этом разделе объясняется, как сделать службу Windows Communication Foundation (WCF) обнаруживаемой. Он основан на образце с [самостоятельным размещением](https://go.microsoft.com/fwlink/?LinkId=145523) .  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
-1. Откройте решение резидентного размещения в Visual Studio 2012. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Откройте решение для самостоятельного размещения в Visual Studio 2012. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии платформы .NET Framework, отличной от указанной в проекте...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** является [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке "System. Для ServiceModel. Discovery. dll или одной из его зависимостей требуется более поздняя версия .NET Framework, чем та, которая указана в проекте... " Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозреватель решений и выберите пункт **Свойства**. В окне **Свойства проекта** убедитесь, что **Требуемая версия .NET Framework** [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Откройте файл Service.cs и добавьте следующую инструкцию `using`.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65586627"
   
 2. Добавьте ссылку на сборки `System.ServiceModel.dll` и `System.ServiceModel.Discovery.dll`.  
   
-3. Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**, а затем выберите **DiscoveryClientApp** проекта, щелкните правой кнопкой мыши и выберите **Вставить**.  
+3. Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **Обозреватель решений**, выберите **Копировать**, а затем выберите проект **дисковериклиентапп** , щелкните правой кнопкой мыши и выберите команду **Вставить**.  
   
 4. Откройте файл Program.cs.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65586627"
     }  
     ```  
   
-     Оно говорит WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> класс следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
+     Это говорит WCF, что классу <xref:System.ServiceModel.Discovery.DiscoveryClient> следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
   
 8. В следующей строке вызовите метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> и укажите экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий контракт службы, который необходимо найти. В данном случае укажите `ICalculator`.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "65586627"
   
      Этот метод использует для вызова службы калькулятора адрес конечной точки, возвращенной из `FindCalculatorServiceAddress`.  
   
-11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца. Он был сформирован с помощью программы Svcutil.exe.  
+11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется с помощью примера с [самостоятельным размещением](https://go.microsoft.com/fwlink/?LinkId=145523) . Он был сформирован с помощью программы Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -196,7 +196,7 @@ ms.locfileid: "65586627"
   
 3. Результатом выполнения service.exe должен быть следующий вывод.  
   
-    ```Output  
+    ```output  
     Received Add(100,15.99)  
     Return: 115.99  
     Received Subtract(100,15.99)  
@@ -209,7 +209,7 @@ ms.locfileid: "65586627"
   
 4. Результатом выполнения Discoveryclientapp.exe должен быть следующий вывод.  
   
-    ```Output  
+    ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
     Add(100,15.99) = 115.99  
     Subtract(100,15.99) = 84.01  
@@ -220,7 +220,7 @@ ms.locfileid: "65586627"
     ```  
   
 ## <a name="example"></a>Пример  
- Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образец, перечисляются только измененные файлы. Дополнительные сведения об образце резидентного размещения см. в разделе [инструкции по настройке](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на образце с [самостоятельным размещением](https://go.microsoft.com/fwlink/?LinkId=145523) , отображаются только измененные файлы. Дополнительные сведения о примере с самостоятельным размещением см. в разделе [инструкции по установке](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  
