@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e16f0c8ede5e1a24d4fc4606c3c25225ea72e750
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117094"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237449"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Изменение сигнатуры JsonFactoryConverter.CreateConverter
 
 В целях упрощения формирования классов <xref:System.Text.Json.Serialization.JsonConverterFactory> метод <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> стал общедоступным и получил второй аргумент типа <xref:System.Text.Json.JsonSerializerOptions>.
 
-#### <a name="details"></a>Подробные сведения
+#### <a name="change-description"></a>Описание изменений
 
 Сигнатура метода `CreateConverter` в .NET Core до версии 3.0 (предварительная версия 8) имела вид: 
 

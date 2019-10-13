@@ -4,12 +4,12 @@ description: В этой статье объясняется терминоло�
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090502"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275766"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Пакеты, метапакеты и платформы
 
@@ -72,7 +72,7 @@ ms.locfileid: "59090502"
 Основные метапакеты .NET Core:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) — описывает библиотеки, входящие в распространяемый пакет .NET Core. Формирует [платформу `.NETCoreApp`](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Зависит от метапакета `NETStandard.Library`.
-- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.App) — включает в себя все поддерживаемые пакеты из ASP.NET Core, Entity Framework Core, за исключением тех, которые содержат сторонние зависимости. Дополнительные сведения см. в статье о [метапакете Microsoft.AspNetCore.App для ASP.NET Core](/aspnet/core/fundamentals/metapackage).
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.App) — включает в себя все поддерживаемые пакеты из ASP.NET Core, Entity Framework Core, за исключением тех, которые содержат сторонние зависимости. Дополнительные сведения см. в статье о [метапакете Microsoft.AspNetCore.App для ASP.NET Core](/aspnet/core/fundamentals/metapackage-app).
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) — включает в себя все поддерживаемые пакеты из ASP.NET Core, Entity Framework Core, а также из внутренних и сторонних зависимостей, используемых ASP.NET Core и Entity Framework Core. Дополнительные сведения см. в статье [Метапакет Microsoft.AspNetCore.All для ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — набор интерфейсов совместимости, которые обеспечивают выполнение переносимых библиотек классов на основе mscorlib в .NET Core.
 

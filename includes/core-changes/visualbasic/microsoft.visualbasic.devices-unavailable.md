@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bb163d5a6eb3d926a44a83ea79572c3a497bbe8d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dae4afa92b8833f326b4eacd00b36bb3e1199cc1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181844"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237443"
 ---
 ### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Типы из пространства имен Microsoft.VisualBasic.Devices недоступны
 
@@ -14,7 +14,7 @@ ms.locfileid: "71181844"
 
 .NET Core 3.0 (предварительная версия 8)
 
-#### <a name="details"></a>Сведения
+#### <a name="change-description"></a>Описание изменений
 
 Типы из пространства имен <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> были доступны в некоторых предварительных выпусках .NET Core 3.0. Начиная с предварительной версии 9 .NET Core 3.0, они больше не доступны.
 

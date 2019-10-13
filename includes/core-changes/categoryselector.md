@@ -1,16 +1,17 @@
 ---
-ms.openlocfilehash: 8921dba1395b5720534ee8592a52d4a5b5681f31
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 83ddbd365b76a5bcf6bb922a4a214dccaf70df07
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956039"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72023116"
 ---
 > [!div class="op_single_selector"]
 >
 > - [CoreFx](~/docs/core/compatibility/corefx.md)
 > - [Шифрование](~/docs/core/compatibility/cryptography.md)
 > - [Глобализация](~/docs/core/compatibility/globalization.md)
+> - [Сеть](~/docs/core/compatibility/networking.md)
 > - [Visual Basic](~/docs/core/compatibility/visualbasic.md)
 > - [Windows Forms](~/docs/core/compatibility/winforms.md)
 > - [ASP.NET Core (на GitHub)](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
