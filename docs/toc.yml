@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: Расширенные сценарии для интерполяции строки
           href: csharp/tutorials/string-interpolation.md
-        - name: Безопасное обновление интерфейсов с элементами интерфейса по умолчанию
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Безопасное обновление интерфейсов с помощью методов интерфейса по умолчанию
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Индексы и диапазоны
           href: csharp/tutorials/ranges-indexes.md
         - name: 'Использование ссылочных типов, допускающих значение NULL'
