@@ -2,12 +2,12 @@
 title: Использование сервера баз данных, работающего в качестве контейнера
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование сервера баз данных, работающего в качестве контейнера? Только для разработки! Давайте поймем, почему.
 ms.date: 10/02/2018
-ms.openlocfilehash: 3e655e26be2d6132577b0494db39d9c2e8b9aacd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039841"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291304"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Использование сервера баз данных, работающего в качестве контейнера
 
@@ -32,7 +32,7 @@ ms.locfileid: "71039841"
 Аналогичным образом, вместо `docker-compose` используйте следующую команду `docker run` для запуска контейнера:
 
 ```console
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Но если вы развертываете приложение с несколькими контейнерами, например eShopOnContainers, удобнее использовать команду `docker-compose up`, чтобы развернуть все необходимые контейнеры для приложения.
@@ -167,7 +167,7 @@ Redis предоставляет образ Docker с Redis. Этот образ
 Вы можете запустить контейнер Docker Redis напрямую, выполнив следующую команду Docker CLI в командной строке:
 
 ```console
-  docker run --name some-redis -d redis
+docker run --name some-redis -d redis
 ```
 
 Образ Redis включает expose:6379 (порт, используемый Redis), поэтому при стандартном связывании контейнеров он будет автоматически доступен связанным контейнерам.
