@@ -2,12 +2,12 @@
 title: Модернизация приложений с помощью мониторинга и данных телеметрии
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Модернизировать приложения с помощью мониторинга и телеметрии
 ms.date: 04/30/2018
-ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cdd7738606b086e980c4a50348166a7e23e15fa5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373957"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318493"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизация приложений с помощью мониторинга и данных телеметрии
 
@@ -19,7 +19,7 @@ Application Insights — это расширяемая служба управл
 
 На рис. 4-10 показан пример того, как Application Insights наблюдает за приложением и как он отражает эти сведения на панели мониторинга.
 
-![Панель мониторинга Application Insights мониторинга](./media/image10.png)
+![Снимок экрана панели мониторинга Application Insights мониторинга.](./media/modernize-your-apps-with-monitoring-and-telemetry/application-insights-monitoring-dashboard.png)
 
 **Рис. 4-10.** Панель мониторинга Application Insights мониторинга
 
@@ -43,7 +43,7 @@ Application Insights — это расширяемая служба управл
 
 На рис. 4-11 показаны связи между разными узлами контейнеров и агентами и OMS.
 
-![Log Analytics решение для мониторинга контейнеров](./media/image11.png)
+![Снимок экрана решения для мониторинга контейнера Log Analytics.](./media/modernize-your-apps-with-monitoring-and-telemetry/log-analytics-container-monitoring-solution.png)
 
 **Рис. 4-11.** Log Analytics решение для мониторинга контейнеров
 
