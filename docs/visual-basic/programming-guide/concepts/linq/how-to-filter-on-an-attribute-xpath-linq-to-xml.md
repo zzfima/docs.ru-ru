@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Фильтрация по атрибуту (XPath-LINQ to XML) (Visual Basic)
+title: Практическое руководство. Фильтр по атрибуту (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ee90e90e1087ffeeeefb475b637f3307a179bff
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855508"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250027"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Фильтрация по атрибуту (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Фильтр по атрибуту (XPath-LINQ to XML) (Visual Basic)
 В этом разделе показано, как получать элементы-потомки с указанным именем и атрибут с заданным значением.  
   
  Выражение XPath:  
@@ -47,7 +47,7 @@ Next
   
  В этом примере выводятся следующие данные:  
   
-```  
+```console
 Results are identical  
 <Address Type="Shipping">  
   <Name>Ellen Adams</Name>  

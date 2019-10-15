@@ -1,25 +1,25 @@
 ---
-title: Практическое руководство. Сериализация и десериализация данных JSON
+title: Как использовать DataContractJsonSerializer
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 0bebdbb3d74d58db093c4ec1e0e88138c7080335
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5e521621dd3ec8e82a860590e66c1c4da95fd3b8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947894"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180219"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>Практическое руководство. Сериализация и десериализация данных JSON
+# <a name="how-to-use-datacontractjsonserializer"></a>Как использовать DataContractJsonSerializer
 JSON - эффективный формат кодирования данных, обеспечивающий быстрый обмен небольшими объемами данных между клиентскими браузерами и веб-службами с поддержкой AJAX.  
   
- В этой статье показано, как сериализовать объекты типа .NET в данные в кодировке JSON, а затем десериализовать данные в формате JSON обратно в экземпляры типов .NET. В этом примере используется контракт данных для демонстрации сериализации и десериализации определяемого `Person` пользователем типа и использования. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
+ В этой статье показано, как сериализовать объекты типа .NET в данные в кодировке JSON, а затем десериализовать данные в формате JSON обратно в экземпляры типов .NET. В этом примере используется контракт данных для демонстрации сериализации и десериализации определяемого пользователем типа `Person` и используется <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
- Как правило, сериализация и десериализация JSON автоматически обрабатываются Windows Communication Foundation (WCF) при использовании типов контрактов данных в операциях службы, которые доступны через конечные точки с поддержкой AJAX. Однако в некоторых случаях может потребоваться непосредственная работа с данными JSON.   
-  
+ Как правило, сериализация и десериализация JSON автоматически обрабатываются Windows Communication Foundation (WCF) при использовании типов контрактов данных в операциях службы, которые доступны через конечные точки с поддержкой AJAX. Однако в некоторых случаях может потребоваться непосредственная работа с данными JSON.
+
 > [!NOTE]
-> Если ошибка возникает во время сериализации исходящего ответа на сервере или по какой-либо другой причине, она может не возвращаться клиенту в качестве ошибки.  
+> Эта статья посвящена <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. В большинстве сценариев, в которых участвует сериализация и десериализация JSON, рекомендуется использовать средства из [пространства имен System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
   
- Эта статья основана на примере [сериализации JSON](../samples/json-serialization.md) .  
+ Эта статья основана на [образце DataContractJsonSerializer](../samples/json-serialization.md).  
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Определение контракта данных для типа Person 
   
@@ -39,6 +39,9 @@ JSON - эффективный формат кодирования данных, 
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>Сериализация экземпляра типа Person в формат JSON  
   
+> [!NOTE]
+> Если ошибка возникает во время сериализации исходящего ответа на сервере или по какой-либо другой причине, она может не возвращаться клиенту в качестве ошибки.  
+
 1. Создайте экземпляр типа `Person`.  
   
     ```csharp  
@@ -47,7 +50,7 @@ JSON - эффективный формат кодирования данных, 
     p.age = 42;  
     ```  
   
-2. Сериализует объект в поток памяти с <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>помощью. `Person`  
+2. Сериализует объект `Person` в поток памяти с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```csharp  
     var stream1 = new MemoryStream();  
@@ -137,5 +140,5 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
   
 ## <a name="see-also"></a>См. также
 
-- [Изолированная сериализация JSON](stand-alone-json-serialization.md)
-- [Поддержка JSON и других форматов обмена данными](support-for-json-and-other-data-transfer-formats.md)
+- [Сериализация JSON в .NET](../../../standard/serialization/system-text-json-overview.md)
+

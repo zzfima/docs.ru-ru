@@ -1,4 +1,4 @@
-﻿---
+---
 title: Практическое руководство. Сжатие и извлечение файлов
 ms.date: 01/14/2019
 ms.technology: dotnet-standard

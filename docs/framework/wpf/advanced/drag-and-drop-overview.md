@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 72dc443e5653b9871c3f67b003bd1af0536d5993
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046408"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291474"
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
@@ -28,9 +28,9 @@ ms.locfileid: "70046408"
   
  Можно перетаскивать совершенно произвольные типы и количества объектов. Например, в качестве наиболее распространенных объектов перетаскивания можно назвать файлы, папки, выбранное содержимое.  
   
- Конкретные действия, выполняемые во время операции перетаскивания, зависят от приложения и часто определяются контекстом.  Например, при перетаскивании выбранных файлов из одной папки в другую на одном запоминающем устройстве эти файлы по умолчанию перемещаются, тогда как при перетаскивании файлов из общего ресурса [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] в локальную папку эти файлы по умолчанию копируются.  
+ Конкретные действия, выполняемые во время операции перетаскивания, зависят от приложения и часто определяются контекстом.  Например, перетаскивание выбранных файлов из одной папки в другую на одном устройстве хранения перемещает файлы по умолчанию, тогда как при перетаскивании файлов из общего ресурса UNC в локальную папку файлы копируются по умолчанию.  
   
- В средствах перетаскивания, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], предусмотрена высокая гибкость и возможность настройки с целью поддержки различных сценариев перетаскивания.  Перетаскивание поддерживает управление объектами в рамках одного приложения или в разных приложениях. Также полностью поддерживаются перетаскивание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] между приложениями и другими приложениями Windows.  
+ В средствах перетаскивания, предоставляемых [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], предусмотрена высокая гибкость и возможность настройки с целью поддержки различных сценариев перетаскивания.  Перетаскивание поддерживает управление объектами в рамках одного приложения или в разных приложениях. Также полностью поддерживаются перетаскивание между приложениями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и другими приложениями Windows.  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] любые элементы <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> могут участвовать в операциях перетаскивания. События и методы, необходимые для операций перетаскивания, определяются в классе <xref:System.Windows.DragDrop>. Классы <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement> содержат псевдонимы для вложенных событий <xref:System.Windows.DragDrop>, чтобы эти события отображались в списке членов класса, когда <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> наследуется как базовый элемент. Обработчики событий, связанные с этими событиями, присоединяются к основному вложенному событию <xref:System.Windows.DragDrop> и получают один и тот же экземпляр данных события. Дополнительные сведения см. в описании события <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "70046408"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Пример перетаскивания  
- В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Подробные инструкции по реализации перетаскивания см. в разделе [пошаговое руководство. Включение перетаскивания для пользовательского элемента управления](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Полные инструкции по реализации перетаскивания см. в разделе [Walkthrough: Включение перетаскивания для пользовательского элемента управления @ no__t-0.  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -218,6 +218,6 @@ ms.locfileid: "70046408"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Clipboard>
-- [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления @ no__t-0
 - [Разделы практического руководства](drag-and-drop-how-to-topics.md)
 - [Перетаскивание](drag-and-drop.md)

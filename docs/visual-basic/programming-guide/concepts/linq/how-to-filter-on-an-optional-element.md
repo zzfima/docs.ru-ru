@@ -2,12 +2,12 @@
 title: Практическое руководство. Фильтрация по необязательному элементу (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 4de8c0b07eebc340a53785e6b932a66cb9d2fec9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710418"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250001"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Практическое руководство. Фильтрация по необязательному элементу (Visual Basic)
 Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML. Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference. В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.  
@@ -50,7 +50,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -100,7 +100,7 @@ End Module
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  

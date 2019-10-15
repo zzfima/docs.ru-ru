@@ -2,12 +2,12 @@
 title: Модернизация жизненного цикла приложений с помощью конвейеров непрерывной интеграции и непрерывного развертывания и средств DevOps в облаке
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Модернизировать жизненный цикл приложения с помощью конвейеров CI/CD и средств DevOps в облаке
 ms.date: 04/30/2018
-ms.openlocfilehash: 4e4436ac4a622a82cc990b977b03eeae95ca9368
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 75ac3fa06f442570a0a5043a88409b3fdebb5810
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181901"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318565"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Модернизация жизненного цикла приложений с помощью конвейеров непрерывной интеграции и непрерывного развертывания и средств DevOps в облаке
 
@@ -27,7 +27,7 @@ Azure DevOps Services поддерживает непрерывную интег
 
 На рис. 4-12 показан конвейер непрерывного развертывания, который развертывается в кластере Kubernetes в службе контейнеров Azure.
 
-![Azure DevOps Services конвейера непрерывного развертывания, развертывание в кластере Kubernetes](./media/image12.png)
+![Снимок экрана Azure DevOps Services развертывании в кластере Kubernetes.](./media/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud/deploy-mvc-app-container-kubernetes.png)
 
 **Рис. 4-12.** Azure DevOps Services конвейера непрерывного развертывания, развертывание в кластере Kubernetes
 

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск объединения двух путей расположения (XPath-LINQ to XML) (Visual Basic)
+title: Практическое руководство. Найти объединение двух путей расположения (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: 662cad329f4837d26b25d56f15d323fe623b05c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6905e6a7bd0cba37006b1fc3077ad72de36bcf56
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021678"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249953"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Поиск объединения двух путей расположения (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Найти объединение двух путей расположения (XPath-LINQ to XML) (Visual Basic)
 XPath позволяет найти объединение результатов определения двух путей доступа XPath.  
   
  Выражение XPath:  
@@ -47,7 +47,7 @@ Next
   
  В этом примере выводятся следующие данные:  
   
-```  
+```console
 Results are identical  
 <Category>A</Category>  
 <Price>24.50</Price>  

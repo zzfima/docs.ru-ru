@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: Практическое руководство. Использование именованных каналов для сетевого взаимодействия между процессами
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Конвейеры
+      href: pipelines.md
     - name: Сопоставленные в памяти файлы
       href: memory-mapped-files.md

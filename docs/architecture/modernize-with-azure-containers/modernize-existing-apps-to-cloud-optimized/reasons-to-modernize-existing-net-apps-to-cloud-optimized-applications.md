@@ -2,12 +2,12 @@
 title: Причины для модернизировать существующих приложений .NET в приложения, оптимизированные для облака
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Причины для модернизировать существующих приложений .NET в приложения, оптимизированные для облака
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373931"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318538"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Причины для модернизировать существующих приложений .NET в приложения, оптимизированные для облака
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373931"
 
 На рис. 4-2 показаны основные необязательные основы приложения, оптимизированного для облака. Чем больше основополагающих возможностей, тем удобнее ваше приложение пойдет на себя, чтобы удовлетворить ожидания ваших клиентов.
 
-![Основные принципы приложения, оптимизированного для облака](./media/image2.png)
+![Схема именования основных принципов приложения, оптимизированного для облака.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **Рис. 4-2.** Основные принципы приложения, оптимизированного для облака
 

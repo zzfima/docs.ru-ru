@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003439"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291463"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для глобального рынка. Элементы программирования глобализации определяются в .NET в пространстве имен <xref:System.Globalization>.
@@ -143,7 +143,7 @@ ms.locfileid: "72003439"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Многоязыковой интерфейс пользователя
- Многоязыковой интерфейс пользователя (MUI) — это поддержка Майкрософт для переключения [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] с одного языка на другой. Приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует модель сборки для поддержки многоязыкового интерфейса пользователя. Одно приложение содержит независимые от языка сборки, а также зависимые от языка сборки вспомогательных ресурсов. Точкой входа является управляемый EXE-файл в основной сборке.  загрузчик ресурсов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует преимущества диспетчера ресурсов [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] для поддержки поиска и отката ресурсов. Многоязыковые вспомогательные сборки работают с одной и той же основной сборкой. Загружаемая сборка ресурса зависит от <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> текущего потока.
+ Многоязыковой интерфейс пользователя (MUI) — это поддержка Майкрософт для переключения пользовательских интерфейсов с одного языка на другой. Приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует модель сборки для поддержки многоязыкового интерфейса пользователя. Одно приложение содержит независимые от языка сборки, а также зависимые от языка сборки вспомогательных ресурсов. Точкой входа является управляемый EXE-файл в основной сборке.  загрузчик ресурсов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует преимущества диспетчера ресурсов [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] для поддержки поиска и отката ресурсов. Многоязыковые вспомогательные сборки работают с одной и той же основной сборкой. Загружаемая сборка ресурса зависит от <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> текущего потока.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Локализуемый пользовательский интерфейс

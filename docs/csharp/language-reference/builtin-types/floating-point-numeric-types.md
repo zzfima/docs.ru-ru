@@ -12,17 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
+- size of floating-point types [C#]
 - types [C#], floating-point types
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236063"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002195"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Числовые типы с плавающей запятой (справочник по C#)
 
@@ -32,11 +33,11 @@ ms.locfileid: "68236063"
 
 C# поддерживает следующие предварительно определенные типы с плавающей запятой:
   
-|Ключевое слово или тип C#|Приблизительный диапазон значений|Точность|Тип .NET|
-|----------|-----------------------|---------------|--------------|
-|`float`|От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup>|6–9 цифр|<xref:System.Single?displayProperty=nameWithType>|
-|`double`|от ±5,0 × 10<sup>−324</sup> до ±1,7 × 10<sup>308</sup>|15–17 цифр|<xref:System.Double?displayProperty=nameWithType>|
-|`decimal`|от ±1,0 x 10<sup>-28</sup> до ±7,9228 x 10<sup>28</sup>|28-29 знаков|<xref:System.Decimal?displayProperty=nameWithType>|
+|Ключевое слово или тип C#|Приблизительный диапазон значений|Точность|Размер|Тип .NET|
+|----------|-----------------------|---------------|--------------|--------------|
+|`float`|От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup>|6–9 цифр|4 байта|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|от ±5,0 × 10<sup>−324</sup> до ±1,7 × 10<sup>308</sup>|15–17 цифр|8 байт|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|от ±1,0 x 10<sup>-28</sup> до ±7,9228 x 10<sup>28</sup>|28-29 знаков|16 байт|<xref:System.Decimal?displayProperty=nameWithType>|
 
 В приведенной выше таблице каждый тип ключевого слова C# из крайнего левого столбца является псевдонимом для соответствующего типа .NET. Они взаимозаменяемые. Например, следующие объявления объявляют переменные одного типа:
 

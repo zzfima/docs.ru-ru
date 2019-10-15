@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск элемента с указанным дочерним элементом (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709072"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249914"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Практическое руководство. Поиск элемента с указанным дочерним элементом (Visual Basic)
 В этом разделе показан определенный элемент, имеющий дочерний элемент с заданным значением.  
@@ -30,7 +30,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 0002  
 0006  
 ```  
@@ -61,7 +61,7 @@ End Module
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 0002  
 0006  
 ```  

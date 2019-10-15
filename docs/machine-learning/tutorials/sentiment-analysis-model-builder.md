@@ -1,17 +1,17 @@
 ---
 title: Учебник. Анализ тональности (двоичная классификация)
 description: В этом руководстве показано, как создать консольное приложение Razor Pages, которое определяет тональность комментариев на веб-сайте, и предпринимает соответствующие действия. Двоичный классификатор тональности использует построитель моделей в Visual Studio.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332578"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700916"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Учебник. Анализ тональности комментариев на веб-сайте в веб-приложении с помощью построителя моделей ML.NET
 
@@ -45,7 +45,7 @@ ms.locfileid: "71332578"
 1. Создайте **приложение ASP.NET Core Razor Pages**.
 
     1. Откройте Visual Studio и выберите **Файл > Создать > Проект** в строке меню.
-    1. В диалоговом окне "Новый проект" щелкните узел **Visual C#** , а затем — **Веб**.
+    1. В диалоговом окне "Новый проект" щелкните узел **Visual C#**, а затем — **Веб**.
     1. Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**.
     1. В текстовом поле **Имя** введите SentimentRazor.
     1. Флажок **Создать каталог для решения** должен быть установлен по умолчанию. Если это не так, установите его.
@@ -79,8 +79,8 @@ ms.locfileid: "71332578"
 
 1. На этапе добавления данных выберите в раскрывающемся списке источников данных пункт **Прогнозирование цен**.
 1. Нажмите кнопку рядом с текстовым полем **Выберите файл** и щелкните в проводнике файл *wikipedia-detox-250-line-data.tsv*.
-1. Выберите **Тональность** в раскрывающемся списке **Метка для прогнозирования (или столбец)** .
-1. Оставьте значения по умолчанию для раскрывающегося списка **Входные столбцы (компоненты)** .
+1. Выберите **Тональность** в раскрывающемся списке **Метка для прогнозирования (или столбец)**.
+1. Оставьте значения по умолчанию для раскрывающегося списка **Входные столбцы (компоненты)**.
 1. Щелкните ссылку **Обучение**, чтобы перейти к следующему шагу в средстве построителя моделей.
 
 ## <a name="train-the-model"></a>Обучение модели
@@ -103,7 +103,7 @@ ms.locfileid: "71332578"
 
 ## <a name="evaluate-the-model"></a>Оценка модели
 
-Результат обучения — одна модель с наивысшей точностью. В шаге оценки в разделе результатов будет указан алгоритм, используемый оптимальной моделью, в поле **Лучшая модель**, а также метрики в поле **Качество лучшей модели (достоверность аппроксимации)** . Кроме того, приводится сводная таблица с пятью лучшими моделями и их метриками.
+Результат обучения — одна модель с наивысшей точностью. На шаге оценки инструмента построителя моделей в разделе результатов будет указан алгоритм, используемый оптимальной моделью, в поле **Лучшая модель**, а также метрики в поле **Качество лучшей модели**. Кроме того, приводится сводная таблица с пятью лучшими моделями и их метриками.
 
 Если вас не удовлетворяют метрики точности, самые простые способы повысить точность модели — увеличить длительность обучения или использовать больше данных. В противном случае щелкните ссылку **Код**, чтобы перейти к завершающему шагу в средстве построителя моделей.
 
@@ -138,23 +138,43 @@ ms.locfileid: "71332578"
 1. Откройте файл *Startup.cs* в проекте *SentimentRazor*.
 1. Добавьте следующие операторы using, ссылающиеся на пакет NuGet *Microsoft.Extensions.ML* и проект *SentimentRazorML.Model*:
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
+    ```csharp
+    using System.IO;
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
 1. Создайте глобальную переменную для хранения расположения файла обученной модели.
 
-    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+    ```csharp
+    private readonly string _modelPath;
+    ```
 
 1. Файл модели хранится в каталоге сборки вместе с файлами сборки приложения. Чтобы упростить доступ к нему, создайте вспомогательный метод `GetAbsolutePath`, вызываемый после метода `Configure`.
 
-    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+    ```csharp
+    public static string GetAbsolutePath(string relativePath)
+    {
+        FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
+        string assemblyFolderPath = _dataRoot.Directory.FullName;
+
+        string fullPath = Path.Combine(assemblyFolderPath, relativePath);
+        return fullPath;
+    }    
+    ```
 
 1. Используйте метод `GetAbsolutePath` в конструкторе класса `Startup`, чтобы задать `_modelPath`.
 
-    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+    ```csharp
+    _modelPath = GetAbsolutePath("MLModel.zip");
+    ```
 
 1. Настройте `PredictionEnginePool` для приложения в методе `ConfigureServices`:
 
-    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+    ```csharp
+    services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile(_modelPath);
+    ```
 
 ### <a name="create-sentiment-analysis-handler"></a>Создание обработчика анализа тональности
 
@@ -162,17 +182,27 @@ ms.locfileid: "71332578"
 
 1. Откройте файл *Index.cshtml.cs*, расположенный в каталоге *Pages*, и добавьте следующие операторы using:
 
-    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+    ```csharp
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
     Чтобы использовать службу `PredictionEnginePool`, настроенную в классе `Startup`, необходимо внедрить ее в конструктор модели для дальнейшего использования.
 
 1. Добавьте переменную для создания ссылки на `PredictionEnginePool` в классе `IndexModel`.
 
-    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+    ```csharp
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
+    ```
 
 1. Создайте конструктор в классе `IndexModel` и вставьте в него службу `PredictionEnginePool`.
 
-    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+    ```csharp
+    public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
+    {
+        _predictionEnginePool = predictionEnginePool;
+    }    
+    ```
 
 1. Создайте обработчик метода, который использует `PredictionEnginePool` для создания прогнозов на основе вводимых пользователем данных, полученных с веб-страницы.
 
@@ -187,23 +217,33 @@ ms.locfileid: "71332578"
 
     1. Внутри метода `OnGetAnalyzeSentiment` передайте тональность *Neutral* (Нейтрально), если входные данные пользователя пусты или имеют значение NULL.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
+        ```csharp
+        if (String.IsNullOrEmpty(text)) return Content("Neutral");
+        ```
 
     1. При наличии допустимых входных данных создайте новый экземпляр `ModelInput`.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
+        ```csharp
+        var input = new ModelInput { SentimentText = text };
+        ```
 
     1. Используйте `PredictionEnginePool` для прогнозирования тональности.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
+        ```csharp
+        var prediction = _predictionEnginePool.Predict(input);
+        ```
 
     1. Преобразуйте прогнозируемое значение `bool` в токсичное или нетоксичное с помощью следующего кода.
 
-        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+        ```csharp
+        var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+        ```
 
     1. Наконец, передайте тональности обратно на веб-страницу.
 
-        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+        ```csharp
+        return Content(sentiment);
+        ```
 
 ### <a name="configure-the-web-page"></a>Настройка веб-страницы
 

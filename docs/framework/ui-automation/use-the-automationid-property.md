@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a172db8bcb626d78a24b546147b4e32f20f5d83
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040342"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291343"
 ---
 # <a name="use-the-automationid-property"></a>Использование свойства AutomationID
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе API автоматизации [Windows: Модель автоматизации пользовательского интерфейса @ no__t-0.  
   
  В этом разделе содержатся сценарии и примеры кода, которые показывают, как и когда можно использовать <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> для поиска элемента в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71040342"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Для поиска определенного элемента в дереве модели автоматизации пользовательского интерфейса используйте уникальный и обнаруживаемый AutomationID.  
   
-- Используйте такой инструмент, как [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] , чтобы сообщить о <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> интересующего элемента [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Затем это значение можно скопировать и вставить в клиентское приложение, такое как тестовый скрипт для последующего автоматического тестирования. Такой подход сокращает и упрощает код, необходимый для идентификации и обнаружения элементов во время выполнения.  
+- Используйте такой инструмент, как UI Spy, чтобы сообщить <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> элемента [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], представляющего интерес. Затем это значение можно скопировать и вставить в клиентское приложение, такое как тестовый скрипт для последующего автоматического тестирования. Такой подход сокращает и упрощает код, необходимый для идентификации и обнаружения элементов во время выполнения.  
   
 > [!CAUTION]
 > В целом вы должны пытаться получить только прямые потомки <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Поиск потомков может выполнять итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  

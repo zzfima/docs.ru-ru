@@ -4,12 +4,12 @@ description: Узнайте, как запустить приложение .NET
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928487"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250325"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Учебник. Начало работы с .NET для Apache Spark
 
@@ -67,7 +67,7 @@ ms.locfileid: "70928487"
 
 1. Скачайте выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) на локальный компьютер со страницы выпусков .NET для Apache Spark в GitHub. Например, его можно скачать по пути `c:\bin\Microsoft.Spark.Worker\`.
 
-2. Создайте [переменную среды](https://www.java.com/en/download/help/path.xml) с именем `DotnetWorkerPath` и присвойте ей путь к каталогу, в который вы скачали и извлекли выпуск **Microsoft.Spark.Worker**. Например, `c:\bin\Microsoft.Spark.Worker`.
+2. Создайте [переменную среды](https://www.java.com/en/download/help/path.xml) с именем `DOTNET_WORKER_DIR` и присвойте ей путь к каталогу, в который вы скачали и извлекли выпуск **Microsoft.Spark.Worker**. Например, `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>Клонирование репозитория .NET для Apache Spark в GitHub
 

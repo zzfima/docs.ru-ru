@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605977"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698797"
 ---
 # <a name="built-in-types-table-c-reference"></a>Таблица встроенных типов (Справочник по C#)
 
-В следующей таблице показаны ключевые слова для встроенных типов C#, которые являются псевдонимами предопределенных типов в пространстве имен <xref:System>.  
-  
+В следующей таблице показаны ключевые слова для встроенных типов C#, которые являются псевдонимами предопределенных типов в пространстве имен <xref:System>:
+
 |Тип C#|Тип .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,9 +38,9 @@ ms.locfileid: "69605977"
   
 ## <a name="remarks"></a>Примечания
 
-Все типы в таблице, за исключением `object` и `string`, считаются простыми.  
-  
-Типы .NET и псевдонимы ключевых слов типов C# являются взаимозаменяемыми. Например, можно объявить целочисленную переменную с помощью любого из следующих объявлений:  
+Все типы в таблице, за исключением `object` и `string`, считаются простыми.
+
+Типы .NET и псевдонимы ключевых слов типов C# являются взаимозаменяемыми. Например, можно объявить целочисленную переменную с помощью любого из следующих объявлений:
 
 ```csharp
 int x = 123;
