@@ -122,7 +122,7 @@
       href: standard/datetime/
     - name: События
       href: standard/events/
-    - name: Процесс управляемого выполнения
+    - name: Процесс выполнения управляемого кода
       href: standard/managed-execution-process.md
     - name: Метаданные и компоненты с самоописанием
       href: standard/metadata-and-self-describing-components.md
