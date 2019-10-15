@@ -1,5 +1,5 @@
----
-title: Как выполнить  Запись символов в строку
+﻿---
+title: Практическое руководство. Запись символов в строку
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,7 +20,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 02/03/2019
 ms.locfileid: "55674754"
 ---
-# <a name="how-to-write-characters-to-a-string"></a>Как выполнить  Запись символов в строку
+# <a name="how-to-write-characters-to-a-string"></a>Практическое руководство. Запись символов в строку
 Следующий пример кода демонстрирует синхронную или асинхронную запись символов из массива символов в строку.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>Пример Синхронная запись символов в консольном приложении  

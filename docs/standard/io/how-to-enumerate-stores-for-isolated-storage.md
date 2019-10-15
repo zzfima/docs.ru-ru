@@ -1,5 +1,5 @@
----
-title: Как выполнить Перечисление хранилищ для изолированного хранилища
+﻿---
+title: Практическое руководство. Перечисление хранилищ для изолированного хранилища
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54591764"
 ---
-# <a name="how-to-enumerate-stores-for-isolated-storage"></a>Как выполнить Перечисление хранилищ для изолированного хранилища
+# <a name="how-to-enumerate-stores-for-isolated-storage"></a>Практическое руководство. Перечисление хранилищ для изолированного хранилища
 Перечислить все изолированные хранилища для текущего пользователя можно с помощью статического метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType>. Этот метод принимает значение <xref:System.IO.IsolatedStorage.IsolatedStorageScope> и возвращает перечислитель <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Чтобы перечислить хранилища, вам нужно разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission>, которое указывает значение <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>. При вызове метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> со значением <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> он возвращает массив объектов <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, определенных для текущего пользователя.  
   
 ## <a name="example"></a>Пример  
