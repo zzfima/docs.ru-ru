@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740690"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274227"
 ---
-# <a name="corgcreference-structure"></a>Структура COR_GC_REFERENCE
+# <a name="cor_gc_reference-structure"></a>Структура COR_GC_REFERENCE
 Содержит сведения об объекте, в котором должна быть выполнена сборка мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,38 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`domain`|Указатель на домен приложения, к которому принадлежит этот дескриптор или объект. Значение параметра может быть `null`.|  
-|`location`|ICorDebugValue или ICorDebugReferenceValue-интерфейс, который соответствует объекту быть сборщиком мусора.|  
-|`type`|Объект [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) значение перечисления, указывающее, откуда поступили корня. Дополнительные сведения см. в разделе "Примечания".|  
-|`extraData`|Дополнительные данные об объекте, чтобы участвовать в сборе мусора. Эта информация зависит от источника объекта, как указано в `type` поля. Дополнительные сведения см. в разделе "Примечания".|  
+|`domain`|Указатель на домен приложения, которому принадлежит маркер или объект. Его значение может быть `null`.|  
+|`location`|Интерфейс ICorDebugValue или ICorDebugReferenceValue, соответствующий объекту, который должен быть собран сборщиком мусора.|  
+|`type`|Значение перечисления [CorGCReferenceType](corgcreferencetype-enumeration.md) , указывающее, откуда поступил корень. Дополнительные сведения см. в разделе "Примечания".|  
+|`extraData`|Дополнительные данные об объекте, который должен быть собран сборщиком мусора. Эти сведения зависят от источника объекта, как указано в `type` поле. Дополнительные сведения см. в разделе "Примечания".|  
   
 ## <a name="remarks"></a>Примечания  
- `type` Поле является [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) значение перечисления, указывающее, откуда поступили ссылки. Определенный `COR_GC_REFERENCE` значение может отражать любой из следующих типов управляемых объектов:  
+ Поле `type` является значением перечисления [CorGCReferenceType](corgcreferencetype-enumeration.md), которое указывает, откуда поступила ссылка. Конкретное `COR_GC_REFERENCE` значение может отражать любой из следующих видов управляемых объектов:  
   
-- Объекты из всех управляемых стеков (`CorGCReferenceType.CorReferenceStack`). Сюда входят активных ссылок в управляемый код, а также объекты, созданные средой CLR.  
+- Объекты из всех управляемых стеков (`CorGCReferenceType.CorReferenceStack`). Сюда входят динамические ссылки в управляемом коде, а также объекты, созданные средой CLR.  
   
-- Объекты из таблицы дескрипторов (`CorGCReferenceType.CorHandle*`). Сюда входят строгих ссылок (`HNDTYPE_STRONG` и `HNDTYPE_REFCOUNT`) и статические переменные в модуле.  
+- Объекты из таблицы Handle (`CorGCReferenceType.CorHandle*`). Это включает в себя строгие `HNDTYPE_REFCOUNT`ссылки (`HNDTYPE_STRONG` и) и статические переменные в модуле.  
   
-- Объекты из очереди метода завершения (`CorGCReferenceType.CorReferenceFinalizer`). Обслуживает очередь метода завершения корневых объектов, пока не будет запущен финализатор.  
+- Объекты из очереди метода завершения (`CorGCReferenceType.CorReferenceFinalizer`). Очередь метода завершения помещает объекты в корни до запуска метода завершения.  
   
- `extraData` Поле содержит дополнительные данные в зависимости от источника (или тип) ссылки. Доступны следующие значения:  
+ `extraData` Поле содержит дополнительные данные в зависимости от источника (или типа) ссылки. Доступны следующие значения:  
   
-- `DependentSource`. Если `type` — `CorGCREferenceType.CorHandleStrongDependent`, это поле является объектом, который, если в активном состоянии, корней объекта сборщиком мусора в `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Если имеет `type` `CorGCREferenceType.CorHandleStrongDependent`значение, то это поле является объектом, в котором в случае со сроком существования объект, который должен `COR_GC_REFERENCE.Location`быть собран в мусор, находится в корне.  
   
-- `RefCount`. Если `type` является `CorGCREferenceType.CorHandleStrongRefCount`, это поле является счетчик ссылок дескриптора.  
+- `RefCount`. Если значение `type` равно `CorGCREferenceType.CorHandleStrongRefCount`, это поле представляет собой счетчик ссылок для маркера.  
   
-- `Size`. Если `type` является `CorGCREferenceType.CorHandleStrongSizedByref`, это поле является последний размер дерева объектов, для которой сборщик мусора рассчитана корни объекта. Обратите внимание на то, что этот расчет не обязательно в актуальном состоянии.  
+- `Size`. Если значение `type` равно `CorGCREferenceType.CorHandleStrongSizedByref`, это поле является последним размером дерева объектов, для которого сборщик мусора вычисляет корни объекта. Обратите внимание, что это вычисление не обязательно в актуальном состоянии.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug. idl, CorDebug. h  
   
- **Библиотека:** CorGuids.lib  
+ **Библиотечная** Коргуидс. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Структуры отладки](debugging-structures.md)
+- [Отладка](index.md)

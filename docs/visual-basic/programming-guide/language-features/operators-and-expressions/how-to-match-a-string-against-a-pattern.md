@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)
+title: Практическое руководство. Сопоставление строки с шаблоном (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -13,71 +13,73 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bac0869d9e319071abb31dd0576edf0450aa198
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649713"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054155"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)
-Если вы хотите определить выражение [строковый тип данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) удовлетворяет шаблону, можно использовать [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
-  
- `Like` принимает два операнда. Левый операнд представляет собой строковое выражение, а правый — строка, содержащая шаблон, используемый для сопоставления. `Like` Возвращает `Boolean` значение, указывающее, удовлетворяет ли строковое выражение шаблону.  
-  
- Можно сопоставить каждый символ в строковом выражении с определенный символ, символом-шаблоном, список символ или диапазон символов. Позиции в строке шаблона спецификации соответствуют позиции символов для сопоставления строковым выражением.  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Сравнение символа в строковом выражении с указанным символом  
-  
-- Поместите указанный символ непосредственно в строку шаблона. Некоторые специальные символы должны заключаться в квадратные скобки (`[ ]`). Дополнительные сведения см. в разделе [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
-  
-     В следующем примере производится проверка ли `myString` состоит ровно из символов `H`.  
-  
-     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Сравнение символа в строковом выражении с символом-шаблоном  
-  
-- Поместить знак вопроса (`?`) в строке шаблона. Любой допустимый символ в этой позиции совпадение является успешным.  
-  
-     В следующем примере производится проверка ли `myString` состоит из символов `W` и любых значений между двумя символами.  
-  
-     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Сравнение символа в строковом выражении в списке символов  
-  
-- Поместите квадратные скобки (`[ ]`) в строке шаблона и внутри скобок укажите список символов. Они не разделяют символы с запятыми или любых других разделителей. Любому одиночному символу в списке совпадение является успешным.  
-  
-     В следующем примере производится проверка ли `myString` состоит из любой допустимый символ, за которым следует точно один из символов `A`, `C`, или `E`.  
-  
-     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
-  
-     Обратите внимание на то, что при сравнении учитывается регистр.  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Сравнение символа в строковом выражении с диапазона символов  
-  
-- Поместите квадратные скобки (`[ ]`) в строку шаблона, а в скобках укажите символы минимальный и максимальный диапазон, разделенных дефисом (`–`). Любому одиночному символу в диапазоне совпадение является успешным.  
-  
-     В следующем примере производится проверка ли `myString` состоит из символов `num` с одного из символов `i`, `j`, `k`, `l`, `m`, или `n`.  
-  
-     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
-  
-     Обратите внимание на то, что при сравнении учитывается регистр.  
-  
-## <a name="matching-empty-strings"></a>Сравнение пустых строк  
- `Like` рассматривает последовательность `[]` как строка нулевой длины (`""`). Можно использовать `[]` для тестирования ли выражение всю строку пуст, но его нельзя использовать для проверки, если определенное положение в строковое выражение является пустым. Если пустая позиция является один из параметров необходимо проверить, можно использовать `Like` более одного раза.  
-  
-#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Сравнение символа в строковом выражении в списке символов или ни один знак  
-  
-1. Вызовите `Like` оператор дважды для одного строкового выражения и подключение двух вызовов с помощью либо [или оператор](../../../../visual-basic/language-reference/operators/or-operator.md) или [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
-  
-2. В строке шаблона для первого `Like` предложения, включите список символов, заключенные в квадратные скобки (`[ ]`).  
-  
-3. В строке шаблона для второго `Like` предложение, не следует помещать любой символ в позиции в вопросе.  
-  
-     В следующем примере проверяется номер телефона из семи цифр `phoneNum` ровно три цифры, а затем пробел, дефис (`–`), точку (`.`), или ни один знак, за которым следует ровно четыре цифры.  
-  
-     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
-  
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Практическое руководство. Сопоставление строки с шаблоном (Visual Basic)
+
+Если нужно выяснить, удовлетворяет ли выражение [строкового типа данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) шаблону, можно использовать [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).
+
+`Like`принимает два операнда. Левый операнд является строковым выражением, а правый — строкой, содержащей шаблон, используемый для сопоставления. `Like``Boolean` возвращает значение, указывающее, удовлетворяет ли строковое выражение шаблону.
+
+Каждый символ в строковом выражении можно сопоставить с конкретным символом, символом-шаблоном, списком символов или диапазоном символов. Положения спецификаций в строке шаблона соответствуют позициям символов, которые должны быть сопоставлены в строковом выражении.
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Сопоставление символа в строковом выражении с конкретным символом
+
+Помещает конкретный символ непосредственно в строку шаблона. Некоторые специальные символы должны быть заключены в квадратные скобки (`[ ]`). Дополнительные сведения см. [в разделе Оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).
+
+В следующем примере проверяется `myString` , состоит ли только из одного `H`символа.
+
+[!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Сопоставление символа в строковом выражении с подстановочным знаком
+
+Добавьте вопросительный знак (`?`) в строку шаблона. Любой допустимый символ в этой позиции делает успешное совпадение.
+
+В следующем примере проверяется `myString` , состоит ли из одного `W` символа, за которым следует ровно два символа любого значения.
+
+[!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Сопоставление символа в строковом выражении со списком символов
+
+Вставьте квадратные`[ ]`скобки () в строку шаблона, а внутри квадратных скобок вставьте список символов. Не разделяйте символы запятыми или любым другим разделителем. Любой отдельный символ в списке успешно выполняет сопоставление.
+
+В следующем примере проверяется `myString` , состоит ли из любого допустимого символа, за которым следует `A`только один из `E`символов, `C`или.
+
+[!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
+
+Обратите внимание, что в этом совпадении учитывается регистр.
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Сопоставление символа в строковом выражении с диапазоном символов
+
+Вставьте квадратные`[ ]`скобки () в строку шаблона, а внутри квадратных скобок — наименьшие и максимальные символы в диапазоне, разделенные`–`дефисом (). Любой отдельный символ в диапазоне выполняет успешное совпадение.
+
+В следующем примере проверяется `myString` , состоит ли из `num` символов, за которыми следует только один `i`из `j` `m`символов `k`: `l`,,, `n`, или.
+
+[!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
+
+Обратите внимание, что в этом совпадении учитывается регистр.
+
+## <a name="matching-empty-strings"></a>Совпадающие пустые строки
+
+`Like`обрабатывает последовательность `[]` как строку нулевой длины (`""`). Можно использовать `[]` для проверки, является ли все строковое выражение пустым, но нельзя использовать его для проверки того, что определенная позицией в строковом выражении пуста. Если пустое расположение является одним из параметров, которые необходимо проверить, можно использовать `Like` более одного раза.
+
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Сопоставление символа в строковом выражении со списком символов или без символа
+
+1. Дважды вызовите `Like` оператор для того же строкового выражения и соедините два вызова с помощью [оператора OR](../../../../visual-basic/language-reference/operators/or-operator.md) или [оператора OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md).
+
+2. В строке шаблона для первого `Like` предложения включите список символов, заключенный в квадратные скобки (`[ ]`).
+
+3. В строке шаблона для второго `Like` предложения не помещайте ни один символ в позиции.
+
+    В следующем примере проверяется номер `phoneNum` телефона, состоящий из семи цифр, для ровно трех цифр, за которыми следует пробел, дефис (`–`), точка`.`() или вообще нет символа, за которыми следует только четыре цифры.
+
+    [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
+
 ## <a name="see-also"></a>См. также
 
 - [Операторы сравнения](../../../../visual-basic/language-reference/operators/comparison-operators.md)
