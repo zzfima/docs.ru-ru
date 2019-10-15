@@ -1,5 +1,5 @@
 ﻿---
-title: Процесс управляемого выполнения
+title: Процесс выполнения управляемого кода
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70969031"
 ---
-# <a name="managed-execution-process"></a>Процесс управляемого выполнения
+# <a name="managed-execution-process"></a>Процесс выполнения управляемого кода
 <a name="introduction"></a> Процесс управляемого исполнения включает следующие шаги, которые подробно разбираются позднее в этом разделе:  
   
 1. [Выбор компилятора](#choosing_a_compiler).  
