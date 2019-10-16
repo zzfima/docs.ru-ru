@@ -2,45 +2,45 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: fef90beebf1c2723c767eaf5155542ad40d5fcb8
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bdee9281fd406a3d029d3a10536cbdd48d2f7a58
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249731"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319417"
 ---
-# <a name="overlaps-entity-sql"></a><span data-ttu-id="f0492-102">OVERLAPS (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f0492-102">OVERLAPS (Entity SQL)</span></span>
-<span data-ttu-id="f0492-103">Определяет, содержат ли две коллекции общие элементы.</span><span class="sxs-lookup"><span data-stu-id="f0492-103">Determines whether two collections have common elements.</span></span>  
+# <a name="overlaps-entity-sql"></a><span data-ttu-id="18ee9-102">OVERLAPS (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="18ee9-102">OVERLAPS (Entity SQL)</span></span>
+<span data-ttu-id="18ee9-103">Определяет, содержат ли две коллекции общие элементы.</span><span class="sxs-lookup"><span data-stu-id="18ee9-103">Determines whether two collections have common elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0492-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f0492-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18ee9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="18ee9-104">Syntax</span></span>  
   
-```  
+```sql  
 expression OVERLAPS expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f0492-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="f0492-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="18ee9-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="18ee9-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="f0492-106">Любое допустимое выражение запроса, которое возвращает коллекцию для сравнения с коллекцией, возвращенной другим выражением запроса.</span><span class="sxs-lookup"><span data-stu-id="f0492-106">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span> <span data-ttu-id="f0492-107">Все выражения должны иметь тот же тип, что и аргумент `expression`, или принадлежать к базовому или производному типу для типа этого аргумента.</span><span class="sxs-lookup"><span data-stu-id="f0492-107">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
+ <span data-ttu-id="18ee9-106">Любое допустимое выражение запроса, которое возвращает коллекцию для сравнения с коллекцией, возвращенной другим выражением запроса.</span><span class="sxs-lookup"><span data-stu-id="18ee9-106">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span> <span data-ttu-id="18ee9-107">Все выражения должны иметь тот же тип, что и аргумент `expression`, или принадлежать к базовому или производному типу для типа этого аргумента.</span><span class="sxs-lookup"><span data-stu-id="18ee9-107">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f0492-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f0492-108">Return Value</span></span>  
- <span data-ttu-id="f0492-109">`true` , если две коллекции содержат общие элементы; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="f0492-109">`true` if the two collections have common elements; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="18ee9-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="18ee9-108">Return Value</span></span>  
+ <span data-ttu-id="18ee9-109">`true` , если две коллекции содержат общие элементы; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="18ee9-109">`true` if the two collections have common elements; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f0492-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="f0492-110">Remarks</span></span>  
- <span data-ttu-id="f0492-111">Перекрытия обеспечивают функционально эквивалент следующего:</span><span class="sxs-lookup"><span data-stu-id="f0492-111">OVERLAPS provides functionally equivalent to the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18ee9-110">Заметки</span><span class="sxs-lookup"><span data-stu-id="18ee9-110">Remarks</span></span>  
+ <span data-ttu-id="18ee9-111">Перекрытия обеспечивают функционально эквивалент следующего:</span><span class="sxs-lookup"><span data-stu-id="18ee9-111">OVERLAPS provides functionally equivalent to the following:</span></span>  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- <span data-ttu-id="f0492-112">Оператор OVERLAPS - это один из операторов работы с наборами в языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f0492-112">OVERLAPS is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="f0492-113">Все операторы работы с наборами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выполняются слева направо.</span><span class="sxs-lookup"><span data-stu-id="f0492-113">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="f0492-114">Сведения о приоритетах для [!INCLUDE[esql](../../../../../../includes/esql-md.md)] операторов набора см. в разделе [except](except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="f0492-114">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](except-entity-sql.md).</span></span>  
+ <span data-ttu-id="18ee9-112">Оператор OVERLAPS - это один из операторов работы с наборами в языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="18ee9-112">OVERLAPS is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="18ee9-113">Все операторы работы с наборами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выполняются слева направо.</span><span class="sxs-lookup"><span data-stu-id="18ee9-113">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="18ee9-114">Сведения о приоритетах для операторов установки [!INCLUDE[esql](../../../../../../includes/esql-md.md)] см. в разделе [except](except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="18ee9-114">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](except-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f0492-115">Пример</span><span class="sxs-lookup"><span data-stu-id="f0492-115">Example</span></span>  
- <span data-ttu-id="f0492-116">В следующем запросе Entity SQL оператор OVERLAPS используется для определения, имеют ли две коллекции общее значение.</span><span class="sxs-lookup"><span data-stu-id="f0492-116">The following Entity SQL query uses the OVERLAPS operator to determines whether two collections have a common value.</span></span> <span data-ttu-id="f0492-117">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="f0492-117">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f0492-118">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="f0492-118">To compile and run this, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="18ee9-115">Пример</span><span class="sxs-lookup"><span data-stu-id="18ee9-115">Example</span></span>  
+ <span data-ttu-id="18ee9-116">В следующем запросе Entity SQL оператор OVERLAPS используется для определения, имеют ли две коллекции общее значение.</span><span class="sxs-lookup"><span data-stu-id="18ee9-116">The following Entity SQL query uses the OVERLAPS operator to determines whether two collections have a common value.</span></span> <span data-ttu-id="18ee9-117">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="18ee9-117">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="18ee9-118">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="18ee9-118">To compile and run this, follow these steps:</span></span>  
   
-1. <span data-ttu-id="f0492-119">Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.</span><span class="sxs-lookup"><span data-stu-id="f0492-119">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="18ee9-119">Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="18ee9-119">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="f0492-120">Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="f0492-120">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="18ee9-120">Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="18ee9-120">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
- [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
+ [!code-sql[DP EntityServices Concepts#OVERLAPS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#overlaps)]  
   
-## <a name="see-also"></a><span data-ttu-id="f0492-121">См. также</span><span class="sxs-lookup"><span data-stu-id="f0492-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18ee9-121">См. также</span><span class="sxs-lookup"><span data-stu-id="18ee9-121">See also</span></span>
 
-- [<span data-ttu-id="f0492-122">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="f0492-122">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="18ee9-122">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="18ee9-122">Entity SQL Reference</span></span>](entity-sql-reference.md)
