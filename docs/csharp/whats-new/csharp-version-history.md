@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956637"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002690"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -22,7 +22,7 @@ ms.locfileid: "71956637"
 - [C# 7.3](csharp-7-3.md).
   - Версия C# 7.3 появилась в [Visual Studio 2017 версии 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 - [C# 7.2](csharp-7-2.md).
-  - Версия C# 7.2 появилась в [Visual Studio 2017 версии 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
+  - Версия C# 7.2 появилась в [Visual Studio 2017 версии 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 - [C# 7.1](csharp-7-1.md).
   - Версия C# 7.1 появилась в [Visual Studio 2017 версии 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
@@ -173,4 +173,4 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 Но при этом сфера применения C# продолжает расширяться. Теперь .NET Core подходит для любой операционной системы, а также уверенно движется в направлении облачных технологий и портативности.  Очевидно, что разработчики активно занимаются этими новыми возможностями наравне с добавлением новых функций.
 
-_Статья_ [_изначально опубликована в блоге NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, с разрешения Эрика Дитриха (Erik Dietrich) и Патрика Смачиа (Patrick Smacchia)._
+_Статья_ [_изначально опубликована в блоге NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, с разрешения Эрика Дитриха (Erik Dietrich) и Патрика Смачиа (Patrick Smacchia)._

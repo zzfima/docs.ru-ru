@@ -2,14 +2,14 @@
 title: Упаковка дистрибутивов .NET Core
 description: Узнайте, как создавать пакеты .NET Core, присваивать им имена и управлять их версиями для распространения.
 author: tmds
-ms.date: 03/02/2018
+ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394164"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250139"
 ---
 # <a name="net-core-distribution-packaging"></a>Упаковка дистрибутивов .NET Core
 
@@ -23,37 +23,37 @@ ms.locfileid: "70394164"
 Установка .NET Core включает несколько компонентов, которые располагаются в файловой системе следующим образом:
 
 ```
-.
+{dotnet_root}                                     (*)
 ├── dotnet                       (1)
 ├── LICENSE.txt                  (8)
 ├── ThirdPartyNotices.txt        (8)
-├── host
-│   └── fxr
+├── host                                          (*)
+│   └── fxr                                       (*)
 │       └── <fxr version>        (2)
-├── sdk
+├── sdk                                           (*)
 │   ├── <sdk version>            (3)
-│   └── NuGetFallbackFolder      (4)
-├── packs
-│   ├── Microsoft.AspNetCore.App.Ref
+│   └── NuGetFallbackFolder      (4)              (*)
+├── packs                                         (*)
+│   ├── Microsoft.AspNetCore.App.Ref              (*)
 │   │   └── <aspnetcore ref version>     (11)
-│   ├── Microsoft.NETCore.App.Ref
+│   ├── Microsoft.NETCore.App.Ref                 (*)
 │   │   └── <netcore ref version>        (12)
-│   ├── Microsoft.NETCore.App.Host.<rid>
+│   ├── Microsoft.NETCore.App.Host.<rid>          (*)
 │   │   └── <apphost version>            (13)
-│   ├── Microsoft.WindowsDesktop.App.Ref
+│   ├── Microsoft.WindowsDesktop.App.Ref          (*)
 │   │   └── <desktop ref version>        (14)
-│   └── NETStandard.Library.Ref
+│   └── NETStandard.Library.Ref                   (*)
 │       └── <netstandard version>        (15)
-├── shared
-│   ├── Microsoft.NETCore.App
+├── shared                                        (*)
+│   ├── Microsoft.NETCore.App                     (*)
 │   │   └── <runtime version>     (5)
-│   ├── Microsoft.AspNetCore.App
+│   ├── Microsoft.AspNetCore.App                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   ├── Microsoft.AspNetCore.All
+│   ├── Microsoft.AspNetCore.All                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   └── Microsoft.WindowsDesktop.App
+│   └── Microsoft.WindowsDesktop.App              (*)
 │       └── <desktop app version> (7)
-└── templates
+└── templates                                     (*)
 │   └── <templates version>      (17)
 /
 ├── etc/dotnet
@@ -94,9 +94,11 @@ ms.locfileid: "70394164"
 
 - (15) **NETStandard.Library.Ref** описывает API `x.y` netstandard. Эти файлы используются при компиляции для этого целевого объекта.
 
-- (16) **/etc/dotnet/install_location** — это файл, содержащий полный путь к папке, в которой находится двоичный файл узла `dotnet`. Путь может заканчиваться новой строкой. Если корневым элементом является `/usr/share/dotnet`, добавлять этот файл не нужно.
+- (16) **/etc/dotnet/install_location** — это файл, содержащий полный путь для `{dotnet_root}`. Путь может заканчиваться новой строкой. Если корневым элементом является `/usr/share/dotnet`, добавлять этот файл не нужно.
 
 - (17) **templates** содержат шаблоны, используемые пакетом SDK. Например, `dotnet new` находит шаблоны проектов.
+
+Папки, помеченные `(*)`, используются несколькими пакетами. Для некоторых форматов пакетов (например, `rpm`) требуется специальная обработка таких папок. Этим должен заниматься специалист по обслуживанию пакетов.
 
 ## <a name="recommended-packages"></a>Рекомендуемые пакеты
 
@@ -113,7 +115,7 @@ ms.locfileid: "70394164"
   - **Версия:** \<версия среды выполнения>
   - **Пример:** dotnet-sdk-2.1
   - **Содержит:** (3),(4)
-  - **Зависимости:** `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
+  - **Зависимости:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]` — устанавливает конкретную среду выполнения ASP.NET Core
   - **Версия:** \<версия среды выполнения aspnetcore>
@@ -130,13 +132,13 @@ ms.locfileid: "70394164"
   - **Версия:** \<версия среды выполнения>
   - **Пример:** dotnet-runtime-2.1
   - **Содержит:** (5)
-  - **Зависимости:** `dotnet-hostfxr:<runtime version>+`, `dotnet-runtime-deps-[major].[minor]`
+  - **Зависимости:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
-- `dotnet-hostfxr` — зависимость
+- `dotnet-hostfxr-[major].[minor]` — зависимость
   - **Версия:** \<версия среды выполнения>
-  - **Пример:** dotnet-hostfxr
+  - **Пример:** dotnet-hostfxr-3.0
   - **Содержит:** (2)
-  - **Зависимости:** `host:<runtime version>+`
+  - **Зависимости:** `dotnet-host`
 
 - `dotnet-host` — зависимость
   - **Версия:** \<версия среды выполнения>
@@ -155,7 +157,7 @@ ms.locfileid: "70394164"
   - **Версия:** \<версия среды выполнения aspnetcore>
   - **Содержит:** (11)
 
-- `netstandard-targeting-pack-[major].[minor]` — нацеливание на версию netstandard
+- `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` — нацеливание на версию netstandard
   - **Версия:** \<версия пакета SDK>
   - **Содержит:** (15)
 
@@ -165,7 +167,7 @@ ms.locfileid: "70394164"
 
 Для использования `dotnet-runtime-deps-[major].[minor]` необходимо понимать _зависимости для конкретных дистрибутивов_. Так как система сборки дистрибутива может наследовать этот пакет автоматически, он является необязательным. В этом случае эти зависимости добавляются прямо в пакет `dotnet-runtime-[major].[minor]`.
 
-Если содержимое пакета находится в папке, которой присвоена версия, имя пакета `[major].[minor]` совпадает с именем этой папки. Для всех пакетов, кроме `netstandard-targeting-pack-[major].[minor]`, также обязательно совпадение версий .NET Core.
+Если содержимое пакета находится в папке, которой присвоена версия, имя пакета `[major].[minor]` совпадает с именем этой папки. Для всех пакетов, кроме `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, также обязательно совпадение версий .NET Core.
 
 Для зависимостей между пакетами должно действовать следующее применимое к версиям правило: _больше или равно_. Например, для `dotnet-sdk-2.2:2.2.401` требуется `aspnetcore-runtime-2.2 >= 2.2.6`. В этом случае пользователь может обновить свою установку с помощью корневого пакета (например, `dnf update dotnet-sdk-2.2`).
 

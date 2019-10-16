@@ -2,12 +2,12 @@
 title: Рабочий процесс разработки для приложений Docker
 description: Сведения о рабочем процессе для разработки приложений Docker. Начнем по шагам, рассмотрим подробности оптимизации файлов Dockerfile и закончим на упрощенном рабочем процессе, доступном при использовании Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040212"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031881"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -169,7 +169,7 @@ Dockerfile похож на пакетный сценарий. Он похож н
 
 Возможно, лучший способ понять, как работает многоэтапный процесс, — это пройти в файле Dockerfile по каждой строке; давайте начнем с базового файла Dockerfile, созданного с помощью Visual Studio при добавлении поддержки Docker в проект, чтобы позже внести некоторые оптимизации.
 
-Исходный файл Dockerfile может выглядеть следующим образом:The initial Dockerfile might look something like this:
+Исходный файл Dockerfile может выглядеть следующим образом:
 
 ```Dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base

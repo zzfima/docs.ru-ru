@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415927"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291590"
 ---
 # <a name="tour-of-net"></a>Обзор .NET
 
@@ -55,7 +55,7 @@ ms.locfileid: "54415927"
 
 Некоторые объекты ссылаются на *неуправляемые ресурсы*. Неуправляемые ресурсы — это ресурсы, которые не обслуживаются средой выполнения .NET автоматически. Например, к неуправляемым ресурсам относятся дескрипторы файлов. Объект <xref:System.IO.FileStream> — управляемый, но он ссылается на дескриптор файла, который является неуправляемым ресурсом. После окончания работы с <xref:System.IO.FileStream> нужно освободить дескриптор файла.
 
-В среде .NET объекты, которые ссылаются на неуправляемые ресурсы, реализуют интерфейс <xref:System.IDisposable>. После окончания работы с объектом вызовите метод <xref:System.IDisposable.Dispose> объекта, который отвечает за освобождение неуправляемых ресурсов. В языках .NET для таких объектов есть удобный синтаксис `using`, как показано в следующем примере:
+В среде .NET объекты, которые ссылаются на неуправляемые ресурсы, реализуют интерфейс <xref:System.IDisposable>. После окончания работы с объектом вызовите метод <xref:System.IDisposable.Dispose> объекта, который отвечает за освобождение неуправляемых ресурсов. В языках .NET для таких объектов есть удобная [инструкция `using`](../csharp/language-reference/keywords/using.md), как показано в следующем примере:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

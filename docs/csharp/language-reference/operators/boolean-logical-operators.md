@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698681"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290944"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Логические операторы (справочник по C#)
 
@@ -51,11 +51,11 @@ ms.locfileid: "71698681"
 
 ## <a name="logical-negation-operator-"></a>Оператор логического отрицания !
 
-Оператор `!` выполняет логическое отрицание операнда, возвращая `true`, если операнд имеет значение `false`, и `false`, если операнд имеет значение `true`.
+Унарный префиксный оператор `!` выполняет логическое отрицание операнда, возвращая `true`, если операнд имеет значение `false`, и `false`, если операнд имеет значение `true`.
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-Начиная с C# 8.0, унарный постфиксный оператор `!` допускает значение null. При включенном контексте аннотаций, допускающем значение null, он используется для объявления того, что выражение `x` для ссылочного типа, допускающего значение null, не равно нулю: `x!`. Дополнительные сведения см. в статье [Ссылочные типы, допускающие значение NULL](../../nullable-references.md).
+Начиная с C# 8.0 унарный постфиксный оператор `!` [допускает значение NULL](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Оператор логического И &amp;
 
@@ -120,13 +120,13 @@ ms.locfileid: "71698681"
 |п|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|Ложь|false|true|  
 |true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
+|Ложь|true|Ложь|true|  
+|Ложь|Ложь|Ложь|Ложь|  
+|Ложь|null|Ложь|null|  
 |null|true|null|true|  
-|null|false|false|null|  
+|null|Ложь|Ложь|null|  
 |null|null|null|null|  
 
 Поведение этих операторов отличается от типичного поведения операторов, допускающих значение NULL. Как правило, оператор, который определяется для операндов типа значения, можно также использовать с соответствующими операндами типа, допускающего значение NULL. Такой оператор возвращает `null`, если какой-либо из операндов имеет значение `null`. При этом операторы `&` и `|` могут возвращать отличное от NULL значение, даже если один из операндов имеет значение `null`. См. подробнее о поведении [операторов](../../programming-guide/nullable-types/using-nullable-types.md#operators), допускающих значение NULL, в руководстве по [использованию типов, допускающих значение NULL](../../programming-guide/nullable-types/using-nullable-types.md).

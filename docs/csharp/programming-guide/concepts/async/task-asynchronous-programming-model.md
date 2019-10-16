@@ -2,12 +2,12 @@
 title: Модель асинхронного программирования задач (TAP) с использованием ключевых слов async и await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167904"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291338"
 ---
 # <a name="task-asynchronous-programming-model"></a>Асинхронная модель программирования
 
@@ -42,22 +42,31 @@ ms.locfileid: "70167904"
 
 Ниже приводится пример асинхронного метода. Почти все элементы кода должны быть вам знакомы.
 
-Полный файл примера Windows Presentation Foundation представлен в конце раздела. Также его можно скачать на странице [примера асинхронной работы из руководства по использованию ключевых слов Async и Await](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).
+Полный файл примера Windows Presentation Foundation представлен в конце раздела. Также его можно скачать на странице [примера асинхронной работы из руководства по использованию ключевых слов Async и Await](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/).
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{
+{ 
     // You need to add a reference to System.Net.Http to declare client.
-    using (HttpClient client = new HttpClient())
-    {
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
+    var client = new HttpClient();
 
-        DoIndependentWork();
+    // GetStringAsync returns a Task<string>. That means that when you await the
+    // task you'll get a string (urlContents).
+    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com/dotnet");
 
-        string urlContents = await getStringTask;
+    // You can do work here that doesn't rely on the string from GetStringAsync.
+    DoIndependentWork();
 
-        return urlContents.Length;
-    }
+    // The await operator suspends AccessTheWebAsync.
+    //  - AccessTheWebAsync can't continue until getStringTask is complete.
+    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
+    //  - Control resumes here when getStringTask is complete. 
+    //  - The await operator then retrieves the string result from getStringTask.
+    string urlContents = await getStringTask;
+
+    // The return statement specifies an integer result.
+    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
+    return urlContents.Length;
 }
 ```
 
@@ -75,23 +84,18 @@ async Task<int> AccessTheWebAsync()
 Если метод `AccessTheWebAsync` не выполняет никакие операции между вызовом метода `GetStringAsync` и его завершением, можно упростить код, описав вызов и ожидание с помощью следующего простого оператора.
 
 ```csharp
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
+string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dotnet");
 ```
 
-Далее поясняется, почему код предыдущего примера является асинхронным методом.
+Далее поясняется, почему код предыдущего примера является асинхронным методом:
 
 - Сигнатура метода включает модификатор `async`.
-
 - Имя асинхронного метода, как правило, оканчивается суффиксом Async.
-
 - Возвращаемое значение имеет один из следующих типов:
 
   - <xref:System.Threading.Tasks.Task%601>, если метод включает оператор return с операндом типа `TResult`.
-
   - <xref:System.Threading.Tasks.Task>, если метод не имеет оператора Return или имеет оператор Return без операнда.
-
   - `void`, если вы создаете асинхронный обработчик событий.
-
   - Любой другой тип, имеющий метод `GetAwaiter` (начиная с C# 7.0).
 
   Дополнительные сведения см. в [описании типов возвращаемого значения и параметров](#BKMK_ReturnTypesandParameters).
@@ -110,7 +114,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 Числа в схеме соответствуют следующим шагам, запускаемым при нажатии пользователем кнопки запуска.
 
-1. Обработчик событий вызывает и ожидает Async-метод `AccessTheWebAsync`.
+1. Обработчик событий вызывает и ожидает асинхронный метод `AccessTheWebAsync`.
 
 2. `AccessTheWebAsync` создает экземпляр <xref:System.Net.Http.HttpClient> и вызывает асинхронный метод <xref:System.Net.Http.HttpClient.GetStringAsync%2A>, чтобы загрузить содержимое веб-сайта в виде строки.
 
@@ -136,7 +140,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 8. Если `AccessTheWebAsync` содержит строковый результат, метод может вычислить длину строки. Затем работа `AccessTheWebAsync` также завершена, и ожидающий обработчик событий может возобновить работу. В полном примере в конце этого раздела видно, что обработчик событий извлекает значение длины и выводит результат.
 Если вы недавно занимаетесь асинхронным программированием, рекомендуем обратить внимание на различия между синхронным и асинхронным поведением. Синхронный метод возвращает управление, когда его работа завершается (шаг 5), тогда как асинхронный метод возвращает значение задачи, когда его работа приостанавливается (шаги 3 и 6). Когда асинхронный метод в конечном счете завершает работу, задача помечается как завершенная и результат, при его наличии, сохраняется в задаче.
 
-Дополнительные сведения о потоке управления см. в статье [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Поток управления в асинхронных программах на C#).
+Дополнительные сведения о потоке управления см. в статье [Control Flow in Async Programs (C#)](control-flow-in-async-programs.md) (Поток управления в асинхронных программах на C#).
 
 ## <a name="BKMK_APIAsyncMethods"></a> Async-методы API-интерфейсов
 
@@ -158,16 +162,15 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 - Асинхронный метод сможет использовать [await](../../../language-reference/operators/await.md) для обозначения точек приостановки. Оператор `await` сообщает компилятору, что асинхронный метод не может выполняться после этой точки до завершения ожидаемого асинхронного процесса. На это время управление возвращается вызывающему объекту асинхронного метода.
 
-     Приостановка асинхронного метода на выражении `await` не считается выходом из метода и блоки `finally` не выполняются.
+     Приостановка асинхронного метода на выражении `await` не считается выходом из метода, и блоки `finally` не выполняются.
 
 - Сам обозначенный асинхронный метод может ожидаться вызывающими его методами.
 
-Асинхронный метод обычно содержит одно или несколько вхождений оператора `await`, но отсутствие выражений `await` не вызывает ошибок компилятора. Если асинхронный метод не использует оператор `await` для обозначения точки приостановки, метод выполняется как синхронный, независимо от наличия модификатора `async`. При компиляции таких методов выдается предупреждение.
+Асинхронный метод обычно содержит одно или несколько вхождений оператора `await`, но отсутствие выражений `await` не вызывает ошибок компилятора. Если асинхронный метод не использует оператор `await` для обозначения точки приостановки, метод выполняется как синхронный независимо от наличия модификатора `async`. При компиляции таких методов выдается предупреждение.
 
 `async` и `await` являются контекстными ключевыми словами. Дополнительные сведения и примеры см. в следующих разделах:
 
 - [async](../../../language-reference/keywords/async.md)
-
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Типы и параметры возвращаемого значения
@@ -180,7 +183,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 
 В C# начиная с версии 7.0 также можно указывать любые другие типы операторов return, при условии, что тип содержит метод `GetAwaiter`. Пример такого типа — <xref:System.Threading.Tasks.ValueTask%601>. Он доступен в NuGet-пакете [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
 
-В следующем примере показано объявление и вызов метода, который возвращает <xref:System.Threading.Tasks.Task%601> или <xref:System.Threading.Tasks.Task>.
+В следующем примере показано объявление и вызов метода, который возвращает <xref:System.Threading.Tasks.Task%601> или <xref:System.Threading.Tasks.Task>:
 
 ```csharp
 // Signature specifies Task<TResult>
@@ -225,11 +228,8 @@ await GetTaskAsync();
 При программировании в среде выполнения Windows асинхронные API-интерфейсы имеют один из следующих возвращаемых типов, которые похожи на задачи.
 
 - <xref:Windows.Foundation.IAsyncOperation%601>, что соответствует <xref:System.Threading.Tasks.Task%601>
-
 - <xref:Windows.Foundation.IAsyncAction>, что соответствует <xref:System.Threading.Tasks.Task>
-
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
-
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
 ## <a name="BKMK_NamingConvention"></a> Соглашение об именовании
@@ -257,88 +257,9 @@ await GetTaskAsync();
 
 ## <a name="BKMK_CompleteExample"></a> Полный пример
 
-Ниже представлен код файла MainWindow.xaml.cs из приложения Windows Presentation Foundation (WPF), которое обсуждается в этой статье. Вы можете скачать [пример использования Async из руководства по использованию ключевых слов Async и Await](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).
+Ниже представлен код файла *MainWindow.xaml.cs* из приложения WPF, которое обсуждается в этой статье. Вы можете скачать [пример использования Async из руководства по использованию ключевых слов Async и Await](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/).
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http;
-using System.Net.Http;
-
-namespace AsyncFirstExample
-{
-    public partial class MainWindow : Window
-    {
-        // Mark the event handler with async so you can use await in it.
-        private async void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Call and await separately.
-            //Task<int> getLengthTask = AccessTheWebAsync();
-            //// You can do independent work here.
-            //int contentLength = await getLengthTask;
-
-            int contentLength = await AccessTheWebAsync();
-
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-
-        // Three things to note in the signature:
-        //  - The method has an async modifier.
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)
-        //    Here, it is Task<int> because the return statement returns an integer.
-        //  - The method name ends in "Async."
-        async Task<int> AccessTheWebAsync()
-        {
-            // You need to add a reference to System.Net.Http to declare client.
-            using (HttpClient client = new HttpClient())
-            {
-                    // GetStringAsync returns a Task<string>. That means that when you await the
-                    // task you'll get a string (urlContents).
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
-
-                    // You can do work here that doesn't rely on the string from GetStringAsync.
-                    DoIndependentWork();
-
-                    // The await operator suspends AccessTheWebAsync.
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-                    //  - Control resumes here when getStringTask is complete.
-                    //  - The await operator then retrieves the string result from getStringTask.
-                    string urlContents = await getStringTask;
-
-                    // The return statement specifies an integer result.
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-                    return urlContents.Length;
-            }
-        }
-
-        void DoIndependentWork()
-        {
-            resultsTextBox.Text += "Working . . . . . . .\r\n";
-        }
-    }
-}
-
-// Sample Output:
-
-// Working . . . . . . .
-
-// Length of the downloaded string: 25035.
-```
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
 
 ## <a name="see-also"></a>См. также
 

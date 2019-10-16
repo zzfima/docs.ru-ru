@@ -2,12 +2,12 @@
 title: Реализация прикладного уровня микрослужб с помощью веб-интерфейсов API
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о внедрении зависимостей и шаблонах медиатора, а также их реализации на прикладном уровне веб-API.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834366"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249736"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Реализация прикладного уровня для микрослужб с помощью веб-API
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Реализация идемпотентных команд
 
-Более сложным примером по сравнению с приведенным выше в приложении **eShopOnContainers** является отправка объекта CreateOrderCommand из микрослужбы размещения заказов. Однако поскольку бизнес-процесс размещения заказов является немного более сложным и в данном случае он фактически начинается в микрослужбе Basket, действие отправки объекта CreateOrderCommand выполняется из обработчика событий интеграции с именем >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs), а не из простого контроллера WebAPI, вызываемого из клиентского приложения, как в предыдущем более простом примере.
+Более сложным примером по сравнению с приведенным выше в приложении **eShopOnContainers** является отправка объекта CreateOrderCommand из микрослужбы размещения заказов. Однако поскольку бизнес-процесс размещения заказов является немного более сложным и в данном случае он фактически начинается в микрослужбе Basket, действие отправки объекта CreateOrderCommand выполняется из обработчика событий интеграции с именем [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs), а не из простого контроллера WebAPI, вызываемого из клиентского приложения, как в предыдущем более простом примере.
 
 Тем не менее действие отправки команды в MediatR по многом схоже, как показано в приведенном ниже коде.
 

@@ -2,12 +2,12 @@
 title: Реализация операций чтения и запросов в микрослужбе CQRS
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация стороны запросов CQRS в микрослужбе заказов в eShopOnContainers с помощью Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674341"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275786"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Реализация операций чтения и запросов в микрослужбе CQRS
 
@@ -118,7 +118,7 @@ public class OrderQueries : IOrderQueries
         using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
-            var result = await connection.QueryAsync<OrderSummary>(
+            return await connection.QueryAsync<OrderSummary>(
                   @"SELECT o.[Id] as ordernumber, 
                   o.[OrderDate] as [date],os.[Name] as [status], 
                   SUM(oi.units*oi.unitprice) as total
@@ -185,13 +185,13 @@ public class OrderSummary
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Dapper** \
+- **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman (Джули Лерман). Точки данных — Dapper, Entity Framework и гибридные приложения (статья в журнале MSDN)**  \
-  <https://msdn.microsoft.com/magazine/mt703432.aspx>
+- **Julie Lerman (Джули Лерман). Точки данных — Dapper, Entity Framework и гибридные приложения (статья в журнале MSDN)**  
+  <https://msdn.microsoft.com/magazine/mt703432>
 
-- **Страницы справки по веб-API ASP.NET Core с использованием Swagger** \
+- **Страницы справки по веб-API ASP.NET Core с использованием Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]

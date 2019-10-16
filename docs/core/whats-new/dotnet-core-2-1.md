@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834262"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031850"
 ---
 # <a name="whats-new-in-net-core-21"></a>Новые возможности .NET Core 2.1
 
@@ -213,7 +213,7 @@ dotnet tool install -g dotnetsay
 
 - Статический метод <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> заполняет <xref:System.Span%601> случайными значениями.
 
-- Теперь <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> поддерживается в maxOS и Linux.
+- Теперь <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> поддерживается в macOS и Linux.
 
 - Эллиптические кривые Диффи—Хелмана (ECDH) теперь доступны в семействе классов <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>. Контактная зона сохраняется такой же, как в .NET Framework.
 

@@ -2,12 +2,12 @@
 title: Команда dotnet restore
 description: Вы узнаете, как восстановить зависимости и связанные с проектом средства при помощи команды dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117597"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275747"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -137,7 +137,7 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `minimal`.
 
 `--interactive`
 
@@ -183,7 +183,7 @@ dotnet restore [-h|--help]
 
 `--verbosity <LEVEL>`
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `minimal`.
 
 ---
 
@@ -205,6 +205,6 @@ dotnet restore [-h|--help]
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-Восстановление зависимостей и средств для проекта в текущем каталоге с выводом минимального объема выходных данных:
+Восстановление зависимостей и средств для проекта в текущем каталоге с подробными выходными данными:
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

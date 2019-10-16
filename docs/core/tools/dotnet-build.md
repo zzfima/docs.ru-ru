@@ -1,13 +1,13 @@
 ---
 title: Команда dotnet build
 description: Команда dotnet build выполняет сборку проекта и всех его зависимостей.
-ms.date: 08/08/2019
-ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/07/2019
+ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117761"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250196"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -66,9 +66,9 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration {CONFIGURATION}`**
 
-  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+  Определяет конфигурацию сборки. По умолчанию для большинства проектов используется `Debug`, но можно переопределить параметры конфигурации сборки в проекте.
 
 * **`-f|--framework <FRAMEWORK>`**
 

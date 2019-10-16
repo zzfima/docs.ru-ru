@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895271"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180197"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Основы сборки мусора
 
@@ -176,7 +176,7 @@ ms.locfileid: "70895271"
 
 На следующем рисунке показан поток, запускающий сборку мусора и вызывающий приостановку других потоков.
 
-![Когда поток запускает сборку мусора](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") Поток, запускающий сборку мусора
+![Когда поток запускает сборку мусора](../../../docs/standard/garbage-collection/media/gc-triggered.png "Когда поток запускает сборку мусора")
 
 [К началу](#top)
 
@@ -208,7 +208,7 @@ ms.locfileid: "70895271"
 
 На рисунке ниже показаны выделенные потоки, выполняющие сборку мусора на сервере.
 
-![Потоки серверной сборки мусора](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Серверная сборка мусора
+![Потоки серверной сборки мусора](../../../docs/standard/garbage-collection/media/gc-server.png "Потоки серверной сборки мусора")
 
 ### <a name="configuring-garbage-collection"></a>Настройка сборки мусора
 
@@ -262,7 +262,7 @@ ms.locfileid: "70895271"
 
 На следующем рисунке показана параллельная сборка мусора на отдельном выделенном потоке.
 
-![Параллельные потоки сборки мусора](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") Параллельная сборка мусора
+![Параллельные потоки сборки мусора](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Параллельные потоки сборки мусора")
 
 [К началу](#top)
 
@@ -283,7 +283,7 @@ ms.locfileid: "70895271"
 
 На следующем рисунке показана фоновая сборка мусора в отдельном выделенном потоке на рабочей станции.
 
-![Схема, иллюстрирующая фоновую сборку мусора на рабочей станции.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Схема, на которой показана фоновая сборка мусора рабочей станции.](./media/fundamentals/background-workstation-garbage-collection.png "Схема, на которой показана фоновая сборка мусора рабочей станции.")
 
 [К началу](#top)
 
@@ -295,7 +295,7 @@ ms.locfileid: "70895271"
 
 На следующем рисунке показана фоновая сборка мусора в отдельном выделенном потоке на сервере.
 
-![Схема, иллюстрирующая фоновую сборку мусора на сервере.](./media/fundamentals/background-server-garbage-collection.png)
+![Схема, на которой показана фоновая сборка мусора сервера.](./media/fundamentals/background-server-garbage-collection.png "Схема, на которой показана фоновая сборка мусора сервера.")
 
 ## <a name="see-also"></a>См. также
 
