@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875990"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321379"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Указание поведения службы во время выполнения
-После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. Дополнительные сведения о настройке приложения службы, см. в разделе [Настройка служб](../../../docs/framework/wcf/configuring-services.md).  
+После создания ([Designing Service Contracts](designing-service-contracts.md)) и реализации ([Implementing Service Contracts](implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. Дополнительные сведения о настройке приложения службы см. в разделе [Настройка служб](configuring-services.md).  
   
 ## <a name="overview"></a>Обзор  
  Контракт определяет входные данные, выходные данные, типы данных и возможности службы этого типа. При реализации контракта службы создается класс, которой, при настройке с привязкой к адресу, выполняет реализуемый им контракт. Сведения о контракте, привязке и адресе известны клиенту; без этих сведений клиент не может пользоваться службой.  
   
- Однако конкретные сведения об операциях, такие как сведения о потоках или управлении экземплярами, не видны клиентам. После реализации контракта службы можно настроить большое количество характеристик операций с помощью *поведений*. Поведения — это объекты, изменяющие среды выполнения Windows Communication Foundation (WCF), путем настройки ее свойств или путем добавления пользовательского типа в среду выполнения. Дополнительные сведения об изменении среды выполнения путем создания пользовательских поведений см. в разделе [расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Однако конкретные сведения об операциях, такие как сведения о потоках или управлении экземплярами, не видны клиентам. После реализации контракта службы можно настроить большое количество характеристик операций с помощью *поведений*. Поведение — это объекты, изменяющие среду выполнения Windows Communication Foundation (WCF) путем установки свойства среды выполнения или путем вставки в среду выполнения типа настройки. Дополнительные сведения об изменении среды выполнения путем создания определяемых пользователем поведений см. [в разделе Расширение ServiceHost и уровня модели службы](./extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> и <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> являются наиболее широко используемыми поведениями, раскрывающими наиболее часто запрашиваемые функции операции. Так как они являются атрибутами, они применяются к реализации службы или операции. Другие поведения, такие как <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, обычно применяются с помощью файла конфигурации приложения, хотя их можно использовать и программно.  
   
- В этом разделе содержится обзор <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> атрибуты, описываются различные области, в которых могут работать поведения и приводится краткое описание многих предоставляемых системой поведений в различных областях, которые могут представлять интерес для разработчиков, WCF.  
+ В этом разделе приводятся общие сведения об атрибутах <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute>, описываются различные области, в которых могут работать поведения, и приводится краткое описание многих предоставляемых системой поведений в различных областях, которые могут представлять интерес для WCF. разработки.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>Атрибуты ServiceBehaviorAttribute и OperationBehaviorAttribute  
  Наиболее важными поведениями являются атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> , которые можно использовать для управления указанными ниже характеристиками.  
@@ -61,7 +61,7 @@ ms.locfileid: "65875990"
   
  Для создания такой службы используйте конструктор <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> . Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> , если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор (например, если он не реализует открытый конструктор по умолчанию, не имеющий параметров).  
   
- Обратите внимание на то, что когда объект передается этот конструктор, некоторые функции, относящиеся к Windows Communication Foundation (WCF) поведения при создании экземпляров работают по-разному. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр хорошо известного объекта. Аналогичным образом игнорируются все другие механизмы освобождения экземпляров. Класс <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
+ Обратите внимание, что при указании объекта для этого конструктора некоторые функции, связанные с поведением создания экземпляров Windows Communication Foundation (WCF), работают по-разному. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр хорошо известного объекта. Аналогичным образом игнорируются все другие механизмы освобождения экземпляров. Класс <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Другие поведения службы, конечной точки, контракта и операции  
  Поведения службы, такие как атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> , действуют во всей службе. Например, если для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> задано значение <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> , необходимо самостоятельно обрабатывать вопросы синхронизации потоков внутри каждой операции службы. Поведения конечной точки действуют на уровне конечной точки; многие из предоставляемых системой поведений конечных точек предназначены для функциональных возможностей клиентов. Поведения контракта действуют на уровне контракта, а поведения операции изменяют доставку операции.  
@@ -77,50 +77,50 @@ ms.locfileid: "65875990"
 ### <a name="service-behaviors"></a>Поведения служб  
  Следующие поведения работают на уровне служб.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Применяется к службе WCF для указания того, можно ли запустить эту службу в режиме совместимости ASP.NET.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> Применяется к службе WCF, чтобы указать, может ли эта служба запускаться в режиме совместимости ASP.NET.  
   
-- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Управляет тем, как служба авторизует запросы клиентов.  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Управляет тем, как служба авторизует запросы клиентов.  
   
-- <xref:System.ServiceModel.Description.ServiceCredentials>. Настраивает учетные данные службы. Этот класс используется для указания учетных данных для службы, таких как сертификат X.509.  
+- <xref:System.ServiceModel.Description.ServiceCredentials> Настраивает учетные данные службы. Этот класс используется для указания учетных данных для службы, таких как сертификат X.509.  
   
-- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Включает отладку и функции справочной информации для службы WCF.  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior> Включает функции отладки и справочной информации для службы WCF.  
   
-- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Контролирует публикацию метаданных службы и связанной с ними информации.  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Контролирует публикацию метаданных службы и связанной с ними информации.  
   
-- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Задает расширения функциональности аудита для событий безопасности.  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> Задает расширения функциональности аудита для событий безопасности.  
   
-- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Настраивает параметры производительности времени выполнения, которые позволяют настроить производительность службы.  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Настраивает параметры производительности времени выполнения, которые позволяют настроить производительность службы.  
   
 ### <a name="endpoint-behaviors"></a>Поведения конечных точек  
  Следующие поведения работают на уровне конечных точек. Многие из этих поведений используются в клиентских приложениях.  
   
-- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Настраивает реализацию службы обратного вызова в дуплексном клиентском приложении.  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute> Настраивает реализацию службы обратного вызова в дуплексном клиентском приложении.  
   
-- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Включает отладку службы для объекта обратного вызова WCF.  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior> Включает отладку службы для объекта обратного вызова WCF.  
   
-- <xref:System.ServiceModel.Description.ClientCredentials>. Позволяет пользователю настроить учетные данные клиента и службы, а также параметры проверки подлинности учетных данных службы для использования в клиенте.  
+- <xref:System.ServiceModel.Description.ClientCredentials> Позволяет пользователю настроить учетные данные клиента и службы, а также параметры проверки подлинности учетных данных службы для использования в клиенте.  
   
-- <xref:System.ServiceModel.Description.ClientViaBehavior>. Используется клиентами, чтобы указать универсальный код ресурса (URI), для которого необходимо создать канал транспорта.  
+- <xref:System.ServiceModel.Description.ClientViaBehavior> Используется клиентами, чтобы указать универсальный код ресурса (URI), для которого необходимо создать канал транспорта.  
   
-- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Указывает WCF отключить `MustUnderstand` обработки.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior> Указывает WCF отключить обработку `MustUnderstand`.  
   
-- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Указывает, что в среде выполнения для каналов должен использоваться синхронный процесс получения.  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> Указывает, что в среде выполнения для каналов должен использоваться синхронный процесс получения.  
   
-- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Оптимизирует операции получения для транспорта, поддерживающего транзакционные получения.  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior> Оптимизирует операции получения для транспорта, поддерживающего транзакционные получения.  
   
 ### <a name="contract-behaviors"></a>Поведения контрактов  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Задает требования к функциям, которые должны поддерживаться привязками для реализации службы или клиента.  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute> Задает требования к функциям, которые должны поддерживаться привязками для реализации службы или клиента.  
   
 ### <a name="operation-behaviors"></a>Поведения операций  
  Указанные ниже поведения операций задают элементы управления сериализацией и транзакциями для операций.  
   
-- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Представляет поведение времени выполнения <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Представляет поведение времени выполнения <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Контролирует поведение времени выполнения для `XmlSerializer` и связывает его с операцией.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> Контролирует поведение времени выполнения для `XmlSerializer` и связывает его с операцией.  
   
-- <xref:System.ServiceModel.TransactionFlowAttribute>. Задает уровень, на котором операция службы принимает заголовок транзакции.  
+- <xref:System.ServiceModel.TransactionFlowAttribute> Задает уровень, на котором операция службы принимает заголовок транзакции.  
   
 ## <a name="see-also"></a>См. также
 
-- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)
-- [Практическое руководство. Управление созданием экземпляров служб](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Настройка служб](configuring-services.md)
+- [Практическое руководство. Управление созданием экземпляров служб](./feature-details/how-to-control-service-instancing.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Служба: Количество сбоев вызовов в секунду'
+title: 'Служба: количество сбоев вызовов в секунду'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5431144a4618b146a10dfaa3bbdaae34c519319e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915685"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315786"
 ---
-# <a name="service-calls-failed-per-second"></a>Служба: Количество сбоев вызовов в секунду
-Имя счетчика: Количество сбоев вызовов в секунду.  
+# <a name="service-calls-failed-per-second"></a>Служба: количество сбоев вызовов в секунду
+Имя счетчика: Calls Failed Per Second.  
   
 ## <a name="description"></a>Описание  
  Число вызовов с необработанными исключениями, получаемых этой службой за секунду.  
   
- Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  
+ Этот счетчик имеет тип счетчика производительности [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется с помощью следующей формулы.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
@@ -27,4 +27,4 @@ ms.locfileid: "61915685"
   
 ## <a name="see-also"></a>См. также
 
-- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Указание и обработка сбоев в контрактах и службах](../../specifying-and-handling-faults-in-contracts-and-services.md)

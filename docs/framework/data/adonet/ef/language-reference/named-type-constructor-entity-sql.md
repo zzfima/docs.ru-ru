@@ -2,19 +2,19 @@
 title: Конструктор именованных типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f40adce1a9e031ed0b7cd5d03d9c63db255aa610
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250009"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319576"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Конструктор именованных типов (Entity SQL)
 Используется для создания экземпляров номинальных типов концептуальной модели, например сложных типов или типов сущностей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 [{identifier. }] identifier( [expression [{, expression }]] )  
 ```  
   
@@ -28,7 +28,7 @@ ms.locfileid: "70250009"
 ## <a name="return-value"></a>Возвращаемое значение  
  Экземпляры именованных сложных типов и типов сущностей.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  В следующих примерах показано, как создавать номинальные и сложные типы.  
   
  Приведенное далее выражение создает экземпляр типа `Person` .  
@@ -52,11 +52,11 @@ ms.locfileid: "70250009"
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL конструктор именованного типа используется для создания экземпляра типа концептуальной модели. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
+ [!code-sql[DP EntityServices Concepts#NAMED_TYPE_CONSTRUCTOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#named_type_constructor)]  
   
 ## <a name="see-also"></a>См. также
 

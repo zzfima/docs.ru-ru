@@ -8,42 +8,42 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4212ca0b86e1c4e4dc74e4b68767b2ce866c9ee
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000120"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320814"
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
 В этом разделе представлены основные принципы создания приложений Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Описание жизненного цикла разработки, создания и развертывания служб и клиентских приложений WCF.  
+## <a name="in-this-section"></a>Содержание  
+ [Базовый жизненный цикл программирования](basic-programming-lifecycle.md)  
+ Описание жизненного цикла разработки, сборки и развертывания служб и клиентских приложений WCF.  
   
- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Проектирование и реализация служб](designing-and-implementing-services.md)  
  Описание разработки и реализации контракта службы, выбора шаблона обмена сообщениями, задания контракта сбоя и других основных аспектов служб.  
   
- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)  
- В этой статье описывается настройка службы WCF на поддержку требований контракта, настройки поведения среды выполнения локальной и обозначения адреса для публикации службы.  
+ [Настройка служб](configuring-services.md)  
+ Описывает настройку службы WCF для поддержки требований контракта, настройку поведения локальной среды выполнения и указание адреса для публикации службы.  
   
- [Размещение служб](../../../docs/framework/wcf/hosting-services.md)  
+ [Размещение служб](hosting-services.md)  
  Описание основных принципов размещения служб в приложении.  
   
- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
- Описывает способы решения проблем безопасности, получить метаданные из службы, преобразовать их в код клиента WCF и сборки, настройки и содержать клиента WCF.  
+ [Создание клиентов](building-clients.md)  
+ Описывает получение метаданных из служб, преобразование их в клиентский код WCF, обработку проблем безопасности, а затем сборку, настройку и размещение клиента WCF.  
   
- [Введение в расширяемость](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Описывает способы расширения WCF для создания пользовательских решений.  
+ [Введение в расширяемость](introduction-to-extensibility.md)  
+ Описывает, как расширить WCF для создания пользовательских решений.  
   
- [Примеры устранения неполадок WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
+ [Примеры устранения неполадок WCF](wcf-troubleshooting-quickstart.md)  
  Описание наиболее распространенных проблем, способов их решения и источников дополнительной информации о них.  
   
- [WCF и веб-API ASP.NET](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ [WCF и веб-API ASP.NET](wcf-and-aspnet-web-api.md)  
  Описывает две технологии, их взаимосвязь друг с другом и способы их использования.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -51,20 +51,20 @@ ms.locfileid: "62000120"
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Требования к системе](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ [Требования к системе](wcf-system-requirements.md)  
   
- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Концептуальный обзор](conceptual-overview.md)  
   
- [Руководство по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Руководство по началу работы](getting-started-tutorial.md)  
   
- [Правила и рекомендации](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [Правила и рекомендации](guidelines-and-best-practices.md)  
   
- [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
+ [Средства Windows Communication Foundation](tools.md)  
   
  [Примеры Windows Communication Foundation (WCF)](./samples/index.md)  
   
- [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Начало работы](./samples/getting-started-sample.md)  
   
- [Размещение в службах IIS с использованием встроенного кода](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [Размещение в службах IIS с использованием встроенного кода](./samples/iis-hosting-using-inline-code.md)  
   
- [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)
+ [Резидентное размещение](./samples/self-host.md)

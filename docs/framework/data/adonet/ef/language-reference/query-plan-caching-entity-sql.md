@@ -2,17 +2,17 @@
 title: Кэширование плана запроса (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: ca95f3aed5c092247a97bbfe5b0237a45b95ae16
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 020b2b3f08262fc15ace8603c26e2d6c059baafd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249288"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319409"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Кэширование плана запроса (Entity SQL)
 При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен. Если это так, то кэшированный план используется повторно вместо построения нового плана. Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется. Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров (имен и типов). Все текстовые сравнения выполняются с учетом регистра.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
  Кэширование планов запросов можно настроить с помощью <xref:System.Data.EntityClient.EntityCommand>.  
   
  Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, назначьте этому свойству значение `true` или `false`. Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.  
@@ -22,14 +22,16 @@ ms.locfileid: "70249288"
 ## <a name="recommended-practice"></a>Рекомендации  
  Как правило, следует избегать динамических запросов. Динамический запрос в следующем примере уязвим для атак путем внедрения кода SQL, так как входные данные пользователя принимаются напрямую без проверки.  
   
- `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
-  
+ ```csharp
+ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;  
+ ```
+ 
  Если используются динамически формируемые запросы, подумайте об отключении кэширования плана запроса, чтобы избежать ненужного расходования памяти для записей кэша, которые вряд ли будут использоваться повторно.  
   
  Кэширование планов запросов для статических запросов и параметризованных запросов может увеличить производительность. Ниже приводится пример статического запроса:  
   
-```  
-"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
+```csharp
+var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
 ```  
   
  Для правильного сопоставления запросов кэшу планов запросов они должны соответствовать следующим требованиям.  

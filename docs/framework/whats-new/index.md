@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3acfa0da0caa29b503f47f23b0e9042d73ef0657
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353386"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393710"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -542,7 +542,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 ```
 
 ```vb
-Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
+Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
 Это событие возникает каждый раз, когда среда выполнения разрешает ссылку [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Аргументы <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> описывают разрешение и ключ, используемый для разрешения, а также указывают объект и свойство, в котором указаны ссылка [StaticResource](../wpf/advanced/staticresource-markup-extension.md) и словарь <xref:Windows.UI.Xaml.ResourceDictionary>:

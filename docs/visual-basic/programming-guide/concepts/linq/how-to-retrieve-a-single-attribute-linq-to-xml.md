@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Получение одного атрибута (LINQ to XML) (Visual Basic)
+title: Как получить один атрибут (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 635644783153765d61aff3c00fe16860642c29f1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710531"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321318"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Практическое руководство. Получение одного атрибута (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Как получить один атрибут (LINQ to XML) (Visual Basic)
 В этом разделе приведены объяснения способа получения одного атрибута элемента при условии, что название атрибута известно. Это полезно для составления выражений запросов, при которых требуется найти элемент с определенным атрибутом.  
   
  Метод <xref:System.Xml.Linq.XElement.Attribute%2A> класса <xref:System.Xml.Linq.XElement> возвращает значение <xref:System.Xml.Linq.XAttribute> с указанным именем.  
@@ -32,7 +32,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 home  
 work  
 ```  
@@ -55,7 +55,7 @@ Next
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 home  
 work  
 ```  
@@ -87,7 +87,7 @@ End Module
   
  Этот код выводит следующие результаты:  
   
-```  
+```console  
 home  
 work  
 ```  

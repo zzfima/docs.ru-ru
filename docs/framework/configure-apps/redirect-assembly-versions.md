@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971563"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319737"
 ---
 # <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 
@@ -65,11 +65,11 @@ ms.locfileid: "70971563"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Можно включить автоматическое перенаправление привязки, если приложение предназначено для более ранних версий .NET Framework. Это поведение по умолчанию можно переопределить, предоставив сведения о перенаправлении привязки в файле App. config для любой сборки или отключив функцию перенаправления привязки. Сведения о том, как включить или отключить эту функцию, см. [в разделе как Включение и отключение автоматического перенаправления привязки](how-to-enable-and-disable-automatic-binding-redirection.md).
+Можно включить автоматическое перенаправление привязки, если приложение предназначено для более ранних версий .NET Framework. Это поведение по умолчанию можно переопределить, предоставив сведения о перенаправлении привязки в файле App. config для любой сборки или отключив функцию перенаправления привязки. Сведения о том, как включить или отключить эту функцию, см. [в разделе Включение и отключение автоматического перенаправления привязок](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Обход политики издателя
- При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте [ \<](./file-schema/runtime/publisherpolicy-element.md) элемент [ \<](./file-schema/runtime/dependentassembly-element.md) publisherpolicy Apply > в элемент dependentAssembly > в файле конфигурации приложения и установите для атрибута apply значение **No**, которое переопределяет все предыдущие параметры **Yes** .
+ При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте элемент [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) в элемент [\<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) в файле конфигурации приложения и установите для атрибута **Apply** значение **No**, переопределяющее все предыдущие параметры **Yes** .
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ ms.locfileid: "70971563"
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Указание привязки сборки в файлах конфигурации
- Один и тот же формат XML позволяет указать перенаправления привязок в файле конфигурации приложения, в файле конфигурации компьютера и в файле политики издателя. Чтобы перенаправить одну версию сборки в другую, используйте [ \<элемент bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . В атрибуте **OldVersion** можно указать одну версию сборки или диапазон версий. В атрибуте `newVersion` должна быть указана одна версия.  Например, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` указывает, что среда выполнения должна использовать версию 2.0.0.0 вместо версий сборки от 1.1.0.0 до 1.2.0.0.
+ Один и тот же формат XML позволяет указать перенаправления привязок в файле конфигурации приложения, в файле конфигурации компьютера и в файле политики издателя. Чтобы перенаправить одну версию сборки в другую, используйте элемент [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . В атрибуте **OldVersion** можно указать одну версию сборки или диапазон версий. В атрибуте `newVersion` должна быть указана одна версия.  Например, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` указывает, что среда выполнения должна использовать версию 2.0.0.0 вместо версий сборки от 1.1.0.0 до 1.2.0.0.
 
  Следующий пример кода демонстрирует различные сценарии перенаправления привязки. В примере указывается перенаправление для диапазона версий `myAssembly`и одно перенаправление привязки для `mySecondAssembly`. В примере также указывается, что файл политики издателя не будет переопределять перенаправления привязок для `myThirdAssembly`.
 
- Для привязки сборки необходимо указать строку "urn: schemas-microsoft-com: ASM. v1" с атрибутом **xmlns** в [ \<теге assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
+ Для привязки сборки необходимо указать строку "urn: schemas-microsoft-com: ASM. v1" с атрибутом **xmlns** в теге [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ ms.locfileid: "70971563"
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ ms.locfileid: "70971563"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Ограничения привязок сборок определенной версией
- Чтобы перенаправить ссылки привязки сборок на определенную версию .NET Framework, можно использовать атрибут **appliesTo** в [ \<элементе assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.
+ Вы можете использовать атрибут **appliesTo** в элементе [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения, чтобы перенаправить ссылки привязки сборок на определенную версию .NET Framework. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.
 
  Например, чтобы перенаправить привязку сборки для .NET Framework версии 3.5, следует включить в файл конфигурации приложения приведенный ниже код XML.
 
@@ -155,7 +155,7 @@ ms.locfileid: "70971563"
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Включение и отключение автоматического перенаправления привязки](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<Элемент bindingRedirect >](./file-schema/runtime/bindingredirect-element.md)
+- [Элемент > @no__t 1bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
 - [Разрешение безопасности перенаправления привязки сборок](assembly-binding-redirection-security-permission.md)
 - [Сборки в .NET](../../standard/assembly/index.md)
 - [Программирование с использованием сборок](../../standard/assembly/program.md)

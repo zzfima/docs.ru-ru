@@ -2,17 +2,17 @@
 title: Определения типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248954"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319246"
 ---
 # <a name="type-definitions-entity-sql"></a>Определения типов (Entity SQL)
 Определение типа используется в операторе объявления встраиваемой функции [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Оператор объявления для встроенной функции состоит из ключевого слова [Function](function-entity-sql.md) , за которым следует идентификатор, представляющий имя функции (например, "мявг"), за которым следует список определений параметров в круглых скобках (например, "сборная коллекция ( Decimal) ").  
   
  Список определений параметров содержит ноль или более определений параметров. Каждое определение параметра состоит из идентификатора (имя параметра для функции, например «dues»), за которым следует определение типа (например, «Collection(Decimal)»).  
@@ -31,7 +31,7 @@ ms.locfileid: "70248954"
   
  Определения типов имеют следующие параметры:  
   
-- `IdentifierName supported_type`, или  
+- `IdentifierName supported_type`или  
   
 - `IdentifierName` COLLECTION(`type_definition`), или  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70248954"
 ## <a name="examples"></a>Примеры  
  Ниже приводится пример простого определения типа.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  Ниже приводится пример определения типа COLLECTION.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  Ниже приводится пример определения типа ROW.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  Ниже приводится пример определения типа REF.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  

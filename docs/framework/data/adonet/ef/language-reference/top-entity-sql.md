@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248976"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319277"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -15,15 +15,15 @@ ms.locfileid: "70248976"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```sql
 [ TOP (n) ]
 ```
 
 ## <a name="arguments"></a>Аргументы
 
-`n`Числовое выражение, задающее количество возвращаемых строк. `n` может быть одним числовым литералом или одним параметром.
+`n` числовое выражение, задающее количество возвращаемых строк. `n` может быть одним числовым литералом или одним параметром.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Выражение TOP должно быть одним числовым литералом или одним параметром. При использовании постоянного литерала он должен поддерживать неявное повышение до Edm.Int64 (byte, int16, int32 и int64 или любой тип поставщика, который сопоставляется с типом, поддерживающим повышение до Edm.Int64), а его значение должно быть больше или равно нулю. В противном случае возникнет исключение. Если в качестве выражения используется параметр, то тип параметра также должен поддерживать неявное повышение до Edm.Int64, однако проверка фактического значения параметра во время компиляции проводиться не будет, поскольку значения параметров связываются в режиме позднего связывания.
 
@@ -45,11 +45,11 @@ select distinct top(@topParam) c.a1, c.a2 from T as a
 
 В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] для указания верхней строки, которую следует вернуть из результата запроса, используется выражение TOP. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.
 
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).
 
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :
 
-    [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]
+    [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
 ## <a name="see-also"></a>См. также
 

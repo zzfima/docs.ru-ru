@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93268be4b04ec6824ed7ecab070f28ddf40f8831
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951011"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320942"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
-Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Рабочий пример см. в разделе [авторизация доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Рабочий пример см. в разделе [авторизация доступа к операциям службы](./samples/authorizing-access-to-service-operations.md).  
   
  Эта задача состоит из двух отдельных процедур. Первая создает группу и заносит в нее пользователей. Вторая применяет класс <xref:System.Security.Permissions.PrincipalPermissionAttribute>, чтобы задать группу.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "69951011"
   
 ### <a name="to-demand-user-membership"></a>Требование членства пользователя  
   
-1. Откройте файл кода Windows Communication Foundation (WCF), содержащий реализованный код контракта службы. Дополнительные сведения о реализации контракта см. в разделе [реализация контрактов служб](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Откройте файл кода Windows Communication Foundation (WCF), содержащий реализованный код контракта службы. Дополнительные сведения о реализации контракта см. в разделе [реализация контрактов служб](implementing-service-contracts.md).  
   
-2. Примените атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к каждому методу, доступ к которому необходимо ограничить определенной группой. Задайте для свойства <xref:System.Security.Permissions.SecurityAttribute.Action%2A> значение <xref:System.Security.Permissions.SecurityAction.Demand>, а для свойства <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> задайте имя группы. Например:  
+2. Примените атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к каждому методу, доступ к которому необходимо ограничить определенной группой. Задайте для свойства <xref:System.Security.Permissions.SecurityAttribute.Action%2A> значение <xref:System.Security.Permissions.SecurityAction.Demand>, а для свойства <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> задайте имя группы. Пример:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -52,7 +52,7 @@ ms.locfileid: "69951011"
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Использование сертификата для управления доступом к методу  
  Для управления доступом к методу можно также использовать класс `PrincipalPermissionAttribute`, если типом учетных данных клиента является сертификат. Для этого необходимо иметь субъект и отпечаток сертификата.  
   
- Сведения о проверке сертификата для его свойств см. [в разделе как Просмотр сертификатов с помощью оснастки](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC. Чтобы найти значение отпечатка, [см. раздел как Получение отпечатка сертификата](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+ Сведения о проверке сертификата для его свойств см. в разделе [как просматривать сертификаты с помощью оснастки MMC](./feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Чтобы найти значение отпечатка, см. статью [как получить отпечаток сертификата](./feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 #### <a name="to-control-access-using-a-certificate"></a>Управление доступом с помощью сертификата  
   
@@ -89,6 +89,6 @@ ms.locfileid: "69951011"
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [Авторизация доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Реализация контрактов служб](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Авторизация доступа к операциям службы](./samples/authorizing-access-to-service-operations.md)
+- [Общие сведения о безопасности](./feature-details/security-overview.md)
+- [Реализация контрактов служб](implementing-service-contracts.md)

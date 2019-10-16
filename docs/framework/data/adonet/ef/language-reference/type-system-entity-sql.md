@@ -2,15 +2,15 @@
 title: Система типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 7f9b41181d9a7a7f23123f2e1b71893000b34d4a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0f7dae9e57132929737d752c67694cd369b79d9e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248940"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319241"
 ---
 # <a name="type-system-entity-sql"></a>Система типов (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]поддерживает несколько типов:  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает несколько типов:  
   
 - Типы-примитивы (простые типы), такие как `Int32` и `String.`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70248940"
   
  По ссылке можно переходить с помощью оператора доступа к элементам «точка» (`.`). В следующем фрагменте извлекается свойство Id (объекта Order) путем перехода по свойству r (сокращение от reference).  
   
-```  
+```sql  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  

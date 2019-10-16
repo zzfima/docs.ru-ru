@@ -1,0 +1,1419 @@
+- name: Руководство по Visual Basic
+  href: index.md
+- name: Новые возможности Visual Basic
+  href: getting-started/whats-new.md
+- name: Приступая к работе
+  href: getting-started/index.md
+  items:
+    - name: Критические изменения Visual Basic в Visual Studio
+      href: getting-started/breaking-changes-in-visual-studio.md
+    - name: 'Дополнительные ресурсы для программистов, использующих Visual Basic'
+      href: getting-started/additional-resources.md
+- name: Разработка приложений
+  href: developing-apps/index.md
+  items:
+    - name: Программирование в Visual Basic
+      href: developing-apps/programming/index.md
+      items:
+        - name: Доступ к ресурсам компьютера
+          href: developing-apps/programming/computer-resources/index.md
+        - name: Запись сведений в журнал из приложения
+          href: developing-apps/programming/log-info/index.md
+        - name: Доступ к данным пользователя
+          href: developing-apps/programming/accessing-user-data.md
+        - name: Доступ к формам приложения
+          href: developing-apps/programming/accessing-application-forms.md
+        - name: Доступ к веб-службам приложения
+          href: developing-apps/programming/accessing-application-web-services.md
+          items:
+            - name: Практическое руководство. Асинхронный вызов веб-службы
+              href: developing-apps/programming/how-to-call-a-web-service-asynchronously.md
+        - name: Accessing Application Settings
+          href: developing-apps/programming/app-settings/index.md
+        - name: 'Операции с дисками, папками и файлами'
+          href: developing-apps/programming/drives-directories-files/processing.md
+    - name: Разработка с использованием My
+      href: developing-apps/development-with-my/index.md
+      items:
+        - name: 'Выполнение задач с помощью My.Application, My.Computer и My.User'
+          href: developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md
+        - name: 'Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию'
+          href: developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md
+        - name: Быстрая разработка приложений с использованием My.Resources и My.Settings
+          href: developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md
+        - name: Обзор модели приложения в Visual Basic
+          href: developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md
+        - name: Зависимость My от типа проекта
+          href: developing-apps/development-with-my/how-my-depends-on-project-type.md
+    - name: Доступ к данным
+      href: developing-apps/accessing-data.md
+    - name: Создание и использование компонентов
+      href: developing-apps/creating-and-using-components.md
+    - name: Основы разработки приложений Windows Forms
+      href: developing-apps/windows-forms/index.md
+    - name: Настройка проектов и расширение объекта My в Visual Basic
+      href: developing-apps/customizing-extending-my/index.md
+      items:
+        - name: Расширение пространства имен My
+          href: developing-apps/customizing-extending-my/extending-the-my-namespace.md
+        - name: Упаковка и развертывание пользовательских расширений пространства имен My
+          href: developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md
+        - name: Расширение модели приложения Visual Basic
+          href: developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
+        - name: Настройка доступа к объектам через My
+          href: developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
+- name: Основные понятия программирования
+  href: programming-guide/concepts/index.md
+  items:
+    - name: Асинхронное программирование с использованием ключевых слов Async и Await
+      href: programming-guide/concepts/async/index.md
+    - name: Атрибуты
+      href: programming-guide/concepts/attributes/index.md
+    - name: Сведения о вызывающем
+      href: programming-guide/concepts/caller-information.md
+    - name: Коллекции
+      href: programming-guide/concepts/collections.md
+    - name: Ковариация и контрвариация
+      href: programming-guide/concepts/covariance-contravariance/index.md
+    - name: Деревья выражений
+      href: programming-guide/concepts/expression-trees/index.md
+    - name: Iterators
+      href: programming-guide/concepts/iterators.md
+    - name: LINQ
+      href: programming-guide/concepts/linq/index.md
+    - name: Объектно-ориентированное программирование
+      href: programming-guide/concepts/object-oriented-programming.md
+    - name: Отражение
+      href: programming-guide/concepts/reflection.md
+    - name: Сериализация
+      href: programming-guide/concepts/serialization/index.md
+- name: Соглашения о структуре программы и коде
+  href: programming-guide/program-structure/program-structure-and-code-conventions.md
+  items:
+    - name: Структура программы
+      href: programming-guide/program-structure/structure-of-a-visual-basic-program.md
+    - name: Основная процедура
+      href: programming-guide/program-structure/main-procedure.md
+    - name: Ссылки и оператор Imports
+      href: programming-guide/program-structure/references-and-the-imports-statement.md
+    - name: Пространства имен
+      href: programming-guide/program-structure/namespaces.md
+    - name: Соглашения об именах
+      href: programming-guide/program-structure/naming-conventions.md
+    - name: Соглашения о написании кода
+      href: programming-guide/program-structure/coding-conventions.md
+    - name: Условная компиляция
+      href: programming-guide/program-structure/conditional-compilation.md
+    - name: Практическое руководство. Разбиение и объединение инструкций в коде
+      href: programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
+    - name: Практическое руководство. Сворачивание и скрытие частей кода
+      href: programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
+    - name: Практическое руководство. Операторы меток
+      href: programming-guide/program-structure/how-to-label-statements.md
+    - name: Специальные символы в коде
+      href: programming-guide/program-structure/special-characters-in-code.md
+    - name: Комментарии в коде
+      href: programming-guide/program-structure/comments-in-code.md
+    - name: Ключевые слова как имена элементов в коде
+      href: programming-guide/program-structure/keywords-as-element-names-in-code.md
+    - name: 'Me, My, MyBase и MyClass'
+      href: programming-guide/program-structure/me-my-mybase-and-myclass.md
+    - name: Ограничения
+      href: programming-guide/program-structure/limitations.md
+- name: Возможности языка
+  href: programming-guide/language-features/index.md
+  items:
+    - name: Массивы
+      href: programming-guide/language-features/arrays/index.md
+    - name: Инициализаторы коллекций
+      href: programming-guide/language-features/collection-initializers/index.md
+    - name: Константы и перечисления
+      href: programming-guide/language-features/constants-enums/index.md
+    - name: Поток управления
+      href: programming-guide/language-features/control-flow/index.md
+    - name: Типы данных
+      href: programming-guide/language-features/data-types/index.md
+      items:
+        - name: Символы типов
+          href: programming-guide/language-features/data-types/type-characters.md
+        - name: Простые типы данных
+          href: programming-guide/language-features/data-types/elementary-data-types.md
+          items:
+            - name: Числовые типы данных
+              href: programming-guide/language-features/data-types/numeric-data-types.md
+            - name: Символьные типы данных
+              href: programming-guide/language-features/data-types/character-data-types.md
+            - name: Прочие типы данных
+              href: programming-guide/language-features/data-types/miscellaneous-data-types.md
+        - name: Составные типы данных
+          href: programming-guide/language-features/data-types/composite-data-types.md
+          items:
+            - name: Практическое руководство. Хранение нескольких значений в переменной
+              href: programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
+        - name: Универсальные типы
+          href: programming-guide/language-features/data-types/generic-types.md
+          items:
+            - name: 'Практическое руководство. Определение класса, реализующего одинаковую функциональность для разных типов данных'
+              href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
+            - name: Практическое руководство. Использование универсального класса
+              href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
+        - name: Универсальные процедуры
+          href: programming-guide/language-features/data-types/generic-procedures.md
+        - name: 'Типы значений, допускающие значение NULL'
+          href: programming-guide/language-features/data-types/nullable-value-types.md
+        - name: Value Types and Reference Types
+          href: programming-guide/language-features/data-types/value-types-and-reference-types.md
+        - name: Преобразования типов
+          href: programming-guide/language-features/data-types/type-conversions.md
+          items:
+            - name: Widening and Narrowing Conversions
+              href: programming-guide/language-features/data-types/widening-and-narrowing-conversions.md
+            - name: Явные и неявные преобразования
+              href: programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
+            - name: Преобразования значений между строковыми и другими типами
+              href: programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
+            - name: Практическое руководство. Преобразование объекта в другой тип
+              href: programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
+            - name: Преобразования массивов
+              href: programming-guide/language-features/data-types/array-conversions.md
+        - name: Структуры
+          href: programming-guide/language-features/data-types/structures.md
+          items:
+            - name: Практическое руководство. Объявление структуры
+              href: programming-guide/language-features/data-types/how-to-declare-a-structure.md
+            - name: Переменные структуры
+              href: programming-guide/language-features/data-types/structure-variables.md
+            - name: Структуры и другие элементы программирования
+              href: programming-guide/language-features/data-types/structures-and-other-programming-elements.md
+            - name: Структуры и классы
+              href: programming-guide/language-features/data-types/structures-and-classes.md
+        - name: Кортежи
+          href: programming-guide/language-features/data-types/tuples.md
+        - name: Эффективное использование типов данных
+          href: programming-guide/language-features/data-types/efficient-use-of-data-types.md
+        - name: 'Устранение неполадок, связанных с типами данных'
+          href: programming-guide/language-features/data-types/troubleshooting-data-types.md
+    - name: Объявленные элементы
+      href: programming-guide/language-features/declared-elements/index.md
+    - name: Делегаты
+      href: programming-guide/language-features/delegates/index.md
+    - name: Раннее и позднее связывание
+      href: programming-guide/language-features/early-late-binding/index.md
+    - name: Типы ошибок
+      href: programming-guide/language-features/error-types.md
+    - name: События
+      href: programming-guide/language-features/events/index.md
+    - name: Интерфейсы
+      href: programming-guide/language-features/interfaces/index.md
+      items:
+        - name: Пошаговое руководство. Создание и реализация интерфейсов
+          href: programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md
+    - name: LINQ
+      href: programming-guide/language-features/linq/index.md
+    - name: Объекты и классы
+      href: programming-guide/language-features/objects-and-classes/index.md
+    - name: Операторы и выражения
+      href: programming-guide/language-features/operators-and-expressions/index.md
+    - name: Процедуры
+      href: programming-guide/language-features/procedures/index.md
+    - name: Операторы
+      href: programming-guide/language-features/statements.md
+    - name: Строки
+      href: programming-guide/language-features/strings/index.md
+    - name: Переменные
+      href: programming-guide/language-features/variables/index.md
+    - name: XML
+      href: programming-guide/language-features/xml/index.md
+- name: COM-взаимодействие
+  href: programming-guide/com-interop/index.md
+  items:
+    - name: Знакомство с COM-взаимодействием
+      href: programming-guide/com-interop/introduction-to-com-interop.md
+    - name: Практическое руководство. Ссылка на COM-объекты
+      href: programming-guide/com-interop/how-to-reference-com-objects.md
+    - name: Практическое руководство. Работа с элементами управления ActiveX
+      href: programming-guide/com-interop/how-to-work-with-activex-controls.md
+    - name: Пошаговое руководство. Вызов API Windows
+      href: programming-guide/com-interop/walkthrough-calling-windows-apis.md
+    - name: Практическое руководство. Вызов API Windows
+      href: programming-guide/com-interop/how-to-call-windows-apis.md
+    - name: 'Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа'
+      href: programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
+    - name: Пошаговое руководство. Создание COM-объектов
+      href: programming-guide/com-interop/walkthrough-creating-com-objects.md
+    - name: Устранение неполадок взаимодействия
+      href: programming-guide/com-interop/troubleshooting-interoperability.md
+    - name: COM-взаимодействие в приложениях .NET Framework
+      href: programming-guide/com-interop/com-interoperability-in-net-framework-applications.md
+    - name: Пошаговое руководство. Реализация наследования с использованием COM-объектов
+      href: programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md
+- name: Справочник по языку
+  href: language-reference/index.md
+  items:
+    - name: Настройка версии языка
+      href: language-reference/configure-language-version.md
+    - name: Условные обозначения и соглашения о коде
+      href: language-reference/typographic-and-code-conventions.md
+    - name: Члены библиотеки времени выполнения Visual Basic
+      href: language-reference/runtime-library-members.md
+    - name: Ключевые слова
+      href: language-reference/keywords/index.md
+      items:
+        - name: Сводка по массивам
+          href: language-reference/keywords/arrays-summary.md
+        - name: Сводка по объекту Collection
+          href: language-reference/keywords/collection-object-summary.md
+        - name: Сводка по потоку управления
+          href: language-reference/keywords/control-flow-summary.md
+        - name: Сводка по преобразованию
+          href: language-reference/keywords/conversion-summary.md
+        - name: Data Types Summary
+          href: language-reference/keywords/data-types-summary.md
+        - name: Сводка элементов для работы со значениями дат и времени
+          href: language-reference/keywords/dates-and-times-summary.md
+        - name: Сводка по объявлениям и константам
+          href: language-reference/keywords/declarations-and-constants-summary.md
+        - name: Сводка по каталогам и файлам
+          href: language-reference/keywords/directories-and-files-summary.md
+        - name: Сводка по ошибкам
+          href: language-reference/keywords/errors-summary.md
+        - name: Сводка по финансовым функциям
+          href: language-reference/keywords/financial-summary.md
+        - name: Сводка по сведениям и взаимодействию
+          href: language-reference/keywords/information-and-interaction-summary.md
+        - name: Сводка по вводу и выводу
+          href: language-reference/keywords/input-and-output-summary.md
+        - name: Сводка по математическим функциям
+          href: language-reference/keywords/math-summary.md
+          items:
+            - name: Производные математические функции
+              href: language-reference/keywords/derived-math-functions.md
+        - name: Справочные материалы по My
+          href: language-reference/keywords/my-reference.md
+        - name: Сводка по операторам
+          href: language-reference/keywords/operators-summary.md
+        - name: Сводка по реестру
+          href: language-reference/keywords/registry-summary.md
+        - name: Сводка по работе со строками
+          href: language-reference/keywords/string-manipulation-summary.md
+    - name: Атрибуты
+      href: language-reference/attributes.md
+    - name: Константы и перечисления
+      href: language-reference/constants-and-enumerations.md
+    - name: Сводка по типам данных
+      href: language-reference/data-types/index.md
+      items:
+        - name: Логический тип данных
+          href: language-reference/data-types/boolean-data-type.md
+        - name: Тип данных Byte
+          href: language-reference/data-types/byte-data-type.md
+        - name: Тип данных Char
+          href: language-reference/data-types/char-data-type.md
+        - name: Тип данных Date
+          href: language-reference/data-types/date-data-type.md
+        - name: Тип данных Decimal
+          href: language-reference/data-types/decimal-data-type.md
+        - name: Тип данных Double
+          href: language-reference/data-types/double-data-type.md
+        - name: Тип данных Integer
+          href: language-reference/data-types/integer-data-type.md
+        - name: Тип данных Long
+          href: language-reference/data-types/long-data-type.md
+        - name: Object Data Type
+          href: language-reference/data-types/object-data-type.md
+        - name: Тип данных SByte
+          href: language-reference/data-types/sbyte-data-type.md
+        - name: Тип данных Short
+          href: language-reference/data-types/short-data-type.md
+        - name: Тип данных Single
+          href: language-reference/data-types/single-data-type.md
+        - name: Тип данных String
+          href: language-reference/data-types/string-data-type.md
+        - name: Тип данных UInteger
+          href: language-reference/data-types/uinteger-data-type.md
+        - name: Тип данных ULong
+          href: language-reference/data-types/ulong-data-type.md
+        - name: 'Тип данных, определенный пользователем'
+          href: language-reference/data-types/user-defined-data-type.md
+        - name: Тип данных UShort
+          href: language-reference/data-types/ushort-data-type.md
+    - name: Директивы
+      href: language-reference/directives/index.md
+      items:
+        - name: '#Директива Const'
+          href: language-reference/directives/const-directive.md
+        - name: '#Директива ExternalSource'
+          href: language-reference/directives/externalsource-directive.md
+        - name: '#Директивы If…Then…#Else'
+          href: language-reference/directives/if-then-else-directives.md
+        - name: '#Директива Region'
+          href: language-reference/directives/region-directive.md
+    - name: Функции
+      href: language-reference/functions/index.md
+      items:
+        - name: Функции преобразования
+          href: language-reference/functions/conversion-functions.md
+        - name: Математические функции
+          href: language-reference/functions/math-functions.md
+        - name: Строковые функции
+          href: language-reference/functions/string-functions.md
+        - name: Type Conversion Functions
+          href: language-reference/functions/type-conversion-functions.md
+          items:
+            - name: Возвращаемые значения функции CStr
+              href: language-reference/functions/return-values-for-the-cstr-function.md
+        - name: CType Function
+          href: language-reference/functions/ctype-function.md
+    - name: Модификаторы
+      href: language-reference/modifiers/index.md
+      items:
+        - name: Ansi
+          href: language-reference/modifiers/ansi.md
+        - name: Assembly
+          href: language-reference/modifiers/assembly.md
+        - name: Async
+          href: language-reference/modifiers/async.md
+        - name: Авто
+          href: language-reference/modifiers/auto.md
+        - name: ByRef
+          href: language-reference/modifiers/byref.md
+        - name: ByVal
+          href: language-reference/modifiers/byval.md
+        - name: Значение по умолчанию
+          href: language-reference/modifiers/default.md
+        - name: Friend
+          href: language-reference/modifiers/friend.md
+        - name: in (универсальный модификатор)
+          href: language-reference/modifiers/in-generic-modifier.md
+        - name: Iterator
+          href: language-reference/modifiers/iterator.md
+        - name: Ключ
+          href: language-reference/modifiers/key.md
+        - name: Module
+          href: language-reference/modifiers/module-keyword.md
+        - name: MustInherit
+          href: language-reference/modifiers/mustinherit.md
+        - name: MustOverride
+          href: language-reference/modifiers/mustoverride.md
+        - name: Narrowing
+          href: language-reference/modifiers/narrowing.md
+        - name: NotInheritable
+          href: language-reference/modifiers/notinheritable.md
+        - name: NotOverridable
+          href: language-reference/modifiers/notoverridable.md
+        - name: Optional
+          href: language-reference/modifiers/optional.md
+        - name: out (универсальный модификатор)
+          href: language-reference/modifiers/out-generic-modifier.md
+        - name: Overloads
+          href: language-reference/modifiers/overloads.md
+        - name: Overridable
+          href: language-reference/modifiers/overridable.md
+        - name: Overrides
+          href: language-reference/modifiers/overrides.md
+        - name: ParamArray
+          href: language-reference/modifiers/paramarray.md
+        - name: Partial
+          href: language-reference/modifiers/partial.md
+        - name: Private
+          href: language-reference/modifiers/private.md
+        - name: Частный защищенный
+          href: language-reference/modifiers/private-protected.md
+        - name: Защищенный
+          href: language-reference/modifiers/protected.md
+        - name: Protected Friend
+          href: language-reference/modifiers/protected-friend.md
+        - name: Public
+          href: language-reference/modifiers/public.md
+        - name: ReadOnly
+          href: language-reference/modifiers/readonly.md
+        - name: Shadows
+          href: language-reference/modifiers/shadows.md
+        - name: Shared
+          href: language-reference/modifiers/shared.md
+        - name: Статические
+          href: language-reference/modifiers/static.md
+        - name: Юникод
+          href: language-reference/modifiers/unicode.md
+        - name: Widening
+          href: language-reference/modifiers/widening.md
+        - name: WithEvents
+          href: language-reference/modifiers/withevents.md
+        - name: WriteOnly
+          href: language-reference/modifiers/writeonly.md
+    - name: Модули
+      href: language-reference/modules.md
+    - name: Nothing
+      href: language-reference/nothing.md
+    - name: Объекты
+      href: language-reference/objects/index.md
+      items:
+        - name: Объект My.Application
+          href: language-reference/objects/my-application-object.md
+          items:
+            - name: Объект My.Application.Info
+              href: language-reference/objects/my-application-info-object.md
+            - name: My.Application.Log - объект
+              href: language-reference/objects/my-application-log-object.md
+        - name: Объект My.Computer
+          href: language-reference/objects/my-computer-object.md
+          items:
+            - name: Объект My.Computer.Audio
+              href: language-reference/objects/my-computer-audio-object.md
+            - name: Объект My.Computer.Clipboard
+              href: language-reference/objects/my-computer-clipboard-object.md
+            - name: Объект My.Computer.Clock
+              href: language-reference/objects/my-computer-clock-object.md
+            - name: Объект My.Computer.FileSystem
+              href: language-reference/objects/my-computer-filesystem-object.md
+              items:
+                - name: Объект My.Computer.FileSystem.SpecialDirectories
+                  href: language-reference/objects/my-computer-filesystem-specialdirectories-object.md
+            - name: Объект My.Computer.Info
+              href: language-reference/objects/my-computer-info-object.md
+            - name: Объект My.Computer.Keyboard
+              href: language-reference/objects/my-computer-keyboard-object.md
+            - name: Объект My.Computer.Mouse
+              href: language-reference/objects/my-computer-mouse-object.md
+            - name: Объект My.Computer.Network
+              href: language-reference/objects/my-computer-network-object.md
+            - name: Объект My.Computer.Ports
+              href: language-reference/objects/my-computer-ports-object.md
+            - name: Объект My.Computer.Registry
+              href: language-reference/objects/my-computer-registry-object.md
+        - name: Объект My.Forms
+          href: language-reference/objects/my-forms-object.md
+        - name: Объект My.Log
+          href: language-reference/objects/my-log-object.md
+        - name: Объект My.Request
+          href: language-reference/objects/my-request-object.md
+        - name: Объект My.Response
+          href: language-reference/objects/my-response-object.md
+        - name: Объект My.Resources
+          href: language-reference/objects/my-resources-object.md
+        - name: Объект My.Settings
+          href: language-reference/objects/my-settings-object.md
+        - name: Объект My.User
+          href: language-reference/objects/my-user-object.md
+        - name: Объект My.WebServices
+          href: language-reference/objects/my-webservices-object.md
+        - name: TextFieldParser Object
+          href: language-reference/objects/textfieldparser-object.md
+    - name: Операторы
+      href: language-reference/operators/index.md
+      items:
+        - name: Приоритет операторов
+          href: language-reference/operators/operator-precedence.md
+        - name: Типы данных результатов оператора
+          href: language-reference/operators/data-types-of-operator-results.md
+        - name: 'Список операторов, сгруппированных по функциональному назначению'
+          href: language-reference/operators/operators-listed-by-functionality.md
+          items:
+            - name: Арифметические операторы
+              href: language-reference/operators/arithmetic-operators.md
+            - name: Операторы присваивания
+              href: language-reference/operators/assignment-operators.md
+            - name: Операторы сдвига битов
+              href: language-reference/operators/bit-shift-operators.md
+            - name: Операторы сравнения
+              href: language-reference/operators/comparison-operators.md
+            - name: Операторы объединения
+              href: language-reference/operators/concatenation-operators.md
+            - name: Логические и побитовые операторы
+              href: language-reference/operators/logical-bitwise-operators.md
+            - name: Прочие операторы
+              href: language-reference/operators/miscellaneous-operators.md
+        - name: Список операторов Visual Basic
+          items:
+            - name: Оператор &
+              href: language-reference/operators/concatenation-operator.md
+            - name: Оператор &=
+              href: language-reference/operators/and-assignment-operator.md
+            - name: '* Оператор'
+              href: language-reference/operators/multiplication-operator.md
+            - name: Оператор *=
+              href: language-reference/operators/multiplication-assignment-operator.md
+            - name: + Оператор
+              href: language-reference/operators/addition-operator.md
+            - name: Оператор +=
+              href: language-reference/operators/addition-assignment-operator.md
+            - name: Оператор =
+              href: language-reference/operators/assignment-operator.md
+            - name: '- Оператор'
+              href: language-reference/operators/subtraction-operator.md
+            - name: Оператор -=
+              href: language-reference/operators/subtraction-assignment-operator.md
+            - name: Оператор <
+              href: language-reference/operators/comparison-operators.md
+            - name: Оператор <=
+              href: language-reference/operators/comparison-operators.md
+            - name: '> Оператор'
+              href: language-reference/operators/comparison-operators.md
+            - name: '>Оператор ='
+              href: language-reference/operators/comparison-operators.md
+            - name: Оператор <<
+              href: language-reference/operators/left-shift-operator.md
+            - name: Оператор <<=
+              href: language-reference/operators/left-shift-assignment-operator.md
+            - name: '>> Оператор'
+              href: language-reference/operators/right-shift-operator.md
+            - name: '>>Оператор ='
+              href: language-reference/operators/right-shift-assignment-operator.md
+            - name: Оператор /
+              href: language-reference/operators/floating-point-division-operator.md
+            - name: Оператор /=
+              href: language-reference/operators/floating-point-division-assignment-operator.md
+            - name: Оператор \
+              href: language-reference/operators/integer-division-operator.md
+            - name: Оператор \=
+              href: language-reference/operators/integer-division-assignment-operator.md
+            - name: Оператор ^
+              href: language-reference/operators/exponentiation-operator.md
+            - name: Оператор ^=
+              href: language-reference/operators/exponentiation-assignment-operator.md
+            - name: Оператор ?()
+              href: language-reference/operators/null-conditional-operators.md
+            - name: '?. Оператор'
+              href: language-reference/operators/null-conditional-operators.md
+            - name: Оператор AddressOf
+              href: language-reference/operators/addressof-operator.md
+            - name: Оператор And
+              href: language-reference/operators/and-operator.md
+            - name: Оператор AndAlso
+              href: language-reference/operators/andalso-operator.md
+            - name: Оператор Await
+              href: language-reference/operators/await-operator.md
+            - name: Оператор DirectCast
+              href: language-reference/operators/directcast-operator.md
+            - name: Выражение function
+              href: language-reference/operators/function-expression.md
+            - name: GetType Operator
+              href: language-reference/operators/gettype-operator.md
+            - name: Оператор GetXmlNamespace
+              href: language-reference/operators/getxmlnamespace-operator.md
+            - name: Оператор If
+              href: language-reference/operators/if-operator.md
+            - name: Оператор Is
+              href: language-reference/operators/is-operator.md
+            - name: Оператор IsFalse
+              href: language-reference/operators/isfalse-operator.md
+            - name: Оператор IsNot
+              href: language-reference/operators/isnot-operator.md
+            - name: Оператор IsTrue
+              href: language-reference/operators/istrue-operator.md
+            - name: Оператор Like
+              href: language-reference/operators/like-operator.md
+            - name: Оператор Mod
+              href: language-reference/operators/mod-operator.md
+            - name: Оператор New
+              href: language-reference/operators/new-operator.md
+            - name: Оператор Not
+              href: language-reference/operators/not-operator.md
+            - name: Оператор Or
+              href: language-reference/operators/or-operator.md
+            - name: Оператор OrElse
+              href: language-reference/operators/orelse-operator.md
+            - name: Выражение sub
+              href: language-reference/operators/sub-expression.md
+            - name: Оператор TryCast
+              href: language-reference/operators/trycast-operator.md
+            - name: Оператор TypeOf
+              href: language-reference/operators/typeof-operator.md
+            - name: Оператор Xor
+              href: language-reference/operators/xor-operator.md
+    - name: Свойства
+      href: language-reference/properties.md
+    - name: Запросы
+      href: language-reference/queries/index.md
+      items:
+        - name: Aggregate Clause
+          href: language-reference/queries/aggregate-clause.md
+        - name: Предложение Distinct
+          href: language-reference/queries/distinct-clause.md
+        - name: Предложение Equals
+          href: language-reference/queries/equals-clause.md
+        - name: Предложение From
+          href: language-reference/queries/from-clause.md
+        - name: Предложение Group By
+          href: language-reference/queries/group-by-clause.md
+        - name: Предложение Group Join
+          href: language-reference/queries/group-join-clause.md
+        - name: Предложение Join
+          href: language-reference/queries/join-clause.md
+        - name: Предложение Let
+          href: language-reference/queries/let-clause.md
+        - name: Предложение Order By
+          href: language-reference/queries/order-by-clause.md
+        - name: Предложение Select
+          href: language-reference/queries/select-clause.md
+        - name: Предложение Skip
+          href: language-reference/queries/skip-clause.md
+        - name: Предложение Skip While
+          href: language-reference/queries/skip-while-clause.md
+        - name: Предложение Take
+          href: language-reference/queries/take-clause.md
+        - name: Предложение Take While
+          href: language-reference/queries/take-while-clause.md
+        - name: Предложение Where
+          href: language-reference/queries/where-clause.md
+    - name: Операторы
+      href: language-reference/statements/index.md
+      items:
+        - name: Операторы A-E
+          href: language-reference/statements/a-e-statements.md
+          items:
+            - name: Оператор AddHandler
+              href: language-reference/statements/addhandler-statement.md
+            - name: Оператор Call
+              href: language-reference/statements/call-statement.md
+            - name: Оператор Class
+              href: language-reference/statements/class-statement.md
+            - name: Оператор Const
+              href: language-reference/statements/const-statement.md
+            - name: Оператор Continue
+              href: language-reference/statements/continue-statement.md
+            - name: Declare Statement
+              href: language-reference/statements/declare-statement.md
+            - name: Оператор Delegate
+              href: language-reference/statements/delegate-statement.md
+            - name: Оператор Dim
+              href: language-reference/statements/dim-statement.md
+            - name: Оператор Do…Loop
+              href: language-reference/statements/do-loop-statement.md
+            - name: Оператор Else
+              href: language-reference/statements/else-statement.md
+            - name: Оператор End
+              href: language-reference/statements/end-statement.md
+            - name: Оператор End <keyword>
+              href: language-reference/statements/end-keyword-statement.md
+            - name: Оператор Enum
+              href: language-reference/statements/enum-statement.md
+            - name: Оператор Erase
+              href: language-reference/statements/erase-statement.md
+            - name: Оператор Error
+              href: language-reference/statements/error-statement.md
+            - name: Оператор Event
+              href: language-reference/statements/event-statement.md
+            - name: Оператор Exit
+              href: language-reference/statements/exit-statement.md
+        - name: Операторы F-P
+          href: language-reference/statements/f-p-statements.md
+          items:
+            - name: Оператор For Each…Next
+              href: language-reference/statements/for-each-next-statement.md
+            - name: Оператор For…Next
+              href: language-reference/statements/for-next-statement.md
+            - name: Оператор Function
+              href: language-reference/statements/function-statement.md
+            - name: Оператор Get
+              href: language-reference/statements/get-statement.md
+            - name: Оператор GoTo
+              href: language-reference/statements/goto-statement.md
+            - name: Оператор If…Then…Else
+              href: language-reference/statements/if-then-else-statement.md
+            - name: Оператор Implements
+              href: language-reference/statements/implements-statement.md
+            - name: Оператор Imports (пространство имен .NET и тип)
+              href: language-reference/statements/imports-statement-net-namespace-and-type.md
+            - name: Оператор Imports (пространство имен XML)
+              href: language-reference/statements/imports-statement-xml-namespace.md
+            - name: Inherits Statement
+              href: language-reference/statements/inherits-statement.md
+            - name: Оператор Interface
+              href: language-reference/statements/interface-statement.md
+            - name: Оператор Mid
+              href: language-reference/statements/mid-statement.md
+            - name: Оператор Module
+              href: language-reference/statements/module-statement.md
+            - name: Оператор Namespace
+              href: language-reference/statements/namespace-statement.md
+            - name: Оператор On Error
+              href: language-reference/statements/on-error-statement.md
+            - name: Operator Statement
+              href: language-reference/statements/operator-statement.md
+            - name: Оператор <keyword> Statement
+              href: language-reference/statements/option-keyword-statement.md
+            - name: Оператор Option Compare
+              href: language-reference/statements/option-compare-statement.md
+            - name: Оператор Option Explicit
+              href: language-reference/statements/option-explicit-statement.md
+            - name: Option Infer - оператор
+              href: language-reference/statements/option-infer-statement.md
+            - name: Option Strict Statement
+              href: language-reference/statements/option-strict-statement.md
+            - name: Property Statement
+              href: language-reference/statements/property-statement.md
+        - name: Операторы Q-Z
+          href: language-reference/statements/q-z-statements.md
+          items:
+            - name: Оператор RaiseEvent
+              href: language-reference/statements/raiseevent-statement.md
+            - name: Оператор reDim
+              href: language-reference/statements/redim-statement.md
+            - name: Оператор REM
+              href: language-reference/statements/rem-statement.md
+            - name: Оператор RemoveHandler
+              href: language-reference/statements/removehandler-statement.md
+            - name: Оператор Resume
+              href: language-reference/statements/resume-statement.md
+            - name: Оператор Return
+              href: language-reference/statements/return-statement.md
+            - name: Оператор Select…Case
+              href: language-reference/statements/select-case-statement.md
+            - name: Оператор Set
+              href: language-reference/statements/set-statement.md
+            - name: Оператор Stop
+              href: language-reference/statements/stop-statement.md
+            - name: Оператор Structure
+              href: language-reference/statements/structure-statement.md
+            - name: Оператор Sub
+              href: language-reference/statements/sub-statement.md
+            - name: Оператор SyncLock
+              href: language-reference/statements/synclock-statement.md
+            - name: Оператор Then
+              href: language-reference/statements/then-statement.md
+            - name: Оператор Throw
+              href: language-reference/statements/throw-statement.md
+            - name: Оператор Try…Catch…Finally
+              href: language-reference/statements/try-catch-finally-statement.md
+            - name: Оператор Using
+              href: language-reference/statements/using-statement.md
+            - name: Оператор While…End While
+              href: language-reference/statements/while-end-while-statement.md
+            - name: Оператор With…End With
+              href: language-reference/statements/with-end-with-statement.md
+            - name: Оператор Yield
+              href: language-reference/statements/yield-statement.md
+        - name: Предложения
+          href: language-reference/statements/clauses.md
+          items:
+            - name: Предложение Alias
+              href: language-reference/statements/alias-clause.md
+            - name: Предложение As
+              href: language-reference/statements/as-clause.md
+            - name: Предложение Handles
+              href: language-reference/statements/handles-clause.md
+            - name: Предложение Implements
+              href: language-reference/statements/implements-clause.md
+            - name: Предложение In
+              href: language-reference/statements/in-clause.md
+            - name: Предложение Into
+              href: language-reference/statements/into-clause.md
+            - name: Предложение Of
+              href: language-reference/statements/of-clause.md
+        - name: Контексты объявления и уровни доступа по умолчанию
+          href: language-reference/statements/declaration-contexts-and-default-access-levels.md
+        - name: Список атрибутов
+          href: language-reference/statements/attribute-list.md
+        - name: Список параметров
+          href: language-reference/statements/parameter-list.md
+        - name: Type List
+          href: language-reference/statements/type-list.md
+    - name: XML-теги для комментариев
+      href: language-reference/xmldoc/index.md
+      items:
+        - name: <c>
+          href: language-reference/xmldoc/c.md
+        - name: <code>
+          href: language-reference/xmldoc/code.md
+        - name: <example>
+          href: language-reference/xmldoc/example.md
+        - name: <exception>
+          href: language-reference/xmldoc/exception.md
+        - name: <include>
+          href: language-reference/xmldoc/include.md
+        - name: <list>
+          href: language-reference/xmldoc/list.md
+        - name: <para>
+          href: language-reference/xmldoc/para.md
+        - name: <param>
+          href: language-reference/xmldoc/param.md
+        - name: <paramref>
+          href: language-reference/xmldoc/paramref.md
+        - name: <permission>
+          href: language-reference/xmldoc/permission.md
+        - name: <remarks>
+          href: language-reference/xmldoc/remarks.md
+        - name: <returns>
+          href: language-reference/xmldoc/returns.md
+        - name: <see>
+          href: language-reference/xmldoc/see.md
+        - name: <seealso>
+          href: language-reference/xmldoc/seealso.md
+        - name: <summary>
+          href: language-reference/xmldoc/summary.md
+        - name: <typeparam>
+          href: language-reference/xmldoc/typeparam.md
+        - name: <value>
+          href: language-reference/xmldoc/value.md
+    - name: Свойства оси XML
+      href: language-reference/xml-axis/index.md
+      items:
+        - name: XML Attribute Axis Property
+          href: language-reference/xml-axis/xml-attribute-axis-property.md
+        - name: XML Child Axis Property
+          href: language-reference/xml-axis/xml-child-axis-property.md
+        - name: XML Descendant Axis Property
+          href: language-reference/xml-axis/xml-descendant-axis-property.md
+        - name: Свойство индексатора расширения
+          href: language-reference/xml-axis/extension-indexer-property.md
+        - name: Свойство значения XML
+          href: language-reference/xml-axis/xml-value-property.md
+    - name: XML-литералы
+      href: language-reference/xml-literals/index.md
+      items:
+        - name: XML-литерал элемента
+          href: language-reference/xml-literals/xml-element-literal.md
+        - name: XML-литерал документа
+          href: language-reference/xml-literals/xml-document-literal.md
+        - name: XML-литерал CDATA
+          href: language-reference/xml-literals/xml-cdata-literal.md
+        - name: XML-литерал комментария
+          href: language-reference/xml-literals/xml-comment-literal.md
+        - name: XML-литерал инструкции обработки
+          href: language-reference/xml-literals/xml-processing-instruction-literal.md
+    - name: Сообщения об ошибках
+      href: language-reference/error-messages/index.md
+      items:
+        - name: 'Оператору #ElseIf должен предшествовать соответствующий оператор #If или #ElseIf'
+          href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
+        - name: 'Операторы #Region и #End Region недопустимы в телах методов/многострочных лямбда-операторах'
+          href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
+        - name: <attribute> не может быть применен из-за неверного формата GUID <number>
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
+        - name: '<classname> несовместимо с CLS, так как интерфейс <interfacename>, который он реализует, несовместим с CLS'
+          href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
+        - name: <elementname> является устаревшим (Предупреждение Visual Basic)
+          href: language-reference/error-messages/elementname-is-obsolete-visual-basic-warning.md
+        - name: '<eventname> является событием, поэтому его прямой вызов невозможен'
+          href: language-reference/error-messages/eventname-is-an-event-and-cannot-be-called-directly.md
+        - name: <expression> нельзя использовать в качестве ограничения типа
+          href: language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md
+        - name: <functionname> не объявлена (ошибка компилятора Smart Device-Visual Basic)
+          href: language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md
+        - name: <interfacename>.<membername> уже реализован базовым классом <baseclassname>. Предполагается повторная реализация <type>
+          href: language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md
+        - name: <keyword> разрешено использовать только в методе экземпляра
+          href: language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md
+        - name: <membername> не может представлять тип <typename> вне проекта посредством <containertype><containertypename>
+          href: language-reference/error-messages/membername-cannot-expose-type-typename-outside-the-project.md
+        - name: Член <membername> является неоднозначным в наследуемых интерфейсах <interfacename1> и <interfacename2>
+          href: language-reference/error-messages/membername-is-ambiguous-across-the-inherited-interfaces.md
+        - name: <message> Эта ошибка может также быть вызвана смешением ссылки на файл и ссылки проекта на сборку <assemblyname>
+          href: language-reference/error-messages/message-this-error-could-also-be-due-to-mixing-a-file-reference.md
+        - name: Метод <methodname> несколько раз определен с одинаковыми подписями
+          href: language-reference/error-messages/methodname-has-multiple-definitions-with-identical-signatures.md
+        - name: <name> является неоднозначным в пространстве имен <namespacename>
+          href: language-reference/error-messages/name-is-ambiguous-in-the-namespace-namespacename.md
+        - name: '<name1> является неоднозначным, поскольку импортировано из пространств имен или типов <name2>'
+          href: language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md
+        - name: '<proceduresignature1> не соответствует CLS, поскольку он перегружает <proceduresignature2>, который отличается от него только массивом типов параметров или рангом типов параметра массива'
+          href: language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md
+        - name: <type1>Тип <typename> должен реализовать <membername> для интерфейса <interfacename>
+          href: language-reference/error-messages/type1-must-implement-membername-for-interface.md
+        - name: <type1>Тип <typename> должен реализовать <methodname> для интерфейса <interfacename>
+          href: language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md
+        - name: '<typename> не может наследоваться от <type><basetypename>, поскольку он расширяет доступ базового типа <type> за пределы сборки'
+          href: language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md
+        - name: <typename> является типом делегата
+          href: language-reference/error-messages/typename-is-a-delegate-type.md
+        - name: <typename> является типом и не может использоваться в качестве выражения
+          href: language-reference/error-messages/typename-is-a-type-and-cannot-be-used-as-an-expression.md
+        - name: 'Двойные кавычки не являются допустимой лексемой комментария для полей с разделителями, где EscapeQuote имеет значение True'
+          href: language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md
+        - name: Нельзя включить ссылку на закрытый объект при вызове свойства или функции в качестве аргумента или возвращаемого значения
+          href: language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md
+        - name: Была создана ссылка на внедренную сборку взаимодействия <assembly1> из-за наличия неявной ссылки на эту сборки из сборки <assembly2>
+          href: language-reference/error-messages/bc40059.md
+        - name: Начальная форма не указана
+          href: language-reference/error-messages/a-startup-form-has-not-been-specified.md
+        - name: Доступ к общему члену через экземпляр; выражение уточнения не вычисляется
+          href: language-reference/error-messages/bc42025.md
+        - name: Операнд оператора AddressOf должен быть именем метода (без скобок)
+          href: language-reference/error-messages/bc30577.md
+        - name: 'Непредвиденная ошибка, так как операционная система не может получить ресурсы, требуемые для запуска одного экземпляра.'
+          href: language-reference/error-messages/an-unexpected-error-has-occurred.md
+        - name: Имя члена анонимного типа может быть определено только из простого или уточненного имени без аргументов
+          href: language-reference/error-messages/bc36556.md
+        - name: Аргумент является обязательным
+          href: language-reference/error-messages/argument-not-optional.md
+        - name: В спецификаторах типов не могут задаваться границы массива
+          href: language-reference/error-messages/bc30638.md
+        - name: 'Массив, объявленный как переменная управления циклом, не может быть объявлен с исходным размером'
+          href: language-reference/error-messages/bc32039.md
+        - name: Отсутствует выражение с индексами для массива
+          href: language-reference/error-messages/bc30306.md
+        - name: 'Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера'
+          href: language-reference/error-messages/bc31043.md
+        - name: '''As Any'' не поддерживается в операторах Declare'
+          href: language-reference/error-messages/bc30828.md
+        - name: Атрибут <attributename> не может применяться многократно
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: Ошибка автоматизации
+          href: language-reference/error-messages/automation-error.md
+        - name: 'Неверное значение контрольной суммы, не шестнадцатеричные цифры или нечетное число шестнадцатеричных цифр'
+          href: language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md
+        - name: Недопустимое соглашение о вызовах DLL
+          href: language-reference/error-messages/bad-dll-calling-convention.md
+        - name: Недопустимый режим файла
+          href: language-reference/error-messages/bad-file-mode.md
+        - name: Недопустимое имя файла или номер
+          href: language-reference/error-messages/bad-file-name-or-number.md
+        - name: Недопустимая длина записи
+          href: language-reference/error-messages/bad-record-length.md
+        - name: 'Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.'
+          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
+        - name: 'Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля'
+          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: Не удается создать компонент ActiveX
+          href: language-reference/error-messages/cannot-create-activex-component.md
+        - name: 'Невозможно обратиться к полю <name>, так как оно является членом поля с типизированным значением <name> класса <classname>, базовым классом которого является System.MarshalByRefObject'
+          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+        - name: Не удается обратиться к члену экземпляра класса из совместно используемого метода или совместно используемого инициализатора без явного указания экземпляра этого класса
+          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+        - name: Не удается создать требуемый временный файл
+          href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
+        - name: Не удается открыть <filename> для записи
+          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+        - name: Класс <classname> не найден
+          href: language-reference/error-messages/class-classname-cannot-be-found.md
+        - name: Класс не поддерживает автоматизацию или не поддерживает ожидаемый интерфейс
+          href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
+        - name: Оператор Class должен заканчиваться соответствующим End Class
+          href: language-reference/error-messages/class-statement-must-end-with-a-matching-end-class.md
+        - name: Недопустимый формат буфера обмена
+          href: language-reference/error-messages/clipboard-format-is-not-valid.md
+        - name: Константное выражение не может быть представлено как имеющее тип <typename>
+          href: language-reference/error-messages/constant-expression-not-representable-in-type-typename.md
+        - name: 'Константа должна быть величиной внутреннего или перечислимого типа, а не классом, структурой, параметром типа или массивом'
+          href: language-reference/error-messages/constants-must-be-of-an-intrinsic-or-enumerated-type.md
+        - name: Конструктор <name> не может вызывать сам себя
+          href: language-reference/error-messages/constructor-name-cannot-call-itself.md
+        - name: При копировании значения ByRef параметра <parametername> обратно в соответствующий аргумент тип <typename1> сужается в тип <typename2>
+          href: language-reference/error-messages/copying-the-value-of-byref-parameter-back-to-the-matching-argument-narrows.md
+        - name: 'Модификатор Custom недопустим для событий, объявленных без явных делегируемых типов'
+          href: language-reference/error-messages/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types.md
+        - name: Типы данных параметров-типов не могут быть определены из этих аргументов
+          href: language-reference/error-messages/data-type-s-of-the-type-parameter-s-cannot-be-inferred-from-these-arguments.md
+        - name: Ожидается объявление
+          href: language-reference/error-messages/declaration-expected.md
+        - name: 'Свойство <propertyname1>, используемое по умолчанию, конфликтует со свойством <propertyname2>, используемым по умолчанию в классе <classname>, и должно быть объявлено с ключевым словом Shadows'
+          href: language-reference/error-messages/default-property-propertyname1-conflicts-with-default-property-propertyname2.md
+        - name: 'При доступе к свойству по умолчанию возникает неоднозначность между членами наследуемых интерфейсов: <defaultpropertyname> интерфейса <interfacename1> и <defaultpropertyname> интерфейса <interfacename2>'
+          href: language-reference/error-messages/default-property-access-is-ambiguous.md
+        - name: 'В делегируемом классе <classname> отсутствует метод Invoke, поэтому выражение этого типа не может быть вызвано посредством метода'
+          href: language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md
+        - name: Производные классы не могут вызывать события базового класса
+          href: language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md
+        - name: Ошибка ввода-вывода устройства
+          href: language-reference/error-messages/device-i-o-error.md
+        - name: Функция Dir должна первый раз вызываться с аргументом PathName
+          href: language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md
+        - name: Ожидается окончание оператора
+          href: language-reference/error-messages/end-of-statement-expected.md
+        - name: 'Ошибка при создании манифеста сборки: <error message>'
+          href: language-reference/error-messages/error-creating-assembly-manifest-error-message.md
+        - name: 'Ошибка при создании ресурсов Win32: <error message>'
+          href: language-reference/error-messages/error-creating-win32-resources-error-message.md
+        - name: Ошибка при загрузке DLL
+          href: language-reference/error-messages/error-in-loading-dll.md
+        - name: 'Ошибка при сохранении временного файла ресурсов Win32 <filename>: <error message>'
+          href: language-reference/error-messages/error-saving-temporary-win32-resource-file-filename-error-message.md
+        - name: При компиляции XML-схем в проекте возникли ошибки
+          href: language-reference/error-messages/errors-occurred-while-compiling-the-xml-schemas-in-the-project.md
+        - name: Истекло время ожидания вычисления выражения или оператора
+          href: language-reference/error-messages/evaluation-of-expression-or-statement-timed-out.md
+        - name: 'Событие <eventname1> не может реализовать событие <eventname2> в интерфейсе <interface>, так как их делегируемые типы <delegate1> и <delegate2> не совпадают'
+          href: language-reference/error-messages/event-eventname1-cannot-implement-event-eventname2-on-interface.md
+        - name: 'События не могут быть объявлены с делегирующим типом, у которого есть возвращаемый тип'
+          href: language-reference/error-messages/events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type.md
+        - name: События общих переменных WithEvents не могут обрабатываться не используемыми совместно методами
+          href: language-reference/error-messages/events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods.md
+        - name: Выражение не выдает значение
+          href: language-reference/error-messages/expression-does-not-produce-a-value.md
+        - name: 'Выражение имеет тип <typename> который является ограниченным и не может использоваться для доступа к членам, унаследованным от Object или ValueType'
+          href: language-reference/error-messages/expression-has-the-type-typename-which-is-a-restricted-type.md
+        - name: 'Нельзя присвоить значение выражению, поскольку оно является значением'
+          href: language-reference/error-messages/expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment.md
+        - name: Выражение типа <type> не доступно для запроса
+          href: language-reference/error-messages/expression-of-type-type-is-not-queryable.md
+        - name: Выражение рекурсивно вызывает содержащее свойство <propertyname>
+          href: language-reference/error-messages/expression-recursively-calls-the-containing-property-propertyname.md
+        - name: Слишком сложное выражение
+          href: language-reference/error-messages/expression-too-complex.md
+        - name: 'Атрибут Extension может быть применен только к объявлениям Module, Sub или Function'
+          href: language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md
+        - name: Файл уже открыт
+          href: language-reference/error-messages/file-already-open.md
+        - name: Файл слишком велик для чтения в массив байтов
+          href: language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md
+        - name: Операция автоопределения не нашла имя файла или класса
+          href: language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md
+        - name: Файл не найден (Ошибка времени выполнения Visual Basic)
+          href: language-reference/error-messages/file-not-found-visual-basic-run-time-error.md
+        - name: Первый операнд в двоичном выражении If должен поддерживать значение NULL или быть ссылочного типа
+          href: language-reference/error-messages/first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type.md
+        - name: Первый оператор этого Sub New должен быть вызовом MyBase.New или MyClass.New (Нет доступного конструктора без параметров)
+          href: language-reference/error-messages/first-statement-of-this-sub-new-must-be-a-call-to-mybase-new-or-myclass-new.md
+        - name: 'Первым оператором в этой процедуре Sub New должен быть явный вызов MyBase.New или MyClass.New, так как <constructorname> в базовом классе <baseclassname> класса <derivedclassname> отмечен как устаревший: <errormessage>'
+          href: language-reference/error-messages/first-statement-of-sub-new-must-be-explicit-call-to-mybase-new-or-myclass-new.md
+        - name: 'Оператор For Each для типа <typename> неоднозначен, поскольку тип реализует несколько экземпляров System.Collections.Generic.IEnumerable (Of T)'
+          href: language-reference/error-messages/for-each-on-type-typename-is-ambiguous.md
+        - name: Ссылка <reference> на дружественную сборку является недопустимой
+          href: language-reference/error-messages/friend-assembly-reference-reference-is-invalid.md
+        - name: Функция <procedurename> возвращает значение не для всех путей выполнения
+          href: language-reference/error-messages/function-procedurename-doesn-t-return-a-value-on-all-code-paths.md
+        - name: 'Вычисление функции отключено, поскольку истекло время, выделенное на вычисление предыдущей функции'
+          href: language-reference/error-messages/function-evaluation-is-disabled.md
+        - name: 'Универсальные параметры, используемые как типы необязательных параметров, должны быть ограничены классом'
+          href: language-reference/error-messages/generic-parameters-used-as-optional-parameter-types-must-be-class-constrained.md
+        - name: Метод доступа Get свойства <propertyname> недоступен
+          href: language-reference/error-messages/get-accessor-of-property-propertyname-is-not-accessible.md
+        - name: 'Для предложения Handles требуется переменная WithEvents, определенная в содержащем типе или одном из его базовых типов'
+          href: language-reference/error-messages/handles-clause-requires-a-withevents-variable-defined.md
+        - name: Требуется идентификатор
+          href: language-reference/error-messages/identifier-expected.md
+        - name: Слишком длинный идентификатор
+          href: language-reference/error-messages/identifier-is-too-long.md
+        - name: Ожидается инициализатор
+          href: language-reference/error-messages/initializer-expected.md
+        - name: Оператор Input обнаружил конец файла
+          href: language-reference/error-messages/input-past-end-of-file.md
+        - name: Произошла внутренняя ошибка в <location>
+          href: language-reference/error-messages/internal-error-happened-at-location.md
+        - name: 'Неявное приведение <typename1> к <typename2> при копировании значения параметра <parametername>, объявленного как ByRef, обратно в соответствующий аргумент.'
+          href: language-reference/error-messages/implicit-conversion-from-typename1-to-typename2-in-copying.md
+        - name: 'При использовании оператора сравнения Is требуются операнды со ссылочным типом, однако данный операнд имеет тип значения <typename>'
+          href: language-reference/error-messages/is-requires-operands-that-have-reference-types.md
+        - name: 'Операнд IsNot типа  можно сравнить только с Nothing, так как  является типом, допускающим значение NULL'
+          href: language-reference/error-messages/isnot-operand-of-type-can-only-be-compared-to-nothing.md
+        - name: 'После меток, представляющих собой числа, следует ставить двоеточие'
+          href: language-reference/error-messages/labels-that-are-numbers-must-be-followed-by-colons.md
+        - name: Лямбда-выражение не будет удалено из этого обработчика событий
+          href: language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md
+        - name: Лямбда-выражения недопустимы в первом выражении оператора Select Case
+          href: language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md
+        - name: Разрешение позднего связывания; возможно возникновение ошибок времени выполнения
+          href: language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md
+        - name: 'Разрешение перегружаемой функции с поздним связыванием не может быть применено к <procedurename>, так как типом экземпляра, к которому осуществляется доступ, является интерфейс'
+          href: language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md
+        - name: 'Символ "." или "!", стоящий в начале оператора, может использоваться только внутри оператора "With"'
+          href: language-reference/error-messages/leading-period-or-exclamation-point-can-only-appear-inside-a-with-statement.md
+        - name: Недопустимо длинная строка
+          href: language-reference/error-messages/line-is-too-long.md
+        - name: Операторы Line больше не поддерживаются (ошибка компилятора Visual Basic)
+          href: language-reference/error-messages/line-statements-are-no-longer-supported-visual-basic-compiler-error.md
+        - name: 'Метод не имеет подписи, совместимой с делегатом'
+          href: language-reference/error-messages/method-does-not-have-a-signature-compatible-with-the-delegate.md
+        - name: Методы System.Nullable(Of T) нельзя использовать в качестве операндов оператора AddressOf
+          href: language-reference/error-messages/methods-of-system-nullable-of-t-cannot-be-used-as-operands-of-the-addressof.md
+        - name: Операторы Module могут присутствовать только на уровне файлов или пространств имен
+          href: language-reference/error-messages/module-statements-can-occur-only-at-file-or-namespace-level.md
+        - name: Имя <membername> не является CLS-совместимым
+          href: language-reference/error-messages/name-membername-is-not-cls-compliant.md
+        - name: Имя <name> не объявлено
+          href: language-reference/error-messages/name-name-is-not-declared.md
+        - name: Имя <namespacename> в корневом пространстве имен <fullnamespacename> не является CLS-совместимым
+          href: language-reference/error-messages/name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant.md
+        - name: 'Пространство имен или тип, указанный в Imports <qualifiedelementname>, не содержит общих членов или не найден'
+          href: language-reference/error-messages/namespace-or-type-specified-in-the-imports-qualifiedelementname.md
+        - name: 'Пространство имен или тип, указанные в свойстве Imports <qualifiedelementname> для проекта, не содержит никаких общих членов или не может быть найдено'
+          href: language-reference/error-messages/namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname.md
+        - name: Требуется индекс массива свойства
+          href: language-reference/error-messages/need-property-array-index.md
+        - name: 'Вложенная функция не имеет сигнатуры, совместимой с делегатом "<delegatename>"'
+          href: language-reference/error-messages/nested-function-does-not-have-a-signature-that-is-compatible-with-delegate.md
+        - name: В <name> не найдено доступного метода Main с подходящей подписью
+          href: language-reference/error-messages/no-accessible-main-method-with-an-appropriate-signature-was-found-in-name.md
+        - name: CLS-несовместимый <membername> не допускается в CLS-совместимом интерфейсе
+          href: language-reference/error-messages/non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface.md
+        - name: Выведение типа Nullable не поддерживается в данном контексте
+          href: language-reference/error-messages/nullable-type-inference-is-not-supported-in-this-context.md
+        - name: Количество индексов превышает размерность индексированного массива
+          href: language-reference/error-messages/number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array.md
+        - name: Объект или класс не поддерживает набор событий
+          href: language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md
+        - name: Требуется объект
+          href: language-reference/error-messages/object-required.md
+        - name: Не задана переменная объекта или переменная блока With
+          href: language-reference/error-messages/object-variable-or-with-block-variable-not-set.md
+        - name: 'В объявлении оператора должен использоваться один из следующих операторов: +,-,*,-,-,^, &, Like, Mod, And, Or, Xor, Not, <<, >>, =, <>, <, <=, >, >=, CType, IsTrue, IsFalse'
+          href: language-reference/error-messages/operator-declaration-must-be-one-of.md
+        - name: Ожидается Optional
+          href: language-reference/error-messages/optional-expected.md
+        - name: Для необязательных параметров должно быть задано значение по умолчанию
+          href: language-reference/error-messages/optional-parameters-must-specify-a-default-value.md
+        - name: Недопустимый порядковый номер
+          href: language-reference/error-messages/ordinal-is-not-valid.md
+        - name: Недостаточно памяти (Ошибка компилятора Visual Basic)
+          href: language-reference/error-messages/out-of-memory-visual-basic-compiler-error.md
+        - name: Недостаточно места для стека
+          href: language-reference/error-messages/out-of-stack-space.md
+        - name: Недостаточно места для строки
+          href: language-reference/error-messages/out-of-string-space.md
+        - name: Переполнение (ошибка Visual Basic)
+          href: language-reference/error-messages/overflow-visual-basic-error.md
+        - name: Переполнение (Ошибка во время выполнения Visual Basic)
+          href: language-reference/error-messages/overflow-visual-basic-run-time-error.md
+        - name: Путь не найден
+          href: language-reference/error-messages/path-not-found.md
+        - name: Ошибка доступа к пути к файлу
+          href: language-reference/error-messages/path-file-access-error.md
+        - name: В разрешении отказано
+          href: language-reference/error-messages/permission-denied.md
+        - name: Недопустимый вызов или аргумент процедуры
+          href: language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
+        - name: Свойство ''<propertyname>'' возвращает значение не для всех ветвей кода
+          href: language-reference/error-messages/property-propertyname-doesn-t-return-a-value-on-all-code-paths.md
+        - name: Недопустимый индекс массива свойства
+          href: language-reference/error-messages/property-array-index-is-not-valid.md
+        - name: 'Процедура свойства let не определена, а процедура свойства get не вернула объект'
+          href: language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md
+        - name: Свойство не найдено
+          href: language-reference/error-messages/property-not-found.md
+        - name: Свойство или метод не найдены
+          href: language-reference/error-messages/property-or-method-not-found.md
+        - name: 'Переменная диапазона <variable> скрывает переменную во включающем блоке, ранее определенную переменную диапазона или неявно объявленную переменную в выражении запроса'
+          href: language-reference/error-messages/range-variable-variable-hides-a-variable-in-an-enclosing-block.md
+        - name: Имя переменной диапазона может быть выведено только из простого или полного имени без аргументов
+          href: language-reference/error-messages/range-variable-name-can-be-inferred.md
+        - name: 'Требуется ссылка на сборку <assemblyidentity>, содержащую тип <typename>, но подходящую ссылку не удалось найти из-за неоднозначности между проектами <projectname1> и <projectname2>'
+          href: language-reference/error-messages/reference-required-to-assembly-containing-type-but-suitable-reference-not-found.md
+        - name: 'Требуется ссылка на сборку <assemblyname>, содержащую базовый класс <classname>'
+          href: language-reference/error-messages/reference-required-to-assembly-assemblyname-containing-the-base-class-classname.md
+        - name: Запрошенная операция недоступна (BC35000)
+          href: language-reference/error-messages/bc35000.md
+        - name: Выполнение оператора Resume без ошибки
+          href: language-reference/error-messages/resume-without-error.md
+        - name: Тип возвращаемого значения функции <procedurename> несовместим с CLS
+          href: language-reference/error-messages/return-type-of-function-procedurename-is-not-cls-compliant.md
+        - name: Метод доступа Set свойства <propertyname> недоступен
+          href: language-reference/error-messages/set-accessor-of-property-propertyname-is-not-accessible.md
+        - name: Некоторые подразделы удалить нельзя
+          href: language-reference/error-messages/some-subkeys-cannot-be-deleted.md
+        - name: Оператор не может завершить блок за пределами однострочной инструкции If
+          href: language-reference/error-messages/statement-cannot-end-a-block-outside-of-a-line-if-statement.md
+        - name: Недопустимый оператор для пространства имен
+          href: language-reference/error-messages/statement-is-not-valid-in-a-namespace.md
+        - name: Оператор недопустим в теле метода/многострочного лямбда-оператора
+          href: language-reference/error-messages/statement-is-not-valid-inside-a-method-multiline-lambda.md
+        - name: Строковые константы должны завершаться двойной кавычкой
+          href: language-reference/error-messages/string-constants-must-end-with-a-double-quote.md
+        - name: 'Структура <structurename> должна содержать по крайней мере один экземпляр переменной члена или экземпляр объявления события, не помеченный как Custom'
+          href: language-reference/error-messages/structure-structurename-must-contain.md
+        - name: В <name> не найдено объявление Sub Main
+          href: language-reference/error-messages/sub-main-was-not-found-in-name.md
+        - name: Подпрограмма или функция не определена
+          href: language-reference/error-messages/sub-or-function-not-defined.md
+        - name: Список индексов вне диапазона
+          href: language-reference/error-messages/subscript-out-of-range.md
+        - name: 'TextFieldParser не смог завершить операцию чтения, так как превышен максимальный размер буфера'
+          href: language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md
+        - name: 'Тип для переменной <variablename> не будет определен, так как она привязана к полю во включающей области'
+          href: language-reference/error-messages/the-type-for-variable-variablename-will-not-be-inferred.md
+        - name: Этот массив имеет фиксированную длину или временно заблокирован
+          href: language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md
+        - name: Ключ уже связан с элементом коллекции
+          href: language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md
+        - name: Слишком много файлов
+          href: language-reference/error-messages/too-many-files.md
+        - name: В типе <typename> отсутствуют конструкторы
+          href: language-reference/error-messages/type-typename-has-no-constructors.md
+        - name: Тип <typename> несовместим с CLS
+          href: language-reference/error-messages/type-typename-is-not-cls-compliant.md
+        - name: Тип <typename> не определен
+          href: language-reference/error-messages/type-typename-is-not-defined.md
+        - name: Аргументы типа не могут быть выведены от делегата
+          href: language-reference/error-messages/type-arguments-could-not-be-inferred-from-the-delegate.md
+        - name: Несовпадение типов
+          href: language-reference/error-messages/type-mismatch.md
+        - name: 'Тип <variablename> не может быть выведен, поскольку для границ цикла и переменной шага нет расширяющего преобразования к одному типу'
+          href: language-reference/error-messages/type-of-variablename-cannot-be-inferred.md
+        - name: Тип члена <membername> не является CLS-совместимым
+          href: language-reference/error-messages/type-of-member-membername-is-not-cls-compliant.md
+        - name: Тип необязательного значения для необязательного параметра <parametername> несовместим с CLS
+          href: language-reference/error-messages/type-of-optional-value-for-optional-parameter-is-not-cls-compliant.md
+        - name: Тип параметра <parametername> не является CLS-совместимым
+          href: language-reference/error-messages/type-of-parameter-parametername-is-not-cls-compliant.md
+        - name: Параметры типа нельзя использовать в качестве квалификаторов
+          href: language-reference/error-messages/type-parameters-cannot-be-used-as-qualifiers.md
+        - name: 'Не удается создать сборку со строгим именем из файла ключа <filename>: <error>'
+          href: language-reference/error-messages/unable-to-create-strong-named-assembly-from-key-file-filename-error.md
+        - name: 'Не удается внедрить файл ресурсов <filename>: <error message>'
+          href: language-reference/error-messages/unable-to-embed-resource-file-filename-error-message.md
+        - name: 'Не удается выпустить сборку: <error message>'
+          href: language-reference/error-messages/unable-to-emit-assembly-error-message.md
+        - name: Не удается найти требуемый файл <filename>
+          href: language-reference/error-messages/unable-to-find-required-file-filename.md
+        - name: Не удалось получить имена последовательных портов из-за внутренней системной ошибки
+          href: language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md
+        - name: 'Не удается создать связь с файлом ресурсов <filename>: <error message>'
+          href: language-reference/error-messages/unable-to-link-to-resource-file-filename-error-message.md
+        - name: Не удается выполнить загрузку сведений для класса <classname>
+          href: language-reference/error-messages/unable-to-load-information-for-class-classname.md
+        - name: Не удается выполнить запись выходных данных в память
+          href: language-reference/error-messages/unable-to-write-output-to-memory.md
+        - name: 'Запись во временный файл невозможна, поскольку его каталог недоступен'
+          href: language-reference/error-messages/unable-to-write-temporary-file-because-temporary-path-is-not-available.md
+        - name: 'Не удается выполнить запись в файл результатов <filename>: <error>'
+          href: language-reference/error-messages/unable-to-write-to-output-file-filename-error.md
+        - name: Базовый тип <typename> перечисления несовместим с CLS
+          href: language-reference/error-messages/underlying-type-typename-of-enum-is-not-cls-compliant.md
+        - name: Использование переменной итератора в лямбда-выражении может привести к неожиданным результатам
+          href: language-reference/error-messages/using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results.md
+        - name: Значение типа <typename1> невозможно привести к <typename2>
+          href: language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md
+        - name: Значение типа <typename1> невозможно преобразовать в <typename2> (Множественные ссылки на файл)
+          href: language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md
+        - name: Невозможно преобразовать значение типа  в
+          href: language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md
+        - name: Переменная <variablename> скрывает содержащуюся в блоке переменную
+          href: language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md
+        - name: 'Переменная <variablename> используется до того, как ей присвоено значение'
+          href: language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md
+        - name: 'Переменная использует тип автоматизации, не поддерживаемый в Visual Basic'
+          href: language-reference/error-messages/variable-uses-an-automation-type-not-supported.md
+        - name: Свойства оси XML не поддерживают позднее связывание
+          href: language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md
+        - name: Исключение комментария XML должно иметь атрибут cref
+          href: language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md
+        - name: Ссылки на XML-сущности не поддерживаются
+          href: language-reference/error-messages/xml-entity-references-are-not-supported.md
+        - name: XML литералы и XML свойства не поддерживаются во встроенном в ASP.NET коде
+          href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
+        - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
+          href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
+- name: Справочник
+  href: reference/index.md
+  items:
+    - name: Компилятор с интерфейсом командной строки
+      href: reference/command-line-compiler/index.md
+      items:
+        - name: Построение из командной строки
+          href: reference/command-line-compiler/building-from-the-command-line.md
+          items:
+            - name: Практическое руководство. Вызов компилятора командной строки
+              href: reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
+            - name: Примеры командных строк компиляции
+              href: reference/command-line-compiler/sample-compilation-command-lines.md
+        - name: Параметры компилятора в алфавитном порядке
+          href: reference/command-line-compiler/compiler-options-listed-alphabetically.md
+          items:
+            - name: '@ (указание файла ответов)'
+              href: reference/command-line-compiler/specify-response-file.md
+            - name: '-addmodule'
+              href: reference/command-line-compiler/addmodule.md
+            - name: '-baseaddress'
+              href: reference/command-line-compiler/baseaddress.md
+            - name: '-bugreport'
+              href: reference/command-line-compiler/bugreport.md
+            - name: '-codepage'
+              href: reference/command-line-compiler/codepage.md
+            - name: '-debug'
+              href: reference/command-line-compiler/debug.md
+            - name: '-define'
+              href: reference/command-line-compiler/define.md
+            - name: '-delaysign'
+              href: reference/command-line-compiler/delaysign.md
+            - name: '-deterministic'
+              href: reference/command-line-compiler/deterministic.md
+            - name: '-doc'
+              href: reference/command-line-compiler/doc.md
+            - name: '-errorreport'
+              href: reference/command-line-compiler/errorreport.md
+            - name: '-filealign'
+              href: reference/command-line-compiler/filealign.md
+            - name: '-help, /?'
+              href: reference/command-line-compiler/help.md
+            - name: '-highentropyva'
+              href: reference/command-line-compiler/highentropyva.md
+            - name: '-imports'
+              href: reference/command-line-compiler/imports.md
+            - name: '-keycontainer'
+              href: reference/command-line-compiler/keycontainer.md
+            - name: '-keyfile'
+              href: reference/command-line-compiler/keyfile.md
+            - name: '-langversion'
+              href: reference/command-line-compiler/langversion.md
+            - name: '-libpath'
+              href: reference/command-line-compiler/libpath.md
+            - name: '-link'
+              href: reference/command-line-compiler/link.md
+            - name: '-linkresource'
+              href: reference/command-line-compiler/linkresource.md
+            - name: '-main'
+              href: reference/command-line-compiler/main.md
+            - name: '-moduleassemblyname'
+              href: reference/command-line-compiler/moduleassemblyname.md
+            - name: '-netcf'
+              href: reference/command-line-compiler/netcf.md
+            - name: '-noconfig'
+              href: reference/command-line-compiler/noconfig.md
+            - name: '-nologo'
+              href: reference/command-line-compiler/nologo.md
+            - name: '-nostdlib'
+              href: reference/command-line-compiler/nostdlib.md
+            - name: '-nowarn'
+              href: reference/command-line-compiler/nowarn.md
+            - name: '-nowin32manifest'
+              href: reference/command-line-compiler/nowin32manifest.md
+            - name: '-optimize'
+              href: reference/command-line-compiler/optimize.md
+            - name: '-optioncompare'
+              href: reference/command-line-compiler/optioncompare.md
+            - name: '-optionexplicit'
+              href: reference/command-line-compiler/optionexplicit.md
+            - name: '-optioninfer'
+              href: reference/command-line-compiler/optioninfer.md
+            - name: '-optionstrict'
+              href: reference/command-line-compiler/optionstrict.md
+            - name: '-out'
+              href: reference/command-line-compiler/out.md
+            - name: '-platform'
+              href: reference/command-line-compiler/platform.md
+            - name: '-quiet'
+              href: reference/command-line-compiler/quiet.md
+            - name: '-recurse'
+              href: reference/command-line-compiler/recurse.md
+            - name: '-reference'
+              href: reference/command-line-compiler/reference.md
+            - name: '-refonly'
+              href: reference/command-line-compiler/refonly-compiler-option.md
+            - name: '-refout'
+              href: reference/command-line-compiler/refout-compiler-option.md
+            - name: '-removeintchecks'
+              href: reference/command-line-compiler/removeintchecks.md
+            - name: '-resource'
+              href: reference/command-line-compiler/resource.md
+            - name: '-rootnamespace'
+              href: reference/command-line-compiler/rootnamespace.md
+            - name: '-sdkpath'
+              href: reference/command-line-compiler/sdkpath.md
+            - name: '-target'
+              href: reference/command-line-compiler/target.md
+            - name: '-subsystemversion'
+              href: reference/command-line-compiler/subsystemversion.md
+            - name: '-utf8output'
+              href: reference/command-line-compiler/utf8output.md
+            - name: '-vbruntime'
+              href: reference/command-line-compiler/vbruntime.md
+            - name: '-verbose'
+              href: reference/command-line-compiler/verbose.md
+            - name: '-warnaserror'
+              href: reference/command-line-compiler/warnaserror.md
+            - name: '-win32icon'
+              href: reference/command-line-compiler/win32icon.md
+            - name: '-win32manifest'
+              href: reference/command-line-compiler/win32manifest.md
+            - name: '-win32resource'
+              href: reference/command-line-compiler/win32resource.md
+        - name: 'Параметры компилятора, упорядоченные по категориям'
+          href: reference/command-line-compiler/compiler-options-listed-by-category.md
+    - name: Справочная информация по .NET Framework
+      href: reference/net-framework-reference-information.md
+    - name: Спецификация языка
+      href: reference/language-specification/
+- name: Примеры приложений
+  href: sample-applications.md
+- name: Пошаговые руководства
+  href: walkthroughs.md

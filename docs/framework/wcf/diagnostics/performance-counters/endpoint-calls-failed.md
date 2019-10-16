@@ -1,20 +1,20 @@
 ---
-title: 'Конечная точка: Сбои вызовов'
+title: 'Конечная точка: сбои вызовов'
 ms.date: 03/30/2017
 ms.assetid: 3bdca983-7199-4596-b7e1-de15c0766250
-ms.openlocfilehash: 819f8ebe50587577b400d9140e82447d8640cad5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 70370a7e98d3844cd7b255ccb103fa70d6b25e30
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422119"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319986"
 ---
-# <a name="endpoint-calls-failed"></a>Конечная точка: Сбои вызовов
-Имя счетчика: Количество сбоев вызовов.  
+# <a name="endpoint-calls-failed"></a>Конечная точка: сбои вызовов
+Counter Name: Calls Failed  
   
 ## <a name="description"></a>Описание  
  Количество вызовов с необработанными исключениями в данной конечной точке. Значение этого счетчика увеличивается при каждом обнаружении необработанного исключения в данной конечной точке.  
   
 ## <a name="see-also"></a>См. также
 
-- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Указание и обработка сбоев в контрактах и службах](../../specifying-and-handling-faults-in-contracts-and-services.md)

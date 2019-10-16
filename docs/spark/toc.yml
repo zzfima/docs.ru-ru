@@ -3,6 +3,8 @@
 - name: Обзор
   expanded: true
   items:
+    - name: Что такое Apache Spark?
+      href: what-is-spark.md
     - name: Что такое .NET для Apache Spark?
       href: what-is-apache-spark-dotnet.md
 - name: Учебники

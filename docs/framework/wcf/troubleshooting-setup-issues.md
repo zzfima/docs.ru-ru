@@ -2,12 +2,12 @@
 title: Устранение неполадок с установкой
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291515"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321357"
 ---
 # <a name="troubleshooting-setup-issues"></a>Устранение неполадок с установкой
 В этом разделе описывается устранение неполадок, связанных с настройкой Windows Communication Foundation (WCF).  
@@ -38,15 +38,15 @@ ms.locfileid: "72291515"
   
 4. В журнале событий или в файле журнала трассировки установки может быть зарегистрировано исключение, например одно из приведенных ниже.  
   
-     ServiceModelReg [11:09:59:046]: System. ApplicationException: Непредвиденный результат 3 при исполнении E:\WINDOWS\system32\wbem\mofcomp.exe с "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Фаундатион\сервицемодел.МОФ"  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Неожиданный результат 3, ожидается E:\WINDOWS\system32\wbem\mofcomp.exe с «E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof»  
   
      или  
   
-     ServiceModelReg [07:19:33:843]: System. TypeInitializationException: Инициализатор типа для "System. Management. Манажементпас" вызвал исключение. ---> System. Runtime. InteropServices. COMException (0x80040154): Не удалось получить фабрику класса COM для компонента с CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} из-за следующей ошибки: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Инициализатор типа 'System.Management.ManagementPath' выдал исключение. ---> System. Runtime. InteropServices. COMException (0x80040154): не удалось получить фабрику класса COM для компонента с CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} из-за следующей ошибки: 80040154.  
   
      или  
   
-     ServiceModelReg [07:19:32:750]: System. IO. FileNotFoundException: Не удалось загрузить файл или сборку "C:\WINDOWS\system32\wbem\mofcomp.exe" или одну из ее зависимостей. Не удается найти указанный файл.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Невозможно загрузить файл или сборку 'C:\WINDOWS\system32\wbem\mofcomp.exe' или один из зависимых от них компонентов. Не удается найти указанный файл.  
   
      Имя файла: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
@@ -57,14 +57,14 @@ ms.locfileid: "72291515"
  Восстановите установку .NET Framework 3,0 с помощью приложения **Установка и удаление программ** , расположенного в **панели управления**, или удалите или переустановите .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Восстановление .NET Framework 3.0, после того как в процессе установки .NET Framework 3.5 из файла machine.config будут удалены элементы конфигурации, добавленные .NET Framework 3.5  
- В случае восстановления .NET Framework 3.0 после установки [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] из файла machine.config удаляются элементы конфигурации, добавленные [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Однако файл web.config остается без изменений. Чтобы решить эту проблему, восстановите [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] после этого через ARP или используйте [средство регистрации службы рабочего процесса (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) с параметром `/c`.  
+ В случае восстановления .NET Framework 3.0 после установки [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] из файла machine.config удаляются элементы конфигурации, добавленные [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Однако файл web.config остается без изменений. Чтобы решить эту проблему, восстановите [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] после этого через ARP или используйте [средство регистрации службы рабочего процесса (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) с параметром `/c`.  
   
- [Средство регистрации служб рабочего процесса (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) можно найти по адресу%windir%\Microsoft.NET\framework\v3.5\ или%WINDIR%\Microsoft.NET\framework64\v3.5\  
+ [Средство регистрации служб рабочего процесса (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) можно найти по адресу%windir%\Microsoft.NET\framework\v3.5\ или%WINDIR%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Правильная настройка узла WCF/WF в службах IIS после установки .NET Framework 3.5  
  Если установка [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] не позволяет настроить дополнительные параметры конфигурации IIS, связанные с WCF, регистрируется ошибка в журнале установки и сохраняется. Все попытки запуска приложений WorkflowServices будут неудачными, поскольку отсутствуют обязательные параметры конфигурации. Например, не удастся загрузить службы правил или XOML.  
   
- Чтобы решить эту проблему, используйте [средство регистрации службы рабочего процесса (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) с параметром `/c`, чтобы правильно настроить карты сценариев IIS на компьютере. [Средство регистрации служб рабочего процесса (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) можно найти по адресу%windir%\Microsoft.NET\framework\v3.5\ или%WINDIR%\Microsoft.NET\framework64\v3.5\  
+ Чтобы решить эту проблему, используйте [средство регистрации службы рабочего процесса (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) с параметром `/c`, чтобы правильно настроить карты сценариев IIS на компьютере. [Средство регистрации служб рабочего процесса (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) можно найти по адресу%windir%\Microsoft.NET\framework\v3.5\ или%WINDIR%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Не удалось загрузить "System.ServiceModel.Activation.HttpModule" из сборки "System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".  
  Эта ошибка возникает, если установлена [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], а затем включена активация WCF HTTP. Чтобы устранить эту проблему, выполните следующую команду из командной строки в Командная строка разработчика для Visual Studio:  
@@ -75,4 +75,4 @@ aspnet_regiis.exe -i -enable
   
 ## <a name="see-also"></a>См. также
 
-- [Инструкции по настройке](../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Инструкции по настройке](./samples/set-up-instructions.md)

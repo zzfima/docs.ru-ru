@@ -2,12 +2,12 @@
 title: Параметры (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
-ms.openlocfilehash: 723e40f523f8bb573e0ffcb1863ed0c082ea9d8d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8fbca4f10a7c2c3dbaffff978a536b87d31a8df4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249591"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319434"
 ---
 # <a name="parameters-entity-sql"></a>Параметры (Entity SQL)
 Параметры - это переменные, определенные вне [!INCLUDE[esql](../../../../../../includes/esql-md.md)] обычно через привязку API, используемую базовым языком. Каждый параметр имеет имя и тип. Имена параметров определены в выражениях запросов с символом (@) в качестве префикса. Так они отличаются от имен свойств или других имен, определенных в запросе.  
@@ -16,10 +16,10 @@ ms.locfileid: "70249591"
   
 ## <a name="example"></a>Пример  
   
-```  
-select c   
-      from LOB.Customers as c   
-      where c.Name = @name  
+```sql  
+SELECT c   
+      FROM LOB.Customers AS c   
+      WHERE c.Name = @name  
 ```  
   
 ## <a name="see-also"></a>См. также

@@ -1,0 +1,66 @@
+- name: Руководство по .NET Framework
+  href: index.md
+- name: Новые возможности
+  href: whats-new/
+- name: Приступая к работе
+  href: get-started/
+- name: Руководство по установке
+  href: install/
+- name: Руководства по миграции
+  href: migration-guide/
+- name: Руководство по разработке
+  href: development-guide.md
+  items:
+    - name: Домены приложений и сборки
+      href: app-domains/
+    - name: Ресурсы в приложениях для настольных систем
+      href: resources/
+    - name: Специальные возможности
+      href: ui-automation/
+    - name: Данные и модели
+      href: data/
+    - name: Клиентские приложения
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: Сервисноориентированные приложения с WCF
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Служебные приложения Windows
+      href: windows-services/
+    - name: 64-разрядные приложения
+      href: 64-bit-apps.md
+    - name: Веб-приложения с ASP.NET
+      href: develop-web-apps-with-aspnet.md
+    - name: Сетевое программирование в .NET Framework
+      href: network-programming/
+    - name: Настройка приложений
+      href: configure-apps/
+    - name: Компиляция приложений с помощью машинного кода .NET
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 'Отладка, трассировка и профилирование'
+      href: debug-trace-profile/
+    - name: Развертывание
+      href: deployment/
+    - name: Производительность
+      href: performance/
+    - name: Динамическое программирование
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: Взаимодействие с неуправляемым кодом
+      href: interop/
+    - name: Справочник по неуправляемым API
+      href: unmanaged-api/
+    - name: Службы XAML
+      href: xaml-services/
+- name: Инструменты
+  href: tools/
+- name: Дополнительные библиотеки классов и API-интерфейсы
+  href: additional-apis/

@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 19ac9da94ce6e405632293a7d569698c9d866bef
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d02e697b23b6c745a59f3c9c37dd9c565f2f710e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856059"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320921"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Практическое руководство. Защита службы с использованием учетных данных Windows
 
-В этом разделе показано, как включить безопасность транспорта для службы Windows Communication Foundation (WCF), которая находится в домене Windows и вызывается клиентами в том же домене. Дополнительные сведения об этом сценарии см. [в статье безопасность транспорта с использованием проверки подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе пример [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) .
+В этом разделе показано, как включить безопасность транспорта для службы Windows Communication Foundation (WCF), которая находится в домене Windows и вызывается клиентами в том же домене. Дополнительные сведения об этом сценарии см. [в статье безопасность транспорта с использованием проверки подлинности Windows](./feature-details/transport-security-with-windows-authentication.md). Пример приложения см. в разделе пример [WSHttpBinding](./samples/wshttpbinding.md) .
 
 Начинать изучение этого раздела рекомендуется только после определения существующего интерфейса контракта и его реализации. Также можно изменять существующие службу и клиент.
 
@@ -47,13 +47,13 @@ ms.locfileid: "70856059"
 
 ### <a name="using-the-binding-in-a-service"></a>Использование привязки в службе
 
-Это вторая процедура, в которой показано, как использовать привязку в резидентной службе. Дополнительные сведения о службах хостинга см. в разделе [службы хостинга](../../../docs/framework/wcf/hosting-services.md).
+Это вторая процедура, в которой показано, как использовать привязку в резидентной службе. Дополнительные сведения о службах хостинга см. в разделе [службы хостинга](hosting-services.md).
 
 ##### <a name="to-use-a-binding-in-a-service"></a>Использование привязки в службе
 
 1. Вставьте код этой процедуры после кода предыдущей процедуры
 
-2. Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При использовании Visual Basic используйте `GetType` оператор; при использовании C#используйте `typeof` ключевое слово.
+2. Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При использовании Visual Basic используйте оператор `GetType`; При использовании C#используйте ключевое слово `typeof`.
 
 3. Создайте вторую переменную <xref:System.Type> с именем `serviceType` и присвойте ей тип реализованного контракта (`Calculator`).
 
@@ -70,15 +70,15 @@ ms.locfileid: "70856059"
 
 ### <a name="using-the-binding-in-a-client"></a>Использование привязки в клиенте
 
-Эта процедура показывает, как создать прокси, взаимодействующий со службой. Прокси-сервер создается с помощью [служебной программы метаданных ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , которая использует метаданные службы для создания учетной записи-посредника.
+Эта процедура показывает, как создать прокси, взаимодействующий со службой. Прокси-сервер создается с помощью [служебной программы метаданных ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) , которая использует метаданные службы для создания учетной записи-посредника.
 
 Эта процедура также создает экземпляр класса <xref:System.ServiceModel.WSHttpBinding> для взаимодействия со службой, а затем вызывает службу.
 
 В этом примере для создания клиента используется только код. В качестве альтернативы можно использовать файл конфигурации, показанный в следующем после этой процедуры разделе.
 
-##### <a name="to-use-a-binding-in-a-client-with-code"></a>Использование привязки в клиенте с кодом
+#### <a name="to-use-a-binding-in-a-client-with-code"></a>Использование привязки в клиенте с кодом
 
-1. Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. Дополнительные сведения см. в разделе [Практическое руководство. Создайте клиент](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Созданный код прокси-сервера наследуется <xref:System.ServiceModel.ClientBase%601> от класса, который гарантирует, что каждый клиент имеет необходимые конструкторы, методы и свойства для взаимодействия со службой WCF. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.
+1. Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. Дополнительные сведения см. [в разделе инструкции. Создание клиента](how-to-create-a-wcf-client.md). Созданный код прокси-сервера наследует от класса <xref:System.ServiceModel.ClientBase%601>, который гарантирует, что каждый клиент имеет необходимые конструкторы, методы и свойства для взаимодействия со службой WCF. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.
 
 2. Код этой процедуры вставляется в начало метода `Main` программы клиента.
 
@@ -99,22 +99,22 @@ ms.locfileid: "70856059"
 
 Вместо создания привязки с процедурным кодом можно использовать следующий код, приведенный для раздела привязок файла конфигурации.
 
-Если вы еще не определили службу, см. статью [Разработка и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)и [Настройка служб](../../../docs/framework/wcf/configuring-services.md).
+Если вы еще не определили службу, см. статью [Разработка и реализация служб](designing-and-implementing-services.md)и [Настройка служб](configuring-services.md).
 
 > [!NOTE]
 > Этот код конфигурации используется в файлах конфигурации службы и клиента.
 
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Включение безопасности передачи в службе в домене Windows с использованием конфигурации
 
-1. Добавьте [элемент \<привязки wsHttpBinding > в раздел привязок >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемент файла конфигурации. [ \<](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+1. Добавьте элемент [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) в раздел элемента [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) файла конфигурации.
 
-2. Добавьте элемент >`binding`< в элемент <`WSHttpBinding` `configurationName` > и присвойте атрибуту значение, соответствующее приложению.
+2. Добавьте < `binding` > в элемент @no__t < >-1 и задайте для атрибута `configurationName` значение, соответствующее приложению.
 
-3. Добавьте элемент >`security`< и `mode` присвойте атрибуту значение Message.
+3. Добавьте < `security` > и присвойте атрибуту `mode` значение Message.
 
-4. Добавьте элемент >`message`< и `clientCredentialType` присвойте атрибуту значение Windows.
+4. Добавьте элемент > < `message` и задайте для атрибута `clientCredentialType` значение Windows.
 
-5. В файле конфигурации службы замените раздел `<bindings>` с помощью следующего кода. Если у вас еще нет файла конфигурации службы, см. раздел [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).
+5. В файле конфигурации службы замените раздел `<bindings>` с помощью следующего кода. Если у вас еще нет файла конфигурации службы, см. раздел [Использование привязок для настройки служб и клиентов](using-bindings-to-configure-services-and-clients.md).
 
     ```xml
     <bindings>
@@ -132,11 +132,11 @@ ms.locfileid: "70856059"
 
 Эта процедура показывает, как создать два файла: прокси, взаимодействующий со службой, и файл конфигурации. В этой процедуре также описаны изменения программы клиента, которая является третьим файлом, используемым в клиенте.
 
-##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Использование привязки в клиенте с конфигурацией
+#### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Использование привязки в клиенте с конфигурацией
 
-1. Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. Дополнительные сведения см. в разделе [Практическое руководство. Создайте клиент](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+1. Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. Дополнительные сведения см. [в разделе инструкции. Создание клиента](how-to-create-a-wcf-client.md).
 
-2. Замените [привязку > разделе созданного файла конфигурации кодом конфигурации из предыдущего раздела. \<](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+2. Замените раздел [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) созданного файла конфигурации кодом конфигурации из предыдущего раздела.
 
 3. Процедурный код вставлен в начало метода `Main` программы клиента.
 
@@ -158,7 +158,7 @@ ms.locfileid: "70856059"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.WSHttpBinding>
-- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Защита служб](../../../docs/framework/wcf/securing-services.md)
-- [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Практическое руководство. Создание клиента](how-to-create-a-wcf-client.md)
+- [Защита служб](securing-services.md)
+- [Общие сведения о безопасности](./feature-details/security-overview.md)

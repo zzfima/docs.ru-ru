@@ -1,4 +1,4 @@
-﻿---
+---
 title: Практическое руководство. Запись символов в строку
 ms.date: 01/21/2019
 ms.technology: dotnet-standard

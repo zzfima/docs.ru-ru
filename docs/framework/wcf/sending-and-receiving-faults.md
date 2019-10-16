@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 447928ec3e6c0eaab997f839ab1aab49c677ad44
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dc9dcb5d8e36984d1e5a2e5c5124e74509de7f3d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044473"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320217"
 ---
 # <a name="sending-and-receiving-faults"></a>Сбои при отправке и получении
 
-Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. Как правило, служба определяет пользовательское содержимое ошибки и указывает операции, которые могут возвращать такие ошибки. (Дополнительные сведения см. в разделе [Определение и указание ошибок](../../../docs/framework/wcf/defining-and-specifying-faults.md).) В этом разделе описывается, как служба или дуплексный клиент могут отправлять такие ошибки в случае возникновения соответствующих условий и как клиентское приложение или приложение службы обрабатывает эти ошибки. Общие сведения об обработке ошибок в приложениях Windows Communication Foundation (WCF) см. в разделе [Указание и обработка ошибок в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).
+Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. Как правило, служба определяет пользовательское содержимое ошибки и указывает операции, которые могут возвращать такие ошибки. (Дополнительные сведения см. в разделе [Определение и указание ошибок](defining-and-specifying-faults.md).) В этом разделе обсуждается, как служба или дуплексный клиент могут отправить эти ошибки при возникновении соответствующего условия ошибки и о том, как клиент или приложение службы обрабатывает эти ошибки. Общие сведения об обработке ошибок в приложениях Windows Communication Foundation (WCF) см. в разделе [Указание и обработка ошибок в контрактах и службах](specifying-and-handling-faults-in-contracts-and-services.md).
 
 ## <a name="sending-soap-faults"></a>Отправка ошибок SOAP
 
@@ -29,7 +29,7 @@ ms.locfileid: "70044473"
 [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
 [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]
 
-Для передачи клиенту сведений об ошибке `GreetingFault` необходимо перехватить ошибку и создать новое исключение <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> типа `GreetingFault` с новым объектом `GreetingFault` в качестве аргумента; см. пример кода ниже. Если клиент является клиентским приложением WCF, он работает как управляемое исключение, в котором тип имеет <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> тип. `GreetingFault`
+Для передачи клиенту сведений об ошибке `GreetingFault` необходимо перехватить ошибку и создать новое исключение <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> типа `GreetingFault` с новым объектом `GreetingFault` в качестве аргумента; см. пример кода ниже. Если клиент является клиентским приложением WCF, он работает как управляемое исключение, где тип — <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> типа `GreetingFault`.
 
 [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
 [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]
@@ -39,11 +39,11 @@ ms.locfileid: "70044473"
 Отправка необъявленных сбоев может оказаться очень полезной для быстрой диагностики и отладки проблем в приложениях WCF, но ее полезность в том, что это средство отладки ограничено. В общем случае при отладке рекомендуется использовать свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>. Если свойству присвоено значение true, клиенты получают такие ошибки в виде исключений <xref:System.ServiceModel.FaultException%601> типа <xref:System.ServiceModel.ExceptionDetail>.
 
 > [!IMPORTANT]
-> Так как управляемые исключения могут предоставлять внутренние сведения о приложении <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> , <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> устанавливать `true` или разрешать клиентам WCF получать сведения о внутренних исключениях операций службы, включая личные идентифицируемые или другие конфиденциальные сведения.
+> Поскольку управляемые исключения могут предоставлять внутренние сведения о приложении, установка <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> в `true` может позволить клиентам WCF получать сведения о внутренних исключениях операций службы, включая персональные и другие конфиденциальные данные. об.
 >
-> Поэтому задавать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> значение `true` рекомендуется только для временной отладки приложения службы. Кроме того, WSDL для метода, который возвращает такие необработанные управляемые исключения, не содержит контракт для исключения <xref:System.ServiceModel.FaultException%601> типа <xref:System.ServiceModel.ExceptionDetail>. Клиенты должны рассчитывать на возможность неизвестной ошибки SOAP (возвращается клиентам WCF как <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> объекты) для правильного получения отладочной информации.
+> Поэтому задавать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> значение `true` рекомендуется только для временной отладки приложения службы. Кроме того, WSDL для метода, который возвращает такие необработанные управляемые исключения, не содержит контракт для исключения <xref:System.ServiceModel.FaultException%601> типа <xref:System.ServiceModel.ExceptionDetail>. Клиенты должны рассчитывать на возможность неизвестной ошибки SOAP (возвращенные клиентам WCF как объекты <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>) для правильного получения отладочной информации.
 
-Чтобы отправить необъявленную ошибку SOAP, необходимо создать объект <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> (не универсального типа <xref:System.ServiceModel.FaultException%601>) и передать строку конструктору. Это значение предоставляется клиентским приложениям WCF в виде вызванного <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> исключения, когда строка доступна путем <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> вызова метода.
+Чтобы отправить необъявленную ошибку SOAP, необходимо создать объект <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> (не универсального типа <xref:System.ServiceModel.FaultException%601>) и передать строку конструктору. Он предоставляется клиентским приложениям WCF в виде вызванного исключения <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>, где строка доступна путем вызова метода <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
 > Если объявлена ошибка SOAP строкового типа, а затем она выдана службе в виде объекта <xref:System.ServiceModel.FaultException%601> с параметром типа <xref:System.String?displayProperty=nameWithType>, значение строки присваивается свойству <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> и недоступно в свойстве <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.
@@ -67,7 +67,7 @@ ms.locfileid: "70044473"
 Исключения <xref:System.ServiceModel.FaultException%601> выдаются в клиенте при получении ошибки, указанной в контракте операции, в ответ на двустороннюю операцию (т.е. метод с атрибутом <xref:System.ServiceModel.OperationContractAttribute>, у которого свойству <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> присвоено значение `false`).
 
 > [!NOTE]
-> <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> Если в службе WCF свойство или `true` <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> задано для клиента как необъявленное <xref:System.ServiceModel.FaultException%601> значение типа <xref:System.ServiceModel.ExceptionDetail>. Клиенты могут либо перехватить эту определенную ошибку, либо обработать ее в блоке catch для <xref:System.ServiceModel.FaultException>.
+> Если для службы WCF свойство <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> установлено в значение `true`, клиент выдает это как необъявленный <xref:System.ServiceModel.FaultException%601> типа <xref:System.ServiceModel.ExceptionDetail>. Клиенты могут либо перехватить эту определенную ошибку, либо обработать ее в блоке catch для <xref:System.ServiceModel.FaultException>.
 
 Как правило, только исключения <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException> и <xref:System.ServiceModel.CommunicationException> представляют интерес для клиентов и служб.
 
@@ -102,12 +102,12 @@ ms.locfileid: "70044473"
 
 Поскольку при закрытии канала также могут создаваться исключения, рекомендуется в дополнение к перехвату исключений ошибок в правильном порядке прерывать канал, использованный в вызове, в блоке catch.
 
-Если ошибка содержит сведения об ошибке, касающиеся операции, и существует возможность использования ее другими объектами, прерывать канал не требуется (такие случаи являются редкими). Во всех остальных случаях рекомендуется прерывать канал. Пример, демонстрирующий все эти моменты, см. в разделе [ожидаемые исключения](../../../docs/framework/wcf/samples/expected-exceptions.md).
+Если ошибка содержит сведения об ошибке, касающиеся операции, и существует возможность использования ее другими объектами, прерывать канал не требуется (такие случаи являются редкими). Во всех остальных случаях рекомендуется прерывать канал. Пример, демонстрирующий все эти моменты, см. в разделе [ожидаемые исключения](./samples/expected-exceptions.md).
 
 В следующем примере кода демонстрируется обработка исключений ошибок SOAP в простом клиентском приложении, в том числе объявленных и необъявленных ошибок.
 
 > [!NOTE]
-> В этом примере кода не используется конструкция `using`. Поскольку закрытие каналов может вызывать исключения, рекомендуется сначала создать клиент WCF, а затем открыть, использовать и закрыть клиент WCF в том же блоке try. Дополнительные сведения см. в статье [Общие сведения о клиенте WCF](../../../docs/framework/wcf/wcf-client-overview.md) и [Использование Close и Abort для освобождения ресурсов клиента WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).
+> В этом примере кода не используется конструкция `using`. Поскольку закрытие каналов может вызывать исключения, рекомендуется сначала создать клиент WCF, а затем открыть, использовать и закрыть клиент WCF в том же блоке try. Дополнительные сведения см. в статье [Общие сведения о клиенте WCF](wcf-client-overview.md) и [Использование Close и Abort для освобождения ресурсов клиента WCF](./samples/use-close-abort-release-wcf-client-resources.md).
 
 [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
 [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]
@@ -117,5 +117,5 @@ ms.locfileid: "70044473"
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
-- [Ожидаемые исключения](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Использование закрытия и прерывания для освобождения ресурсов клиента WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Ожидаемые исключения](./samples/expected-exceptions.md)
+- [Использование закрытия и прерывания для освобождения ресурсов клиента WCF](./samples/use-close-abort-release-wcf-client-resources.md)

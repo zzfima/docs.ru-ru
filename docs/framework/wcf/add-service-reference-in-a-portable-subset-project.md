@@ -2,15 +2,15 @@
 title: Добавление ссылки на службу в проект переносного вложенного набора
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782425"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320848"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Добавление ссылки на службу в проект переносного вложенного набора
-Проекты переносимого подмножества позволяют программистам, создающим сборки .NET поддерживать одно дерево исходного кода и система сборки, продолжая поддерживать несколько реализаций .NET (рабочий стол, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества ссылаться только на переносимые библиотеки .NET, которые являются сборкой .NET framework, который может использоваться в любой реализации .NET.  
+Переносимые проекты подмножества позволяют программистам сборок .NET поддерживать единое дерево исходного кода и систему сборки, одновременно обеспечивая поддержку нескольких реализаций .NET (Desktop, Silverlight, Windows Phone и XBOX). Переносимые проекты подмножества ссылаются только на переносимые библиотеки .NET, которые являются сборкой .NET Framework, которую можно использовать в любой реализации .NET.  
   
 ## <a name="add-service-reference-details"></a>Диалоговое окно «Добавление ссылки на службу»  
  При добавлении ссылки на службу в проект переносного подмножества применяются следующие ограничения.  
@@ -45,5 +45,5 @@ ms.locfileid: "61782425"
   
 ## <a name="see-also"></a>См. также
 
-- [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Обращение к службам с помощью клиента WCF](accessing-services-using-a-wcf-client.md)
 - [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

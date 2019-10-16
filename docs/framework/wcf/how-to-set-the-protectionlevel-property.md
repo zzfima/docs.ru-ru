@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ff835f767852da586a3a35b7f4ce2edf99db283
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950983"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320911"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Практическое руководство. Установка свойства ProtectionLevel
-Уровень защиты можно задать, применив соответствующий атрибут и задав свойство. Защиту на уровне службы можно задать таким образом, чтобы она влияла на все части каждого сообщения, можно также задать защиту на более детализированных уровнях - от методов до частей сообщения. Дополнительные сведения о свойстве `ProtectionLevel` см. в разделе Основные сведения об [уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md).  
+Уровень защиты можно задать, применив соответствующий атрибут и задав свойство. Защиту на уровне службы можно задать таким образом, чтобы она влияла на все части каждого сообщения, можно также задать защиту на более детализированных уровнях - от методов до частей сообщения. Дополнительные сведения о свойстве `ProtectionLevel` см. в разделе Общие сведения об [уровне защиты](understanding-protection-level.md).  
   
 > [!NOTE]
 > Уровни защиты можно задавать только в коде, а не в конфигурации.  
@@ -42,7 +42,7 @@ ms.locfileid: "69950983"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Защита сообщений об ошибках  
- Создаваемые в службе исключения можно отправить клиенту в виде ошибок SOAP. Дополнительные сведения о создании строго типизированных ошибок см. [в разделе Указание и обработка ошибок в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) , а [так: Объявить ошибки в контрактах](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)служб.  
+ Создаваемые в службе исключения можно отправить клиенту в виде ошибок SOAP. Дополнительные сведения о создании строго типизированных ошибок см. [в разделе Указание и обработка ошибок в контрактах и службах](specifying-and-handling-faults-in-contracts-and-services.md) и [инструкции: объявление ошибок в контрактах служб](how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>Защита сообщения об ошибке  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69950983"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Защита частей сообщения  
- Для защиты частей сообщения следует использовать контракт сообщения. Дополнительные сведения о контрактах сообщений см. [в разделе Использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Для защиты частей сообщения следует использовать контракт сообщения. Дополнительные сведения о контрактах сообщений см. [в разделе Использование контрактов сообщений](./feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>Защита тела сообщения  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69950983"
   
 3. Примените атрибут <xref:System.ServiceModel.MessageHeaderAttribute> к полю, которое будет выражено как заголовок сообщения, и задайте значение `ProtectionLevel` для свойства <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-4. Примените `ProtectionLevel` <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>к любому полю, которое будет выражаться как часть текста сообщения, и задайте для свойства значение, как показано в следующем примере. <xref:System.ServiceModel.MessageBodyMemberAttribute>  
+4. Примените <xref:System.ServiceModel.MessageBodyMemberAttribute> к любому полю, которое будет выводиться как часть текста сообщения, и задайте для свойства `ProtectionLevel` значение <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, как показано в следующем примере.  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
@@ -95,4 +95,4 @@ ms.locfileid: "69950983"
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.MessageContractAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
-- [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Основные сведения об уровне защиты](understanding-protection-level.md)

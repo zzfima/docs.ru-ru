@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 671e650a494d314ec1da1957eaae91e2d1811213
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aea26c3a814a34c9d2985bb1bf02dbb80d32ef12
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952839"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320292"
 ---
 # <a name="using-sessions"></a>Использование сеансов
 В приложениях Windows Communication Foundation (WCF) *сеанс* сопоставляет группу сообщений с диалогом. Сеансы WCF отличаются от объектов сеанса, доступных в ASP.NET приложениях, поддерживают различные поведения и управляются различными способами. В этом разделе описываются функции, которые сеансы включают в приложениях WCF, и способы их использования.  
@@ -30,7 +30,7 @@ ms.locfileid: "69952839"
   
 - Нет общего хранилища данных, связанного с сеансом WCF.  
   
- Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> классом в приложениях ASP.NET и предоставляемыми им функциями, вы можете заметить следующие различия между этим видом сеанса и сеансами WCF:  
+ Если вы знакомы с классом <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в приложениях ASP.NET и предоставляемыми им функциями, вы можете заметить следующие различия между этим видом сеанса и сеансами WCF:  
   
 - Сеансы ASP.NET всегда инициируются сервером.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "69952839"
 - Управление созданием и прекращением сеанса и его связью с экземпляром службы.  
   
 ## <a name="default-execution-behavior-using-sessions"></a>Поведение выполнения по умолчанию с использованием сеансов  
- Привязка, пытающаяся инициировать сеанс, называется *основанной на сеансе* . Контракты служб указывают о том, что для них требуются, допускаются или не допускаются привязки, основанные на сеансе. Для этого свойству <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> интерфейса (или класса) контракта службы присваивается одно из значений перечисления <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> . По умолчанию значение этого свойства равно <xref:System.ServiceModel.SessionMode.Allowed>, а это означает, что если клиент использует привязку на основе сеанса с реализацией службы WCF, служба устанавливает и использует предоставленный сеанс.  
+ Привязка, пытающаяся инициировать сеанс, называется *основанной на сеансе* . Контракты служб указывают о том, что для них требуются, допускаются или не допускаются привязки, основанные на сеансе. Для этого свойству <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> интерфейса (или класса) контракта службы присваивается одно из значений перечисления <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> . По умолчанию значение этого свойства равно <xref:System.ServiceModel.SessionMode.Allowed>. Это означает, что если клиент использует привязку на основе сеанса с реализацией службы WCF, служба устанавливает и использует предоставленный сеанс.  
   
  Когда служба WCF принимает сеанс клиента, по умолчанию включаются следующие функции.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "69952839"
   
  WCF предоставляет следующие типы поведения приложений на основе сеансов:  
   
-- Элемент <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> поддерживает основанные на безопасности сеансы, в которых обе стороны, обменивающиеся информацией, согласовали определенный безопасный диалог. Дополнительные сведения см. в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md). Например, привязка <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> , содержащая поддержку как безопасных, так и надежных сеансов, по умолчанию использует только безопасный сеанс, шифрующий сообщения и защищающий их цифровой подписью.  
+- Элемент <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> поддерживает основанные на безопасности сеансы, в которых обе стороны, обменивающиеся информацией, согласовали определенный безопасный диалог. Дополнительные сведения см. в разделе [Защита служб](securing-services.md). Например, привязка <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> , содержащая поддержку как безопасных, так и надежных сеансов, по умолчанию использует только безопасный сеанс, шифрующий сообщения и защищающий их цифровой подписью.  
   
 - Привязка <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> поддерживает сеансы, основанные на TCP/IP, что обеспечивает корреляцию всех сообщений по подключению на уровне сокетов.  
   
-- Элемент <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> , реализующий спецификацию WS-ReliableMessaging, обеспечивает поддержку надежных сеансов, в которых можно настроить отправку сообщений в определенном порядке и только один раз, что гарантирует получение сообщений, даже когда при диалоге они проходят через несколько узлов. Дополнительные сведения см. в разделе [Надежные сеансы](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- Элемент <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> , реализующий спецификацию WS-ReliableMessaging, обеспечивает поддержку надежных сеансов, в которых можно настроить отправку сообщений в определенном порядке и только один раз, что гарантирует получение сообщений, даже когда при диалоге они проходят через несколько узлов. Дополнительные сведения см. в разделе [Надежные сеансы](./feature-details/reliable-sessions.md).  
   
-- Привязка <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> обеспечивает сеансы датаграммы MSMQ. Дополнительные сведения см. [в разделе очереди в WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- Привязка <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> обеспечивает сеансы датаграммы MSMQ. Дополнительные сведения см. [в разделе очереди в WCF](./feature-details/queues-in-wcf.md).  
   
  Установка свойства <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> указывает о том, что для контракта требуется сеанс, но не задает тип этого сеанса.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69952839"
 > [!NOTE]
 > Поведение по умолчанию имеет сходство с локальными конструкторами и деструкторами, но это не более чем сходство. Любая операция службы WCF может быть инициированной или завершающей операцией одновременно. Кроме того, в случае по умолчанию инициирующие операции можно вызывать сколько угодно раз и в любом порядке. После того как сеанс установлен и связан с экземпляром, дополнительные сеансы могут быть созданы только в случае осуществления явным образом управления временем существования экземпляра службы (путем обработки объекта <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). И наконец, состояние связывается с сеансом, а не с объектом службы.  
   
- Например, `ICalculatorSession` контракт, используемый в предыдущем примере, требует, чтобы клиентский объект WCF сначала `Clear` вызывал операцию перед любой другой операцией и что сеанс с этим объектом клиента WCF должен завершаться при вызове метода `Equals` операция. В следующем примере кода приведен контракт, обеспечивающий выполнение этих требований. Для инициации сеанса сначала необходимо вызвать операцию`Clear` , а завершится сеанс при вызове операции `Equals` .  
+ Например, контракт `ICalculatorSession`, используемый в предыдущем примере, требует, чтобы клиентский объект WCF сначала вызывал операцию `Clear` до выполнения любой другой операции и что сеанс с этим объектом клиента WCF должен завершаться при вызове операции `Equals`. В следующем примере кода приведен контракт, обеспечивающий выполнение этих требований. Для инициации сеанса сначала необходимо вызвать операцию`Clear` , а завершится сеанс при вызове операции `Equals` .  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
@@ -117,7 +117,7 @@ ms.locfileid: "69952839"
   
 - <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>в объекте клиента WCF, созданном [средством служебной программы метаданных ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> для объекта клиента WCF, созданного [служебной программой метаданных ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 - Операция инициирования для любого типа клиентского объекта WCF (по умолчанию инициируются все операции). При вызове первой операции клиентский объект WCF автоматически открывает канал и инициирует сеанс.  
   
@@ -125,22 +125,22 @@ ms.locfileid: "69952839"
   
 - <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>в объекте клиента WCF, созданном программой Svcutil. exe.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> для клиентского объекта WCF, созданного программой Svcutil. exe.  
   
 - Завершающая операция для любого типа клиентского объекта WCF (по умолчанию никакие операции не завершаются; контракт должен явно указать завершающую операцию). При вызове первой операции клиентский объект WCF автоматически открывает канал и инициирует сеанс.  
   
- Примеры см. в разделах [Практическое руководство. Создайте службу, для которой требуются](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) сеансы, а также [поведение службы по умолчанию](../../../docs/framework/wcf/samples/default-service-behavior.md) и примеры создания [экземпляров](../../../docs/framework/wcf/samples/instancing.md) .  
+ Примеры см. в разделе [How to: Create a Service That Requires Sessions](./feature-details/how-to-create-a-service-that-requires-sessions.md) , а также в примерах из разделов [Default Service Behavior](./samples/default-service-behavior.md) и [Instancing](./samples/instancing.md) .  
   
- Дополнительные сведения о клиентах и сеансах см. [в разделе доступ к службам с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Дополнительные сведения о клиентах и сеансах см. [в разделе доступ к службам с помощью клиента WCF](./feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Сеансы взаимодействуют с параметрами InstanceContext  
- Перечисление <xref:System.ServiceModel.SessionMode> контракта взаимодействует со свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> , управляющим связью между каналами и определенными объектами службы. Дополнительные сведения см. в разделе [сеансы, создание экземпляров и параллелизм](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Перечисление <xref:System.ServiceModel.SessionMode> контракта взаимодействует со свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> , управляющим связью между каналами и определенными объектами службы. Дополнительные сведения см. в разделе [сеансы, создание экземпляров и параллелизм](./feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Совместное использование объектов InstanceContext  
  Также можно задать для каждого вызова или канала, основанного на сеансе, с каким именно объектом <xref:System.ServiceModel.InstanceContext> он будет ассоциирован, самостоятельно назначив ассоциацию. 
   
 ## <a name="sessions-and-streaming"></a>Сеансы и потоковая передача  
- При наличии большого количества данных для передачи режим потоковой передачи в WCF является разумной альтернативой поведению по умолчанию для буферизации и обработки сообщений в памяти целиком. При потоковой передаче вызовов с привязкой, основанной на сеансе, может возникнуть непредвиденное поведение. Все потоковые вызовы выполняются через один канал (канал датаграммы), который не поддерживает сеансы, даже если используемая привязка настроена так, чтобы она использовала сеансы. Если несколько клиентов выполняют потоковые вызовы одного объекта службы через привязку, основанную на сеансе, и задан "одиночный" режим параллелизма объекта службы и задан режим контекста его экземпляра `PerSession`, все вызовы должны проходить через канал датаграммы, а потому может обрабатываться не более одного вызова одновременно. При этом может истечь время ожидания для одного или нескольких клиентов. Эту проблему можно обойти, присвоив значение `InstanceContextMode` свойству `PerCall` или выбрав "множественный" режим параллелизма.  
+ При наличии большого количества данных для передачи режим потоковой передачи в WCF является разумной альтернативой поведению по умолчанию для буферизации и обработки сообщений в памяти целиком. При потоковой передаче вызовов с привязкой, основанной на сеансе, может возникнуть непредвиденное поведение. Все потоковые вызовы выполняются через один канал (канал датаграммы), который не поддерживает сеансы, даже если используемая привязка настроена так, чтобы она использовала сеансы. Если несколько клиентов выполняют потоковые вызовы одного объекта службы через привязку, основанную на сеансе, и задан "одиночный" режим параллелизма объекта службы и задан режим контекста его экземпляра `PerSession`, все вызовы должны проходить через канал датаграммы, а потому может обрабатываться не более одного вызова одновременно. После этого может исключаться время ожидания одного или нескольких клиентов. Эту ошибку можно обойти, установив значение `InstanceContextMode` объекта службы равным `PerCall` или нескольким параллелизмом.  
   
 > [!NOTE]
 > Свойство MaxConcurrentSessions в данном случае ни на что не влияет, поскольку имеется всего один сеанс.  

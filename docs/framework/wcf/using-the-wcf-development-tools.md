@@ -2,12 +2,12 @@
 title: Использование средств разработки WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: ef20d13ade41992e6babc0ebb3a985aabb686ed3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 27cefb1ca1f4748f0d074ffdcd47cd6faa29da00
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040411"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320273"
 ---
 # <a name="using-the-wcf-development-tools"></a>Использование средств разработки WCF
 В этом разделе описываются средства разработки Visual Studio, которые помогут вам в разработке WCFservice.  
@@ -18,24 +18,24 @@ ms.locfileid: "69040411"
  > Начиная с Visual Studio 2017 средства разработки WCF по умолчанию не устанавливаются. Чтобы использовать эти функции, необходимо убедиться в том, что в установщике Visual Studio выбран компонент Windows Communication Foundation.
   
 ## <a name="the-wcf-developer-tools"></a>Инструменты разработчика WCF  
- [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Шаблоны WCF в Visual Studio](wcf-vs-templates.md)  
   
  Вы можете использовать стандартные шаблоны проектов и элементов Visual Studio в Visual Studio для быстрой сборки служб WCF и окружающих приложений.  
   
- [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [Узел службы WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)  
   
  Автоматическое размещение службы WCF (WcfSvcHost. exe) позволяет запустить отладчик Visual Studio (F5) для автоматического размещения и тестирования реализованной службы. Затем можно протестировать службу с помощью тестового клиента WCF (клиент WcfTestClient. exe) или собственного клиента, чтобы найти и исправить возможные ошибки.  
   
- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
+ [Тестовый клиент WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)  
   
  Тестовый клиент WCF (клиент WcfTestClient. exe) — это средство графического пользовательского интерфейса, которое позволяет вводить параметры произвольных типов, отправлять эти входные данные в службу и просматривать ответ, отправляемый службой обратно. Она обеспечивает простой процесс тестирования служб при объединении с автоматическим размещением службы WCF.  
   
- [Формирование классов типов данных из XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [Формирование классов типов данных из XML](generating-data-type-classes-from-xml.md)  
   
  Данные XML, сохраненные в буфере обмена, можно вставить в кодовую страницу. Классы, определенные в данных, будут преобразованы в типы кода.  
   
 ## <a name="using-the-tools-without-administrator-privilege"></a>Использование инструментов без прав администратора  
- Чтобы разрешить пользователям без прав администратора для разработки служб WCF, в процессе установки Visual Studio создается список управления доступом (ACL) для http://+:8731/Design_Time_Addresses пространства имен "". Список управления доступом определяется пользовательским интерфейсом, который включает всех пользователей, выполнивших вход в систему. Администраторы могут добавлять или удалять пользователей из этого списка ACL или открыть дополнительные порты. Этот список ACL позволяет шаблонам WCF или WF отправлять и получать данные в их конфигурации по умолчанию. Он также позволяет пользователям использовать автоматическое размещение службы WCF (wcfSvcHost. exe) без предоставления прав администратора.  
+ Чтобы разрешить пользователям без прав администратора для разработки служб WCF, в ходе установки Visual Studio для пространства имен "http://+:8731/Design_Time_Addresses" создается список управления доступом (ACL). Список управления доступом определяется пользовательским интерфейсом, который включает всех пользователей, выполнивших вход в систему. Администраторы могут добавлять или удалять пользователей из этого списка ACL или открыть дополнительные порты. Этот список ACL позволяет шаблонам WCF или WF отправлять и получать данные в их конфигурации по умолчанию. Он также позволяет пользователям использовать автоматическое размещение службы WCF (wcfSvcHost. exe) без предоставления прав администратора.  
   
  Можно изменить доступ используя средство Netsh.exe в [!INCLUDE[wv](../../../includes/wv-md.md)] под учетной записью администратора. Ниже приведен пример использования средства Netsh.exe.  
   
@@ -47,6 +47,6 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
 ## <a name="see-also"></a>См. также
 
-- [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Шаблоны WCF в Visual Studio](wcf-vs-templates.md)
+- [Узел службы WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [Тестовый клиент WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

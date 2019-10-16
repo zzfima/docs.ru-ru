@@ -2,19 +2,19 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb16fe0072066580bff36ac0879ff38217f1e34
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249253"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319376"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Создает анонимные структурно типизированные записи из одного или нескольких значений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 ROW ( expression [ AS alias ] [,...] )  
 ```  
   
@@ -28,10 +28,10 @@ ROW ( expression [ AS alias ] [,...] )
 ## <a name="return-value"></a>Возвращаемое значение  
  Тип строки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  В [!INCLUDE[esql](../../../../../../includes/esql-md.md)] конструкторы строк можно использовать для создания анонимных структурно типизированных записей из одного или нескольких значений. Итоговый тип конструктора строк является типом строки, типы полей которого соответствуют типам значений, которые использовались для создания этой строки. Например, следующее выражение создает значение типа `Record(a int, b string, c int)`.  
   
-```  
+```sql  
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
@@ -48,11 +48,11 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор ROW используется для создания анонимных структурно типизированных записей. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#ROW](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#row)]  
+ [!code-sql[DP EntityServices Concepts#ROW](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#row)]  
   
 ## <a name="see-also"></a>См. также
 

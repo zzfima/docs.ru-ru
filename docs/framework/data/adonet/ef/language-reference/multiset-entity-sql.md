@@ -2,21 +2,21 @@
 title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: 8e02d2d3171c9f08333ecef7ee22e65100bdf822
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 222be86db434b5d41c7b0536d271a3750b6afbe8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250097"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319586"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
 Создает экземпляр мультинабора из списка значений. Все значения конструктора MULTISET должны принадлежать совместимому типу `T`. Применение пустых конструкторов мультинаборов не допускается.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 MULTISET ( expression [{, expression }] )  
-or  
+-- or  
 { expression [{, expression }] }  
 ```  
   
@@ -25,9 +25,9 @@ or
  Любой допустимый список значений.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Коллекция мультинаборов\<типов T >.  
+ Коллекция типов МУЛЬТИНАБОРов @ no__t-0T >.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] предоставляет три типа конструкторов: конструкторы строк, конструкторы объектов и конструкторы мультинаборов (или коллекций). Дополнительные сведения см. в разделе [Создание типов](constructing-types-entity-sql.md).  
   
  Конструктор мультинаборов создает экземпляр мультинабора из списка значений. Все значения конструктора MULTISET должны принадлежать совместимому типу.  
@@ -44,11 +44,11 @@ or
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор MULTISET используется для создания экземпляра мультинабора из списка значений. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
+ [!code-sql[DP EntityServices Concepts#MULTISET](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#multiset)]  
   
 ## <a name="see-also"></a>См. также
 

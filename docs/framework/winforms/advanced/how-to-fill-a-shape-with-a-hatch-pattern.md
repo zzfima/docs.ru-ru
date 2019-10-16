@@ -9,18 +9,18 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b80708f0ce722b1809fe49190639231e7e4c8329
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645463"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320054"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Практическое руководство. Штриховая заливка фигуры
-Шаблон штриховки осуществляется из двух цветов: один для фона и один для строк, которые образуют узор на фоне. Для заполнения замкнутой фигуры, штриховая, использовать <xref:System.Drawing.Drawing2D.HatchBrush> объекта. Следующий пример демонстрирует Штриховая заливка эллипса:  
+Шаблон штриховки состоит из двух цветов: один для фона, а другой для линий, образующих шаблон на фоне. Для заполнения замкнутой фигуры шаблоном штриховки используйте объект <xref:System.Drawing.Drawing2D.HatchBrush>. В следующем примере показано, как заполнить эллипс с помощью шаблона штриховки:  
   
 ## <a name="example"></a>Пример  
- <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Конструктор принимает три аргумента: стиль штриховки, цвет штриховой линии и цвет фона. Стиль штриховки может быть любое значение от <xref:System.Drawing.Drawing2D.HatchStyle> перечисления. Существует более пятидесяти элементов в <xref:System.Drawing.Drawing2D.HatchStyle> перечисления; часть из них элементы показаны в следующем списке:  
+ Конструктор <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> принимает три аргумента: стиль штриховки, цвет линии штриховки и цвет фона. Аргумент стиля штриховки может быть любым значением перечисления <xref:System.Drawing.Drawing2D.HatchStyle>. В перечислении <xref:System.Drawing.Drawing2D.HatchStyle> содержится более 50 элементов; Некоторые из этих элементов показаны в следующем списке:  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -34,15 +34,15 @@ ms.locfileid: "64645463"
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- На следующем рисунке заполненного эллипса.  
+ На следующем рисунке показан закрашенный эллипс.  
   
- ![Шаблон штриховки](./media/hatch1.png "hatch1")  
+  ![Снимок экрана, как выглядит эллипс с шаблоном штриховки.](./media/how-to-fill-a-shape-with-a-hatch-pattern/ellipse-filled-hatch.png "hatch1")
   
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>.  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs>`e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>См. также
 
