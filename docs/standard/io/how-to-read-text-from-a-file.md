@@ -1,4 +1,4 @@
-﻿---
+---
 title: Практическое руководство. Чтение текста из файла
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
