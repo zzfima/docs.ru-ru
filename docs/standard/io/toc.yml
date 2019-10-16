@@ -41,9 +41,9 @@
           href: types-of-isolation.md
         - name: Практическое руководство. Получение хранилищ для изолированного хранения
           href: how-to-obtain-stores-for-isolated-storage.md
-        - name: Практическое руководство. Перечисление хранилищ для изолированного хранилища
+        - name: Практическое руководство. Перечисление хранилищ для изолированного хранения
           href: how-to-enumerate-stores-for-isolated-storage.md
-        - name: Практическое руководство. Удаление хранилищ из области изолированного хранения
+        - name: Практическое руководство. Удаление хранилищ из изолированного хранения
           href: how-to-delete-stores-in-isolated-storage.md
         - name: Практическое руководство. Предупреждение нехватки места при изолированном хранении
           href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
