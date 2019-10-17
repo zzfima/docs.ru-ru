@@ -1,9 +1,0 @@
-- name: Main() и аргументы командной строки
-  href: index.md
-  items:
-    - name: Аргументы командной строки
-      href: command-line-arguments.md
-    - name: Практическое руководство. Отображение аргументов командной строки
-      href: how-to-display-command-line-arguments.md
-    - name: 'Значения, возвращаемые методом main()'
-      href: main-return-values.md
