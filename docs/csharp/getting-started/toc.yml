@@ -1,6 +1,0 @@
-- name: Начало работы
-  items:
-    - name: Как пользоваться руководством
-      href: index.md
-    - name: 'Введение в язык C# и платформу .NET Framework'
-      href: introduction-to-the-csharp-language-and-the-net-framework.md

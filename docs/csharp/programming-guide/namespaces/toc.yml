@@ -1,7 +1,0 @@
-- name: Пространства имен
-  href: index.md
-  items:
-    - name: Использование пространств имен
-      href: using-namespaces.md
-    - name: Практическое руководство. Использование пространства имен My
-      href: how-to-use-the-my-namespace.md

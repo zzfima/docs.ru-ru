@@ -1,7 +1,0 @@
-- name: 'Типы значений, допускающие значение NULL'
-  href: index.md
-  items:
-    - name: "Использование типов значений, допускающих значение\_NULL"
-      href: using-nullable-types.md
-    - name: "Практическое руководство. Идентификация типа значений, допускающего значение\_NULL"
-      href: how-to-identify-a-nullable-type.md
