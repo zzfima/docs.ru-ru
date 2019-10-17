@@ -4,12 +4,12 @@ description: Узнайте о различных сценариях, подде
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577197"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522354"
 ---
 # <a name="serverless-design-examples"></a>Примеры бессерверного проектирования
 
@@ -65,7 +65,7 @@ ms.locfileid: "69577197"
 
 ## <a name="stream-processing"></a>Потоковая обработка
 
-Устройства и датчики часто создают потоки данных, которые должны обрабатываться в режиме реального времени. Существует ряд технологий, которые могут записывать сообщения и потоки из концентраторов [событий](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) и [центра Интернета вещей](https://docs.microsoft.com/azure/iot-hub) в [служебную шину](https://docs.microsoft.com/azure/service-bus). Независимо от транспорта, бессерверный процесс является идеальным механизмом обработки сообщений и потоков данных по мере их появления. Без сервера можно быстро масштабироваться в соответствии с потребностями больших объемов данных. Несерверный код может применять бизнес-логику для анализа данных и вывода в структурированном формате для действий и аналитики.
+Устройства и датчики часто создают потоки данных, которые должны обрабатываться в режиме реального времени. Существует ряд технологий, которые могут записывать сообщения и потоки из [концентраторов событий](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) и [центра Интернета вещей](https://docs.microsoft.com/azure/iot-hub) в [служебную шину](https://docs.microsoft.com/azure/service-bus). Независимо от транспорта, бессерверный процесс является идеальным механизмом обработки сообщений и потоков данных по мере их появления. Без сервера можно быстро масштабироваться в соответствии с потребностями больших объемов данных. Несерверный код может применять бизнес-логику для анализа данных и вывода в структурированном формате для действий и аналитики.
 
 ![Обработка бессерверного потока](./media/serverless-stream-processing.png)
 
@@ -77,16 +77,16 @@ ms.locfileid: "69577197"
 
 ## <a name="recommended-resources"></a>Рекомендуемые ресурсы
 
-* [Сетка событий Azure](https://docs.microsoft.com/azure/event-grid/overview)
-* [Центр Интернета вещей Azure](https://docs.microsoft.com/azure/iot-hub)
-* [Распределенное управление данными: проблемы и решения](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [Проектирование микрослужб: определение границ микрослужб](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Центры событий](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [Шаблон источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [Реализация шаблона размыкателя цепи](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [Центр Интернета вещей](https://docs.microsoft.com/azure/iot-hub)
-* [Служебная шина](https://docs.microsoft.com/azure/service-bus)
-* [Работа с поддержкой веб-канала изменений в Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Сетка событий Azure](https://docs.microsoft.com/azure/event-grid/overview)
+- [Центр Интернета вещей Azure](https://docs.microsoft.com/azure/iot-hub)
+- [Распределенное управление данными: проблемы и решения](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [Проектирование микрослужб: определение границ микрослужб](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Концентраторы событий](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Шаблон источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Реализация шаблона размыкателя цепи](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [Центр Интернета вещей](https://docs.microsoft.com/azure/iot-hub)
+- [Служебная шина](https://docs.microsoft.com/azure/service-bus)
+- [Работа с поддержкой веб-канала изменений в Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[Назад](serverless-architecture-considerations.md)

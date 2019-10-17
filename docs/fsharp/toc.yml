@@ -1,0 +1,272 @@
+- name: 'Руководство по языку F#'
+  href: index.md
+- name: Приступая к работе
+  href: get-started/index.md
+  items:
+    - name: 'Установка F#'
+      href: get-started/install-fsharp.md
+    - name: 'Начало работы с F# в Visual Studio'
+      href: get-started/get-started-visual-studio.md
+    - name: 'Начало работы с F# в Visual Studio для Mac'
+      href: get-started/get-started-with-visual-studio-for-mac.md
+    - name: 'Начало работы с F# в Visual Studio Code и Ionide'
+      href: get-started/get-started-vscode.md
+    - name: 'Начало работы с F# в .NET Core CLI'
+      href: get-started/get-started-command-line.md
+- name: "Что такое\_F#"
+  href: what-is-fsharp.md
+- name: 'Обзор языка F#'
+  href: tour.md
+- name: Учебники
+  items:
+    - name: Введение в функциональное программирование
+      href: introduction-to-functional-programming/index.md
+      items:
+        - name: Функции первого класса
+          href: introduction-to-functional-programming/first-class-functions.md
+    - name: Асинхронное и параллельное программирование
+      items:
+        - name: Асинхронное программирование
+          href: tutorials/asynchronous-and-concurrent-programming/async.md
+    - name: Поставщики типов
+      href: tutorials/type-providers/index.md
+      items:
+        - name: Создание поставщика типов
+          href: tutorials/type-providers/creating-a-type-provider.md
+        - name: Безопасность поставщиков типов
+          href: tutorials/type-providers/type-provider-security.md
+        - name: Устранение неполадок поставщиков типов
+          href: tutorials/type-providers/troubleshooting-type-providers.md
+    - name: 'F# Interactive'
+      href: tutorials/fsharp-interactive/index.md
+- name: 'Справочник по языку F#'
+  href: language-reference/index.md
+  items:
+    - name: Справочные сведения о ключевых словах
+      href: language-reference/keyword-reference.md
+    - name: Справочник символов и операторов
+      href: language-reference/symbol-and-operator-reference/index.md
+      items:
+        - name: Арифметические операторы
+          href: language-reference/symbol-and-operator-reference/arithmetic-operators.md
+        - name: Логические операторы
+          href: language-reference/symbol-and-operator-reference/boolean-operators.md
+        - name: Побитовые операторы
+          href: language-reference/symbol-and-operator-reference/bitwise-operators.md
+        - name: 'Операторы, допускающие значение NULL'
+          href: language-reference/symbol-and-operator-reference/nullable-operators.md
+    - name: Функции
+      href: language-reference/functions/index.md
+      items:
+        - name: Привязки let
+          href: language-reference/functions/let-bindings.md
+        - name: Привязки do
+          href: language-reference/functions/do-bindings.md
+        - name: 'Лямбда-выражения: ключевое слово fun'
+          href: language-reference/functions/lambda-expressions-the-fun-keyword.md
+        - name: 'Рекурсивные функции: ключевое слово rec'
+          href: language-reference/functions/recursive-functions-the-rec-keyword.md
+        - name: Точка входа
+          href: language-reference/functions/entry-point.md
+        - name: Внешние функции
+          href: language-reference/functions/external-functions.md
+        - name: Встраиваемые функции
+          href: language-reference/functions/inline-functions.md
+    - name: Значения
+      href: language-reference/values/index.md
+      items:
+        - name: Значения NULL
+          href: language-reference/values/null-values.md
+    - name: Литералы
+      href: language-reference/literals.md
+    - name: 'Типы языка F#'
+      href: language-reference/fsharp-types.md
+    - name: Вывод типа
+      href: language-reference/type-inference.md
+    - name: Базовые типы
+      href: language-reference/basic-types.md
+    - name: Тип Unit
+      href: language-reference/unit-type.md
+    - name: Строки
+      href: language-reference/strings.md
+    - name: Кортежи
+      href: language-reference/tuples.md
+    - name: 'Типы коллекций F#'
+      href: language-reference/fsharp-collection-types.md
+    - name: Списки
+      href: language-reference/lists.md
+    - name: Массивы
+      href: language-reference/arrays.md
+    - name: Последовательности
+      href: language-reference/sequences.md
+    - name: Срезы
+      href: language-reference/slices.md
+    - name: Параметры
+      href: language-reference/options.md
+    - name: Параметры значений
+      href: language-reference/value-options.md
+    - name: Результаты
+      href: language-reference/results.md
+    - name: Универсальные шаблоны
+      href: language-reference/generics/index.md
+      items:
+        - name: Автоматическое обобщение
+          href: language-reference/generics/automatic-generalization.md
+        - name: Ограничения
+          href: language-reference/generics/constraints.md
+        - name: Статически разрешаемые параметры типов
+          href: language-reference/generics/statically-resolved-type-parameters.md
+    - name: Записи
+      href: language-reference/records.md
+    - name: Анонимные записи
+      href: language-reference/anonymous-records.md
+    - name: Копирование и обновление выражений записей
+      href: language-reference/copy-and-update-record-expressions.md
+    - name: Размеченные объединения
+      href: language-reference/discriminated-unions.md
+    - name: Перечисления
+      href: language-reference/enumerations.md
+    - name: Сокращенные обозначения типов
+      href: language-reference/type-abbreviations.md
+    - name: Классы
+      href: language-reference/classes.md
+    - name: Структуры
+      href: language-reference/structures.md
+    - name: Наследование
+      href: language-reference/inheritance.md
+    - name: Интерфейсы
+      href: language-reference/interfaces.md
+    - name: Абстрактные классы
+      href: language-reference/abstract-classes.md
+    - name: Участники
+      href: language-reference/members/index.md
+      items:
+        - name: Привязки let в классах
+          href: language-reference/members/let-bindings-in-classes.md
+        - name: Привязки do в классах
+          href: language-reference/members/do-bindings-in-classes.md
+        - name: Свойства
+          href: language-reference/members/properties.md
+        - name: Индексированные свойства
+          href: language-reference/members/indexed-properties.md
+        - name: Методы
+          href: language-reference/members/methods.md
+        - name: Конструкторы
+          href: language-reference/members/constructors.md
+        - name: События
+          href: language-reference/members/events.md
+        - name: Явные поля. Ключевое слово `val`
+          href: language-reference/members/explicit-fields-the-val-keyword.md
+    - name: Расширения типов
+      href: language-reference/type-extensions.md
+    - name: Параметры и аргументы
+      href: language-reference/parameters-and-arguments.md
+    - name: Перегрузка операторов
+      href: language-reference/operator-overloading.md
+    - name: Гибкие типы
+      href: language-reference/flexible-types.md
+    - name: Делегаты
+      href: language-reference/delegates.md
+    - name: Выражения объекта
+      href: language-reference/object-expressions.md
+    - name: Приведение и преобразование
+      href: language-reference/casting-and-conversions.md
+    - name: Контроль доступа
+      href: language-reference/access-control.md
+    - name: Условные выражения. if…then…else
+      href: language-reference/conditional-expressions-if-then-else.md
+    - name: Выражения match
+      href: language-reference/match-expressions.md
+    - name: Сопоставление шаблонов
+      href: language-reference/pattern-matching.md
+    - name: Активные шаблоны
+      href: language-reference/active-patterns.md
+    - name: Циклы. Выражение for...to
+      href: language-reference/loops-for-to-expression.md
+    - name: 'Циклы: выражение for...in'
+      href: language-reference/loops-for-in-expression.md
+    - name: 'Циклы: выражение while...do'
+      href: language-reference/loops-while-do-expression.md
+    - name: Утверждения
+      href: language-reference/assertions.md
+    - name: Обработка исключений
+      href: language-reference/exception-handling/index.md
+      items:
+        - name: Типы исключения
+          href: language-reference/exception-handling/exception-types.md
+        - name: Выражение try…with
+          href: language-reference/exception-handling/the-try-with-expression.md
+        - name: Выражение try…finally
+          href: language-reference/exception-handling/the-try-finally-expression.md
+        - name: Функция raise
+          href: language-reference/exception-handling/the-raise-function.md
+        - name: Функция failwith
+          href: language-reference/exception-handling/the-failwith-function.md
+        - name: Функция invalidArg
+          href: language-reference/exception-handling/the-invalidArg-function.md
+    - name: Атрибуты
+      href: language-reference/attributes.md
+    - name: 'Управление ресурсами: ключевое слово use'
+      href: language-reference/resource-management-the-use-keyword.md
+    - name: Пространства имен
+      href: language-reference/namespaces.md
+    - name: Модули
+      href: language-reference/modules.md
+    - name: Объявления импорта. Ключевое слово open
+      href: language-reference/import-declarations-the-open-keyword.md
+    - name: Файлы подписи
+      href: language-reference/signature-files.md
+    - name: Единицы измерения
+      href: language-reference/units-of-measure.md
+    - name: Документация XML
+      href: language-reference/xml-documentation.md
+    - name: Отложенные выражения
+      href: language-reference/lazy-expressions.md
+    - name: Выражения вычисления
+      href: language-reference/computation-expressions.md
+    - name: Асинхронные рабочие потоки
+      href: language-reference/asynchronous-workflows.md
+    - name: Выражения запросов
+      href: language-reference/query-expressions.md
+    - name: Цитирование кода
+      href: language-reference/code-quotations.md
+    - name: Ключевое слово fixed
+      href: language-reference/fixed.md
+    - name: Byref
+      href: language-reference/byrefs.md
+    - name: Ссылочные ячейки
+      href: language-reference/reference-cells.md
+    - name: Директивы компилятора
+      href: language-reference/compiler-directives.md
+    - name: Параметры компилятора
+      href: language-reference/compiler-options.md
+    - name: 'Параметры F# Interactive'
+      href: language-reference/fsharp-interactive-options.md
+    - name: 'Идентификаторы Source Line, File и Path'
+      href: language-reference/source-line-file-path-identifiers.md
+    - name: Сведения о вызывающем
+      href: language-reference/caller-information.md
+    - name: Подробный синтаксис
+      href: language-reference/verbose-syntax.md
+- name: 'Руководство по стилю для F#'
+  href: style-guide/index.md
+  items:
+    - name: 'Рекомендации по форматированию кода F#'
+      href: style-guide/formatting.md
+    - name: 'Соглашения о написании кода на F#'
+      href: style-guide/conventions.md
+    - name: 'Рекомендации по проектированию компонентов F#'
+      href: style-guide/component-design-guidelines.md
+- name: 'Использование языка F# в Azure'
+  href: using-fsharp-on-azure/index.md
+  items:
+    - name: "Начало работы с хранилищем BLOB-объектов Azure с помощью языка\_F#"
+      href: using-fsharp-on-azure/blob-storage.md
+    - name: "Начало работы с хранилищем файлов Azure с помощью языка\_F#"
+      href: using-fsharp-on-azure/file-storage.md
+    - name: "Начало работы с хранилищем очередей Azure с помощью языка\_F#"
+      href: using-fsharp-on-azure/queue-storage.md
+    - name: "Начало работы с хранилищем таблиц Azure с помощью языка\_F#"
+      href: using-fsharp-on-azure/table-storage.md
+    - name: 'Управление пакетами для зависимостей F# в Azure'
+      href: using-fsharp-on-azure/package-management.md

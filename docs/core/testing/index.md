@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926296"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522907"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
@@ -39,30 +39,30 @@ ms.locfileid: "70926296"
 
 Проекты модульных тестов .NET Core поддерживаются для следующих языков:
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 Также вы можете выбрать один из следующих вариантов:
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
 Дополнительные сведения см. в следующих пошаговых руководствах:
 
-* Создание модульных тестов с помощью [*xUnit*, *C#* и .NET Core CLI](unit-testing-with-dotnet-test.md).
-* Создание модульных тестов с помощью [*NUnit*, *C#* и интерфейса командной строки .NET Core](unit-testing-with-nunit.md).
-* Создание модульных тестов с помощью [*MSTest*, *C#* и .NET Core CLI](unit-testing-with-mstest.md).
-* Создание модульных тестов с помощью [*xUnit*, *F#* и .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md).
-* Создание модульных тестов с помощью [*NUnit*, *F#* и интерфейса командной строки .NET Core](unit-testing-fsharp-with-nunit.md).
-* Создание модульных тестов с помощью [*MSTest*, *F#* и .NET Core CLI](unit-testing-fsharp-with-mstest.md).
-* Создание модульных тестов с помощью [*xUnit*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md).
-* Создание модульных тестов с помощью [*NUnit*, *Visual Basic* и интерфейса командной строки .NET Core](unit-testing-visual-basic-with-nunit.md).
-* Создание модульных тестов с помощью [*MSTest*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-mstest.md).
+- Создание модульных тестов с помощью [*xUnit*, *C#* и .NET Core CLI](unit-testing-with-dotnet-test.md).
+- Создание модульных тестов с помощью [*NUnit*, *C#* и интерфейса командной строки .NET Core](unit-testing-with-nunit.md).
+- Создание модульных тестов с помощью [*MSTest*, *C#* и .NET Core CLI](unit-testing-with-mstest.md).
+- Создание модульных тестов с помощью [*xUnit*, *F#* и .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md).
+- Создание модульных тестов с помощью [*NUnit*, *F#* и интерфейса командной строки .NET Core](unit-testing-fsharp-with-nunit.md).
+- Создание модульных тестов с помощью [*MSTest*, *F#* и .NET Core CLI](unit-testing-fsharp-with-mstest.md).
+- Создание модульных тестов с помощью [*xUnit*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md).
+- Создание модульных тестов с помощью [*NUnit*, *Visual Basic* и интерфейса командной строки .NET Core](unit-testing-visual-basic-with-nunit.md).
+- Создание модульных тестов с помощью [*MSTest*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-mstest.md).
 
 Дополнительные сведения см. в следующих статьях:
 
-* Visual Studio Enterprise предлагает отличные средства тестирования для .NET Core. Дополнительные сведения: [Live Unit Testing](/visualstudio/test/live-unit-testing) и [Code Coverage](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-* Дополнительные сведения о выборочном модульном тестировании см. в разделах [Выполнение выборочных модульных тестов](selective-unit-tests.md) и [Включение и исключение тестов с помощью Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* [Как использовать xUnit с .NET Core и Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+- Visual Studio Enterprise предлагает отличные средства тестирования для .NET Core. Дополнительные сведения: [Live Unit Testing](/visualstudio/test/live-unit-testing) и [Code Coverage](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
+- Дополнительные сведения о выборочном модульном тестировании см. в разделах [Выполнение выборочных модульных тестов](selective-unit-tests.md) и [Включение и исключение тестов с помощью Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+- [Как использовать xUnit с .NET Core и Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).

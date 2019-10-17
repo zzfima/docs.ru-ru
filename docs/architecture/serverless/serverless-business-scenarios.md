@@ -4,12 +4,12 @@ description: Изучите практический подход, обраща�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834298"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522386"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Бессерверные сценарии и варианты использования для бизнеса
 
@@ -27,7 +27,7 @@ ms.locfileid: "71834298"
 
 ![Автоматизированная Коллекция образов](./media/automated-image-gallery.png)
 
-Полный репозиторий и инструкции по созданию приложения логики доступны здесь: [Приклеивание сетки событий](https://github.com/JeremyLikness/Event-Grid-Glue).
+Полный репозиторий и инструкции по созданию приложения логики доступны здесь: [приклеивание в сетке событий](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Кросс-платформенный мобильный клиент с использованием Xamarin. Forms и функций
 
@@ -55,7 +55,7 @@ ms.locfileid: "71834298"
 
 Прокси-сервер предоставляет одну конечную точку API, которая обновляется для перенаправления отдельных запросов при их перемещении в бессерверные функции.
 
-Вы можете просмотреть видео, которое проходит всю миграцию: Перенос [и сдвиг с помощью безсерверных функций Azure](https://channel9.msdn.com/Events/Connect/2017/E102). Доступ к образцу кода: [Перенесите свое приложение](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Вы можете просмотреть видео, которое проходит всю миграцию: повышение [и смещение с помощью безсерверных функций Azure](https://channel9.msdn.com/Events/Connect/2017/E102). Доступ к образцу кода: [перенесите свое приложение](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Анализ CSV-файла и вставка в базу данных
 
@@ -77,7 +77,7 @@ ms.locfileid: "71834298"
 
 ![Пример Power BI](./media/power-bi-example.png)
 
-Полный репозиторий сокращения ссылок с инструкциями можно найти здесь: [Несерверный URL-адрес](https://github.com/jeremylikness/serverless-url-shortener). Более простую версию можно прочитать здесь: Служба [хранилища Azure для безсерверных приложений .NET за считаные минуты](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+Полный репозиторий сокращения ссылок с инструкциями доступен здесь: [сокращение URL-адреса без сервера](https://github.com/jeremylikness/serverless-url-shortener). Дополнительные сведения о упрощенной версии см. здесь: [хранилище Azure для безсерверных приложений .NET за считаные минуты](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Проверка подключения устройства с помощью проверки связи
 
@@ -87,15 +87,15 @@ ms.locfileid: "71834298"
 
 ## <a name="recommended-resources"></a>Рекомендуемые ресурсы
 
-* [Генератор фотомозаики по функциям Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Проверка связи с центром Интернета вещей Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Хранилище Azure для безсерверных приложений .NET за считаные минуты](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [Перенесите свое приложение](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [Лаборатория импорта CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [Приклеивание сетки событий](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Реализация простой функции Azure с помощью клиента Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [Прогнозирование и сдвиг с помощью безсерверных функций Azure](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [Несерверный URL-адрес](https://github.com/jeremylikness/serverless-url-shortener)
+- [Генератор фотомозаики по функциям Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Проверка связи с центром Интернета вещей Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Хранилище Azure для безсерверных приложений .NET за считаные минуты](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [Перенесите свое приложение](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [Лаборатория импорта CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Приклеивание сетки событий](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Реализация простой функции Azure с помощью клиента Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Прогнозирование и сдвиг с помощью безсерверных функций Azure](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Несерверный URL-адрес](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[Назад](orchestration-patterns.md)
