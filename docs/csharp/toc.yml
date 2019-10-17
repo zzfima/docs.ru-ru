@@ -1,0 +1,198 @@
+- name: 'Руководство по языку C#'
+  href: index.md
+- name: Приступая к работе
+  href: getting-started/
+- name: Учебники
+  items:
+    - name: Обзор
+      href: tutorials/index.md
+    - name: 'Введение в программирование на C#'
+      items:
+        - name: Выберите первый урок
+          href: tutorials/intro-to-csharp/index.md
+        - name: 'Здравствуй, мир'
+          href: tutorials/intro-to-csharp/hello-world.yml
+        - name: 'Числа в C#'
+          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+        - name: Ветви и циклы
+          href: tutorials/intro-to-csharp/branches-and-loops.yml
+        - name: Коллекции списков
+          href: tutorials/intro-to-csharp/list-collection.yml
+        - name: Работа в локальной среде
+          items:
+            - name: Настройка среды
+              href: tutorials/intro-to-csharp/local-environment.md
+            - name: 'Числа в C#'
+              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+            - name: Ветви и циклы
+              href: tutorials/intro-to-csharp/branches-and-loops-local.md
+            - name: Коллекции списков
+              href: tutorials/intro-to-csharp/arrays-and-collections.md
+            - name: Общие сведения о классах
+              href: tutorials/intro-to-csharp/introduction-to-classes.md
+    - name: "Обзор C#\_6"
+      href: tutorials/exploration/csharp-6.yml
+    - name: Интерполяция строк. Интерактивное руководство
+      href: tutorials/exploration/interpolated-strings.yml
+    - name: Интерполяция строк. В вашей среде
+      href: tutorials/exploration/interpolated-strings-local.md
+    - name: Расширенные сценарии для интерполяции строки
+      href: tutorials/string-interpolation.md
+    - name: Безопасное обновление интерфейсов с помощью методов интерфейса по умолчанию
+      href: tutorials/default-interface-methods-versions.md
+    - name: Создание функциональных возможностей смешения с помощью методов интерфейса по умолчанию
+      href: tutorials/mixins-with-default-interface-methods.md
+    - name: Индексы и диапазоны
+      href: tutorials/ranges-indexes.md
+    - name: 'Использование ссылочных типов, допускающих значение NULL'
+      href: tutorials/nullable-reference-types.md
+    - name: "Перевод приложения на ссылочные типы, допускающие значение\_NULL"
+      href: tutorials/upgrade-to-nullable-references.md
+    - name: Создание и использование асинхронных потоков
+      href: tutorials/generate-consume-asynchronous-stream.md
+    - name: Расширение возможностей данных с помощью сопоставления шаблонов
+      href: tutorials/pattern-matching.md
+    - name: Консольное приложение
+      href: tutorials/console-teleprompter.md
+    - name: Клиент REST
+      href: tutorials/console-webapiclient.md
+    - name: 'Наследование в C# и .NET'
+      href: tutorials/inheritance.md
+    - name: Работа с LINQ
+      href: tutorials/working-with-linq.md
+    - name: Использование атрибутов
+      href: tutorials/attributes.md
+- name: 'Обзор языка C#'
+  href: tour-of-csharp/
+- name: 'Новые возможности C#'
+  items:
+    - name: 'C# 8.0'
+      href: whats-new/csharp-8.md
+    - name: "C#\_7.3"
+      href: whats-new/csharp-7-3.md
+    - name: "C#\_7.2"
+      href: whats-new/csharp-7-2.md
+    - name: "C#\_7.1"
+      href: whats-new/csharp-7-1.md
+    - name: 'C# 7.0'
+      href: whats-new/csharp-7.md
+    - name: 'C# 6'
+      href: whats-new/csharp-6.md
+    - name: 'Журнал версий C#'
+      href: whats-new/csharp-version-history.md
+    - name: Связи между языком и платформой
+      href: whats-new/relationships-between-language-and-library.md
+    - name: Соображения относительно версии и обновления
+      href: whats-new/version-update-considerations.md
+- name: 'Основные понятия C#'
+  items:
+    - name: 'Система типов C#'
+      href: programming-guide/types/index.md
+    - name: 'Ссылочные типы, допускающие значение null'
+      href: nullable-references.md
+    - name: 'Описание API, допускающих значение null, с помощью атрибутов и ограничений'
+      href: nullable-attributes.md
+    - name: Пространства имен
+      href: programming-guide/namespaces/index.md
+    - name: Базовые типы
+      href: basic-types.md
+    - name: Классы
+      href: programming-guide/classes-and-structs/classes.md
+    - name: Структуры
+      href: structs.md
+    - name: Кортежи
+      href: tuples.md
+    - name: Деконструкция кортежей и других типов
+      href: deconstruct.md
+    - name: Интерфейсы
+      href: programming-guide/interfaces/index.md
+    - name: Методы
+      href: methods.md
+    - name: Лямбда-выражения
+      href: programming-guide/statements-expressions-operators/lambda-expressions.md
+    - name: Свойства
+      href: properties.md
+    - name: Индексаторы
+      href: indexers.md
+    - name: Пустые переменные
+      href: discards.md
+    - name: Универсальные шаблоны
+      href: programming-guide/generics/index.md
+    - name: Iterators
+      href: iterators.md
+    - name: Делегаты и события
+      items:
+        - name: Общие сведения о делегатах
+          href: delegates-overview.md
+        - name: System.Delegate и ключевое слово delegate
+          href: delegate-class.md
+        - name: Строго типизированные делегаты
+          href: delegates-strongly-typed.md
+        - name: Общие шаблоны делегатов
+          href: delegates-patterns.md
+        - name: Общие сведения о событиях
+          href: events-overview.md
+        - name: Стандартные шаблоны событий .NET
+          href: event-pattern.md
+        - name: Обновленный шаблон событий .NET
+          href: modern-events.md
+        - name: Различия между делегатами и событиями
+          href: distinguish-delegates-events.md
+    - name: Синтаксис LINQ
+      href: linq/
+    - name: Асинхронное программирование
+      href: async.md
+    - name: Сопоставление шаблонов
+      href: pattern-matching.md
+    - name: Написание безопасного и эффективного кода
+      href: write-safe-efficient-code.md
+    - name: Деревья выражений
+      items:
+        - name: Введение в деревья выражений
+          href: expression-trees.md
+        - name: Описание деревьев выражений
+          href: expression-trees-explained.md
+        - name: 'Типы платформ, поддерживающие деревья выражений'
+          href: expression-classes.md
+        - name: Выполнение выражений
+          href: expression-trees-execution.md
+        - name: Интерпретация выражений
+          href: expression-trees-interpreting.md
+        - name: Построение выражений
+          href: expression-trees-building.md
+        - name: Преобразование выражений
+          href: expression-trees-translating.md
+        - name: Сводка
+          href: expression-trees-summary.md
+    - name: Взаимодействие на уровне машинного кода
+      href: programming-guide/interop/index.md
+    - name: Документирование кода
+      href: codedoc.md
+    - name: Управление версиями
+      href: versioning.md
+- name: 'Практические руководства по языку C#'
+  items:
+    - name: Указатель раздела
+      href: how-to/index.md
+    - name: Синтаксический анализ строк с помощью `String.Split`
+      href: how-to/parse-strings-using-split.md
+    - name: Объединение строк
+      href: how-to/concatenate-multiple-strings.md
+    - name: Преобразование строки в значение типа DateTime
+      href: ../standard/base-types/parsing-datetime.md
+    - name: Поиск по строкам
+      href: how-to/search-strings.md
+    - name: Изменение содержимого строк
+      href: how-to/modify-string-contents.md
+    - name: Сравнение строк
+      href: how-to/compare-strings.md
+    - name: 'Безопасное приведение с помощью сопоставления шаблонов, операторы is и as'
+      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+- name: Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)
+  href: roslyn-sdk/
+- name: 'Руководство по программированию на C#'
+  href: programming-guide/
+- name: Справочник по языку
+  href: language-reference/
+- name: Пошаговые руководства
+  href: walkthroughs.md

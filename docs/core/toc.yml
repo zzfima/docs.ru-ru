@@ -1,0 +1,331 @@
+- name: Руководство по .NET Core
+  href: index.md
+- name: "Сведения о .NET\_Core"
+  href: about.md
+- name: Начало работы
+  href: get-started.md
+  items:
+    - name: 'Начало работы с C# и Visual Studio Code'
+      href: tutorials/with-visual-studio-code.md
+    - name: "Создание приложения Hello World на C# с помощью .NET Core в Visual Studio\_2017"
+      href: tutorials/with-visual-studio.md
+    - name: "Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio\_2017"
+      href: tutorials/vb-with-visual-studio.md
+    - name: 'Отладка приложения .NET Core Hello World на C# или Visual с помощью Visual Studio 2017'
+      href: tutorials/debugging-with-visual-studio.md
+    - name: "Публикация приложения Hello World с помощью Visual Studio\_2017"
+      href: tutorials/publishing-with-visual-studio.md
+    - name: "Создание библиотеки .NET\_Standard с помощью C# и .NET\_Core в Visual Studio\_2017"
+      href: tutorials/library-with-visual-studio.md
+    - name: "Создание библиотеки .NET\_Standard с помощью Visual\_Basic и .NET\_Core в Visual Studio\_2017"
+      href: tutorials/vb-library-with-visual-studio.md
+    - name: "Тестирование библиотеки .NET\_Standard с помощью .NET\_Core в Visual Studio\_2017"
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: "Использование библиотеки .NET\_Standard в Visual Studio\_2017"
+      href: tutorials/consuming-library-with-visual-studio.md
+- name: Необходимые компоненты для Windows
+  href: windows-prerequisites.md
+- name: Необходимые компоненты для macOS
+  href: macos-prerequisites.md
+- name: Необходимые компоненты для Linux
+  href: linux-prerequisites.md
+- name: Новые возможности .NET Core
+  items:
+    - name: Новые возможности .NET Core 3.0
+      href: whats-new/dotnet-core-3-0.md
+    - name: Новые возможности .NET Core 2.2
+      href: whats-new/dotnet-core-2-2.md
+    - name: Новые возможности .NET Core 2.1
+      href: whats-new/dotnet-core-2-1.md
+    - name: "Новые возможности .NET Core\_2.0"
+      href: whats-new/dotnet-core-2-0.md
+- name: Совместимость приложений
+  href: compatibility/
+- name: Учебники
+  href: tutorials/index.md
+  items:
+    - name: Шаблоны для интерфейса командной строки
+      items:
+        - name: 1. Создание шаблона элемента
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2. Создание шаблона проекта
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3. Создание пакета шаблонов
+          href: tutorials/cli-templates-create-template-pack.md
+    - name: Начало работы с .NET Core в macOS
+      href: tutorials/using-on-macos.md
+    - name: Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
+      href: tutorials/using-on-mac-vs.md
+    - name: Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
+      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Начало работы с .NET Core с помощью средств интерфейса командной строки
+      href: tutorials/using-with-xplat-cli.md
+    - name: Организация и тестирование проектов с использованием командной строки .NET Core
+      href: tutorials/testing-with-cli.md
+    - name: Разработка библиотек с помощью кроссплатформенных средств
+      href: tutorials/libraries.md
+    - name: Создание приложения .NET Core с подключаемыми модулями
+      href: tutorials/creating-app-with-plugin-support.md
+    - name: Разработка приложений ASP.NET Core
+      href: tutorials/aspnet-core.md
+    - name: Размещение .NET Core из машинного кода
+      href: tutorials/netcore-hosting.md
+- name: Взаимодействие на уровне машинного кода
+  items:
+    - name: Предоставление доступа к компонентам .NET Core для COM
+      href: native-interop/expose-components-to-com.md
+- name: 'Пакеты, метапакеты и платформы'
+  href: packages.md
+- name: Общие сведения об изменениях интерфейса командной строки
+  href: tools/cli-msbuild-architecture.md
+  items:
+    - name: Управление зависимостями
+      href: tools/dependencies.md
+    - name: Дополнения к формату CSPROJ
+      href: tools/csproj.md
+- name: Миграция
+  items:
+    - name: "Переход с ASP.NET Core\_2.0 на\_2.1"
+      href: migration/20-21.md
+    - name: Миграция из project.json
+      href: migration/index.md
+    - name: Сопоставление между project.json и CSPROJ
+      href: tools/project-json-to-csproj.md
+    - name: Миграция из DNX
+      href: migration/from-dnx.md
+- name: Развертывание приложений
+  href: deploying/index.md
+  items:
+    - name: Развертывание приложений с помощью средств интерфейса командной строки
+      href: deploying/deploy-with-cli.md
+    - name: Развертывание приложений с помощью Visual Studio
+      href: deploying/deploy-with-vs.md
+    - name: Создание пакета NuGet с помощью кроссплатформенных средств
+      href: deploying/creating-nuget-packages.md
+    - name: Обновление версии среды выполнения автономного развертывания
+      href: deploying/runtime-patch-selection.md
+    - name: Хранилище пакетов среды выполнения
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: Введение в .NET и Docker
+      href: docker/introduction.md
+    - name: Контейнеризация приложения .NET Core
+      href: docker/build-container.md
+    - name: Средства для контейнеров в Visual Studio
+      href: /visualstudio/containers/overview
+- name: Диагностические средства
+  items:
+    - name: Обзор
+      href: diagnostics/index.md
+    - name: Управляемые отладчики
+      href: diagnostics/managed-debuggers.md
+    - name: Ведение журнала и трассировка
+      href: diagnostics/logging-tracing.md
+    - name: Глобальные средства .NET Core CLI
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+- name: Модульное тестирование
+  href: testing/index.md
+  items:
+    - name: Рекомендации по модульному тестированию
+      href: testing/unit-testing-best-practices.md
+    - name: 'Модульное тестирование в C# с использованием xUnit'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'Модульное тестирование в C# с использованием NUnit'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'Модульное тестирование в C# с использованием MSTest'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'Модульное тестирование в F# с использованием xUnit'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'Модульное тестирование в F# с использованием NUnit'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'Модульное тестирование в F# с использованием MSTest'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: Модульное тестирование в Visual Basic с использованием xUnit
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: Модульное тестирование в Visual Basic с использованием NUnit
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: Модульное тестирование в Visual Basic с использованием MSTest
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: Выполнение выборочных модульных тестов
+      href: testing/selective-unit-tests.md
+    - name: Модульное тестирование публикуемых выходных данных
+      href: testing/unit-testing-published-output.md
+    - name: Live Unit Testing в проектах .NET Core с использованием Visual Studio
+      href: /visualstudio/test/live-unit-testing-start
+- name: Непрерывная интеграция
+  href: tools/using-ci-with-cli.md
+- name: Управление версиями
+  href: versions/index.md
+  items:
+    - name: Выбор версии .NET Core
+      href: versions/selection.md
+    - name: "Удаление устаревших сред выполнения и\_пакетов SDK"
+      href: versions/remove-runtime-sdk-versions.md
+- name: Каталог идентификаторов сред выполнения (RID)
+  href: rid-catalog.md
+- name: Обзор пакета SDK для .NET Core
+  href: sdk.md
+- name: Интерфейс командной строки .NET Core
+  items:
+    - name: Обзор
+      href: tools/index.md
+    - name: Инструменты
+      expanded: true
+      items:
+        - name: Глобальные инструменты
+          expanded: true
+          items:
+            - name: Обзор
+              href: tools/global-tools.md
+            - name: Создание глобального инструмента
+              href: tools/global-tools-how-to-create.md
+        - name: Устранение неполадок инструмента
+          href: tools/troubleshoot-usage-issues.md
+    - name: Повышенные права доступа
+      href: tools/elevated-access.md
+    - name: Модель расширяемости
+      href: tools/extensibility.md
+    - name: Пользовательские шаблоны
+      href: tools/custom-templates.md
+    - name: Включение автодополнения клавишей TAB
+      href: tools/enable-tab-autocomplete.md
+    - name: Телеметрия
+      href: tools/telemetry.md
+    - name: Обзор global.json
+      href: tools/global-json.md
+    - name: Справочник
+      items:
+        - name: dotnet
+          href: tools/dotnet.md
+        - name: dotnet build
+          href: tools/dotnet-build.md
+        - name: dotnet build-server
+          href: tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: tools/dotnet-clean.md
+        - name: dotnet help
+          href: tools/dotnet-help.md
+        - name: dotnet migrate
+          href: tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: tools/dotnet-pack.md
+        - name: dotnet publish
+          href: tools/dotnet-publish.md
+        - name: dotnet restore
+          href: tools/dotnet-restore.md
+        - name: dotnet run
+          href: tools/dotnet-run.md
+        - name: dotnet sln
+          href: tools/dotnet-sln.md
+        - name: dotnet store
+          href: tools/dotnet-store.md
+        - name: dotnet test
+          href: tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: tools/dotnet-vstest.md
+        - name: Скрипты dotnet-install
+          href: tools/dotnet-install-script.md
+        - name: Команды для создания ссылок на проект
+          items:
+            - name: dotnet add reference
+              href: tools/dotnet-add-reference.md
+            - name: dotnet list reference
+              href: tools/dotnet-list-reference.md
+            - name: dotnet remove reference
+              href: tools/dotnet-remove-reference.md
+        - name: Команды для упаковки проекта
+          items:
+            - name: dotnet add package
+              href: tools/dotnet-add-package.md
+            - name: dotnet list package
+              href: tools/dotnet-list-package.md
+            - name: dotnet remove package
+              href: tools/dotnet-remove-package.md
+- name: Дополнительные инструменты .NET Core
+  href: additional-tools/index.md
+  items:
+    - name: Поставщик WCF Web Service Reference
+      href: additional-tools/wcf-web-service-reference-guide.md
+    - name: dotnet-svcutil
+      href: additional-tools/dotnet-svcutil-guide.md
+    - name: dotnet-svcutil.xmlserializer
+      href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
+    - name: Генератор сериализации XML
+      href: additional-tools/xml-serializer-generator.md
+- name: Перенос из .NET Framework
+  href: porting/index.md
+  items:
+    - name: "Технологии .NET\_Framework, недоступные в .NET\_Core"
+      href: porting/net-framework-tech-unavailable.md
+    - name: Анализ зависимостей сторонних разработчиков
+      href: porting/third-party-deps.md
+    - name: Перенос библиотек
+      href: porting/libraries.md
+    - name: Организация проектов для .NET Core
+      href: porting/project-structure.md
+    - name: Инструменты для переноса в .NET Core
+      href: porting/tools.md
+    - name: Использование пакета обеспечения совместимости Windows
+      href: porting/windows-compat-pack.md
+    - name: Перенос проектов Windows Forms
+      href: porting/winforms.md
+    - name: Перенос проектов WPF
+      href: porting/wpf.md
+- name: Загрузка зависимостей
+  items:
+    - name: Обзор
+      href: dependency-loading/overview.md
+    - name: Основные сведения об AssemblyLoadContext
+      href: dependency-loading/understanding-assemblyloadcontext.md
+    - name: Загрузка сведений
+      items:
+        - name: Проверка зависимостей по умолчанию
+          href: dependency-loading/default-probing.md
+        - name: Загрузка управляемых сборок
+          href: dependency-loading/loading-managed.md
+        - name: Загрузка вспомогательных сборок
+          href: dependency-loading/loading-resources.md
+        - name: Загрузка неуправляемых библиотек
+          href: dependency-loading/loading-unmanaged.md
+    - name: Учебники
+      items:
+        - name: Создание приложения .NET Core с подключаемыми модулями
+          href: tutorials/creating-app-with-plugin-support.md
+        - name: Использование и отладка сборок с возможностью выгрузки в .NET Core
+          href: ../standard/assembly/unloadability-howto.md
+- name: "Сборка .NET\_Core из исходного кода"
+  href: build/index.md
+  items:
+    - name: Упаковка дистрибутивов .NET Core
+      href: build/distribution-packaging.md
+- name: "VS\_2015/project.json docs"
+  href: ../project-json.md
