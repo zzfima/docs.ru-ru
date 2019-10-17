@@ -1,5 +1,5 @@
 ---
-title: Свойство SqlStreamChars.CanSeek (System.Data.SqlTypes)
+title: Свойство Склстреамчарс. CanSeek (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: b85e21c6bc89d2a00ff8d302f67a3d074d5e7b8f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eb32978f62b7d46f0abf715e2bca347592c0fda8
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634388"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395778"
 ---
-# <a name="sqlstreamcharscanseek-property"></a>Свойство SqlStreamChars.CanSeek
+# <a name="sqlstreamcharscanseek-property"></a>Склстреамчарс. CanSeek, свойство
 
-При переопределении в производном классе получает значение, указывающее, поддерживает ли текущий поток операции поиска. Сборка, содержащая это свойство имеет с SQLAccess.dll связью. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе получает значение, указывающее, поддерживает ли текущий Steam операцию Seek. Сборка, содержащая это свойство, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ```csharp
 public abstract bool CanSeek { get; }
@@ -31,19 +31,19 @@ public abstract bool CanSeek { get; }
 ## <a name="property-value"></a>Значение свойства
 
 <xref:System.Boolean>\
-`true` Если текущий поток поддерживает операции поиска; в противном случае `false`.
+`true`, если текущий Steam поддерживает операцию Seek; в противном случае `false`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.CanSeek` Свойство является закрытым и не предназначен для непосредственного использования в коде.
+> Свойство `SqlStreamChars.CanSeek` является закрытым и не предназначено для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого свойства в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

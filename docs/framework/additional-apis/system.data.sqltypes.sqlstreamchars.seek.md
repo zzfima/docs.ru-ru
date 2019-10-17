@@ -1,5 +1,5 @@
 ---
-title: Метод SqlStreamChars.Seek (Int64, SeekOrigin) (System.Data.SqlTypes)
+title: Метод Склстреамчарс. Seek (Int64, SeekOrigin) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6b69f87da9fb3829d765dc135de1f6c10765b63a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: db8aba0a86c140ba62af8056011226532d415951
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634364"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395596"
 ---
-# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>Метод SqlStreamChars.Seek (Int64, SeekOrigin)
+# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>Метод Склстреамчарс. Seek (Int64, SeekOrigin)
 
-При переопределении в производном классе задает позицию в текущем потоке. Дружественные сборки, содержащей этот метод связан с SQLAccess.dll. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе задает позицию в текущем потоке. Сборка, содержащая этот метод, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ```csharp
 public abstract long Seek (long offset, System.IO.SeekOrigin origin);
@@ -33,24 +33,24 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 Смещение в байтах относительно `origin`.
 
 `origin`\
-Одно из значений перечисления, указывающее опорную точку для получения новой позиции.
+Одно из значений перечисления, указывающее точку ссылки, из которой следует получить новую позицию.
 
 ## <a name="returns"></a>Returns
 
 <xref:System.Int32>\
 Новая позиция в текущем потоке.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.Seek` Метод является закрытым и не предназначен для непосредственного использования в коде.
+> Метод `SqlStreamChars.Seek` является закрытым и не предназначен для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого метода в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

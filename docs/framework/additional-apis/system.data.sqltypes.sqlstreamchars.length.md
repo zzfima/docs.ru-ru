@@ -1,5 +1,5 @@
 ---
-title: Свойство SqlStreamChars.Length (System.Data.SqlTypes)
+title: Склстреамчарс. length, свойство (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634445"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395605"
 ---
-# <a name="sqlstreamcharslength-property"></a>Свойство SqlStreamChars.Length
+# <a name="sqlstreamcharslength-property"></a>Склстреамчарс. length, свойство
 
-При переопределении в производном классе получает длину текущего потока. Сборка, содержащая это свойство имеет с SQLAccess.dll связью. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе получает длину текущего потока. Сборка, содержащая это свойство, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,17 +35,17 @@ public abstract long Length { get; }
 <xref:System.Int64>\
 Длина потока.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.Length` Свойство является закрытым и не предназначен для непосредственного использования в коде.
+> Свойство `SqlStreamChars.Length` является закрытым и не предназначено для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого свойства в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

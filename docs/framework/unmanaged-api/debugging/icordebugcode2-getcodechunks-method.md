@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdaf6391ca5c19f073708d6258ad5775bec9824
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d64773aa0d35f2e97232576d145dfcba624812ec
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700728"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395528"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>Метод ICorDebugCode2::GetCodeChunks
 
@@ -41,26 +41,25 @@ HRESULT GetCodeChunks (
 
 ## <a name="parameters"></a>Параметры
 
- `cbufSize`  
- окне Размер массива `chunks`.
+`cbufSize`  
+окне Размер массива `chunks`.
 
- `pcnumChunks`  
- заполняет Число блоков, возвращаемых в массиве `chunks`.
+`pcnumChunks`  
+заполняет Число блоков, возвращаемых в массиве `chunks`.
 
- `chunks`  
- заполняет Массив структур "Кодечункинфо", каждый из которых представляет отдельный фрагмент кода. Если значение `cbufSize` равно 0, то этот параметр может иметь значение null.
+`chunks`  
+заполняет Массив структур "Кодечункинфо", каждый из которых представляет отдельный фрагмент кода. Если значение `cbufSize` равно 0, то этот параметр может иметь значение null.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
- Фрагменты кода никогда не перекрываются, и они будут следовать порядку, в котором они были сцеплены с помощью [ICorDebugCode:: Code](icordebugcode-getcode-method.md). Объект кода на языке MSIL в .NET Framework версии 2,0 будет состоять из одного фрагмента кода.
+Фрагменты кода никогда не перекрываются, и они будут следовать порядку, в котором они были сцеплены с помощью [ICorDebugCode:: Code](icordebugcode-getcode-method.md). Объект кода на языке MSIL в .NET Framework версии 2,0 будет состоять из одного фрагмента кода.
 
 ## <a name="requirements"></a>Требования
 
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Заголовок.** CorDebug. idl, CorDebug. h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
- **Библиотечная** Коргуидс. lib
+**Библиотека:** CorGuids.lib
 
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

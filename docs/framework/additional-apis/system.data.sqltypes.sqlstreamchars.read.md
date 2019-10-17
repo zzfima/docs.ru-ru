@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Read(Char[], Int32, Int32) Method (System.Data.SqlTypes)
+title: Метод Склстреамчарс. Read (char [], Int32, Int32) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: df715f622f874b3c9297c421eab9f4c7504e696b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c8a1526e75fdc304022e74a7cc52506762489ea
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634321"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395754"
 ---
-# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>Метод SqlStreamChars.Read (Char [], Int32, Int32)
+# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>Метод Склстреамчарс. Read (char [], Int32, Int32)
 
-При переопределении в производном классе, считывает следующий набор символов из входного потока. Дружественные сборки, содержащей этот метод связан с SQLAccess.dll. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе считывает следующий набор символов из входного потока. Сборка, содержащая этот метод, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ```csharp
 public abstract int Read (char[] buffer, int offset, int count);
@@ -30,30 +30,30 @@ public abstract int Read (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>Параметры
 
 `buffer`\
-Массива символов для чтения.
+Массив символов для чтения.
 
 `offset`\
 Смещение относительно начала координат.
 
 `count`\
-Число символов для чтения из текущего потока.
+Число символов, считываемых из текущего потока.
 
 ## <a name="returns"></a>Returns
 
 <xref:System.Int32>\
 Общее количество символов, считанных в буфер.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.Read` Метод является закрытым и не предназначен для непосредственного использования в коде.
+> Метод `SqlStreamChars.Read` является закрытым и не предназначен для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого метода в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

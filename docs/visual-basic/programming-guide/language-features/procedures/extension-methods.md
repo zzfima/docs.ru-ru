@@ -7,18 +7,18 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701059"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396015"
 ---
 # <a name="extension-methods-visual-basic"></a>Методы расширения (Visual Basic)
 
 Методы расширения позволяют разработчикам добавлять пользовательские функции к типам данных, которые уже определены без создания нового производного типа. Методы расширения позволяют написать метод, который может вызываться, как если бы он был методом экземпляра существующего типа.
-  
-## <a name="remarks"></a>Примечания
+
+## <a name="remarks"></a>Заметки
 
 Метод расширения может быть только процедурой `Sub` или `Function`. Невозможно определить свойство, поле или событие расширения. Все методы расширения должны быть помечены атрибутом расширения `<Extension>` из пространства имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> и должны быть определены в [модуле](../../../language-reference/statements/module-statement.md). Если метод расширения определен за пределами модуля, Visual Basic компилятор создает ошибку [BC36551](../../../misc/bc36551.md), "методы расширения могут быть определены только в модулях".
 
@@ -29,7 +29,7 @@ ms.locfileid: "71701059"
 ## <a name="example"></a>Пример
 
 В следующем примере определяется расширение `Print` для типа данных <xref:System.String>. Метод использует `Console.WriteLine` для вывода строки. Параметр метода `Print`, `aString`, устанавливает, что метод расширяет класс <xref:System.String>.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 Обратите внимание, что определение метода расширения помечено атрибутом расширения `<Extension()>`. Маркировка модуля, в котором определен метод, является необязательной, но каждый метод расширения должен быть помечен. чтобы получить доступ к атрибуту расширения, необходимо импортировать <xref:System.Runtime.CompilerServices>.
@@ -45,7 +45,6 @@ ms.locfileid: "71701059"
 Метод вызывается путем отправки строкового аргумента для `punc`: `example.PrintAndPunctuate(".")`.
 
 В следующем примере показаны `Print` и `PrintAndPunctuate`, определенные и вызванные. <xref:System.Runtime.CompilerServices> импортируется в модуль определения, чтобы обеспечить доступ к атрибуту расширения.
-
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -94,7 +93,7 @@ End Module
 
 - Классы (ссылочные типы)
 - Структуры (типы значений)
-- Интерфейсы
+- интерфейсов,
 - Делегаты
 - Аргументы ByRef и ByVal
 - Параметры универсального метода

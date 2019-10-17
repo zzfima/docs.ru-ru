@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Write(Char[], Int32, Int32) Method (System.Data.SqlTypes)
+title: Метод Склстреамчарс. Write (char [], Int32, Int32) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4084c7161eaa91d78eab32f1c14624e0032cdfcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d952041122ceb3824712bd81cab7ce4789c9db8
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705913"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395579"
 ---
-# <a name="sqlstreamcharswritechar-int32-int32-method"></a>Метод SqlStreamChars.Write (Char [], Int32, Int32)
+# <a name="sqlstreamcharswritechar-int32-int32-method"></a>Метод Склстреамчарс. Write (char [], Int32, Int32)
 
-При переопределении в производном классе, записывает последовательность символов в текущий поток и перемещает текущую позицию внутри потока на число записанных символов. Дружественные сборки, содержащей этот метод связан с SQLAccess.dll. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе записывает последовательность символов в текущий поток и перемещает текущую позицию в этом потоке вперед на число записанных символов. Сборка, содержащая этот метод, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ```csharp
 public abstract void Write (char[] buffer, int offset, int count);
@@ -30,25 +30,25 @@ public abstract void Write (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>Параметры
 
 `buffer`  
-Записываемый массив char.
+Массив символов для записи.
 
 `offset`  
 Смещение относительно начала координат.
 
 `count`  
-Число символов для записи в текущий поток.
+Число символов, записываемых в текущий поток.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.Write` Метод является закрытым и не предназначен для непосредственного использования в коде.
+> Метод `SqlStreamChars.Write` является закрытым и не предназначен для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого метода для написания в рабочем приложении каких-либо обстоятельств.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

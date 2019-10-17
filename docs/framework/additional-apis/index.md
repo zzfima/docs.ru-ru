@@ -1,6 +1,6 @@
 ---
 title: Дополнительные библиотеки классов и интерфейсы API
-ms.date: 01/29/2018
+ms.date: 10/09/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,20 +10,20 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053246"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395664"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
 .NET Framework постоянно развивается. Для улучшения разработки кросс-платформенного процесса и появления новых функций на ранних этапах новые функции выпускаются с использованием аппаратного контроллера управления (OOB). В этом разделе перечислены внештатные проекты, для которых мы предоставляем документацию.  
   
-Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например, <xref:System.Text.CodePagesEncodingProvider> класс делает кодировки кодовых страниц доступными для приложений UWP, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
+Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например, класс <xref:System.Text.CodePagesEncodingProvider> делает кодировки кодовых страниц доступными для приложений UWP, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
   
-## <a name="oob-projects"></a>Встроенные проекты
+## <a name="oob-projects"></a>Внештатные проекты
   
 | Проект | Описание |  
 | ------- | ----------- |  
@@ -36,30 +36,53 @@ ms.locfileid: "71053246"
   
 | Проект | Описание |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> Расширяет класс, чтобы сделать кодировки кодовых страниц доступными для приложений, предназначенных для универсальная платформа Windows. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Расширяет класс <xref:System.Text.EncodingProvider>, чтобы кодировки кодовых страниц были доступны для приложений, предназначенных для универсальная платформа Windows. |  
   
 ## <a name="private-apis"></a>Частные интерфейсы API  
 
 Эти API-интерфейсы используются для поддержки инфраструктуры продукта и не предназначены для использования непосредственно в коде.  
   
-| Имя API |
-| -------- |
-| [Класс System .NET. Connection](connection.md) |
-| [Поле системы .NET. Connection.\_m врителист](m_writelist.md) |
-| [Класс System .NET. Коннектионграуп](connectiongroup.md) |
-| [System .NET. коннектионграуп. m\_коннектионлист, поле](m_connectionlist.md) |
-| [Класс System .NET. Коререспонседата](coreresponsedata.md) |
-| [System .NET. коререспонседата. m\_ResponseHeaders, поле](coreresponsedata_m_responseheaders.md) |
-| [Поле StatusCode System .NET. коререспонседата\_. m](coreresponsedata_m_statuscode.md) |
-| [System .NET. HttpWebRequest. \_Поле перенаправлений](_autoredirects.md) |
-| [System .NET. HttpWebRequest. \_Поле коререспонсе](httpwebrequest__coreresponse.md) |
-| [System .NET. HttpWebRequest. \_Поле HttpResponse](_httpresponse.md) |
-| [System .NET. ServicePoint. m\_коннектионграуплист, поле](m_connectiongrouplist.md) |
-| [Поле System .NET. ServicePointManager.\_s сервицепоинттабле](s_servicepointtable.md) |
-| [System. Windows. Diagnostics. висуалдиагностикс. s\_исдебугжерчеккдисабледфортестпурпосес, поле](s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [Класс System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md) |
-| [Класс System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md) |
+* [Свойство Microsoft. SqlServer. Server. Смиордерпроперти. Item](microsoft.sqlserver.server.smiorderproperty.item.md)
+* [Метод System. Exception. Препфорремотинг](system.exception.prepforremoting.md)
+* [Свойство System. Data. SqlTypes. SqlChars. Stream](system.data.sqltypes.sqlchars.stream.md)
+* [Конструктор System. Data. SqlTypes. Склстреамчарс](system.data.sqltypes.sqlstreamchars.-ctor.md)
+* [Свойство System. Data. SqlTypes. Склстреамчарс. CanSeek](system.data.sqltypes.sqlstreamchars.canseek.md)
+* [Свойство System. Data. SqlTypes. Склстреамчарс. IsNull](system.data.sqltypes.sqlstreamchars.isnull.md)
+* [Свойство System. Data. SqlTypes. Склстреамчарс. length](system.data.sqltypes.sqlstreamchars.length.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. Close](system.data.sqltypes.sqlstreamchars.close.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. Dispose](system.data.sqltypes.sqlstreamchars.dispose.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. Flush](system.data.sqltypes.sqlstreamchars.flush.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. Read](system.data.sqltypes.sqlstreamchars.read.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. Seek](system.data.sqltypes.sqlstreamchars.seek.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. SetLength](system.data.sqltypes.sqlstreamchars.setlength.md)
+* [Метод System. Data. SqlTypes. Склстреамчарс. Write](system.data.sqltypes.sqlstreamchars.write.md)
+* [Класс System .NET. Connection](connection.md)
+* [System .NET. Connection. m @ no__t-1WriteList поле](m_writelist.md)
+* [Класс System .NET. Коннектионграуп](connectiongroup.md)
+* [System .NET. Коннектионграуп. m @ no__t-1ConnectionList поле](m_connectionlist.md)
+* [Класс System .NET. Коререспонседата](coreresponsedata.md)
+* [System .NET. Коререспонседата. m @ no__t-1ResponseHeaders поле](coreresponsedata_m_responseheaders.md)
+* [System .NET. Коререспонседата. m @ no__t-1StatusCode поле](coreresponsedata_m_statuscode.md)
+* [Поле System .NET. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
+* [Поле System .NET. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
+* [Поле System .NET. HttpWebRequest. \_HttpResponse](_httpresponse.md)
+* [System .NET. ServicePoint. m @ no__t-1ConnectionGroupList поле](m_connectiongrouplist.md)
+* [System .NET. ServicePointManager. s @ no__t-1ServicePointTable поле](s_servicepointtable.md)
+* [System. Windows. Diagnostics. Висуалдиагностикс. s @ no__t-1isDebuggerCheckDisabledForTestPurposes поле](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Класс System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
+* [Класс System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
+* [ADODB. Интерфейс подключения](adodb.connection.md)
+* [ADODB. Перечисление Евентреасон](adodb.eventreasonenum.md)
+* [ADODB. Перечисление Евентстатус](adodb.eventstatusenum.md)
+* [стдоле. Структура DISPPARAMS](stdole.dispparams.md)
+* [стдоле. Структура ЕКСЦЕПИНФО](stdole.excepinfo.md)
+* [стдоле. IFont.Name, свойство](stdole.ifont.name.md)
+* [стдоле. Интерфейс IFontDisp](stdole.ifontdisp.md)
+* [стдоле. Ипиктуре. Handle, свойство](stdole.ipicture.handle.md)
+* [стдоле. Ипиктуредисп. Handle, свойство](stdole.ipicturedisp.handle.md)
+* [стдоле. Интерфейс Стдфонт](stdole.stdfont.md)
+* [стдоле. Интерфейс Стдпиктуре](stdole.stdpicture.md)
   
 ## <a name="see-also"></a>См. также
 
-- [.NET Framework и отдельные выпуски](../get-started/the-net-framework-and-out-of-band-releases.md)
+* [.NET Framework и отдельные выпуски](../get-started/the-net-framework-and-out-of-band-releases.md)

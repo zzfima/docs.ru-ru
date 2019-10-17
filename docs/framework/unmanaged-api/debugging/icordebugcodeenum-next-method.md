@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 076b5d628dfe83decdbbe2f5e74c50e08262c580
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700687"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395478"
 ---
 # <a name="icordebugcodeenumnext-method"></a>Метод ICorDebugCodeEnum::Next
 
@@ -41,22 +41,21 @@ HRESULT Next (
 
 ## <a name="parameters"></a>Параметры
 
- `celt`  
- окне Число извлекаемых экземпляров `ICorDebugCode`.
+`celt`  
+окне Число извлекаемых экземпляров `ICorDebugCode`.
 
- `values`  
- заполняет Массив указателей, каждый из которых указывает на объект `ICorDebugCode`.
+`values`  
+заполняет Массив указателей, каждый из которых указывает на объект `ICorDebugCode`.
 
- `pceltFetched`  
- заполняет Указатель на число фактически возвращенных экземпляров `ICorDebugCode`. Это значение может быть равно null, если `celt` является одним.
+`pceltFetched`  
+заполняет Указатель на число фактически возвращенных экземпляров `ICorDebugCode`. Это значение может быть равно null, если `celt` является одним.
 
 ## <a name="requirements"></a>Требования
 
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Заголовок.** CorDebug. idl, CorDebug. h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
- **Библиотечная** Коргуидс. lib
+**Библиотека:** CorGuids.lib
 
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

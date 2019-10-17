@@ -8,15 +8,15 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 61ee38319b2f0aa46690fb063f6ffe6612f993ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f2b18593d075b54eb8c3351bbb84415700cfd4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918435"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395806"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Практическое руководство. Использование специальных символов в XAML
-Файлы разметки, созданные в [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] , автоматически сохраняются [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] в формате UTF-8, что означает, что большинство специальных символов, таких как диакритические знаки, кодируются правильно. Но существует набор широко используемых специальных символов, которые обрабатываются по-другому. Эти специальные символы соответствуют [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] стандарту для кодирования.  
+Файлы разметки, созданные в [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], автоматически сохраняются в формате файлов Юникода UTF-8, что означает, что большинство специальных символов, таких как диакритические знаки, кодируются правильно. Но существует набор широко используемых специальных символов, которые обрабатываются по-другому. Эти специальные символы соответствуют стандарту [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] для кодирования.  
   
  В следующей таблице показан синтаксис кодирования этого набора специальных символов:  
   
@@ -28,7 +28,7 @@ ms.locfileid: "69918435"
 |"|`&quot;`|Символ двойной кавычки.|  
   
 > [!NOTE]
-> При создании файла разметки с помощью текстового редактора, например Блокнота Windows, необходимо сохранить файл в [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] формате UTF-8, чтобы сохранить закодированные специальные символы.  
+> При создании файла разметки с помощью текстового редактора, например Блокнота Windows, необходимо сохранить файл в формате Юникода UTF-8, чтобы сохранить закодированные специальные символы.  
   
  В приведенном ниже примере показано, как можно использовать специальные символы в тексте при создании разметки.  
   

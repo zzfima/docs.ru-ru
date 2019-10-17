@@ -2,15 +2,15 @@
 title: Защита сообщений с использованием средств обеспечения безопасности сообщений
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911773"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395705"
 ---
 # <a name="securing-messages-using-message-security"></a>Защита сообщений с использованием средств обеспечения безопасности сообщений
-В этом разделе обсуждается безопасность сообщений WCF при <xref:System.ServiceModel.NetMsmqBinding>использовании.  
+В этом разделе обсуждается безопасность сообщений WCF при использовании <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 > Перед чтением этого раздела рекомендуется ознакомиться с [основными понятиями безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "69911773"
   
  Обратите внимание, что при использовании этого типа учетных данных служба должна запускаться из учетной записи службы (SERVICE).  
   
- Протокол Kerberos используется по умолчанию при выборе учетных данных сообщения. Дополнительные сведения см. в разделе [исследование Kerberos, протокол для распределенной безопасности в Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ Протокол Kerberos используется по умолчанию при выборе учетных данных сообщения.
   
 ### <a name="username-password"></a>Имя пользователя и пароль  
  С помощью этого свойства клиент может проверить подлинность сервера, используя имя пользователя и пароль в заголовке безопасности сообщения.  

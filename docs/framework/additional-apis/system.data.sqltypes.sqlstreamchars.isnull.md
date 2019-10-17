@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.IsNull Property (System.Data.SqlTypes)
+title: Свойство Склстреамчарс. IsNull (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 03b702b0ffe258eb8cad0a1ece5314b363f9a0d0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d80f653724b3ef0a1cadb69a5f72b1d9455597d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634618"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395734"
 ---
-# <a name="sqlstreamcharsisnull-property"></a>Свойство SqlStreamChars.IsNull
+# <a name="sqlstreamcharsisnull-property"></a>Склстреамчарс. IsNull, свойство
 
-При переопределении в производном классе получает значение, указывающее, является ли поток `null`. Сборка, содержащая это свойство имеет с SQLAccess.dll связью. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе получает значение, указывающее, является ли поток `null`. Сборка, содержащая это свойство, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,19 +33,19 @@ public abstract bool IsNull { get; }
 ## <a name="property-value"></a>Значение свойства
 
 <xref:System.Boolean>\
-`true` Если поток `null`; в противном случае `false`.
+`true`, если поток `null`; в противном случае `false`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.IsNull` Свойство является закрытым и не предназначен для непосредственного использования в коде.
+> Свойство `SqlStreamChars.IsNull` является закрытым и не предназначено для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого свойства в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

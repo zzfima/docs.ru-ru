@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a13cc98a88ff81afd478eaa3e40286169811233a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: HT
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320306"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395902"
 ---
 # <a name="wcf-performance-counters"></a>Счетчики производительности WCF
 Windows Communication Foundation (WCF) включает большой набор счетчиков производительности, помогающих оценить производительность приложения.  
@@ -118,19 +118,16 @@ config.Save();
 > При наличии одинаковых имен операций в контракте можно получить только экземпляры одного счетчика для обоих операций.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Программирование счетчиков производительности WCF  
- Несколько файлов устанавливаются в папку установки пакета SDK, что позволяет программно получить доступ к счетчикам производительности WCF. Ниже приводится список этих файлов.  
+
+Несколько файлов устанавливаются в папку установки пакета SDK, что позволяет программно получить доступ к счетчикам производительности WCF. Эти файлы перечислены ниже.
   
-- _ServiceModelEndpointPerfCounters.vrg  
+- *@no__t -1ServiceModelEndpointPerfCounters. ВРГ*
+- *@no__t -1ServiceModelOperationPerfCounters. ВРГ*
+- *@no__t -1ServiceModelServicePerfCounters. ВРГ*  
+- *@no__t -1SMSvcHostPerfCounters. ВРГ*
+- *@no__t -1TransactionBridgePerfCounters. ВРГ*
   
-- _ServiceModelOperationPerfCounters.vrg  
-  
-- _ServiceModelServicePerfCounters.vrg  
-  
-- _SMSvcHostPerfCounters.vrg  
-  
-- _TransactionBridgePerfCounters.vrg  
-  
- Дополнительные сведения о программном доступе к счетчикам см. в разделе [Архитектура программирования счетчика производительности](https://go.microsoft.com/fwlink/?LinkId=95179).  
+Дополнительные сведения о программном доступе к счетчикам см. в разделе [Архитектура программирования счетчика производительности](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   
 ## <a name="see-also"></a>См. также
 

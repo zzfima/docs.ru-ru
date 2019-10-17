@@ -1,5 +1,5 @@
 ---
-title: Метод SqlStreamChars.Flush (System.Data.SqlTypes)
+title: Метод Склстреамчарс. Flush (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634335"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395615"
 ---
-# <a name="sqlstreamcharsflush-method"></a>Метод SqlStreamChars.Flush
+# <a name="sqlstreamcharsflush-method"></a>Склстреамчарс. Flush, метод
 
-При переопределении в производном классе очищает все буферы данного потока и вызывает запись данных буферов в базовое устройство. Дружественные сборки, содержащей этот метод связан с SQLAccess.dll. Он предназначен для использования с SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.
+При переопределении в производном классе очищает все буферы данного потока и вызывает запись данных буферов в базовое устройство. Сборка, содержащая этот метод, имеет дружественную связь с Склакцесс. dll. Он предназначен для использования SQL Server. Для других баз данных используйте механизм размещения, предоставляемый этой базой данных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,17 +29,17 @@ ms.locfileid: "65634335"
 public abstract void Flush ();
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 > [!WARNING]
-> `SqlStreamChars.Flush` Метод является закрытым и не предназначен для непосредственного использования в коде.
+> Метод `SqlStreamChars.Flush` является закрытым и не предназначен для непосредственного использования в коде.
 >
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого метода в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Data.SqlTypes>
 
-**Сборка:** System.Data (в System.Data.dll)
+**Сборка:** System. Data (в System. Data. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.
