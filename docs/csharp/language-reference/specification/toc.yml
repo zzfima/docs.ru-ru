@@ -1,0 +1,40 @@
+- name: "Предварительная спецификация C#\_6.0"
+  items:
+    - name: Вступление
+      href: ../../../../_csharplang/spec/introduction.md
+    - name: Лексическая структура
+      href: ../../../../_csharplang/spec/lexical-structure.md
+    - name: Основные понятия
+      href: ../../../../_csharplang/spec/basic-concepts.md
+    - name: Типы
+      href: ../../../../_csharplang/spec/types.md
+    - name: Переменные
+      href: ../../../../_csharplang/spec/variables.md
+    - name: Преобразования
+      href: ../../../../_csharplang/spec/conversions.md
+    - name: Выражения
+      href: ../../../../_csharplang/spec/expressions.md
+    - name: Операторы
+      href: ../../../../_csharplang/spec/statements.md
+    - name: Пространства имен
+      href: ../../../../_csharplang/spec/namespaces.md
+    - name: Классы
+      href: ../../../../_csharplang/spec/classes.md
+    - name: Структуры
+      href: ../../../../_csharplang/spec/structs.md
+    - name: Массивы
+      href: ../../../../_csharplang/spec/arrays.md
+    - name: Интерфейсы
+      href: ../../../../_csharplang/spec/interfaces.md
+    - name: Перечисления
+      href: ../../../../_csharplang/spec/enums.md
+    - name: Делегаты
+      href: ../../../../_csharplang/spec/delegates.md
+    - name: Исключения
+      href: ../../../../_csharplang/spec/exceptions.md
+    - name: Атрибуты
+      href: ../../../../_csharplang/spec/attributes.md
+    - name: Небезопасный код
+      href: ../../../../_csharplang/spec/unsafe-code.md
+    - name: Комментарии для документации
+      href: ../../../../_csharplang/spec/documentation-comments.md
