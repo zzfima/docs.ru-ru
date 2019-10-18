@@ -2,150 +2,155 @@
 title: Сортировка данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8b1734597efa3134c95c9764bad7f79fd3cf1e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908117"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524078"
 ---
-# <a name="sorting-data-visual-basic"></a><span data-ttu-id="99196-102">Сортировка данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99196-102">Sorting Data (Visual Basic)</span></span>
-<span data-ttu-id="99196-103">Операция сортировки упорядочивает элементы последовательности на основе одного или нескольких атрибутов.</span><span class="sxs-lookup"><span data-stu-id="99196-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="99196-104">Первый критерий сортировки выполняет первичную сортировку элементов.</span><span class="sxs-lookup"><span data-stu-id="99196-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="99196-105">Указав второй критерий поиска, можно сортировать элементы внутри каждой группы первичной сортировки.</span><span class="sxs-lookup"><span data-stu-id="99196-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  
-  
- <span data-ttu-id="99196-106">На следующем рисунке показаны результаты операции сортировки в алфавитном порядке в последовательности символов.</span><span class="sxs-lookup"><span data-stu-id="99196-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>  
-  
- ![Рисунок с операциями сортировки в алфавитном порядке.](./media/sorting-data/alphabetical-sort-operation.png)  
-  
- <span data-ttu-id="99196-108">Далее перечислены методы стандартных операторов запроса, которые выполняют сортировку данных.</span><span class="sxs-lookup"><span data-stu-id="99196-108">The standard query operator methods that sort data are listed in the following section.</span></span>  
-  
-## <a name="methods"></a><span data-ttu-id="99196-109">Методы</span><span class="sxs-lookup"><span data-stu-id="99196-109">Methods</span></span>  
-  
-|<span data-ttu-id="99196-110">Имя метода</span><span class="sxs-lookup"><span data-stu-id="99196-110">Method Name</span></span>|<span data-ttu-id="99196-111">Описание</span><span class="sxs-lookup"><span data-stu-id="99196-111">Description</span></span>|<span data-ttu-id="99196-112">Синтаксис выражений запросов Visual Basic</span><span class="sxs-lookup"><span data-stu-id="99196-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="99196-113">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="99196-113">More Information</span></span>|  
-|-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="99196-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="99196-114">OrderBy</span></span>|<span data-ttu-id="99196-115">Сортировка значений в возрастающем порядке.</span><span class="sxs-lookup"><span data-stu-id="99196-115">Sorts values in ascending order.</span></span>|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="99196-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="99196-116">OrderByDescending</span></span>|<span data-ttu-id="99196-117">Сортировка значений в убывающем порядке.</span><span class="sxs-lookup"><span data-stu-id="99196-117">Sorts values in descending order.</span></span>|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="99196-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="99196-118">ThenBy</span></span>|<span data-ttu-id="99196-119">Дополнительная сортировка по возрастанию.</span><span class="sxs-lookup"><span data-stu-id="99196-119">Performs a secondary sort in ascending order.</span></span>|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="99196-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="99196-120">ThenByDescending</span></span>|<span data-ttu-id="99196-121">Дополнительная сортировка по убыванию.</span><span class="sxs-lookup"><span data-stu-id="99196-121">Performs a secondary sort in descending order.</span></span>|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="99196-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="99196-122">Reverse</span></span>|<span data-ttu-id="99196-123">Изменение порядка элементов в коллекции на обратный.</span><span class="sxs-lookup"><span data-stu-id="99196-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="99196-124">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="99196-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
-  
-## <a name="query-expression-syntax-examples"></a><span data-ttu-id="99196-125">Примеры синтаксиса выражений запросов</span><span class="sxs-lookup"><span data-stu-id="99196-125">Query Expression Syntax Examples</span></span>  
-  
-### <a name="primary-sort-examples"></a><span data-ttu-id="99196-126">Примеры основной сортировки</span><span class="sxs-lookup"><span data-stu-id="99196-126">Primary Sort Examples</span></span>  
-  
-#### <a name="primary-ascending-sort"></a><span data-ttu-id="99196-127">Основная сортировка по возрастанию</span><span class="sxs-lookup"><span data-stu-id="99196-127">Primary Ascending Sort</span></span>  
- <span data-ttu-id="99196-128">В следующем примере показано использование предложения `Order By` в запросе LINQ для сортировки строк в массиве по длине строки в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="99196-128">The following example demonstrates how to use the `Order By` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>  
-  
-```vb  
-Dim words = {"the", "quick", "brown", "fox", "jumps"}  
-  
-Dim sortQuery = From word In words   
-                Order By word.Length   
-                Select word  
-  
-Dim sb As New System.Text.StringBuilder()  
-For Each str As String In sortQuery  
-    sb.AppendLine(str)  
-Next  
-  
-' Display the results.  
-MsgBox(sb.ToString())  
-  
-' This code produces the following output:  
-  
-' the  
-' fox  
-' quick  
-' brown  
-' jumps  
-```  
-  
-#### <a name="primary-descending-sort"></a><span data-ttu-id="99196-129">Основная сортировка по убыванию</span><span class="sxs-lookup"><span data-stu-id="99196-129">Primary Descending Sort</span></span>  
- <span data-ttu-id="99196-130">В следующем примере показано использование предложения `Order By Descending` в запросе LINQ для сортировки строк по их первой букве в порядке убывания.</span><span class="sxs-lookup"><span data-stu-id="99196-130">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>  
-  
-```vb  
-Dim words = {"the", "quick", "brown", "fox", "jumps"}  
-  
-Dim sortQuery = From word In words   
-                Order By word.Substring(0, 1) Descending   
-                Select word  
-  
-Dim sb As New System.Text.StringBuilder()  
-For Each str As String In sortQuery  
-    sb.AppendLine(str)  
-Next  
-  
-' Display the results.  
-MsgBox(sb.ToString())  
-  
-' This code produces the following output:  
-  
-' the  
-' quick  
-' jumps  
-' fox  
-' brown  
-```  
-  
-### <a name="secondary-sort-examples"></a><span data-ttu-id="99196-131">Примеры дополнительной сортировки</span><span class="sxs-lookup"><span data-stu-id="99196-131">Secondary Sort Examples</span></span>  
-  
-#### <a name="secondary-ascending-sort"></a><span data-ttu-id="99196-132">Дополнительная сортировка по возрастанию</span><span class="sxs-lookup"><span data-stu-id="99196-132">Secondary Ascending Sort</span></span>  
- <span data-ttu-id="99196-133">В следующем примере показано использование предложения `Order By` в запросе LINQ для выполнения основной и дополнительной сортировки строк в массиве.</span><span class="sxs-lookup"><span data-stu-id="99196-133">The following example demonstrates how to use the `Order By` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="99196-134">Строки сортируются основным образом по длине и дополнительно — по первой букве строки; в обоих случаях в возрастающем порядке.</span><span class="sxs-lookup"><span data-stu-id="99196-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>  
-  
-```vb  
-Dim words = {"the", "quick", "brown", "fox", "jumps"}  
-  
-Dim sortQuery = From word In words   
-                Order By word.Length, word.Substring(0, 1)   
-                Select word  
-  
-Dim sb As New System.Text.StringBuilder()  
-For Each str As String In sortQuery  
-    sb.AppendLine(str)  
-Next  
-  
-' Display the results.  
-MsgBox(sb.ToString())  
-  
-' This code produces the following output:  
-  
-' fox  
-' the  
-' brown  
-' jumps  
-' quick  
-```  
-  
-#### <a name="secondary-descending-sort"></a><span data-ttu-id="99196-135">Дополнительная сортировка по убыванию</span><span class="sxs-lookup"><span data-stu-id="99196-135">Secondary Descending Sort</span></span>  
- <span data-ttu-id="99196-136">В следующем примере показано использование предложения `Order By Descending` в запросе LINQ для выполнения основной сортировки по возрастанию и дополнительной сортировки по убыванию.</span><span class="sxs-lookup"><span data-stu-id="99196-136">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="99196-137">Строки сортируются основным образом по длине и дополнительно — по первой букве строки.</span><span class="sxs-lookup"><span data-stu-id="99196-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>  
-  
-```vb  
-Dim words = {"the", "quick", "brown", "fox", "jumps"}  
-  
-Dim sortQuery = From word In words   
-                Order By word.Length, word.Substring(0, 1) Descending   
-                Select word  
-  
-Dim sb As New System.Text.StringBuilder()  
-For Each str As String In sortQuery  
-    sb.AppendLine(str)  
-Next  
-  
-' Display the results.  
-MsgBox(sb.ToString())  
-  
-' This code produces the following output:  
-  
-' fox  
-' the  
-' quick  
-' jumps  
-' brown  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="99196-138">См. также</span><span class="sxs-lookup"><span data-stu-id="99196-138">See also</span></span>
+# <a name="sorting-data-visual-basic"></a><span data-ttu-id="2573b-102">Сортировка данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2573b-102">Sorting Data (Visual Basic)</span></span>
+
+<span data-ttu-id="2573b-103">Операция сортировки упорядочивает элементы последовательности на основе одного или нескольких атрибутов.</span><span class="sxs-lookup"><span data-stu-id="2573b-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="2573b-104">Первый критерий сортировки выполняет первичную сортировку элементов.</span><span class="sxs-lookup"><span data-stu-id="2573b-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="2573b-105">Указав второй критерий поиска, можно сортировать элементы внутри каждой группы первичной сортировки.</span><span class="sxs-lookup"><span data-stu-id="2573b-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>
+
+<span data-ttu-id="2573b-106">На следующем рисунке показаны результаты операции сортировки в алфавитном порядке в последовательности символов.</span><span class="sxs-lookup"><span data-stu-id="2573b-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>
+
+![Рисунок с операциями сортировки в алфавитном порядке.](./media/sorting-data/alphabetical-sort-operation.png)
+
+<span data-ttu-id="2573b-108">Далее перечислены методы стандартных операторов запроса, которые выполняют сортировку данных.</span><span class="sxs-lookup"><span data-stu-id="2573b-108">The standard query operator methods that sort data are listed in the following section.</span></span>
+
+## <a name="methods"></a><span data-ttu-id="2573b-109">Методы</span><span class="sxs-lookup"><span data-stu-id="2573b-109">Methods</span></span>
+
+|<span data-ttu-id="2573b-110">Имя метода</span><span class="sxs-lookup"><span data-stu-id="2573b-110">Method Name</span></span>|<span data-ttu-id="2573b-111">Описание</span><span class="sxs-lookup"><span data-stu-id="2573b-111">Description</span></span>|<span data-ttu-id="2573b-112">Синтаксис выражения запроса Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2573b-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="2573b-113">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="2573b-113">More Information</span></span>|
+|-----------------|-----------------|------------------------------------------|----------------------|
+|<span data-ttu-id="2573b-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="2573b-114">OrderBy</span></span>|<span data-ttu-id="2573b-115">Сортировка значений в возрастающем порядке.</span><span class="sxs-lookup"><span data-stu-id="2573b-115">Sorts values in ascending order.</span></span>|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="2573b-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="2573b-116">OrderByDescending</span></span>|<span data-ttu-id="2573b-117">Сортировка значений в убывающем порядке.</span><span class="sxs-lookup"><span data-stu-id="2573b-117">Sorts values in descending order.</span></span>|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="2573b-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="2573b-118">ThenBy</span></span>|<span data-ttu-id="2573b-119">Дополнительная сортировка по возрастанию.</span><span class="sxs-lookup"><span data-stu-id="2573b-119">Performs a secondary sort in ascending order.</span></span>|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="2573b-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="2573b-120">ThenByDescending</span></span>|<span data-ttu-id="2573b-121">Дополнительная сортировка по убыванию.</span><span class="sxs-lookup"><span data-stu-id="2573b-121">Performs a secondary sort in descending order.</span></span>|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="2573b-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="2573b-122">Reverse</span></span>|<span data-ttu-id="2573b-123">Изменение порядка элементов в коллекции на обратный.</span><span class="sxs-lookup"><span data-stu-id="2573b-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="2573b-124">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="2573b-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
+
+## <a name="query-expression-syntax-examples"></a><span data-ttu-id="2573b-125">Примеры синтаксиса выражений запросов</span><span class="sxs-lookup"><span data-stu-id="2573b-125">Query Expression Syntax Examples</span></span>
+
+### <a name="primary-sort-examples"></a><span data-ttu-id="2573b-126">Примеры основной сортировки</span><span class="sxs-lookup"><span data-stu-id="2573b-126">Primary Sort Examples</span></span>
+
+#### <a name="primary-ascending-sort"></a><span data-ttu-id="2573b-127">Основная сортировка по возрастанию</span><span class="sxs-lookup"><span data-stu-id="2573b-127">Primary Ascending Sort</span></span>
+
+<span data-ttu-id="2573b-128">В следующем примере показано использование предложения `Order By` в запросе LINQ для сортировки строк в массиве по длине строки в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="2573b-128">The following example demonstrates how to use the `Order By` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>
+
+```vb
+Dim words = {"the", "quick", "brown", "fox", "jumps"}
+
+Dim sortQuery = From word In words
+                Order By word.Length
+                Select word
+
+Dim sb As New System.Text.StringBuilder()
+For Each str As String In sortQuery
+    sb.AppendLine(str)
+Next
+
+' Display the results.
+MsgBox(sb.ToString())
+
+' This code produces the following output:
+
+' the
+' fox
+' quick
+' brown
+' jumps
+```
+
+#### <a name="primary-descending-sort"></a><span data-ttu-id="2573b-129">Основная сортировка по убыванию</span><span class="sxs-lookup"><span data-stu-id="2573b-129">Primary Descending Sort</span></span>
+
+<span data-ttu-id="2573b-130">В следующем примере показано использование предложения `Order By Descending` в запросе LINQ для сортировки строк по их первой букве в порядке убывания.</span><span class="sxs-lookup"><span data-stu-id="2573b-130">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>
+
+```vb
+Dim words = {"the", "quick", "brown", "fox", "jumps"}
+
+Dim sortQuery = From word In words
+                Order By word.Substring(0, 1) Descending
+                Select word
+
+Dim sb As New System.Text.StringBuilder()
+For Each str As String In sortQuery
+    sb.AppendLine(str)
+Next
+
+' Display the results.
+MsgBox(sb.ToString())
+
+' This code produces the following output:
+
+' the
+' quick
+' jumps
+' fox
+' brown
+```
+
+### <a name="secondary-sort-examples"></a><span data-ttu-id="2573b-131">Примеры дополнительной сортировки</span><span class="sxs-lookup"><span data-stu-id="2573b-131">Secondary Sort Examples</span></span>
+
+#### <a name="secondary-ascending-sort"></a><span data-ttu-id="2573b-132">Дополнительная сортировка по возрастанию</span><span class="sxs-lookup"><span data-stu-id="2573b-132">Secondary Ascending Sort</span></span>
+
+<span data-ttu-id="2573b-133">В следующем примере показано использование предложения `Order By` в запросе LINQ для выполнения основной и дополнительной сортировки строк в массиве.</span><span class="sxs-lookup"><span data-stu-id="2573b-133">The following example demonstrates how to use the `Order By` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="2573b-134">Строки сортируются основным образом по длине и дополнительно — по первой букве строки; в обоих случаях в возрастающем порядке.</span><span class="sxs-lookup"><span data-stu-id="2573b-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>
+
+```vb
+Dim words = {"the", "quick", "brown", "fox", "jumps"}
+
+Dim sortQuery = From word In words
+                Order By word.Length, word.Substring(0, 1)
+                Select word
+
+Dim sb As New System.Text.StringBuilder()
+For Each str As String In sortQuery
+    sb.AppendLine(str)
+Next
+
+' Display the results.
+MsgBox(sb.ToString())
+
+' This code produces the following output:
+
+' fox
+' the
+' brown
+' jumps
+' quick
+```
+
+#### <a name="secondary-descending-sort"></a><span data-ttu-id="2573b-135">Дополнительная сортировка по убыванию</span><span class="sxs-lookup"><span data-stu-id="2573b-135">Secondary Descending Sort</span></span>
+
+<span data-ttu-id="2573b-136">В следующем примере показано использование предложения `Order By Descending` в запросе LINQ для выполнения основной сортировки по возрастанию и дополнительной сортировки по убыванию.</span><span class="sxs-lookup"><span data-stu-id="2573b-136">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="2573b-137">Строки сортируются основным образом по длине и дополнительно — по первой букве строки.</span><span class="sxs-lookup"><span data-stu-id="2573b-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>
+
+```vb
+Dim words = {"the", "quick", "brown", "fox", "jumps"}
+
+Dim sortQuery = From word In words
+                Order By word.Length, word.Substring(0, 1) Descending
+                Select word
+
+Dim sb As New System.Text.StringBuilder()
+For Each str As String In sortQuery
+    sb.AppendLine(str)
+Next
+
+' Display the results.
+MsgBox(sb.ToString())
+
+' This code produces the following output:
+
+' fox
+' the
+' quick
+' jumps
+' brown
+```
+
+## <a name="see-also"></a><span data-ttu-id="2573b-138">См. также</span><span class="sxs-lookup"><span data-stu-id="2573b-138">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="99196-139">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99196-139">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="99196-140">Предложение Order By</span><span class="sxs-lookup"><span data-stu-id="99196-140">Order By Clause</span></span>](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [<span data-ttu-id="99196-141">Практическое руководство. Сортировка результатов запроса</span><span class="sxs-lookup"><span data-stu-id="99196-141">How to: Sort Query Results</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [<span data-ttu-id="99196-142">Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99196-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [<span data-ttu-id="2573b-139">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2573b-139">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="2573b-140">Предложение Order By</span><span class="sxs-lookup"><span data-stu-id="2573b-140">Order By Clause</span></span>](../../../../visual-basic/language-reference/queries/order-by-clause.md)
+- <span data-ttu-id="2573b-141">[How to: Sort Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md) (Практическое руководство. Сортировка результатов запроса)</span><span class="sxs-lookup"><span data-stu-id="2573b-141">[How to: Sort Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)</span></span>
+- [<span data-ttu-id="2573b-142">Как сортировать или фильтровать текстовые данные по любому слову или полю (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2573b-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

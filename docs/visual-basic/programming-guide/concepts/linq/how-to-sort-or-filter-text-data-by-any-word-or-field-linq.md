@@ -2,78 +2,80 @@
 title: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 5d6a8d26f28feafecfbddfb8d2b538adc22f1b90
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592459"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524126"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="e7beb-102">Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7beb-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="e7beb-103">В следующем примере демонстрируется сортировка строк структурированного текста, таких как значения, разделенные запятыми, по любому полю в строке.</span><span class="sxs-lookup"><span data-stu-id="e7beb-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="e7beb-104">Поле можно указывать в среде выполнения динамически.</span><span class="sxs-lookup"><span data-stu-id="e7beb-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="e7beb-105">Допустим, поля в файле scores.csv содержат идентификационные номера учащихся и баллы, которые они набрали в результате четырех тестов.</span><span class="sxs-lookup"><span data-stu-id="e7beb-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
-  
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="e7beb-106">Создание файла с данными</span><span class="sxs-lookup"><span data-stu-id="e7beb-106">To create a file that contains data</span></span>  
-  
-1. <span data-ttu-id="e7beb-107">Скопируйте данные из файла scores.csv (см. раздел [Практическое руководство. Объединение содержимого из разных форматов файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) и сохраните его в папку решения.</span><span class="sxs-lookup"><span data-stu-id="e7beb-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="e7beb-108">Пример</span><span class="sxs-lookup"><span data-stu-id="e7beb-108">Example</span></span>  
-  
-```vb  
-Class SortLines  
-  
-    Shared Sub Main()  
-        Dim scores As String() = System.IO.File.ReadAllLines("../../../scores.csv")  
-  
-        ' Change this to any value from 0 to 4  
-        Dim sortField As Integer = 1  
-  
-        Console.WriteLine("Sorted highest to lowest by field " & sortField)  
-  
-        ' Demonstrates how to return query from a method.  
-        ' The query is executed here.  
-        For Each str As String In SortQuery(scores, sortField)  
-            Console.WriteLine(str)  
-        Next  
-  
-        ' Keep console window open in debug mode.  
-        Console.WriteLine("Press any key to exit.")  
-        Console.ReadKey()  
-  
-    End Sub  
-  
-    Shared Function SortQuery(  
-        ByVal source As IEnumerable(Of String),   
-        ByVal num As Integer) As IEnumerable(Of String)  
-  
-        Dim scoreQuery = From line In source   
-                         Let fields = line.Split(New Char() {","})   
-                         Order By fields(num) Descending   
-                         Select line  
-  
-        Return scoreQuery  
-    End Function  
-End Class  
-' Output:  
-' Sorted highest to lowest by field 1  
-' 116, 99, 86, 90, 94  
-' 120, 99, 82, 81, 79  
-' 111, 97, 92, 81, 60  
-' 114, 97, 89, 85, 82  
-' 121, 96, 85, 91, 60  
-' 122, 94, 92, 91, 91  
-' 117, 93, 92, 80, 87  
-' 118, 92, 90, 83, 78  
-' 113, 88, 94, 65, 91  
-' 112, 75, 84, 91, 39  
-' 119, 68, 79, 88, 92  
-' 115, 35, 72, 91, 70  
-```  
-  
- <span data-ttu-id="e7beb-109">В этом примере также показано, как вернуть переменную запроса из функции.</span><span class="sxs-lookup"><span data-stu-id="e7beb-109">This example also demonstrates how to return a query variable from a Function.</span></span>  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="e7beb-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e7beb-110">Compiling the Code</span></span>  
-<span data-ttu-id="e7beb-111">Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="e7beb-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="e7beb-112">См. также</span><span class="sxs-lookup"><span data-stu-id="e7beb-112">See also</span></span>
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="27d0e-102">Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27d0e-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
 
-- [<span data-ttu-id="e7beb-113">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7beb-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+<span data-ttu-id="27d0e-103">В следующем примере демонстрируется сортировка строк структурированного текста, таких как значения, разделенные запятыми, по любому полю в строке.</span><span class="sxs-lookup"><span data-stu-id="27d0e-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="27d0e-104">Поле можно указывать в среде выполнения динамически.</span><span class="sxs-lookup"><span data-stu-id="27d0e-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="27d0e-105">Допустим, поля в файле scores.csv содержат идентификационные номера учащихся и баллы, которые они набрали в результате четырех тестов.</span><span class="sxs-lookup"><span data-stu-id="27d0e-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
+
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="27d0e-106">Создание файла с данными</span><span class="sxs-lookup"><span data-stu-id="27d0e-106">To create a file that contains data</span></span>
+
+<span data-ttu-id="27d0e-107">Скопируйте данные scores. CSV из раздела [как объединить содержимое из файлов разных форматов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) и сохранить его в папке решения.</span><span class="sxs-lookup"><span data-stu-id="27d0e-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
+
+## <a name="example"></a><span data-ttu-id="27d0e-108">Пример</span><span class="sxs-lookup"><span data-stu-id="27d0e-108">Example</span></span>
+
+```vb
+Class SortLines
+
+    Shared Sub Main()
+        Dim scores As String() = System.IO.File.ReadAllLines("../../../scores.csv")
+
+        ' Change this to any value from 0 to 4
+        Dim sortField As Integer = 1
+
+        Console.WriteLine("Sorted highest to lowest by field " & sortField)
+
+        ' Demonstrates how to return query from a method.
+        ' The query is executed here.
+        For Each str As String In SortQuery(scores, sortField)
+            Console.WriteLine(str)
+        Next
+
+        ' Keep console window open in debug mode.
+        Console.WriteLine("Press any key to exit.")
+        Console.ReadKey()
+
+    End Sub
+
+    Shared Function SortQuery(
+        ByVal source As IEnumerable(Of String),
+        ByVal num As Integer) As IEnumerable(Of String)
+
+        Dim scoreQuery = From line In source
+                         Let fields = line.Split(New Char() {","})
+                         Order By fields(num) Descending
+                         Select line
+
+        Return scoreQuery
+    End Function
+End Class
+' Output:
+' Sorted highest to lowest by field 1
+' 116, 99, 86, 90, 94
+' 120, 99, 82, 81, 79
+' 111, 97, 92, 81, 60
+' 114, 97, 89, 85, 82
+' 121, 96, 85, 91, 60
+' 122, 94, 92, 91, 91
+' 117, 93, 92, 80, 87
+' 118, 92, 90, 83, 78
+' 113, 88, 94, 65, 91
+' 112, 75, 84, 91, 39
+' 119, 68, 79, 88, 92
+' 115, 35, 72, 91, 70
+```
+
+<span data-ttu-id="27d0e-109">В этом примере также показано, как вернуть переменную запроса из функции.</span><span class="sxs-lookup"><span data-stu-id="27d0e-109">This example also demonstrates how to return a query variable from a Function.</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="27d0e-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="27d0e-110">Compiling the Code</span></span>
+
+<span data-ttu-id="27d0e-111">Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.</span><span class="sxs-lookup"><span data-stu-id="27d0e-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="27d0e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="27d0e-112">See also</span></span>
+
+- [<span data-ttu-id="27d0e-113">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27d0e-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

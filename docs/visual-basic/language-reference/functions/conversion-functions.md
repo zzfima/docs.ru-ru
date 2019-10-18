@@ -12,43 +12,43 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: 6f867742aef5e5a56daa9e4557036d5b17b61f48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef85f695de9ba11fbab20bad82fa6b28663f9e27
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949413"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523847"
 ---
-# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="20b8c-102">Функции преобразования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20b8c-102">Conversion functions (Visual Basic)</span></span>
+# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="bed8e-102">Функции преобразования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bed8e-102">Conversion functions (Visual Basic)</span></span>
 
-<xref:Microsoft.VisualBasic.Strings.Asc%2A>   
-<xref:Microsoft.VisualBasic.Strings.AscW%2A>   
-<span data-ttu-id="20b8c-103">[CBool-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-103">[CBool Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-104">[CByte-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-104">[CByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-105">[CChar-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-105">[CChar Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-106">[CDate-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-106">[CDate Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-107">[Функции CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-107">[CDbl Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-108">[CDec-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-108">[CDec Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<xref:Microsoft.VisualBasic.Strings.Chr%2A>   
-<xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
-<span data-ttu-id="20b8c-109">[CInt-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-109">[CInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-110">[CLng-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-110">[CLng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-111">[Функция CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-111">[CObj Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-112">[CSByte-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-112">[CSByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-113">[Функция CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-113">[CShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-114">[CSng-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-114">[CSng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-115">[Функции CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-115">[CStr Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-116">[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-116">[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) </span></span>  
-<span data-ttu-id="20b8c-117">[CUInt-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-117">[CUInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-118">[CULng-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-118">[CULng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="20b8c-119">[CUShort-функция](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="20b8c-119">[CUShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<xref:Microsoft.VisualBasic.Strings.Format%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Oct%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Str%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- [<span data-ttu-id="bed8e-103">Функция CBool</span><span class="sxs-lookup"><span data-stu-id="bed8e-103">CBool Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-104">Функция CByte</span><span class="sxs-lookup"><span data-stu-id="bed8e-104">CByte Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-105">Функция CChar</span><span class="sxs-lookup"><span data-stu-id="bed8e-105">CChar Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-106">CDate, функция</span><span class="sxs-lookup"><span data-stu-id="bed8e-106">CDate Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-107">CDbl, функция</span><span class="sxs-lookup"><span data-stu-id="bed8e-107">CDbl Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-108">Функция CDec</span><span class="sxs-lookup"><span data-stu-id="bed8e-108">CDec Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [<span data-ttu-id="bed8e-109">Функция CInt</span><span class="sxs-lookup"><span data-stu-id="bed8e-109">CInt Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-110">CLng, функция</span><span class="sxs-lookup"><span data-stu-id="bed8e-110">CLng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-111">Функция CObj</span><span class="sxs-lookup"><span data-stu-id="bed8e-111">CObj Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-112">Функция Ксбите</span><span class="sxs-lookup"><span data-stu-id="bed8e-112">CSByte Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-113">CShort, функция</span><span class="sxs-lookup"><span data-stu-id="bed8e-113">CShort Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-114">Функция CSng</span><span class="sxs-lookup"><span data-stu-id="bed8e-114">CSng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-115">Функция CStr</span><span class="sxs-lookup"><span data-stu-id="bed8e-115">CStr Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-116">Функция CType</span><span class="sxs-lookup"><span data-stu-id="bed8e-116">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [<span data-ttu-id="bed8e-117">Функция Куинт</span><span class="sxs-lookup"><span data-stu-id="bed8e-117">CUInt Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-118">Функция Кулнг</span><span class="sxs-lookup"><span data-stu-id="bed8e-118">CULng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-119">Функция Кушорт</span><span class="sxs-lookup"><span data-stu-id="bed8e-119">CUShort Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- <xref:Microsoft.VisualBasic.Strings.Format%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Str%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 
-## <a name="see-also"></a><span data-ttu-id="20b8c-120">См. также</span><span class="sxs-lookup"><span data-stu-id="20b8c-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bed8e-120">См. также</span><span class="sxs-lookup"><span data-stu-id="bed8e-120">See also</span></span>
 
-- [<span data-ttu-id="20b8c-121">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="20b8c-121">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="20b8c-122">Преобразование типов данных</span><span class="sxs-lookup"><span data-stu-id="20b8c-122">Converting Data Types</span></span>](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [<span data-ttu-id="bed8e-121">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="bed8e-121">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="bed8e-122">Преобразование типов данных</span><span class="sxs-lookup"><span data-stu-id="bed8e-122">Converting Data Types</span></span>](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
