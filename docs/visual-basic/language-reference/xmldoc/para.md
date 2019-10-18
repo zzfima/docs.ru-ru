@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: 16d10b2f955a4d9a02075ee4cc40dfa2b18c3541
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4e4c14717b69b9ca4595e20c768a2b91aac1e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940879"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524738"
 ---
-# <a name="para-visual-basic"></a>\<para > (Visual Basic)
-Указывает, что содержимое отформатировано как абзац.  
+# <a name="para-visual-basic"></a>> \<para (Visual Basic)
+Указывает, что содержимое форматируется как абзац.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,13 +25,13 @@ ms.locfileid: "61940879"
  `content`  
  Текст абзаца.  
   
-## <a name="remarks"></a>Примечания  
- `<para>` Тега используется внутри тега, такие как [ \<summary >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<"Примечания" >](../../../visual-basic/language-reference/xmldoc/remarks.md), или [ \<возвращает >](../../../visual-basic/language-reference/xmldoc/returns.md), и позволяет добавить структуру к тексту.  
+## <a name="remarks"></a>Заметки  
+ Тег `<para>` предназначен для использования внутри тега, например [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md)или [\<returns >](../../../visual-basic/language-reference/xmldoc/returns.md), и позволяет добавить в текст структуру.  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<para>` тег для разбиения в разделе "Примечания" `UpdateRecord` метод на два абзаца.  
+ В этом примере используется тег `<para>` для разбиения раздела примечаний для метода `UpdateRecord` на два абзаца.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

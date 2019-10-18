@@ -1,19 +1,19 @@
 ---
-title: '&lt;код&gt; (Visual Basic)'
+title: <code> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 8a4708a7b50b0e221c1ebe7f95d4f8ff80cd1ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4e887e3bbbc01e4cef5278f67b8c4afe273bf28
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566311"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524035"
 ---
-# <a name="ltcodegt-visual-basic"></a>&lt;код&gt; (Visual Basic)
-Указывает, что текст является несколько строк кода.  
+# <a name="code-visual-basic"></a>> \<code (Visual Basic)
+Указывает, что текст представляет собой несколько строк кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -21,19 +21,20 @@ ms.locfileid: "54566311"
 <code>content</code>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `content`  
- Текст, который необходимо пометить как код.  
+ Текст, помечающий как код.  
   
-## <a name="remarks"></a>Примечания  
- Используйте `<code>` тег, чтобы указать несколько строк как код. С помощью тега [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) можно указать, что текст в описании необходимо пометить как код.  
+## <a name="remarks"></a>Заметки  
+ Используйте тег `<code>`, чтобы указать несколько строк в виде кода. С помощью тега [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) можно указать, что текст в описании необходимо пометить как код.  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется \<кода > тег пример кода для использования `ID` поля.  
+ В этом примере используется тег \<code >, чтобы добавить пример кода для использования поля `ID`.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

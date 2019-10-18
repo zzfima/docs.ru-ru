@@ -5,15 +5,15 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938597"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523940"
 ---
-# <a name="c-visual-basic"></a>\<c > (Visual Basic)
-Указывает, что текст в описании кода.  
+# <a name="c-visual-basic"></a>> \<c (Visual Basic)
+Указывает, что текст в описании является кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,13 +27,13 @@ ms.locfileid: "61938597"
 |---|---|  
 |`text`|Текст, который нужно указать в качестве кода.|  
   
-## <a name="remarks"></a>Примечания  
- `<c>` Тег дает возможность указать, что текст в описании должен быть помечен как код. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+## <a name="remarks"></a>Заметки  
+ Тег `<c>` позволяет указать, что текст в описании должен быть помечен как код. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<c>` тег в разделе сводки, чтобы указать, что `Counter` — это код.  
+ В этом примере используется тег `<c>` в разделе сводки, чтобы указать, что `Counter` является кодом.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

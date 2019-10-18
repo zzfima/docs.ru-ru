@@ -5,15 +5,15 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f28dbf19bc03cb9d91323e9fa43a7081c1990db
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772509"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524004"
 ---
-# <a name="example-visual-basic"></a>\<Пример > (Visual Basic)
-Задает пример для элемента.  
+# <a name="example-visual-basic"></a>> \<example (Visual Basic)
+Указывает пример для элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,13 +25,13 @@ ms.locfileid: "61772509"
  `description`  
  Описание примера кода.  
   
-## <a name="remarks"></a>Примечания  
- `<example>` Тег позволяет указать пример демонстрирует использование метода или другого элемента библиотеки. Вместе с ним часто применяется тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+## <a name="remarks"></a>Заметки  
+ Тег `<example>` позволяет указать пример использования метода или другого элемента библиотеки. Вместе с ним часто применяется тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<example>` тега для включения примера использования `ID` поля.  
+ В этом примере тег `<example>` используется для включения примера использования поля `ID`.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

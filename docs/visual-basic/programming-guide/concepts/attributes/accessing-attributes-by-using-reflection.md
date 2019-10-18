@@ -1,104 +1,106 @@
 ---
-title: Обращение к атрибутам с помощью отражения (Visual Basic)
+title: Доступ к атрибутам с помощью отражения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a50c308a66637768dbe0089e612fcfe73bafdfa2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937159"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524344"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Обращение к атрибутам с помощью отражения (Visual Basic)
-Возможность определения настраиваемых атрибутов и их помещения в собственный исходный код не будет настолько значимой без наличия способа извлечения этих сведений и работы с ними. Отражение позволяет извлекать сведения, определенные с настраиваемыми атрибутами. Основным методом выступает `GetCustomAttributes`, который возвращает массив объектов, являющихся эквивалентами времени выполнения атрибутов исходного кода. Для этого метода существует несколько перегруженных версий. Дополнительные сведения см. в разделе <xref:System.Attribute>.  
-  
- Спецификация атрибута, например:  
-  
-```vb  
-<Author("P. Ackerman", Version:=1.1)>   
-Class SampleClass  
-    ' P. Ackerman's code goes here...  
-End Class  
-```  
-  
- концептуально эквивалентна следующему коду:  
-  
-```vb  
-Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
-anonymousAuthorObject.version = 1.1  
-```  
-  
- Однако код не выполняется до тех пор, пока у `SampleClass` не будут запрошены атрибуты. Вызов `GetCustomAttributes` в `SampleClass` приведет к тому, что объект `Author` будет создан и инициализирован так, как показано выше. Если класс имеет другие атрибуты, другие объекты атрибутов создаются аналогично. `GetCustomAttributes` затем возвращает объект `Author` и все другие объекты атрибутов в массиве. Потом можно пройти по этому массиву, определить в зависимости от типа каждого элемента массива какие атрибуты были применены и извлечь сведения из объектов атрибутов.  
-  
-## <a name="example"></a>Пример  
- Ниже приведен полный пример. Определяется настраиваемый атрибут, который применяется к нескольким сущностям и извлекается через отражение.  
-  
-```vb  
-' Multiuse attribute  
-<System.AttributeUsage(System.AttributeTargets.Class Or   
-                       System.AttributeTargets.Struct,   
-                       AllowMultiple:=True)>   
-Public Class Author  
-    Inherits System.Attribute  
-    Private name As String  
-    Public version As Double  
-    Sub New(ByVal authorName As String)  
-        name = authorName  
-  
-        ' Default value  
-        version = 1.0  
-    End Sub  
-  
-    Function GetName() As String  
-        Return name  
-    End Function          
-End Class  
-  
-' Class with the Author attribute  
-<Author("P. Ackerman")>   
-Public Class FirstClass  
-End Class  
-  
-' Class without the Author attribute  
-Public Class SecondClass  
-End Class  
-  
-' Class with multiple Author attributes.  
-<Author("P. Ackerman"), Author("R. Koch", Version:=2.0)>   
-Public Class ThirdClass  
-End Class  
-  
-Class TestAuthorAttribute  
-    Sub Main()  
-        PrintAuthorInfo(GetType(FirstClass))  
-        PrintAuthorInfo(GetType(SecondClass))  
-        PrintAuthorInfo(GetType(ThirdClass))  
-    End Sub  
-  
-    Private Shared Sub PrintAuthorInfo(ByVal t As System.Type)  
-        System.Console.WriteLine("Author information for {0}", t)  
-  
-        ' Using reflection  
-        Dim attrs() As System.Attribute = System.Attribute.GetCustomAttributes(t)  
-  
-        ' Displaying output  
-        For Each attr In attrs  
-            Dim a As Author = CType(attr, Author)  
-            System.Console.WriteLine("   {0}, version {1:f}", a.GetName(), a.version)  
-        Next              
-    End Sub  
-  
-    ' Output:  
-    '   Author information for FirstClass  
-    '     P. Ackerman, version 1.00  
-    ' Author information for SecondClass  
-    ' Author information for ThirdClass  
-    '  R. Koch, version 2.00  
-    '  P. Ackerman, version 1.00  
-  
-End Class  
-```  
-  
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Доступ к атрибутам с помощью отражения (Visual Basic)
+
+Возможность определения настраиваемых атрибутов и их помещения в собственный исходный код не будет настолько значимой без наличия способа извлечения этих сведений и работы с ними. Отражение позволяет извлекать сведения, определенные с настраиваемыми атрибутами. Основным методом выступает `GetCustomAttributes`, который возвращает массив объектов, являющихся эквивалентами времени выполнения атрибутов исходного кода. Для этого метода существует несколько перегруженных версий. Для получения дополнительной информации см. <xref:System.Attribute>.
+
+Спецификация атрибута, например:
+
+```vb
+<Author("P. Ackerman", Version:=1.1)>
+Class SampleClass
+    ' P. Ackerman's code goes here...
+End Class
+```
+
+ концептуально эквивалентна следующему коду:
+
+```vb
+Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
+anonymousAuthorObject.version = 1.1
+```
+
+Однако код не выполняется до тех пор, пока у `SampleClass` не будут запрошены атрибуты. Вызов `GetCustomAttributes` в `SampleClass` приведет к тому, что объект `Author` будет создан и инициализирован так, как показано выше. Если класс имеет другие атрибуты, другие объекты атрибутов создаются аналогично. `GetCustomAttributes` затем возвращает объект `Author` и все другие объекты атрибутов в массиве. Потом можно пройти по этому массиву, определить в зависимости от типа каждого элемента массива какие атрибуты были применены и извлечь сведения из объектов атрибутов.
+
+## <a name="example"></a>Пример
+
+Ниже приведен полный пример. Определяется настраиваемый атрибут, который применяется к нескольким сущностям и извлекается через отражение.
+
+```vb
+' Multiuse attribute
+<System.AttributeUsage(System.AttributeTargets.Class Or
+                       System.AttributeTargets.Struct,
+                       AllowMultiple:=True)>
+Public Class Author
+    Inherits System.Attribute
+    Private name As String
+    Public version As Double
+    Sub New(ByVal authorName As String)
+        name = authorName
+
+        ' Default value
+        version = 1.0
+    End Sub
+
+    Function GetName() As String
+        Return name
+    End Function
+End Class
+
+' Class with the Author attribute
+<Author("P. Ackerman")>
+Public Class FirstClass
+End Class
+
+' Class without the Author attribute
+Public Class SecondClass
+End Class
+
+' Class with multiple Author attributes.
+<Author("P. Ackerman"), Author("R. Koch", Version:=2.0)>
+Public Class ThirdClass
+End Class
+
+Class TestAuthorAttribute
+    Sub Main()
+        PrintAuthorInfo(GetType(FirstClass))
+        PrintAuthorInfo(GetType(SecondClass))
+        PrintAuthorInfo(GetType(ThirdClass))
+    End Sub
+
+    Private Shared Sub PrintAuthorInfo(ByVal t As System.Type)
+        System.Console.WriteLine("Author information for {0}", t)
+
+        ' Using reflection
+        Dim attrs() As System.Attribute = System.Attribute.GetCustomAttributes(t)
+
+        ' Displaying output
+        For Each attr In attrs
+            Dim a As Author = CType(attr, Author)
+            System.Console.WriteLine("   {0}, version {1:f}", a.GetName(), a.version)
+        Next
+    End Sub
+
+    ' Output:
+    '   Author information for FirstClass
+    '     P. Ackerman, version 1.00
+    ' Author information for SecondClass
+    ' Author information for ThirdClass
+    '  R. Koch, version 2.00
+    '  P. Ackerman, version 1.00
+
+End Class
+```
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Reflection>
