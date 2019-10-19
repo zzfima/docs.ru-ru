@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Переход к странице
+title: Руководство. Переход к странице
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25a0dbbc609c7b6f8f2878d2068e61e492a59c7e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966030"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582541"
 ---
-# <a name="how-to-navigate-to-a-page"></a>Практическое руководство. Переход к странице
+# <a name="how-to-navigate-to-a-page"></a>Руководство. Переход к странице
 Этот пример иллюстрирует несколько способов перехода на страницу из <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Пример  
- Для перехода на страницу можно <xref:System.Windows.Navigation.NavigationWindow> использовать один из следующих вариантов.  
+ @No__t_0 переходить на страницу можно с помощью одного из следующих средств:  
   
 - Свойство <xref:System.Windows.Navigation.NavigationWindow.Source%2A>.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "69966030"
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
-> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]может быть либо относительным, либо абсолютным. Дополнительные сведения см. в разделе [URI типа "pack" в WPF](pack-uris-in-wpf.md).  
+> Универсальные идентификаторы ресурсов (URI) могут быть либо относительными, либо абсолютными. Дополнительные сведения см. в разделе [URI типа "pack" в WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>См. также
 

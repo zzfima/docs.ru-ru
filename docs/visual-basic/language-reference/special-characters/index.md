@@ -1,16 +1,16 @@
 ---
-title: Специальные символы (Справочник по языку Visual Basic)
+title: Специальные символы (Справочник по Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: c179ac69833404f0ad7e36cfcada1643d91d604d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7085c020cc21b0ca8b3fc46226c864d736ab0085
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945149"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582370"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Специальные символы (Справочник по языку Visual Basic)
+# <a name="special-characters-visual-basic-reference"></a>Специальные символы (Справочник по Visual Basic)
 
-Специальные символы — это стандартные контекстно-зависимые символы, которые изменяют элемент программы, к которому они добавляются. Visual Basic поддерживает следующих специальных символов: 
+Специальные символы являются предопределенными, контекстуальными символами, которые изменяют программный элемент, к которому они добавляются. Visual Basic поддерживает следующий специальный символ:
 
 - [$](interpolated.md), символ интерполируемой строки.
 

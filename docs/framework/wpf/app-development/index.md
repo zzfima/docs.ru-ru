@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964803"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582501"
 ---
 # <a name="application-development"></a>Разработка приложений
 <a name="introduction"></a>Windows Presentation Foundation (WPF) — это структура представления, которую можно использовать для разработки приложений следующих типов:  
   
 - Автономные приложения (традиционные приложения Windows, созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](приложения, состоящие из страниц навигации, построенных как исполняемые сборки и размещенные в веб-браузерах, таких как Microsoft Internet Explorer или Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (приложения, состоящие из страниц навигации, построенных как исполняемые сборки и размещенные в веб-браузерах, таких как Microsoft Internet Explorer или Mozilla Firefox).  
   
 - пользовательские библиотеки элементов управления (неисполняемые сборки, содержащие многократно используемые элементы управления);  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69964803"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Ресурсы, Содержимое и Файлы данных WPF-приложения  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]расширяет базовую поддержку в Microsoft .NET Framework для внедренных ресурсов с поддержкой трех типов неисполняемых файлов данных: ресурсов, содержимого и данных. Дополнительные сведения см. в разделе [Файлы ресурсов, содержимого и данных WPF-приложения](wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет базовую поддержку в инфраструктуре Microsoft .NET для внедренных ресурсов с поддержкой трех типов неисполняемых файлов данных: ресурсов, содержимого и данных. Дополнительные сведения см. в разделе [Файлы ресурсов, содержимого и данных WPF-приложения](wpf-application-resource-content-and-data-files.md).  
   
- Ключевым компонентом поддержки неисполняемых файлов данных WPF является возможность их идентификации и загрузки с помощью уникального [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Дополнительные сведения см. в разделе [URI типа "pack" в WPF](pack-uris-in-wpf.md).  
+ Ключевым компонентом поддержки неисполняемых файлов данных WPF является возможность определять и загружать их с помощью уникального универсального кода ресурса (URI). Дополнительные сведения см. в разделе [URI типа "pack" в WPF](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Окна и диалоговые окна  
@@ -74,7 +74,7 @@ ms.locfileid: "69964803"
   
  <xref:System.Windows.Window> поддерживает возможность создать особый тип окна, известный как диалоговое окно. Можно создавать модальные и немодальные типы диалоговых окон.  
   
- Для удобства и преимуществ повторного использования и согласованного взаимодействия с пользователем в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] разных приложениях предоставляет три общих диалоговых окна Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>и <xref:System.Windows.Controls.PrintDialog>.  
+ Для удобства и преимуществ повторного использования и согласованного взаимодействия с пользователем в приложениях [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три общих диалоговых окна Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> и <xref:System.Windows.Controls.PrintDialog>.  
   
  Окно сообщения представляет собой особый тип диалогового окна для отображения важной текстовой информации для пользователей и задания простых вопросов (да, нет, ОК, отмена). Класс <xref:System.Windows.MessageBox> используется для создания и отображения окон сообщений.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69964803"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Размещение  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]может размещаться в Microsoft Internet Explorer или Firefox. Каждая модель размещения имеет свой собственный набор разрешений и ограничений, которые рассматриваются в разделе [Размещение](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] могут размещаться в Microsoft Internet Explorer или Firefox. Каждая модель размещения имеет свой собственный набор разрешений и ограничений, которые рассматриваются в разделе [Размещение](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Построение и Развертывание  
@@ -127,4 +127,4 @@ ms.locfileid: "69964803"
 |[Размещение](hosting-wpf-applications.md)|Предоставляет общие сведения о [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Сборка и развертывание](building-and-deploying-wpf-applications.md)|Описание процесса сборки и развертывания приложения WPF.|  
 |[Введение в WPF в Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Описание основных возможностей WPF.|  
-|[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)|Пошаговое руководство, в котором демонстрируется создание приложения WPF с использованием навигации по страницам, макета, элементов управления, изображений, стилей и привязок.|
+|[Пошаговое руководство. Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Пошаговое руководство, в котором демонстрируется создание приложения WPF с использованием навигации по страницам, макета, элементов управления, изображений, стилей и привязок.|

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 212ce1f06a01c39acbce43d8d069dae3526b1b4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea22af2eb896542bfc329e087101608e08c45107
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963547"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581474"
 ---
 # <a name="mid-statement"></a>Оператор Mid
-Заменяет указанное число символов в `String` переменной символами из другой строки.  
+Заменяет указанное число символов в переменной `String` символами из другой строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 Mid( _  
    ByRef Target As String, _  
    ByVal Start As Integer, _  
@@ -32,33 +32,33 @@ Mid( _
   
 ## <a name="parts"></a>Части  
  `Target`  
- Обязательный. `String` Имя переменной, которую необходимо изменить.  
+ Обязательный. Имя изменяемой переменной `String`.  
   
  `Start`  
- Обязательный. `Integer`выражение. Место в символах, с `Target` которого начинается замена текста. `Start`использует индекс, отсчитываемый от единицы.  
+ Обязательный. выражение `Integer`. Позицию символа в `Target`, где начинается замена текста. `Start` использует индекс, отсчитываемый от единицы.  
   
  `Length`  
- Необязательный параметр. `Integer`выражение. Число символов для замены. Если этот параметр опущен, используются `String` все.  
+ Необязательный. выражение `Integer`. Число символов для замены. Если этот параметр опущен, используется все `String`.  
   
  `StringExpression`  
- Обязательный. `String`выражение, которое заменяет часть `Target`.  
+ Обязательный. `String` выражение, которое заменяет часть `Target`.  
   
 ## <a name="exceptions"></a>Исключения  
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 или `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 или `Length` < 0.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Число заменяемых символов всегда меньше или равно числу символов в `Target`.  
   
- Visual Basic содержит <xref:Microsoft.VisualBasic.Strings.Mid%2A> функцию `Mid` и оператор. Эти элементы работают с указанным числом символов в строке, но `Mid` функция возвращает символы, `Mid` пока оператор заменяет символы. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic содержит функцию <xref:Microsoft.VisualBasic.Strings.Mid%2A> и инструкцию `Mid`. Эти элементы работают с указанным числом символов в строке, но функция `Mid` возвращает символы, пока оператор `Mid` заменяет символы. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> `MidB` Инструкция более ранних версий Visual Basic заменяет подстроку в байтах, а не на символы. Он используется в основном для преобразования строк в приложениях с двухбайтовой кодировкой (DBCS). Все строки Visual Basic в Юникоде и `MidB` больше не поддерживаются.  
+> @No__t_0ная инструкция более ранних версий Visual Basic заменяет подстроку в байтах, а не на символы. Он используется в основном для преобразования строк в приложениях с двухбайтовой кодировкой (DBCS). Все строки Visual Basic в Юникоде, а `MidB` больше не поддерживаются.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `Mid` оператор для замены указанного числа символов в строковой переменной символами из другой строки.  
+ В этом примере используется оператор `Mid` для замены указанного числа символов в строковой переменной символами из другой строки.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
@@ -67,7 +67,7 @@ Mid( _
   
  **Модуль:** `Strings`  
   
- **Сборок** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

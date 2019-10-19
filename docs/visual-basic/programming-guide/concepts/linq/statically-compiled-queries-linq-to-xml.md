@@ -2,24 +2,24 @@
 title: Статически скомпилированные запросы (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: ed701f57821c18f4cfa75a3bb7cd5a652ab384d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f295e8aa8b747b90933d6a35e5352f66740ef071
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373733"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582906"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Статически скомпилированные запросы (LINQ to XML) (Visual Basic)
 
 Одним из важнейших преимуществ LINQ to XML перед <xref:System.Xml.XmlDocument> с точки зрения производительности является то, что в LINQ to XML запросы компилируются статически, тогда как запросы XPath интерпретируются во время выполнения. Это встроенная функция LINQ to XML, поэтому вам не нужно будет принимать какие-либо подготовительные меры для ее использования, однако, чтобы сделать обоснованный выбор той или другой технологии, важно понимать их различие. Данное различие описано в текущем разделе.
 
-## <a name="statically-compiled-queries-vs-xpath"></a>Сравнение статически скомпилированных запросов и языка XPath
+## <a name="statically-compiled-queries-vs-xpath"></a>Сравнение статически скомпилированных запросов с XPath
 
 В следующем примере показано, как получать элементы-потомки с указанным именем и атрибут с заданным значением.
 
 Далее представлено эквивалентное выражение XPath.
 
-```
+```vb
 //Address[@Type='Shipping']
 ```
 
@@ -46,7 +46,7 @@ For Each el In list1
 Next
 ```
 
-Метод <xref:System.Linq.Enumerable.Where%2A> является методом расширения. Дополнительные сведения см. в статье [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Поскольку используется метод расширения <xref:System.Linq.Enumerable.Where%2A>, представленный выше запрос компилируется так, как показано далее.
+Метод <xref:System.Linq.Enumerable.Where%2A> является методом расширения. Дополнительные сведения см. в разделе [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Поскольку используется метод расширения <xref:System.Linq.Enumerable.Where%2A>, представленный выше запрос компилируется так, как показано далее.
 
 ```vb
 Dim po = XDocument.Load("PurchaseOrders.xml")

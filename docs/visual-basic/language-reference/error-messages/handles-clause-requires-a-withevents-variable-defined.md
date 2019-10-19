@@ -7,32 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 04c94d3d32660d1a186a9bb377c49a53e1451be6
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512731"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582828"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Для предложения Handles требуется переменная WithEvents, определенная в содержащем типе или одном из его базовых типов
-Вы не указали `WithEvents` переменную `Handles` в предложении. Ключевое слово в конце объявления процедуры вызывает обработку событий, вызванных переменной объекта, объявленной `WithEvents` с помощью ключевого слова. `Handles`
-  
- **Идентификатор ошибки:** BC30506
+
+Вы не указали переменную `WithEvents` в предложении `Handles`. Ключевое слово `Handles` в конце объявления процедуры приводит к тому, что оно обрабатывает события, вызванные объектной переменной, объявленной с помощью ключевого слова `WithEvents`.
+
+**Идентификатор ошибки:** BC30506
 
 ## <a name="to-correct-this-error"></a>Исправление ошибки
-  
-- Укажите необходимую `WithEvents` переменную.
-  
+
+Укажите необходимую переменную `WithEvents`.
+
 ## <a name="example"></a>Пример
 
-В следующем примере Visual Basic создает ошибку `BC30506` компилятора, так как ключевое слово [WithEvents](../modifiers/withevents.md) не используется в определении <xref:System.Timers.Timer?displayProperty=nameWithType> экземпляра.
+В следующем примере Visual Basic создает ошибку компилятора `BC30506` поскольку ключевое слово [WithEvents](../modifiers/withevents.md) не используется в определении экземпляра <xref:System.Timers.Timer?displayProperty=nameWithType>.
 
 ```vb
 Imports System.Timers
 
 Module Module1
     Private _timer1 As New Timer() With {.Interval = 1000, .Enabled = True}
-    
+
     Sub Main()
         Console.WriteLine("Press any key to start the timer...")
         Console.ReadKey()
@@ -46,7 +47,7 @@ Module Module1
 End Module
 ```
 
-Следующий пример компилируется успешно, так как `_timer1` переменная определена `WithEvents` с помощью ключевого слова:
+Следующий пример компилируется успешно, так как переменная `_timer1` определена с ключевым словом `WithEvents`:
 
 ```vb
 Imports System.Timers

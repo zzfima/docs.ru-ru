@@ -10,63 +10,65 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: a80e504cc8e88dfc8968f70fee2c17991b28aff5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8370d15e99a6f7ed0868441a4e44360fb258be13
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929459"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583068"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
-Модификатор доступа к члену, указывающий, что один или несколько объявленных программных элементов доступны только в своем собственном классе или производном классе.  
-  
-## <a name="remarks"></a>Примечания  
- Иногда программный элемент, объявленный в классе, содержит конфиденциальные данные или ограниченный код и требуется ограничить доступ к элементу. Однако если класс является наследуемым и предполагается иерархия производных классов, то эти производные классы могут быть необходимы для доступа к данным или коду в этих производных классах. В этом случае необходимо, чтобы элемент был доступен как из базового класса, так и из всех производных классов. Чтобы ограничить доступ к элементу таким образом, его можно объявить с помощью `Protected`.  
+
+Модификатор доступа к члену, указывающий, что один или несколько объявленных программных элементов доступны только в своем собственном классе или производном классе.
+
+## <a name="remarks"></a>Заметки
+
+Иногда программный элемент, объявленный в классе, содержит конфиденциальные данные или ограниченный код и требуется ограничить доступ к элементу. Однако если класс является наследуемым и предполагается иерархия производных классов, то эти производные классы могут быть необходимы для доступа к данным или коду в этих производных классах. В этом случае необходимо, чтобы элемент был доступен как из базового класса, так и из всех производных классов. Чтобы ограничить доступ к элементу таким образом, его можно объявить с помощью `Protected`.
 
 > [!NOTE]
-> Модификатор `Protected` доступа можно сочетать с двумя другими модификаторами:
+> Модификатор доступа `Protected` можно сочетать с двумя другими модификаторами:
 >
-> - Модификатор [Protected Friend](protected-friend.md) делает член класса доступным из этого класса, из производных классов и из той же сборки, в которой определен класс. 
+> - Модификатор [Protected Friend](protected-friend.md) делает член класса доступным из этого класса, из производных классов и из той же сборки, в которой определен класс.
 > - Модификатор [Private protected](private-protected.md) делает член класса доступным для производных типов, но только внутри его содержащей сборки.
-  
-## <a name="rules"></a>Правила  
-  
-- **Контекст объявления.** Можно использовать `Protected` только на уровне класса. Это означает, что контекст объявления для `Protected` элемента должен быть классом и не может быть исходным файлом, пространством имен, интерфейсом, модулем, структурой или процедурой.  
 
-## <a name="behavior"></a>Поведение  
-  
-- **Уровень доступа.** Весь код в классе может обращаться к его элементам. Код в любом классе, производном от базового класса, может обращаться ко `Protected` всем элементам базового класса. Это справедливо для всех поколений наследования. Это означает, что класс может обращаться к `Protected` элементам базового класса базового класса и т. д.  
-  
-     Защищенный доступ не является надмножеством или подмножеством дружественного доступа.  
-  
-- **Модификаторы доступа.** Ключевые слова, определяющие уровень доступа, называются *модификаторами доступа*. Сравнение модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
-  
- Модификатор `Protected` можно использовать в следующих контекстах:  
-  
- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
-  
- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)  
-  
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)  
-  
- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
-  
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
-  
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+## <a name="rules"></a>Правила
+
+**Контекст объявления.** @No__t_0 можно использовать только на уровне класса. Это означает, что контекст объявления для элемента `Protected` должен быть классом и не может быть исходным файлом, пространством имен, интерфейсом, модулем, структурой или процедурой.
+
+## <a name="behavior"></a>Поведение
+
+- **Уровень доступа.** Весь код в классе может обращаться к его элементам. Код в любом классе, производном от базового класса, имеет доступ ко всем `Protected`ным элементам базового класса. Это справедливо для всех поколений наследования. Это означает, что класс может получить доступ к `Protected` элементам базового класса базового класса и т. д.
+
+     Защищенный доступ не является надмножеством или подмножеством дружественного доступа.
+
+- **Модификаторы доступа.** Ключевые слова, определяющие уровень доступа, называются *модификаторами доступа*. Сравнение модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+
+Модификатор `Protected` можно использовать в следующих контекстах:
+
+- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)
+
+- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)
+
+- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)
+
+- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+
+- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+
+- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>См. также
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

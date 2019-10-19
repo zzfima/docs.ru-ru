@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление ресурса системы (Visual Basic)
+title: Практическое руководство. Удаление системного ресурса (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906741"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583147"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление ресурса системы (Visual Basic)
-Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, которые используют большой объем памяти или других компонентов также требуется использовать.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление системного ресурса (Visual Basic)
+Можно использовать блок `Using`, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, который потребляет большой объем памяти или что другие компоненты также хотят использовать.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Для удаления подключения к базе данных после завершения вашего кода с ним  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Удаление подключения к базе данных после завершения работы с ним кода  
   
-1. Убедитесь, что вы включить соответствующую [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале файла исходного кода (в данном случае <xref:System.Data.SqlClient>).  
+1. Убедитесь, что вы включили соответствующий [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале исходного файла (в данном случае <xref:System.Data.SqlClient>).  
   
-2. Создание `Using` блоке с `Using` и `End Using` инструкций. Внутри блока поместите код, который имеет дело с подключения к базе данных.  
+2. Создайте блок `Using` с инструкциями `Using` и `End Using`. Внутри блока разместите код, который работает с подключением к базе данных.  
   
-3. Объявите соединение и создайте его экземпляр как часть `Using` инструкции.  
+3. Объявите соединение и создайте его экземпляр в составе оператора `Using`.  
   
-    ```  
+    ```vb  
     ' Insert the following line at the beginning of your source file.  
     Imports System.Data.SqlClient  
     Public Sub AccessSql(ByVal s As String)  
@@ -38,11 +38,11 @@ ms.locfileid: "61906741"
     End Sub  
     ```  
   
-     Система удаляет ресурс независимо от того, как выйти из блоков, включая регистр необработанное исключение.  
+     Система уничтожает ресурс независимо от того, как вы выйдете из блока, включая случай необработанного исключения.  
   
-     Обратите внимание, что при отсутствии доступа к `sqc` из за пределами `Using` block, так как ее область ограничена блока.  
+     Обратите внимание, что доступ к `sqc` извне блока `Using` невозможен, так как его область ограничена блоком.  
   
-     Этот же прием можно использовать на системный ресурс, такие как дескриптор файла или оболочки COM. Использовании `Using` заблокировать, если вы хотите чтобы оставить ресурс доступным для других компонентов, после закрытия `Using` блока.  
+     Эту же методику можно использовать для системных ресурсов, таких как файловый обработчик или оболочка COM. Используйте блок `Using`, если вы хотите оставить ресурс доступным для других компонентов после выхода из блока `Using`.  
   
 ## <a name="see-also"></a>См. также
 

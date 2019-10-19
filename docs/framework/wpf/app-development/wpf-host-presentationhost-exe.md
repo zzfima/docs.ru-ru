@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: c1c26b49a33a58189f66e7b938333f362e467853
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ec8ec42c174d87834af5d4c651c1e8c8bde3b3e2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002152"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581705"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
 Узел Windows Presentation Foundation (WPF) (PresentationHost. exe) — это приложение, которое позволяет размещать приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в совместимых браузерах (включая Microsoft Internet Explorer 6 и более поздние версии). По умолчанию узел Windows Presentation Foundation (WPF) регистрируется в качестве оболочки и обработчика MIME для содержимого, размещенного в браузере [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], в том числе:  
@@ -36,7 +36,7 @@ ms.locfileid: "72002152"
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|filename|Путь к файлу, который нужно активировать. Также может быть [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
+|filename|Путь к файлу, который нужно активировать. Также может быть URI.|  
 |-debug|При активации приложения не фиксирует его в хранилище и не запускает из хранилища. Работает только при активации локального файла.|  
 |-debugSecurityZoneURL \<url>|Используется со значением URL-адреса, чтобы указать PresentationHost. exe, что приложение должно быть отлажено, как если бы оно было развернуто с указанного URL-адреса. Это определяет как зону развертывания, так и исходный узел.|  
 |-embedding|Требуется для OLE. Если указан параметр `-event` или `-debug`, то не обязательно указывать параметр `-embedding`, поскольку он устанавливается внутренне.|  
@@ -59,4 +59,4 @@ ms.locfileid: "72002152"
   
 ## <a name="see-also"></a>См. также
 
-- [безопасность](../security-wpf.md)
+- [Security](../security-wpf.md)

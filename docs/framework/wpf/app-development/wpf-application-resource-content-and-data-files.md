@@ -17,25 +17,25 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 57eae5067a72777db2c19331029b6df679a9fdce
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956191"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581729"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Ресурсы, Содержимое и Файлы данных WPF-приложения
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]приложения часто зависят от файлов, содержащих неисполняемые данные, такие [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]как, изображения, видео и звук. Windows Presentation Foundation (WPF) предлагает специальную поддержку для настройки, идентификации и использования этих типов файлов данных, которые называются файлами данных приложения. Эта поддержка относится к определенному набору типов файлов данных приложения, включая следующие:  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] приложения часто зависят от файлов, которые содержат неисполняемые данные, такие как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], изображения, видео и звук. Windows Presentation Foundation (WPF) предлагает специальную поддержку для настройки, идентификации и использования этих типов файлов данных, которые называются файлами данных приложения. Эта поддержка относится к определенному набору типов файлов данных приложения, включая следующие:  
   
-- **Файлы ресурсов**: Файлы данных, компилируемые в исполняемый файл или сборку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] библиотеки.  
+- **Файлы ресурсов**. файлы данных, компилируемые в исполняемый файл или библиотеку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборки.  
   
-- **Файлы содержимого**: Автономные файлы данных с явной связью с исполняемой [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборкой.  
+- **Файлы содержимого**: автономные файлы данных с явной связью с исполняемым [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборкой.  
   
-- **Файлы исходного узла**: Автономные файлы данных, не имеющие связи с исполняемой [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборкой.  
+- **Файлы исходного узла**: автономные файлы данных, не имеющие связи с исполняемым [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборкой.  
   
- Важным отличием между этими тремя типами файлов является то, что файлы ресурсов и файлы содержимого известны во время построения. Сборка содержит информацию о них. Однако для файлов исходного узла сборка может вообще не иметь сведений о них или неявного набора знаний через ссылку на пакет [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ; в последнем случае нет никакой гарантии, что упоминаемый исходный файл узла действительно существует.  
+ Важным отличием между этими тремя типами файлов является то, что файлы ресурсов и файлы содержимого известны во время построения. Сборка содержит информацию о них. Однако для файлов исходного узла сборка может вообще не иметь сведений о них или неявного набора знаний через универсальный код ресурса (URI) типа pack. в последнем случае нет никакой гарантии, что файл исходного узла, на который указывает ссылка, фактически существует.  
   
- Для ссылки на файлы данных приложения Windows Presentation Foundation (WPF) использует схему Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] , которая подробно описана в разделе URI типа " [Pack" в WPF](pack-uris-in-wpf.md).  
+ Для ссылки на файлы данных приложения Windows Presentation Foundation (WPF) использует схему универсального идентификатора ресурса (URI) типа Pack, которая подробно описана в разделе URI типа " [Pack" в WPF](pack-uris-in-wpf.md).  
   
  В этом разделе описывается настройка и использование файлов данных приложения.  
 
@@ -55,7 +55,7 @@ ms.locfileid: "69956191"
 > Файлы ресурсов, описанные в этом разделе, отличаются от файлов ресурсов, описанных в [ресурсах XAML](../advanced/xaml-resources.md) , и отличаются от внедренных или связанных ресурсов, описанных в статье [Управление ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Настройка файлов ресурсов  
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]файл ресурсов — это файл, который включается в проект Microsoft Build Engine (MSBuild) в `Resource` качестве элемента.  
+ В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] файл ресурсов — это файл, который включается в проект Microsoft Build Engine (MSBuild) как элемент `Resource`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,21 +68,21 @@ ms.locfileid: "69956191"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]файл ресурсов создается путем добавления файла в проект и присвоения `Resource`ему `Build Action` значения.  
+> В [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] можно создать файл ресурсов, добавив файл в проект и задав для его `Build Action` значение `Resource`.  
   
  При построении проекта MSBuild компилирует ресурс в сборку.  
   
 ### <a name="using-resource-files"></a>Использование файлов ресурсов  
- Чтобы загрузить файл ресурсов, можно вызвать <xref:System.Windows.Application.GetResourceStream%2A> метод <xref:System.Windows.Application> класса, передав ему пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , который определяет нужный файл ресурсов. <xref:System.Windows.Application.GetResourceStream%2A>Возвращает объект, который предоставляет файл ресурсов <xref:System.IO.Stream> как и описывает его тип содержимого. <xref:System.Windows.Resources.StreamResourceInfo>  
+ Чтобы загрузить файл ресурсов, можно вызвать метод <xref:System.Windows.Application.GetResourceStream%2A> класса <xref:System.Windows.Application>, передав URI типа Pack, который идентифицирует нужный файл ресурсов. <xref:System.Windows.Application.GetResourceStream%2A> возвращает объект <xref:System.Windows.Resources.StreamResourceInfo>, который предоставляет файл ресурсов как <xref:System.IO.Stream> и описывает его тип содержимого.  
   
- Например, в следующем коде показано, как <xref:System.Windows.Application.GetResourceStream%2A> использовать для <xref:System.Windows.Controls.Page> загрузки файла ресурсов и его установки в <xref:System.Windows.Controls.Frame> качестве содержимого объекта (`pageFrame`):  
+ В следующем примере кода показано, как использовать <xref:System.Windows.Application.GetResourceStream%2A> для загрузки <xref:System.Windows.Controls.Page> файла ресурсов и его установки в качестве содержимого <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- Хотя при <xref:System.Windows.Application.GetResourceStream%2A> вызове предоставляется доступ <xref:System.IO.Stream>к, необходимо выполнить дополнительную работу по преобразованию в тип свойства, для которого будет задано значение. Вместо этого можно [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться о открытии и <xref:System.IO.Stream> преобразовании, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
+ При вызове <xref:System.Windows.Application.GetResourceStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться об открытии и преобразовании <xref:System.IO.Stream>, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
   
- В следующем примере показано, как загрузить объект <xref:System.Windows.Controls.Page> непосредственно <xref:System.Windows.Controls.Frame> в (`pageFrame`) с помощью кода.  
+ В следующем примере показано, как загрузить <xref:System.Windows.Controls.Page> непосредственно в <xref:System.Windows.Controls.Frame> (`pageFrame`) с помощью кода.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
@@ -92,11 +92,11 @@ ms.locfileid: "69956191"
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Файлы кода приложения как файлы ресурсов  
- На Специальный набор [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] файлов кода приложения можно ссылаться с помощью пакета [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], в том числе окон, страниц, документов нефиксированного формата и словарей ресурсов. Например, можно задать <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> свойство с пакетом [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , который ссылается на окно или страницу, которые необходимо загрузить при запуске приложения.  
+ На Специальный набор [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] файлов кода приложения можно ссылаться с помощью URI типа "Pack", включая окна, страницы, документы нефиксированного формата и словари ресурсов. Например, можно задать свойство <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> с URI типа Pack, который ссылается на окно или страницу, которые вы хотите загрузить при запуске приложения.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
- Это можно сделать, когда XAML-файл включается в проект MSBuild как `Page` элемент.  
+ Это можно сделать, когда XAML-файл включается в проект MSBuild как элемент `Page`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -109,12 +109,12 @@ ms.locfileid: "69956191"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]добавляется новый <xref:System.Windows.Window>объект, <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Controls.Page> `Page`,, или<xref:System.Windows.ResourceDictionary> в проект ,`Build Action` для файла разметки по умолчанию будет. <xref:System.Windows.Documents.FlowDocument>  
+> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] вы добавляете в проект новый <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> или <xref:System.Windows.ResourceDictionary>, `Build Action` для файла разметки по умолчанию будет `Page`.  
   
- При компиляции `Page` [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] проекта с элементами элементы преобразуются в двоичный формат и компилируются в связанную сборку. Следовательно, эти файлы можно использовать таким же образом, как и обычные файлы ресурсов.  
+ При компиляции проекта с `Page` элементами [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] элементы преобразуются в двоичный формат и компилируются в связанную сборку. Следовательно, эти файлы можно использовать таким же образом, как и обычные файлы ресурсов.  
   
 > [!NOTE]
-> Если файл настроен `Resource` в качестве элемента и не имеет файла кода программной части, то необработанный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] код компилируется в сборку, а не в двоичную версию RAW [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+> Если [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл настроен как элемент `Resource` и не имеет файла кода программной части, то необработанный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] компилируется в сборку, а не в двоичную версию необработанного [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>Файлы с содержимым  
@@ -123,7 +123,7 @@ ms.locfileid: "69956191"
  Файлы содержимого необходимо использовать, если приложению требуется определенный набор файлов данных приложения, которые нужно обновлять без повторной компиляции использующей их сборки.  
   
 ### <a name="configuring-content-files"></a>Настройка файлов содержимого  
- Чтобы добавить файл содержимого в проект, в качестве `Content` элемента необходимо включить файл данных приложения. Более того, поскольку файл содержимого не компилируется непосредственно в сборку, необходимо задать элемент метаданных MSBuild `CopyToOutputDirectory` , чтобы указать, что файл содержимого копируется в расположение, относящееся к построенной сборке. Если требуется, чтобы ресурс копировался в выходную папку сборки при каждом построении проекта, необходимо задать `CopyToOutputDirectory` для элемента `Always` метаданных значение. В противном случае можно гарантировать, что только последняя версия ресурса копируется в выходную папку сборки с использованием `PreserveNewest` значения.  
+ Чтобы добавить файл содержимого в проект, файл данных приложения должен быть добавлен в качестве элемента `Content`. Более того, поскольку файл содержимого не компилируется непосредственно в сборку, необходимо задать элемент метаданных `CopyToOutputDirectory` MSBuild, чтобы указать, что файл содержимого копируется в расположение, относящееся к построенной сборке. Если требуется, чтобы ресурс копировался в выходную папку сборки при каждом построении проекта, необходимо задать для элемента метаданных `CopyToOutputDirectory` значение `Always`. В противном случае можно убедиться, что только последняя версия ресурса копируется в выходную папку сборки с использованием значения `PreserveNewest`.  
   
  Ниже показан файл, настроенный как файл содержимого, который копируется в папку выходных данных построения только при добавлении новой версии ресурса в проект.  
   
@@ -140,29 +140,29 @@ ms.locfileid: "69956191"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]файл содержимого создается путем добавления файла в проект и установки его `Copy if newer` `Always` `Build Action` в `Content`значение, а также для `Copy always` задания его `Copy to Output Directory` значения (то же, что `PreserveNewest`и).  
+> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] можно создать файл содержимого, добавив файл в проект и задав для его `Build Action` значение `Content`, а также задать для `Copy to Output Directory` `Copy always` (то же, что `Always`) и `Copy if newer` (то же, что `PreserveNewest`).  
   
- При построении <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> проекта атрибут компилируется в метаданные сборки для каждого файла содержимого.  
+ При построении проекта <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> атрибут компилируется в метаданные сборки для каждого файла содержимого.  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- Значение параметра <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> указывает путь к файлу содержимого относительно его положения в проекте. Например, если файл содержимого находился во вложенной папке проекта, то в это <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> значение будет включен дополнительный путь к данным.  
+ Значение <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> подразумевает путь к файлу содержимого относительно его положения в проекте. Например, если файл содержимого находится во вложенной папке проекта, то дополнительные сведения о пути будут включены в <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> значение.  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Значение является также значением пути к файлу содержимого в выходной папке построения.  
+ Значение <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> — это также значение пути к файлу содержимого в выходной папке построения.  
   
 ### <a name="using-content-files"></a>Использование файлов содержимого  
- Чтобы загрузить файл содержимого, можно вызвать <xref:System.Windows.Application.GetContentStream%2A> метод <xref:System.Windows.Application> класса, передав ему пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , идентифицирующий нужный файл содержимого. <xref:System.Windows.Application.GetContentStream%2A>Возвращает объект, который предоставляет файл содержимого в <xref:System.IO.Stream> виде и описывает его тип содержимого. <xref:System.Windows.Resources.StreamResourceInfo>  
+ Чтобы загрузить файл содержимого, можно вызвать метод <xref:System.Windows.Application.GetContentStream%2A> класса <xref:System.Windows.Application>, передав URI типа Pack, который идентифицирует нужный файл содержимого. <xref:System.Windows.Application.GetContentStream%2A> возвращает объект <xref:System.Windows.Resources.StreamResourceInfo>, который предоставляет файл содержимого как <xref:System.IO.Stream> и описывает его тип содержимого.  
   
- Например, в следующем коде показано, как <xref:System.Windows.Application.GetContentStream%2A> использовать для <xref:System.Windows.Controls.Page> загрузки файла содержимого и его установки в <xref:System.Windows.Controls.Frame> качестве содержимого объекта (`pageFrame`).  
+ В следующем примере кода показано, как использовать <xref:System.Windows.Application.GetContentStream%2A> для загрузки <xref:System.Windows.Controls.Page>ного файла содержимого и задания его в качестве содержимого <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- Хотя при <xref:System.Windows.Application.GetContentStream%2A> вызове предоставляется доступ <xref:System.IO.Stream>к, необходимо выполнить дополнительную работу по преобразованию в тип свойства, для которого будет задано значение. Вместо этого можно [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться о открытии и <xref:System.IO.Stream> преобразовании, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
+ При вызове <xref:System.Windows.Application.GetContentStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться об открытии и преобразовании <xref:System.IO.Stream>, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
   
- В следующем примере показано, как загрузить объект <xref:System.Windows.Controls.Page> непосредственно <xref:System.Windows.Controls.Frame> в (`pageFrame`) с помощью кода.  
+ В следующем примере показано, как загрузить <xref:System.Windows.Controls.Page> непосредственно в <xref:System.Windows.Controls.Frame> (`pageFrame`) с помощью кода.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
@@ -173,7 +173,7 @@ ms.locfileid: "69956191"
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>Файлы исходного узла  
- Файлы ресурсов имеют явную связь со сборками, которые они распределяют вместе, как определено в <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Но иногда необходимо установить неявную либо несуществующую связь между сборкой и файлом данных приложения, например, в следующих случаях:  
+ Файлы ресурсов имеют явную связь со сборками, которые они распределяют вместе, как определено <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Но иногда необходимо установить неявную либо несуществующую связь между сборкой и файлом данных приложения, например, в следующих случаях:  
   
 - Файл не существует во время компиляции.  
   
@@ -183,21 +183,21 @@ ms.locfileid: "69956191"
   
 - Приложение использует большие файлы данных, такие как аудио и видео, и необходимо, чтобы пользователи могли их загружать только при необходимости.  
   
- Эти типы файлов можно загрузить с помощью традиционных [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] схем, таких как схемы file:///и http://.  
+ Эти типы файлов можно загрузить с помощью традиционных схем URI, таких как схемы file:///и http://.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Однако схемы file:/// и http:// требуют полного доверия приложения. Если приложение [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] запущено из Интернета или интрасети и запрашивает только набор разрешений, разрешенных для приложений, запускаемых из этих расположений, свободные файлы могут загружаться только с исходного узла приложения ( Расположение запуска). Такие файлы называются файлами *исходного узла* .  
+ Однако схемы file:/// и http:// требуют полного доверия приложения. Если приложение является [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], которое было запущено из Интернета или интрасети, и запрашивает только набор разрешений, разрешенных для приложений, запускаемых из этих расположений, свободные файлы могут загружаться только с исходного узла приложения (запуск расположение). Такие файлы называются файлами *исходного узла* .  
   
  Файлы исходного узла являются единственным вариантом для приложений с частичным доверием, хотя и не ограничиваются такими приложениями. Приложениям с полным доверием, возможно, все равно придется загружать файлы данных приложений, о которых они не знают во время построения. Хотя приложения с полным доверием могут использовать схему file:///, вероятнее всего, файлы данных приложения будут установлены в одну папку или вложенную папку со сборкой приложения. В этом случае использовать ссылки на исходный узел проще, чем использовать file:///, так как последнее требует разработки полного пути к файлу.  
   
 > [!NOTE]
-> Файлы исходного узла не кэшируются [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] на клиентском компьютере, а файлы содержимого —. Следовательно, они загружаются только по специальному запросу. [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] Если приложение содержит большие файлы мультимедиа, их настройка в качестве файлов исходного узла означает, что начальный запуск приложения выполняется гораздо быстрее, а файлы скачиваются по запросу.  
+> Файлы исходного узла не кэшируются с [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] на клиентском компьютере, а файлы содержимого —. Следовательно, они загружаются только по специальному запросу. Если приложение [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] имеет большие файлы мультимедиа, то их настройка в качестве файлов исходного узла означает, что начальный запуск приложения выполняется гораздо быстрее, а файлы загружаются по требованию.  
   
 ### <a name="configuring-site-of-origin-files"></a>Настройка файлов исходного узла  
  Если файлы исходного сайта не существуют или неизвестны во время компиляции, необходимо использовать традиционные механизмы развертывания для обеспечения доступности необходимых файлов во время выполнения, в том числе с помощью `XCopy` программы командной строки или [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Если во время компиляции вы узнаете, какие файлы необходимо найти на исходном узле, но все равно хотите избежать явной зависимости, можно добавить эти файлы в проект MSBuild как `None` элемент. Как и в случае с файлами содержимого, необходимо задать атрибут `CopyToOutputDirectory` MSBuild, чтобы указать, что файл исходного узла копируется в расположение относительно сборки, указав `Always` либо значение `PreserveNewest` , либо значение.  
+ Если во время компиляции вы узнаете, какие файлы необходимо найти на исходном узле, но все равно хотите избежать явной зависимости, можно добавить эти файлы в проект MSBuild как `None` элемент. Как и в случае с файлами содержимого, необходимо задать атрибут `CopyToOutputDirectory` MSBuild, чтобы указать, что файл исходного сайта копируется в расположение относительно сборки, указав либо значение `Always`, либо значение `PreserveNewest`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -210,21 +210,21 @@ ms.locfileid: "69956191"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]создайте файл исходного узла, добавив файл в проект и задав для `None`него `Build Action` значение.  
+> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] можно создать файл исходного узла, добавив файл в проект и задав для его `Build Action` значение `None`.  
   
  При построении проекта MSBuild копирует указанные файлы в выходную папку сборки.  
   
 ### <a name="using-site-of-origin-files"></a>Использование файлов исходного узла  
- Чтобы загрузить файл исходного узла, можно вызвать <xref:System.Windows.Application.GetRemoteStream%2A> метод <xref:System.Windows.Application> класса, передав ему пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , определяющий нужный файл исходного узла. <xref:System.Windows.Application.GetRemoteStream%2A>Возвращает объект, который предоставляет файл исходного узла <xref:System.IO.Stream> как и описывает его тип содержимого. <xref:System.Windows.Resources.StreamResourceInfo>  
+ Чтобы загрузить файл исходного узла, можно вызвать метод <xref:System.Windows.Application.GetRemoteStream%2A> класса <xref:System.Windows.Application>, передав URI типа Pack, который идентифицирует нужный файл исходного узла. <xref:System.Windows.Application.GetRemoteStream%2A> возвращает объект <xref:System.Windows.Resources.StreamResourceInfo>, который предоставляет файл исходного узла в качестве <xref:System.IO.Stream> и описывает его тип содержимого.  
   
- В следующем примере кода показано, как <xref:System.Windows.Application.GetRemoteStream%2A> использовать для <xref:System.Windows.Controls.Page> загрузки файла исходного узла и задать его в <xref:System.Windows.Controls.Frame> качестве содержимого объекта (`pageFrame`).  
+ В следующем примере кода показано, как использовать <xref:System.Windows.Application.GetRemoteStream%2A> для загрузки <xref:System.Windows.Controls.Page> файла исходного узла и его установки в качестве содержимого <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- Хотя при <xref:System.Windows.Application.GetRemoteStream%2A> вызове предоставляется доступ <xref:System.IO.Stream>к, необходимо выполнить дополнительную работу по преобразованию в тип свойства, для которого будет задано значение. Вместо этого можно [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться о открытии и <xref:System.IO.Stream> преобразовании, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
+ При вызове <xref:System.Windows.Application.GetRemoteStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться об открытии и преобразовании <xref:System.IO.Stream>, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
   
- В следующем примере показано, как загрузить объект <xref:System.Windows.Controls.Page> непосредственно <xref:System.Windows.Controls.Frame> в (`pageFrame`) с помощью кода.  
+ В следующем примере показано, как загрузить <xref:System.Windows.Controls.Page> непосредственно в <xref:System.Windows.Controls.Frame> (`pageFrame`) с помощью кода.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  

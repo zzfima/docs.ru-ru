@@ -9,40 +9,40 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: af49ea95d7f9d01072190ac3ccf6ba2f1041347e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957677"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583258"
 ---
 # <a name="return-statement-visual-basic"></a>Оператор Return (Visual Basic)
-Возвращает управление `Function`коду, который вызвал процедуру `Get`, `Sub`,, `Set`или `Operator` .  
+Возвращает управление коду, который вызвал процедуру `Function`, `Sub`, `Get`, `Set` или `Operator`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 Return  
--or-  
+' -or-  
 Return expression  
 ```  
   
 ## <a name="part"></a>Отделение  
  `expression`  
- Требуется в `Function`процедуре, `Get`или. `Operator` Выражение, представляющее значение, возвращаемое вызывающему коду.  
+ Требуется в `Function`, `Get` или процедуре `Operator`. Выражение, представляющее значение, возвращаемое вызывающему коду.  
   
-## <a name="remarks"></a>Примечания  
- `Set` `Exit Property` В процедуре `Sub` `Exit Sub` или инструкция эквивалентна оператору или и`expression` не должна быть указана. `Return`  
+## <a name="remarks"></a>Заметки  
+ В `Sub` или `Set` инструкция `Return` эквивалентна инструкции `Exit Sub` или `Exit Property`, а `expression` не должен быть указан.  
   
- `Get` Впроцедуре`Return` ,или`expression`инструкция должна включать оператор и`expression` должен иметь тип данных, преобразуемый в возвращаемый тип процедуры. `Operator` `Function` В процедуре `Get` `Exit Function` или вы также можете назначить выражение имени процедуры, которое будет использоваться в качестве возвращаемого значения, а затем выполнить инструкцию или `Exit Property`. `Function` В процедуре необходимо использовать `Return expression`. `Operator`  
+ В `Function`, `Get` или `Operator` инструкция `Return` должна включать `expression`, а `expression` должен иметь тип данных, преобразуемый в возвращаемый тип процедуры. В `Function` или `Get` можно также назначить выражение для имени процедуры, которое будет использоваться в качестве возвращаемого значения, а затем выполнить инструкцию `Exit Function` или `Exit Property`. В `Operator` процедуре необходимо использовать `Return expression`.  
   
- В одной процедуре можно включить `Return` столько инструкций, сколько необходимо.  
+ В той же процедуре можно включить столько `Return` инструкций, сколько необходимо.  
   
 > [!NOTE]
-> Код `Finally` в блоке выполняется `Try` `Return` после обнаружения оператора в блоке или `Catch` , но перед выполнением этой `Return` инструкции. Инструкция не может быть включена `Finally` в блок. `Return`  
+> Код в блоке `Finally` выполняется после того, как обнаруживается инструкция `Return` в блоке `Try` или `Catch`, но перед выполнением этой инструкции `Return`. Инструкция `Return` не может быть включена в блок `Finally`.  
   
 ## <a name="example"></a>Пример  
- В следующем примере `Return` оператор используется несколько раз для возврата к вызывающему коду, если процедура не должна предпринимать никаких других действий.  
+ В следующем примере оператор `Return` используется несколько раз для возврата к вызывающему коду, если процедура не должна выполнять никаких других действий.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

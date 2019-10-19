@@ -23,45 +23,45 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b84ab5e8edebba3048c5cddf723198cf3f28858
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610601"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579914"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Практическое руководство. Объявление константы (Visual Basic)
-Использовании `Const` инструкцию, чтобы объявление константы и присвойте ему значение. Объявляя константу, понятное имя назначается значение. После объявления константа не может изменить или присвоить новое значение.  
+Чтобы объявить константу и задать ее значение, используется оператор `Const`. Объявляя константу, можно присвоить значение понятному имени. После объявления константы ее нельзя изменить или присвоить ей новое значение.  
   
- Вы объявите константу в процедуре или в раздел объявлений модуля, класса или структуры. Класс или структура на уровне константы являются `Private` по умолчанию, но также может быть объявлено как `Public`, `Friend`, `Protected`, или `Protected Friend` для соответствующего уровня доступа к коду.  
+ Константа объявляется в процедуре или в разделе объявлений модуля, класса или структуры. Константы уровня класса или структуры `Private` по умолчанию, но также могут быть объявлены как `Public`, `Friend`, `Protected` или `Protected Friend` для соответствующего уровня доступа к коду.  
   
- Константа должна иметь допустимое символическое имя (правила являются те же имени для переменной) и выражение, состоящее из числовой или строковый констант и операторов (но не вызовы функций).  
+ Константа должна иметь допустимое символьное имя (правила совпадают с правилами для создания имен переменных) и выражение, состоящее из числовых или строковых констант и операторов (но не для вызовов функций).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-declare-a-constant"></a>Объявление константы  
   
-- Написать объявление, которое включает спецификатор доступа `Const` ключевое слово и выражение, как показано в следующих примерах:  
+- Напишите объявление, которое включает спецификатор доступа, ключевое слово `Const` и выражение, как показано в следующих примерах:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     Когда [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) — `Off` и [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) — `On`, константа необходимо объявить явно путем указания типа данных (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, или `String`).  
+     Если [параметр Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) имеет значение `Off` и [Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, необходимо явно объявить константу, указав тип данных (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, 0 , 1, 2, 3 или 4).  
   
-     При `Option Infer` — `On` или `Option Strict` — `Off`, можно объявить без указания типа данных с константой `As` предложение. Компилятор определяет тип константы из типа выражения. Дополнительные сведения см. в разделе [константой, а также типы данных литералов](constant-and-literal-data-types.md).  
+     Если `Option Infer` имеет `On` или `Option Strict` `Off`, можно объявить константу без указания типа данных с помощью предложения `As`. Компилятор определяет тип константы на основе типа выражения. Дополнительные сведения см. в разделе [константные и литеральные типы данных](constant-and-literal-data-types.md).  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Объявление константы с явно заданным типом данных  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Объявление константы с явно указанным типом данных  
   
-- Написать объявление, которое включает в себя `As` ключевое слово и явных типов данных, как показано в следующих примерах:  
+- Напишите объявление, которое включает ключевое слово `As` и явный тип данных, как показано в следующих примерах:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     Можно объявить несколько констант в одной строке, несмотря на то, что ваш код более удобочитаемым, если объявляется только одной константы в строке. Если в одной строке объявляется несколько констант, все они должны иметь тот же уровень доступа (`Public`, `Private`, `Friend`, `Protected`, или `Protected Friend`).  
+     В одной строке можно объявить несколько констант, хотя код более удобен для чтения, если объявить только одну константу в строке. При объявлении нескольких констант в одной строке все они должны иметь одинаковый уровень доступа (`Public`, `Private`, `Friend`, `Protected` или `Protected Friend`).  
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>Объявление нескольких констант в одной строке  
   
-- Разделите объявления запятой и пробелом, как показано в следующем примере:  
+- Разделяйте объявления запятыми и пробелами, как показано в следующем примере:  
   
-    ```  
+    ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
@@ -73,10 +73,10 @@ ms.locfileid: "64610601"
 - [Практическое руководство. Объявление константы](how-to-declare-a-constant.md)
 - [Константы, определенные пользователем](user-defined-constants.md)
 - [Типы данных констант и литералов](constant-and-literal-data-types.md)
-- [Практическое руководство. Группы значений связанных констант](how-to-group-related-constant-values-together.md)
+- [Практическое руководство. Группирование значений связанных констант](how-to-group-related-constant-values-together.md)
 - [Общие сведения о перечислениях](enumerations-overview.md)
 - [Практическое руководство. Объявление перечислений](how-to-declare-enumerations.md)
-- [Практическое руководство. Ссылка на член перечисления](how-to-refer-to-an-enumeration-member.md)
+- [Практическое руководство. Ссылка на элемент перечисления](how-to-refer-to-an-enumeration-member.md)
 - [Перечисления и уточнение имен](enumerations-and-name-qualification.md)
 - [Практическое руководство. Перебор элементов перечисления](how-to-iterate-through-an-enumeration.md)
 - [Практическое руководство. Определение строки, связанной со значением из перечисления](how-to-determine-the-string-associated-with-an-enumeration-value.md)
@@ -84,7 +84,7 @@ ms.locfileid: "64610601"
 
 - [Общие сведения о перечислениях](enumerations-overview.md)
 - [Общие сведения о константах](constants-overview.md)
-- [Практическое руководство. Объявления перечисления](how-to-declare-enumerations.md)
+- [Инструкции. Объявление перечисления](how-to-declare-enumerations.md)
 - [Перечисления и уточнение имен](enumerations-and-name-qualification.md)
 - [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)

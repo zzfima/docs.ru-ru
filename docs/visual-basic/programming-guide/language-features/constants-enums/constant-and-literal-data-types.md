@@ -9,35 +9,35 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9db7fa3f36021a39fafe6cf3da5af7070f0b5b0d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906975"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582977"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Типы данных констант и литералов (Visual Basic)
-Литерал — это значение, которое выражается само по себе, а не как значение переменной или результат выражения, например число 3 или строка «Hello». Константа представляет собой значимое имя, которое занимает место литерал и хранит это же значение для программы, в отличие от переменной, значения которых могут меняться.  
+Литерал — это значение, которое выражено как само по себе, а не как значение переменной или результат выражения, например число 3 или строка "Hello". Константа — это понятное имя, которое принимает место литерала и сохраняется в программе в отличие от переменной, значение которой может измениться.  
   
- Когда [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) — `Off` и [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) является `On`, необходимо объявить все константы явным образом с типом данных. В следующем примере, тип данных `MyByte` явно объявлен как тип данных `Byte`:  
+ Если [параметр Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) имеет значение `Off` и [Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, необходимо явно объявить все константы с типом данных. В следующем примере тип данных `MyByte` явно объявлен как тип данных `Byte`:  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- При `Option Infer` — `On` или `Option Strict` — `Off`, можно объявить без указания типа данных с константой `As` предложение. Компилятор определяет тип константы из типа выражения. По умолчанию для приводится целочисленный литерал `Integer` тип данных. Тип данных по умолчанию для чисел с плавающей запятой — `Double`и ключевые слова `True` и `False` укажите `Boolean` константы.  
+ Если `Option Infer` имеет `On` или `Option Strict` `Off`, можно объявить константу без указания типа данных с помощью предложения `As`. Компилятор определяет тип константы на основе типа выражения. Числовой целочисленный литерал по умолчанию приводится к типу данных `Integer`. Типом данных по умолчанию для чисел с плавающей запятой является `Double`, а ключевые слова `True` и `False` указать константу `Boolean`.  
   
 ## <a name="literals-and-type-coercion"></a>Литералы и приведение типов  
- В некоторых случаях может потребоваться принудительно литерала к определенному типу данных; Например, при назначении особенно большой целочисленный литерал переменной типа `Decimal`. Следующий пример приводит к ошибке:  
+ В некоторых случаях может потребоваться принудительно применить литерал к конкретному типу данных. Например, при присваивании особо большого целочисленного значения литерала переменной типа `Decimal`. Следующий пример приводит к ошибке:  
   
-```  
+```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- Эта ошибка возникает из представления литерала. `Decimal` Тип данных может содержать значение такого размера, но литерал неявно представлен как `Long`, какие нельзя.  
+ Эта ошибка возникает из представления литерала. Тип данных `Decimal` может содержать это большое значение, но литерал неявно представляется как `Long`, что не может.  
   
- Приведение литерала к определенному типу данных двумя способами: путем добавления к литералу символа типа, или путем помещения его в окружающие символы. Символ типа или окружающие символы необходимо сразу же перед и/или выполните литерала, без промежуточных пробелов или символов любого типа.  
+ Можно привести литерал к определенному типу данных двумя способами: путем добавления к нему символа типа или путем помещения его в окружающие символы. Символ типа или заключенные в него символы должны находиться непосредственно перед и/или следовать за литералом без промежуточного пробела или символов какого-либо типа.  
   
- Чтобы предыдущий пример работал, можно добавить `D` знак в литерал, что приводит к его в виде типа `Decimal`:  
+ Чтобы предыдущий пример работал, можно добавить к литералу символ типа `D`, что приводит к его представлению в виде `Decimal`:  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
@@ -45,9 +45,9 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- Показано в следующей таблице окружающие символы и символы типов, доступные в Visual Basic.  
+ В следующей таблице показаны окружающие символы и символы типа, доступные в Visual Basic.  
   
-|Тип данных|Заключения символа|Добавленный символ типа|  
+|Тип данных|Вложенный символ|Символ добавленного типа|  
 |---|---|---|  
 |`Boolean`|(нет)|(нет)|  
 |`Byte`|(нет)|(нет)|  
@@ -55,7 +55,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Date`|#|(нет)|  
 |`Decimal`|(нет)|D или @|  
 |`Double`|(нет)|R или #|  
-|`Integer`|(нет)|Я или %|  
+|`Integer`|(нет)|I или%|  
 |`Long`|(нет)|L или &|  
 |`Short`|(нет)|S|  
 |`Single`|(нет)|F или!|  
@@ -69,7 +69,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Оператор Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [Практическое руководство. Объявления перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Инструкции. Объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)

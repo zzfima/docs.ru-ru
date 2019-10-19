@@ -9,19 +9,19 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 5b1fd9c6e12a3dbea6de939ee90c48df716bd265
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395809"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581890"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Знакомство с объектом GlyphRun и элементом Glyphs
 В этом разделе описывается объект <xref:System.Windows.Media.GlyphRun> и элемент <xref:System.Windows.Documents.Glyphs>.  
 
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>Общие сведения о GlyphRun  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет расширенную поддержку текста, включая разметку на уровне глифов с прямым доступом к <xref:System.Windows.Documents.Glyphs> для клиентов, которым требуется перехватывать и сохранять текст после форматирования. Эти функции обеспечивают критически важную поддержку различных требований к отрисовке текста в каждом из следующих сценариев.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает расширенную поддержку текста, включая разметку на уровне глифов с прямым доступом к <xref:System.Windows.Documents.Glyphs> для клиентов, которым требуется перехватывать и сохранять текст после форматирования. Эти функции обеспечивают критически важную поддержку различных требований к отрисовке текста в каждом из следующих сценариев.  
   
 1. Отображение на экране документов фиксированного формата.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "72395809"
 ## <a name="the-glyphrun-object"></a>Объект GlyphRun  
  Объект <xref:System.Windows.Media.GlyphRun> представляет последовательность глифов из одной грани одного шрифта с одним размером и с одним стилем отрисовки.  
   
- <xref:System.Windows.Media.GlyphRun> включает как сведения о шрифтах, такие как глиф <xref:System.Windows.Documents.Glyphs.Indices%2A>, так и отдельные позиции глифов. Он также включает исходные кодовые точки Юникода, из которых был создан запуск, сведения о сопоставлении смещения буфера символов и глифов, а также флаги отдельных символов и глифов.  
+ <xref:System.Windows.Media.GlyphRun> включает как сведения о шрифтах, такие как <xref:System.Windows.Documents.Glyphs.Indices%2A> глифов, так и отдельные позиции глифов. Он также включает исходные кодовые точки Юникода, из которых был создан запуск, сведения о сопоставлении смещения буфера символов и глифов, а также флаги отдельных символов и глифов.  
   
- <xref:System.Windows.Media.GlyphRun> имеет соответствующий высокоуровневый <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> можно использовать в дереве элементов и разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для представления выходных данных <xref:System.Windows.Media.GlyphRun>.  
+ <xref:System.Windows.Media.GlyphRun> имеет соответствующий высокоуровневый <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> можно использовать в дереве элементов и в разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для представления выходных данных <xref:System.Windows.Media.GlyphRun>.  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Элемент Glyphs  
@@ -58,14 +58,14 @@ ms.locfileid: "72395809"
   
 |свойство;|Описание|  
 |--------------|-----------------|  
-|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Указывает идентификатор ресурса: имя файла, веб-[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] или ссылка на ресурс в файле Application. exe или контейнере.|  
+|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Указывает идентификатор ресурса: имя файла, универсальный код ресурса (URI) или ссылку на ресурс в файле Application. exe или контейнере.|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Указывает размер шрифта в единицах графической поверхности (по умолчанию — 0,96 дюйма).|  
 |<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|Задает флаги для полужирного шрифта и курсива.|  
 |<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|Задает уровень двунаправленного макета. Четные и нулевые значения подразумевают макет слева направо; нечетные значения подразумевают макет справа налево.|  
   
 <a name="text_glyphrunovw_indicesproperty"></a>   
 ### <a name="indices-property"></a>Свойство Indices  
- Свойство <xref:System.Windows.Documents.Glyphs.Indices%2A> является строкой спецификаций глифов. Если последовательность глифов образует единый кластер, спецификации первого глифа в кластере предшествует спецификация того, сколько глифов и сколько кодовых точек объединяются для формирования кластера. Свойство <xref:System.Windows.Documents.Glyphs.Indices%2A> собирает в одной строке следующие свойства.  
+ Свойство <xref:System.Windows.Documents.Glyphs.Indices%2A> — это строка спецификаций глифов. Если последовательность глифов образует единый кластер, спецификации первого глифа в кластере предшествует спецификация того, сколько глифов и сколько кодовых точек объединяются для формирования кластера. Свойство <xref:System.Windows.Documents.Glyphs.Indices%2A> собирает в одной строке следующие свойства.  
   
 - Индексы глифов  
   

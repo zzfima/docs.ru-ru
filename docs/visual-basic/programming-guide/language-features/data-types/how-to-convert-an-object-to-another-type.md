@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39083fc55d30e24c357ec162a15466f81655f4c8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600993"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582332"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Практическое руководство. Преобразование объекта к другому типу в Visual Basic
-Преобразования `Object` переменных в другой тип данных с помощью ключевого слова преобразования, например [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Преобразование `Object` переменной в другой тип данных осуществляется с помощью ключевого слова преобразования, например [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере выполняется преобразование `Object` переменной `Integer` и `String`.  
+ В следующем примере переменная `Object` преобразуется в `Integer` и в `String`.  
   
-```  
+```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
     Dim anInteger As Integer  
     Dim aString As String  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Если вы знаете, что содержимое `Object` переменной типа данных, лучше преобразовать в этот тип данных переменной. Если вы продолжите использовать `Object` переменной, то это вызовет либо *упаковки-преобразования* и *распаковки* (для типа значения) или *позднее связывание* (для ссылочного типа). Эти операции принимают дополнительное время выполнения и снижают производительность.  
+ Если известно, что содержимое переменной `Object` относится к определенному типу данных, лучше преобразовать переменную в этот тип данных. Если вы продолжаете использовать переменную `Object`, вы используете *упаковку* и распаковку (для типа значения) или *позднее связывание* *(для* ссылочного типа). Все эти операции занимают некоторое время и снижают производительность.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
@@ -36,7 +36,7 @@ End Sub
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Object>
-- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)

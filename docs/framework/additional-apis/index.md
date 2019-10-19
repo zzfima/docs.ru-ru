@@ -1,6 +1,6 @@
 ---
 title: Дополнительные библиотеки классов и интерфейсы API
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395664"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579116"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
@@ -57,20 +57,21 @@ ms.locfileid: "72395664"
 * [Метод System. Data. SqlTypes. Склстреамчарс. SetLength](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [Метод System. Data. SqlTypes. Склстреамчарс. Write](system.data.sqltypes.sqlstreamchars.write.md)
 * [Класс System .NET. Connection](connection.md)
-* [System .NET. Connection. m @ no__t-1WriteList поле](m_writelist.md)
+* [Поле "система .NET. Connection. m \_WriteList"](m_writelist.md)
 * [Класс System .NET. Коннектионграуп](connectiongroup.md)
-* [System .NET. Коннектионграуп. m @ no__t-1ConnectionList поле](m_connectionlist.md)
+* [Поле \_ConnectionList System .NET. Коннектионграуп. m](m_connectionlist.md)
 * [Класс System .NET. Коререспонседата](coreresponsedata.md)
-* [System .NET. Коререспонседата. m @ no__t-1ResponseHeaders поле](coreresponsedata_m_responseheaders.md)
-* [System .NET. Коререспонседата. m @ no__t-1StatusCode поле](coreresponsedata_m_statuscode.md)
+* [Поле \_ResponseHeaders System .NET. Коререспонседата. m](coreresponsedata_m_responseheaders.md)
+* [Поле \_StatusCode System .NET. Коререспонседата. m](coreresponsedata_m_statuscode.md)
 * [Поле System .NET. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
 * [Поле System .NET. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
 * [Поле System .NET. HttpWebRequest. \_HttpResponse](_httpresponse.md)
-* [System .NET. ServicePoint. m @ no__t-1ConnectionGroupList поле](m_connectiongrouplist.md)
-* [System .NET. ServicePointManager. s @ no__t-1ServicePointTable поле](s_servicepointtable.md)
-* [System. Windows. Diagnostics. Висуалдиагностикс. s @ no__t-1isDebuggerCheckDisabledForTestPurposes поле](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Поле \_ConnectionGroupList System .NET. ServicePoint. m](m_connectiongrouplist.md)
+* [Поле System .NET. ServicePointManager. s \_ServicePointTable](s_servicepointtable.md)
+* [Поле \_isDebuggerCheckDisabledForTestPurposes System. Windows. Diagnostics. Висуалдиагностикс. s](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [Класс System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
 * [Класс System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
+* [Метод System. XML. XmlReader. Креатесклреадер](system.xml.xmlreader.createsqlreader.md)
 * [ADODB. Интерфейс подключения](adodb.connection.md)
 * [ADODB. Перечисление Евентреасон](adodb.eventreasonenum.md)
 * [ADODB. Перечисление Евентстатус](adodb.eventstatusenum.md)

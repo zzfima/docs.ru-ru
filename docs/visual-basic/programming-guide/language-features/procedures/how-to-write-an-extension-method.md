@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4671728330614f0f3da23fd90f5e635ddcf46578
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004614"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581157"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
 
@@ -27,13 +27,13 @@ ms.locfileid: "72004614"
     Imports System.Runtime.CompilerServices
     ```
 
-3. В модуле в новом или существующем приложении приступите к определению метода с атрибутом [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) :
+3. В модуле в новом или существующем приложении приступите к определению метода с помощью атрибута [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) :
 
     ```vb
     <Extension()>
     ```
- 
-   Обратите внимание, что атрибут `Extension` можно применить только к методу (процедура `Sub` или `Function`) в [модуле](../../../language-reference/statements/module-statement.md)Visual Basic. Если применить его к методу в `Class` или `Structure`, компилятор Visual Basic создает ошибку [BC36551](../../../misc/bc36551.md), "методы расширения могут быть определены только в модулях".
+
+    Обратите внимание, что атрибут `Extension` можно применить только к методу (`Sub` или процедуре `Function`) в [модуле](../../../language-reference/statements/module-statement.md)Visual Basic. Если применить его к методу в `Class` или `Structure`, компилятор Visual Basic создает ошибку [BC36551](../../../misc/bc36551.md), "методы расширения могут быть определены только в модулях".
 
 4. Объявите метод обычным способом, за исключением того, что тип первого параметра должен быть типом данных, который требуется расширить.
 
@@ -46,8 +46,8 @@ ms.locfileid: "72004614"
 
 ## <a name="example"></a>Пример
 
- В следующем примере объявляется метод расширения в модуле `StringExtensions`. Второй модуль, `Module1`, импортирует `StringExtensions` и вызывает метод. Метод расширения должен находиться в области видимости при его вызове. Метод расширения `PrintAndPunctuate` расширяет класс <xref:System.String> с помощью метода, который отображает экземпляр строки, за которым следует строка символов пунктуации, отправленная в качестве параметра.
-  
+В следующем примере объявляется метод расширения в модуле `StringExtensions`. Второй модуль, `Module1`, импортирует `StringExtensions` и вызывает метод. Метод расширения должен находиться в области видимости при его вызове. Метод расширения `PrintAndPunctuate` расширяет класс <xref:System.String> с помощью метода, который отображает экземпляр строки, за которым следует строка символов пунктуации, отправленная в качестве параметра.
+
 ```vb
 ' Declarations will typically be in a separate module.
 Imports System.Runtime.CompilerServices
@@ -68,23 +68,23 @@ End Module
 Imports ConsoleApplication2.StringExtensions
 
 Module Module1
-  
+
     Sub Main()
         Dim example = "Hello"
         example.PrintAndPunctuate("?")
         example.PrintAndPunctuate("!!!!")
     End Sub
-    
+
 End Module
 ```
-  
- Обратите внимание, что метод определен с двумя параметрами и вызывается только с одним. Первый параметр, `aString`, в определении метода привязан к `example`, экземпляру `String`, который вызывает метод. Выходные данные примера могут быть следующими:
-  
- ```console
- Hello?
- Hello!!!!
- ```
-  
+
+Обратите внимание, что метод определен с двумя параметрами и вызывается только с одним. Первый параметр, `aString`, в определении метода привязан к `example`, экземпляр `String`, который вызывает метод. Выходные данные примера могут быть следующими:
+
+```console
+Hello?
+Hello!!!!
+```
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>

@@ -11,39 +11,39 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c027964d185d7f69c0a56a4386bedc2d8f9d2eac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 19ff8cf1dbcdb941e38f23be4cb68d3a5e5b83a8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912339"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582580"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Оператор Option Explicit (Visual Basic)
 Заставляет явно объявлять все переменные в файле или допускает неявные объявления переменных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```vb  
 Option Explicit { On | Off }  
 ```  
   
 ## <a name="parts"></a>Части  
  `On`  
- Необязательный параметр. Включает `Option Explicit` проверку. Если `On` параметр `Off` или не указан, по умолчанию `On`используется значение.  
+ Необязательный. Включает проверку `Option Explicit`. Если `On` или `Off` не указаны, по умолчанию используется значение `On`.  
   
  `Off`  
- Необязательный параметр. Отключает `Option Explicit` проверку.  
+ Необязательный. Отключает проверку `Option Explicit`.  
   
-## <a name="remarks"></a>Примечания  
- Если `Option Explicit On` `Dim` `ReDim` или `Option Explicit` присутствует в файле, необходимо явно объявить все переменные с помощью инструкций или. При попытке использовать необъявленное имя переменной во время компиляции возникает ошибка. `Option Explicit Off` Оператор допускает неявное объявление переменных.  
+## <a name="remarks"></a>Заметки  
+ При появлении `Option Explicit On` или `Option Explicit` в файле необходимо явно объявить все переменные с помощью инструкций `Dim` или `ReDim`. При попытке использовать необъявленное имя переменной во время компиляции возникает ошибка. Оператор `Option Explicit Off` допускает неявное объявление переменных.  
   
  Если используется оператор `Option Explicit`, он должен быть указан в файле до всех прочих операторов.  
   
 > [!NOTE]
-> Установка `Option Explicit` в`Off` обычно не является хорошей практикой. Вы можете допустить ошибку при вводе имени переменной в одном или нескольких местах, что приведет к непредвиденным результатам при выполнении программы.  
+> Обычно не рекомендуется устанавливать `Option Explicit` в `Off`. Вы можете допустить ошибку при вводе имени переменной в одном или нескольких местах, что приведет к непредвиденным результатам при выполнении программы.  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Если отсутствует оператор Option Explicit  
- Если исходный код не содержит `Option Explicit` инструкцию, то используется **параметр Explicit** на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Если используется компилятор командной строки, используется параметр компилятора [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) .  
+ Если исходный код не содержит инструкцию `Option Explicit`, то используется **параметр Explicit** на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Если используется компилятор командной строки, используется параметр компилятора [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) .  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Установка параметра Explicit в интегрированной среде разработки  
   
@@ -51,16 +51,16 @@ Option Explicit { On | Off }
   
 2. Откройте вкладку **Компиляция**.  
   
-3. Задайте значение в явном поле **Option** .  
+3. Задайте значение в **явном поле Option** .  
   
- При создании нового проекта параметр **Option Explicit** на вкладке **Компиляция** имеет значение **Option Explicit** в диалоговом окне Параметры **VB по умолчанию** . Чтобы открыть диалоговое окно **настройки VB по умолчанию** , в меню **Сервис** выберите пункт **Параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальным значением по умолчанию в `On` **VB по умолчанию** является.  
+ При создании нового проекта параметр **Option Explicit** на вкладке **Компиляция** имеет значение **Option Explicit** в диалоговом окне Параметры **VB по умолчанию** . Чтобы открыть диалоговое окно **настройки VB по умолчанию** , в меню **Сервис** выберите пункт **Параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальным параметром по умолчанию в **VB по умолчанию** является `On`.  
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Установка параметра Explicit в командной строке  
   
 - Включите параметр компилятора [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) в команду **vbc** .  
   
 ## <a name="example"></a>Пример  
- В следующем примере `Option Explicit` оператор используется для принудительного явного объявления всех переменных. Попытка использовать необъявленную переменную вызывает ошибку во время компиляции.  
+ В следующем примере оператор `Option Explicit` используется для принудительного явного объявления всех переменных. Попытка использовать необъявленную переменную вызывает ошибку во время компиляции.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

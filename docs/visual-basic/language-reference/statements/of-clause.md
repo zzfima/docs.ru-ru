@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784154"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583510"
 ---
 # <a name="of-clause-visual-basic"></a>Предложение Of (Visual Basic)
-Представляет `Of` предложение, которое идентифицирует *параметр типа* на *универсального* класса, структуры, интерфейса, делегата или процедуры. Сведения об универсальных типах см. в разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Вводит предложение `Of`, которое определяет *параметр типа* в *универсальном* классе, структуре, интерфейсе, делегате или процедуре. Сведения об универсальных типах см. [в разделе Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>С помощью ключевого слова  
- В следующем примере кода используется `Of` ключевое слово для определения структуры, класса, который принимает два параметра типа. Он *ограничивает* `keyType` по <xref:System.IComparable> интерфейс, который означает, что код-потребитель должен предоставить аргумент типа, который реализует <xref:System.IComparable>. Это необходимо, чтобы `add` процедура может вызывать <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> метод. Дополнительные сведения об ограничениях см. в разделе [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Использование ключевого слова of  
+ В следующем примере кода ключевое слово `Of` используется для определения структуры класса, принимающего два параметра типа. Он *ограничивает* параметр `keyType` интерфейсом <xref:System.IComparable>, что означает, что в используемом коде должен быть указан аргумент типа, реализующий <xref:System.IComparable>. Это необходимо для того, чтобы процедура `add` могла вызвать метод <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>. Дополнительные сведения об ограничениях см. в разделе [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,11 +42,11 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Если выполнить предыдущий определение класса, можно создать различные `dictionary` классы из него. Типы, которые вводятся `entryType` и `keyType` определить, содержит класс тип записи и какой тип ключа, который связывает, с каждой записи. Из-за ограничения, необходимо указать `keyType` тип, реализующий <xref:System.IComparable>.  
+ Если вы закончите предыдущее определение класса, можно создать из него разнообразные `dictionary` классы. Типы, предоставляемые для `entryType` и `keyType` определяют, какой тип записи принадлежит классу и какой тип ключа он связывает с каждой записью. Из-за ограничения необходимо указать, чтобы `keyType` тип, реализующий <xref:System.IComparable>.  
   
- В следующем примере кода создается объект, содержащий `String` записи и связывает `Integer` ключа с каждой из них. `Integer` реализует <xref:System.IComparable> и таким образом удовлетворяющую на `keyType`.  
+ В следующем примере кода создается объект, содержащий `String` записи и связывающий ключ `Integer` с каждым из них. `Integer` реализует <xref:System.IComparable> и, следовательно, удовлетворяет ограничениям на `keyType`.  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   

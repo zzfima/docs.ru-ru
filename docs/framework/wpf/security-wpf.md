@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 031313c6f56801f032a5aeaff06cde8d0550af92
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962826"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582410"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
-<a name="introduction"></a>При разработке изолированных приложений Windows Presentation Foundation (WPF) и обозревателей, размещенных в браузере, необходимо учитывать модель безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]автономные приложения выполняются с неограниченными разрешениями (набор разрешений**FULLTRUST** ЦС), а также развернут с помощью установщик Windows (. msi), XCOPY или ClickOnce. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Однако ведущее приложение с полным доверием может создать частичное доверие <xref:System.AppDomain> с помощью модели надстройки .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
+<a name="introduction"></a>При разработке изолированных приложений Windows Presentation Foundation (WPF) и обозревателей, размещенных в браузере, необходимо учитывать модель безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] автономные приложения выполняются с неограниченными разрешениями (набор разрешений**FULLTRUST** CAS), будь то развертывание с помощью установщик Windows (. msi), XCOPY или ClickOnce. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Однако ведущее приложение с полным доверием может создать <xref:System.AppDomain> частичного доверия с помощью модели надстройки .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]приложения, размещенные в браузере, размещаются в Windows Internet Explorer или Firefox и могут [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] быть либо [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] свободными документами. Дополнительные сведения см. в статье [Общие сведения о приложениях браузера WPF XAML](./app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] размещенные в браузере приложения размещаются в Windows Internet Explorer или Firefox и могут быть [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] или свободными [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] документами дополнительные сведения см. в разделе [Общие сведения о приложениях браузера WPF XAML](./app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]приложения, размещенные в браузере, выполняются в песочнице безопасности с частичным доверием по умолчанию, которая ограничена набором разрешений зоны**Интернета** CAS по умолчанию. Это эффективно изолирует [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] приложения, размещенные в браузере, от клиентского компьютера так же, как обычные веб-приложения будут изолированы. Приложение XBAP может повысить привилегии вплоть до полного доверия в зависимости от зоны безопасности URL-адреса развертывания и конфигурации безопасности клиента. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] приложения, размещенные в браузере, выполняются в песочнице безопасности с частичным доверием по умолчанию, которая ограничена набором разрешений зоны**Интернета** CAS по умолчанию. Это эффективно изолирует [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] приложений, размещенных в браузере, от клиентского компьютера точно так же, как обычные веб-приложения будут изолированы. Приложение XBAP может повысить привилегии вплоть до полного доверия в зависимости от зоны безопасности URL-адреса развертывания и конфигурации безопасности клиента. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](wpf-partial-trust-security.md).  
   
  В этом разделе обсуждается модель безопасности для изолированных приложений Windows Presentation Foundation (WPF) и обозревателей, размещенных в браузере.  
   
@@ -45,45 +45,45 @@ ms.locfileid: "69962826"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Безопасная навигация  
- Для [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] следует[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] отличать два типа навигации: приложение и браузер.  
+ Для [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] различает два типа навигации: приложение и браузер.  
   
  *Навигация в приложении* — это навигация между элементами содержимого в пределах приложения, размещенного в браузере. *Навигация в браузере* — это навигация, изменяющая содержимое и URL-адрес расположения самого браузера. Связь между навигацией между приложениями (обычно XAML) и навигацией в браузере (как правило, HTML) показана на следующем рисунке:
   
  ![Связь между навигацией приложения и навигацией в браузере.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
- Тип содержимого, которое считается безопасным для [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] перехода к, в первую очередь определяется тем, используется ли Навигация по приложению или браузер.  
+ Тип содержимого, которое считается безопасным для [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] для перехода, в основном определяется тем, используется ли Навигация по приложению или браузер.  
   
 <a name="Application_Navigation_Security"></a>   
 ### <a name="application-navigation-security"></a>Безопасность навигации в приложениях  
- Навигация по приложениям считается надежной, если ее можно определить с помощью [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]типа Pack, который поддерживает четыре типа содержимого:  
+ Навигация по приложениям считается надежной, если ее можно определить с помощью URI типа "Pack", который поддерживает четыре типа содержимого:  
   
 |Тип содержимого|Описание|Пример URI|  
 |------------------|-----------------|-----------------|  
-|Resource|Файлы, добавляемые в проект с типом построения " **ресурс**".|`pack://application:,,,/MyResourceFile.xaml`|  
+|Ресурс|Файлы, добавляемые в проект с типом построения " **ресурс**".|`pack://application:,,,/MyResourceFile.xaml`|  
 |Content|Файлы, добавляемые в проект с типом сборки **содержимое**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Исходный веб-сайт|Файлы, добавляемые в проект с типом построения " **нет**".|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Код приложения|Ресурсы XAML, имеющие скомпилированный код программной части.<br /><br /> -или-<br /><br /> Файлы XAML, добавляемые в проект с типом сборки **страница**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Код приложения|Ресурсы XAML, имеющие скомпилированный код программной части.<br /><br /> \- или -<br /><br /> Файлы XAML, добавляемые в проект с типом сборки **страница**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
-> Дополнительные сведения о файлах данных приложения и пакете [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]см. в разделе [ресурсы приложения WPF, содержимое и файлы данных](./app-development/wpf-application-resource-content-and-data-files.md).  
+> Дополнительные сведения о файлах данных приложения и URI типа "Pack" см. в разделе [ресурс приложения WPF, содержимое и файлы данных](./app-development/wpf-application-resource-content-and-data-files.md).  
   
  Файлы этих типов содержимого поддерживают навигацию, выполняемую пользователем или программно.  
   
-- **Навигация, выполняемая пользователем**. Пользователь переходит по щелчку <xref:System.Windows.Documents.Hyperlink> элемента.  
+- **Навигация, выполняемая пользователем**. Пользователь переходит по щелчку элемента <xref:System.Windows.Documents.Hyperlink>.  
   
-- **Программная навигация**. Приложение переходит без участия пользователя, например путем установки <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> свойства.  
+- **Программная навигация**. Приложение переходит без участия пользователя, например путем установки свойства <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>.  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>Безопасность навигации в браузере  
  Навигация в браузере считается безопасной только при выполнении следующих условий.  
   
-- **Навигация, выполняемая пользователем**. Пользователь переходит по щелчку <xref:System.Windows.Documents.Hyperlink> элемента, который находится внутри основного <xref:System.Windows.Navigation.NavigationWindow>, а не вложенного <xref:System.Windows.Controls.Frame>.  
+- **Навигация, выполняемая пользователем**. Пользователь переходит по элементу <xref:System.Windows.Documents.Hyperlink>, который находится в основном <xref:System.Windows.Navigation.NavigationWindow>, а не во вложенной <xref:System.Windows.Controls.Frame>.  
   
 - **Зона**. Содержимое, к которому выполняется переход, находится в Интернете или в локальной интрасети.  
   
 - **Протокол**. Используемый протокол — **http**, **HTTPS**, **File**или **mailto**.  
   
- При попытке перехода к содержимому способом, который не соответствует этим условиям <xref:System.Security.SecurityException> , создается исключение. [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]  
+ Если [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] пытается переходить к содержимому способом, который не соответствует этим условиям, выдается <xref:System.Security.SecurityException>.  
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Параметры безопасности программного обеспечения для просмотра веб-страниц  
@@ -99,9 +99,9 @@ ms.locfileid: "69962826"
   
 - Скрипты  
   
-- Проверка подлинности пользователя  
+- проверка подлинности пользователя.  
   
- Набор функциональных возможностей, которые могут быть защищены таким образом, настраивается для каждой зоны в зонах " **Интернет**","интрасеть", " **Доверенные сайты**" и " **ограниченные сайты** ". Ниже приведена процедура для настройки параметров безопасности.  
+ Набор функциональных возможностей, которые могут быть защищены таким образом, настраивается для каждой зоны в зонах " **Интернет**", " **интрасеть**", " **Доверенные сайты**" и " **ограниченные сайты** ". Ниже приведена процедура для настройки параметров безопасности.  
   
 1. Откройте **панель управления**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "69962826"
   
  Начиная с Windows Internet Explorer 7, включены следующие параметры безопасности, специально предназначенные для .NET Framework:  
   
-- **Свободный XAML**. Определяет, может ли Internet Explorer переходить к [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам и свободные файлы. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
+- **Свободный XAML**. Определяет, может ли Internet Explorer переходить к файлам, свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
   
-- **XAML-приложения браузера**. Определяет, может ли Internet Explorer переходить к [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]и запускать. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
+- **XAML-приложения браузера**. Определяет, может ли Internet Explorer переходить к и запускать [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
   
  По умолчанию все эти параметры включены для зон " **Интернет**", " **Местная интрасеть**" и " **Доверенные сайты** " и отключены для зоны **ограниченных узлов** .  
   
@@ -148,16 +148,16 @@ ms.locfileid: "69962826"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>Элемент управления WebBrowser и элементы управления функциями  
- Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF можно использовать для размещения веб-содержимого. Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF заключает в оболочку базовый элемент управления ActiveX WebBrowser. WPF обеспечивает некоторую поддержку защиты приложения при использовании элемента управления WPF <xref:System.Windows.Controls.WebBrowser> для размещения ненадежного веб-содержимого. Однако некоторые функции безопасности должны быть применены непосредственно приложениями с помощью <xref:System.Windows.Controls.WebBrowser> элемента управления. Дополнительные сведения об элементе управления ActiveX WebBrowser см. в разделе [WebBrowser Control обзоры и учебники](https://go.microsoft.com/fwlink/?LinkId=179388).  
+ Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF можно использовать для размещения веб-содержимого. Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF служит оболочкой для базового элемента управления ActiveX WebBrowser. WPF обеспечивает некоторую поддержку защиты приложения при использовании элемента управления <xref:System.Windows.Controls.WebBrowser> WPF для размещения ненадежного веб-содержимого. Однако некоторые функции безопасности должны быть применены непосредственно приложениями с помощью элемента управления <xref:System.Windows.Controls.WebBrowser>. Дополнительные сведения об элементе управления ActiveX WebBrowser см. в разделе [WebBrowser Control обзоры и учебники](https://go.microsoft.com/fwlink/?LinkId=179388).  
   
 > [!NOTE]
-> Этот раздел также применяется к <xref:System.Windows.Controls.Frame> элементу управления, так как он <xref:System.Windows.Controls.WebBrowser> использует для перехода к содержимому HTML.  
+> Этот раздел также относится к элементу управления <xref:System.Windows.Controls.Frame>, так как он использует <xref:System.Windows.Controls.WebBrowser> для перехода к содержимому HTML.  
   
- Если элемент управления <xref:System.Windows.Controls.WebBrowser> WPF используется для размещения ненадежного веб-содержимого, приложение должно использовать частичное доверие <xref:System.AppDomain> , чтобы изолировать код приложения от потенциально вредоносного кода HTML-скрипта. Это особенно верно, если приложение взаимодействует с размещенным скриптом с помощью <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> метода <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> и свойства. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
+ Если элемент управления WPF <xref:System.Windows.Controls.WebBrowser> используется для размещения ненадежного веб-содержимого, приложение должно использовать <xref:System.AppDomain> частичного доверия для облегчения изоляции кода приложения от потенциально вредоносного кода HTML-скрипта. Это особенно верно, если приложение взаимодействует с размещенным скриптом с помощью метода <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> и свойства <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
   
- Если приложение использует элемент управления WPF <xref:System.Windows.Controls.WebBrowser> , другим способом повышения безопасности и устранения атак является включение элементов управления функциями Internet Explorer. Элементы управления функциями — это дополнения к Internet Explorer, позволяющие администраторам и разработчикам настраивать функции Internet Explorer и приложений, на которых размещается элемент <xref:System.Windows.Controls.WebBrowser> управления ActiveX WebBrowser, который является элементом управления WPF. Элементы управления функциями можно настраивать с помощью функции [коинтернетсетфеатуринаблед](https://go.microsoft.com/fwlink/?LinkId=179394) или изменяя значения в реестре. Дополнительные сведения об элементах управления функциями см. [в разделе Введение в элементы управления функциями](https://go.microsoft.com/fwlink/?LinkId=179390) и [элементы управления функциями Интернета](https://go.microsoft.com/fwlink/?LinkId=179392).  
+ Если приложение использует элемент управления WPF <xref:System.Windows.Controls.WebBrowser>, еще один способ повышения безопасности и устранения атак — включить элементы управления функциями Internet Explorer. Элементы управления функциями — это дополнения к Internet Explorer, позволяющие администраторам и разработчикам настраивать функции Internet Explorer и приложений, на которых размещается элемент управления ActiveX WebBrowser, который является элементом управления WPF <xref:System.Windows.Controls.WebBrowser>. Элементы управления функциями можно настраивать с помощью функции [коинтернетсетфеатуринаблед](https://go.microsoft.com/fwlink/?LinkId=179394) или изменяя значения в реестре. Дополнительные сведения об элементах управления функциями см. [в разделе Введение в элементы управления функциями](https://go.microsoft.com/fwlink/?LinkId=179390) и [элементы управления функциями Интернета](https://go.microsoft.com/fwlink/?LinkId=179392).  
   
- При разработке автономного приложения WPF, использующего элемент управления WPF <xref:System.Windows.Controls.WebBrowser> , WPF автоматически включает следующие элементы управления функциями для приложения.  
+ При разработке автономного приложения WPF, использующего элемент управления WPF <xref:System.Windows.Controls.WebBrowser>, WPF автоматически включает следующие элементы управления функциями для приложения.  
   
 |Элемент управления функцией|  
 |---------------------|  
@@ -184,7 +184,7 @@ ms.locfileid: "69962826"
  Элементы управления функциями применяются процессом, создающим экземпляр объекта ActiveX WebBrowser. Таким образом, при создании автономного приложения, которое может переходить к ненадежному содержимому, следует рассмотреть возможность включения дополнительных элементов управления функциями.  
   
 > [!NOTE]
-> Эта рекомендация основана на общих рекомендациях по безопасности узлов MSHTML и SHDOCVW. Дополнительные сведения см. в [разделе вопросы и ответы по безопасности главного узла MSHTML: Часть I из II](https://go.microsoft.com/fwlink/?LinkId=179396) и [часто задаваемые вопросы по безопасности узла MSHTML: Часть II из II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> Эта рекомендация основана на общих рекомендациях по безопасности узлов MSHTML и SHDOCVW. Дополнительные сведения см. [в разделе вопросы и ответы по безопасности главного узла MSHTML: часть I из II](https://go.microsoft.com/fwlink/?LinkId=179396) и [часто задаваемые вопросы о безопасности узла MSHTML: часть II из II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Для исполняемого файла можно включить следующие элементы управления функциями путем установки значения реестра равным 1.  
   
@@ -207,20 +207,20 @@ ms.locfileid: "69962826"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- При выполнении частичного доверия [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] , включающего элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в Windows Internet Explorer, WPF размещает элемент управления ActiveX WebBrowser в адресном пространстве процесса Internet Explorer. Так как элемент управления ActiveX WebBrowser размещается в процессе Internet Explorer, все элементы управления функциями для Internet Explorer также включены для элемента управления ActiveX WebBrowser.  
+ При выполнении [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] частичного доверия, включающего элемент управления <xref:System.Windows.Controls.WebBrowser> WPF в Windows Internet Explorer, WPF размещает элемент управления ActiveX WebBrowser в адресном пространстве процесса Internet Explorer. Так как элемент управления ActiveX WebBrowser размещается в процессе Internet Explorer, все элементы управления функциями для Internet Explorer также включены для элемента управления ActiveX WebBrowser.  
   
- XBAP-приложения, выполняющиеся в Internet Explorer, также получают более высокий уровень безопасности по сравнению с обычными автономными приложениями. Такая дополнительная безопасность заключается в том, что Internet Explorer и, следовательно, элемент управления ActiveX WebBrowser по умолчанию [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] работает в защищенном режиме в и. [!INCLUDE[win7](../../../includes/win7-md.md)] Дополнительные сведения о защищенном режиме см. [в разделе понимание и работа в защищенном режиме Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ XBAP-приложения, выполняющиеся в Internet Explorer, также получают более высокий уровень безопасности по сравнению с обычными автономными приложениями. Такая дополнительная безопасность обусловлена тем, что Internet Explorer и, следовательно, элемент управления ActiveX WebBrowser запускается в защищенном режиме по умолчанию на [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] и [!INCLUDE[win7](../../../includes/win7-md.md)]. Дополнительные сведения о защищенном режиме см. [в разделе понимание и работа в защищенном режиме Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
-> При попытке запустить XBAP, включающий элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в браузере Firefox, в зоне <xref:System.Security.SecurityException> Интернета будет создано исключение. Это связано с политикой безопасности WPF.  
+> При попытке запустить XBAP, включающий элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в браузере Firefox, в зоне Интернета будет выдано <xref:System.Security.SecurityException>. Это связано с политикой безопасности WPF.  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Отключение сборок APTCA для клиентских приложений с частичным доверием  
- Если управляемые сборки устанавливаются в глобальный кэш сборок (GAC), они становятся полностью доверенными, поскольку пользователь должен предоставить явное разрешение на их установку. Поскольку они пользуются полным доверием, их могут использовать только полностью доверенные управляемые клиентские приложения. Чтобы разрешить приложениям с частичным доверием использовать их, они должны быть помечены <xref:System.Security.AllowPartiallyTrustedCallersAttribute> атрибутом (APTCA). Этим атрибутом могут быть помечены только сборки, которые были протестированы для подтверждения безопасности при выполнении в режиме частичного доверия.  
+ Если управляемые сборки устанавливаются в глобальный кэш сборок (GAC), они становятся полностью доверенными, поскольку пользователь должен предоставить явное разрешение на их установку. Поскольку они пользуются полным доверием, их могут использовать только полностью доверенные управляемые клиентские приложения. Чтобы разрешить приложениям с частичным доверием использовать их, они должны быть помечены <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Этим атрибутом могут быть помечены только сборки, которые были протестированы для подтверждения безопасности при выполнении в режиме частичного доверия.  
   
  Однако сборка APTCA может вызвать изъян в системе безопасности после установки в глобальный кэш сборок. После обнаружения уязвимости безопасности издатели сборок могут создавать обновления безопасности для решения проблем существующих установок и защиты установок, которые могут выполняться после выявления проблемы. Одним из вариантов обновления является удаление сборки, хотя это может нарушить работу других полностью доверенных клиентских приложений, использующих сборку.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]предоставляет механизм, с помощью которого сборку APTCA можно отключить для частичного доверия [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] без удаления сборки APTCA.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предоставляет механизм, с помощью которого сборку APTCA можно отключить для частично доверенных [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] без удаления сборки APTCA.  
   
  Чтобы отключить сборку APTCA, необходимо создать специальный раздел реестра.  
   
@@ -245,11 +245,11 @@ ms.locfileid: "69962826"
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Режим песочницы для свободных файлов XAML  
- Свободные [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлы — это файлы XAML только для разметки, которые не зависят от кода программной части, обработчика событий или сборки конкретного приложения. При переходе к свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам непосредственно из браузера они загружаются в песочнице безопасности на основе набора разрешений зоны Интернета по умолчанию.  
+ Свободные файлы [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] — это файлы XAML только для разметки, которые не зависят от кода программной части, обработчика событий или сборки, зависящей от приложения. При переходе к свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам непосредственно из браузера они загружаются в песочнице безопасности на основе набора разрешений зоны Интернета по умолчанию.  
   
  Однако поведение безопасности отличается при переходе к свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам из <xref:System.Windows.Navigation.NavigationWindow> или <xref:System.Windows.Controls.Frame> в автономном приложении.  
   
- В обоих случаях свободный [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файл, к которому осуществляется переход, наследует разрешения ведущего приложения. Однако такое поведение может быть нежелательно с точки зрения безопасности, особенно если свободный [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файл был создан ненадежной или неизвестной сущностью. Этот тип содержимого называется *внешним содержимым*, и его <xref:System.Windows.Navigation.NavigationWindow> можно настроить <xref:System.Windows.Controls.Frame> таким образом, чтобы изолировать его при переходе к. Изоляция достигается путем присвоения свойству **сандбоксекстерналконтент** значения true, как показано в следующих примерах <xref:System.Windows.Controls.Frame> для <xref:System.Windows.Navigation.NavigationWindow>и:  
+ В обоих случаях свободный файл [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)], к которому осуществляется переход, наследует разрешения ведущего приложения. Однако такое поведение может быть нежелательно с точки зрения безопасности, особенно в том случае, если свободный [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файл был создан ненадежной или неизвестной сущностью. Этот тип содержимого известен как *внешнее содержимое*, и <xref:System.Windows.Controls.Frame> и <xref:System.Windows.Navigation.NavigationWindow> можно настроить таким образом, чтобы изолировать его при переходе к. Изоляция достигается путем присвоения свойству **сандбоксекстерналконтент** значения true, как показано в следующих примерах для <xref:System.Windows.Controls.Frame> и <xref:System.Windows.Navigation.NavigationWindow>.  
   
  [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
@@ -258,13 +258,13 @@ ms.locfileid: "69962826"
  Этот параметр позволяет загружать внешнее содержимое в процесс, который отделен от процесса, содержащего приложение. Этот процесс ограничен набором разрешений зоны Интернета по умолчанию, что эффективно изолирует его от ведущего приложения и клиентского компьютера.  
   
 > [!NOTE]
-> Несмотря на то, что [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] переход на свободные файлы <xref:System.Windows.Navigation.NavigationWindow> из <xref:System.Windows.Controls.Frame> или в автономном приложении реализуется на основе инфраструктуры размещения браузера WPF, включающей в себя процесс PresentationHost, уровень безопасности немного меньше, чем, когда содержимое загружается непосредственно в Internet [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] Explorer [!INCLUDE[win7](../../../includes/win7-md.md)] в и (что по-прежнему выполняется через PresentationHost). Это обусловлено тем, что автономное приложение WPF, использующее веб-браузер, не предоставляет дополнительную функцию безопасности "Защищенный режим" Internet Explorer.  
+> Хотя переход к свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам из <xref:System.Windows.Navigation.NavigationWindow> или <xref:System.Windows.Controls.Frame> в автономном приложении реализован на основе инфраструктуры размещения WPF, включающей в себя процесс PresentationHost, уровень безопасности немного меньше, чем при содержимое загружается непосредственно в Internet Explorer на [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] и [!INCLUDE[win7](../../../includes/win7-md.md)] (который по-прежнему будет использоваться в PresentationHost). Это обусловлено тем, что автономное приложение WPF, использующее веб-браузер, не предоставляет дополнительную функцию безопасности "Защищенный режим" Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Ресурсы для разработки приложений WPF, обеспечивающих безопасность  
- Ниже приведены некоторые дополнительные ресурсы, помогающие в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] разработке приложений, повышающих безопасность.  
+ Ниже приведены некоторые дополнительные ресурсы, помогающие в разработке [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] приложений, повышающих безопасность:  
   
-|Область|Resource|  
+|Область|Ресурс|  
 |----------|--------------|  
 |Управляемый код|[Шаблоны и рекомендации по обеспечению безопасности приложений](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |CAS|[Управление доступом для кода](../misc/code-access-security.md)|  

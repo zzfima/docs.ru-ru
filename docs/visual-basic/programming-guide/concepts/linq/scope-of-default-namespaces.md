@@ -2,12 +2,12 @@
 title: Область пространств имен по умолчанию в Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710354"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581886"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Область пространств имен по умолчанию в Visual Basic
 Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов. Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.  
@@ -50,7 +50,7 @@ End Module
 ### <a name="comments"></a>Комментарии  
  Этот пример выдает следующий результат:  
   
-```  
+```console  
 Result set follows:  
 End of result set  
 ```  
@@ -91,7 +91,7 @@ End Module
 ### <a name="comments"></a>Комментарии  
  Этот пример выдает следующий результат:  
   
-```  
+```console  
 Result set follows:  
 1  
 2  
