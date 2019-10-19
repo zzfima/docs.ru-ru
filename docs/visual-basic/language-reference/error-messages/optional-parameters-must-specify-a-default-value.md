@@ -7,29 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: b32c150f0faf4a9dcec3cec7620c3a9c050f6f20
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 8ec4627d070cc670ce04be3a5d0298dba0a279d0
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696875"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582135"
 ---
-# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="3183f-102">Для необязательных параметров должно быть задано значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="3183f-102">Optional parameters must specify a default value</span></span>
-<span data-ttu-id="3183f-103">Необязательные параметры должны предоставлять значения по умолчанию, которые можно использовать, если вызывающая процедура не предоставляет параметр.</span><span class="sxs-lookup"><span data-stu-id="3183f-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
-  
- <span data-ttu-id="3183f-104">**Идентификатор ошибки:** BC30812</span><span class="sxs-lookup"><span data-stu-id="3183f-104">**Error ID:** BC30812</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="3183f-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="3183f-105">To correct this error</span></span>  
-  
-- <span data-ttu-id="3183f-106">Укажите значения по умолчанию для необязательных параметров. Например:</span><span class="sxs-lookup"><span data-stu-id="3183f-106">Specify default values for optional parameters; for example:</span></span>  
-  
-    ```vb  
-    Sub Proc1(ByVal X As Integer,   
-          Optional ByVal Y As String = "Default Value")  
-       MsgBox("Default argument is: " & Y)  
-    End Sub  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="3183f-107">См. также</span><span class="sxs-lookup"><span data-stu-id="3183f-107">See also</span></span>
+# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="a5f74-102">Для необязательных параметров должно быть задано значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="a5f74-102">Optional parameters must specify a default value</span></span>
 
-- [<span data-ttu-id="3183f-108">Необязательный</span><span class="sxs-lookup"><span data-stu-id="3183f-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
+<span data-ttu-id="a5f74-103">Необязательные параметры должны предоставлять значения по умолчанию, которые можно использовать, если вызывающая процедура не предоставляет параметр.</span><span class="sxs-lookup"><span data-stu-id="a5f74-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>
+
+<span data-ttu-id="a5f74-104">**Идентификатор ошибки:** BC30812</span><span class="sxs-lookup"><span data-stu-id="a5f74-104">**Error ID:** BC30812</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="a5f74-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="a5f74-105">To correct this error</span></span>
+
+<span data-ttu-id="a5f74-106">Укажите значения по умолчанию для необязательных параметров. Например:</span><span class="sxs-lookup"><span data-stu-id="a5f74-106">Specify default values for optional parameters; for example:</span></span>
+
+```vb
+Sub Proc1(ByVal X As Integer,
+      Optional ByVal Y As String = "Default Value")
+    MsgBox("Default argument is: " & Y)
+End Sub
+```
+
+## <a name="see-also"></a><span data-ttu-id="a5f74-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a5f74-107">See also</span></span>
+
+- [<span data-ttu-id="a5f74-108">Необязательный</span><span class="sxs-lookup"><span data-stu-id="a5f74-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
