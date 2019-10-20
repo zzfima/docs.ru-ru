@@ -2,12 +2,12 @@
 title: Команда dotnet-add reference
 description: Команду dotnet add reference удобно использовать для добавления ссылок между проектами.
 ms.date: 06/26/2019
-ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117782"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522766"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -39,43 +39,43 @@ ms.locfileid: "71117782"
 
 ## <a name="arguments"></a>Аргументы
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   Указывает файл проекта. Если он не указан, команда ищет текущий каталог для него.
 
-* **`PROJECT_REFERENCES`**
+- **`PROJECT_REFERENCES`**
 
   Добавляемые перекрестные ссылки между проектами (P2P). Укажите один или несколько проектов. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в системах на основе Unix или Linux.
 
 ## <a name="options"></a>Параметры
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Выводит краткую справку по команде.
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Добавляет ссылки на проекты только при ориентации на конкретную [платформу](../../standard/frameworks.md).
 
-* **`--interactive`**
+- **`--interactive`**
 
   Позволяет остановить команду и дождаться, пока пользователь введет данные или выполнит действие (например, завершит проверку подлинности). Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 ## <a name="examples"></a>Примеры
 
-* Добавление ссылки на проект:
+- Добавление ссылки на проект:
 
   ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-* Добавление нескольких ссылок на проекты в проект в текущем каталоге:
+- Добавление нескольких ссылок на проекты в проект в текущем каталоге:
 
   ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-* Добавление нескольких ссылок на проект с помощью стандартной маски в Linux/Unix:
+- Добавление нескольких ссылок на проект с помощью стандартной маски в Linux/Unix:
 
   ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj

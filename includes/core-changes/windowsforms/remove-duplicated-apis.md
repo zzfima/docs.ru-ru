@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 4d67da34cf692133df95480a7f0215943337a34e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3d0a90a57c2b1c2759b8420e74c284668d54e9cb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003006"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526771"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Дублированные API удалены из Windows Forms
 
-В .NET Core 3.0 RC1 были удалены некоторые API, которые случайно дублируются в пространстве имен <xref:System.Windows.Forms?displayProperty=fullName> начиная с версии .NET Core 3.0, предварительная версия 4. 
+В .NET Core 3.0 RC1 были удалены некоторые API, которые случайно дублируются в пространстве имен <xref:System.Windows.Forms?displayProperty=fullName> начиная с версии .NET Core 3.0, предварительная версия 4.
 
 #### <a name="change-description"></a>Описание изменений
 
@@ -38,7 +38,7 @@ Windows Forms
 
 - Невозможно обнаружить с помощью анализа API.
 
-<!-- 
+<!--
 
 ### Affected APIs
 

@@ -4,12 +4,12 @@ description: Обзор инструмента Microsoft WCF Web Service Referen
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926460"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522237"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Использование инструмента WCF Web Service Reference Provider
 
@@ -20,16 +20,16 @@ ms.locfileid: "70926460"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) или более поздней версии
+- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) или более поздней версии
 
 ## <a name="how-to-use-the-extension"></a>Использование расширения
 
 > [!NOTE]
 > Функция **WCF Web Service Reference** (Ссылка на веб-службу WCF) применима к проектам, созданным с помощью следующих шаблонов проекта:
 >
-> * **Visual C#**  >  **.NET Core**
-> * **Visual C#**  >  **.NET Standard**
-> * **Visual C#**  > **Web** > **Веб-приложение ASP.NET Core**
+> - **Visual C#**  >  **.NET Core**
+> - **Visual C#**  >  **.NET Standard**
+> - **Visual C#**  > **Web** > **Веб-приложение ASP.NET Core**
 
 Эта статья, где в качестве примера используется шаблон проекта **Веб-приложение ASP.NET Core**, описывает добавление ссылки на службу WCF в проект:
 
@@ -68,9 +68,9 @@ ms.locfileid: "70926460"
 
 Отображая ход выполнения, инструмент:
 
-* скачивает метаданные из службы WCF;
-* формирует код для ссылок на службы в файле с именем *reference.cs* и добавляет его в узел **Подключенные службы** проекта;
-* обновляет файл проекта (CSPROJ-файл) с использованием ссылок на пакеты NuGet, необходимых для компиляции и запуска на целевой платформе.
+- скачивает метаданные из службы WCF;
+- формирует код для ссылок на службы в файле с именем *reference.cs* и добавляет его в узел **Подключенные службы** проекта;
+- обновляет файл проекта (CSPROJ-файл) с использованием ссылок на пакеты NuGet, необходимых для компиляции и запуска на целевой платформе.
 
 ![Окно хода выполнения в Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ ms.locfileid: "70926460"
 
 ### <a name="release-notes"></a>заметки о выпуске;
 
-* Актуальные сведения о выпуске, включая описание известных проблем, см. в [заметках о выпуске](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md).
+- Актуальные сведения о выпуске, включая описание известных проблем, см. в [заметках о выпуске](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md).

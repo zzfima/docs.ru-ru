@@ -2,12 +2,12 @@
 title: Команда dotnet build-server
 description: Команда dotnet build-server взаимодействует с серверами, запущенными сборкой.
 ms.date: 04/24/2019
-ms.openlocfilehash: 89d1aba104e2cb07b46766a3768eed68d85a7aa7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1c6c6dcdb53d779426daf5daa470d2ad0470a7a1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117763"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523011"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
@@ -31,24 +31,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>Команды
 
-* **`shutdown`**
+- **`shutdown`**
 
   Завершает работу серверов сборки, запущенных командой dotnet. По умолчанию все серверы завершают работу.
 
 ## <a name="options"></a>Параметры
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Выводит краткую справку по команде.
 
-* **`--msbuild`**
+- **`--msbuild`**
 
   Завершает работу сервера сборки MSBuild.
 
-* **`--razor`**
+- **`--razor`**
 
   Завершает работу сервера сборки Razor.
 
-* **`--vbcscompiler`**
+- **`--vbcscompiler`**
 
   Завершает работу сервера сборки компилятора VB/C#.

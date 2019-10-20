@@ -4,12 +4,12 @@ description: Дополнительные сведения об изменени
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656301"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522089"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Обновление версии среды выполнения автономного развертывания
 
@@ -28,8 +28,8 @@ ms.locfileid: "53656301"
 
 Выполнение операции `restore` в рамках операции `publish` может привести к нежелательным результатам. Чтобы избежать операции `restore` во время операции `publish` при создании автономных приложений, выполните следующие действия:
 
-* Установите для свойства `RuntimeIdentifiers` разделенный точкой с запятой список идентификаторов [RID](../rid-catalog.md) для публикации.
-* Задайте для свойства `TargetLatestRuntimePatch` значение `true`.
+- Установите для свойства `RuntimeIdentifiers` разделенный точкой с запятой список идентификаторов [RID](../rid-catalog.md) для публикации.
+- Задайте для свойства `TargetLatestRuntimePatch` значение `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Аргумент no-restore в параметрах dotnet publish
 

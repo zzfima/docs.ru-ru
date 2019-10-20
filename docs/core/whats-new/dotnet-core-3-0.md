@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216266"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395437"
 ---
 # <a name="whats-new-in-net-core-30"></a>Новые возможности .NET Core 3.0
 
 В этой статье описываются новые возможности в .NET Core 3.0. Одно из основных усовершенствований — это поддержка классических приложений Windows (только Windows). С помощью пакета SDK для .NET Core 3.0 под названием Windows Desktop можно переносить приложения Windows Forms и Windows Presentation Foundation (WPF). Следует уточнить, что компонент Windows Desktop поддерживается и включен только в Windows. Дополнительные сведения см. далее в этой статье, в разделе [Рабочий стол Windows](#windows-desktop).
 
-В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio для Mac 8.3](/visualstudio/mac/install-preview) или [Visual Studio Code](https://code.visualstudio.com/) с **расширением C#**.
+В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio для Mac 8.3](/visualstudio/mac/install-preview) или [Visual Studio Code](https://code.visualstudio.com/) с **расширением C#** .
 
 [Скачайте .NET Core 3.0 и начните работу](https://aka.ms/netcore3download) прямо сейчас в Windows, macOS или Linux.
 
@@ -28,7 +28,7 @@ ms.locfileid: "71216266"
 
 ## <a name="net-core-sdk-windows-installer"></a>Установщик пакета SDK Windows для .NET Core
 
-Начиная с .NET Core 3.0, установщик MSI для Windows был изменен. Установщики пакетов SDK теперь обновляют дополнительные пакеты функций SDK на месте. Пакеты функций определяют *сотни* в обозначении *исправления* в номере версии. Например, в версиях **3.0._101_** и **3.0._201_** пакеты функций различаются, а в версиях **3.0._101_** и **3.0._199_**  — одинаковы. При установке пакета SDK для .NET Core **3.0._101_** пакет SDK для .NET Core **3.0._100_**, если он есть на компьютере, удаляется. Когда на тот же компьютер устанавливается пакет SDK для .NET Core **3.0._200_**, пакет SDK для .NET Core **3.0._101_** удаляться не будет.
+Начиная с .NET Core 3.0, установщик MSI для Windows был изменен. Установщики пакетов SDK теперь обновляют дополнительные пакеты функций SDK на месте. Пакеты функций определяют *сотни* в обозначении *исправления* в номере версии. Например, в версиях **3.0._101_** и **3.0._201_** пакеты функций различаются, а в версиях **3.0._101_** и **3.0._199_**  — одинаковы. При установке пакета SDK для .NET Core **3.0._101_** пакет SDK для .NET Core **3.0._100_** , если он есть на компьютере, удаляется. Когда на тот же компьютер устанавливается пакет SDK для .NET Core **3.0._200_** , пакет SDK для .NET Core **3.0._101_** удаляться не будет.
 
 Дополнительные сведения об управлении версиями см. в разделе [Общие сведения об управлении версиями в .NET Core](../versions/index.md).
 
@@ -54,7 +54,7 @@ ms.locfileid: "71216266"
 
 ## <a name="improved-net-core-version-apis"></a>Улучшенные API версий .NET Core
 
-Начиная с .NET Core 3.0, API версий, предоставляемые с .NET Core, возвращают те данные, которые должны. Например: 
+Начиная с .NET Core 3.0, API версий, предоставляемые с .NET Core, возвращают те данные, которые должны. Например:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -112,7 +112,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 -или-
 
 ```dotnetcli
-dotnet publish -r win10-x64 /p:PublishSingleFile=true
+dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
 Дополнительные сведения о публикации однофайловых исполняемых файлов см. в [документе о разработке однофайловых пакетных установщиков](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
