@@ -4,12 +4,12 @@ description: Научитесь анализировать внешние зав
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904332"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521474"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Анализ зависимостей для переноса кода в .NET Core
 
@@ -20,8 +20,8 @@ ms.locfileid: "55904332"
 Если в своем проекте вы ссылаетесь на пакеты NuGet, необходимо проверить, совместимы ли они с .NET Core.
 Этого можно добиться двумя способами:
 
-* [С помощью приложения обозревателя пакетов NuGet](#analyze-nuget-packages-using-nuget-package-explorer).
-* [С помощью сайта nuget.org](#analyze-nuget-packages-using-nugetorg).
+- [С помощью приложения обозревателя пакетов NuGet](#analyze-nuget-packages-using-nuget-package-explorer).
+- [С помощью сайта nuget.org](#analyze-nuget-packages-using-nugetorg).
 
 Если анализ пакетов покажет, что они не совместимы с .NET Core и предназначены только для использования с .NET Framework, можно проверить, поможет ли выполнить перенос [режим совместимости .NET Framework](#net-framework-compatibility-mode).
 
