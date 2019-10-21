@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924696"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520287"
 ---
 # <a name="extern-alias-c-reference"></a>Псевдоним extern (Справочник по C#)
 Иногда может потребоваться сослаться на две версии сборок, которые имеют одинаковые полные имена типов. Например, если необходимо использовать две или более версии сборки в одном приложении. Используя внешний псевдоним сборки, пространства имен для каждой сборки можно перенести внутрь пространств имен корневого уровня с именованием по псевдониму, что позволяет использовать их в одном файле.  
@@ -47,4 +47,4 @@ ms.locfileid: "69924696"
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](./index.md)
 - [:: Оператор](../operators/namespace-alias-qualifier.md)
-- [/reference (параметры компилятора C#)](../compiler-options/reference-compiler-option.md)
+- [-reference (параметры компилятора C#)](../compiler-options/reference-compiler-option.md)

@@ -2,12 +2,12 @@
 title: Сравнение шаблона шлюза API с прямым взаимодействием клиента и микрослужбы
 description: Общие сведения о различиях использования шаблона шлюза API и прямого взаимодействия клиента и микрослужбы.
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834437"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522948"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Сравнение шаблона шлюза API с прямым взаимодействием клиента и микрослужбы
 
@@ -17,7 +17,7 @@ ms.locfileid: "71834437"
 
 Возможный подход — использование архитектуры с прямым взаимодействием между клиентом и микрослужбой. При таком подходе клиентские приложения могут отправлять запросы к некоторым микрослужбам напрямую, как показано на рис. 4-12.
 
-![На схеме представлена архитектура с взаимодействием клиента и микрослужбы.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![На схеме представлена архитектура с взаимодействием клиента и микрослужбы.](./media/direct-client-to-microservice-communication.png)
 
 **Рис. 4-12**. Использование архитектуры с прямым взаимодействием клиента и микрослужбы
 
@@ -185,7 +185,7 @@ Ocelot используется в [примере приложения eShopOnC
 - **Уди Дахан (Udi Dahan). Объединение на основе служб** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Клеменс Вастерс (Clemens Vasters). Messaging and Microservices (Обмен сообщениями и микрослужбы) на GOTO 2016 (видео)** \
+- **Клеменс Вастерс (Clemens Vasters). Messaging and Microservices (Обмен сообщениями и микрослужбы) на GOTO 2016 (видео)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API Gateway in a Nutshell** (Краткие сведения о шлюзе API) — серия руководств по шлюзу API ASP.NET Core \

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587854"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523378"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Обработка XML-файла (руководство по программированию на C#)
 
@@ -27,7 +27,7 @@ ms.locfileid: "69587854"
 
     |Знак|ОПИСАНИЕ|
     |---------------|-----------------|
-    |в|namespace<br /><br /> Вы не можете присвоить комментарий документации пространству имен, но можете создать для него cref-ссылку, если они поддерживаются.|
+    |Нет|namespace<br /><br /> Вы не можете присвоить комментарий документации пространству имен, но можете создать для него cref-ссылку, если они поддерживаются.|
     |T|тип: класс, интерфейс, структура, перечисление, делегат|
     |C|поле|
     |С|свойство (включая индексаторы или другие индексированные свойства)|
@@ -86,5 +86,5 @@ ms.locfileid: "69587854"
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
-- [/doc (параметры компилятора C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (параметры компилятора C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Комментарии XML-документации](./index.md)

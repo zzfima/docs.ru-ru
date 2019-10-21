@@ -2,12 +2,12 @@
 title: Асинхронное взаимодействие на основе сообщений
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Асинхронная связь на основе сообщений является основным понятием в архитектуре микрослужб, так как это лучший способ обеспечить независимость микрослужб друг от друга и при этом синхронизировать их.
 ms.date: 09/20/2018
-ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834474"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522756"
 ---
 # <a name="asynchronous-message-based-communication"></a>Асинхронное взаимодействие на основе сообщений
 
@@ -77,14 +77,14 @@ ms.locfileid: "71834474"
 
 - Использование полной модели [источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
-- Использование [модели исходящих сообщений](http://gistlabs.com/2014/05/the-outbox/), таблицы базы данных транзакций как очереди сообщений, которая служит основой для компонента генерации событий, создающего и публикующего события.
+- Использование [модели исходящих сообщений](http://www.kamilgrzybek.com/design/the-outbox-pattern/), таблицы базы данных транзакций как очереди сообщений, которая служит основой для компонента генерации событий, создающего и публикующего события.
 
 При использовании асинхронного взаимодействия следует дополнительно рассмотреть вопросы идемпотентности и дедупликации сообщений. Эти вопросы рассматриваются в разделе [Реализация взаимодействия между микрослужбами на основе событий (события интеграции)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) далее в этом руководстве.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Обмен сообщениями на основе событий** \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Канал публикации или подписки** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
@@ -92,7 +92,7 @@ ms.locfileid: "71834474"
 - **Уди Дахан (Udi Dahan). Пояснения к CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **Архитектура с разделением команд и запросов (CQRS)** \
+- **Архитектура с разделением команд и запросов (CQRS)**  \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Взаимодействие между ограниченными контекстами** \
