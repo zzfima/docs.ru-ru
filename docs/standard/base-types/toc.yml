@@ -30,21 +30,21 @@
         - name: Выполнение операций форматирования
           href: performing-formatting-operations.md
           items:
-            - name: Как выполнить Добавление к числу начальных нулей
+            - name: Практическое руководство. Дополнение числа начальными нулями
               href: how-to-pad-a-number-with-leading-zeros.md
-            - name: Как выполнить Извлечение дня недели из конкретной даты
+            - name: Практическое руководство. Извлечение дня недели из конкретной даты
               href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-            - name: Как выполнить Определение и использование настраиваемых поставщиков числовых форматов
+            - name: Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
               href: how-to-define-and-use-custom-numeric-format-providers.md
-            - name: Как выполнить Значения даты и времени кругового пути
+            - name: Практическое руководство. Сохранение и восстановление значения даты и времени
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Как выполнить Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа'
+            - name: 'Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа'
               href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
+            - name: Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
               href: how-to-display-localized-date-and-time-information-to-web-users.md
-            - name: Как выполнить Отображение миллисекунд в значениях даты и времени
+            - name: Практическое руководство. Отображение миллисекунд в значениях даты и времени
               href: how-to-display-milliseconds-in-date-and-time-values.md
-            - name: 'Как выполнить Отображение дат в календарях, отличных от григорианского'
+            - name: 'Практическое руководство. Отображение дат в календарях, отличных от григорианского'
               href: how-to-display-dates-in-non-gregorian-calendars.md
     - name: Операции со строками
       href: manipulating-strings.md
@@ -66,7 +66,7 @@
               href: changing-case.md
             - name: Использование класса StringBuilder
               href: stringbuilder.md
-            - name: Как выполнить Выполнение базовых операций со строками
+            - name: Практическое руководство. Выполнение базовых операций со строками
               href: basic-manipulations.md
         - name: Регулярные выражения в .NET
           href: regular-expressions.md
@@ -110,15 +110,15 @@
             - name: Примеры регулярных выражений
               href: regular-expression-examples.md
               items:
-                - name: Пример поиск ссылок HREF
+                - name: Пример регулярного выражения. Поиск ссылок HREF
                   href: regular-expression-example-scanning-for-hrefs.md
-                - name: Пример Изменение форматов даты
+                - name: Пример регулярного выражения. Изменение форматов даты
                   href: regular-expression-example-changing-date-formats.md
-                - name: Как выполнить Извлечение протокола и номера порта из URL-адреса
+                - name: Практическое руководство. Извлечение протокола и номера порта из URL-адреса
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-                - name: Как выполнить Исключение недопустимых символов из строки
+                - name: Практическое руководство. Исключение недопустимых символов из строки
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: Как выполнить Проверка строк на соответствие формату электронной почты
+                - name: Практическое руководство. Проверка строк на соответствие формату электронной почты
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: Кодировка символов в .NET
           href: character-encoding.md
