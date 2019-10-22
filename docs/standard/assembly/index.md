@@ -14,12 +14,12 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970017"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583012"
 ---
 # <a name="assemblies-in-net"></a>Сборки в .NET
 
@@ -93,7 +93,7 @@ ms.locfileid: "70970017"
 
 ## <a name="related-content"></a>Связанная информация
   
-|Название|ОПИСАНИЕ|  
+|Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Содержимое сборок](contents.md)|Элементы, составляющие сборку.|  
 |[Манифест сборки](manifest.md)|Данные в манифесте сборки и способ их хранения в сборках.|  
@@ -115,6 +115,7 @@ ms.locfileid: "70970017"
 - [Формат файла сборки .NET](file-format.md)
 - [Сборки в .NET](index.md)
 - [Дружественные сборки](friend.md)
-- [How to: Загрузка и выгрузка сборок](load-unload.md)
-- [How to: Использование и отладка сборок с возможностью выгрузки в .NET Core](unloadability.md)
-- [How to: Определение того, является ли файл сборкой](identify.md)
+- [Ссылочные сборки](reference-assemblies.md)
+- [Практическое руководство. Загрузка и выгрузка сборок](load-unload.md)
+- [Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core](unloadability.md)
+- [Практическое руководство. Определение того, является ли файл сборкой](identify.md)
