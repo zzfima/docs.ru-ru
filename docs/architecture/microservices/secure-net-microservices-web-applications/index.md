@@ -4,12 +4,12 @@ description: Безопасность микрослужб и веб-прило�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 5e9b616e0443e85c016401a51efc3b04d2329e3b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771988"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798854"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Обеспечение безопасности микрослужб и веб-приложений .NET
 
@@ -293,9 +293,6 @@ public void ConfigureServices(IServiceCollection services)
 
 - **репозиторий GitHub для поставщиков OAuth в ASP.NET**\
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
-
-- **Дэнни Строкис (Danny Strockis). Integrating Azure AD into an ASP.NET Core Web App (Интеграция Azure AD в веб-приложение ASP.NET Core)**  \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4. Официальная документация** \
   <https://identityserver4.readthedocs.io/en/latest/>
