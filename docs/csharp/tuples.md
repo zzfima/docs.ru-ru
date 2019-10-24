@@ -3,12 +3,12 @@ title: Типы кортежей — руководство по C#
 description: Сведения о типах именованных и неименованных кортежей в C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105894"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319759"
 ---
 # <a name="c-tuple-types"></a>Типы кортежей в C#
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 Метод `Deconstruct` может преобразовать объект `Person` `p` в кортеж, содержащий две строки, но он неприменим в контексте проверок на равенство.
+
+## <a name="tuples-as-out-parameters"></a>Кортежи как параметры вывода
+
+Кортежи можно использовать в качестве параметров вывода *сами по себе*. Это не является неоднозначностью, как упоминается выше в разделе [Деконструирование](#deconstruction). В вызове метода необходимо описать только форму кортежа:
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+Кроме того, можно использовать [_безымянный_](#named-and-unnamed-tuples) кортеж и ссылаться на его поля как на `Item1` и `Item2`:
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>Заключение 
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567579"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320016"
 ---
 # <a name="net-framework-application-essentials"></a>Основные сведения о приложениях .NET Framework
 В этом разделе документации по платформе .NET Framework представлены сведения о базовых задачах разработки приложений с использованием .NET Framework.  
@@ -54,8 +54,7 @@ ms.locfileid: "33567579"
  [Глобализация и локализация](../../docs/standard/globalization-localization/index.md)  
  Сведения о проектировании и разработке готовых к работе приложений.  
   
- Специальные возможности  
- Сведения о Microsoft UI Automation, платформе специальных возможностей, созданной для реализации продуктов со специальными возможностями и платформ автоматизированного тестирования с помощью программного доступа к сведениям о пользовательском интерфейсе.  
+ [Специальные возможности](../../docs/framework/ui-automation/index.md) Сведения о Microsoft UI Automation, платформе специальных возможностей, созданной для реализации продуктов со специальными возможностями и платформ автоматизированного тестирования с помощью программного доступа к сведениям о пользовательском интерфейсе.  
   
  [Атрибуты](../../docs/standard/attributes/index.md)  
  Описание использования атрибутов для настройки метаданных.  

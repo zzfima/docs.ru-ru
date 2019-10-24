@@ -4,12 +4,12 @@ description: Безопасность микрослужб и веб-прило�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5e9b616e0443e85c016401a51efc3b04d2329e3b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295207"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771988"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Обеспечение безопасности микрослужб и веб-приложений .NET
 

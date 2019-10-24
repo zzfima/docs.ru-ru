@@ -1,16 +1,16 @@
 ---
-title: Как выполнить Сравнение строк (руководство по C#)
+title: Практическое руководство. Сравнение строк (руководство по C#)
 description: Сведения о том, как сравнивать и упорядочивать строковые значения с учетом или без учета регистра и порядка для определенного языка.
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759876"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395445"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Сравнение строк в C\#
 
@@ -29,19 +29,19 @@ ms.locfileid: "58759876"
 
 ## <a name="default-ordinal-comparisons"></a>Порядковые сравнения по умолчанию
 
-Самые распространенные операции:
+Ниже представлены самые распространенные операции по умолчанию:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> и <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>, т. е. операторы [равенства `==` и `!=`](../language-reference/operators/equality-operators.md#string-equality) соответственно
 
-порядковое сравнение, сравнение с учетом регистра и текущие значения языка и региональных параметров. Соответствующие результаты показаны в примере ниже.
+выполняют порядковое сравнение с учетом регистра и используют текущие значения языка и региональных параметров при необходимости. Это показано в следующем примере:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-При порядковых сравнениях строк по умолчанию лингвистические правила не учитываются. В них сравнивается двоичное значение каждого объекта <xref:System.Char> в двух строках. Таким образом, в порядковом сравнении по умолчанию также учитывается регистр. 
+При порядковых сравнениях строк по умолчанию лингвистические правила не учитываются. В них сравнивается двоичное значение каждого объекта <xref:System.Char> в двух строках. Таким образом, в порядковом сравнении по умолчанию также учитывается регистр.
 
-Обратите внимание, что проверка на равенство с <xref:System.String.Equals%2A?displayProperty=nameWithType> и <xref:System.String.op_Equality%2A?displayProperty=nameWithType> отличается от сравнения строк с использованием методов <xref:System.String.CompareTo%2A?displayProperty=nameWithType> и <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Несмотря на то, что в тестах на равенство происходит порядковое сравнение с учетом регистра, метод сравнения выполняет сравнение с учетом регистра, с учетом языка и региональных параметров с использованием текущего значения языка и региональных параметров. Поскольку методы сравнения по умолчанию часто выполняют сравнения различных типов, рекомендуется всегда четко определять назначение кода путем вызова перегрузки, которая явно указывает тип выполняемого сравнения.
+Обратите внимание, что проверка на равенство с использованием <xref:System.String.Equals%2A?displayProperty=nameWithType>, а также операторов `==` и `!=` отличается от сравнения строк с использованием методов <xref:System.String.CompareTo%2A?displayProperty=nameWithType> и <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Хотя в проверках на равенство выполняется порядковое сравнение с учетом регистра, метод сравнения выполняет сравнение с учетом регистра, с учетом языка и региональных параметров с использованием текущего значения языка и региональных параметров. Поскольку методы сравнения по умолчанию часто выполняют сравнения различных типов, рекомендуется всегда четко определять назначение кода путем вызова перегрузки, которая явно указывает тип выполняемого сравнения.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Порядковые сравнения без учета регистра
 

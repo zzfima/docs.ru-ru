@@ -5,21 +5,22 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: bb1ce118bd46b2db840138a7ca13e9d1f5d75231
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: e07ded52d76e027127ad41c14c39730648c0ca12
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053653"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775185"
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
-Этот раздел документации помогает начать разработку приложений на Visual Basic.  
-  
+
+Этот раздел документации помогает начать разработку приложений на Visual Basic.
+
 ## <a name="get-started-with-visual-basic-and-net-core"></a>Начало работы с Visual Basic и .NET Core
 
 [Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
 
-[Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)  
+[Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
@@ -34,11 +35,8 @@ ms.locfileid: "66053653"
 
 ## <a name="see-also"></a>См. также
 
-- [Получить Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)\
+- [Получить Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
 Ссылки для скачивания версий Visual Studio с поддержкой Visual Basic, включая бесплатные версии.
-
-- [Основы программирования на Visual Basic для начинающих](https://mva.microsoft.com/en-us/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
-Курс академии Microsoft Virtual Academy по основам программирования на Visual Basic.
 
 - [Объектно-ориентированное программирование](../programming-guide/concepts/object-oriented-programming.md)\
 Ссылки на страницы, знакомящие с основами объектно-ориентированного программирования и описывающие порядок создания собственных объектов и их использования для упрощения программирования.
@@ -49,7 +47,7 @@ ms.locfileid: "66053653"
 - [Пошаговые руководства](../../visual-basic/walkthroughs.md)\
 Перечень страниц справки, демонстрирующих различные аспекты языка Visual Basic.
 
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)\
+- [Параметры обратной связи для Visual Studio](/visualstudio/ide/feedback-options)\
 Способы получения поддержки и обеспечения обратной связи.
 
 - [Visual Studio](/visualstudio/)\

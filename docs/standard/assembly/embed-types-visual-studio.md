@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f32bd840efa97b62097a2d051c25d519785b381
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a37a3bcc3b1bc352d6a2f59691819e0b2403d3d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972735"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523894"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio
 
@@ -323,8 +323,8 @@ ms.locfileid: "70972735"
 
 ## <a name="see-also"></a>См. также
 
-- [/link (параметры компилятора C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [-link (параметры компилятора C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [Руководство по программированию на C#](../../csharp/programming-guide/index.md)
 - [Основные понятия программирования (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [Программирование с использованием сборок](program.md)

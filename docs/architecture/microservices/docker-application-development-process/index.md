@@ -2,12 +2,12 @@
 title: Процесс разработки для приложений на основе Docker
 description: Общий обзор возможностей для разработки приложений Docker. Использование Visual Studio для Windows, Visual Studio для Mac и Visual Studio Code для поддержки нескольких платформ (Windows, Mac и Linux).
 ms.date: 09/27/2018
-ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6299d67299948dce1081a211b350e657b2c1b951
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295141"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770129"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Процесс разработки для приложений на основе Docker
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295141"
 
 Предпочитаете ли вы использовать полнофункциональную среду IDE или упрощенный редактор, корпорация Майкрософт предлагает средства, с помощью которых можно разрабатывать приложения Docker.
 
-**Visual Studio (для Windows).** При разработке приложений Docker с помощью Visual Studio, мы рекомендуем использовать Visual Studio 2017 начиная с версии 15.7. Этот инструмент уже встроен в средства для Docker. Средства для Docker позволяют разрабатывать, запускать и проверять приложения непосредственно в целевой среде Docker. Нажмите клавишу F5 для запуска и отладки приложения (на основе одного контейнера или нескольких) непосредственно в узле Docker или нажмите клавиши CTRL+F5 для редактирования и обновления приложения без повторной сборки контейнера. Это самый эффективный вариант разработки приложений на основе Docker.
+**Visual Studio (для Windows).** При разработке приложений Docker с помощью Visual Studio мы рекомендуем использовать Visual Studio 2017 начиная с версии 15.7. Этот инструмент уже встроен в средства для Docker. Средства для Docker позволяют разрабатывать, запускать и проверять приложения непосредственно в целевой среде Docker. Нажмите клавишу F5 для запуска и отладки приложения (на основе одного контейнера или нескольких) непосредственно в узле Docker или нажмите клавиши CTRL+F5 для редактирования и обновления приложения без повторной сборки контейнера. Это самый эффективный вариант разработки приложений на основе Docker.
 
 **Visual Studio для Mac.** Это интегрированная среда разработки, дальнейшее развитие Xamarin Studio, которая работает в macOS и поддерживает Docker с середины 2017 года. Она должна быть предпочтительным вариантом для разработчиков, работающих на компьютерах Mac и стремящихся использовать мощную интегрированную среду разработки.
 
@@ -37,7 +37,7 @@ ms.locfileid: "70295141"
 
 - **Docker Desktop for Windows Community Edition (CE)**  \
   [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-  
+
 - **Docker Desktop for Mac Community Edition (CE)**  \
   [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 

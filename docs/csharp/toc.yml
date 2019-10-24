@@ -1298,14 +1298,16 @@
               items:
                 - name: Характеристики типов значений
                   href: language-reference/keywords/value-types.md
-                - name: bool
-                  href: language-reference/keywords/bool.md
                 - name: Целочисленные типы
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
                 - name: Числовые типы с плавающей запятой
-                  displayName: 'float, decimal, double, rational, real'
+                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: Встроенные числовые преобразования
+                  href: language-reference/builtin-types/numeric-conversions.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
                 - name: char
                   href: language-reference/keywords/char.md
                 - name: enum
@@ -1316,11 +1318,11 @@
               items:
                 - name: Характеристики ссылочных типов
                   href: language-reference/keywords/reference-types.md
-                - name: class
-                  href: language-reference/keywords/class.md
                 - name: Встроенные ссылочные типы
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
+                - name: class
+                  href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
             - name: void
@@ -1337,10 +1339,6 @@
                   href: language-reference/keywords/value-types-table.md
                 - name: Таблица значений по умолчанию
                   href: language-reference/keywords/default-values-table.md
-                - name: Таблица неявных числовых преобразований
-                  href: language-reference/keywords/implicit-numeric-conversions-table.md
-                - name: Таблица явных числовых преобразований
-                  href: language-reference/keywords/explicit-numeric-conversions-table.md
                 - name: Таблица форматирования числовых результатов
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Модификаторы

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290944"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319111"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Логические операторы (справочник по C#)
 
@@ -55,7 +55,7 @@ ms.locfileid: "72290944"
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-Начиная с C# 8.0 унарный постфиксный оператор `!` [допускает значение NULL](null-forgiving.md).
+Начиная с C# 8.0, унарный постфиксный оператор `!` [допускает значение NULL](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Оператор логического И &amp;
 

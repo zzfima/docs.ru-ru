@@ -4,12 +4,12 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515199"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319113"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Установка платформы .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8
 
@@ -19,7 +19,7 @@ ms.locfileid: "43515199"
 
 Если вы попробуете запустить приложение, которому требуется платформа .NET Framework 3.5, может появиться следующее окно настройки. Выберите вариант **Установить этот компонент**, чтобы включить .NET Framework 3.5. Для использования этого варианта требуется подключение к Интернету.
 
-![Диалоговое окно установки .NET Framework](./media/dotnet-framework-installation-dialog.jpg)
+![Снимок экрана: диалоговое окно установки .NET Framework](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>Почему появляется это всплывающее окно?
 
@@ -29,17 +29,17 @@ ms.locfileid: "43515199"
 
 Вы можете самостоятельно включить .NET Framework 3.5 через панель управления Windows. Для использования этого варианта требуется подключение к Интернету.
 
-1. Нажмите клавишу Windows ![с логотипом Windows](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) на клавиатуре, введите "Компоненты Windows" и нажмите клавишу ВВОД. Откроется диалоговое окно **Включение и отключение компонентов Windows**.
+1. Нажмите клавишу с логотипом Windows ![Снимок экрана: клавиша с логотипом Windows](./media/dotnet-35-windows-10/windows-keyboard-logo.png) на клавиатуре, введите "Компоненты Windows" и нажмите ВВОД. Откроется диалоговое окно **Включение и отключение компонентов Windows**.
 
-2. Установите флажок **.NET Framework 3.5 (включает .NET 2.0 и 3.0)**, нажмите кнопку **OK** и перезагрузите компьютер при появлении соответствующего запроса.
+2. Установите флажок **.NET Framework 3.5 (включает .NET 2.0 и 3.0)** , нажмите кнопку **OK** и перезагрузите компьютер при появлении соответствующего запроса.
 
-   ![Установка .NET с помощью панели управления](./media/dotnet-control-panel.png)
+   ![Снимок экрана: установка .NET с помощью панели управления](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
    Дочерние элементы для **активации Windows Communication Foundation (WCF) по HTTP** и **активации Windows Communication Foundation (WCF) по протоколу, отличному от HTTP**, предназначены для разработчиков и администраторов серверов, которые используют эту функцию. В других случаях их выбирать не нужно.
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Устранение неполадок с установкой .NET Framework 3.5
 
-Во время установки могут возникнуть ошибки 0x800f0906, 0x800f0907, 0x800f081f или 0x800F0922. В этом случае обратитесь к разделу [Ошибка установки .NET Framework 3.5: 0x800f0906, 0x800f0907 или 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09).
+Во время установки могут возникнуть ошибки 0x800f0906, 0x800f0907, 0x800f081f или 0x800F0922. В этом случае см. раздел [Ошибка установки .NET Framework 3.5: 0x800f0906, 0x800f0907 или 0x800F081F](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09), чтобы узнать решение этой проблемы.
 
 Если вам по-прежнему не удается устранить проблему с установкой или у вас нет подключения к Интернету, вы можете попытаться установить платформу с установочного носителя Windows. Дополнительные сведения см. в разделе [Развертывание .NET Framework 3.5 с помощью системы обслуживания образов развертывания и управления ими (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Если у вас нет установочного носителя, см. сведения в разделе [Создание установочного носителя Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
 

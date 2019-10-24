@@ -1,16 +1,16 @@
 ---
 title: Справочник по C#. Оператор using
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632901"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579182"
 ---
 # <a name="using-statement-c-reference"></a>Оператор using (справочник по C#)
 
@@ -22,6 +22,10 @@ ms.locfileid: "65632901"
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
+Начиная с версии C# 8.0, можно использовать следующий альтернативный синтаксис для оператора `using` без использования фигурных скобок:
+
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+
 ## <a name="remarks"></a>Примечания
 
 <xref:System.IO.File> и <xref:System.Drawing.Font> представляют собой примеры управляемых типов, которые обращаются к неуправляемым ресурсам (в данном случае это обработчики файлов и контексты устройств). Существуют и многие другие виды неуправляемых ресурсов и типов библиотек классов, которые их инкапсулируют. Все эти типы реализуют интерфейс <xref:System.IDisposable>.
@@ -32,11 +36,17 @@ ms.locfileid: "65632901"
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
+Новый синтаксис инструкции `using` преобразуется в очень похожий код. Блок `try` открывается там, где объявлена переменная. Блок `finally` добавляется в конец охватывающего блока, как правило, в конце метода.
+
 Дополнительные сведения об операторе `try`-`finally` см. в разделе [try-finally](try-finally.md).
 
 В операторе `using` можно объявить сразу несколько экземпляров типа, как показано в следующем примере:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+
+Несколько объявлений одного типа можно объединить с помощью нового синтаксиса, представленного в C# 8. Это показано в следующем примере:
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
 Вы можете создать экземпляр объекта ресурсов, а затем передать переменную в оператор `using`, однако делать этого не рекомендуется. В этом случае объект остается в области действия и после того, как блок `using` теряет контроль, хотя доступа к неуправляемым ресурсам у него, скорее всего, не будет. Иными словами, он уже не полностью инициализируется. При попытке использовать объект за пределами блока `using` может возникнуть исключение. По этой причине лучше создать экземпляр объекта в операторе `using` и ограничить область действия блоком `using`.
 
@@ -57,3 +67,4 @@ ms.locfileid: "65632901"
 - [Сборка мусора](../../../standard/garbage-collection/index.md)
 - [Использование объектов, реализующих IDisposable](../../../standard/garbage-collection/using-objects.md)
 - [Интерфейс IDisposable](xref:System.IDisposable)
+- [Инструкция using в C# 8.0](~/_csharplang/proposals/csharp-8.0/using.md)

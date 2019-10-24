@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291695"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395944"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines в .NET
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291695"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>Какие задачи решает System.IO.Pipelines
+
 <!-- corner case doesn't MT (machine translate)   -->
 Приложения, которые анализируют потоковые данные, состоят из стандартного кода, имеющего множество специализированных и необычных потоков кода. Стандартный и специальный код сложен, и его трудно поддерживать.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 * Помещение входящих данных в буфер до тех пор, пока не будет найдена новая строка.
 * Синтаксический анализ всех строк, возвращенных в буфер.
-* Возможно, длина строки превышает 1 КБ (1024 байт). Код должен изменить размер входного буфера, если найдена полная строка.
+* Возможно, длина строки превышает 1 КБ (1024 байт). Код должен изменять размер входного буфера до тех пор, пока не будет найден разделитель, чтобы вместить всю строку в буфере.
 
   * Если размер буфера изменить, создаются дополнительные буферные копии, так как во входных данных отображаются более длинные строки.
   * Чтобы уменьшить объем неиспользуемого пространства, необходимо сжать буфер, используемый для чтения строк.
@@ -97,7 +98,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * Возвращает <xref:System.IO.Pipelines.ReadResult>, который содержит два важных элемента информации:
 
   * Данные, считанные в форме `ReadOnlySequence<byte>`.
-  * Логическое значение `IsCompleted`, указывающее, достигнут ли конец данных (EOF). 
+  * Логическое значение `IsCompleted`, указывающее, достигнут ли конец данных (EOF).
 
 После нахождения разделителя конца строки (EOL) и синтаксического анализа строки:
 
@@ -304,7 +305,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="pipewriter"></a>PipeWriter
 
-<xref:System.IO.Pipelines.PipeWriter> управляет буферами для записи от имени вызывающего объекта. `PipeWriter` реализует [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>` позволяет получить доступ к буферам для выполнения операций записи без дополнительных буферных копий.
+<xref:System.IO.Pipelines.PipeWriter> управляет буферами для записи от имени вызывающего объекта. `PipeWriter` реализует [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` позволяет получить доступ к буферам для выполнения операций записи без дополнительных буферных копий.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

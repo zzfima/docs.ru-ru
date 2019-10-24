@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972813"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523889"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Практическое руководство. Создание подписанных дружественных сборок
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
@@ -132,7 +132,7 @@ ms.locfileid: "70972813"
 - [Сборки в .NET](index.md)
 - [Дружественные сборки](friend.md)
 - [Практическое руководство. Создание неподписанных дружественных сборок](create-unsigned-friend.md)
-- [/keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (средство строгих имен)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Создание и использование сборок со строгими именами](create-use-strong-named.md)

@@ -4,12 +4,12 @@ description: Общие сведения о дополнительных инс�
 author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 75c74c16367bacf66fa2fb56d7666a07f7274aff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631957"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771969"
 ---
 # <a name="net-core-additional-tools-overview"></a>Общие сведения о дополнительных инструментах .NET Core
 
@@ -22,7 +22,7 @@ WCF (Windows Communication Foundation) Web Service Reference — это пос�
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Средство WCF dotnet-svcutil](dotnet-svcutil-guide.md)
 
 Средство WCF (Windows Communication Foundation) dotnet-svcutil — это средство .NET Core CLI, которое извлекает метаданные веб-службы в сетевом расположении или из файла WSDL, а затем создает совместимый с .NET Core исходный файл, определяющий прокси-класс WCF с методами, который можно использовать для доступа к операциям веб-службы.
-Средство **dotnet-svcutil** — это альтернатива поставщика подключенной службы Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md), впервые представленного в Visual Studio 2017 15.5. Как и .NET Core CLI, средство **dotnet-svcutil** доступно на платформах Linux, macOS и Windows.
+Средство **dotnet-svcutil** — это альтернатива поставщика подключенной службы Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md), впервые представленного в Visual Studio 2017 версии 15.5. Как и .NET Core CLI, средство **dotnet-svcutil** доступно на платформах Linux, macOS и Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Средство WCF dotnet-svcutil.xmlserializer](dotnet-svcutil.xmlserializer-guide.md)
 

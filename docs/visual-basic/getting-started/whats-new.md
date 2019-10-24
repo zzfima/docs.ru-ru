@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835254"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581964"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -26,34 +26,49 @@ Visual Basic 16.0/Visual Studio 2019 версии 16.0
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
-Visual Basic 15.8 и Visual Studio 2017 версии 15.8. Описание новых функций см. в статье о [Visual Basic 15.8](#visual-basic-158).
+Visual Basic 15.8/Visual Studio 2017 версии 15.8  
+Описание новых функций см. в статье о [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5 и Visual Studio 2017 версии 15.5. Описание новых функций см. в статье о [Visual Basic 15.5](#visual-basic-155).
+Visual Basic 15.5 / Visual Studio 2017 версии 15.5  
+Описание новых функций см. в статье о [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3 и Visual Studio 2017 версии 15.3. Описание новых функций см. в статье о [Visual Basic 15.3](#visual-basic-153).
+Visual Basic 15.3 / Visual Studio 2017 версии 15.3  
+Описание новых функций см. в статье о [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017 и Visual Studio 2017. Описание новых функций см. в статье о [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 2017 / Visual Studio 2017  
+Описание новых функций см. в статье о [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic и Visual Studio 2015. Описание новых функций см. в статье о [Visual Basic 14](#visual-basic-14).
+Visual Basic / Visual Studio 2015  
+Описание новых функций см. в статье о [Visual Basic 14](#visual-basic-14).
 
-Visual Basic и Visual Studio 2013 CTP-версии .NET Compiler Platform (Roslyn)
+Visual Basic / Visual Studio 2013  
+CTP-версии платформы компиляции .NET (Roslyn)
 
-Visual Basic и Visual Studio 2012 Ключевые слова `Async` и `await`, итераторы, атрибуты сведений о вызывающем объекте
+Visual Basic / Visual Studio 2012  
+Ключевые слова `Async` и `await`, итераторы, атрибуты сведений о вызывающем объекте
 
-Visual Basic и Visual Studio 2010 Автоматически реализуемые свойства, инициализаторы наборов, неявные продолжения строк, динамические типы, универсальная ковариантность и контрвариантность, доступ к глобальным пространствам имен
+Visual Basic, Visual Studio 2010  
+Автоматически реализуемые свойства, инициализаторы коллекций, неявное продолжение строки, динамические типы, универсальная ковариантность и контрвариантность, доступ к глобальному пространству имен
 
-Visual Basic и Visual Studio 2008 Запросы LINQ, XML-литералы, вывод локального типа, инициализаторы объектов, анонимные типы, методы расширений, вывод локального типа `var`, лямбда-выражения, оператор `if`, частичные методы, типы значений, допускающие значение NULL
+Visual Basic / Visual Studio 2008  
+Интегрированные запросы языка (LINQ), XML-литералы, определение локального типа, инициализаторы объектов, анонимные типы, методы расширений, определение локального типа `var`, лямбда-выражения, оператор `if`, типы значений, допускающие значение NULL
 
-Visual Basic и Visual Studio 2005 Тип `My` и вспомогательные типы (доступ к приложению, компьютеру, файловой системе, сети)
+Visual Basic / Visual Studio 2005  
+Тип `My` и вспомогательные типы (доступ к приложению, компьютеру, файловой системе, сети)
 
-Visual Basic и Visual Studio .NET 2003 Операторы поразрядного сдвига, объявление переменных цикла
+Visual Basic/Visual Studio .NET 2003  
+Операторы поразрядного сдвига, объявление переменных цикла
 
-Visual Basic и Visual Studio .NET 2002 Первый выпуск Visual Basic .NET
+Visual Basic/Visual Studio .NET 2002  
+Первый выпуск Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
-Visual Basic 16.0 фокусируется на предоставлении большего числа функций среды выполнения Visual Basic (microsoft.visualbasic.dll) в .NET Core и является первой версией Visual Basic, ориентированной на .NET Core. Многие части среды выполнения Visual Basic зависят от WinForms и будут добавлены в более поздней версии Visual Basic. 
 
-**Комментарии можно использовать в большем количестве мест внутри операторов**. В Visual Basic 15.8 и более ранних версиях комментарии можно использовать только в пустых строках, в конце оператора или в определенных местах внутри оператора, где разрешено неявное продолжение строки. Начиная с Visual Basic 16.0 комментарии также допускаются после явных продолжений строк и внутри оператора в строке, начинающейся с пробела, за которым следует символ подчеркивания.
+Visual Basic 16.0 фокусируется на предоставлении большего числа функций среды выполнения Visual Basic (microsoft.visualbasic.dll) в .NET Core и является первой версией Visual Basic, ориентированной на .NET Core. Многие части среды выполнения Visual Basic зависят от WinForms и будут добавлены в более поздней версии Visual Basic.
+
+**Комментарии можно использовать в большем количестве мест внутри операторов**.
+
+В Visual Basic 15.8 и более ранних версиях комментарии можно использовать только в пустых строках, в конце оператора или в определенных местах внутри оператора, где разрешено неявное продолжение строки. Начиная с Visual Basic 16.0 комментарии также допускаются после явных продолжений строк и внутри оператора в строке, начинающейся с пробела, за которым следует символ подчеркивания.
 
 ```vb
 Public Sub Main()
@@ -140,7 +155,7 @@ Dim number As Integer = &H_C305_F860
 
 **Дополнительные параметры компилятора**
 
-Теперь компилятор командной строки Visual Basic поддерживает параметры [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) и [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) для управления выводом базовых сборок. **-refout** определяет выходной каталог базовой сборки, а **-refonly** указывает, что в результате компиляции будет выводиться только базовая сборка.
+Теперь компилятор командной строки Visual Basic поддерживает параметры [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) и [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) для управления выводом базовых сборок. **-refout** определяет выходной каталог базовой сборки, а **-refonly** указывает, что в результате компиляции будет выводиться только базовая сборка.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
