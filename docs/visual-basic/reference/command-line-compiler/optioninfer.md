@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005322"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775619"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Включает использование локального определения типов в различных объявлениях.  
@@ -28,13 +28,13 @@ ms.locfileid: "72005322"
   
 |Термин|Определение|  
 |---|---|  
-|`+` &#124; `-`|Необязательный параметр. Укажите `-optioninfer+`, чтобы включить локальное определение типов, или `-optioninfer-`, чтобы заблокировать его. Параметр `-optioninfer`, для которого не указано значение, действует так же, как `-optioninfer+`. Значение по умолчанию при отсутствии параметра `-optioninfer` также равно `-optioninfer+`. Значение по умолчанию задается в файле ответов Vbc.rsp.|  
+|`+` &#124; `-`|Необязательный. Укажите `-optioninfer+`, чтобы включить локальное определение типов, или `-optioninfer-`, чтобы заблокировать его. Параметр `-optioninfer`, для которого не указано значение, действует так же, как `-optioninfer+`. Значение по умолчанию при отсутствии параметра `-optioninfer` также равно `-optioninfer+`. Значение по умолчанию задается в файле ответов Vbc.rsp.|  
   
 > [!NOTE]
 > Можно использовать параметр `-noconfig`, чтобы сохранить внутренние значения компилятора по умолчанию вместо использования значений, заданных в vbc.rsp. Значение компилятора по умолчанию для этого параметра — `-optioninfer-`.  
   
-## <a name="remarks"></a>Примечания  
- Если файл исходного кода содержит [инструкцию Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), инструкция переопределяет параметр компилятора командной строки `-optioninfer`.  
+## <a name="remarks"></a>Заметки  
+ Если файл исходного кода содержит [инструкцию Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), инструкция переопределяет `-optioninfer` параметр компилятора командной строки.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Установка параметра-оптионинфер в интегрированной среде разработки Visual Studio  
   
@@ -60,5 +60,5 @@ vbc -optioninfer+ test.vb
 - [Вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

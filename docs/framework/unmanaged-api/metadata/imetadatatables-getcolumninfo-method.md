@@ -1,6 +1,6 @@
 ---
 title: Метод IMetaDataTables::GetColumnInfo
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781515"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774256"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Метод IMetaDataTables::GetColumnInfo
-Получает данные о заданном столбце в указанной таблице.  
+Получает данные о указанном столбце в указанной таблице.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,31 +40,59 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры
+=======
+
  `ixTbl`  
- [in] Индекс нужную таблицу.  
+ окне Индекс требуемой таблицы.  
   
  `ixCol`  
- [in] Индекс требуемый столбец.  
+ окне Индекс нужного столбца.  
   
  `poCol`  
- [out] Указатель на смещение столбца в строке.  
+ заполняет Указатель на смещение столбца в строке.  
   
  `pcbCol`  
- [out] Указатель на размер в байтах, столбца.  
+ заполняет Указатель на размер столбца в байтах.  
   
  `pType`  
- [out] Указатель на тип значения в столбце.  
+ заполняет Указатель на тип значений в столбце.  
   
  `ppName`  
- [out] Указатель на указатель на имя столбца.  
-  
+ заполняет Указатель на указатель на имя столбца.  
+ 
+## <a name="remarks"></a>Заметки
+
+Возвращаемый тип столбца попадает в диапазон значений:
+
+| птипе                    | Описание   | Вспомогательная функция                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`.. `iRidMax`<br>(0.. 63)   | Избежать           | **исридтипе**<br>**исридортокен** |
+| `iCodedToken`.. `iCodedTokenMax`<br>(64.. 95) | Закодированный маркер | **искодедтокентипе** <br>**исридортокен** |
+| `iSHORT` (96)            | Int16         | **исфикседтипе**                   |
+| `iUSHORT` (97)           | UInt16        | **исфикседтипе**                   |
+| `iLONG` (98)             | Int32         | **исфикседтипе**                   |
+| `iULONG` (99)            | UInt32        | **исфикседтипе**                   |
+| `iBYTE` (100)            | Байт          | **исфикседтипе**                   |
+| `iSTRING` (101)          | Строковое        | **ишеаптипе**                    |
+| `iGUID` (102)            | GUID          | **ишеаптипе**                    |
+| `iBLOB` (103)            | Blob          | **ишеаптипе**                    |
+
+Значения, хранящиеся в *куче* (то есть `IsHeapType == true`), могут быть считаны с помощью:
+
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables... GUID**
+- `iBLOB`: **IMetadataTables. BLOB**
+
+> [!IMPORTANT]
+> Чтобы использовать константы, определенные в приведенной выше таблице, включите директиву `#define _DEFINE_META_DATA_META_CONSTANTS`, предоставляемую файлом заголовка *COR. h* .
+
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок:** COR. h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

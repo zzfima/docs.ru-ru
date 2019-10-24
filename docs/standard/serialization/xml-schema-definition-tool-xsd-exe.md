@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 7a27b05a12017a3c0de6b0d036f480b3e7fdeda7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9de4a195f34b0daedcfb3687dbb36495b985092d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392738"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775258"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -16,13 +16,13 @@ ms.locfileid: "71392738"
 ## <a name="syntax"></a>Синтаксис
 
 ```console
-xsd file.xdr [/outputdir:directory][/parameters:file.xml]
-xsd file.xml [/outputdir:directory] [/parameters:file.xml]
+xsd file.xdr [-outputdir:directory][/parameters:file.xml]
+xsd file.xml [-outputdir:directory] [/parameters:file.xml]
 xsd file.xsd {/classes | /dataset} [/element:element]
              [/enableLinqDataSet] [/language:language]
-                          [/namespace:namespace] [/outputdir:directory] [URI:uri]
+                          [/namespace:namespace] [-outputdir:directory] [URI:uri]
                           [/parameters:file.xml]
-xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/parameters:file.xml]
+xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/parameters:file.xml]
 ```
 
 ## <a name="argument"></a>Аргумент
@@ -35,41 +35,41 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 
 |Параметр|Описание|
 |------------|-----------------|
-|**/h @ no__t-1elp @ no__t-2**|Отображает синтаксис команд и параметров программы.|
-|**/o @ no__t-1utputdir @ no__t-2:** _Каталог_|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|
+|**/h \[elp \]**|Отображает синтаксис команд и параметров программы.|
+|**/o \[utputdir \]:** _Каталог_|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|
 |**/?**|Отображает синтаксис команд и параметров программы.|
-|**/p @ no__t-1arameters @ no__t-2:** _File. XML_|Считывает параметры различных режимов операций из указанного XML-файла. Краткая форма: `/p:`. Дополнительные сведения см. в разделе ["Примечания](#remarks) ".|
+|**/p \[arameters \]:** _File. XML_|Считывает параметры различных режимов операций из указанного XML-файла. Краткая форма: `/p:`. Дополнительные сведения см. в разделе ["Примечания](#remarks) ".|
 
 ## <a name="xsd-file-options"></a>Параметры файла XSD
  Для файлов XSD следует указать только один из следующих параметров.
 
 |Параметр|Описание|
 |------------|-----------------|
-|**/c @ no__t-1lasses @ no__t-2**|Создает классы, соответствующие указанной схеме. Чтобы считать данные XML в объект, используйте метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
-|**/d @ no__t-1ataset @ no__t-2**|Создает классы, которые являются производными класса <xref:System.Data.DataSet> и соответствуют указанной схеме. Чтобы считать данные XML в производный класс, используйте метод <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
+|**/c \[lasses \]**|Создает классы, соответствующие указанной схеме. Чтобы считать данные XML в объект, используйте метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
+|**/d \[ataset \]**|Создает классы, которые являются производными класса <xref:System.Data.DataSet> и соответствуют указанной схеме. Чтобы считать данные XML в производный класс, используйте метод <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
 
  Для файлов XSD также можно указать любой из следующих параметров.
 
 |Параметр|Описание|
 |------------|-----------------|
-|**/e @ no__t-1lement @ no__t-2:** _element_|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|
+|**/e \[lement \]:** _element_|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|
 |**/enableDataBinding**|Реализует интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> для всех созданных типов для обеспечения привязки данных. Краткая форма: `/edb`.|
-|**/enableLinqDataSet**|(Краткая форма: `/eld`.) Указывает, что созданный набор данных можно запросить с помощью LINQ to DataSet. Этот параметр используется только при указании параметра /dataset. Дополнительные сведения см. в разделах [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) и [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md). Общие сведения об использовании LINQ см. в [разделе C# LINQ-или](../../csharp/programming-guide/concepts/linq/index.md) [LINQ-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
-|**/f @ no__t-1ields @ no__t-2**|Создает поля вместо свойств. По умолчанию создаются свойства.|
-|**/l @ no__t-1anguage @ no__t-2:** _язык_|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
-|**/n @ no__t-1amespace @ no__t-2:** _Namespace_|Определяет пространство имен среды выполнения для создаваемых типов. Пространство имен по умолчанию — `Schemas`.|
+|**/enableLinqDataSet**|(Краткая форма: `/eld`.) Указывает, что созданный набор данных можно запрашивать с помощью LINQ to DataSet. Этот параметр используется только при указании параметра /dataset. Дополнительные сведения см. в разделах [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) и [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md). Общие сведения об использовании LINQ см. в [разделе C# LINQ-или](../../csharp/programming-guide/concepts/linq/index.md) [LINQ-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/f \[ields \]**|Создает поля вместо свойств. По умолчанию создаются свойства.|
+|**/l \[anguage \]:** _язык_|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
+|**/n \[amespace \]:** _Namespace_|Определяет пространство имен среды выполнения для создаваемых типов. Пространство имен по умолчанию — `Schemas`.|
 |**/nologo**|Отключает баннер.|
 |**/order**|Создает явные идентификаторы порядка для всех примитивных членов.|
-|**/o @ no__t-1ut @ no__t-2:** _директоринаме_|Задает выходной каталог, в котором следует разместить файлы. Значением по умолчанию является текущий каталог.|
-|**/u @ no__t-1ri @ no__t-2:** _URI_|Определяет универсальный код ресурса (URI) для элементов схемы, для которого создается код. Этот универсальный код ресурса, если имеется, применяется ко всем элементам, заданным параметром `/element`.|
+|**/o \[ut \]:** _директоринаме_|Задает выходной каталог, в котором следует разместить файлы. Значением по умолчанию является текущий каталог.|
+|**/u \[ri \]:** _URI_|Определяет универсальный код ресурса (URI) для элементов схемы, для которого создается код. Этот универсальный код ресурса, если имеется, применяется ко всем элементам, заданным параметром `/element`.|
 
 ## <a name="dll-and-exe-file-options"></a>Параметры файлов DLL и EXE
 
 |Параметр|Описание|
 |------------|-----------------|
-|**/t @ no__t-1ype @ no__t-2:** _TypeName_|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|
+|**/t \[ype \]:** _TypeName_|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 В следующей таблице показаны операции, выполняемые Xsd.exe.
 
@@ -150,7 +150,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|language|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider>.|
+|язык|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider>.|
 |namespace|Задает пространство имен созданного кода. Пространство имен должно соответствовать стандартам CLR (например, отсутствие пробелов или обратной косой черты).|
 |options|Одно из следующих значений: `none`, `properties` (создает свойства вместо открытых полей), `order` или `enableDataBinding` (см. параметры `/order` и `/enableDataBinding` в предыдущем разделе параметров файла XSD).|
 
@@ -174,7 +174,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |Атрибут|Описание|
 |---------------|-----------------|
 |enableLinqDataSet|Указывает, что созданный набор данных можно запросить с помощью LINQ to DataSet. Значением по умолчанию является false.|
-|language|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider>.|
+|язык|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider>.|
 |namespace|Задает пространство имен созданного кода. Пространство имен должно соответствовать стандартам CLR (например, отсутствие пробелов или обратной косой черты).|
 
  Существуют атрибуты, которые можно задать для элемента верхнего уровня `<xsd>`. Эти параметры можно использовать с любым из дочерних элементов (`<generateSchemas>`, `<generateClasses>` или `<generateDataSet>`). Следующий код XML создает код для элемента с именем "IDItems" в выходном каталоге с именем "MyOutputDirectory".

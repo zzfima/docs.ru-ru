@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582571"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775444"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Ограничивают неявные преобразования типов данных только расширяющими преобразованиями, запрещает позднее связывание и запрещает неявную типизацию, которая приводит к типу `Object`.  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Если отсутствует оператор Option Case  
  Если исходный код не содержит инструкцию `Option Strict`, то используется **параметр Option ограничивал** на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . На **странице Компиляция** имеются параметры, обеспечивающие дополнительный контроль над условиями, которые вызывают ошибку.  
   
- При использовании компилятора командной строки можно использовать параметр компилятора [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) , чтобы указать параметр для `Option Strict`.  
+ При использовании компилятора командной строки можно использовать параметр компилятора [-оптионстрикт](../../../visual-basic/reference/command-line-compiler/optionstrict.md) , чтобы указать параметр для `Option Strict`.  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>Установка Option в интегрированной среде разработки  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  Чтобы задать `Option Strict` в этом диалоговом окне, в меню **Сервис** выберите пункт **Параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальным параметром по умолчанию в **VB по умолчанию** является `Off`.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>Установка параметра Option в командной строке  
- Включите параметр компилятора [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) в команду **vbc** .  
+ Включите параметр компилятора [-оптионстрикт](../../../visual-basic/reference/command-line-compiler/optionstrict.md) в команду **vbc** .  
   
 ## <a name="example"></a>Пример  
  В следующих примерах показаны ошибки времени компиляции, вызванные неявными преобразованиями типов, которые являются сужающими преобразованиями. Эта категория ошибок соответствует условию **неявного преобразования** на **странице Компиляция**.  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Позднее связывание в решениях Office](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
