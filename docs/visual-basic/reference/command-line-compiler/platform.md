@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 741c36473d80b2581718d969a7037f6c81ff4bf5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005294"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775589"
 ---
 # <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Указывает, на какой версии платформы среды CLR может запускаться выходной файл.  
@@ -33,7 +33,7 @@ ms.locfileid: "72005294"
 |`anycpu`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных версиях Windows и как 64-разрядное приложение в 64-разрядных версиях Windows. Этот флаг — значение по умолчанию.|  
 |`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. Этот флаг допустим только для исполняемых объектов (. EXE) и требует .NET Framework 4,5.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Используйте параметр `-platform`, чтобы указать процессор назначения для выходного файла.  
   
  В целом, сборки .NET Framework, написанные на Visual Basic, будут работать одинаково вне зависимости от платформы. Тем не менее, в некоторых случаях поведение программ на разных платформах может различаться. Вот эти случаи:  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>См. также
 
-- [/Target (Visual Basic)](target.md)
+- [-Target (Visual Basic)](target.md)
 - [Компилятор Visual Basic с интерфейсом командной строки](index.md)
 - [Примеры командных строк компиляции](sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: Обработка повторного входа в асинхронных приложениях (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352002"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775526"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
 
@@ -15,6 +15,9 @@ ms.locfileid: "71352002"
 
 > [!NOTE]
 > Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
+
+> [!NOTE]
+> Версия протокола TLS 1,2 теперь является минимальной версией для использования в разработке приложений. Если приложение предназначено для более ранней версии .NET Framework, чем 4,7, обратитесь к следующей статье, в которой приведены рекомендации по [обеспечению безопасности транспортного уровня (TLS) с помощью .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Распознавание поддержки повторного входа
 
@@ -94,7 +97,7 @@ TOTAL bytes returned:  890591
 
 Можно заблокировать кнопку **Start`StartButton_Click` во время операции, отключив кнопку в верхней части обработчика событий** . Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.
 
-В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение из примеров [Async: Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
+В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение в разделе [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -125,7 +128,7 @@ End Sub
 
 Дополнительные сведения об отмене см. [в разделе тонкая настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Чтобы настроить этот сценарий, внесите следующие изменения в основной код, который содержится в разделе [Проверка и выполнение примера приложения](#BKMD_SettingUpTheExample). Также можно загрузить готовое приложение в разделе [Примеры асинхронности. Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Этот проект называется CancelAndRestart.
+Чтобы настроить этот сценарий, внесите следующие изменения в основной код, который содержится в разделе [Проверка и выполнение примера приложения](#BKMD_SettingUpTheExample). Также можно загрузить готовое приложение в разделе [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Этот проект называется CancelAndRestart.
 
 1. Объявите переменную <xref:System.Threading.CancellationTokenSource>, `cts`, которая находится в области действия всех методов.
 
@@ -153,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. В конце `StartButton_Click` текущий процесс завершен, поэтому установите значение `cts` обратно в `Nothing`.
+4. В конце `StartButton_Click` текущий процесс завершен, поэтому установите для параметра `cts` обратно значение `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -533,7 +536,7 @@ End Function
 
 ### <a name="BKMK_DownloadingTheApp"></a> Загрузка приложения
 
-1. Скачайте сжатый файл в разделе [Примеры асинхронности. Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).
+1. Скачайте сжатый файл в разделе [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).
 
 2. Распакуйте загруженный файл, а затем запустите Visual Studio.
 
@@ -561,7 +564,7 @@ End Function
 
 4. В списке типов проектов выберите **Приложение WPF**.
 
-5. Дайте проекту имя `WebsiteDownloadWPF` и нажмите кнопку **ОК**.
+5. Присвойте проекту имя `WebsiteDownloadWPF`, выберите .NET Framework версии 4,6 или более поздней, а затем нажмите кнопку **ОК** .
 
      В **обозревателе решений** появится новый проект.
 
@@ -589,7 +592,9 @@ End Function
 
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.
 
-8. Добавьте ссылку для <xref:System.Net.Http>.
+8. В **Обозреватель решений**щелкните правой кнопкой мыши **ссылки** и выберите команду **Добавить ссылку**.
+
+     Добавьте ссылку на <xref:System.Net.Http>, если она еще не выбрана.
 
 9. В **Обозреватель решений**откройте контекстное меню файла MainWindow. XAML. vb и выберите пункт **Просмотреть код**.
 
@@ -603,6 +608,8 @@ End Function
     Class MainWindow
 
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or System.Net.SecurityProtocolType.Tls12
+
             ' This line is commented out to make the results clearer in the output.
             'ResultsTextBox.Text = ""
 
@@ -677,5 +684,5 @@ End Function
 
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

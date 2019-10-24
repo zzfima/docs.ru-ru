@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005270"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775607"
 ---
 # <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
 Заставляет компилятор предоставлять сведения о типах в указанных сборках, доступных для компилируемого в данный момент проекта.  
@@ -37,8 +37,8 @@ ms.locfileid: "72005270"
 |---|---|  
 |`fileList`|Обязательный. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
   
-## <a name="remarks"></a>Примечания  
- Импортируемые файлы должны содержать метаданные сборки. За пределами сборки видны только открытые типы. Параметр [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) импортирует метаданные из модуля.  
+## <a name="remarks"></a>Заметки  
+ Импортируемые файлы должны содержать метаданные сборки. За пределами сборки видны только открытые типы. Параметр [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) импортирует метаданные из модуля.  
   
  При ссылке на сборку (сборку A), которая сама ссылается на другую сборку (сборка B), необходимо ссылаться на сборку б, если:  
   

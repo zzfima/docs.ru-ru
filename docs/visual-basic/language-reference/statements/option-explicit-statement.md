@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 19ff8cf1dbcdb941e38f23be4cb68d3a5e5b83a8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0405814efecbdff5769af36b27dce1cd3305aab5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582580"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775499"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Оператор Option Explicit (Visual Basic)
 Заставляет явно объявлять все переменные в файле или допускает неявные объявления переменных.  
@@ -43,7 +43,7 @@ Option Explicit { On | Off }
 > Обычно не рекомендуется устанавливать `Option Explicit` в `Off`. Вы можете допустить ошибку при вводе имени переменной в одном или нескольких местах, что приведет к непредвиденным результатам при выполнении программы.  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Если отсутствует оператор Option Explicit  
- Если исходный код не содержит инструкцию `Option Explicit`, то используется **параметр Explicit** на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Если используется компилятор командной строки, используется параметр компилятора [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) .  
+ Если исходный код не содержит инструкцию `Option Explicit`, то используется **параметр Explicit** на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Если используется компилятор командной строки, используется параметр компилятора [-оптионексплиЦит](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) .  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Установка параметра Explicit в интегрированной среде разработки  
   
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Установка параметра Explicit в командной строке  
   
-- Включите параметр компилятора [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) в команду **vbc** .  
+- Включите параметр компилятора [-оптионексплиЦит](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) в команду **vbc** .  
   
 ## <a name="example"></a>Пример  
  В следующем примере оператор `Option Explicit` используется для принудительного явного объявления всех переменных. Попытка использовать необъявленную переменную вызывает ошибку во время компиляции.  
@@ -72,7 +72,7 @@ Option Explicit { On | Off }
 - [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
