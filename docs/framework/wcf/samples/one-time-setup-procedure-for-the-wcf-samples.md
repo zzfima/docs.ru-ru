@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 4fe77455c26393455c66c24c74691a335ad8cb1b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039181"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799026"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 
@@ -37,15 +37,15 @@ ms.locfileid: "70039181"
     ```
 
     > [!WARNING]
-    > Выполнение команды `aspnet_regiis –i –enable` сделает пул приложений по умолчанию с помощью [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], что может привести к проблемам несовместимости других приложений на том же компьютере.
+    > Выполнение команды `aspnet_regiis –i –enable` сделает пул приложений по умолчанию запущенным с помощью [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], что может привести к несовместимости других приложений на том же компьютере.
 
 5. Следуйте [инструкциям брандмауэра](../../../../docs/framework/wcf/samples/firewall-instructions.md) , чтобы включить порты, используемые образцами.
 
-6. Проверьте наличие следующего каталога по умолчанию: \<Инсталлдриве >: **\WF_WCF_Samples**. Если образцы были предварительно установлены, этот каталог будет выбран по умолчанию.
+6. Проверьте следующий каталог по умолчанию: \<Инсталлдриве >: **\WF_WCF_Samples**. Если образцы были предварительно установлены, этот каталог будет выбран по умолчанию.
 
-7. Если образцы не установлены, установите их из расположения загрузки образцов для [Visual C# ](https://go.microsoft.com/fwlink/?LinkId=190939) или [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).
+7. Если образцы не установлены, установите их из расположения загрузки образцов для [C#](https://go.microsoft.com/fwlink/?LinkId=190939).
 
-8. После установки образцов перейдите по адресу: \<InstallDrive>: **\WF_WCF_Samples\WCF\Setup\\**
+8. После установки образцов перейдите по адресу: \<Инсталлдриве >: **\WF_WCF_Samples\WCF\Setup\\**
 
 9. Запустите пакетный файл **Setupvroot. bat** . Выполняются следующие действия.
 
@@ -65,7 +65,7 @@ ms.locfileid: "70039181"
 
 11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]и Windows Server 2008 R2 это учетная запись **Network Service**. Для [!INCLUDE[lserver](../../../../includes/lserver-md.md)] это учетная запись NT Authority\Network Service. Для [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] это учетная запись ASPNET.
 
-12. Запустите файл Setupcerttool.bat. Этот файл находится в \<папке INSTALLPATH > \WF_WCF_Samples\WCF\Setup\.  Этот скрипт выполнит следующие задачи.
+12. Запустите файл Setupcerttool.bat. Этот файл находится в папке \<InstallPath > \WF_WCF_Samples\WCF\Setup\.  Этот скрипт выполнит следующие задачи.
 
     - Построит средство FindPrivateKey.
 
