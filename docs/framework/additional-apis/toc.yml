@@ -55,6 +55,10 @@
           items:
             - name: Поле m_ConnectionList
               href: m_connectionlist.md
+        - name: Класс ConnectStream
+          items:
+            - name: Свойство Connection
+              href: system.net.connectstream.connection.md
         - name: Класс CoreResponseData
           href: coreresponsedata.md
           items:
@@ -70,12 +74,26 @@
               href: httpwebrequest__coreresponse.md
             - name: Поле _HttpResponse
               href: _httpresponse.md
+        - name: Класс PooledStream
+          items:
+            - name: Свойство NetworkStream
+              href: system.net.pooledstream.networkstream.md
         - name: Класс ServicePoint
           items:
             - name: Поле m_ConnectionGroupList
               href: m_connectiongrouplist.md
             - name: Поле s_ServicePointTable
               href: s_servicepointtable.md
+        - name: Класс TlsStream
+          items:
+            - name: Поле m_Worker
+              href: system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: Класс SslState
+          items:
+            - name: Протокол SslProtocol
+              href: system.net.security.sslstate.sslprotocol.md
     - name: System.Windows.Diagnostics
       items:
         - name: Класс VisualDiagnostics
