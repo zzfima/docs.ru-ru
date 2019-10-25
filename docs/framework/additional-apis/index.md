@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579116"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847080"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
@@ -57,18 +57,22 @@ ms.locfileid: "72579116"
 * [Метод System. Data. SqlTypes. Склстреамчарс. SetLength](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [Метод System. Data. SqlTypes. Склстреамчарс. Write](system.data.sqltypes.sqlstreamchars.write.md)
 * [Класс System .NET. Connection](connection.md)
-* [Поле "система .NET. Connection. m \_WriteList"](m_writelist.md)
+* [Система .NET. Connection. m\_поле Врителист](m_writelist.md)
 * [Класс System .NET. Коннектионграуп](connectiongroup.md)
-* [Поле \_ConnectionList System .NET. Коннектионграуп. m](m_connectionlist.md)
+* [System .NET. Коннектионграуп. m\_поле Коннектионлист](m_connectionlist.md)
+* [Свойство System .NET. Коннектстреам. Connection](system.net.connectstream.connection.md)
 * [Класс System .NET. Коререспонседата](coreresponsedata.md)
-* [Поле \_ResponseHeaders System .NET. Коререспонседата. m](coreresponsedata_m_responseheaders.md)
-* [Поле \_StatusCode System .NET. Коререспонседата. m](coreresponsedata_m_statuscode.md)
-* [Поле System .NET. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
-* [Поле System .NET. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
-* [Поле System .NET. HttpWebRequest. \_HttpResponse](_httpresponse.md)
-* [Поле \_ConnectionGroupList System .NET. ServicePoint. m](m_connectiongrouplist.md)
-* [Поле System .NET. ServicePointManager. s \_ServicePointTable](s_servicepointtable.md)
-* [Поле \_isDebuggerCheckDisabledForTestPurposes System. Windows. Diagnostics. Висуалдиагностикс. s](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [System .NET. Коререспонседата. m\_поле ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [System .NET. Коререспонседата. m\_поле StatusCode](coreresponsedata_m_statuscode.md)
+* [System .NET. HttpWebRequest.\_поле перенаправления](_autoredirects.md)
+* [System .NET. HttpWebRequest.\_Коререспонсе поле](httpwebrequest__coreresponse.md)
+* [System .NET. HttpWebRequest.\_HttpResponse поле](_httpresponse.md)
+* [Свойство System .NET. Пуледстреам. NetworkStream](system.net.pooledstream.networkstream.md)
+* [System .NET. ServicePoint. m\_поле Коннектионграуплист](m_connectiongrouplist.md)
+* [System .NET. ServicePointManager. s\_поле Сервицепоинттабле](s_servicepointtable.md)
+* [Поле System .NET. Тлсстреам. m_Worker](system.net.tlsstream.m_worker.md)
+* [Свойство System .NET. Security. Сслстате. Сслпротокол](system.net.security.sslstate.sslprotocol.md)
+* [System. Windows. Diagnostics. Висуалдиагностикс. s\_поле Исдебугжерчеккдисабледфортестпурпосес](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [Класс System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
 * [Класс System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
 * [Метод System. XML. XmlReader. Креатесклреадер](system.xml.xmlreader.createsqlreader.md)
