@@ -1,5 +1,5 @@
 ---
-title: Windows Presentation Foundation
+title: Windows Presentation Foundation (WPF)
 ms.date: 01/25/2018
 applies_to:
 - Windows 10
@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764547"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919370"
 ---
-# <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для создания бизнес-приложений Windows настольных систем.  
-  
- [Создание классических приложений с помощью Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+# <a name="windows-presentation-foundation"></a>Windows Presentation Foundation (WPF)
 
- [Разработка XAML в Visual Studio и Blend для Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [Получить Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+Windows Presentation Foundation (WPF) предоставляет разработчикам унифицированную модель программирования для создания настольных бизнес-приложений в Windows.
+
+- [Введение в WPF](introduction-to-wpf.md)
+- [Начало работы](getting-started/index.md)
+- [Разработка приложения](app-development/index.md)
+- [Дополнительно](advanced/index.md)
+- [Элементы управления](controls/index.md)
+- [Данные](data/index.md)
+- [Графика и мультимедиа](graphics-multimedia/index.md)
+- [Security](security-wpf.md)
+- [Примеры WPF](wpf-samples.md)
+- [Библиотека классов](class-library-wpf.md)

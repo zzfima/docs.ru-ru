@@ -13,25 +13,28 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: e428939253065a5f66ca13f3d9f8a3321f3666ec
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660332"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920046"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Создание элемента управления с настраиваемым внешним видом
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] дает возможность создать внешний вид которых можно настроить элемент управления. Например, можно изменить внешний вид <xref:System.Windows.Controls.CheckBox> Кроме какие настройки свойств будет сделать путем создания нового <xref:System.Windows.Controls.ControlTemplate>. На следующем рисунке показано <xref:System.Windows.Controls.CheckBox> , по умолчанию использует <xref:System.Windows.Controls.ControlTemplate> и <xref:System.Windows.Controls.CheckBox> , использующий пользовательский <xref:System.Windows.Controls.ControlTemplate>.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] дает возможность создать элемент управления, внешний вид которого можно настроить. Например, можно изменить внешний вид <xref:System.Windows.Controls.CheckBox> помимо того, какие свойства будут доступны, создав новую <xref:System.Windows.Controls.ControlTemplate>. На следующем рисунке показана <xref:System.Windows.Controls.CheckBox>, использующая <xref:System.Windows.Controls.ControlTemplate> по умолчанию и <xref:System.Windows.Controls.CheckBox>, использующая настраиваемый <xref:System.Windows.Controls.ControlTemplate>.
 
-![Флажок с шаблоном элемента управления по умолчанию. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault") управления CheckBox, использующий шаблон элемента управления по умолчанию
+![Элемент управления CheckBox, использующий шаблон элемента управления по умолчанию.](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")
+Элемент управления CheckBox, использующий шаблон элемента управления по умолчанию
 
-![Флажок с пользовательским шаблоном элемента управления. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom") управления CheckBox, использующий пользовательский шаблон элемента управления
+![Элемент управления CheckBox, использующий пользовательский шаблон элемента управления.](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")
+Элемент управления CheckBox, использующий пользовательский шаблон элемента управления
 
-Если вы следуете части и состояния модели, при создании элемента управления, внешнего вида элемента управления будет настраиваемым. Средства конструктора, таких как Microsoft Expression Blend поддерживает части и состояния модели, поэтому при выполнении этой модели элемент управления будет можно настраивать в таких типах приложений.  В этом разделе описывается, части и состояния модели и как следовать ему при создании собственного элемента управления. В этом разделе используется пример пользовательского элемента управления, `NumericUpDown`для иллюстрации идеи, лежащие в этой модели.  `NumericUpDown` Элемент управления отображает числовое значение, которое пользователь может увеличить или уменьшить, нажимая кнопки элемента управления.  На следующем рисунке показано `NumericUpDown` элемент управления, который рассматривается в этом разделе.
+При использовании модели частей и состояний при создании элемента управления внешний вид элемента управления будет настраиваемым. Средства конструктора, такие как Blend для Visual Studio, поддерживают модель частей и состояний, поэтому при соблюдении этой модели элемент управления будет настраиваться в этих типах приложений.  В этом разделе рассматривается модель частей и состояний, а также объясняется, как это сделать при создании собственного элемента управления. В этом разделе используется пример пользовательского элемента управления, `NumericUpDown`, для иллюстрации философии этой модели.  Элемент управления `NumericUpDown` отображает числовое значение, которое пользователь может увеличить или уменьшить, нажав кнопки элемента управления.  На следующем рисунке показан элемент управления `NumericUpDown`, описанный в этом разделе.
 
-![Пользовательский элемент управления NumericUpDown. ](./media/ndp-numericupdown.png "NDP_NumericUPDown") пользовательского элемента управления NumericUpDown
+![Пользовательский элемент управления NumericUpDown.](./media/ndp-numericupdown.png "NDP_NumericUPDown")
+Пользовательский элемент управления NumericUpDown
 
 В этом разделе содержатся следующие подразделы.
 
@@ -39,9 +42,9 @@ ms.locfileid: "67660332"
 
 - [Модель частей и состояний](#parts_and_states_model)
 
-- [Определение визуальную структуру и визуальное поведение элемента управления в ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)
+- [Определение визуальной структуры и визуального поведения элемента управления в ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)
 
-- [Части шаблона элемента управления в коде](#using_parts_of_the_controltemplate_in_code)
+- [Использование частей ControlTemplate в коде](#using_parts_of_the_controltemplate_in_code)
 
 - [Предоставление контракта элемента управления](#providing_the_control_contract)
 
@@ -49,156 +52,156 @@ ms.locfileid: "67660332"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
-В этом разделе предполагается, что вы знаете, как создать новую <xref:System.Windows.Controls.ControlTemplate> для существующего элемента управления, уже есть опыт каковы элементы в контракте элемента управления и понимать концепции, описанные в [Настройка внешнего вида существующего элемента управления, Создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+В этом разделе предполагается, что вы знаете, как создать новый <xref:System.Windows.Controls.ControlTemplate> для существующего элемента управления, знакомы с элементами в контракте элемента управления и понимаете принципы [настройки внешнего вида существующего элемента управления путем создания ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
 > [!NOTE]
-> Чтобы создать элемент управления, который может быть настраиваемым внешним видом, необходимо создать элемент управления, который наследует от <xref:System.Windows.Controls.Control> класс или один из его подклассов, отличных от <xref:System.Windows.Controls.UserControl>.  Элемент управления, который наследует от <xref:System.Windows.Controls.UserControl> является элементом управления, можно создать очень быстро, но он не использует <xref:System.Windows.Controls.ControlTemplate> и не может настроить его внешний вид.
+> Чтобы создать элемент управления, для которого может быть настроен внешний вид, необходимо создать элемент управления, который наследует от класса <xref:System.Windows.Controls.Control> или одного из его подклассов, отличных от <xref:System.Windows.Controls.UserControl>.  Элемент управления, наследуемый от <xref:System.Windows.Controls.UserControl>, — это элемент управления, который можно быстро создать, но он не использует <xref:System.Windows.Controls.ControlTemplate> и не может настраивать внешний вид.
 
 <a name="parts_and_states_model"></a>
 
 ## <a name="parts-and-states-model"></a>Модель частей и состояний
 
-Части и состояния модели указывает способ определения визуальную структуру и визуальное поведение элемента управления. Чтобы выполнить части и состояния модели, поступайте следующим:
+Модель частей и состояний определяет, как определить визуальную структуру и визуальное поведение элемента управления. Чтобы следовать модели частей и состояний, необходимо выполнить следующие действия.
 
 - Определите визуальную структуру и визуальное поведение в <xref:System.Windows.Controls.ControlTemplate> элемента управления.
 
-- Выполните определенные рекомендации, когда логика элемента управления взаимодействует с частями шаблона элемента управления.
+- Следуйте определенным рекомендациям, когда логика элемента управления взаимодействует с частями шаблона элемента управления.
 
-- Укажите контракт элемента управления, чтобы указать, что должны быть включены в <xref:System.Windows.Controls.ControlTemplate>.
+- Предоставьте контракт элемента управления, чтобы указать, что следует включить в <xref:System.Windows.Controls.ControlTemplate>.
 
-При определении визуальную структуру и визуальное поведение в <xref:System.Windows.Controls.ControlTemplate> элемента управления, разработчики приложения могут изменять визуальную структуру и визуальное поведение элемента управления путем создания нового <xref:System.Windows.Controls.ControlTemplate> вместо написания кода.   Необходимо предоставить разработчикам контракт элемента управления, который сообщает приложению о том, какие <xref:System.Windows.FrameworkElement> объектов и состояний должны быть определены в <xref:System.Windows.Controls.ControlTemplate>. Вы должны следовать некоторым рекомендациям при взаимодействии с частями в <xref:System.Windows.Controls.ControlTemplate> таким образом, элемент управления правильно обрабатывал неполное <xref:System.Windows.Controls.ControlTemplate>.  Если вы следуете этим трем принципам, разработчики приложений будут иметь возможность создавать <xref:System.Windows.Controls.ControlTemplate> для элемента управления просто так же легко, как только они могут для элементов управления, поставляемые с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  В следующем разделе объясняется каждый из этих рекомендаций, подробно.
+При определении визуальной структуры и визуального поведения в <xref:System.Windows.Controls.ControlTemplate> элемента управления авторы приложений могут изменять визуальную структуру и визуальное поведение элемента управления, создавая новую <xref:System.Windows.Controls.ControlTemplate> вместо написания кода.   Необходимо предоставить контракт элемента управления, который сообщает авторам приложений, <xref:System.Windows.FrameworkElement> какие объекты и состояния должны быть определены в <xref:System.Windows.Controls.ControlTemplate>. При взаимодействии с частями в <xref:System.Windows.Controls.ControlTemplate> следует соблюдать некоторые рекомендации, чтобы элемент управления правильно обрабатывал незавершенные <xref:System.Windows.Controls.ControlTemplate>.  Если следовать этим трем принципам, авторы приложений смогут создавать <xref:System.Windows.Controls.ControlTemplate> для элемента управления так же легко, как и для элементов управления, поставляемых с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  В следующем разделе подробно описывается каждая из этих рекомендаций.
 
 <a name="defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate"></a>
 
-## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>Определение визуальную структуру и визуальное поведение элемента управления в ControlTemplate
+## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>Определение визуальной структуры и визуального поведения элемента управления в ControlTemplate
 
-При создании пользовательского элемента управления с помощью модели части и состояния, определении визуальную структуру и визуальное поведение элемента управления его <xref:System.Windows.Controls.ControlTemplate> вместо в своей логике.  Визуальную структуру элемента управления состоит из <xref:System.Windows.FrameworkElement> объекты, составляющие элемента управления.  Визуальное поведение — это способ отображения элемента управления, когда он находится в определенном состоянии.   Дополнительные сведения о создании <xref:System.Windows.Controls.ControlTemplate> , который указывает визуальную структуру и визуальное поведение элемента управления, см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+При создании пользовательского элемента управления с помощью модели частей и состояний вы определяете визуальную структуру и визуальное поведение элемента управления в его <xref:System.Windows.Controls.ControlTemplate>, а не в логике.  Визуальная структура элемента управления является составной частью <xref:System.Windows.FrameworkElement> объектов, составляющих элемент управления.  Визуальное поведение — это способ отображения элемента управления, когда он находится в определенном состоянии.   Дополнительные сведения о создании <xref:System.Windows.Controls.ControlTemplate>, определяющего визуальную структуру и визуальное поведение элемента управления, см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
-В примере `NumericUpDown` элемента управления, визуальная структура включает в себя два <xref:System.Windows.Controls.Primitives.RepeatButton> элементов управления и <xref:System.Windows.Controls.TextBlock>.  При добавлении этих элементов управления в коде `NumericUpDown` управления--в конструкторе, например положение этих элементов управления может быть неизменяемым.  Вместо определения визуальную структуру и визуальное поведение элемента управления в его код, можно задать его в <xref:System.Windows.Controls.ControlTemplate>.  Затем разработчик приложения может настроить расположение кнопок и <xref:System.Windows.Controls.TextBlock> и указать поведение при `Value` отрицательное поскольку <xref:System.Windows.Controls.ControlTemplate> можно заменить.
+В примере элемента управления `NumericUpDown` визуальная структура содержит два элемента управления <xref:System.Windows.Controls.Primitives.RepeatButton> и <xref:System.Windows.Controls.TextBlock>.  Если добавить эти элементы управления в код элемента управления `NumericUpDown`--в конструкторе, например, позиции этих элементов управления будут неизменными.  Вместо того, чтобы определять визуальную структуру элемента управления и визуальное поведение в своем коде, необходимо определить ее в <xref:System.Windows.Controls.ControlTemplate>.  Затем разработчик приложения может настроить расположение кнопок и <xref:System.Windows.Controls.TextBlock> и указать, какое поведение происходит, когда `Value` отрицательно, поскольку <xref:System.Windows.Controls.ControlTemplate> можно заменить.
 
-Следующий пример показывает визуальную структуру элемента `NumericUpDown` элемент управления, который включает в себя <xref:System.Windows.Controls.Primitives.RepeatButton> для увеличения `Value`, <xref:System.Windows.Controls.Primitives.RepeatButton> уменьшение `Value`и <xref:System.Windows.Controls.TextBlock> для отображения `Value`.
+В следующем примере показана визуальная структура элемента управления `NumericUpDown`, которая включает <xref:System.Windows.Controls.Primitives.RepeatButton> для увеличения `Value`, <xref:System.Windows.Controls.Primitives.RepeatButton> для уменьшения `Value`и <xref:System.Windows.Controls.TextBlock> для отображения `Value`.
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-Визуальное поведение элемента `NumericUpDown` элемент управления является то, что значение является красным цветом, если отрицательное.  При изменении <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> в программном коде `Value` отрицательное, `NumericUpDown` всегда будет отображаться красный отрицательное значение. Укажите визуальное поведение элемента управления в <xref:System.Windows.Controls.ControlTemplate> , добавив <xref:System.Windows.VisualState> объектов <xref:System.Windows.Controls.ControlTemplate>.  В следующем примере показан <xref:System.Windows.VisualState> объектов для `Positive` и `Negative` состояний.  `Positive` и `Negative` являются взаимоисключающими (элемент управления всегда находится в одном из двух), поэтому в примере <xref:System.Windows.VisualState> объекты в единую <xref:System.Windows.VisualStateGroup>.  Когда элемент управления переходит в `Negative` состояние, <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> станет красным.  Если элемент управления находится в `Positive` состояние, <xref:System.Windows.Controls.TextBlock.Foreground%2A> возвращает исходное значение.  Определение <xref:System.Windows.VisualState> объекты в <xref:System.Windows.Controls.ControlTemplate> подробнее рассматривается в [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Визуальное поведение элемента управления `NumericUpDown` заключается в том, что значение имеет красный шрифт, если оно отрицательное.  Если вы изменяете <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> в коде, если `Value` отрицательный, `NumericUpDown` всегда будет показывать красное отрицательное значение. Визуальное поведение элемента управления указывается в <xref:System.Windows.Controls.ControlTemplate> путем добавления <xref:System.Windows.VisualState> объектов в <xref:System.Windows.Controls.ControlTemplate>.  В следующем примере показаны объекты <xref:System.Windows.VisualState> для состояний `Positive` и `Negative`.  `Positive` и `Negative` являются взаимоисключающими (элемент управления всегда находится в точности один из двух), поэтому в примере объекты <xref:System.Windows.VisualState> помещаются в один <xref:System.Windows.VisualStateGroup>.  Когда элемент управления переходит в состояние `Negative`, <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> становится красным.  Когда элемент управления находится в состоянии `Positive`, <xref:System.Windows.Controls.TextBlock.Foreground%2A> возвращается к исходному значению.  Определение объектов <xref:System.Windows.VisualState> в <xref:System.Windows.Controls.ControlTemplate> подробнее обсуждается в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
 > [!NOTE]
-> Не забудьте задать <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> присоединенного свойства в корне <xref:System.Windows.FrameworkElement> из <xref:System.Windows.Controls.ControlTemplate>.
+> Не забудьте задать <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> присоединенное свойство в корневой <xref:System.Windows.FrameworkElement> <xref:System.Windows.Controls.ControlTemplate>.
 
 [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]
 
 <a name="using_parts_of_the_controltemplate_in_code"></a>
 
-## <a name="using-parts-of-the-controltemplate-in-code"></a>Части шаблона элемента управления в коде
+## <a name="using-parts-of-the-controltemplate-in-code"></a>Использование частей ControlTemplate в коде
 
-Объект <xref:System.Windows.Controls.ControlTemplate> автор может опустить <xref:System.Windows.FrameworkElement> или <xref:System.Windows.VisualState> объектов, намеренно или по ошибке, но логика элемента управления могут понадобиться эти части правильной. Модель части и состояния указывает, что элемент управления должен быть устойчив к <xref:System.Windows.Controls.ControlTemplate> , где отсутствует <xref:System.Windows.FrameworkElement> или <xref:System.Windows.VisualState> объектов.  Элемент управления не должны вызывать исключение или сообщение ошибку если <xref:System.Windows.FrameworkElement>, <xref:System.Windows.VisualState>, или <xref:System.Windows.VisualStateGroup> отсутствует <xref:System.Windows.Controls.ControlTemplate>. В этом разделе описываются рекомендации по взаимодействию с <xref:System.Windows.FrameworkElement> объектов и управление состояниями.
+Автор <xref:System.Windows.Controls.ControlTemplate> может опустить <xref:System.Windows.FrameworkElement> или <xref:System.Windows.VisualState> объектов, либо намеренно, либо по ошибке, но логика элемента управления может потребовать, чтобы эти компоненты работали правильно. Модель "части и состояния" указывает, что элемент управления должен быть устойчивым к <xref:System.Windows.Controls.ControlTemplate>, на котором отсутствуют <xref:System.Windows.FrameworkElement> или <xref:System.Windows.VisualState> объекты.  Элемент управления не должен вызывать исключение или сообщать об ошибке, если в <xref:System.Windows.Controls.ControlTemplate>отсутствует <xref:System.Windows.FrameworkElement>, <xref:System.Windows.VisualState>или <xref:System.Windows.VisualStateGroup>. В этом разделе описаны рекомендации по взаимодействию с <xref:System.Windows.FrameworkElement> объектами и управлением состояниями.
 
-### <a name="anticipate-missing-frameworkelement-objects"></a>Предвидеть отсутствие FrameworkElement объектов
+### <a name="anticipate-missing-frameworkelement-objects"></a>Ожидается отсутствие объектов FrameworkElement
 
-При определении <xref:System.Windows.FrameworkElement> объекты в <xref:System.Windows.Controls.ControlTemplate>, логика элемента управления может потребоваться взаимодействовать с некоторыми из них.  Например `NumericUpDown` управления подписывается на кнопки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий, чтобы увеличить или уменьшить `Value` и задает <xref:System.Windows.Controls.TextBlock.Text%2A> свойство <xref:System.Windows.Controls.TextBlock> для `Value`. Если пользовательский <xref:System.Windows.Controls.ControlTemplate> опускает <xref:System.Windows.Controls.TextBlock> или кнопки, это допустимо, что элемент управления теряет часть ее функциональных возможностей, но следует убедиться, что элемент управления не вызывает ошибку. Например если <xref:System.Windows.Controls.ControlTemplate> не содержит кнопки для изменения `Value`, `NumericUpDown` теряет свою функциональность, но приложение, использующее <xref:System.Windows.Controls.ControlTemplate> будет продолжать работу.
+При определении <xref:System.Windows.FrameworkElement> объектов в <xref:System.Windows.Controls.ControlTemplate>логике элемента управления может потребоваться взаимодействие с некоторыми из них.  Например, элемент управления `NumericUpDown` подписывается на событие кнопки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> для увеличения или уменьшения `Value` и устанавливает для свойства <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> значение `Value`. Если в пользовательском <xref:System.Windows.Controls.ControlTemplate> опущены <xref:System.Windows.Controls.TextBlock> или кнопки, то допустимо, чтобы элемент управления потерял некоторые его функции, но вы должны быть уверены, что элемент управления не вызывает ошибку. Например, если <xref:System.Windows.Controls.ControlTemplate> не содержит кнопки для изменения `Value`, `NumericUpDown` теряет эту функциональность, но приложение, использующее <xref:System.Windows.Controls.ControlTemplate>, будет продолжать работать.
 
-Следующие рекомендации убедитесь, что элемент управления правильно реагирует на отсутствует <xref:System.Windows.FrameworkElement> объектов:
+Следующие рекомендации гарантируют, что элемент управления будет правильно реагировать на отсутствие <xref:System.Windows.FrameworkElement> объектов:
 
-1. Задайте `x:Name` атрибут для каждого <xref:System.Windows.FrameworkElement> , необходимо ссылаться в коде.
+1. Задайте атрибут `x:Name` для каждой <xref:System.Windows.FrameworkElement>, на которую необходимо ссылаться в коде.
 
-2. Определите частные свойства для каждого <xref:System.Windows.FrameworkElement> , вам понадобится взаимодействовать с.
+2. Определите частные свойства для каждого <xref:System.Windows.FrameworkElement>, с которым необходимо взаимодействовать.
 
-3. Подписаться и Отмена подписки на события, которые обрабатывает элемент управления в <xref:System.Windows.FrameworkElement> доступа set свойства.
+3. Подпишитесь и отменяйте подписывание любых событий, обрабатываемых элементом управления в методе доступа set свойства <xref:System.Windows.FrameworkElement>.
 
-4. Задайте <xref:System.Windows.FrameworkElement> свойства, которые были определены на этапе 2 в <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> метод. Это связано с самой ранней, <xref:System.Windows.FrameworkElement> в <xref:System.Windows.Controls.ControlTemplate> доступен для элемента управления. Используйте `x:Name` из <xref:System.Windows.FrameworkElement> для получения их из <xref:System.Windows.Controls.ControlTemplate>.
+4. Задайте свойства <xref:System.Windows.FrameworkElement>, определенные на шаге 2, в методе <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>. Это самое раннее, что <xref:System.Windows.FrameworkElement> в <xref:System.Windows.Controls.ControlTemplate> доступен элементу управления. Используйте `x:Name` <xref:System.Windows.FrameworkElement>, чтобы получить его из <xref:System.Windows.Controls.ControlTemplate>.
 
-5. Убедитесь, что <xref:System.Windows.FrameworkElement> не `null` перед обращением к их элементам.  Если это `null`, не сообщает об ошибке.
+5. Убедитесь, что <xref:System.Windows.FrameworkElement> не `null` перед доступом к ее членам.  Если это `null`, не сообщайте об ошибке.
 
-В следующих примерах показывается как `NumericUpDown` элемент управления взаимодействует с <xref:System.Windows.FrameworkElement> объектов в соответствии с рекомендациями в списке выше.
+В следующих примерах показано, как элемент управления `NumericUpDown` взаимодействует с <xref:System.Windows.FrameworkElement>ными объектами в соответствии с рекомендациями из предыдущего списка.
 
-В примере, который определяет визуальную структуру элемента `NumericUpDown` контролировать <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.Controls.Primitives.RepeatButton> , увеличивающий `Value` имеет его `x:Name` атрибут `UpButton`.  В следующем примере объявляется свойство с именем `UpButtonElement` , представляющий <xref:System.Windows.Controls.Primitives.RepeatButton> , объявленным в <xref:System.Windows.Controls.ControlTemplate>. `set` Доступа сначала отменяет подписку на кнопку <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий Если `UpDownElement` не `null`, задает свойство, и затем подписывается на <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий. Также имеется свойство определен, но не отображается, для других <xref:System.Windows.Controls.Primitives.RepeatButton>, который называется `DownButtonElement`.
+В примере, который определяет визуальную структуру элемента управления `NumericUpDown` в <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.Controls.Primitives.RepeatButton>, увеличивающее `Value`, имеет атрибут `x:Name`, установленный в `UpButton`.  В следующем примере объявляется свойство с именем `UpButtonElement`, которое представляет <xref:System.Windows.Controls.Primitives.RepeatButton>, объявленный в <xref:System.Windows.Controls.ControlTemplate>. Метод доступа `set` First отменяет подписывание на событие <xref:System.Windows.Controls.Primitives.ButtonBase.Click> кнопки, если `UpDownElement` не `null`, то задается свойство, а затем подписывается на событие <xref:System.Windows.Controls.Primitives.ButtonBase.Click>. Кроме того, имеется свойство, определенное, но не показанное здесь для других <xref:System.Windows.Controls.Primitives.RepeatButton>, именуемое `DownButtonElement`.
 
 [!code-csharp[VSMCustomControl#UpButtonProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#upbuttonproperty)]
 [!code-vb[VSMCustomControl#UpButtonProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#upbuttonproperty)]
 
-В следующем примере показан <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> для `NumericUpDown` элемента управления.  В примере используется <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> метод для получения <xref:System.Windows.FrameworkElement> объектов из <xref:System.Windows.Controls.ControlTemplate>.  Обратите внимание, что в примере предотвращаются ситуации, когда <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> находит <xref:System.Windows.FrameworkElement> с указанным именем, которое не относится к ожидаемому типу. Это также рекомендуемый способ игнорирования элементов, имеющих указанный `x:Name` , но имеет неправильный тип.
+В следующем примере показаны <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> для элемента управления `NumericUpDown`.  В примере используется метод <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> для получения объектов <xref:System.Windows.FrameworkElement> из <xref:System.Windows.Controls.ControlTemplate>.  Обратите внимание, что пример защищается от случаев, когда <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> находит <xref:System.Windows.FrameworkElement> с указанным именем, которое не относится к ожидаемому типу. Также рекомендуется пропускать элементы с указанным `x:Name`, но имеют неверный тип.
 
 [!code-csharp[VSMCustomControl#ApplyTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
 [!code-vb[VSMCustomControl#ApplyTemplate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]
 
-Следуя рекомендациям, показанные в предыдущих примерах, убедитесь, что элемент управления будет продолжать выполняться, когда <xref:System.Windows.Controls.ControlTemplate> отсутствует <xref:System.Windows.FrameworkElement>.
+Следуя рекомендациям, приведенным в предыдущих примерах, вы убедитесь, что элемент управления продолжит работу, когда в <xref:System.Windows.Controls.ControlTemplate> отсутствует <xref:System.Windows.FrameworkElement>.
 
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Использование VisualStateManager для управления состояниями
 
-<xref:System.Windows.VisualStateManager> Отслеживает состояния элемента управления и выполняет логику, необходимую для перехода между состояниями. При добавлении <xref:System.Windows.VisualState> объектов <xref:System.Windows.Controls.ControlTemplate>, их следует добавить <xref:System.Windows.VisualStateGroup> и добавьте <xref:System.Windows.VisualStateGroup> для <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> вложенного свойства зависимостей, чтобы <xref:System.Windows.VisualStateManager> имеет доступ к ним.
+<xref:System.Windows.VisualStateManager> отслеживает состояния элемента управления и выполняет логику, необходимую для перехода между состояниями. При добавлении <xref:System.Windows.VisualState> объектов в <xref:System.Windows.Controls.ControlTemplate>их необходимо добавить в <xref:System.Windows.VisualStateGroup> и добавить <xref:System.Windows.VisualStateGroup> в <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> присоединенное свойство, чтобы у <xref:System.Windows.VisualStateManager> был доступ к ним.
 
-В следующем примере повторяется предыдущий пример, в котором показано <xref:System.Windows.VisualState> объектов, которые соответствуют `Positive` и `Negative` состояний элемента управления. <xref:System.Windows.Media.Animation.Storyboard> В `Negative` <xref:System.Windows.VisualState> включает <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> красным.   Когда `NumericUpDown` элемент управления находится в `Negative` state, раскадровки в `Negative` состояние начинается.  Затем <xref:System.Windows.Media.Animation.Storyboard> в `Negative` состояние останавливается, когда элемент управления возвращается `Positive` состояния.  `Positive` <xref:System.Windows.VisualState> Не содержать <xref:System.Windows.Media.Animation.Storyboard> так как при <xref:System.Windows.Media.Animation.Storyboard> для `Negative` останавливается, <xref:System.Windows.Controls.TextBlock.Foreground%2A> возвращает исходного цвета.
+В следующем примере повторяется предыдущий пример, в котором показаны <xref:System.Windows.VisualState>ные объекты, соответствующие `Positive` и `Negative` состояниям элемента управления. <xref:System.Windows.Media.Animation.Storyboard> в `Negative`<xref:System.Windows.VisualState> превращает <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> Red.   Когда `NumericUpDown` элемент управления находится в состоянии `Negative`, начинается раскадровка в `Negative`ном состоянии.  Затем <xref:System.Windows.Media.Animation.Storyboard> в `Negative` состояние останавливается, когда элемент управления возвращается в состояние `Positive`.  <xref:System.Windows.VisualState> `Positive`не обязательно должен содержать <xref:System.Windows.Media.Animation.Storyboard>, так как если <xref:System.Windows.Media.Animation.Storyboard> для `Negative` останавливается, <xref:System.Windows.Controls.TextBlock.Foreground%2A> возвращается к исходному цвету.
 
 [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]
 
-Обратите внимание, что <xref:System.Windows.Controls.TextBlock> присваивается имя, но <xref:System.Windows.Controls.TextBlock> не находится в контракте элемента управления для `NumericUpDown` так как логика элемента управления никогда не ссылается на <xref:System.Windows.Controls.TextBlock>.  Элементы, которые упоминаются в <xref:System.Windows.Controls.ControlTemplate> имеют имена, но не обязательно должны быть частью контракта элемента управления, так как новый <xref:System.Windows.Controls.ControlTemplate> для элемента управления не может потребоваться ссылка на этот элемент.  Например, человек, который создает новую <xref:System.Windows.Controls.ControlTemplate> для `NumericUpDown` может решить указать, что не `Value` путем изменения <xref:System.Windows.Controls.Control.Foreground%2A>.  В этом случае ни код, ни <xref:System.Windows.Controls.ControlTemplate> ссылки <xref:System.Windows.Controls.TextBlock> по имени.
+Обратите внимание, что <xref:System.Windows.Controls.TextBlock> присваивается имя, но <xref:System.Windows.Controls.TextBlock> не находится в контракте элемента управления для `NumericUpDown`, так как логика элемента управления никогда не ссылается на <xref:System.Windows.Controls.TextBlock>.  Элементы, упоминаемые в <xref:System.Windows.Controls.ControlTemplate>, имеют имена, но не обязательно должны быть частью контракта элемента управления, <xref:System.Windows.Controls.ControlTemplate> поскольку для элемента управления может не потребоваться ссылка на этот элемент.  Например, кто-то, кто создает новый <xref:System.Windows.Controls.ControlTemplate> для `NumericUpDown`, может решить не указывать, что `Value` отрицательно, изменив <xref:System.Windows.Controls.Control.Foreground%2A>.  В этом случае ни код, ни <xref:System.Windows.Controls.ControlTemplate> не ссылаются на <xref:System.Windows.Controls.TextBlock> по имени.
 
-Логика элемента управления отвечает за изменение состояния элемента управления. В следующем примере показано, что `NumericUpDown` контролирующие вызовы, <xref:System.Windows.VisualStateManager.GoToState%2A> метод в `Positive` состояние при `Value` 0 или больше и `Negative` состояние при `Value` меньше 0.
+Логика элемента управления отвечает за изменение состояния элемента управления. В следующем примере показано, что элемент управления `NumericUpDown` вызывает метод <xref:System.Windows.VisualStateManager.GoToState%2A>, чтобы переходить в состояние `Positive`, когда `Value` имеет значение 0 или больше, и состояние `Negative`, если `Value` меньше 0.
 
 [!code-csharp[VSMCustomControl#ValueStateChange](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#valuestatechange)]
 [!code-vb[VSMCustomControl#ValueStateChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#valuestatechange)]
 
-<xref:System.Windows.VisualStateManager.GoToState%2A> Метод выполняет логику, необходимую для запуска и остановки раскадровки соответствующим образом. Когда элемент управления вызывает <xref:System.Windows.VisualStateManager.GoToState%2A> для изменения его состояния <xref:System.Windows.VisualStateManager> делает следующее:
+Метод <xref:System.Windows.VisualStateManager.GoToState%2A> выполняет логику, необходимую для запуска и завершения раскадровки соответствующим образом. Когда элемент управления вызывает <xref:System.Windows.VisualStateManager.GoToState%2A> для изменения его состояния, <xref:System.Windows.VisualStateManager> выполняет следующие действия:
 
-- Если <xref:System.Windows.VisualState> требуется элемент управления имеет <xref:System.Windows.Media.Animation.Storyboard>, раскадровки. Затем, если <xref:System.Windows.VisualState> откуда элемент управления имеет <xref:System.Windows.Media.Animation.Storyboard>, завершения раскадровки.
+- Если <xref:System.Windows.VisualState>, что в элементе управления будет <xref:System.Windows.Media.Animation.Storyboard>, начинается раскадровка. Затем, если <xref:System.Windows.VisualState>, из которого поступает элемент управления, <xref:System.Windows.Media.Animation.Storyboard>, раскадровка заканчивается.
 
-- Если элемент управления уже находится в состоянии, которое указано, <xref:System.Windows.VisualStateManager.GoToState%2A> не предпринимает никаких действий и возвращает `true`.
+- Если элемент управления уже находится в указанном состоянии, <xref:System.Windows.VisualStateManager.GoToState%2A> не выполняет никаких действий и возвращает `true`.
 
-- Если указанное состояние не существует в <xref:System.Windows.Controls.ControlTemplate> из `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> не предпринимает никаких действий и возвращает `false`.
+- Если указанное состояние не существует в <xref:System.Windows.Controls.ControlTemplate> `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> не выполняет никаких действий и возвращает `false`.
 
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>Рекомендации по работе с VisualStateManager
 
-Рекомендуется выполнить следующую команду, чтобы поддерживать состояний элемента управления.
+Для поддержания состояния элемента управления рекомендуется выполнить следующие действия.
 
-- Свойства можно используйте для отслеживания состояния.
+- Используйте свойства для отслеживания состояния.
 
 - Создайте вспомогательный метод для перехода между состояниями.
 
-`NumericUpDown` Управления использует его `Value` свойства для отслеживания, является ли он в `Positive` или `Negative` состояния.  `NumericUpDown` Управления также определяет `Focused` и `UnFocused` очевидно из записей <xref:System.Windows.UIElement.IsFocused%2A> свойство. Если вы используете состояния, которые не соответствуют естественным образом свойство элемента управления, можно определить частное свойство для отслеживания состояния.
+Элемент управления `NumericUpDown` использует свойство `Value` для отслеживания того, находится ли он в `Positive` или `Negative` состоянии.  Элемент управления `NumericUpDown` также определяет `Focused` и `UnFocused` состояния, которые отслеживают свойство <xref:System.Windows.UIElement.IsFocused%2A>. При использовании состояний, которые, естественно, не соответствуют свойству элемента управления, можно определить частное свойство для отслеживания состояния.
 
-Один метод, который обновляет все состояния, централизованно выполняет вызовы <xref:System.Windows.VisualStateManager> и сохраняет код управляемым. В следующем примере показан `NumericUpDown` вспомогательный метод элемента управления, `UpdateStates`. Когда `Value` больше или равно 0, <xref:System.Windows.Controls.Control> в `Positive` состояние.  Когда `Value` — меньше 0, элемент управления находится в `Negative` состояние.  Когда <xref:System.Windows.UIElement.IsFocused%2A> — `true`, элемент управления находится в `Focused` состояния; в противном случае он находится в `Unfocused` состояние.  Элемент управления может вызывать `UpdateStates` каждый раз, когда необходимо изменить свое состояние, независимо от состояния.
+Один метод, который обновляет все состояния, централизует вызовы <xref:System.Windows.VisualStateManager> и обеспечивает управляемость кода. В следующем примере показан вспомогательный метод элемента управления `NumericUpDown` `UpdateStates`. Если `Value` больше или равно 0, <xref:System.Windows.Controls.Control> находится в состоянии `Positive`.  Если `Value` меньше 0, элемент управления находится в состоянии `Negative`.  Если <xref:System.Windows.UIElement.IsFocused%2A> `true`, элемент управления находится в `Focused` состоянии. в противном случае он находится в состоянии `Unfocused`.  Элемент управления может вызывать `UpdateStates` каждый раз, когда ему нужно изменить свое состояние, независимо от изменения состояния.
 
 [!code-csharp[VSMCustomControl#UpdateStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#updatestates)]
 [!code-vb[VSMCustomControl#UpdateStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#updatestates)]
 
-Если передать имя состояния для <xref:System.Windows.VisualStateManager.GoToState%2A> когда элемент управления уже находится в этом состоянии <xref:System.Windows.VisualStateManager.GoToState%2A> ничего не делает, поэтому не нужно проверить текущее состояние элемента управления.  Например если `Value` изменяется от одного отрицательного числа на другое отрицательное число, раскадровка для `Negative` состояние не прерывается, и пользователь не увидит изменений в элементе управления.
+Если имя состояния передается <xref:System.Windows.VisualStateManager.GoToState%2A>, когда элемент управления уже находится в этом состоянии, <xref:System.Windows.VisualStateManager.GoToState%2A> не выполняет никаких действий, поэтому не нужно проверять текущее состояние элемента управления.  Например, если `Value` меняется от одного отрицательного числа к другому отрицательному, раскадровка для состояния `Negative` не прерывается и пользователь не увидит изменения в элементе управления.
 
-<xref:System.Windows.VisualStateManager> Использует <xref:System.Windows.VisualStateGroup> объектов, чтобы определить, какое состояние, чтобы завершить работу при вызове <xref:System.Windows.VisualStateManager.GoToState%2A>. Элемент управления всегда находится в одном состоянии для каждой <xref:System.Windows.VisualStateGroup> , определенный в его <xref:System.Windows.Controls.ControlTemplate> и покидает это состояние только при переходе в другое состояние с использованием того же <xref:System.Windows.VisualStateGroup>. Например <xref:System.Windows.Controls.ControlTemplate> из `NumericUpDown` управления определяет `Positive` и `Negative` <xref:System.Windows.VisualState> объектов в одном <xref:System.Windows.VisualStateGroup> и `Focused` и `Unfocused` <xref:System.Windows.VisualState> объекты в другой. (Вы увидите `Focused` и `Unfocused` <xref:System.Windows.VisualState> определенные в [полный пример](#complete_example) в этой статье, когда элемент управления переходит из `Positive` состояние `Negative` состояние, или наоборот, элемент управления остается в любом `Focused` или `Unfocused` состояния.
+<xref:System.Windows.VisualStateManager> использует <xref:System.Windows.VisualStateGroup> объекты, чтобы определить, какое состояние выйти при вызове <xref:System.Windows.VisualStateManager.GoToState%2A>. Элемент управления всегда находится в одном состоянии для каждого <xref:System.Windows.VisualStateGroup>, определенного в его <xref:System.Windows.Controls.ControlTemplate> и оставляет состояние только при переходе в другое состояние из того же <xref:System.Windows.VisualStateGroup>. Например, <xref:System.Windows.Controls.ControlTemplate> элемента управления `NumericUpDown` определяет `Positive` и `Negative`<xref:System.Windows.VisualState> объекты в одном <xref:System.Windows.VisualStateGroup>, а `Focused` и `Unfocused`<xref:System.Windows.VisualState> объекты в другом. (Вы видите `Focused` и `Unfocused`<xref:System.Windows.VisualState>, определенные в разделе " [полный пример](#complete_example) " этого раздела, когда элемент управления переходит из состояния `Positive` в состояние `Negative` или наоборот, элемент управления остается в `Focused` или `Unfocused` с.
 
-Существует три типичные места, где может изменить состояние элемента управления:
+Существует три типичных места, в которых состояние элемента управления может измениться:
 
-- Когда <xref:System.Windows.Controls.ControlTemplate> применяется к <xref:System.Windows.Controls.Control>.
+- При применении <xref:System.Windows.Controls.ControlTemplate> к <xref:System.Windows.Controls.Control>.
 
 - При изменении свойства.
 
 - При возникновении события.
 
-В следующих примерах демонстрируется обновление состояния `NumericUpDown` элемента управления в таких случаях.
+В следующих примерах показано обновление состояния элемента управления `NumericUpDown` в этих случаях.
 
-Необходимо обновить состояние элемента управления в <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> метод отображения элемента управления в правильное состояние при <xref:System.Windows.Controls.ControlTemplate> применяется. В следующем примере вызывается `UpdateStates` в <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> чтобы убедиться в правильности состояния элемента управления.  Например, предположим, создаваемые `NumericUpDown` и затем задать его <xref:System.Windows.Controls.Control.Foreground%2A> зеленый цвет и `Value` значению -5.  Если вы не вызываете `UpdateStates` при <xref:System.Windows.Controls.ControlTemplate> применяется к `NumericUpDown` элемент управления, элемент управления отсутствует в `Negative` состояние и значение отображается зеленым цветом, вместо red.  Необходимо вызвать `UpdateStates` для размещения этого элемента управления `Negative` состояние.
+Необходимо обновить состояние элемента управления в методе <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>, чтобы элемент управления выявлялся в правильном состоянии при применении <xref:System.Windows.Controls.ControlTemplate>. В следующем примере вызывается `UpdateStates` в <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>, чтобы гарантировать, что элемент управления находится в соответствующих состояниях.  Например, предположим, что вы создаете элемент управления `NumericUpDown`, а затем установите для его <xref:System.Windows.Controls.Control.Foreground%2A> значение зеленый, а `Value` — значение-5.  Если не вызвать `UpdateStates` при применении <xref:System.Windows.Controls.ControlTemplate> к элементу управления `NumericUpDown`, элемент управления находится не в состоянии `Negative`, а значение — зеленым вместо красного.  Чтобы перевести элемент управления в состояние `Negative`, необходимо вызвать метод `UpdateStates`.
 
 [!code-csharp[VSMCustomControl#ApplyTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
 [!code-vb[VSMCustomControl#ApplyTemplate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]
 
-Часто требуется для обновления состояния элемента управления при изменении свойства. В следующем примере показан весь `ValueChangedCallback` метод. Так как `ValueChangedCallback` вызывается, когда `Value` изменяется, вызывается метод `UpdateStates` в случае, если `Value` изменилось с положительным, отрицательным или наоборот. Это допустимо для вызова `UpdateStates` при `Value` изменяется, но остается положительным или отрицательным, поскольку в этом случае элемент управления не изменяет состояние.
+Часто требуется обновлять состояния элемента управления при изменении свойства. В следующем примере показан весь метод `ValueChangedCallback`. Поскольку `ValueChangedCallback` вызывается при изменении `Value`, метод вызывает `UpdateStates` на случай, если `Value` изменился с положительного на отрицательный или наоборот. Допускается вызов `UpdateStates`, когда `Value` изменяется, но остается положительным или отрицательным, поскольку в этом случае элемент управления не изменит состояние.
 
 [!code-csharp[VSMCustomControl#EntireValueChangedCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#entirevaluechangedcallback)]
 [!code-vb[VSMCustomControl#EntireValueChangedCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#entirevaluechangedcallback)]
 
-Может также потребоваться обновить состояния при возникновении события. В следующем примере показано, что `NumericUpDown` вызовы `UpdateStates` на <xref:System.Windows.Controls.Control> для обработки <xref:System.Windows.UIElement.GotFocus> событий.
+Также может потребоваться обновить состояния при возникновении события. В следующем примере показано, что `NumericUpDown` вызывает `UpdateStates` в <xref:System.Windows.Controls.Control> для управления событием <xref:System.Windows.UIElement.GotFocus>.
 
 [!code-csharp[VSMCustomControl#OnGotFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#ongotfocus)]
 [!code-vb[VSMCustomControl#OnGotFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#ongotfocus)]
 
-<xref:System.Windows.VisualStateManager> Помогает управлять состояний элемента управления. С помощью <xref:System.Windows.VisualStateManager>, убедитесь, что элемент управления правильные переходы между состояниями.  Если вы выполните рекомендации, описанные в этом разделе, для работы с <xref:System.Windows.VisualStateManager>, код элемента управления будет оставаться читаемым и простым в обслуживании.
+<xref:System.Windows.VisualStateManager> помогает управлять состояниями элемента управления. Используя <xref:System.Windows.VisualStateManager>, вы гарантируете, что элемент управления правильно переходит между состояниями.  Если следовать рекомендациям, описанным в этом разделе, для работы с <xref:System.Windows.VisualStateManager>, код элемента управления останется доступным для чтения и сопровождения.
 
 <a name="providing_the_control_contract"></a>
 
 ## <a name="providing-the-control-contract"></a>Предоставление контракта элемента управления
 
-Укажите контракт элемента управления, чтобы <xref:System.Windows.Controls.ControlTemplate> авторы будет знать, какие нужно указать в шаблоне. Контракт элемента управления имеет три элемента:
+Вы предоставляете контракт элемента управления, чтобы <xref:System.Windows.Controls.ControlTemplate> авторы узнают, что следует разместить в шаблоне. Контракт элемента управления имеет три элемента:
 
 - визуальный элемент, используемый логикой элемента управления;
 
@@ -206,15 +209,15 @@ ms.locfileid: "67660332"
 
 - общие свойства, визуально воздействующие на элемент управления.
 
-Кто-то, которое создает новый <xref:System.Windows.Controls.ControlTemplate> должен знать, что <xref:System.Windows.FrameworkElement> объектов логикой элемента управления, новые типы этих объектов и их имена. Объект <xref:System.Windows.Controls.ControlTemplate> автор также необходимо знать имя каждого возможного состояния элемента управления, а какие <xref:System.Windows.VisualStateGroup> состояние имеет значение.
+Кто-то, создающий новый <xref:System.Windows.Controls.ControlTemplate>, должен иметь представление об объектах <xref:System.Windows.FrameworkElement>, используемых логикой элемента управления, типе каждого объекта и его имени. Автору <xref:System.Windows.Controls.ControlTemplate> также необходимо иметь имя каждого возможного состояния, в котором может находиться элемент управления, а также указать, в каком <xref:System.Windows.VisualStateGroup> находится состояние.
 
-Возвращаясь к `NumericUpDown` примере элемент управления ожидает <xref:System.Windows.Controls.ControlTemplate> быть следующие <xref:System.Windows.FrameworkElement> объектов:
+При возврате к примеру `NumericUpDown` элемент управления ждет, что <xref:System.Windows.Controls.ControlTemplate> будет иметь следующие <xref:System.Windows.FrameworkElement> объекты:
 
-- Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `UpButton`.
+- <xref:System.Windows.Controls.Primitives.RepeatButton> с именем `UpButton`.
 
-- Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `DownButton.`
+- <xref:System.Windows.Controls.Primitives.RepeatButton> с именем `DownButton.`
 
- Размер элемента управления можно в следующих состояниях:
+ Элемент управления может находиться в следующих состояниях:
 
 - В `ValueStates`<xref:System.Windows.VisualStateGroup>
 
@@ -228,11 +231,11 @@ ms.locfileid: "67660332"
 
   - `Unfocused`
 
-Указать, что <xref:System.Windows.FrameworkElement> ожидает, что объекты элемента управления, использовать <xref:System.Windows.TemplatePartAttribute>, который указывает имя и тип ожидаемых элементов.  Для указания возможных состояний элемента управления, используется <xref:System.Windows.TemplateVisualStateAttribute>, который указывает имя состояния, а какие <xref:System.Windows.VisualStateGroup> он принадлежит.  Поместите <xref:System.Windows.TemplatePartAttribute> и <xref:System.Windows.TemplateVisualStateAttribute> в определении класса элемента управления.
+Чтобы указать, какие объекты <xref:System.Windows.FrameworkElement> ожидает элемент управления, используйте <xref:System.Windows.TemplatePartAttribute>, который указывает имя и тип ожидаемых элементов.  Чтобы указать возможные состояния элемента управления, используйте <xref:System.Windows.TemplateVisualStateAttribute>, который указывает имя состояния и <xref:System.Windows.VisualStateGroup> к нему.  Вставьте <xref:System.Windows.TemplatePartAttribute> и <xref:System.Windows.TemplateVisualStateAttribute> в определение класса элемента управления.
 
-Любое открытое свойство, которое влияет на внешний вид элемента управления также является частью контракта элемента управления.
+Любое открытое свойство, влияющее на внешний вид элемента управления, также является частью контракта элемента управления.
 
-В следующем примере задается <xref:System.Windows.FrameworkElement> объекта и состояний для `NumericUpDown` элемента управления.
+В следующем примере задается объект <xref:System.Windows.FrameworkElement> и состояния для элемента управления `NumericUpDown`.
 
 [!code-csharp[VSMCustomControl#ControlContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controlcontract)]
 [!code-vb[VSMCustomControl#ControlContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controlcontract)]
@@ -241,11 +244,11 @@ ms.locfileid: "67660332"
 
 ## <a name="complete-example"></a>Полный пример
 
-Ниже приведен весь <xref:System.Windows.Controls.ControlTemplate> для `NumericUpDown` элемента управления.
+Ниже приведен пример всего <xref:System.Windows.Controls.ControlTemplate> для элемента управления `NumericUpDown`.
 
 [!code-xaml[VSMCustomControl#NUDTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/themes/generic.xaml#nudtemplate)]
 
-В следующем примере показано логику для `NumericUpDown`.
+В следующем примере показана логика для `NumericUpDown`.
 
 [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
 [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]

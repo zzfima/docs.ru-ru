@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 2eacb0ff49b868f144bf35af4bb64b7d049b30cb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: cee80ca0880e046870f699f45624df61ee507a47
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401392"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919865"
 ---
 # <a name="attached-properties-overview"></a>Общие сведения о вложенных свойствах зависимостей
 
@@ -24,7 +24,7 @@ ms.locfileid: "68401392"
 
 ## Зачем использовать присоединенные свойства<a name="attached_properties_usage"></a>
 
-Среди прочего, присоединенные свойства позволяют разным дочерним элементам задавать уникальные значения для свойства, которое фактически определено в родительском элементе. Конкретным примером этого сценария является уведомление дочерними элементами родительского элемента о порядке их представления в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Одним из примеров является <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> свойство. Свойство создается как присоединенное свойство, так как оно предназначено для установки в элементах, содержащихся <xref:System.Windows.Controls.DockPanel>в, а не на <xref:System.Windows.Controls.DockPanel> самом себе. <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.DependencyProperty> <xref:System.Windows.Controls.DockPanel.DockProperty> <xref:System.Windows.Controls.DockPanel.GetDock%2A> Класс определяет статическое поле с именем, а затем предоставляет методы и <xref:System.Windows.Controls.DockPanel.SetDock%2A> в качестве открытых методов доступа для присоединенного свойства. <xref:System.Windows.Controls.DockPanel>
+Среди прочего, присоединенные свойства позволяют разным дочерним элементам задавать уникальные значения для свойства, которое фактически определено в родительском элементе. Конкретным примером этого сценария является уведомление дочерними элементами родительского элемента о порядке их представления в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Одним из примеров является свойство <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Свойство <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> создается как присоединенное свойство, так как оно предназначено для установки в элементах, содержащихся в <xref:System.Windows.Controls.DockPanel>, а не на <xref:System.Windows.Controls.DockPanel>. Класс <xref:System.Windows.Controls.DockPanel> определяет статическое поле <xref:System.Windows.DependencyProperty> с именем <xref:System.Windows.Controls.DockPanel.DockProperty>, а затем предоставляет методы <xref:System.Windows.Controls.DockPanel.GetDock%2A> и <xref:System.Windows.Controls.DockPanel.SetDock%2A> в качестве открытых методов доступа для присоединенного свойства.
 
 ## Вложенные свойства в XAML<a name="attached_properties_xaml"></a>
 
@@ -34,7 +34,7 @@ ms.locfileid: "68401392"
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-Обратите внимание, что использование в некоторой степени похоже на статическое свойство. всегда следует ссылаться на тип <xref:System.Windows.Controls.DockPanel> , который владеет и регистрирует присоединенное свойство, а не ссылаться на любой экземпляр, указанный по имени.
+Обратите внимание, что использование в некоторой степени похоже на статическое свойство. всегда следует ссылаться на тип <xref:System.Windows.Controls.DockPanel>, который владеет и регистрирует присоединенное свойство, а не ссылаться на любой экземпляр, заданный по имени.
 
 Кроме того, поскольку присоединенное свойство в XAML является атрибутом, который устанавливается в разметке, операция задания является значимой. Нельзя напрямую получить свойство в XAML, хотя существуют некоторые косвенные механизмы для сравнения значений, такие как триггеры в стилях (подробнее см. в разделе [Стилизация и использование шаблонов](../controls/styling-and-templating.md)).
 
@@ -56,18 +56,18 @@ ms.locfileid: "68401392"
 
 Наиболее типичный сценарий, в котором WPF определяет присоединенное свойство, — когда родительский элемент поддерживает коллекцию дочерних элементов, а также реализует поведение, при котором особенности поведения передаются по отдельности для каждого дочернего элемента.
 
-<xref:System.Windows.Controls.DockPanel>Определяет присоединенное свойство и <xref:System.Windows.Controls.DockPanel> содержит код уровня класса как часть его логики отрисовки (в частности, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> и <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Экземпляр всегда проверяет, установил ли какой-либо из его непосредственных дочерних элементов значение для <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. <xref:System.Windows.Controls.DockPanel> В таком случае эти значения становятся входными данными для логики отображения, применяемой к соответствующему дочернему элементу. Каждый <xref:System.Windows.Controls.DockPanel> вложенный экземпляр обрабатывает собственные непосредственные коллекции дочерних элементов, но это поведение зависит от реализации того <xref:System.Windows.Controls.DockPanel> , <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> как обрабатываются значения. Теоретически возможно наличие присоединенных свойств, оказывающих влияние на элементы за пределами непосредственного родителя. Если присоединенное свойство задано для элемента, который не <xref:System.Windows.Controls.DockPanel> имеет родительского элемента, который будет работать с ним, то ошибка или исключение не возникает. <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Это просто означает, что задано глобальное значение свойства, но у него нет текущего <xref:System.Windows.Controls.DockPanel> родителя, который мог бы использовать эту информацию.
+<xref:System.Windows.Controls.DockPanel> определяет присоединенное <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> свойство, а <xref:System.Windows.Controls.DockPanel> содержит код уровня класса как часть логики отрисовки (в частности, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> и <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Экземпляр <xref:System.Windows.Controls.DockPanel> всегда проверяет, задано ли для любого из его непосредственных дочерних элементов значение для <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. В таком случае эти значения становятся входными данными для логики отображения, применяемой к соответствующему дочернему элементу. Вложенные экземпляры <xref:System.Windows.Controls.DockPanel> каждый из них обрабатывает собственные непосредственные дочерние коллекции элементов, но это поведение зависит от реализации того, как <xref:System.Windows.Controls.DockPanel> обрабатывает <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> значения. Теоретически возможно наличие присоединенных свойств, оказывающих влияние на элементы за пределами непосредственного родителя. Если присоединяемое свойство <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> задано для элемента, который не имеет <xref:System.Windows.Controls.DockPanel> родительского элемента, который будет работать над ним, то ошибка или исключение не возникает. Это просто означает, что было задано глобальное значение свойства, но нет текущего <xref:System.Windows.Controls.DockPanel> родителя, который может использовать эти сведения.
 
 ## Присоединенные свойства в коде<a name="attached_properties_code"></a>
 
 Присоединенные свойства в WPF не имеют типовых методов оболочки CLR для простого доступа get/set. Это связано с тем, что присоединенное свойство не обязательно является частью пространства имен CLR для экземпляров, в которых задано свойство. Тем не менее обработчик XAML должен иметь возможность задавать эти значения при анализе XAML. Для поддержки эффективного использования присоединенного свойства тип владельца присоединенного свойства должен реализовывать выделенные методы доступа в форме **Get_PropertyName_** и **Set_PropertyName_** . Такие специальные методы доступа также удобны для получения или задания присоединенного свойства в коде. С точки зрения кода присоединенное свойство аналогично резервному полю с методами доступа к методам вместо методов доступа к свойствам. Такое резервное поле может существовать для любого объекта и не требует специального определения.
 
-В следующем примере кода показано задание присоединенного свойства в коде. В этом примере `myCheckBox` — это экземпляр <xref:System.Windows.Controls.CheckBox> класса.
+В следующем примере кода показано задание присоединенного свойства в коде. В этом примере `myCheckBox` является экземпляром класса <xref:System.Windows.Controls.CheckBox>.
 
 [!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
 [!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
-Как и в случае с примером XAML `myCheckBox` , если он еще не был добавлен в качестве дочернего `myDockPanel` элемента третьей строкой кода, то в четвертой строке кода не будет вызываться исключение, но значение свойства не <xref:System.Windows.Controls.DockPanel> будет взаимодействовать с родительским объектом и, таким образом, ничего не делает. Только значение, установленное в дочернем элементе вместе с присутствием <xref:System.Windows.Controls.DockPanel> родительского элемента, приведет к эффективному поведению в приложении, готовом для просмотра. <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> (В этом случае вы может задать присоединенное свойство, а затем подключиться к дереву. Аналогично, можно подключиться к дереву, а затем задать присоединенное свойство. Любая последовательность действий дает тот же результат.)
+Как и в случае с XAML, если `myCheckBox` еще не были добавлены в качестве дочернего элемента `myDockPanel` третьей строкой кода, то четвертая строка кода не будет вызывать исключение, но значение свойства не будет взаимодействовать с <xref:System.Windows.Controls.DockPanel>ным родителем и, таким образом, сделает возмож. Только <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> значение, установленное для дочернего элемента вместе с присутствием <xref:System.Windows.Controls.DockPanel> родительского элемента, приведет к эффективному поведению в приложении, готовом для просмотра. (В этом случае вы может задать присоединенное свойство, а затем подключиться к дереву. Аналогично, можно подключиться к дереву, а затем задать присоединенное свойство. Любая последовательность действий дает тот же результат.)
 
 ## Метаданные присоединенного свойства<a name="attached_properties_metadata"></a>
 
@@ -89,12 +89,12 @@ ms.locfileid: "68401392"
 
 ### Создание присоединенного свойства<a name="how_do_i_create_attached_properties"></a>
 
-Если класс определяет присоединенное свойство исключительно для использования в других типах, класс не обязательно должен быть производным от <xref:System.Windows.DependencyObject>. Но вам нужно создать производную от <xref:System.Windows.DependencyObject> , если вы подберете общую модель WPF, в которой присоединенное свойство также является свойством зависимостей.
+Если класс определяет присоединенное свойство исключительно для использования в других типах, класс не обязательно должен быть производным от <xref:System.Windows.DependencyObject>. Но вам нужно создать производную от <xref:System.Windows.DependencyObject> если следовать общей модели WPF, в которой присоединенное свойство также является свойством зависимостей.
 
-Определите присоединенное свойство как свойство зависимостей, объявляя `public static readonly` поле типа. <xref:System.Windows.DependencyProperty> Это поле определяется с помощью возвращаемого значения <xref:System.Windows.DependencyProperty.RegisterAttached%2A> метода. Имя поля должно совпадать с именем присоединенного свойства, добавленного со строкой `Property`, чтобы соответствовать установленному шаблону WPF именования идентифицирующих полей относительно свойств, которые они представляют. Поставщик присоединенного свойства также должен предоставлять статические методы **Get_PropertyName_** и **Set_PropertyName_** в качестве методов доступа к присоединенному свойству. Если этого не сделать, система свойств не сможет использовать присоединенное свойство.
+Определите присоединенное свойство как свойство зависимостей, объявляя `public static readonly` поле типа <xref:System.Windows.DependencyProperty>. Это поле определяется с помощью возвращаемого значения метода <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. Имя поля должно совпадать с именем присоединенного свойства, добавленного со строкой `Property`, чтобы соответствовать установленному шаблону WPF именования идентифицирующих полей относительно свойств, которые они представляют. Поставщик присоединенного свойства также должен предоставлять статические методы **Get_PropertyName_** и **Set_PropertyName_** в качестве методов доступа к присоединенному свойству. Если этого не сделать, система свойств не сможет использовать присоединенное свойство.
 
 > [!NOTE]
-> Если опустить метод доступа Get присоединенного свойства, привязка данных к свойству не будет работать в средствах разработки, таких как Visual Studio и Expression Blend.
+> Если опустить метод доступа Get присоединенного свойства, привязка данных к свойству не будет работать в средствах разработки, таких как Visual Studio и Blend для Visual Studio.
 
 #### <a name="the-get-accessor"></a>Метод доступа get
 
@@ -102,9 +102,9 @@ ms.locfileid: "68401392"
 
 `public static object GetPropertyName(object target)`
 
-- Объект `target` можно указать как более конкретный тип в реализации. Например, <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> метод присваивает <xref:System.Windows.UIElement>параметру значение, поскольку присоединенное свойство <xref:System.Windows.UIElement> предназначено только для экземпляров.
+- Объект `target` можно указать как более конкретный тип в реализации. Например, метод <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> присваивает параметру значение <xref:System.Windows.UIElement>, поскольку присоединенное свойство предназначено только для <xref:System.Windows.UIElement> экземпляров.
 
-- Возвращаемое значение можно указать как более конкретный тип в реализации. Например <xref:System.Windows.Controls.DockPanel.GetDock%2A> , метод вводит тип <xref:System.Windows.Controls.Dock>, так как значение может быть задано только для этого перечисления.
+- Возвращаемое значение можно указать как более конкретный тип в реализации. Например, метод <xref:System.Windows.Controls.DockPanel.GetDock%2A> вводит его как <xref:System.Windows.Controls.Dock>, поскольку значение может быть задано только для этого перечисления.
 
 #### <a name="the-set-accessor"></a>Метод доступа set
 
@@ -112,18 +112,18 @@ ms.locfileid: "68401392"
 
 `public static void SetPropertyName(object target, object value)`
 
-- Объект `target` можно указать как более конкретный тип в реализации. Например, <xref:System.Windows.Controls.DockPanel.SetDock%2A> метод вводит <xref:System.Windows.UIElement>значение, поскольку присоединенное свойство <xref:System.Windows.UIElement> предназначено только для экземпляров.
+- Объект `target` можно указать как более конкретный тип в реализации. Например, метод <xref:System.Windows.Controls.DockPanel.SetDock%2A> вводит его как <xref:System.Windows.UIElement>, так как присоединенное свойство предназначено только для установки в экземплярах <xref:System.Windows.UIElement>.
 
-- Объект `value` можно указать как более конкретный тип в реализации. Например <xref:System.Windows.Controls.DockPanel.SetDock%2A> , метод вводит тип <xref:System.Windows.Controls.Dock>, так как значение может быть задано только для этого перечисления. Помните, что значением этого метода являются входные данные, поступающие от загрузчика XAML, когда он встречает присоединенное свойство в использовании присоединенного свойства в макете. Эти входные данные являются значением, указанным как значение атрибута XAML в разметке. Таким образом, необходимо обеспечить поддержку преобразования типов, сериализатора значений или расширений разметки для используемого типа так, чтобы соответствующий тип можно было создать из значения атрибута (которое, в конечном счете, является просто строкой).
+- Объект `value` можно указать как более конкретный тип в реализации. Например, метод <xref:System.Windows.Controls.DockPanel.SetDock%2A> вводит его как <xref:System.Windows.Controls.Dock>, поскольку значение может быть задано только для этого перечисления. Помните, что значением этого метода являются входные данные, поступающие от загрузчика XAML, когда он встречает присоединенное свойство в использовании присоединенного свойства в макете. Эти входные данные являются значением, указанным как значение атрибута XAML в разметке. Таким образом, необходимо обеспечить поддержку преобразования типов, сериализатора значений или расширений разметки для используемого типа так, чтобы соответствующий тип можно было создать из значения атрибута (которое, в конечном счете, является просто строкой).
 
-В следующем примере показана регистрация свойства зависимостей (с помощью <xref:System.Windows.DependencyProperty.RegisterAttached%2A> метода), а также методы доступа **Get_PropertyName_** и **Set_PropertyName_** . В этом примере именем присоединенного свойства является `IsBubbleSource`. Таким образом, методы доступа должны называться `GetIsBubbleSource` и `SetIsBubbleSource`.
+В следующем примере показана регистрация свойства зависимостей (с помощью метода <xref:System.Windows.DependencyProperty.RegisterAttached%2A>), а также методы доступа **Get_PropertyName_** и **Set_PropertyName_** . В этом примере именем присоединенного свойства является `IsBubbleSource`. Таким образом, методы доступа должны называться `GetIsBubbleSource` и `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Атрибуты присоединенного свойства
 
-WPF определяет несколько [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] , которые предназначены для предоставления сведений о вложенных свойствах процессам отражения, а также обычным пользователям отражения и информации о свойствах, таких как конструкторы. Поскольку присоединенные свойства имеют тип неограниченной области, разработчикам необходим способ, который позволит избежать представления пользователям глобального списка всех присоединенных свойств, которые определены в конкретной реализации технологии, использующей XAML. Объект [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] , определяемый в WPF для присоединенных свойств, может использоваться для определения области ситуаций, в которых заданное присоединенное свойство должно отображаться в окне свойств. Эти атрибуты можно также применить для собственных присоединенных свойств. Назначение и синтаксис [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] описаны в соответствующих разделах справочника.
+WPF определяет несколько [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], предназначенных для предоставления сведений о вложенных свойствах процессам отражения, а также обычным пользователям отражения и информации о свойствах, таких как конструкторы. Поскольку присоединенные свойства имеют тип неограниченной области, разработчикам необходим способ, который позволит избежать представления пользователям глобального списка всех присоединенных свойств, которые определены в конкретной реализации технологии, использующей XAML. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], определяемые в WPF для присоединенных свойств, можно использовать для определения ситуаций, когда заданное присоединенное свойство должно отображаться в окне свойств. Эти атрибуты можно также применить для собственных присоединенных свойств. Назначение и синтаксис [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] описаны в соответствующих разделах справочника.
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
@@ -139,7 +139,7 @@ WPF определяет несколько [!INCLUDE[TLA2#tla_netframewkattr#pl
 
 - Более сложные сценарии использования свойств зависимостей и присоединенных свойств см. в разделе [Пользовательские свойства зависимостей](custom-dependency-properties.md).
 
-- Свойство можно также зарегистрировать как присоединенное свойство и как свойство зависимостей, но тем не менее предоставить реализации "оболочки". В этом случае свойство можно задать как для данного элемента, так и для любого элемента с помощью синтаксиса подключенных свойств XAML. Примером свойства с соответствующим сценарием для стандартных и присоединенных случаев использования является <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
+- Свойство можно также зарегистрировать как присоединенное свойство и как свойство зависимостей, но тем не менее предоставить реализации "оболочки". В этом случае свойство можно задать как для данного элемента, так и для любого элемента с помощью синтаксиса подключенных свойств XAML. Примером свойства с соответствующим сценарием как для стандартных, так и для присоединенных случаев использования является <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>См. также
 
