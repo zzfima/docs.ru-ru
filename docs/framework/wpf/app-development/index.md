@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582501"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920212"
 ---
 # <a name="application-development"></a>Разработка приложений
 <a name="introduction"></a>Windows Presentation Foundation (WPF) — это структура представления, которую можно использовать для разработки приложений следующих типов:  
@@ -74,7 +74,7 @@ ms.locfileid: "72582501"
   
  <xref:System.Windows.Window> поддерживает возможность создать особый тип окна, известный как диалоговое окно. Можно создавать модальные и немодальные типы диалоговых окон.  
   
- Для удобства и преимуществ повторного использования и согласованного взаимодействия с пользователем в приложениях [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три общих диалоговых окна Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> и <xref:System.Windows.Controls.PrintDialog>.  
+ Для удобства и преимуществ повторного использования и согласованного взаимодействия с пользователем в приложениях [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три общих диалоговых окна Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>и <xref:System.Windows.Controls.PrintDialog>.  
   
  Окно сообщения представляет собой особый тип диалогового окна для отображения важной текстовой информации для пользователей и задания простых вопросов (да, нет, ОК, отмена). Класс <xref:System.Windows.MessageBox> используется для создания и отображения окон сообщений.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "72582501"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Построение и Развертывание  
- Хотя простые приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] могут быть собраны из командной строки с помощью компиляторов командной строки, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] интегрируется с [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] для обеспечения дополнительной поддержки, которая упрощает процесс разработки и сборки. Дополнительные сведения см. в разделе [Построение приложения WPF](building-a-wpf-application-wpf.md).  
+ Несмотря на то, что простые [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения можно создавать из командной строки с помощью компиляторов, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] интегрируется с Visual Studio для предоставления дополнительной поддержки, которая упрощает процесс разработки и сборки. Дополнительные сведения см. в разделе [Построение приложения WPF](building-a-wpf-application-wpf.md).  
   
  В зависимости от типа приложения вы можете выбрать один или несколько параметров развертывания. Дополнительные сведения см. в разделе [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md).  
   

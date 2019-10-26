@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859941"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920199"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF
-Для улучшенного взаимодействия с браузерами, можно использовать элементы управления ActiveX в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе. В этом пошаговом руководстве показано, как разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.
+Чтобы обеспечить улучшенное взаимодействие с браузерами, можно использовать элементы управления Microsoft ActiveX в приложении на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] странице.
 
  В данном пошаговом руководстве представлены следующие задачи.
 
@@ -26,12 +26,12 @@ ms.locfileid: "67859941"
 
 - Размещение элемента управления ActiveX на странице WPF.
 
- После завершения этого пошагового руководства вы узнаете, как использовать элементы управления ActiveX в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе.
+ После завершения этого пошагового руководства вы узнаете, как использовать элементы управления Microsoft ActiveX в приложении на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] установлена на компьютере, где установлена среда Visual Studio.
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)], установленные на компьютере, где установлена система Visual Studio.
 
 - Visual Studio 2010.
 
@@ -39,66 +39,66 @@ ms.locfileid: "67859941"
 
 ### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта
 
-1. Создание проекта приложения WPF с именем `HostingAxInWpf`.
+1. Создайте проект приложения WPF с именем `HostingAxInWpf`.
 
-2. Добавить в решение проекта библиотеки элементов управления Windows Forms и назовите проект `WmpAxLib`.
+2. Добавьте в решение проект библиотеки элементов управления Windows Forms и присвойте проекту имя `WmpAxLib`.
 
-3. В проекте WmpAxLib добавьте ссылку на сборку проигрывателя Windows Media, которая называется wmp.dll.
+3. В проекте Вмпакслиб добавьте ссылку на сборку проигрывателя Windows Media, которая называется WMP. dll.
 
-4. Откройте **элементов**.
+4. Откройте **панель элементов**.
 
-5. Щелкните правой кнопкой мыши в **элементов**, а затем нажмите кнопку **Выбор элементов**.
+5. Щелкните правой кнопкой мыши **область элементов**и выберите пункт **выбрать элементы**.
 
-6. Нажмите кнопку **COM-компоненты** выберите **проигрывателя Windows Media** управления, а затем нажмите кнопку **ОК**.
+6. Перейдите на вкладку **COM-компоненты** , выберите элемент управления **проигрывателя Windows Media** и нажмите кнопку **ОК**.
 
-     Добавляемый элемент управления проигрывателя Windows Media **элементов**.
+     Элемент управления проигрывателя Windows Media добавляется на **панель элементов**.
 
-7. В обозревателе решений щелкните правой кнопкой мыши **UserControl1** файла и нажмите кнопку **Переименовать**.
+7. В обозреватель решений щелкните правой кнопкой мыши файл **UserControl1** и выберите команду **Переименовать**.
 
 8. Измените имя на `WmpAxControl.vb` или `WmpAxControl.cs`в зависимости от языка.
 
-9. Если в ответ на приглашение переименовать все ссылки, нажмите кнопку **Да**.
+9. Если появится запрос на переименование всех ссылок, нажмите кнопку **Да**.
 
 ## <a name="creating-the-activex-control"></a>Создание элемента управления ActiveX
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] автоматически создает <xref:System.Windows.Forms.AxHost> класс-оболочку для элемента управления Microsoft ActiveX, когда элемент управления добавляется в рабочую область конструирования. В следующей процедуре создается управляемая сборка с именем AxInterop.WMPLib.dll.
+Visual Studio автоматически создает класс-оболочку <xref:System.Windows.Forms.AxHost> для элемента управления Microsoft ActiveX, когда элемент управления добавляется в область конструктора. Следующая процедура создает управляемую сборку с именем Аксинтероп. Вмплиб. dll.
 
-### <a name="to-create-the-activex-control"></a>Чтобы создать элемент управления ActiveX
+### <a name="to-create-the-activex-control"></a>Создание элемента управления ActiveX
 
-1. Откройте WmpAxControl.vb или WmpAxControl.cs в конструкторе Windows Forms.
+1. Откройте Вмпаксконтрол. vb или WmpAxControl.cs в конструктор Windows Forms.
 
-2. Из **элементов**, добавьте элемент управления проигрывателя Windows Media в область конструктора.
+2. Из **панели элементов**добавьте элемент управления проигрывателя Windows Media в область конструктора.
 
-3. В окне свойств установите для параметра элемента управления проигрывателя Windows Media <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.
+3. В окно свойств задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> элемента управления проигрывателя Windows Media значение <xref:System.Windows.Forms.DockStyle.Fill>.
 
-4. Создание проекта библиотеки элементов управления WmpAxLib.
+4. Создайте проект библиотеки элементов управления Вмпакслиб.
 
-## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Размещение элемента управления ActiveX в страницу WPF
+## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Размещение элемента управления ActiveX на странице WPF
 
 ### <a name="to-host-the-activex-control"></a>Размещение элемента управления ActiveX
 
-1. В проекте HostingAxInWpf добавьте ссылку на созданную сборку взаимодействия ActiveX.
+1. В проекте Хостингаксинвпф добавьте ссылку на созданную сборку взаимодействия ActiveX.
 
-     Эта сборка называется AxInterop.WMPLib.dll и был добавлен в папку отладки проекта WmpAxLib при импорте элементом управления проигрывателя Windows Media.
+     Эта сборка называется Аксинтероп. Вмплиб. dll и была добавлена в папку Debug проекта Вмпакслиб при импорте элемента управления проигрывателя Windows Media.
 
-2. Добавьте ссылку на сборку WindowsFormsIntegration с именем WindowsFormsIntegration.dll.
+2. Добавьте ссылку на сборку WindowsFormsIntegration, которая называется WindowsFormsIntegration. dll.
 
-3. Добавьте ссылку на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сборку, которая называется System.Windows.Forms.dll.
+3. Добавьте ссылку на сборку [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], которая называется System. Windows. Forms. dll.
 
-4. Откройте файл MainWindow.xaml в конструкторе WPF.
+4. Откройте файл MainWindow. XAML в конструкторе WPF.
 
-5. Имя <xref:System.Windows.Controls.Grid> элемент `grid1`.
+5. Назовите `grid1`элемент <xref:System.Windows.Controls.Grid>.
 
      [!code-xaml[HostingAxInWpf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]
 
-6. В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.
+6. В представление конструирования или представлении XAML выберите элемент <xref:System.Windows.Window>.
 
-7. В окне «Свойства» щелкните **события** вкладки.
+7. В окно свойств перейдите на вкладку **события** .
 
-8. Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
+8. Дважды щелкните событие <xref:System.Windows.FrameworkElement.Loaded>.
 
-9. Вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.
+9. Вставьте следующий код, обрабатывающий событие <xref:System.Windows.FrameworkElement.Loaded>.
 
-     Этот код создает экземпляр класса <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления и добавляет экземпляр `AxWindowsMediaPlayer` элемента управления в качестве дочернего.
+     Этот код создает экземпляр элемента управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> и добавляет экземпляр элемента управления `AxWindowsMediaPlayer` в качестве дочернего.
 
      [!code-csharp[HostingAxInWpf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
@@ -110,5 +110,5 @@ ms.locfileid: "67859941"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

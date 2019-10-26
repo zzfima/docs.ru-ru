@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581729"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920364"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Ресурсы, Содержимое и Файлы данных WPF-приложения
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] приложения часто зависят от файлов, которые содержат неисполняемые данные, такие как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], изображения, видео и звук. Windows Presentation Foundation (WPF) предлагает специальную поддержку для настройки, идентификации и использования этих типов файлов данных, которые называются файлами данных приложения. Эта поддержка относится к определенному набору типов файлов данных приложения, включая следующие:  
@@ -55,7 +55,7 @@ ms.locfileid: "72581729"
 > Файлы ресурсов, описанные в этом разделе, отличаются от файлов ресурсов, описанных в [ресурсах XAML](../advanced/xaml-resources.md) , и отличаются от внедренных или связанных ресурсов, описанных в статье [Управление ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Настройка файлов ресурсов  
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] файл ресурсов — это файл, который включается в проект Microsoft Build Engine (MSBuild) как элемент `Resource`.  
+ В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]файл ресурсов — это файл, который включается в проект Microsoft Build Engine (MSBuild) как элемент `Resource`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,7 +68,7 @@ ms.locfileid: "72581729"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] можно создать файл ресурсов, добавив файл в проект и задав для его `Build Action` значение `Resource`.  
+> В Visual Studio создайте файл ресурсов, добавив файл в проект и задав для его `Build Action` значение `Resource`.  
   
  При построении проекта MSBuild компилирует ресурс в сборку.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "72581729"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] вы добавляете в проект новый <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> или <xref:System.Windows.ResourceDictionary>, `Build Action` для файла разметки по умолчанию будет `Page`.  
+> В Visual Studio вы добавляете в проект новый <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>или <xref:System.Windows.ResourceDictionary>, `Build Action` для файла разметки по умолчанию будет `Page`.  
   
  При компиляции проекта с `Page` элементами [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] элементы преобразуются в двоичный формат и компилируются в связанную сборку. Следовательно, эти файлы можно использовать таким же образом, как и обычные файлы ресурсов.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72581729"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] можно создать файл содержимого, добавив файл в проект и задав для его `Build Action` значение `Content`, а также задать для `Copy to Output Directory` `Copy always` (то же, что `Always`) и `Copy if newer` (то же, что `PreserveNewest`).  
+> В Visual Studio вы создаете файл содержимого, добавляя файл в проект и настроив его `Build Action` на `Content`и настраиваете его `Copy to Output Directory` на `Copy always` (то же, что `Always`) и `Copy if newer` (то же, что `PreserveNewest`).  
   
  При построении проекта <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> атрибут компилируется в метаданные сборки для каждого файла содержимого.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "72581729"
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Однако схемы file:/// и http:// требуют полного доверия приложения. Если приложение является [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], которое было запущено из Интернета или интрасети, и запрашивает только набор разрешений, разрешенных для приложений, запускаемых из этих расположений, свободные файлы могут загружаться только с исходного узла приложения (запуск расположение). Такие файлы называются файлами *исходного узла* .  
+ Однако схемы file:/// и http:// требуют полного доверия приложения. Если приложение является [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], которое было запущено из Интернета или интрасети, и запрашивает только набор разрешений, разрешенных для приложений, запускаемых из этих расположений, свободные файлы могут загружаться только с исходного узла приложения ( Расположение запуска). Такие файлы называются файлами *исходного узла* .  
   
  Файлы исходного узла являются единственным вариантом для приложений с частичным доверием, хотя и не ограничиваются такими приложениями. Приложениям с полным доверием, возможно, все равно придется загружать файлы данных приложений, о которых они не знают во время построения. Хотя приложения с полным доверием могут использовать схему file:///, вероятнее всего, файлы данных приложения будут установлены в одну папку или вложенную папку со сборкой приложения. В этом случае использовать ссылки на исходный узел проще, чем использовать file:///, так как последнее требует разработки полного пути к файлу.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "72581729"
 ```  
   
 > [!NOTE]
-> В [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] можно создать файл исходного узла, добавив файл в проект и задав для его `Build Action` значение `None`.  
+> В Visual Studio создайте файл исходного узла, добавив файл в проект и задав для его `Build Action` значение `None`.  
   
  При построении проекта MSBuild копирует указанные файлы в выходную папку сборки.  
   

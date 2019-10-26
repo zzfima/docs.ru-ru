@@ -1,5 +1,5 @@
 ---
-title: Создание объекту класса InkCanvas в приложении WPF в Visual Studio
+title: Создание InkCanvas в приложении WPF в Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753005"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920253"
 ---
-# <a name="get-started-with-ink-in-wpf"></a>Начало работы с рукописными данными в WPF
+# <a name="get-started-with-ink-in-wpf"></a>Начало работы с рукописным вводом в WPF
 
-Windows Presentation Foundation (WPF) есть функция рукописного ввода, которая позволяет легко внедрить рукописный ввод в приложение.
+Windows Presentation Foundation (WPF) имеет функцию рукописного ввода, которая упрощает внедрение цифровых рукописных данных в приложение.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
-Чтобы использовать в следующих примерах, сначала нужно установить [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Полезно также знать способы написания базовых приложений WPF. Помощь по началу работы с WPF, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Чтобы использовать следующие примеры, сначала установите [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Кроме того, он помогает понять, как писать базовые приложения WPF. Сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Быстрый запуск
+## <a name="quick-start"></a>Быстрое начало
 
-Этот раздел поможет написать простое приложение WPF, сбора данных рукописного ввода.
+Этот раздел поможет вам написать простое приложение WPF, собирающее рукописный ввод.
 
-### <a name="got-ink"></a>У вас есть рукописного ввода?
+### <a name="got-ink"></a>У вас есть рукописный ввод?
 
-Создание приложения WPF с поддержкой рукописного ввода:
+Создание приложения WPF, поддерживающего рукописный ввод:
 
 1. Запустите Visual Studio.
 
-2. Создайте новый **приложение WPF**.
+2. Создайте новое **приложение WPF**.
 
-   В **новый проект** диалоговом окне разверните **установленные** > **Visual C#** или **Visual Basic**  >   **Windows Desktop** категории. Выберите **приложение WPF (.NET Framework)** шаблон приложения. Введите имя, а затем выберите **ОК**.
+   В диалоговом окне **Новый проект** разверните узел **установленные** > **Visual C#**  или **Visual Basic** > **Windows Desktop** . Затем выберите шаблон приложения **WPF (.NET Framework)** . Введите имя и нажмите кнопку **ОК**.
 
-   Visual Studio создает проект, и *MainWindow.xaml* откроется в конструкторе.
+   Visual Studio создаст проект, а файл *MainWindow. XAML* откроется в конструкторе.
 
-3. Тип `<InkCanvas/>` между `<Grid>` теги.
+3. Введите `<InkCanvas/>` между тегами `<Grid>`.
 
    ![Конструктор XAML с тегом InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. Нажмите клавишу **F5** для запуска приложения в отладчике.
+4. Нажмите клавишу **F5** , чтобы запустить приложение в отладчике.
 
-5. С помощью пера или мышь, писать **Здравствуй, мир** в окне.
+5. С помощью пера или мыши напишите **Hello World** в окне.
 
-Вы написали рукописный эквивалент приложения на «hello world» с помощью всего 12 клавиш!
+Вы написали рукописный эквивалент приложения "Hello World" только с 12 нажатиями!
 
-### <a name="spice-up-your-app"></a>Оживить приложения
+### <a name="spice-up-your-app"></a>Воссоздание приложения
 
-Рассмотрим преимущества некоторых функций WPF. Замените весь код между открывающим и закрывающим \<окна > теги, используя следующую разметку:
+Давайте попробуем воспользоваться преимуществами некоторых функций WPF. Замените все между открывающим и закрывающим \<окном > тегами следующей разметкой:
 
 ```xaml
 <Page>
@@ -68,43 +68,43 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 </Page>
 ```
 
-Этот XAML создает градиентный фон поверхности рукописного ввода.
+Этот XAML создает фон градиентной кисти на поверхности рукописного ввода.
 
-![Цвета градиента на рукописный ввод поверхности в приложении WPF](./media/getting-started-with-ink/gradient-colors.png)
+![Градиентные цвета на поверхности рукописного ввода в приложении WPF](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a>Добавление кода программной части XAML
+### <a name="add-some-code-behind-the-xaml"></a>Добавьте код, лежащий в основе XAML
 
-Хотя XAML позволяет очень легко разрабатывать пользовательский интерфейс, любой реальных приложений необходимо добавить код для обработки событий. Ниже приведен простой пример увеличения рукописный ввод в ответ на щелчок правой кнопкой мыши.
+Хотя XAML упрощает проектирование пользовательского интерфейса, любое реальное приложение должно добавлять код для работы с событиями. Ниже приведен простой пример, который позволяет увеличить рукописный ввод в ответ на щелчок правой кнопкой мыши.
 
-1. Задайте `MouseRightButtonUp` обработчика в вашей XAML:
+1. Задайте обработчик `MouseRightButtonUp` в коде XAML:
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. В **обозревателе решений**, разверните файл MainWindow.xaml и откройте файл с выделенным кодом (MainWindow.xaml.cs или MainWindow.xaml.vb). Добавьте следующий код обработчика событий:
+1. В **Обозреватель решений**разверните MainWindow. XAML и откройте файл кода программной части (MainWindow.XAML.cs или MainWindow. XAML. vb). Добавьте следующий код обработчика событий:
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. Запустите приложение. Добавьте рукописные и щелкните правой кнопкой мыши, с помощью мыши или эквивалента нажатие и удерживание с помощью пера.
+1. Запустите приложение. Добавьте рукописный ввод, а затем щелкните его правой кнопкой мыши или выполните нажатие клавиши с пером.
 
-   Отображение увеличивает каждый раз, когда щелчком правой кнопки мыши.
+   Экран увеличивается при каждом щелчке правой кнопкой мыши.
 
-### <a name="use-procedural-code-instead-of-xaml"></a>Используйте процедурный код вместо XAML
+### <a name="use-procedural-code-instead-of-xaml"></a>Использование процедурного кода вместо XAML
 
-От процедурного кода доступны все возможности WPF. Выполните следующие действия, чтобы создать приложение «Hello Ink World» для WPF, не использующего любого XAML.
+Вы можете получить доступ ко всем функциям WPF из процедурного кода. Выполните следующие действия, чтобы создать приложение "Привет для рукописного ввода" для WPF, которое вообще не использует XAML.
 
 1. Создайте новый проект консольного приложения в Visual Studio.
 
-   В **новый проект** диалоговом окне разверните **установленные** > **Visual C#** или **Visual Basic**  >   **Windows Desktop** категории. Выберите **консольное приложение (.NET Framework)** шаблон приложения. Введите имя, а затем выберите **ОК**.
+   В диалоговом окне **Новый проект** разверните узел **установленные** > **Visual C#**  или **Visual Basic** > **Windows Desktop** . Затем выберите шаблон приложения " **консольное приложение" (.NET Framework)** . Введите имя и нажмите кнопку **ОК**.
 
-1. Вставьте следующий код в файле Program.cs или Program.vb:
+1. Вставьте следующий код в файл Program.cs или Program. vb:
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. Добавьте ссылки на сборки PresentationCore, PresentationFramework и WindowsBase, щелкнув правой кнопкой мыши **ссылки** в **обозревателе решений** и выбрав **добавить ссылку на**.
+1. Добавьте ссылки на сборки PresentationCore, PresentationFramework и WindowsBase, щелкнув правой кнопкой мыши **ссылки** в **Обозреватель решений** и выбрав **Добавить ссылку**.
 
-   ![Диспетчер ссылок, показывающий PresentationCore и PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
+   ![Диспетчер ссылок, отображающий PresentationCore и PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. Постройте приложение, нажав клавишу **F5**.
 

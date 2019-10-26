@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 3f85d7d454247694d084ac68780f830c4301b6c7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332802"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920189"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Пошаговое руководство. Создание кнопки с помощью XAML
 
 Цель этого пошагового руководства — научиться создавать анимированную кнопку для использования в приложении Windows Presentation Foundation (WPF). В этом пошаговом руководстве используются стили и шаблон для создания настраиваемого ресурса кнопки, который позволяет повторно использовать код и разделение логики кнопки из объявления кнопки. Это пошаговое руководство написано полностью в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].
 
 > [!IMPORTANT]
-> В этом пошаговом руководстве описано, как создать приложение, введя или скопировав и вставляя [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] в Microsoft Visual Studio. Если вы хотите узнать, как использовать средство проектирования (Microsoft Expression Blend) для создания того же приложения, см. раздел [Создание кнопки с помощью Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).
+> В этом пошаговом руководстве описано, как создать приложение, введя или скопировав и вставляя [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] в Visual Studio. Если вы предпочитаете использовать конструктор для создания того же приложения, см. раздел [Создание кнопки с помощью Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).
 
 На следующем рисунке показаны готовые кнопки.
 
@@ -30,9 +30,9 @@ ms.locfileid: "71332802"
 
 1. Запустите Visual Studio.
 
-2. **Создайте новый проект WPF:** В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**. Найдите шаблон **Windows Application (WPF)** и назовите проект «аниматедбуттон». Это приведет к созданию каркаса для приложения.
+2. **Создайте новый проект WPF:** В меню **файл** наведите указатель мыши на пункт **создать**и выберите пункт **проект**. Найдите шаблон **Windows Application (WPF)** и назовите проект «аниматедбуттон». Это приведет к созданию каркаса для приложения.
 
-3. **Добавить основные кнопки по умолчанию:** Все файлы, необходимые для этого пошагового руководства, предоставляются шаблоном. Откройте файл Window1. XAML, дважды щелкнув его в обозреватель решений. По умолчанию в Window1. XAML имеется элемент <xref:System.Windows.Controls.Grid>. Удалите элемент <xref:System.Windows.Controls.Grid> и добавьте несколько кнопок на страницу [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], введя или скопировав и вставляя следующий выделенный код в Window1. XAML:
+3. **Добавить основные кнопки по умолчанию:** Все файлы, необходимые для этого пошагового руководства, предоставляются шаблоном. Откройте файл Window1. XAML, дважды щелкнув его в обозреватель решений. По умолчанию в Window1. XAML присутствует элемент <xref:System.Windows.Controls.Grid>. Удалите элемент <xref:System.Windows.Controls.Grid> и добавьте несколько кнопок на страницу [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], введя или скопировав и вставляя следующий выделенный код в Window1. XAML:
 
     ```xaml
     <Window x:Class="AnimatedButton.Window1"
@@ -77,7 +77,7 @@ ms.locfileid: "71332802"
 
      Область ресурсов определяется местом, где определяется ресурс. Определение ресурсов в `Application.Resources` в файле App. XAML позволяет использовать ресурс из любого места в приложении. Дополнительные сведения об определении области ресурсов см. в разделе [ресурсы XAML](../advanced/xaml-resources.md).
 
-2. **Создайте стиль и определите в нем основные значения свойств:** Добавьте следующую разметку в блок `Application.Resources`. Эта разметка создает <xref:System.Windows.Style>, который применяется ко всем кнопкам в приложении, устанавливая <xref:System.Windows.FrameworkElement.Width%2A> для кнопок в 90, а <xref:System.Windows.FrameworkElement.Margin%2A> – 10:
+2. **Создайте стиль и определите в нем основные значения свойств:** Добавьте следующую разметку в блок `Application.Resources`. Эта разметка создает <xref:System.Windows.Style>, который применяется ко всем кнопкам в приложении, настроив <xref:System.Windows.FrameworkElement.Width%2A> кнопок на 90, а <xref:System.Windows.FrameworkElement.Margin%2A> — на 10:
 
     ```xaml
     <Application.Resources>
@@ -111,7 +111,7 @@ ms.locfileid: "71332802"
     </Application.Resources>
     ```
 
-     Непосредственно в блоке `Application.Resources` вы создали ресурс с именем «Грайблуеградиентбруш». Этот ресурс определяет горизонтальный градиент. Этот ресурс можно использовать как значение свойства из любого места в приложении, включая внутри метода задания стиля кнопки для свойства <xref:System.Windows.Controls.Control.Background%2A>. Теперь все кнопки имеют значение свойства <xref:System.Windows.Controls.Control.Background%2A> для этого градиента.
+     Непосредственно в блоке `Application.Resources` вы создали ресурс с именем «Грайблуеградиентбруш». Этот ресурс определяет горизонтальный градиент. Этот ресурс можно использовать как значение свойства из любого места в приложении, включая внутри метода задания стиля кнопки для свойства <xref:System.Windows.Controls.Control.Background%2A>. Теперь все кнопки имеют значение свойства <xref:System.Windows.Controls.Control.Background%2A> этого градиента.
 
      Нажмите клавишу F5 для запуска приложения. Он должен выглядеть следующим образом.
 
@@ -125,7 +125,7 @@ ms.locfileid: "71332802"
 
 ### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Использование шаблона для определения вида кнопки
 
-1. **Настройте шаблон:** Поскольку элементы управления, такие как <xref:System.Windows.Controls.Button>, имеют свойство <xref:System.Windows.Controls.Control.Template%2A>, можно определить значение свойства шаблона так же, как и другие значения свойств, заданные в <xref:System.Windows.Style> с помощью <xref:System.Windows.Setter>. Добавьте следующую выделенную разметку в стиль кнопки.
+1. **Настройте шаблон:** Так как элементы управления, такие как <xref:System.Windows.Controls.Button>, имеют свойство <xref:System.Windows.Controls.Control.Template%2A>, можно определить значение свойства шаблона так же, как и другие значения свойств, заданные в <xref:System.Windows.Style> с помощью <xref:System.Windows.Setter>. Добавьте следующую выделенную разметку в стиль кнопки.
 
     ```xaml
     <Application.Resources>
@@ -148,7 +148,7 @@ ms.locfileid: "71332802"
     </Application.Resources>
     ```
 
-2. **Изменить представление кнопки:** На этом этапе необходимо определить шаблон. Добавьте следующую выделенную разметку. Эта разметка определяет два элемента <xref:System.Windows.Shapes.Rectangle> со скругленными краями, за которыми следует <xref:System.Windows.Controls.DockPanel>. @No__t-0 используется для размещения <xref:System.Windows.Controls.ContentPresenter> кнопки. Значение <xref:System.Windows.Controls.ContentPresenter> отображает содержимое кнопки. В этом пошаговом руководстве содержимое является текстом ("Кнопка 1", "Кнопка 2", "Кнопка 3"). Все компоненты шаблона (прямоугольники и <xref:System.Windows.Controls.DockPanel>) размещаются в <xref:System.Windows.Controls.Grid>.
+2. **Изменить представление кнопки:** На этом этапе необходимо определить шаблон. Добавьте следующую выделенную разметку. Эта разметка определяет два элемента <xref:System.Windows.Shapes.Rectangle> с закругленными краями, за которыми следует <xref:System.Windows.Controls.DockPanel>. <xref:System.Windows.Controls.DockPanel> используется для размещения <xref:System.Windows.Controls.ContentPresenter> кнопки. <xref:System.Windows.Controls.ContentPresenter> отображает содержимое кнопки. В этом пошаговом руководстве содержимое является текстом ("Кнопка 1", "Кнопка 2", "Кнопка 3"). Все компоненты шаблона (прямоугольники и <xref:System.Windows.Controls.DockPanel>) размещаются внутри <xref:System.Windows.Controls.Grid>.
 
     ```xaml
     <Setter.Value>
@@ -189,7 +189,7 @@ ms.locfileid: "71332802"
     <!-- Styles and other resources below here. -->
     ```
 
-     Эти ресурсы используются в качестве <xref:System.Windows.Shapes.Shape.Fill%2A> для прямоугольника, вставляемого в <xref:System.Windows.Controls.Grid> шаблона кнопки. Добавьте в шаблон следующую выделенную разметку.
+     Эти ресурсы используются в качестве <xref:System.Windows.Shapes.Shape.Fill%2A> для прямоугольника, который мы вставляем в <xref:System.Windows.Controls.Grid> шаблона кнопки. Добавьте в шаблон следующую выделенную разметку.
 
     ```xaml
     <Setter.Value>
@@ -246,7 +246,7 @@ ms.locfileid: "71332802"
     </Setter.Value>
     ```
 
-     Обратите внимание, что <xref:System.Windows.UIElement.Opacity%2A> прямоугольника со свойством `x:Name` для «Гласскубе» равно 0, поэтому при запуске образца прямоугольник с эффектом стекла не отображается сверху. Это связано с тем, что позже мы добавим триггеры к шаблону, когда пользователь взаимодействует с кнопкой. Однако можно увидеть, как выглядит кнопка, изменив значение <xref:System.Windows.UIElement.Opacity%2A> на 1 и запустив приложение. См. следующий рисунок. Прежде чем перейти к следующему шагу, измените значение <xref:System.Windows.UIElement.Opacity%2A> обратно на 0.
+     Обратите внимание, что <xref:System.Windows.UIElement.Opacity%2A> прямоугольника со свойством `x:Name` "Гласскубе" равно 0, поэтому при выполнении образца не отображается стеклянный прямоугольник, наложенный сверху. Это связано с тем, что позже мы добавим триггеры к шаблону, когда пользователь взаимодействует с кнопкой. Однако можно увидеть, как выглядит кнопка, изменив значение <xref:System.Windows.UIElement.Opacity%2A> на 1 и запустив приложение. См. следующий рисунок. Прежде чем перейти к следующему шагу, измените значение <xref:System.Windows.UIElement.Opacity%2A> обратно на 0.
 
      ![Пользовательские кнопки, созданные с помощью XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")
 
@@ -254,7 +254,7 @@ ms.locfileid: "71332802"
 
 В этом разделе вы создадите триггеры свойств и триггеры событий для изменения значений свойств и запуска анимации в ответ на действия пользователя, такие как перемещение указателя мыши над кнопкой и нажатие кнопки.
 
-Простой способ добавления интерактивности (нажатие кнопки мыши, выхода из мыши, щелчка и т. д.) заключается в определении триггеров в шаблоне или стиле. Чтобы создать <xref:System.Windows.Trigger>, необходимо определить свойство Condition, например: Значение свойства Button <xref:System.Windows.UIElement.IsMouseOver%2A> равно `true`. Затем определяются методы задания (Actions), которые выполняются, когда условие триггера имеет значение true.
+Простой способ добавления интерактивности (нажатие кнопки мыши, выхода из мыши, щелчка и т. д.) заключается в определении триггеров в шаблоне или стиле. Чтобы создать <xref:System.Windows.Trigger>, определите свойство "Condition", например: кнопка <xref:System.Windows.UIElement.IsMouseOver%2A> значение свойства равно `true`. Затем определяются методы задания (Actions), которые выполняются, когда условие триггера имеет значение true.
 
 ### <a name="to-create-button-interactivity"></a>Создание интерактивной активности кнопки
 
@@ -366,7 +366,7 @@ ms.locfileid: "71332802"
 
      Нажмите клавишу F5, чтобы запустить приложение, и нажмите одну из кнопок. Обратите внимание, что кнопка остается выделенной после ее нажатия, так как она по-прежнему имеет фокус. Если щелкнуть другую кнопку, кнопка Создать получит фокус, а последний теряет ее.
 
-4. **Добавьте анимации для**  <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее мы добавим несколько анимаций к триггерам. Добавьте следующую разметку в любое место внутри блока `ControlTemplate.Triggers`.
+4. **Добавьте анимацию для**  <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **.** далее мы добавим несколько анимаций к триггерам. Добавьте следующую разметку в любое место внутри блока `ControlTemplate.Triggers`.
 
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->
@@ -399,11 +399,11 @@ ms.locfileid: "71332802"
 
      Прозрачный прямоугольник сжимается при наведении указателя мыши на кнопку и возвращается к нормальному размеру, когда указатель покидает.
 
-     Существует две анимации, которые запускаются при наведении указателя мыши на кнопку (возникает событие <xref:System.Windows.UIElement.MouseEnter>). Эти анимации сжимают стеклянный прямоугольник вдоль осей X и Y. Обратите внимание на свойства элементов <xref:System.Windows.Media.Animation.DoubleAnimation> — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. @No__t-0 указывает, что анимация выполняется в течение половины секунды, а <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> указывает, что стекло сжимается на 10%.
+     Существует две анимации, которые запускаются при наведении указателя мыши на кнопку (возникает событие<xref:System.Windows.UIElement.MouseEnter>). Эти анимации сжимают стеклянный прямоугольник вдоль осей X и Y. Обратите внимание на свойства элементов <xref:System.Windows.Media.Animation.DoubleAnimation> — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> указывает, что анимация выполняется в течение половины секунды, а <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> указывает, что стекло сжимается на 10%.
 
      Второй триггер события (<xref:System.Windows.UIElement.MouseLeave>) просто останавливает первый из них. Когда вы останавливаете <xref:System.Windows.Media.Animation.Storyboard>, все анимированные свойства возвращают значения по умолчанию. Таким образом, когда пользователь перемещает указатель мыши за пределы кнопки, кнопка возвращается к способу, который находился перед перемещением курсора по кнопке. Дополнительные сведения о анимациях см. в разделе [Общие сведения об анимации](../graphics-multimedia/animation-overview.md).
 
-5. **Добавить анимацию при нажатии кнопки:** Последним шагом является добавление триггера для, когда пользователь нажимает кнопку. Добавьте следующую разметку в любое место в блоке `ControlTemplate.Triggers`:
+5. **Добавить анимацию при нажатии кнопки:** Последним шагом является добавление триггера для, когда пользователь нажимает кнопку. Добавьте следующую разметку в любое место внутри блока `ControlTemplate.Triggers`:
 
     ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->
@@ -426,15 +426,15 @@ ms.locfileid: "71332802"
 ## <a name="summary"></a>Сводка
  В этом пошаговом руководстве вы выполнили следующие упражнения:
 
-- Целевой объект <xref:System.Windows.Style> для типа объекта (<xref:System.Windows.Controls.Button>).
+- Нацелен на <xref:System.Windows.Style> типа объекта (<xref:System.Windows.Controls.Button>).
 
 - Контролируемые основные свойства кнопок во всем приложении, использующих <xref:System.Windows.Style>.
 
-- Созданные ресурсы, такие как градиенты, используемые для значений свойств методов задания <xref:System.Windows.Style>.
+- Созданные ресурсы, такие как градиенты, используемые для значений свойств <xref:System.Windows.Style> методов задания.
 
 - Настройка вида кнопок во всем приложении путем применения шаблона к кнопкам.
 
-- Настраиваемое поведение кнопок в ответ на действия пользователя (такие как <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave> и <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), которые включают эффекты анимации.
+- Настраиваемое поведение кнопок в ответ на действия пользователя (например, <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>и <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), которые включают эффекты анимации.
 
 ## <a name="see-also"></a>См. также
 
