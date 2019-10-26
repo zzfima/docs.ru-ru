@@ -1,5 +1,5 @@
 ---
-title: Windows Presentation Foundation
+title: Windows Presentation Foundation (WPF)
 ms.date: 01/25/2018
 applies_to:
 - Windows 10
@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764547"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919370"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="864cd-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="864cd-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="864cd-103">Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для создания бизнес-приложений Windows настольных систем.</span><span class="sxs-lookup"><span data-stu-id="864cd-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
-  
- [<span data-ttu-id="864cd-104">Создание классических приложений с помощью Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="864cd-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="036d2-102">Windows Presentation Foundation (WPF)</span><span class="sxs-lookup"><span data-stu-id="036d2-102">Windows Presentation Foundation</span></span>
 
- [<span data-ttu-id="864cd-105">Разработка XAML в Visual Studio и Blend для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="864cd-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [<span data-ttu-id="864cd-106">Получить Visual Studio</span><span class="sxs-lookup"><span data-stu-id="864cd-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+<span data-ttu-id="036d2-103">Windows Presentation Foundation (WPF) предоставляет разработчикам унифицированную модель программирования для создания настольных бизнес-приложений в Windows.</span><span class="sxs-lookup"><span data-stu-id="036d2-103">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
+
+- [<span data-ttu-id="036d2-104">Введение в WPF</span><span class="sxs-lookup"><span data-stu-id="036d2-104">Introduction to WPF</span></span>](introduction-to-wpf.md)
+- [<span data-ttu-id="036d2-105">Начало работы</span><span class="sxs-lookup"><span data-stu-id="036d2-105">Getting Started</span></span>](getting-started/index.md)
+- [<span data-ttu-id="036d2-106">Разработка приложения</span><span class="sxs-lookup"><span data-stu-id="036d2-106">Application Development</span></span>](app-development/index.md)
+- [<span data-ttu-id="036d2-107">Дополнительно</span><span class="sxs-lookup"><span data-stu-id="036d2-107">Advanced</span></span>](advanced/index.md)
+- [<span data-ttu-id="036d2-108">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="036d2-108">Controls</span></span>](controls/index.md)
+- [<span data-ttu-id="036d2-109">Данные</span><span class="sxs-lookup"><span data-stu-id="036d2-109">Data</span></span>](data/index.md)
+- [<span data-ttu-id="036d2-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="036d2-110">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
+- [<span data-ttu-id="036d2-111">Security</span><span class="sxs-lookup"><span data-stu-id="036d2-111">Security</span></span>](security-wpf.md)
+- [<span data-ttu-id="036d2-112">Примеры WPF</span><span class="sxs-lookup"><span data-stu-id="036d2-112">WPF Samples</span></span>](wpf-samples.md)
+- [<span data-ttu-id="036d2-113">Библиотека классов</span><span class="sxs-lookup"><span data-stu-id="036d2-113">Class Library</span></span>](class-library-wpf.md)
