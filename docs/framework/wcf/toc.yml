@@ -50,7 +50,7 @@
                     - name: Определение и задание сбоев
                       href: defining-and-specifying-faults.md
                       items:
-                        - name: Как выполнить Объявление сбоев в контрактах служб
+                        - name: Практическое руководство. Объявление сбоев в контрактах служб
                           href: how-to-declare-faults-in-service-contracts.md
                     - name: Сбои при отправке и получении
                       href: sending-and-receiving-faults.md
@@ -59,7 +59,7 @@
                 - name: Синхронные и асинхронные операции
                   href: synchronous-and-asynchronous-operations.md
                   items:
-                    - name: Как выполнить Асинхронная реализация операции службы
+                    - name: Практическое руководство. Асинхронная реализация операции службы
                       href: how-to-implement-an-asynchronous-service-operation.md
                 - name: Надежные службы
                   href: reliable-services.md
@@ -89,13 +89,13 @@
                 - name: Использование привязок для настройки служб и клиентов
                   href: using-bindings-to-configure-services-and-clients.md
                   items:
-                    - name: Как выполнить Задание привязки клиента в коде
+                    - name: Практическое руководство. Задание привязки клиента в коде
                       href: how-to-specify-a-client-binding-in-code.md
-                    - name: Как выполнить Указание привязки клиента в конфигурации
+                    - name: Практическое руководство. Указание привязки клиента в конфигурации
                       href: how-to-specify-a-client-binding-in-configuration.md
-                    - name: Как выполнить Задание привязки службы в коде
+                    - name: Практическое руководство. Задание привязки службы в коде
                       href: how-to-specify-a-service-binding-in-code.md
-                    - name: Как выполнить Задание привязки службы в конфигурации
+                    - name: Практическое руководство. Задание привязки службы в конфигурации
                       href: how-to-specify-a-service-binding-in-configuration.md
                 - name: Настройка привязок для служб
                   href: configuring-bindings-for-wcf-services.md
@@ -111,30 +111,30 @@
             - name: Защита служб
               href: securing-services.md
               items:
-                - name: Как выполнить Защита службы с использованием учетных данных Windows
+                - name: Практическое руководство. Защита службы с использованием учетных данных Windows
                   href: how-to-secure-a-service-with-windows-credentials.md
-                - name: Как выполнить Задание режима безопасности
+                - name: Практическое руководство. Задание режима безопасности
                   href: how-to-set-the-security-mode.md
-                - name: Как выполнить Указание типа учетных данных клиента
+                - name: Практическое руководство. Указание типа учетных данных клиента
                   href: how-to-specify-the-client-credential-type.md
-                - name: Как выполнить Ограничение доступа с использованием класса PrincipalPermissionAttribute
+                - name: Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
                   href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
-                - name: Как выполнить Олицетворение клиента в рамках службы
+                - name: Практическое руководство. Олицетворение клиента в рамках службы
                   href: how-to-impersonate-a-client-on-a-service.md
-                - name: Как выполнить Анализ контекста безопасности
+                - name: Практическое руководство. Анализ контекста безопасности
                   href: how-to-examine-the-security-context.md
                 - name: Основные сведения об уровне защиты
                   href: understanding-protection-level.md
-                - name: Как выполнить Установка свойства ProtectionLevel
+                - name: Практическое руководство. Установка свойства ProtectionLevel
                   href: how-to-set-the-protectionlevel-property.md
             - name: 'Создание служб, поддерживающих взаимодействие с базовым профилем WS-I 1.1'
               href: creating-ws-i-basic-profile-1-1-interoperable-services.md
         - name: Размещение служб
           href: hosting-services.md
           items:
-            - name: Как выполнить Размещение службы WCF в управляемом приложении
+            - name: Практическое руководство. Размещение службы WCF в управляемом приложении
               href: how-to-host-a-wcf-service-in-a-managed-application.md
-            - name: "Как выполнить Размещение службы WCF, написанной для.NET Framework\_3.5 в IIS, которая работает в .NET Framework\_4"
+            - name: "Практическое руководство. Размещение службы WCF, написанной для.NET Framework\_3.5 в IIS, которая работает в .NET Framework\_4"
               href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
         - name: Создание клиентов
           href: building-clients.md
@@ -153,7 +153,7 @@
             - name: Обеспечение безопасности клиентов
               href: securing-clients.md
               items:
-                - name: Как выполнить Задание значений учетных данных клиента
+                - name: Практическое руководство. Задание значений учетных данных клиента
                   href: how-to-specify-client-credential-values.md
         - name: Введение в расширяемость
           href: introduction-to-extensibility.md
@@ -184,8 +184,6 @@
           href: deploying-wcf-applications-with-clickonce.md
     - name: Администрирование и диагностика
       href: diagnostics/
-    - name: Требования к системе
-      href: wcf-system-requirements.md
     - name: 'Ресурсы операционной системы, необходимые WCF'
       href: operating-system-resources-required-by-wcf.md
     - name: Устранение неполадок с установкой
