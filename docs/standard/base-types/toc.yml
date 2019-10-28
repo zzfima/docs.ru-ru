@@ -34,7 +34,7 @@
               href: how-to-pad-a-number-with-leading-zeros.md
             - name: Практическое руководство. Извлечение дня недели из конкретной даты
               href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-            - name: Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
+            - name: Практическое руководство. Определение и использование поставщиков настраиваемых числовых форматов
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: Практическое руководство. Сохранение и восстановление значения даты и времени
               href: how-to-round-trip-date-and-time-values.md
@@ -110,9 +110,9 @@
             - name: Примеры регулярных выражений
               href: regular-expression-examples.md
               items:
-                - name: Пример регулярного выражения. Поиск ссылок HREF
+                - name: Пример. Поиск ссылок HREF
                   href: regular-expression-example-scanning-for-hrefs.md
-                - name: Пример регулярного выражения. Изменение форматов даты
+                - name: Пример. Изменение форматов даты
                   href: regular-expression-example-changing-date-formats.md
                 - name: Практическое руководство. Извлечение протокола и номера порта из URL-адреса
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
