@@ -1,16 +1,16 @@
 ---
-title: Итераторы
+title: Iterators
 description: Сведения о том, как использовать встроенные итераторы C# и создавать собственные настраиваемые методы итераторов.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c378ceb651eed7e7a3d8c738bd4b2b3cf7de2a0f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613438"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773878"
 ---
-# <a name="iterators"></a>Итераторы
+# <a name="iterators"></a>Iterators
 
 Почти каждой написанной вами программе придется выполнять итерацию определенной коллекции. Для этого вы напишете код, проверяющий каждый элемент в коллекции.
 
@@ -69,8 +69,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 }
 ```
 
@@ -80,14 +80,14 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
     index = 100;
-    while (index++ < 110)
-        yield return index;
+    while (index < 110)
+        yield return index++;
 }
 ```
 
@@ -111,8 +111,8 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -130,8 +130,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -155,9 +155,12 @@ public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
 private IEnumerable<int> IteratorMethod()
 {
     int index = 0;
-    while (index++ < 10)
+    while (index < 10)
+    {
         if (index % 2 == 1)
             yield return index;
+        index++;
+    }
 }
 ```
 

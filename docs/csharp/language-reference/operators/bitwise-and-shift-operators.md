@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609945"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771724"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Побитовые операторы и операторы сдвига (справочник по C#)
 
@@ -158,7 +158,7 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>Величина смещения операторов сдвига
 
-Для операторов сдвига `<<` и `>>` тип правого операнда должен быть [int](../builtin-types/integral-numeric-types.md) или типом, имеющим [предопределенное неявное числовое преобразование](../keywords/implicit-numeric-conversions-table.md) в `int`.
+Для операторов сдвига `<<` и `>>` тип правого операнда должен быть [int](../builtin-types/integral-numeric-types.md) или типом, имеющим [предопределенное неявное числовое преобразование](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) в `int`.
 
 Для выражений `x << count` и `x >> count` фактическая величина сдвига зависит от типа `x` следующим образом:
 

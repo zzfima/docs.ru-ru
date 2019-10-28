@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605817"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771865"
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
 
@@ -101,6 +101,4 @@ int x = (int)Day.Sun;
 - [Ключевые слова в C#](index.md)
 - [Целочисленные типы](../builtin-types/integral-numeric-types.md)
 - [Таблица встроенных типов](built-in-types-table.md)
-- [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)
-- [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)
 - [Соглашения об именовании перечислений](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
