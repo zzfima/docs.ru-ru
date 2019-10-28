@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db85781b48fd75c3d2ef70834fd8451647f6917
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f9b8b93fe2b15ca6b4544547f3934f51ffed4df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044224"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774195"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../resources/creating-resource-files-for-desktop-apps.md).)  
@@ -62,7 +62,7 @@ resgen /?
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
+resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
 ```console  
