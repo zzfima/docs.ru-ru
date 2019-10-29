@@ -2,19 +2,19 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7c1e02d44c674bf262f92df1c43bec6e9f2143c5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251253"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039926"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 Вычисляет набор выражений типа `Boolean` для определения результата.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```csharp  
 CASE  
      WHEN Boolean_expression THEN result_expression   
     [ ...n ]   
@@ -40,8 +40,8 @@ END
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает тип с наивысшим приоритетом из набора типов в выражении `result_expression` и необязательном выражении `else_result_expression`.  
   
-## <a name="remarks"></a>Примечания  
- Выражение [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case напоминает выражение CASE языка Transact-SQL. Выражение CASE применяется для выполнения ряда проверок условий в целях определения того, вычисление какого выражения приведет к получению приемлемого результата. В этой форме выражение CASE применяется к ряду, состоящему из одного или нескольких выражений типа `Boolean` , для определения правильного результирующего выражения.  
+## <a name="remarks"></a>Заметки  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выражение CASE напоминает выражение CASE языка Transact-SQL. Выражение CASE применяется для выполнения ряда проверок условий в целях определения того, вычисление какого выражения приведет к получению приемлемого результата. В этой форме выражение CASE применяется к ряду, состоящему из одного или нескольких выражений типа `Boolean` , для определения правильного результирующего выражения.  
   
  Функция CASE находит значение `Boolean_expression` для каждого предложения WHEN в указанном порядке и возвращает значение `result_expression` первого выражения `Boolean_expression` , которое определяется как `true`. Остальные выражения оцениваться не будут. Если ни одно выражение `Boolean_expression` не вычисляется в `true`, компонент Database Engine возвращает выражение `else_result_expression` , если указано предложение ELSE, или значение NULL, если предложение ELSE не указано.  
   
@@ -50,7 +50,7 @@ END
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL с помощью выражения CASE оценивает набор выражений типа `Boolean` , чтобы определить результат. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
+1. Выполните процедуру, описанную в разделе [инструкции. выполнение запроса, возвращающего тип PrimitiveType результаты](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   

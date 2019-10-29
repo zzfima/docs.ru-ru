@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a9c81c8554c0fb393c10ed69f84c8b2d936ec1e6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784862"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040126"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Сопоставления DataAdapter DataTable и DataColumn
 Объект **DataAdapter** содержит коллекцию из нуля или более <xref:System.Data.Common.DataTableMapping> объектов в своем свойстве **TableMappings** . **Экземпляр DataTableMapping** предоставляет основное сопоставление данных, возвращенных запросом к источнику данных, и <xref:System.Data.DataTable>. Имя **экземпляр DataTableMapping** может быть передано вместо имени **DataTable** в метод **Fill** объекта **DataAdapter**. В следующем примере создается **экземпляр DataTableMapping** с именем **Аусорсмаппинг** для таблицы **authors** .  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  Если не указать имя **TableName** или **экземпляр DataTableMapping** при вызове метода **Fill** или **Update** объекта **DataAdapter**, то **DataAdapter** ищет **экземпляр DataTableMapping** с именем Table. Если этот **экземпляр DataTableMapping** не существует, то **TableName** объекта **DataTable** имеет значение Table. Можно указать **экземпляр DataTableMapping** по умолчанию, создав **экземпляр DataTableMapping** с именем "Table".  
   
- Следующий пример кода создает **экземпляр DataTableMapping** (из <xref:System.Data.Common> пространства имен) и делает его сопоставлением по умолчанию для указанного **объекта DataAdapter** , присваивая ему имя "Table". Затем в примере сопоставляются столбцы из первой таблицы в результатах запроса (таблица **Customers** базы данных **Northwind** ) с набором более понятных имен пользователей в таблице <xref:System.Data.DataSet> **"клиенты" Northwind** в. Для столбцов, к которым не применяется сопоставление, используются имена столбцов из источника данных.  
+ Следующий пример кода создает **экземпляр DataTableMapping** (из пространства имен <xref:System.Data.Common>) и делает его сопоставлением по умолчанию для указанного **объекта DataAdapter** , присваивая ему имя "Table". Затем в примере сопоставляются столбцы из первой таблицы в результатах запроса (таблица **Customers** базы данных **Northwind** ) с набором более понятных имен пользователей в таблице **"Customers"** в <xref:System.Data.DataSet>. Для столбцов, к которым не применяется сопоставление, используются имена столбцов из источника данных.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -86,16 +86,25 @@ adapter.Fill(custDS, "Customers");
 ## <a name="handling-multiple-result-sets"></a>Обработка нескольких результирующих наборов  
  Если **SelectCommand** возвращает несколько таблиц, функция **Fill** автоматически создает имена таблиц с добавочными значениями для таблиц в **наборе данных**, начиная с указанного имени таблицы и продолжая в форме **TableName** . *N*, начиная с **TableName1**. Сопоставления таблиц можно использовать для сопоставления автоматически создаваемого имени таблицы с именем, которое необходимо указать для таблицы в **наборе данных**. Например, для **SelectCommand** , возвращающего две таблицы, **Customers** и **Orders**, выполните следующий вызов функции **Fill**.  
   
-```  
+```vb  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
-  
- В **наборе данных**создаются две таблицы: **Клиенты** и **Customers1**. Можно использовать сопоставления таблиц, чтобы гарантировать, что вторая таблица будет называться **Orders** вместо **Customers1**. Для этого сопоставьте исходную таблицу **Customers1** со столбцами таблицы **набора данных** ,как показано в следующем примере.  
-  
+
+```csharp  
+adapter.Fill(customersDataSet, "Customers");  
 ```  
+
+ В **наборе данных**создаются две таблицы: **Customers** и **Customers1**. Можно использовать сопоставления таблиц, чтобы гарантировать, что вторая таблица будет называться **Orders** вместо **Customers1**. Для этого сопоставьте исходную таблицу **Customers1** со столбцами таблицы **набора данных** ,как показано в следующем примере.  
+  
+```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
+
+```csharp  
+adapter.TableMappings.Add("Customers1", "Orders");  
+adapter.Fill(customersDataSet, "Customers");  
+```
   
 ## <a name="see-also"></a>См. также
 

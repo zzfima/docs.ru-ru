@@ -2,12 +2,12 @@
 title: Создание кода SQL из деревьев команд. Рекомендации
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855005"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040002"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Создание кода SQL из деревьев команд. Рекомендации
 
@@ -31,7 +31,7 @@ ORDER BY …
 
 В качестве примера рассмотрим следующее дерево команд запроса:
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ WHERE b.y = 5
 
 Левосторонние соединения (которые выглядят как левые дочерние другого соединения) проще сделать плоскими и превратить в одну инструкцию SELECT языка SQL. В качестве примера рассмотрим следующее дерево команд запроса:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 Однако соединения, не являющиеся левосторонними соединениями, невозможно легко превратить в плоскую структуру, и не следует пытаться это сделать. В качестве примера рассмотрим соединения в следующем дереве команд запроса:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(

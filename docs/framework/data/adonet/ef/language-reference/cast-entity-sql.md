@@ -2,19 +2,19 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251236"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039917"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Преобразует выражение одного типа данных в другой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```csharp
 CAST ( expression AS data_type )  
 ```  
   
@@ -28,10 +28,10 @@ CAST ( expression AS data_type )
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение такого же типа, что и аргумент `data_type`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Выражение приведения имеет аналогичную семантику выражения Transact-SQL CONVERT. Выражение явного приведения используется для преобразования значения одного типа в значение другого типа.  
   
-```  
+```csharp
 CAST( e as T )  
 ```  
   
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>Пример  
  В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор CAST используется для явного приведения выражения одного типа данных к другому. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего тип PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md)результаты.  
+1. Выполните процедуру, описанную в разделе [инструкции. выполнение запроса, возвращающего тип PrimitiveType результаты](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   

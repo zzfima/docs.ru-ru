@@ -2,12 +2,12 @@
 title: Ограничения и отношения схемы XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784187"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040031"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Ограничения и отношения схемы XML
 В схеме языка определения схемы XML (XSD) можно указать ограничения (ограничения UNIQUE, Key и keyref) и отношения (с помощью аннотации **msdata: relationship** ). В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  
@@ -15,7 +15,7 @@ ms.locfileid: "70784187"
  Как правило, в XML-схеме задается Аннотация **msdata: relationship** , если нужно создать только связи в **наборе данных**. Дополнительные сведения см. [в разделе Создание связей наборов данных из схемы XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Если необходимо создать ограничения в **наборе данных**, необходимо указать ограничения (уникальные, ключ и keyref). Обратите внимание, что ограничения key и keyref используются также для формирования связей, как объясняется далее в подразделе.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Формирование связи из ограничений key и keyref  
- Вместо указания аннотации **msdata: relationship** можно указать ограничения key и keyref, которые используются в процессе СОПОСТАВЛЕНИЯ схем XML для создания не только ограничений, но и связи в **наборе данных**. Однако если указать `msdata:ConstraintOnly="true"` в элементе **keyref** , то **набор данных** будет включать только ограничения и не будет включать связь.  
+ Вместо указания аннотации **msdata: relationship** можно указать ограничения key и keyref, которые используются в процессе СОПОСТАВЛЕНИЯ схем XML для создания не только ограничений, но и связи в **наборе данных**. Однако при указании `msdata:ConstraintOnly="true"` в элементе **keyref** **набор данных** будет включать только ограничения и не будет включать связь.  
   
  В следующем примере показана схема XML, включающая элементы **Order** и **OrderDetail** , которые не являются вложенными. Схема также указывает ограничения key и keyref.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "70784187"
   
  **Набор данных** , формируемый в процессе СОПОСТАВЛЕНИЯ схем XML, включает таблицы **Order** и **OrderDetail** . Кроме того, **набор данных** содержит отношения и ограничения. Эти связи и ограничения показаны в приведенном ниже примере. Обратите внимание, что в схеме не указана Аннотация **msdata: relationship** ; Вместо этого для создания отношения используются ограничения key и keyref.  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ ms.locfileid: "70784187"
   
  **Набор данных** , полученный из процесса СОПОСТАВЛЕНИЯ схем XML, включает две таблицы:  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  **Набор данных** также содержит две связи (одна на основе аннотации **msdata: relationship** , а другая — на основе ограничений key и keyref) и различных ограничений. Эти связи и ограничения показаны в следующем примере.  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

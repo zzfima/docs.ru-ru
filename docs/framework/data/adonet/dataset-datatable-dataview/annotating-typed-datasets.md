@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784806"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040397"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме приведет к тому, что типизированный **набор данных** будет ссылаться на объекты, не существующие в источнике данных, а также будет потеряна ссылка на объекты, существующие в источнике данных.  
   
- С помощью заметок можно настроить имена объектов в типизированном **наборе данных** с более информативными именами, сделать код более удобочитаемым, а типизированный **набор данных** проще использовать для использования клиентами, при этом не изменяя базовую схему. Например, следующий элемент схемы для таблицы **Customers** базы данных **Northwind** приведет к появлению <xref:System.Data.DataRowCollection> имени объекта **DataRow** **кустомерсров** и именованных **клиентов**.  
+ С помощью заметок можно настроить имена объектов в типизированном **наборе данных** с более информативными именами, сделать код более удобочитаемым, а типизированный **набор данных** проще использовать для использования клиентами, при этом не изменяя базовую схему. Например, следующий элемент схемы для таблицы **Customers** базы данных **Northwind** приведет к появлению имени объекта **DataRow** **кустомерсров** и <xref:System.Data.DataRowCollection> с именем **Customers**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -46,7 +46,7 @@ ms.locfileid: "70784806"
 |Комментарий|Описание|  
 |----------------|-----------------|  
 |**типеднаме**|Имя объекта.|  
-|**typedPlural**|Имя коллекции объектов.|  
+|**типедплурал**|Имя коллекции объектов.|  
 |**типедпарент**|Имя объекта при ссылке на родительскую связь.|  
 |**типедчилдрен**|Имя метода, возвращающего объекты по дочерней связи.|  
 |**nullValue**|Значение, если базовое значение равно **DBNull**. См. следующую таблицу для **NullValue** Annotations. Значение по умолчанию — **_throw**.|  
@@ -74,9 +74,9 @@ ms.locfileid: "70784806"
 |**Родительский элемент** Возмож|TableNameRow|typedParent|  
 |**Набор данных** Событиях|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Чтобы использовать зааннотации типизированного **набора данных** , необходимо включить следующую ссылку **xmlns** в схему языка определения схемы XML (XSD). Сведения о создании XSD на основе таблиц базы данных <xref:System.Data.DataSet.WriteXmlSchema%2A> см. в разделе или [Работа с DataSets в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Чтобы использовать зааннотации типизированного **набора данных** , необходимо включить следующую ссылку **xmlns** в схему языка определения схемы XML (XSD). Сведения о создании XSD из таблиц базы данных см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [Работа с наборами DataSet в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- В следующем примере кода используется строго типизированный **набор данных** , созданный из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> из них для заполнения таблицы **Customers** , <xref:System.Data.SqlClient.SqlDataAdapter> а другой — для заполнения таблицы **Orders** . Строго типизированный **набор данных** определяет **DataRelation**.  
+ В следующем примере кода используется строго типизированный **набор данных** , созданный из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Customers** и другой <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Orders** . Строго типизированный **набор данных** определяет **DataRelation**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

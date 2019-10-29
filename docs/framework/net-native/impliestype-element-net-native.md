@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType>Элемент (.NET Native)
+title: Элемент <ImpliesType> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38bdfc974a6942596e9778cabb87b275f1e51db8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049665"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039524"
 ---
-# <a name="impliestype-element-net-native"></a>\<Элемент > Имплиестипе (.NET Native)
+# <a name="impliestype-element-net-native"></a>Элемент \<Имплиестипе > (.NET Native)
 Применяет политику к типу, если политика была применена к содержащему типу или методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,18 +51,18 @@ ms.locfileid: "71049665"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*type_name*|Имя типа. Если тип, представленный этим элементом `<ImpliesType>`, находится в том же пространстве имен, что и содержащий его элемент `<Type>`, атрибут *type_name* может содержать имя типа без пространства имен. В противном случае атрибут *type_name* должен содержать полное имя типа.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71049665"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
 |[\<Method>](method-element-net-native.md)|Применяет политику отражения к методу.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `<ImpliesType>` в основном предназначен для использования в библиотеках. Он используется в следующем сценарии:  
   
 - Если процедура должна отражаться на одном типе, она обязательно должна отражаться на втором типе  
@@ -99,13 +99,13 @@ ms.locfileid: "71049665"
 </Type>  
 ```  
   
- Элемент `<ImpliesType>` может также отображаться в элементе `<Method>`, так как в некоторых случаях создание экземпляров универсального метода подразумевает отражение на экземпляре типа. Например, представьте себе универсальный метод `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` , к которому заданная библиотека будет обращаться динамически вместе со связанными <xref:System.Collections.Generic.List%601> типами и <xref:System.Array> . Это можно выразить следующим образом:  
+ Элемент `<ImpliesType>` может также отображаться в элементе `<Method>`, так как в некоторых случаях создание экземпляров универсального метода подразумевает отражение на экземпляре типа. Например, представьте себе универсальный метод `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`, что доступ к данной библиотеке будет осуществляться динамически вместе со связанными <xref:System.Collections.Generic.List%601> и <xref:System.Array> типами. Это можно выразить следующим образом:  
   
 ```xml  
 <Type Name="MyType">  
     <Method Name="MakeEnumerable{T}" Signature="(System.String, T)" Dynamic="Included">  
         <ImpliesType Name="T[]" Dynamic="Public" />  
-        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public">  
+        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public" />  
     </Method>  
 </Type>  
 ```  

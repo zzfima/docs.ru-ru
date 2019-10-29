@@ -2,19 +2,19 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 41036e629837bd5861368df545bed9423eac5b23
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 611e90f362bbc0eac521e1e1998fb85200169c19
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251286"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039949"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
-Определяет, находится ли значение выражения в указанном диапазоне. Выражение [!INCLUDE[esql](../../../../../../includes/esql-md.md)] between имеет те же функциональные возможности, что и Transact-SQL между выражениями.  
+Определяет, находится ли значение выражения в указанном диапазоне. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] между выражениями имеет те же функциональные возможности, что и Transact-SQL между выражениями.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```csharp  
 expression [ NOT ] BETWEEN begin_expression AND end_expression    
 ```  
   
@@ -37,13 +37,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если аргумент `expression` находится в диапазоне между `begin_expression` и `end_expression`; в противном случае - значение `false`. Возвращает `null`, если `expression` равно `null` или если `begin_expression` или `end_expression` равно `null`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Чтобы указать эксклюзивный диапазон, используйте операторы "больше" (>) и "меньше" (<), а не между ними.  
   
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор BETWEEN определяет, входит ли значение выражения в указанный диапазон. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   

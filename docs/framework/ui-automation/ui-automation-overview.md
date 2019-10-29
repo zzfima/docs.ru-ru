@@ -6,18 +6,18 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042276"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040548"
 ---
 # <a name="ui-automation-overview"></a>Общие сведения о модели автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это новая инфраструктура специальных возможностей для [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], доступная во всех операционных системах, поддерживающих [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это новая платформа специальных возможностей для Microsoft Windows, доступная во всех операционных системах, поддерживающих [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] обеспечивает программный доступ к большинству элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] на рабочем столе, позволяя продуктам с поддержкой специальных возможностей, таким как средства чтения с экрана, предоставлять конечным пользователям сведения о [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и управлять [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] средствами, отличными от стандартного ввода данных. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] также позволяет скриптам автоматических тестов взаимодействовать с [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71042276"
 |API поставщика (UIAutomationProvider. dll и UIAutomationTypes. dll)|Набор определений интерфейса, которые реализуются поставщиками автоматизации пользовательского интерфейса, объектами, предоставляющими сведения об элементах [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и реагирующими на ввод данных программными средствами.|  
 |API клиента (UIAutomationClient.dll и UIAutomationTypes.dll)|Набор типов для управляемого кода, который позволяет клиентским приложениям модели автоматизации пользовательского интерфейса получать сведения о [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и отправлять входные данные в элементы управления.|  
 |UiAutomationCore.dll|Базовый код (иногда называемый ядром [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ), который обрабатывает взаимодействие между поставщиками и клиентами.|  
-|UIAutomationClientsideProviders.dll|Набор поставщиков автоматизации пользовательского интерфейса для стандартных элементов управления прежних версий. (Элементы управления [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] имеют встроенную поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Эта поддержка автоматически доступна для клиентских приложений.|  
+|UIAutomationClientsideProviders.dll|Набор поставщиков автоматизации пользовательского интерфейса для стандартных элементов управления прежних версий. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] элементы управления имеют встроенную поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Эта поддержка автоматически доступна для клиентских приложений.|  
   
  С точки зрения разработчика программного обеспечения существует два способа использования [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: создание поддержки пользовательских элементов управления (с помощью API поставщика) и создание приложений, использующих ядро [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для взаимодействия с элементами [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (с помощью API клиента). В зависимости от ключевых целей вы должны обращаться к разным частям документации. В следующих разделах вы можете подробнее ознакомиться с основными понятиями и получить практические знания.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71042276"
 |[Клиенты автоматизации пользовательского интерфейса для управляемого кода](ui-automation-clients-for-managed-code.md)|Обзоры и практические руководства, помогающие использовать API клиента.|Разработчики клиентских приложений.|  
 |[Шаблоны модели автоматизации пользовательского интерфейса](ui-automation-control-patterns.md)|Сведения о порядке реализации поставщиками шаблонов элементов управления и о функциональных возможностях, доступных для клиентов.|Все.|  
 |[Шаблон текста модели автоматизации пользовательского интерфейса](ui-automation-text-pattern.md)|Сведения о порядке реализации поставщиками шаблонов элементов управления Text и о функциональных возможностях, доступных для клиентов.|Все.|  
-|[UI Automation Control Types](ui-automation-control-types.md)|Сведения о свойствах и шаблонах элементов управления, поддерживаемых разными типами элементов управления.|Все.|  
+|[Типы элементов управления автоматизации пользовательского интерфейса](ui-automation-control-types.md)|Сведения о свойствах и шаблонах элементов управления, поддерживаемых разными типами элементов управления.|Все.|  
   
  В следующей таблице перечислены пространства имен [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , библиотеки DLL, которые их содержат, и использующая их аудитория.  
   

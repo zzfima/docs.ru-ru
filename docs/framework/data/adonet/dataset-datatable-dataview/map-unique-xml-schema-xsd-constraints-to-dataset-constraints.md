@@ -2,12 +2,12 @@
 title: Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b847aba31aa75f7be3bd6a11b6bcb8231c06bc4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784408"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040361"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 В схеме языка определения схемы XML (XSD) элемент **UNIQUE** указывает ограничение уникальности для элемента или атрибута. В процессе преобразования схемы XML в реляционную схему наложенное на элемент или атрибут ограничение, гарантирующее уникальность, в XML-схеме сопоставляется с ограничением уникальности в объекте <xref:System.Data.DataTable> в соответствующем объекте <xref:System.Data.DataSet>, который формируется.  
@@ -17,7 +17,7 @@ ms.locfileid: "70784408"
 |Имя атрибута|Описание|  
 |--------------------|-----------------|  
 |**msdata: ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае атрибут **Name** предоставляет значение имени ограничения.|  
-|**msdata: PrimaryKey**|Если `PrimaryKey="true"` имеется в элементе **UNIQUE** , то создается ограничение UNIQUE со свойством **IsPrimaryKey имеют значение** , установленным в **значение true**.|  
+|**msdata: PrimaryKey**|Если `PrimaryKey="true"` содержится в элементе **UNIQUE** , то создается ограничение UNIQUE, в котором свойство **IsPrimaryKey имеют значение** имеет значение **true**.|  
   
  В следующем примере показана схема XML, использующая элемент **UNIQUE** для указания ограничения уникальности.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "70784408"
   
  Элемент **UNIQUE** в схеме указывает, что для всех элементов **Customer** в экземпляре документа значение дочернего элемента **CustomerID** должно быть уникальным. При построении **набора данных**процесс сопоставления считывает эту схему и создает следующую таблицу:  
   
-```  
+```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  Процесс сопоставления также создает ограничение UNIQUE для столбца **CustomerID** , как показано в следующем **наборе данных**. (Для простоты показаны только значимые свойства.)  
   
-```  
+```text  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
@@ -64,7 +64,7 @@ TableName: Customers
       Unique: True  
   ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
-      Columns: CustomerID   
+      Columns: CustomerID
       IsPrimaryKey: False  
 ```  
   
@@ -86,10 +86,10 @@ TableName: Customers
   
  Это ограничение, создаваемое в результирующем **наборе данных**.  
   
-```  
+```text  
 ConstraintName: SomeName  
   Table: Customers  
-  Columns: CustomerID CompanyName   
+  Columns: CustomerID CompanyName
   IsPrimaryKey: False  
 ```  
   

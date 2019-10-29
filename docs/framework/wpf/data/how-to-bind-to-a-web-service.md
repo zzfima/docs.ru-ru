@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920148"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040906"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Практическое руководство. Привязка к веб-службе
 В этом примере показано, как выполнить привязку к объектам, возвращаемым вызовами метода веб-службы.  
@@ -32,18 +32,18 @@ ms.locfileid: "72920148"
   
 4. Нажмите **Go** , а затем — **Добавить ссылку**.  
   
- Затем вызывается метод веб-службы и задается <xref:System.Windows.FrameworkElement.DataContext%2A> соответствующего элемента управления или окна в возвращаемый объект. Метод **WebMethod** службы MTPS принимает ссылку на объект **жетконтентрекуест** . Поэтому в следующем примере сначала настраивается объект запроса:  
+ Затем вызывается метод веб-службы и задается <xref:System.Windows.FrameworkElement.DataContext%2A> соответствующего элемента управления или окна в возвращаемый объект. Метод `GetContent` службы MTPS принимает ссылку на объект `getContentRequest`. Поэтому в следующем примере сначала настраивается объект запроса:  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- После установки <xref:System.Windows.FrameworkElement.DataContext%2A> можно создать привязки к свойствам объекта, для которого <xref:System.Windows.FrameworkElement.DataContext%2A> было установлено значение. В этом примере для <xref:System.Windows.FrameworkElement.DataContext%2A> задается объект **жетконтентреспонсе** **, возвращаемый методом GetObject** . В следующем примере <xref:System.Windows.Controls.ItemsControl> привязывается к и отображает значения **языкового стандарта** **аваилаблеверсионсандлокалес** из **жетконтентреспонсе**.  
+ После установки <xref:System.Windows.FrameworkElement.DataContext%2A> можно создать привязки к свойствам объекта, для которого <xref:System.Windows.FrameworkElement.DataContext%2A> было установлено значение. В этом примере <xref:System.Windows.FrameworkElement.DataContext%2A> задается как объект `getContentResponse`, возвращаемый методом `GetContent`. В следующем примере <xref:System.Windows.Controls.ItemsControl> привязывается к и отображает `locale` значения `availableVersionsAndLocales` `getContentResponse`.  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- Сведения о структуре **жетконтентреспонсе**см. в [документации по службе содержимого](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
+ Сведения о структуре `getContentResponse`см. в [документации по службе содержимого](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>См. также
 

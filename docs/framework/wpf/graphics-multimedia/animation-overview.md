@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780144"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039177"
 ---
 # <a name="animation-overview"></a>Общие сведения об эффектах анимации
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет мощный набор функций графикой и макетом, которые позволяют создавать привлекательные пользовательские интерфейсы и документы. Применение анимации позволяет сделать пользовательский интерфейс еще более наглядным и удобным в использовании. Используйте анимацию цвета фона или объекта <xref:System.Windows.Media.Transform>, можно создать экранных эффектов перехода или отображения визуальных подсказок.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет мощный набор функций для работы с графикой и макетом, позволяющий создавать привлекательные пользовательские интерфейсы и привлекательные документы. Применение анимации позволяет сделать пользовательский интерфейс еще более наглядным и удобным в использовании. Просто анимировать цвет фона или применить анимированный <xref:System.Windows.Media.Transform>, вы можете создавать значительные переходы экрана или предоставлять полезные визуальные подсказки.
 
-Данный обзор представляет введение в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] анимации и системы. Этот раздел посвящен анимации из [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объектов с помощью раскадровок.
+В этом обзоре содержатся общие сведения о [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] анимации и системе управления временем. Он посвящен анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объектов с помощью раскадровок.
 
 <a name="introducinganimations"></a>
 
@@ -38,7 +38,7 @@ ms.locfileid: "67780144"
 
 - Затем программа обновляет прямоугольник с использованием нового значения и перерисовывает его.
 
-До версии [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] разработчикам приходится создавать и управлять собственные системы управления временем либо использовать специальные пользовательские библиотеки. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает в себя эффективная система контроля времени, предоставляется с помощью управляемого кода и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и которые тесно интегрированы в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. Анимация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] упрощает анимацию элементов управления и других графических объектов.
+Прежде чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], разработчикам Microsoft Windows пришлось создавать собственные системы управления временем и управлять ими, а также использовать специальные пользовательские библиотеки. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит эффективную систему управления временем, доступную через управляемый код и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и тесно интегрированную в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ную платформу. Анимация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] упрощает анимацию элементов управления и других графических объектов.
 
 В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эффективно осуществляются все внутренние процессы управления системой времени и перерисовки экрана. Предоставляются классы контроля времени, позволяющие сосредоточиться на создаваемых эффектах, а не на механике их реализации. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также упрощает создание собственной анимации, предоставляя доступ к базовым классам анимации, из которых пользовательские классы могут наследовать средства создания пользовательской анимации. По сравнению со стандартными пользовательские классы анимации обеспечивают большое преимущество в производительности.
 
@@ -46,125 +46,125 @@ ms.locfileid: "67780144"
 
 ## <a name="wpf-property-animation-system"></a>Система анимации свойств WPF
 
-Если вы понимаете основные понятия системы управления временем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] анимация может быть проще в использовании. Наиболее важно то, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], анимация объектов осуществляется путем применения анимации к свойствам этих объектов. Например, чтобы увеличить размер элемента среды, следует анимировать его <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства. Чтобы скрыть объект из представления, следует анимировать его <xref:System.Windows.UIElement.Opacity%2A> свойство.
+Если вы понимаете несколько важных концепций системы управления временем, удобнее использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] анимации. Самое важное заключается в том, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]анимация объектов осуществляется путем применения анимации к отдельным свойствам. Например, чтобы увеличить элемент платформы, можно анимировать его свойства <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>. Чтобы сделать объект эффектным от представления, можно анимировать его свойство <xref:System.Windows.UIElement.Opacity%2A>.
 
 Свойство, поддерживающее анимацию, должно удовлетворять следующим трем требованиям.
 
 - Свойство является свойством зависимостей.
 
-- Он должен входить в класс, наследуемый от <xref:System.Windows.DependencyObject> и реализует <xref:System.Windows.Media.Animation.IAnimatable> интерфейс.
+- Он должен принадлежать классу, который наследуется от <xref:System.Windows.DependencyObject> и реализует интерфейс <xref:System.Windows.Media.Animation.IAnimatable>.
 
-- Доступен совместимый тип анимации. (Если [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет его, вы можете создать свой собственный. См. в разделе [Общие сведения о пользовательской анимации](custom-animations-overview.md).)
+- Доступен совместимый тип анимации. (Если [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет его, можно создать собственный. См. раздел [Общие сведения о пользовательской анимации](custom-animations-overview.md).)
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит множество объектов, имеющих <xref:System.Windows.Media.Animation.IAnimatable> свойства. Элементы управления, например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TabControl>, а также <xref:System.Windows.Controls.Panel> и <xref:System.Windows.Shapes.Shape> объекты наследуют от <xref:System.Windows.DependencyObject>. Большинство их свойств являются свойствами зависимостей.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит множество объектов, которые имеют свойства <xref:System.Windows.Media.Animation.IAnimatable>. Такие элементы управления, как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TabControl>, а также <xref:System.Windows.Controls.Panel> и <xref:System.Windows.Shapes.Shape> объекты наследуют от <xref:System.Windows.DependencyObject>. Большинство их свойств являются свойствами зависимостей.
 
 Анимацию можно использовать практически везде, где используются стили и шаблоны элементов управления. Анимация не обязательно должна быть визуальной; можно анимировать и объекты, не являющиеся частью пользовательского интерфейса, если они соответствуют описанным в этом разделе условиям.
 
 <a name="storyboardwalkthrough"></a>
 
-## <a name="example-make-an-element-fade-in-and-out-of-view"></a>Пример Сделать элемент исчезания и
+## <a name="example-make-an-element-fade-in-and-out-of-view"></a>Пример. Реализация исчезновения и появления элемента
 
-В этом примере показано, как использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] анимации для анимации значения свойства зависимостей. Она использует <xref:System.Windows.Media.Animation.DoubleAnimation>, который является типом анимации, создающий <xref:System.Double> значения для анимации <xref:System.Windows.UIElement.Opacity%2A> свойство <xref:System.Windows.Shapes.Rectangle>. В результате <xref:System.Windows.Shapes.Rectangle> исчезает и появляется.
+В этом примере показано, как использовать анимацию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для анимации значения свойства зависимостей. Он использует <xref:System.Windows.Media.Animation.DoubleAnimation>, который является типом анимации, создающей <xref:System.Double> значения, для анимации свойства <xref:System.Windows.UIElement.Opacity%2A> <xref:System.Windows.Shapes.Rectangle>. В результате <xref:System.Windows.Shapes.Rectangle> исчезает и выходит из представления.
 
-В первой части примера создается <xref:System.Windows.Shapes.Rectangle> элемент. Описанные ниже шаги показывают, как создание анимации и применить его в прямоугольник <xref:System.Windows.UIElement.Opacity%2A> свойство.
+В первой части примера создается элемент <xref:System.Windows.Shapes.Rectangle>. Ниже показано, как создать анимацию и применить ее к свойству <xref:System.Windows.UIElement.Opacity%2A> прямоугольника.
 
-Далее показано, как создать <xref:System.Windows.Shapes.Rectangle> элемент <xref:System.Windows.Controls.StackPanel> в XAML.
+Ниже показано, как создать элемент <xref:System.Windows.Shapes.Rectangle> в <xref:System.Windows.Controls.StackPanel> в XAML.
 
 [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_1)]
 
-Далее показано, как создать <xref:System.Windows.Shapes.Rectangle> элемент <xref:System.Windows.Controls.StackPanel> в коде.
+Ниже показано, как создать элемент <xref:System.Windows.Shapes.Rectangle> в <xref:System.Windows.Controls.StackPanel> в коде.
 
 [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_1)]
 [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_1)]
 
 <a name="opacity_animation_step1"></a>
 
-### <a name="part-1-create-a-doubleanimation"></a>Часть 1. Создание объекта DoubleAnimation
+### <a name="part-1-create-a-doubleanimation"></a>Часть 1. Создание объекта DoubleAnimation
 
-Одним из способов создания исчезновения и появления элемента является анимация его <xref:System.Windows.UIElement.Opacity%2A> свойство. Так как <xref:System.Windows.UIElement.Opacity%2A> свойство имеет тип <xref:System.Double>, вам потребуется анимацию, создающую значения типа double. Объект <xref:System.Windows.Media.Animation.DoubleAnimation> является одна анимация. Объект <xref:System.Windows.Media.Animation.DoubleAnimation> создает переход между двумя значениями типа double. Чтобы указать начальное значение, необходимо задать его <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство. Чтобы задать конечное значение, задайте его <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство.
+Одним из способов сделать элемент недоступным для просмотра является анимация его свойства <xref:System.Windows.UIElement.Opacity%2A>. Так как свойство <xref:System.Windows.UIElement.Opacity%2A> имеет тип <xref:System.Double>, требуется анимация, создающая значения типа Double. Одной из таких анимаций является <xref:System.Windows.Media.Animation.DoubleAnimation>. <xref:System.Windows.Media.Animation.DoubleAnimation> создает переход между двумя значениями типа Double. Чтобы указать его начальное значение, необходимо задать свойство <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>. Чтобы указать конечное значение, необходимо задать свойство <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>.
 
-1. Значение непрозрачности `1.0` делает объект полностью непрозрачным, а значение непрозрачности `0.0` полностью невидимым. Чтобы реализовать анимацию перехода от `1.0` для `0.0` задаются его <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства `1.0` и его <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойства `0.0`. Далее показано, как создать <xref:System.Windows.Media.Animation.DoubleAnimation> в XAML.
+1. Значение непрозрачности `1.0` делает объект полностью непрозрачным, а значение непрозрачности `0.0` делает его полностью невидимым. Чтобы переход анимации с `1.0` на `0.0` вы установили для свойства <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> значение `1.0`, а для свойства <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> — значение `0.0`. Ниже показано, как создать <xref:System.Windows.Media.Animation.DoubleAnimation> в XAML.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]
 
-    Далее показано, как создать <xref:System.Windows.Media.Animation.DoubleAnimation> в коде.
+    Ниже показано, как создать <xref:System.Windows.Media.Animation.DoubleAnimation> в коде.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]
 
-2. Далее необходимо указать <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Анимации определяет время, необходимое для перехода от начального к конечному значению. Далее показано, как задать <xref:System.Windows.Media.Animation.Timeline.Duration%2A> значение пяти секунд в XAML.
+2. Далее необходимо указать <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> анимации указывает время перехода от начального значения к целевому значению. Ниже показано, как задать для <xref:System.Windows.Media.Animation.Timeline.Duration%2A> значение 5 секунд в XAML.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]
 
-    Далее показано, как задать <xref:System.Windows.Media.Animation.Timeline.Duration%2A> значение пяти секунд в коде.
+    Ниже показано, как установить <xref:System.Windows.Media.Animation.Timeline.Duration%2A> в течение пяти секунд в коде.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]
 
-3. В предыдущем примере была анимации, которая переходит из `1.0` для `0.0`, чего исчезают из полностью непрозрачными реализуется целевого элемента. Чтобы отобразить элемент обратно в представление после его исчезновения, установите <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> свойство для анимации, которую `true`. Чтобы циклически повторять анимацию бесконечно, задайте его <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойства <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. Далее показано, как задать <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> и <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойства в XAML.
+3. Предыдущий код показал анимацию, которая переходит с `1.0` на `0.0`, что приводит к исчезновению целевого элемента от полностью непрозрачного до полного невидимого. Чтобы вернуть элемент в представление после исчезновения, установите для свойства <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> анимации значение `true`. Чтобы сделать анимацию неопределенной, установите для свойства <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> значение <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. Ниже показано, как задать свойства <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> и <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> в XAML.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]
 
-    Далее показано, как задать <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> и <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойства в коде.
+    Ниже показано, как задать свойства <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> и <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> в коде.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_4)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_4)]
 
 <a name="opacity_animation_step2"></a>
 
-### <a name="part-2-create-a-storyboard"></a>Часть 2. Создать раскадровку
+### <a name="part-2-create-a-storyboard"></a>Часть 2. Создание раскадровки
 
-Чтобы применить анимацию к объекту, создайте <xref:System.Windows.Media.Animation.Storyboard> и использовать <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> присоединенного свойства для указания объекта и анимируемое свойство.
+Чтобы применить анимацию к объекту, создайте <xref:System.Windows.Media.Animation.Storyboard> и используйте присоединенные свойства <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty>, чтобы указать объект и свойство для анимации.
 
-1. Создание <xref:System.Windows.Media.Animation.Storyboard> и добавьте ее в качестве дочернего. Далее показано, как создать <xref:System.Windows.Media.Animation.Storyboard> в XAML.
+1. Создайте <xref:System.Windows.Media.Animation.Storyboard> и добавьте анимацию в качестве дочерней. Ниже показано, как создать <xref:System.Windows.Media.Animation.Storyboard> в XAML.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]
 
-    Чтобы создать <xref:System.Windows.Media.Animation.Storyboard> в коде объявите <xref:System.Windows.Media.Animation.Storyboard> переменных на уровне класса.
+    Чтобы создать <xref:System.Windows.Media.Animation.Storyboard> в коде, объявите переменную <xref:System.Windows.Media.Animation.Storyboard> на уровне класса.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_100)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_100)]
 
-    Затем инициализируйте <xref:System.Windows.Media.Animation.Storyboard> и добавьте ее в качестве дочернего.
+    Затем инициализируйте <xref:System.Windows.Media.Animation.Storyboard> и добавьте анимацию в качестве дочернего элемента.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]
 
-2. <xref:System.Windows.Media.Animation.Storyboard> Должен знать, где применяется анимация. Используйте <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> присоединенного свойства для указания объекта для анимации. Далее показано, как задать целевое имя <xref:System.Windows.Media.Animation.DoubleAnimation> для `MyRectangle` в XAML.
+2. <xref:System.Windows.Media.Animation.Storyboard> необходимо указать, куда применять анимацию. Используйте присоединенное свойство <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>, чтобы указать объект для анимации. Ниже показано, как задать целевое имя <xref:System.Windows.Media.Animation.DoubleAnimation> для `MyRectangle` в XAML.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]
 
-    Далее показано, как задать целевое имя <xref:System.Windows.Media.Animation.DoubleAnimation> для `MyRectangle` в коде.
+    Ниже показано, как задать целевое имя <xref:System.Windows.Media.Animation.DoubleAnimation> для `MyRectangle` в коде.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]
 
-3. Используйте <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> вложенное свойство, чтобы указать анимируемое свойство. Далее показано, как настроить анимацию к целевому объекту <xref:System.Windows.UIElement.Opacity%2A> свойство <xref:System.Windows.Shapes.Rectangle> в XAML.
+3. Используйте присоединенное свойство <xref:System.Windows.Media.Animation.Storyboard.TargetProperty>, чтобы указать свойство для анимации. Ниже показано, как настроить анимацию для свойства <xref:System.Windows.UIElement.Opacity%2A> <xref:System.Windows.Shapes.Rectangle> в XAML.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]
 
-    Далее показано, как настроить анимацию к целевому объекту <xref:System.Windows.UIElement.Opacity%2A> свойство <xref:System.Windows.Shapes.Rectangle> в коде.
+    Ниже показано, как настроить анимацию для свойства <xref:System.Windows.UIElement.Opacity%2A> <xref:System.Windows.Shapes.Rectangle> в коде.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]
 
-Дополнительные сведения о <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> синтаксис и Дополнительные примеры см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
+Дополнительные сведения о синтаксисе <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> и дополнительные примеры см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
 
 <a name="opacity_animation_step3"></a>
 
-### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Часть 3 (XAML). Связать раскадровки с триггером
+### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Часть 3 (XAML). Связывание раскадровки с триггером
 
-Самый простой способ применить и запустить <xref:System.Windows.Media.Animation.Storyboard> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] является использование триггера событий. В этом разделе показано, как связать <xref:System.Windows.Media.Animation.Storyboard> с триггером в XAML.
+Самый простой способ применить и запустить <xref:System.Windows.Media.Animation.Storyboard> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] — использовать триггер события. В этом разделе показано, как связать <xref:System.Windows.Media.Animation.Storyboard> с триггером в XAML.
 
-1. Создание <xref:System.Windows.Media.Animation.BeginStoryboard> и свяжите с ним раскадровки. Объект <xref:System.Windows.Media.Animation.BeginStoryboard> — это разновидность <xref:System.Windows.TriggerAction> , применения и запуска <xref:System.Windows.Media.Animation.Storyboard>.
+1. Создайте объект <xref:System.Windows.Media.Animation.BeginStoryboard> и свяжите с ним раскадровку. <xref:System.Windows.Media.Animation.BeginStoryboard> — это тип <xref:System.Windows.TriggerAction>, который применяет и запускает <xref:System.Windows.Media.Animation.Storyboard>.
 
     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]
 
-2. Создание <xref:System.Windows.EventTrigger> и добавьте <xref:System.Windows.Media.Animation.BeginStoryboard> для его <xref:System.Windows.EventTrigger.Actions%2A> коллекции. Задайте <xref:System.Windows.EventTrigger.RoutedEvent%2A> свойство <xref:System.Windows.EventTrigger> на перенаправленное событие, которое вы хотите начать <xref:System.Windows.Media.Animation.Storyboard>. (Дополнительные сведения о перенаправленных событиях см. в разделе [Routed Events Overview](../advanced/routed-events-overview.md).)
+2. Создайте <xref:System.Windows.EventTrigger> и добавьте <xref:System.Windows.Media.Animation.BeginStoryboard> в коллекцию <xref:System.Windows.EventTrigger.Actions%2A>. Задайте для свойства <xref:System.Windows.EventTrigger.RoutedEvent%2A> <xref:System.Windows.EventTrigger> перенаправленное событие, которое необходимо запустить <xref:System.Windows.Media.Animation.Storyboard>. (Дополнительные сведения о перенаправленных событиях см. в разделе [Общие сведения о перенаправленных событиях](../advanced/routed-events-overview.md).)
 
     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]
 
-3. Добавить <xref:System.Windows.EventTrigger> для <xref:System.Windows.FrameworkElement.Triggers%2A> коллекции прямоугольника.
+3. Добавьте <xref:System.Windows.EventTrigger> в коллекцию <xref:System.Windows.FrameworkElement.Triggers%2A> прямоугольника.
 
     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]
 
@@ -172,21 +172,21 @@ ms.locfileid: "67780144"
 
 ### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>Часть 3 (код). Связывание раскадровки с обработчиком событий
 
-Самый простой способ применить и запустить <xref:System.Windows.Media.Animation.Storyboard> в коде является использование обработчика событий. В этом разделе показано, как связать <xref:System.Windows.Media.Animation.Storyboard> с обработчиком событий в коде.
+Самый простой способ применить и запустить <xref:System.Windows.Media.Animation.Storyboard> в коде — использовать обработчик событий. В этом разделе показано, как связать <xref:System.Windows.Media.Animation.Storyboard> с обработчиком событий в коде.
 
-1. Зарегистрируйтесь для <xref:System.Windows.FrameworkElement.Loaded> событий прямоугольника.
+1. Зарегистрируйтесь для <xref:System.Windows.FrameworkElement.Loaded>ного события прямоугольника.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]
 
-2. Объявите обработчик событий. В обработчике событий используйте <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод для применения раскадровки.
+2. Объявите обработчик событий. В обработчике событий используйте метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>, чтобы применить раскадровку.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]
 
 ### <a name="complete-example"></a>Полный пример
 
-Ниже показано, как создать прямоугольник, который исчезает и в XAML появляется.
+Ниже показано, как создать прямоугольник, который исчезает и выходит из представления в XAML.
 
 [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml#rectangleopacityfadeexamplexaml)]
 
@@ -199,9 +199,9 @@ ms.locfileid: "67780144"
 
 ## <a name="animation-types"></a>Типы анимации
 
-Поскольку анимация создает значения свойств, для различных типов свойств существуют различные типы анимации. Для анимации свойства, которое принимает <xref:System.Double>, такие как <xref:System.Windows.FrameworkElement.Width%2A> свойства элемента, используйте анимацию, создающую <xref:System.Double> значения. Для анимации свойства, которое принимает <xref:System.Windows.Point>, используйте анимацию, создающую <xref:System.Windows.Point> значений и т. д. Из-за количества различных типов свойств, имеется несколько классов анимации в <xref:System.Windows.Media.Animation> пространства имен. Имена классов следуют строгому соглашению, благодаря чему их легко различать.
+Поскольку анимация создает значения свойств, для различных типов свойств существуют различные типы анимации. Чтобы анимировать свойство, которое принимает <xref:System.Double>, например свойство <xref:System.Windows.FrameworkElement.Width%2A> элемента, используйте анимацию, которая создает значения <xref:System.Double>. Чтобы анимировать свойство, которое принимает <xref:System.Windows.Point>, используйте анимацию, создающую <xref:System.Windows.Point> значения и т. д. Из-за количества различных типов свойств в <xref:System.Windows.Media.Animation> пространстве имен существует несколько классов анимации. Имена классов следуют строгому соглашению, благодаря чему их легко различать.
 
-- \<*Тип*> анимации
+- Анимация > *типа*\<
 
   Такая анимация называется "базовой" (или From/To/By) и производится либо от начального до конечного значения, либо посредством добавления значения смещения к начальному значению.
 
@@ -211,52 +211,52 @@ ms.locfileid: "67780144"
 
   - Чтобы установить значение смещения, присвойте значение свойству By анимации.
 
-  В примерах этого раздела используются анимации этого класса, поскольку они являются наиболее простыми в использовании. Анимации From/To/By подробно описываются в обзоре класса анимации.
+  В примерах этого раздела используются анимации этого класса, поскольку они являются наиболее простыми в использовании. Сведения об анимации From/To/By подробно описаны в обзоре анимации From/To/By.
 
-- \<*Тип*> AnimationUsingKeyFrames
+- *тип*\<> AnimationUsingKeyFrames
 
-  Анимация с использованием ключевых кадров является более эффективным средством, чем анимация класса From/To/By, поскольку при ее использовании можно задать любое число конечных значений, а также управлять методами их интерполяции. Некоторые типы могут быть анимированы только с помощью анимации с ключевыми кадрами. По ключевым кадрам описываются подробно в [сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).
+  Анимация с использованием ключевых кадров является более эффективным средством, чем анимация класса From/To/By, поскольку при ее использовании можно задать любое число конечных значений, а также управлять методами их интерполяции. Некоторые типы могут быть анимированы только с помощью анимации с ключевыми кадрами. Анимация по ключевым кадрам подробно описана в разделе [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).
 
-- \<*Тип*> AnimationUsingPath
+- *тип*\<> аниматионусингпас
 
   Анимация с использованием пути позволяет использовать геометрический путь для создания анимации значений.
 
-- \<*Тип*> AnimationBase
+- *тип*\<> AnimationBase
 
-  Абстрактный класс, при реализации которого анимируется \< *тип*> значение. Этот класс служит базовым классом для \< *тип*> анимации и \< *тип*> AnimationUsingKeyFrames классы. Эти классы используются непосредственно только для создания пользовательской анимации. В противном случае используйте \< *тип*> Animation или KeyFrame\<*тип*> анимации.
+  Абстрактный класс, который при реализации реализует анимацию *типа*\<> значение. Этот класс выступает в качестве базового класса для \<*типа*> анимации и \<*типа*> классов AnimationUsingKeyFrames. Эти классы используются непосредственно только для создания пользовательской анимации. В противном случае используйте *тип*\<> анимации или опорного кадра\<*типа*> анимации.
 
-В большинстве случаев требуется использовать \< *тип*> классы анимации, например <xref:System.Windows.Media.Animation.DoubleAnimation> и <xref:System.Windows.Media.Animation.ColorAnimation>.
+В большинстве случаев потребуется использовать \<*тип*> класс анимации, например <xref:System.Windows.Media.Animation.DoubleAnimation> и <xref:System.Windows.Media.Animation.ColorAnimation>.
 
 В следующей таблице приведены несколько общих типов анимации, а также некоторые свойства, с которыми они используются.
 
 |Тип свойства|Соответствующая базовая (From/To/By) анимация|Соответствующая анимация с ключевыми кадрами|Соответствующая анимация с использованием пути|Пример использования|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> или <xref:System.Windows.Media.GradientStop>.|
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Анимация <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.FrameworkElement.Height%2A> из <xref:System.Windows.Controls.Button>.|
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Анимация <xref:System.Windows.Media.EllipseGeometry.Center%2A> положение элемента <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Анимация <xref:System.Windows.Controls.TextBlock.Text%2A> из <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.ContentControl.Content%2A> из <xref:System.Windows.Controls.Button>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Отсутствуют|Анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> <xref:System.Windows.Media.SolidColorBrush> или <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Анимация <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.Button>.|
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Анимация <xref:System.Windows.Media.EllipseGeometry.Center%2A> расположения <xref:System.Windows.Media.EllipseGeometry>.|
+|<xref:System.String>|Отсутствуют|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Отсутствуют|Анимация <xref:System.Windows.Controls.TextBlock.Text%2A> <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.ContentControl.Content%2A> <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
 ### <a name="animations-are-timelines"></a>Анимации представляет собой шкалу времени
 
-Все типы анимации наследуют от <xref:System.Windows.Media.Animation.Timeline> класса; таким образом, все анимации будут специализированными типами шкалы времени. Объект <xref:System.Windows.Media.Animation.Timeline> определяет сегмент времени. Можно указать *характер поведения* временной шкалы: ее <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, сколько раз это и даже скорость течения времени для него.
+Все типы анимации наследуются от класса <xref:System.Windows.Media.Animation.Timeline>; Таким образом, все анимации являются специализированными типами временных шкал. <xref:System.Windows.Media.Animation.Timeline> определяет сегмент времени. Можно указать *временные характеристики* временной шкалы: ее <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, количество повторений и даже время, в течение которого она выполняется.
 
-Поскольку анимация принадлежит <xref:System.Windows.Media.Animation.Timeline>, он также представляет сегмент времени. Анимации также вычисляются выходные значения по мере прохождения заданных сегментов времени (или <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). По мере выполнения (воспроизведения) анимации обновляется свойство, с которым она связана.
+Поскольку анимация является <xref:System.Windows.Media.Animation.Timeline>, она также представляет сегмент времени. Анимация также вычисляет выходные значения по мере продвижения по заданному сегменту времени (или <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). По мере выполнения (воспроизведения) анимации обновляется свойство, с которым она связана.
 
-Три часто используются свойства времени <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, и <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
+Три часто используемых свойства времени: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>и <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
 #### <a name="the-duration-property"></a>Свойство Duration
 
-Как упоминалось ранее, временная шкала представляет собой сегмент времени. Длина этого сегмента определяется <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, которое обычно задается с помощью <xref:System.Windows.Duration.TimeSpan%2A> значение. По достижении конца временной шкалы времени ее выполнение завершается.
+Как упоминалось ранее, временная шкала представляет собой сегмент времени. Длина этого сегмента определяется <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, которая обычно указывается с помощью <xref:System.Windows.Duration.TimeSpan%2A> значения. По достижении конца временной шкалы времени ее выполнение завершается.
 
-Анимация использует его <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство для определения текущего значения. Если вы не укажете <xref:System.Windows.Media.Animation.Timeline.Duration%2A> значение для анимации, он использует 1 секунды, по умолчанию.
+Для определения текущего значения анимации используется свойство <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Если для анимации не указано значение <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, используется по умолчанию 1 секунда.
 
-Следующий синтаксис показывает упрощенную версию [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] синтаксис для атрибута <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство.
+Следующий синтаксис демонстрирует упрощенную версию синтаксиса атрибута [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для свойства <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.
 
 *часы* `:` *минуты* `:` *секунды*
 
-В следующей таблице показаны несколько <xref:System.Windows.Duration> параметры и возвращаемые ими значения.
+В следующей таблице показано несколько параметров <xref:System.Windows.Duration> и их результирующих значений.
 
 |Параметр|Возвращаемое значение|
 |-------------|---------------------|
@@ -264,90 +264,90 @@ ms.locfileid: "67780144"
 |0:30:5.5|30 минут и 5,5 секунды.|
 |1:30:5.5|1 час, 30 минут и 5,5 секунды.|
 
-Один из способов для указания <xref:System.Windows.Duration> в коде является использование <xref:System.TimeSpan.FromSeconds%2A> метод для создания <xref:System.TimeSpan>, чего объявляется новая <xref:System.Windows.Duration> структуры с помощью, <xref:System.TimeSpan>.
+Одним из способов указания <xref:System.Windows.Duration> в коде является использование метода <xref:System.TimeSpan.FromSeconds%2A> для создания <xref:System.TimeSpan>, а затем объявление новой структуры <xref:System.Windows.Duration> с помощью <xref:System.TimeSpan>.
 
-Дополнительные сведения о <xref:System.Windows.Duration> значения и полный [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] синтаксис, см. в разделе <xref:System.Windows.Duration> структуры.
+Дополнительные сведения о <xref:System.Windows.Duration> значениях и полном синтаксисе [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] см. в разделе Структура <xref:System.Windows.Duration>.
 
 #### <a name="autoreverse"></a>Свойство AutoReverse
 
-<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> Свойство указывает, является ли воспроизведение временной шкалы по достижении конца ее <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Если значение этого свойства анимации значение `true`, обращает анимации при достижении конца ее <xref:System.Windows.Media.Animation.Timeline.Duration%2A>воспроизведение от конечного значения к начальному значению. По умолчанию это свойство имеет `false`.
+Свойство <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> указывает, будет ли временная шкала воспроизводиться назад после достижения конца <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Если задать для этого свойства анимации значение `true`, анимация будет отменяться после достижения конца <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, начиная с ее конечного значения и заканчивая начальным значением. По умолчанию это свойство имеет значение `false`.
 
 #### <a name="repeatbehavior"></a>RepeatBehavior
 
-<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> Свойство определяет количество воспроизведений временной шкалы. По умолчанию временные шкалы имеют число итераций `1.0`, означающее, воспроизведение происходит один раз и не повторяется.
+Свойство <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> указывает, сколько раз будет воспроизводиться временная шкала. По умолчанию временные шкалы имеют число итераций `1.0`. Это означает, что они воспроизводятся один раз и не повторяются.
 
-Дополнительные сведения об этих и других свойствах см. в разделе [Общие сведения о характере поведения](timing-behaviors-overview.md).
+Дополнительные сведения об этих свойствах и других см. в разделе [Общие сведения о поведении времени](timing-behaviors-overview.md).
 
 <a name="applyanimationstoproperty"></a>
 
 ## <a name="applying-an-animation-to-a-property"></a>Применение анимации к свойству
 
-В предыдущих разделах описаны различные типы анимации и их свойства времени. В этом подразделе показано, как применить анимацию к свойству. <xref:System.Windows.Media.Animation.Storyboard> объекты предоставляют один из способов применения анимации к свойствам. Объект <xref:System.Windows.Media.Animation.Storyboard> — *временной шкалы контейнера* , предоставляющей сведения об анимации, которую она содержит.
+В предыдущих разделах описаны различные типы анимации и их свойства времени. В этом подразделе показано, как применить анимацию к свойству. <xref:System.Windows.Media.Animation.Storyboard> объекты предоставляют один из способов применения анимации к свойствам. <xref:System.Windows.Media.Animation.Storyboard> — это *временная шкала контейнера* , которая предоставляет сведения о целевой информации для содержащихся в ней анимаций.
 
 ### <a name="targeting-objects-and-properties"></a>Целевые объекты и свойства
 
-<xref:System.Windows.Media.Animation.Storyboard> Класс предоставляет <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> присоединенных свойств. Эти свойства определяют анимируемые объекты. Чтобы использовать объект в качестве целевого объекта анимации, обычно следует присвоить ему имя.
+Класс <xref:System.Windows.Media.Animation.Storyboard> предоставляет <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> вложенные свойства. Эти свойства определяют анимируемые объекты. Чтобы использовать объект в качестве целевого объекта анимации, обычно следует присвоить ему имя.
 
-Назначение имени для <xref:System.Windows.FrameworkElement> отличается от присваивания имени <xref:System.Windows.Freezable> объекта. Большинство элементов управления и панелей являются элементами среды. Однако большинство чисто графических объектов, в том числе кисти, преобразования и геометрические объекты, являются фиксируемыми объектами. Если вы не уверены, является ли тип <xref:System.Windows.FrameworkElement> или <xref:System.Windows.Freezable>, см. **иерархии наследования** разделе данной справочной документации.
+Присвоение имени <xref:System.Windows.FrameworkElement> отличается от присвоения имени объекту <xref:System.Windows.Freezable>. Большинство элементов управления и панелей являются элементами среды. Однако большинство чисто графических объектов, в том числе кисти, преобразования и геометрические объекты, являются фиксируемыми объектами. Если вы не уверены, является ли тип <xref:System.Windows.FrameworkElement> или <xref:System.Windows.Freezable>, см. раздел **Иерархия наследования** в справочной документации.
 
-- Чтобы сделать <xref:System.Windows.FrameworkElement> целевого объекта анимации, присвойте его имя, задав его <xref:System.Windows.FrameworkElement.Name%2A> свойство. В коде, необходимо также использовать <xref:System.Windows.FrameworkElement.RegisterName%2A> метод для регистрации имени элемента на странице, к которой он принадлежит.
+- Чтобы создать <xref:System.Windows.FrameworkElement> цели анимации, присвойте ей имя, задав его свойство <xref:System.Windows.FrameworkElement.Name%2A>. В коде также необходимо использовать метод <xref:System.Windows.FrameworkElement.RegisterName%2A>, чтобы зарегистрировать имя элемента со страницей, к которой он принадлежит.
 
-- Чтобы сделать <xref:System.Windows.Freezable> объект целевого объекта анимации в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], использовании [директива x: Name](../../xaml-services/x-name-directive.md) присвоить имя. В коде, можно просто использовать <xref:System.Windows.FrameworkElement.RegisterName%2A> метод для регистрации объекта на странице, к которой он принадлежит.
+- Чтобы сделать объект <xref:System.Windows.Freezable> целевым объектом анимации в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте [директиву x:Name](../../xaml-services/x-name-directive.md) , чтобы присвоить ей имя. В коде просто используется метод <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации объекта со страницей, к которой он принадлежит.
 
-В последующих разделах приводится пример присваивания имени элементу в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и кода. Более подробные сведения об именовании и определение целевых объектов см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
+В следующих разделах приводится пример именования элемента в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и коде. Более подробные сведения об именовании и нацеливании см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
 
 ### <a name="applying-and-starting-storyboards"></a>Применение и запуск раскадровки
 
-Чтобы запустить раскадровку [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], необходимо связать его с <xref:System.Windows.EventTrigger>. <xref:System.Windows.EventTrigger> Является объектом, описывающим, какие действия следует предпринять при возникновении указанного события. Одно из этих действий может быть <xref:System.Windows.Media.Animation.BeginStoryboard> действие, которое используется для запуска раскадровки. Триггеры событий по концепции аналогичны обработчикам событий, так как они позволяют задать реакцию приложения на конкретное событие. В отличие от обработчиков событий триггеры событий могут быть полностью описаны в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; никакой другой код является обязательным.
+Чтобы запустить раскадровку в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], свяжите ее с <xref:System.Windows.EventTrigger>. <xref:System.Windows.EventTrigger> — это объект, который описывает действия, выполняемые при наступлении указанного события. Одно из этих действий может быть <xref:System.Windows.Media.Animation.BeginStoryboard> действием, которое используется для запуска раскадровки. Триггеры событий по концепции аналогичны обработчикам событий, так как они позволяют задать реакцию приложения на конкретное событие. В отличие от обработчиков событий, триггеры событий можно полностью описать в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; никакой другой код не требуется.
 
-Чтобы запустить <xref:System.Windows.Media.Animation.Storyboard> в коде, можно использовать <xref:System.Windows.EventTrigger> или использовать <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод <xref:System.Windows.Media.Animation.Storyboard> класса.
+Чтобы запустить <xref:System.Windows.Media.Animation.Storyboard> в коде, можно использовать <xref:System.Windows.EventTrigger> или использовать метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> класса <xref:System.Windows.Media.Animation.Storyboard>.
 
 <a name="controllingstoryboards"></a>
 
 ## <a name="interactively-control-a-storyboard"></a>Интерактивное управление раскадровкой
 
-В предыдущем примере показан запуск <xref:System.Windows.Media.Animation.Storyboard> при наступлении определенного события. Вы можете управлять в интерактивном режиме <xref:System.Windows.Media.Animation.Storyboard> после ее запуска: можно приостановить, возобновить, остановить, перейти к периоду заполнения, поиска и удалить <xref:System.Windows.Media.Animation.Storyboard>. Дополнительные сведения и пример, в котором показано, как управлять в интерактивном режиме <xref:System.Windows.Media.Animation.Storyboard>, см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
+В предыдущем примере показано, как запустить <xref:System.Windows.Media.Animation.Storyboard> при возникновении события. Можно также интерактивно управлять <xref:System.Windows.Media.Animation.Storyboard> после запуска: вы можете приостановить, возобновить, остановить, перейти к его периоду заполнения, найти и удалить <xref:System.Windows.Media.Animation.Storyboard>. Дополнительные сведения и пример, демонстрирующий интерактивное управление <xref:System.Windows.Media.Animation.Storyboard>, см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
 
 <a name="fillbehaviorsection"></a>
 
 ## <a name="what-happens-after-an-animation-ends"></a>Что происходит по завершении анимации?
 
-<xref:System.Windows.Media.Animation.FillBehavior> Свойство определяет поведение временной шкалы по ее завершении. По умолчанию запускается временная шкала <xref:System.Windows.Media.Animation.ClockState.Filling> при ее окончании. Анимации, которая является <xref:System.Windows.Media.Animation.ClockState.Filling> содержит конечное значение.
+Свойство <xref:System.Windows.Media.Animation.FillBehavior> указывает, как ведет себя временная шкала при ее завершении. По умолчанию временная шкала начинается <xref:System.Windows.Media.Animation.ClockState.Filling> по завершении. Анимация, <xref:System.Windows.Media.Animation.ClockState.Filling>, содержит конечное выходное значение.
 
-<xref:System.Windows.Media.Animation.DoubleAnimation> В предыдущем примере не заканчивается, поскольку его <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойству <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. В следующем примере прямоугольник анимируется с помощью аналогичной анимации. В отличие от предыдущего примера <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> и <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> свойств этой анимации остаются значения по умолчанию. Таким образом, анимация выполняется от 1 до 0 в течение пяти секунд, а затем останавливается.
+<xref:System.Windows.Media.Animation.DoubleAnimation> в предыдущем примере не заканчивается, так как свойство <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> имеет значение <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. В следующем примере прямоугольник анимируется с помощью аналогичной анимации. В отличие от предыдущего примера, свойства <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> и <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> этой анимации остаются в значениях по умолчанию. Таким образом, анимация выполняется от 1 до 0 в течение пяти секунд, а затем останавливается.
 
 [!code-xaml[animation_ovws_snippet#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/FillBehaviorExample.xaml#fillbehaviorexamplerectangleinline)]
 
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Так как его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не был изменен со значения по умолчанию, который является <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, анимация поддерживает конечное значение, 0, по ее завершении. Таким образом <xref:System.Windows.UIElement.Opacity%2A> прямоугольника в 0 после анимация завершается. Если задать <xref:System.Windows.UIElement.Opacity%2A> прямоугольника с другим значением, видимых не произойдет, поскольку по-прежнему управляется анимацией <xref:System.Windows.UIElement.Opacity%2A> свойство.
+Поскольку его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не были изменены по умолчанию, что <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, анимация сохраняет свое окончательное значение 0 при завершении. Таким образом, <xref:System.Windows.UIElement.Opacity%2A> прямоугольника остается в 0 после окончания анимации. Если задать для <xref:System.Windows.UIElement.Opacity%2A> прямоугольника другое значение, код не будет оказывать никакого влияния, так как анимация по-прежнему влияет на свойство <xref:System.Windows.UIElement.Opacity%2A>.
 
-Один из способов, чтобы возвратить управление анимированным свойством в коде является использование <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод и указать значение null для <xref:System.Windows.Media.Animation.AnimationTimeline> параметра. Дополнительные сведения и пример см. в разделе [Установка свойства после его анимации с помощью раскадровки](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
+Одним из способов восстановить управление анимированным свойством в коде является использование метода <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> и указание значения NULL для параметра <xref:System.Windows.Media.Animation.AnimationTimeline>. Дополнительные сведения и пример см. в разделе [Задание свойства после его анимации с помощью раскадровки](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
-Обратите внимание, что, несмотря на то, что установка значения свойства, имеет <xref:System.Windows.Media.Animation.ClockState.Active> или <xref:System.Windows.Media.Animation.ClockState.Filling> анимации, по-видимому, не влияют, измените значение свойства. Дополнительные сведения см. в разделе [анимации и общие сведения о характере системы](animation-and-timing-system-overview.md).
+Обратите внимание, что, несмотря на то, что задание значения свойства с <xref:System.Windows.Media.Animation.ClockState.Active> или <xref:System.Windows.Media.Animation.ClockState.Filling> анимация не оказывает никакого влияния, значение свойства изменяется. Дополнительные сведения см. в разделе [Обзор анимации и системы управления временем](animation-and-timing-system-overview.md).
 
 <a name="databindingAndAnimatingAnimationsSection"></a>
 
 ## <a name="data-binding-and-animating-animations"></a>Привязка данных и анимирование анимации
 
-Большинство свойств анимации могут быть связаны с данными либо анимированы. Например, можно анимировать <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation>. Однако в связи с особенностями работы системы времени поведение привязки данных или анимированных анимаций отличается от других случаев привязки данных и анимирования объектов. Чтобы понять их поведение, следует понять значение применения анимации к свойству.
+Большинство свойств анимации могут быть привязанными к данным или анимированными. Например, можно анимировать свойство <xref:System.Windows.Media.Animation.Timeline.Duration%2A> <xref:System.Windows.Media.Animation.DoubleAnimation>. Однако в связи с особенностями работы системы времени поведение привязки данных или анимированных анимаций отличается от других случаев привязки данных и анимирования объектов. Чтобы понять их поведение, следует понять значение применения анимации к свойству.
 
-В примере в предыдущем разделе, демонстрируется порядок анимации <xref:System.Windows.UIElement.Opacity%2A> прямоугольника. При загрузке прямоугольника в предыдущем примере его обработчик событий применяет <xref:System.Windows.Media.Animation.Storyboard>. Система времени создает копию объекта <xref:System.Windows.Media.Animation.Storyboard> и его анимации. Эти копии фиксируются (доступным только для чтения) и <xref:System.Windows.Media.Animation.Clock> на их основе создаются объекты. Эти объекты используются для выполнения фактических действий по анимации целевых свойств.
+См. пример в предыдущем разделе, в котором показано, как анимировать <xref:System.Windows.UIElement.Opacity%2A> прямоугольника. При загрузке прямоугольника в предыдущем примере его триггер события применяет <xref:System.Windows.Media.Animation.Storyboard>. Система времени создает копию <xref:System.Windows.Media.Animation.Storyboard> и ее анимацию. Эти копии заморожены (доступны только для чтения), а объекты <xref:System.Windows.Media.Animation.Clock> создаются из них. Эти объекты используются для выполнения фактических действий по анимации целевых свойств.
 
-В системе времени создаются часы для <xref:System.Windows.Media.Animation.DoubleAnimation> и применяет его к объекту и свойству, которое определяется <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> из <xref:System.Windows.Media.Animation.DoubleAnimation>. В этом случае система времени применяет часы к <xref:System.Windows.UIElement.Opacity%2A> свойство объекта, который называется «MyRectangle.»
+Система времени создает часы для <xref:System.Windows.Media.Animation.DoubleAnimation> и применяет ее к объекту и свойству, заданному <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> <xref:System.Windows.Media.Animation.DoubleAnimation>. В этом случае система времени применяет часы к свойству <xref:System.Windows.UIElement.Opacity%2A> объекта с именем «Миректангле».
 
-Несмотря на то, что часы также создаются для <xref:System.Windows.Media.Animation.Storyboard>, часы не применяются к его свойствам. Он предназначен для управления его дочерних часами, которая создается для <xref:System.Windows.Media.Animation.DoubleAnimation>.
+Хотя для <xref:System.Windows.Media.Animation.Storyboard>также создаются часы, часы не применяются к свойствам. Он предназначен для управления дочерними часами, часов, созданных для <xref:System.Windows.Media.Animation.DoubleAnimation>.
 
-Для отражения анимацией привязки данных или изменений анимации следует обновить ее часы. Автоматическое повторное создание часов не выполняется. Чтобы отразить изменения в анимации, повторно примените соответствующую раскадровку с помощью <xref:System.Windows.Media.Animation.BeginStoryboard> или <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод. При использовании любого из этих методов анимация запускается повторно. В коде, можно использовать <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> метод для раскадровки обратно в предыдущее положение.
+Для отражения анимацией привязки данных или изменений анимации следует обновить ее часы. Автоматическое обновление часов не поддерживается. Чтобы анимация отражала изменения, повторно примените ее раскадровку с помощью <xref:System.Windows.Media.Animation.BeginStoryboard> или метода <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. При использовании любого из этих методов анимация запускается повторно. В коде можно использовать метод <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>, чтобы переместить раскадровку обратно в предыдущую точку.
 
-Для примера данных, привязанного к анимации, см. в разделе [Key Spline Animation Sample](https://go.microsoft.com/fwlink/?LinkID=160011). Дополнительные сведения о работе анимации и системы времени см. в разделе [анимации и общие сведения о характере системы](animation-and-timing-system-overview.md).
+Пример анимации с привязкой к данным см. в разделе [Пример анимации по ключевым сплайнам](https://go.microsoft.com/fwlink/?LinkID=160011). Дополнительные сведения о работе анимации и системы управления временем см. в разделе [Общие сведения об анимации и системе](animation-and-timing-system-overview.md)управления временем.
 
 <a name="otherWaysToAnimateSection"></a>
 
 ## <a name="other-ways-to-animate"></a>Другие способы анимации
 
-В примерах этого раздела демонстрируется анимация с помощью раскадровок. При использовании кода можно выполнять анимацию различными способами. Дополнительные сведения см. в разделе [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).
+В примерах этого раздела демонстрируется анимация с помощью раскадровок. При использовании кода можно выполнять анимацию различными способами. Дополнительные сведения см. в статье [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).
 
 <a name="animation_samples"></a>
 
@@ -355,7 +355,7 @@ ms.locfileid: "67780144"
 
 В следующих примерах описывается порядок добавления анимации в приложения.
 
-- [Пример целевых значений анимации From, To, By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
 
   Описание различных параметров анимации From/To/By.
 
@@ -369,7 +369,7 @@ ms.locfileid: "67780144"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)|Описывает, как система управления временем использует <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> классы, которые позволяют создавать анимации.|
+|[Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)|Описывает, как система управления временем использует классы <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock>, которые позволяют создавать анимации.|
 |[Советы и рекомендации по анимации](animation-tips-and-tricks.md)|Список полезных советов по устранению проблем с анимацией, например проблем производительности.|
 |[Общие сведения о пользовательской анимации](custom-animations-overview.md)|Описание способов расширения системы анимации полными кадрами, классами анимации и покадровым обратным вызовом.|
 |[Общие сведения об анимациях From, To и By](from-to-by-animations-overview.md)|Описание способов создания анимации, которая переходит между двумя значениями.|
@@ -378,16 +378,16 @@ ms.locfileid: "67780144"
 |[Общие сведения об анимации с использованием пути](path-animations-overview.md)|Описание способов перемещения или поворота объекта по сложному пути.|
 |[Общие сведения о методах анимации свойств](property-animation-techniques-overview.md)|Описание анимации свойств с помощью раскадровок, локальных анимаций, часов и покадровой анимации.|
 |[Общие сведения о раскадровке](storyboards-overview.md)|Описание способов использования раскадровок с несколькими временными шкалами для создания сложных анимаций.|
-|[Общие сведения о характере поведения во времени](timing-behaviors-overview.md)|Описывает <xref:System.Windows.Media.Animation.Timeline> типов и свойств, используемых в анимации.|
-|[Общие сведения о временных событиях](timing-events-overview.md)|Описывает события, доступные на <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов для выполнения кода в точках временной шкалы, такие как начать, приостановить, возобновить, пропустить или остановить.|
+|[Общие сведения о характере поведения во времени](timing-behaviors-overview.md)|Описывает типы <xref:System.Windows.Media.Animation.Timeline> и свойства, используемые в анимации.|
+|[Общие сведения о временных событиях](timing-events-overview.md)|Описание событий, доступных в <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов для выполнения кода в точках временной шкалы, таких как begin, пауза, возобновление, пропуск или остановка.|
 |[Разделы практического руководства](animation-and-timing-how-to-topics.md)|Примеры кода для использования анимаций и временных шкал в приложении.|
-|[Разделы руководства, посвященные часам](clocks-how-to-topics.md)|Примеры кода для использования <xref:System.Windows.Media.Animation.Clock> объекта в приложении.|
+|[Разделы руководства, посвященные часам](clocks-how-to-topics.md)|Содержит примеры кода для использования объекта <xref:System.Windows.Media.Animation.Clock> в приложении.|
 |[Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)|Примеры кода для использования покадровой анимации в приложении.|
 |[Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)|Примеры кода для применения анимации с использованием пути в приложении.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочники
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

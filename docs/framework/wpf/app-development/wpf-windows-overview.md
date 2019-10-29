@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920022"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040863"
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
 Пользователи взаимодействуют с автономными приложениями Windows Presentation Foundation (WPF) через Windows. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения предоставляют собственные окна с помощью класса <xref:System.Windows.Window>. В этом разделе представлены <xref:System.Windows.Window>, прежде чем изобретаться основы создания и управления окнами в автономных приложениях.  
@@ -442,7 +442,7 @@ ms.locfileid: "72920022"
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Непрямоугольный стиль окна  
- Существуют также ситуации, когда стили границ, которые <xref:System.Windows.Window.WindowStyle%2A> позволяют, недостаточно. Например, может потребоваться создать приложение с непрямоугольной границей, например [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] использования.  
+ Существуют также ситуации, когда стили границ, которые <xref:System.Windows.Window.WindowStyle%2A> позволяют, недостаточно. Например, может потребоваться создать приложение с непрямоугольной границей, например с помощью проигрывателя Microsoft Windows Media.  
   
  Например, рассмотрим всплывающее окно распознавания речи, показанное на следующем рисунке:  
   

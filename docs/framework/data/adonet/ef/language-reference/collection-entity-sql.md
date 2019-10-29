@@ -2,27 +2,27 @@
 title: COLLECTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-ms.openlocfilehash: 0e611add4ce3f20e42bb01b0bf0392bbe81ec548
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5a1af1aab8a084b19e48fbdbb159d7ddd8a8dd7c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251200"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039908"
 ---
 # <a name="collection-entity-sql"></a>COLLECTION (Entity SQL)
 Ключевое слово COLLECTION используется только в определении встроенной функции. Функции коллекций — это функции, которые работают с коллекциями значений и возвращают скалярное значение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-COLLECTION(type_definition)   
+```csharp  
+COLLECTION(type_definition)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
  `type_definition`  
  Выражение, возвращающее коллекцию поддерживаемых типов, строк или ссылок.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Дополнительные сведения о ключевом слове COLLECTION см. в статье [Type Definitions](type-definitions-entity-sql.md).  
   
 ## <a name="example"></a>Пример  

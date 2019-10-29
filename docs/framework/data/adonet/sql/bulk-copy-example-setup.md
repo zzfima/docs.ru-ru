@@ -2,12 +2,12 @@
 title: Установка примера массового копирования
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794415"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040257"
 ---
 # <a name="bulk-copy-example-setup"></a>Установка примера массового копирования
 Класс <xref:System.Data.SqlClient.SqlBulkCopy> может использоваться для записи данных только в таблицы SQL Server. В примерах кода, приведенных в этом разделе, используется SQL Server образец базы данных **AdventureWorks**. В целях предотвращения модификации существующих таблиц в этих образцах кода запись данных осуществляется в таблицы, которые должны быть созданы заранее.  
@@ -22,7 +22,7 @@ ms.locfileid: "70794415"
 ## <a name="table-setup"></a>Подготовка таблиц  
  Чтобы создать таблицы, необходимые для правильного выполнения образцов кода, требуется выполнить следующие инструкции Transact-SQL в базе данных SQL Server.  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782440"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040442"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Зеркальное отображение баз данных в SQL Server
 Зеркальное отображение базы данных в SQL Server позволяет сохранять копию или зеркальную копию базы данных SQL Server на резервном сервере. Зеркальное отображение гарантирует постоянное существование двух отдельных копий данных, обеспечивая тем самым высокий уровень доступности и полную избыточность данных. Поставщик данных .NET для SQL Server предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не надо предпринимать никаких действий или писать код, если он настроен для работы с базой данных SQL Server. Кроме того, объект <xref:System.Data.SqlClient.SqlConnection> поддерживает режим явного подключения, в котором в строке подключения <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> можно указать имя резервного сервера-участника.  
@@ -26,7 +26,7 @@ ms.locfileid: "70782440"
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Указание резервного участника в строке подключения  
  При указании в строке подключения имени резервного сервера-участника клиент прозрачным образом попытается установить соединение с резервным участником, если основная база данных будет недоступна при первом подключении клиентского приложения.  
   
-```  
+```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   
@@ -59,7 +59,7 @@ string activeServer = connection.DataSource;
 ## <a name="database-mirroring-resources"></a>Ресурсы, посвященные зеркальному отображению баз данных  
  Концептуальную документацию и сведения о настройке, развертывании и администрировании зеркального отображения см. в следующих ресурсах SQL Server документации.  
   
-|Resource|Описание|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Зеркальное отображение базы данных](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Описывается установка и настройка зеркального отображения в SQL Server.|  
   

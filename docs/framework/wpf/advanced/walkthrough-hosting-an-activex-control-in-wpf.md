@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920199"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040829"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF
-Чтобы обеспечить улучшенное взаимодействие с браузерами, можно использовать элементы управления Microsoft ActiveX в приложении на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] странице.
+Чтобы обеспечить улучшенное взаимодействие с браузерами, можно использовать элементы управления Microsoft ActiveX в приложении на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно разместить проигрыватель Microsoft Windows Media как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] странице.
 
  В данном пошаговом руководстве представлены следующие задачи.
 
@@ -31,7 +31,7 @@ ms.locfileid: "72920199"
 ## <a name="prerequisites"></a>Необходимые компоненты
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)], установленные на компьютере, где установлена система Visual Studio.
+- Проигрыватель Microsoft Windows Media, установленный на компьютере, где установлена среда Visual Studio.
 
 - Visual Studio 2010.
 

@@ -2,19 +2,19 @@
 title: ANYELEMENT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 475a9ad6-8c8d-4f49-9970-af273e5360f1
-ms.openlocfilehash: 4eea3d43ef6ae9ea91432ea277326526e5e91fbc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c0f7686f7ff3f6458637b51e29ecafe0c0ccfbc4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251333"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040325"
 ---
 # <a name="anyelement-entity-sql"></a>ANYELEMENT (Entity SQL)
 Извлекает элемент из многозначной коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```csharp
 ANYELEMENT ( expression )  
 ```  
   
@@ -25,17 +25,17 @@ ANYELEMENT ( expression )
 ## <a name="return-value"></a>Возвращаемое значение  
  Единственный элемент коллекции или произвольный элемент, если в коллекции их несколько. Если коллекция пустая, возвращается значение `null`. Если `collection` является коллекцией типа `Collection<T>`, то `ANYELEMENT(collection)` является допустимым выражением, результатом которого является экземпляр типа `T`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Оператор ANYELEMENT извлекает произвольный элемент из многозначной коллекции. Например, в следующем примере извлекается один элемент из набора `Customers`.  
   
-```  
+```csharp
 ANYELEMENT(Customers)  
 ```  
   
 ## <a name="example"></a>Пример  
  В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор ANYELEMENT используется для извлечения элемента из многозначной коллекции. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в [разделе инструкции. Выполнение запроса, возвращающего Структуралтипе](../how-to-execute-a-query-that-returns-structuraltype-results.md)результаты.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   

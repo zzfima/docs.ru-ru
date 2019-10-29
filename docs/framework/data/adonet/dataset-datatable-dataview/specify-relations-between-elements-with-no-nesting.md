@@ -2,12 +2,12 @@
 title: Указание отношений между элементами без вложенности
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784278"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040053"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Указание отношений между элементами без вложенности
 Если элементы не вложены, какие-либо неявные связи не создаются. Однако можно явно указать связи между элементами, которые не вложены с помощью аннотации **msdata: relationship** .  
@@ -53,9 +53,9 @@ ms.locfileid: "70784278"
 </xs:schema>  
 ```  
   
- В процессе сопоставления схемы языка определения схемы XML (XSD) создаются <xref:System.Data.DataSet> таблицы **Order** и **OrderDetail** и связь, указанная между этими двумя таблицами, как показано ниже.  
+ В процессе сопоставления схем на языке определения схем XML (XSD) создается <xref:System.Data.DataSet> с таблицами **Order** и **OrderDetail** , а также связь, указанная между этими двумя таблицами, как показано ниже.  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   
