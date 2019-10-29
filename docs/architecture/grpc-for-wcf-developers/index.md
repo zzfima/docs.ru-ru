@@ -3,16 +3,14 @@ title: ASP.NET Core gRPC для разработчиков WCF — gRPC для 
 description: Подлежит написанию
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696924"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919378"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC для разработчиков WCF
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![изображение обложки](./media/cover.png)
 
@@ -62,7 +60,7 @@ TODO
 
 **ОБНОВИТЕ ЭТО**
 
-Это руководство предназначено для разработчиков WCF, руководителей отделов разработки и архитекторов, заинтересованных в переносе решений WCF на базе .NET 4 и более ранних версий в ASP.NET Core 3.0 с использованием служб gRPC.
+Это руководство предназначено для разработчиков WCF, руководителей отделов разработки и архитекторов, заинтересованных в переносе решений WCF на базе .NET Framework 4 и более ранних версий в ASP.NET Core 3.0 с использованием служб gRPC.
 
 ## <a name="how-you-can-use-this-guide"></a>Как использовать это руководство
 

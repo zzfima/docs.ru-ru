@@ -1,87 +1,119 @@
-- name: Данные
+- name: Документация по привязке данных
   href: index.md
+- name: Обзор
+  href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
+- name: Источники привязки
+  href: binding-sources-overview.md
+- name: Шаблоны данных
+  href: data-templating-overview.md
+- name: Объявления привязки
+  href: binding-declarations-overview.md
+- name: Практические советы
   items:
-    - name: Привязка данных
-      href: data-binding-wpf.md
+    - name: Разделы инструкции по привязке данных
+      href: data-binding-how-to-topics.md
+    - name: Создание простой привязки
+      href: how-to-create-a-simple-binding.md
+    - name: Указание источника привязки
+      href: how-to-specify-the-binding-source.md
+    - name: Обеспечение доступности данных для привязки в XAML
+      href: how-to-make-data-available-for-binding-in-xaml.md
+    - name: Управление обновлением источника из поля TextBox
+      href: how-to-control-when-the-textbox-text-updates-the-source.md
+    - name: Указание направления привязки
+      href: how-to-specify-the-direction-of-the-binding.md
+    - name: Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
+      href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
+    - name: Привязка к перечислению
+      href: how-to-bind-to-an-enumeration.md
+    - name: Привязка свойств двух элементов управления
+      href: how-to-bind-the-properties-of-two-controls.md
+    - name: Реализация проверки привязки
+      href: how-to-implement-binding-validation.md
+    - name: Реализация логики проверки для пользовательских объектов
+      href: how-to-implement-validation-logic-on-custom-objects.md
+    - name: Получение объекта привязки из свойства целевого объекта привязки
+      href: how-to-get-the-binding-object-from-a-bound-target-property.md
+    - name: Реализация CompositeCollection
+      href: how-to-implement-a-compositecollection.md
+    - name: Преобразование привязанных данных
+      href: how-to-convert-bound-data.md
+    - name: Создание привязки в коде
+      href: how-to-create-a-binding-in-code.md
+    - name: Получение представления по умолчанию для коллекции данных
+      href: how-to-get-the-default-view-of-a-data-collection.md
+    - name: Перемещение по объектам в представлении Data CollectionView
+      href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
+    - name: Фильтрация данных в представлении
+      href: how-to-filter-data-in-a-view.md
+    - name: Сортировка данных в представлении
+      href: how-to-sort-data-in-a-view.md
+    - name: Сортировка и группировка данных с помощью представления в XAML
+      href: how-to-sort-and-group-data-using-a-view-in-xaml.md
+    - name: Использование шаблона "Основной/подробности" с иерархическими данными
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
+    - name: Использование шаблона "Основной/подробности" с иерархическими XML-данными
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
+    - name: Создание значений на основе списка привязанных элементов
+      href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
+    - name: Реализация уведомления об изменении свойства
+      href: how-to-implement-property-change-notification.md
+    - name: Создание и привязка ObservableCollection
+      href: how-to-create-and-bind-to-an-observablecollection.md
+    - name: Реализация PriorityBinding
+      href: how-to-implement-prioritybinding.md
+    - name: Привязка к XML-данным с помощью XMLDataProvider и запросов XPath
+      href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
+    - name: Привязка к результатам запроса
+      href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
+    - name: Привязка к результатам запроса LINQ
+      href: how-to-bind-to-the-results-of-a-linq-query.md
+    - name: Использование пространств имен XML при привязке данных
+      href: how-to-use-xml-namespaces-in-data-binding.md
+    - name: Привязка к источнику данных ADO.NET
+      href: how-to-bind-to-an-ado-net-data-source.md
+    - name: Привязка к методу
+      href: how-to-bind-to-a-method.md
+    - name: Настройка уведомлений обновлений привязок
+      href: how-to-set-up-notification-of-binding-updates.md
+    - name: Очистка привязок
+      href: how-to-clear-bindings.md
+    - name: 'Поиск элементов, созданных с использованием шаблона DataTemplate'
+      href: how-to-find-datatemplate-generated-elements.md
+    - name: Привязка к веб-службе
+      href: how-to-bind-to-a-web-service.md
+- name: "Привязка данных с помощью LINQ to\_XML"
+  items:
+    - name: Обзор
+      href: wpf-data-binding-with-linq-to-xml-overview.md
+    - name: "Динамические свойства LINQ to\_XML"
       items:
-        - name: Общие сведения о привязке данных
-          href: data-binding-overview.md
-        - name: Общие сведения об источниках привязки
-          href: binding-sources-overview.md
-        - name: Общие сведения о шаблонах данных
-          href: data-templating-overview.md
-        - name: Общие сведения об объявлении привязок
-          href: binding-declarations-overview.md
-        - name: Практические руководства
-          href: data-binding-how-to-topics.md
+        - name: Обзор
+          displayName: LINQ to XML dynamic properties
+          href: linq-to-xml-dynamic-properties.md
+        - name: Динамические свойства XAttribute
           items:
-            - name: Создание простой привязки
-              href: how-to-create-a-simple-binding.md
-            - name: Указание источника привязки
-              href: how-to-specify-the-binding-source.md
-            - name: Обеспечение доступности данных для привязки в XAML
-              href: how-to-make-data-available-for-binding-in-xaml.md
-            - name: Управление обновлением источника из поля TextBox
-              href: how-to-control-when-the-textbox-text-updates-the-source.md
-            - name: Указание направления привязки
-              href: how-to-specify-the-direction-of-the-binding.md
-            - name: Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
-              href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
-            - name: Привязка к перечислению
-              href: how-to-bind-to-an-enumeration.md
-            - name: Привязка свойств двух элементов управления
-              href: how-to-bind-the-properties-of-two-controls.md
-            - name: Реализация проверки привязки
-              href: how-to-implement-binding-validation.md
-            - name: Реализация логики проверки для пользовательских объектов
-              href: how-to-implement-validation-logic-on-custom-objects.md
-            - name: Получение объекта привязки из свойства целевого объекта привязки
-              href: how-to-get-the-binding-object-from-a-bound-target-property.md
-            - name: Реализация CompositeCollection
-              href: how-to-implement-a-compositecollection.md
-            - name: Преобразование привязанных данных
-              href: how-to-convert-bound-data.md
-            - name: Создание привязки в коде
-              href: how-to-create-a-binding-in-code.md
-            - name: Получение представления по умолчанию для коллекции данных
-              href: how-to-get-the-default-view-of-a-data-collection.md
-            - name: Перемещение по объектам в Data CollectionView
-              href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
-            - name: Фильтрация данных в представлении
-              href: how-to-filter-data-in-a-view.md
-            - name: Сортировка данных в представлении
-              href: how-to-sort-data-in-a-view.md
-            - name: Сортировка и группировка данных с помощью представления в XAML
-              href: how-to-sort-and-group-data-using-a-view-in-xaml.md
-            - name: Использование шаблона "Основной/подробности" с иерархическими данными
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
-            - name: Использование шаблона "Основной/подробности" с иерархическими XML-данными
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
-            - name: Создание значений на основе списка связанных элементов
-              href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
-            - name: Реализация уведомления об изменении свойства
-              href: how-to-implement-property-change-notification.md
-            - name: Создание и привязка ObservableCollection
-              href: how-to-create-and-bind-to-an-observablecollection.md
-            - name: Реализация PriorityBinding
-              href: how-to-implement-prioritybinding.md
-            - name: Привязка к XML-данным с помощью XMLDataProvider и запросов XPath
-              href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
-            - name: 'Привязка к XDocument, XElement или LINQ для результатов запросов XML'
-              href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
-            - name: Использование пространств имен XML в привязке данных
-              href: how-to-use-xml-namespaces-in-data-binding.md
-            - name: Привязка к источнику данных ADO.NET
-              href: how-to-bind-to-an-ado-net-data-source.md
-            - name: Создание привязки к методу
-              href: how-to-bind-to-a-method.md
-            - name: Настройка уведомлений обновлений привязок
-              href: how-to-set-up-notification-of-binding-updates.md
-            - name: Очистка привязок
-              href: how-to-clear-bindings.md
-            - name: 'Поиск элементов, созданных с использованием шаблона DataTemplate'
-              href: how-to-find-datatemplate-generated-elements.md
-            - name: Привязка к веб-службе
-              href: how-to-bind-to-a-web-service.md
-            - name: Привязка к результатам запроса LINQ
-              href: how-to-bind-to-the-results-of-a-linq-query.md
+            - name: Значение
+              href: value-xattribute-dynamic-property.md
+        - name: Динамические свойства XElement
+          items:
+            - name: Атрибут
+              href: attribute-xelement-dynamic-property.md
+            - name: Элемент
+              href: element-xelement-dynamic-property.md
+            - name: Элементы
+              href: elements-xelement-dynamic-property.md
+            - name: Потомки
+              href: descendants-xelement-dynamic-property.md
+            - name: Значение
+              href: value-xelement-dynamic-property.md
+            - name: Xml
+              href: xml-xelement-dynamic-property.md
+        - name: Пример
+          items:
+            - name: Пример привязки данных LINQ to XML
+              href: linq-to-xml-data-binding-sample.md
+            - name: Исходный код L2DBForm.xaml
+              href: l2dbform-xaml-source-code.md
+            - name: Исходный код L2DBForm.xaml.cs
+              href: l2dbform-xaml-cs-source-code.md

@@ -52,11 +52,11 @@
           items:
             - name: Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid
               href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-            - name: Как выполнить Добавление сведений о строках в элемент управления DataGrid
+            - name: Практическое руководство. Добавление сведений о строках в элемент управления DataGrid
               href: how-to-add-row-details-to-a-datagrid-control.md
-            - name: 'Как выполнить Группировка, сортировка и фильтрация данных в элементе управления DataGrid'
+            - name: 'Практическое руководство. Группировка, сортировка и фильтрация данных в элементе управления DataGrid'
               href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-            - name: Как выполнить Реализация проверки с помощью элемента управления DataGrid
+            - name: Практическое руководство. Реализация проверки с помощью элемента управления DataGrid
               href: how-to-implement-validation-with-the-datagrid-control.md
             - name: Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid
               href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
@@ -396,7 +396,7 @@
           href: styling-and-templating.md
         - name: Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
           href: customizing-the-appearance-of-an-existing-control.md
-        - name: 'Как выполнить Поиск элемента, созданного шаблоном ControlTemplate'
+        - name: 'Практическое руководство. Поиск элемента, созданного шаблоном ControlTemplate'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Настройка элементов управления
       href: control-customization.md
@@ -497,7 +497,7 @@
         - name: Пошаговые руководства. Создание пользовательской анимированной кнопки
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Создание кнопки с помощью Microsoft Expression Blend
+            - name: Создание кнопки с помощью Blend
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: Создание кнопки с помощью XAML
               href: walkthrough-create-a-button-by-using-xaml.md
