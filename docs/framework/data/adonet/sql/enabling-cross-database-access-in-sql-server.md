@@ -2,12 +2,12 @@
 title: Организация межбазового доступа в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: f69a405a562bfae3bc283f2b3166812046be868e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bf46d43f5ac9b0a385e9bc6da1546af1d67a282d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794183"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040247"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Организация межбазового доступа в SQL Server
 Межбазовые цепочки владения возникают, когда процедура в одной базе данных зависит от объектов в другой базе данных. Межбазовая цепочка владения работает так же, как цепочка владения внутри единой базы данных, но для непрерывной цепочки владения необходимо, чтобы все владельцы объекта были сопоставлены с одной учетной записью входа. Если одна учетная запись входа является владельцем исходного объекта в исходной базе данных и целевых объектов в целевых базах данных, то SQL Server не проверяет наличие разрешений в целевых объектах.  
@@ -26,7 +26,7 @@ ms.locfileid: "70794183"
   
  В следующем примере включены межбазовые цепочки владения для всех баз данных.  
   
-```  
+```sql
 EXECUTE sp_configure 'show advanced', 1;  
 RECONFIGURE;  
 EXECUTE sp_configure 'cross db ownership chaining', 1;  
@@ -35,7 +35,7 @@ RECONFIGURE;
   
  В следующем примере включены межбазовые цепочки владения для конкретных баз данных.  
   
-```  
+```sql
 ALTER DATABASE Database1 SET DB_CHAINING ON;  
 ALTER DATABASE Database2 SET DB_CHAINING ON;  
 ```  
@@ -46,7 +46,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Resource|Описание|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Расширение олицетворения базы данных с помощью параметра выполнить как](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) и [перекрестный межбазовые цепочки владения](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|В статьях описано, как настроить межбазовые цепочки владения для экземпляра SQL Server.|  
   

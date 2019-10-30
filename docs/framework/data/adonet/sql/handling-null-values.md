@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352977"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040220"
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. Значение Null не является ни пустой строкой (для символьного типа данных или типа данных datetime), ни нулевым значением (для числовых типов данных). Спецификация ANSI SQL-92 устанавливает, что значение NULL должно быть одинаково для всех типов данных, так чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> предоставляет семантику NULL при реализации интерфейса <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет свое собственное свойство `IsNull` и значение `Null`, которое может быть присвоено экземпляру этого типа данных.  
@@ -35,23 +35,23 @@ ms.locfileid: "71352977"
  ![Таблица истинности](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Основные сведения о параметре ANSI_NULLS  
- <xref:System.Data.SqlTypes> предоставляет ту же семантику, что и в случае, когда параметр ANSI_NULLS установлен в SQL Server. Все арифметические операторы (+,-, \*,/,%), битовые операторы (~, &, \|) и большинство функций возвращают значение null, если любой из операндов или аргументов имеет значение null, за исключением свойства `IsNull`.  
+ <xref:System.Data.SqlTypes> предоставляет ту же семантику, что и в случае, когда параметр ANSI_NULLS установлен в SQL Server. Все арифметические операторы (+,-, \*,/,%), битовые операторы (~, &, \|) и большинство функций возвращают значение null, если любой из операндов или аргументов имеет значение null, за исключением `IsNull`свойства.  
   
  Стандарт ANSI SQL-92 не поддерживает *ColumnName* = NULL в предложении WHERE. В SQL Server параметр ANSI_NULLS контролирует как допустимость значений NULL по умолчанию, так и оценку сравнений со значениями NULL. Если параметр ANSI_NULLS установлен в значение ON (по умолчанию), в выражениях при проверке на значения NULL должен использоваться оператор IS NULL. Например, при параметре ANSI_NULLS, установленном в значение ON, результатом следующего сравнения всегда является UNKNOWN:  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  Результатом сравнения переменной, содержащей значение NULL, также является UNKNOWN:  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  Для проверки на значение NULL используется предикат IS NULL или IS NOT NULL. Это может усложнить предложение WHERE. Например, в столбце TerritoryID таблицы «Заказчики AdventureWorks» разрешены значения NULL. Если инструкция SELECT используется для проверки на значения NULL в дополнение к другим, она должна включать предикат IS NULL:  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Кроме того, следующие правила применяются для экземпляра присваивания `DataRow.["columnName"]` значений NULL.  
   
-1. По *умолчанию используется значение @no__t* -1 для всех столбцов, кроме строго типизированных null, где это строго типизированное значение null.  
+1. *Значение по умолчанию* `DbNull.Value` для всех, кроме строго типизированных столбцов NULL, где это строго типизированное значение null.  
   
 2. Значения NULL никогда не записываются в XML-файлы во время сериализации (в виде "xsi:nil").  
   
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  В результате выполнения данного примера выдаются следующие результаты:  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  Этот код выводит следующие результаты:  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846835"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040190"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 
@@ -55,26 +55,28 @@ ms.locfileid: "72846835"
 
 В командной строке введите следующую команду:
 
-**Al/Link:** *публишерполицифиле* **/out:** *публишерполициассемблифиле* **/keyfile:** *кэйпаирфиле* **/Platform:** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 В этой команде:
 
-- Аргумент *публишерполицифиле* — это имя файла политики издателя.
+- Аргумент `publisherPolicyFile` — это имя файла политики издателя.
 
-- Аргумент *публишерполициассемблифиле* — это имя сборки политики издателя, полученное в результате выполнения этой команды. Имя файла сборки должно соответствовать формату:
+- Аргумент `publisherPolicyAssemblyFile` — это имя сборки политики издателя, полученное в результате выполнения этой команды. Имя файла сборки должно соответствовать формату:
 
-  **политик.** *мажорнумбер* **.** *минорнумбер* **.** *маинассемблинаме* **. dll**
+  "Policy. Мажорнумбер. Минорнумбер. Маинассемблинаме. dll"
 
-- Аргумент *кэйпаирфиле* — это имя файла, содержащего пару ключей. Сборку политики сборки и издателя необходимо подписать с помощью той же пары ключей.
+- Аргумент `keyPairFile` — это имя файла, содержащего пару ключей. Сборку политики сборки и издателя необходимо подписать с помощью той же пары ключей.
 
-- Аргумент *processorArchitecture* определяет платформу, на которую ссылается сборка для конкретного процессора.
+- Аргумент `processorArchitecture` определяет платформу, на которую ссылается сборка для конкретного процессора.
 
   > [!NOTE]
   > Возможность ориентироваться на конкретную архитектуру процессора доступна начиная с .NET Framework 2,0.
 
 Возможность ориентироваться на конкретную архитектуру процессора доступна начиная с .NET Framework 2,0. Следующая команда создает сборку политики издателя с именем `policy.1.0.myAssembly` из файла политики издателя с именем `pub.config`, присваивает сборке строгое имя с помощью пары ключей в файле `sgKey.snk` и указывает, что сборка предназначена для процессора x86. AHA.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 В командной строке введите следующую команду:
 
-**gacutil/I**  *публишерполициассемблифиле*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 Следующая команда добавляет `policy.1.0.myAssembly.dll` в глобальный кэш сборок.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 
