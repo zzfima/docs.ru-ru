@@ -1,15 +1,13 @@
 ---
 title: WMI и счетчики производительности (справочник по неуправляемым API)
 description: Сводные данные по неуправляемому API-интерфейсу .NET Framework для WMI и счетчиков производительности.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127419"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчики производительности (справочник по неуправляемым API)
 
@@ -19,7 +17,7 @@ ms.locfileid: "62049314"
 
 API включает в себя следующие функции:
 
-| Функция | Описание |
+| Функция | ОПИСАНИЕ |
 |---------|---------|
 | [Функция BeginEnumeration](beginenumeration.md) | Сбрасывает перечислитель в начало перечисления свойств объекта WMI. |
 | [Функция BeginMethodEnumeration](beginmethodenumeration.md) |  Начинает перечисление методов, доступных для объекта. |
