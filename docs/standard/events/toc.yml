@@ -1,18 +1,18 @@
 - name: События
   href: index.md
   items:
-    - name: Как выполнить Вызов и прием событий
+    - name: Практическое руководство. Вызов и прием событий
       href: how-to-raise-and-consume-events.md
-    - name: Как выполнить Обработка нескольких событий с помощью их свойств
+    - name: Практическое руководство. Обработка нескольких событий с помощью их свойств
       href: how-to-handle-multiple-events-using-event-properties.md
-    - name: Как выполнить Прием событий в приложениях веб-форм
+    - name: Практическое руководство. Прием событий в приложениях веб-форм
       href: how-to-consume-events-in-a-web-forms-application.md
     - name: Шаблон разработки Observer
       href: observer-design-pattern.md
       items:
         - name: Рекомендации по шаблону разработки Observer
           href: observer-design-pattern-best-practices.md
-        - name: Как выполнить Реализация поставщика
+        - name: Практическое руководство. Реализация поставщика
           href: how-to-implement-a-provider.md
-        - name: Как выполнить Реализация наблюдателя
+        - name: Практическое руководство. Реализация наблюдателя
           href: how-to-implement-an-observer.md
