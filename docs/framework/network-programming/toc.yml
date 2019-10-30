@@ -10,13 +10,13 @@
       items:
         - name: Создание интернет-запросов
           href: creating-internet-requests.md
-        - name: Как выполнить Запрос веб-страницы и получение результатов в виде потока
+        - name: Практическое руководство. Запрос веб-страницы и получение результатов в виде потока
           href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
-        - name: Как выполнить Запрос данных с помощью класса WebRequest
+        - name: Практическое руководство. Запрос данных с помощью класса WebRequest
           href: how-to-request-data-using-the-webrequest-class.md
-        - name: Как выполнить Отправка данных с помощью класса WebRequest
+        - name: Практическое руководство. Отправка данных с помощью класса WebRequest
           href: how-to-send-data-using-the-webrequest-class.md
-        - name: 'Как выполнить Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола'
+        - name: 'Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола'
           href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
         - name: Использование потоков в сети
           href: using-streams-on-the-network.md
@@ -27,9 +27,9 @@
     - name: программирование подключаемых протоколов
       href: programming-pluggable-protocols.md
       items:
-        - name: Как выполнить Регистрация пользовательского протокола с помощью WebRequest
+        - name: Практическое руководство. Регистрация пользовательского протокола с помощью WebRequest
           href: how-to-register-a-custom-protocol-using-webrequest.md
-        - name: 'Как выполнить Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом'
+        - name: 'Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом'
           href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
         - name: Наследование от WebResponse
           href: deriving-from-webrequest.md
@@ -43,14 +43,14 @@
           items:
             - name: Класс HttpListener
               href: httplistener.md
-        - name: 'Как выполнить Доступ к свойствам, относящимся с HTTP'
+        - name: 'Практическое руководство. Доступ к свойствам, относящимся с HTTP'
           href: how-to-access-http-specific-properties.md
         - name: Управление подключениями
           href: managing-connections.md
           items:
             - name: Группирование подключений
               href: connection-grouping.md
-            - name: Как выполнить Присвоение данных пользователя групповым подключениям
+            - name: Практическое руководство. Присвоение данных пользователя групповым подключениям
               href: how-to-assign-user-information-to-group-connections.md
         - name: TCP-UDP
           href: tcp-udp.md
@@ -62,7 +62,7 @@
         - name: сокеты
           href: sockets.md
           items:
-            - name: Как выполнить Создание сокета
+            - name: Практическое руководство. Создание сокета
               href: how-to-create-a-socket.md
             - name: Использование сокетов клиента
               href: using-client-sockets.md
@@ -92,11 +92,11 @@
         - name: FTP
           href: ftp.md
           items:
-            - name: Как выполнить Скачивание файлов с использованием FTP
+            - name: Практическое руководство. Скачивание файлов с использованием FTP
               href: how-to-download-files-with-ftp.md
-            - name: Как выполнить Отправка файлов с использованием FTP
+            - name: Практическое руководство. Отправка файлов с использованием FTP
               href: how-to-upload-files-with-ftp.md
-            - name: Как выполнить Перечисление содержимого каталога с помощью FTP
+            - name: Практическое руководство. Перечисление содержимого каталога с помощью FTP
               href: how-to-list-directory-contents-with-ftp.md
         - name: Основные сведения о проблемах и исключениях WebRequest
           href: understanding-webrequest-problems-and-exceptions.md
@@ -111,7 +111,7 @@
           href: ipv6-auto-configuration.md
         - name: Включение и отключение IPv6
           href: enabling-and-disabling-ipv6.md
-        - name: Как выполнить Изменение файла конфигурации компьютера для включения поддержки IPv6
+        - name: Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6
           href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
     - name: Настройка веб-приложений
       href: configuring-internet-applications.md
@@ -122,7 +122,7 @@
           href: interpreting-network-tracing.md
         - name: Включение сетевой трассировки
           href: enabling-network-tracing.md
-        - name: Как выполнить Настройка трассировки сети
+        - name: Практическое руководство. Настройка трассировки сети
           href: how-to-configure-network-tracing.md
     - name: Управление кэшем для сетевых приложений
       href: cache-management-for-network-applications.md
@@ -141,13 +141,13 @@
         - name: Настройка кэширования в сетевых приложениях
           href: configuring-caching-in-network-applications.md
           items:
-            - name: Как выполнить Установка политики кэша для приложения на основе расположения
+            - name: Практическое руководство. Установка политики кэша для приложения на основе расположения
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
-            - name: Как выполнить Установка политики кэша для приложения на основе времени по умолчанию
+            - name: Практическое руководство. Установка политики кэша для приложения на основе времени по умолчанию
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
-            - name: Как выполнить Настройка политики кэша на основе времени
+            - name: Практическое руководство. Настройка политики кэша на основе времени
               href: how-to-customize-a-time-based-cache-policy.md
-            - name: Как выполнить Задание политики кэширования для запроса
+            - name: Практическое руководство. Задание политики кэширования для запроса
               href: how-to-set-cache-policy-for-a-request.md
     - name: Безопасность в сетевом программировании
       href: security-in-network-programming.md
@@ -177,18 +177,18 @@
           href: proxy-configuration.md
         - name: Автоматическое обнаружение прокси-сервера
           href: automatic-proxy-detection.md
-        - name: Как выполнить Включение в WebRequest использования прокси-сервера для связи с Интернетом
+        - name: Практическое руководство. Включение в WebRequest использования прокси-сервера для связи с Интернетом
           href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
-        - name: Как выполнить Переопределение глобальных прокси-серверов
+        - name: Практическое руководство. Переопределение глобальных прокси-серверов
           href: how-to-override-a-global-proxy-selection.md
     - name: NetworkInformation
       href: networkinformation.md
       items:
-        - name: Как выполнить Определение доступности сети и изменений адреса
+        - name: Практическое руководство. Определение доступности сети и изменений адреса
           href: how-to-detect-network-availability-and-address-changes.md
-        - name: Как выполнить Получение информации об интерфейсах и протоколах
+        - name: Практическое руководство. Получение информации об интерфейсах и протоколах
           href: how-to-get-interface-and-protocol-information.md
-        - name: Как выполнить Проверка связи с узлом
+        - name: Практическое руководство. Проверка связи с узлом
           href: how-to-ping-a-host.md
     - name: Изменения пространства имен System.Uri в версии 2.0
       href: changes-to-the-system-uri-namespace-in-version-2-0.md

@@ -30,6 +30,8 @@
         - name: Рекомендации фильмов (матричная факторизация)
           href: tutorials/movie-recommendation.md
         - name: Классификация изображений (передача обучения)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: Классификация изображений (композиция модели)
           href: tutorials/image-classification.md
         - name: Анализ продаж продукта (обнаружение аномалий)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: Инструменты
       items:
+        - name: Загрузка данных в построитель моделей
+          href: how-to-guides/load-data-model-builder.md
         - name: Установить построитель моделей
           href: how-to-guides/install-model-builder.md
         - name: Установка CLI
