@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608369"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771739"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Арифметические операторы (справочник по C#)
 
@@ -115,7 +115,7 @@ ms.locfileid: "69608369"
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-Если один из операндов — это `decimal`, второй операнд не может быть ни `float`, ни `double`, так как ни `float`, ни `double` не преобразуется неявно в тип `decimal`. Необходимо явным образом преобразовать операнд `float` или `double` в тип `decimal`. Дополнительные сведения о неявных числовых преобразованиях см. в [таблице неявных числовых преобразований](../keywords/implicit-numeric-conversions-table.md).
+Если один из операндов — это `decimal`, второй операнд не может быть ни `float`, ни `double`, так как ни `float`, ни `double` не преобразуется неявно в тип `decimal`. Необходимо явным образом преобразовать операнд `float` или `double` в тип `decimal`. Дополнительные сведения о числовых преобразованиях см. в разделе [Встроенные числовые преобразования](../builtin-types/numeric-conversions.md).
 
 ## <a name="remainder-operator-"></a>Оператор остатка %
 

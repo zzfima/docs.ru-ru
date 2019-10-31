@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395437"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773895"
 ---
 # <a name="whats-new-in-net-core-30"></a>Новые возможности .NET Core 3.0
 
 В этой статье описываются новые возможности в .NET Core 3.0. Одно из основных усовершенствований — это поддержка классических приложений Windows (только Windows). С помощью пакета SDK для .NET Core 3.0 под названием Windows Desktop можно переносить приложения Windows Forms и Windows Presentation Foundation (WPF). Следует уточнить, что компонент Windows Desktop поддерживается и включен только в Windows. Дополнительные сведения см. далее в этой статье, в разделе [Рабочий стол Windows](#windows-desktop).
 
-В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio для Mac 8.3](/visualstudio/mac/install-preview) или [Visual Studio Code](https://code.visualstudio.com/) с **расширением C#** .
+В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать [Visual Studio 2019 версии 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) или более поздней, [Visual Studio для Mac 8.3](/visualstudio/mac/install-preview) или более поздней или [Visual Studio Code](https://code.visualstudio.com/) с последним **расширением C#** .
 
 [Скачайте .NET Core 3.0 и начните работу](https://aka.ms/netcore3download) прямо сейчас в Windows, macOS или Linux.
 

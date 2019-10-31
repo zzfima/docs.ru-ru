@@ -2,12 +2,12 @@
 title: Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 description: Реальные рабочие приложения должны развертываться с оркестраторами, которые управляют работоспособностью, рабочими нагрузками и жизненным циклом всех контейнеров.
 ms.date: 02/15/2019
-ms.openlocfilehash: dcc1c8686210e34df33aef024429898a098fa33d
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395322"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771092"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 

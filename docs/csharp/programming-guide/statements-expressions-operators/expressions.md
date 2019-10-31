@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921809"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774179"
 ---
 # <a name="expressions-c-programming-guide"></a>Выражения (Руководство по программированию в C#)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Переполнения
 
- Числовые выражения могут привести к переполнениям, если значение больше максимального значения типа значения. Дополнительные сведения см. в разделах [Checked и Unchecked](../../language-reference/keywords/checked-and-unchecked.md) и [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Числовые выражения могут привести к переполнениям, если значение больше максимального значения типа значения. Дополнительные сведения см. в разделах [Проверяемые и непроверяемые](../../language-reference/keywords/checked-and-unchecked.md) и [Явные числовые преобразования](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) в статье [Встроенные числовые преобразования](../../language-reference/builtin-types/numeric-conversions.md).
   
 ## <a name="operator-precedence-and-associativity"></a>Приоритет и ассоциативность операторов
 

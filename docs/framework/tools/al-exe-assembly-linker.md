@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523809"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774216"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (компоновщик сборок)
 
 Компоновщик сборок создает файл с манифестом сборки из одного или нескольких файлов, являющихся модулями или файлами ресурсов. Модуль — это файл промежуточного языка (IL) без манифеста сборки.
 
 > [!NOTE]
-> Начиная с Visual Studio 2008, компиляторы C# и Visual Basic автоматически внедряют манифест Win32 в сборку. Дополнительные сведения см. в разделе [/win32manifest (параметры компилятора C#)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Начиная с Visual Studio 2008, компиляторы C# и Visual Basic автоматически внедряют манифест Win32 в сборку. Дополнительные сведения см. в разделе [-win32manifest (параметры компилятора C#)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).
 

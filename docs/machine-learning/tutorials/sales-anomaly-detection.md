@@ -4,12 +4,12 @@ description: Узнайте, как создать приложение для �
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929055"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774441"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Учебник. Обнаружение аномалий в данных о продажах товаров с помощью ML.NET
 
@@ -28,7 +28,7 @@ ms.locfileid: "70929055"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+* [Visual Studio 2017 версии 15.6 или более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
 * [Набор данных product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -62,7 +62,7 @@ ms.locfileid: "70929055"
 
 В следующей таблице представлены данные из вашего файла \*.csv:
 
-|Месяц.  |ProductSales |
+|Месяц  |ProductSales |
 |-------|-------------|
 |1-Jan  |    271      |
 |2-Jan  |    150,9    |

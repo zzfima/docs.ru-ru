@@ -2,12 +2,12 @@
 title: Реализация фоновых задач в микрослужбах с помощью IHostedService и класса BackgroundService
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Новые варианты использования IHostedService и BackgroundService для реализации фоновых задач в микрослужбах .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318685"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770126"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Реализация фоновых задач в микрослужбах с помощью IHostedService и класса BackgroundService
 
@@ -45,7 +45,7 @@ ms.locfileid: "72318685"
 
 Выполнение любого из этих действий можно перенести в фоновую задачу на основе IHostedService.
 
-Для добавления одного или нескольких экземпляров `IHostedServices` в `WebHost` или `Host` их следует зарегистрировать посредством стандартного внедрения зависимостей в классе ASP.NET Core `WebHost` (или в классе `Host` в .NET Core 2.1 и более поздних версий). Фактически размещенные службы регистрируются в известном методе `ConfigureServices()` класса `Startup`, как в следующем коде типичного класса ASP.NET WebHost:
+Для добавления одного или нескольких экземпляров `IHostedServices` в `WebHost` или `Host` их следует зарегистрировать посредством метода расширения <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> в классе ASP.NET Core `WebHost` (или в классе `Host` в .NET Core 2.1 и более поздних версий). Фактически размещенные службы регистрируются в известном методе `ConfigureServices()` класса `Startup`, как в следующем коде типичного класса ASP.NET WebHost:
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -53,9 +53,9 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     //Other DI registrations;
 
     // Register Hosted Services
-    services.AddSingleton<IHostedService, GracePeriodManagerService>();
-    services.AddSingleton<IHostedService, MyHostedServiceB>();
-    services.AddSingleton<IHostedService, MyHostedServiceC>();
+    services.AddHostedService<GracePeriodManagerService>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -238,13 +238,13 @@ WebHost.CreateDefaultBuilder(args)
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Создание запланированной задачи в ASP.NET Core или Standard 2.0**  
+- **Создание запланированной задачи в ASP.NET Core или Standard 2.0**
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Реализация интерфейса IHostedService в ASP.NET Core 2.0**  
+- **Реализация интерфейса IHostedService в ASP.NET Core 2.0**
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **Пример GenericHost с ASP.NET Core 2.1**  
+- **Пример GenericHost с ASP.NET Core 2.1**
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

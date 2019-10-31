@@ -4,12 +4,12 @@ description: Практические рекомендации по упаков
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895212"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775315"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -84,7 +84,7 @@ NuGet — это диспетчер пакетов для экосистемы .
 > [!NOTE]
 > В пакетах стабильных выпусков нельзя указывать зависимости от пакетов предварительной версии. В таком случае переведите используемый пакет в режим предварительной версии или укажите зависимость от более ранней стабильной версии.
 
-![Зависимость пакета NuGet в предварительной версии](./media/nuget/nuget-prerelease-package.png "NuGet pre-release package dependency")
+![Зависимость пакета предварительной версии NuGet](./media/nuget/nuget-prerelease-package.png "Зависимость пакета предварительной версии NuGet")
 
 **✔️ РЕКОМЕНДУЕТСЯ.** Публикуйте пакет в режиме предварительной версии для тестирования, предварительного просмотра или экспериментов.
 
@@ -99,7 +99,7 @@ NuGet.org размещает свой собственный [репозитор
 > [!IMPORTANT]
 > Сервер символов NuGet.org поддерживает только новые [файлы переносимых символов](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`), созданные проектами в стиле пакетов SDK.
 >
-> Чтобы использовать сервер символов NuGet.org при отладке библиотеки .NET, у разработчиков должна быть версия Visual Studio 2017 15.9 или выше.
+> Чтобы использовать сервер символов NuGet.org при отладке библиотеки .NET, у разработчиков должна быть Visual Studio 2017 версии 15.9 или более поздней.
 
 Альтернатива созданию пакета символов — внедрение файлов символов в главный пакет NuGet. Главный пакет NuGet будет больше, но внедренные файлы символов позволяют разработчикам не настраивать сервер символов NuGet.org. Если вы создаете пакет NuGet из проекта в стиле SDK, файлы символов в него можно внедрить с помощью свойства `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 

@@ -5,12 +5,12 @@ ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9d5699f772dba994b10408d15422faa3c5931f45
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991686"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774345"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>Практическое руководство. Создание неподписанных дружественных сборок
 
@@ -136,7 +136,7 @@ ms.locfileid: "70991686"
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (*EXE* или *DLL*) с помощью параметра компилятора `/out`. Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) или [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+   Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (*EXE* или *DLL*) с помощью параметра компилятора `-out`. Дополнительные сведения см. в разделе [-out (параметры компилятора C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) или [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 6. Запустите файл *friend_unsigned_B.exe*.
 

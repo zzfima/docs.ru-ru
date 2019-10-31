@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 399e9ce3288d53049e968688736f5b953d7e5b80
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698649"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799078"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Учебник. Создание модели классификации изображений ML.NET на основе предварительно обученной модели TensorFlow
 
@@ -39,13 +39,13 @@ ms.locfileid: "71698649"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+* [Visual Studio 2017 версии 15.6 или более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
 * Пакет Nuget для Microsoft.ML 1.3.1.
 * Пакет Nuget для Microsoft.ML.ImageAnalytics 1.3.1.
 * Пакет Nuget для Microsoft.ML.TensorFlow 1.3.1.
 
-* [ZIP-файл каталога ресурсов руководства.](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [ZIP-файл каталога ресурсов руководства.](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 
 * [Модель машинного обучения Inception версии 1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -100,7 +100,7 @@ ms.locfileid: "71698649"
 
 Алгоритм, реализованный этим инструктором, хорошо работает в задачах с большим количеством признаков, что характерно для модели глубокого обучения, работающей с данными изображений.
 
-### <a name="data"></a>Данные
+### <a name="data"></a>Data
 
 Доступны два источника данных: файл `.tsv` и файлы образов.  Файл `tags.tsv` содержит два столбца: первый определен как `ImagePath`, а во втором указана метка `Label`, соответствующая изображению. В примере файла ниже отсутствует строка заголовка. Сам файл выглядит следующим образом:
 
@@ -137,7 +137,7 @@ toaster2.png    appliance
 
 ### <a name="download-assets"></a>Скачивание ресурсов
 
-1. Скачайте [ZIP-файл каталога с ресурсами проекта](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip) и распакуйте его.
+1. Скачайте [ZIP-файл каталога с ресурсами проекта](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip) и распакуйте его.
 
 1. Скопируйте каталог `assets` в каталог проекта *TransferLearningTF*. Этот каталог и его подкаталоги содержат данные и файлы поддержки (за исключением модели Inception, которую вы скачаете и добавите на следующем шаге), необходимые для работы с этим руководством.
 
@@ -246,7 +246,7 @@ toaster2.png    appliance
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    Чтобы получить прогноз, используйте метод [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A). Класс [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) представляет собой удобный API, позволяющий осуществить прогнозирование на основе единственного экземпляра данных. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Допустимо использовать в средах прототипов или средах с одним потоком. Для улучшенной производительности и потокобезопасности в рабочей среде используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении. Ознакомьтесь с этим руководством о том, как [использовать `PredictionEnginePool` в ASP.NET Core Web API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+    Чтобы получить прогноз, используйте метод [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A). Класс [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) представляет собой удобный API, позволяющий осуществить прогнозирование на основе единственного экземпляра данных. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Допустимо использовать в средах прототипов или средах с одним потоком. Для улучшенной производительности и потокобезопасности в рабочей среде используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении. См. руководство по [использованию `PredictionEnginePool` в веб-API ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
     > [!NOTE]
     > Расширение службы `PredictionEnginePool` сейчас доступно в предварительной версии.
@@ -282,7 +282,7 @@ toaster2.png    appliance
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-    Этот этап конвейера загружает модель TensorFlow в память, а затем обрабатывает вектор значений пикселей через сеть модели TensorFlow. Применение входных данных к модели глубокого обучения и формирование выходных данных с помощью модели называется **оценкой**. При полном использовании модели оценка делает вывод или прогноз. 
+    Этот этап конвейера загружает модель TensorFlow в память, а затем обрабатывает вектор значений пикселей через сеть модели TensorFlow. Применение входных данных к модели глубокого обучения и формирование выходных данных с помощью модели называется **оценкой**. При полном использовании модели оценка делает вывод или прогноз.
 
     В этом случае используется вся модель TensorFlow, за исключением последнего слоя, который делает вывод. Выходные данные предпоследнего слоя помечаются как `softmax_2_preactivation`. Выходные данные этого слоя фактически являются вектором признаков, характеризующих исходные входные изображения.
 
@@ -323,7 +323,7 @@ toaster2.png    appliance
     [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
     Есть несколько примеров изображений, которые можно использовать для оценки модели. Как и данные для обучения, их нужно загрузить в `IDataView`, чтобы модель могла их преобразовать.
-   
+
 1. Добавьте следующий код в метод `GenerateModel()` для оценки модели:
 
     [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]

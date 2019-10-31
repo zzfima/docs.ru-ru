@@ -4,12 +4,12 @@ description: Обзор инструмента Microsoft WCF Web Service Referen
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 28eaae4a83d918f8a9e5376eb3c8d42843ffa027
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522237"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773956"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Использование инструмента WCF Web Service Reference Provider
 
@@ -20,7 +20,7 @@ ms.locfileid: "72522237"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) или более поздней версии
+- [Visual Studio 2017 версии 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) или более поздней
 
 ## <a name="how-to-use-the-extension"></a>Использование расширения
 

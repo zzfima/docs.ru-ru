@@ -2,12 +2,12 @@
 title: Что такое Docker?
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Что такое Docker?
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674861"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771348"
 ---
 # <a name="what-is-docker"></a>Что такое Docker?
 

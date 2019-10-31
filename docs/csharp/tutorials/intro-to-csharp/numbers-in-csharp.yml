@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Ветви и циклы в C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
-  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72291368"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774003"
 items:
 - durationInMinutes: 1
   content: >
@@ -423,10 +423,6 @@ items:
 
     - [Целочисленные типы](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [Таблица типов с плавающей запятой](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [Числовые типы с плавающей запятой](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [Таблица встроенных типов](../../language-reference/keywords/built-in-types-table.md)
-
-    - [Таблица неявных числовых преобразований](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [Встроенные числовые преобразования](../../language-reference/builtin-types/numeric-conversions.md)

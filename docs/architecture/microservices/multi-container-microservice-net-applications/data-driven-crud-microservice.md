@@ -2,12 +2,12 @@
 title: Создание простой микрослужбы CRUD на основе данных
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о создании простой микрослужбы CRUD (управляемой данными) в контексте приложения для микрослужб.
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039917"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771209"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;

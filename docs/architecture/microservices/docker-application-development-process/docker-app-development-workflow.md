@@ -2,12 +2,12 @@
 title: Рабочий процесс разработки для приложений Docker
 description: Сведения о рабочем процессе для разработки приложений Docker. Начнем по шагам, рассмотрим подробности оптимизации файлов Dockerfile и закончим на упрощенном рабочем процессе, доступном при использовании Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031881"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771499"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 

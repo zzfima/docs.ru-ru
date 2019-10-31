@@ -6,18 +6,18 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117860"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775222"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Новые возможности .NET Standard
 
 .NET Standard — это формальная спецификация, определяющая ряд версий с набором интерфейсов API, которые должны быть доступны во всех реализациях .NET, соответствующих определенной версии стандарта. Решение .NET Standard ориентировано на разработчиков библиотек. Библиотека, которая предназначена для некоторой версии .NET Standard, может использоваться в любой реализации .NET Framework, .NET Core или Xamarin, совместимой с той же версией стандарта.
 
-Сейчас последней версией является .NET Standard 2.0. Она входит в пакет SDK для .NET Core 2.0, а также в Visual Studio 2017 версии 15.3 при установке с рабочей нагрузкой .NET Core.
+Сейчас последней версией является .NET Standard 2.0. Она входит в пакет SDK для .NET Core 2.0, а также в Visual Studio 2017 версии 15.3 при установленной рабочей нагрузке .NET Core.
 
 ## <a name="supported-net-implementations"></a>Поддерживаемые реализации .NET
 
@@ -61,7 +61,7 @@ ms.locfileid: "71117860"
 
 ### <a name="support-for-visual-basic"></a>Поддержка Visual Basic
 
-Теперь вы можете разрабатывать библиотеки .NET Standard на Visual Basic. Разработчики Visual Basic, использующие Visual Studio 2017 версии 15.3 или более поздней версии с установленной рабочей нагрузкой .NET Core, теперь получают в Visual Studio шаблон библиотеки классов .NET Standard. Разработчики Visual Basic, которые используют другие средства и среды разработки, могут создать проект библиотеки .NET Standard с помощью команды [dotnet new](../../core/tools/dotnet-new.md). Дополнительные сведения см. в разделе [Поддержка средств для библиотек .NET Standard](#tooling-support-for-net-standard-libraries).
+Теперь вы можете разрабатывать библиотеки .NET Standard на Visual Basic. Разработчики Visual Basic, использующие Visual Studio 2017 версии 15.3 или более поздней версии с установленной рабочей нагрузкой .NET Core, теперь получают в Visual Studio шаблон библиотеки классов .NET Standard. Разработчики Visual Basic, которые используют другие средства и среды разработки, могут создать проект библиотеки .NET Standard с помощью команды [dotnet new](../../core/tools/dotnet-new.md). Дополнительные сведения см. в разделе [Поддержка средств для библиотек .NET Standard](#tooling-support-for-net-standard-libraries).
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Поддержка средств для библиотек .NET Standard
 
