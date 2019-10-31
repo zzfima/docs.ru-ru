@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141411"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>Метод StrongNameSignatureVerificationEx2
-Проверяет подпись сборки со строгим именем, а также сопоставление ключа ECMA фактическую клавишу.  
+Проверяет подпись сборки со строгим именем и обеспечивает сопоставление ключа ECMA с реальным ключом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +38,29 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к переносимого исполняемого файла (.exe или .dll) для сборки, которую требуется проверить.  
+ окне Путь к переносимому исполняемому файлу (exe или DLL) для проверяемой сборки.  
   
  `fForceVerification`  
- [in] `true` будет выполнить проверку подлинности, даже если это необходимо переопределить параметры реестра, в противном случае — `false`.  
+ [in] `true` выполнить проверку, даже если необходимо переопределить параметры реестра; в противном случае `false`.  
   
  `pbEcmaPublicKey`  
- [in] Указатель на сопоставление из фактическую клавишу ECMA открытый ключ, используемый для проверки.  
+ окне Указатель на сопоставление открытого ключа ECMA с реальным ключом, используемым для проверки.  
   
  `cbEcmaPublicKey`  
- [in] Длина открытого ключа реальных ECMA.  
+ окне Длина действительного открытого ключа ECMA.  
   
  `pfWasVerified`  
- [out] `true` при подписи строгого имени проверенного; в противном случае `false`. Этот параметр задается значение `false` Если проверка пройдена успешно из-за параметров реестра.  
+ [out] `true`, если подпись строгого имени была проверена; в противном случае `false`. Этот параметр также имеет значение `false`, если проверка прошла успешно из-за параметров реестра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

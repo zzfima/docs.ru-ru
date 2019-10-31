@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127278"
 ---
 # <a name="qualifierset_get-function"></a>Функция QualifierSet_Get
 Получает указанный именованный квалификатор.  
@@ -56,29 +54,29 @@ HRESULT QualifierSet_Get (
 [in] Зарезервировано. Этот параметр должен иметь значение 0.
 
 `pVal`   
-заполняет При успешном выполнении, правильный тип и значение для квалификатора. Если функция завершается ошибкой, `VARIANT` то, на `pVal` которую указывает, не изменяется. Если этот параметр имеет `null`значение, параметр игнорируется.
+заполняет При успешном выполнении, правильный тип и значение для квалификатора. Если функция завершается ошибкой, `VARIANT`, на которую указывает `pVal`, не изменяется. Если этот параметр имеет значение `null`, параметр игнорируется.
 
 `plFlavor`   
-заполняет Указатель на значение типа LONG, которое получает биты флагов для запрошенного описателя. Если сведения о разновидностях не нужны, этот параметр может `null`иметь значение. 
+заполняет Указатель на значение типа LONG, которое получает биты флагов для запрошенного описателя. Если сведения о разновидностях не нужны, этот параметр можно `null`. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный квалификатор не существует. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемкуалифиерсет:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088500"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>Метод ICorDebugArrayValue::GetDimensions
-Получает число элементов в каждом измерении этого массива.  
+Возвращает количество элементов в каждом измерении этого массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,17 +37,17 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>Параметры  
  `cdim`  
- [in] Число измерений противном.  
+ окне Число измерений данного объекта ICorDebugArrayValue.  
   
- Этот параметр также имеет размер `dims` массива, так как его размер равен числу измерений `ICorDebugArrayValue` объекта.  
+ Это значение также является размером массива `dims`, так как его размер равен числу измерений объекта `ICorDebugArrayValue`.  
   
  `dims`  
- [out] Массив целых чисел, каждое из которых указывает количество элементов в измерении в это `ICorDebugArrayValue` объекта.  
+ заполняет Массив целых чисел, каждый из которых указывает количество элементов в измерении в этом `ICorDebugArrayValue` объекте.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

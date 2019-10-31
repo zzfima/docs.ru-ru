@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0e72d15ab4ca9b4468efb2a671022f30bfb3cc6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122669"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Метод ICorDebugInternalFrame2::IsCloserToLeaf
-Проверяет ли `this` ближе к конечному объекту, чем указанный объект ICorDebugFrame внутренний фрейм.  
+Проверяет, находится ли внутренний кадр `this` ближе к конечному объекту, чем указанный объект ICorDebugFrame.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +34,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>Параметры  
  `pFrameToCompare`  
- [in] Указатель на сравнение `ICorDebugFrame` объекта.  
+ окне Указатель на объект сравнения `ICorDebugFrame`.  
   
  `pIsCloser`  
- [out] `true` Если `this` внутренний фрейм находится ближе к конечному объекту, чем кадр, определяемый `pFrameToCompare`; в противном случае `false`.  
+ [out] `true`, если внутренний кадр `this` находится ближе к конечному объекту, чем кадр, заданный `pFrameToCompare`; в противном случае `false`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -47,16 +45,16 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Сравнение успешно выполнено.|  
-|E_FAIL|Не удается выполнить сравнение.|  
+|E_FAIL|Не удалось выполнить сравнение.|  
 |E_INVALIDARG|`pFrameToCompare` или `pIsCloser` равно null.|  
   
-## <a name="remarks"></a>Примечания  
- `IsCloserToLeaf` можно использовать для реализации политики чередования внутренних кадров с другими фреймы в стеке.  
+## <a name="remarks"></a>Заметки  
+ `IsCloserToLeaf` можно использовать для реализации политики для поверх внутренних кадров с другими кадрами в стеке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

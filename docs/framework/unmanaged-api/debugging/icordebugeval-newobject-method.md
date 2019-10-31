@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 362c01e0b08145919793cec011a856f0090e5c47
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68a7e911c2bd1798ea8f34f6a6e24299fe68775d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752990"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137621"
 ---
 # <a name="icordebugevalnewobject-method"></a>Метод ICorDebugEval::NewObject
-Выделяет новый экземпляр объекта и вызывает заданный метод конструктора.  
+Выделяет новый экземпляр объекта и вызывает указанный метод конструктора.  
   
- Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) вместо этого.  
+ Этот метод является устаревшим в .NET Framework версии 2,0. Вместо этого используйте [ICorDebugEval2:: невпараметеризедобжект](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,22 +39,22 @@ HRESULT NewObject (
   
 ## <a name="parameters"></a>Параметры  
  `pConstructor`  
- [in] К вызову конструктора.  
+ окне Вызываемый конструктор.  
   
  `nArgs`  
  [in] Размер массива `ppArgs`.  
   
  `ppArgs`  
- [in] Массив объектов ICorDebugValue, каждый из которых представляет аргумент, передаваемый в конструктор.  
+ окне Массив объектов ICorDebugValue, каждый из которых представляет аргумент, передаваемый конструктору.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.1, 1.0  
+ **.NET Framework версии:** 1,1, 1,0  
   
 ## <a name="see-also"></a>См. также
 

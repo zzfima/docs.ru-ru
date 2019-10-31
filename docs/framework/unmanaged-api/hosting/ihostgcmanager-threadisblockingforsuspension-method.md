@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb78026f875c18a557951108518c9280f5eb567d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb807a6a344c49baeedfa88aef989a9cb2ec8a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133920"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>Метод IHostGCManager::ThreadIsBlockingForSuspension
 Уведомляет узел о том, что поток, из которого был сделан вызов метода, собирается блокироваться для сборки мусора.  
@@ -37,25 +35,25 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`успешно возвращено.|  
+|S_OK|`ThreadIsBlockingForSuspension` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR обычно вызывает `ThreadIsBlockForSuspension` метод в процессе подготовки к сборке мусора, чтобы дать узлу возможность перепланировать поток для неуправляемых задач.  
+## <a name="remarks"></a>Заметки  
+ Среда CLR обычно вызывает метод `ThreadIsBlockForSuspension` при подготовке к сборке мусора, чтобы дать узлу возможность перепланировать поток для неуправляемых задач.  
   
 > [!IMPORTANT]
 > Узел может перепланировать задачи только после вызова `ThreadIsBlockingForSuspension`. После того как среда выполнения вызовет [SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md), узел не должен перепланировать задачу.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

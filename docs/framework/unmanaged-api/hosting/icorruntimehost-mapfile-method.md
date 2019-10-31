@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780089"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139524"
 ---
 # <a name="icorruntimehostmapfile-method"></a>Метод ICorRuntimeHost::MapFile
-Сопоставляет указанный файл в память. Этот метод устарел.  
+Сопоставляет указанный файл с памятью. Этот метод устарел.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +36,19 @@ HRESULT MapFile(
   
 ## <a name="parameters"></a>Параметры  
  `hFile`  
- [in] Дескриптор файла для сопоставления.  
+ окне Описатель файла для сопоставления.  
   
  `hMapAddress`  
- [out] Начальный адрес памяти, с которого начинается файла сопоставления.  
+ заполняет Начальный адрес памяти, с которого начинается сопоставление файла.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
- **Версии платформы .NET framework:** 1.0, 1.1  
+ **Версия .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание Windows Forms приложения из командной строки
+title: Как создать Windows Forms приложение из командной строки
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834806"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127246"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое руководство. Создание Windows Forms приложения из командной строки
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как создать Windows Forms приложение из командной строки
 
-В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. [также раздел Пошаговое руководство. Размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. также раздел [Пошаговое руководство. размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
 ## <a name="procedure"></a>Процедура  
   
@@ -45,9 +43,9 @@ ms.locfileid: "71834806"
   
 4. Добавьте в класс метод `Main`.
   
-    1. Примените <xref:System.STAThreadAttribute> C# к методу, чтобы указать Windows Forms приложение является однопотоковым апартаментом. `Main` (Атрибут не является обязательным в Visual Basic, так как приложения Windows Forms, разработанные с помощью Visual Basic, по умолчанию используют модель апартамента с одним потоком.)  
+    1. Примените <xref:System.STAThreadAttribute> к методу C# `Main`, чтобы указать, что приложение Windows Forms является однопотоковым апартаментом. (Атрибут не является обязательным в Visual Basic, так как приложения Windows Forms, разработанные с помощью Visual Basic, по умолчанию используют модель апартамента с одним потоком.)  
   
-    2. Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> , чтобы применить стили операционной системы к приложению.  
+    2. Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, чтобы применить стили операционной системы к приложению.  
   
     3. Создайте экземпляр формы и запустите его.  
   
@@ -60,13 +58,13 @@ ms.locfileid: "71834806"
   
 2. Скомпилируйте форму.  
   
-    - При использовании C#введите:`csc form1.cs`  
+    - При использовании C#введите: `csc form1.cs`  
   
          `-or-`  
   
-    - При использовании Visual Basic введите:`vbc form1.vb`  
+    - Если используется Visual Basic, введите: `vbc form1.vb`  
   
-3. В командной строке введите:`Form1.exe`  
+3. В командной строке введите: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события
 

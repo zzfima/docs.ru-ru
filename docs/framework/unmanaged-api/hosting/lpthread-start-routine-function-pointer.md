@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6e0c02af93b9df726202f397bbb2afc306f3b3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090883"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a>Указатель функции LPTHREAD_START_ROUTINE
-Указывает на функцию, которая уведомляет основное приложение, который запущен поток для выполнения.  
+# <a name="lpthread_start_routine-function-pointer"></a>Указатель функции LPTHREAD_START_ROUTINE
+Указывает на функцию, которая уведомляет узел о начале выполнения потока.  
   
- Этот указатель функции был объявлен устаревшим в .NET Framework 4.  
+ Этот указатель функции является устаревшим в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +36,17 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
 ## <a name="parameters"></a>Параметры  
  `lpThreadParameter`  
- [in] Указатель на код, который начато выполнение.  
+ окне Указатель на код, который начал выполнять.  
   
-## <a name="remarks"></a>Примечания  
- Функция, которая `LPTHREAD_START_ROUTINE` точки — это функция обратного вызова и должны быть реализованы модулем записи ведущего приложения.  
+## <a name="remarks"></a>Заметки  
+ Функция, к которой `LPTHREAD_START_ROUTINE` Points, является функцией обратного вызова и должна быть реализована модулем записи размещающего приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** "Mscorwks.dll"  
+ **Библиотека:** MSCorWks. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b8737577bdb5f61f1061cb217620fae03ebd0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139374"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>Метод ICorDebugProcess::ModifyLogSwitch
-Задает уровень серьезности, указанный журнал коммутатора.  
+Задает уровень серьезности указанного переключателя журнала.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +35,18 @@ HRESULT ModifyLogSwitch(
   
 ## <a name="parameters"></a>Параметры  
  `pLogSwitchName`  
- [in] Указатель на строку, которая указывает имя переключателя журнала.  
+ окне Указатель на строку, указывающую имя переключателя журнала.  
   
  `lLevel`  
- [in] Уровень серьезности, который нужно задать для параметра указанного журнала.  
+ окне Уровень серьезности, заданный для указанного переключателя журнала.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод допустим только после [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) произошла обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ Этот метод допустим только после выполнения обратного вызова [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

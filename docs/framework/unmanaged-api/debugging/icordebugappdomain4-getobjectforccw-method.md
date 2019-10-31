@@ -2,14 +2,12 @@
 title: Метод ICorDebugAppDomain4::GetObjectForCCW
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ab4905c55a1395e9ae5cba8343e6b832622005d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b046eb5926bb9aa4738e8fff8e61b0b7c23a3aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737644"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088832"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>Метод ICorDebugAppDomain4::GetObjectForCCW
 Возвращает управляемый объект из вызываемой оболочки COMr (CCW).  
@@ -28,14 +26,14 @@ HRESULT GetObjectForCCW(
  [in] Указатель вызываемой оболочки COM (CCW).  
   
  `ppManagedObject`  
- [out] Указатель на адрес объекта «ICorDebugValue», который представляет управляемый объект, соответствующий заданной указателю на вызываемую Оболочку.  
+ заполняет Указатель на адрес объекта ICorDebugValue, который представляет управляемый объект, соответствующий заданному указателю CCW.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

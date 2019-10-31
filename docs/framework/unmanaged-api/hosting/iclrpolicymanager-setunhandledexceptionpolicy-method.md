@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5268480e-280a-4931-b7a3-dc3ffdf7f78f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab00ccd85481f1c6d37e1132e0ecab5e0e86be90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7b6a4be94e526e7b464b336d221eff936808635a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120569"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>Метод ICLRPolicyManager::SetUnhandledExceptionPolicy
-Задает поведение общеязыковой среды выполнения (CLR), при возникновении необработанного исключения.  
+Задает поведение среды CLR при возникновении необработанного исключения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,28 +35,28 @@ HRESULT SetUnhandledExceptionPolicy (
   
 ## <a name="parameters"></a>Параметры  
  `policy`  
- [in] Один из [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) значения, указывающие, установлен ли поведение среды CLR или узла.  
+ окне Одно из значений [еклрунхандледексцептион](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) , указывающее, задано ли поведение средой CLR или узлом.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetUnhandledExceptionPolicy` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetUnhandledExceptionPolicy` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию среда CLR является окончательной обработчиком для все необработанные исключения, и его поведение по умолчанию — уничтожить процесс. Управляющее приложение может изменить это поведение, задав `policy` значение eHostDeterminedPolicy. Это значение позволяет ведущему приложению реализовать собственное поведение по умолчанию, как и в более ранних версиях среды CLR.  
+## <a name="remarks"></a>Заметки  
+ По умолчанию CLR является окончательным обработчиком для всех необработанных исключений, и его поведение по умолчанию заключается в том, чтобы разорвать этот процесс. Узел может изменить это поведение, задав для `policy` значение Ехостдетерминедполици. Это значение позволяет ведущему приложению реализовать собственное поведение по умолчанию, как в предыдущих версиях среды CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

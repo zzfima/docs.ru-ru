@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a46925b3-3bf8-404f-9f30-a86ae41032c1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50e5fcee3705e05aeed820cf736613c12b00e50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e7821022e6966dbdea90d57b6899f09b2ed1964e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090529"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>Метод ICorDebugFrame::GetFunctionToken
-Получает маркер метаданных для функции, которая содержит код, связанный с данным кадром стека.  
+Возвращает маркер метаданных для функции, которая содержит код, связанный с этим кадром стека.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetFunctionToken (
   
 ## <a name="parameters"></a>Параметры  
  `pToken`  
- [out] Указатель на `mdMethodDef` маркер, который ссылается на метаданные для функции.  
+ заполняет Указатель на маркер `mdMethodDef`, который ссылается на метаданные функции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

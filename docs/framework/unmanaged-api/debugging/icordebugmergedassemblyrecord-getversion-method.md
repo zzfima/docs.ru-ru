@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugMergedAssemblyRecord::GetVersion
+title: 'Метод Икордебугмержедассемблирекорд:: метода Version'
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d9133ab1b7d3985d3a383bb36dcbea315548c00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939931"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129769"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>Метод ICorDebugMergedAssemblyRecord::GetVersion
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>Метод Икордебугмержедассемблирекорд:: метода Version
 Возвращает сведения о версии сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,18 +36,18 @@ HRESULT GetVersion(
  `pRevision`  
  [out] Указатель на номер редакции.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Сведения о версии сборки см в разделе, посвященном классу <xref:System.Version>.  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

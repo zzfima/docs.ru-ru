@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 314ffb143e99f9490bcd4a6489f2afed314b7c2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c847f177f48d72f28192d1efabe93c65a7b3f4b8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768759"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120492"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>Метода ICLRRuntimeHost::ExecuteInAppDomain
-Указывает <xref:System.AppDomain> в которой выполняется указанный управляемый код.  
+Указывает <xref:System.AppDomain>, в котором будет выполняться указанный управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,34 +37,34 @@ HRESULT ExecuteInAppDomain(
   
 ## <a name="parameters"></a>Параметры  
  `AppDomainId`  
- [in] Числовой идентификатор <xref:System.AppDomain> для выполнения указанного метода.  
+ окне Числовой идентификатор <xref:System.AppDomain>, в котором будет выполняться указанный метод.  
   
  `pCallback`  
- [in] Указатель на функцию, выполняемую в течение указанного <xref:System.AppDomain>.  
+ окне Указатель на функцию, которую необходимо выполнить в указанном <xref:System.AppDomain>.  
   
  `cookie`  
- [in] Указатель на непрозрачные памяти, выделенный вызывающим объектом. Этот параметр передается по общеязыковой среды выполнения (CLR) методу обратного вызова домена. Не является управляемой средой выполнения динамической памяти; вызывающий объект управляет выделением и временем существования этой памяти.  
+ окне Указатель на непрозрачную память, выделенную вызывающим объектом. Этот параметр передается средой CLR в обратный вызов домена. Это не управляемая средой выполнения память кучи; как выделение, так и время существования этой памяти контролируются вызывающим объектом.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInAppDomain` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`ExecuteInAppDomain` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- `ExecuteInAppDomain` позволяет узлу для контроля над котором управляемых <xref:System.AppDomain> указанного управляемого метода должен быть выполнен в. Можно получить значение идентификатора домен приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойства, путем вызова [метод GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+## <a name="remarks"></a>Заметки  
+ `ExecuteInAppDomain` позволяет узлу выполнять контроль над тем, какие управляемые <xref:System.AppDomain> указанный управляемый метод должен выполняться в. Можно получить значение идентификатора домена приложения, которое соответствует значению свойства <xref:System.AppDomain.Id%2A>, вызвав [метод жеткуррентаппдомаинид](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

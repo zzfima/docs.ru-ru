@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089114"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Метод ICorDebugAppDomain2::GetArrayOrPointerType
-Получает массив указанного типа, указатель или ссылка на указанный тип.  
+Возвращает массив указанного типа или указатель или ссылку на указанный тип.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,19 +38,19 @@ HRESULT GetArrayOrPointerType (
   
 ## <a name="parameters"></a>Параметры  
  `elementType`  
- [in] Значение CorElementType перечисления, указывающее базовый собственный тип (массив, указатель или ссылка) должен быть создан.  
+ окне Значение перечисления Корелементтипе, которое указывает базовый собственный тип (массив, указатель или ссылка), который необходимо создать.  
   
  `nRank`  
- [in] Ранг (то есть число измерений) массива. Это значение должно быть 0, если `elementType` указывает тип указателя или ссылки.  
+ окне Ранг (то есть количество измерений) массива. Это значение должно быть равно 0, если `elementType` задает указатель или ссылочный тип.  
   
  `pTypeArg`  
- [in] Указатель на интерфейс ICorDebugType объект, представляющий тип массива, указателя или ссылки должен быть создан.  
+ окне Указатель на объект ICorDebugType, представляющий тип создаваемого массива, указателя или ссылки.  
   
  `ppType`  
- [out] Указатель на адрес `ICorDebugType` тип, представляющий сконструированный массива, тип указателя или ссылки.  
+ заполняет Указатель на адрес объекта `ICorDebugType`, представляющего сконструированный массив, тип указателя или ссылочный тип.  
   
-## <a name="remarks"></a>Примечания  
- Значение *elementType* должно быть одно из следующих:  
+## <a name="remarks"></a>Заметки  
+ Значение *ElementType* должно быть одним из следующих:  
   
 - ELEMENT_TYPE_PTR  
   
@@ -60,12 +58,12 @@ HRESULT GetArrayOrPointerType (
   
 - ELEMENT_TYPE_ARRAY или ELEMENT_TYPE_SZARRAY  
   
- Если значение *elementType* ELEMENT_TYPE_PTR или ELEMENT_TYPE_BYREF, *nRank* должно быть равно нулю.  
+ Если значение *ElementType* — ELEMENT_TYPE_PTR или ELEMENT_TYPE_BYREF, *нранк* должно быть равно нулю.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

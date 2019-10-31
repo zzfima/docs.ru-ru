@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046125"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130278"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 
@@ -76,7 +74,7 @@ ms.locfileid: "71046125"
 ## <a name="dlr-architecture"></a>Архитектура среды DLR
  Ниже показана архитектура среды DLR.
 
- ![Обзор архитектуры DLR](./media/dlr-archoverview.png "DLR_ArchOverview") архитектура DLR
+ ![Общие сведения об архитектуре среды выполнения динамического языка](./media/dlr-archoverview.png "DLR_ArchOverview") Архитектура DLR
 
  Среда DLR добавляет в среду CLR ряд служб для лучшей поддержки динамических языков. К ним относятся перечисленные ниже службы.
 
@@ -98,4 +96,4 @@ ms.locfileid: "71046125"
 - [Общеязыковая среда выполнения](../../standard/clr.md)
 - [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
 - [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
-- [Пошаговое руководство: Создание и использование динамических объектов](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Пошаговое руководство. Создание и использование динамических объектов](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

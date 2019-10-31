@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 958968fb1a84b598b0c3e92151fbad58fc5e79d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738742"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122891"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>Метод ICLRDataTarget::GetMachineType
-Получает идентификатор для типа набора инструкций, целевым процессом.  
+Возвращает идентификатор для типа набора инструкций, используемого целевым процессом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>Параметры  
  `machineType`  
- [out] Использует указатель на значение, указывающее набора инструкций, в целевом процессе. Возвращенный `machineType` является одной из констант IMAGE_FILE_MACHINE, которые определены в файле заголовка WinNT.h.  
+ заполняет Указатель на значение, указывающее набор инструкций, который используется целевым процессом. Возвращаемый `machineType` является одной из констант IMAGE_FILE_MACHINE, которые определены в файле заголовка WinNT. h.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

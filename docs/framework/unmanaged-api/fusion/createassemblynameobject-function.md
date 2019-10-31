@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108714"
 ---
 # <a name="createassemblynameobject-function"></a>Функция CreateAssemblyNameObject
 Возвращает указатель интерфейса на экземпляр [IAssemblyName](iassemblyname-interface.md) , представляющий уникальный идентификатор сборки с указанным именем.  
@@ -41,23 +39,23 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>Параметры  
  `ppAssemblyNameObj`  
- заполняет Возвращаемое `IAssemblyName`значение.  
+ заполняет Возвращаемый `IAssemblyName`.  
   
  `szAssemblyName`  
- окне Имя сборки, для которой создается новый `IAssemblyName` экземпляр.  
+ окне Имя сборки, для которой создается новый экземпляр `IAssemblyName`.  
   
  `dwFlags`  
  окне Флаги, передаваемые в конструктор объектов.  
   
  `pvReserved`  
- окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

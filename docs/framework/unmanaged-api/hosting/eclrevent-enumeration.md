@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee749fd40f440e92f1d1b09c2ea5e7bdd51f1cbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769707"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131138"
 ---
 # <a name="eclrevent-enumeration"></a>Перечисление EClrEvent
-Описывает распространенные события среды выполнения (CLR) языка, для которых узел может регистрировать обратные вызовы.  
+Описывает события среды CLR, для которых узел может регистрировать обратные вызовы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,28 +35,28 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|Указывает Неустранимая ошибка среды CLR.|  
-|`Event_DomainUnload`|Указывает, выгрузку конкретной <xref:System.AppDomain>.|  
-|`Event_MDAFired`|Указывает, что сообщение управляемого помощника по отладке (MDA) был создан.|  
+|`Event_ClrDisabled`|Указывает неустранимую ошибку среды CLR.|  
+|`Event_DomainUnload`|Задает выгрузку конкретного <xref:System.AppDomain>.|  
+|`Event_MDAFired`|Указывает, что создано сообщение помощника по отладке управляемого кода (MDA).|  
 |`Event_StackOverflow`|Указывает, что произошла ошибка переполнения стека.|  
   
-## <a name="remarks"></a>Примечания  
- Узел может регистрировать обратные вызовы для любых типов событий, описываемого `EClrEvent` , вызывая методы класса [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) интерфейс. Узел получает указатель на этот интерфейс вызовом [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Узел может регистрировать обратные вызовы для любого из типов событий, описываемых `EClrEvent` путем вызова методов интерфейса [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) . Узел получает указатель на этот интерфейс путем вызова метода [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
   
- `Event_CLRDisabled` И `Event_DomainUnload` события могут вызываться несколько раз и из разных потоков, чтобы сообщить о выгрузке или отключении среды CLR.  
+ События `Event_CLRDisabled` и `Event_DomainUnload` могут вызываться более одного раза и из разных потоков для сигнализации выгрузки или отключения среды CLR.  
   
- `Event_MDAFired` Событие инициирует создание [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) экземпляр, содержащий сведения о сообщении по отладке управляемого кода. Дополнительные сведения о помощниках MDA, см. в разделе [Диагностика ошибок посредством управляемых помощников по отладке](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Событие `Event_MDAFired` вызывает создание экземпляра [мдаинфо](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) , содержащего подробные сведения о сообщении MDA. Дополнительные сведения о помощниках MDA см. в разделе [Диагностика ошибок с помощью помощников по отладке управляемого](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798450"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127430"
 ---
 # <a name="inheritsfrom-function"></a>Функция раскрывшемся
 Определяет, является ли текущий класс или экземпляр производным от указанного родительского класса.
@@ -47,26 +45,26 @@ HRESULT InheritsFrom (
 окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszAncestor`  
-окне Имя класса. `wszAncestor`должен указывать на допустимое `LPCWSTR`значение.
+окне Имя класса. `wszAncestor` должен указывать на допустимое `LPCWSTR`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | Текущий объект наследует от `wszAncestor`.  |
-| `WBEM_S_FALSE` | 1 | Текущий объект не наследует от `wszAncestor`. |
+| `WBEM_S_NO_ERROR` | 0 | Текущий объект наследуется от `wszAncestor`.  |
+| `WBEM_S_FALSE` | 1 | Текущий объект не наследуется от `wszAncestor`. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Свойство `wszAncestor` имеет значение `null`. |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: раскрывшемся](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

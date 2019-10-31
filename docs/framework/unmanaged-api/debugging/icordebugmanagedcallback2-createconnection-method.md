@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761165"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130592"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Метод ICorDebugManagedCallback2::CreateConnection
-Уведомляет отладчик для создания нового соединения.  
+Уведомляет отладчик о создании нового соединения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,25 +37,25 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект «ICorDebugProcess», представляющий процесс, в котором был создан соединения  
+ окне Указатель на объект "ICorDebugProcess", представляющий процесс, в котором было создано соединение  
   
  `dwConnectionId`  
- [in] Идентификатор нового подключения.  
+ окне Идентификатор нового соединения.  
   
  `pConnName`  
- [in] Указатель на имя нового подключения.  
+ окне Указатель на имя нового соединения.  
   
-## <a name="remarks"></a>Примечания  
- Объект `CreateConnection` обратного вызова будет запускаться в любом из следующих случаев:  
+## <a name="remarks"></a>Заметки  
+ Обратный вызов `CreateConnection` будет срабатывать в одном из следующих случаев.  
   
-- Когда отладчик подключается к процессу, который содержит соединения. В этом случае среда выполнения создаст и диспетчеризации `CreateConnection` событий и [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) событий для каждого соединения в процессе.  
+- При присоединении отладчика к процессу, который содержит соединения. В этом случае среда выполнения создаст и отправит событие `CreateConnection` и событие [ICorDebugManagedCallback2:: чанжеконнектион](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) для каждого соединения в процессе.  
   
-- Если узел вызывает [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Когда узел вызывает [ICLRDebugManager:: бегинконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

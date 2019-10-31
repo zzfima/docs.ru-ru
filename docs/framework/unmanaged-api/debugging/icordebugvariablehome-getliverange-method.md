@@ -1,5 +1,5 @@
 ---
-title: Метод IcorDebugVariableHome::GetLiveRange
+title: 'Метод IcorDebugVariableHome:: Жетливеранже'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125117"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>Метод IcorDebugVariableHome::GetLiveRange
-Получает собственный диапазон, по которому эта переменная является динамической.  
+# <a name="icordebugvariablehomegetliverange-method"></a>Метод IcorDebugVariableHome:: Жетливеранже
+Возвращает собственный диапазон, в котором эта переменная находится в режиме реального времени.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>Параметры  
  `pStartOffset`  
- [out] Логические смещение, по которому переменная является первой динамическую.  
+ заполняет Логическое смещение, при котором переменная впервые находится в режиме реального времени.  
   
  `pEndOffset`  
- [out] Логические смещение сразу же после запятой, по которому переменная является последним live.  
+ заполняет Логическое смещение сразу после точки, в которой переменная была последней динамической.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

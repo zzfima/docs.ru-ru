@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e69957bdc5f70aba361b2574a7f6ebe26d4dd43f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb6682ac5a8b7788d97f752f249d85886fba0b6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111650"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>Метод ICLRDebugging::CanUnloadNow
-Определяет, является ли библиотеку, предоставленным [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) интерфейс по-прежнему используется, или может быть выгружен.  
+Определяет, используется ли по-прежнему Библиотека, предоставленная интерфейсом [иклрдебуггинглибрарипровидер](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) , или она может быть выгружена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,26 +33,26 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
 ## <a name="parameters"></a>Параметры  
  `hmodule`  
- [in] Базовый адрес модуля в целевом процессе.  
+ окне Базовый адрес модуля в целевом процессе.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Модуль, на который ссылается `hmodule` может быть выгружен.|  
-|S_FALSE|Модуль, на который ссылается `hmodule` по-прежнему используется.|  
+|S_OK|Модуль, на который ссылается `hmodule`, можно выгрузить.|  
+|S_FALSE|Модуль, на который ссылается `hmodule`, по-прежнему используется.|  
 |COR_E_NOT_CLR|Указанный модуль не является модулем CLR.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- Этот метод проверяет все экземпляры `ICorDebug*` интерфейсы были выпущены и ни один поток не находится внутри вызова [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Этот метод проверяет, освобождаются ли все экземпляры `ICorDebug*` интерфейсов и нет ли потоков в вызове метода [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

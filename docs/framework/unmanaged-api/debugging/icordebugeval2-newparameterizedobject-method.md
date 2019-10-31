@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084845"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>Метод ICorDebugEval2::NewParameterizedObject
-Создает новый объект параметризованного типа и вызывает метод-конструктор объекта.  
+Создает новый объект параметризованного типа и вызывает метод конструктора объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,27 +39,27 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>Параметры  
  `pConstructor`  
- [in] Указатель на объект ICorDebugFunction, представляющий конструктор для создания экземпляра объекта.  
+ окне Указатель на объект ICorDebugFunction, представляющий конструктор объекта, для которого создается экземпляр.  
   
  `nTypeArgs`  
- [in] Передано число аргументов типа.  
+ окне Число переданных аргументов типа.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает на объект, представляющий аргумент типа для объекта, экземпляр которого создается ICorDebugType.  
+ окне Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент типа для объекта, для которого создается экземпляр.  
   
  `nArgs`  
- [in] Число аргументов, переданных в конструктор.  
+ окне Число аргументов, переданных конструктору.  
   
  `ppArgs`  
- [in] Массив указателей, каждый из которых указывает ICorDebugValue объект, представляющий значение аргумента, который передается в конструктор.  
+ окне Массив указателей, каждый из которых указывает на объект ICorDebugValue, представляющий значение аргумента, передаваемое конструктору.  
   
-## <a name="remarks"></a>Примечания  
- Конструктор объекта может занять <xref:System.Type> параметров.  
+## <a name="remarks"></a>Заметки  
+ Конструктор объекта может принимать <xref:System.Type> параметры.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

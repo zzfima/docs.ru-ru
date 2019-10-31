@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106236"
 ---
-# <a name="runtimeinfoflags-enumeration"></a>Перечисление RUNTIME_INFO_FLAGS
-Содержит значения, указывающие, какие сведения об общеязыковой среде выполнения (CLR) должны быть возвращены.  
+# <a name="runtime_info_flags-enumeration"></a>Перечисление RUNTIME_INFO_FLAGS
+Содержит значения, которые указывают, какие сведения о среде CLR должны быть возвращены.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,21 +41,21 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Указывает, что сведения о каталоге не будут включены.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Указывает, что сведения о версии не следует включать.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Указывает, что диалоговое окно ошибки, не должны быть видны в случае сбоя.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Указывает, что последствия вызова [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) функция флаг SEM_FAILCRITICALERRORS, следует переопределить. То есть диалоговое окно установки должен отображаться в случае сбоя, а не было подавлено.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Указывает запрос для получения сведений об AMD-64-совместимые версии среды выполнения.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Указывает запрос для получения сведений об IA-64-совместимые версии среды выполнения.|  
-|`RUNTIME_INFO_REQUEST_X86`|Указывает запрос для получения сведений об x86-совместимой версии среды выполнения.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Указывает, что сведения об обновлении версии должны быть включены.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Указывает, что сведения о каталоге не следует включать.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Указывает, что сведения о версии указывать не следует.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Указывает, что при сбое не должно отображаться диалоговое окно ошибки.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Указывает, что эффекты вызова функции [функцию SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) с флагом SEM_FAILCRITICALERRORS должны быть переопределены. То есть диалоговое окно установки должно отображаться при сбое, а не подавлено.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Указывает запрос сведений о версии среды выполнения, совместимой с AMD-64.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Указывает запрос сведений о версии среды выполнения, совместимой с IA-64.|  
+|`RUNTIME_INFO_REQUEST_X86`|Указывает запрос сведений о версии среды выполнения, совместимой с x86.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Указывает, что должны быть добавлены сведения об обновлении версии.|  
   
-## <a name="remarks"></a>Примечания  
- Далее перечислены флаги архитектуры платформы может быть указанного только один за другим и нельзя использовать вместе:  
+## <a name="remarks"></a>Заметки  
+ Следующие флаги архитектуры платформы могут быть указаны только один за раз и не могут быть объединены:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,11 +64,11 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

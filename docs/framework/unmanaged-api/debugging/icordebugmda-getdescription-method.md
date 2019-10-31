@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da57ecf0c153d902322798e1927c995a34cb93d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131447"
 ---
 # <a name="icordebugmdagetdescription-method"></a>Метод ICorDebugMDA::GetDescription
-Получает строку, содержащую описание управляемый помощник по отладке (MDA), представленный [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Возвращает строку, содержащую описание помощника по отладке управляемого кода (MDA), представленного [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +38,21 @@ HRESULT GetDescription (
   
 ## <a name="parameters"></a>Параметры  
  `cchName`  
- [in] Размер буфера строки, в которой будут храниться описание.  
+ окне Размер строкового буфера, в котором будет храниться описание.  
   
  `pcchName`  
- [out] Указатель на число возвращаемых байтов в буфере строк.  
+ заполняет Указатель на число байтов, возвращенных в буфере строк.  
   
  `szName`  
- [out] Буфер строки, содержащий описание MDA.  
+ заполняет Строковый буфер, содержащий описание MDA.  
   
-## <a name="remarks"></a>Примечания  
- Строка может быть нулевой длины.  
+## <a name="remarks"></a>Заметки  
+ Строка может иметь нулевую длину.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

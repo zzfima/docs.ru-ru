@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af9b87e83def5578ea38e94a4f69c657ac5f7c99
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120713"
 ---
 # <a name="com-wrappers"></a>Оболочки COM
 Модель COM имеет несколько важных отличий от объектной модели среды выполнения .NET:  
@@ -39,4 +37,4 @@ ms.locfileid: "68631438"
 - [Вызываемая оболочка времени выполнения](runtime-callable-wrapper.md)
 - [Вызываемая оболочка COM](com-callable-wrapper.md)
 - [Настройка стандартных оболочек в платформе .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Практическое руководство. Настройка вызываемых оболочек времени выполнения в платформе .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [Как настроить вызываемые оболочки времени выполнения в .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744643"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131871"
 ---
 # <a name="icordebugremotetarget-interface"></a>Интерфейс ICorDebugRemoteTarget
-Предоставляет методы, позволяющие разработчикам отлаживать приложения на основе Silverlight в среде CLR (CLR).  
+Предоставляет методы, позволяющие разработчикам выполнять отладку приложений на основе Silverlight в среде CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,17 +45,17 @@ interface ICorDebugRemoteTarget  : IUnknown
 |------------|-----------------|  
 |[Метод ICorDebugRemoteTarget::GetHostName](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Возвращает имя узла или IP-адрес удаленного компьютера.|  
   
-## <a name="remarks"></a>Примечания  
- Отладка в смешанном режиме (то есть управляемого и машинного кода) не поддерживается в Windows 95, Windows 98 или Windows ME или на платформах, отличных от — x86 (например, IA-64 и AMD64).  
+## <a name="remarks"></a>Заметки  
+ Отладка в смешанном режиме (управляемый и машинный код) не поддерживается в Windows 95, Windows 98 или Windows ME, а также на платформах, отличных от x86 (например, IA-64 и AMD64).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl  
+ **Заголовок:** CorDebug. idl  
   
- **Библиотека:** : CorGuids.lib  
+ **Библиотека:** : коргуидс. lib  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)  
+ **.NET Framework версии:** 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

@@ -8,21 +8,19 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115422"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<Элемент > Сровунобсерведтаскексцептионс
+# <a name="throwunobservedtaskexceptions-element"></a>\<Сровунобсерведтаскексцептионс > элемент
 Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Сровунобсерведтаскексцептионс >**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<сровунобсерведтаскексцептионс >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,13 +40,13 @@ ms.locfileid: "70252264"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |`false`|Не завершает выполняющийся процесс для исключения необработанной задачи. Это значение по умолчанию.|  
 |`true`|Завершает выполняющийся процесс для исключения необработанной задачи.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -58,20 +56,20 @@ ms.locfileid: "70252264"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
 |||  
   
-## <a name="remarks"></a>Примечания  
- Если исключение, связанное с объектом <xref:System.Threading.Tasks.Task> , не было замечено, <xref:System.Threading.Tasks.Task.Wait%2A> то операция отсутствует, родительский элемент <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> не присоединяется, а свойство не было прочитано, поэтому исключение задачи считается незамеченным.  
+## <a name="remarks"></a>Заметки  
+ Если не наблюдалось исключение, связанное с <xref:System.Threading.Tasks.Task>, то <xref:System.Threading.Tasks.Task.Wait%2A> операции нет, родительский элемент не присоединен, а свойство <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> не было считано, поэтому исключение задачи считается незамеченным.  
   
- В .NET Framework 4, по умолчанию, если <xref:System.Threading.Tasks.Task> исключение, для которого имеется незамеченная исключительная ошибка, уничтожается сборщиком мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем сбора мусора и финализации.  
+ В .NET Framework 4, по умолчанию, если <xref:System.Threading.Tasks.Task> с незамеченным исключением, выполняется сбор мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем сбора мусора и финализации.  
   
- Чтобы разработчикам было проще писать асинхронный код на основе задач, .NET Framework 4,5 изменяет это поведение по умолчанию для незамеченных исключений. Незамеченные исключения по-прежнему <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> вызывают событие, но по умолчанию процесс не завершается. Вместо этого исключение пропускается после возникновения события, независимо от того, отслеживает ли обработчик событий исключение.  
+ Чтобы разработчикам было проще писать асинхронный код на основе задач, .NET Framework 4,5 изменяет это поведение по умолчанию для незамеченных исключений. Незамеченные исключения по-прежнему вызывают событие <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, но по умолчанию процесс не завершается. Вместо этого исключение пропускается после возникновения события, независимо от того, отслеживает ли обработчик событий исключение.  
   
- В .NET Framework 4,5 можно использовать [ \<элемент > сровунобсерведтаскексцептионс](throwunobservedtaskexceptions-element.md) в файле конфигурации приложения, чтобы обеспечить поведение .NET Framework 4 для генерации исключения.  
+ В .NET Framework 4,5 можно использовать [элемент\<сровунобсерведтаскексцептионс >](throwunobservedtaskexceptions-element.md) в файле конфигурации приложения, чтобы обеспечить .NET Framework 4 действия создания исключения.  
   
  Можно также указать поведение исключения одним из следующих способов.  
   
-- Путем задания переменной `COMPlus_ThrowUnobservedTaskExceptions` среды (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Путем задания переменной среды `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
-- Задав в реестре значение DWORD Сровунобсерведтаскексцептионс = 1 в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Ключ NETFramework.  
+- Задав в реестре значение DWORD Сровунобсерведтаскексцептионс = 1 в\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft. Ключ NETFramework.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как включить создание исключений в задачах с помощью файла конфигурации приложения.  

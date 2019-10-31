@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 23bc251053dd27a7c5accb48ab4759ecdb79fe09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134308"
 ---
 # <a name="iassemblynameisequal-method"></a>Метод IAssemblyName::IsEqual
-Определяет, равен ли указанный объект [IAssemblyName](iassemblyname-interface.md) этому `IAssemblyName`объекту на основе указанных флагов сравнения.  
+Определяет, равен ли заданный объект [IAssemblyName](iassemblyname-interface.md) данному `IAssemblyName`на основе указанных флагов сравнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>Параметры  
  `pName`  
- окне Объект, с которым необходимо выполнить `IAssemblyName`сравнение. `IAssemblyName`  
+ окне Объект `IAssemblyName`, с которым сравнивается этот `IAssemblyName`.  
   
  `dwCmpFlags`  
  окне Побитовое сочетание значений [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) , влияющих на сравнение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

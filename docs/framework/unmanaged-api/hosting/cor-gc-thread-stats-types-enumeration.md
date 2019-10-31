@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63275aaa7ed1f63c4f100845d2cbe9e93fcd0bcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768017"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131247"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a>Перечисление COR_GC_THREAD_STATS_TYPES
-Указывает, статистика сборки мусора для потока.  
+# <a name="cor_gc_thread_stats_types-enumeration"></a>Перечисление COR_GC_THREAD_STATS_TYPES
+Указывает статистику сборки мусора для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,16 +32,16 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|Поток имеет байт, которые были переданы в последней сборке мусора.|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|Поток содержит байты, которые были повышены в последней сборке мусора.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** GCHost.idl GCHost.h  
+ **Заголовок:** Гчост. idl, Гчост. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

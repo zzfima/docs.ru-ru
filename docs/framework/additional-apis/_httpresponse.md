@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._HttpResponse Field
+title: Поле HttpWebRequest. _HttpResponse
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db56bce0832d3439309d58f85e455f63f339816e
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d993021ccb87ccafb5f6f2fc4c6c7c288288adae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301028"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120079"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse поля
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_поле HttpResponse
 
-`HttpWebRequest._HttpResponse` является <xref:System.Net.HttpWebResponse> содержащий сведения об ответе HTTP из HTTP-запроса. Это может быть `null` пока не будет получен ответ HTTP.
+`HttpWebRequest._HttpResponse` — это <xref:System.Net.HttpWebResponse>, содержащий сведения об ответе HTTP из HTTP-запроса. Это может быть `null` до получения ответа HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` Поле является внутренним и не предназначены для использования непосредственно в коде.
+> Поле `HttpWebRequest._HttpResponse` является внутренним и не предназначено для непосредственного использования в коде.
 > 
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого поля в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** Системы (в System.dll)
+**Сборка:** Система (в System. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

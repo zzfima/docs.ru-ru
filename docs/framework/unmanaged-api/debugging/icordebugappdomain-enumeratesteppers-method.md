@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3f3c4503-570e-44c1-ae6a-a3c6b840c732
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea2c72a91aaa09d1c2d0e0944b73beb9ea313d0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a736990188023031eb8df5a76dd16fcc289cfe20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134036"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>Метод ICorDebugAppDomain::EnumerateSteppers
-Возвращает перечислитель для всех активных средств организации пошагового режима в домене приложения.  
+Возвращает перечислитель для всех активных шагов в домене приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT EnumerateSteppers (
   
 ## <a name="parameters"></a>Параметры  
  `ppSteppers`  
- [out] Указатель на адрес объекта ICorDebugStepperEnum, который является перечислителем для всех активных средств организации пошагового режима в домене приложения.  
+ заполняет Указатель на адрес объекта Икордебугстепперенум, который является перечислителем для всех активных шагов в домене приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

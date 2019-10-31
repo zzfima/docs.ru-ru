@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a683f1531ed28fbd8ef085414bb7cb365762ffde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3611684a17d51fc4fdba31dd4049540039b43e8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110520"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>Метод ICorDebugAppDomain::EnumerateBreakpoints
 Возвращает перечислитель для всех активных точек останова в домене приложения.  
@@ -37,15 +35,15 @@ HRESULT EnumerateBreakpoints (
   
 ## <a name="parameters"></a>Параметры  
  `ppBreakpoints`  
- [out] Указатель на адрес объекта ICorDebugBreakpointEnum, который является перечислителем для всех активных точек останова в домене приложения.  
+ заполняет Указатель на адрес объекта ICorDebugBreakpointEnum, который является перечислителем для всех активных точек останова в домене приложения.  
   
-## <a name="remarks"></a>Примечания  
- Перечислитель включает все типы точек останова, включая точки останова функции и точки останова по данным.  
+## <a name="remarks"></a>Заметки  
+ Перечислитель включает все типы точек останова, включая точки останова функции и точки останова в данных.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

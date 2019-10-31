@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095880"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>Метод ICorDebugObjectValue::GetFieldValue
-Получает значение указанного поля заданного класса для этого значения объекта.  
+Возвращает значение указанного поля указанного класса для данного значения объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +37,23 @@ HRESULT GetFieldValue (
   
 ## <a name="parameters"></a>Параметры  
  `pClass`  
- [in] Указатель на объект, представляющий класс, для которого необходимо получить значение поля «ICorDebugClass».  
+ окне Указатель на объект "ICorDebugClass", представляющий класс, для которого необходимо получить значение поля.  
   
  `fieldDef`  
- [in] `mdFieldDef` Маркер, который ссылается на метаданные, описывающие поле.  
+ окне Токен `mdFieldDef`, который ссылается на метаданные, описывающие поле.  
   
  `ppValue`  
- [out] Указатель на объект «ICorDebugValue», который представляет значение указанного поля.  
+ заполняет Указатель на объект "ICorDebugValue", представляющий значение указанного поля.  
   
-## <a name="remarks"></a>Примечания  
- Класс, заданный в `pClass` параметр, должен быть в иерархии значение объекта класса, а поле должно быть полем этого класса.  
+## <a name="remarks"></a>Заметки  
+ Класс, указанный в параметре `pClass`, должен находиться в иерархии класса значения объекта, а поле должно быть полем этого класса.  
   
- `GetFieldValue` Метод все равно заканчивается успешно для универсальных объектов и классов. Например если MyDictionary\<V > наследует из словаря\<string, V >, и значение объекта, которое имеет тип MyDictionary\<int32 >, передав `ICorDebugClass` объект словаря\<K, V > будет получить поля словаря\<string, int32 >.  
+ Метод `GetFieldValue` по-прежнему будет выполняться для универсальных объектов и универсальных классов. Например, если Мидиктионари\<V > наследуется из словаря\<String, V >, а значение объекта имеет тип Мидиктионари\<Int32 >, передача `ICorDebugClass`ного объекта для Dictionary\<K, V > успешно получит поле\<словаря String, Int32 >.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

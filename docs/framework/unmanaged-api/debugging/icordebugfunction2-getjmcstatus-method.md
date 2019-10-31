@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed2364c7c47aed1430a86aeee3daabf6b94cbf3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 360434fe6e08804d8c80c4ea36d585209cc6761a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137818"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>Метод ICorDebugFunction2::GetJMCStatus
-Получает значение, указывающее, отмечена ли функция, представляемая этим объектом ICorDebugFunction2 как пользовательский код.  
+Возвращает значение, указывающее, помечается ли функция, представленная этим объектом ICorDebugFunction2, как пользовательский код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetJMCStatus (
   
 ## <a name="parameters"></a>Параметры  
  `pbIsJustMyCode`  
- [out] Указатель на логическое значение, которое является `true`, если эта функция помечается как код пользователя; в противном случае значение равно `false`.  
+ заполняет Указатель на логическое значение, которое `true`, если эта функция помечена как пользовательский код; в противном случае значение равно `false`.  
   
-## <a name="remarks"></a>Примечания  
- Если функция, представленный данным `ICorDebugFunction2` невозможна, `pbIsJustMyCode` всегда будет `false`.  
+## <a name="remarks"></a>Заметки  
+ Если функция, представленная этим `ICorDebugFunction2`, не может быть отлажена, `pbIsJustMyCode` всегда будет `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

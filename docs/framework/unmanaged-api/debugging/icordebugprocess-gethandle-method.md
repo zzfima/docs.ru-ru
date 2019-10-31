@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f1dd892429724866182248b0c0413a7d2437cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4061580d59b0cf2a6e6e481d5242005e9452caf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128873"
 ---
 # <a name="icordebugprocessgethandle-method"></a>Метод ICorDebugProcess::GetHandle
-Получает дескриптор процесса.  
+Возвращает маркер процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +33,15 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
   
 ## <a name="parameters"></a>Параметры  
  `phProcessHandle`  
- [out] Указатель на `HPROCESS` это дескриптор процесса.  
+ заполняет Указатель на `HPROCESS`, который является обработчиком процесса.  
   
-## <a name="remarks"></a>Примечания  
- Полученный дескриптор принадлежит интерфейсу отладки. Отладчик должен его дубликаты перед его использованием.  
+## <a name="remarks"></a>Заметки  
+ Полученный обработчик принадлежит интерфейсу отладки. Отладчик должен дублировать этот обработчик перед его использованием.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

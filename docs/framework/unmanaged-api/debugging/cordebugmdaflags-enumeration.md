@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf9f7f3d3419efc9e1dc7d75fc7272432c0cf5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7af194351290ad937e40a2fc8b960c2c242629c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739691"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132795"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>Перечисление CorDebugMDAFlags
 Указывает состояние потока, по которому был вызван помощник по отладке управляемого кода.  
@@ -34,19 +32,19 @@ typedef enum CorDebugMDAFlags {
 } CorDebugMDAFlags;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|Поток, на котором был запущен MDA перенесена, так как был запущен MDA.|  
+|`MDA_FLAG_SLIP`|Поток, в котором был запущен MDA, был в запаздывания с момента запуска MDA.|  
   
-## <a name="remarks"></a>Примечания  
- Если стек вызовов больше не описывает, где изначально был вызван MDA, поток считается *спящий режим*. Это необычное обстоятельство при выполнении недопустимой операции при выходе из потока.  
+## <a name="remarks"></a>Заметки  
+ Если стек вызовов больше не описывает место первоначального создания MDA, обсуждение считается *, что он*находится в недоступном месте. Это необычное обстоятельство, вызванное выполнением недействительной операции потока при выходе.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugVariableHome::GetOffset
+title: 'Метод ICorDebugVariableHome:: методом offset'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125095"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>Метод ICorDebugVariableHome::GetOffset
-Получает смещение от базового регистра для переменной.  
+# <a name="icordebugvariablehomegetoffset-method"></a>Метод ICorDebugVariableHome:: методом offset
+Возвращает смещение от базового регистра для переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +35,20 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Параметры  
  `pOffset`  
- [out] Смещение от базового регистра.  
+ заполняет Смещение от базового регистра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения:  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
-|`S_OK`|Переменная находится в расположении памяти зависящий от регистра.|  
-|`E_FAIL`|Переменная не существует в расположении памяти зависящий от регистра.|  
+|`S_OK`|Переменная находится в расположении в памяти относительно регистра.|  
+|`E_FAIL`|Переменная не находится в расположении в памяти относительно регистра.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

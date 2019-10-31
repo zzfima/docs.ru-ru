@@ -2,14 +2,12 @@
 title: Измерение улучшения запуска с машинным кодом .NET
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927072"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128358"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Измерение улучшения запуска с машинным кодом .NET
 .NET Native значительно улучшает время запуска приложений. Это улучшение особенно заметно на портативных устройствах малой мощности, а также при сложных приложениях. Этот раздел поможет вам приступить к работе с основным инструментарием, который необходим для измерения данного улучшения запуска.  
@@ -47,7 +45,7 @@ ms.locfileid: "70927072"
   
 - Когда приложение завершило синхронизацию новых историй.  
   
- Инструментирование приложения — это просто: Просто вызовите соответствующий метод в производном классе. С помощью `AppEventSource` из предыдущего примера можно инструментировать приложение следующим образом:  
+ Инструментировать приложения очень просто: достаточно вызвать соответствующий метод в производном классе. С помощью `AppEventSource` из предыдущего примера можно инструментировать приложение следующим образом:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -65,7 +63,7 @@ ms.locfileid: "70927072"
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
 ```  
   
- где:  
+ Здесь:  
   
  `-KernelEvents:Process`  
  Указывает, что вам необходимо знать, когда процесс запускается и останавливается. Для приложения необходимо событие Process/Start, чтобы оно могло быть вычтено из времени других событий.  

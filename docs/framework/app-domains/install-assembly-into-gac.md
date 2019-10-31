@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. установку сборки в глобальный кэш сборок
+title: Практическое руководство. Установка сборки в глобальный кэш сборок
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972873"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119808"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Практическое руководство. установку сборки в глобальный кэш сборок
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Практическое руководство. Установка сборки в глобальный кэш сборок
 
 В глобальном кэше сборок сохраняются сборки, которые могут использоваться несколькими приложениями. Установите сборку в [глобальный кэш сборок](gac.md) с одним из следующих компонентов: 
 
@@ -26,13 +24,13 @@ ms.locfileid: "70972873"
 - [Средство глобального кэша сборок](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> В глобальный кэш сборок можно установить только сборки со строгими именами. Дополнительные сведения о создании сборки со строгим именем см. в разделе [Практическое руководство. Подписание сборки со строгим именем](../../standard/assembly/sign-strong-name.md).
+> В глобальный кэш сборок можно установить только сборки со строгими именами. Сведения о создании сборки со строгим именем см. [в разделе как подписать сборку строгим именем](../../standard/assembly/sign-strong-name.md).
 
-## <a name="windows-installer"></a>Установщик Windows
+## <a name="windows-installer"></a>установщик Windows
 
 [Установщик Windows](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache) — средство установки Windows, которое рекомендуется использовать для добавления сборок в GAC. Установщик Windows предоставляет возможность подсчета ссылок на сборки в GAC и другие дополнительные возможности. Создать пакет установщика для установщика Windows можно с помощью [расширения Wix Toolset для Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
 
-## <a name="global-assembly-cache-tool"></a>Средство глобального кэша сборок
+## <a name="global-assembly-cache-tool"></a>программа глобального кэша сборок
 
 [Служебную программу глобального кэша сборок .NET (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) можно использовать для добавления сборок в глобальный кэш сборок и для просмотра содержимого указанного кэша.
 
@@ -61,6 +59,6 @@ gacutil -i hello.dll
 ## <a name="see-also"></a>См. также
 
 - [Работа со сборками и глобальным кэшем сборок](working-with-assemblies-and-the-gac.md)
-- [Практическое руководство. Удаление сборки из глобального кэша сборок](how-to-remove-an-assembly-from-the-gac.md)
+- [Как удалить сборку из глобального кэша сборок](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil.exe (программа глобального кэша сборок)](../tools/gacutil-exe-gac-tool.md)
-- [Практическое руководство. Подписание сборки строгим именем](../../standard/assembly/sign-strong-name.md)
+- [Как подписать сборку строгим именем](../../standard/assembly/sign-strong-name.md)

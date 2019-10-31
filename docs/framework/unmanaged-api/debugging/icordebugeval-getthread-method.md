@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 24bc096a0ba01c58aa963d69fa46a1d1bbe8be75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6a7d9465a454175b58bb7b9566d31f3c65420610
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085061"
 ---
 # <a name="icordebugevalgetthread-method"></a>Метод ICorDebugEval::GetThread
-Получает поток, в котором эта оценка выполняется или будет выполняться.  
+Возвращает поток, в котором выполняется эта оценка или она будет выполнена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>Параметры  
  `ppThread`  
- [out] Указатель на адрес ICorDebugThread объект, представляющий поток.  
+ заполняет Указатель на адрес объекта ICorDebugThread, представляющего поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

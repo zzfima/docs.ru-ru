@@ -14,14 +14,12 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db360584dacf250be2f35e5e6666f8332b39a8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120649"
 ---
 # <a name="deletemethod-function"></a>Функция DeleteMethod
 Удаляет указанный метод из определения класса CIM.
@@ -47,28 +45,28 @@ HRESULT Delete (
 окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`  
-окне Имя метода, удаляемого из таблицы классов. `wszName`должен быть указателем на допустимый `LPCWSTR`объект.
+окне Имя метода, удаляемого из таблицы классов. `wszName` должен быть указателем на допустимый `LPCWSTR`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция создает оболочку для вызова метода [ивбемклассобжект::D елетемесод](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) .
 
 Удаление метода не поддерживается для [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указателей, указывающих на экземпляры CIM.
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

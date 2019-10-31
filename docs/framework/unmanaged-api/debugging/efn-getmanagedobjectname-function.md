@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7333f8f7b95655ac821e9a2977d5db3794486a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738995"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123005"
 ---
-# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName Function
-Получает имя типа с помощью предоставленного указателя управляемого объекта.  
+# <a name="_efn_getmanagedobjectname-function"></a>\_ЕФН\_функция Жетманажедобжектнаме
+Возвращает имя типа, используя предоставленный указатель управляемого объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,24 +37,24 @@ HRESULT _EFN_GetManagedObjectName(
   
 ## <a name="parameters"></a>Параметры  
  `Client`  
- [in] Указатель на клиент отладки.  
+ окне Указатель на клиент отладки.  
   
  `objAddr`  
- [in] Указатель на управляемый объект.  
+ окне Указатель на управляемый объект.  
   
  szName  
- [out] Имя типа.  
+ заполняет Имя типа.  
   
  `cbName`  
- [out] Доступное число символов в буфере строк.  
+ заполняет Число символов, доступных в буфере строк.  
   
-## <a name="remarks"></a>Примечания  
- Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает HRESULT SOS_E_NOMANAGEDCODE со значением сообщения 0xa0 и кодом ошибки 0x1000.  
+## <a name="remarks"></a>Заметки  
+ Если в текущем потоке нет управляемого кода, функция возвращает HRESULT SOS_E_NOMANAGEDCODE с значением устройства 0x82 и кодом ошибки 0x1000.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** SOS_Stacktrace.h  
+ **Заголовок:** SOS_Stacktrace. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

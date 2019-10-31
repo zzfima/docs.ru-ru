@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6e5beabb5ac1b5a4b2a34ae8e18b7fad7c86504
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 390a29760c0f3680ca082561607ab678e8bd1e8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133009"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>Метод IHostTaskManager::ReverseEnterRuntime
 Уведомляет узел о том, что в среде CLR выполняется вызов из неуправляемого кода.  
@@ -37,7 +35,7 @@ HRESULT ReverseEnterRuntime ();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ReverseEnterRuntime`успешно возвращено.|  
+|S_OK|`ReverseEnterRuntime` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
@@ -45,18 +43,18 @@ HRESULT ReverseEnterRuntime ();
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Недостаточно памяти для завершения запрошенного выделения ресурсов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если вызов среды CLR выполняется из последовательности, порожденной в управляемом коде, каждый вызов `ReverseEnterRuntime` соответствует вызову [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
-> Вызовы могут исходить из неуправляемого кода без вложения. В этом случае нет вызова [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [леаверунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) `ReverseLeaveRuntime`или, `ReverseEnterRuntime` а число вызовов не равно числу вызовов `ReverseLeaveRuntime`.  
+> Вызовы могут исходить из неуправляемого кода без вложения. В этом случае нет вызова [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [леаверунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)или `ReverseLeaveRuntime`, а количество вызовов `ReverseEnterRuntime` не равно числу вызовов `ReverseLeaveRuntime`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

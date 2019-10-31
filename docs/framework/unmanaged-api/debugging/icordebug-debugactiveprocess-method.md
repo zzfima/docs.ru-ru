@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe94203d315c32b62a191adf294a9c1310fe28e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b988b110100cd159b8e262573df409847d635c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134129"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>Метод ICorDebug::DebugActiveProcess
 Присоединяет отладчик к существующему процессу.  
@@ -39,21 +37,21 @@ HRESULT DebugActiveProcess (
   
 ## <a name="parameters"></a>Параметры  
  `id`  
- [in] Идентификатор процесса, к которому отладчик должен быть связан.  
+ окне Идентификатор процесса, к которому должен быть присоединен отладчик.  
   
  `win32Attach`  
- [in] Логическое значение, которое будет присвоено `true` Если отладчик должен вести себя как отладчик Win32 для процесса и отправки неуправляемых обратных вызовов; в противном случае `false`.  
+ окне Логическое значение, которое устанавливается в `true`, если отладчик должен вести себя в качестве отладчика Win32 для процесса и отправляют неуправляемые обратные вызовы. в противном случае `false`.  
   
  `ppProcess`  
- [out] Указатель на адрес объекта «ICorDebugProcess», представляющий процесс, к которому присоединен отладчик.  
+ заполняет Указатель на адрес объекта "ICorDebugProcess", который представляет процесс, к которому присоединен отладчик.  
   
-## <a name="remarks"></a>Примечания  
- Отладки взаимодействия не поддерживается в операционных системах Win9x и не — x86 платформ, таких как основе AMD64 и IA-64-разрядных платформах.  
+## <a name="remarks"></a>Заметки  
+ Отладка взаимодействия не поддерживается на платформах Win9x и на платформе, отличной от x86, например на платформах на основе IA-64 и AMD64.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

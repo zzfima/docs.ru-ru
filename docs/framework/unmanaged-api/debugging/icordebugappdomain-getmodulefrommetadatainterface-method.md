@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737903"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110349"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>Метод ICorDebugAppDomain::GetModuleFromMetaDataInterface
-Возвращает модуль, соответствующий данному интерфейсу метаданных.  
+Возвращает модуль, соответствующий заданному интерфейсу метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>Параметры  
  `pIMetaData`  
- [in] Указатель на объект, который является одним из [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ окне Указатель на объект, который является одним из [интерфейсов метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
   
  `ppModule`  
- [out] Указатель на адрес объекта ICorDebugModule, который представляет модуль, соответствующий данному интерфейсу метаданных.  
+ заполняет Указатель на адрес объекта ICorDebugModule, который представляет модуль, соответствующий заданному интерфейсу метаданных.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

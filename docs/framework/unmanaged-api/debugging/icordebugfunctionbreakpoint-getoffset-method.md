@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e619eae4-3ac3-4c37-bba4-55e59989b9cb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67e71002a78023ad6e8ef89c7a57d484a65aaeb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0e4bfb3f7adb0242456dfc3a4703ca56f118476
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138170"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>Метод ICorDebugFunctionBreakpoint::GetOffset
-Получает смещение точки останова в функции.  
+Возвращает смещение точки останова внутри функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetOffset (
   
 ## <a name="parameters"></a>Параметры  
  `pnOffset`  
- [out] Указатель на смещение точки останова.  
+ заполняет Указатель на смещение точки останова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

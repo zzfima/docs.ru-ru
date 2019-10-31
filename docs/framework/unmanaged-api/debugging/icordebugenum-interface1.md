@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931985"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085262"
 ---
 # <a name="icordebugenum-interface"></a>Интерфейс ICorDebugEnum
 
@@ -31,13 +29,13 @@ ms.locfileid: "69931985"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Создает копию этого `ICorDebugEnum` объекта.|  
+|[Метод Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Создает копию этого объекта `ICorDebugEnum`.|  
 |[Метод GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Возвращает число элементов в перечислении.|  
 |[Метод Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Перемещает курсор в начало перечисления.|  
 |[Метод Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Перемещает курсор вперед в перечислении на указанное число элементов.|  
   
-## <a name="remarks"></a>Примечания  
- Следующие перечислители являются производными `ICorDebugEnum`от:  
+## <a name="remarks"></a>Заметки  
+ Следующие перечислители являются производными от `ICorDebugEnum`:  
   
 - "Икордебугаппдомаиненум"  
   
@@ -85,11 +83,11 @@ ms.locfileid: "69931985"
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

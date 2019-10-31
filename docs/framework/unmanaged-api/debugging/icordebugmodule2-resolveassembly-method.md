@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994829"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125303"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>Метод ICorDebugModule2::ResolveAssembly
 
-Разрешает сборки, упоминаемой в заданным токеном метаданных.
+Разрешает сборку, на которую ссылается указанный токен метаданных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,20 +38,20 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Параметры
 
 `tkAssemblyRef`\
-[in] `mdToken` Значение, которое ссылается на сборку.
+окне Значение `mdToken`, которое ссылается на сборку.
 
 `ppAssembly`\
-[out] Указатель на адрес объекта ICorDebugAssembly, представляющий сборку.
+заполняет Указатель на адрес объекта ICorDebugAssembly, который представляет сборку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если сборка еще не загружен при `ResolveAssembly` вызывается HRESULT возвращается значение CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
+Если сборка еще не загружена при вызове `ResolveAssembly`, возвращается значение HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorDebug.idl, CorDebug.h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
 **Библиотека:** CorGuids.lib
 

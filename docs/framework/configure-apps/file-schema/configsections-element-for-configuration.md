@@ -7,21 +7,21 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119019"
 ---
-# <a name="configsections-element-for-configuration"></a>\<Элемент > configSections для \<> конфигурации
+# <a name="configsections-element-for-configuration"></a>Элемент > \<configSections для \<конфигурации >
 
 Содержит раздел конфигурации и объявления пространств имен.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<> configSections**
+&nbsp;&nbsp; **\<configSections >**
 
 ## <a name="attributes"></a>Атрибуты
 
@@ -37,14 +37,14 @@ ms.locfileid: "69927669"
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<раздел >** ](section-element.md) | Содержит объявление раздела конфигурации. |
+| [ **\<разделе >** ](section-element.md) | Содержит объявление раздела конфигурации. |
 | [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Удаляет предопределенный раздел или группу разделов. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Удаляет все ранее определенные разделы и группы разделов. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если этот элемент находится в файле конфигурации, он должен быть первым дочерним элементом  **\<элемента Configuration >** .
+Если этот элемент находится в файле конфигурации, он должен быть первым дочерним элементом элемента **конфигурации\<** .
 
 ## <a name="example"></a>Пример
 

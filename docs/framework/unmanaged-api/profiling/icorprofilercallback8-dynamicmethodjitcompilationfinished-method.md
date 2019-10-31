@@ -1,5 +1,5 @@
 ---
-title: Метод ICorProfilerCallback8::DynamicMethodJITCompilationFinished
+title: 'ICorProfilerCallback8: метод:D Инамикмесоджиткомпилатионфинишед'
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationFinished
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e04459614ca697908fb9b71ecc3931ac305a838
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758002"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136584"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>Метод ICorProfilerCallback8::DynamicMethodJITCompilationFinished
-[Поддерживается в .NET Framework 4.7 и более поздних версиях]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8: метод:D Инамикмесоджиткомпилатионфинишед
+[Поддерживается в .NET Framework 4,7 и более поздних версиях]  
   
-Уведомляет профилировщик, каждый раз, когда JIT-компиляция динамического метода завершения.  
+Уведомляет профилировщик о завершении JIT-компиляции динамического метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,26 +31,26 @@ HRESULT DynamicMethodJITCompilationFinished(
 ```  
   
 ## <a name="parameters"></a>Параметры  
-[in] `functionId`  
-Идентификатор функции в памяти, для которого JIT-компиляции запускается.   
+[входной] `functionId`  
+Идентификатор функции в памяти, для которой запускается JIT-компиляция.   
 
 [in] `hrStatus`   
-Значение, указывающее, успешно ли JIT-компиляции.
+Значение, указывающее, была ли JIT-компиляция успешной.
 
 [in] `fIsSafeToBlock`   
-`true` Чтобы указать, что блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; `false` для указания, что блокировка не повлияет на работу среды выполнения.  
+`true`, чтобы указать, что блокировка может привести к ожиданию средой выполнения вызывающего потока от этого обратного вызова. `false`, чтобы указать, что блокировка не повлияет на работу среды выполнения.  
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
 
-Этот обратный вызов активируется каждый раз, когда JIT-компиляция динамического метода завершения. Сюда входят различные заглушки IL и LCG методы. Его целью является предоставление модулей записи профилировщика достаточно информации для идентификации метода, скомпилированного для пользователей.
+Этот обратный вызов активируется каждый раз, когда JIT-компиляция динамического метода завершается. Сюда входят различные суррогаты IL и методы LCG. Его цель — предоставить средствам записи профилировщика достаточно информации для распознавания скомпилированного метода для пользователей.
 
 > [!NOTE]
-> `functionId` значения не может использоваться для разрешения на их токены метаданных, так как динамические методы имеют без метаданных.
+> `functionId` значения нельзя использовать для разрешения их маркеров метаданных, так как динамические методы не имеют метаданных.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

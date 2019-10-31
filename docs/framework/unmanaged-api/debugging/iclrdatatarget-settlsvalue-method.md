@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1425d48bb18d4161a1c96239b76b8315ae258705
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112784"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>Метод ICLRDataTarget::SetTLSValue
-Задает значение в локальном хранилище потока (TLS) заданного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
+Задает значение в локальном хранилище потока (TLS) указанного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +37,21 @@ HRESULT SetTLSValue (
   
 ## <a name="parameters"></a>Параметры  
  `threadID`  
- [in] Идентификатор потока в целевом процессе операционной системы.  
+ окне Идентификатор операционной системы потока в целевом процессе.  
   
  `index`  
- [in] Индекс расположения. Это значение должно быть допустимым индексом в локальном хранилище из указанного потока.  
+ окне Индекс расположения. Это значение должно быть допустимым индексом в локальном хранилище указанного потока.  
   
  `value`  
- [in] Объект `CLRDATA_ADDRESS` значение, указывающее значение, помещаемое в заданном расположении TLS.  
+ окне Значение `CLRDATA_ADDRESS`, указывающее значение, помещаемое в заданное расположение TLS.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

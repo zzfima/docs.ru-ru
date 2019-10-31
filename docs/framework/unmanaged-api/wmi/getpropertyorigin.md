@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101850"
 ---
 # <a name="getpropertyorigin-function"></a>Функция GetPropertyOrigin
 
@@ -58,7 +56,7 @@ HRESULT GetPropertyOrigin (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найдено. |
@@ -66,19 +64,19 @@ HRESULT GetPropertyOrigin (
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жетпропертйоригин](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) .
 
 Поскольку класс может наследовать свойства от одного или нескольких базовых классов, разработчики часто хотят определить свойство, в котором определен определенный метод.
 
-Параметр не должен указывать на допустимый `BSTR` до `out` вызова функции, так как это параметр; Этот указатель не освобождается после возвращения функции. `pstrClassName`
+Перед вызовом функции параметр `pstrClassName` не должен указывать на допустимый `BSTR`, так как это параметр `out`; Этот указатель не освобождается после возвращения функции.
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils. idl
+**Заголовок:** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -26,14 +26,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f2576aa0d1cf6a4938c8b1c8ee7883251cc192d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046066"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130220"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Создание и компиляция исходного кода из графа CodeDOM
 Пространство имен <xref:System.CodeDom.Compiler> предоставляет интерфейсы для создания исходного кода из графов объекта CodeDOM и для управления компиляцией в поддерживаемых компиляторах. Поставщик кода может создавать исходный код на конкретном языке программирования, используя граф CodeDOM. Класс, производный от <xref:System.CodeDom.Compiler.CodeDomProvider>, обычно может предоставлять методы для создания и компиляции кода для языка, поддерживаемого поставщиком.  

@@ -1,17 +1,15 @@
 ---
-title: <Event>Элемент (.NET Native)
+title: Элемент <Event> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7fb0245c50677da0397ba9c4918f171dcb217ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128496"
 ---
-# <a name="event-element-net-native"></a>\<Элемент > события (.NET Native)
+# <a name="event-element-net-native"></a>Элемент > события \<(.NET Native)
 Применяет политику отражения среды выполнения к событию.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -35,18 +33,18 @@ ms.locfileid: "71049851"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*method_name*|Имя события. Тип события определяется родительским элементом [\<Type>](type-element-net-native.md) или [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый к этому типу политики для события. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,7 +53,7 @@ ms.locfileid: "71049851"
 |[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если политика события не определена явно, оно наследует политику среды выполнения своего родительского элемента.  
   
 ## <a name="see-also"></a>См. также

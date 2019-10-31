@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c26a2df3f73af5ebd1f8b735d7662bb23ba4228
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134167"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Метод ICLRDataTarget::ReadVirtual
 Считывает данные из указанного адреса виртуальной памяти в указанный буфер.  
@@ -41,21 +39,21 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] CLRDATA_ADDRESS, который хранит адрес виртуальной памяти.  
+ окне Объект CLRDATA_ADDRESS, в котором хранится адрес виртуальной памяти.  
   
  `buffer`  
- [out] Указатель на буфер, получающий данные.  
+ заполняет Указатель на буфер, который получает данные.  
   
  `bytesRequested`  
- [in] Длина буфера.  
+ окне Длина буфера.  
   
  `bytesRead`  
- [out] Указатель на число возвращаемых байтов.  
+ заполняет Указатель на число возвращаемых байтов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

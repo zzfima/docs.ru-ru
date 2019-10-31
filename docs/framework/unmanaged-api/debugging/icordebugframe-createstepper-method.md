@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd105a5cbdb857aaa902e60968ff1d94473259b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea2b24d37f56a5cb9e6b3dea0d666c8acc719dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754244"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091032"
 ---
 # <a name="icordebugframecreatestepper-method"></a>Метод ICorDebugFrame::CreateStepper
-Возвращает шаг, который позволяет отладчику осуществлять пошаговое выполнение операций по отношению к этой ICorDebugFrame.  
+Возвращает средство, позволяющее отладчику выполнять операции пошагового выполнения по отношению к этому ICorDebugFrame.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Параметры  
  `ppStepper`  
- [out] Указатель на адрес объекта ICorDebugStepper, которое позволяет отладчику осуществлять пошаговое выполнение операций относительно текущего кадра.  
+ заполняет Указатель на адрес объекта ICorDebugStepper, который позволяет отладчику выполнять операции пошагового выполнения по отношению к текущему кадру.  
   
-## <a name="remarks"></a>Примечания  
- Если кадр не активен, пошагового обычно нужно вернуть кадру до завершения этого шага.  
+## <a name="remarks"></a>Заметки  
+ Если кадр неактивен, объект средства Организации, как правило, должен вернуться к кадру до завершения этого шага.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

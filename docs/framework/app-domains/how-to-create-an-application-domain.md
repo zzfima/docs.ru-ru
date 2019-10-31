@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f42f85adf3e9b0874df6c0360bea25b07facc0d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 83bf0ad96b352ed5c015723dd89aee7913d2a88e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119885"
 ---
 # <a name="how-to-create-an-application-domain"></a>Практическое руководство. Создание домена приложения
 Хост-приложение CLR автоматически создает домены приложений в нужный момент. Но можно создать собственные домены приложений и загрузить их в те сборки, которыми требуется управлять отдельно. Кроме того, домены приложений можно создать из доменов, выполняющих код.  

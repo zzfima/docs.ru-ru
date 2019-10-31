@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetCurrentApartmentType function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6ecd2b49d6850a8fae25ddca54f855fdda2ccabb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120356"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Функция Жеткуррентапартменттипе
 Получает тип подразделения, в котором выполняется вызывающий объект.   
@@ -51,19 +49,19 @@ HRESULT GetCurrentApartmentType (
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `S_OK` | 0 | Функция успешно завершена. |
 | `E_FAIL` | 0x80000008 | Вызывающий объект не выполняется в апартаменте. |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [икомсреадингинфо:: жеткуррентапартменттипе](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

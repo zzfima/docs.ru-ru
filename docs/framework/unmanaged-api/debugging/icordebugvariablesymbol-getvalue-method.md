@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugVariableSymbol::GetValue
+title: 'Метод ICorDebugVariableSymbol:: GetValue'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120967"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>Метод ICorDebugVariableSymbol::GetValue
+# <a name="icordebugvariablesymbolgetvalue-method"></a>Метод ICorDebugVariableSymbol:: GetValue
 Возвращает значение переменной в виде массива байтов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,17 +44,17 @@ HRESULT GetValue(
  `pValue`  
  [out] Массив байтов, содержащий значение переменной.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

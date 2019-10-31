@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 505bba3bb5d08c13e29543c20df2daaebc863d12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77a0a8f58c11673a1958d837b4c3a21a05754c94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768003"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138321"
 ---
 # <a name="corbindtocurrentruntime-function"></a>Функция CorBindToCurrentRuntime
-Загружает общеязыковой среды выполнения (CLR) в процесс, используя сведения, хранящиеся в XML-файл. Формат XML-файла моделируется стандартного файла конфигурации приложения. Дополнительные сведения о файлах конфигурации см. в разделе [Схема файла конфигурации](../../../../docs/framework/configure-apps/file-schema/index.md).  
+Загружает среду CLR в процесс с использованием сведений о версии, хранящихся в XML-файле. Формат XML-файла моделируется после стандартного файла конфигурации приложения. Дополнительные сведения о файлах конфигурации см. в разделе [Схема файла конфигурации](../../../../docs/framework/configure-apps/file-schema/index.md).  
   
- Эта функция является устаревшим в .NET Framework 4. См. в разделе [загрузка среда CLR в процесс](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
+ Эта функция является устаревшей в .NET Framework 4. См. раздел [Загрузка среды CLR в процесс](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,27 +40,27 @@ HRESULT CorBindToCurrentRuntime (
   
 ## <a name="parameters"></a>Параметры  
  `pwszFileName`  
- [in] Имя файла конфигурации приложения, который указывает версию среды CLR для загрузки. Если имя файла не указано полное имя, предполагается, что он является в том же каталоге, что и исполняемый файл, вызывающий.  
+ окне Имя файла конфигурации приложения, указывающего версию среды CLR для загрузки. Если имя файла не указано полностью, предполагается, что он находится в том же каталоге, что и исполняемый объект, вызывающий вызов.  
   
- Версия среды выполнения необходимо загрузить описан в атрибуте версии [ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) элемент файла конфигурации.  
+ Версия загружаемой среды выполнения описывается атрибутом Version в элементе [\<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) файла конфигурации.  
   
- Если версия не указана или если `<requiredRuntime>` элемент не найден, загружается последняя версия среды CLR, которая установлена на компьютере.  
+ Если версия не указана или не удается найти элемент `<requiredRuntime>`, загружается последняя версия среды CLR, установленная на компьютере.  
   
  `rclsid`  
- [in] `CLSID` Компонентного класса, реализующий [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) или [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) интерфейс. Поддерживаемые значения: CLSID_CorRuntimeHost или CLSID_CLRRuntimeHost.  
+ окне `CLSID` компонентного класса, реализующего интерфейс [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) или [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Поддерживаемые значения: CLSID_CorRuntimeHost или CLSID_CLRRuntimeHost.  
   
  `riid`  
- [in] `IID` Интерфейса, для которого запрашивается. Поддерживаемые значения: IID_ICorRuntimeHost и IID_ICLRRuntimeHost.  
+ окне `IID` запрашиваемого интерфейса. Поддерживаемые значения: IID_ICorRuntimeHost или IID_ICLRRuntimeHost.  
   
  `ppv`  
- [out] Возвращаемый указатель интерфейса.  
+ заполняет Возвращаемый указатель интерфейса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

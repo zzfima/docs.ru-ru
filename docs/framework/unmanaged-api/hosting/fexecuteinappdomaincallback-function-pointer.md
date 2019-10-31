@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760250"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138178"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>Указатель функции FExecuteInAppDomainCallback
-Указывает на функцию, которая вызывается средой выполнения (CLR) для выполнения управляемого кода.  
+Указывает на функцию, которая вызывается средой CLR для выполнения управляемого кода.  
   
- Этот указатель функции был объявлен устаревшим в .NET Framework 4.  
+ Этот указатель функции является устаревшим в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +36,16 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>Параметры  
  `cookie`  
- [in] Указатель на непрозрачные памяти, выделенный вызывающим объектом, содержащей управляемый код, который будет выполнен.  
+ окне Указатель на непрозрачную память, выделенную вызывающим объектом, содержащую управляемый код для выполнения.  
   
- Вызывающий объект (CLR) управляет выделением и временем существования этой памяти. Это не памяти неуправляемой кучи среды CLR.  
+ Выделение и время существования этой памяти управляются вызывающим объектом (то есть средой CLR). Это не управляемая средой CLR память в куче.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** "Mscorwks.dll"  
+ **Библиотека:** MSCorWks. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

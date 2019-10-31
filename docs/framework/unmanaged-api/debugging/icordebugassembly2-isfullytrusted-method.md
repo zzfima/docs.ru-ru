@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bef51fe9df0f85659603c637f11ed4e856c8e01a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133950"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>Метод ICorDebugAssembly2::IsFullyTrusted
-Получает значение, указывающее ли были предоставлены сборке полное доверие системой безопасности среды выполнения.  
+Возвращает значение, указывающее, предоставлено ли сборке полное доверие системой безопасности среды выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT IsFullyTrusted(
   
 ## <a name="parameters"></a>Параметры  
  `pbFullyTrusted`  
- [out] `true` Если были предоставлены сборке полное доверие, система безопасности среды выполнения; в противном случае `false`.  
+ [out] `true`, если сборке было предоставлено полное доверие системой безопасности среды выполнения; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод возвращает значение HRESULT CORDBG_E_NOTREADY, если политика безопасности для сборки еще не разрешены, то есть если код не в сборке еще не выполнялся.  
+## <a name="remarks"></a>Заметки  
+ Этот метод возвращает значение HRESULT объекта CORDBG_E_NOTREADY, если политика безопасности для сборки еще не разрешена, то есть если в сборке еще не выполнялся код.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

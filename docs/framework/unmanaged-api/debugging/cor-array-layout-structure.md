@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274221"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099471"
 ---
 # <a name="cor_array_layout-structure"></a>Структура COR_ARRAY_LAYOUT
 Предоставляет сведения о расположении объекта массива в памяти.  
@@ -41,7 +39,7 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -54,17 +52,17 @@ typedef struct COR_ARRAY_LAYOUT {
 |`numRanks`|Число рангов в массиве.|  
 |`rankOffset`|Смещение, с которого начинается ранжирование.|  
   
-## <a name="remarks"></a>Примечания  
- `rankSize` Поле задает размер ранга в многомерном массиве. Точны также для одномерных массивов.  
+## <a name="remarks"></a>Заметки  
+ Поле `rankSize` задает размер ранжирования в многомерном массиве. Точны также для одномерных массивов.  
   
- Значение `numRanks` равно 1 для одномерного массива и `N` `N` многомерного массива измерений.  
+ Значение `numRanks` равно 1 для одномерного массива и `N` многомерного массива измерений `N`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

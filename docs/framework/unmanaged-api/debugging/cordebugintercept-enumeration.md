@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 148bc423a9497962ebfbc73faefcc799c6db6499
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 144bdb1b4e479c1e75f89911ad5002e2650e405d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739896"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098114"
 ---
 # <a name="cordebugintercept-enumeration"></a>Перечисление CorDebugIntercept
 Указывает типы кода, которые могут быть перехвачены (то есть типы, для которых возможно пошаговое выполнение).  
@@ -40,7 +38,7 @@ typedef enum CorDebugIntercept {
 } CorDebugIntercept;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -52,13 +50,13 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_INTERCEPTION`|Не используется.|  
 |`INTERCEPT_ALL`|Возможен перехват любого кода.|  
   
-## <a name="remarks"></a>Примечания  
- Используйте [ICorDebugStepper::SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) метод, чтобы установить те типы кода, которые могут быть перехвачены.  
+## <a name="remarks"></a>Заметки  
+ Используйте метод [ICorDebugStepper:: сетинтерцептмаск](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) , чтобы установить типы кода, которые могут быть перехвачены.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

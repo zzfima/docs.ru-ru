@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1ace501bf5de741ea110fe4d3bb4bc44843bf8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ca4542fe42fab0b5ff54b23b9492d3906698c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120619"
 ---
 # <a name="icordebugsteppersteprange-method"></a>Метод ICorDebugStepper::StepRange
-Принуждает ICorDebugStepper выполнить один шаг через содержащую и должны быть возвращены при достижении кода за последним из указанных диапазонов.  
+Приводит к тому, что данный ICorDebugStepper пошаговым путем через содержащий его поток и возвращает, когда он достигает кода, находящегося за последним из указанных диапазонов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,25 +37,25 @@ HRESULT StepRange (
   
 ## <a name="parameters"></a>Параметры  
  `bStepIn`  
- [in] Значение `true` на шаг с заходом в функцию, которая вызывается в потоке. Значение `false` на шаг с обходом функции.  
+ окне Задайте значение `true`, чтобы выполнить шаг с заходом в функцию, которая вызывается в потоке. Задайте для параметра значение `false`, чтобы выполнить шаг с обходом функции.  
   
  `ranges`  
- [in] Массив структур COR_DEBUG_STEP_RANGE, каждый из которых задает диапазон.  
+ окне Массив структур COR_DEBUG_STEP_RANGE, каждый из которых задает диапазон.  
   
  `cRangeCount`  
  [in] Размер массива `ranges`.  
   
-## <a name="remarks"></a>Примечания  
- `StepRange` Метод работает подобно [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) метода, за исключением того, что она не завершается до кода за пределами данного диапазона будет достигнут.  
+## <a name="remarks"></a>Заметки  
+ Метод `StepRange` работает так же, как метод [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) , за исключением того, что он не завершается до достижения кода за пределами заданного диапазона.  
   
- Это может быть более эффективным, чем пошаговое выполнение одной инструкции одновременно. Диапазоны задаются в виде списка пар смещения от начала несопоставимого кадра.  
+ Это может быть более эффективным, чем шаг с заходом по одной инструкции за раз. Диапазоны задаются в виде списка пар смещений от начала кадра средства Организации.  
   
- Диапазоны указываются относительно кода промежуточного языка MSIL Microsoft метода. Вызовите [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) с `false` вносить диапазоны машинному коду метода.  
+ Диапазоны задаются относительно кода промежуточного языка MSIL метода. Вызовите [ICorDebugStepper:: SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) с `false`, чтобы сделать диапазоны относительно машинного кода метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

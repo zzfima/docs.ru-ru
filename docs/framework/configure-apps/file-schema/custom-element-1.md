@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927504"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118834"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Настраиваемый элемент для Синглетагсектионхандлер
 
-Определяет параметры в разделе пользовательской конфигурации, который определяется по \<разделу > элементу и <xref:System.Configuration.SingleTagSectionHandler> использует класс.
+Определяет параметры в пользовательском разделе конфигурации, определяемом \<разделе > элемента и использующем класс <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; *\<sectionName >*
@@ -40,15 +40,15 @@ ms.locfileid: "69927504"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-None
+Отсутствуют
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Элемент > [ **\<** ](section-element.md) sectionName является пользовательским элементом, определяемым разделом > тегом в [ **\<элементе > configSections**](configsections-element-for-configuration.md) .  **\<** Система конфигурации возвращает <xref:System.Collections.IDictionary> объект при вызове метода <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+Элемент **\<sectionName >** — это пользовательский элемент, определяемый тегом [ **\<раздела >** ](section-element.md) в элементе [ **\<configSections >** ](configsections-element-for-configuration.md) . Система конфигурации возвращает объект <xref:System.Collections.IDictionary> при вызове <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Пример
 
-В следующем примере объявляется пользовательский элемент с именем  **\<самплесектион >** , который содержит <xref:System.Configuration.SingleTagSectionHandler> параметры, считанные классом:
+В следующем примере объявляется пользовательский элемент с именем **\<самплесектион >** , который содержит параметры, считанные классом <xref:System.Configuration.SingleTagSectionHandler>:
 
 ```xml
 <configuration>

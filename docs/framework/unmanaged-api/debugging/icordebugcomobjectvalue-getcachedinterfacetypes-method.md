@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7325e84d8fe4df9a31543426c6376d0941306fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 199f58456e64ccf7ef771d42d5c7d64b189cb670
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748451"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125502"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>Метод ICorDebugComObjectValue::GetCachedInterfaceTypes
-Предоставляет перечислитель для типов интерфейсов, что текущий объект был приведен к или использовать в качестве.  
+Предоставляет перечислитель для типов интерфейса, которые текущий объект приводят к типу или используются в качестве.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +33,17 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>Параметры  
  `bIInspectableOnly`  
- [in] Значение, указывающее, возвращает ли метод только интерфейсы среды выполнения Windows (`IInspectable` интерфейсы) или все интерфейсами COM в вызываемая оболочка времени выполнения (RCW) в кэше.  
+ окне Значение, указывающее, возвращает ли метод только среда выполнения Windows интерфейсы (интерфейсы`IInspectable`) или все COM-интерфейсы, кэшированные вызываемой оболочкой времени выполнения (RCW).  
   
  `ppInterfacesEnum`  
- [out] Указатель на адрес ICorDebugTypeEnum перечислителя, который предоставляет доступ к объектам ICorDebugType, представляющие типы кэшированных интерфейс отфильтрованы согласно `bIInspectableOnly`.  
+ заполняет Указатель на адрес перечислителя ICorDebugTypeEnum, который предоставляет доступ к объектам ICorDebugType, представляющим кэшированные типы интерфейсов, отфильтрованные в соответствии с `bIInspectableOnly`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

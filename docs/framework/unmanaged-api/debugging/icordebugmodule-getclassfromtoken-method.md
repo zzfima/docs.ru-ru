@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6da6fabc6632bea58b28a00f55d05f4c2cc5b46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 790999093f874a4d81dd5db74ef012b1d997a12f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109649"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>Метод ICorDebugModule::GetClassFromToken
-Возвращает класс, указанный токен метаданных.  
+Возвращает класс, указанный токеном метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Параметры  
  `typedef`  
- [in] `mdTypeDef` Токен метаданных, который ссылается на метаданные класса.  
+ окне Токен метаданных `mdTypeDef`, ссылающийся на метаданные класса.  
   
  `ppClass`  
- [out] Указатель на адрес объекта ICorDebugClass, представляющий класс.  
+ заполняет Указатель на адрес объекта ICorDebugClass, который представляет класс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

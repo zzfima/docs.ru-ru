@@ -11,14 +11,12 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c932587c13532e14c956f3ebd058ae41d30519dc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ff7c9d1593c8e75f9bcaeda6577c7cb941719749
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130196"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Практическое руководство. Создание класса с помощью CodeDOM
 В следующих процедурах демонстрируется создание и компиляция графа CodeDOM, который создает класс, содержащий два поля, три свойства, метод, конструктор и точку входа.  

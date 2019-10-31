@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c488ca3a77f2c2b2a40c6143989cd86adf071787
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 418ebb51df3f2d86011ee2e77022c3ee5c7ac0b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737427"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088238"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>Метод ICorDebugArrayValue::HasBaseIndicies
-Получает значение, указывающее, имеют ли все измерения массива базовый индекс ненулевое значение.  
+Возвращает значение, указывающее, имеют ли измерения данного массива базовый индекс, отличный от нуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT HasBaseIndicies (
   
 ## <a name="parameters"></a>Параметры  
  `pbHasBaseIndicies`  
- [out] Указатель на логическое значение, которое является `true` Если одно или несколько измерений этого `ICorDebugArrayValue` объект имеет базовый индекс ненулевое значение; в противном случае логическое значение равно `false`.  
+ заполняет Указатель на логическое значение, которое `true`, если одно или несколько измерений этого `ICorDebugArrayValue` объекта имеют базовый индекс, отличный от нуля; в противном случае логическое значение — `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

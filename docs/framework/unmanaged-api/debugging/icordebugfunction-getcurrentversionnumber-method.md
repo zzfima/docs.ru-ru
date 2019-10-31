@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be66e0e2c9aff788d1003878891b8d64d6353500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0530ba742a739003bfa33079ad75cb1e6f5f5e59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754694"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124023"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>Метод ICorDebugFunction::GetCurrentVersionNumber
-Получает номер версии последней правки, внесенной в функцию, представленный этим объектом ICorDebugFunction.  
+Возвращает номер версии последнего изменения, внесенного в функцию, представленную этим объектом ICorDebugFunction.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetCurrentVersionNumber (
   
 ## <a name="parameters"></a>Параметры  
  `pnCurrentVersion`  
- [out] Указатель на целочисленное значение, — это номер версии последней правки этой функции.  
+ заполняет Указатель на целочисленное значение, которое является номером версии последнего изменения, внесенного в эту функцию.  
   
-## <a name="remarks"></a>Примечания  
- Номер версии последней правки этой функции может быть больше, чем номер версии самой функции. Использовать [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) метод или [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) метод для извлечения номер версии функции.  
+## <a name="remarks"></a>Заметки  
+ Номер версии последнего изменения, внесенного в эту функцию, может быть больше номера версии самой функции. Для получения номера версии функции используйте метод [ICorDebugFunction2:: жетверсионнумбер](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) или метод [ICorDebugCode:: жетверсионнумбер](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

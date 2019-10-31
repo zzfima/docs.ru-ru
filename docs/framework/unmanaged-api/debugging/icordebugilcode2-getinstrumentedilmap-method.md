@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4197b018ea85402762a8591b40f3503c02af3974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dede4e5af702f1b86b430450db4a669c326c062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673139"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131063"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>Метод ICorDebugILCode2::GetInstrumentedILMap
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -41,22 +39,22 @@ HRESULT GetInstrumentedILMap(
  [в] Емкость хранилища массива `map`. Дополнительные сведения см. в разделе "Примечания".  
   
  pcMap  
- [out] Количество значений COR_IL_MAP, записанных в массив сопоставлений.  
+ заполняет Число значений COR_IL_MAP, записанных в массив сопоставлений.  
   
  map  
- [out] Массив значений COR_IL_MAP, которые предоставляют сведения о сопоставлении из промежуточного языка, инструментированного профилировщиком промежуточного языка исходного метода.  
+ заполняет Массив значений COR_IL_MAP, которые предоставляют сведения о сопоставлениях из инструментированного профилировщика IL с IL исходного метода.  
   
-## <a name="remarks"></a>Примечания  
- Если профилировщик устанавливает сопоставление, вызвав [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) метод, то отладчик может вызвать этот метод, чтобы извлечь сопоставление и использовать его при вычислении смещений промежуточного языка для стека трассировки и времени существования переменных.  
+## <a name="remarks"></a>Заметки  
+ Если профилировщик задает сопоставление путем вызова метода [ICorProfilerInfo:: сетилинструментедкодемап](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , отладчик может вызвать этот метод, чтобы получить сопоставление и использовать внутреннее сопоставление при вычислении смещений Il для трассировок стека и переменной. время существования.  
   
- Если `cMap` равно 0 и `pcMap` отличается от**null**, `pcMap` присваивается количество доступных значений COR_IL_MAP. Если значение `cMap` не равно 0, оно обозначает емкость хранилища массива `map`. При возвращении метода `map` содержит максимум элементов `cMap` элементов, и `pcMap` присваивается количество значений COR_IL_MAP, фактически записанных `map` массива.  
+ Если `cMap` имеет значение 0, а `pcMap` не равно**null**, для `pcMap` задается количество доступных значений COR_IL_MAP. Если значение `cMap` не равно 0, оно обозначает емкость хранилища массива `map`. Когда метод возвращает значение, `map` содержит максимум `cMap` элементов, а `pcMap` задает количество значений COR_IL_MAP, фактически записанных в массив `map`.  
   
  Если промежуточный язык не инструментирован или профилировщик не предоставил сопоставление, этот метод возвращает значение `S_OK` и присваивает `pcMap` значение 0.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
@@ -64,6 +62,6 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="see-also"></a>См. также
 
-- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorProfilerInfo:: Сетилинструментедкодемап](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [Интерфейс ICorDebugILCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

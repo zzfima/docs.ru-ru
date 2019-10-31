@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16caf02f-c71e-486c-90b0-f0e54357d8f0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75b28dafae2861a2d33363f95a46bf1abf4cda35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57d83d1f301cbfd43f8f553d9aef4beb3baf95f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131088"
 ---
 # <a name="icordebugilframecansetip-method"></a>Метод ICorDebugILFrame::CanSetIP
-Возвращает значение HRESULT, указывающее, является ли он безопасным задать указатель инструкций в указанное расположение смещения в коде Microsoft Intermediate Language (MSIL).  
+Возвращает значение HRESULT, указывающее, безопасно ли устанавливать указатель инструкции в указанном расположении смещения в коде на языке MSIL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT CanSetIP (
   
 ## <a name="parameters"></a>Параметры  
  `nOffset`  
- [in] Нужное значение указателя инструкций.  
+ окне Требуемый параметр для указателя инструкции.  
   
-## <a name="remarks"></a>Примечания  
- Используйте `CanSetIP` метод перед вызовом [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) метод. Если `CanSetIP` возвращает любой HRESULT, отличных от S_OK, можно по-прежнему вызывать `ICorDebugILFrame::SetIP`, но нет никакой гарантии, что отладчик продолжит выполнение отлаживаемого кода.  
+## <a name="remarks"></a>Заметки  
+ Используйте метод `CanSetIP` перед вызовом метода [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) . Если `CanSetIP` возвращает любое значение HRESULT, отличное от S_OK, вы по-прежнему можете вызывать `ICorDebugILFrame::SetIP`, но нет никакой гарантии, что отладчик продолжит безопасность и правильное выполнение отлаживаемого кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** H CorDebug.idl, CorDebug,  
+ **Заголовок:** CorDebug. idl, CorDebug, h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -1,17 +1,15 @@
 ---
-title: <Application>Элемент (.NET Native)
+title: Элемент <Application> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128519"
 ---
-# <a name="application-element-net-native"></a>\<Элемент > приложения (.NET Native)
+# <a name="application-element-net-native"></a>Элемент > приложения \<(.NET Native)
 Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения и применяет политику отражения среды выполнения ко всем программным элементам приложения.  
   
  Элемент \<Directives>  
@@ -52,7 +50,7 @@ ms.locfileid: "71049933"
   
 ## <a name="all-attributes"></a>Все атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр для этой политики, относящихся к типам в приложении. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
@@ -76,7 +74,7 @@ ms.locfileid: "71049933"
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент [\<Directives>](directives-element-net-native.md) может содержать ноль или один элемент `<Application>`. Несколько элементов `<Application>` в одном файле директив отражения не поддерживаются.  
   
  Элемент `<Application>` можно использовать одним из двух способов:  
@@ -87,7 +85,7 @@ ms.locfileid: "71049933"
   
 ## <a name="see-also"></a>См. также
 
-- [\<Элемент > библиотеки](library-element-net-native.md)
-- [\<Директивы > элемент](directives-element-net-native.md)
+- [Элемент > библиотеки \<](library-element-net-native.md)
+- [Директивы \<> Element](directives-element-net-native.md)
 - [Элементы директив среды выполнения](runtime-directive-elements.md)
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

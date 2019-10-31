@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d83f9c0b187ad8b2955bc12ff168e0c4f26b909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d5582b7a3df16db58ea0ed001dcbffcdcaab79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122453"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>Метод ICorDebugThread4::GetBlockingObjects
-Предоставляет перечисление упорядоченный [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) сведения о блокировании потока структуры, обеспечивающие.  
+Предоставляет упорядоченное перечисление структур [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) , которые предоставляют сведения о блокировке потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,23 +34,23 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Параметры  
  `ppBlockingObjectEnum`  
- [out] Указатель на перечисление упорядоченный [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры.  
+ заполняет Указатель на упорядоченное перечисление структур [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
-## <a name="remarks"></a>Примечания  
- Первый элемент в возвращаемом перечислении соответствует Первая структура, блокирующий поток. Второй элемент соответствует элементу блокировки, выдаваемое во время выполнения асинхронный вызов процедур (APC) при блокировке в первую и т. д.  
+## <a name="remarks"></a>Заметки  
+ Первый элемент в возвращенном перечислении соответствует первой структуре, блокирующей поток. Второй элемент соответствует блокирующему элементу, который обнаруживается при выполнении асинхронного вызова процедуры (APC) при блокировке в первом и т. д.  
   
- Перечисление является допустимым только в течение текущего синхронизированного состояния.  
+ Перечисление допустимо только в течение текущего синхронизированного состояния.  
   
- Этот метод должен вызываться, пока отлаживаемый объект находится в синхронизированном состоянии.  
+ Этот метод должен вызываться, когда отлаживаемый объект находится в синхронизированном состоянии.  
   
  Если `ppBlockingObjectEnum` не является допустимым указателем, результат не определен.  
   
- Если ошибку не удается определить поток заблокирован, метод возвращает значение HRESULT, указывающее на сбой; в противном случае возвращается значение S_OK.  
+ Если поток заблокирован и ошибка не может быть определена, метод возвращает значение HRESULT, указывающее на ошибку; в противном случае возвращается значение S_OK.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

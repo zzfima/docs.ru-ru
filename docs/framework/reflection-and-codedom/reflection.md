@@ -21,14 +21,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130053"
 ---
 # <a name="reflection-in-net"></a>Отражение в .NET
 
@@ -85,7 +83,7 @@ ms.locfileid: "71045880"
 |[Практическое руководство. Подключение делегата с помощью отражения](how-to-hook-up-a-delegate-using-reflection.md)|Объясняется, как создать делегат для метода и привязать его к событию. Также объясняется, как создать метод обработки событий во время выполнения с помощью <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Предоставление динамических методов и сборок](emitting-dynamic-methods-and-assemblies.md)|Объясняется, как создавать динамические сборки и динамические методы.|  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Справочники  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108218"
 ---
 # <a name="iassemblynamesetproperty-method"></a>Метод IAssemblyName::SetProperty
 Задает значение свойства, на которое ссылается указанный идентификатор свойства.  
@@ -42,15 +40,15 @@ HRESULT SetProperty (
  окне Уникальный идентификатор свойства, значение которого будет задано.  
   
  `pvProperty`  
- окне Значение, для которого задается свойство, `PropertyId`на которое ссылается.  
+ окне Значение, для которого задается свойство, на которое ссылается `PropertyId`.  
   
  `cbProperty`  
- окне Размер (в байтах `pvProperty`).  
+ окне Размер `pvProperty`в байтах.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

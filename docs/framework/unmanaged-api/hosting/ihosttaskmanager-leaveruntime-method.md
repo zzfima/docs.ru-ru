@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ac1c18d094deca50d461ef9ff0933a4f87176e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959041"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132992"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>Метод IHostTaskManager::LeaveRuntime
 Уведомляет основное приложение о том, что Текущая выполняемая задача собирается покинуть среду CLR, и введите неуправляемый код.  
@@ -46,7 +44,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`успешно возвращено.|  
+|S_OK|`LeaveRuntime` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
@@ -54,8 +52,8 @@ HRESULT LeaveRuntime (
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Недостаточно памяти для завершения запрошенного выделения.|  
   
-## <a name="remarks"></a>Примечания  
- Последовательности вызовов для и из неуправляемого кода могут быть вложенными. Например, приведенный `LeaveRuntime`ниже список описывает гипотетическую ситуацию, в которой последовательность вызовов, [IHostTaskManager:: реверсинтеррунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), и `IHostTaskManager::EnterRuntime` позволяет узлу определяет вложенные слои.  
+## <a name="remarks"></a>Заметки  
+ Последовательности вызовов для и из неуправляемого кода могут быть вложенными. Например, приведенный ниже список описывает гипотетическую ситуацию, в которой последовательность вызовов `LeaveRuntime`, [IHostTaskManager:: реверсинтеррунтиме](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)и `IHostTaskManager::EnterRuntime` позволяет узлу опознать вложенные слои.  
   
 |Действие|Вызов соответствующего метода|  
 |------------|-------------------------------|  
@@ -67,11 +65,11 @@ HRESULT LeaveRuntime (
 |Первая неуправляемая функция возвращает выполнение в программу Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

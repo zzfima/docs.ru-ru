@@ -1,17 +1,15 @@
 ---
-title: <MethodInstantiation>Элемент (.NET Native)
+title: Элемент <MethodInstantiation> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2c0354853e4725ba3e673fb9142c4a7a85d2121
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128328"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<Элемент > MethodInstantiation (.NET Native)
+# <a name="methodinstantiation-element-net-native"></a>Элемент \<MethodInstantiation > (.NET Native)
 Применяет политику отражения среды выполнения к сконструированному универсальному методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,30 +37,30 @@ ms.locfileid: "71049622"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*method_name*|Имя метода. Тип метода определяется родительским элементом [\<Type>](type-element-net-native.md) или [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Сигнатура атрибута  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*method_signature*|Определяет именованные параметры метода. При наличии нескольких параметров, они разделяются запятыми.|  
   
 ## <a name="arguments-attribute"></a>Атрибут аргументов  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*method_arguments*|Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми. Каждый аргумент должен содержать полное имя типа.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый к этому типу политики для метода. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -71,7 +69,7 @@ ms.locfileid: "71049622"
 |[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `<MethodInstantiation>`  переопределяет политику отражения среды выполнения его соответствующего открытого универсального метода.  
   
 ## <a name="see-also"></a>См. также

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 651b916a0e3ca178432094428611f9bcc8f0fd17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132418"
 ---
 # <a name="clr_debugging_version-structure"></a>Структура CLR_DEBUGGING_VERSION
 Определяет версию продукта среды CLR, предназначенную для отладки.  
@@ -39,7 +37,7 @@ typedef struct _CLR_DEBUGGING_VERSION
 } CLR_DEBUGGING_VERSION;
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -49,15 +47,15 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wBuild`|Номер сборки.|  
 |`wRevision`|Номер редакции.|  
   
-## <a name="remarks"></a>Примечания  
- Структура аналогична структуре COR_VERSION, однако `CLR_DEBUGGING_VERSION` структура предоставляет дополнительное поле версии структуры (`wStructVersion`). `CLR_DEBUGGING_VERSION` В настоящее время для этого поля необходимо задать значение 0.  
+## <a name="remarks"></a>Заметки  
+ Структура `CLR_DEBUGGING_VERSION` та же, что и структура COR_VERSION, однако структура `CLR_DEBUGGING_VERSION` предоставляет дополнительное поле версии структуры (`wStructVersion`). В настоящее время для этого поля необходимо задать значение 0.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl  
+ **Заголовок:** CorDebug. idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

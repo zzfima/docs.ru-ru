@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102458"
 ---
 # <a name="getobjecttext-function"></a>Функция GetObjectText
 Возвращает текстовое представление объекта в синтаксисе MOF (MOF).
@@ -48,23 +46,23 @@ HRESULT GetObjectText (
 окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
-окне Обычно 0. Если `WBEM_FLAG_NO_FLAVORS` задано значение (или 0x1), квалификаторы включаются без сведений о распространении или разновидности.
+окне Обычно 0. Если указано `WBEM_FLAG_NO_FLAVORS` (или 0x1), квалификаторы включаются без сведений о распространении или разновидности.
 
 `pstrObjectText`   
-заполняет Указатель на запись `null` в элементе. При возврате вновь выделенное `BSTR` значение, содержащее Синтаксис MOF для отображения объекта.  
+заполняет Указатель на `null` записи. При возврате вновь выделенное `BSTR`, содержащее Синтаксис MOF для отображения объекта.  
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жетобжекттекст](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) .
 
@@ -73,14 +71,14 @@ HRESULT GetObjectText (
 Для восстановления текста параметров метода используется следующий алгоритм:
 
 1. Параметры переупорядочиваются в порядке их значений идентификаторов.
-1. Параметры, заданные как `[in]` и `[out]` , объединяются в один параметр.
+1. Параметры, указанные как `[in]` и `[out]`, объединяются в один параметр.
  
-`pstrObjectText`должен быть указателем на объект `null` при вызове функции; он не должен указывать на строку, допустимую до вызова метода, так как указатель не будет освобожден.
+При вызове функции `pstrObjectText` должен быть указателем на `null`. Он не должен указывать на строку, допустимую до вызова метода, так как указатель не будет освобожден.
 
 ## <a name="requirements"></a>Требования  
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

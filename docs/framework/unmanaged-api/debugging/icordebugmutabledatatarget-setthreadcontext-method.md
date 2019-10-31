@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugMutableDataTarget::SetThreadContext
+title: 'Метод Икордебугмутабледататаржет:: SetThreadContext'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21a24b3ae3563db09f1f7e9229f388abf8de654c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 2c9e508c7a4059fee4e1cce6eb28e6de7b2fff6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132707"
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Метод ICorDebugMutableDataTarget::SetThreadContext
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>Метод Икордебугмутабледататаржет:: SetThreadContext
 Задает контекст (значения регистра) для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -32,15 +30,15 @@ HRESULT SetThreadContext(
  `pContext`  
  [in] Указатель на байты, которые требуется записать.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Метод `SetThreadContext` обновляет текущий контекст для потока, указанного аргументом `dwThreadID`, который задается операционной системой. Формат записи контекста определяется платформой, указанной в методе [ICorDebugDataTarget::-Platform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . В Windows это структура [контекста](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   

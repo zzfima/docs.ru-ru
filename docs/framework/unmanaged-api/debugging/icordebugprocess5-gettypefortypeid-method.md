@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767613"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121274"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>Метод ICorDebugProcess5::GetTypeForTypeID
 Преобразует идентификатор типа в значение ICorDebugType.  
@@ -38,18 +36,18 @@ HRESULT GetTypeForTypeID(
   
 ## <a name="parameters"></a>Параметры  
  `id`  
- [in] Идентификатор типа.  
+ окне Идентификатор типа.  
   
  `ppType`  
- [out] Указатель на адрес объекта ICorDebugType.  
+ заполняет Указатель на адрес объекта ICorDebugType.  
   
-## <a name="remarks"></a>Примечания  
- В некоторых случаях методы, возвращающие идентификатор типа могут вернуть значение null `COR_TYPEID` значение. Если это значение передается как `id` аргумент, `GetTypeForTypeID` метод завершится ошибкой и вернет `E_FAIL`.  
+## <a name="remarks"></a>Заметки  
+ В некоторых случаях методы, возвращающие идентификатор типа, могут возвращать значение NULL `COR_TYPEID`. Если это значение передается в качестве аргумента `id`, метод `GetTypeForTypeID` завершится ошибкой и возвратит `E_FAIL`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

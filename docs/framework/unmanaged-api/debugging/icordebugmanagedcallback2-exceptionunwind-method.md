@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 875125185e9af74b85a833d04539403f81badf8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fa317e1217ac0a9ca46bfeb312446534b1fca63a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131563"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Метод ICorDebugManagedCallback2::ExceptionUnwind
 Предоставляет уведомление о состоянии во время процесса очистки исключения.  
@@ -40,26 +38,26 @@ HRESULT ExceptionUnwind (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий поток, на котором возникло исключение.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий поток, в котором было создано исключение.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, на котором возникло исключение.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором было создано исключение.  
   
  `dwEventType`  
- [in] Значение перечисления CorDebugExceptionUnwindCallbackType, указывающий событие, о котором функцией обратного вызова, во время фазы перемотки.  
+ окне Значение перечисления Кордебужексцептионунвиндкаллбакктипе, указывающее событие, сигнальное функцией обратного вызова на этапе очистки.  
   
  `dwFlags`  
- [in] Значение [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) перечисление, содержащее дополнительные сведения об исключении.  
+ окне Значение перечисления [кордебужексцептионфлагс](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , которое указывает дополнительные сведения об исключении.  
   
-## <a name="remarks"></a>Примечания  
- `ExceptionUnwind` вызывается в различных точках во время фазы перемотки процесса обработки исключений. `ExceptionUnwind` может быть вызван несколько раз во время одного исключения.  
+## <a name="remarks"></a>Заметки  
+ `ExceptionUnwind` вызывается в различных точках на этапе очистки процесса обработки исключений. `ExceptionUnwind` можно вызывать более одного раза при очистке одного исключения.  
   
- Если `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, указатель инструкции появится во фрейме конечного потока в точке последовательности (это может быть несколько перед) инструкцией, вызвавшей исключение.  
+ Если `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, указатель инструкции будет находиться в конечном кадре потока в точке следования до (это может быть несколько инструкций до) инструкции, которая привела к исключению.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -1,17 +1,15 @@
 ---
-title: <Type>Элемент (.NET Native)
+title: Элемент <Type> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049154"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091858"
 ---
-# <a name="type-element-net-native"></a>\<Элемент > типа (.NET Native)
+# <a name="type-element-net-native"></a>Элемент > типа \<(.NET Native)
 
 Применяет политику выполнения для конкретного типа, например класса или структуры.
 
@@ -53,13 +51,13 @@ ms.locfileid: "71049154"
 
 ## <a name="name-attribute"></a>Name - атрибут
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |*type_name*|Имя типа. Если этот элемент `<Type>` является дочерним элементом [\<Namespace>](namespace-element-net-native.md) или другого элемента `<Type>`, то атрибут *type_name* может содержать имя типа без его пространства имен. В противном случае атрибут *type_name* должен содержать полное имя типа.|
 
 ## <a name="all-other-attributes"></a>Все остальные атрибуты
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|
 
@@ -90,7 +88,7 @@ ms.locfileid: "71049154"
 |`<Type>`|Применяет политику отражения к типу и всем его членам.|
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Атрибуты отражения, сериализации и взаимодействия являются необязательными. Если таковые отсутствуют, элемент `<Type>` служит в качестве контейнера, чьи дочерние типы определяют политику для отдельных элементов.
 
@@ -102,11 +100,11 @@ ms.locfileid: "71049154"
 
 ## <a name="example"></a>Пример
 
-В следующем примере отражение используется для отображения сведений о полях, свойствах и методах класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Переменная `b` в примере <xref:Windows.UI.Xaml.Controls.TextBlock> является элементом управления. Так как просто извлекаются сведения о типе, доступность метаданных определяется параметром политики `Browse`.
+В следующем примере отражение используется для отображения сведений о полях, свойствах и методах класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Переменная `b` в примере является элементом управления <xref:Windows.UI.Xaml.Controls.TextBlock>. Так как просто извлекаются сведения о типе, доступность метаданных определяется параметром политики `Browse`.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Так как метаданные для <xref:System.Collections.Generic.List%601> класса не включаются автоматически в цепочку инструментов .NET Native, в примере не отображаются сведения о запрашиваемом элементе во время выполнения. Для обеспечения необходимыми метаданными, добавьте следующий элемент `<Type>` в файл директивы среды выполнения. Обратите внимание, что поскольку мы предоставляем родительский элемент [<Namespace\>](namespace-element-net-native.md), нам не требуется указывать полное имя в элементе `<Type>`.
+ Поскольку метаданные для класса <xref:System.Collections.Generic.List%601> не включаются автоматически цепочкой инструментов .NET Native, в примере не отображаются сведения о запрашиваемом элементе во время выполнения. Для обеспечения необходимыми метаданными, добавьте следующий элемент `<Type>` в файл директивы среды выполнения. Обратите внимание, что поскольку мы предоставляем родительский элемент [<Namespace\>](namespace-element-net-native.md), нам не требуется указывать полное имя в элементе `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,11 +118,11 @@ ms.locfileid: "71049154"
 ```
 
 ## <a name="example"></a>Пример
- В следующем примере отражение используется для получения объекта <xref:System.Reflection.PropertyInfo>, представляющего свойство <xref:System.String.Chars%2A?displayProperty=nameWithType>. Затем он использует метод <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> для извлечения значения седьмого знака в строке и для отображения всех символов в строке. Переменная `b` в примере <xref:Windows.UI.Xaml.Controls.TextBlock> является элементом управления.
+ В следующем примере отражение используется для получения объекта <xref:System.Reflection.PropertyInfo>, представляющего свойство <xref:System.String.Chars%2A?displayProperty=nameWithType>. Затем он использует метод <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> для извлечения значения седьмого знака в строке и для отображения всех символов в строке. Переменная `b` в примере является элементом управления <xref:Windows.UI.Xaml.Controls.TextBlock>.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Поскольку метаданные для <xref:System.String> объекта недоступны, вызов <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> метода вызывает <xref:System.NullReferenceException> исключение во время выполнения при компиляции с помощью цепочки инструментов .NET Native. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<Type>` элемент в файл директив среды выполнения:
+ Поскольку метаданные для объекта <xref:System.String> недоступны, вызов метода <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> вызывает исключение <xref:System.NullReferenceException> во время выполнения при компиляции с помощью цепочки инструментов .NET Native. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<Type>` элемент в файл директив среды выполнения:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

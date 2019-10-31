@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31329a8674a9991a3f306eeff44ee3437ad64a5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123299"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>Метод IValidator::FormatEventInfo
-Получает сообщение об ошибке, соответствующее указанной ошибкой проверки.  
+Возвращает сообщение об ошибке, соответствующее указанной ошибке проверки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,25 +39,25 @@ HRESULT FormatEventInfo(
   
 ## <a name="parameters"></a>Параметры  
  `hVECode`  
- [in] Значение HRESULT, который был передан в обработчик ошибок проверки.  
+ окне Значение HRESULT, которое было передано обработчику ошибок проверки.  
   
  `Context`  
- [in] Объект `VEContext` экземпляр, содержащий контекстные сведения об ошибке проверки.  
+ окне Экземпляр `VEContext`, содержащий контекстные сведения об ошибке проверки.  
   
  `msg`  
- [in, out] Строка, содержащая сообщение об ошибке.  
+ [вход, выход] Строка, содержащая возвращенное сообщение об ошибке.  
   
  `ulMaxLength`  
- [in] Максимальная длина сообщения об ошибке.  
+ окне Максимальная длина сообщения об ошибке.  
   
  `psa`  
- [in] Безопасный массив, содержащий дополнительные параметры, описывающее ошибку.  
+ окне Защищенный массив, содержащий дополнительные параметры, описывающие ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** IValidator.idl в файле IValidator.h  
+ **Заголовок:** IValidator. idl, IValidator. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

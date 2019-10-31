@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b56ffab8fb6a9ef70b51421f9cdc5535111e527
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965361"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120485"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Метод ICLRRuntimeHost::ExecuteApplication
 Используется в сценариях развертывания ClickOnce на основе манифеста для указания приложения, которое должно быть активировано в новом домене. Дополнительные сведения об этих сценариях см. в разделе [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -45,13 +43,13 @@ HRESULT ExecuteApplication(
  окне Полное имя приложения, определенное для <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- окне Число строк, `ppwzManifestPaths` содержащихся в массиве.  
+ окне Число строк, содержащихся в массиве `ppwzManifestPaths`.  
   
  `ppwzManifestPaths`  
  [в] Необязательно. Массив строк, содержащий пути манифеста для приложения.  
   
  `dwActivationData`  
- окне Число строк, `ppwzActivationData` содержащихся в массиве.  
+ окне Число строк, содержащихся в массиве `ppwzActivationData`.  
   
  `ppwzActivationData`  
  [в] Необязательно. Массив строк, содержащий данные активации приложения, такие как часть строки запроса URL-адреса для приложений, развернутых через Интернет.  
@@ -63,27 +61,27 @@ HRESULT ExecuteApplication(
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`успешно возвращено.|  
+|S_OK|`ExecuteApplication` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- `ExecuteApplication`используется для активации приложений ClickOnce в только что созданном домене приложения.  
+## <a name="remarks"></a>Заметки  
+ `ExecuteApplication` используется для активации приложений ClickOnce в только что созданном домене приложения.  
   
- Параметру `pReturnValue` Output задается значение, возвращаемое приложением. Если для `pReturnValue` `ExecuteApplication` задано значение null, то не завершается ошибкой, но не возвращает значение.  
+ Параметру вывода `pReturnValue` присваивается значение, возвращаемое приложением. Если для `pReturnValue`указано значение null, `ExecuteApplication` не завершается ошибкой, но не возвращает значение.  
   
 > [!IMPORTANT]
-> Не вызывайте метод [метода Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) перед вызовом `ExecuteApplication` метода для активации приложения на основе манифеста. Если метод вызывается первым, вызов `ExecuteApplication` метода завершится ошибкой. `Start`  
+> Не вызывайте метод [метода Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) перед вызовом метода `ExecuteApplication` для активации приложения на основе манифеста. Если метод `Start` вызывается первым, вызов метода `ExecuteApplication` завершится ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -94,4 +92,4 @@ HRESULT ExecuteApplication(
 - <xref:System.ApplicationIdentity>
 - [Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [Метод SetAppDomainManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
-- [Пошаговое руководство: Загрузка сборок по требованию с помощью API развертывания ClickOnce с использованием конструктора](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Пошаговое руководство. Загрузка сборок по требованию с помощью API развертывания ClickOnce с использованием конструктора](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

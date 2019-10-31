@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767557"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129667"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Метод ICorDebugProcess5::EnumerateGCReferences
-Получает перечислитель для всех объектов, которые должны быть удалены сборщиком мусора в процессе.  
+Возвращает перечислитель для всех объектов, которые должны быть собраны в процессе сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>Параметры  
  `enumerateWeakReferences`  
- [in] Логическое значение, указывающее ли слабые ссылки, которые необходимо перечислить. Если `enumerateWeakReferences` — `true`, `ppEnum` перечислитель включает строгих ссылок и слабых ссылок. Если `enumerateWeakReferences` является `false`, перечислитель включает только строгих ссылок.  
+ окне Логическое значение, указывающее, будут ли также перечисляться слабые ссылки. Если `enumerateWeakReferences` `true`, перечислитель `ppEnum` включает как строгие ссылки, так и слабые ссылки. Если `enumerateWeakReferences` `false`, перечислитель включает только строгие ссылки.  
   
  `ppEnum`  
- [out] Указатель на адрес [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) то есть перечислитель для объектов мусора.  
+ заполняет Указатель на адрес [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , который является перечислителем для объектов, которые должны быть собраны в мусор.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод позволяет определить полную цепочку корня для любого управляемого объекта в процессе и может использоваться, чтобы определить, почему объект все еще существует.  
+## <a name="remarks"></a>Заметки  
+ Этот метод предоставляет способ определения полной цепочки корневых объектов для любого управляемого объекта в процессе и может использоваться для определения причины, по которой объект остается в рабочем состоянии.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

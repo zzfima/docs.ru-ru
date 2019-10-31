@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092037"
 ---
 # <a name="waitortimercallback-function-pointer"></a>Указатель функции WAITORTIMERCALLBACK
-Указывает на функцию, которая уведомляет основное приложение, дескриптор ожидания (<xref:System.Threading.WaitHandle>) был сигнал или истекло время ожидания.  
+Указывает на функцию, которая уведомляет основное приложение о том, что дескриптор ожидания (<xref:System.Threading.WaitHandle>) имеет либо сигнал, либо время ожидания.  
   
- Этот указатель функции был объявлен устаревшим в .NET Framework 4.  
+ Этот указатель функции является устаревшим в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Параметры  
  `lpParameter`  
- [in] Указатель на объект, содержащий сведения, определенные средой размещения.  
+ окне Указатель на объект, содержащий сведения, определенные узлом.  
   
  `TimerOrWaitFired`  
- [in] `true` Если дескриптор ожидания истекло, или `false` Если объект получил сигнал.  
+ [in] `true`, если истекло время ожидания дескриптора ожидания, или `false`, если он был сигнальным.  
   
-## <a name="remarks"></a>Примечания  
- Функция, которая `WAITORTIMERCALLBACK` точки — это функция обратного вызова и должны быть реализованы модулем записи ведущего приложения.  
+## <a name="remarks"></a>Заметки  
+ Функция, к которой `WAITORTIMERCALLBACK` Points, является функцией обратного вызова и должна быть реализована модулем записи размещающего приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** "Mscorwks.dll"  
+ **Библиотека:** MSCorWks. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

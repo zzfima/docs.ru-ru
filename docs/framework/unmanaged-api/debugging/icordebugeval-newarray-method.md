@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9597d05e46c2d41ab1f24a073c028561e944fb59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca0844e4d2b1cad65266d58c6cda74de203d1758
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137663"
 ---
 # <a name="icordebugevalnewarray-method"></a>Метод ICorDebugEval::NewArray
-Выделяет новый массив элементов указанного типа и измерений.  
+Выделяет новый массив указанного типа элемента и измерений.  
   
- Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) вместо этого.  
+ Этот метод является устаревшим в .NET Framework версии 2,0. Вместо этого используйте [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,28 +41,28 @@ HRESULT NewArray (
   
 ## <a name="parameters"></a>Параметры  
  `elementType`  
- [in] Значение перечисления CorElementType, показывающий тип элемента массива.  
+ окне Значение перечисления Корелементтипе, указывающее тип элемента массива.  
   
  `pElementClass`  
- [in] Указатель на объект ICorDebugClass, указывающий класс элемента. Это значение может иметь значение null, если тип элемента является типом-примитивом.  
+ окне Указатель на объект ICorDebugClass, указывающий класс элемента. Это значение может быть равно null, если тип элемента является типом-примитивом.  
   
  `rank`  
- [in] Число измерений массива. В .NET Framework 2.0 это значение должно быть 1.  
+ окне Число измерений массива. В .NET Framework 2,0 это значение должно быть равно 1.  
   
  `dims`  
- [in] Размер в байтах каждого измерения массива.  
+ окне Размер каждого измерения массива в байтах.  
   
  `lowBounds`  
- [в] Необязательно. Нижняя граница каждого измерения массива. Если это значение указано, для каждого измерения предполагается нижнюю границу, равную нулю.  
+ [в] Необязательно. Нижняя граница каждого измерения массива. Если это значение пропущено, для каждого измерения предполагается Нижняя граница, равная нулю.  
   
-## <a name="remarks"></a>Примечания  
- Массив всегда создается в домене приложения, в котором в настоящее время выполняется поток.  
+## <a name="remarks"></a>Заметки  
+ Массив всегда создается в домене приложения, в котором в данный момент выполняется поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.1, 1.0
+ **.NET Framework версии:** 1,1, 1,0

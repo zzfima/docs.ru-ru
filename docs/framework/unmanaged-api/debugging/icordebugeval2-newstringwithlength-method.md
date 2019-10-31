@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754425"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084784"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>Метод ICorDebugEval2::NewStringWithLength
-Создает строку указанной длины, с указанным содержимым.  
+Создает строку указанной длины с указанным содержимым.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>Параметры  
  `string`  
- [in] Указатель на строковое значение.  
+ окне Указатель на строковое значение.  
   
  `uiLength`  
- [in] Длина строки.  
+ окне Длина строки.  
   
-## <a name="remarks"></a>Примечания  
- Если в конце строки нуль-символ должен быть в управляемую строку, объект, вызывающий `NewStringWithLength` метода необходимо убедиться, что длина строки включает конечный символ null.  
+## <a name="remarks"></a>Заметки  
+ Если конечный нуль-символ строки должен быть в управляемой строке, вызывающий метод `NewStringWithLength` должен гарантировать, что длина строки включает замыкающий нуль-символ.  
   
- Строка всегда создается в домене приложения, в котором в настоящее время выполняется поток.  
+ Строка всегда создается в домене приложения, в котором в данный момент выполняется поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

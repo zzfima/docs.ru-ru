@@ -1,17 +1,15 @@
 ---
-title: <Field>Элемент (.NET Native)
+title: Элемент <Field> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128419"
 ---
-# <a name="field-element-net-native"></a>\<Элемент > поля (.NET Native)
+# <a name="field-element-net-native"></a>Элемент > \<поля (.NET Native)
 Применяет политику отражения среды выполнения к полю.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -37,18 +35,18 @@ ms.locfileid: "71049776"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*method_name*|Имя поля. Тип поля определяется родительским элементом [\<Type>](type-element-net-native.md) или [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый к этому типу политики для поля. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71049776"
 |[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если политика поля не определена явно, оно наследует политику среды выполнения своего родительского элемента.  
   
 ## <a name="see-also"></a>См. также

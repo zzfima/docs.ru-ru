@@ -15,14 +15,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b4d36cb04494b01f8864ec36639ab33339d4b087
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130086"
 ---
 # <a name="reflection-and-generic-types"></a>Отражение и универсальные типы
 <a name="top"></a> С точки зрения отражения различие между универсальным типом и обычным заключается в том, что с универсальным типом связан набор параметров типа (если это определение универсального типа) или аргументы типа (если это сконструированный тип). Универсальный метод отличается от обычного тем же.  
@@ -38,7 +36,7 @@ ms.locfileid: "71045922"
   
  Отражение предоставляет методы <xref:System.Type> и <xref:System.Reflection.MethodInfo>, которые позволяют получить доступ к массиву параметров типа и определить, представляет ли экземпляр <xref:System.Type> параметр типа или фактический тип.  
   
- Пример кода, демонстрирующего описанные здесь методы, см. в статье [Руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+ Пример кода, демонстрирующий описанные здесь методы, см. в статье [Практическое руководство. Изучение универсальных типов и создание их экземпляров с помощью отражения](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  В следующем обсуждении предполагается, что вы знакомы с терминологией универсальности, то есть понимаете различия между параметрами типа и аргументами, а также открытыми и закрытыми сконструированными типами. Дополнительные сведения см. в статье [Универсальные шаблоны](../../standard/generics/index.md).  
   
@@ -52,7 +50,7 @@ ms.locfileid: "71045922"
   
 - [Инварианты](#invariants)  
   
-- [Связанные разделы](#related_topics)  
+- [См. также](#related_topics)  
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>Это универсальный тип или метод?  
@@ -149,7 +147,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
+|[Практическое руководство. Изучение универсальных типов и создание их экземпляров с помощью отражения](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
 |[Универсальные шаблоны](../../standard/generics/index.md)|Описана универсальность и поддержка этой технологии в .NET Framework.|  
 |[Практическое руководство. Определение универсального типа с порождаемым отражением](how-to-define-a-generic-type-with-reflection-emit.md)|Показано использование порождения отражения для создания универсальных типов в динамических сборках.|  
 |[Просмотр сведений о типах](viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|

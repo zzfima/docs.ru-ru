@@ -9,20 +9,18 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117631"
 ---
-# <a name="developmentmode-element"></a>\<Элемент > developmentMode
+# <a name="developmentmode-element"></a>\<developmentMode > элемент
 Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,13 +40,13 @@ ms.locfileid: "70252697"
   
 ## <a name="developerinstallation-attribute"></a>Атрибут Девелоперинсталлатион  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |**true**|Выполняет поиск сборок в каталогах, заданных переменной среды DEVPATH.|  
 |**false**|Не выполняет поиск сборок в каталогах, заданных переменной среды DEVPATH. Это значение по умолчанию|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,7 +55,7 @@ ms.locfileid: "70252697"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Используйте этот параметр только во время разработки. Среда выполнения не проверяет версии сборок со строгими именами, найденных в DEVPATH. Он просто использует первую найденную сборку.  
   
 ## <a name="example"></a>Пример  
@@ -75,4 +73,4 @@ ms.locfileid: "70252697"
 
 - [Схема параметров среды выполнения](index.md)
 - [Схема файла конфигурации](../index.md)
-- [Практическое руководство. Обнаружение сборок с помощью функции DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Практическое руководство. Поиск сборок с помощью DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

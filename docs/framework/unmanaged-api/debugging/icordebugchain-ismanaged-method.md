@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123851"
 ---
 # <a name="icordebugchainismanaged-method"></a>Метод ICorDebugChain::IsManaged
-Получает значение, указывающее, выполняется ли эта цепочка управляемого кода.  
+Возвращает значение, указывающее, выполняется ли в этой цепочке управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Параметры  
  `pManaged`  
- [out] `true` Если эта цепочка работает под управлением управляемого кода; в противном случае `false`.  
+ [out] `true`, если в этой цепочке выполняется управляемый код; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

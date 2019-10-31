@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e59fda62-77d5-4e37-89cb-ce7ae4627975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b86828e01fb00b12feff2ed451793c240e16e240
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134379"
 ---
 # <a name="iassemblynamegetproperty-method"></a>Метод IAssemblyName::GetProperty
 Возвращает указатель на свойство, на которое ссылается указанный идентификатор свойства.  
@@ -45,12 +43,12 @@ HRESULT GetProperty (
  заполняет Возвращаемые данные свойства.  
   
  `pcbProperty`  
- [вход, выход] Размер (в байтах `pvProperty`).  
+ [вход, выход] Размер `pvProperty`в байтах.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

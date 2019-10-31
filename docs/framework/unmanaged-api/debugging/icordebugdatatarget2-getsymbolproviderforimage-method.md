@@ -2,14 +2,12 @@
 title: Метод ICorDebugDataTarget2::GetSymbolProviderForImage
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e5a6e70d5148756a5ed8d17c56577da920d1b69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64a35f65bc3c31e091e2d94260efb84f20abb795
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122108"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>Метод ICorDebugDataTarget2::GetSymbolProviderForImage
 Возвращает поставщика символов для модуля из базового адреса модуля.  
@@ -30,17 +28,17 @@ HRESULT GetSymbolProviderForImage(
  `ppSymProvider`  
  заполняет Указатель на адрес объекта [метод icordebugsymbolprovider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

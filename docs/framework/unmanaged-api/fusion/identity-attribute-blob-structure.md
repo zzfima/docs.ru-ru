@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108014"
 ---
 # <a name="identity_attribute_blob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
-Содержит сведения об отдельном атрибуте в сборке и состоит из трех `DWORD`элементов. Каждое `DWORD` из них является смещением в символьном буфере `CurrentIntoBuffer` , созданном методом интерфейса [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+Содержит сведения об одном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` является смещением в символьном буфере, созданном методом `CurrentIntoBuffer` интерфейса [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +36,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|Третье смещение в символьном буфере. Это расположение отмечает начало значения атрибута.|  
   
 ## <a name="sample"></a>Пример  
- В следующем примере показано несколько основных шагов, которые в итоге приводят к заполненной `IDENTITY_ATTRIBUTE_BLOB` структуре:  
+ В следующем примере показаны некоторые основные шаги, которые в итоге приводят к заполненной структуре `IDENTITY_ATTRIBUTE_BLOB`:  
   
 1. Получите [иреференцеидентити](ireferenceidentity-interface.md) для сборки.  
   
 2. Вызовите метод `IReferenceIdentity::EnumAttributes` и получите [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Создайте символьный буфер и приведите его как `IDENTITY_ATTRIBUTE_BLOB` структуру.  
+3. Создайте символьный буфер и приведите его в качестве структуры `IDENTITY_ATTRIBUTE_BLOB`.  
   
-4. Вызовите `IEnumIDENTITY_ATTRIBUTE`методинтерфейса. `CurrentIntoBuffer` Этот метод копирует атрибуты `Namespace`, `Name`и `Value` в буфер символов. Три смещения для этих строк станут доступными в `IDENTITY_ATTRIBUTE_BLOB` структуре.  
+4. Вызовите метод `CurrentIntoBuffer` интерфейса `IEnumIDENTITY_ATTRIBUTE`. Этот метод копирует атрибуты `Namespace`, `Name`и `Value` в символьный буфер. Три смещения для этих строк станут доступными в структуре `IDENTITY_ATTRIBUTE_BLOB`.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,7 +220,7 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Выполнение образца  
- C:\\> енумассембляттрибутес. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> Енумассембляттрибутес. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Пример полученных результатов  
  Culture = Neutral  
@@ -236,9 +234,9 @@ Exit:
  Версия = 2.0.0.0  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Изоляция. h  
+ **Заголовок:** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

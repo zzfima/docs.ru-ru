@@ -2,17 +2,15 @@
 title: Метод ISymUnmanagedWriter5::OpenMapTokensToSourceSpans
 ms.date: 03/30/2017
 ms.assetid: 93ad2517-b0dc-464c-8688-a58a30eda18d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82dc2ced988f7277c994eb9449e7c26efa5450b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 004e1ddae8a6c0262846422a2eeb4314a4c82f65
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121615"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>Метод ISymUnmanagedWriter5::OpenMapTokensToSourceSpans
-Откройте раздел специальные пользовательские данные для отправки сопоставления диапазона маркера к источнику данных в. Когда метод уже открыт, или наоборот, является ошибкой при открытии в этом разделе.  
+Откройте Специальный раздел настраиваемых данных, чтобы выдать сведения о сопоставлении диапазона от токена к источнику в. Открытие этого раздела, если метод уже открыт или наоборот, является ошибкой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -24,7 +22,7 @@ HRESULT OpenMapTokensToSourceSpans();
  Возвращает `HRESULT`.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

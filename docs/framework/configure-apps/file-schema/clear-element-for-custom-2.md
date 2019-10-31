@@ -1,5 +1,5 @@
 ---
-title: <clear>элемент для NameValueSectionHandler и DictionarySectionHandler
+title: элемент <clear> для NameValueSectionHandler и DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e27bb7e21baf2eb4990d0107db4aae1b5f9a7d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119073"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Очистка элемента > для NameValueSectionHandler и DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Clear > элемента для NameValueSectionHandler и DictionarySectionHandler
 
 Удаляет все ранее определенные параметры в разделе.
 
 [ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<очистить >**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,21 +38,21 @@ ms.locfileid: "69927710"
 
 |     | Описание |
 | --- | ------------|
-| [элемент  **>\<sectionName**](custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, <xref:System.Configuration.NameValueSectionHandler> использующих <xref:System.Configuration.DictionarySectionHandler> классы и. |
+| [ **\<sectionName >** Дерев](custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующих классы <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler>. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-None
+Отсутствуют
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-С помощью  **\<элемента clear >** можно удалить из приложения все параметры, которые были определены на более высоком уровне в иерархии файлов конфигурации.
+Можно использовать элемент **\<clear >** , чтобы удалить из приложения все параметры, которые были определены на более высоком уровне в иерархии файлов конфигурации.
 
 ## <a name="example"></a>Пример
 
-В этом примере определяются в файле конфигурации компьютера и файл конфигурации приложения и показано, как использовать **\<снимите>** элемент в файле конфигурации приложения для очистки разделов, определенных ранее в файл конфигурации компьютера.
+В этом примере определяется файл конфигурации компьютера и файл конфигурации приложения, а также демонстрируется использование элемента **\<clear >** в файле конфигурации приложения для очистки разделов, ранее определенных в файле конфигурации компьютера.
 
-Следующий код файла конфигурации компьютера объявляет раздел  **\<мисектион >** :
+В следующем коде файла конфигурации компьютера объявляется раздел **\<мисектион >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-Следующий код файла конфигурации приложения удаляет все параметры из  **\<мисектион >** . Приложение не может получить параметры, которые были объявлены в, в  **\<разделе мисектион >** файла конфигурации компьютера.
+Следующий код файла конфигурации приложения удаляет все параметры из **\<мисектион >** . Приложение не может получить параметры, которые были объявлены в, в разделе **\<мисектион >** файла конфигурации компьютера.
 
 ```xml
 <!-- Application configuration file -->

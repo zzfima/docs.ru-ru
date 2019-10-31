@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba0c2ea7733f098b7fac95f51b5eb16d083174e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779367"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131239"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>Перечисление EClrUnhandledException
 Описывает доступные параметры для управления исключениями, которые не обрабатываются в пользовательском коде.  
@@ -35,22 +33,22 @@ typedef enum {
 } EClrUnhandledException;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|Указывает, что используется поведение по умолчанию. Процесс завершен.|  
-|`eHostDeterminedPolicy`|Указывает, что среда CLR (CLR) не учитывает необработанные исключения и позволяет узлу определить дальнейшие действия.|  
+|`eRuntimeDeterminedPolicy`|Указывает, что происходит поведение по умолчанию. Процесс разорван.|  
+|`eHostDeterminedPolicy`|Указывает, что среда CLR не обрабатывает необработанные исключения и позволяет узлу определить дальнейшие действия.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы указать, что среда CLR аналогично поведению более ранних версий, используйте `eHostDeterminedPolicy` член.  
+## <a name="remarks"></a>Заметки  
+ Чтобы указать, что среда CLR работает как более ранние версии, используйте элемент `eHostDeterminedPolicy`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

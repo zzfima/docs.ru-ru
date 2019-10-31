@@ -8,27 +8,27 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94f7709f4bd273515d9fcdd727354ec579c46207
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7147173dc9f132fa2dd14d20526d59927a183bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927231"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115256"
 ---
-# <a name="section-element"></a>\<Элемент > раздела
+# <a name="section-element"></a>\<раздела > элемента
 
 Содержит объявление раздела конфигурации.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<раздел >**
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+раздел &nbsp;&nbsp;&nbsp;&nbsp; **\<**
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<раздел >**
+&nbsp; **&nbsp;&nbsp;** &nbsp;&nbsp;&nbsp;\<
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -53,25 +53,25 @@ ms.locfileid: "69927231"
 |                     | Описание |
 | ------------------- | ----------- |
 | **allowDefinition** | Указывает файл конфигурации, в котором может использоваться раздел. Необходимо использовать одно из следующих значений.<br><br>**Везде**<br>Позволяет использовать раздел в любом файле конфигурации. Это значение по умолчанию.<br>**MachineOnly**<br>Позволяет использовать раздел только в файле конфигурации компьютера (*Machine. config*).<br>**MachineToApplication**<br>Позволяет использовать раздел в файле конфигурации компьютера или файле конфигурации приложения. |
-| **allowLocation**   | Определяет, можно ли использовать раздел в  **\<элементе > расположения** . Необходимо использовать одно из следующих значений.<br><br>**true**<br>Позволяет использовать раздел в  **\<элементе > Location** . Это значение по умолчанию.<br>**false**<br>Не позволяет использовать раздел в  **\<элементе > Location** . |
+| **allowLocation**   | Определяет, можно ли использовать раздел в элементе **\<location >** . Необходимо использовать одно из следующих значений.<br><br>**true**<br>Позволяет использовать раздел в элементе **\<расположение >** . Это значение по умолчанию.<br>**false**<br>Не разрешает использование раздела в элементе **\<location >** . |
 
 ## <a name="parent-elements"></a>Родительские элементы
 
 |     | Описание |
 | --- | ----------- |
-| [элемент  **>\<configSections**](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
-| [элемент  **sectionGroup\<>** ](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
+| [ **\<configSections >** Дерев](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
+| [ **\<sectionGroup >** Дерев](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
 
 > [!NOTE]
-> Элемент Section > — это дочерний элемент либо  **\<> configSections >** , либо  **\<sectionGroup** , но не оба.  **\<**
+> **\<раздел >** является дочерним элементом либо **\<configSections >** , либо **\<sectionGroup >** , но не оба.
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-None
+Отсутствуют
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Объявление раздела конфигурации фактически определяет новый элемент для файла конфигурации. Новый элемент содержит параметры, которые обработчик раздела конфигурации (то есть класс, реализующий <xref:System.Configuration.IConfigurationSectionHandler> интерфейс) считывает. Атрибуты и дочерние элементы определяемого раздела зависят от обработчика раздела, используемого для чтения параметров.
+Объявление раздела конфигурации фактически определяет новый элемент для файла конфигурации. Новый элемент содержит параметры, которые выполняет обработчик раздела конфигурации (то есть класс, реализующий интерфейс <xref:System.Configuration.IConfigurationSectionHandler>). Атрибуты и дочерние элементы определяемого раздела зависят от обработчика раздела, используемого для чтения параметров.
 
 Объявление обработчика раздела конфигурации в файле *Machine. config* позволяет использовать раздел конфигурации в любом файле конфигурации приложения на этом компьютере, если в атрибуте **allowDefinition** не указано иное.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b964d58bddb174da38fc8988ec807fd3129b5fcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123825"
 ---
 # <a name="icordebugchaingetthread-method"></a>Метод ICorDebugChain::GetThread
-Получает часть физических обсуждение, на которое эта цепочка вызовов.  
+Возвращает физический поток, частью которого является эта цепочка вызовов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>Параметры  
  `ppThread`  
- [out] Указатель на объект, представляющий физическом потоке ICorDebugThread этой цепочке вызовов является частью.  
+ заполняет Указатель на объект ICorDebugThread, представляющий физический поток, частью которого является эта цепочка вызовов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

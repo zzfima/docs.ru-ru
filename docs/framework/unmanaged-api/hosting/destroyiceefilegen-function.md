@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab4560774edce49341c86dd9446e38701db7fa62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769831"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136506"
 ---
 # <a name="destroyiceefilegen-function"></a>Функция DestroyICeeFileGen
-Уничтожает [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) объекта.  
+Уничтожает объект [ицеефилежен](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,20 +38,20 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>Параметры  
  `ceeFileGen`  
- [in] `ICeeFileGen` Уничтожаемый объект.  
+ окне Объект `ICeeFileGen` для уничтожения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM.  
   
-## <a name="remarks"></a>Примечания  
- `DestroyICeeFileGen` Уничтожает `ICeeFileGen` объект, созданный [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) функции.  
+## <a name="remarks"></a>Заметки  
+ `DestroyICeeFileGen` уничтожает объект `ICeeFileGen`, созданный функцией [креатеицеефилежен](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ICeeFileGen.h  
+ **Заголовок:** Ицеефилежен. h  
   
- **Библиотека:** MSCorPE.dll  
+ **Библиотека:** Мскорпе. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

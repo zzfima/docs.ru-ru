@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b0d9259-dbe2-45bb-b34d-990f60c73424
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 595c39b56587150d0d8f9c3f8bdfcae4c075e4d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 848255d44ce8637182f18288d30151a3f0df0912
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092169"
 ---
 # <a name="iclrtaskmanagergetcurrenttasktype-method"></a>Метод ICLRTaskManager::GetCurrentTaskType
-Получает тип задачи, выполняемой в данный момент.  
+Возвращает тип выполняемой в данный момент задачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +35,14 @@ HRESULT GetCurrentTaskType(
   
 ## <a name="parameters"></a>Параметры  
  `pTaskType`  
- [out] Указатель на значение [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) перечисление, указывающее тип задачи, выполняемой в данный момент.  
+ заполняет Указатель на значение перечисления [етасктипе](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) , указывающее тип выполняемой в данный момент задачи.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

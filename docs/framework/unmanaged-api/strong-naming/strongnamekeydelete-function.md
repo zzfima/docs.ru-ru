@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d37f990241ae704abef55d863da0f40a31284837
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799022"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141594"
 ---
 # <a name="strongnamekeydelete-function"></a>Функция StrongNameKeyDelete
 
@@ -44,9 +42,9 @@ BOOLEAN StrongNameKeyDelete (
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true`При успешном завершении; в противном случае —. `false`
+`true` при успешном завершении; в противном случае `false`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Используйте функцию [StrongNameKeyInstall](strongnamekeyinstall-function.md) для импорта пары открытого и закрытого ключей в контейнер.
 
@@ -54,11 +52,11 @@ BOOLEAN StrongNameKeyDelete (
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** StrongName. h
+**Заголовок:** StrongName. h
 
-**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll
+**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

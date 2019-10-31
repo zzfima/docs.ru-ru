@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738467"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091150"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>Метод ICLRDataTarget2::AllocVirtual
-Вызывается службами доступа к данным среды выполнения (CLR) для выделения памяти в адресном пространстве данного целевого процесса.  
+Вызывается службами доступа к данным среды CLR для выделения памяти в адресном пространстве этого целевого процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,29 +39,29 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>Параметры  
  `addr`  
- [in] Объект `CLRDATA_ADDRESS` значение, указывающее запрошенный начальный адрес в памяти для выделения.  
+ окне Значение `CLRDATA_ADDRESS`, указывающее запрошенный начальный адрес выделяемой памяти.  
   
  `size`  
- [in] Размер в байтах, выделение памяти.  
+ окне Размер выделяемой памяти в байтах.  
   
  `typeFlags`  
- [in] Флаги, которые управляют распределением памяти. См. в разделе Win32 `VirtualAlloc` функции.  
+ окне Флаги, управляющие выделением памяти. См. функцию Win32 `VirtualAlloc`.  
   
  `protectFlags`  
- [in] Атрибуты защиты выделенную память. См. в разделе Win32 `VirtualAlloc` функции.  
+ окне Атрибуты защиты для выделенной памяти. См. функцию Win32 `VirtualAlloc`.  
   
  `virt`  
- [out] Указатель на `CLRDATA_ADDRESS` значение, указывающее фактический начальный адрес области памяти.  
+ заполняет Указатель на `CLRDATA_ADDRESS` значение, указывающее фактический начальный адрес выделенной памяти.  
   
-## <a name="remarks"></a>Примечания  
- `AllocVirtual` Метод служит в качестве логической программой-оболочкой для Win32 `VirtualAlloc` функции.  
+## <a name="remarks"></a>Заметки  
+ `AllocVirtual` метод служит логической оболочкой для функции Win32 `VirtualAlloc`.  
   
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

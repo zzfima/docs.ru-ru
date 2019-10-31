@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 197504cbb0dd66c0cf43dee718026fc63e918d60
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b95c96efeb666f25d04118aa8cb9b0da3a2e7924
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104165"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Функция StrongNameTokenFromPublicKey
 Получает маркер, представляющий открытый ключ. Маркер строгого имени — это сокращенная форма открытого ключа.  
@@ -48,28 +46,28 @@ BOOLEANStrongNameTokenFromPublicKey (
  окне Структура типа [публиккэйблоб](publickeyblob-structure.md) , содержащая открытую часть пары ключей, используемую для создания подписи строгого имени.  
   
  `cbPublicKeyBlob`  
- окне Размер (в байтах `pbPublicKeyBlob`).  
+ окне Размер `pbPublicKeyBlob`в байтах.  
   
  `ppbStrongNameToken`  
- заполняет Маркер строгого имени, соответствующий переданному `pbPublicKeyBlob`ключу. Среда CLR выделяет память, в которую возвращается маркер. Вызывающий объект должен освободить эту память с помощью функции [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
+ заполняет Маркер строгого имени, соответствующий ключу, переданному в `pbPublicKeyBlob`. Среда CLR выделяет память, в которую возвращается маркер. Вызывающий объект должен освободить эту память с помощью функции [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbStrongNameToken`  
  заполняет Размер возвращенного маркера строгого имени в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае —. `false`  
+ `true` при успешном завершении; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Маркер строгого имени — это сокращенная форма открытого ключа, используемая для экономии места при хранении ключевых сведений в метаданных. В частности, маркеры строгого имени используются в ссылках на сборки для ссылки на зависимую сборку.  
   
  Если функция `StrongNameTokenFromPublicKey` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку Mscoree. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку Mscoree. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

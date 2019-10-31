@@ -14,14 +14,12 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5097cfe43ae785461a1e2af1217bcbd5e8c4b79c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120289"
 ---
 # <a name="formatfromrawvalue-function"></a>Функция FormatFromRawValue
 Преобразует одно значение необработанных данных о производительности в указанный формат или делает это для двух значений, если преобразование формата зависит от времени. 
@@ -44,12 +42,12 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Параметры
 
 `dwCounterType`\
-окне Тип счетчика. Список типов счетчиков см. в разделе [типы счетчиков производительности WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`может быть любым типом счетчика `PERF_LARGE_RAW_FRACTION` , за исключением и. `PERF_LARGE_RAW_BASE` 
+окне Тип счетчика. Список типов счетчиков см. в разделе [типы счетчиков производительности WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` может быть любым типом счетчика, кроме `PERF_LARGE_RAW_FRACTION` и `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`\
 окне Формат, в который преобразуются необработанные данные производительности. Может принимать одно из следующих значений:
 
-|Константа  |Значение  |Описание |
+|Константа  |значения  |Описание |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Возвращает вычисленное значение в виде значения с плавающей запятой двойной точности. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Возвращает вычисленное значение как 64-разрядное целое число. |
@@ -57,7 +55,7 @@ int FormatFromRawValue (
 
 Одно из предыдущих значений можно ORed с помощью одного из следующих флагов масштабирования:
 
-|Константа  |Значение  |Описание |
+|Константа  |значения  |Описание |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Не применяйте коэффициенты масштабирования счетчика. |
 | `PDH_FMT_1000` | 0x00002000 | Умножьте окончательное значение на 1 000. | 
@@ -65,33 +63,33 @@ int FormatFromRawValue (
 `pTimeBase`\
 окне Указатель на базовую базу времени, если это необходимо для преобразования формата. Если для преобразования формата не требуется базовая информация времени, значение этого параметра игнорируется.
 
-`pRawValue1`\ [in] указатель на [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) структуру, представляющую необработанное значение производительности.
+`pRawValue1`\ [in] указатель на структуру [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) , которая представляет необработанное значение производительности.
 
 `pRawValue2`\
-окне Указатель на [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) структуру, представляющую второе необработанное значение производительности. Если второе необработанное значение производительности не требуется, этот параметр должен быть `null`равен.
+окне Указатель на структуру [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) , которая представляет второе необработанное значение производительности. Если второе необработанное значение производительности не требуется, этот параметр следует `null`.
 
 `pFmtValue`\
-заполняет Указатель на [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) структуру, получающую отформатированное значение производительности.
+заполняет Указатель на структуру [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) , которая получает отформатированное значение производительности.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Эта функция возвращает следующие значения:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | Вызов функции выполнен успешно. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Обязательный аргумент отсутствует или неверен. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Этот маркер не является допустимым объектом PDH. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов функции [форматфромраввалуе](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) .
 
 ## <a name="requirements"></a>Требования
 
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Библиотечная** Перфкаунтер. dll
+ **Библиотека:** Перфкаунтер. dll
 
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

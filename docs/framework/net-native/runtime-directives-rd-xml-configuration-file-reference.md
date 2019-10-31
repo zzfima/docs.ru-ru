@@ -2,14 +2,12 @@
 title: Ссылка на файл конфигурации директив среды выполнения (rd.xml)
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049141"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128126"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Ссылка на файл конфигурации директив среды выполнения (rd.xml)
 
@@ -42,26 +40,26 @@ ms.locfileid: "71049141"
 Для получения справочной информации выберите элементы из приведенной ниже структуры или см. раздел [Элементы директив среды выполнения](runtime-directive-elements.md). В следующей иерархии многоточие отмечает рекурсивную структуру. Информация в скобках указывает, является этот элемент необязательным или обязательным, и если он используется, сколько экземпляров (один или несколько) разрешено.
 
 [Директивы](directives-element-net-native.md) [1:1] [приложение](application-element-net-native.md) [0:1] [Сборка](assembly-element-net-native.md) [0: m] [пространство имен](namespace-element-net-native.md) [0: m]. . .
-[Тип](type-element-net-native.md) [0: M]. . .
+[Введите](type-element-net-native.md) [0: M]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Пространство имен](namespace-element-net-native.md) [0: M] [Пространство имен](namespace-element-net-native.md) [0: M]. . .
-[Тип](type-element-net-native.md) [0: M]. . .
+[Пространство имен](namespace-element-net-native.md) [0: m], [пространство имен](namespace-element-net-native.md) [0: m]. . .
+[Введите](type-element-net-native.md) [0: M]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Тип](type-element-net-native.md) [0: M] [Подтипы](subtypes-element-net-native.md) (подклассов содержащего типа) O:1 [Тип](type-element-net-native.md) [0: M]. . .
+[Введите](type-element-net-native.md) [0: m] [подтипы](subtypes-element-net-native.md) (подклассы содержащего типа) [O:1] [Type](type-element-net-native.md) [0: M]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (содержащий тип является атрибутом) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [Метод](method-element-net-native.md) [0: M] [Параметр](parameter-element-net-native.md) [0: M] [Typeparameter находится вне](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M] [Тип](type-element-net-native.md) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (вмещающий тип является атрибутом) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [метод](method-element-net-native.md) [0: m], [параметр](parameter-element-net-native.md) [0: m] [typeparameter находится вне](typeparameter-element-net-native.md) [0: m] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) ( сконструированный универсальный метод) [0: M] [свойство](property-element-net-native.md) [0: m] [поле](field-element-net-native.md) [0: m] [событие](event-element-net-native.md) [0: m] [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: m], [тип](type-element-net-native.md) [0: m]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Метод](method-element-net-native.md) [0: M] [Параметр](parameter-element-net-native.md) [0: M] [Typeparameter находится вне](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M] [Библиотека](library-element-net-native.md) [0: M] [Сборка](assembly-element-net-native.md) [0: M] [Пространство имен](namespace-element-net-native.md) [0: M]. . .
-[Тип](type-element-net-native.md) [0: M]. . .
+[Метод](method-element-net-native.md) [0: m] [параметр](parameter-element-net-native.md) [0: m] [typeparameter находится вне](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: m] [свойство](property-element-net-native.md) [0: m] [поле](field-element-net-native.md) [0: m], [событие](event-element-net-native.md) [0: m] [ Библиотека](library-element-net-native.md) [0: m] [Сборка](assembly-element-net-native.md) [0: m], [пространство имен](namespace-element-net-native.md) [0: m]. . .
+[Введите](type-element-net-native.md) [0: M]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Пространство имен](namespace-element-net-native.md) [0: M] [Пространство имен](namespace-element-net-native.md) [0: M]. . .
-[Тип](type-element-net-native.md) [0: M]. . .
+[Пространство имен](namespace-element-net-native.md) [0: m], [пространство имен](namespace-element-net-native.md) [0: m]. . .
+[Введите](type-element-net-native.md) [0: M]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Тип](type-element-net-native.md) [0: M] [Подтипы](subtypes-element-net-native.md) (подклассов содержащего типа) O:1 [Тип](type-element-net-native.md) [0: M]. . .
+[Введите](type-element-net-native.md) [0: m] [подтипы](subtypes-element-net-native.md) (подклассы содержащего типа) [O:1] [Type](type-element-net-native.md) [0: M]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (содержащий тип является атрибутом) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [Метод](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M] [Тип](type-element-net-native.md) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (вмещающий тип является атрибутом) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [метод](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: m] [свойство](property-element-net-native.md) [0: m], [поле](field-element-net-native.md) [0: m], [событие](event-element-net-native.md) [0 : M] [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: m], [Тип](type-element-net-native.md) [0: m]. . .
 [TypeInstantiation](typeinstantiation-element-net-native.md) (сконструированный универсальный тип) [0: M]. . .
-[Метод](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: M] [Свойство](property-element-net-native.md) [0: M] [Поле](field-element-net-native.md) [0: M] [Событие](event-element-net-native.md) [0: M]
+[Метод](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (сконструированный универсальный метод) [0: m] [свойство](property-element-net-native.md) [0: M] [поле](field-element-net-native.md) [0: m], [событие](event-element-net-native.md) [0: m]
 
 Элемент [Application](application-element-net-native.md) может не иметь атрибутов или иметь атрибуты политики, рассмотренные в разделе [Директивы и политика среды выполнения](#Directives).
 
@@ -92,43 +90,43 @@ ms.locfileid: "71049141"
 
 Элементы [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) и [Type](type-element-net-native.md) поддерживают следующие типы политик:
 
-- `Activate`. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.
+- `Activate` Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.
 
-- `Browse`. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.
+- `Browse` Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.
 
-- `Dynamic`. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.
+- `Dynamic` Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.
 
-- `Serialize`. Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек сторонних поставщиков, как сериализатор Newtonsoft JSON.
+- `Serialize` Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек сторонних поставщиков, как сериализатор Newtonsoft JSON.
 
-- `DataContractSerializer`. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer` Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer`. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer` Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer`. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer` Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`. Определяет политику для маршалинга ссылочных типов в WinRT и COM.
+- `MarshalObject` Определяет политику для маршалинга ссылочных типов в WinRT и COM.
 
-- `MarshalDelegate`. Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.
+- `MarshalDelegate` Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.
 
 - `MarshalStructure` . Определяет политику для маршалинга структуры в машинный код.
 
 Параметры, связанные с этими типами политики:
 
-- `All`. Включить политику для всех типов и членов, которые не удаляет цепочка инструментов.
+- `All` Включить политику для всех типов и членов, которые не удаляет цепочка инструментов.
 
-- `Auto`. Использовать поведение по умолчанию. (Отсутствие назначения политики эквивалентно установке политики `Auto`, если только эта политика не переопределяется, например, родительским элементом.)
+- `Auto` Использовать поведение по умолчанию. (Отсутствие назначения политики эквивалентно установке политики `Auto`, если только эта политика не переопределяется, например, родительским элементом.)
 
-- `Excluded`. Выключить политику для программного элемента.
+- `Excluded` Выключить политику для программного элемента.
 
-- `Public`. Включить политику для открытых типов и членов, если только цепочка средство не определяет, что элемент является необязательным и поэтому удаляет его. (В последнем случае необходимо использовать `Required Public` чтобы обеспечить сохранение элемента с возможностями отражения.)
+- `Public` Включить политику для открытых типов и членов, если только цепочка средство не определяет, что элемент является необязательным и поэтому удаляет его. (В последнем случае необходимо использовать `Required Public` чтобы обеспечить сохранение элемента с возможностями отражения.)
 
-- `PublicAndInternal`. Включить политику для открытых и внутренних типов и членов, если цепочка инструментов не удаляет их.
+- `PublicAndInternal` Включить политику для открытых и внутренних типов и членов, если цепочка инструментов не удаляет их.
 
-- `Required Public`. Требует, чтобы цепочка инструментов поддерживала открытые типы и члены, независимо то того, используются они или нет, и включала для них политику.
+- `Required Public` Требует, чтобы цепочка инструментов поддерживала открытые типы и члены, независимо то того, используются они или нет, и включала для них политику.
 
-- `Required PublicAndInternal`. Требует, чтобы цепочка инструментов поддерживала открытые и закрытые типы и члены, независимо то того, используются они или нет, и включала для них политику.
+- `Required PublicAndInternal` Требует, чтобы цепочка инструментов поддерживала открытые и закрытые типы и члены, независимо то того, используются они или нет, и включала для них политику.
 
-- `Required All`. Требует, чтобы цепочка инструментов поддерживала все типы и члены, независимо то того, используются они или нет, и включала для них политику.
+- `Required All` Требует, чтобы цепочка инструментов поддерживала все типы и члены, независимо то того, используются они или нет, и включала для них политику.
 
 Например, следующий файл директив среды выполнения определяет политику для всех типов и членов в сборке DataClasses.dll. Он включает отражение для сериализации все открытых свойств, обзор для всех типов и членов типа, активацию для всех типов (из-за атрибута `Dynamic` атрибут), а также отражение для всех открытых типов и членов.
 
@@ -405,7 +403,7 @@ ms.locfileid: "71049141"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Воздействие политик XmlSerializer, DataContractSerializer и DataContractJsonSerializer
 
-В `Serialize` <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> отличие от политики, которая предназначена для сериализаторов на основе отражения, политики, и используются для включения набора сериализаторов, известных цепочке инструментов .NET Native. <xref:System.Xml.Serialization.XmlSerializer> Эти сериализаторы не реализуются с помощью отражения, но наборы типов, которые могут быть сериализованы во время выполнения определяются так же, как типы, которые могут отражаться.
+В отличие от политики `Serialize`, которая предназначена для сериализаторов на основе отражения, политики <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> используются для включения набора сериализаторов, известных цепочке инструментов .NET Native. Эти сериализаторы не реализуются с помощью отражения, но наборы типов, которые могут быть сериализованы во время выполнения определяются так же, как типы, которые могут отражаться.
 
 Применение одной из этих политик для типа позволяет сериализовать тип с помощью соответствующего сериализатора. Все типы, которые обработчик сериализации может статически определить, как нуждающиеся в сериализации, будут также сериализуемыми.
 

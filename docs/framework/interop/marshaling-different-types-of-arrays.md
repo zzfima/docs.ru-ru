@@ -8,21 +8,19 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 1490171c4dd423baa3b6c5f5e00cf133c2584cae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151747"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124399"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Маршалинг различных типов массивов
 Массив является ссылочным типом в управляемом коде, содержащим один или несколько элементов одного и того же типа. Несмотря на то, что массивы являются ссылочными типами, они передаются в неуправляемые функции в виде параметров In. Это поведение не согласуется со способом передачи управляемых массивов в управляемые объекты в виде параметров In/Out. Подробнее см. в разделе [Копирование и закрепление](copying-and-pinning.md).  
   
  В таблице ниже перечислены параметры маршалинга для массивов и описывается их использование.  
   
-|Массив|Описание|  
+|Array|Описание|  
 |-----------|-----------------|  
 |Целые числа по значению.|Передает массив целых чисел в виде параметра In.|  
 |Целые числа по ссылке.|Передает массив целых чисел в виде параметра In/Out.|  

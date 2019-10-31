@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f968dad-0d09-47fb-bebc-94c39a0d16ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8471610008bee02c7cc4e7654b21d6aca5dcf53a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 22a6af61251942f068676daaee2bdfa868e32a97
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796284"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134554"
 ---
 # <a name="getappidauthority-function"></a>Функция GetAppIdAuthority
 Возвращает указатель на экземпляр [иаппидаусорити](iappidauthority-interface.md) , который управляет ключами для удостоверений приложений и ссылок.  
@@ -37,12 +35,12 @@ HRESULT GetAppIdAuthority (
   
 ## <a name="parameters"></a>Параметры  
  `ppIAppIdAuthority`  
- заполняет Возвращаемый `IAppIdAuthority` указатель.  
+ заполняет Возвращаемый указатель `IAppIdAuthority`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Изоляция. h  
+ **Заголовок:** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

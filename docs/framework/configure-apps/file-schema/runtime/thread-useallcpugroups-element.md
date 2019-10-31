@@ -2,21 +2,19 @@
 title: Элемент <Thread_UseAllCpuGroups>
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252277"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115399"
 ---
-# <a name="thread_useallcpugroups-element"></a>\<Элемент > Thread_UseAllCpuGroups
+# <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups > элемент
 
 Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
 
 ## <a name="syntax"></a>Синтаксис
@@ -38,14 +36,14 @@ ms.locfileid: "70252277"
 
 ## <a name="enabled-attribute"></a>Атрибут enabled
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |`false`|Среда выполнения не распределяет управляемые потоки между несколькими группами ЦП. Это значение по умолчанию.|
-|`true`|Среда выполнения распределяет управляемые потоки между несколькими группами ЦП, если компьютер имеет несколько групп ЦП, а [ \<элемент гккпуграуп >](gccpugroup-element.md) включен.|
+|`true`|Среда выполнения распределяет управляемые потоки между несколькими группами ЦП, если компьютер имеет несколько групп ЦП, а элемент [\<гккпуграуп >](gccpugroup-element.md) включен.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -54,9 +52,9 @@ ms.locfileid: "70252277"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если компьютер имеет несколько групп ЦП, включение этого элемента приводит к тому, что среда выполнения распределяет управляемые потоки по всем группам ЦП. Чтобы использовать эту функцию, необходимо также включить [ \<элемент гккпуграуп >](gccpugroup-element.md) , который расширяет сборку мусора на все группы ЦП и учитывает все ядра при создании и балансировке куч. Чтобы включить элемент [> гккпуграуп,необходимовключитьэлемент>gcServer.\<](gccpugroup-element.md) [ \<](gcserver-element.md) Если эти элементы не включены, включение `<Thread_UseAllCpuGroups>` элемента не оказывает никакого влияния.
+Если компьютер имеет несколько групп ЦП, включение этого элемента приводит к тому, что среда выполнения распределяет управляемые потоки по всем группам ЦП. Чтобы использовать эту функцию, необходимо также включить элемент [\<гккпуграуп >](gccpugroup-element.md) , который расширяет сбор мусора на все группы ЦП и учитывает все ядра при создании и балансировке куч. Чтобы включить элемент [\<гккпуграуп >](gccpugroup-element.md) , необходимо включить элемент [\<gcServer >](gcserver-element.md) . Если эти элементы не включены, включение элемента `<Thread_UseAllCpuGroups>` не оказывает никакого влияния.
 
 ## <a name="example"></a>Пример
 
@@ -76,4 +74,4 @@ ms.locfileid: "70252277"
 
 - [Схема параметров среды выполнения](index.md)
 - [Схема файла конфигурации](../index.md)
-- [\<Элемент > Гккпуграуп](gccpugroup-element.md)
+- [\<Гккпуграуп > элемент](gccpugroup-element.md)

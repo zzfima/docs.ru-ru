@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768453"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122037"
 ---
 # <a name="loadstringrcex-function"></a>Функция LoadStringRCEx
-Преобразовывает значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
+Преобразует значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,40 +41,40 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>Параметры  
  `lcid`  
- [in] Идентификатор языка и региональных параметров. Передайте значение -1 `lcid` использовать культуры по умолчанию.  
+ окне Идентификатор языка и региональных параметров. Pass-1 для `lcid` для использования языка и региональных параметров по умолчанию.  
   
  `iResourceID`  
- [in] Значение HRESULT.  
+ окне Значение HRESULT.  
   
  `szBuffer`  
- [out] Буфер, который содержит сообщение об ошибке после успешного завершения.  
+ заполняет Буфер, содержащий сообщение об ошибке после успешного завершения.  
   
  `iMax`  
- [in] Размер буфера сообщений ошибок.  
+ окне Размер буфера сообщений об ошибках.  
   
  `bQuiet`  
- [in] Игнорируется.  
+ окне Игнорируют.  
   
  `pcwchUsed`  
- [out] Указатель на длину сообщение об ошибке.  
+ заполняет Указатель на длину сообщения об ошибке.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо следующих значений.  
+ Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError. h, а также следующие значения.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`szBuffer` имеет значение null, или `iMax` равно нулю (0).|  
+|E_INVALIDARG|`szBuffer` имеет значение null или `iMax` равен нулю (0).|  
   
-## <a name="remarks"></a>Примечания  
- Если метод завершается успешно, `szBuffer` содержит пустую строку.  
+## <a name="remarks"></a>Заметки  
+ Если метод не завершается успешно, `szBuffer` содержит пустую строку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

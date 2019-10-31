@@ -10,14 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6ed7d25593f9dd5d5d01f8c06024dcf8acfcfea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 239b1a9f258f435e6dcca6e00cc20df5b5c01188
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916476"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097452"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Перечисление CorDebugRecordFormat
 Описывает формат данных в массиве байтов, который содержит информацию о событии отладки собственного исключения.  
@@ -31,25 +29,25 @@ typedef enum CorDebugRecordFormat {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|Данные представляют собой 32-разрядную запись Windows-исключения.|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Данные представляют собой 64-разрядную запись Windows-исключения.|  
   
-## <a name="remarks"></a>Примечания  
- Член `CorDebugRecordFormat` перечисления передается в метод [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) для указания формата массива байтов в его `pRecord` аргументе.  
+## <a name="remarks"></a>Заметки  
+ Член перечисления `CorDebugRecordFormat` передается методу [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) для указания формата массива байтов в его `pRecord` аргументе.  
   
 > [!NOTE]
 > Это перечисление предназначено для использования только в сценариях отладки .NET Native.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ed6344f9a37d246a551699c94046b8c2b473fd8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aff8fb0a2316817e413f10e82215556f1f54fbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762691"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109627"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>Метод ICorDebugModule::GetBaseAddress
-Получает базовый адрес модуля.  
+Возвращает базовый адрес модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetBaseAddress(
   
 ## <a name="parameters"></a>Параметры  
  `pAddress`  
- [out] Объект `CORDB_ADDRESS` , задающий базовый адрес модуля.  
+ заполняет `CORDB_ADDRESS`, указывающий базовый адрес модуля.  
   
-## <a name="remarks"></a>Примечания  
- Если модуль является собственным изображения (то есть, если модуль был создан генератором образов в машинном коде, NGen.exe), его базовый адрес будет равно нулю.  
+## <a name="remarks"></a>Заметки  
+ Если модуль является машинным образом (то есть, если модуль был создан генератором образов в машинном код, NGen. exe), его базовый адрес будет равен нулю.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137786"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Метод ICorDebugFunction2::SetJMCStatus
-Помечает функцию, представленный этой ICorDebugFunction2 только мой код пошагового выполнения.  
+Помечает функцию, представленную этим ICorDebugFunction2, для Только мой код пошагового выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Параметры  
  `bIsJustMyCode`  
- [in] Значение `true` пометить ее как код пользователя; в противном случае значение `false`.  
+ окне Задайте значение `true`, чтобы пометить функцию как пользовательский код; в противном случае задайте значение `false`.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|Функция был успешно помечен.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Функции не могут быть помечены как пользовательский код, поскольку он не может быть отлажен.|  
+|`S_OK`|Функция была успешно помечена.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Функция не может быть помечена как пользовательский код, так как ее отладка невозможна.|  
   
-## <a name="remarks"></a>Примечания  
- Несопоставимого только мой код будет пропускать код, не написанный пользователем. Пользовательский код должен представлять собой подмножество отлаживаемый код.  
+## <a name="remarks"></a>Заметки  
+ Только мой код пошаговое средство пропускает код, не являющийся пользовательским. Пользовательский код должен быть подмножеством отлаживаемого кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

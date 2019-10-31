@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b2b7b89c73b59f4f735369659daabb6a8f88300
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e8d65e739504e01a7d11b37d1b34d7313b13a5e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138336"
 ---
 # <a name="coinitializecor-function"></a>Функция CoInitializeCor
 `CoInitializeCor` устарел.  
@@ -35,11 +33,11 @@ STDAPI CoInitializeCor (
 );  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Для инициализации среда CLR следует использовать либо [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) или [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
+## <a name="remarks"></a>Заметки  
+ Чтобы инициализировать среду CLR, используйте либо [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) , либо [корбиндтокуррентрунтиме](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Cor.h  
+ **Заголовок:** COR. h  
   
 ## <a name="see-also"></a>См. также
 

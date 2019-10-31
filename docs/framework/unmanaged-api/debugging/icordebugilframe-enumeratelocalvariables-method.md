@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c18f2fce23e979f27d9116e74b6c6b007cd33bf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 07331a512dd513a94a7d8c3a8d8b0754d998b94b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130999"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>Метод ICorDebugILFrame::EnumerateLocalVariables
-Получает перечислитель для локальных переменных в кадре.  
+Возвращает перечислитель для локальных переменных в этом кадре.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT EnumerateLocalVariables(
   
 ## <a name="parameters"></a>Параметры  
  `ppValueEnum`  
- [out] Указатель на адрес объекта ICorDebugValueEnum, который является перечислителем для локальных переменных в кадре.  
+ заполняет Указатель на адрес объекта ICorDebugValueEnum, который является перечислителем для локальных переменных в этом кадре.  
   
-## <a name="remarks"></a>Примечания  
- `EnumerateLocalVariables` Возвращает перечислитель, который можно вывести список локальных переменных, доступных в кадр вызова, который представлен этим объектом ICorDebugILFrame. Список может содержать не все локальные переменные в исполняемой функции, так как некоторые из них могут быть неактивными.  
+## <a name="remarks"></a>Заметки  
+ `EnumerateLocalVariables` Получает перечислитель, который может перечислить локальные переменные, доступные в кадре вызова, представленном этим объектом ICorDebugILFrame. Список не может включать все локальные переменные в выполняемой функции, так как некоторые из них могут быть неактивными.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

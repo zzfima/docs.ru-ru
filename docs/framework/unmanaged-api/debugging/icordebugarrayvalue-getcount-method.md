@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e45f49d17a5b71abfb58ff8c0126abad49322c5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f33225eae4b62f2d5f0793212ae7dcc70e97f508
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737584"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088533"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>Метод ICorDebugArrayValue::GetCount
-Получает общее число элементов в массиве.  
+Возвращает общее число элементов в массиве.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Параметры  
  `pnCount`  
- [out] Указатель на общее число элементов в массиве.  
+ заполняет Указатель на общее число элементов в массиве.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

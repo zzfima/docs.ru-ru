@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdbec0101de269b3d5b09e750d552c993a0198ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125515"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Метод ICorDebugComObjectValue::GetCachedInterfacePointers
-Возвращает интерфейс необработанные указатели, кэшируются на текущем вызываемой оболочки времени выполнения (RCW).  
+Возвращает необработанные указатели интерфейса, кэшированные в текущей вызываемой оболочке времени выполнения (RCW).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +35,23 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Параметры  
  `bIInspectableOnly`  
- [in] Значение, указывающее, является ли этот метод возвращает только интерфейсы среды выполнения Windows (`IInspectable` интерфейсы) или все интерфейсами COM, кэшируемых вызываемой оболочки времени выполнения (RCW).  
+ окне Значение, указывающее, будет ли метод возвращать только среда выполнения Windows интерфейсы (интерфейсы`IInspectable`) или все COM-интерфейсы, которые кэшируются вызываемой оболочкой времени выполнения (RCW).  
   
  `celt`  
- [in] Количество объектов, чьи адреса должны быть получены.  
+ окне Число объектов, адреса которых необходимо получить.  
   
  `pceltFetched`  
- [out] Указатель на число `CORDB_ADDRESS` значения, фактически возвращенных в `ptrs`.  
+ заполняет Указатель на число значений `CORDB_ADDRESS`, фактически возвращаемых в `ptrs`.  
   
  `ptrs`  
  Указатель на начальный адрес массива `CORDB_ADDRESS` значений, содержащих адреса кэшированных объектов интерфейса.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

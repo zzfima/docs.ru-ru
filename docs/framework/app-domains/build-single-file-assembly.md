@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание однофайловой сборки .NET Framework
+title: Пошаговое руководство. сборка сборки .NET Framework с одним файлом
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,16 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98f06e62e1070f78faa77ef7d83fd80a62984684
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
-ms.translationtype: HT
+ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991247"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119950"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Практическое руководство. Создание однофайловой сборки .NET Framework
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Пошаговое руководство. сборка сборки .NET Framework с одним файлом
 
 Однофайловая сборка, являясь простейшим типом сборки, содержит данные о типе и реализации, а также [манифест сборки](../../standard/assembly/manifest.md). Для создания однофайловой сборки, ориентированной на .NET Framework, можно использовать компиляторы командной строки или Visual Studio. По умолчанию компилятор создает файл сборки с расширением *EXE*.
 
@@ -90,5 +88,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Создание сборок](../../standard/assembly/create.md)
 - [Многофайловые сборки](multifile-assemblies.md)
-- [Практическое руководство. Создание многофайловой сборки](build-multifile-assembly.md)
+- [Как построить многофайловую сборку](build-multifile-assembly.md)
 - [Программирование с использованием сборок](../../standard/assembly/program.md)

@@ -12,14 +12,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb50459e36cfeb76a0c9a1e1cd4544260d484f45
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9a74fd64e046ab3a8943e9a975e4de808c662677
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090955"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>Метод ICorDebugILFrame4::GetCodeEx
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -42,15 +40,15 @@ HRESULT GetCodeEx(
  `ppCode`  
  заполняет Указатель на адрес объекта ICorDebugCode, который представляет код, который исполняется этим кадром стека.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод аналогичен методу [ICorDebugFrame::-Code](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) , за исключением того, что он дополнительно получает доступ к коду, определенному в запросе ReJIT профилировщика. Вызов этого метода со `flags` `ILCODE_ORIGINAL_IL` значением эквивалентен вызову метода " [."](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)если метод инструментирован, его Il будет недоступен. `ILCODE_REJIT_IL` позволяет отладчику получить доступ к промежуточному языку, определенному запросом ReJIT профилировщика. Если IL не инструментирован, `ppCode` имеет **значение NULL**и метод возвращает. `S_OK`  
+## <a name="remarks"></a>Заметки  
+ Этот метод аналогичен методу [ICorDebugFrame::-Code](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) , за исключением того, что он дополнительно получает доступ к коду, определенному в запросе ReJIT профилировщика. Вызов этого метода с `flags` значением `ILCODE_ORIGINAL_IL` эквивалентно вызову метода " [код](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)"; Если метод инструментирован, его IL будет недоступен. `ILCODE_REJIT_IL` позволяет отладчику получить доступ к промежуточному языку, определенному запросом ReJIT профилировщика. Если IL не инструментирован, `ppCode` имеет **значение NULL**, а метод возвращает `S_OK`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
@@ -58,4 +56,4 @@ HRESULT GetCodeEx(
 
 - [Интерфейс ICorDebugILFrame4](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ReJIT Руководство](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT: руководство](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

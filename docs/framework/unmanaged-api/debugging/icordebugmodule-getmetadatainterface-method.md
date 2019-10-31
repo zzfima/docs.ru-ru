@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 398c48bfd30020efdb57861991c9541d412d3e0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb96949e22b4edfc0e64780a54bb38da44eb8369
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129548"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>Метод ICorDebugModule::GetMetaDataInterface
-Получает объект интерфейс метаданных, который может использоваться для просмотра метаданных для модуля.  
+Возвращает объект интерфейса метаданных, который может использоваться для проверки метаданных модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT GetMetaDataInterface (
   
 ## <a name="parameters"></a>Параметры  
  `riid`  
- [in] Идентификатор ссылки, указывающий интерфейс метаданных.  
+ окне Идентификатор ссылки, указывающий интерфейс метаданных.  
   
  `ppObj`  
- [out] Указатель на адрес `T:IUnknown` объект, который является одним из [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ заполняет Указатель на адрес объекта `T:IUnknown`, который является одним из [интерфейсов метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
   
-## <a name="remarks"></a>Примечания  
- Можно использовать отладчик `GetMetaDataInterface` метод для создания копии исходных метаданных для модуля, которая необходима для редактирования этого модуля. Отладчик вызывает `GetMetaDataInterface` для получения [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) объект интерфейса для модуля, затем вызывает [IMetaDataEmit::SaveToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) для сохранения копии метаданных модуля памяти.  
+## <a name="remarks"></a>Заметки  
+ Отладчик может использовать метод `GetMetaDataInterface`, чтобы создать копию исходных метаданных для модуля, который необходимо сделать для изменения этого модуля. Отладчик вызывает `GetMetaDataInterface`, чтобы получить объект интерфейса [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) для модуля, а затем вызывает метод [IMetaDataEmit:: саветомемори](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md) , чтобы сохранить копию метаданных модуля в памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e6121cc3-2f11-42c7-bdae-47808581ff71
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b2860e811a16406a71d7ab8df123f2b32aaf13e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dc91723f009d46f9c57b1c99aa66ba7a1b127e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773296"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126636"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>Метод ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList
-Получает значение, указывающее, соответствует ли указанное имя, имя сборки в списке.  
+Возвращает значение, указывающее, совпадает ли заданное имя с именем сборки в списке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ HRESULT IsStringAssemblyReferenceInList (
   
 ## <a name="parameters"></a>Параметры  
  `pwzAssemblyName`  
- [in] Имя сборки, который требуется найти.  
+ окне Имя сборки, для которой необходимо выполнить поиск.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Строка отображается в списке.|  
+|S_OK|Строка появится в списке.|  
 |S_FALSE|Строка не отображается в списке.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

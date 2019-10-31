@@ -2,14 +2,12 @@
 title: Метод ICorDebugProcess6::GetExportStepInfo
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 18af0dde2d1acc65003558a04789de027bb9209f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d92b05e3d84a230e87901378f34ed27ac38286b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967398"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123462"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>Метод ICorDebugProcess6::GetExportStepInfo
 Предоставляет информацию о функциях, экспортируемых в ходе выполнения, для пошагового перемещения по управляемому коду.  
@@ -39,20 +37,20 @@ HRESULT GetExportStepInfo(
 |Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |`S_OK`|Успешный вызов метода.|  
-|`E_POINTER`|`pInvokeKind`или `pInvokePurpose` имеет **значение NULL**.|  
+|`E_POINTER`|`pInvokeKind` или `pInvokePurpose` имеет **значение NULL**.|  
 |Другие ошибочные значения `HRESULT`.|По мере необходимости.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

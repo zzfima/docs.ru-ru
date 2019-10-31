@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe5525fc29bc01bb84f7f2997d115eec12d72b13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1283abaf6b08af1d842d8fe4469f7f6c15e38ec5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136425"
 ---
 # <a name="getcorversion-function"></a>Функция GetCORVersion
-Возвращает номер версии среда CLR (CLR), на котором выполняется в текущем процессе.  
+Возвращает номер версии общеязыковой среды выполнения (CLR), которая выполняется в текущем процессе.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,20 +39,20 @@ HRESULT GetCORVersion (
   
 ## <a name="parameters"></a>Параметры  
  `pbuffer`  
- Указатель на буфер, в котором среда CLR возвращает строку, представляющую версию среды выполнения, который в данный момент загружается процесс. Возвращаемая строка принимает ту же форму, как строки, переданной в [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), например, «v1.0.1216». Если среда выполнения еще не был загружен в процесс, функция возвращает данные каталога, соответствующего для последней версии среды выполнения, установленную на компьютере.  
+ Указатель на буфер, в котором среда CLR возвращает строку, указывающую версию среды выполнения, которая в данный момент загружена в процесс. Возвращаемая строка принимает ту же форму, что и строки, переданные в [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), например "v 1.0.1216". Если среда выполнения еще не загружена в процесс, функция возвращает соответствующие сведения о каталоге для последней версии среды выполнения, установленной на компьютере.  
   
  `cchBuffer`  
- Число символов (`WCHAR`s), могут храниться в `pbuffer`.  
+ Число символов (`WCHAR`s), которые могут храниться в `pbuffer`.  
   
  `dwLength`  
- Указатель на число символов, фактически возвращенных в `pbuffer`. Если `pbuffer` является пустым указателем, среда выполнения возвращает E_POINTER. Если количество символов больше длины `pbuffer` , среда выполнения возвращает значение ERROR_INSUFFICIENT_BUFFER.  
+ Указатель на число символов, фактически возвращаемых в `pbuffer`. Если `pbuffer` является пустым указателем, среда выполнения возвращает E_POINTER. Если число символов превышает длину `pbuffer`, среда выполнения возвращает ERROR_INSUFFICIENT_BUFFER.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

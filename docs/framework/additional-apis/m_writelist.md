@@ -1,5 +1,5 @@
 ---
-title: Поле Connection.m_WriteList
+title: Поле Connection. m_WriteList
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d138e0490e849ff26f540077ec7d23ae42737606
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 9760e301e25bc6e69ab22b563894cb079a8d58bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300910"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120032"
 ---
-# <a name="connectionmwritelist-field"></a>Connection.m\_WriteList поля
+# <a name="connectionm_writelist-field"></a>Connection. m\_поле Врителист
 
-`Connection.m_WriteList` — <xref:System.Collections.ArrayList> из <xref:System.Net.HttpWebRequest> объекты, которые становятся в очередь для передачи по HTTP.
+`Connection.m_WriteList` — это <xref:System.Collections.ArrayList> <xref:System.Net.HttpWebRequest> объектов, которые помещаются в очередь для отправки по протоколу HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList` Поле является закрытым и не предназначен для непосредственного использования в коде.
+> Поле `Connection.m_WriteList` является закрытым и не предназначено для непосредственного использования в коде.
 > 
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого поля в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** Системы (в System.dll)
+**Сборка:** Система (в System. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

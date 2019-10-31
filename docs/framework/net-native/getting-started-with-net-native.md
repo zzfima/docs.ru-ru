@@ -2,14 +2,12 @@
 title: Начало работы с машинным кодом .NET
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de887f73a5cc3968dda7e0e4dd14493883485d2b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049741"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128401"
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
 
@@ -17,7 +15,7 @@ ms.locfileid: "71049741"
 
 1. [Разработайте приложение универсальной платформы Windows (UWP), предназначенное для Windows 10](#Step1), и протестируйте его отладочные сборки, чтобы убедиться в его правильной работе.
 
-2. [обработайте дополнительные использования отражения и сериализации](#Step2).
+2. [Обработайте дополнительные использования отражения и сериализации](#Step2).
 
 3. [Разверните и протестируйте выпускаемые сборки приложения](#Step3).
 
@@ -28,7 +26,7 @@ ms.locfileid: "71049741"
 
 <a name="Step1"></a>
 
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Шаг 1. Разработка и тестирование отладочных сборок приложения UWP
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Шаг 1. Разработка и тестирование отладочных сборок приложения UWP
 
 При разработке нового приложения или миграции существующего выполняется тот же процесс, что и для любого приложения Windows.
 
@@ -45,7 +43,7 @@ ms.locfileid: "71049741"
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Шаг 2. Обработку дополнительного отражения и использования сериализации
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Шаг 2. Обработка дополнительных операций использования отражения и сериализации
 
 Файл директив среды выполнения по умолчанию Default.RD.XML автоматически добавляется в проект при его создании. При разработке на языке C# он находится в папке **Properties** вашего проекта. При разработке на языке Visual Basic он находится в папке **My Project** вашего проекта.
 
@@ -60,7 +58,7 @@ ms.locfileid: "71049741"
 
 - сериализаторы, работающие без использования отражения. сериализаторы из библиотеки классов .NET Framework, например, <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и классы <xref:System.Xml.Serialization.XmlSerializer> не используют отражение. Тем не менее, они требуют генерировать код на основе объекта для сериализации или десериализации.  Дополнительные сведения см. в разделе "Сериализаторы Microsoft" в [Serialization and Metadata](serialization-and-metadata.md).
 
-- Сериализаторы сторонних поставщиков. Сторонние библиотеки сериализации, наиболее распространенный из которых является сериализатором Newtonsoft JSON, обычно основаны на отражении, и для них требуется запись \*в файле. Rd. XML для поддержки сериализации и десериализации объектов. Дополнительные сведения см. в разделе "Сериализаторы сторонних поставщиков" в [Serialization and Metadata](serialization-and-metadata.md).
+- Сериализаторы сторонних поставщиков. Сторонние библиотеки сериализации, наиболее распространенный из которых является сериализатором Newtonsoft JSON, обычно основаны на отражении и занимают записи в файле \*. Rd. XML для поддержки сериализации и десериализации объектов. Дополнительные сведения см. в разделе "Сериализаторы сторонних поставщиков" в [Serialization and Metadata](serialization-and-metadata.md).
 
 **Методы, основанные на отражении**
 
@@ -79,17 +77,17 @@ ms.locfileid: "71049741"
 
 <a name="Step3"></a>
 
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Шаг 3. Развертывание и тестирование сборок выпуска приложения
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Шаг 3. Развертывание и тестирование выпускаемых сборок приложения
 
-После обновления файла директив среды выполнения можно перестроить и развернуть выпускаемые сборки приложения. Двоичные файлы машинного кода .NET помещаются в подкаталог ILC.out каталога, заданного в текстовом поле **Build output path** (Путь к выходным данным построения) диалогового окна **Properties** (Свойства) проекта, вкладка **Compile** (Компилировать). Двоичные файлы, которые отсутствуют в этой папке, еще не были скомпилированы с использованием машинного кода .NET. Тщательно протестируйте свое приложение и проверьте все сценарии, включая сценарии сбоя, на каждой целевой платформе.
+После обновления файла директив среды выполнения можно перестроить и развернуть выпускаемые сборки приложения. .NET Native двоичные файлы помещаются в подкаталог ILC. out каталога, указанного в текстовом поле **путь к выходным данным сборки** диалогового окна **свойства** проекта, **Компиляция** вкладки. двоичные файлы, которые не находятся в этой папке, не были скомпилированы. с .NET Native. Тщательно протестируйте свое приложение и проверьте все сценарии, включая сценарии сбоя, на каждой целевой платформе.
 
-Если приложение работает неправильно (особенно в случаях, когда оно вызывает исключения [MissingMetadataException](missingmetadataexception-class-net-native.md) или [MissingInteropDataException](missinginteropdataexception-class-net-native.md) во время выполнения), следуйте инструкциям в следующем разделе, [шаг 4. Вручную разрешить отсутствующие](#Step4)метаданные. Включение исключений первого шанса может помочь в обнаружении этих ошибок.
+Если приложение работает плохо (особенно в случае создания исключений [MissingMetadataException](missingmetadataexception-class-net-native.md) или [MissingInteropDataException](missinginteropdataexception-class-net-native.md) во время выполнения), следуйте инструкциям в следующем разделе: [Шаг 4. Устранение вручную проблем с отсутствующими метаданными](#Step4). Включение исключений первого шанса может помочь в обнаружении этих ошибок.
 
 После тестирования и отладки отладочных сборок приложения и уверенности в устранении исключений [MissingMetadataException](missingmetadataexception-class-net-native.md) и [MissingInteropDataException](missinginteropdataexception-class-net-native.md) следует протестировать приложение в качестве оптимизированного .NET Native приложения. Чтобы сделать это, измените настройку активного проекта с **Debug** (Отладка) на **Release**(Выпуск).
 
 <a name="Step4"></a>
 
-## <a name="step-4-manually-resolve-missing-metadata"></a>Шаг 4. Вручную разрешить отсутствующие метаданные
+## <a name="step-4-manually-resolve-missing-metadata"></a>Шаг 4. Устранение проблем с отсутствующими метаданными вручную
 
 Наиболее распространенный сбой при .NET Native, который не встречается на рабочем столе, — это исключение времени выполнения [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)или [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . В некоторых случаях отсутствие метаданных может проявляться в непредсказуемое поведение или даже сбоях приложений. В этом разделе рассматриваются отладка и устранения этих исключений путем добавления директив в файл директив среды выполнения. Сведения о директивах среды выполнения см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md). После добавления директив среды выполнения необходимо снова [развернуть и протестировать ваше приложение](#Step3) и полностью устранить все новые исключения [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md) и [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md).
 

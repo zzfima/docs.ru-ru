@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugType2::GetTypeID
+title: 'Метод ICorDebugType2:: TypeID'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType2.GetTypeID
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3098911bab2878876b93ee1ce23d9794d7e6cdbd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 944313893d88b8eff97291d2517e4863a5ae958a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772465"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092765"
 ---
-# <a name="icordebugtype2gettypeid-method"></a>Метод ICorDebugType2::GetTypeID
-Получает [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) для этого типа.  
+# <a name="icordebugtype2gettypeid-method"></a>Метод ICorDebugType2:: TypeID
+Возвращает [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) для этого типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,10 +35,10 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>Параметры  
  `id`  
- [out] Указатель на [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) для ICorDebugType.  
+ заполняет Указатель на [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) для этого ICorDebugType.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращается значение `S_OK` при успешном выполнении или код ошибки `HRESULT` при сбое. `HRESULT` Коды включают следующее:  
+ Возвращается значение `S_OK` при успешном выполнении или код ошибки `HRESULT` при сбое. Ниже приведены коды `HRESULT`.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
@@ -48,15 +46,15 @@ HRESULT GetTypeID(
 |`CORDBG_E_CLASS_NOT_LOADED`|Тип не был загружен.|  
 |`CORDBG_E_UNSUPPORTED`|Тип не поддерживается.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод обеспечивает сопоставление ICorDebugType, который представляет тип, который может или может не были загружены в среду выполнения до [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), который служит непрозрачным обработки, который определяет тип, загруженной в среду.  
+## <a name="remarks"></a>Заметки  
+ Этот метод предоставляет сопоставление из объекта ICorDebugType, представляющего тип, который может быть загружен в среду выполнения или не может загружается в [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), который служит в качестве непрозрачного маркера, определяющего тип, загруженный в среду выполнения.  
   
- Если тип, представляющий ICorDebugType еще не загружена, этот метод возвращает `CORDBG_E_CLASS_NOT_LOADED`.  Если тип не поддерживается, возвращается `CORDBG_E_UNSUPPORTED`.  
+ Если тип, который представляет объект ICorDebugType, еще не загружен, этот метод возвращает `CORDBG_E_CLASS_NOT_LOADED`.  Если тип не поддерживается, он возвращает `CORDBG_E_UNSUPPORTED`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -10,20 +10,18 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5b45ea4b30677d17e72685b16c19f9192c8c144
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252679"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117500"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<Элемент > disableCachingBindingFailures
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > элемент
 Указывает, следует ли отключать кэширование ошибок привязки, возникающих из-за того, что сборка не была найдена проверкой.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,13 +41,13 @@ ms.locfileid: "70252679"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |0|Не отключайте кэширование ошибок привязки, возникающих из-за того, что сборка не была найдена проверкой. Это поведение привязки по умолчанию, начинающееся с .NET Framework версии 2,0.|  
 |1|Отключите кэширование ошибок привязки, возникающих из-за того, что сборка не была найдена проверкой. Этот параметр восстанавливает поведение привязки .NET Framework версии 1,1.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -58,8 +56,8 @@ ms.locfileid: "70252679"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
- Начиная с версии .NET Framework 2,0, поведением по умолчанию для загрузки сборок является кэширование всех ошибок привязки и загрузки. То есть если попытка загрузить сборку завершается ошибкой, последующие запросы на загрузку одной и той же сборки будут завершаться сбоем немедленно, без каких-либо попыток нахождение сборки. Этот элемент отключает поведение по умолчанию для сбоев привязки, возникающих из-за того, что сборка не найдена в пути поиска. Эти ошибки вызываются <xref:System.IO.FileNotFoundException>.  
+## <a name="remarks"></a>Заметки  
+ Начиная с версии .NET Framework 2,0, поведением по умолчанию для загрузки сборок является кэширование всех ошибок привязки и загрузки. То есть если попытка загрузить сборку завершается ошибкой, последующие запросы на загрузку одной и той же сборки будут завершаться сбоем немедленно, без каких-либо попыток нахождение сборки. Этот элемент отключает поведение по умолчанию для сбоев привязки, возникающих из-за того, что сборка не найдена в пути поиска. Эти ошибки вызывают <xref:System.IO.FileNotFoundException>.  
   
  Этот элемент не влияет на некоторые ошибки привязки и загрузки и всегда кэшируется. Эти сбои возникают из-за того, что сборка найдена, но не может быть загружена. Они создают <xref:System.BadImageFormatException> или <xref:System.IO.FileLoadException>. В следующем списке приведены некоторые примеры таких сбоев.  
   

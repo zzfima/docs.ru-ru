@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc647805fcb7d8354a2540ac9424dc7155853444
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b024d3396dfe1796fcb18afa122d4aee39c4ccc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132724"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>Метод ICorDebugChain::EnumerateFrames
-Возвращает перечислитель, содержащий все управляемые фреймы стека в цепочке, начиная с последнего.  
+Возвращает перечислитель, содержащий все управляемые кадры стека в цепочке, начиная с самого последнего кадра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT EnumerateFrames (
   
 ## <a name="parameters"></a>Параметры  
  `ppFrames`  
- [out] Указатель на адрес объекта ICorDebugFrameEnum, который является перечислителем для кадров стека.  
+ заполняет Указатель на адрес объекта ICorDebugFrameEnum, который является перечислителем для кадров стека.  
   
-## <a name="remarks"></a>Примечания  
- Цепь представляет физический стек вызова для потока.  
+## <a name="remarks"></a>Заметки  
+ Цепочка представляет физический стек вызовов для потока.  
   
- `EnumerateFrames` Метод должен вызываться только для управляемых цепочек. API отладки не поддерживает методы для получения кадров, содержащихся в неуправляемых цепочки. Отладчик должен использовать другие средства для получения этих сведений.  
+ Метод `EnumerateFrames` должен вызываться только для управляемых цепочек. API отладки не предоставляет методы для получения кадров, содержащихся в неуправляемых цепочках. Для получения этих сведений отладчик должен использовать другие средства.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

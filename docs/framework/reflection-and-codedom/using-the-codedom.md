@@ -20,14 +20,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c4cab79976acae236de5a8eaad5a42cdba7d04f9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129997"
 ---
 # <a name="using-the-codedom"></a>Использование CodeDOM
 CodeDOM содержит типы, представляющие многие общие типы элементов исходного кода. Вы можете разработать программу, которая будет строить модель исходного кода, используя элементы CodeDOM для создания графа объектов. Этот граф объектов может быть воспроизведен в виде исходного кода с помощью генератора кода CodeDOM для поддерживаемого языка программирования. CodeDOM можно также использовать для компиляции исходного кода в двоичную сборку.  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fbed34f53ff43ca7887a58b3c879eaa74703da3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744748"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131270"
 ---
 # <a name="icordebugremote-interface"></a>Интерфейс ICorDebugRemote
 Позволяет запускать или подключать управляемый отладчик к удаленному целевому процессу.  
@@ -62,20 +60,20 @@ interface ICorDebugRemote : IUnknown
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод ICorDebugRemote::CreateProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Создает процесс на удаленном компьютере, для отладки управляемого кода.|  
-|[Метод ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Запускает процесс на удаленном компьютере в режиме отладки.|  
+|[Метод ICorDebugRemote::CreateProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Создает процесс на удаленном компьютере для управляемой отладки.|  
+|[Метод ICorDebugRemote::DebugActiveProcessEx](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Запускает процесс на удаленном компьютере в отладчике.|  
   
-## <a name="remarks"></a>Примечания  
- В настоящее время эта функция поддерживается только для отладки приложения на основе Silverlight целевой объект, который выполняется на удаленном компьютере Macintosh.  
+## <a name="remarks"></a>Заметки  
+ В настоящее время эта функция поддерживается только для отладки целевого объекта приложения на основе Silverlight, который выполняется на удаленном компьютере Macintosh.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 4.5, 4, 3.5 С ПАКЕТОМ ОБНОВЛЕНИЯ 1  
+ **.NET Framework версии:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

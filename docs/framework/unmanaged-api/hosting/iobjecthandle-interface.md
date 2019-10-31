@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 436683ef-9849-4b24-89a9-28c06d148dce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 954043414b7cdbbf701f34375372f91dd68a359c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102720"
 ---
 # <a name="iobjecthandle-interface"></a>Интерфейс IObjectHandle
-Предоставляет метод для распаковки объектов маршалинг по значению, косвенного обращения.  
+Предоставляет метод для распаковки объектов, перенаправляемых по значению, из косвенного обращения.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Распаковывает объект маршалинг по значению, косвенного обращения.|  
+|[Метод Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Распаковывает объект по значению из косвенного обращения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

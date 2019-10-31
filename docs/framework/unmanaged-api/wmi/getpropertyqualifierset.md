@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7bce241d10051e4c6be94cdfa40de23773fb0bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4133145c7bea1fb3c018d809b9fea3de38270619
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127458"
 ---
 # <a name="getpropertyqualifierset-function"></a>Функция Жетпропертикуалифиерсет
 
@@ -49,25 +47,25 @@ HRESULT GetPropertyQualifierSet (
 окне Указатель на экземпляр [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethod`\
-окне Имя свойства. `wszProperty`должен указывать на допустимое `LPCWSTR`значение.
+окне Имя свойства. `wszProperty` должен указывать на допустимое `LPCWSTR`.
 
 `ppQualSet`\
-заполняет Получает указатель интерфейса, который разрешает доступ к квалификаторам свойства. Параметр `ppQualSet` не может иметь значение `null`. При возникновении ошибки новый объект не возвращается, и указатель устанавливается на точку `null`.
+заполняет Получает указатель интерфейса, который разрешает доступ к квалификаторам свойства. Параметр `ppQualSet` не может иметь значение `null`. При возникновении ошибки новый объект не возвращается, и указатель задается для указания `null`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр имеет значение `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр — `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | Функция пытается получить квалификаторы системного свойства. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жетпропертикуалифиерсет](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) .
 
@@ -75,13 +73,13 @@ HRESULT GetPropertyQualifierSet (
 
 Поскольку каждый метод может иметь собственные квалификаторы, [указатель ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) позволяет вызывающей стороне добавить, изменить или удалить эти квалификаторы.
 
-Поскольку системные свойства не имеют квалификаторов, функция возвращает `WBEM_E_SYSTEM_PROPERTY` , если попытаться получить указатель [ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) для системного свойства.
+Поскольку системные свойства не имеют квалификаторов, функция возвращает `WBEM_E_SYSTEM_PROPERTY` при попытке получить указатель [ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) для системного свойства.
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils. idl
+**Заголовок:** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

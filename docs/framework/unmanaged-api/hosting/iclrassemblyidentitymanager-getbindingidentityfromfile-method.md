@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1aabc5783e66893d13aed60e04d7ea5f6547c68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 19d6a76d62680be91a7b9721912ca528edde7511
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126757"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>Метод ICLRAssemblyIdentityManager::GetBindingIdentityFromFile
-Получает идентификатор сборки привязка данных для сборки по указанному пути.  
+Возвращает данные привязки удостоверения сборки для сборки по указанному пути к файлу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,39 +38,39 @@ HRESULT GetBindingIdentityFromFile(
   
 ## <a name="parameters"></a>Параметры  
  `pwzFilePath`  
- [in] Путь к файлу для оценки.  
+ окне Путь к файлу, который необходимо вычислить.  
   
  `dwFlags`  
- [in] Значение [ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md) перечисление, указывающее тип удостоверения сборки. Предоставлен для дальнейшего расширения. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT является единственным значением, которая поддерживает общеязыковой среды выполнения (CLR) версии 2.0.  
+ окне Значение перечисления [ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md) , указывающее тип удостоверения сборки. Предоставляется для будущего расширения. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT — единственное значение, поддерживаемое общеязыковой средой выполнения (CLR) версии 2,0.  
   
  `pwzBuffer`  
- [out] Буфер, содержащий данные идентификации непрозрачный сборки.  
+ заполняет Буфер, содержащий непрозрачные данные идентификации сборки.  
   
  `pcchBufferSize`  
- [in, out] Указатель на размер `pwzBuffer`.  
+ [вход, выход] Указатель на размер `pwzBuffer`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Метод возвратился успешно.|  
-|E_INVALIDARG|Предоставленный `pwzFilePath` имеет значение null.|  
+|S_OK|Метод успешно возвращен.|  
+|E_INVALIDARG|Указанный `pwzFilePath` имеет значение null.|  
 |ERROR_INSUFFICIENT_BUFFER|Размер `pwzBuffer` слишком мал.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- `GetBindingIdentityFromFile` обычно вызывается дважды. Первый вызов предоставляет значение null для `pwzBuffer`, а метод возвращает соответствующий размер в `pcchBufferSize`. При втором вызове указывается надлежащий выделенный буфер, а метод возвращает фактические данные буфера после завершения.  
+## <a name="remarks"></a>Заметки  
+ `GetBindingIdentityFromFile` обычно вызывается дважды. Первый вызов предоставляет значение NULL для `pwzBuffer`, а метод возвращает соответствующий размер в `pcchBufferSize`. Второй вызов предоставляет соответствующий буфер, а метод возвращает фактические данные буфера после завершения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

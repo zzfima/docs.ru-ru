@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127058"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Функция GetRequestedRuntimeVersionForCLSID
-Получает соответствующий информация среды CLR (CLR) версии для класса с указанным `CLSID`.  
+Возвращает соответствующую информацию о версии среды CLR для класса с указанным `CLSID`.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,38 +40,38 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="parameters"></a>Параметры  
  `rclsid`  
- [in]  `CLSID` Компонента.  
+ окне  `CLSID` компонента.  
   
  `pVersion`  
- [out]  Буфер, содержащий строку номера версии после успешного завершения.  
+ заполняет  Буфер, содержащий строку номера версии после успешного завершения.  
   
  `cchBuffer`  
- [in]  Размер в расширенные символы из `pVersion` буфера.  
+ окне  Размер `pVersion`ного буфера в расширенных символах.  
   
  `dwLength`  
- [out] Длина в байтах, возвращенного буфера.  
+ заполняет Длина возвращенного буфера в байтах.  
   
  `dwResolutionFlags`  
- [in]  Одно из значений CLSID_RESOLUTION_FLAGS. Поддерживаются следующие значения:  
+ окне  Одно из значений CLSID_RESOLUTION_FLAGS. Поддерживаются следующие значения:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать взаимодействия по умолчанию.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать режим взаимодействия по умолчанию.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) указывает, следует ли выполнять поиск реестра и должна ли применяться политика оболочек совместимости.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) указывает, что необходимо выполнять поиск в реестре и применять политику оболочки совместимости.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Функция успешно возвращен.|  
+|S_OK|Функция возвращена успешно.|  
 |E_INVALIDARG|Один из параметров имеет недопустимый тип или формат.|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion` Буфера недостаточен для хранения всей строки версии.|  
-|REGDB_E_CLASSNOTREG|Отсутствует класс зарегистрирован с указанным `CLSID`.|  
-|E_POINTER|`dwLength` имеет значение null, или `cchBuffer` достаточно велик для хранения строки версии, но `pVersion` имеет значение null.|  
+|ERROR_INSUFFICIENT_BUFFER|Буфер `pVersion` недостаточно велик для размещения всей строки версии.|  
+|REGDB_E_CLASSNOTREG|Отсутствует класс, зарегистрированный в указанном `CLSID`.|  
+|E_POINTER|`dwLength` имеет значение null, или `cchBuffer` достаточно большой для хранения строки версии, но `pVersion` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

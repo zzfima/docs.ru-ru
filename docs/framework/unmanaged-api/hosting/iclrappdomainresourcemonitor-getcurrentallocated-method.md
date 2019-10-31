@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7bab209c-efd4-44c2-af30-61abab0ae2fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d02478c2421823ce2acb533d2abea2ea8b13c74
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f19ac39737d08c10c23ce0bde03131f52b660cac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126814"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>Метод ICLRAppDomainResourceMonitor::GetCurrentAllocated
 Возвращает общий размер (в байтах) всех выделений памяти, сделанных доменом приложения с момента его создания, без вычитания памяти, которая была собрана сборщиком мусора.  
@@ -49,15 +47,15 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |S_OK|Метод завершился успешно.|  
 |COR_E_APPDOMAINUNLOADED|Домен приложения был выгружен или не существует.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод является неуправляемым эквивалентом управляемого <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> свойства.  
+## <a name="remarks"></a>Заметки  
+ Этот метод является неуправляемым эквивалентом управляемого свойства <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Метахост. h  
+ **Заголовок:** Метахост. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

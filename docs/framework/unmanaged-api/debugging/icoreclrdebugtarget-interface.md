@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5a3d06f72ed7163a414ef12e9bec650d8b20783
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83afe121b6bf0de3c5542695e38b6605db7a8b6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121819"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>Интерфейс ICoreClrDebugTarget
-Предоставляет методы, управления счетчиками ссылок, перечислить процессы и освобождения памяти, связанной с помощью отладчика, который подключен к удаленному целевому объекту Macintosh Silverlight.  
+Предоставляет методы, управляющие счетчиком ссылок, перечисление процессов и освобождение памяти, связанной с отладчиком, который подключен к удаленному целевому объекту Macintosh Silverlight.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,20 +52,20 @@ class ICoreClrDebugTarget {
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Перечисляет процессы, работающие на удаленном компьютере.|  
-|[Метод ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Перечисляет языковых сред выполнения (CLR) в указанном процессе на удаленном компьютере.|  
-|[Метод ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Освобождает память, выделенную с помощью методов перечисления в этот класс.|  
+|[Метод ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Перечисляет общеязыковые среды выполнения (CLR) в указанном процессе на удаленном компьютере.|  
+|[Метод ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Освобождает память, выделенную методами перечисления в этом классе.|  
   
-## <a name="remarks"></a>Примечания  
- В настоящее время эта функция поддерживается только для отладки приложения на основе Silverlight целевой объект, который выполняется на удаленном компьютере Macintosh.  
+## <a name="remarks"></a>Заметки  
+ В настоящее время эта функция поддерживается только для отладки целевого объекта приложения на основе Silverlight, который выполняется на удаленном компьютере Macintosh.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)  
+ **.NET Framework версии:** 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

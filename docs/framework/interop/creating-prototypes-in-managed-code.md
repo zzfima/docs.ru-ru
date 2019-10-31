@@ -17,14 +17,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853836"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123618"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
@@ -89,11 +87,11 @@ extern "C" int MessageBox(
   
  Ниже приведен полный набор полей атрибутов, относящихся к вызову неуправляемого кода. Для каждого поля в таблице указано значение по умолчанию и дана ссылка на инструкцию по использованию поля для определения неуправляемых функций DLL.  
   
-|Поле|ОПИСАНИЕ|  
+|Поле|Описание|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Включает или отключает наилучшее сопоставление.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Задает соглашение о вызовах, которое должно использоваться при передаче аргументов методов. Значение по умолчанию — `WinAPI`, что соответствует режиму `__stdcall` для 32-разрядных платформ на базе процессора Intel.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Управляет декорированием имен и способом маршалинга строковых аргументов в функцию. Значение по умолчанию — `CharSet.Ansi`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Управляет декорированием имен и способом маршалинга строковых аргументов в функцию. Значение по умолчанию: `CharSet.Ansi`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Указывает точку входа DLL для вызова.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Определяет, должна ли изменяться точка входа в соответствии с кодировкой. Значение по умолчанию зависит от языка программирования.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Определяет, должна ли сигнатура управляемого метода преобразовываться в неуправляемую сигнатуру, которая возвращает значение HRESULT и имеет дополнительный аргумент [out, retval] для возвращаемого значения.<br /><br /> Значение по умолчанию — `true` (сигнатура не должна преобразовываться).|  

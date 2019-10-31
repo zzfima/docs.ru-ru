@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122835"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>Метод ICorDebugBlockingObjectEnum::Next
 Возвращает указанное число объектов [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) из перечисления, начиная с текущей позиции.  
@@ -54,20 +52,20 @@ HRESULT Next([in] ULONG  celt,
 |S_OK|Метод завершился успешно.|  
 |S_FALSE|Значение параметра `pceltFetched` не равно `celt`.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Этот метод работает, как типичный перечислитель COM.  
   
- Значения входного массива должны иметь размер `celt`не ниже. Массив будет заполнен либо следующими `celt` значениями в перечислении, либо со всеми оставшимися значениями, если они меньше, чем `celt` осталось. При возврате `pceltFetched` из этого метода будет заполнено количество полученных значений. Если `values` содержит недопустимые указатели или указывает на буфер, который `celt`меньше, или `pceltFetched` если является недопустимым указателем, результат не определен.  
+ Значения входного массива должны быть не меньше `celt`размера. Массив будет заполнен либо следующими `celt` значениями в перечислении, либо со всеми оставшимися значениями, если меньше `celt` осталось. При возврате из этого метода `pceltFetched` будут заполнены количеством полученных значений. Если `values` содержит недопустимые указатели или точки в буфере, размер которого меньше `celt`или если `pceltFetched` является недопустимым указателем, результат не определен.  
   
 > [!NOTE]
 > Хотя структуру [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) не нужно освобождать, интерфейс "ICorDebugValue" внутри него должен быть освобожден.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

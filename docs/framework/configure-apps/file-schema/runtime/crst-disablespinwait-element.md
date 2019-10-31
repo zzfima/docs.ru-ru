@@ -5,21 +5,19 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252714"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117642"
 ---
-# <a name="crst_disablespinwait-element"></a>\<Элемент > Crst_DisableSpinWait
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait > элемент
 
 Указывает, следует ли отключать режим ожидания для критической секции, если это не так.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,13 +38,13 @@ ms.locfileid: "70252714"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |1|Отключите режим ожидания, если критическая секция не может быть получена.|  
-|0|Не отключайте режим ожидания, если критическая секция не может быть получена. Это значение по умолчанию.|  
+|0|Не отключайте режим ожидания, если критическая секция не может быть получена. Это значение используется по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

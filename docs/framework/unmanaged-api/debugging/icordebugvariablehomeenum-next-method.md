@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHomeEnum::Next Method
+title: 'Метод ICorDebugVariableHomeEnum:: Next'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum.Next
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c2c16789fb61099c9b7c58154810739d225af1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774918"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121925"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum::Next Method
-Возвращает заданное число [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) экземпляров, которые содержат сведения о локальных переменных и аргументов в функции.  
+# <a name="icordebugvariablehomeenumnext-method"></a>Метод ICorDebugVariableHomeEnum:: Next
+Возвращает указанное число экземпляров [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) , содержащих сведения о локальных переменных и аргументах в функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,10 +40,10 @@ HRESULT Next(
  [in] Количество объектов, которые должны быть получены.  
   
  `homes`  
- Массив указателей, каждый из которых указывает [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) объект, предоставляющий сведения о локальной переменной или аргумента функции.  
+ Массив указателей, каждый из которых указывает на объект [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) , предоставляющий сведения о локальной переменной или аргументе функции.  
   
  `pceltFetched`  
- [out] Количество экземпляров, фактически возвращенных в объектах.  
+ заполняет Число экземпляров, фактически возвращаемых в объектах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения.  
@@ -53,15 +51,15 @@ HRESULT Next(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|Метод завершился успешно.|  
-|`S_FALSE`|Извлечь фактическое число экземпляров, как показано в `pceltFetched`, меньше, чем количество запрошенных экземпляров.|  
+|`S_FALSE`|Фактическое число полученных экземпляров, как отражается в `pceltFetched`, меньше, чем количество запрошенных экземпляров.|  
   
-## <a name="remarks"></a>Примечания  
- [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) метод позволяет получить максимум `celt` объектов, начиная с текущей позиции перечислителя. При возвращении метода `pceltFetched` содержит фактическое число объектами, возвращаемыми.  
+## <a name="remarks"></a>Заметки  
+ Метод [ICorDebugVariableHomeEnum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) извлекает не более `celt` объектов, начиная с текущей позиции перечислителя. Когда метод возвращает значение, `pceltFetched` содержит фактическое число извлеченных объектов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

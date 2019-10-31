@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94e2f1c13c91c50daa5730898adf0aedf00f6579
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 453486c9e3d98ffd6f0dcfa08e7a0a9a1c1d3342
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123394"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>Метод ICorDebugProcess7::SetWriteableMetadataUpdateMode
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -36,15 +34,15 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>Параметры  
  `flags`  
- Объект [WriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md) значение перечисления, указывающее, являются ли видимыми обновления находящихся в памяти метаданных в целевом процессе (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) или не отображается (`WriteableMetadataUpdateMode::LegacyCompatPolicy`) для отладчика.  
+ Значение перечисления [вритеаблеметадатаупдатемоде](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md) , указывающее, являются ли обновления в памяти в целевом процессе видимыми (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) или невидимыми (`WriteableMetadataUpdateMode::LegacyCompatPolicy`) отладчиком.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Обновления для метаданных в целевом процессе могут поступать из режима "Изменить и продолжить", профилировщика или <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

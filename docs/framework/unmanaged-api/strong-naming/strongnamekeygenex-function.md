@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f9ab908866402bd7a883114466f32921321a5ee6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 63ddd90f3a8090853d10f03052915d10e1503ea6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799015"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125214"
 ---
 # <a name="strongnamekeygenex-function"></a>Функция StrongNameKeyGenEx
 Создает новую пару открытого и закрытого ключей с указанным размером ключа для использования строгого имени.  
@@ -42,12 +40,12 @@ BOOLEAN StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>Параметры  
  `wszKeyContainer`  
- окне Запрошенное имя контейнера ключей. `wszKeyContainer`должен быть непустой строкой или иметь значение NULL для создания временного имени.  
+ окне Запрошенное имя контейнера ключей. `wszKeyContainer` должен быть непустой строкой или иметь значение NULL для создания временного имени.  
   
  `dwFlags`  
  окне Указывает, следует ли оставить зарегистрированный ключ. Поддерживаются следующие значения:  
   
-- 0x00000000 — используется, `wszKeyContainer` если параметр имеет значение null, чтобы создать имя контейнера временного ключа.  
+- 0x00000000 — используется, если `wszKeyContainer` имеет значение NULL для создания временного имени контейнера ключей.  
   
 - 0x00000001 (`SN_LEAVE_KEY`) — указывает, что ключ должен оставаться зарегистрированным.  
   
@@ -58,24 +56,24 @@ BOOLEAN StrongNameKeyGenEx (
  заполняет Возвращаемая пара открытого и закрытого ключей.  
   
  `pcbKeyBlob`  
- заполняет Размер (в байтах `ppbKeyBlob`).  
+ заполняет Размер `ppbKeyBlob`в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае —. `false`  
+ `true` при успешном завершении; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
- Для подписывания сборки строгим именем в `dwKeySize` .NET Framework версиях 1,0 и 1,1 требуется a из 1024 бит. в версии 2,0 добавлена поддержка для 2048-разрядных ключей.  
+## <a name="remarks"></a>Заметки  
+ Для подписи сборки строгим именем в .NET Framework версиях 1,0 и 1,1 требуется `dwKeySize` 1024 бит. в версии 2,0 добавлена поддержка для 2048-разрядных ключей.  
   
  После извлечения ключа необходимо вызвать функцию [StrongNameFreeBuffer](strongnamefreebuffer-function.md) , чтобы освободить выделенную память.  
   
  Если функция `StrongNameKeyGenEx` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод ICorProfilerCallback8::DynamicMethodJITCompilationStarted
+title: 'ICorProfilerCallback8: метод:D Инамикмесоджиткомпилатионстартед'
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a60f074ce0081df07a61d0b832d542c8873776f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1eaf29e1c93f352facde4af2ee57910783d82e5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136466"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>Метод ICorProfilerCallback8::DynamicMethodJITCompilationStarted
-[Поддерживается в .NET Framework 4.7 и более поздних версиях]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8: метод:D Инамикмесоджиткомпилатионстартед
+[Поддерживается в .NET Framework 4,7 и более поздних версиях]  
   
-Уведомляет профилировщик, каждый раз, когда JIT-компиляция динамического метода запуска.  
+Уведомляет профилировщик каждый раз, когда запускается JIT-компиляция динамического метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,31 +32,31 @@ HRESULT DynamicMethodJITCompilationStarted(
 ```  
   
 ## <a name="parameters"></a>Параметры  
-[in] `functionId`  
-Идентификатор функции в памяти, для которого JIT-компиляции запускается.   
+[входной] `functionId`  
+Идентификатор функции в памяти, для которой запускается JIT-компиляция.   
 
 [in] `fIsSafeToBlock`   
-`true` Чтобы указать, что блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; `false` для указания, что блокировка не повлияет на работу среды выполнения.  
+`true`, чтобы указать, что блокировка может привести к ожиданию средой выполнения вызывающего потока от этого обратного вызова. `false`, чтобы указать, что блокировка не повлияет на работу среды выполнения.  
 
 [in] `pILHeader`    
-Указатель на первый байт метод IL заголовка.   
+Указатель на первый байт заголовка IL метода.   
 
 [in] `cbILHeader`    
 Число байтов в заголовке IL. 
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
 
-Этот обратный вызов активируется каждый раз, когда динамический метод является JIT-компиляции. Сюда входят различные заглушки IL и LCG методы. Его целью является предоставление модулей записи профилировщика достаточно информации для идентификации метода, скомпилированного для пользователей.
+Этот обратный вызов активируется всякий раз, когда динамический метод компилируется JIT-компилятором. Сюда входят различные суррогаты IL и методы LCG. Его цель — предоставить средствам записи профилировщика достаточно информации для распознавания скомпилированного метода для пользователей.
 
 > [!NOTE]
-> `functionId` значения не может использоваться для разрешения на их токены метаданных, так как динамические методы имеют без метаданных.
+> `functionId` значения нельзя использовать для разрешения их маркеров метаданных, так как динамические методы не имеют метаданных.
 
-`pILHeader` Указатель допустим только во время обратного вызова.
+Указатель `pILHeader` допустим только во время обратного вызова.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

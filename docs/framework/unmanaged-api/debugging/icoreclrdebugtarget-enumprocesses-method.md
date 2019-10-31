@@ -17,14 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 301e6cc153f905bc5c15e1b526e6fb1a492a76d6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121845"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Метод ICoreClrDebugTarget::EnumProcesses
 Перечисляет процессы, работающие на удаленном компьютере.  
@@ -43,7 +41,7 @@ HRESULT EnumProcesses (
  [out] Число процессов, возвращаемых в `ppProcs`. Это значение может быть 0 (ноль).  
   
  `ppProcs`  
- [out] Массив [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) структур, представляющих процессы, запущенные на удаленном компьютере.  
+ заполняет Массив структур [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) , представляющих процессы, выполняемые на удаленном компьютере.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -55,17 +53,17 @@ HRESULT EnumProcesses (
  E_FAIL (или другие коды возврата E_)  
  Прочие сбои.  
   
-## <a name="remarks"></a>Примечания  
- Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Чтобы освободить память, выделенную этим методом, вызовите метод [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)  
+ **.NET Framework версии:** 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

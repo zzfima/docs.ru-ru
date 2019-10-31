@@ -2,19 +2,17 @@
 title: Перечисление COR_PRF_HIGH_MONITOR
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8cbc66ef1eb5048d2c708a615a99ea363d29540f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03fa33e0e2b4175d9f82bc6021731d58805da258
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123985"
 ---
-# <a name="corprfhighmonitor-enumeration"></a>Перечисление COR_PRF_HIGH_MONITOR
+# <a name="cor_prf_high_monitor-enumeration"></a>Перечисление COR_PRF_HIGH_MONITOR
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
   
- Предоставляет флаги в дополнение к найденным в [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) перечисления, которое профилировщик может указать [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) метода при его загрузке.  
+ Предоставляет флаги в дополнение к тем, которые находятся в перечислении [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) , которые профилировщик может указать в методе [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) при загрузке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,33 +36,33 @@ typedef enum {
 } COR_PRF_HIGH_MONITOR;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_HIGH_MONITOR_NONE`|Флаги не установлены.|  
-|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Элементы управления [ICorProfilerCallback6::GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) обратный вызов для добавления ссылки на сборки во время обхода замыкания сборки среды CLR.|  
-|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Элементы управления [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) обратный вызов для обновления в поток символ, связанный с модулем в памяти.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Элементы управления [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) обратного вызова, указывающий, когда динамический метод был мусора собираются и выгрузки. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
-|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 и более поздних версий: Отключает [многоуровневые компиляции](../../../core/whats-new/dotnet-core-3-0.md) для профилировщиков.|
-|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 и более поздних версий: Предоставляет упрощенную GC, параметр профилирования по сравнению с [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Управляет только [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), и [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) обратные вызовы. В отличие от `COR_PRF_MONITOR_GC` флаг, `COR_PRF_HIGH_BASIC_GC` не отключает параллельную сборку мусора.|
-|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 и более поздних версий: Позволяет [MovedReferences](icorprofilercallback-movedreferences-method.md) и [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) обратные вызовы для сжатия глобальных каталогов.|
-|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 и более поздних версий: Аналогичную [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), но содержит сведения о выделения объектов для Large Object Heap (LOH) только.|
-|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, для которых необходимы улучшенные профилировщиком изображения. Он соответствует `COR_PRF_REQUIRE_PROFILE_IMAGE` флаг в [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) перечисления.|  
+|`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Управляет обратным вызовом [ICorProfilerCallback6:: жетассемблиреференце](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) для добавления ссылок на сборки во время анализа закрытия ссылок на сборки CLR.|  
+|`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Управляет обратным вызовом [ICorProfilerCallback7:: модулеинмеморисимболсупдатед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) для обновлений потока символов, связанного с модулем в памяти.|  
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Управляет обратным вызовом [ICorProfilerCallback9::D инамикмесодунлоадед](icorprofilercallback9-dynamicmethodunloaded-method.md) для указания, когда динамический метод был собран и выгружен. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|Только .NET Core 3,0 и более поздние версии: отключает [многоуровневую компиляцию](../../../core/whats-new/dotnet-core-3-0.md) для профилировщиков.|
+|`COR_PRF_HIGH_BASIC_GC`|Только для .NET Core 3,0 и более поздних версий: предоставляет возможность использования упрощенного профилирования GC по сравнению с [`COR_PRF_MONITOR_GC`](cor-prf-monitor-enumeration.md). Управляет только обратными вызовами [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)и [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) . В отличие от флага `COR_PRF_MONITOR_GC`, `COR_PRF_HIGH_BASIC_GC` не отключает параллельную сборку мусора.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|Только для .NET Core 3,0 и более поздних версий: включает обратные вызовы [MovedReferences](icorprofilercallback-movedreferences-method.md) и [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) для сжатия GC.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET Core 3,0 и более поздние версии: аналогично [`COR_PRF_MONITOR_OBJECT_ALLOCATED`](cor-prf-monitor-enumeration.md), но предоставляет сведения о выделении объектов для кучи больших объектов (LOH).|
+|`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, для которых необходимы улучшенные профилировщиком изображения. Он соответствует флагу `COR_PRF_REQUIRE_PROFILE_IMAGE` в перечислении [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) .|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, которые могут быть установлены после присоединения профилировщика к выполняющемуся приложению.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, которые могут быть установлены только во время инициализации. Попытка изменить какой-нибудь из этих флагов в другом месте вызовет значение `HRESULT`, указывающее на сбой.|  
   
-## <a name="remarks"></a>Примечания  
- `COR_PRF_HIGH_MONITOR` Флаги используются с `pdwEventsHigh` параметр [ICorProfilerInfo5::GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) и [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) методы.  
+## <a name="remarks"></a>Заметки  
+ Флаги `COR_PRF_HIGH_MONITOR` используются с параметром `pdwEventsHigh` методов [ICorProfilerInfo5:: GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) и [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) .  
   
-Начиная с .NET Framework 4.6.1, значение `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` изменить от 0 до `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). Начиная с .NET Framework 4.7.2, его значение изменилось с `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` для `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
+Начиная с .NET Framework 4.6.1 значение `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` изменилось с 0 на `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). Начиная с .NET Framework 4.7.2, его значение изменилось с `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` на `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
 
-`COR_PRF_HIGH_MONITOR_IMMUTABLE` должен быть битовой маской, который представляет все флаги, которые можно задать только во время инициализации. Попытка изменить какие-либо из этих флагов в другом месте вызовет сбой `HRESULT`.
+`COR_PRF_HIGH_MONITOR_IMMUTABLE` должен быть битовой маской, представляющей все флаги, которые могут быть установлены только во время инициализации. Попытка изменить любой из этих флагов в других случаях приведет к неудачной `HRESULT`.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

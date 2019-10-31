@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee3a0c27d350dec8e9f3e9448174d978c7d50e81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad3a357a98cb5ed28a34e4076b5e145903ceaf91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103503"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>Метод ICorPublishProcess::IsManaged
-Получает значение, указывающее, является ли процесс ссылается этот [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) известно, что есть управляемый код.  
+Возвращает значение, указывающее, известно ли для процесса, на который ссылается этот [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) , управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Параметры  
  `pbManaged`  
- [out] Указатель на логическое значение, указывающее, ли процесс управляемого кода. Значение равно `true` Если процесс с управляемым кодом; в противном случае `false`.  
+ заполняет Указатель на логическое значение, указывающее, имеет ли процесс управляемый код. Значение `true`, если процесс имеет управляемый код; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
- Так как текущая версия `ICorPublishProcess` разрешает доступ только к процессам, которые управляемого кода, `IsManaged` всегда возвращает `true`.  
+## <a name="remarks"></a>Заметки  
+ Поскольку текущая версия `ICorPublishProcess` разрешает доступ только к процессам с управляемым кодом, `IsManaged` всегда возвращает `true`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorPub.idl, CorPub.h  
+ **Заголовок:** Корпуб. idl, Корпуб. h  
   
  **Библиотека:** CorGuids.lib  
   

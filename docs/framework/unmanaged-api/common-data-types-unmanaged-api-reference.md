@@ -2,14 +2,12 @@
 title: Общие типы данных (справочник по неуправляемым интерфейсам API)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132449"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Общие типы данных (справочник по неуправляемым интерфейсам API)
 В этом разделе перечислены простые типы данных, которые используются неуправляемыми API для платформы .NET Framework, определенными инструкциями C/C++ `typedef`. Эти типы данных, как правило, являются псевдонимами примитивных типов данных языка программирования C/C++. Как правило, значения этих типов данных непрозрачны, т. е. возвращаются конкретной функцией или методом таким образом, что могут быть переданы в другие функции или методы без изменений.  
@@ -18,7 +16,7 @@ ms.locfileid: "70776464"
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Идентификатор домена приложения.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Идентификатор сборки.|  
-|ClassID:|`typedef UINT_PTR ClassID;`|corprof.h|Идентификатор управляемого класса.|  
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Идентификатор управляемого класса.|  
 |CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|клрдата. h|64-разрядный адрес памяти.|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Недоступно|64-разрядный адрес памяти.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Идентификатор подключения для потока, подключенного к экземпляру Microsoft SQL Server.|  

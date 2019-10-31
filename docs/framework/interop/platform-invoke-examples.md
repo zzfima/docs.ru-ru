@@ -13,14 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89c2043570b9e2798ef41984b889791ddfe1d526
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: da157a40819ada3914cf1791c8ca3f7b30e8c837
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124762"
 ---
 # <a name="platform-invoke-examples"></a>Примеры вызовов неуправляемого кода
 В следующих примерах демонстрируется, как определить и вызвать функцию **MessageBox** в User32.dll, передав в качестве аргумента простую строку. В этом примере полю <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> присваивается значение **Автоматически**, благодаря чему целевая платформа определяет ширину символа и параметры маршалинга строк.  

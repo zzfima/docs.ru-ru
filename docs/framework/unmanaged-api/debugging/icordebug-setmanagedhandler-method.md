@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134053"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>Метод ICorDebug::SetManagedHandler
 Указывает объект обработчика событий для управляемых событий.  
@@ -37,17 +35,17 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>Параметры  
  `pCallback`  
- [in] Указатель на [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) объект, являющийся объект обработчика событий.  
+ окне Указатель на объект [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) , который является объектом обработчика событий.  
   
-## <a name="remarks"></a>Примечания  
- `SetManagedHandler` должен вызываться во время создания.  
+## <a name="remarks"></a>Заметки  
+ `SetManagedHandler` должны вызываться во время создания.  
   
- Если `ICorDebugManagedCallback` реализация не содержит достаточно интерфейсы для обработки событий отладки для приложения, которое выполняется отладка, `SetManagedHandler` возвращает HRESULT E_NOINTERFACE.  
+ Если `ICorDebugManagedCallback` реализация не содержит достаточных интерфейсов для работы с событиями отладки для отлаживаемого приложения, `SetManagedHandler` возвращает значение HRESULT E_NOINTERFACE.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

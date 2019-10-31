@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09c6431ec885c8b797dc9bb5f5c3ffe21890ccc7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107942"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>Интерфейс IEnumDefinitionIdentity
-Служит в качестве перечислителя для коллекции `IDefinitionIdentity` объектов.  
+Служит в качестве перечислителя для коллекции объектов `IDefinitionIdentity`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,15 +53,15 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Метод|Описание|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Возвращает указатель интерфейса на новый `IEnumDefinitionIdentity` объект, содержащий те же элементы, что и этот. `IEnumDefinitionIdentity`|  
-|`IEnumDefinitionIdentity::Next`|Возвращает указанное число `IDefinitionIdentity` объектов, начиная с текущей позиции.|  
-|`IEnumDefinitionIdentity::Reset`|Перемещает указатель инструкций в начало `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Clone`|Возвращает указатель интерфейса на новый объект `IEnumDefinitionIdentity`, который содержит те же члены, что и этот `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Next`|Возвращает указанное число объектов `IDefinitionIdentity`, начиная с текущей позиции.|  
+|`IEnumDefinitionIdentity::Reset`|Перемещает указатель инструкции в начало этого `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Skip`|Перемещает указатель инструкции вперед на указанное число элементов, начиная с текущей позиции.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Изоляция. h  
+ **Заголовок:** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

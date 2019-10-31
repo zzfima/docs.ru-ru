@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffd0f708-0d21-4fae-a395-63b6c45828fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6eb93b84baf9dcd82d89bb1a4711a91d97c52779
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64304b671532325bdc2f8841a2702d537d143330
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754788"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124038"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>Метод ICorDebugFunction::CreateBreakpoint
 Создает точку останова в начале этой функции.  
@@ -37,12 +35,12 @@ HRESULT CreateBreakpoint (
   
 ## <a name="parameters"></a>Параметры  
  `ppBreakpoint`  
- [out] Указатель на адрес ICorDebugFunctionBreakpoint объект, представляющий новую точку останова функции.  
+ заполняет Указатель на адрес объекта ICorDebugFunctionBreakpoint, который представляет новую точку останова для функции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

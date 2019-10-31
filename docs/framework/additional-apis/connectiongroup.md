@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1064c15fc6fc1416f9c2b3a7aac51ef30d78ca7a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5a9041ab75836b4239d492987e94c9104133e9bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120040"
 ---
 # <a name="connectiongroup-class"></a>Класс ConnectionGroup
 
-`ConnectionGroup` Класс группирует список подключений в <xref:System.Net.ServicePoint> контекста и используется для поддержки контекста для сетевых ресурсов (например, прокси-серверы и отдельные клиенты).
+Класс `ConnectionGroup` группирует список соединений в контексте <xref:System.Net.ServicePoint> и используется для сохранения контекста сетевых ресурсов (например, для прокси-серверов и отдельных клиентов).
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> `ConnectionGroup` Класс является внутренним и не предназначен для непосредственного использования в коде.
+> Класс `ConnectionGroup` является внутренним и не предназначен для непосредственного использования в коде.
 > 
-> Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** Системы (в System.dll)
+**Сборка:** Система (в System. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

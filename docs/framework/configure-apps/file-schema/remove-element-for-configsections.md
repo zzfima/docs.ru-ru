@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f57dc9279c107ce751f71c2998670ab992db162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118438"
 ---
-# <a name="remove-element-for-configsections"></a>\<Удаление элемента > для \<configSections >
+# <a name="remove-element-for-configsections"></a>\<удалить элемент > для \<configSections >
 
 Удаляет предопределенный раздел или группу разделов.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Удалить >**
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,21 +40,21 @@ ms.locfileid: "69927459"
 
 |     | Описание |
 | --- | ----------- |
-| [элемент  **>\<configSections**](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
+| [ **\<configSections >** Дерев](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-None
+Отсутствуют
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Элемент  **\<Remove >** можно использовать для удаления разделов и групп разделов из приложения, которые были определены на более высоком уровне в иерархии файлов конфигурации.
+Элемент **\<удалить >** можно использовать для удаления разделов и групп разделов из приложения, которые были определены на более высоком уровне в иерархии файлов конфигурации.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано,  **\<** как использовать элемент remove > в файле конфигурации приложения для удаления раздела, ранее определенного в файле конфигурации компьютера.
+В следующем примере показано использование элемента **\<Remove >** в файле конфигурации приложения для удаления раздела, ранее определенного в файле конфигурации компьютера.
 
-Следующий код файла конфигурации компьютера объявляет раздел  **\<самплесектион >** :
+В следующем коде файла конфигурации компьютера объявляется раздел **\<самплесектион >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ None
 </configuration>
 ```
 
-В следующем коде файла конфигурации приложения удаляется  **\<раздел > самплесектион** . После удаления приложение не сможет получить параметры в  **\<самплесектион >** .
+В следующем коде файла конфигурации приложения удаляется раздел **\<самплесектион >** . После удаления приложение не сможет получить параметры в **\<самплесектион >** .
 
 ```xml
 <!-- Application configuration file -->

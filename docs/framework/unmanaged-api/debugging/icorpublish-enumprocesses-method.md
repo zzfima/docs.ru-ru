@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f0dd814ad5adfa1b0dd7199530a3f993634a548
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121795"
 ---
 # <a name="icorpublishenumprocesses-method"></a>Метод ICorPublish::EnumProcesses
-Возвращает перечислитель для управляемых процессов, запущенных на этом компьютере.  
+Возвращает перечислитель для управляемых процессов, выполняющихся на этом компьютере.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT EnumProcesses (
   
 ## <a name="parameters"></a>Параметры  
  `Type`  
- Значение [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) перечисление, указывающее тип процесса требуется получить. В текущей версии только COR_PUB_MANAGEDONLY является допустимым.  
+ Значение перечисления [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) , указывающее тип получаемого процесса. В текущей версии допускается только COR_PUB_MANAGEDONLY.  
   
  `ppIEnum`  
- Указатель на адрес [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) экземпляр, который является перечислителем процессов.  
+ Указатель на адрес экземпляра [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) , который является перечислителем процессов.  
   
-## <a name="remarks"></a>Примечания  
- Перечислитель коллекции процессов основан на моментальный снимок процессов, которые выполняются при `EnumProcesses` вызывается метод. Перечислитель не будет включать все процессы, прежде чем или запустить после `EnumProcesses` вызывается.  
+## <a name="remarks"></a>Заметки  
+ Коллекция процессов перечислителя основана на моментальном снимке процессов, выполняемых при вызове метода `EnumProcesses`. Перечислитель не будет включать процессы, которые завершаются до или после вызова `EnumProcesses`.  
   
- `EnumProcesses` Метод может вызываться несколько раз на этом [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) экземпляра для создания новой актуальной коллекции процессов. Существующие коллекции не будут затронуты, последующие вызовы `EnumProcesses` метод.  
+ Метод `EnumProcesses` может быть вызван более одного раза в этом экземпляре [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) для создания новой актуальной коллекции процессов. Последующие вызовы метода `EnumProcesses` не будут затронуты существующими коллекциями.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorPub.idl, CorPub.h  
+ **Заголовок:** Корпуб. idl, Корпуб. h  
   
  **Библиотека:** CorGuids.lib  
   

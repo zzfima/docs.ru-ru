@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dffc3d197b05bb71443aa60c101260daabadadd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136392"
 ---
 # <a name="getrealprocaddress-function"></a>Функция GetRealProcAddress
-Получает адрес заданной функции, экспортируемой из последней установленной версии общеязыковой среды выполнения (CLR).  
+Возвращает адрес указанной функции, которая экспортируется из последней установленной версии среды CLR.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,13 +37,13 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Параметры  
  `pwszProcName`  
- [in] Имя функции.  
+ окне Имя функции.  
   
  `ppv`  
- [out] Расположение, которая получает указатель на адрес функции.  
+ заполняет Расположение, которое получает указатель на адрес функции.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений, определенных в CorError.h.  
+ Этот метод возвращает коды стандартных ошибок модели COM, как определено в файле WinError. h, в дополнение к следующим значениям, определенным в CorError. h.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
@@ -54,11 +52,11 @@ HRESULT GetRealProcAddress (
 |CLR_E_SHIM_RUNTIMEEXPORT|Функция не экспортируется из среды выполнения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

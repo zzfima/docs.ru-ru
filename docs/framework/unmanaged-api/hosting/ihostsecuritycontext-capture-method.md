@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 96bb3a530bf4c63c3662ecfa635a929381fc0de6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121539"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>Метод IHostSecurityContext::Capture
 Возвращает клон экземпляра [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) , возвращенный из вызова [IHostSecurityManager:: getsecuritycontext-](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
@@ -37,28 +35,28 @@ HRESULT Capture (
   
 ## <a name="parameters"></a>Параметры  
  `ppClonedContext`  
- заполняет Указатель на адрес клона `IHostSecurityContext` объекта, который необходимо записать.  
+ заполняет Указатель на адрес клона объекта `IHostSecurityContext`, который необходимо записать.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`Capture`успешно возвращено.|  
+|S_OK|`Capture` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- Указатель интерфейса, возвращенный `Capture` из, является клоном захваченного контекста. Когда эта информация перемещается по асинхронной кодовой точке, ее время существования отделяется от указателя, на который был сделан вызов. Таким образом, исходный указатель может быть освобожден.  
+## <a name="remarks"></a>Заметки  
+ Указатель интерфейса, возвращенный из `Capture`, является клоном захваченного контекста. Когда эта информация перемещается по асинхронной кодовой точке, ее время существования отделяется от указателя, на который был сделан вызов. Таким образом, исходный указатель может быть освобожден.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
