@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137630"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>Метод ICorDebugEval2::CallParameterizedFunction
-Устанавливает для указанного ICorDebugFunction, который может быть вложен в класс, конструктор которого принимает вызов <xref:System.Type> параметры или сам может занять <xref:System.Type> параметров.  
+Настраивает вызов указанного ICorDebugFunction, который может быть вложен в класс, конструктор которого принимает <xref:System.Type> параметры или сам может принимать <xref:System.Type> параметров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,31 +39,31 @@ HRESULT CallParameterizedFunction (
   
 ## <a name="parameters"></a>Параметры  
  `pFunction`  
- [in] Указатель на `ICorDebugFunction` объект, который представляет функцию для вызова.  
+ окне Указатель на объект `ICorDebugFunction`, представляющий вызываемую функцию.  
   
  `nTypeArgs`  
- [in] Число аргументов, функция принимает.  
+ окне Число аргументов, которые принимает функция.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает ICorDebugType объект, представляющий аргумент функции.  
+ окне Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент функции.  
   
  `nArgs`  
- [in] Число значений, переданных в функцию.  
+ окне Количество значений, переданных функции.  
   
  `ppArgs`  
- [in] Массив указателей, каждый из которых указывает ICorDebugValue объект, представляющий значение передается в качестве аргумента функции.  
+ окне Массив указателей, каждый из которых указывает на объект ICorDebugValue, представляющий значение, передаваемое в аргументе функции.  
   
-## <a name="remarks"></a>Примечания  
- `CallParameterizedFunction` Подобно [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) за исключением того, что функция может быть внутри класса с параметрами типа, может сам принимают параметры типа или оба. Аргументы типа должны быть заданы сначала для класса, а затем для функции.  
+## <a name="remarks"></a>Заметки  
+ `CallParameterizedFunction` имеет вид [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) , за исключением того, что функция может находиться внутри класса с параметрами типа, может иметь параметры типа или и то, и другое. Аргументы типа должны быть даны сначала для класса, а затем для функции.  
   
- Если функция находится в другом домене приложения, будет выполнен переход. Тем не менее все аргументы типа и значения должны быть в целевом домене приложения.  
+ Если функция находится в другом домене приложения, произойдет переход. Однако все аргументы типа и значения должны находиться в целевом домене приложения.  
   
- Вычисление функции могут выполняться только в ограниченном числе сценариев. Если `CallParameterizedFunction` или `ICorDebugEval::CallFunction` завершается сбоем, возвращенное значение HRESULT указывает наиболее общие возможные причины сбоя.  
+ Вычисление функций может выполняться только в ограниченных сценариях. В случае сбоя `CallParameterizedFunction` или `ICorDebugEval::CallFunction` возвращаемое значение HRESULT будет указывать на наиболее общую возможную причину сбоя.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

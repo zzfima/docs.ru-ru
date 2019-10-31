@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aaf76d4c3d0f5fb59aeb35fae7a7020ee97b74d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c5e803c874e1254510f75189846d7cb12cb1ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132478"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Функция CertTimestampAuthenticodeLicense
 Отметки времени для лицензии Authenticode XrML.  
@@ -38,9 +36,9 @@ HRESULT CertTimestampAuthenticodeLicense (
  [в] URL-адресу сервера отметок времени.  
   
  `pTimestampSignatureBlob`  
- [из] Указатель на CRYPT_DATA_BLOB для получения подписи с отметкой времени в кодировке base64. Его `pTimestampSignatureBlob` можно бесплатно -> `pbData` использовать послеиспользования.`HepFree()` См. структуру [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
+ [из] Указатель на CRYPT_DATA_BLOB для получения подписи с отметкой времени в кодировке base64. Он отвечает за освобождение `pTimestampSignatureBlob`->`pbData` с `HepFree()` после использования. См. структуру [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Подпись с отметкой времени фактически представляет собой сообщение PKCS #7 SignedData, содержимое которого является двоичной формой SignatureValue из подписи лицензии. По сути, она действует как подпись, подтверждающая лицензию.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

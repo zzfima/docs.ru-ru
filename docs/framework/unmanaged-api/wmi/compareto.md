@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128701"
 ---
 # <a name="compareto-function"></a>Функция CompareTo
 
@@ -52,28 +50,28 @@ HRESULT CompareTo (
 окне Побитовое сочетание флагов, задающих характеристики объекта, которые следует учитывать при сравнении. Дополнительные сведения см. в разделе ["Примечания"](#remarks) .
 
 `pCompareTo`\
-окне Объект для сравнения. `pCompareTo`должен быть допустимым экземпляром [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ; оно не может `null`быть.
+окне Объект для сравнения. `pCompareTo` должен быть допустимым экземпляром [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ; его невозможно `null`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неопределенная ошибка. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Второй вызов `BeginEnumeration` был выполнен без промежуточного [`EndEnumeration`](endenumeration.md)вызова. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Второй вызов `BeginEnumeration` был выполнен без промежуточного вызова [`EndEnumeration`](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Объекты различаются. |
 | `WBEM_S_SAME` | 0 | Объекты одинаковы на основе флагов сравнения. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) .
 
-Флаги, которые могут быть переданы `lEnumFlags` в качестве аргумента, определяются в файле заголовка *вбемкли. h* или могут быть определены в коде в виде констант. Можно указать отдельные характеристики, участвующие в сравнении, указав побитовое сочетание следующих флагов:
+Флаги, которые могут быть переданы в качестве аргумента `lEnumFlags`, определяются в файле заголовка *вбемкли. h* , или их можно определить как константы в коде. Можно указать отдельные характеристики, участвующие в сравнении, указав побитовое сочетание следующих флагов:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Игнорируйте источник (сервер и пространство имен, из которого они поступили). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Игнорировать все квалификаторы (включая **ключ** и **динамический**) |
@@ -84,15 +82,15 @@ HRESULT CompareTo (
 
 Или можно указать один составной флаг следующим образом:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Рассмотрите все функции в сравнении. |
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils. idl
+**Заголовок:** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64bf667c5c9bc20db14f08f18fa6f4f84fa12a24
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252253"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115214"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<Элемент > TimeSpan_LegacyFormatMode
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > элемент
 
-Определяет, сохраняет ли среда выполнения устаревшее поведение в операциях <xref:System.TimeSpan?displayProperty=nameWithType> форматирования со значениями.
+Определяет, сохраняет ли среда выполнения устаревшее поведение в операциях форматирования с <xref:System.TimeSpan?displayProperty=nameWithType> значениями.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
 
 ## <a name="syntax"></a>Синтаксис
@@ -40,18 +38,18 @@ ms.locfileid: "70252253"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли среда выполнения устаревшее поведение <xref:System.TimeSpan?displayProperty=nameWithType> форматирования со значениями.|
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли среда выполнения устаревшее поведение форматирования с <xref:System.TimeSpan?displayProperty=nameWithType> значениями.|
 
 ## <a name="enabled-attribute"></a>Атрибут enabled
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |`false`|Среда выполнения не восстанавливает устаревшее поведение форматирования.|
 |`true`|Среда выполнения восстанавливает устаревшее поведение форматирования.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -60,17 +58,17 @@ ms.locfileid: "70252253"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Начиная с .NET Framework 4 <xref:System.TimeSpan?displayProperty=nameWithType> структура <xref:System.IFormattable> реализует интерфейс и поддерживает операции форматирования со стандартными и пользовательскими строками формата. Если метод синтаксического анализа обнаруживает неподдерживаемый описатель формата или строку формата, он создает исключение <xref:System.FormatException>.
+Начиная с .NET Framework 4 Структура <xref:System.TimeSpan?displayProperty=nameWithType> реализует интерфейс <xref:System.IFormattable> и поддерживает операции форматирования со стандартными и пользовательскими строками формата. Если метод синтаксического анализа встречает неподдерживаемый описатель формата или строку формата, он выдает исключение <xref:System.FormatException>.
 
-В предыдущих версиях .NET Framework <xref:System.TimeSpan> структура не реализовала <xref:System.IFormattable> и не поддерживала строки формата. Однако многие разработчики ошибочно предполагали, <xref:System.TimeSpan> что поддерживало набор строк формата и использовали их в [операциях составного форматирования](../../../../standard/base-types/composite-formatting.md) с помощью таких <xref:System.String.Format%2A?displayProperty=nameWithType>методов, как. Обычно, если тип реализует <xref:System.IFormattable> и поддерживает строки формата, вызовы методов форматирования с неподдерживаемыми строками формата обычно <xref:System.FormatException>создают исключение. Однако, поскольку <xref:System.TimeSpan> не реализуется <xref:System.IFormattable>, среда выполнения игнорирует <xref:System.TimeSpan.ToString?displayProperty=nameWithType> строку формата и вызывает метод. Это означает, что, хотя строки формата не оказывают влияния на операцию форматирования, их присутствие не привело к <xref:System.FormatException>созданию.
+В предыдущих версиях .NET Framework структура <xref:System.TimeSpan> не реализовала <xref:System.IFormattable> и не поддерживала строки формата. Однако многие разработчики ошибочно предполагали, что <xref:System.TimeSpan> поддерживали набор строк формата и использовали их в [операциях составного форматирования](../../../../standard/base-types/composite-formatting.md) с такими методами, как <xref:System.String.Format%2A?displayProperty=nameWithType>. Обычно, если тип реализует <xref:System.IFormattable> и поддерживает строки формата, вызовы методов форматирования с неподдерживаемыми строками формата обычно создают <xref:System.FormatException>. Однако поскольку <xref:System.TimeSpan> не реализовал <xref:System.IFormattable>, среда выполнения игнорирует строку формата и вызывает метод <xref:System.TimeSpan.ToString?displayProperty=nameWithType>. Это означает, что, хотя строки формата не оказывают влияния на операцию форматирования, их присутствие не привело к <xref:System.FormatException>.
 
-Для случаев, когда устаревший код передает метод составного форматирования и недопустимую строку формата, и этот код нельзя перекомпилировать, можно использовать `<TimeSpan_LegacyFormatMode>` элемент для восстановления прежнего <xref:System.TimeSpan> поведения. Если `enabled` атрибуту этого `true`элемента присвоить значение, метод составного форматирования приводит к <xref:System.TimeSpan.ToString?displayProperty=nameWithType> вызову <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, а не, а <xref:System.FormatException> исключение не создается.
+В случаях, когда устаревший код передает метод составного форматирования и недопустимую строку формата, и этот код не может быть перекомпилирован, можно использовать элемент `<TimeSpan_LegacyFormatMode>` для восстановления прежнего поведения <xref:System.TimeSpan>. Если для атрибута `enabled` этого элемента задано значение `true`, метод составного форматирования приводит к вызову <xref:System.TimeSpan.ToString?displayProperty=nameWithType>, а не <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, а <xref:System.FormatException> не создается.
 
 ## <a name="example"></a>Пример
 
-Следующий пример создает экземпляр <xref:System.TimeSpan> объекта и пытается отформатировать его <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> с помощью метода, используя неподдерживаемую строку стандартного формата.
+Следующий пример создает экземпляр объекта <xref:System.TimeSpan> и пытается отформатировать его с помощью метода <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType>, используя неподдерживаемую строку стандартного формата.
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]

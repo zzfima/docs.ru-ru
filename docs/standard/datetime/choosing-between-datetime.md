@@ -13,14 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132580"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo
 
@@ -40,10 +38,10 @@ ms.locfileid: "71835301"
 
 - для выполнения арифметических операций с датой и временем, возможно, с результатом, однозначно определяющим момент времени.
 
-.NET включает типы <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> и <xref:System.TimeZoneInfo>, которые можно использовать для создания приложений, работающих с датами и временем.
+.NET включает типы <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>и <xref:System.TimeZoneInfo>, которые можно использовать для создания приложений, работающих с датами и временем.
 
 > [!NOTE]
-> В этом разделе не рассматривается <xref:System.TimeZone>, так как его функциональность практически полностью включена в класс <xref:System.TimeZoneInfo>. Везде, где это возможно, используйте класс <xref:System.TimeZoneInfo> вместо класса <xref:System.TimeZone>.
+> В этом разделе не рассматривается <xref:System.TimeZone>, поскольку его функциональные возможности практически полностью включены в класс <xref:System.TimeZoneInfo>. Везде, где это возможно, используйте класс <xref:System.TimeZoneInfo>, а не класс <xref:System.TimeZone>.
 
 ## <a name="the-datetime-structure"></a>Структура DateTime
 
@@ -98,9 +96,9 @@ ms.locfileid: "71835301"
 
 - для отражения интервала времени между двумя значениями даты и времени (например, при вычитании одного значения <xref:System.DateTime> из другого возвращается значение <xref:System.TimeSpan> );
 
-- для измерения прошедшего времени. Например, свойство <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> возвращает значение <xref:System.TimeSpan>, отражающее интервал времени, прошедший с момента вызова одного из методов <xref:System.Diagnostics.Stopwatch>, которые начинают измерять прошедшее время.
+- для измерения прошедшего времени. Например, свойство <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> возвращает <xref:System.TimeSpan> значение, отражающее интервал времени, прошедший с момента вызова одного из методов <xref:System.Diagnostics.Stopwatch>, которые начинают измерять прошедшее время.
 
-Значение <xref:System.TimeSpan> также может использоваться в качестве замены для значения <xref:System.DateTime>, если это значение отражает время без ссылки на конкретный день. Это использование аналогично свойствам <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, которые возвращают значение <xref:System.TimeSpan>, которое представляет время без ссылки на дату. Например, структуру <xref:System.TimeSpan> можно использовать для представления ежедневного времени открытия или закрытия магазина или времени, в которое происходит любое регулярное событие.
+Значение <xref:System.TimeSpan> может также использоваться в качестве замены для <xref:System.DateTime> значения, когда это значение отражает время без ссылки на конкретный день. Это использование аналогично свойствам <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, которые возвращают значение <xref:System.TimeSpan>, представляющее время без ссылки на дату. Например, структуру <xref:System.TimeSpan> можно использовать для представления ежедневного времени открытия или закрытия магазина или времени, в которое происходит любое регулярное событие.
 
 В примере ниже определяется структура `StoreInfo` , которая включает объекты <xref:System.TimeSpan> , представляющие время закрытия и открытия магазина, а также объект <xref:System.TimeZoneInfo> , представляющий часовой пояс магазина. Структура также включает два метода, `IsOpenNow` и `IsOpenAt`, указывающие, открыт ли магазин в то время, которое указал пользователь, предположительно находящийся в местном часовом поясе.
 
@@ -114,7 +112,7 @@ ms.locfileid: "71835301"
 
 ## <a name="the-timezoneinfo-class"></a>Класс TimeZoneInfo
 
-Класс <xref:System.TimeZoneInfo> представляет все часовые пояса Земли и обеспечивает преобразование любого значения даты и времени из одного часового пояса в его эквивалент в другом часовом поясе. Класс <xref:System.TimeZoneInfo> позволяет работать со значениями даты и времени, обеспечивая однозначную идентификацию единственного момента времени с помощью любого значения даты и времени. Класс <xref:System.TimeZoneInfo> также является расширяемым. Хотя он зависит от сведений о часовом поясе, предоставленных для систем Windows и определенных в реестре, он поддерживает создание настраиваемых часовых поясов. Кроме того, он поддерживает сериализацию и десериализацию сведений о часовом поясе.
+Класс <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. Класс <xref:System.TimeZoneInfo> позволяет работать со значениями даты и времени, обеспечивая однозначную идентификацию единственного момента времени с помощью любого значения даты и времени. Класс <xref:System.TimeZoneInfo> также является расширяемым. Хотя он зависит от сведений о часовом поясе, предоставленных для систем Windows и определенных в реестре, он поддерживает создание настраиваемых часовых поясов. Кроме того, он поддерживает сериализацию и десериализацию сведений о часовом поясе.
 
 В некоторых случаях использование всех преимуществ класса <xref:System.TimeZoneInfo> может потребовать дальнейших усилий по разработке. Если значения даты и времени не тесно связаны с часовыми поясами, к которым они относятся, требуется дополнительная работа. Если приложение не предоставляет какой-либо механизм для связывания даты и времени со связанным часовым поясом, то определенное значение даты и времени можно легко привязать к его часовому поясу. Одним из способов связывания этой информации является определение класса или структуры, содержащих значение даты и времени и связанный с ним часовой пояс.
 

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122446"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>Метод ICorDebugThread4::GetCurrentCustomDebuggerNotification
 
-Получает текущий [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) объекта в текущем потоке.
+Возвращает текущий объект [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) в текущем потоке.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,17 +37,17 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>Параметры
 
 `ppNotificationObject`\
-[out] Указатель на текущий `ICorDebugManagedCallback3::CustomNotification` объекта в текущем потоке.
+заполняет Указатель на текущий объект `ICorDebugManagedCallback3::CustomNotification` в текущем потоке.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Значение `ppNotificationObject` имеет значение null, если метод не вызывается из `ICorDebugManagedCallback3::CustomNotification` обратного вызова, или если текущий объект уведомления не существует.
+Значение `ppNotificationObject` равно null, если метод не вызывается из обратного вызова `ICorDebugManagedCallback3::CustomNotification` или если текущий объект уведомления не существует.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorDebug.idl, CorDebug.h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
 **Библиотека:** CorGuids.lib
 

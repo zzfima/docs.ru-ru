@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125322"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>Метод ICorDebugDataTarget::GetPlatform
-Сведения о платформе, включая архитектуру процессора и операционной системы, на котором выполняется целевой процесс.  
+Предоставляет сведения о платформе, включая архитектуру процессора и операционную систему, на которых выполняется целевой процесс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,23 +33,23 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>Параметры  
  `pTargetPlatform`  
- [out] Указатель на [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) перечисление, описывающее целевой платформы.  
+ заполняет Указатель на перечисление [кордебугплатформенум](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) , описывающее целевую платформу.  
   
-## <a name="remarks"></a>Примечания  
- `CorDebugPlatformEnum` Возвращаемое значение перечисления используется [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс, чтобы определить сведения о целевом процессе, такие как его размер указателя, структуры адресного пространства, набор регистров, формат команд, структура контекста и соглашения о вызовах.  
+## <a name="remarks"></a>Заметки  
+ Возвращаемое значение перечисления `CorDebugPlatformEnum` используется интерфейсом [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) для определения сведений о целевом процессе, таких как размер указателя, макет адресного пространства, набор регистров, формат инструкций, контекстный макет и соглашения о вызовах.  
   
- `pTargetPlatform` Может указывать на платформу, эмулируется для целевого объекта вместо указания фактическое оборудование используется. Например, следует использовать процесс, который работает в Windows в среде Windows (WOW) в 64-разрядной версии операционной системы Windows `CORDB_PLATFORM_WINDOWS_X86` значение [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) перечисления.  
+ Значение `pTargetPlatform` может ссылаться на платформу, которая эмулируется для целевого объекта, вместо того, чтобы указывать фактическое используемое оборудование. Например, процесс, выполняемый в среде Windows on Windows (WOW) в 64-разрядном выпуске операционной системы Windows, должен использовать `CORDB_PLATFORM_WINDOWS_X86` значение перечисления [кордебугплатформенум](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) .  
   
- Этот метод должен завершиться успешно. Если происходит сбой, целевая платформа — непригодным для использования. Метод может завершиться ошибкой по следующим причинам:  
+ Этот метод должен быть выполнен. В случае сбоя Целевая платформа будет непригодна для использования. Метод может завершиться ошибкой по следующим причинам:  
   
-- Платформа, которая является эмулируемая для целевого объекта не может использоваться.  
+- Платформа, которая эмулируется для целевого объекта, непригодна для использования.  
   
-- Фактическое оборудование на целевой платформе непригодным для использования.  
+- Фактическое оборудование на целевой платформе непригодно для использования.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

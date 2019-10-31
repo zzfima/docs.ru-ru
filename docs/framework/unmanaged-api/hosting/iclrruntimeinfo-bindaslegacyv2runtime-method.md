@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ea4bd222500015f6c78cb0455539aa2c24e681
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d37ec8e17e62f58212a5f79f4d6b6aa75f57bf7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120258"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>Метод ICLRRuntimeInfo::BindAsLegacyV2Runtime
-Привязывает текущую среду выполнения для всех устаревших распространенных языка среды выполнения (CLR) версии 2 активации решения на основе политик.  
+Привязывает текущую среду выполнения для всех устаревших решений политики активации среды CLR версии 2.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,22 +32,22 @@ HRESULT BindAsLegacyV2Runtime ();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает следующие специфичные результаты HRESULT:  
+ Этот метод возвращает следующие определенные значения HRESULT:  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Привязка выполнена успешно, либо эта среда выполнения уже были привязаны как старой среды выполнения CLR версии 2 активации политики.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Другие среды выполнения уже была привязана к устаревшая политика активации 2 версии среды CLR.|  
+|S_OK|Либо привязка выполнена успешно, либо эта среда выполнения уже была привязана к устаревшей среде выполнения политики активации CLR версии 2.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Другая среда выполнения уже привязана к устаревшей политике активации CLR версии 2.|  
   
-## <a name="remarks"></a>Примечания  
- Если для всех предыдущих версий среды CLR версии 2 решений политики активации уже привязано текущей среды выполнения (например, с помощью `useLegacyV2RuntimeActivationPolicy` атрибут [ \<запуска > элемент](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) в файле конфигурации), этот метод не возвращает результат ошибки; Вместо этого возвращается значение S_OK, так же, как было бы, если метод успешно привязал устаревшей политике активации.  
+## <a name="remarks"></a>Заметки  
+ Если текущая среда выполнения уже привязана для всех устаревших решений политики активации CLR версии 2 (например, с помощью атрибута `useLegacyV2RuntimeActivationPolicy` в [элементе\<startup >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) в файле конфигурации), этот метод не возвращает результат ошибки. Вместо этого результатом будет значение S_OK, точно так же, как если бы метод успешно привязать устаревшую политику активации.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

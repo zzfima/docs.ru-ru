@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770080"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122390"
 ---
 # <a name="icordebugthreadenumnext-method"></a>Метод ICorDebugThreadEnum::Next
-Возвращает количество экземпляров указанного ICorDebugThread из перечисления, начиная с текущей позиции.  
+Возвращает число указанных экземпляров ICorDebugThread из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Количество `ICorDebugThread` извлекаемых экземпляров.  
+ окне Число извлекаемых экземпляров `ICorDebugThread`.  
   
  `threads`  
- [out] Массив указателей, каждый из которых указывает `ICorDebugThread` , представляющий поток.  
+ заполняет Массив указателей, каждый из которых указывает на объект `ICorDebugThread`, представляющий поток.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugThread` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращаемых экземпляров `ICorDebugThread`. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

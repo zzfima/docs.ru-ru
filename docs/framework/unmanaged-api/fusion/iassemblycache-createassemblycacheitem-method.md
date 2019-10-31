@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 017a7ba5-aaaf-44e2-9cbe-ceebef259df0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3e50538bde8fe3509b49e3dbcb031875e6863e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796826"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127121"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Метод IAssemblyCache::CreateAssemblyCacheItem
 Возвращает ссылку на новый объект [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
@@ -47,18 +45,18 @@ HRESULT CreateAssemblyCacheItem (
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- окне Зарезервировано для будущего расширения. `pvReserved`должен быть пустой ссылкой.  
+ окне Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
   
  `ppAsmItem`  
- заполняет Возвращаемый `IAssemblyCacheItem` указатель.  
+ заполняет Возвращаемый указатель `IAssemblyCacheItem`.  
   
  `pszAssemblyName`  
- [входные, необязательные] Неканонические пары, разделенные `name=value` запятыми.  
+ [входные, необязательные] Неканонические пары `name=value` с разделителями-запятыми.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781167"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141499"
 ---
 # <a name="rundll32shimw-function"></a>Функция RunDll32ShimW
 Выполняет указанную команду.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,23 +39,23 @@ HRESULT RunDll32ShimW (
   
 ## <a name="parameters"></a>Параметры  
  `hwnd`  
- [in] Дескриптор окна, в которой будут отображаться выходные данные команды.  
+ окне Маркер окна, в котором будут отображаться выходные данные команды.  
   
  `hinst`  
- [in] Дескриптор в библиотеку, содержащую команду.  
+ окне Маркер библиотеки, которая содержит команду.  
   
  `lpszCmdLine`  
- [in] Строковое значение, указывающее выполняемую команду.  
+ окне Строка, указывающая выполняемую команду.  
   
  `nCmdShow`  
- [in] Целое число, указывающее режим отображения для окна вывода.  
+ окне Целое число, указывающее режим просмотра для окна вывода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

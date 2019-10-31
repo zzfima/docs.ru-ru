@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127152"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>Метод ICorDebugRegisterSet::GetThreadContext
-Получает контекст текущего потока.  
+Возвращает контекст текущего потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Параметры  
  `contextSize`  
- [in] Размер в байтах из `context` массива.  
+ окне Размер массива `context` в байтах.  
   
  `context`  
- [in, out] Массив байтов, составляющих Win32 `CONTEXT` структуре для текущей платформы.  
+ [вход, выход] Массив байтов, образующих структуру Win32 `CONTEXT` для текущей платформы.  
   
-## <a name="remarks"></a>Примечания  
- Отладчик должен вызвать эту функцию вместо Win32 `GetThreadContext` работать, поскольку поток может находиться в состоянии «перехваченного», где контекст был временно изменен. Данные, возвращенные предназначена для Win32 `CONTEXT` структуре для текущей платформы.  
+## <a name="remarks"></a>Заметки  
+ Отладчик должен вызвать эту функцию вместо функции Win32 `GetThreadContext`, так как поток может находиться в состоянии "перехвачено", в котором его контекст временно изменен. Возвращаемые данные представляют собой структуру Win32 `CONTEXT` для текущей платформы.  
   
- Для неконечных кадров, клиенты должны проверять, регистрирующий являются допустимыми с помощью [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ Для неконечных кадров клиенты должны проверить, какие регистры являются допустимыми с помощью [ICorDebugRegisterSet:: жетрегистерсаваилабле](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

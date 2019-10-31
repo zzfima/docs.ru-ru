@@ -1,17 +1,15 @@
 ---
-title: <Property>Элемент (.NET Native)
+title: Элемент <Property> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128215"
 ---
-# <a name="property-element-net-native"></a>\<Элемент > свойства (.NET Native)
+# <a name="property-element-net-native"></a>Элемент > свойства \<(.NET Native)
 Применяет политику отражения среды выполнения к свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -37,18 +35,18 @@ ms.locfileid: "71049310"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*method_name*|Имя свойства. Тип свойства определяется родительским элементом [\<Type>](type-element-net-native.md) или [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый к этому типу политики для свойства. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71049310"
 |[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если политика свойства не определена явно, оно наследует политику среды выполнения своего родительского элемента.  
   
 ## <a name="example"></a>Пример  
@@ -75,7 +73,7 @@ ms.locfileid: "71049310"
   
  Файл применяет значение `All` к политике `Activate` для класса `Book`, который предоставляет доступ к конструкторам класса через отражение. Политика `Browse` для класса `Book` наследуется от его родительского пространства имен. Это свойство имеет значение `Required Public`, что делает метаданные доступными во время выполнения.  
   
- Ниже приведен исходный код для этого примера. `outputBlock` Переменная<xref:Windows.UI.Xaml.Controls.TextBlock> представляет элемент управления.  
+ Ниже приведен исходный код для этого примера. Переменная `outputBlock` представляет элемент управления <xref:Windows.UI.Xaml.Controls.TextBlock>.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

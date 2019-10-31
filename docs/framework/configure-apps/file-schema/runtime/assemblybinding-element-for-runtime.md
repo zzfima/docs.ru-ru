@@ -8,20 +8,18 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118134"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<Элемент > assemblyBinding для \<> среды выполнения
+# <a name="assemblybinding-element-for-runtime"></a>\<элемент > assemblyBinding для среды выполнения \<
 Содержит сведения о перенаправлении версии сборки и о расположениях сборок.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,7 +44,7 @@ ms.locfileid: "70252811"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Инкапсулирует политику привязки и расположение сборки. Используйте один  **\<тег dependentAssembly >** для каждой сборки.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Инкапсулирует политику привязки и расположение сборки. Используйте один **\<dependentAssembly >** тега для каждой сборки.|  
 |[\<probing>](probing-element.md)|Задает вложенные папки, в которых среда CLR выполняет поиск при загрузке сборки.|  
 |[\<publisherPolicy>](publisherpolicy-element.md)|Указывает, применяет ли среда выполнения политику издателя.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Задает полное имя сборки, которая должна загружаться динамически в случае использования неполного имени.|  

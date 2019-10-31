@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53042e722809a6574396648529c677d749154716
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132727"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>Метод ICorDebugAssembly::GetAppDomain
-Получает указатель интерфейса на домен приложения, который содержит это `ICorDebugAssembly` экземпляра.  
+Возвращает указатель интерфейса на домен приложения, содержащий данный `ICorDebugAssembly` экземпляр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>Параметры  
  `ppAppDomain`  
- [out] Указатель на адрес ICorDebugAppDomain-интерфейс, который представляет домен приложения.  
+ заполняет Указатель на адрес интерфейса ICorDebugAppDomain, который представляет домен приложения.  
   
-## <a name="remarks"></a>Примечания  
- Если эта сборка является сборкой системы, `GetAppDomain` возвращает значение null.  
+## <a name="remarks"></a>Заметки  
+ Если эта сборка является системной, `GetAppDomain` возвращает значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

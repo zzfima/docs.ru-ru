@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796405"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131737"
 ---
 # <a name="iinstallreferenceenum-interface"></a>Интерфейс IInstallReferenceEnum
 Представляет перечислитель для сборок, на которые имеются ссылки, установленных в глобальном кэше сборок.  
@@ -42,12 +40,12 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Возвращает указатель на следующий `IInstallReferenceItem` объект, содержащийся в этом. `IInstallReferenceEnum`|  
+|[Метод GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Возвращает указатель на следующее `IInstallReferenceItem`, содержащееся в этом `IInstallReferenceEnum`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
