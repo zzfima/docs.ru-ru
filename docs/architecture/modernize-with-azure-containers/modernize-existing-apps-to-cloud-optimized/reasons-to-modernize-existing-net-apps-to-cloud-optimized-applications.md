@@ -2,12 +2,12 @@
 title: Причины для модернизировать существующих приложений .NET в приложения, оптимизированные для облака
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Причины для модернизировать существующих приложений .NET в приложения, оптимизированные для облака
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093635"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Причины для модернизировать существующих приложений .NET в приложения, оптимизированные для облака
 
@@ -19,7 +19,7 @@ ms.locfileid: "72522939"
 
 В результате, когда Организация строится и управляет приложениями, которые оптимизированы в облаке, ИТ-специалисты могут быстрее и приносить новые идеи на рынке, когда они важны.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Принципы и принципы применения, оптимизированные для облака 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Принципы и принципы применения, оптимизированные для облака
 
 Улучшения в облаке в основном сосредоточены на двух целях: Сократите расходы и улучшите развитие бизнеса за счет улучшения гибкости. Эти цели достигаются за счет упрощения процессов и снижения трения при выпуске и поставке приложений.
 

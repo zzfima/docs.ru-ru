@@ -2,12 +2,12 @@
 title: Перенос реляционных баз данных в Azure
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Перенос реляционных баз данных в Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374099"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093613"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Перенос реляционных баз данных в Azure
 
@@ -90,7 +90,7 @@ ms.locfileid: "70374099"
 
 В некоторых случаях необходимо выполнить миграцию на SQL Server как обычную виртуальную машину. Примером сценария является использование SQL Server Reporting Services. Однако в большинстве случаев Управляемый экземпляр Базы данных SQL Azure может предоставить все необходимое для миграции с локальных серверов SQL Server, поэтому миграция на SQL Serverную виртуальную машину должна быть крайне важна.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Использование Azure Database Migration Service для переноса реляционных баз данных в Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Использование Azure Database Migration Service для переноса реляционных баз данных в Azure
 
 Azure Database Migration Service можно использовать для переноса реляционных баз данных, таких как SQL Server, Oracle и MySQL, в Azure, независимо от того, является ли ваша целевая база данных SQL Azure, Управляемый экземпляр Базы данных SQL Azure или SQL Server на виртуальной машине Azure.
 
@@ -104,7 +104,7 @@ Azure Database Migration Service можно использовать для пе
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Выберите вариант SQL Server облака: База данных SQL Azure (PaaS) или SQL Server на виртуальной машине Azure (IaaS)**
+- **Выбор облачной SQL Server параметра: база данных SQL Azure (PaaS) или SQL Server на виртуальной машине Azure (IaaS)**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
