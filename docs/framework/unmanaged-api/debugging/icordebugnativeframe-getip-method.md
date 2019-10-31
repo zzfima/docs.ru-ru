@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137339"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Метод ICorDebugNativeFrame::GetIP
-Получает расположение, к которому в настоящее время задать указатель инструкций смещения в машинном коде.  
+Возвращает расположение смещения машинного кода, в котором в данный момент установлен указатель инструкции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Параметры  
  `pnOffset`  
- [out] Указатель на расположение смещения в машинном коде.  
+ заполняет Указатель на положение смещения в машинном коде.  
   
-## <a name="remarks"></a>Примечания  
- Если кадр стека, представленного «ICorDebugNativeFrame» активен, значением offset является адрес следующую инструкцию для выполнения. Если данный кадр стека не активен, смещение является адресом следующую инструкцию для выполнения при повторной активации кадра стека.  
+## <a name="remarks"></a>Заметки  
+ Если кадр стека, представленный этим «ICorDebugNativeFrame», активен, то смещение — это адрес следующей инструкции, которая будет выполнена. Если этот кадр стека неактивен, то смещение является адресом следующей инструкции, которая будет выполнена при повторной активации кадра стека.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
