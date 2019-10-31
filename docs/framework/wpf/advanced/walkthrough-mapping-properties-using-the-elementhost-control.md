@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 3c74878a91f89e14837b42a45a35ab35bcd5cf68
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650828"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197814"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost
 
-В этом пошаговом руководстве показано, как использовать <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> свойства для сопоставления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойств с соответствующими свойствами вложенного [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элемент.
+В этом пошаговом руководстве показано, как использовать свойство <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>, чтобы сопоставлять свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с соответствующими свойствами размещенного элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 В данном пошаговом руководстве представлены следующие задачи.
 
@@ -29,11 +29,11 @@ ms.locfileid: "64650828"
 
 - Расширение сопоставления свойства по умолчанию.
 
-Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [сопоставления свойств с помощью пример элемента управления ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
+Полный листинг кода задач, показанных в этом пошаговом руководстве, см. в разделе [сопоставление свойств с помощью примера элемента управления ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-Когда вы закончите, можно сопоставить [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойств с соответствующими [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойства элемента.
+По завершении вы сможете сопоставлять [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойства с соответствующими свойствами [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] размещенного элемента.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
@@ -43,9 +43,9 @@ ms.locfileid: "64650828"
 
 ### <a name="to-create-the-project"></a>Создание проекта
 
-1. Создание **приложения Windows Forms** проект с именем `PropertyMappingWithElementHost`.
+1. Создайте проект **приложения Windows Forms** с именем `PropertyMappingWithElementHost`.
 
-2. В **обозревателе решений**, добавьте ссылки на следующие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сборок.
+2. В **Обозреватель решений**добавьте ссылки на следующие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сборки.
 
     - PresentationCore
 
@@ -55,58 +55,58 @@ ms.locfileid: "64650828"
 
     - WindowsFormsIntegration
 
-3. Скопируйте следующий код в верхнюю часть `Form1` файл кода.
+3. Скопируйте следующий код в начало файла кода `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
-4. Откройте `Form1` в конструкторе Windows Forms. Дважды щелкните форму, чтобы добавить обработчик событий для <xref:System.Windows.Forms.Form.Load> событий.
+4. Откройте `Form1` в конструкторе Windows Forms. Дважды щелкните форму, чтобы добавить обработчик событий для события <xref:System.Windows.Forms.Form.Load>.
 
-5. Вернитесь к конструктору Windows Forms и добавьте обработчик событий для формы <xref:System.Windows.Forms.Control.Resize> событий. Дополнительные сведения см. в разделе [Как Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
+5. Вернитесь к конструктор Windows Forms и добавьте обработчик событий для <xref:System.Windows.Forms.Control.Resize> события формы. Дополнительные сведения см. в разделе [инструкции. Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
 
-6. Объявите <xref:System.Windows.Forms.Integration.ElementHost> в `Form1` класса.
+6. Объявите поле <xref:System.Windows.Forms.Integration.ElementHost> в классе `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#16](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
 
 ## <a name="defining-new-property-mappings"></a>Определение новых сопоставлений свойств
 
-<xref:System.Windows.Forms.Integration.ElementHost> Элемент управления предоставляет несколько стандартных сопоставления свойств. Добавить новое сопоставление свойства путем вызова <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> метод <xref:System.Windows.Forms.Integration.ElementHost> элемента управления <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.
+Элемент управления <xref:System.Windows.Forms.Integration.ElementHost> предоставляет несколько сопоставлений свойств по умолчанию. Новое сопоставление свойств добавляется путем вызова метода <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> для <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>элемента управления <xref:System.Windows.Forms.Integration.ElementHost>.
 
-### <a name="to-define-new-property-mappings"></a>Для определения новых сопоставлений свойств
+### <a name="to-define-new-property-mappings"></a>Определение новых сопоставлений свойств
 
-1. Скопируйте следующий код в определение `Form1` класса.
+1. Скопируйте следующий код в определение класса `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
 
-     `AddMarginMapping` Метод добавляет новое сопоставление для <xref:System.Windows.Forms.Control.Margin%2A> свойство.
+     Метод `AddMarginMapping` добавляет новое сопоставление для свойства <xref:System.Windows.Forms.Control.Margin%2A>.
 
-     `OnMarginChange` Метод преобразует <xref:System.Windows.Forms.Control.Margin%2A> свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> свойство.
+     Метод `OnMarginChange` преобразует свойство <xref:System.Windows.Forms.Control.Margin%2A> в свойство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A>.
 
-2. Скопируйте следующий код в определение `Form1` класса.
+2. Скопируйте следующий код в определение класса `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
 
-     `AddRegionMapping` Метод добавляет новое сопоставление для <xref:System.Windows.Forms.Control.Region%2A> свойство.
+     Метод `AddRegionMapping` добавляет новое сопоставление для свойства <xref:System.Windows.Forms.Control.Region%2A>.
 
-     `OnRegionChange` Метод преобразует <xref:System.Windows.Forms.Control.Region%2A> свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> свойство.
+     Метод `OnRegionChange` преобразует свойство <xref:System.Windows.Forms.Control.Region%2A> в свойство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A>.
 
-     `Form1_Resize` Метод обрабатывает формы <xref:System.Windows.Forms.Control.Resize> событий и размеров области отсечения в соответствии с размещаемый элемент.
+     Метод `Form1_Resize` обрабатывает событие <xref:System.Windows.Forms.Control.Resize> формы и изменяет размер вырезанной области в соответствии с размещаемым элементом.
 
 ## <a name="removing-a-default-property-mapping"></a>Удаление сопоставления свойства по умолчанию
 
-Удаление сопоставления свойства по умолчанию путем вызова <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> метод <xref:System.Windows.Forms.Integration.ElementHost> элемента управления <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.
+Удалите сопоставление свойств по умолчанию, вызвав метод <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> для <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>элемента управления <xref:System.Windows.Forms.Integration.ElementHost>.
 
 ### <a name="to-remove-a-default-property-mapping"></a>Удаление сопоставления свойства по умолчанию
 
-- Скопируйте следующий код в определение `Form1` класса.
+- Скопируйте следующий код в определение класса `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
 
-     `RemoveCursorMapping` Метод удаляет сопоставление по умолчанию для <xref:System.Windows.Forms.Control.Cursor%2A> свойство.
+     Метод `RemoveCursorMapping` удаляет сопоставление по умолчанию для свойства <xref:System.Windows.Forms.Control.Cursor%2A>.
 
 ## <a name="extending-a-default-property-mapping"></a>Расширение сопоставления свойства по умолчанию
 
@@ -114,25 +114,25 @@ ms.locfileid: "64650828"
 
 ### <a name="to-extend-a-default-property-mapping"></a>Расширение сопоставления свойства по умолчанию
 
-- Скопируйте следующий код в определение `Form1` класса.
+- Скопируйте следующий код в определение класса `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
 
-     `ExtendBackColorMapping` Метод добавляет пользовательский преобразователь свойств для существующего <xref:System.Windows.Forms.Control.BackColor%2A> сопоставление свойств.
+     Метод `ExtendBackColorMapping` добавляет настраиваемый транслятор свойств к существующему сопоставлению свойств <xref:System.Windows.Forms.Control.BackColor%2A>.
 
-     `OnBackColorChange` Метод присваивает определенное изображение для размещенного элемента управления <xref:System.Windows.Controls.Control.Background%2A> свойство. `OnBackColorChange` Метод вызывается после применения сопоставления свойства по умолчанию.
+     Метод `OnBackColorChange` присваивает конкретному изображению свойство <xref:System.Windows.Controls.Control.Background%2A> размещаемого элемента управления. Метод `OnBackColorChange` вызывается после применения сопоставления свойства по умолчанию.
 
 ## <a name="initialize-your-property-mappings"></a>Инициализация сопоставлений свойств
 
-1. Скопируйте следующий код в определение `Form1` класса.
+1. Скопируйте следующий код в определение класса `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
 
-     `Form1_Load` Метод обрабатывает <xref:System.Windows.Forms.Form.Load> событий и выполнения следующей инициализации.
+     Метод `Form1_Load` обрабатывает событие <xref:System.Windows.Forms.Form.Load> и выполняет следующую инициализацию.
 
-    - Создает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> элемент.
+    - Создает элемент <xref:System.Windows.Controls.Button> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
     - Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
 
@@ -146,5 +146,5 @@ ms.locfileid: "64650828"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
-- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

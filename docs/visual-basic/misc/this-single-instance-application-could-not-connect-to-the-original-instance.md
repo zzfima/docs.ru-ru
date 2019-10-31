@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 5585da7f2ccf7d5d3ec8db281ab9534249020a63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04ceec4839d07ba959c39af8c4f582c7abfe7d6b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619846"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198127"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Данное приложение, допускающее только один экземпляр, не может подключиться к первоначальному экземпляру
 Данное приложение, допускающее только один экземпляр, не может подключиться к первоначальному экземпляру. Вот некоторые возможные причины этой проблемы.  
@@ -34,4 +34,4 @@ ms.locfileid: "64619846"
   
 ## <a name="see-also"></a>См. также
 
-- [Основы отладки](/visualstudio/debugger/debugger-basics)
+- [Основы отладки](/visualstudio/debugger/debugger-feature-tour)

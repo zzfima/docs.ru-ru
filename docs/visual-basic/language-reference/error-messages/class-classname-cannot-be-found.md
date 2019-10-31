@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec7ce5ddcfe647088393042dd2ada52d283535f7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649924"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197538"
 ---
-# <a name="class-classname-cannot-be-found"></a>Класс\<имя_класса > "не найден
-Класс\<имя_класса > "не найден. Это состояние, как правило, является результатом использования несоответствующей библиотеки "Microsoft.VisualBasic.dll".  
+# <a name="class-classname-cannot-be-found"></a>Не удается найти класс "\<ClassName >"
+Не удается найти класс "\<ClassName >". Это состояние, как правило, является результатом использования несоответствующей библиотеки "Microsoft.VisualBasic.dll".  
   
  Не удалось найти определенный член.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "61649924"
   
 1. Скомпилируйте программу еще раз, чтобы узнать, повторится ли ошибка.  
   
-2. Если ошибка повторится, сохраните работу и перезапустите Visual Studio.  
+2. Если ошибка повторяется, сохраните свою работу и перезапустите Visual Studio.  
   
 3. Если ошибка повторяется, переустановите Visual Basic.  
   
@@ -33,4 +33,4 @@ ms.locfileid: "61649924"
   
 ## <a name="see-also"></a>См. также
 
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)

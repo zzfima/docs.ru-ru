@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Назначение содержимого WPF для формы Windows Forms во время разработки
+title: Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,18 +11,18 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: bc5f5e2d8808c0a60df721bf2c0ed76b45ef49a0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0fc7cf40acb141d698f59a1b7fbe6c32269ea61d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666259"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197439"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Назначение содержимого WPF на Windows Forms во время разработки
 
 В этой статье показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые должны отображаться в форме. Можно выбрать любые типы элементов управления WPF, включенные в проект.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -37,19 +37,19 @@ ms.locfileid: "69666259"
 
 После добавления типов элементов управления WPF в проект их можно разместить в разных элементах управления <xref:System.Windows.Forms.Integration.ElementHost>.
 
-1. Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF на Windows Forms во время](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)разработки.
+1. Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство. Создание нового содержимого WPF на Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
 
 2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования.
 
 3. В окне **Свойства** задайте для свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение **200**.
 
-4. Добавьте элемент управления <xref:System.Windows.Controls.UserControl> в и <xref:System.Windows.Controls.TextBox.Text%2A> задайте в качестве значения свойства **размещенное содержимое**. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
+4. Добавьте элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> в <xref:System.Windows.Controls.UserControl> и задайте для свойства <xref:System.Windows.Controls.TextBox.Text%2A> **размещенное содержимое**.
 
 5. Добавьте в проект второй элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl2.xaml`).
 
 6. В окне **Свойства** задайте для свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение **200**.
 
-7. Добавьте элемент управления <xref:System.Windows.Controls.UserControl> в и <xref:System.Windows.Controls.TextBox.Text%2A> задайте для свойства значение **размещенное содержимое 2**. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
+7. Добавьте элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> в <xref:System.Windows.Controls.UserControl> и установите значение свойства <xref:System.Windows.Controls.TextBox.Text%2A> в **размещенное содержимое 2**.
 
    > [!NOTE]
    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
@@ -62,7 +62,7 @@ ms.locfileid: "69666259"
 
 1. Откройте `Form1` в конструкторе Windows Forms.
 
-2. На **панели элементов**дважды щелкните `UserControl1` , чтобы `UserControl1` создать экземпляр в форме.
+2. На **панели элементов**дважды щелкните `UserControl1`, чтобы создать экземпляр `UserControl1` в форме.
 
    Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.
 
@@ -72,9 +72,9 @@ ms.locfileid: "69666259"
 
    В элементе управления `elementHost1` теперь будет размещен экземпляр типа `UserControl2`.
 
-5. В окне **Свойства** убедитесь, что <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> для свойства задано значение **UserControl2**.
+5. В окне **Свойства** убедитесь, что для свойства <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> задано значение **UserControl2**.
 
-6. Из **панели элементов**в группе **взаимодействие WPF** перетащите <xref:System.Windows.Forms.Integration.ElementHost> элемент управления на форму.
+6. Из **панели элементов**в группе **взаимодействие WPF** перетащите элемент управления <xref:System.Windows.Forms.Integration.ElementHost> на форму.
 
    Имя по умолчанию для нового элемента управления — `elementHost2`.
 
@@ -90,4 +90,4 @@ ms.locfileid: "69666259"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
-- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

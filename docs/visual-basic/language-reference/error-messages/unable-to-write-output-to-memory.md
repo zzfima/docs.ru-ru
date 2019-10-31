@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 510488e9dd18d8bf274a8fe5cd00666c4c26fcf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787378"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198165"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Не удается выполнить запись выходных данных в память
 Возникла проблема с выводом в память.  
@@ -23,7 +23,7 @@ ms.locfileid: "61787378"
   
 1. Скомпилируйте программу еще раз, чтобы узнать, повторится ли ошибка.  
   
-2. Если ошибка продолжает появляться, сохраните работу и перезапустите Visual Studio.  
+2. Если ошибка не исчезает, сохраните работу и перезапустите Visual Studio.  
   
 3. Если ошибка повторяется, переустановите Visual Basic.  
   
@@ -31,4 +31,4 @@ ms.locfileid: "61787378"
   
 ## <a name="see-also"></a>См. также
 
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)

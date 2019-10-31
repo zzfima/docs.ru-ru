@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: 578eac69ea36d8320933a2cbeff0a5bed4f24d3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe07bdf063b5e1be3150f118f3e8090caf31d336
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803263"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191961"
 ---
-# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Ошибка при сохранении временного файла ресурсов Win32 "\<имя_файла >": \<сообщение об ошибке >
-Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке получения имени файла для использования при записи ресурса, обрабатываемого в памяти.  
+# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Ошибка при сохранении временного файла ресурсов Win32 "\<filename >": \<сообщение об ошибке >
+Компилятор Visual Basic вызывает компоновщик сборок (Al. exe, также известный как ALink) для создания сборки с манифестом. Компоновщик сообщил об ошибке получения имени файла для использования при записи ресурса, обрабатываемого в памяти.  
   
  **Идентификатор ошибки:** BC30137  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Изучите приведенное сообщение об ошибке и обратитесь к разделу [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). для пояснения и рекомендации.  
+1. Изучите сообщение об ошибке в кавычках и ознакомьтесь с разделом [Al. exe](../../../framework/tools/al-exe-assembly-linker.md). для получения дополнительных пояснений и рекомендаций.  
   
 2. Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)

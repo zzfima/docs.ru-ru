@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65ac05a524297029ca50970bdd231c6a9112e35c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c72f58bb65bd862b0625bfa0398b26bad0197e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748396"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192087"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>Метод ICLRRuntimeInfo::LoadLibrary
-Загружает библиотеку .NET Framework из общеязыковой среды выполнения (CLR), представленный [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс.  
+Загружает библиотеку .NET Framework из среды CLR, представленной интерфейсом [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .  
   
- Этот метод заменяет [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) функции.  
+ Этот метод заменяет функцию [лоадлибраришим](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,10 +37,10 @@ HRESULT LoadLibrary(
   
 ## <a name="parameters"></a>Параметры  
  `pwzDllName`  
- [in] Имя сборки для загрузки.  
+ окне Имя загружаемой сборки.  
   
  `phndModule`  
- [out] Дескриптор загруженной сборки.  
+ заполняет Маркер загруженной сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -51,17 +49,17 @@ HRESULT LoadLibrary(
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|`pwzDllName` или `phndModule` равно null.|  
-|E_OUTOFMEMORY|Недостаточно памяти для обработки запроса.|  
+|E_OUTOFMEMORY|Недостаточно памяти для выполнения запроса.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод загружает только библиотеки DLL, включенные в распространяемый пакет .NET Framework. Он не может загружать сборки, созданное пользователем.  
+## <a name="remarks"></a>Заметки  
+ Этот метод загружает только библиотеки DLL, входящие в распространяемый пакет .NET Framework. Он не может загружать сборки, созданные пользователем.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

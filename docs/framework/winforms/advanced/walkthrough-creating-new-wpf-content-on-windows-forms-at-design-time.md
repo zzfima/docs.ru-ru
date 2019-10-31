@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание содержимого WPF для формы Windows Forms во время разработки
+title: Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,18 +11,18 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: fc6f988d6ffd270eba4abe277ca34fa2eeec56fd
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987137"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197423"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Создание нового содержимого WPF на Windows Forms во время разработки
 
 В этой статье показано, как создать элемент управления Windows Presentation Foundation (WPF) для использования в приложениях на основе Windows Forms.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -58,9 +58,9 @@ ms.locfileid: "69987137"
 
 3. В окне **Свойства** задайте для свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение **200**.
 
-4. Перетащите<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> элемент управления из области **элементов**в область конструктора.
+4. Перетащите элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> из области **элементов**в область конструктора.
 
-5. В окне **Свойства** присвойте <xref:System.Windows.Controls.TextBox.Text%2A> свойству значение **размещенное содержимое**.
+5. В окне **Свойства** задайте для свойства <xref:System.Windows.Controls.TextBox.Text%2A> значение **размещенное содержимое**.
 
    > [!NOTE]
    > Обычно размещается более сложное содержимое WPF. Элемент управления <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> используется здесь в целях наглядности.
@@ -69,7 +69,7 @@ ms.locfileid: "69987137"
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Добавление элемента управления WPF в форму Windows Forms
 
-Новый элемент управления WPF готов к использованию в форме. Windows Forms использует <xref:System.Windows.Forms.Integration.ElementHost> элемент управления для размещения содержимого WPF.
+Новый элемент управления WPF готов к использованию в форме. Windows Forms использует элемент управления <xref:System.Windows.Forms.Integration.ElementHost> для размещения содержимого WPF.
 
 Чтобы добавить элемент управления WPF в форму Windows Forms, выполните следующие действия.
 
@@ -81,13 +81,13 @@ ms.locfileid: "69987137"
 
     - Для размещения элемента управления WPF на форме будет автоматически создан элемент управления <xref:System.Windows.Forms.Integration.ElementHost>.
 
-    - <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> Элемент управления называется, и в окне Свойства можно увидеть, что его свойство имеет значение UserControl1. `elementHost1` <xref:System.Windows.Forms.Integration.ElementHost>
+    - Элемент управления <xref:System.Windows.Forms.Integration.ElementHost> называется `elementHost1` и в окне **Свойства** можно увидеть, что его свойство <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> имеет значение **UserControl1**.
 
     - В проект добавляются ссылки на сборки WPF.
 
     - Элемент управления `elementHost1` имеет панель смарт-тегов, на которой приводятся имеющиеся параметры размещения.
 
-4. На панели смарт-тегов **Задачи ElementHost** выберите закрепить **в родительском контейнере**.
+4. На панели смарт-тегов **Задачи ElementHost** выберите **закрепить в родительском контейнере**.
 
 5. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
@@ -95,11 +95,11 @@ ms.locfileid: "69987137"
 
 Windows Forms и WPF — это разные технологии, но они предназначены для тесного взаимодействия. Чтобы обеспечить расширенный внешний вид и поведение приложений, попробуйте выполнить следующие действия.
 
-- Размещение элемента управления Windows Forms на странице WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение элемента управления Windows Forms в WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Размещение элемента управления Windows Forms на странице WPF. Дополнительные сведения см. [в разделе Пошаговое руководство. размещение элемента управления Windows Forms в WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Применение стилей оформления Windows Forms к содержимому WPF. Дополнительные сведения см. в разделе [Практическое руководство. Включение визуальных стилей в гибридном](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)приложении.
+- Применение стилей оформления Windows Forms к содержимому WPF. Дополнительные сведения см. в разделе [Практическое руководство. Включение визуальных стилей в гибридном приложении](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Стилизация содержимого](walkthrough-styling-wpf-content.md)WPF.
+- Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство. стилизация содержимого WPF](walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -107,4 +107,4 @@ Windows Forms и WPF — это разные технологии, но они 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
-- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

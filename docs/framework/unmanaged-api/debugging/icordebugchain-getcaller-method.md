@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744973"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192136"
 ---
 # <a name="icordebugchaingetcaller-method"></a>Метод ICorDebugChain::GetCaller
-Получает цепочку, вызвавшей эту цепочку.  
+Возвращает цепочку, вызвавшую эту цепь.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес ICorDebugChain объект, представляющий цепочки вызовов.  
+ заполняет Указатель на адрес объекта ICorDebugChain, который представляет вызывающую цепочку.  
   
- Если эта цепочка была вызвана спонтанно (как можно добиться, если эта цепочка или отладчик инициализирован стека вызовов), `ppChain` будет иметь значение null.  
+ Если эта цепочка была вызвана недостаточной (как в случае, если эта цепочка или отладчик инициализируют стек вызовов), `ppChain` будет иметь значение null.  
   
-## <a name="remarks"></a>Примечания  
- Если вызов был маршалирован в потоки, цепочки вызовов возможно в другом потоке.  
+## <a name="remarks"></a>Заметки  
+ Вызывающая цепочка может находиться в другом потоке, если вызов был маршалирован в потоках.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195960"
 ---
 # <a name="bucketparameters-structure"></a>Структура BucketParameters
 Хранит имя типа события и параметры для текущего исключения, связанного с событием.  
@@ -36,18 +34,18 @@ typedef struct _BucketParameters {
 } BucketParameters;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`fInited`|`true`, если остальная часть этой структуры является допустимым; в противном случае `false`.|  
+|`fInited`|`true`, если оставшаяся часть этой структуры является допустимой; в противном случае `false`.|  
 |`pszEventTypeName`|Имя типа события.|  
-|`pszParams`|Массив строк, каждая из которых задает параметр для текущего исключения, связанного с событием.|  
+|`pszParams`|Массив строк, каждый из которых задает параметр для текущего исключения, связанного с событием.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.idl  
+ **Заголовок:** MSCorEE. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

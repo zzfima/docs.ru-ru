@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d775fab8de7cdbfa1982e455a6a46fef83114d5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787391"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197229"
 ---
-# <a name="unable-to-link-to-resource-file-filename-error-message"></a>Не удается скомпоновать с файлом ресурсов "\<имя_файла >": \<сообщение об ошибке >
-Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке связывания с файлом машинного ресурса COM+ из сборки.  
+# <a name="unable-to-link-to-resource-file-filename-error-message"></a>Не удается установить связь с файлом ресурсов "\<filename >": \<сообщение об ошибке >
+Компилятор Visual Basic вызывает компоновщик сборок (Al. exe, также известный как ALink) для создания сборки с манифестом. Компоновщик сообщил об ошибке связывания с файлом машинного ресурса COM+ из сборки.  
   
  **Идентификатор ошибки:** BC30144  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Изучите приведенное сообщение об ошибке и обратитесь к разделу [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). для пояснения и рекомендации.  
+1. Изучите сообщение об ошибке в кавычках и ознакомьтесь с разделом [Al. exe](../../../framework/tools/al-exe-assembly-linker.md). для получения дополнительных пояснений и рекомендаций.  
   
 2. Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)

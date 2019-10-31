@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582937"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197334"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Преобразование значений между строковыми и другими типами (Visual Basic)
 Можно преобразовать числовое, `Boolean` или значение даты и времени в `String`. Можно также преобразовать в обратном направлении — от строкового значения к числовому, `Boolean` или `Date` — при условии, что содержимое строки может интерпретироваться как допустимое значение целевого типа данных. Если они не могут, возникает ошибка времени выполнения.  
@@ -49,4 +49,4 @@ Str = "The total count is " & count
 - [Преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Знакомство с международными приложениями на платформе .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Разработка глобализованных и локализованных приложений](/visualstudio/ide/globalizing-and-localizing-applications)

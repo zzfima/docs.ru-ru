@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141196"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197488"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, поддерживающих двунаправленные (справа налево) языки, такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.
 
 ## <a name="culture-support"></a>Поддержка языка и региональных параметров
- Язык и региональные параметры, в том числе язык и региональные параметры пользовательского интерфейса, определяют способы обработки приложением дат, времени, валют и других данных. Поддержка языка и региональных параметров, в том числе языка и региональных параметров пользовательского интерфейса, для языков с двунаправленным письмом соответствует поддержке для любых других языков. Дополнительные сведения см. в разделе [классы, зависящие от языка и региональных параметров, для глобальных форм Windows Forms и веб-форм](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
+ Язык и региональные параметры, в том числе язык и региональные параметры пользовательского интерфейса, определяют способы обработки приложением дат, времени, валют и других данных. Поддержка языка и региональных параметров, в том числе языка и региональных параметров пользовательского интерфейса, для языков с двунаправленным письмом соответствует поддержке для любых других языков. Дополнительные сведения см. в разделе [классы, зависящие от языка и региональных параметров, для глобальных форм Windows Forms и веб-форм](/visualstudio/ide/globalizing-and-localizing-applications).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Свойства RightToLeft и RightToLeftLayout
  Базовый класс <xref:System.Windows.Forms.Control>, от которого наследуются формы, включает свойство <xref:System.Windows.Forms.Control.RightToLeft%2A>, которое можно задать, чтобы изменить порядок чтения формы и ее элементов управления. Если задать свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> формы, по умолчанию элементы управления формы будут наследовать этот параметр. Однако свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> можно также задать по отдельности для большинства элементов управления. См. также [Практическое руководство. Отображение текста справа налево в формах Windows Forms с целью глобализации](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).

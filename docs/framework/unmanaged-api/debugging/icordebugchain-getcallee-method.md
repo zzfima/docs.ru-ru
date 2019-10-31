@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196337"
 ---
 # <a name="icordebugchaingetcallee-method"></a>Метод ICorDebugChain::GetCallee
-Получает цепочку, вызванная этой цепочки.  
+Возвращает цепочку, вызванную этой цепочкой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес ICorDebugChain объект, представляющий вызываемый цепочки. Если эта цепочка выполняемый в текущий момент (то есть, если эта цепочка не находится в состоянии для вызываемой цепочки для возврата), `ppChain` будет иметь значение null.  
+ заполняет Указатель на адрес объекта ICorDebugChain, который представляет вызываемую цепочку. Если эта цепочка выполняется в данный момент (то есть если эта цепочка не ожидает возврата вызванной цепочки), `ppChain` будет иметь значение null.  
   
-## <a name="remarks"></a>Примечания  
- Эта цепочка будет ожидать, чтобы вернуть свое выполнение вызванной цепочка. Вызванная цепь может находиться в другом потоке, в случае маршалированного вызовы между потоками.  
+## <a name="remarks"></a>Заметки  
+ Эта цепочка будет ожидать возврата вызванной цепочки перед возобновлением выполнения. Вызываемая цепочка может находиться в другом потоке в случае маршалинга вызовов между потоками.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

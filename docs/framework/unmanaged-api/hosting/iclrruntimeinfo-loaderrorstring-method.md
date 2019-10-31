@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e6638f731b335ba7552379cdc77fa912a1def4d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748376"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195931"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>Метод ICLRRuntimeInfo::LoadErrorString
-Преобразовывает значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
+Преобразует значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
   
- Этот метод замещает следующие функции:  
+ Этот метод заменяет следующие функции:  
   
-- [LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [лоадстрингрк](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
   
-- [LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [лоадстрингрцекс](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,16 +43,16 @@ HRESULT LoadErrorString(
   
 ## <a name="parameters"></a>Параметры  
  `iResourceID`  
- [in] Значение HRESULT, для преобразования.  
+ окне Значение HRESULT для преобразования.  
   
  `pwzBuffer`  
- [out] Строка сообщения, связанные с данным значением HRESULT.  
+ заполняет Строка сообщения, связанная с данным значением HRESULT.  
   
  `pcchBuffer`  
- [in, out] Размер `pwzbuffer` для предотвращения переполнения буфера. Если `pwzbuffer` имеет значение null, `pcchBuffer` предоставляет ожидаемый размер `pwzbuffer` чтобы разрешить предварительное выделение.  
+ [вход, выход] Размер `pwzbuffer`, чтобы избежать переполнения буфера. Если `pwzbuffer` имеет значение null, `pcchBuffer` предоставляет ожидаемый размер `pwzbuffer`, чтобы разрешить предварительное выделение.  
   
  `iLocaleID`  
- [in] Идентификатор языка и региональных параметров. Чтобы использовать параметры по умолчанию, необходимо указать значение -1.  
+ окне Идентификатор языка и региональных параметров. Чтобы использовать язык и региональные параметры по умолчанию, необходимо указать значение-1.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -66,11 +64,11 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|Параметр `pwzBuffer` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 560635718a931cc9cdb687154a1d23970136de97
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7ccfb970a0e471b4a7e6808f041dfea2f386e7e9
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972292"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197134"
 ---
-# <a name="error-creating-assembly-manifest-error-message"></a>Ошибка при создании манифеста \<сборки: сообщение об ошибке >
+# <a name="error-creating-assembly-manifest-error-message"></a>Ошибка при создании манифеста сборки: \<сообщение об ошибке >
 Компилятор Visual Basic вызывает компоновщик сборок (Al. exe, также известный как ALink) для создания сборки с манифестом. Компоновщик сообщил об ошибке на этапе предварительного выпуска процедуры создания сборки.  
   
  Такая ситуация может возникнуть при наличии проблем с указанным файлом ключа или контейнером ключей. Чтобы использовать для сборки полную подпись, необходимо предоставить допустимый файл ключа с информацией об открытом и закрытом ключах. Чтобы использовать для сборки отложенную подпись, необходимо установить флажок **Только отложенная подпись** и предоставить допустимый файл ключа с информацией о ключах. При использовании отложенной подписи для сборки наличие закрытого ключа не требуется. Дополнительные сведения см. в разделе [Практическое руководство. Подписание сборки строгим именем](../../../standard/assembly/sign-strong-name.md).  
@@ -32,4 +32,4 @@ ms.locfileid: "70972292"
 - [Практическое руководство. Подписание сборки строгим именем](../../../standard/assembly/sign-strong-name.md)
 - [Страница "Подписывание" в конструкторе проектов](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)
