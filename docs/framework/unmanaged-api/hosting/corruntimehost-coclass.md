@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 942c9544a6ce868c3b6296569d4a16a44281cdba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 512009e053605e2018f1fcbafa422c1a36ddecc1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136911"
 ---
 # <a name="corruntimehost-coclass"></a>Компонентный класс CorRuntimeHost
-Предоставляет интерфейсы для управления приложениями, которые выполняются в среде CLR.  
+Предоставляет интерфейсы для управления приложениями, которые выполняются средой CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +36,22 @@ coclass CorRuntimeHost {
 };  
 ```  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
 |Интерфейс|Описание|  
 |---------------|-----------------|  
-|[Интерфейс ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|Предоставляет методы для настройки общеязыковой среды выполнения (CLR).|  
-|[Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|Предоставляет методы, позволяющие узел для запуска и остановки среда CLR явным образом, для создания и настройки доменов приложений, для доступа к области по умолчанию и для перечисления всех доменов, выполняемых в процессе.|  
+|[Интерфейс ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|Предоставляет методы для настройки среды CLR.|  
+|[Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|Предоставляет методы, позволяющие основному приложению запускать и прекращать работу среды CLR, создавать и настраивать домены приложений, получать доступ к домену по умолчанию и перечислять все домены, выполняющиеся в процессе.|  
 |[Интерфейс IDebuggerInfo](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|Предоставляет методы для получения сведений о состоянии служб отладки.|  
-|[Интерфейс IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|Предоставляет методы для получения информации о сборщик мусора, а также для управления некоторыми аспектами сбора мусора.|  
-|«IValidator»|Предоставляет методы для проверки переносимого исполняемого образа и подробные отчеты об ошибках проверки.|  
+|[Интерфейс IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|Предоставляет методы для получения сведений о системе сборки мусора и для управления некоторыми аспектами сборки мусора.|  
+|IValidator|Предоставляет методы для проверки переносимых исполняемых образов и подробных отчетов об ошибках проверки.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.idl  
+ **Заголовок:** MSCorEE. idl  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

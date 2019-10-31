@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41bd4c0bb4e84b6d6f267e24808baafa57f71882
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771120"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133616"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>Метод ICorDebugThread::CreateEval
-Создает объект ICorDebugEval, которая собирает и предоставляет функциональные возможности ICorDebugThread.  
+Создает объект ICorDebugEval, который собирает и предоставляет функциональные возможности этого ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Параметры  
  `ppEval`  
- [out] Указатель на адрес `ICorDebugEval` объект, который собирает и предоставляет функциональные возможности для данного потока.  
+ заполняет Указатель на адрес объекта `ICorDebugEval`, который собирает и предоставляет функциональные возможности этого потока.  
   
-## <a name="remarks"></a>Примечания  
- Объект выполнения будет отправлять новую цепочку в потоке перед выполнением этого вычисления. Это прервет вычисления, в данный момент выполняется в потоке до завершения оценки.  
+## <a name="remarks"></a>Заметки  
+ Объект вычисления перед выполнением вычислений выдаст новую цепочку в потоке. Это прерывает вычисления, выполняемые в данный момент в потоке до завершения оценки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 608c2cea79c20a43d65fcbf37ba13242fa465100
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969315"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122801"
 ---
 # <a name="icordebugbreakpoint-interface"></a>Интерфейс ICorDebugBreakpoint
 
@@ -31,23 +29,23 @@ ms.locfileid: "69969315"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Задает активное состояние этого `ICorDebugBreakpoint`объекта.|  
-|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Возвращает значение, указывающее, является ли `ICorDebugBreakpoint` этот объект активным.|  
+|[Метод Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Задает активное состояние этого `ICorDebugBreakpoint`.|  
+|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Возвращает значение, указывающее, активна ли эта `ICorDebugBreakpoint`.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Точки останова не поддерживают непосредственно условные выражения. Если требуется такая функциональность, отладчик должен реализовать его поверх `ICorDebugBreakpoint`.  
   
- Интерфейс ICorDebugFunctionBreakpoint расширяется `ICorDebugBreakpoint` для поддержки точек останова в функциях.  
+ Интерфейс ICorDebugFunctionBreakpoint расширяет `ICorDebugBreakpoint` для поддержки точек останова в функциях.  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

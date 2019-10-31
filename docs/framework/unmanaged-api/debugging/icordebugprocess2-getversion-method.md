@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f618f6779f6931785bba18f70fb1ac9baf46753
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137194"
 ---
 # <a name="icordebugprocess2getversion-method"></a>Метод ICorDebugProcess2::GetVersion
 
-Возвращает номер версии среда CLR (CLR), на котором выполняется в этом процессе.
+Возвращает номер версии среды CLR, которая выполняется в этом процессе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,17 +37,17 @@ HRESULT GetVersion (
 ## <a name="parameters"></a>Параметры
 
 `version`\
-[out] Указатель на структуру COR_VERSION, которая хранит номер версии среды выполнения.
+заполняет Указатель на структуру COR_VERSION, в которой хранится номер версии среды выполнения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-`GetVersion` Метод возвращает код ошибки, если среда выполнения не была загружена в процесс.
+Метод `GetVersion` возвращает код ошибки, если в процессе не была загружена среда выполнения.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorDebug.idl, CorDebug.h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
 **Библиотека:** CorGuids.lib
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e2fc054e42c34b13051e2125f8e18adc3029633
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7923008eecb9011bead685fbbb7f05f81f12329b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138577"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>Метод ICorDebugGenericValue::GetValue
-Значение этого универсального копируется в указанный буфер.  
+Копирует значение этого универсального объекта в указанный буфер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Параметры  
  `pTo`  
- [out] Указатель на значение, представленное этим объектом ICorDebugGenericValue. Значение может быть простым типом или ссылочным типом (то есть указатель).  
+ заполняет Указатель на значение, представленное этим объектом ICorDebugGenericValue. Значение может быть простым типом или ссылочным типом (т. е. указателем).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

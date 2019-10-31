@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 63398902071b4cfa1964f77b5641baa6e6239eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8dc3a3c04a619ace566e173fb8d8945a9d921bce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757356"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140763"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>Метод ICLRPolicyManager::SetDefaultAction
-Указывает действие политики, которое общеязыковой среды выполнения (CLR) следует предпринять при возникновении указанной операции.  
+Указывает действие политики, которое должна выполнять среда CLR при выполнении указанной операции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,41 +36,41 @@ HRESULT SetDefaultAction (
   
 ## <a name="parameters"></a>Параметры  
  `operation`  
- [in] Один из [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) значений, указывающий действие, для которых среда CLR должна настроить поведение.  
+ окне Одно из значений [еклроператион](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) , указывающее действие, для которого необходимо настроить поведение среды CLR.  
   
  `action`  
- [in] Один из [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) значения, указывающие действие политики CLR займет `operation` происходит.  
+ окне Одно из значений [еполициактион](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) , указывающее действие политики, которое должна предпринять среда CLR при `operation`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_INVALIDARG|Указан недопустимый `action` был указан для `operation`, или задано недопустимое значение `operation`.|  
+|S_OK|`SetDefaultAction` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|E_INVALIDARG|Для `operation`указан недопустимый `action`, или для `operation`указано недопустимое значение.|  
   
-## <a name="remarks"></a>Примечания  
- Не все значения действия политики можно указать в качестве поведения по умолчанию для операций среды CLR. `SetDefaultAction` обычно используется только для того, чтобы расширить поведение. Например, узел может указать, что преобразовать прерывания потока в грубое отменой потоков, но не может. В следующей таблице описываются допустимые `action` значения для каждого возможного `operation` значение.  
+## <a name="remarks"></a>Заметки  
+ Не все значения действий политики могут быть указаны в качестве поведения по умолчанию для операций среды CLR. `SetDefaultAction` обычно можно использовать только для эскалации поведения. Например, узел может указать, что прерывания потока должны быть преобразованы в грубые прерывания потока, но не могут указывать обратно. В следующей таблице описаны допустимые значения `action` для каждого возможного `operation` значения.  
   
 |Значение для `operation`|Допустимые значения для `action`|  
 |---------------------------|-------------------------------|  
-|OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-   eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
-|OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-   eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
-|OPR_AppDomainUnload|-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-   eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
-|OPR_AppDomainRudeUnload|-eRudeUnloadAppDomain<br />-eExitProcess<br />-   eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
-|OPR_ProcessExit|-eExitProcess<br />-   eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
-|OPR_FinalizerRun|-eNoAction<br />-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-   eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
+|OPR_ThreadAbort|-Еабортсреад<br />-Ерудеабортсреад<br />-Еунлоадаппдомаин<br />-Ерудеунлоадаппдомаин<br />-Икситпроцесс<br />-Ефастекситпроцесс<br />-Ерудикситпроцесс<br />-Едисаблерунтиме|  
+|OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-Ерудеабортсреад<br />-Еунлоадаппдомаин<br />-Ерудеунлоадаппдомаин<br />-Икситпроцесс<br />-Ефастекситпроцесс<br />-Ерудикситпроцесс<br />-Едисаблерунтиме|  
+|OPR_AppDomainUnload|-Еунлоадаппдомаин<br />-Ерудеунлоадаппдомаин<br />-Икситпроцесс<br />-Ефастекситпроцесс<br />-Ерудикситпроцесс<br />-Едисаблерунтиме|  
+|OPR_AppDomainRudeUnload|-Ерудеунлоадаппдомаин<br />-Икситпроцесс<br />-Ефастекситпроцесс<br />-Ерудикситпроцесс<br />-Едисаблерунтиме|  
+|OPR_ProcessExit|-Икситпроцесс<br />-Ефастекситпроцесс<br />-Ерудикситпроцесс<br />-Едисаблерунтиме|  
+|OPR_FinalizerRun|-Еноактион<br />-Еабортсреад<br />-Ерудеабортсреад<br />-Еунлоадаппдомаин<br />-Ерудеунлоадаппдомаин<br />-Икситпроцесс<br />-Ефастекситпроцесс<br />-Ерудикситпроцесс<br />-Едисаблерунтиме|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

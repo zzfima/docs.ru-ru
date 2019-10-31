@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a59b18-ce9a-41f4-b23b-4dd6753d6d36
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 629a4850d47940633c8c69a7e464cfae315b3c56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2550320494b9ba43947c3176788042f5c2e6ad5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761243"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130623"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>Метод ICorDebugManagedCallback::UnloadClass
 Уведомляет отладчик о выгрузке класса.  
@@ -38,18 +36,18 @@ HRESULT UnloadClass (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий класс.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий класс.  
   
  `c`  
- [in] Указатель на объект, представляющий класс ICorDebugClass.  
+ окне Указатель на объект ICorDebugClass, представляющий класс.  
   
-## <a name="remarks"></a>Примечания  
- Не следует ссылаться класса после этого вызова.  
+## <a name="remarks"></a>Заметки  
+ После этого вызова не следует ссылаться на класс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

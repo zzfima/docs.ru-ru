@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58832e110f67a54d3bd57a7284b2e26e43d6bf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739402"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132131"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>Структура CoreClrDebugRuntimeInfo
 Представляет экземпляр среды CLR, который загружается в процессе на удаленном компьютере.  
@@ -36,17 +34,17 @@ struct  CoreClrDebugRuntimeInfo {
 };  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`m_dwInternalID`|Идентификатор среды выполнения, назначаемый прокси-сервером удаленной отладки, работающим на целевом компьютере.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

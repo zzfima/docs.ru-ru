@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae0f48c-4ede-4256-9251-a7fc85a229dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36a33b74a692761d772a888ce918aa28a2d92678
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c1d7db8aacaf81d47abd4a9cd972b44f56a3bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137510"
 ---
 # <a name="icordebugstepperstepout-method"></a>Метод ICorDebugStepper::StepOut
-Принуждает ICorDebugStepper выполнить один шаг через содержащую и для завершения текущего кадра возвращает управление в вызывающий кадр.  
+Приводит к тому, что данный ICorDebugStepper пошаговым путем через содержащий его поток и завершается, когда текущий кадр возвращает управление вызывающему кадру.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,17 +31,17 @@ ms.locfileid: "67760556"
 HRESULT StepOut ();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Объект `StepOut` операция будет выполнена после возврата в обычном режиме из текущего кадра на вызывающий кадр.  
+## <a name="remarks"></a>Заметки  
+ Операция `StepOut` будет завершена после возврата в обычном режиме из текущего кадра в вызывающий кадр.  
   
- Если `StepOut` вызывается, когда в неуправляемом коде, шаг будет выполнен при возврате текущего кадра в управляемый код, который вызвал ее.  
+ Если `StepOut` вызывается в неуправляемом коде, шаг завершится, когда текущий кадр вернется в управляемый код, вызвавший его.  
   
- В .NET Framework версии 2.0, не используйте `StepOut` с по умолчанию STOP_UNMANAGED флага stateful, так как его не удастся. (Используйте [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) установить флаги для пошагового выполнения.) Отладчики взаимодействия необходимо шаг с выходом в машинный код самостоятельно.  
+ В .NET Framework версии 2,0 не используйте `StepOut` с установленным флагом STOP_UNMANAGED, так как он завершится ошибкой. (Используйте [ICorDebugStepper:: сетунмаппедстопмаск](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) для установки флагов для пошагового выполнения.) Отладчики взаимодействия должны выполнять шаг с заходом в собственный код.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

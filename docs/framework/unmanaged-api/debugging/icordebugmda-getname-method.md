@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca5d96e51c3809c6652d1a1fd75b80efb0b34222
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761914"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128046"
 ---
 # <a name="icordebugmdagetname-method"></a>Метод ICorDebugMDA::GetName
-Получает строку, содержащую имя помощник по отладке управляемого (кода MDA), представленный [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Возвращает строку, содержащую имя помощника по отладке управляемого кода (MDA), представленного [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,18 +41,18 @@ HRESULT GetName (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- [out] Указатель на длину имени.  
+ заполняет Указатель на длину имени.  
   
  `szName`  
- [out] Массив, в котором для хранения имени.  
+ заполняет Массив, в котором сохраняется имя.  
   
-## <a name="remarks"></a>Примечания  
- MDA имена являются уникальными значениями. `GetName` Метод представляет собой альтернативу удобный производительности Получение потока XML и извлечения имени из потока на основе схемы.  
+## <a name="remarks"></a>Заметки  
+ Имена MDA являются уникальными значениями. Метод `GetName` является удобной альтернативой производительности для получения XML-потока и извлечения имени из потока на основе схемы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

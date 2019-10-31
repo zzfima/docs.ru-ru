@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e834042c5e00709fcb2198c1496a8a630841d069
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779540"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134816"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>Метод IGCHost2::SetGCStartupLimitsEx
 Задает размер сегмента и максимальный размер для поколения 0.  
@@ -38,20 +36,20 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Параметры  
  `SegmentSize`  
- [in] Размер сегмента, используемой системой сбора мусора.  
+ окне Размер сегмента, используемого системой сборки мусора.  
   
  `MaxGen0Size`  
- [in] Максимальный размер поколения 0.  
+ окне Максимальный размер для поколения 0.  
   
-## <a name="remarks"></a>Примечания  
- Значения, `SetGCStartupLimitsEx` множества могут быть заданы только в том случае, перед запуском узла. Эти значения нельзя изменить позже.  
+## <a name="remarks"></a>Заметки  
+ Значения, которые `SetGCStartupLimitsEx` наборы, можно указать только перед запуском узла. Эти значения нельзя изменить позже.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** GCHost.idl GCHost.h  
+ **Заголовок:** Гчост. idl, Гчост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

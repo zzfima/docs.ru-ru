@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugStaticFieldSymbol::GetSize
+title: 'Метод Икордебугстатикфиелдсимбол:: resize'
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d99e06c1093dbc67e9c1999e4b9ccabd6579340e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fa9c519a40624dd8c5471231263d2430738af87
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131771"
 ---
-# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Метод ICorDebugStaticFieldSymbol::GetSize
+# <a name="icordebugstaticfieldsymbolgetsize-method"></a>Метод Икордебугстатикфиелдсимбол:: resize
 Получает размер статического поля в байтах.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,17 +24,17 @@ HRESULT GetSize(
  `pcbSize`  
  [out] Указатель на длину этого поля.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

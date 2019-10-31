@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739209"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132089"
 ---
 # <a name="createversionstringfrommodule-function"></a>Функция CreateVersionStringFromModule
 Создает строку версии из пути среды CLR в целевом процессе.  
@@ -73,16 +71,16 @@ HRESULT CreateVersionStringFromModule (
  E_FAIL (или другие коды возврата E_)  
  Параметр `pidDebuggee` не ссылается на допустимый процесс, или произошел другой сбой.  
   
-## <a name="remarks"></a>Примечания  
- Эта функция принимает процесс CLR, который определяется параметром `pidDebuggee` и строкой пути, заданной параметром `szModuleName`. Строка версии возвращается в буфер, на который указывает `pBuffer`. Эта строка непрозрачна для пользователя функции, то есть сама строка версии не имеет внутреннего смысла. Он используется исключительно в контексте этой функции и [функция CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
+## <a name="remarks"></a>Заметки  
+ Эта функция принимает процесс CLR, который определяется параметром `pidDebuggee` и строкой пути, заданной параметром `szModuleName`. Строка версии возвращается в буфер, на который указывает `pBuffer`. Эта строка непрозрачна для пользователя функции, то есть сама строка версии не имеет внутреннего смысла. Он используется исключительно в контексте этой функции и [функции CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
   
  Эта функция должна вызываться дважды. При первом вызове передайте значение null для обоих параметров `pBuffer` и `cchBuffer`. После этого размер буфера, необходимый для `pBuffer`, будет возвращен в `pdwLength`. Затем можно вызвать эту функцию во второй раз и передать буфер в `pBuffer` и его размер в `cchBuffer`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** dbgshim.h  
+ **Заголовок:** dbgshim. h  
   
- **Библиотека:** dbgshim.dll  
+ **Библиотека:** dbgshim. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

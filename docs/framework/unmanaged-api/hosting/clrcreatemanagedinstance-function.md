@@ -18,19 +18,17 @@ helpviewer_keywords:
 ms.assetid: 58ba42c0-4857-43bf-a039-73a4dc6544c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1ae530b8488dcd375e91058a227316dd38cf4ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e672030ae83b57da6f9ab66630513d79f28b8f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779158"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131987"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>Функция ClrCreateManagedInstance
-Создает экземпляра указанного управляемого типа.  
+Создает экземпляр указанного управляемого типа.  
   
- Эта функция является устаревшим в .NET Framework 4. Использовать COM-компоненты для создания экземпляра управляемого типа или размещение (см. в разделе [CLR размещение интерфейсов, добавленные в .NET Framework 4 и 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Эта функция является устаревшей в .NET Framework 4. Используйте активацию COM для создания экземпляра управляемого типа или используйте размещение (см. Дополнительные сведения о [интерфейсах размещения CLR, добавленных в .NET Framework 4 и 4,5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,23 +42,23 @@ STDAPI ClrCreateManagedInstance (
   
 ## <a name="parameters"></a>Параметры  
  `pTypeName`  
- [in] Указатель на имя запрашиваемого типа экземпляра.  
+ окне Указатель на имя запрашиваемого типа экземпляра.  
   
  `riid`  
- [in] `IID` Запрашиваемого типа экземпляра.  
+ окне `IID` запрашиваемого типа экземпляра.  
   
  `ppObject`  
- [out] Указатель на указатель на экземпляр управляемого типа, который был запрошен вызывающим объектом.  
+ заполняет Указатель на указатель на экземпляр управляемого типа, запрошенный вызывающим объектом.  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR, уже должны быть загружены в процесс. Например, его можно загрузить с помощью вызова [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) функцию перед `ClrCreateManagedInstance` функция вызывается. Если среда выполнения не загружается, `ClrCreateManagedInstance` сначала пытается загрузить v1.0.3705 среды выполнения. Если это не удается, предпринимается попытка загрузить последнюю версию среды выполнения.  
+## <a name="remarks"></a>Заметки  
+ Среда CLR уже должна быть загружена в процесс. Например, его можно загрузить с помощью вызова функции [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) перед вызовом функции `ClrCreateManagedInstance`. Если среда выполнения не загружена, `ClrCreateManagedInstance` сначала пытается загрузить v 1.0.3705 среды выполнения. В случае сбоя он пытается загрузить последнюю версию среды выполнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

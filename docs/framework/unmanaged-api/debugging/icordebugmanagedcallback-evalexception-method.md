@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbf12612bb432f8935d08bdeac0bbcb471c38c54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70ae72968c3411a6732b09c0afe3d82931410cb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759640"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130805"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>Метод ICorDebugManagedCallback::EvalException
-Уведомляет отладчик о том, что оценку был завершен с необработанным исключением.  
+Уведомляет отладчик о том, что вычисление завершено с необработанным исключением.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,18 +37,18 @@ HRESULT EvalException (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором прерывание оценки.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в котором завершается вычисление.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в котором прерывание оценки.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором завершено вычисление.  
   
  `pEval`  
- [in] Указатель на ICorDebugEval объект, представляющий код, который выполняется вычисление.  
+ окне Указатель на объект ICorDebugEval, представляющий код, который выполнил вычисление.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

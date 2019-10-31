@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72d3d927-f590-4f2d-8f60-448f3dfb96af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e42db5d7ebc9ec9983fe9e56477808415b26968b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a00177faabfcad56d70ec5c64328c90675c1532
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138765"
 ---
 # <a name="icordebugtypegetrank-method"></a>Метод ICorDebugType::GetRank
-Получает число измерений в тип массива.  
+Возвращает число измерений в типе массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetRank (
   
 ## <a name="parameters"></a>Параметры  
  `pnRank`  
- [out] Указатель на число измерений.  
+ заполняет Указатель на число измерений.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

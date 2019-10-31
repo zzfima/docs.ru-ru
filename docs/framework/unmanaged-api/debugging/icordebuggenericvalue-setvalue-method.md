@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0b6907cdf78fc70c75ddd711cd8593427857b172
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4cd03895b4e33c3e42c71acca12eaf950fc9a145
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138557"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>Метод ICorDebugGenericValue::SetValue
 Копирует новое значение из указанного буфера.  
@@ -37,15 +35,15 @@ HRESULT SetValue (
   
 ## <a name="parameters"></a>Параметры  
  `pFrom`  
- [in] Указатель на буфер, из которого необходимо скопировать значение.  
+ окне Указатель на буфер, из которого копируется значение.  
   
-## <a name="remarks"></a>Примечания  
- Для ссылочных типов значение является ссылкой, не содержимое.  
+## <a name="remarks"></a>Заметки  
+ Для ссылочных типов значением является ссылка, а не содержимое.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

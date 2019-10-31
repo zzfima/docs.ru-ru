@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e359384-0d3d-451c-807e-5d7fcebf2be7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b116a1f422daa20a2b51f0a5fc12d6065c2a01e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9415d5189edb901822abad9269e0150e7601a963
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140966"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>Метод ICLRMetaHost::EnumerateInstalledRuntimes
-Возвращает перечисление, содержащее допустимый [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс для каждой версии среда CLR (CLR), установленного на компьютере.  
+Возвращает перечисление, которое содержит допустимый интерфейс [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) для каждой версии среды CLR, установленной на компьютере.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +34,7 @@ HRESULT EnumerateInstalledRuntimes (
   
 ## <a name="parameters"></a>Параметры  
  `ppEnumerator`  
- [out] Перечисление [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейсы для каждой версии среды CLR, которая установлена на компьютере.  
+ заполняет Перечисление интерфейсов [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) , соответствующих каждой версии среды CLR, установленной на компьютере.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -47,11 +45,11 @@ HRESULT EnumerateInstalledRuntimes (
 |E_POINTER|Параметр `ppEnumerator` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

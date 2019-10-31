@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d438123dcefb901098954845596c210e5b76cea6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a0b70078dee88b270d8361aa9bddcb7d80df1db1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129473"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>Метод ICorDebugModule2::SetJMCStatus
-Задает состояние "только мой код (") все методы для всех классов в этом ICorDebugModule2 указанное значение, за исключением тех, в `pTokens` массив, который задает противоположное значение.  
+Задает для состояния Только мой код (JMC) всех методов всех классов в этом ICorDebugModule2 указанное значение, за исключением тех, которые заданы в массиве `pTokens`, для которого задается противоположное значение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,25 +37,25 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Параметры  
  `bIsJustMycode`  
- [in] Значение `true` Если код является отладки; в противном случае, значение `false`.  
+ окне Задайте значение `true`, если код должен быть отлажен. в противном случае задайте значение `false`.  
   
  `cTokens`  
  [in] Размер массива `pTokens`.  
   
  `pTokens`  
- [in] Массив `mdToken` значений, каждое из которых ссылается на метод, который будет иметь состоянием JMC!`bIsJustMycode`.  
+ окне Массив значений `mdToken`, каждый из которых ссылается на метод, для которого в качестве его состояния JMC задано значение!`bIsJustMycode`.  
   
-## <a name="remarks"></a>Примечания  
- Состояние JMC каждого метода, который указан в `pTokens` массива имеет значение противоположностью `bIsJustMycode` значение. Присвоено состояние всех методов в этом модуле `bIsJustMycode` значение.  
+## <a name="remarks"></a>Заметки  
+ JMC состояние каждого метода, указанного в массиве `pTokens`, имеет значение, противоположное значению `bIsJustMycode`. Состояние всех остальных методов в этом модуле задается как значение `bIsJustMycode`.  
   
- `SetJMCStatus` Метод стирает все предыдущие параметры JMC в этом модуле.  
+ Метод `SetJMCStatus` удаляет все предыдущие параметры JMC в этом модуле.  
   
- `SetJMCStatus` Метод возвращает значение S_OK HRESULT, если успешно заданы все функции. Он возвращает HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE, если некоторые функции, которые помечены `true` не подлежит отладке.  
+ Метод `SetJMCStatus` возвращает значение S_OK HRESULT, если все функции заданы успешно. Он возвращает значение HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE, если некоторые функции, помеченные `true`, не могут быть отлажены.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

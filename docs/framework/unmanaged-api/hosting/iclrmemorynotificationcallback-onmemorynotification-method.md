@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5612a44d-56cc-4f34-af31-8c9809ba9431
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 899d0cf6a0475846b749bd0b7cbda41b1b88253d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11b9b500e16917498856888c437c58c0df2edafb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949705"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140984"
 ---
 # <a name="iclrmemorynotificationcallbackonmemorynotification-method"></a>Метод ICLRMemoryNotificationCallback::OnMemoryNotification
 Уведомляет среду CLR о загрузке памяти на компьютере.  
@@ -43,25 +41,25 @@ HRESULT OnMemoryNotification (
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`OnMemoryNotification`успешно возвращено.|  
+|S_OK|`OnMemoryNotification` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR регистрирует обратный вызов `OnMemoryNotification` с помощью вызова метода [IHostMemoryManager:: RegisterMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md) . Среда выполнения использует сведения, возвращаемые при обратном вызове, чтобы освободить дополнительную память, когда узел сообщает, что ресурсы памяти имеют низкий уровень.  
+## <a name="remarks"></a>Заметки  
+ Среда CLR регистрирует обратный вызов для `OnMemoryNotification` с помощью вызова метода [IHostMemoryManager:: RegisterMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md) . Среда выполнения использует сведения, возвращаемые при обратном вызове, чтобы освободить дополнительную память, когда узел сообщает, что ресурсы памяти имеют низкий уровень.  
   
 > [!NOTE]
-> `OnMemoryNotification` Вызовы никогда не блокируются. Они всегда возвращают немедленно.  
+> Вызовы `OnMemoryNotification` никогда не блокируются. Они всегда возвращают немедленно.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

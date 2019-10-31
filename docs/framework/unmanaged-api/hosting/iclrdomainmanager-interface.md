@@ -12,34 +12,32 @@ f1_keywords:
 helpviewer_keywords:
 - ICLRDomainManager interface [.NET Framework hosting]
 ms.assetid: f08b2390-d872-4521-a815-e9c237c4c45d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce53149b92ca40ad50ecbefaf4701940e8567ae5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa874205cf14232e7a69ed2215086e33c0beab4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984754"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129344"
 ---
 # <a name="iclrdomainmanager-interface"></a>Интерфейс ICLRDomainManager
-Ведущее приложение может указать диспетчер домена приложения, который будет использоваться для инициализации домена приложения по умолчанию, а также для указания свойств инициализации.  
+Позволяет узлу указать Диспетчер домена приложения, который будет использоваться для инициализации домена приложения по умолчанию, а также для указания свойств инициализации.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)|Указывает тип, производный от <xref:System.AppDomainManager?displayProperty=nameWithType> класс диспетчера домена приложения, который будет использоваться для инициализации домена приложения по умолчанию.|  
+|[Метод SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)|Задает тип, производный от класса <xref:System.AppDomainManager?displayProperty=nameWithType> диспетчера домена приложения, который будет использоваться для инициализации домена приложения по умолчанию.|  
 |[Метод SetPropertiesForDefaultAppDomain](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setpropertiesfordefaultappdomain-method.md)|Задает свойства, которые будут использоваться для инициализации домена приложения по умолчанию.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы получить экземпляр этого интерфейса, вызовите [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) метод с типом manager IID `IID_ICLRDomainManager`.  
+## <a name="remarks"></a>Заметки  
+ Чтобы получить экземпляр этого интерфейса, вызовите метод [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) с типом менеджера IID `IID_ICLRDomainManager`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

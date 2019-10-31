@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 163816e7-0739-4566-b3df-cd256be8b8a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad87b6552df25926b5b4184b7884c1d444c4f1be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8928e22b70af0360660c30289ee999a3e4c5e99e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133477"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>Метод ICorDebugThread::GetProcess
-Получает указатель интерфейса на процесс, из которых ICorDebugThread эти формы.  
+Возвращает указатель интерфейса на процесс, в котором этот интерфейс формы является частью.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>Параметры  
  `ppProcess`  
- [out] Указатель на адрес объекта интерфейса ICorDebugProcess, представляющий процесс.  
+ заполняет Указатель на адрес объекта интерфейса ICorDebugProcess, который представляет процесс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

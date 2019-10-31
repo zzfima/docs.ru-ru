@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: adde52dddb63b83dcd7ff10703a43928d9601c92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140618"
 ---
 # <a name="strongnamecompareassemblies-function"></a>Функция StrongNameCompareAssemblies
 Определяет, отличаются ли две сборки только подписями строгого имени.  
@@ -48,25 +46,25 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  заполняет Одно из следующих значений:  
   
-- `SN_CMP_DIFFERENT`(0) — указывает, что сборки содержат различные данные.  
+- `SN_CMP_DIFFERENT` (0) — указывает, что сборки содержат различные данные.  
   
-- `SN_CMP_IDENTICAL`(1) — указывает, что сборки точно одинаковы, включая их подписи и контрольные суммы.  
+- `SN_CMP_IDENTICAL` (1) — указывает, что сборки точно одинаковы, включая их подписи и контрольные суммы.  
   
-- `SN_CMP_SIGONLY`(2) — указывает, что сборки отличаются только сигнатурой и контрольной суммой.  
+- `SN_CMP_SIGONLY` (2) — указывает, что сборки отличаются только сигнатурой и контрольной суммой.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае —. `false`  
+ `true` при успешном завершении; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Подпись строгого имени сборки состоит из текстового имени, версии, языка и региональных параметров сборки, а также токена открытого ключа.  
   
  Если функция `StrongNameCompareAssemblies` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  

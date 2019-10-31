@@ -12,14 +12,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124177"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Практическое руководство. Создание ссылки на типы .NET из COM
 С точки зрения кода клиента и сервера различия между COM и .NET Framework практически незаметны. Клиенты Microsoft Visual Basic могут просматривать объект .NET в обозревателе объектов, который позволяет просмотреть методы, синтаксис, свойства и поля объекта точно так же, как если бы это был объект COM.  
@@ -28,15 +26,15 @@ ms.locfileid: "64626308"
   
 ### <a name="to-import-a-library"></a>Импорт библиотеки  
   
-- Укажите параметр **raw_interfaces_only** в диалоговом окне директивы **#import**. Например:  
+- Укажите параметр **raw_interfaces_only** в диалоговом окне директивы **#import**. Пример:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     - или -  
+     \- или -  
   
-- Включите директиву #import для Mscorlib.tlb. Например:  
+- Включите директиву #import для Mscorlib.tlb. Пример:  
   
     ```cpp  
     #import "mscorlib.tlb"  

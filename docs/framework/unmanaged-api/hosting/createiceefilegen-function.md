@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968de84182b74f7baa89d5dfc12a4797ade595
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de27851b4afc3eccad46531848c68723bff346d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136825"
 ---
 # <a name="createiceefilegen-function"></a>Функция CreateICeeFileGen
-Создает [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) объекта.  
+Создает объект [ицеефилежен](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +38,22 @@ HRESULT CreateICeeFileGen (
   
 ## <a name="parameters"></a>Параметры  
  `ceeFileGen`  
- [out] Указатель на адрес нового `ICeeFileGen` объекта.  
+ заполняет Указатель на адрес нового объекта `ICeeFileGen`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM.  
   
-## <a name="remarks"></a>Примечания  
- `ICeeFileGen` Объект используется для создания общего языка переносимого исполняемого (PE) файлов среды выполнения (CLR).  
+## <a name="remarks"></a>Заметки  
+ Объект `ICeeFileGen` используется для создания переносимых исполняемых (PE) файлов среды CLR.  
   
- Вызовите [DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) функции для уничтожения `ICeeFileGen` объекта после завершения.  
+ Вызовите функцию [дестройицеефилежен](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) , чтобы уничтожить объект `ICeeFileGen` по завершении.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ICeeFileGen.h  
+ **Заголовок:** Ицеефилежен. h  
   
- **Библиотека:** MSCorPE.dll  
+ **Библиотека:** Мскорпе. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

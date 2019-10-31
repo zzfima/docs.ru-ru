@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8609b32ad2dea699b5b248b2b8bb3d81ec744043
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6534c3085b70b590c2dcc3f50cf0253bd5e6682
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134750"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>Метод IGCThreadControl::ThreadIsBlockingForSuspension
-Уведомляет узел, что поток, который выполняет вызов заблокирован, возможно, для сбора мусора или по другим причинам.  
+Уведомляет узел о том, что поток, выполняющий вызов, будет заблокирован, возможно, для сборки мусора или другой приостановки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,15 +31,15 @@ ms.locfileid: "67779479"
 HRESULT ThreadIsBlockingForSuspension ( );  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Выбрать узел в пределах `ThreadIsBlockingForSuspension` обратного вызова необходимость повторного планирования потока.  
+## <a name="remarks"></a>Заметки  
+ Узел может выбрать в `ThreadIsBlockingForSuspension` обратного вызова, следует ли перепланировать поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

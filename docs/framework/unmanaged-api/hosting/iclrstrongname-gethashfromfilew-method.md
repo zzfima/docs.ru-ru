@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5b5eb587a4739cf3481c76ef73ebc62f0a9d20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 553acc178bc5805b5afef5931fefc8ad74cbac39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135173"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>Метод ICLRStrongName::GetHashFromFileW
 Создает хэш содержимого файла, указанного строкой Юникода.  
@@ -41,32 +39,32 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Имя файла для хеширования Юникода.  
+ окне Имя файла в Юникоде для хэширования.  
   
  `piHashAlg`  
- [in, out] Алгоритм, используемый при создании хеша. Допустимыми являются алгоритмы, определенные интерфейсом Win32 CryptoAPI. Если `piHashAlg` имеет значение 0, CALG_SHA 1 используется алгоритм по умолчанию.  
+ [вход, выход] Алгоритм, используемый при формировании хэша. Допустимыми являются алгоритмы, определяемые интерфейсом Win32 CryptoAPI. Если `piHashAlg` имеет значение 0, используется алгоритм по умолчанию CALG_SHA-1.  
   
  `pbHash`  
- [out] Массив байтов, содержащий созданный хэш.  
+ заполняет Массив байтов, содержащий созданный хэш.  
   
  `cchHash`  
- [in] Максимальный размер буфера, на которые указывают `pbHash`.  
+ окне Максимальный размер буфера, на который указывает `pbHash`.  
   
  `pchHash`  
- [out] Размер в байтах из `pbHash`.  
+ заполняет Размер `pbHash`в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
-## <a name="remarks"></a>Примечания  
- Этот метод является таким же, как [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) , за исключением того, что спецификация имени файла является Юникода вместо ANSI.  
+## <a name="remarks"></a>Заметки  
+ Этот метод аналогичен методу [метод iclrstrongname:: GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) , за исключением того, что спецификация имени файла имеет кодировку Unicode, а не ANSI.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

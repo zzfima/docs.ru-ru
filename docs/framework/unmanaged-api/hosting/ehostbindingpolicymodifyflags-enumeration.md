@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70f7dd872cefbadce56c577ce2ecc9cbcb663b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2faf22b48dd0b809d6c3668a37f2119733a9b18
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129448"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>Перечисление EHostBindingPolicyModifyFlags
-Позволяет узлу указать тип перенаправления, которые общеязыковой среды выполнения (CLR) следует выполнять при применении изменений политики из исходной сборки на целевую сборку.  
+Позволяет узлу указать тип перенаправления, которое должна выполнять среда CLR при применении изменений политики из исходной сборки к целевой сборке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +35,24 @@ typedef enum _hostBindingPolicyModifyFlags {
 } EHostBindingPolicyModifyFlags;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`HOST_BINDING_POLICY_MODIFY_CHAIN`|Указывает, что среда CLR присоединит значения политики исходной сборки к соответствующим целевой сборки.|  
+|`HOST_BINDING_POLICY_MODIFY_CHAIN`|Указывает, что среда CLR будет связывать значения политики исходной сборки с целевыми сборками.|  
 |`HOST_BINDING_POLICY_MODIFY_DEFAULT`|Указывает, что среда CLR будет выполнять действие по умолчанию.|  
-|`HOST_BINDING_POLICY_MODIFY_MAX`|Указывает, что среда CLR установит значения политики целевой сборки максимальные значения.|  
-|`HOST_BINDING_POLICY_MODIFY_REMOVE`|Указывает, что среда CLR заменит значения политики целевой сборки с соответствующими исходной сборки.|  
+|`HOST_BINDING_POLICY_MODIFY_MAX`|Указывает, что среда CLR будет задавать максимальные значения политики для целевой сборки.|  
+|`HOST_BINDING_POLICY_MODIFY_REMOVE`|Указывает, что среда CLR заменит значения политики целевой сборки значениями из исходной сборки.|  
   
-## <a name="remarks"></a>Примечания  
- [ICLRHostBindingPolicyManager::ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) метод принимает параметр типа `EHostBindingPolicyModifyFlags`.  
+## <a name="remarks"></a>Заметки  
+ Метод [ICLRHostBindingPolicyManager:: ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) принимает параметр типа `EHostBindingPolicyModifyFlags`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

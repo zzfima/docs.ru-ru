@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737076"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139358"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>Метод ICorDebugProcess::ReadMemory
-Считывает в указанную область памяти для этого процесса.  
+Считывает указанную область памяти для этого процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,28 +37,28 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] Объект `CORDB_ADDRESS` значение, указывающее базовый адрес в памяти для чтения.  
+ окне Значение `CORDB_ADDRESS`, указывающее базовый адрес памяти для чтения.  
   
  `size`  
- [in] Число байтов, считываемых из памяти.  
+ окне Число байтов, считываемых из памяти.  
   
  `buffer`  
- [out] Буфер, получающий содержимое памяти.  
+ заполняет Буфер, который получает содержимое памяти.  
   
  `read`  
- [out] Указатель на число байтов, переданных в указанный буфер.  
+ заполняет Указатель на число байтов, передаваемых в указанный буфер.  
   
-## <a name="remarks"></a>Примечания  
- `ReadMemory` Метод в основном предназначен для использования при отладке взаимодействия для проверки областей памяти, используются ли в неуправляемой части отлаживаемого кода. Этот метод можно также прочитать код на промежуточном языке (MSIL) и собственного JIT-скомпилированный код.  
+## <a name="remarks"></a>Заметки  
+ Метод `ReadMemory` в основном предназначен для использования в отладке взаимодействия для проверки областей памяти, используемых неуправляемой частью отлаживаемого кода. Этот метод также можно использовать для считывания кода на языке MSIL и собственного JIT-скомпилированного кода.  
   
- Все управляемые точки останова будут удалены из данных, который возвращается в `buffer` параметра. Каких-либо корректировок станет собственного точек останова, установленных [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Все управляемые точки останова будут удалены из данных, возвращаемых в параметре `buffer`. Никакие изменения для собственных точек останова, заданных [ICorDebugProcess2:: сетунманажедбреакпоинт](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md), не выполняются.  
   
  Кэширование памяти процесса не выполняется.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

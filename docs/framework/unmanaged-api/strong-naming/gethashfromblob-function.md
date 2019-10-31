@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b712d862-f2d0-4b55-87d4-65bbeadef982
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d1027aea1d800bda1654b223fec992aa70efd4b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140712"
 ---
 # <a name="gethashfromblob-function"></a>Функция GetHashFromBlob
 
@@ -60,15 +58,15 @@ HRESULT GetHashFromBlob (
 окне Запрошенный максимальный размер `pbHash`.
 
 `pchHash`\
-заполняет Размер возвращаемого `pbHash`объекта (в байтах).
+заполняет Размер возвращаемого `pbHash`в байтах.
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** StrongName. h
+**Заголовок:** StrongName. h
 
-**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll
+**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6325a782-6862-4346-8e20-d922ca246169
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e59ec88ea001640ba0dc3e923fa62a064a2d007
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d9ae66b7c77a0d3482b7c68a824a8a148ba2595
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139158"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>Функция ShutdownDbgTransportManager
 Завершает работу диспетчера транспорта для подключения к удаленному целевому компьютеру.  
@@ -35,10 +33,10 @@ void InitDbgTransportManager ();
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

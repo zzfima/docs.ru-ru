@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7115e920-aaff-440a-824e-39497139c6f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b19d6e43783211698ae2e68868aff87c91cc3e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a18e1efd246b0d6895d18ae0e7089a78703eae0e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773140"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129426"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>Метод ICLRDebugManager::GetDacl
 Этот метод не реализован.  
@@ -37,7 +35,7 @@ HRESULT GetDacl (
   
 ## <a name="parameters"></a>Параметры  
  `ppacl`  
- [out] Указатель интерфейса списка управления доступом (ACL).  
+ заполняет Указатель интерфейса на список управления доступом (ACL).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -46,11 +44,11 @@ HRESULT GetDacl (
 |E_NOTIMPL|Метод не реализован.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759624"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130824"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>Метод ICorDebugManagedCallback::Exception
-Уведомляет отладчик о том, что исключение выдавалось из управляемого кода.  
+Уведомляет отладчик о появлении исключения из управляемого кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +37,21 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором возникло исключение.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в котором было создано исключение.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в котором возникло исключение.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором было создано исключение.  
   
  `unhandled`  
- [in] Если это значение равно `false`, исключение еще не был обработан элементом приложения; в противном случае, исключение остается необработанным и завершает процесс.  
+ окне Если это значение равно `false`, исключение еще не было обработано приложением; в противном случае исключение не обработано, и процесс завершится.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Конкретное исключение можно получить из объекта потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

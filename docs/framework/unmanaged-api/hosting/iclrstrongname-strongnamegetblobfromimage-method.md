@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f5a2ec8-e776-4fd8-bda6-937b6834575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e13f0ebbdc4e5fe3974208f91ab57f86dd29c910
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad3b151165eb233bd3a4a78d8f4d612a696b7e93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748010"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135100"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>Метод ICLRStrongName::StrongNameGetBlobFromImage
 Получает двоичное представление образа сборки по указанному адресу памяти.  
@@ -40,26 +38,26 @@ HRESULT StrongNameGetBlobFromImage (
   
 ## <a name="parameters"></a>Параметры  
  `pbBase`  
- [in] Адрес памяти, сопоставленной сборки манифеста.  
+ окне Адрес сопоставленного манифеста сборки в памяти.  
   
  `dwLength`  
- [in] Размер в байтах, изображения в `pbBase`.  
+ окне Размер изображения в байтах, в `pbBase`.  
   
  `pbBlob`  
- [in] Буфер, содержащий двоичное представление изображения.  
+ окне Буфер для хранения двоичного представления изображения.  
   
  `pcbBlob`  
- [in, out] Максимальный размер в байтах, запрошенную `pbBlob`. По возвращении фактический размер в байтах из `pbBlob`.  
+ [вход, выход] Запрошенный максимальный размер `pbBlob`в байтах. При возврате фактический размер (в байтах) `pbBlob`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

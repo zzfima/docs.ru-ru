@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752557"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139168"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a>Указатель функции PFN_CLRDataCreateInstance
-Указывает на функцию, которая создает объект интерфейса для заданного целевого элемента.  
+# <a name="pfn_clrdatacreateinstance-function-pointer"></a>Указатель функции PFN_CLRDataCreateInstance
+Указывает на функцию, которая создает объект интерфейса для указанного целевого элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +36,21 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="parameters"></a>Параметры  
  `iid`  
- [in] Идентификатор интерфейса для создания экземпляра.  
+ окне Идентификатор интерфейса, для которого создается экземпляр.  
   
  `target`  
- [in] Указатель на реализуется пользователем [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
+ окне Указатель на реализуемый пользователем объект [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.  
   
  `iface`  
- [out] Указатель на адрес объекта возвращенный интерфейс.  
+ заполняет Указатель на адрес возвращенного объекта интерфейса.  
   
-## <a name="remarks"></a>Примечания  
- `ICLRDataTarget` Объект реализуется разработчиком отладки приложения. Реализация зависит от тип представляемого целевого элемента. Конечный элемент может быть процесс, дамп памяти, удаленный компьютер и т. д.  
+## <a name="remarks"></a>Заметки  
+ Объект `ICLRDataTarget` реализуется модулем записи приложения отладки. Реализация зависит от типа представляемого целевого элемента. Целевой элемент может быть процессом, дампом памяти, удаленным компьютером и т. д.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl  
+ **Заголовок:** Клрдата. idl  
   
  **Библиотека:** CorGuids.lib  
   

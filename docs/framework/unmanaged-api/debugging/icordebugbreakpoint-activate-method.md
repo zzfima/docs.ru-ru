@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e30c29f7-3f19-4081-b572-a731aa14cd44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0f056e4ae233e70223755c1961cd3ee5da68ec90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50794e96484432c8b7c203f6b8caa60130068a8c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122791"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>Метод ICorDebugBreakpoint::Activate
-Задает активное состояние `ICorDebugBreakpoint`.  
+Задает активное состояние этого `ICorDebugBreakpoint`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT Activate (
   
 ## <a name="parameters"></a>Параметры  
  `bActive`  
- [in] Это значение равно `true` для указания состояния как активный; в противном случае это значение равно `false`.  
+ окне Присвойте этому параметру значение `true`, чтобы указать состояние "активный". в противном случае присвойте этому параметру значение `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

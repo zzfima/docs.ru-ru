@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 20fc1b9d-e228-4107-bd76-53934c1724b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73036d1c12c46cbfda8031073a005bc9b376040e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9679029cd54ac44832add9bc4f47f8c8e9a26a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138453"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>Интерфейс ICorDebugHeapSegmentEnum
-Предоставляет перечислитель для областей памяти управляемой кучи. Этот интерфейс является подклассом ICorDebugEnum-интерфейс.  
+Предоставляет перечислитель для областей памяти управляемой кучи. Этот интерфейс является подклассом интерфейса ICorDebugEnum.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|Возвращает заданное число [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) экземпляров, которые содержат сведения о регионах управляемой кучи.|  
+|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|Возвращает указанное число экземпляров [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) , содержащих сведения о регионах управляемой кучи.|  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugHeapSegmentEnum` Интерфейс реализует интерфейс ICorDebugEnum.  
+## <a name="remarks"></a>Заметки  
+ Интерфейс `ICorDebugHeapSegmentEnum` реализует интерфейс ICorDebugEnum.  
   
- `ICorDebugHeapSegmentEnum` Экземпляр заполняется [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) экземпляров путем вызова [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) метод. [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) объектов в коллекции можно перечислить, вызвав [ICorDebugHeapSegmentEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md) метод.  
+ Экземпляр `ICorDebugHeapSegmentEnum` заполняется экземплярами [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) путем вызова метода [метод ICorDebugProcess5:: енумератехеапрегионс](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) . Объекты [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) в коллекции можно перечислить, вызвав метод [Икордебугхеапсегментенум:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md) .  
   
- `ICorDebugHeapSegmentEnum` Объект коллекции, перечисляет все области памяти, которые могут содержать управляемые объекты, но это не гарантирует, что управляемые объекты располагаются в этих регионах. Он может содержать сведения об областях памяти пустой или зарезервировано.  
+ Объект `ICorDebugHeapSegmentEnum` Collection перечисляет все области памяти, которые могут содержать управляемые объекты, но не гарантирует, что управляемые объекты фактически находятся в этих регионах. Он может включать сведения о пустых или зарезервированных регионах памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

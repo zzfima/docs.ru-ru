@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ab86277956469e558d20cea81174a7fdcc0020b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d21e0d3d0370ec7c1b223be29099f6b99822463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132109"
 ---
 # <a name="createcordbobject-function"></a>Функция CreateCordbObject
-Создает интерфейс отладчика ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)), обеспечивающий функциональность для создания управляемого сеанса отладки в удаленном процессе.  
+Создает интерфейс отладчика ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)), который предоставляет функциональные возможности для создания экземпляра управляемого сеанса отладки на удаленном процессе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] Версия отладчика целевого процесса. Для удаленной отладки этот параметр должен иметь значение CorDebugVersion_2_0.  
   
  `ppCordb`  
- [out] Указатель на указатель на объект, который приводится к [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс и возвращается.  
+ заполняет Указатель на указатель на объект, который будет приведен к интерфейсу [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) и возвращен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -57,14 +55,14 @@ HRESULT CordbCreateObject (
  E_FAIL (или другие коды возврата E_)  
  Прочие сбои.  
   
-## <a name="remarks"></a>Примечания  
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс, который возвращается в `ppCordb` — это интерфейс верхнего уровня отладки для всех управляемых служб отладки.  
+## <a name="remarks"></a>Заметки  
+ Интерфейс [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , возвращаемый в `ppCordb`, является интерфейсом отладки верхнего уровня для всех управляемых служб отладки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

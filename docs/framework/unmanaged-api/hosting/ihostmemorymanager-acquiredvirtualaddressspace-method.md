@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef2f83c2-127e-4c38-8385-306c03cd2167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 423fbfc2bda9d3544a5c32b6cd650643209f0e86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b70454cd1e2d6d38e6ca4d0ea0bd8974963c201c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767242"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136732"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Метод IHostMemoryManager::AcquiredVirtualAddressSpace
-Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) получила указанную память от операционной системы.  
+Уведомляет узел о том, что среда CLR получила указанную память из операционной системы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT AcquiredVirtualAddressSpace(
   
 ## <a name="parameters"></a>Параметры  
  `startAddress`  
- [in] Начальный адрес памяти.  
+ окне Начальный адрес памяти.  
   
  `size`  
- [in] Размер в байтах объем памяти.  
+ окне Размер памяти в байтах.  
   
-## <a name="remarks"></a>Примечания  
- `AcquiredVirtualAddressSpace` Метод является методом обратного вызова и должны быть реализованы модулем записи ведущего приложения. Он вызывается средой CLR.  
+## <a name="remarks"></a>Заметки  
+ Метод `AcquiredVirtualAddressSpace` является методом обратного вызова и должен быть реализован модулем записи размещающего приложения. Он вызывается средой CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

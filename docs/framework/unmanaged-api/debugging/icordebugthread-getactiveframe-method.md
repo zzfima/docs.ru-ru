@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390a2c64508bf407296d318a47bfd2972b7ef9d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d623893bd77e46832b0bd823ed60c23e4eee29ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133539"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>Метод ICorDebugThread::GetActiveFrame
-Получает указатель интерфейса на этот объект ICorDebugThread активного кадра (последней).  
+Возвращает указатель интерфейса на активный (самый последний) кадр для этого объекта ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Параметры  
  `ppFrame`  
- [out] Указатель на адрес объекта интерфейса ICorDebugFrame, представляющий кадр.  
+ заполняет Указатель на адрес объекта интерфейса ICorDebugFrame, который представляет кадр.  
   
-## <a name="remarks"></a>Примечания  
- `ppFrame` Параметр имеет значение null, если не рамка в данный момент активна.  
+## <a name="remarks"></a>Заметки  
+ Параметр `ppFrame` имеет значение null, если в настоящий момент нет активного кадра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

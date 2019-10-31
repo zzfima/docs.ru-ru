@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1fb356c-72cf-4aa4-8376-f291a6d97c01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 266e2d92ea3c21a9df28bda18a5d0f32e5a32090
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdca03b781e07b709cbc54e673dbaa2a1130fbe3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748086"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135149"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>Метод ICLRStrongName::StrongNameCompareAssemblies
 Определяет, отличаются ли две сборки только подписями строгого имени.  
@@ -39,34 +37,34 @@ HRESULT StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>Параметры  
  `wszAssembly1`  
- [in] Путь к первой сборки.  
+ окне Путь к первой сборке.  
   
  `wszAssembly2`  
- [in] Путь к вторую сборку.  
+ окне Путь к второй сборке.  
   
  `pdwResult`  
- [out] Одно из следующих значений:  
+ заполняет Одно из следующих значений:  
   
-- `SN_CMP_DIFFERENT` (0) — указывает, что сборки содержат разные данные.  
+- `SN_CMP_DIFFERENT` (0) — указывает, что сборки содержат различные данные.  
   
-- `SN_CMP_IDENTICAL` (1) — указывает, что сборки идентичны, включая их подписи и контрольной суммы.  
+- `SN_CMP_IDENTICAL` (1) — указывает, что сборки точно одинаковы, включая их подписи и контрольные суммы.  
   
-- `SN_CMP_SIGONLY` (2) — указывает, что сборки отличаются только подпись и контрольная сумма.  
+- `SN_CMP_SIGONLY` (2) — указывает, что сборки отличаются только сигнатурой и контрольной суммой.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="remarks"></a>Примечания  
- Подпись строгого имени сборки состоит из текстовое имя сборки, версию, язык и региональные параметры и маркер открытого ключа.  
+## <a name="remarks"></a>Заметки  
+ Подпись строгого имени сборки состоит из текстового имени, версии, языка и региональных параметров сборки, а также токена открытого ключа.  
   
 ## <a name="see-also"></a>См. также
 

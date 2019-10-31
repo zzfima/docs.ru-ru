@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755736"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132066"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>Метод ICorDebugType::GetStaticFieldValue
-Получает указатель интерфейса на объект, содержащий значение статического поля, который ссылается указанное поле ICorDebugValue токена в указанном кадре стека.  
+Возвращает указатель интерфейса на объект ICorDebugValue, содержащий значение статического поля, на которое ссылается заданный токен поля в указанном кадре стека.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,28 +37,28 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Параметры  
  `fieldDef`  
- [in] `mdFieldDef` Токен, который указывает статического поля.  
+ окне Токен `mdFieldDef`, указывающий статическое поле.  
   
  `pFrame`  
- [in] Указатель на ICorDebugFrame, который представляет кадр стека.  
+ окне Указатель на объект ICorDebugFrame, представляющий кадр стека.  
   
  `ppValue`  
- [out] Указатель на адрес `ICorDebugValue` , содержащий значение статического поля.  
+ заполняет Указатель на адрес `ICorDebugValue`, который содержит значение статического поля.  
   
-## <a name="remarks"></a>Примечания  
- `GetStaticFieldValue` Метод может использоваться только в том случае, если тип является ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, обозначенный [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Метод `GetStaticFieldValue` можно использовать, только если тип — ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, как показано в методе [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) .  
   
- Для неуниверсальных типов, операция выполнена пользователем `GetStaticFieldValue` совпадает с вызовом метода [ICorDebugClass::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) ICorDebugClass объекта, возвращенного [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ Для неуниверсальных типов операция, выполняемая `GetStaticFieldValue`, идентична вызову [ICorDebugClass:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) для объекта ICorDebugClass, возвращаемого методами [ICorDebugType::](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)GetObject.  
   
- Для универсальных типов значение статического поля будет относительно определенного процесса создания экземпляров. Кроме того Если статическое поле может определяться относительно потока, контекста или домена приложения, кадр стека поможет определить значение отладчик.  
+ Для универсальных типов значение статического поля будет относиться к определенному экземпляру. Кроме того, если статическое поле может быть связано с потоком, контекстом или доменом приложения, то кадр стека поможет отладчику определить правильное значение.  
   
-## <a name="remarks"></a>Примечания  
- `GetStaticFieldValue` может использоваться только при вызове `ICorDebugType::GetType` возвращает значение ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE.  
+## <a name="remarks"></a>Заметки  
+ `GetStaticFieldValue` можно использовать только в том случае, если вызов метода `ICorDebugType::GetType` возвращает значение ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

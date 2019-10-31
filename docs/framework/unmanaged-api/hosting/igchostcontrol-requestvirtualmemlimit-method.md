@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cbb0b6191c74c2b7ebdc8267701f246c17b016f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134777"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>Метод IGCHostControl::RequestVirtualMemLimit
-Запрашивает узла, чтобы изменить ограничения виртуальной памяти.  
+Запрашивает у узла изменение ограничений виртуальной памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +36,17 @@ HRESULT RequestVirtualMemLimit (
   
 ## <a name="parameters"></a>Параметры  
  `sztMaxVirtualMemMB`  
- [in] Запрошенный размер выделяемой памяти.  
+ окне Запрошенный размер выделенной памяти.  
   
  `psztNewMaxVirtualMemMB`  
- [in, out] Указатель на фактический размер выделенной памяти.  
+ [вход, выход] Указатель на фактический размер выделенной памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

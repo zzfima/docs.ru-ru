@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 751ed69f-b7ab-4e07-80de-e17ca9319b0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f984d44d0a8acb85562a58653dfd2882053a0ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 866b34acae333f043d8e13f4d0ebd55f32046334
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799287"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140728"
 ---
 # <a name="gethashfromassemblyfile-function"></a>Функция GetHashFromAssemblyFile
 Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма.  
@@ -54,14 +52,14 @@ HRESULT GetHashFromAssemblyFile (
  окне Запрошенный максимальный размер `pbHash`.  
   
  `pchHash`  
- заполняет Возвращаемый размер (в байтах) `pbHash`для.  
+ заполняет Возвращаемый размер `pbHash`в байтах.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

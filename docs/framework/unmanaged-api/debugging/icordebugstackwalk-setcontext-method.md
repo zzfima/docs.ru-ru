@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771038"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131814"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>Метод ICorDebugStackWalk::SetContext
-Наборы [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) текущего контекста объекта для допустимого контекста потока.  
+Задает для текущего контекста объекта [икордебугстакквалк](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) допустимый контекст для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,37 +35,37 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Параметры  
  `flag`  
- [in] Объект [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) флаг, указывающий контекста: взят из активного кадра в стеке или получить контекст путем очистки стека.  
+ окне Флаг [кордебугсетконтекстфлаг](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) , который указывает, относится ли контекст к активному кадру в стеке или к контексту, полученному путем очистки стека.  
   
  `contextSize`  
- [in] Выделенный размер `CONTEXT` буфера.  
+ окне Выделенный размер буфера `CONTEXT`.  
   
  `context`  
- [in] `CONTEXT` Буфера.  
+ окне Буфер `CONTEXT`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk` Был успешно задан контекст объекта.|  
-|E_FAIL|`ICorDebugStackWalk` Контекст объекта не задано.|  
+|S_OK|Контекст объекта `ICorDebugStackWalk` был успешно задан.|  
+|E_FAIL|Контекст объекта `ICorDebugStackWalk` не задан.|  
 |E_INVALIDARG|Контекст имеет значение null.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Буфер контекста слишком мал.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- Этот метод не изменяет контекст текущего потока.  
+## <a name="remarks"></a>Заметки  
+ Этот метод не изменяет текущий контекст потока.  
   
- Установка на недопустимый контекст для текущего контекста может привести к непредсказуемым результатам при обходе стека.  
+ Установка текущего контекста в недопустимый контекст может привести к непредсказуемым результатам обхода стека.  
   
- Побитовое точную копию данного контекста можно получить путем вызова [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) метод.  
+ Вы можете получить точную побитовую копию этого контекста путем немедленного вызова метода [икордебугстакквалк:: oncontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
