@@ -4,175 +4,225 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957251"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72961091"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="10b0e-103">Развертывание приложения .NET для Apache Spark в Databricks</span><span class="sxs-lookup"><span data-stu-id="10b0e-103">Deploy a .NET for Apache Spark application to Databricks</span></span>
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="878c3-103">Учебник. Развертывание приложения .NET для Apache Spark в Databricks</span><span class="sxs-lookup"><span data-stu-id="878c3-103">Tutorial: Deploy a .NET for Apache Spark application to Databricks</span></span>
 
-<span data-ttu-id="10b0e-104">В этом руководстве рассматривается развертывание приложения .NET для Apache Spark в Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Databricks.</span></span>
+<span data-ttu-id="878c3-104">В этом учебнике описывается, как развернуть приложение в облаке с помощью Azure Databricks, платформу для аналитики на базе Apache Spark. Платформа настраивается одним щелчком, упрощает рабочие процессы и предоставляет интерактивную рабочую область для совместной работы.</span><span class="sxs-lookup"><span data-stu-id="878c3-104">This tutorial teaches you how to deploy your app to the cloud through Azure Databricks, an Apache Spark-based analytics platform with one-click setup, streamlined workflows, and interactive workspace that enables collaboration.</span></span>
 
-<span data-ttu-id="10b0e-105">В этом руководстве вы узнаете, как:</span><span class="sxs-lookup"><span data-stu-id="10b0e-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="878c3-105">В этом руководстве вы узнаете, как:</span><span class="sxs-lookup"><span data-stu-id="878c3-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
->
-> - <span data-ttu-id="10b0e-106">Подготовка Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="10b0e-106">Prepare Microsoft.Spark.Worker</span></span>
-> - <span data-ttu-id="10b0e-107">Публикация приложения Spark .NET</span><span class="sxs-lookup"><span data-stu-id="10b0e-107">Publish your Spark .NET app</span></span>
-> - <span data-ttu-id="10b0e-108">Развертывание приложения в Databricks</span><span class="sxs-lookup"><span data-stu-id="10b0e-108">Deploy your app to Databricks</span></span>
-> - <span data-ttu-id="10b0e-109">Запуск приложения</span><span class="sxs-lookup"><span data-stu-id="10b0e-109">Run your app</span></span>
+> <span data-ttu-id="878c3-106">создание рабочей области Azure Databricks;</span><span class="sxs-lookup"><span data-stu-id="878c3-106">Create an Azure Databricks workspace.</span></span>
+> <span data-ttu-id="878c3-107">Опубликовать приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-107">Publish your .NET for Apache Spark app.</span></span>
+> <span data-ttu-id="878c3-108">Создать задание Spark и кластер Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-108">Create a Spark job and Spark cluster.</span></span>
+> <span data-ttu-id="878c3-109">Запустить приложение в кластере Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-109">Run your app on the Spark cluster.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="10b0e-110">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="10b0e-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="878c3-110">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="878c3-110">Prerequisites</span></span>
 
-<span data-ttu-id="10b0e-111">Прежде чем начать, сделайте следующее:</span><span class="sxs-lookup"><span data-stu-id="10b0e-111">Before you start, do the following:</span></span>
+<span data-ttu-id="878c3-111">Прежде чем начать, сделайте следующее.</span><span class="sxs-lookup"><span data-stu-id="878c3-111">Before you start, do the following tasks:</span></span>
 
-- <span data-ttu-id="10b0e-112">Скачайте [интерфейс командной строки Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span><span class="sxs-lookup"><span data-stu-id="10b0e-112">Download the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span></span>
-- <span data-ttu-id="10b0e-113">Скачайте файл [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="10b0e-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="10b0e-114">Это вспомогательный скрипт, который будет использоваться позже для копирования зависимых файлов .NET для Apache Spark в рабочие узлы кластера Spark.</span><span class="sxs-lookup"><span data-stu-id="10b0e-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
+* <span data-ttu-id="878c3-112">Если у вас нет учетной записи, вы можете создать [бесплатную учетную запись](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="878c3-112">If you don't have an Azure account, create a [free account](https://azure.microsoft.com/free/).</span></span>
+* <span data-ttu-id="878c3-113">Войдите на [портале Azure](https://portal.azure.com/).</span><span class="sxs-lookup"><span data-stu-id="878c3-113">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
+* <span data-ttu-id="878c3-114">Пройдите учебник [.NET для Apache Spark — начало работы за 10 минут](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro).</span><span class="sxs-lookup"><span data-stu-id="878c3-114">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
 
-## <a name="prepare-worker-dependencies"></a><span data-ttu-id="10b0e-115">Подготовка зависимостей рабочей роли</span><span class="sxs-lookup"><span data-stu-id="10b0e-115">Prepare worker dependencies</span></span>
+## <a name="create-an-azure-databricks-workspace"></a><span data-ttu-id="878c3-115">Создание рабочей области Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="878c3-115">Create an Azure Databricks workspace</span></span>
 
-<span data-ttu-id="10b0e-116">**Microsoft.Spark.Worker** — это серверный компонент, который размещается в отдельных рабочих узлах кластера Spark.</span><span class="sxs-lookup"><span data-stu-id="10b0e-116">**Microsoft.Spark.Worker** is a back-end component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="10b0e-117">Если вам нужно выполнить определяемую пользователем функцию C#, Spark необходимо знать, как запустить среду CLR .NET для выполнения этой функции.</span><span class="sxs-lookup"><span data-stu-id="10b0e-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="10b0e-118">**Microsoft.Spark.Worker** предоставляет Spark коллекцию классов, которые обеспечивают такую возможность.</span><span class="sxs-lookup"><span data-stu-id="10b0e-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
+> [!Note]
+> <span data-ttu-id="878c3-116">Инструкции из этого руководство нельзя выполнять с **бесплатной пробной версией подписки**.</span><span class="sxs-lookup"><span data-stu-id="878c3-116">This tutorial cannot be carried out using **Azure Free Trial Subscription**.</span></span>
+> <span data-ttu-id="878c3-117">Если у вас есть бесплатная учетная запись, перейдите к профилю и измените подписку на подписку с **оплатой по мере использования**.</span><span class="sxs-lookup"><span data-stu-id="878c3-117">If you have a free account, go to your profile and change your subscription to **pay-as-you-go**.</span></span> <span data-ttu-id="878c3-118">Дополнительные сведения см. на странице [создания бесплатной учетной записи Azure](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="878c3-118">For more information, see [Azure free account](https://azure.microsoft.com/free/).</span></span> <span data-ttu-id="878c3-119">Затем [удалите предельную сумму расходов](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit) и [запросите увеличение квоты](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) на ЦП в своем регионе.</span><span class="sxs-lookup"><span data-stu-id="878c3-119">Then, [remove the spending limit](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), and [request a quota increase](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) for vCPUs in your region.</span></span> <span data-ttu-id="878c3-120">При создании рабочей области Azure Databricks можно выбрать ценовую категорию **Пробная версия ("Премиум" — 14 дней бесплатно (DBU))** для предоставления рабочей области доступа к бесплатным DBU Azure Databricks уровня "Премиум" на 14 дней.</span><span class="sxs-lookup"><span data-stu-id="878c3-120">When you create your Azure Databricks workspace, you can select the **Trial (Premium - 14-Days Free DBUs)** pricing tier to give the workspace access to free Premium Azure Databricks DBUs for 14 days.</span></span>
 
-1. <span data-ttu-id="10b0e-119">Выберите выпуск netcoreapp компонента [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) для Linux, который будет развернут в кластере.</span><span class="sxs-lookup"><span data-stu-id="10b0e-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
+<span data-ttu-id="878c3-121">В этом разделе вы создадите рабочую область Azure Databricks с помощью портала Azure.</span><span class="sxs-lookup"><span data-stu-id="878c3-121">In this section, you create an Azure Databricks workspace using the Azure portal.</span></span>
 
-   <span data-ttu-id="10b0e-120">Например, чтобы использовать `.NET for Apache Spark v0.1.0` с `netcoreapp2.1`, скачайте выпуск [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span><span class="sxs-lookup"><span data-stu-id="10b0e-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
+1. <span data-ttu-id="878c3-122">На портале Azure выберите **Создать ресурс** > **Analytics** > **Azure Databricks**.</span><span class="sxs-lookup"><span data-stu-id="878c3-122">In the Azure portal, select **Create a resource** > **Analytics** > **Azure Databricks**.</span></span>
 
-2. <span data-ttu-id="10b0e-121">Передайте файлы `Microsoft.Spark.Worker.<release>.tar.gz` и [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) в распределенную файловую систему (например, DBFS), к которой есть доступ у кластера.</span><span class="sxs-lookup"><span data-stu-id="10b0e-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (for example, DBFS) that your cluster has access to.</span></span>
+   ![Создание ресурса Azure Databricks на портале Azure](./media/databricks-deployment/create-databricks-resource.png)
 
-## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="10b0e-122">Подготовка приложения .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="10b0e-122">Prepare your .NET for Apache Spark app</span></span>
+2. <span data-ttu-id="878c3-124">В разделе **службы Azure Databricks** укажите значения для создания рабочей области Databricks.</span><span class="sxs-lookup"><span data-stu-id="878c3-124">Under **Azure Databricks Service**, provide the values to create a Databricks workspace.</span></span>
+    
+    |<span data-ttu-id="878c3-125">Свойство.</span><span class="sxs-lookup"><span data-stu-id="878c3-125">Property</span></span>  |<span data-ttu-id="878c3-126">ОПИСАНИЕ</span><span class="sxs-lookup"><span data-stu-id="878c3-126">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="878c3-127">**Имя рабочей области**</span><span class="sxs-lookup"><span data-stu-id="878c3-127">**Workspace name**</span></span>     | <span data-ttu-id="878c3-128">Укажите имя рабочей области Databricks.</span><span class="sxs-lookup"><span data-stu-id="878c3-128">Provide a name for your Databricks workspace.</span></span>        |
+    |<span data-ttu-id="878c3-129">**Подписка**</span><span class="sxs-lookup"><span data-stu-id="878c3-129">**Subscription**</span></span>     | <span data-ttu-id="878c3-130">Выберите подписку Azure в раскрывающемся списке.</span><span class="sxs-lookup"><span data-stu-id="878c3-130">From the drop-down, select your Azure subscription.</span></span>        |
+    |<span data-ttu-id="878c3-131">**группа ресурсов**</span><span class="sxs-lookup"><span data-stu-id="878c3-131">**Resource group**</span></span>     | <span data-ttu-id="878c3-132">Укажите, следует ли создать новую группу ресурсов или использовать имеющуюся.</span><span class="sxs-lookup"><span data-stu-id="878c3-132">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="878c3-133">Группа ресурсов — это контейнер, содержащий связанные ресурсы для решения Azure.</span><span class="sxs-lookup"><span data-stu-id="878c3-133">A resource group is a container that holds related resources for an Azure solution.</span></span> <span data-ttu-id="878c3-134">Дополнительные сведения см. в [обзоре группы ресурсов Azure](/azure/azure-databricks/azure-resource-manager/resource-group-overview).</span><span class="sxs-lookup"><span data-stu-id="878c3-134">For more information, see [Azure Resource Group overview](/azure/azure-databricks/azure-resource-manager/resource-group-overview).</span></span> |
+    |<span data-ttu-id="878c3-135">**Расположение**</span><span class="sxs-lookup"><span data-stu-id="878c3-135">**Location**</span></span>     | <span data-ttu-id="878c3-136">Выберите предпочитаемый регион.</span><span class="sxs-lookup"><span data-stu-id="878c3-136">Select your preferred region.</span></span> <span data-ttu-id="878c3-137">Доступные регионы см. в статье о [доступности служб Azure по регионам](https://azure.microsoft.com/regions/services/).</span><span class="sxs-lookup"><span data-stu-id="878c3-137">For information about available regions, see [Azure services available by region](https://azure.microsoft.com/regions/services/).</span></span>        |
+    |<span data-ttu-id="878c3-138">**Ценовая категория**</span><span class="sxs-lookup"><span data-stu-id="878c3-138">**Pricing Tier**</span></span>     |  <span data-ttu-id="878c3-139">Вы можете выбрать уровень **Стандартный** или **Премиум** или воспользоваться **бесплатной пробной версией**.</span><span class="sxs-lookup"><span data-stu-id="878c3-139">Choose between **Standard**, **Premium**, or **Trial**.</span></span> <span data-ttu-id="878c3-140">Дополнительные сведения об этих ценовых категориях см. на [странице цен на Databricks](https://azure.microsoft.com/pricing/details/databricks/).</span><span class="sxs-lookup"><span data-stu-id="878c3-140">For more information on these tiers, see [Databricks pricing page](https://azure.microsoft.com/pricing/details/databricks/).</span></span>       |
+    |<span data-ttu-id="878c3-141">**Виртуальная сеть**</span><span class="sxs-lookup"><span data-stu-id="878c3-141">**Virtual Network**</span></span>     |   <span data-ttu-id="878c3-142">Нет</span><span class="sxs-lookup"><span data-stu-id="878c3-142">No</span></span>       |
 
-1. <span data-ttu-id="10b0e-123">Выполните сборку приложения согласно инструкциям из [руководства по началу работы](get-started.md).</span><span class="sxs-lookup"><span data-stu-id="10b0e-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
+3. <span data-ttu-id="878c3-143">Выберите **Создать**.</span><span class="sxs-lookup"><span data-stu-id="878c3-143">Select **Create**.</span></span> <span data-ttu-id="878c3-144">Создание рабочей области займет несколько минут.</span><span class="sxs-lookup"><span data-stu-id="878c3-144">The workspace creation takes a few minutes.</span></span> <span data-ttu-id="878c3-145">Во время создания рабочей области состояние развертывания можно просмотреть в области **Уведомления**.</span><span class="sxs-lookup"><span data-stu-id="878c3-145">During workspace creation, you can view the deployment status in **Notifications**.</span></span>
 
-2. <span data-ttu-id="10b0e-124">Опубликуйте приложение .NET для Spark как автономное.</span><span class="sxs-lookup"><span data-stu-id="10b0e-124">Publish your Spark .NET app as self-contained.</span></span>
+## <a name="install-azure-databricks-tools"></a><span data-ttu-id="878c3-146">Установка средств Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="878c3-146">Install Azure Databricks tools</span></span>
 
-   <span data-ttu-id="10b0e-125">В Linux можно выполнить приведенную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="10b0e-125">You can run the following command on Linux.</span></span>
+<span data-ttu-id="878c3-147">Для подключения к кластерам Azure Databricks и передачи файлов с локального компьютера можно использовать **интерфейс командной строки Databricks**.</span><span class="sxs-lookup"><span data-stu-id="878c3-147">You can use the **Databricks CLI** to connect to Azure Databricks clusters and upload files to them from your local machine.</span></span> <span data-ttu-id="878c3-148">В кластерах Databricks доступ к файлам осуществляется через DBFS (файловая система Databricks).</span><span class="sxs-lookup"><span data-stu-id="878c3-148">Databricks clusters access files through DBFS (Databricks File System).</span></span> 
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
-   ```
+1. <span data-ttu-id="878c3-149">Для работы интерфейса командной строки Databricks требуется Python 3.6 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="878c3-149">The Databricks CLI requires Python 3.6 or above.</span></span> <span data-ttu-id="878c3-150">Если у вас уже установлен Python, можно перейти к следующему шагу.</span><span class="sxs-lookup"><span data-stu-id="878c3-150">If you already have Python installed, you can skip this step.</span></span>
+ 
+   <span data-ttu-id="878c3-151">**Для Windows:**</span><span class="sxs-lookup"><span data-stu-id="878c3-151">**For Windows:**</span></span>
 
-3. <span data-ttu-id="10b0e-126">Создайте `<your app>.zip` для опубликованных файлов.</span><span class="sxs-lookup"><span data-stu-id="10b0e-126">Produce `<your app>.zip` for the published files.</span></span>
+   [<span data-ttu-id="878c3-152">Загрузка Python для Windows</span><span class="sxs-lookup"><span data-stu-id="878c3-152">Download Python for Windows</span></span>](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
 
-   <span data-ttu-id="10b0e-127">В Linux можно выполнить приведенную ниже команду с помощью `zip`.</span><span class="sxs-lookup"><span data-stu-id="10b0e-127">You can run the following command on Linux using `zip`.</span></span>
-
-   ```bash
-   zip -r <your app>.zip .
-   ```
-
-4. <span data-ttu-id="10b0e-128">Передайте в распределенную файловую систему (например, DBFS), к которой есть доступ у кластера, следующие файлы:</span><span class="sxs-lookup"><span data-stu-id="10b0e-128">Upload the following to a distributed file system (for example, DBFS) that your cluster has access to:</span></span>
-
-   - <span data-ttu-id="10b0e-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`. Этот JAR-файл входит в состав пакета NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) и размещается в выходном каталоге сборки приложения.</span><span class="sxs-lookup"><span data-stu-id="10b0e-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
-   - `<your app>.zip`
-   - <span data-ttu-id="10b0e-130">Файлы (например, файлы зависимостей или общие данные, доступные каждой рабочей роли) или сборки (например, библиотеки DLL, содержащие определяемые пользователем функции, или библиотеки, от которых зависит приложение), которые необходимо поместить в рабочий каталог каждого исполнителя.</span><span class="sxs-lookup"><span data-stu-id="10b0e-130">Files (like dependency files or common data accessible to every worker) or assemblies (like DLLs that contain your user-defined functions or libraries that your app depends on) to be placed in the working directory of each executor.</span></span>
-
-## <a name="deploy-to-databricks"></a><span data-ttu-id="10b0e-131">Развертывание в Databricks</span><span class="sxs-lookup"><span data-stu-id="10b0e-131">Deploy to Databricks</span></span>
-
-<span data-ttu-id="10b0e-132">[Databricks](https://databricks.com) — это платформа, которая обеспечивает обработку больших данных в облаке с помощью Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="10b0e-132">[Databricks](https://databricks.com) is a platform that provides cloud-based big data processing using Apache Spark.</span></span>
-
-> [!Note] 
-> <span data-ttu-id="10b0e-133">[Azure Databricks](https://azure.microsoft.com/services/databricks/) и [AWS Databricks](https://databricks.com/aws) работают под управлением Linux.</span><span class="sxs-lookup"><span data-stu-id="10b0e-133">[Azure Databricks](https://azure.microsoft.com/services/databricks/) and [AWS Databricks](https://databricks.com/aws) are Linux-based.</span></span> <span data-ttu-id="10b0e-134">Поэтому если вы хотите развернуть приложение в Databricks, оно должно быть совместимо с .NET Standard, а для его компиляции необходимо использовать [компилятор .NET Core](https://dotnet.microsoft.com/download).</span><span class="sxs-lookup"><span data-stu-id="10b0e-134">Therefore, if you are interested in deploying your app to Databricks, make sure your app is .NET Standard compatible and that you use [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
-
-<span data-ttu-id="10b0e-135">Databricks позволяет отправлять приложения .NET для Apache Spark в существующий активный кластер или создавать новый кластер при каждом запуске задания.</span><span class="sxs-lookup"><span data-stu-id="10b0e-135">Databricks allows you to submit .NET for Apache Spark apps to an existing active cluster or create a new cluster every time you launch a job.</span></span> <span data-ttu-id="10b0e-136">Перед отправкой приложения .NET для Apache Spark требуется установить **Microsoft.Spark.Worker**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-136">This requires the **Microsoft.Spark.Worker** to be installed before you submit a .NET for Apache Spark app.</span></span>
-
-### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="10b0e-137">Развертывание Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="10b0e-137">Deploy Microsoft.Spark.Worker</span></span>
-
-<span data-ttu-id="10b0e-138">Этот шаг необходимо выполнить для кластера только один раз.</span><span class="sxs-lookup"><span data-stu-id="10b0e-138">This step is only required once for a cluster.</span></span>
-
-1. <span data-ttu-id="10b0e-139">Скачайте файлы [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) и [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) на локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="10b0e-139">Download [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) onto your local machine.</span></span>
-
-2. <span data-ttu-id="10b0e-140">Измените файл **db-init.sh** так, чтобы он указывал на выпуск **Microsoft.Spark.Worker**, который вы хотите скачать и установить в кластере.</span><span class="sxs-lookup"><span data-stu-id="10b0e-140">Modify **db-init.sh** to point to the **Microsoft.Spark.Worker** release you want to download and install on your cluster.</span></span>
-
-3. <span data-ttu-id="10b0e-141">Установите [интерфейс командной строки Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span><span class="sxs-lookup"><span data-stu-id="10b0e-141">Install the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span></span>
-
-4. <span data-ttu-id="10b0e-142">[Настройте сведения о проверке подлинности](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) для интерфейса командной строки Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-142">[Setup authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) details for the Databricks CLI.</span></span>
-
-5. <span data-ttu-id="10b0e-143">Отправьте файлы в кластер Databricks с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="10b0e-143">Upload the files to your Databricks cluster using the following command:</span></span>
+   <span data-ttu-id="878c3-153">**Для Linux:** Python предустановлен в большинстве дистрибутивов Linux.</span><span class="sxs-lookup"><span data-stu-id="878c3-153">**For Linux:** Python comes preinstalled on most Linux distributions.</span></span> <span data-ttu-id="878c3-154">Выполните следующую команду, чтобы узнать, какая версия установлена:</span><span class="sxs-lookup"><span data-stu-id="878c3-154">Run the following command to see which version you have installed:</span></span>
 
    ```bash
-   cd <path-to-db-init-and-install-worker>
+   python3 --version
+   ```
+
+2. <span data-ttu-id="878c3-155">Установите интерфейс командной строки Databricks с помощью pip.</span><span class="sxs-lookup"><span data-stu-id="878c3-155">Use pip to install the Databricks CLI.</span></span> <span data-ttu-id="878c3-156">В Python 3.4 и более поздних версий pip включен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="878c3-156">Python 3.4 and later include pip by default.</span></span> <span data-ttu-id="878c3-157">Используйте pip3 для Python 3.</span><span class="sxs-lookup"><span data-stu-id="878c3-157">Use pip3 for Python 3.</span></span> <span data-ttu-id="878c3-158">Выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="878c3-158">Run the following command:</span></span>
+
+   ```bash
+   pip3 install databricks-cli
+   ```
+
+3. <span data-ttu-id="878c3-159">После установки интерфейса командной строки Databricks откройте новую командную строку и выполните команду `databricks`.</span><span class="sxs-lookup"><span data-stu-id="878c3-159">Once you've installed the Databricks CLI, open a new command prompt and run the command `databricks`.</span></span> <span data-ttu-id="878c3-160">Если вы получаете **внутреннюю или внешнюю ошибку команды о том, что Databricks не распознан**, убедитесь, что открыли новую командную строку.</span><span class="sxs-lookup"><span data-stu-id="878c3-160">If you receive a **'databricks' is not recognized as an internal or external command error**, make sure you opened a new command prompt.</span></span>
+
+## <a name="set-up-azure-databricks"></a><span data-ttu-id="878c3-161">Настройка Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="878c3-161">Set up Azure Databricks</span></span>
+
+<span data-ttu-id="878c3-162">Теперь, когда интерфейс командной строки Databricks установлен, необходимо настроить сведения о проверке подлинности.</span><span class="sxs-lookup"><span data-stu-id="878c3-162">Now that you have the Databricks CLI installed, you need to set up authentication details.</span></span>
+
+1. <span data-ttu-id="878c3-163">В интерфейсе командной строки Databricks выполните команду `databricks configure --token`.</span><span class="sxs-lookup"><span data-stu-id="878c3-163">Run the Databricks CLI command `databricks configure --token`.</span></span>
+
+2. <span data-ttu-id="878c3-164">После выполнения команды конфигурации будет предложено ввести узел.</span><span class="sxs-lookup"><span data-stu-id="878c3-164">After running the configure command, you are prompted to enter a host.</span></span> <span data-ttu-id="878c3-165">URL-адрес узла использует формат: **https://<\Location>.azuredatabricks.net**.</span><span class="sxs-lookup"><span data-stu-id="878c3-165">Your host URL uses the format: **https://<\Location>.azuredatabricks.net**.</span></span> <span data-ttu-id="878c3-166">Например, если вы выбрали **eastus2** при создании службы Azure Databricks, узел будет **https://eastus2.azuredatabricks.net** .</span><span class="sxs-lookup"><span data-stu-id="878c3-166">For instance, if you selected **eastus2** during Azure Databricks Service creation, the host would be **https://eastus2.azuredatabricks.net**.</span></span>
+
+3. <span data-ttu-id="878c3-167">После ввода узла вам будет предложено ввести маркер.</span><span class="sxs-lookup"><span data-stu-id="878c3-167">After entering your host, you are prompted to enter a token.</span></span> <span data-ttu-id="878c3-168">На портале Azure выберите **Запустить рабочую область**, чтобы запустить рабочую область Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="878c3-168">In the Azure portal, select **Launch Workspace** to launch your Azure Databricks workspace.</span></span>
+
+   ![Запуск рабочей области Azure Databricks](./media/databricks-deployment/launch-databricks-workspace.png)
+
+4. <span data-ttu-id="878c3-170">На домашней странице рабочей области выберите **Параметры пользователя**.</span><span class="sxs-lookup"><span data-stu-id="878c3-170">On the home page of your workspace, select **User Settings**.</span></span>
+
+   ![Параметры пользователя рабочей области Azure Databricks](./media/databricks-deployment/databricks-user-settings.png)
+
+5. <span data-ttu-id="878c3-172">На странице "Параметры пользователя" можно создать новый маркер.</span><span class="sxs-lookup"><span data-stu-id="878c3-172">On the User Settings page, you can generate a new token.</span></span> <span data-ttu-id="878c3-173">Скопируйте созданный маркер и вставьте его обратно в командную строку.</span><span class="sxs-lookup"><span data-stu-id="878c3-173">Copy the generated token and paste it back into your command prompt.</span></span>
+
+   ![Создание нового маркера доступа в рабочей области Azure Databricks](./media/databricks-deployment/generate-token.png)
+
+<span data-ttu-id="878c3-175">Теперь вы можете получить доступ ко всем кластерам Azure Databricks, которые вы создаете, и отправить файлы в DBFS.</span><span class="sxs-lookup"><span data-stu-id="878c3-175">You should now be able to access any Azure Databricks clusters you create and upload files to the DBFS.</span></span>
+
+## <a name="download-worker-dependencies"></a><span data-ttu-id="878c3-176">Загрузка зависимостей рабочей роли</span><span class="sxs-lookup"><span data-stu-id="878c3-176">Download worker dependencies</span></span>
+
+1. <span data-ttu-id="878c3-177">Microsoft.Spark.Worker помогает Apache Spark запускать ваше приложение, например пользовательские функции (UDF), которые вы написали.</span><span class="sxs-lookup"><span data-stu-id="878c3-177">Microsoft.Spark.Worker helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="878c3-178">Загрузите [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span><span class="sxs-lookup"><span data-stu-id="878c3-178">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span></span>
+
+2. <span data-ttu-id="878c3-179">*install-worker.sh* — это скрипт, который позволяет копировать зависимые файлы .NET для Apache Spark в узлы кластера.</span><span class="sxs-lookup"><span data-stu-id="878c3-179">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span> 
+
+   <span data-ttu-id="878c3-180">Создайте новый файл с именем **install-worker.sh** на локальном компьютере и вставьте [содержимое файла install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh), расположенного на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="878c3-180">Create a new file named **install-worker.sh** on your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span> 
+
+3. <span data-ttu-id="878c3-181">*db-init.sh* — это скрипт, который устанавливает зависимости на кластер Databricks Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-181">The *db-init.sh* is a script that installs dependencies onto your Databricks Spark cluster.</span></span>
+
+   <span data-ttu-id="878c3-182">Создайте новый файл с именем **db-init.sh** на локальном компьютере и вставьте [содержимое файла db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh), расположенного на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="878c3-182">Create a new file named **db-init.sh** on your local computer, and paste the [db-init.sh contents](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) located on GitHub.</span></span> 
+   
+   <span data-ttu-id="878c3-183">В только что созданном файле задайте для переменной `DOTNET_SPARK_RELEASE` значение `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span><span class="sxs-lookup"><span data-stu-id="878c3-183">In the file you just created, set the `DOTNET_SPARK_RELEASE` variable to `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span></span> <span data-ttu-id="878c3-184">Оставьте остальную часть файла *db-init.sh* без изменений.</span><span class="sxs-lookup"><span data-stu-id="878c3-184">Leave the rest of the *db-init.sh* file as-is.</span></span>
+
+> [!Note]
+> <span data-ttu-id="878c3-185">Если вы используете Windows, убедитесь, что для окончаний строк в скриптах *install-worker.sh* и *db-init.sh* используется стиль Unix (LF).</span><span class="sxs-lookup"><span data-stu-id="878c3-185">If you are using Windows, verify that the line-endings in your *install-worker.sh* and *db-init.sh* scripts are Unix-style (LF).</span></span> <span data-ttu-id="878c3-186">Можно изменять окончания строк в текстовых редакторах, таких как Notepad++ и Atom.</span><span class="sxs-lookup"><span data-stu-id="878c3-186">You can change line endings through text editors like Notepad++ and Atom.</span></span>
+
+## <a name="publish-your-app"></a><span data-ttu-id="878c3-187">Публикация приложения</span><span class="sxs-lookup"><span data-stu-id="878c3-187">Publish your app</span></span>
+
+<span data-ttu-id="878c3-188">Затем вы публикуете приложение *mySparkApp*, созданное в учебнике [.NET для Apache Spark — начало работы за 10 минут](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro), чтобы кластер Spark имел доступ ко всем файлам, которые необходимы для запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="878c3-188">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial to ensure your Spark cluster has access to all the files it needs to run your app.</span></span> 
+
+1. <span data-ttu-id="878c3-189">Для публикации *mySparkApp* выполните следующие команды:</span><span class="sxs-lookup"><span data-stu-id="878c3-189">Run the following commands to publish the *mySparkApp*:</span></span>
+
+   <span data-ttu-id="878c3-190">**В Windows:**</span><span class="sxs-lookup"><span data-stu-id="878c3-190">**On Windows:**</span></span>
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   ```
+
+   <span data-ttu-id="878c3-191">**В Linux:**</span><span class="sxs-lookup"><span data-stu-id="878c3-191">**On Linux:**</span></span>
+
+   ```bash
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   ```
+
+2. <span data-ttu-id="878c3-192">Выполните следующие задачи и заархивируйте опубликованные файлы приложения, чтобы их можно было легко передать в кластер Databricks Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-192">Do the following tasks to zip your published app files so that you can easily upload them to your Databricks Spark cluster.</span></span>
+
+   <span data-ttu-id="878c3-193">**В Windows:**</span><span class="sxs-lookup"><span data-stu-id="878c3-193">**On Windows:**</span></span>
+
+   <span data-ttu-id="878c3-194">Перейдите в каталог mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64.</span><span class="sxs-lookup"><span data-stu-id="878c3-194">Navigate to mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64.</span></span> <span data-ttu-id="878c3-195">Затем щелкните правой кнопкой мыши папку **Publish** и выберите **Отправить > Сжатая ZIP-папка**.</span><span class="sxs-lookup"><span data-stu-id="878c3-195">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="878c3-196">Назовите папку **publish.zip**.</span><span class="sxs-lookup"><span data-stu-id="878c3-196">Name the new folder **publish.zip**.</span></span>
+
+   <span data-ttu-id="878c3-197">**В Linux выполните следующую команду:**</span><span class="sxs-lookup"><span data-stu-id="878c3-197">**On Linux, run the following command:**</span></span>
+
+   ```bash
+   zip -r publish.zip .
+   ```
+
+## <a name="upload-files"></a><span data-ttu-id="878c3-198">Отправка файлов</span><span class="sxs-lookup"><span data-stu-id="878c3-198">Upload files</span></span>
+
+<span data-ttu-id="878c3-199">В этом разделе вы отправите в DBFS несколько файлов, чтобы в кластере было все необходимое для запуска приложения в облаке.</span><span class="sxs-lookup"><span data-stu-id="878c3-199">In this section, you upload several files to DBFS so that your cluster has everything it needs to run your app in the cloud.</span></span> <span data-ttu-id="878c3-200">Каждый раз при отправке файла в DBFS убеждайтесь, что вы находитесь в каталоге, где расположен этот файл на компьютере.</span><span class="sxs-lookup"><span data-stu-id="878c3-200">Each time you upload a file to the DBFS, make sure you are in the directory where that file is located on your computer.</span></span>
+
+1. <span data-ttu-id="878c3-201">Выполните следующие команды, чтобы отправить *db-init.sh*, *install-worker.sh* и *Microsoft.Spark.Worker* в DBFS:</span><span class="sxs-lookup"><span data-stu-id="878c3-201">Run the following commands to upload the *db-init.sh*, *install-worker.sh*, and *Microsoft.Spark.Worker* to DBFS:</span></span>
+
+   ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-6. <span data-ttu-id="10b0e-144">Перейдите к рабочей области Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-144">Go to your Databricks workspace.</span></span> <span data-ttu-id="10b0e-145">В меню слева выберите **Кластеры**, а затем выберите **Создать кластер**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-145">Select **Clusters** from the left-side menu, and then select **Create Cluster**.</span></span>
+2. <span data-ttu-id="878c3-202">Выполните следующие команды, чтобы отправить оставшиеся файлы, необходимые кластеру для запуска приложения: ZIP-папку публикации, *input.txt* и *microsoft-spark-2.4.x-0.3.0.jar*.</span><span class="sxs-lookup"><span data-stu-id="878c3-202">Run the following commands to upload the remaining files your cluster will need to run your app: the zipped publish folder, *input.txt*, and *microsoft-spark-2.4.x-0.3.0.jar*.</span></span> 
 
-7. <span data-ttu-id="10b0e-146">Настроив кластер нужным образом, укажите **скрипт инициализации** и создайте кластер.</span><span class="sxs-lookup"><span data-stu-id="10b0e-146">After configuring the cluster appropriately, set the **Init Script** and create the cluster.</span></span>
-
-   ![Изображение действия скрипта](./media/databricks-deployment/deployment-databricks-init-script.png)
-
-## <a name="run-your-app"></a><span data-ttu-id="10b0e-148">Запуск приложения</span><span class="sxs-lookup"><span data-stu-id="10b0e-148">Run your app</span></span> 
-
-<span data-ttu-id="10b0e-149">Для отправки задания в Databricks можно использовать `set JAR` или `spark-submit`.</span><span class="sxs-lookup"><span data-stu-id="10b0e-149">You can use `set JAR` or `spark-submit` to submit your job to Databricks.</span></span>
-
-### <a name="use-set-jar"></a><span data-ttu-id="10b0e-150">Использование действия "Указание файла JAR"</span><span class="sxs-lookup"><span data-stu-id="10b0e-150">Use Set JAR</span></span>
-
-<span data-ttu-id="10b0e-151">Действие [Указание файла JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) позволяет отправить задание в существующий активный кластер.</span><span class="sxs-lookup"><span data-stu-id="10b0e-151">[Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) allows you to submit a job to an existing active cluster.</span></span>
-
-#### <a name="one-time-setup"></a><span data-ttu-id="10b0e-152">Однократная настройка</span><span class="sxs-lookup"><span data-stu-id="10b0e-152">One-time setup</span></span>
-
-1. <span data-ttu-id="10b0e-153">Перейдите в кластер Databricks и в меню слева выберите **Задания**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-153">Go to your Databricks cluster and select **Jobs** from the left-side menu.</span></span> <span data-ttu-id="10b0e-154">Затем выберите действие **Указание файла JAR**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-154">Then select **Set JAR**.</span></span>
-
-2. <span data-ttu-id="10b0e-155">Отправьте соответствующий файл `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar`.</span><span class="sxs-lookup"><span data-stu-id="10b0e-155">Upload the appropriate `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` file.</span></span>
-
-3. <span data-ttu-id="10b0e-156">Задайте необходимые параметры.</span><span class="sxs-lookup"><span data-stu-id="10b0e-156">Set the parameters appropriately.</span></span>
-
-   | <span data-ttu-id="10b0e-157">Параметр</span><span class="sxs-lookup"><span data-stu-id="10b0e-157">Parameter</span></span>   | <span data-ttu-id="10b0e-158">Значение</span><span class="sxs-lookup"><span data-stu-id="10b0e-158">Value</span></span>                                                |
-   |-------------|------------------------------------------------------|
-   | <span data-ttu-id="10b0e-159">Основной класс</span><span class="sxs-lookup"><span data-stu-id="10b0e-159">Main Class</span></span>  | <span data-ttu-id="10b0e-160">org.apache.spark.deploy.dotnet.DotnetRunner</span><span class="sxs-lookup"><span data-stu-id="10b0e-160">org.apache.spark.deploy.dotnet.DotnetRunner</span></span>          |
-   | <span data-ttu-id="10b0e-161">Аргументы</span><span class="sxs-lookup"><span data-stu-id="10b0e-161">Arguments</span></span>   | <span data-ttu-id="10b0e-162">/dbfs/apps/<your-app-name>.zip <your-app-main-class></span><span class="sxs-lookup"><span data-stu-id="10b0e-162">/dbfs/apps/<your-app-name>.zip <your-app-main-class></span></span> |
-
-4. <span data-ttu-id="10b0e-163">Настройте параметр **Кластер** так, чтобы он указывал на существующий кластер, для которого в предыдущем разделе был создан **скрипт инициализации**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-163">Configure the **Cluster** to point to the existing cluster you created the **Init Script** for in the previous section.</span></span>
-
-#### <a name="publish-and-run-your-app"></a><span data-ttu-id="10b0e-164">Публикация и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="10b0e-164">Publish and run your app</span></span>
-
-1. <span data-ttu-id="10b0e-165">Чтобы передать приложение в кластер Databricks, используйте [интерфейс командной строки Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span><span class="sxs-lookup"><span data-stu-id="10b0e-165">Use the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) to upload your application to your Databricks cluster.</span></span>
-
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-      ```
-
-2. <span data-ttu-id="10b0e-166">Этот шаг требуется, только если сборки приложения (например, библиотеки DLL, содержащие определяемые пользователем функции, и их зависимости) необходимо поместить в рабочий каталог каждой роли **Microsoft.Spark.Worker**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-166">This step is only required if your app assemblies (for example, DLLs that contain user-defined functions along with their dependencies) need to be placed in the working directory of each **Microsoft.Spark.Worker**.</span></span>
-
-   - <span data-ttu-id="10b0e-167">Передача сборок приложения в кластер Databricks</span><span class="sxs-lookup"><span data-stu-id="10b0e-167">Upload your application assemblies to your Databricks cluster</span></span>
-      
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <assembly>.dll dbfs:/apps/dependencies
-      ```
-
-   - <span data-ttu-id="10b0e-168">Раскомментируйте и измените раздел зависимостей приложения в файле [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh), указав путь к зависимостям приложения, а затем передайте этот файл в кластер Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-168">Uncomment and modify the app dependencies section in [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) to point to your app dependencies path and upload to your Databricks cluster.</span></span>
+   ```console
+   cd mySparkApp 
+   databricks fs cp input.txt dbfs:/input.txt
    
-      ```bash
-      cd <path-to-db-init-and-install-worker>
-      databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
-      ```
-   
-   - <span data-ttu-id="10b0e-169">Перезапустите кластер.</span><span class="sxs-lookup"><span data-stu-id="10b0e-169">Restart your cluster.</span></span>
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   ```
 
-3. <span data-ttu-id="10b0e-170">Перейдите в кластер Databricks в рабочей области Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-170">Go to your Databricks cluster in your Databricks workspace.</span></span> <span data-ttu-id="10b0e-171">В разделе **Задания** выберите задание, а затем щелкните **Запустить сейчас**, чтобы выполнить его.</span><span class="sxs-lookup"><span data-stu-id="10b0e-171">Under **Jobs**, select your job and then select **Run Now** to run your job.</span></span>
+## <a name="create-a-job"></a><span data-ttu-id="878c3-203">создать задание;</span><span class="sxs-lookup"><span data-stu-id="878c3-203">Create a job</span></span>
 
-### <a name="use-spark-submit"></a><span data-ttu-id="10b0e-172">Использование команды spark-submit</span><span class="sxs-lookup"><span data-stu-id="10b0e-172">Use spark-submit</span></span>
+<span data-ttu-id="878c3-204">Приложение выполняется на Azure Databricks с помощью задания, которое выполняет **spark-submit**. Это команда, используемая для запуска заданий .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-204">Your app runs on Azure Databricks through a job that runs **spark-submit**, which is the command you use to run .NET for Apache Spark jobs.</span></span>
 
-<span data-ttu-id="10b0e-173">Команда [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) позволяет отправить задание в новый кластер.</span><span class="sxs-lookup"><span data-stu-id="10b0e-173">The [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command allows you to submit a job to a new cluster.</span></span>
+1. <span data-ttu-id="878c3-205">В рабочей области Azure Databricks нажмите на значок **Задания**, а затем **+ Создать задание**.</span><span class="sxs-lookup"><span data-stu-id="878c3-205">In your Azure Databricks Workspace, select the **Jobs** icon and then **+ Create Job**.</span></span> 
 
-1. <span data-ttu-id="10b0e-174">[Создайте задание](https://docs.databricks.com/user-guide/jobs.html) и выберите **Настройка spark-submit**.</span><span class="sxs-lookup"><span data-stu-id="10b0e-174">[Create a Job](https://docs.databricks.com/user-guide/jobs.html) and select **Configure spark-submit**.</span></span>
+   ![Создание задания Azure Databricks](./media/databricks-deployment/create-job.png)
 
-2. <span data-ttu-id="10b0e-175">Настройте команду `spark-submit` со следующими параметрами:</span><span class="sxs-lookup"><span data-stu-id="10b0e-175">Configure `spark-submit` with the following parameters:</span></span>
+2. <span data-ttu-id="878c3-207">Выберите название задания, а затем нажмите **Настройка spark-submit**.</span><span class="sxs-lookup"><span data-stu-id="878c3-207">Choose a title for your job, and then select **Configure spark-submit**.</span></span>
 
-      ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-      ```
+   ![Настройка spark-submit для задания Databricks](./media/databricks-deployment/configure-spark-submit.png)
 
-3. <span data-ttu-id="10b0e-176">Перейдите в кластер Databricks в рабочей области Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-176">Go to your Databricks cluster in your Databricks workspace.</span></span> <span data-ttu-id="10b0e-177">В разделе **Задания** выберите задание, а затем щелкните **Запустить сейчас**, чтобы выполнить его.</span><span class="sxs-lookup"><span data-stu-id="10b0e-177">Under **Jobs**, select your job and then select **Run Now** to run your job.</span></span>
+3. <span data-ttu-id="878c3-209">Вставьте следующие параметры в конфигурацию задания.</span><span class="sxs-lookup"><span data-stu-id="878c3-209">Paste the following parameters in the job configuration.</span></span> <span data-ttu-id="878c3-210">Затем выберите **Подтвердить**.</span><span class="sxs-lookup"><span data-stu-id="878c3-210">Then, select **Confirm**.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="10b0e-178">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="10b0e-178">Next steps</span></span>
+   ```
+   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ```
 
-<span data-ttu-id="10b0e-179">В этом руководстве вы развернули приложение .NET для Apache Spark в Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-179">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="10b0e-180">Дополнительные сведения о Databricks см. в документации по Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="10b0e-180">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
+## <a name="create-a-cluster"></a><span data-ttu-id="878c3-211">Создание кластера</span><span class="sxs-lookup"><span data-stu-id="878c3-211">Create a cluster</span></span>
+
+1. <span data-ttu-id="878c3-212">Перейдите к своему заданию и выберите **Изменить**, чтобы настроить кластер задания.</span><span class="sxs-lookup"><span data-stu-id="878c3-212">Navigate to your job and select **Edit** to configure your job's cluster.</span></span>
+
+2. <span data-ttu-id="878c3-213">Выберите для кластера **Spark 2.4.1**.</span><span class="sxs-lookup"><span data-stu-id="878c3-213">Set your cluster to **Spark 2.4.1**.</span></span> <span data-ttu-id="878c3-214">Затем выберите **Дополнительные параметры** > **Скрипты инициализации**.</span><span class="sxs-lookup"><span data-stu-id="878c3-214">Then, select **Advanced Options** > **Init Scripts**.</span></span> <span data-ttu-id="878c3-215">Введите следующий путь к скрипту инициализации: `dbfs:/spark-dotnet/db-init.sh`.</span><span class="sxs-lookup"><span data-stu-id="878c3-215">Set Init Script Path as `dbfs:/spark-dotnet/db-init.sh`.</span></span> 
+
+   ![Настройка кластера Spark в Azure Databricks](./media/databricks-deployment/cluster-config.png)
+
+3. <span data-ttu-id="878c3-217">Выберите **Подтвердить**, чтобы подтвердить параметры кластера.</span><span class="sxs-lookup"><span data-stu-id="878c3-217">Select **Confirm** to confirm your cluster settings.</span></span>
+
+## <a name="run-your-app"></a><span data-ttu-id="878c3-218">Запуск приложения</span><span class="sxs-lookup"><span data-stu-id="878c3-218">Run your app</span></span>
+
+1. <span data-ttu-id="878c3-219">Перейдите к своему заданию и выберите **Запустить сейчас**, чтобы запустить задание в только что настроенном кластере Spark.</span><span class="sxs-lookup"><span data-stu-id="878c3-219">Navigate to your job and select **Run Now** to run your job on your newly configured Spark cluster.</span></span>
+
+2. <span data-ttu-id="878c3-220">Создание кластера задания может занять несколько минут.</span><span class="sxs-lookup"><span data-stu-id="878c3-220">It takes a few minutes for the job's cluster to create.</span></span> <span data-ttu-id="878c3-221">После создания задание будет отправлено, и вы сможете просмотреть выходные данные.</span><span class="sxs-lookup"><span data-stu-id="878c3-221">Once it is created, your job will be submitted, and you can view the output.</span></span>
+
+3. <span data-ttu-id="878c3-222">Выберите **Кластеры** в меню слева, а затем имя и выполнение задания.</span><span class="sxs-lookup"><span data-stu-id="878c3-222">Select **Clusters** from the left menu, and then the name and run of your job.</span></span> 
+
+4. <span data-ttu-id="878c3-223">Выберите **Журналы драйверов**, чтобы просмотреть выходные данные задания.</span><span class="sxs-lookup"><span data-stu-id="878c3-223">Select **Driver Logs** to view the output of your job.</span></span> <span data-ttu-id="878c3-224">После выполнения приложения отображается та же таблица подсчета слов из локального запуска начального приложения, записанная на консоль стандартного потока вывода.</span><span class="sxs-lookup"><span data-stu-id="878c3-224">When your app finishes executing, you see the same word count table from the getting started local run written to the standard output console.</span></span>
+
+   ![Таблица выходных данных задания Azure Databricks](./media/databricks-deployment/table-output.png)
+
+   <span data-ttu-id="878c3-226">Поздравляем, вы запустили свое первое приложение .NET для Apache Spark в облаке!</span><span class="sxs-lookup"><span data-stu-id="878c3-226">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
+
+## <a name="clean-up-resources"></a><span data-ttu-id="878c3-227">Очистка ресурсов</span><span class="sxs-lookup"><span data-stu-id="878c3-227">Clean up resources</span></span>
+
+<span data-ttu-id="878c3-228">Если рабочая область Databricks больше не нужна, можно удалить ресурс Azure Databricks на портале Azure.</span><span class="sxs-lookup"><span data-stu-id="878c3-228">If you no longer need the Databricks workspace, you can delete your Azure Databricks resource in the Azure portal.</span></span> <span data-ttu-id="878c3-229">Кроме того, можно выбрать имя группы ресурсов, чтобы открыть страницу группы ресурсов, а затем щелкнуть **Удалить группу ресурсов**.</span><span class="sxs-lookup"><span data-stu-id="878c3-229">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="878c3-230">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="878c3-230">Next steps</span></span>
+
+<span data-ttu-id="878c3-231">В этом руководстве вы развернули приложение .NET для Apache Spark в Databricks.</span><span class="sxs-lookup"><span data-stu-id="878c3-231">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="878c3-232">Дополнительные сведения о Databricks см. в документации по Azure Databricks.</span><span class="sxs-lookup"><span data-stu-id="878c3-232">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="10b0e-181">Документация по Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="10b0e-181">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
+> [<span data-ttu-id="878c3-233">Документация по Azure Databricks</span><span class="sxs-lookup"><span data-stu-id="878c3-233">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
