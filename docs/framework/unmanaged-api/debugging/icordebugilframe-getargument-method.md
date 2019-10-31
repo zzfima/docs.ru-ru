@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e9f627f1ba213f663f042d1107afd1eb05b56b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01c7cb2e4359a477c26f995602dbf29668e567c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757865"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131013"
 ---
-# <a name="icordebugilframegetargument-method"></a><span data-ttu-id="0d0dc-102">Метод ICorDebugILFrame::GetArgument</span><span class="sxs-lookup"><span data-stu-id="0d0dc-102">ICorDebugILFrame::GetArgument Method</span></span>
-<span data-ttu-id="0d0dc-103">Получает значение указанного аргумента в кадре стека промежуточного языка MSIL.</span><span class="sxs-lookup"><span data-stu-id="0d0dc-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
+# <a name="icordebugilframegetargument-method"></a><span data-ttu-id="a5a7b-102">Метод ICorDebugILFrame::GetArgument</span><span class="sxs-lookup"><span data-stu-id="a5a7b-102">ICorDebugILFrame::GetArgument Method</span></span>
+<span data-ttu-id="a5a7b-103">Возвращает значение указанного аргумента в кадре стека MSIL.</span><span class="sxs-lookup"><span data-stu-id="a5a7b-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d0dc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0d0dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5a7b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a5a7b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetArgument (  
@@ -36,21 +34,21 @@ HRESULT GetArgument (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0d0dc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0d0dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5a7b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a5a7b-105">Parameters</span></span>  
  `dwIndex`  
- <span data-ttu-id="0d0dc-106">[in] Индекс аргумента в кадре стека MSIL.</span><span class="sxs-lookup"><span data-stu-id="0d0dc-106">[in] The index of the argument in this MSIL stack frame.</span></span>  
+ <span data-ttu-id="a5a7b-106">окне Индекс аргумента в этом кадре стека MSIL.</span><span class="sxs-lookup"><span data-stu-id="a5a7b-106">[in] The index of the argument in this MSIL stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="0d0dc-107">[out] Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение.</span><span class="sxs-lookup"><span data-stu-id="0d0dc-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
+ <span data-ttu-id="a5a7b-107">заполняет Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение.</span><span class="sxs-lookup"><span data-stu-id="a5a7b-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0d0dc-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="0d0dc-108">Remarks</span></span>  
- <span data-ttu-id="0d0dc-109">`GetArgument` Метод может использоваться в кадре стека MSIL или во фрейме скомпилированного just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="0d0dc-109">The `GetArgument` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a5a7b-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="a5a7b-108">Remarks</span></span>  
+ <span data-ttu-id="a5a7b-109">Метод `GetArgument` можно использовать либо в кадре стека MSIL, либо в кадре JIT-компиляции.</span><span class="sxs-lookup"><span data-stu-id="a5a7b-109">The `GetArgument` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d0dc-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0d0dc-110">Requirements</span></span>  
- <span data-ttu-id="0d0dc-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d0dc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5a7b-110">Требования</span><span class="sxs-lookup"><span data-stu-id="a5a7b-110">Requirements</span></span>  
+ <span data-ttu-id="a5a7b-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5a7b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d0dc-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0d0dc-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a5a7b-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5a7b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0d0dc-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d0dc-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a5a7b-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5a7b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0d0dc-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d0dc-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a5a7b-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5a7b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
