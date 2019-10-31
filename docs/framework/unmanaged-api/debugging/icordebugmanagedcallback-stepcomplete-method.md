@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c3ced50457519d62be44712386bdabce176c44e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e044b1a2ad777868e33cd64bc8d09a9b76d547aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130672"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>Метод ICorDebugManagedCallback::StepComplete
-Уведомляет отладчик о выполнении шага.  
+Уведомляет отладчик о завершении шага.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,24 +38,24 @@ HRESULT StepComplete (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий поток, в котором шага.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий поток, в котором выполнен шаг.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в котором шага.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором выполнен шаг.  
   
  `pStepper`  
- [in] Указатель на объект ICorDebugStepper, который представляет шаг при выполнении кода.  
+ окне Указатель на объект ICorDebugStepper, представляющий шаг при выполнении кода.  
   
  `reason`  
- [in] Значение перечисления CorDebugStepReason, которое указывает результат отдельного шага.  
+ окне Значение перечисления Кордебугстепреасон, указывающее результат отдельного шага.  
   
-## <a name="remarks"></a>Примечания  
- Несопоставимого может использоваться для выполните шаг с заходом при необходимости, если отладка завершена.  
+## <a name="remarks"></a>Заметки  
+ Средство организации пошагового режима можно использовать для продолжения пошагового выполнения, если отладка не будет завершена.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

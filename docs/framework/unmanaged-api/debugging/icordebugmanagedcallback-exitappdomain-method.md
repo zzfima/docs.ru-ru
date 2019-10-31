@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ba6ce4e59057442a9f17338ec7bfff787bd5d05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130793"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>Метод ICorDebugManagedCallback::ExitAppDomain
-Уведомляет отладчик о том, что завершил работу домена приложения.  
+Уведомляет отладчик о завершении работы домена приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT ExitAppDomain (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляющий процесс, содержащий указанный домен приложения.  
+ окне Указатель на объект ICorDebugProcess, представляющий процесс, который содержит заданный домен приложения.  
   
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который завершил работу.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который завершил работу.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

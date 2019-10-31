@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23f248625753c15a4798ea69a1eb3b377b79f95d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a862dd3f6a9c10c6b3a5a0bb41208d351c4ca9f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125690"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>Метод ICorDebugClass2::SetJMCStatus
-Для каждого метода класса задает значение, указывающее, является ли метод определяемого пользователем кода.  
+Для каждого метода класса задает значение, указывающее, является ли метод определяемым пользователем кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Параметры  
  `bIsJustMyCode`  
- [in] Значение `true` для указания, что метод определяется пользователем кода; в противном случае — значение `false`.  
+ окне Задайте значение `true`, чтобы указать, что метод является определяемым пользователем кодом; в противном случае задайте значение `false`.  
   
-## <a name="remarks"></a>Примечания  
- Только мой код (JMC) несопоставимого пропустит не пользовательский код. Пользовательский код должен представлять собой подмножество отлаживаемый код.  
+## <a name="remarks"></a>Заметки  
+ Средство "только мой код" (JMC) пропускает код, не определенный пользователем. Определяемый пользователем код должен быть подмножеством отлаживаемого кода.  
   
- `SetJMCStatus` Возвращает значение HRESULT S_FALSE, если не удается задать значение для любого метода, даже если он успешно устанавливает значение для всех других методов.  
+ `SetJMCStatus` возвращает значение HRESULT, равное S_FALSE, если не удается задать значение для какого бы то ни было метода, даже если оно успешно задает значение для всех других методов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e0e877402daf27c375aedddf8922e919a546ae5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae40d8adaae70ccff6e8058858a506267d58873f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781178"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133752"
 ---
 # <a name="modulebindinfo-structure"></a>Структура ModuleBindInfo
-Предоставляет подробные сведения о модуле, на которые имеются ссылки и сборки, содержащей его.  
+Предоставляет подробные сведения о модуле, на который указывает ссылка, и содержащей его сборку.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,23 +34,23 @@ typedef struct _ModuleBindInfo {
 } ModuleBindInfo;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`dwAppDomainId`|Уникальный идентификатор для `IStream` возвращаемый путем вызова [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) метод, из которого необходимо загрузить модуль, на который указывает ссылка.|  
-|`lpAssemblyIdentity`|Уникальный идентификатор сборки, содержащей модуль, на который указывает ссылка.|  
+|`dwAppDomainId`|Уникальный идентификатор `IStream`, возвращаемый вызовом метода [IHostAssemblyStore::P ровидемодуле](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) , из которого загружается указанный модуль.|  
+|`lpAssemblyIdentity`|Уникальный идентификатор сборки, содержащей упоминаемый модуль.|  
 |`lpModuleName`|Имя модуля, на который указывает ссылка.|  
   
-## <a name="remarks"></a>Примечания  
- `ModuleBindInfo` передается в качестве параметра `IHostAssemblyStore::ProvideModule`. Узел предоставляет уникальный идентификатор `dwAppDomainId` для общеязыковой среды выполнения (CLR). После вызова [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) возвращает метод, среда выполнения использует идентификатор для определения ли содержимое `IStream` были сопоставлены. Если Да, среда выполнения загружает имеющуюся копию вместо повторного сопоставления потока. Среда выполнения также использует этот идентификатор в качестве ключа поиска для потоков, возвращаемых из вызовов `IHostAssemblyStore::ProvideAssembly` метод. Таким образом идентификатор должен быть уникальным для запросов модулей, а также и для запросов сборок.  
+## <a name="remarks"></a>Заметки  
+ `ModuleBindInfo` передается в качестве параметра `IHostAssemblyStore::ProvideModule`. Узел предоставляет уникальный идентификатор, `dwAppDomainId` общеязыковой среде выполнения (CLR). После вызова метода [IHostAssemblyStore::P ровидеассембли](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) среда выполнения использует идентификатор, чтобы определить, сопоставлено ли содержимое `IStream`. Если это так, среда выполнения загружает существующую копию вместо повторного сопоставления потока. Среда выполнения также использует этот идентификатор в качестве ключа поиска для потоков, возвращаемых из вызовов метода `IHostAssemblyStore::ProvideAssembly`. Таким образом, идентификатор должен быть уникальным для запросов модуля, а также для запросов сборки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.idl  
+ **Заголовок:** MSCorEE. idl  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

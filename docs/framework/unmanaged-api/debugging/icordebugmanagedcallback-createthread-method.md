@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401cb41d8231e78b8657513e1a755a50814e463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137395"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>Метод ICorDebugManagedCallback::CreateThread
 Уведомляет отладчик о том, что поток начал выполнение управляемого кода.  
@@ -38,18 +36,18 @@ HRESULT CreateThread (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит поток.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий поток.  
   
  `thread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток.  
+ окне Указатель на объект ICorDebugThread, представляющий поток.  
   
-## <a name="remarks"></a>Примечания  
- Поток будет расположен в первой инструкции для выполнения управляемого кода.  
+## <a name="remarks"></a>Заметки  
+ Поток будет размещен в первой выполняемой инструкции управляемого кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

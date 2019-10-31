@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95a00e8646589e7897636c1698b7c2647cd233fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133597"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>Метод ICorDebugThread::CreateStepper
-Создает объект, позволяющий пошаговое выполнение активного кадра ICorDebugThread ICorDebugStepper.  
+Создает объект ICorDebugStepper, позволяющий выполнять пошаговую отладку активной рамки этого ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Параметры  
  `ppStepper`  
- [out] Указатель на адрес `ICorDebugStepper` объект, который позволяет пошаговое выполнение активного кадра для данного потока.  
+ заполняет Указатель на адрес объекта `ICorDebugStepper`, который позволяет пошагово пройти по активному кадру этого потока.  
   
-## <a name="remarks"></a>Примечания  
- Возможно, активного кадра неуправляемого кода.  
+## <a name="remarks"></a>Заметки  
+ Активным кадром может быть неуправляемый код.  
   
- `ICorDebugStepper` Интерфейс необходимо использовать для фактического пошагового выполнения.  
+ Для выполнения фактического пошагового шага необходимо использовать интерфейс `ICorDebugStepper`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76f064d1683615ef8f665cf1facaa31d61b294a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 143052febe136e969987c35bc06f6c3b3356aedf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759594"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140785"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Метод ICLRPolicyManager::SetActionOnFailure
-Задает действие политики, которые общеязыковой среды выполнения (CLR) необходимо выполнить при возникновении указанной ошибки.  
+Указывает действие политики, которое должна выполнять среда CLR при возникновении указанного сбоя.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,45 +36,45 @@ HRESULT SetActionOnFailure (
   
 ## <a name="parameters"></a>Параметры  
  `failure`  
- [in] Один из [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) значения, указывающие тип сбоя, для которого требуется выполнить действие.  
+ окне Одно из значений [еклрфаилуре](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) , указывающее тип сбоя, для которого необходимо выполнить действие.  
   
  `action`  
- [in] Один из [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) значения, указывающие действие, выполняемое при сбое. Список поддерживаемых значений см. в разделе "Примечания".  
+ окне Одно из значений [еполициактион](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) , указывающее действие, выполняемое в случае сбоя. Список поддерживаемых значений см. в разделе "Примечания".  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_INVALIDARG|Невозможно задать действие политики для указанной операции или действия Недопустимая политика был указан для операции.|  
+|S_OK|`SetActionOnFailure` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|E_INVALIDARG|Действие политики не может быть задано для указанной операции, или для операции указано недопустимое действие политики.|  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию среда CLR создает исключение, если ей не удается выделить ресурсы, такие как память. `SetActionOnFailure` позволяет узлу переопределить это поведение, указав политику действие, выполняемое в случае сбоя. В следующей таблице показаны сочетания [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) и [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) поддерживаемые значения. (Префикс FAIL_ исключается из [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) значения.)  
+## <a name="remarks"></a>Заметки  
+ По умолчанию среда CLR создает исключение, когда не удается выделить ресурс, например память. `SetActionOnFailure` позволяет узлу переопределить это поведение, указав действие политики для выполнения при сбое. В следующей таблице показаны поддерживаемые сочетания значений [еклрфаилуре](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) и [еполициактион](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) . (Префикс FAIL_ опускается из значений [еклрфаилуре](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) .)  
   
-||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
+||нонкритикалресаурце|критикалресаурце|фаталрунтиме|орфанедлокк|StackOverflow|AccessViolationException|кодеконтракт|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|X|X||||Н/Д||  
-|eThrowException|X|X||||Н/Д||  
-|`eAbortThread`|X|X||||Н/Д|X|  
-|`eRudeAbortThread`|X|X||||Н/Д|X|  
-|`eUnloadAppDomain`|X|X||X||Н/Д|X|  
-|`eRudeUnloadAppDomain`|X|X||X|X|Н/Д|X|  
-|`eExitProcess`|X|X||X|X|Н/Д|X|  
-|eFastExitProcess|X|X||X|X|Н/Д||  
-|`eRudeExitProcess`|X|X|X|X|X|Н/Д||  
-|`eDisableRuntime`|X|X|X|X|X|Н/Д||  
+|`eNoAction`|x|x||||Н/Д||  
+|есровексцептион|x|x||||Н/Д||  
+|`eAbortThread`|x|x||||Н/Д|x|  
+|`eRudeAbortThread`|x|x||||Н/Д|x|  
+|`eUnloadAppDomain`|x|x||x||Н/Д|x|  
+|`eRudeUnloadAppDomain`|x|x||x|x|Н/Д|x|  
+|`eExitProcess`|x|x||x|x|Н/Д|x|  
+|ефастекситпроцесс|x|x||x|x|Н/Д||  
+|`eRudeExitProcess`|x|x|x|x|x|Н/Д||  
+|`eDisableRuntime`|x|x|x|x|x|Н/Д||  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

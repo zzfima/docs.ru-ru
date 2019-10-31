@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752455"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139118"
 ---
 # <a name="variablelocationtype-enumeration"></a>Перечисление VariableLocationType
-Указывает тип собственного расположение переменной.  
+Указывает тип собственного расположения переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +35,21 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`VLT_REGISTER`|Переменная находится в регистре.|  
-|`VLT_REGISTER_RELATIVE`|Переменная находится в расположении памяти зависящий от регистра.|  
-|`VLT_INVALID`|Переменная не хранится в регистр и в памяти зависящий от регистра.|  
+|`VLT_REGISTER_RELATIVE`|Переменная находится в расположении в памяти относительно регистра.|  
+|`VLT_INVALID`|Переменная не хранится в регистре или расположении в памяти относительно регистра.|  
   
-## <a name="remarks"></a>Примечания  
- Является членом `VariableLocationType` возвращенного перечисления [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Член перечисления `VariableLocationType` возвращается методом [ICorDebugVariableHome:: жетлокатионтипе](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

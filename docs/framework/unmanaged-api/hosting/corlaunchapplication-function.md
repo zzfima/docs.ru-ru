@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758375"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136949"
 ---
 # <a name="corlaunchapplication-function"></a>Функция CorLaunchApplication
-Запускает приложение по указанному сетевому пути, используя заданные манифесты и другие данные приложения.  
+Запускает приложение по указанному сетевому пути, используя указанные манифесты и другие данные приложения.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,32 +43,32 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Параметры  
  `dwClickOnceHost`  
- [in] Значение [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) перечисление, указывающее тип узла, которое запускает приложение.  
+ окне Значение перечисления [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) , указывающее тип узла, запускающего приложение.  
   
  `pwzAppFullName`  
- [in] Полное имя приложения, запускаемый.  
+ окне Полное имя запускаемого приложения.  
   
  `dwManifestPaths`  
- [in] Количество путей манифестов для приложения.  
+ окне Число путей манифеста для приложения.  
   
  `ppwzManifestPaths`  
- [in] Массив строк, каждый из которых указывает путь к манифесту приложения, запускаемый.  
+ окне Массив строк, каждый из которых указывает путь к манифесту запускаемого приложения.  
   
  `dwActivationData`  
- [in] Число элементов данных активации для приложения, запускаемый.  
+ окне Количество элементов данных активации для запускаемого приложения.  
   
  `ppwzActivationData`  
- [in] Массив строк, каждый из которых представляет элемент данных активации для приложения, запускаемый.  
+ окне Массив строк, каждый из которых является элементом данных активации для запускаемого приложения.  
   
  `lpProcessInformation`  
- [out] Указатель на сведения о процессе, в котором было загружено приложение.  
+ заполняет Указатель на сведения о процессе, в котором было загружено приложение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

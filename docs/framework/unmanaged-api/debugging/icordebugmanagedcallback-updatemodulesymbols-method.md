@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a15e3ab0d50763ad53b1caa921035239868fec1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f5b413ffbbc8fccbea38f23d8c87d40e010dd37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761232"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130613"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>Метод ICorDebugManagedCallback::UpdateModuleSymbols
-Уведомляет отладчик о том, что изменились символы для модуля среды CLR.  
+Уведомляет отладчик о том, что символы для модуля среды CLR были изменены.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,25 +37,25 @@ HRESULT UpdateModuleSymbols (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащей модуль, в котором символы были изменены.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий модуль, в котором были изменены символы.  
   
  `pModule`  
- [in] Указатель на объект ICorDebugModule, представляющий модуль, в котором символы были изменены.  
+ окне Указатель на объект ICorDebugModule, представляющий модуль, в котором были изменены символы.  
   
  `pSymbolStream`  
- [in] Указатель на Win32 COM `IStream` объект, содержащий измененный символы.  
+ окне Указатель на объект `IStream` Win32 COM, содержащий измененные символы.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод предоставляет возможность обновить представление отладчика символов модуля путем вызова [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) или [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
+## <a name="remarks"></a>Заметки  
+ Этот метод предоставляет возможность обновить представление символов модуля отладчика путем вызова [ISymUnmanagedReader:: UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) или [ISymUnmanagedReader:: ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
- Этот обратный вызов может встречаться несколько раз для одного модуля.  
+ Этот обратный вызов может происходить несколько раз для одного модуля.  
   
- Отладчик должен попытаться привязать несвязанного уровень источника точки останова.  
+ Отладчик должен попытаться привязать несвязанные точки останова на уровне источника.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

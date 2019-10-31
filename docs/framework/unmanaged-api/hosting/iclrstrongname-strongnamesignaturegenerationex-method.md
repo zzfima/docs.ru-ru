@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b411a51a5640a924d3eeae5d52102a842966d3fa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135001"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Метод ICLRStrongName::StrongNameSignatureGenerationEx
 Создает подпись строгого имени для указанной сборки в соответствии с заданными флагами.  
@@ -48,20 +46,20 @@ HRESULT StrongNameSignatureGenerationEx (
  `wszKeyContainer`  
  окне Имя контейнера ключей, содержащего пару открытого и закрытого ключей.  
   
- Если `pbKeyBlob` параметр имеет значение `wszKeyContainer` null, необходимо указать допустимый контейнер в поставщике служб шифрования (CSP). В этом случае для подписания файла используется пара ключей, хранящаяся в контейнере.  
+ Если `pbKeyBlob` имеет значение null, `wszKeyContainer` необходимо указать допустимый контейнер в поставщике служб шифрования (CSP). В этом случае для подписания файла используется пара ключей, хранящаяся в контейнере.  
   
- Если `pbKeyBlob` значение не равно null, предполагается, что пара ключей содержится в большом двоичном объекте Key (BLOB).  
+ Если `pbKeyBlob` не равно null, предполагается, что пара ключей содержится в большом двоичном объекте Key (BLOB).  
   
  `pbKeyBlob`  
- окне Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданный функцией Win32 `CryptExportKey` . Если `pbKeyBlob` аргумент имеет значение null, предполагается, `wszKeyContainer` что контейнер ключей, заданный параметром, содержит пару ключей.  
+ окне Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданный функцией Win32 `CryptExportKey`. Если `pbKeyBlob` имеет значение null, предполагается, что контейнер ключей, заданный параметром `wszKeyContainer`, содержит пару ключей.  
   
  `cbKeyBlob`  
- окне Размер (в байтах `pbKeyBlob`).  
+ окне Размер `pbKeyBlob`в байтах.  
   
  `ppbSignatureBlob`  
- заполняет Указатель на расположение, в которое среда CLR возвращает подпись. Если `ppbSignatureBlob` параметр имеет значение null, среда выполнения сохраняет подпись в файле, указанном параметром `wszFilePath`.  
+ заполняет Указатель на расположение, в которое среда CLR возвращает подпись. Если `ppbSignatureBlob` имеет значение null, среда выполнения сохраняет подпись в файле, указанном `wszFilePath`.  
   
- Если `ppbSignatureBlob` значение не равно null, среда CLR выделяет пространство, в которое возвращается подпись. Вызывающий объект должен освободить это пространство с помощью метода [метод iclrstrongname:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Если `ppbSignatureBlob` не равно null, среда CLR выделяет пространство, в которое возвращается подпись. Вызывающий объект должен освободить это пространство с помощью метода [метод iclrstrongname:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbSignatureBlob`  
  заполняет Размер возвращенной сигнатуры в байтах.  
@@ -69,28 +67,28 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  окне Одно или несколько из следующих значений:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001) — повторное вычисление всех хэшей для связанных модулей.  
+- `SN_SIGN_ALL_FILES` (0x00000001) — повторное вычисление всех хэшей для связанных модулей.  
   
-- `SN_TEST_SIGN`(0x00000002) — Тестовая подпись сборки.  
+- `SN_TEST_SIGN` (0x00000002) — Тестовая подпись сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`значение, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
-## <a name="remarks"></a>Примечания  
- Укажите значение NULL `wszFilePath` для, чтобы вычислить размер подписи без создания подписи.  
+## <a name="remarks"></a>Заметки  
+ Укажите значение NULL для `wszFilePath`, чтобы вычислить размер подписи без создания подписи.  
   
  Подпись может храниться непосредственно в файле или возвращаться вызывающему объекту.  
   
- Если `SN_SIGN_ALL_FILES` указан параметр, но открытый ключ не включен `pbKeyBlob` (и `wszFilePath` имеет значение null), хэши для связанных модулей пересчитываются, но сборка не подписывается повторно.  
+ Если `SN_SIGN_ALL_FILES` указан, но открытый ключ не включен (как `pbKeyBlob`, так и `wszFilePath` равны NULL), хэши для связанных модулей пересчитываются, но сборка не подписывается повторно.  
   
- Если `SN_TEST_SIGN` указан параметр, заголовок среды CLR не изменяется, чтобы указать, что сборка подписана строгим именем.  
+ Если указан параметр `SN_TEST_SIGN`, заголовок среды CLR не изменяется, указывая, что сборка подписана строгим именем.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Метахост. h  
+ **Заголовок:** Метахост. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

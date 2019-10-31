@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f381cc687b4c28dd58a02aea8cf931f569cf9611
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cbd6fa5f7935a57799d695c3ebb617d856e6dbd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133179"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>Метод IDebuggerInfo::IsDebuggerAttached
-Получает значение, указывающее, присоединен ли управляемый отладчик к этому процессу.  
+Возвращает значение, указывающее, присоединен ли к этому процессу управляемый отладчик.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +35,14 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="parameters"></a>Параметры  
  `pbAttached`  
- [out] Указатель на значение, являющееся `true` Если управляемый отладчик присоединен к процессу; в противном случае — значение `false`.  
+ заполняет Указатель на значение, которое `true`, если управляемый отладчик присоединен к процессу; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

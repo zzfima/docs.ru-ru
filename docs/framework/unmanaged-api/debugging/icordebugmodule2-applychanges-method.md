@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 860b87b09ee487f893a1bba2aaa34292c50ffcb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c324019e1e62701f4f2aaba1c00948b292ba6847
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127916"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>Метод ICorDebugModule2::ApplyChanges
-Применяет изменения в метаданных и изменения в код на промежуточном языке (MSIL) к выполняющемуся процессу.  
+Применяет изменения в метаданных и изменения в коде промежуточного языка MSIL к выполняющемуся процессу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,34 +38,34 @@ HRESULT ApplyChanges (
   
 ## <a name="parameters"></a>Параметры  
  `cbMetadata`  
- [in] Размер в байтах, изменений метаданных.  
+ окне Размер (в байтах) разностных метаданных.  
   
  `pbMetadata`  
- [in] Буфер, содержащий метаданные изменений. Адрес буфера возвращается из [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) метод.  
+ окне Буфер, содержащий разностные метаданные. Адрес буфера возвращается методом [IMetaDataEmit2:: саведелтатомемори](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) .  
   
- Относительные виртуальные адреса (RVA) в метаданных должен указываться относительно начала кода на языке MSIL.  
+ Относительные виртуальные адреса (RVA) в метаданных должны относиться к началу кода MSIL.  
   
  `cbIL`  
- [in] Размер в байтах, разностных кода MSIL.  
+ окне Размер (в байтах) разностного кода MSIL.  
   
  `pbIL`  
- [in] Буфер, содержащий обновленный код MSIL.  
+ окне Буфер, содержащий обновленный код MSIL.  
   
-## <a name="remarks"></a>Примечания  
- `pbMetadata` Параметр имеет формат метаданных специальных изменений (как выходные, [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` принимает предыдущий метаданные базовым и описание отдельных изменений для применения к базе.  
+## <a name="remarks"></a>Заметки  
+ Параметр `pbMetadata` находится в особом формате разностных метаданных (в виде выходных данных [IMetaDataEmit2:: саведелтатомемори](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` принимает предыдущие метаданные в качестве основы и описывает отдельные изменения, которые необходимо применить к этой базе.  
   
- Напротив, `pbIL[`] параметр содержит новый код MSIL для метода обновленные и предназначен для полной замены предыдущих MSIL для этого метода  
+ В отличие от этого, параметр `pbIL[`] содержит новый код MSIL для обновленного метода и предназначен для полной замены предыдущего MSIL для этого метода.  
   
- При создании разностного кода MSIL и метаданных в памяти в отладчике вызывает `ApplyChanges` для отправки изменений в общеязыковой среде выполнения (CLR). Среда выполнения обновляет свою таблицу метаданных, помещает новый код MSIL в процесс и настраивает just-in-time (JIT) компиляции нового кода MSIL. Если изменения были применены, отладчик должен вызвать [IMetaDataEmit2::ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) для подготовки для следующего сеанса редактирования. Затем он может продолжить процесс.  
+ Если разностный код MSIL и метаданные были созданы в памяти отладчика, отладчик вызывает `ApplyChanges` для отправки изменений в среду CLR. Среда выполнения обновляет свои таблицы метаданных, помещает новый код MSIL в процесс и настраивает JIT-компиляцию нового MSIL. После применения изменений отладчик должен вызвать [IMetaDataEmit2:: ресетенклог](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) , чтобы подготовиться к следующему сеансу редактирования. Затем отладчик может продолжить процесс.  
   
- Каждый раз, когда он вызывает `ApplyChanges` модуля, который содержит метаданные изменений, он должен также вызывать [IMetaDataEmit::ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) с одинаковыми метаданными изменений на всех копий этого модуля метаданных, за исключением копирования используется для выдачи изменений. Если копия метаданных каким-либо образом становится out синхронизированной с фактическими метаданными, отладчик всегда может выбрасывать эту копию и получить новую.  
+ Всякий раз, когда отладчик вызывает `ApplyChanges` для модуля, который имеет разностные метаданные, он также должен вызвать метод [IMetaDataEmit:: ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) с теми же разностными метаданными для всех своих копий метаданных этого модуля, за исключением копирования, используемой для отправки изменений. Если копия метаданных по каким-либо причинам не синхронизирована с фактическими метаданными, то отладчик всегда может создать копию и получить новую копию.  
   
- Если `ApplyChanges` метод завершается ошибкой, отладочные сеанс находится в недопустимом состоянии и должен быть перезапущен.  
+ В случае сбоя метода `ApplyChanges` сеанс отладки находится в недопустимом состоянии и должен быть перезапущен.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

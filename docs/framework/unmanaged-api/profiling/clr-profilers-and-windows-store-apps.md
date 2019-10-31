@@ -12,14 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140389"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Профилировщики CLR и приложения для Магазина Windows
 
@@ -114,7 +112,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>Загрузка при загрузке
 
-Как правило, в классическом приложении пользовательский интерфейс профилировщика запрашивает загрузку библиотеки DLL профилировщика, инициализируя блок среды, содержащий необходимые переменные среды API профилирования CLR (т. е. `COR_PROFILER`, `COR_ENABLE_PROFILING` и `COR_PROFILER_PATH`), а затем создает новый элемент управления Обработайте этот блок среды. То же самое относится к приложениям Магазина Windows, но механизмы отличаются.
+Как правило, в классическом приложении пользовательский интерфейс профилировщика запрашивает загрузку библиотеки DLL профилировщика путем инициализации блока среды, содержащего необходимые переменные среды API профилирования CLR (т. е. `COR_PROFILER`, `COR_ENABLE_PROFILING`и `COR_PROFILER_PATH`), а затем создает новый элемент управления Обработайте этот блок среды. То же самое относится к приложениям Магазина Windows, но механизмы отличаются.
 
 **Не запускать с повышенными правами**
 
@@ -137,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Указание пользовательского блока среды**
 
-Новый COM-интерфейс [ипаккажедебугсеттингс](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)позволяет настроить поведение приложения для Магазина Windows, чтобы упростить некоторые формы диагностики. Один из его методов, [енабледебуггинг](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), позволяет передать блок среды в приложение Магазина Windows при запуске, а также другие полезные эффекты, такие как отключение автоматической приостановки процесса. Блок среды важен, так как необходимо указать переменные среды (`COR_PROFILER`, `COR_ENABLE_PROFILING` и `COR_PROFILER_PATH)`), используемые средой CLR для загрузки DLL-файла профилировщика.
+Новый COM-интерфейс [ипаккажедебугсеттингс](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)позволяет настроить поведение приложения для Магазина Windows, чтобы упростить некоторые формы диагностики. Один из его методов, [енабледебуггинг](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), позволяет передать блок среды в приложение Магазина Windows при запуске, а также другие полезные эффекты, такие как отключение автоматической приостановки процесса. Блок среды важен, так как для загрузки DLL-библиотеки профилировщика необходимо указать переменные среды (`COR_PROFILER`, `COR_ENABLE_PROFILING`и `COR_PROFILER_PATH)`), используемые средой CLR.
 
 Рассмотрим следующий фрагмент кода:
 
@@ -149,9 +147,9 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Существует несколько элементов, которые необходимо получить правильно:
 
-- `packageFullName` можно определить при переборе пакетов и при извлечении `package.Id.FullName`.
+- `packageFullName` можно определить во время итерации пакетов и захвата `package.Id.FullName`.
 
-- `debuggerCommandLine` является более интересным. Чтобы передать пользовательский блок среды в приложение Магазина Windows, необходимо написать собственный, упрощенный фиктивный отладчик. Windows порождает приложение Магазина Windows, которое приостановило работу, а затем присоединяет ваш отладчик, запустив отладчик с помощью командной строки, как в следующем примере:
+- `debuggerCommandLine` немного более интересно. Чтобы передать пользовательский блок среды в приложение Магазина Windows, необходимо написать собственный, упрощенный фиктивный отладчик. Windows порождает приложение Магазина Windows, которое приостановило работу, а затем присоединяет ваш отладчик, запустив отладчик с помощью командной строки, как в следующем примере:
 
     ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
@@ -253,7 +251,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
 
 При просмотре API Windows вы заметите, что каждый API является применимым для классических приложений, приложений Магазина Windows или и того, и другого. Например, раздел **требований** в документации по функции [инитиализекритикалсектионандспинкаунт](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) указывает, что функция применяется только к классическим приложениям. В отличие от этого функция [инитиализекритикалсектионекс](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) доступна как для классических приложений, так и для приложений Магазина Windows.
 
-При разработке библиотеки DLL профилировщика следует рассматривать ее как приложение для Магазина Windows и использовать только интерфейсы API, которые задокументированы как доступные для приложений Магазина Windows. Проанализируйте зависимости (например, вы можете запустить `link /dump /imports` по отношению к библиотеке DLL профилировщика для аудита), а затем выполните поиск по документации, чтобы узнать, какие зависимости имеют значение ОК, а какие нет. В большинстве случаев нарушения можно устранить, просто заменив их более новой формой API, которая задокументирована как безопасность (например, замените [инитиализекритикалсектионандспинкаунт](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) на [инитиализекритикалсектионекс](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+При разработке библиотеки DLL профилировщика следует рассматривать ее как приложение для Магазина Windows и использовать только интерфейсы API, которые задокументированы как доступные для приложений Магазина Windows. Проанализируйте зависимости (например, вы можете запустить `link /dump /imports` с библиотекой DLL профилировщика для аудита), а затем выполните поиск по документации, чтобы узнать, какие из зависимостей имеют значение OK, а какие нет. В большинстве случаев нарушения можно устранить, просто заменив их более новой формой API, которая задокументирована как безопасность (например, замените [инитиализекритикалсектионандспинкаунт](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) на [инитиализекритикалсектионекс](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
 
 Вы можете заметить, что библиотека DLL профилировщика вызывает некоторые API, которые применяются только к классическим приложениям, но они работают даже при загрузке библиотеки DLL профилировщика в приложение Магазина Windows. Имейте в виду, что при загрузке в процесс приложения Магазина Windows не следует использовать API, которые не документированы для использования с приложениями Магазина Windows в библиотеке DLL профилировщика.
 
@@ -298,7 +296,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-В то же время библиотека DLL профилировщика может сделать то же самое, хотя она может легко получить @no__t класса с помощью свойства [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
+В то же время библиотека DLL профилировщика может сделать то же самое, хотя она может легко получить <xref:Windows.Storage.ApplicationData> классу с помощью свойства [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
 
 **Обмен данными через события**
 
@@ -334,7 +332,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="no-shutdown-notifications"></a>Уведомления о завершении работы отсутствуют
 
-При работе в приложении для Магазина Windows библиотека DLL профилировщика не должна полагаться на метод [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) или даже [DllMain](/windows/desktop/Dlls/dllmain) (с `DLL_PROCESS_DETACH`), который ВЫЗЫВАЕТСЯ для уведомления библиотеки DLL профилировщика о выходе приложения из Магазина Windows. На самом деле следует предполагать, что они никогда не будут вызываться. Исторически многие библиотеки DLL профилировщика использовали эти уведомления в качестве удобных мест для записи кэша на диск, закрытия файлов, отправки уведомлений обратно в пользовательский интерфейс профилировщика и т. д. Но теперь ваша библиотека DLL профилировщика должна быть организована несколько иначе.
+При работе в приложении для Магазина Windows библиотека DLL профилировщика не должна полагаться на метод [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) или даже [DllMain](/windows/desktop/Dlls/dllmain) (с `DLL_PROCESS_DETACH`), чтобы уведомить библиотеку DLL профилировщика о выходе приложения из Магазина Windows. На самом деле следует предполагать, что они никогда не будут вызываться. Исторически многие библиотеки DLL профилировщика использовали эти уведомления в качестве удобных мест для записи кэша на диск, закрытия файлов, отправки уведомлений обратно в пользовательский интерфейс профилировщика и т. д. Но теперь ваша библиотека DLL профилировщика должна быть организована несколько иначе.
 
 Библиотека DLL профилировщика должна заносить в журнал данные по мере их возникновения. Из соображений производительности может потребоваться Пакетная информация в памяти и их сброс на диск, так как размер пакета превышает некоторое пороговое значение. Но предполагается, что все данные, которые еще не сброшены на диск, могут быть потеряны. Это означает, что вам нужно полагаться на пороговое значение, а пользовательский интерфейс профилировщика должен быть защищен для работы с неполными сведениями, записанными библиотекой DLL профилировщика.
 
@@ -354,7 +352,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 С точки зрения среды CLR все файлы WinMD являются модулями. Поэтому API профилирования CLR сообщает библиотеке DLL профилировщика о загрузке файлов WinMD и о том, что они Модулеидс, так же, как и для других управляемых модулей.
 
-Библиотека DLL профилировщика может отличать файлы WinMD от других модулей путем вызова метода [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) и проверки выходного параметра `pdwModuleFlags` для флага [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Он устанавливается только в том случае, если он представляет WinMD-объект.)
+Библиотека DLL профилировщика может отличать файлы WinMD от других модулей путем вызова метода [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) и проверки параметра вывода `pdwModuleFlags` для флага [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Он устанавливается только в том случае, если он представляет WinMD-объект.)
 
 ### <a name="reading-metadata-from-winmds"></a>Чтение метаданных из WinMD-файлы
 
@@ -366,7 +364,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="modifying-metadata-from-winmds"></a>Изменение метаданных из WinMD-файлы
 
-Изменение метаданных в WinMD-файлы не поддерживается. Если вызвать метод [ICorProfilerInfo:: жетмодулеметадата](icorprofilerinfo-getmodulemetadata-method.md) для файла WinMD и указать [офврите](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) в параметре `dwOpenFlags` или запросить доступный для записи интерфейс метаданных, например [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [жетмодулеметадата](icorprofilerinfo-getmodulemetadata-method.md) завершится ошибкой. Это конкретная важность для профилировщиков, которые требуют изменения метаданных для поддержки инструментирования (например, для добавления Ассемблирефс или новых методов). Поэтому сначала следует проверить [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) (как обсуждалось в предыдущем разделе) и не запрашивать доступные для записи интерфейсы метаданных в таких модулях.
+Изменение метаданных в WinMD-файлы не поддерживается. Если вызвать метод [ICorProfilerInfo:: жетмодулеметадата](icorprofilerinfo-getmodulemetadata-method.md) для WINMD-файла и указать [офврите](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) в параметре `dwOpenFlags` или запросить доступный для записи интерфейс метаданных, например [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [жетмодулеметадата](icorprofilerinfo-getmodulemetadata-method.md) завершится ошибкой. Это конкретная важность для профилировщиков, которые требуют изменения метаданных для поддержки инструментирования (например, для добавления Ассемблирефс или новых методов). Поэтому сначала следует проверить [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) (как обсуждалось в предыдущем разделе) и не запрашивать доступные для записи интерфейсы метаданных в таких модулях.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Разрешение ссылок на сборки в WinMD-файлы
 
@@ -384,13 +382,13 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 Соответствующая точка заключается в том, что вызовы, выполняемые в потоках, созданных профилировщиком, всегда считаются синхронными, даже если эти вызовы выполняются вне реализации одного из методов [ICorProfilerCallback](icorprofilercallback-interface.md) библиотеки DLL профилировщика. По крайней мере, это используется в качестве варианта. Теперь, когда среда CLR включила поток профилировщика в управляемый поток из-за вызова [метода ForceGC](icorprofilerinfo-forcegc-method.md), этот поток больше не считается потоком профилировщика. Таким образом, среда CLR применяет более строгое определение того, что определяет как синхронное для этого потока, а именно, что вызов должен исходить из одного из методов [ICorProfilerCallback](icorprofilercallback-interface.md) библиотеки DLL профилировщика, чтобы считаться синхронным.
 
-Что это означает на практике? Большинство методов [ICorProfilerInfo](icorprofilerinfo-interface.md) можно вызывать только синхронно, и в противном случае произойдет сбой. Таким образом, если библиотека DLL профилировщика повторно использует поток [метода ForceGC](icorprofilerinfo-forcegc-method.md) для других вызовов, обычно сделанных в потоках, созданных профилировщиком (например, в [рекуестпрофилердетач](icorprofilerinfo3-requestprofilerdetach-method.md), [рекуестрежит](icorprofilerinfo4-requestrejit-method.md)или [рекуестреверт](icorprofilerinfo4-requestrevert-method.md)), у вас возникнут проблемы. . Даже асинхронная функция, такая как [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , имеет специальные правила при вызове из управляемых потоков. (См. запись блога @no__t — 0Profiler стека: Основные сведения и свыше @ no__t-0 для получения дополнительных сведений.)
+Что это означает на практике? Большинство методов [ICorProfilerInfo](icorprofilerinfo-interface.md) можно вызывать только синхронно, и в противном случае произойдет сбой. Таким образом, если библиотека DLL профилировщика повторно использует поток [метода ForceGC](icorprofilerinfo-forcegc-method.md) для других вызовов, обычно сделанных в потоках, созданных профилировщиком (например, в [рекуестпрофилердетач](icorprofilerinfo3-requestprofilerdetach-method.md), [рекуестрежит](icorprofilerinfo4-requestrejit-method.md)или [рекуестреверт](icorprofilerinfo4-requestrevert-method.md)), у вас возникнут проблемы. . Даже асинхронная функция, такая как [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , имеет специальные правила при вызове из управляемых потоков. (Дополнительные сведения см. в записи блога анализ [стека профилировщика: основы и дополнение](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) .)
 
 Поэтому рекомендуется использовать любой поток, создаваемый библиотекой DLL профилировщика для вызова [метода ForceGC](icorprofilerinfo-forcegc-method.md) , *только* в целях активации GC и последующего реагирования на обратные вызовы GC. Он не должен вызывать API профилирования для выполнения других задач, таких как выборка стека или отсоединение.
 
 ### <a name="conditionalweaktablereferences"></a>кондитионалвеактаблереференцес
 
-Начиная с .NET Framework 4,5 существует новый обратный вызов GC, [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), который предоставляет профилировщику более полные сведения о *зависимых дескрипторах*. Эти дескрипторы эффективно добавляют ссылку из исходного объекта в целевой объект с целью управления жизненным циклом сборки мусора. Зависимые дескрипторы не представляют ничего нового, и разработчики, которые программировать в управляемом коде, могли создавать собственные зависимые дескрипторы с помощью класса <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>, даже до Windows 8 и .NET Framework 4,5.
+Начиная с .NET Framework 4,5 существует новый обратный вызов GC, [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), который предоставляет профилировщику более полные сведения о *зависимых дескрипторах*. Эти дескрипторы эффективно добавляют ссылку из исходного объекта в целевой объект с целью управления жизненным циклом сборки мусора. Зависимые дескрипторы ничего не появились, и разработчики, которые программировать в управляемом коде, могли создавать собственные зависимые дескрипторы с помощью класса <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>, даже до Windows 8 и .NET Framework 4,5.
 
 Однако управляемые приложения для Магазина Windows в XAML теперь сильно используют зависимые дескрипторы. В частности, среда CLR использует их для упрощения управления циклами ссылок между управляемыми и неуправляемыми среда выполнения Windowsными объектами. Это означает, что теперь профилировщикам памяти важнее знать о таких зависимых маркерах, чтобы их можно было визуально отобразить вместе с остальными краями в графе кучи. Библиотека DLL профилировщика должна использовать [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)и [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) вместе для формирования полного представления графа кучи.
 

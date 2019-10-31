@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58f148eb4c3206ba12eed41df670846d7beab77a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d9c7393827b613d49e23972b4896bfe657a544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771638"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138987"
 ---
 # <a name="icordebugstepperenumnext-method"></a>Метод ICorDebugStepperEnum::Next
-Получает указанное число экземпляров ICorDebugStepper из перечисления, начиная с текущей позиции.  
+Возвращает указанное число экземпляров ICorDebugStepper из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +38,18 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Количество `ICorDebugStepper` извлекаемых экземпляров.  
+ окне Число извлекаемых экземпляров `ICorDebugStepper`.  
   
  `steppers`  
- [out] Массив указателей, каждый из которых указывает `ICorDebugStepper` объекта.  
+ заполняет Массив указателей, каждый из которых указывает на объект `ICorDebugStepper`.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugStepper` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращаемых экземпляров `ICorDebugStepper`. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

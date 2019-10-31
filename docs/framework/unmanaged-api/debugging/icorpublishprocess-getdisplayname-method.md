@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 354e1b0dad942534068d5fb07071ed4ac695fb49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2750f082ddc40bbeee121116c3e877d037da84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140429"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>Метод ICorPublishProcess::GetDisplayName
-Возвращает полный путь к исполняемому файлу для процесса, который ссылается этот [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
+Возвращает полный путь к исполняемому файлу для процесса, на который ссылается этот [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,15 +41,15 @@ HRESULT GetDisplayName (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- [out] Число расширенных символов, возвращаемых в `szName` массива.  
+ заполняет Число расширенных символов, возвращаемых в массиве `szName`.  
   
  `szName`  
- [out] Массив для хранения имени, включая полный путь исполняемого файла. Имя заканчивается нулевым байтом.  
+ заполняет Массив для хранения имени исполняемого файла, включая полный путь к нему. Имя заканчивается нулем.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorPub.idl, CorPub.h  
+ **Заголовок:** Корпуб. idl, Корпуб. h  
   
  **Библиотека:** CorGuids.lib  
   

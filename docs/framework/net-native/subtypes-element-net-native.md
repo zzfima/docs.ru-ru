@@ -1,17 +1,15 @@
 ---
-title: <Subtypes>Элемент (.NET Native)
+title: Элемент <Subtypes> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049129"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128111"
 ---
-# <a name="subtypes-element-net-native"></a>\<Подтипы > элемент (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<подтипов > элемента (.NET Native)
 Применяет политику среды выполнения для всех классов, унаследованных из содержащего типа.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -49,12 +47,12 @@ ms.locfileid: "71049129"
   
 ## <a name="all-attributes"></a>Все атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -62,7 +60,7 @@ ms.locfileid: "71049129"
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `<Subtypes>` применяет политику ко всем подтипам его содержащего типа. Используется для применения различных политик для производных типов и их базовых классов.  
   
  Атрибуты отражения, сериализации и взаимодействия необязательны, несмотря на то, что по крайней мере один из них должен присутствовать.  
@@ -91,7 +89,7 @@ ms.locfileid: "71049129"
   
 ## <a name="see-also"></a>См. также
 
-- [\<Элемент > типа](type-element-net-native.md)
+- [Элемент > типа\<](type-element-net-native.md)
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](runtime-directive-elements.md)
 - [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md)

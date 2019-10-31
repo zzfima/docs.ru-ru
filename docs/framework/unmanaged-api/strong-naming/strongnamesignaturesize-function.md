@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38f98b971e430a2c35a4c484f4f9c4bf387c640c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a8856790b655f071df704879a247169f456ae2f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798957"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130876"
 ---
 # <a name="strongnamesignaturesize-function"></a>Функция StrongNameSignatureSize
-Возвращает размер подписи строгого имени. `StrongNameSignatureSize`обычно используется компиляторами для определения объема пространства, резервируемого в файле при создании сборки с отложенной подписью.  
+Возвращает размер подписи строгого имени. `StrongNameSignatureSize` обычно используются компиляторами для определения объема пространства, резервируемого в файле при создании сборки с отложенной подписью.  
   
  Эта функция является устаревшей. Используйте вместо этого метод [метод iclrstrongname:: StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) .  
   
@@ -43,23 +41,23 @@ BOOLEAN StrongNameSignatureSize (
  окне Структура типа [публиккэйблоб](publickeyblob-structure.md) , содержащая открытую часть пары ключей, используемую для создания подписи строгого имени.  
   
  `cbPublicKeyBlob`  
- окне Размер (в байтах `pbPublicKeyBlob`).  
+ окне Размер `pbPublicKeyBlob`в байтах.  
   
  `pcbSize`  
  окне Число байтов, необходимое для хранения подписи строгого имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае —. `false`  
+ `true` при успешном завершении; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если функция `StrongNameSignatureSize` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

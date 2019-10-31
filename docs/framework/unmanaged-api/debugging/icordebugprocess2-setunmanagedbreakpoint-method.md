@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f16a5d1bad80a5aad8573508aab5fbf98c8c2a03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736839"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137181"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>Метод ICorDebugProcess2::SetUnmanagedBreakpoint
-Задает неуправляемую точку останова с указанным образов в машинном коде смещения.  
+Задает неуправляемую точку останова в указанном смещении машинного образа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,24 +39,24 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] Объект `CORDB_ADDRESS` , указывающий смещение образов в машинном коде.  
+ окне Объект `CORDB_ADDRESS`, указывающий смещение машинного образа.  
   
  `bufsize`  
- [in] Размер в байтах из `buffer` массива.  
+ окне Размер массива `buffer` в байтах.  
   
  `buffer`  
- [out] Массив, содержащий код операции, который заменяется точки останова.  
+ заполняет Массив, содержащий код операции, который заменяется точкой останова.  
   
  `bufLen`  
- [out] Указатель на число байтов, возвращаемых в `buffer` массива.  
+ заполняет Указатель на число байтов, возвращенных в массиве `buffer`.  
   
-## <a name="remarks"></a>Примечания  
- Если смещение образов в машинном коде в общеязыковой среде выполнения (CLR), точка останова будет игнорироваться. Это позволяет среде CLR избежать диспетчеризации точки останова каналу, если задана точка останова в отладчике.  
+## <a name="remarks"></a>Заметки  
+ Если смещение машинного образа находится в среде CLR, точка останова будет пропущена. Это позволяет среде CLR избежать диспетчеризации точки останова по внешнему каналу, когда точка останова задается отладчиком.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

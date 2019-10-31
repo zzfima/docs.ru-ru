@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779086"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131930"
 ---
 # <a name="comcallunmarshal-coclass"></a>Компонентный класс ComCallUnmarshal
-Предоставляет интерфейсы для управления маршалингом указателей интерфейса.  
+Предоставляет интерфейсы для управления упаковкой указателей интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,18 +32,18 @@ coclass ComCallUnmarshal {
 };  
 ```  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
 |Интерфейс|Описание|  
 |---------------|-----------------|  
-|`IMarshal`|Предоставляет методы для создания, инициализации и управления прокси в клиентский процесс.|  
+|`IMarshal`|Предоставляет методы для создания, инициализации и управления прокси-сервером в клиентском процессе.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.idl  
+ **Заголовок:** MSCorEE. idl  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

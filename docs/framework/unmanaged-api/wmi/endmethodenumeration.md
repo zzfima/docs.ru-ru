@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 174cf76d4b0ddf07e67e02bff20a983dca08819a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132024"
 ---
 # <a name="endmethodenumeration-function"></a>Функция EndMethodEnumeration
 Завершает последовательность перечисления, запущенную с вызовом [функции бегинмесоденумератион](beginmethodenumeration.md).  
@@ -49,21 +47,21 @@ HRESULT EndMethodEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Внутренняя ошибка. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: ендмесоденумератион](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) .
 
-Вызывающий объект начинает последовательность перечисления с помощью [функции бегинмесоденумератион](beginmethodenumeration.md), а затем вызывает [функцию некстмесод](nextmethod.md ), пока метод не `WBEM_S_NO_MORE_DATA`вернет значение. Вызывающий объект, по желанию, завершает последовательность `EndMethodEnumeration`путем вызова. Вызывающий объект может завершить перечисление раньше `EndMethodEnumeration` , вызвав в любое время.
+Вызывающий объект начинает последовательность перечисления с помощью [функции бегинмесоденумератион](beginmethodenumeration.md), а затем вызывает [функцию некстмесод](nextmethod.md ), пока метод не возвратит `WBEM_S_NO_MORE_DATA`. Вызывающий объект, по желанию, завершает последовательность путем вызова `EndMethodEnumeration`. Вызывающий объект может завершить перечисление раньше, вызвав `EndMethodEnumeration` в любое время.
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

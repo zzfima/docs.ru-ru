@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: d33c8b31473e389e07fb24076dc32272e9dde387
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274259"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132389"
 ---
 # <a name="codechunkinfo-structure"></a>Структура CodeChunkInfo
 
@@ -36,22 +34,22 @@ typedef struct _CodeChunkInfo {
 } CodeChunkInfo;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`startAddr`|`CORDB_ADDRESS` Значение, указывающее начальный адрес фрагмента.|  
+|`startAddr`|Значение `CORDB_ADDRESS`, указывающее начальный адрес фрагмента.|  
 |`length`|Размер блока в байтах.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Единственный фрагмент кода — это область машинного кода, которая является частью объекта кода, например функции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl  
+ **Заголовок:** CorDebug. idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

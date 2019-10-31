@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abbfd21736d220f1cba029235c71a85bf3048ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 456a79ec290964df8e9f74fc6ca19ef9aabe1230
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130674"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>Метод ICorDebugManagedCallback::NameChange
-Уведомляет отладчик о том, что имя домена приложения или поток был изменен.  
+Уведомляет отладчик о том, что имя домена приложения или потока изменилось.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT NameChange (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, которое было изменение имени или, содержит поток, в котором произошло изменение имени.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в котором либо было изменено имя, либо содержащий поток, в котором было изменено имя.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в котором произошло изменение имени.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, для которого было изменено имя.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

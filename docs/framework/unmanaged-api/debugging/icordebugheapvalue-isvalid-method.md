@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138399"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>Метод ICorDebugHeapValue::IsValid
-Получает значение, указывающее, является ли допустимым объект, представленный этой ICorDebugHeapValue.  
+Возвращает значение, указывающее, является ли допустимым объект, представленный этим ICorDebugHeapValue.  
   
- Этот метод был объявлен устаревшим в .NET Framework версии 2.0.  
+ Этот метод не рекомендуется к использованию в .NET Framework версии 2,0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,17 +37,17 @@ HRESULT IsValid (
   
 ## <a name="parameters"></a>Параметры  
  `pbValid`  
- [out] Указатель на логическое значение, указывающее, допустим ли это значение в куче.  
+ заполняет Указатель на логическое значение, указывающее, является ли значение в куче допустимым.  
   
-## <a name="remarks"></a>Примечания  
- Значение является недопустимым, если удален сборщиком мусора.  
+## <a name="remarks"></a>Заметки  
+ Значение недопустимо, если оно было освобождено сборщиком мусора.  
   
- Этот метод использовать не рекомендуется. В .NET Framework 2.0, все значения являются действительными до [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) вызывается во время которого значения становятся недействительными.  
+ Этот метод использовать не рекомендуется. В .NET Framework 2,0 все значения являются допустимыми до тех пор, пока не будет вызван метод [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , после чего значения становятся недействительными.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

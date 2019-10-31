@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137452"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Метод ICorDebugManagedCallback2::Exception
-Уведомляет отладчик о начале поиска обработчика исключений.  
+Уведомляет отладчик о запуске поиска обработчика исключений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,41 +40,41 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий поток, на котором возникло исключение.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий поток, в котором было создано исключение.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, на котором возникло исключение.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором было создано исключение.  
   
  `pFrame`  
- [in] Указатель на интерфейс ICorDebugFrame объект, представляющий кадр, что определяется `dwEventType` параметра. Дополнительные сведения см. в таблице в разделе "Примечания".  
+ окне Указатель на объект ICorDebugFrame, представляющий кадр, как определено параметром `dwEventType`. Дополнительные сведения см. в таблице в разделе "Примечания".  
   
  `nOffset`  
- [in] Целое число, указывающее смещение, определяемое `dwEventType` параметра. Дополнительные сведения см. в таблице в разделе "Примечания".  
+ окне Целое число, задающее смещение, определяемое параметром `dwEventType`. Дополнительные сведения см. в таблице в разделе "Примечания".  
   
  `dwEventType`  
- [in] Значение перечисления CorDebugExceptionCallbackType, которое указывает тип этого обратного вызова исключения.  
+ окне Значение перечисления CorDebugExceptionCallbackType, указывающее тип этого обратного вызова исключения.  
   
  `dwFlags`  
- [in] Значение [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) перечисление, содержащее дополнительные сведения об исключении  
+ окне Значение перечисления [кордебужексцептионфлагс](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , которое указывает дополнительные сведения об исключении  
   
-## <a name="remarks"></a>Примечания  
- `Exception` Обратный вызов выполняется в различных точках этапа поиска процесса обработки исключений. То есть он может быть вызван больше, чем один раз во время очистки исключения.  
+## <a name="remarks"></a>Заметки  
+ Обратный вызов `Exception` вызывается в различных точках на этапе поиска процесса обработки исключений. То есть он может быть вызван более одного раза при очистке исключения.  
   
- Исключение обрабатывается можно получить из объекта ICorDebugThread ссылается `pThread` параметра.  
+ Обрабатываемое исключение может быть получено из объекта ICorDebugThread, на который ссылается параметр `pThread`.  
   
- Определенный кадр и смещение определяется `dwEventType` параметр следующим образом:  
+ Конкретный кадр и смещение определяются параметром `dwEventType` следующим образом:  
   
 |Значение `dwEventType`|Значение `pFrame`|Значение `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Фрейма, вызвавшего исключение.|Указатель инструкций в кадре.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Фрейма пользовательского кода, ближайшего к точке вызванного исключения.|Указатель инструкций в кадре.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Кадр, содержащего обработчик catch.|Смещение промежуточного языка MSIL Microsoft начале обработчика catch.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Не определено.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Кадр, вызвавший исключение.|Указатель инструкции в кадре.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Кадр пользовательского кода, ближайший к точке вызванного исключения.|Указатель инструкции в кадре.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Кадр, содержащий обработчик catch.|Смещение на языке MSIL, начинающееся с начала обработчика catch.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Определено.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

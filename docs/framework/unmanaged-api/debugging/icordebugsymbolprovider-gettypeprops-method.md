@@ -2,14 +2,12 @@
 title: 'Метод метод icordebugsymbolprovider:: GetTypeProps'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c8ea3a201cc94ef7bdf679371ef43ab2641b791
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133667"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>Метод метод icordebugsymbolprovider:: GetTypeProps
 Возвращает сведения о свойствах типа, такие как число сигнатур его универсальных параметров, для указанного относительного виртуального адреса (RVA) в таблице VTable.  
@@ -38,18 +36,18 @@ HRESULT GetTypeProps(
  `signature`  
  [out] Буфер, в котором хранятся сигнатуры TypeSpec для всех универсальных параметров.  
   
-## <a name="remarks"></a>Примечания  
- Чтобы получить требуемый размер `signature` массива типа, `cbSignature` задайте для аргумента значение 0 и `signature` **значение NULL**. После возврата метода параметр `pcbSignature` будет содержать число байт, требуемое для массива `signature`.  
+## <a name="remarks"></a>Заметки  
+ Чтобы получить требуемый размер массива `signature` типа, присвойте аргументу `cbSignature` значение 0 и `signature` **значение NULL**. После возврата метода параметр `pcbSignature` будет содержать число байт, требуемое для массива `signature`.  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

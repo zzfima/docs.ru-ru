@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9b4867ad19f25e35ca31c007c0d238b949abab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c18ed781d44c873b4cd1957bf0102a4ce0cccad4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762223"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139218"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>Метод ICorDebugModule::EnableClassLoadCallbacks
-Элементы управления ли [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) и [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) обратные вызовы, называются для этого модуля.  
+Определяет, вызываются ли для этого модуля обратные вызовы [ICorDebugManagedCallback:: loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) и [ICorDebugManagedCallback:: унлоадкласс](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT EnableClassLoadCallbacks(
   
 ## <a name="parameters"></a>Параметры  
  `bClassLoadCallbacks`  
- [in] Это значение равно `true` для включения общеязыковой среды выполнения (CLR), для вызова `ICorDebugManagedCallback::LoadClass` и `ICorDebugManagedCallback::UnloadClass` методы при возникновении связанные с ними события.  
+ окне Присвойте этому параметру значение `true`, чтобы среда CLR вызывала методы `ICorDebugManagedCallback::LoadClass` и `ICorDebugManagedCallback::UnloadClass` при возникновении связанных с ними событий.  
   
- Значение по умолчанию — `false` для модулей, не поддерживающих динамические. Это значение всегда равно `true` для динамических модулей и не может быть изменено.  
+ Значение по умолчанию — `false` для модулей, не являющихся динамическими. Значение всегда `true` для динамических модулей и не может быть изменено.  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugManagedCallback::LoadClass` И `ICorDebugManagedCallback::UnloadClass` обратные вызовы для динамических модулей всегда включены и не может быть отключено.  
+## <a name="remarks"></a>Заметки  
+ Обратные вызовы `ICorDebugManagedCallback::LoadClass` и `ICorDebugManagedCallback::UnloadClass` всегда включены для динамических модулей и не могут быть отключены.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

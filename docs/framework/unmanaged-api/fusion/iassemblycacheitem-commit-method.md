@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 380181d8e309ba4b51d49aae9159f0bbf7e0250f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5de522c00da76e7c01369c706cb7f9e2bdad4b3b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134514"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>Метод IAssemblyCacheItem::Commit
 Фиксирует в памяти ссылку на кэшированную сборку.  
@@ -44,9 +42,9 @@ HRESULT Commit (
  [out, необязательно] Значение, указывающее результат операции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

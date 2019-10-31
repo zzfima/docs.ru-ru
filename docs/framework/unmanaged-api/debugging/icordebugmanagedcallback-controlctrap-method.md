@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137431"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>Метод ICorDebugManagedCallback::ControlCTrap
-Уведомляет отладчик о том, что сочетание клавиш CTRL + C, представленные в отлаживаемом процессе.  
+Уведомляет отладчик о том, что в отлаживаемом процессе выполняется перехват CTRL + C.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляющий процесс, в котором перехватывается CTRL + C.  
+ окне Указатель на объект ICorDebugProcess, представляющий процесс, в котором выполняется перехват CTRL + C.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Отладчик будет обрабатывать нажатие клавиши CTRL + C.|  
-|S_FALSE|Отладчик не будет обрабатывать нажатие CTRL + C.|  
+|S_OK|Отладчик будет выполнять обработку ловушек CTRL + C.|  
+|S_FALSE|Отладчик не будет выполнять обработку ловушек CTRL + C.|  
   
-## <a name="remarks"></a>Примечания  
- Все домены приложений в рамках процесса остановлены для этого обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ Все домены приложений в рамках процесса останавливаются для этого обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

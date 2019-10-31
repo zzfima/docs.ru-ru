@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32d6f3040cbb2070433ad5e3b6117d4b0b212656
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e4181cbd14674336133314acdcd6cdcf0c9ff6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134935"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>Метод ICLRStrongName::StrongNameSignatureVerificationEx
-Получает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени.  
+Возвращает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +37,26 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к переносимого исполняемого файла (.exe или .dll) для сборки, которую требуется проверить.  
+ окне Путь к переносимому исполняемому файлу (exe или DLL) для проверяемой сборки.  
   
  `fForceVerification`  
- [in] `true` будет выполнить проверку подлинности, даже если это необходимо переопределить параметры реестра, в противном случае — `false`.  
+ [in] `true` выполнить проверку, даже если необходимо переопределить параметры реестра; в противном случае `false`.  
   
  `pfWasVerified`  
- [out] `true` при подписи строгого имени проверенного; в противном случае `false`. `pfWasVerified` задается значение `false` Если проверка пройдена успешно из-за параметров реестра.  
+ [out] `true`, если подпись строгого имени была проверена; в противном случае `false`. `pfWasVerified` также имеет значение `false`, если проверка прошла успешно из-за параметров реестра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
-## <a name="remarks"></a>Примечания  
- [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) метод предоставляет возможность, аналогичную [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) метод. Однако второй входной параметр и параметр вывода для [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) относятся к типу `BOOLEAN` вместо `DWORD`.  
+## <a name="remarks"></a>Заметки  
+ Метод [метод iclrstrongname:: StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) предоставляет такую возможность, как метод [метод iclrstrongname:: StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) . Однако второй входной параметр и выходной параметр для [метод iclrstrongname:: StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) относятся к типу `BOOLEAN` вместо `DWORD`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

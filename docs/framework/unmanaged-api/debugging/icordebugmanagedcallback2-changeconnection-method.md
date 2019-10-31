@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f8a8f84d3dfd8f1e64197078d7e20d2aebef2323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130599"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>Метод ICorDebugManagedCallback2::ChangeConnection
-Уведомляет отладчик о том, что изменился набор задач, связанных с указанным соединением.  
+Уведомляет отладчик о том, что набор задач, связанных с указанным соединением, изменился.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,24 +36,24 @@ HRESULT ChangeConnection (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект «ICorDebugProcess», который представляет процесс, содержащий соединение измененного.  
+ окне Указатель на объект "ICorDebugProcess", представляющий процесс, содержащий измененное соединение.  
   
  `dwConnectionId`  
- [in] Идентификатор соединения, в котором изменен.  
+ окне Идентификатор измененного соединения.  
   
-## <a name="remarks"></a>Примечания  
- Объект `ChangeConnection` обратного вызова будет запускаться в любом из следующих случаев:  
+## <a name="remarks"></a>Заметки  
+ Обратный вызов `ChangeConnection` будет срабатывать в одном из следующих случаев.  
   
-- Когда отладчик подключается к процессу, который содержит соединения. В этом случае среда выполнения создаст и диспетчеризации [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) событий и `ChangeConnection` событий для каждого соединения в процессе. Объект `ChangeConnection` событие создается для каждого существующего подключения, независимо от того, это подключение набора задач был изменен с момента его создания.  
+- При присоединении отладчика к процессу, который содержит соединения. В этом случае среда выполнения создаст и отправит событие [ICorDebugManagedCallback2:: CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) и событие `ChangeConnection` для каждого соединения в процессе. Событие `ChangeConnection` создается для каждого существующего соединения независимо от того, изменился ли набор задач этого соединения с момента его создания.  
   
-- Если узел вызывает [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Когда узел вызывает [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
- Отладчик должен просканировать все потоки в процессе, чтобы собрать новые изменения.  
+ Отладчик должен проверить все потоки в процессе, чтобы получить новые изменения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

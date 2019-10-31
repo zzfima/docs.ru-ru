@@ -2,14 +2,12 @@
 title: Сериализация и метаданные
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049172"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128112"
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
 
@@ -47,7 +45,7 @@ ms.locfileid: "71049172"
   
 ### <a name="typeof-used-outside-the-constructor"></a>TypeOf, использованный за пределами конструктора
 
- Если вызвать конструктор этих классов сериализации и использовать C# оператор [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) за пределами выражения, переданного в <xref:System.Type> параметр конструктора, как показано в следующем коде, компилятору .NET Native не удается разрешить тип:  
+ Если вызвать конструктор этих классов сериализации и использовать C# оператор [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) за пределами выражения, переданного в параметр <xref:System.Type> конструктора, как показано в следующем коде, компилятор .NET Native не может разрешить тип:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71049172"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Аналогичным образом, если вызвать конструктор, например <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> , и предоставить массив дополнительных <xref:System.Type> объектов для сериализации, как показано в следующем коде, компилятор .NET Native не может разрешить эти типы.  
+ Аналогично, если вы вызываете конструктор, например <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> и предоставляете для сериализации массив дополнительных <xref:System.Type> объектов, как показано в следующем коде, компилятор .NET Native не может разрешить эти типы.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -73,5 +71,5 @@ ms.locfileid: "71049172"
 
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](runtime-directive-elements.md)
-- [\<Элемент > типа](type-element-net-native.md)
+- [Элемент > типа\<](type-element-net-native.md)
 - [Элемент \<Namespace>](namespace-element-net-native.md)

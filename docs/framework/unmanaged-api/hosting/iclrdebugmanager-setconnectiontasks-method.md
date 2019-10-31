@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85db4247ebe4a488f7907e195bb0f25f72d87e9b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d6092f16804fae39dd9496e8572edd64e1b7e9bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951348"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129373"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>Метод ICLRDebugManager::SetConnectionTasks
 Связывает список экземпляров [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) с идентификатором и понятным именем.  
@@ -39,38 +37,38 @@ HRESULT SetConnectionTasks (
   
 ## <a name="parameters"></a>Параметры  
  `id`  
- окне Специфический для узла идентификатор соединения, с которым связывается `ppCLRTask` массив.  
+ окне Специфический для узла идентификатор соединения, с которым связывается массив `ppCLRTask`.  
   
  `dwCount`  
  окне Число членов `ppCLRTask`. Это число должно быть больше нуля.  
   
  `ppCLRTask`  
- окне Массив `ICLRTask` указателей, связываемый с соединением, `id`определенным. Этот массив должен содержать по крайней мере один элемент.  
+ окне Массив `ICLRTask`ных указателей, связываемых с соединением, идентифицируемым `id`. Этот массив должен содержать по крайней мере один элемент.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`SetConnectionTasks`успешно возвращено.|  
+|S_OK|`SetConnectionTasks` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
-|E_INVALIDARG|[Бегинконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) не вызывался с использованием этого значения `id`, или `dwCount` или `id` равно нулю, либо один из элементов `ppCLRTask` имеет значение null.|  
+|E_INVALIDARG|[Бегинконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) не вызывался с помощью этого значения `id`или `dwCount` или `id` равно нулю, либо один из элементов `ppCLRTask` имеет значение null.|  
   
-## <a name="remarks"></a>Примечания  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) предоставляет три метода, `BeginConnection` `SetConnectionTasks`, и [ендконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)для связывания списков задач с идентификаторами и понятными именами.  
+## <a name="remarks"></a>Заметки  
+ [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) предоставляет три метода: `BeginConnection`, `SetConnectionTasks`и [ендконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)для связывания списков задач с идентификаторами и понятными именами.  
   
 > [!IMPORTANT]
-> Эти три метода должны вызываться в определенном порядке для каждого набора задач. `BeginConnection`вызывается первым для установления нового соединения. `SetConnectionTasks`вызывается далее для предоставления набора задач, которые должны быть связаны с этим соединением. `EndConnection`вызывается последним, чтобы удалить связь между списком задач и идентификатором и понятным именем. Однако вызовы для различных соединений могут быть вложенными.  
+> Эти три метода должны вызываться в определенном порядке для каждого набора задач. Сначала вызывается `BeginConnection`, чтобы установить новое соединение. `SetConnectionTasks` вызывается далее для предоставления набора задач, которые должны быть связаны с этим соединением. `EndConnection` вызывается Last для удаления связи между списком задач и идентификатором и понятным именем. Однако вызовы для различных соединений могут быть вложенными.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

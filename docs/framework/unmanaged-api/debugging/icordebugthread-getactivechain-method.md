@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133556"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>Метод ICorDebugThread::GetActiveChain
-Получает указатель интерфейса на этот объект ICorDebugThread active (последней) Цепочка стека.  
+Возвращает указатель интерфейса на активную (последнюю) цепь стека на этом объекте ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetActiveChain (
   
 ## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес ICorDebugChain объект, представляющий цепочка стека.  
+ заполняет Указатель на адрес объекта ICorDebugChain, который представляет цепочку стека.  
   
-## <a name="remarks"></a>Примечания  
- `ppChain` Параметр имеет значение null, если нет цепочка стека в данный момент активна.  
+## <a name="remarks"></a>Заметки  
+ Параметр `ppChain` имеет значение null, если цепочка стека в данный момент не активна.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

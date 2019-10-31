@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9d0b9628-a91c-40d0-b9bc-00b34a396b8f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eebb0c39cb8ae69dfce1e865f2784bbe9a408786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46d045712e5d3f688ec35d039ccfecba0088037c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737831"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134692"
 ---
 # <a name="icordebugappdomaingetprocess-method"></a>Метод ICorDebugAppDomain::GetProcess
-Получает процесс, содержащий домен приложения.  
+Возвращает процесс, содержащий домен приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>Параметры  
  `ppProcess`  
- [out] Указатель на адрес объекта ICorDebugProcess, представляющий процесс.  
+ заполняет Указатель на адрес объекта ICorDebugProcess, который представляет процесс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

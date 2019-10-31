@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 371ed85f53109856d9c8f64e42aadca10302c269
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43a5cd57a8eeaba70f1bb1ffb9cab5bb1a067914
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130954"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>Метод ICLRStrongName::GetHashFromAssemblyFileW
 Создает хэш содержимого файла, указанного строкой Юникода.  
@@ -41,29 +39,29 @@ HRESULT GetHashFromAssemblyFileW (
   
 ## <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к файлу, хэширование которого требуется выполнить. Этот параметр должен быть строкой Юникода.  
+ окне Путь к файлу для хэширования. Этот параметр должен быть строкой в Юникоде.  
   
  `piHashAlg`  
- [in, out] Константа, указывающая хэш-алгоритм. Использовать нуль для хэш-алгоритм по умолчанию.  
+ [вход, выход] Константа, указывающая хэш-алгоритм. Для алгоритма хэширования по умолчанию используется нуль.  
   
  `pbHash`  
- [out] Буфер, возвращенный хэша.  
+ заполняет Возвращаемый буфер хэша.  
   
  `cchHash`  
- [in] Запрошенный максимальный размер `pbHash`.  
+ окне Запрошенный максимальный размер `pbHash`.  
   
  `pchHash`  
- [out] Размер в байтах, возвращенное `pbHash`.  
+ заполняет Возвращаемый размер `pbHash`в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

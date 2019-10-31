@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755662"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136965"
 ---
-# <a name="cordllmain-function"></a>\_Функция CorDllMain
+# <a name="_cordllmain-function"></a>\_функция Кордллмаин
 
-Инициализирует общеязыковой среды выполнения (CLR), размещает управляемую точку входа в заголовке среды CLR сборки DLL и начинает выполнение.  
+Инициализирует среду CLR, находит управляемую точку входа в заголовке CLR сборки DLL и начинает выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,33 +37,33 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>Параметры  
  `hInst`  
- [in] Дескриптор экземпляра загруженного модуля.  
+ окне Экземпляр загруженного модуля.  
   
  `dwReason`  
- [in] Указывает, почему вызывается функция точки входа библиотеки DLL. Этот параметр может принимать одно из следующих значений: Библиотеки DLL\_PROCESS_ATTACH, DLL\_ПОТОКОВ\_ATTACH, DLL\_ПОТОКОВ\_ATTACH или DLL\_процесс\_ОТСОЕДИНЕНИЯ. Описание этих значений, см. в разделе `DllMain` документации пакета Platform SDK.  
+ окне Указывает, почему вызывается функция точки входа DLL. Этот параметр может принимать одно из следующих значений: DLL\_PROCESS_ATTACH, DLL\_потока\_ATTACH, DLL\_потока\_ATTACH или DLL\_процесса\_DETACH. Описание этих значений см. в документации по `DllMain` в пакете Platform SDK.  
   
  `lpReserved`  
- [in] Не используется.  
+ окне Использующ.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает `true` для достижения успеха и `false` при возникновении ошибки.  
+ Этот метод возвращает `true` для успешного выполнения и `false` при возникновении ошибки.  
   
-## <a name="remarks"></a>Примечания  
- Эта функция вызывается загрузчиком операционной системы для DLL-сборки. Исполняемые сборки, загрузчик вызывает [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) вместо этого функцию.  
+## <a name="remarks"></a>Заметки  
+ Эта функция вызывается загрузчиком операционной системы для сборок DLL. Для исполняемых сборок загрузчик вызывает функцию [\_корексемаин](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) .  
   
  Загрузчик операционной системы вызывает этот метод независимо от точки входа, указанной в файле DLL.  
   
-`_CorDllMain` Функция вызывается загрузчиком операционной системы.
+Функция `_CorDllMain` вызывается непосредственно загрузчиком операционной системы.
   
- Дополнительные сведения см. в разделе "Примечания" в [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
+ Дополнительные сведения см. в подразделе "Примечания" статьи [\_корвалидатеимаже](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Требования  
 
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок:** COR. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

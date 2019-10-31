@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a874646a6746a9b2fc8ce597e6c1ca47340c199a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759646"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137341"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Метод ICorDebugManagedCallback::EvalComplete
-Уведомляет отладчик о завершении вычисления.  
+Уведомляет отладчик о завершении оценки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,18 +37,18 @@ HRESULT EvalComplete (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором была выполнена оценка.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в котором была выполнена оценка.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в котором была выполнена оценка.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором выполнялась оценка.  
   
  `pEval`  
- [in] Указатель на ICorDebugEval объект, представляющий код, который выполняется вычисление.  
+ окне Указатель на объект ICorDebugEval, представляющий код, который выполнил вычисление.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

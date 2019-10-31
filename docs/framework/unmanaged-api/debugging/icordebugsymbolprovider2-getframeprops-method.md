@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugSymbolProvider2::GetFrameProps
+title: 'Метод ICorDebugSymbolProvider2:: Жетфрамепропс'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c22e9c58a203c13611298e1956a6951d8ca7e8b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133645"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>Метод ICorDebugSymbolProvider2::GetFrameProps
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>Метод ICorDebugSymbolProvider2:: Жетфрамепропс
 Возвращает начальный относительный виртуальный адрес метода и родительского фрейма для указанного относительного виртуального адреса кода.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -34,17 +32,17 @@ HRESULT GetFrameProps(
  `pParentFrameStartRva`  
  [out] Указатель на начальный относительный виртуальный адрес фрейма.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

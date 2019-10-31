@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14b10b94f66a6b5434befeac1cd9562cb8a0f27f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761557"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130708"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>Метод ICorDebugManagedCallback::LogMessage
-Уведомляет отладчик о том, что нитью среды выполнения (CLR) управляемый язык вызвал метод <xref:System.Diagnostics.EventLog> класс события в журнал.  
+Уведомляет отладчик о том, что управляемый поток среды CLR вызвал метод в классе <xref:System.Diagnostics.EventLog> для записи события в журнал.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,24 +39,24 @@ HRESULT LogMessage (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий управляемый поток, который зафиксировал событие.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий управляемый поток, который зарегистрировал событие.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, который представляет управляемый поток.  
+ окне Указатель на объект ICorDebugThread, представляющий управляемый поток.  
   
  `lLevel`  
- [in] Значение [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) перечисление, указывающее степень серьезности описательное сообщение, которые были записаны в журнал событий.  
+ окне Значение перечисления [логгинглевеленум](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) , указывающее степень серьезности описательного сообщения, записанного в журнал событий.  
   
  `pLogSwitchName`  
- [in] Указатель на имя переключателя трассировки.  
+ окне Указатель на имя переключателя трассировки.  
   
  `pMessage`  
- [in] Указатель на сообщения, которые были записаны в журнал событий.  
+ окне Указатель на сообщение, записанное в журнал событий.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

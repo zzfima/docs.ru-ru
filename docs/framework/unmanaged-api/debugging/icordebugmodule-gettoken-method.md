@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30097ff0cd92253897a366a5a18f305eddb06b5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 683c2853ea2ed43e61eb666ec56619cb58cde273
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129497"
 ---
 # <a name="icordebugmodulegettoken-method"></a>Метод ICorDebugModule::GetToken
-Получает токен для записи в таблице для этого модуля.  
+Возвращает маркер для записи таблицы для этого модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>Параметры  
  `pToken`  
- [out] Указатель на `mdModule` маркер, который ссылается на метаданные модуля.  
+ заполняет Указатель на маркер `mdModule`, который ссылается на метаданные модуля.  
   
-## <a name="remarks"></a>Примечания  
- Можно передать маркер [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), и [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейсы импорта метаданных.  
+## <a name="remarks"></a>Заметки  
+ Маркер может быть передан интерфейсам импорта метаданных [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)и [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

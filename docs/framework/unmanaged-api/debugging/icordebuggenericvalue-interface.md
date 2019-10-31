@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910231"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138574"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Интерфейс ICorDebugGenericValue
 
@@ -34,8 +32,8 @@ ms.locfileid: "69910231"
 |[Метод GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Копирует значение в указанный буфер.|  
 |[Метод SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Копирует новое значение из указанного буфера.|  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugGenericValue`является подинтерфейсом, так как он не является удаленным.  
+## <a name="remarks"></a>Заметки  
+ `ICorDebugGenericValue` является подинтерфейсом, так как он не является удаленным.  
   
  Для ссылочных типов значение является ссылкой, а не содержимым ссылки.  
   
@@ -45,11 +43,11 @@ ms.locfileid: "69910231"
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

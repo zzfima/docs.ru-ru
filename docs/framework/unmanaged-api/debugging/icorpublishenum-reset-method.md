@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c9486b8ad0acb53e13f6a9202ce2d713ffe5fce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140463"
 ---
 # <a name="icorpublishenumreset-method"></a>Метод ICorPublishEnum::Reset
 Перемещает курсор в начало перечисления.  
@@ -34,12 +32,12 @@ HRESULT Reset ();
 ```  
   
 ## <a name="parameters"></a>Параметры  
- `Reset` не принимает никаких параметров.  
+ `Reset` не принимает параметров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorPub.idl, CorPub.h  
+ **Заголовок:** Корпуб. idl, Корпуб. h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138190"
 ---
 # <a name="etasktype-enumeration"></a>Перечисление ETaskType
-Содержит значения, указывающие тип задачи, представленного либо [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) или [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) интерфейс.  
+Содержит значения, указывающие тип задачи, представленной интерфейсом [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) или [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,16 +42,16 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|Интерфейс представляет задачу выгрузки домена приложения.|  
 |`TT_DEBUGGERHELPER`|Интерфейс представляет вспомогательную задачу отладчика.|  
-|`TT_FINALIZER`|Интерфейс представляет задачу метода завершения.|  
+|`TT_FINALIZER`|Интерфейс представляет задачу финализатора.|  
 |`TT_GC`|Интерфейс представляет задачу сборки мусора.|  
-|`TT_THREADPOOL_GATE`|Интерфейс представляет задачу потока логического.|  
-|`TT_THREADPOOL_IOCOMPLETION`|Интерфейс представляет задачу потока ввода-вывода или задачу потока порта завершения.|  
+|`TT_THREADPOOL_GATE`|Интерфейс представляет задачу потока шлюза.|  
+|`TT_THREADPOOL_IOCOMPLETION`|Интерфейс представляет задачу потока ввода-вывода или задачи потока порта завершения.|  
 |`TT_THREADPOOL_TIMER`|Интерфейс представляет задачу потока таймера.|  
 |`TT_THREADPOOL_WAIT`|Интерфейс представляет задачу потока ожидания.|  
 |`TT_THREADPOOL_WORKER`|Интерфейс представляет задачу рабочего потока.|  
@@ -61,11 +59,11 @@ typedef enum ETaskType {
 |`TT_USER`|Интерфейс представляет задачу пользователя.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

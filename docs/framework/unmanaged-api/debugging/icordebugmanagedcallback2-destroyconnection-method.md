@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 350a3505345aa88d93f551309eb896ff52cc683d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a64df9f821021547efd08045e9f67fee25173e5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761161"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137443"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>Метод ICorDebugManagedCallback2::DestroyConnection
-Уведомляет отладчик о том, что указанное соединение было прервано.  
+Уведомляет отладчик о завершении указанного соединения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT DestroyConnection (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляющий процесс, содержащий соединения, в котором был удален.  
+ окне Указатель на объект ICorDebugProcess, представляющий процесс, содержащий удаленное соединение.  
   
  `dwConnectionId`  
- [in] Идентификатор соединения, в котором был удален.  
+ окне Идентификатор уничтоженного соединения.  
   
-## <a name="remarks"></a>Примечания  
- Объект `DestroyConnection` запускается обратного вызова, когда узел вызывает [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+## <a name="remarks"></a>Заметки  
+ Если узел вызывает [ICLRDebugManager:: ендконнектион](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md), будет запущен обратный вызов `DestroyConnection`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04b8ac6751024e64cc866fce1cfe72fb42e41200
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4518637eb47acf416a02c045f8ca6f8a90167277
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760440"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130777"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>Метод ICorDebugManagedCallback::ExitProcess
-Уведомляет отладчик о том, что процесс завершен.  
+Уведомляет отладчик о завершении процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +35,19 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляющий процесс.  
+ окне Указатель на объект ICorDebugProcess, представляющий процесс.  
   
-## <a name="remarks"></a>Примечания  
- Не удается продолжить выполнение после `ExitProcess` событий. Это событие вызывается асинхронно с другими событиями во время появится нужный процесс нужно остановить. Это может произойти, если процесс прерывается во время остановки, обычно вследствие внешних.  
+## <a name="remarks"></a>Заметки  
+ Невозможно продолжить выполнение события `ExitProcess`. Это событие может вызываться асинхронно для других событий, пока процесс остановлен. Это может произойти, если процесс завершается при остановке, обычно из-за некоторой внешней силы.  
   
- Если среда CLR (CLR), который уже обслуживается управляемом обратном вызове, это событие будет отложено до после возвращения ответного вызова.  
+ Если общеязыковая среда выполнения (CLR) уже передает управляемый обратный вызов, это событие будет отложено до тех пор, пока этот обратный вызов не вернется.  
   
- `ExitProcess` Это единственное событие завершения и выгрузки, гарантированно вызывается при завершении работы.  
+ Событие `ExitProcess` является единственным событием выхода и выгрузки, которое гарантированно вызывается при завершении работы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -10,17 +10,15 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d35e0f27968b2649a63b035759a6e72d53b2b94
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3094eb6e3006be49cf17c1ca2a220b8ec58b673
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928182"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139062"
 ---
 # <a name="icordebugilframe3-interface"></a>Интерфейс ICorDebugILFrame3
-Предоставляет метод, инкапсулирующий возвращаемое значение функции. `ICorDebugILFrame3`является логическим расширением интерфейсов ICorDebugILFrame и ICorDebugILFrame2.  
+Предоставляет метод, инкапсулирующий возвращаемое значение функции. `ICorDebugILFrame3` является логическим расширением интерфейсов ICorDebugILFrame и ICorDebugILFrame2.  
   
 ## <a name="methods"></a>Методы  
   
@@ -28,17 +26,17 @@ ms.locfileid: "69928182"
 |------------|-----------------|  
 |[Метод GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Возвращает объект ICorDebugValue, инкапсулирующий возвращаемое значение функции.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Перечисление присутствующих на компьютере часовых поясов
+title: Руководство. Перечисление имеющихся на компьютере часовых поясов
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,55 +9,53 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: afc3b57659dd6719f72cefba8a6d2f1abe08c0d0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129122"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Практическое руководство. Перечисление присутствующих на компьютере часовых поясов
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Руководство. Перечисление имеющихся на компьютере часовых поясов
 
 Для успешной работы с указанным часовым поясом необходимо, чтобы сведения об этом часовом поясе были доступны в системе. В операционных системах Windows XP и Windows Vista эти сведения хранятся в реестре. Тем не менее, хотя общее число часовых поясов, которые существуют по всему миру, велико, реестр содержит сведения только о подмножестве из них. Кроме того, реестр сам является динамической структурой, содержимое которой подвержено преднамеренным и случайным изменениям. В итоге приложение не может всегда предполагать, что конкретный часовой пояс определен и доступен в системе. Первым шагом для многих приложений, использующих данные о часовых поясах, является определение доступности требуемого часового пояса на локальном компьютере или предоставление пользователю списка часовых поясов для выбора. Для этого необходимо, чтобы приложение перечислило часовые пояса, определенные в локальной системе.
 
 > [!NOTE]
-> Если приложение полагается на присутствие определенного часового пояса, которое не может быть определено в локальной системе, приложение может обеспечить его присутствие путем сериализации и десериализации сведений о часовом поясе. Затем часовой пояс можно добавить в элемент управления "список", чтобы пользователь приложения мог выбрать его. Подробную информацию см. в разделе [Практическое руководство. Сохраняйте Часовые пояса во внедренном](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ресурсе и [последующее: Восстановление часовых поясов из внедренного](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)ресурса.
+> Если приложение полагается на присутствие определенного часового пояса, которое не может быть определено в локальной системе, приложение может обеспечить его присутствие путем сериализации и десериализации сведений о часовом поясе. Затем часовой пояс можно добавить в элемент управления "список", чтобы пользователь приложения мог выбрать его. Дополнительные сведения см. [в разделе как сохранить Часовые пояса во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [как восстановить Часовые пояса из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Перечисление часовых поясов, присутствующих в локальной системе
 
-1. Вызовите метод <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. Метод возвращает универсальную <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> коллекцию объектов. Записи в коллекции сортируются по их <xref:System.TimeZoneInfo.DisplayName%2A> свойству. Например:
+1. Вызовите метод <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. Метод возвращает универсальную коллекцию <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> объектов <xref:System.TimeZoneInfo>. Записи в коллекции сортируются по свойству <xref:System.TimeZoneInfo.DisplayName%2A>. Пример:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
 
-2. Перечисляет отдельные <xref:System.TimeZoneInfo> объекты в коллекции с `foreach` помощью цикла C# `For Each`(в) или...`Next` цикл (в Visual Basic) и выполните необходимую обработку для каждого объекта. Например, следующий код перечисляет <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> коллекцию объектов, возвращенных на шаге 1, и отображает отображаемое имя каждого часового пояса в консоли.
+2. Перечисление отдельных объектов <xref:System.TimeZoneInfo> в коллекции с помощью цикла `foreach` (в C#) или `For Each`...`Next` цикл (в Visual Basic) и выполните необходимую обработку для каждого объекта. Например, следующий код перечисляет <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> коллекцию объектов <xref:System.TimeZoneInfo>, возвращаемых на шаге 1, и отображает отображаемое имя каждого часового пояса в консоли.
 
    [!code-csharp[System.TimeZone2.Concepts#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#12)]
    [!code-vb[System.TimeZone2.Concepts#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#12)]
 
 ### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Предоставление пользователю списка часовых поясов, имеющихся в локальной системе
 
-1. Вызовите метод <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. Метод возвращает универсальную <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> коллекцию объектов.
+1. Вызовите метод <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. Метод возвращает универсальную коллекцию <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> объектов <xref:System.TimeZoneInfo>.
 
-2. Назначьте коллекцию, возвращенную в шаге 1 `DataSource` , свойству элемента управления Windows Forms или ASP.NET List.
+2. Назначьте коллекцию, возвращенную в шаге 1, свойству `DataSource` элемента управления списка Windows Forms или ASP.NET.
 
-3. <xref:System.TimeZoneInfo> Получение объекта, выбранного пользователем.
+3. Получение объекта <xref:System.TimeZoneInfo>, выбранного пользователем.
 
 В примере показана Иллюстрация для приложения Windows.
 
 ## <a name="example"></a>Пример
 
-В примере запускается приложение Windows, которое отображает Часовые пояса, определенные в системе, в поле со списком. Затем в примере отображается диалоговое окно, содержащее значение <xref:System.TimeZoneInfo.DisplayName%2A> свойства объекта часового пояса, выбранного пользователем.
+В примере запускается приложение Windows, которое отображает Часовые пояса, определенные в системе, в поле со списком. Затем в примере отображается диалоговое окно, содержащее значение свойства <xref:System.TimeZoneInfo.DisplayName%2A> объекта часового пояса, выбранного пользователем.
 
 [!code-csharp[System.TimeZone2.Concepts#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#2)]
 [!code-vb[System.TimeZone2.Concepts#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#2)]
 
-Большинство элементов управления "список" ( <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> например <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> , или) позволяют назначить коллекцию переменных объекта их `DataSource` <xref:System.Collections.IEnumerable> свойству, если эта коллекция реализует интерфейс. (Это делается <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> универсальным классом.) Чтобы отобразить отдельный объект в коллекции, элемент управления вызывает `ToString` метод объекта для извлечения строки, используемой для представления объекта. В случае <xref:System.TimeZoneInfo> с объектами `ToString` метод возвращает <xref:System.TimeZoneInfo> отображаемое имя объекта (значение его <xref:System.TimeZoneInfo.DisplayName%2A> свойства).
+Большинство элементов управления "список" (например, <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> или <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>) позволяют присвоить коллекции объектных переменных свойству `DataSource`, если эта коллекция реализует интерфейс <xref:System.Collections.IEnumerable>. (Это делается универсальным классом <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.) Чтобы отобразить отдельный объект в коллекции, элемент управления вызывает метод `ToString` объекта для извлечения строки, используемой для представления объекта. В случае <xref:System.TimeZoneInfo> объектов метод `ToString` Возвращает отображаемое имя объекта <xref:System.TimeZoneInfo> (значение его свойства <xref:System.TimeZoneInfo.DisplayName%2A>).
 
 > [!NOTE]
-> Поскольку элементы управления "список" вызывают `ToString` метод объекта, можно присвоить элементу управления <xref:System.TimeZoneInfo> коллекцию объектов, отображать для каждого <xref:System.TimeZoneInfo> объекта понятное имя и получать объект, выбранный пользователем. Это избавляет от необходимости извлекать строку для каждого объекта в коллекции, присваивать строку коллекции, которая, в свою очередь, присвоена `DataSource` свойству элемента управления, получать строку, выбранную пользователем, а затем использовать эту строку для извлечения объекта. его описание. 
+> Поскольку элементы управления "список" вызывают метод `ToString` объекта, можно присвоить элементу управления коллекцию <xref:System.TimeZoneInfo> объектов, иметь элемент управления отображать значимое имя для каждого объекта и получать объект <xref:System.TimeZoneInfo>, который выбрал пользователь. Это избавляет от необходимости извлекать строку для каждого объекта в коллекции, присваивать строке коллекции, которая в свою очередь назначена свойству `DataSource` элемента управления, получать строку, выбранную пользователем, а затем использовать эту строку для извлечения объекта, который Он описывает. 
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
@@ -65,7 +63,7 @@ ms.locfileid: "70106655"
 
 - Для импорта следующих пространств имен:
 
-  <xref:System>(в C# коде)
+  <xref:System> (в C# коде)
 
   <xref:System.Collections.ObjectModel>
 
