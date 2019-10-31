@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: af0c67c7-f53e-47c9-b84b-be50bd04903e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a3f01edcd6ce1d16ab2c651a66d2fd9cd2eb0ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e0b0c4ed9bac4abd1dc185031e41c1e3ed014a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134675"
 ---
-# <a name="icordebugappdomainisattached-method"></a><span data-ttu-id="40ade-102">Метод ICorDebugAppDomain::IsAttached</span><span class="sxs-lookup"><span data-stu-id="40ade-102">ICorDebugAppDomain::IsAttached Method</span></span>
-<span data-ttu-id="40ade-103">Получает значение, указывающее, присоединен ли отладчик в домен приложения.</span><span class="sxs-lookup"><span data-stu-id="40ade-103">Gets a value that indicates whether the debugger is attached to the application domain.</span></span>  
+# <a name="icordebugappdomainisattached-method"></a><span data-ttu-id="2ad1d-102">Метод ICorDebugAppDomain::IsAttached</span><span class="sxs-lookup"><span data-stu-id="2ad1d-102">ICorDebugAppDomain::IsAttached Method</span></span>
+<span data-ttu-id="2ad1d-103">Возвращает значение, указывающее, присоединен ли отладчик к домену приложения.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-103">Gets a value that indicates whether the debugger is attached to the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40ade-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40ade-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ad1d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2ad1d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsAttached (  
@@ -35,18 +33,18 @@ HRESULT IsAttached (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40ade-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="40ade-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ad1d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2ad1d-105">Parameters</span></span>  
  `pbAttached`  
- <span data-ttu-id="40ade-106">[out] `true` Если отладчик присоединен в домен приложения; в противном случае — значение `false`.</span><span class="sxs-lookup"><span data-stu-id="40ade-106">[out] `true` if the debugger is attached to the application domain; otherwise, `false`.</span></span>  
+ <span data-ttu-id="2ad1d-106">[out] `true`, если отладчик присоединен к домену приложения; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-106">[out] `true` if the debugger is attached to the application domain; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="40ade-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="40ade-107">Remarks</span></span>  
- <span data-ttu-id="40ade-108">ICorDebugController методы нельзя использовать до подключения отладчика к домену приложения.</span><span class="sxs-lookup"><span data-stu-id="40ade-108">The ICorDebugController methods cannot be used until the debugger attaches to the application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ad1d-107">Заметки</span><span class="sxs-lookup"><span data-stu-id="2ad1d-107">Remarks</span></span>  
+ <span data-ttu-id="2ad1d-108">Методы ICorDebugController нельзя использовать до тех пор, пока отладчик не подключится к домену приложения.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-108">The ICorDebugController methods cannot be used until the debugger attaches to the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40ade-109">Требования</span><span class="sxs-lookup"><span data-stu-id="40ade-109">Requirements</span></span>  
- <span data-ttu-id="40ade-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40ade-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ad1d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="2ad1d-109">Requirements</span></span>  
+ <span data-ttu-id="2ad1d-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ad1d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40ade-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="40ade-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ad1d-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ad1d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="40ade-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40ade-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ad1d-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ad1d-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="40ade-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40ade-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2ad1d-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ad1d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

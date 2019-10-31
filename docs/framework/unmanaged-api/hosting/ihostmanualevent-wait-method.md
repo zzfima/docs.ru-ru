@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1fbb7d8b-8a23-4c2b-8376-1a70cd2d6030
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2242395a02254268c9492e534309c690a343ffbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f39a5af706ef49e3f6e4bd040d752e5698063b29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136748"
 ---
-# <a name="ihostmanualeventwait-method"></a><span data-ttu-id="aec91-102">Метод IHostManualEvent::Wait</span><span class="sxs-lookup"><span data-stu-id="aec91-102">IHostManualEvent::Wait Method</span></span>
-<span data-ttu-id="aec91-103">Вызывает текущий [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) экземпляр ждать, пока он принадлежал или определенный промежуток времени.</span><span class="sxs-lookup"><span data-stu-id="aec91-103">Causes the current [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance to wait until it is owned, or a specified amount of time elapses.</span></span>  
+# <a name="ihostmanualeventwait-method"></a><span data-ttu-id="501bc-102">Метод IHostManualEvent::Wait</span><span class="sxs-lookup"><span data-stu-id="501bc-102">IHostManualEvent::Wait Method</span></span>
+<span data-ttu-id="501bc-103">Заставляет текущий экземпляр [ихостмануалевент](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) ожидать его признания или истечения указанного времени.</span><span class="sxs-lookup"><span data-stu-id="501bc-103">Causes the current [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instance to wait until it is owned, or a specified amount of time elapses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aec91-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aec91-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="501bc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="501bc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Wait (  
@@ -36,38 +34,38 @@ HRESULT Wait (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aec91-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="aec91-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="501bc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="501bc-105">Parameters</span></span>  
  `dwMilliseconds`  
- <span data-ttu-id="aec91-106">[in] Количество миллисекунд ожидания перед возвратом, если текущий `IHostManualEvent` экземпляр не принадлежит.</span><span class="sxs-lookup"><span data-stu-id="aec91-106">[in] The number of milliseconds to wait before returning, if the current `IHostManualEvent` instance is not owned.</span></span>  
+ <span data-ttu-id="501bc-106">окне Число миллисекунд ожидания перед возвратом, если текущий экземпляр `IHostManualEvent` не владеет.</span><span class="sxs-lookup"><span data-stu-id="501bc-106">[in] The number of milliseconds to wait before returning, if the current `IHostManualEvent` instance is not owned.</span></span>  
   
  `option`  
- <span data-ttu-id="aec91-107">[in] Один из [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) значений, указывающий действие, выполняемое узлом, если это операция блокирует.</span><span class="sxs-lookup"><span data-stu-id="aec91-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, indicating the action the host should take if this operation blocks.</span></span>  
+ <span data-ttu-id="501bc-107">окне Одно из значений [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , указывающее действие, которое должен выполнить узел, если эта операция блокируется.</span><span class="sxs-lookup"><span data-stu-id="501bc-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, indicating the action the host should take if this operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aec91-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="aec91-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="501bc-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="501bc-108">Return Value</span></span>  
   
-|<span data-ttu-id="aec91-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="aec91-109">HRESULT</span></span>|<span data-ttu-id="aec91-110">Описание</span><span class="sxs-lookup"><span data-stu-id="aec91-110">Description</span></span>|  
+|<span data-ttu-id="501bc-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="501bc-109">HRESULT</span></span>|<span data-ttu-id="501bc-110">Описание</span><span class="sxs-lookup"><span data-stu-id="501bc-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="aec91-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="aec91-111">S_OK</span></span>|<span data-ttu-id="aec91-112">`Wait` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="aec91-112">`Wait` returned successfully.</span></span>|  
-|<span data-ttu-id="aec91-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="aec91-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="aec91-114">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="aec91-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="aec91-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="aec91-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="aec91-116">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="aec91-116">The call timed out.</span></span>|  
-|<span data-ttu-id="aec91-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="aec91-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="aec91-118">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="aec91-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="aec91-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="aec91-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="aec91-120">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="aec91-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="aec91-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="aec91-121">E_FAIL</span></span>|<span data-ttu-id="aec91-122">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="aec91-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="aec91-123">Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="aec91-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="aec91-124">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="aec91-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="aec91-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="aec91-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="aec91-126">Узел обнаружил взаимоблокировку в период ожидания и выберите текущий `IHostManualEvent` экземпляр в качестве жертвы взаимоблокировки.</span><span class="sxs-lookup"><span data-stu-id="aec91-126">The host detected a deadlock during the wait interval, and chose the current `IHostManualEvent` instance as the deadlock victim.</span></span>|  
+|<span data-ttu-id="501bc-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="501bc-111">S_OK</span></span>|<span data-ttu-id="501bc-112">`Wait` успешно возвращено.</span><span class="sxs-lookup"><span data-stu-id="501bc-112">`Wait` returned successfully.</span></span>|  
+|<span data-ttu-id="501bc-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="501bc-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="501bc-114">Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="501bc-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="501bc-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="501bc-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="501bc-116">Время ожидания вызова истекло.</span><span class="sxs-lookup"><span data-stu-id="501bc-116">The call timed out.</span></span>|  
+|<span data-ttu-id="501bc-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="501bc-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="501bc-118">Вызывающий объект не владеет блокировкой.</span><span class="sxs-lookup"><span data-stu-id="501bc-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="501bc-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="501bc-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="501bc-120">Событие было отменено, пока заблокированный поток или волокно ожидают его.</span><span class="sxs-lookup"><span data-stu-id="501bc-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="501bc-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="501bc-121">E_FAIL</span></span>|<span data-ttu-id="501bc-122">Произошла неизвестная фатальная ошибка.</span><span class="sxs-lookup"><span data-stu-id="501bc-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="501bc-123">Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="501bc-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="501bc-124">Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="501bc-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="501bc-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="501bc-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="501bc-126">Узел обнаружил взаимоблокировку в течение интервала ожидания и выбрал текущий экземпляр `IHostManualEvent` в качестве жертвы взаимоблокировки.</span><span class="sxs-lookup"><span data-stu-id="501bc-126">The host detected a deadlock during the wait interval, and chose the current `IHostManualEvent` instance as the deadlock victim.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="aec91-127">Требования</span><span class="sxs-lookup"><span data-stu-id="aec91-127">Requirements</span></span>  
- <span data-ttu-id="aec91-128">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aec91-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="501bc-127">Требования</span><span class="sxs-lookup"><span data-stu-id="501bc-127">Requirements</span></span>  
+ <span data-ttu-id="501bc-128">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="501bc-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aec91-129">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="aec91-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="501bc-129">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="501bc-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="aec91-130">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="aec91-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="501bc-130">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="501bc-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="aec91-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aec91-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="501bc-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="501bc-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aec91-132">См. также</span><span class="sxs-lookup"><span data-stu-id="aec91-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="501bc-132">См. также</span><span class="sxs-lookup"><span data-stu-id="501bc-132">See also</span></span>
 
-- [<span data-ttu-id="aec91-133">Интерфейс ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="aec91-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="aec91-134">Интерфейс IHostAutoEvent</span><span class="sxs-lookup"><span data-stu-id="aec91-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="aec91-135">Интерфейс IHostManualEvent</span><span class="sxs-lookup"><span data-stu-id="aec91-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="aec91-136">Интерфейс IHostSemaphore</span><span class="sxs-lookup"><span data-stu-id="aec91-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="aec91-137">Интерфейс IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="aec91-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="501bc-133">Интерфейс ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="501bc-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="501bc-134">Интерфейс IHostAutoEvent</span><span class="sxs-lookup"><span data-stu-id="501bc-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="501bc-135">Интерфейс IHostManualEvent</span><span class="sxs-lookup"><span data-stu-id="501bc-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="501bc-136">Интерфейс IHostSemaphore</span><span class="sxs-lookup"><span data-stu-id="501bc-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="501bc-137">Интерфейс IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="501bc-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

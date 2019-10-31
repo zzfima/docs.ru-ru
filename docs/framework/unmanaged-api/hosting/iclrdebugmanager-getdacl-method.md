@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7115e920-aaff-440a-824e-39497139c6f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b19d6e43783211698ae2e68868aff87c91cc3e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a18e1efd246b0d6895d18ae0e7089a78703eae0e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773140"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129426"
 ---
-# <a name="iclrdebugmanagergetdacl-method"></a><span data-ttu-id="d1b99-102">Метод ICLRDebugManager::GetDacl</span><span class="sxs-lookup"><span data-stu-id="d1b99-102">ICLRDebugManager::GetDacl Method</span></span>
-<span data-ttu-id="d1b99-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="d1b99-103">This method is not implemented.</span></span>  
+# <a name="iclrdebugmanagergetdacl-method"></a><span data-ttu-id="bdf38-102">Метод ICLRDebugManager::GetDacl</span><span class="sxs-lookup"><span data-stu-id="bdf38-102">ICLRDebugManager::GetDacl Method</span></span>
+<span data-ttu-id="bdf38-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="bdf38-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1b99-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d1b99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bdf38-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bdf38-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDacl (  
@@ -35,28 +33,28 @@ HRESULT GetDacl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1b99-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d1b99-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bdf38-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bdf38-105">Parameters</span></span>  
  `ppacl`  
- <span data-ttu-id="d1b99-106">[out] Указатель интерфейса списка управления доступом (ACL).</span><span class="sxs-lookup"><span data-stu-id="d1b99-106">[out] An interface pointer to the Access Control List (ACL).</span></span>  
+ <span data-ttu-id="bdf38-106">заполняет Указатель интерфейса на список управления доступом (ACL).</span><span class="sxs-lookup"><span data-stu-id="bdf38-106">[out] An interface pointer to the Access Control List (ACL).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d1b99-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d1b99-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bdf38-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="bdf38-107">Return Value</span></span>  
   
-|<span data-ttu-id="d1b99-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d1b99-108">HRESULT</span></span>|<span data-ttu-id="d1b99-109">Описание</span><span class="sxs-lookup"><span data-stu-id="d1b99-109">Description</span></span>|  
+|<span data-ttu-id="bdf38-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bdf38-108">HRESULT</span></span>|<span data-ttu-id="bdf38-109">Описание</span><span class="sxs-lookup"><span data-stu-id="bdf38-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d1b99-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="d1b99-110">E_NOTIMPL</span></span>|<span data-ttu-id="d1b99-111">Метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="d1b99-111">The method is not implemented.</span></span>|  
+|<span data-ttu-id="bdf38-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="bdf38-110">E_NOTIMPL</span></span>|<span data-ttu-id="bdf38-111">Метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="bdf38-111">The method is not implemented.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d1b99-112">Требования</span><span class="sxs-lookup"><span data-stu-id="d1b99-112">Requirements</span></span>  
- <span data-ttu-id="d1b99-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1b99-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bdf38-112">Требования</span><span class="sxs-lookup"><span data-stu-id="bdf38-112">Requirements</span></span>  
+ <span data-ttu-id="bdf38-113">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bdf38-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1b99-114">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d1b99-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bdf38-114">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="bdf38-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d1b99-115">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d1b99-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bdf38-115">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="bdf38-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d1b99-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1b99-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bdf38-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bdf38-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1b99-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d1b99-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdf38-117">См. также</span><span class="sxs-lookup"><span data-stu-id="bdf38-117">See also</span></span>
 
-- [<span data-ttu-id="d1b99-118">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="d1b99-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="d1b99-119">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="d1b99-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [<span data-ttu-id="d1b99-120">Метод SetDacl</span><span class="sxs-lookup"><span data-stu-id="d1b99-120">SetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
-- [<span data-ttu-id="d1b99-121">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="d1b99-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="bdf38-118">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="bdf38-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="bdf38-119">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="bdf38-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="bdf38-120">Метод SetDacl</span><span class="sxs-lookup"><span data-stu-id="bdf38-120">SetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
+- [<span data-ttu-id="bdf38-121">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="bdf38-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

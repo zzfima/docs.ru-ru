@@ -15,33 +15,31 @@ helpviewer_keywords:
 ms.assetid: 90f5e791-038b-4b05-9bc5-8d4367d0173e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 967bab92ddf452fcbc3ad32fdee2ba43fc018e88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97afd08e11fd8931600e72c34af183a4dbc0fd5f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139623"
 ---
-# <a name="icorruntimehostcreatelogicalthreadstate-method"></a><span data-ttu-id="8d2b2-102">Метод ICorRuntimeHost::CreateLogicalThreadState</span><span class="sxs-lookup"><span data-stu-id="8d2b2-102">ICorRuntimeHost::CreateLogicalThreadState Method</span></span>
-<span data-ttu-id="8d2b2-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="8d2b2-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostcreatelogicalthreadstate-method"></a><span data-ttu-id="c9872-102">Метод ICorRuntimeHost::CreateLogicalThreadState</span><span class="sxs-lookup"><span data-stu-id="c9872-102">ICorRuntimeHost::CreateLogicalThreadState Method</span></span>
+<span data-ttu-id="c9872-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="c9872-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d2b2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8d2b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9872-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c9872-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8d2b2-105">Требования</span><span class="sxs-lookup"><span data-stu-id="8d2b2-105">Requirements</span></span>  
- <span data-ttu-id="8d2b2-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d2b2-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9872-105">Требования</span><span class="sxs-lookup"><span data-stu-id="c9872-105">Requirements</span></span>  
+ <span data-ttu-id="c9872-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9872-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d2b2-107">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8d2b2-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c9872-107">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="c9872-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8d2b2-108">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8d2b2-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c9872-108">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c9872-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8d2b2-109">**Версии платформы .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="8d2b2-109">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="c9872-109">**Версия .NET Framework:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="c9872-109">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d2b2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="8d2b2-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9872-110">См. также</span><span class="sxs-lookup"><span data-stu-id="c9872-110">See also</span></span>
 
-- [<span data-ttu-id="8d2b2-111">Интерфейс ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="8d2b2-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="c9872-111">Интерфейс ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="c9872-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

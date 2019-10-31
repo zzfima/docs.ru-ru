@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78f2733584e07433171c91d6a2674d3a67c8e283
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f3010cccc584288608b3f6ba95efbeb95f271fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772518"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132062"
 ---
-# <a name="icordebugtypegettype-method"></a><span data-ttu-id="7850f-102">Метод ICorDebugType::GetType</span><span class="sxs-lookup"><span data-stu-id="7850f-102">ICorDebugType::GetType Method</span></span>
-<span data-ttu-id="7850f-103">Получает значение CorElementType, описывающее в собственный тип общеязыковой среды выполнения (CLR) <xref:System.Type> представленный ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="7850f-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  
+# <a name="icordebugtypegettype-method"></a><span data-ttu-id="c12c1-102">Метод ICorDebugType::GetType</span><span class="sxs-lookup"><span data-stu-id="c12c1-102">ICorDebugType::GetType Method</span></span>
+<span data-ttu-id="c12c1-103">Возвращает значение Корелементтипе, которое описывает собственный тип <xref:System.Type> среды CLR, представленный этим объектом ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="c12c1-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7850f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7850f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c12c1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c12c1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetType (  
@@ -35,18 +33,18 @@ HRESULT GetType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7850f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7850f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c12c1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c12c1-105">Parameters</span></span>  
  `ty`  
- <span data-ttu-id="7850f-106">[out] Указатель на значение `CorElementType` перечисление, указывающее, среда CLR <xref:System.Type> этим `ICorDebugType` представляет.</span><span class="sxs-lookup"><span data-stu-id="7850f-106">[out] A pointer to a value of the `CorElementType` enumeration that indicates the CLR <xref:System.Type> that this `ICorDebugType` represents.</span></span>  
+ <span data-ttu-id="c12c1-106">заполняет Указатель на значение перечисления `CorElementType`, указывающее <xref:System.Type> среды CLR, которую представляет этот `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="c12c1-106">[out] A pointer to a value of the `CorElementType` enumeration that indicates the CLR <xref:System.Type> that this `ICorDebugType` represents.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7850f-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="7850f-107">Remarks</span></span>  
- <span data-ttu-id="7850f-108">Если значение `ty` ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) метод может вызываться для получения типа без экземпляров универсального типа; в противном случае не вызывайте `ICorDebugType::GetClass`.</span><span class="sxs-lookup"><span data-stu-id="7850f-108">If the value of `ty` is either ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, the [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) method may be called to get the uninstantiated type for a generic type; otherwise, do not call `ICorDebugType::GetClass`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c12c1-107">Заметки</span><span class="sxs-lookup"><span data-stu-id="c12c1-107">Remarks</span></span>  
+ <span data-ttu-id="c12c1-108">Если значение `ty` — ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, то метод [ICorDebugType:: coclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) можно вызвать, чтобы получить неэкземплярный тип для универсального типа. в противном случае не вызывайте `ICorDebugType::GetClass`.</span><span class="sxs-lookup"><span data-stu-id="c12c1-108">If the value of `ty` is either ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, the [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) method may be called to get the uninstantiated type for a generic type; otherwise, do not call `ICorDebugType::GetClass`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7850f-109">Требования</span><span class="sxs-lookup"><span data-stu-id="7850f-109">Requirements</span></span>  
- <span data-ttu-id="7850f-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7850f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c12c1-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c12c1-109">Requirements</span></span>  
+ <span data-ttu-id="c12c1-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c12c1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7850f-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7850f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c12c1-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c12c1-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7850f-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7850f-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c12c1-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c12c1-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7850f-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7850f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c12c1-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c12c1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

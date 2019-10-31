@@ -14,38 +14,36 @@ helpviewer_keywords:
 ms.assetid: c6c3ace6-e5e7-4450-8cc5-a9a48208c493
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7864bb81c3b457bf8ec07cd194d24b29a42bd441
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b63d4269a8d48ee49016a4c51d63bf81bdba8da2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141028"
 ---
-# <a name="iclriocompletionmanager-interface"></a><span data-ttu-id="05aab-102">Интерфейс ICLRIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="05aab-102">ICLRIoCompletionManager Interface</span></span>
-<span data-ttu-id="05aab-103">Реализует метод обратного вызова, позволяющий основному приложению уведомлять общеязыковой среды выполнения (CLR) о состоянии указанной операции ввода-вывода запросов.</span><span class="sxs-lookup"><span data-stu-id="05aab-103">Implements a callback method that allows the host to notify the common language runtime (CLR) of the status of specified I/O requests.</span></span>  
+# <a name="iclriocompletionmanager-interface"></a><span data-ttu-id="26078-102">Интерфейс ICLRIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="26078-102">ICLRIoCompletionManager Interface</span></span>
+<span data-ttu-id="26078-103">Реализует метод обратного вызова, который позволяет узлу уведомлять среду CLR о состоянии указанных запросов ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="26078-103">Implements a callback method that allows the host to notify the common language runtime (CLR) of the status of specified I/O requests.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="05aab-104">Методы</span><span class="sxs-lookup"><span data-stu-id="05aab-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="26078-104">Методы</span><span class="sxs-lookup"><span data-stu-id="26078-104">Methods</span></span>  
   
-|<span data-ttu-id="05aab-105">Метод</span><span class="sxs-lookup"><span data-stu-id="05aab-105">Method</span></span>|<span data-ttu-id="05aab-106">Описание</span><span class="sxs-lookup"><span data-stu-id="05aab-106">Description</span></span>|  
+|<span data-ttu-id="26078-105">Метод</span><span class="sxs-lookup"><span data-stu-id="26078-105">Method</span></span>|<span data-ttu-id="26078-106">Описание</span><span class="sxs-lookup"><span data-stu-id="26078-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="05aab-107">Метод OnComplete</span><span class="sxs-lookup"><span data-stu-id="05aab-107">OnComplete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|<span data-ttu-id="05aab-108">Уведомляет среду CLR о состоянии запроса ввода-вывода, которые были выполнены с помощью вызова [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="05aab-108">Notifies the CLR of the status of an I/O request that was made by using a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span>|  
+|[<span data-ttu-id="26078-107">Метод OnComplete</span><span class="sxs-lookup"><span data-stu-id="26078-107">OnComplete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|<span data-ttu-id="26078-108">Сообщает среде CLR о состоянии запроса ввода-вывода, сделанного с помощью вызова метода [IHostIoCompletionManager:: BIND](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) .</span><span class="sxs-lookup"><span data-stu-id="26078-108">Notifies the CLR of the status of an I/O request that was made by using a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="05aab-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="05aab-109">Remarks</span></span>  
- <span data-ttu-id="05aab-110">Сервер реализует интерфейс абстракции завершения ввода-вывода с помощью [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="05aab-110">The host implements the I/O completion abstraction by using the [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md) interface.</span></span> <span data-ttu-id="05aab-111">Среда CLR выполняет запросы ввода-вывода через этот интерфейс, и основное приложение уведомляет среду выполнения о результатах такого запроса с помощью `ICLRIoCompletionManager` интерфейс.</span><span class="sxs-lookup"><span data-stu-id="05aab-111">The CLR makes I/O requests through this interface, and the host notifies the runtime of the outcome of such requests by using the `ICLRIoCompletionManager` interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="26078-109">Заметки</span><span class="sxs-lookup"><span data-stu-id="26078-109">Remarks</span></span>  
+ <span data-ttu-id="26078-110">Узел реализует абстракцию завершения ввода-вывода с помощью интерфейса [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="26078-110">The host implements the I/O completion abstraction by using the [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md) interface.</span></span> <span data-ttu-id="26078-111">Среда CLR делает запросы ввода-вывода через этот интерфейс, и узел уведомляет среду выполнения о результатах таких запросов с помощью интерфейса `ICLRIoCompletionManager`.</span><span class="sxs-lookup"><span data-stu-id="26078-111">The CLR makes I/O requests through this interface, and the host notifies the runtime of the outcome of such requests by using the `ICLRIoCompletionManager` interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05aab-112">Требования</span><span class="sxs-lookup"><span data-stu-id="05aab-112">Requirements</span></span>  
- <span data-ttu-id="05aab-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05aab-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26078-112">Требования</span><span class="sxs-lookup"><span data-stu-id="26078-112">Requirements</span></span>  
+ <span data-ttu-id="26078-113">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26078-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05aab-114">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="05aab-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="26078-114">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="26078-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="05aab-115">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="05aab-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="26078-115">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="26078-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="05aab-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05aab-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="26078-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26078-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05aab-117">См. также</span><span class="sxs-lookup"><span data-stu-id="05aab-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26078-117">См. также</span><span class="sxs-lookup"><span data-stu-id="26078-117">See also</span></span>
 
-- [<span data-ttu-id="05aab-118">Интерфейс IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="05aab-118">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
-- [<span data-ttu-id="05aab-119">Интерфейс IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="05aab-119">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
-- [<span data-ttu-id="05aab-120">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="05aab-120">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="26078-118">Интерфейс IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="26078-118">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [<span data-ttu-id="26078-119">Интерфейс IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="26078-119">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="26078-120">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="26078-120">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
