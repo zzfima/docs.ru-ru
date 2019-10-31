@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795276"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109494"
 ---
-# <a name="asm_cache_flags-enumeration"></a><span data-ttu-id="b3a97-102">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="b3a97-102">ASM_CACHE_FLAGS Enumeration</span></span>
-<span data-ttu-id="b3a97-103">Указывает источник сборки, представленной [IAssemblyCacheItem](iassemblycacheitem-interface.md) в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="b3a97-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
+# <a name="asm_cache_flags-enumeration"></a><span data-ttu-id="bdec6-102">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="bdec6-102">ASM_CACHE_FLAGS Enumeration</span></span>
+<span data-ttu-id="bdec6-103">Указывает источник сборки, представленной [IAssemblyCacheItem](iassemblycacheitem-interface.md) в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="bdec6-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3a97-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b3a97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bdec6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bdec6-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -38,27 +36,27 @@ typedef enum {
 } ASM_CACHE_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b3a97-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b3a97-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bdec6-105">Члены</span><span class="sxs-lookup"><span data-stu-id="bdec6-105">Members</span></span>  
   
-|<span data-ttu-id="b3a97-106">Член</span><span class="sxs-lookup"><span data-stu-id="b3a97-106">Member</span></span>|<span data-ttu-id="b3a97-107">Описание</span><span class="sxs-lookup"><span data-stu-id="b3a97-107">Description</span></span>|  
+|<span data-ttu-id="bdec6-106">Член</span><span class="sxs-lookup"><span data-stu-id="bdec6-106">Member</span></span>|<span data-ttu-id="bdec6-107">Описание</span><span class="sxs-lookup"><span data-stu-id="bdec6-107">Description</span></span>|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|<span data-ttu-id="b3a97-108">Перечисляет кэш предварительно скомпилированных сборок с помощью Ngen. exe.</span><span class="sxs-lookup"><span data-stu-id="b3a97-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
-|`ASM_CACHE_GAC`|<span data-ttu-id="b3a97-109">Перечисляет глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="b3a97-109">Enumerates the global assembly cache.</span></span>|  
-|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="b3a97-110">Перечисляет сборки, скачанные по запросу или теневые копии.</span><span class="sxs-lookup"><span data-stu-id="b3a97-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
-|`ASM_CACHE_ROOT`|<span data-ttu-id="b3a97-111">Указывает, что функция [жеткачепас](getcachepath-function.md) должна возвращать путь к глобальному кэшу сборок для общеязыковой среды выполнения (CLR) версии 2,0.</span><span class="sxs-lookup"><span data-stu-id="b3a97-111">Indicates that the [GetCachePath](getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="b3a97-112">Имеет смысл только в контексте вызова [жеткачепас](getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="b3a97-112">Meaningful only in the context of a call to [GetCachePath](getcachepath-function.md).</span></span>|  
-|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="b3a97-113">Указывает, что функция [жеткачепас](getcachepath-function.md) должна возвращать путь к глобальному кэшу сборок для CLR версии 4.</span><span class="sxs-lookup"><span data-stu-id="b3a97-113">Indicates that the [GetCachePath](getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="b3a97-114">Имеет смысл только в контексте вызова [жеткачепас](getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="b3a97-114">Meaningful only in the context of a call to [GetCachePath](getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ZAP`|<span data-ttu-id="bdec6-108">Перечисляет кэш предварительно скомпилированных сборок с помощью Ngen. exe.</span><span class="sxs-lookup"><span data-stu-id="bdec6-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
+|`ASM_CACHE_GAC`|<span data-ttu-id="bdec6-109">Перечисляет глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="bdec6-109">Enumerates the global assembly cache.</span></span>|  
+|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="bdec6-110">Перечисляет сборки, скачанные по запросу или теневые копии.</span><span class="sxs-lookup"><span data-stu-id="bdec6-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
+|`ASM_CACHE_ROOT`|<span data-ttu-id="bdec6-111">Указывает, что функция [жеткачепас](getcachepath-function.md) должна возвращать путь к глобальному кэшу сборок для общеязыковой среды выполнения (CLR) версии 2,0.</span><span class="sxs-lookup"><span data-stu-id="bdec6-111">Indicates that the [GetCachePath](getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="bdec6-112">Имеет смысл только в контексте вызова [жеткачепас](getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="bdec6-112">Meaningful only in the context of a call to [GetCachePath](getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="bdec6-113">Указывает, что функция [жеткачепас](getcachepath-function.md) должна возвращать путь к глобальному кэшу сборок для CLR версии 4.</span><span class="sxs-lookup"><span data-stu-id="bdec6-113">Indicates that the [GetCachePath](getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="bdec6-114">Имеет смысл только в контексте вызова [жеткачепас](getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="bdec6-114">Meaningful only in the context of a call to [GetCachePath](getcachepath-function.md).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b3a97-115">Требования</span><span class="sxs-lookup"><span data-stu-id="b3a97-115">Requirements</span></span>  
- <span data-ttu-id="b3a97-116">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3a97-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bdec6-115">Требования</span><span class="sxs-lookup"><span data-stu-id="bdec6-115">Requirements</span></span>  
+ <span data-ttu-id="bdec6-116">**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bdec6-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3a97-117">**Заголовок.** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="b3a97-117">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="bdec6-117">**Заголовок:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="bdec6-117">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b3a97-118">**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b3a97-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bdec6-118">**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="bdec6-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b3a97-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3a97-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bdec6-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bdec6-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3a97-120">См. также</span><span class="sxs-lookup"><span data-stu-id="b3a97-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdec6-120">См. также</span><span class="sxs-lookup"><span data-stu-id="bdec6-120">See also</span></span>
 
-- [<span data-ttu-id="b3a97-121">Функция GetCachePath</span><span class="sxs-lookup"><span data-stu-id="b3a97-121">GetCachePath Function</span></span>](getcachepath-function.md)
-- [<span data-ttu-id="b3a97-122">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="b3a97-122">IAssemblyCacheItem Interface</span></span>](iassemblycacheitem-interface.md)
-- [<span data-ttu-id="b3a97-123">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="b3a97-123">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="bdec6-121">Функция GetCachePath</span><span class="sxs-lookup"><span data-stu-id="bdec6-121">GetCachePath Function</span></span>](getcachepath-function.md)
+- [<span data-ttu-id="bdec6-122">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="bdec6-122">IAssemblyCacheItem Interface</span></span>](iassemblycacheitem-interface.md)
+- [<span data-ttu-id="bdec6-123">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="bdec6-123">Fusion Enumerations</span></span>](fusion-enumerations.md)

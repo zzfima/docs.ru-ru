@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63275aaa7ed1f63c4f100845d2cbe9e93fcd0bcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768017"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131247"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="59158-102">Перечисление COR_GC_THREAD_STATS_TYPES</span><span class="sxs-lookup"><span data-stu-id="59158-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
-<span data-ttu-id="59158-103">Указывает, статистика сборки мусора для потока.</span><span class="sxs-lookup"><span data-stu-id="59158-103">Indicates the garbage collection statistics for a thread.</span></span>  
+# <a name="cor_gc_thread_stats_types-enumeration"></a><span data-ttu-id="a51ec-102">Перечисление COR_GC_THREAD_STATS_TYPES</span><span class="sxs-lookup"><span data-stu-id="a51ec-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+<span data-ttu-id="a51ec-103">Указывает статистику сборки мусора для потока.</span><span class="sxs-lookup"><span data-stu-id="a51ec-103">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59158-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="59158-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a51ec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a51ec-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -34,19 +32,19 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="59158-105">Участники</span><span class="sxs-lookup"><span data-stu-id="59158-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a51ec-105">Члены</span><span class="sxs-lookup"><span data-stu-id="a51ec-105">Members</span></span>  
   
-|<span data-ttu-id="59158-106">Член</span><span class="sxs-lookup"><span data-stu-id="59158-106">Member</span></span>|<span data-ttu-id="59158-107">Описание</span><span class="sxs-lookup"><span data-stu-id="59158-107">Description</span></span>|  
+|<span data-ttu-id="a51ec-106">Член</span><span class="sxs-lookup"><span data-stu-id="a51ec-106">Member</span></span>|<span data-ttu-id="a51ec-107">Описание</span><span class="sxs-lookup"><span data-stu-id="a51ec-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="59158-108">Поток имеет байт, которые были переданы в последней сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="59158-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="a51ec-108">Поток содержит байты, которые были повышены в последней сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="a51ec-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="59158-109">Требования</span><span class="sxs-lookup"><span data-stu-id="59158-109">Requirements</span></span>  
- <span data-ttu-id="59158-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59158-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a51ec-109">Требования</span><span class="sxs-lookup"><span data-stu-id="a51ec-109">Requirements</span></span>  
+ <span data-ttu-id="a51ec-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a51ec-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59158-111">**Заголовок.** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="59158-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="a51ec-111">**Заголовок:** Гчост. idl, Гчост. h</span><span class="sxs-lookup"><span data-stu-id="a51ec-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="59158-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59158-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a51ec-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a51ec-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59158-113">См. также</span><span class="sxs-lookup"><span data-stu-id="59158-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a51ec-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a51ec-113">See also</span></span>
 
-- [<span data-ttu-id="59158-114">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="59158-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="a51ec-114">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="a51ec-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

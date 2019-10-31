@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 41c09512-e8fe-4a82-90c5-6b39c18682da
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29fb23dce20883e2a2a894972cc7c397c04517a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 268baee6c94f7ec0914d5fb01b256a4d8f354330
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120174"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="a0bed-102">Метод ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="a0bed-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="a0bed-103">`ICorDebugErrorInfoEnum::Next` устарел.</span><span class="sxs-lookup"><span data-stu-id="a0bed-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="a0bed-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="a0bed-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="68ef5-102">Метод ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="68ef5-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+<span data-ttu-id="68ef5-103">`ICorDebugErrorInfoEnum::Next` устарел.</span><span class="sxs-lookup"><span data-stu-id="68ef5-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="68ef5-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="68ef5-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0bed-105">См. также</span><span class="sxs-lookup"><span data-stu-id="a0bed-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68ef5-105">См. также</span><span class="sxs-lookup"><span data-stu-id="68ef5-105">See also</span></span>
 
-- [<span data-ttu-id="a0bed-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a0bed-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="68ef5-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="68ef5-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

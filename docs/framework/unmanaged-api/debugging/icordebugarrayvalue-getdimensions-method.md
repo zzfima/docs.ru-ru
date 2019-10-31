@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088500"
 ---
-# <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="58190-102">Метод ICorDebugArrayValue::GetDimensions</span><span class="sxs-lookup"><span data-stu-id="58190-102">ICorDebugArrayValue::GetDimensions Method</span></span>
-<span data-ttu-id="58190-103">Получает число элементов в каждом измерении этого массива.</span><span class="sxs-lookup"><span data-stu-id="58190-103">Gets the number of elements in each dimension of this array.</span></span>  
+# <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="536ea-102">Метод ICorDebugArrayValue::GetDimensions</span><span class="sxs-lookup"><span data-stu-id="536ea-102">ICorDebugArrayValue::GetDimensions Method</span></span>
+<span data-ttu-id="536ea-103">Возвращает количество элементов в каждом измерении этого массива.</span><span class="sxs-lookup"><span data-stu-id="536ea-103">Gets the number of elements in each dimension of this array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58190-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="58190-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="536ea-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="536ea-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDimensions (  
@@ -37,20 +35,20 @@ HRESULT GetDimensions (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="58190-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="58190-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="536ea-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="536ea-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="58190-106">[in] Число измерений противном.</span><span class="sxs-lookup"><span data-stu-id="58190-106">[in] The number of dimensions of this ICorDebugArrayValue object.</span></span>  
+ <span data-ttu-id="536ea-106">окне Число измерений данного объекта ICorDebugArrayValue.</span><span class="sxs-lookup"><span data-stu-id="536ea-106">[in] The number of dimensions of this ICorDebugArrayValue object.</span></span>  
   
- <span data-ttu-id="58190-107">Этот параметр также имеет размер `dims` массива, так как его размер равен числу измерений `ICorDebugArrayValue` объекта.</span><span class="sxs-lookup"><span data-stu-id="58190-107">This value is also the size of the `dims` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="536ea-107">Это значение также является размером массива `dims`, так как его размер равен числу измерений объекта `ICorDebugArrayValue`.</span><span class="sxs-lookup"><span data-stu-id="536ea-107">This value is also the size of the `dims` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `dims`  
- <span data-ttu-id="58190-108">[out] Массив целых чисел, каждое из которых указывает количество элементов в измерении в это `ICorDebugArrayValue` объекта.</span><span class="sxs-lookup"><span data-stu-id="58190-108">[out] An array of integers, each of which specifies the number of elements in a dimension in this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="536ea-108">заполняет Массив целых чисел, каждый из которых указывает количество элементов в измерении в этом `ICorDebugArrayValue` объекте.</span><span class="sxs-lookup"><span data-stu-id="536ea-108">[out] An array of integers, each of which specifies the number of elements in a dimension in this `ICorDebugArrayValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58190-109">Требования</span><span class="sxs-lookup"><span data-stu-id="58190-109">Requirements</span></span>  
- <span data-ttu-id="58190-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58190-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="536ea-109">Требования</span><span class="sxs-lookup"><span data-stu-id="536ea-109">Requirements</span></span>  
+ <span data-ttu-id="536ea-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="536ea-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58190-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58190-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="536ea-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="536ea-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="58190-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58190-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="536ea-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="536ea-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="58190-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58190-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="536ea-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="536ea-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

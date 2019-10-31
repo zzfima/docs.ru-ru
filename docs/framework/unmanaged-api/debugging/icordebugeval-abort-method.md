@@ -15,32 +15,30 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 78402e5e099815fe309618e692285de91b8b29f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124241"
 ---
-# <a name="icordebugevalabort-method"></a><span data-ttu-id="12935-102">Метод ICorDebugEval::Abort</span><span class="sxs-lookup"><span data-stu-id="12935-102">ICorDebugEval::Abort Method</span></span>
-<span data-ttu-id="12935-103">Прерывает выполняемое вычисление этого объекта ICorDebugEval выполняющему в настоящий момент.</span><span class="sxs-lookup"><span data-stu-id="12935-103">Aborts the computation this ICorDebugEval object is currently performing.</span></span>  
+# <a name="icordebugevalabort-method"></a><span data-ttu-id="484d8-102">Метод ICorDebugEval::Abort</span><span class="sxs-lookup"><span data-stu-id="484d8-102">ICorDebugEval::Abort Method</span></span>
+<span data-ttu-id="484d8-103">Прерывает вычисление, которое данный объект ICorDebugEval сейчас выполняет.</span><span class="sxs-lookup"><span data-stu-id="484d8-103">Aborts the computation this ICorDebugEval object is currently performing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12935-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="12935-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="484d8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="484d8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Abort ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="12935-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="12935-105">Remarks</span></span>  
- <span data-ttu-id="12935-106">Если вычисление является вложенным, и это не самую последнюю из них, `Abort` может произойти сбой метода.</span><span class="sxs-lookup"><span data-stu-id="12935-106">If the evaluation is nested and it is not the most recent one, the `Abort` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="484d8-105">Заметки</span><span class="sxs-lookup"><span data-stu-id="484d8-105">Remarks</span></span>  
+ <span data-ttu-id="484d8-106">Если оценка является вложенной и не является самой последней, метод `Abort` может завершиться ошибкой.</span><span class="sxs-lookup"><span data-stu-id="484d8-106">If the evaluation is nested and it is not the most recent one, the `Abort` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="12935-107">Требования</span><span class="sxs-lookup"><span data-stu-id="12935-107">Requirements</span></span>  
- <span data-ttu-id="12935-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="12935-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="484d8-107">Требования</span><span class="sxs-lookup"><span data-stu-id="484d8-107">Requirements</span></span>  
+ <span data-ttu-id="484d8-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="484d8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12935-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="12935-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="484d8-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="484d8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="12935-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="12935-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="484d8-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="484d8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="12935-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12935-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="484d8-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="484d8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

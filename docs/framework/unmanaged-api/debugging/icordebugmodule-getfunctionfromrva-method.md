@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f5a34517-2422-484f-be89-2ce0b4bce195
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ab8d56a457db0a70b47293684f0de73ce9ff5f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6245942f0b5cedd478ba0704acc1fef7251b8211
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763370"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109604"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="edc84-102">Метод ICorDebugModule::GetFunctionFromRVA</span><span class="sxs-lookup"><span data-stu-id="edc84-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="edc84-103">Этот метод не реализован в текущей версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="edc84-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="1e389-102">Метод ICorDebugModule::GetFunctionFromRVA</span><span class="sxs-lookup"><span data-stu-id="1e389-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+<span data-ttu-id="1e389-103">Этот метод не был реализован в текущей версии .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1e389-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edc84-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="edc84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e389-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1e389-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromRVA(  
@@ -36,7 +34,7 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="edc84-105">Требования</span><span class="sxs-lookup"><span data-stu-id="edc84-105">Requirements</span></span>  
- <span data-ttu-id="edc84-106">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="edc84-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e389-105">Требования</span><span class="sxs-lookup"><span data-stu-id="1e389-105">Requirements</span></span>  
+ <span data-ttu-id="1e389-106">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e389-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="edc84-107">См. также</span><span class="sxs-lookup"><span data-stu-id="edc84-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e389-107">См. также</span><span class="sxs-lookup"><span data-stu-id="1e389-107">See also</span></span>

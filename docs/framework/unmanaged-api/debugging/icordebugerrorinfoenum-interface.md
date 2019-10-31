@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a5ff40b0-d04e-40d5-a007-cc6ee7c3a9ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de292b4631e1bcf9f0d31e2e2acaa5fdff96f4f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765450"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124224"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="13f39-102">Интерфейс ICorDebugErrorInfoEnum</span><span class="sxs-lookup"><span data-stu-id="13f39-102">ICorDebugErrorInfoEnum Interface</span></span>
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="4e00d-102">Интерфейс ICorDebugErrorInfoEnum</span><span class="sxs-lookup"><span data-stu-id="4e00d-102">ICorDebugErrorInfoEnum Interface</span></span>
 
-<span data-ttu-id="13f39-103">`ICorDebugErrorInfoEnum` устарел.</span><span class="sxs-lookup"><span data-stu-id="13f39-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="13f39-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="13f39-104">Do not use this interface.</span></span>  
+<span data-ttu-id="4e00d-103">`ICorDebugErrorInfoEnum` устарел.</span><span class="sxs-lookup"><span data-stu-id="4e00d-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="4e00d-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="4e00d-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13f39-105">См. также</span><span class="sxs-lookup"><span data-stu-id="13f39-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e00d-105">См. также</span><span class="sxs-lookup"><span data-stu-id="4e00d-105">See also</span></span>
 
-- [<span data-ttu-id="13f39-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="13f39-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="4e00d-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="4e00d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

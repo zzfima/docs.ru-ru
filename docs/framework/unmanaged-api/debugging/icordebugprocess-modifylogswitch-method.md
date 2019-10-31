@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b8737577bdb5f61f1061cb217620fae03ebd0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139374"
 ---
-# <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="dce5b-102">Метод ICorDebugProcess::ModifyLogSwitch</span><span class="sxs-lookup"><span data-stu-id="dce5b-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
-<span data-ttu-id="dce5b-103">Задает уровень серьезности, указанный журнал коммутатора.</span><span class="sxs-lookup"><span data-stu-id="dce5b-103">Sets the severity level of the specified log switch.</span></span>  
+# <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="17272-102">Метод ICorDebugProcess::ModifyLogSwitch</span><span class="sxs-lookup"><span data-stu-id="17272-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
+<span data-ttu-id="17272-103">Задает уровень серьезности указанного переключателя журнала.</span><span class="sxs-lookup"><span data-stu-id="17272-103">Sets the severity level of the specified log switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dce5b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dce5b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17272-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="17272-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ModifyLogSwitch(  
@@ -35,21 +33,21 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dce5b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="dce5b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17272-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="17272-105">Parameters</span></span>  
  `pLogSwitchName`  
- <span data-ttu-id="dce5b-106">[in] Указатель на строку, которая указывает имя переключателя журнала.</span><span class="sxs-lookup"><span data-stu-id="dce5b-106">[in] A pointer to a string that specifies the name of the log switch.</span></span>  
+ <span data-ttu-id="17272-106">окне Указатель на строку, указывающую имя переключателя журнала.</span><span class="sxs-lookup"><span data-stu-id="17272-106">[in] A pointer to a string that specifies the name of the log switch.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="dce5b-107">[in] Уровень серьезности, который нужно задать для параметра указанного журнала.</span><span class="sxs-lookup"><span data-stu-id="dce5b-107">[in] The severity level to be set for the specified log switch.</span></span>  
+ <span data-ttu-id="17272-107">окне Уровень серьезности, заданный для указанного переключателя журнала.</span><span class="sxs-lookup"><span data-stu-id="17272-107">[in] The severity level to be set for the specified log switch.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dce5b-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="dce5b-108">Remarks</span></span>  
- <span data-ttu-id="dce5b-109">Этот метод допустим только после [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) произошла обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="dce5b-109">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback has occurred.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="17272-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="17272-108">Remarks</span></span>  
+ <span data-ttu-id="17272-109">Этот метод допустим только после выполнения обратного вызова [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .</span><span class="sxs-lookup"><span data-stu-id="17272-109">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback has occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dce5b-110">Требования</span><span class="sxs-lookup"><span data-stu-id="dce5b-110">Requirements</span></span>  
- <span data-ttu-id="dce5b-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dce5b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17272-110">Требования</span><span class="sxs-lookup"><span data-stu-id="17272-110">Requirements</span></span>  
+ <span data-ttu-id="17272-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17272-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dce5b-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dce5b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17272-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17272-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dce5b-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dce5b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17272-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17272-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dce5b-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dce5b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="17272-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17272-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

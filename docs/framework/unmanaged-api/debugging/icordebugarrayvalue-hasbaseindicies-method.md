@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c488ca3a77f2c2b2a40c6143989cd86adf071787
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 418ebb51df3f2d86011ee2e77022c3ee5c7ac0b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737427"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088238"
 ---
-# <a name="icordebugarrayvaluehasbaseindicies-method"></a><span data-ttu-id="ecf06-102">Метод ICorDebugArrayValue::HasBaseIndicies</span><span class="sxs-lookup"><span data-stu-id="ecf06-102">ICorDebugArrayValue::HasBaseIndicies Method</span></span>
-<span data-ttu-id="ecf06-103">Получает значение, указывающее, имеют ли все измерения массива базовый индекс ненулевое значение.</span><span class="sxs-lookup"><span data-stu-id="ecf06-103">Gets a value that indicates whether any dimensions of this array have a base index of non-zero.</span></span>  
+# <a name="icordebugarrayvaluehasbaseindicies-method"></a><span data-ttu-id="73861-102">Метод ICorDebugArrayValue::HasBaseIndicies</span><span class="sxs-lookup"><span data-stu-id="73861-102">ICorDebugArrayValue::HasBaseIndicies Method</span></span>
+<span data-ttu-id="73861-103">Возвращает значение, указывающее, имеют ли измерения данного массива базовый индекс, отличный от нуля.</span><span class="sxs-lookup"><span data-stu-id="73861-103">Gets a value that indicates whether any dimensions of this array have a base index of non-zero.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ecf06-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ecf06-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73861-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="73861-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HasBaseIndicies (  
@@ -35,15 +33,15 @@ HRESULT HasBaseIndicies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ecf06-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ecf06-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73861-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="73861-105">Parameters</span></span>  
  `pbHasBaseIndicies`  
- <span data-ttu-id="ecf06-106">[out] Указатель на логическое значение, которое является `true` Если одно или несколько измерений этого `ICorDebugArrayValue` объект имеет базовый индекс ненулевое значение; в противном случае логическое значение равно `false`.</span><span class="sxs-lookup"><span data-stu-id="ecf06-106">[out] A pointer to a Boolean value that is `true` if one or more dimensions of this `ICorDebugArrayValue` object have a base index of non-zero; otherwise, the Boolean value is `false`.</span></span>  
+ <span data-ttu-id="73861-106">заполняет Указатель на логическое значение, которое `true`, если одно или несколько измерений этого `ICorDebugArrayValue` объекта имеют базовый индекс, отличный от нуля; в противном случае логическое значение — `false`.</span><span class="sxs-lookup"><span data-stu-id="73861-106">[out] A pointer to a Boolean value that is `true` if one or more dimensions of this `ICorDebugArrayValue` object have a base index of non-zero; otherwise, the Boolean value is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ecf06-107">Требования</span><span class="sxs-lookup"><span data-stu-id="ecf06-107">Requirements</span></span>  
- <span data-ttu-id="ecf06-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ecf06-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73861-107">Требования</span><span class="sxs-lookup"><span data-stu-id="73861-107">Requirements</span></span>  
+ <span data-ttu-id="73861-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73861-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ecf06-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ecf06-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="73861-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="73861-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ecf06-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ecf06-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="73861-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73861-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ecf06-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ecf06-111">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>
+ <span data-ttu-id="73861-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73861-111">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>

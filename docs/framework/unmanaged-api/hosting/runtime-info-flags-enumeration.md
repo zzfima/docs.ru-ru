@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106236"
 ---
-# <a name="runtimeinfoflags-enumeration"></a><span data-ttu-id="c81ec-102">Перечисление RUNTIME_INFO_FLAGS</span><span class="sxs-lookup"><span data-stu-id="c81ec-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
-<span data-ttu-id="c81ec-103">Содержит значения, указывающие, какие сведения об общеязыковой среде выполнения (CLR) должны быть возвращены.</span><span class="sxs-lookup"><span data-stu-id="c81ec-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
+# <a name="runtime_info_flags-enumeration"></a><span data-ttu-id="a4caf-102">Перечисление RUNTIME_INFO_FLAGS</span><span class="sxs-lookup"><span data-stu-id="a4caf-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
+<span data-ttu-id="a4caf-103">Содержит значения, которые указывают, какие сведения о среде CLR должны быть возвращены.</span><span class="sxs-lookup"><span data-stu-id="a4caf-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c81ec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c81ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4caf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a4caf-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -43,37 +41,37 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c81ec-105">Участники</span><span class="sxs-lookup"><span data-stu-id="c81ec-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a4caf-105">Члены</span><span class="sxs-lookup"><span data-stu-id="a4caf-105">Members</span></span>  
   
-|<span data-ttu-id="c81ec-106">Член</span><span class="sxs-lookup"><span data-stu-id="c81ec-106">Member</span></span>|<span data-ttu-id="c81ec-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c81ec-107">Description</span></span>|  
+|<span data-ttu-id="a4caf-106">Член</span><span class="sxs-lookup"><span data-stu-id="a4caf-106">Member</span></span>|<span data-ttu-id="a4caf-107">Описание</span><span class="sxs-lookup"><span data-stu-id="a4caf-107">Description</span></span>|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="c81ec-108">Указывает, что сведения о каталоге не будут включены.</span><span class="sxs-lookup"><span data-stu-id="c81ec-108">Indicates that directory information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="c81ec-109">Указывает, что сведения о версии не следует включать.</span><span class="sxs-lookup"><span data-stu-id="c81ec-109">Indicates that version information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="c81ec-110">Указывает, что диалоговое окно ошибки, не должны быть видны в случае сбоя.</span><span class="sxs-lookup"><span data-stu-id="c81ec-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="c81ec-111">Указывает, что последствия вызова [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) функция флаг SEM_FAILCRITICALERRORS, следует переопределить.</span><span class="sxs-lookup"><span data-stu-id="c81ec-111">Indicates that the effects of calling the [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="c81ec-112">То есть диалоговое окно установки должен отображаться в случае сбоя, а не было подавлено.</span><span class="sxs-lookup"><span data-stu-id="c81ec-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
-|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="c81ec-113">Указывает запрос для получения сведений об AMD-64-совместимые версии среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="c81ec-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="c81ec-114">Указывает запрос для получения сведений об IA-64-совместимые версии среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="c81ec-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="c81ec-115">Указывает запрос для получения сведений об x86-совместимой версии среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="c81ec-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="c81ec-116">Указывает, что сведения об обновлении версии должны быть включены.</span><span class="sxs-lookup"><span data-stu-id="c81ec-116">Indicates that version upgrade information should be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="a4caf-108">Указывает, что сведения о каталоге не следует включать.</span><span class="sxs-lookup"><span data-stu-id="a4caf-108">Indicates that directory information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="a4caf-109">Указывает, что сведения о версии указывать не следует.</span><span class="sxs-lookup"><span data-stu-id="a4caf-109">Indicates that version information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="a4caf-110">Указывает, что при сбое не должно отображаться диалоговое окно ошибки.</span><span class="sxs-lookup"><span data-stu-id="a4caf-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="a4caf-111">Указывает, что эффекты вызова функции [функцию SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) с флагом SEM_FAILCRITICALERRORS должны быть переопределены.</span><span class="sxs-lookup"><span data-stu-id="a4caf-111">Indicates that the effects of calling the [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="a4caf-112">То есть диалоговое окно установки должно отображаться при сбое, а не подавлено.</span><span class="sxs-lookup"><span data-stu-id="a4caf-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
+|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="a4caf-113">Указывает запрос сведений о версии среды выполнения, совместимой с AMD-64.</span><span class="sxs-lookup"><span data-stu-id="a4caf-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="a4caf-114">Указывает запрос сведений о версии среды выполнения, совместимой с IA-64.</span><span class="sxs-lookup"><span data-stu-id="a4caf-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="a4caf-115">Указывает запрос сведений о версии среды выполнения, совместимой с x86.</span><span class="sxs-lookup"><span data-stu-id="a4caf-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="a4caf-116">Указывает, что должны быть добавлены сведения об обновлении версии.</span><span class="sxs-lookup"><span data-stu-id="a4caf-116">Indicates that version upgrade information should be included.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c81ec-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="c81ec-117">Remarks</span></span>  
- <span data-ttu-id="c81ec-118">Далее перечислены флаги архитектуры платформы может быть указанного только один за другим и нельзя использовать вместе:</span><span class="sxs-lookup"><span data-stu-id="c81ec-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4caf-117">Заметки</span><span class="sxs-lookup"><span data-stu-id="a4caf-117">Remarks</span></span>  
+ <span data-ttu-id="a4caf-118">Следующие флаги архитектуры платформы могут быть указаны только один за раз и не могут быть объединены:</span><span class="sxs-lookup"><span data-stu-id="a4caf-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
   
-- <span data-ttu-id="c81ec-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="c81ec-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
+- <span data-ttu-id="a4caf-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="a4caf-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
   
-- <span data-ttu-id="c81ec-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="c81ec-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
+- <span data-ttu-id="a4caf-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="a4caf-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
   
-- <span data-ttu-id="c81ec-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="c81ec-121">RUNTIME_INFO_REQUEST_X86</span></span>  
+- <span data-ttu-id="a4caf-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="a4caf-121">RUNTIME_INFO_REQUEST_X86</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c81ec-122">Требования</span><span class="sxs-lookup"><span data-stu-id="c81ec-122">Requirements</span></span>  
- <span data-ttu-id="c81ec-123">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c81ec-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4caf-122">Требования</span><span class="sxs-lookup"><span data-stu-id="a4caf-122">Requirements</span></span>  
+ <span data-ttu-id="a4caf-123">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4caf-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c81ec-124">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c81ec-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a4caf-124">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="a4caf-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c81ec-125">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c81ec-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4caf-125">**Библиотека:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="a4caf-125">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c81ec-126">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c81ec-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a4caf-126">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4caf-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c81ec-127">См. также</span><span class="sxs-lookup"><span data-stu-id="c81ec-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4caf-127">См. также</span><span class="sxs-lookup"><span data-stu-id="a4caf-127">See also</span></span>
 
-- [<span data-ttu-id="c81ec-128">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="c81ec-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="a4caf-128">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="a4caf-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

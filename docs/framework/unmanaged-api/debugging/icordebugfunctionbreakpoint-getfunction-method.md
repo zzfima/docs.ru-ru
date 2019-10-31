@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2a62dae5-dd8a-4696-b817-0e1e586c24a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4f9ea741e545cc424dff450325c3f8d271c8554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b53c80157bfd99a766eb691e8a8a2e6b9659a95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755575"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137745"
 ---
-# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="9a12f-102">Метод ICorDebugFunctionBreakpoint::GetFunction</span><span class="sxs-lookup"><span data-stu-id="9a12f-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
-<span data-ttu-id="9a12f-103">Получает указатель на интерфейс ICorDebugFunction, который ссылается на функцию, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="9a12f-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
+# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="2ebd1-102">Метод ICorDebugFunctionBreakpoint::GetFunction</span><span class="sxs-lookup"><span data-stu-id="2ebd1-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
+<span data-ttu-id="2ebd1-103">Возвращает указатель на интерфейс ICorDebugFunction, ссылающийся на функцию, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="2ebd1-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a12f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9a12f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ebd1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2ebd1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunction (  
@@ -35,15 +33,15 @@ HRESULT GetFunction (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a12f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9a12f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ebd1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2ebd1-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="9a12f-106">[out] Указатель на адрес функции, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="9a12f-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="2ebd1-106">заполняет Указатель на адрес функции, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="2ebd1-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a12f-107">Требования</span><span class="sxs-lookup"><span data-stu-id="9a12f-107">Requirements</span></span>  
- <span data-ttu-id="9a12f-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a12f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ebd1-107">Требования</span><span class="sxs-lookup"><span data-stu-id="2ebd1-107">Requirements</span></span>  
+ <span data-ttu-id="2ebd1-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ebd1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a12f-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a12f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ebd1-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ebd1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a12f-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a12f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ebd1-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ebd1-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a12f-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a12f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2ebd1-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ebd1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

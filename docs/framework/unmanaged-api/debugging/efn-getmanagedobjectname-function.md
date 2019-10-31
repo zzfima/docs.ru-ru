@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7333f8f7b95655ac821e9a2977d5db3794486a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738995"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123005"
 ---
-# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="24c1b-102">\_EFN\_GetManagedObjectName Function</span><span class="sxs-lookup"><span data-stu-id="24c1b-102">\_EFN\_GetManagedObjectName Function</span></span>
-<span data-ttu-id="24c1b-103">Получает имя типа с помощью предоставленного указателя управляемого объекта.</span><span class="sxs-lookup"><span data-stu-id="24c1b-103">Gets the name of a type using the provided managed object pointer.</span></span>  
+# <a name="_efn_getmanagedobjectname-function"></a><span data-ttu-id="d023f-102">\_ЕФН\_функция Жетманажедобжектнаме</span><span class="sxs-lookup"><span data-stu-id="d023f-102">\_EFN\_GetManagedObjectName Function</span></span>
+<span data-ttu-id="d023f-103">Возвращает имя типа, используя предоставленный указатель управляемого объекта.</span><span class="sxs-lookup"><span data-stu-id="d023f-103">Gets the name of a type using the provided managed object pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24c1b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="24c1b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d023f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d023f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT _EFN_GetManagedObjectName(  
@@ -37,29 +35,29 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="24c1b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="24c1b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d023f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d023f-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="24c1b-106">[in] Указатель на клиент отладки.</span><span class="sxs-lookup"><span data-stu-id="24c1b-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="d023f-106">окне Указатель на клиент отладки.</span><span class="sxs-lookup"><span data-stu-id="d023f-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="24c1b-107">[in] Указатель на управляемый объект.</span><span class="sxs-lookup"><span data-stu-id="24c1b-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="d023f-107">окне Указатель на управляемый объект.</span><span class="sxs-lookup"><span data-stu-id="d023f-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="24c1b-108">szName</span><span class="sxs-lookup"><span data-stu-id="24c1b-108">szName</span></span>  
- <span data-ttu-id="24c1b-109">[out] Имя типа.</span><span class="sxs-lookup"><span data-stu-id="24c1b-109">[out] The name of the type.</span></span>  
+ <span data-ttu-id="d023f-108">szName</span><span class="sxs-lookup"><span data-stu-id="d023f-108">szName</span></span>  
+ <span data-ttu-id="d023f-109">заполняет Имя типа.</span><span class="sxs-lookup"><span data-stu-id="d023f-109">[out] The name of the type.</span></span>  
   
  `cbName`  
- <span data-ttu-id="24c1b-110">[out] Доступное число символов в буфере строк.</span><span class="sxs-lookup"><span data-stu-id="24c1b-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="d023f-110">заполняет Число символов, доступных в буфере строк.</span><span class="sxs-lookup"><span data-stu-id="d023f-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="24c1b-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="24c1b-111">Remarks</span></span>  
- <span data-ttu-id="24c1b-112">Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает HRESULT SOS_E_NOMANAGEDCODE со значением сообщения 0xa0 и кодом ошибки 0x1000.</span><span class="sxs-lookup"><span data-stu-id="24c1b-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d023f-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="d023f-111">Remarks</span></span>  
+ <span data-ttu-id="d023f-112">Если в текущем потоке нет управляемого кода, функция возвращает HRESULT SOS_E_NOMANAGEDCODE с значением устройства 0x82 и кодом ошибки 0x1000.</span><span class="sxs-lookup"><span data-stu-id="d023f-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24c1b-113">Требования</span><span class="sxs-lookup"><span data-stu-id="24c1b-113">Requirements</span></span>  
- <span data-ttu-id="24c1b-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24c1b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d023f-113">Требования</span><span class="sxs-lookup"><span data-stu-id="d023f-113">Requirements</span></span>  
+ <span data-ttu-id="d023f-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d023f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24c1b-115">**Заголовок.** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="24c1b-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="d023f-115">**Заголовок:** SOS_Stacktrace. h</span><span class="sxs-lookup"><span data-stu-id="d023f-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="24c1b-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24c1b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d023f-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d023f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24c1b-117">См. также</span><span class="sxs-lookup"><span data-stu-id="24c1b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d023f-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d023f-117">See also</span></span>
 
-- [<span data-ttu-id="24c1b-118">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="24c1b-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="d023f-118">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="d023f-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

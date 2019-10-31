@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2dcdaed34044122dd2a61c9e0b5bb02f8cc0d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121779"
 ---
-# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="d6c9a-102">Метод ICorPublish::GetProcess</span><span class="sxs-lookup"><span data-stu-id="d6c9a-102">ICorPublish::GetProcess Method</span></span>
-<span data-ttu-id="d6c9a-103">Получает [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) экземпляр, представляющий процесс с указанным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="d6c9a-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
+# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="63877-102">Метод ICorPublish::GetProcess</span><span class="sxs-lookup"><span data-stu-id="63877-102">ICorPublish::GetProcess Method</span></span>
+<span data-ttu-id="63877-103">Возвращает экземпляр [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) , представляющий процесс с указанным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="63877-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6c9a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d6c9a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63877-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="63877-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProcess(  
@@ -36,25 +34,25 @@ HRESULT GetProcess(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d6c9a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d6c9a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63877-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="63877-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="d6c9a-106">[in] Идентификатор процесса.</span><span class="sxs-lookup"><span data-stu-id="d6c9a-106">[in] The identifier of the process.</span></span>  
+ <span data-ttu-id="63877-106">окне Идентификатор процесса.</span><span class="sxs-lookup"><span data-stu-id="63877-106">[in] The identifier of the process.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="d6c9a-107">[out] Указатель на адрес `ICorPublishProcess` экземпляр, представляющий процесс.</span><span class="sxs-lookup"><span data-stu-id="d6c9a-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
+ <span data-ttu-id="63877-107">заполняет Указатель на адрес экземпляра `ICorPublishProcess`, который представляет процесс.</span><span class="sxs-lookup"><span data-stu-id="63877-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d6c9a-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="d6c9a-108">Remarks</span></span>  
- <span data-ttu-id="d6c9a-109">`GetProcess` завершается неудачей, если процесс не существует или не является управляемым процессом, который можно отлаживать текущим пользователем.</span><span class="sxs-lookup"><span data-stu-id="d6c9a-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63877-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="63877-108">Remarks</span></span>  
+ <span data-ttu-id="63877-109">`GetProcess` завершается ошибкой, если процесс не существует или не является управляемым процессом, который может быть отлажен текущим пользователем.</span><span class="sxs-lookup"><span data-stu-id="63877-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6c9a-110">Требования</span><span class="sxs-lookup"><span data-stu-id="d6c9a-110">Requirements</span></span>  
- <span data-ttu-id="d6c9a-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6c9a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63877-110">Требования</span><span class="sxs-lookup"><span data-stu-id="63877-110">Requirements</span></span>  
+ <span data-ttu-id="63877-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63877-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6c9a-112">**Заголовок.** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="d6c9a-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="63877-112">**Заголовок:** Корпуб. idl, Корпуб. h</span><span class="sxs-lookup"><span data-stu-id="63877-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="d6c9a-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d6c9a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="63877-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63877-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d6c9a-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6c9a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="63877-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63877-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6c9a-115">См. также</span><span class="sxs-lookup"><span data-stu-id="d6c9a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63877-115">См. также</span><span class="sxs-lookup"><span data-stu-id="63877-115">See also</span></span>
 
-- [<span data-ttu-id="d6c9a-116">Интерфейс ICorPublish</span><span class="sxs-lookup"><span data-stu-id="d6c9a-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+- [<span data-ttu-id="63877-116">Интерфейс ICorPublish</span><span class="sxs-lookup"><span data-stu-id="63877-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

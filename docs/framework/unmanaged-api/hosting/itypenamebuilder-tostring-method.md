@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6372aca7-869a-4af6-ba2b-0eb1047ef5c0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8237d2841863c73989c34a46da61033e111ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 531bd3ffe00c12ef580e8341cd6ad1f7d3924717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765445"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123350"
 ---
-# <a name="itypenamebuildertostring-method"></a><span data-ttu-id="94a63-102">Метод ITypeNameBuilder::ToString</span><span class="sxs-lookup"><span data-stu-id="94a63-102">ITypeNameBuilder::ToString Method</span></span>
-<span data-ttu-id="94a63-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="94a63-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuildertostring-method"></a><span data-ttu-id="89dbc-102">Метод ITypeNameBuilder::ToString</span><span class="sxs-lookup"><span data-stu-id="89dbc-102">ITypeNameBuilder::ToString Method</span></span>
+<span data-ttu-id="89dbc-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="89dbc-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94a63-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94a63-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89dbc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="89dbc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ToString (  
@@ -35,15 +33,15 @@ HRESULT ToString (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="94a63-105">Требования</span><span class="sxs-lookup"><span data-stu-id="94a63-105">Requirements</span></span>  
- <span data-ttu-id="94a63-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94a63-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89dbc-105">Требования</span><span class="sxs-lookup"><span data-stu-id="89dbc-105">Requirements</span></span>  
+ <span data-ttu-id="89dbc-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89dbc-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94a63-107">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="94a63-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="89dbc-107">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="89dbc-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="94a63-108">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="94a63-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="89dbc-108">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="89dbc-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="94a63-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94a63-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="89dbc-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89dbc-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94a63-110">См. также</span><span class="sxs-lookup"><span data-stu-id="94a63-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89dbc-110">См. также</span><span class="sxs-lookup"><span data-stu-id="89dbc-110">See also</span></span>
 
-- [<span data-ttu-id="94a63-111">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="94a63-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="89dbc-111">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="89dbc-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

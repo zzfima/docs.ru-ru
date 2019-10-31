@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c682f744-996e-43c7-a9ea-c57cbc755398
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb83ed90c59a5a576618879d128705803064271f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b5c0763d348be0670f51445eda0890ca14575ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123347"
 ---
-# <a name="itypenamefactorygettypenamebuilder-method"></a><span data-ttu-id="7912e-102">Метод ITypeNameFactory::GetTypeNameBuilder</span><span class="sxs-lookup"><span data-stu-id="7912e-102">ITypeNameFactory::GetTypeNameBuilder Method</span></span>
-<span data-ttu-id="7912e-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="7912e-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamefactorygettypenamebuilder-method"></a><span data-ttu-id="4024b-102">Метод ITypeNameFactory::GetTypeNameBuilder</span><span class="sxs-lookup"><span data-stu-id="4024b-102">ITypeNameFactory::GetTypeNameBuilder Method</span></span>
+<span data-ttu-id="4024b-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="4024b-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7912e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7912e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4024b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4024b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeNameBuilder (  
@@ -35,15 +33,15 @@ HRESULT GetTypeNameBuilder (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="7912e-105">Требования</span><span class="sxs-lookup"><span data-stu-id="7912e-105">Requirements</span></span>  
- <span data-ttu-id="7912e-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7912e-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4024b-105">Требования</span><span class="sxs-lookup"><span data-stu-id="4024b-105">Requirements</span></span>  
+ <span data-ttu-id="4024b-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4024b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7912e-107">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7912e-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4024b-107">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="4024b-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7912e-108">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7912e-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4024b-108">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="4024b-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7912e-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7912e-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4024b-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4024b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7912e-110">См. также</span><span class="sxs-lookup"><span data-stu-id="7912e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4024b-110">См. также</span><span class="sxs-lookup"><span data-stu-id="4024b-110">See also</span></span>
 
-- [<span data-ttu-id="7912e-111">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="7912e-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="4024b-111">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="4024b-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

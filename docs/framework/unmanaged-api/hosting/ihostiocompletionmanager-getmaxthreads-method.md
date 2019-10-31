@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7a6cadc-2433-4472-a701-58891abcde45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fcd66914448fa63c892f7285b8cd364d4cacc5f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d35fd91f2a28c392176a6dd87bd21baa964ee9a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779219"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133813"
 ---
-# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="52a87-102">Метод IHostIoCompletionManager::GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="52a87-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
-<span data-ttu-id="52a87-103">Возвращает максимальное число потоков, которые основное приложение может выделить для обслуживания запросов ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="52a87-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
+# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="84edc-102">Метод IHostIoCompletionManager::GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="84edc-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
+<span data-ttu-id="84edc-103">Возвращает максимальное число потоков, которое узел может выделить для обслуживания запросов ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="84edc-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52a87-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="52a87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84edc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="84edc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMaxThreads (  
@@ -35,35 +33,35 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="52a87-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="52a87-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84edc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="84edc-105">Parameters</span></span>  
  `pdwMaxIoCompletionThreads`  
- <span data-ttu-id="52a87-106">[out] Указатель на максимальное число потоков в пуле потоков, основное приложение может выделить для обслуживания запросов ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="52a87-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
+ <span data-ttu-id="84edc-106">заполняет Указатель на максимальное количество потоков в пуле потоков, которое узел может выделить для обслуживания запросов ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="84edc-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="52a87-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="52a87-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84edc-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="84edc-107">Return Value</span></span>  
   
-|<span data-ttu-id="52a87-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="52a87-108">HRESULT</span></span>|<span data-ttu-id="52a87-109">Описание</span><span class="sxs-lookup"><span data-stu-id="52a87-109">Description</span></span>|  
+|<span data-ttu-id="84edc-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="84edc-108">HRESULT</span></span>|<span data-ttu-id="84edc-109">Описание</span><span class="sxs-lookup"><span data-stu-id="84edc-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="52a87-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="52a87-110">S_OK</span></span>|<span data-ttu-id="52a87-111">`GetMaxThreads` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="52a87-111">`GetMaxThreads` returned successfully.</span></span>|  
-|<span data-ttu-id="52a87-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="52a87-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="52a87-113">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="52a87-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="52a87-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="52a87-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="52a87-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="52a87-115">The call timed out.</span></span>|  
-|<span data-ttu-id="52a87-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="52a87-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="52a87-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="52a87-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="52a87-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="52a87-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="52a87-119">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="52a87-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="52a87-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="52a87-120">E_FAIL</span></span>|<span data-ttu-id="52a87-121">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="52a87-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="52a87-122">Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="52a87-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="52a87-123">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="52a87-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="52a87-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="52a87-124">E_NOTIMPL</span></span>|<span data-ttu-id="52a87-125">Узел не поддерживает реализацию `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="52a87-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
+|<span data-ttu-id="84edc-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="84edc-110">S_OK</span></span>|<span data-ttu-id="84edc-111">`GetMaxThreads` успешно возвращено.</span><span class="sxs-lookup"><span data-stu-id="84edc-111">`GetMaxThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="84edc-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="84edc-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="84edc-113">Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="84edc-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="84edc-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="84edc-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="84edc-115">Время ожидания вызова истекло.</span><span class="sxs-lookup"><span data-stu-id="84edc-115">The call timed out.</span></span>|  
+|<span data-ttu-id="84edc-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="84edc-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="84edc-117">Вызывающий объект не владеет блокировкой.</span><span class="sxs-lookup"><span data-stu-id="84edc-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="84edc-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="84edc-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="84edc-119">Событие было отменено, пока заблокированный поток или волокно ожидают его.</span><span class="sxs-lookup"><span data-stu-id="84edc-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="84edc-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="84edc-120">E_FAIL</span></span>|<span data-ttu-id="84edc-121">Произошла неизвестная фатальная ошибка.</span><span class="sxs-lookup"><span data-stu-id="84edc-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="84edc-122">Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="84edc-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="84edc-123">Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="84edc-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="84edc-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="84edc-124">E_NOTIMPL</span></span>|<span data-ttu-id="84edc-125">Узел не предоставляет реализацию `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="84edc-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="52a87-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="52a87-126">Remarks</span></span>  
- <span data-ttu-id="52a87-127">Узлу может потребоваться исключительный контроль над количество потоков, которое может быть выделено для обработки запросов ввода-вывода, например для реализации, производительности и масштабируемости.</span><span class="sxs-lookup"><span data-stu-id="52a87-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="52a87-128">По этой причине узел не нужно реализовать `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="52a87-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="52a87-129">В этом случае узел должен возвращать E_NOTIMPL из этого метода.</span><span class="sxs-lookup"><span data-stu-id="52a87-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84edc-126">Заметки</span><span class="sxs-lookup"><span data-stu-id="84edc-126">Remarks</span></span>  
+ <span data-ttu-id="84edc-127">Узлу может потребоваться эксклюзивный контроль над количеством потоков, которые могут быть выделены для обработки запросов ввода-вывода, по таким причинам, как реализация, производительность или масштабируемость.</span><span class="sxs-lookup"><span data-stu-id="84edc-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="84edc-128">По этой причине узел не требуется для реализации `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="84edc-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="84edc-129">В этом случае узел должен вернуть значение E_NOTIMPL из этого метода.</span><span class="sxs-lookup"><span data-stu-id="84edc-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52a87-130">Требования</span><span class="sxs-lookup"><span data-stu-id="52a87-130">Requirements</span></span>  
- <span data-ttu-id="52a87-131">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52a87-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84edc-130">Требования</span><span class="sxs-lookup"><span data-stu-id="84edc-130">Requirements</span></span>  
+ <span data-ttu-id="84edc-131">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84edc-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52a87-132">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="52a87-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="84edc-132">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="84edc-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="52a87-133">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="52a87-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="84edc-133">**Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="84edc-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="52a87-134">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52a87-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="84edc-134">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84edc-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52a87-135">См. также</span><span class="sxs-lookup"><span data-stu-id="52a87-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84edc-135">См. также</span><span class="sxs-lookup"><span data-stu-id="84edc-135">See also</span></span>
 
-- [<span data-ttu-id="52a87-136">Интерфейс ICLRIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="52a87-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [<span data-ttu-id="52a87-137">Интерфейс IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="52a87-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [<span data-ttu-id="84edc-136">Интерфейс ICLRIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="84edc-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="84edc-137">Интерфейс IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="84edc-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

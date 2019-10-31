@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 621b4543-a8f7-4117-98e4-930992cd688a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17cb3440c5b33d461b1624608ce115e1942d6beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129721"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="ff93b-102">Метод ICorDebugObjectValue2::GetVirtualMethodAndType</span><span class="sxs-lookup"><span data-stu-id="ff93b-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="ff93b-103">Этот метод еще не реализован.</span><span class="sxs-lookup"><span data-stu-id="ff93b-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="bc3e3-102">Метод ICorDebugObjectValue2::GetVirtualMethodAndType</span><span class="sxs-lookup"><span data-stu-id="bc3e3-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="bc3e3-103">Этот метод еще не реализован.</span><span class="sxs-lookup"><span data-stu-id="bc3e3-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff93b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ff93b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc3e3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bc3e3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVirtualMethodAndType (  
@@ -37,7 +35,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="ff93b-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="ff93b-105">Remarks</span></span>  
- <span data-ttu-id="ff93b-106">Получает указатели интерфейса на экземпляры «ICorDebugFunction» и «ICorDebugType», представляющие наиболее производный метод и тип для заданной ссылки на член.</span><span class="sxs-lookup"><span data-stu-id="ff93b-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc3e3-105">Заметки</span><span class="sxs-lookup"><span data-stu-id="bc3e3-105">Remarks</span></span>  
+ <span data-ttu-id="bc3e3-106">Получает указатели интерфейса на экземпляры "ICorDebugFunction" и "ICorDebugType", представляющие самый производный метод и тип для указанной ссылки на элемент.</span><span class="sxs-lookup"><span data-stu-id="bc3e3-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff93b-107">См. также</span><span class="sxs-lookup"><span data-stu-id="ff93b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc3e3-107">См. также</span><span class="sxs-lookup"><span data-stu-id="bc3e3-107">See also</span></span>

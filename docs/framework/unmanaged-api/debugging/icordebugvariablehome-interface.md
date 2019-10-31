@@ -16,32 +16,30 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 339a0f502b7e47f7bee82a0da92185481d909e64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 306a07450b8ae6d29875ca0cc4679390472e4d1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768873"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121045"
 ---
-# <a name="icordebugvariablehome-interface"></a><span data-ttu-id="c923a-102">Интерфейс ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="c923a-102">ICorDebugVariableHome Interface</span></span>
-<span data-ttu-id="c923a-103">Представляет локальную переменную или аргумент функции.</span><span class="sxs-lookup"><span data-stu-id="c923a-103">Represents a local variable or argument of a function.</span></span>  
+# <a name="icordebugvariablehome-interface"></a><span data-ttu-id="120c7-102">Интерфейс ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="120c7-102">ICorDebugVariableHome Interface</span></span>
+<span data-ttu-id="120c7-103">Представляет локальную переменную или аргумент функции.</span><span class="sxs-lookup"><span data-stu-id="120c7-103">Represents a local variable or argument of a function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c923a-104">Методы</span><span class="sxs-lookup"><span data-stu-id="c923a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="120c7-104">Методы</span><span class="sxs-lookup"><span data-stu-id="120c7-104">Methods</span></span>  
   
-|<span data-ttu-id="c923a-105">Метод</span><span class="sxs-lookup"><span data-stu-id="c923a-105">Method</span></span>|<span data-ttu-id="c923a-106">Описание</span><span class="sxs-lookup"><span data-stu-id="c923a-106">Description</span></span>|  
+|<span data-ttu-id="120c7-105">Метод</span><span class="sxs-lookup"><span data-stu-id="120c7-105">Method</span></span>|<span data-ttu-id="120c7-106">Описание</span><span class="sxs-lookup"><span data-stu-id="120c7-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c923a-107">Метод GetArgumentIndex</span><span class="sxs-lookup"><span data-stu-id="c923a-107">GetArgumentIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|<span data-ttu-id="c923a-108">Получает индекс аргумента функции.</span><span class="sxs-lookup"><span data-stu-id="c923a-108">Gets the index of a function argument.</span></span>|  
-|[<span data-ttu-id="c923a-109">Метод GetCode</span><span class="sxs-lookup"><span data-stu-id="c923a-109">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|<span data-ttu-id="c923a-110">Возвращает экземпляр «ICorDebugCode», содержащий этот `ICorDebugVariableHome` объекта.</span><span class="sxs-lookup"><span data-stu-id="c923a-110">Gets the "ICorDebugCode" instance that contains this `ICorDebugVariableHome` object.</span></span>|  
-|[<span data-ttu-id="c923a-111">Метод GetLiveRange</span><span class="sxs-lookup"><span data-stu-id="c923a-111">GetLiveRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|<span data-ttu-id="c923a-112">Получает собственный диапазон, по которому эта переменная является динамической.</span><span class="sxs-lookup"><span data-stu-id="c923a-112">Gets the native range over which this variable is live.</span></span>|  
-|[<span data-ttu-id="c923a-113">Метод GetLocationType</span><span class="sxs-lookup"><span data-stu-id="c923a-113">GetLocationType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|<span data-ttu-id="c923a-114">Получает тип переменной собственному расположению.</span><span class="sxs-lookup"><span data-stu-id="c923a-114">Gets the type of the variable's native location.</span></span>|  
-|[<span data-ttu-id="c923a-115">Метод GetOffset</span><span class="sxs-lookup"><span data-stu-id="c923a-115">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|<span data-ttu-id="c923a-116">Получает смещение от базового регистра для переменной.</span><span class="sxs-lookup"><span data-stu-id="c923a-116">Gets the offset from the base register for a variable.</span></span>|  
-|[<span data-ttu-id="c923a-117">Метод GetRegister</span><span class="sxs-lookup"><span data-stu-id="c923a-117">GetRegister Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|<span data-ttu-id="c923a-118">Получает регистр, который содержит переменную с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="c923a-118">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>|  
-|[<span data-ttu-id="c923a-119">Метод GetSlotIndex</span><span class="sxs-lookup"><span data-stu-id="c923a-119">GetSlotIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|<span data-ttu-id="c923a-120">Возвращает управляемый индекс слота локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="c923a-120">Gets the managed slot-index of a local variable.</span></span>|  
+|[<span data-ttu-id="120c7-107">Метод GetArgumentIndex</span><span class="sxs-lookup"><span data-stu-id="120c7-107">GetArgumentIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|<span data-ttu-id="120c7-108">Возвращает индекс аргумента функции.</span><span class="sxs-lookup"><span data-stu-id="120c7-108">Gets the index of a function argument.</span></span>|  
+|[<span data-ttu-id="120c7-109">Метод GetCode</span><span class="sxs-lookup"><span data-stu-id="120c7-109">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|<span data-ttu-id="120c7-110">Возвращает экземпляр "ICorDebugCode", который содержит этот объект `ICorDebugVariableHome`.</span><span class="sxs-lookup"><span data-stu-id="120c7-110">Gets the "ICorDebugCode" instance that contains this `ICorDebugVariableHome` object.</span></span>|  
+|[<span data-ttu-id="120c7-111">Метод GetLiveRange</span><span class="sxs-lookup"><span data-stu-id="120c7-111">GetLiveRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|<span data-ttu-id="120c7-112">Возвращает собственный диапазон, в котором эта переменная находится в режиме реального времени.</span><span class="sxs-lookup"><span data-stu-id="120c7-112">Gets the native range over which this variable is live.</span></span>|  
+|[<span data-ttu-id="120c7-113">Метод GetLocationType</span><span class="sxs-lookup"><span data-stu-id="120c7-113">GetLocationType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|<span data-ttu-id="120c7-114">Возвращает тип собственного расположения переменной.</span><span class="sxs-lookup"><span data-stu-id="120c7-114">Gets the type of the variable's native location.</span></span>|  
+|[<span data-ttu-id="120c7-115">Метод GetOffset</span><span class="sxs-lookup"><span data-stu-id="120c7-115">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|<span data-ttu-id="120c7-116">Возвращает смещение от базового регистра для переменной.</span><span class="sxs-lookup"><span data-stu-id="120c7-116">Gets the offset from the base register for a variable.</span></span>|  
+|[<span data-ttu-id="120c7-117">Метод GetRegister</span><span class="sxs-lookup"><span data-stu-id="120c7-117">GetRegister Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|<span data-ttu-id="120c7-118">Возвращает регистр, содержащий переменную с типом расположения `VLT_REGISTER`и базовый регистр для переменной с типом расположения `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="120c7-118">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>|  
+|[<span data-ttu-id="120c7-119">Метод GetSlotIndex</span><span class="sxs-lookup"><span data-stu-id="120c7-119">GetSlotIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|<span data-ttu-id="120c7-120">Возвращает управляемый индекс в виде слота локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="120c7-120">Gets the managed slot-index of a local variable.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="c923a-121">Пример</span><span class="sxs-lookup"><span data-stu-id="c923a-121">Example</span></span>  
- <span data-ttu-id="c923a-122">В следующем фрагменте кода используется [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) объект с именем `pCode4`.</span><span class="sxs-lookup"><span data-stu-id="c923a-122">The following code fragment uses the [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) object named `pCode4`.</span></span>  
+## <a name="example"></a><span data-ttu-id="120c7-121">Пример</span><span class="sxs-lookup"><span data-stu-id="120c7-121">Example</span></span>  
+ <span data-ttu-id="120c7-122">В следующем фрагменте кода используется объект [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) с именем `pCode4`.</span><span class="sxs-lookup"><span data-stu-id="120c7-122">The following code fragment uses the [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) object named `pCode4`.</span></span>  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -82,16 +80,16 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c923a-123">Требования</span><span class="sxs-lookup"><span data-stu-id="c923a-123">Requirements</span></span>  
- <span data-ttu-id="c923a-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c923a-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="120c7-123">Требования</span><span class="sxs-lookup"><span data-stu-id="120c7-123">Requirements</span></span>  
+ <span data-ttu-id="120c7-124">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="120c7-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c923a-125">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c923a-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="120c7-125">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="120c7-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c923a-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c923a-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="120c7-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="120c7-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c923a-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c923a-127">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="120c7-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="120c7-127">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c923a-128">См. также</span><span class="sxs-lookup"><span data-stu-id="c923a-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="120c7-128">См. также</span><span class="sxs-lookup"><span data-stu-id="120c7-128">See also</span></span>
 
-- [<span data-ttu-id="c923a-129">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="c923a-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="c923a-130">Интерфейс ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="c923a-130">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+- [<span data-ttu-id="120c7-129">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="120c7-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="120c7-130">Интерфейс ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="120c7-130">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

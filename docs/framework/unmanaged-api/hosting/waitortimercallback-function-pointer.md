@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092037"
 ---
-# <a name="waitortimercallback-function-pointer"></a><span data-ttu-id="e1b9a-102">Указатель функции WAITORTIMERCALLBACK</span><span class="sxs-lookup"><span data-stu-id="e1b9a-102">WAITORTIMERCALLBACK Function Pointer</span></span>
-<span data-ttu-id="e1b9a-103">Указывает на функцию, которая уведомляет основное приложение, дескриптор ожидания (<xref:System.Threading.WaitHandle>) был сигнал или истекло время ожидания.</span><span class="sxs-lookup"><span data-stu-id="e1b9a-103">Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.</span></span>  
+# <a name="waitortimercallback-function-pointer"></a><span data-ttu-id="c0ffb-102">Указатель функции WAITORTIMERCALLBACK</span><span class="sxs-lookup"><span data-stu-id="c0ffb-102">WAITORTIMERCALLBACK Function Pointer</span></span>
+<span data-ttu-id="c0ffb-103">Указывает на функцию, которая уведомляет основное приложение о том, что дескриптор ожидания (<xref:System.Threading.WaitHandle>) имеет либо сигнал, либо время ожидания.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-103">Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.</span></span>  
   
- <span data-ttu-id="e1b9a-104">Этот указатель функции был объявлен устаревшим в .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="e1b9a-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="c0ffb-104">Этот указатель функции является устаревшим в .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1b9a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e1b9a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0ffb-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c0ffb-105">Syntax</span></span>  
   
 ```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
@@ -37,25 +35,25 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e1b9a-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="e1b9a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c0ffb-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="c0ffb-106">Parameters</span></span>  
  `lpParameter`  
- <span data-ttu-id="e1b9a-107">[in] Указатель на объект, содержащий сведения, определенные средой размещения.</span><span class="sxs-lookup"><span data-stu-id="e1b9a-107">[in] A pointer to an object that contains information defined by the host.</span></span>  
+ <span data-ttu-id="c0ffb-107">окне Указатель на объект, содержащий сведения, определенные узлом.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-107">[in] A pointer to an object that contains information defined by the host.</span></span>  
   
  `TimerOrWaitFired`  
- <span data-ttu-id="e1b9a-108">[in] `true` Если дескриптор ожидания истекло, или `false` Если объект получил сигнал.</span><span class="sxs-lookup"><span data-stu-id="e1b9a-108">[in] `true` if the wait handle timed out, or `false` if it was signaled.</span></span>  
+ <span data-ttu-id="c0ffb-108">[in] `true`, если истекло время ожидания дескриптора ожидания, или `false`, если он был сигнальным.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-108">[in] `true` if the wait handle timed out, or `false` if it was signaled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e1b9a-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="e1b9a-109">Remarks</span></span>  
- <span data-ttu-id="e1b9a-110">Функция, которая `WAITORTIMERCALLBACK` точки — это функция обратного вызова и должны быть реализованы модулем записи ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="e1b9a-110">The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c0ffb-109">Заметки</span><span class="sxs-lookup"><span data-stu-id="c0ffb-109">Remarks</span></span>  
+ <span data-ttu-id="c0ffb-110">Функция, к которой `WAITORTIMERCALLBACK` Points, является функцией обратного вызова и должна быть реализована модулем записи размещающего приложения.</span><span class="sxs-lookup"><span data-stu-id="c0ffb-110">The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1b9a-111">Требования</span><span class="sxs-lookup"><span data-stu-id="e1b9a-111">Requirements</span></span>  
- <span data-ttu-id="e1b9a-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1b9a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0ffb-111">Требования</span><span class="sxs-lookup"><span data-stu-id="c0ffb-111">Requirements</span></span>  
+ <span data-ttu-id="c0ffb-112">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0ffb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1b9a-113">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e1b9a-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c0ffb-113">**Заголовок:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="c0ffb-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e1b9a-114">**Библиотека:** "Mscorwks.dll"</span><span class="sxs-lookup"><span data-stu-id="e1b9a-114">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="c0ffb-114">**Библиотека:** MSCorWks. dll</span><span class="sxs-lookup"><span data-stu-id="c0ffb-114">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="e1b9a-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1b9a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c0ffb-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0ffb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1b9a-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e1b9a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0ffb-116">См. также</span><span class="sxs-lookup"><span data-stu-id="c0ffb-116">See also</span></span>
 
-- [<span data-ttu-id="e1b9a-117">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="e1b9a-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="c0ffb-117">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="c0ffb-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

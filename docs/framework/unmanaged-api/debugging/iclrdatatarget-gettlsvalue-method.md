@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113704"
 ---
-# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="62779-102">Метод ICLRDataTarget::GetTLSValue</span><span class="sxs-lookup"><span data-stu-id="62779-102">ICLRDataTarget::GetTLSValue Method</span></span>
-<span data-ttu-id="62779-103">Возвращает значение из локального хранилища потока (TLS) из указанного потока в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="62779-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="62779-104">Этот метод вызывается службами доступа к данным среды CLR.</span><span class="sxs-lookup"><span data-stu-id="62779-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="b8f78-102">Метод ICLRDataTarget::GetTLSValue</span><span class="sxs-lookup"><span data-stu-id="b8f78-102">ICLRDataTarget::GetTLSValue Method</span></span>
+<span data-ttu-id="b8f78-103">Возвращает значение из локального хранилища потока (TLS) указанного потока в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="b8f78-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="b8f78-104">Этот метод вызывается службами доступа к данным среды CLR.</span><span class="sxs-lookup"><span data-stu-id="b8f78-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62779-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="62779-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8f78-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b8f78-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTLSValue (  
@@ -37,28 +35,28 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="62779-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="62779-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b8f78-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="b8f78-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="62779-107">[in] Идентификатор потока в целевом процессе операционной системы.</span><span class="sxs-lookup"><span data-stu-id="62779-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="b8f78-107">окне Идентификатор операционной системы потока в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="b8f78-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="62779-108">[in] Индекс расположения.</span><span class="sxs-lookup"><span data-stu-id="62779-108">[in] The index of the location.</span></span> <span data-ttu-id="62779-109">Это значение должно быть допустимым индексом в локальном хранилище из указанного потока.</span><span class="sxs-lookup"><span data-stu-id="62779-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="b8f78-108">окне Индекс расположения.</span><span class="sxs-lookup"><span data-stu-id="b8f78-108">[in] The index of the location.</span></span> <span data-ttu-id="b8f78-109">Это значение должно быть допустимым индексом в локальном хранилище указанного потока.</span><span class="sxs-lookup"><span data-stu-id="b8f78-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="62779-110">[out] Указатель на `CLRDATA_ADDRESS` возвращается значение, которое указывает значение из заданного расположения TLS.</span><span class="sxs-lookup"><span data-stu-id="62779-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
+ <span data-ttu-id="b8f78-110">заполняет Указатель на значение `CLRDATA_ADDRESS`, указывающее значение, возвращаемое из заданного расположения TLS.</span><span class="sxs-lookup"><span data-stu-id="b8f78-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="62779-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="62779-111">Remarks</span></span>  
- <span data-ttu-id="62779-112">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="62779-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b8f78-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="b8f78-111">Remarks</span></span>  
+ <span data-ttu-id="b8f78-112">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="b8f78-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62779-113">Требования</span><span class="sxs-lookup"><span data-stu-id="62779-113">Requirements</span></span>  
- <span data-ttu-id="62779-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62779-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8f78-113">Требования</span><span class="sxs-lookup"><span data-stu-id="b8f78-113">Requirements</span></span>  
+ <span data-ttu-id="b8f78-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8f78-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62779-115">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="62779-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="b8f78-115">**Заголовок:** Клрдата. idl, Клрдата. h</span><span class="sxs-lookup"><span data-stu-id="b8f78-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="62779-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="62779-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b8f78-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8f78-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="62779-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62779-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b8f78-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8f78-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62779-118">См. также</span><span class="sxs-lookup"><span data-stu-id="62779-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8f78-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b8f78-118">See also</span></span>
 
-- [<span data-ttu-id="62779-119">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="62779-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="b8f78-119">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="b8f78-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126810"
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="9abbf-102">Класс ICeeFileGen</span><span class="sxs-lookup"><span data-stu-id="9abbf-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="9abbf-103">Предоставляет функциональные возможности для создания машинного переносимого исполняемого файла (PE).</span><span class="sxs-lookup"><span data-stu-id="9abbf-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="9abbf-104">Интерфейс, как правило, используется компиляторами для создания скомпилированного выходного исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="9abbf-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="d5b6a-102">Класс ICeeFileGen</span><span class="sxs-lookup"><span data-stu-id="d5b6a-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="d5b6a-103">Предоставляет функциональные возможности для создания машинного переносимого исполняемого файла (PE).</span><span class="sxs-lookup"><span data-stu-id="d5b6a-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="d5b6a-104">Интерфейс, как правило, используется компиляторами для создания скомпилированного выходного исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="d5b6a-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="9abbf-105">`ICeeFileGen`поддерживает инфраструктуру .NET Framework и не предназначена для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="9abbf-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+> <span data-ttu-id="d5b6a-105">`ICeeFileGen` поддерживает инфраструктуру .NET Framework и не предназначена для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="d5b6a-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="9abbf-106">Этот интерфейс является устаревшим и будет удален в следующем выпуске.</span><span class="sxs-lookup"><span data-stu-id="9abbf-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="d5b6a-106">Этот интерфейс является устаревшим и будет удален в следующем выпуске.</span><span class="sxs-lookup"><span data-stu-id="d5b6a-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9abbf-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9abbf-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5b6a-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d5b6a-107">Syntax</span></span>  
   
 ```cpp  
 class ICeeFileGen {  
@@ -236,13 +234,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9abbf-108">Требования</span><span class="sxs-lookup"><span data-stu-id="9abbf-108">Requirements</span></span>  
- <span data-ttu-id="9abbf-109">**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9abbf-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5b6a-108">Требования</span><span class="sxs-lookup"><span data-stu-id="d5b6a-108">Requirements</span></span>  
+ <span data-ttu-id="d5b6a-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5b6a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9abbf-110">**Заголовок.** Ицеефилежен. h</span><span class="sxs-lookup"><span data-stu-id="9abbf-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="d5b6a-110">**Заголовок:** Ицеефилежен. h</span><span class="sxs-lookup"><span data-stu-id="d5b6a-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="9abbf-111">**Версия .NET Framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="9abbf-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="d5b6a-111">**Версия .NET Framework:** 1,0</span><span class="sxs-lookup"><span data-stu-id="d5b6a-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9abbf-112">См. также</span><span class="sxs-lookup"><span data-stu-id="9abbf-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5b6a-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d5b6a-112">See also</span></span>
 
-- [<span data-ttu-id="9abbf-113">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="9abbf-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="d5b6a-113">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="d5b6a-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097974"
 ---
-# <a name="cordebugjitcompilerflags-enumeration"></a><span data-ttu-id="5239c-102">Перечисление CorDebugJITCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="5239c-102">CorDebugJITCompilerFlags Enumeration</span></span>
-<span data-ttu-id="5239c-103">Содержит значения, которые влияют на поведение управляемого JIT-компилятора.</span><span class="sxs-lookup"><span data-stu-id="5239c-103">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
+# <a name="cordebugjitcompilerflags-enumeration"></a><span data-ttu-id="403a1-102">Перечисление CorDebugJITCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="403a1-102">CorDebugJITCompilerFlags Enumeration</span></span>
+<span data-ttu-id="403a1-103">Содержит значения, которые влияют на поведение управляемого JIT-компилятора.</span><span class="sxs-lookup"><span data-stu-id="403a1-103">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5239c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5239c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="403a1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="403a1-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugJITCompilerFlags {  
@@ -38,23 +36,23 @@ typedef enum CorDebugJITCompilerFlags {
 } CorDebugJITCompilerFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5239c-105">Участники</span><span class="sxs-lookup"><span data-stu-id="5239c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="403a1-105">Члены</span><span class="sxs-lookup"><span data-stu-id="403a1-105">Members</span></span>  
   
-|<span data-ttu-id="5239c-106">Член</span><span class="sxs-lookup"><span data-stu-id="5239c-106">Member</span></span>|<span data-ttu-id="5239c-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5239c-107">Description</span></span>|  
+|<span data-ttu-id="403a1-106">Член</span><span class="sxs-lookup"><span data-stu-id="403a1-106">Member</span></span>|<span data-ttu-id="403a1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="403a1-107">Description</span></span>|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|<span data-ttu-id="5239c-108">Указывает, что компилятор должен отслеживать данные компиляции и позволяет выполнять оптимизацию.</span><span class="sxs-lookup"><span data-stu-id="5239c-108">Specifies that the compiler should track compilation data, and allows optimizations.</span></span>|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|<span data-ttu-id="5239c-109">Указывает, что компилятор должен отслеживать данные компиляции, но отключает синхронизацию.</span><span class="sxs-lookup"><span data-stu-id="5239c-109">Specifies that the compiler should track compilation data, but disables optimizations.</span></span>|  
-|`CORDEBUG_JIT_ENABLE_ENC`|<span data-ttu-id="5239c-110">Указывает, что компилятор должен отслеживать данные компиляции, отключает синхронизацию и позволяет изменить и продолжить технологий.</span><span class="sxs-lookup"><span data-stu-id="5239c-110">Specifies that the compiler should track compilation data, disables optimizations, and enables Edit and Continue technologies.</span></span>|  
+|`CORDEBUG_JIT_DEFAULT`|<span data-ttu-id="403a1-108">Указывает, что компилятор должен отслеживанить данные компиляции и допускает оптимизацию.</span><span class="sxs-lookup"><span data-stu-id="403a1-108">Specifies that the compiler should track compilation data, and allows optimizations.</span></span>|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|<span data-ttu-id="403a1-109">Указывает, что компилятор должен отслеживаниь данных компиляции, но отключает оптимизацию.</span><span class="sxs-lookup"><span data-stu-id="403a1-109">Specifies that the compiler should track compilation data, but disables optimizations.</span></span>|  
+|`CORDEBUG_JIT_ENABLE_ENC`|<span data-ttu-id="403a1-110">Указывает, что компилятор должен выполнять трассировку данных компиляции, отключать оптимизации и включать технологии "изменить и продолжить".</span><span class="sxs-lookup"><span data-stu-id="403a1-110">Specifies that the compiler should track compilation data, disables optimizations, and enables Edit and Continue technologies.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5239c-111">Требования</span><span class="sxs-lookup"><span data-stu-id="5239c-111">Requirements</span></span>  
- <span data-ttu-id="5239c-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5239c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="403a1-111">Требования</span><span class="sxs-lookup"><span data-stu-id="403a1-111">Requirements</span></span>  
+ <span data-ttu-id="403a1-112">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="403a1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5239c-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5239c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="403a1-113">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="403a1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5239c-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5239c-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="403a1-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="403a1-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5239c-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5239c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="403a1-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="403a1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5239c-116">См. также</span><span class="sxs-lookup"><span data-stu-id="5239c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="403a1-116">См. также</span><span class="sxs-lookup"><span data-stu-id="403a1-116">See also</span></span>
 
-- [<span data-ttu-id="5239c-117">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="5239c-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="403a1-117">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="403a1-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
