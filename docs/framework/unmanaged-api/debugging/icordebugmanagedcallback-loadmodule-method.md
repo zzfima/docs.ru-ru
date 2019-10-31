@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130714"
 ---
-# <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="bca12-102">Метод ICorDebugManagedCallback::LoadModule</span><span class="sxs-lookup"><span data-stu-id="bca12-102">ICorDebugManagedCallback::LoadModule Method</span></span>
-<span data-ttu-id="bca12-103">Уведомляет отладчик, что общий модуль среды выполнения (CLR) язык был успешно загружен.</span><span class="sxs-lookup"><span data-stu-id="bca12-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="7bb45-102">Метод ICorDebugManagedCallback::LoadModule</span><span class="sxs-lookup"><span data-stu-id="7bb45-102">ICorDebugManagedCallback::LoadModule Method</span></span>
+<span data-ttu-id="7bb45-103">Уведомляет отладчик о том, что модуль среды CLR успешно загружен.</span><span class="sxs-lookup"><span data-stu-id="7bb45-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bca12-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bca12-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7bb45-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7bb45-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadModule (  
@@ -36,26 +34,26 @@ HRESULT LoadModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bca12-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bca12-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7bb45-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7bb45-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="bca12-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который загружен модуль.</span><span class="sxs-lookup"><span data-stu-id="bca12-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the module has been loaded.</span></span>  
+ <span data-ttu-id="7bb45-106">окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в который был загружен модуль.</span><span class="sxs-lookup"><span data-stu-id="7bb45-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the module has been loaded.</span></span>  
   
  `pModule`  
- <span data-ttu-id="bca12-107">[in] Указатель на объект ICorDebugModule, который представляет модуль среды CLR.</span><span class="sxs-lookup"><span data-stu-id="bca12-107">[in] A pointer to an ICorDebugModule object that represents the CLR module.</span></span>  
+ <span data-ttu-id="7bb45-107">окне Указатель на объект ICorDebugModule, представляющий модуль CLR.</span><span class="sxs-lookup"><span data-stu-id="7bb45-107">[in] A pointer to an ICorDebugModule object that represents the CLR module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bca12-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="bca12-108">Remarks</span></span>  
- <span data-ttu-id="bca12-109">`LoadModule` Обратного вызова предоставляет подходящий момент для просмотра метаданных для модуля, задать флаги компилятора just-in-time (JIT), или включить или отключить обратные вызовы для модуля загрузки.</span><span class="sxs-lookup"><span data-stu-id="bca12-109">The `LoadModule` callback provides an appropriate time to examine metadata for the module, set just-in-time (JIT) compiler flags, or enable or disable class loading callbacks for the module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7bb45-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="7bb45-108">Remarks</span></span>  
+ <span data-ttu-id="7bb45-109">Обратный вызов `LoadModule` предоставляет подходящее время для проверки метаданных модуля, установки флагов JIT-компилятора или включения или отключения обратных вызовов при загрузке класса для модуля.</span><span class="sxs-lookup"><span data-stu-id="7bb45-109">The `LoadModule` callback provides an appropriate time to examine metadata for the module, set just-in-time (JIT) compiler flags, or enable or disable class loading callbacks for the module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bca12-110">Требования</span><span class="sxs-lookup"><span data-stu-id="bca12-110">Requirements</span></span>  
- <span data-ttu-id="bca12-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bca12-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7bb45-110">Требования</span><span class="sxs-lookup"><span data-stu-id="7bb45-110">Requirements</span></span>  
+ <span data-ttu-id="7bb45-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7bb45-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bca12-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bca12-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7bb45-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7bb45-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bca12-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bca12-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7bb45-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7bb45-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bca12-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bca12-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7bb45-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7bb45-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bca12-115">См. также</span><span class="sxs-lookup"><span data-stu-id="bca12-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bb45-115">См. также</span><span class="sxs-lookup"><span data-stu-id="7bb45-115">See also</span></span>
 
-- [<span data-ttu-id="bca12-116">Метод UnloadModule</span><span class="sxs-lookup"><span data-stu-id="bca12-116">UnloadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
-- [<span data-ttu-id="bca12-117">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="bca12-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="7bb45-116">Метод UnloadModule</span><span class="sxs-lookup"><span data-stu-id="7bb45-116">UnloadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
+- [<span data-ttu-id="7bb45-117">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="7bb45-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

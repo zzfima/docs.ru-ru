@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7649d91ca2b654952d1d5ab0d45f7903d3c46a32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 867db3325f9b18b31f66429d01ea02be3603c0f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745542"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125759"
 ---
-# <a name="icordebugclassgetstaticfieldvalue-method"></a><span data-ttu-id="9ae38-102">Метод ICorDebugClass::GetStaticFieldValue</span><span class="sxs-lookup"><span data-stu-id="9ae38-102">ICorDebugClass::GetStaticFieldValue Method</span></span>
-<span data-ttu-id="9ae38-103">Получает значение указанного статического поля.</span><span class="sxs-lookup"><span data-stu-id="9ae38-103">Gets the value of the specified static field.</span></span>  
+# <a name="icordebugclassgetstaticfieldvalue-method"></a><span data-ttu-id="8a3e0-102">Метод ICorDebugClass::GetStaticFieldValue</span><span class="sxs-lookup"><span data-stu-id="8a3e0-102">ICorDebugClass::GetStaticFieldValue Method</span></span>
+<span data-ttu-id="8a3e0-103">Возвращает значение указанного статического поля.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-103">Gets the value of the specified static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ae38-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ae38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a3e0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8a3e0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStaticFieldValue (  
@@ -37,26 +35,26 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9ae38-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ae38-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8a3e0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8a3e0-105">Parameters</span></span>  
  `fieldDef`  
- <span data-ttu-id="9ae38-106">[in] Поле `Def` маркер, который ссылается на поля для извлечения.</span><span class="sxs-lookup"><span data-stu-id="9ae38-106">[in] A field `Def` token that references the field to be retrieved.</span></span>  
+ <span data-ttu-id="8a3e0-106">окне Поле `Def` токен, ссылающийся на извлекаемое поле.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-106">[in] A field `Def` token that references the field to be retrieved.</span></span>  
   
  `pFrame`  
- <span data-ttu-id="9ae38-107">[in] Указатель на интерфейс ICorDebugFrame объект, представляющий кадр и использоваться для однозначного определения потока, контекста или статических элементов домена приложения.</span><span class="sxs-lookup"><span data-stu-id="9ae38-107">[in] A pointer to an ICorDebugFrame object that represents the frame to be used to disambiguate among thread, context, or application domain statics.</span></span>  
+ <span data-ttu-id="8a3e0-107">окне Указатель на объект ICorDebugFrame, представляющий кадр, который будет использоваться для однозначного определения статических элементов потока, контекста или домена приложения.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-107">[in] A pointer to an ICorDebugFrame object that represents the frame to be used to disambiguate among thread, context, or application domain statics.</span></span>  
   
- <span data-ttu-id="9ae38-108">Если поле является статическим относительно потока, контекста или домена приложения, кадр определит соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="9ae38-108">If the static field is relative to a thread, a context, or an application domain, the frame will determine the proper value.</span></span>  
+ <span data-ttu-id="8a3e0-108">Если статическое поле задается относительно потока, контекста или домена приложения, кадр определит правильное значение.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-108">If the static field is relative to a thread, a context, or an application domain, the frame will determine the proper value.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="9ae38-109">[out] Указатель на адрес ICorDebugValue объект, представляющий значение статического поля.</span><span class="sxs-lookup"><span data-stu-id="9ae38-109">[out] A pointer to the address of an ICorDebugValue object that represents the value of the static field.</span></span>  
+ <span data-ttu-id="8a3e0-109">заполняет Указатель на адрес объекта ICorDebugValue, который представляет значение статического поля.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-109">[out] A pointer to the address of an ICorDebugValue object that represents the value of the static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9ae38-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="9ae38-110">Remarks</span></span>  
- <span data-ttu-id="9ae38-111">Для параметризованных типов значение статического поля задается относительно определенного процесса создания экземпляров.</span><span class="sxs-lookup"><span data-stu-id="9ae38-111">For parameterized types, the value of a static field is relative to the particular instantiation.</span></span> <span data-ttu-id="9ae38-112">Таким образом Если конструктор классов принимает параметры типа <xref:System.Type>, вызовите [ICorDebugType::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) вместо `ICorDebugClass::GetStaticFieldValue`.</span><span class="sxs-lookup"><span data-stu-id="9ae38-112">Therefore, if the class constructor takes parameters of type <xref:System.Type>, call [ICorDebugType::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) instead of `ICorDebugClass::GetStaticFieldValue`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a3e0-110">Заметки</span><span class="sxs-lookup"><span data-stu-id="8a3e0-110">Remarks</span></span>  
+ <span data-ttu-id="8a3e0-111">Для параметризованных типов значение статического поля задается относительно конкретного экземпляра.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-111">For parameterized types, the value of a static field is relative to the particular instantiation.</span></span> <span data-ttu-id="8a3e0-112">Таким образом, если конструктор класса принимает параметры типа <xref:System.Type>, вызовите метод [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) вместо `ICorDebugClass::GetStaticFieldValue`.</span><span class="sxs-lookup"><span data-stu-id="8a3e0-112">Therefore, if the class constructor takes parameters of type <xref:System.Type>, call [ICorDebugType::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) instead of `ICorDebugClass::GetStaticFieldValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ae38-113">Требования</span><span class="sxs-lookup"><span data-stu-id="9ae38-113">Requirements</span></span>  
- <span data-ttu-id="9ae38-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ae38-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a3e0-113">Требования</span><span class="sxs-lookup"><span data-stu-id="8a3e0-113">Requirements</span></span>  
+ <span data-ttu-id="8a3e0-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a3e0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ae38-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ae38-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8a3e0-115">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8a3e0-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9ae38-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ae38-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8a3e0-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a3e0-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9ae38-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ae38-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8a3e0-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a3e0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

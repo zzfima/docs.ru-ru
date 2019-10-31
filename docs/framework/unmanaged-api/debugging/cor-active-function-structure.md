@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132382"
 ---
-# <a name="cor_active_function-structure"></a><span data-ttu-id="61a20-102">Структура COR_ACTIVE_FUNCTION</span><span class="sxs-lookup"><span data-stu-id="61a20-102">COR_ACTIVE_FUNCTION Structure</span></span>
-<span data-ttu-id="61a20-103">Содержит сведения о функциях, которые в данный момент активны в кадрах потока.</span><span class="sxs-lookup"><span data-stu-id="61a20-103">Contains information about the functions that are currently active in a thread's frames.</span></span> <span data-ttu-id="61a20-104">Эта структура используется методом [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) .</span><span class="sxs-lookup"><span data-stu-id="61a20-104">This structure is used by the [ICorDebugThread2::GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) method.</span></span>  
+# <a name="cor_active_function-structure"></a><span data-ttu-id="3e613-102">Структура COR_ACTIVE_FUNCTION</span><span class="sxs-lookup"><span data-stu-id="3e613-102">COR_ACTIVE_FUNCTION Structure</span></span>
+<span data-ttu-id="3e613-103">Содержит сведения о функциях, которые в данный момент активны в кадрах потока.</span><span class="sxs-lookup"><span data-stu-id="3e613-103">Contains information about the functions that are currently active in a thread's frames.</span></span> <span data-ttu-id="3e613-104">Эта структура используется методом [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) .</span><span class="sxs-lookup"><span data-stu-id="3e613-104">This structure is used by the [ICorDebugThread2::GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61a20-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="61a20-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e613-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3e613-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct  _COR_ACTIVE_FUNCTION {  
@@ -38,26 +36,26 @@ typedef struct  _COR_ACTIVE_FUNCTION {
 } COR_ACTIVE_FUNCTION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="61a20-106">Участники</span><span class="sxs-lookup"><span data-stu-id="61a20-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3e613-106">Члены</span><span class="sxs-lookup"><span data-stu-id="3e613-106">Members</span></span>  
   
-|<span data-ttu-id="61a20-107">Член</span><span class="sxs-lookup"><span data-stu-id="61a20-107">Member</span></span>|<span data-ttu-id="61a20-108">Описание</span><span class="sxs-lookup"><span data-stu-id="61a20-108">Description</span></span>|  
+|<span data-ttu-id="3e613-107">Член</span><span class="sxs-lookup"><span data-stu-id="3e613-107">Member</span></span>|<span data-ttu-id="3e613-108">Описание</span><span class="sxs-lookup"><span data-stu-id="3e613-108">Description</span></span>|  
 |------------|-----------------|  
-|`pAppDomain`|<span data-ttu-id="61a20-109">Указатель на владельца `ilOffset` домена приложения для поля.</span><span class="sxs-lookup"><span data-stu-id="61a20-109">Pointer to the application domain owner of the `ilOffset` field.</span></span>|  
-|`pModule`|<span data-ttu-id="61a20-110">Указатель на владельца `ilOffset` поля.</span><span class="sxs-lookup"><span data-stu-id="61a20-110">Pointer to the module owner of the `ilOffset` field.</span></span>|  
-|`pFunction`|<span data-ttu-id="61a20-111">Указатель на владельца `ilOffset` функции поля.</span><span class="sxs-lookup"><span data-stu-id="61a20-111">Pointer to the function owner of the `ilOffset` field.</span></span>|  
-|`ilOffset`|<span data-ttu-id="61a20-112">Смещение кадра на языке MSIL.</span><span class="sxs-lookup"><span data-stu-id="61a20-112">The Microsoft intermediate language (MSIL) offset of the frame.</span></span>|  
-|`flags`|<span data-ttu-id="61a20-113">Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="61a20-113">Reserved for future extensibility.</span></span>|  
+|`pAppDomain`|<span data-ttu-id="3e613-109">Указатель на владельца домена приложения `ilOffset` поля.</span><span class="sxs-lookup"><span data-stu-id="3e613-109">Pointer to the application domain owner of the `ilOffset` field.</span></span>|  
+|`pModule`|<span data-ttu-id="3e613-110">Указатель на владельца модуля `ilOffset` поля.</span><span class="sxs-lookup"><span data-stu-id="3e613-110">Pointer to the module owner of the `ilOffset` field.</span></span>|  
+|`pFunction`|<span data-ttu-id="3e613-111">Указатель на владельца функции поля `ilOffset`.</span><span class="sxs-lookup"><span data-stu-id="3e613-111">Pointer to the function owner of the `ilOffset` field.</span></span>|  
+|`ilOffset`|<span data-ttu-id="3e613-112">Смещение кадра на языке MSIL.</span><span class="sxs-lookup"><span data-stu-id="3e613-112">The Microsoft intermediate language (MSIL) offset of the frame.</span></span>|  
+|`flags`|<span data-ttu-id="3e613-113">Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="3e613-113">Reserved for future extensibility.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="61a20-114">Требования</span><span class="sxs-lookup"><span data-stu-id="61a20-114">Requirements</span></span>  
- <span data-ttu-id="61a20-115">**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61a20-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e613-114">Требования</span><span class="sxs-lookup"><span data-stu-id="3e613-114">Requirements</span></span>  
+ <span data-ttu-id="3e613-115">**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e613-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61a20-116">**Заголовок.** CorDebug. idl</span><span class="sxs-lookup"><span data-stu-id="61a20-116">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="3e613-116">**Заголовок:** CorDebug. idl</span><span class="sxs-lookup"><span data-stu-id="3e613-116">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="61a20-117">**Библиотечная** Коргуидс. lib</span><span class="sxs-lookup"><span data-stu-id="61a20-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3e613-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e613-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61a20-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61a20-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3e613-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e613-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61a20-119">См. также</span><span class="sxs-lookup"><span data-stu-id="61a20-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e613-119">См. также</span><span class="sxs-lookup"><span data-stu-id="3e613-119">See also</span></span>
 
-- [<span data-ttu-id="61a20-120">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="61a20-120">Debugging Structures</span></span>](debugging-structures.md)
-- [<span data-ttu-id="61a20-121">Отладка</span><span class="sxs-lookup"><span data-stu-id="61a20-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="3e613-120">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="3e613-120">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="3e613-121">Отладка</span><span class="sxs-lookup"><span data-stu-id="3e613-121">Debugging</span></span>](index.md)
