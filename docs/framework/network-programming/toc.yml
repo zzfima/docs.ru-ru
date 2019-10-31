@@ -40,9 +40,6 @@
       items:
         - name: HTTP
           href: http.md
-          items:
-            - name: Класс HttpListener
-              href: httplistener.md
         - name: 'Практическое руководство. Доступ к свойствам, относящимся с HTTP'
           href: how-to-access-http-specific-properties.md
         - name: Управление подключениями
