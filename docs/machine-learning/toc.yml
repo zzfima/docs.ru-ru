@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: Классификация тональности с помощью TensorFlow (классификация текста)
           href: tutorials/text-classification-tf.md
-    - name: Инструменты
+    - name: Построитель моделей и интерфейс командной строки
       items:
-        - name: Прогнозирование цен с помощью построителя моделей
+        - name: Прогнозирование цен (построитель моделей и регрессия)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Анализ тональности с помощью интерфейса командной строки ML.NET
           href: tutorials/mlnet-cli.md
-        - name: Анализ тональности с помощью построителя моделей и Razor Pages
+        - name: "Анализ тональности в Razor\_Pages (построитель моделей и двоичная классификация)"
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Категоризация нарушения санитарных норм (построитель моделей и многоклассовая классификация)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Вероятностное программирование с использованием Infer.NET
@@ -103,7 +105,7 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: Использование API автоматизированного машинного обучения
           href: how-to-guides/how-to-use-the-automl-api.md
-- name: Справочник
+- name: Ссылка
   items:
     - name: API
       items:
