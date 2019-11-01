@@ -4,16 +4,16 @@ description: Руководство по бессерверной архитек
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093536"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Бессерверные приложения: Архитектура, шаблоны и реализация в Azure
 
-![Снимок экрана, на котором показана обложка электронной книги, посвященной бессерверным приложениям.](./media/index/serverless-apps-cover.jpg)
+![Снимок экрана, на котором показана обложка электронной книги, посвященной бессерверным приложениям](./media/index/serverless-apps-cover.jpg)
 
 > Можно загрузить по ссылке: <https://aka.ms/serverless-ebook>
 
@@ -43,17 +43,17 @@ Mac и macOS являются товарными знаками Apple Inc.
 
 Автор:
 
-> **[Джереми Ликнесс (Jeremy Likness)](https://twitter.com/jeremylikness)** , старший советник по облачной разработке, APEX, корпорация Майкрософт.
+> **[Джереми Ликнесс (Jeremy Likness)](https://twitter.com/jeremylikness)** , старший советник по облачной разработке, корпорация Майкрософт.
 
 Участник:
 
-> **[Сесил Филлип (Cecil Phillip)](https://twitter.com/cecilphillip)** , советник по облачной разработке II, APEX, корпорация Майкрософт.
+> **[Сесил Филлип (Cecil Phillip)](https://twitter.com/cecilphillip)** , старший советник по облачной разработке, корпорация Майкрософт.
 
 Редакторы:
 
-> **[Билл Вагнер (Bill Wagner)](https://twitter.com/billwagner)** , старший разработчик содержимого, APEX, корпорация Майкрософт.
+> **[Билл Вагнер (Bill Wagner)](https://twitter.com/billwagner)** , старший разработчик содержимого, корпорация Майкрософт.
 
-> **[Майра Вензел (Maira Wenzel)](https://twitter.com/mairacw)** , старший разработчик содержимого, APEX, корпорация Майкрософт.
+> **[Майра Вензел (Maira Wenzel)](https://twitter.com/mairacw)** , старший разработчик содержимого, корпорация Майкрософт.
 
 Участники и рецензенты:
 

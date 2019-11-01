@@ -4,18 +4,18 @@ description: Сведения о том, как простым и привычн
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696931"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088131"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor для разработчиков ASP.NET Web Forms
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-![Снимок экрана, на котором показана обложка электронной книги, посвященной бессерверным приложениям.](./media/index/blazor-for-web-forms-developers-cover.png)
+![Снимок экрана, на котором показана обложка электронной книги, посвященной бессерверным приложениям](./media/index/blazor-for-web-forms-developers-cover.png)
 
 > Можно загрузить по ссылке: <https://aka.ms/blazor-ebook>
 
