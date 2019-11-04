@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610803"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139708"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Практическое руководство. Написание цикла Parallel.For с локальными переменными потока
 В этом примере показано, как использовать локальные переменные потока для хранения и получения состояния каждой отдельной задачи, создаваемой циклом <xref:System.Threading.Tasks.Parallel.For%2A>. Благодаря локальным переменным потока вы можете избежать дополнительной нагрузки при синхронизации большого количества доступов к общему состоянию. Вместо записи в общий ресурс при каждой итерации вы вычисляете и сохраняете значение до тех пор, пока не будут выполнены все итерации для задачи. После этого вы можете однократно записать итоговый результат в общий ресурс или передать его в другой метод.  

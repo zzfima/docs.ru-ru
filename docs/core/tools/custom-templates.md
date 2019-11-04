@@ -3,12 +3,12 @@ title: Пользовательские шаблоны для команды dot
 description: Сведения о пользовательских шаблонах для проектов или файлов .NET любых типов.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117805"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420883"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
@@ -18,7 +18,7 @@ ms.locfileid: "71117805"
 
 Модуль шаблонов имеет открытый код. Репозиторий кода в Интернете — [dotnet/templating](https://github.com/dotnet/templating/) в GitHub. Образцы шаблонов можно найти в репозитории [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples). Дополнительные шаблоны, в том числе шаблоны от сторонних разработчиков, можно найти на странице [Доступные шаблоны для dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) в GitHub. Дополнительные сведения о создании и использовании пользовательских шаблонов см. в записи блога [Создание собственных шаблонов для команды dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) и на [вики-сайте, посвященном репозиторию dotnet/templating в GitHub](https://github.com/dotnet/templating/wiki).
 
-Пошаговое руководство по созданию шаблона см. в учебнике [Создание пользовательского шаблона для команды dotnet new](../tutorials/create-custom-template.md).
+Пошаговое руководство по созданию шаблона см. в учебнике [Создание пользовательского шаблона для команды dotnet new](../tutorials/cli-templates-create-item-template.md).
 
 ### <a name="net-default-templates"></a>Шаблоны .NET по умолчанию
 
@@ -250,7 +250,7 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>См. также
 
-- [Создание пользовательского шаблона для команды dotnet new (учебник)](../tutorials/create-custom-template.md)
+- [Создание пользовательского шаблона для команды dotnet new (учебник)](../tutorials/cli-templates-create-item-template.md)
 - [Вики-сайт, посвященный репозиторию dotnet/templating в GitHub](https://github.com/dotnet/templating/wiki)
 - [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)
 - [Создание собственных шаблонов для команды dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)

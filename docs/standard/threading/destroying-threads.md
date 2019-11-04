@@ -9,14 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960093"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138091"
 ---
 # <a name="destroying-threads"></a>Удаление потоков
 Метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> используется для остановки управляемого потока без возможности возобновления. При вызове <xref:System.Threading.Thread.Abort%2A> общеязыковая среда выполнения создает в целевом потоке исключение <xref:System.Threading.ThreadAbortException>, которое целевой поток может перехватить. Дополнительные сведения можно найти по адресу: <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

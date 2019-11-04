@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 026c7d2be678c4b6aeed4e2e6f9eb43283cd04c1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 4c04afb23a168a9cff60962bd5a75a65e3ebca4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134185"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Практическое руководство. Объединение параллельных и последовательных запросов LINQ
 Этот пример демонстрирует применение метода <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, который запрашивает последовательную обработку в PLINQ всех последующих операторов текущего запроса. Обычно последовательная обработка выполняется медленнее, чем параллельная, но иногда она необходима, чтобы гарантировать правильные результаты.  

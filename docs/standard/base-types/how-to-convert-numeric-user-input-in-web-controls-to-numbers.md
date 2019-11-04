@@ -13,14 +13,12 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78ba284ad2e75b39c0fb1001b0f65b48c519dbb5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882473"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140105"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 Веб-страницы могут отображаться в любой части света, а значит пользователи будут вводить числовые данные в элемент управления <xref:System.Web.UI.WebControls.TextBox> в самых разных форматах. Поэтому очень важно правильно определить язык и региональные параметры каждого посетителя веб-страницы. Тогда вы сможете применить соглашения о форматировании, соответствующие языку и региональным параметрам пользователя, при синтаксическом анализе вводимых данных.  
