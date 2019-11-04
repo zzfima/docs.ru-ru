@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960855"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454961"
 ---
 # <a name="readonly-c-reference"></a>readonly (Справочник по C#)
 
@@ -27,13 +27,13 @@ ms.locfileid: "72960855"
   - Ссылочные типы содержат только ссылку на соответствующие данные, а значит поле `readonly` ссылочного типа будет всегда ссылаться на один объект. Но сам этот объект не является неизменяемым. Модификатор `readonly` запрещает замену поля другим экземпляром ссылочного типа. Но этот модификатор не препятствует изменению данных экземпляра, на которое ссылается поле только для чтения, в том числе через это поле.
 
   > [!WARNING]
-  > Видимый извне тип, который содержит видимое извне и доступное только для чтения поле с изменяемым ссылочным типом, может представлять уязвимость и приводить к предупреждению [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types): Не объявляйте изменяющиеся ссылочные типы только для чтения.
+  > Видимый извне тип, который содержит видимое извне и доступное только для чтения поле с изменяемым ссылочным типом, может представлять уязвимость и приводить к предупреждению [CA2104](/visualstudio/code-quality/ca2104): Не объявляйте изменяющиеся ссылочные типы только для чтения.
 
 - В [определении `readonly struct`](#readonly-struct-example) `readonly` указывает на то, что `struct` является неизменяемым.
 - В [определения элемента `readonly`](#readonly-member-examples) `readonly` указывает, что элемент `struct` не изменяет внутреннее состояние структуры.
 - В [возврате метода `ref readonly`](#ref-readonly-return-example) модификатор `readonly` указывает, что метод возвращает ссылку, и записи для этой ссылки не допускаются.
 
-Контексты `readonly sturct` и `ref readonly` были добавлены в C# 7.2. Члены структуры `readonly` добавлены в C# 8.0
+Контексты `readonly struct` и `ref readonly` были добавлены в C# 7.2. Члены структуры `readonly` добавлены в C# 8.0
 
 ## <a name="readonly-field-example"></a>Пример поля только для чтения
 
@@ -161,6 +161,6 @@ public string Message { readonly get; set; }
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Модификаторы](modifiers.md)
+- [Модификаторы](index.md)
 - [const](const.md)
 - [Поля](../../programming-guide/classes-and-structs/fields.md)

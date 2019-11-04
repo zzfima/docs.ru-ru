@@ -2,12 +2,12 @@
 title: Практическое руководство. Связанные вызовы метода оси (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 573efb50dd889d1e10fc3a74bb5c7d9a8ac30eab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3dfb2849bc2e2af9290738ed06938f80f3416f72
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594079"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418413"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Практическое руководство. Связанные вызовы метода оси (LINQ to XML) (C#)
 Обычно при написании кода вы будете придерживаться схемы, по которой вызывается метод оси, после чего вызывается одна из осей метода расширений.  
@@ -118,4 +118,4 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>См. также
 
-- [Оси LINQ to XML (C#)](./linq-to-xml-axes.md)
+- [Оси LINQ to XML (C#)](linq-to-xml-axes-overview.md)

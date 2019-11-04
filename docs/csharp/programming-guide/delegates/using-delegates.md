@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: f7ee014150a01fe0010048101576f2fece360146
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: a0422b5cd3083f351bde44deae5871599a649140
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031869"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423290"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Использование делегатов (Руководство по программированию на C#)
 
-[Делегат](../../language-reference/keywords/delegate.md) — это тип, который безопасно инкапсулирует метод, схожий с указателем функции в C и C++. В отличие от указателей функций в C делегаты объектно-ориентированы, типобезопасны и безопасны. Тип делегата задается его именем. В следующем примере объявляется делегат с именем `Del`, который может инкапсулировать метод, использующий в качестве аргумента значение [string](../../language-reference/keywords/string.md) и возвращающий значение [void](../../language-reference/keywords/void.md):
+[Делегат](../../language-reference/builtin-types/reference-types.md) — это тип, который безопасно инкапсулирует метод, схожий с указателем функции в C и C++. В отличие от указателей функций в C делегаты объектно-ориентированы, типобезопасны и безопасны. Тип делегата задается его именем. В следующем примере объявляется делегат с именем `Del`, который может инкапсулировать метод, использующий в качестве аргумента значение [string](../../language-reference/builtin-types/reference-types.md) и возвращающий значение [void](../../language-reference/keywords/void.md):
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

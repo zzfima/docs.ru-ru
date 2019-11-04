@@ -7,53 +7,53 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 974b145a125a158bcafff93f8e9bc11001e00bf1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107371"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453582"
 ---
 # <a name="how-to-implement-icommandsource"></a>Практическое руководство. Реализация ICommandSource
-В этом примере показано, как создать источник команды, реализовав <xref:System.Windows.Input.ICommandSource>.  Источник команды — это объект, который знает, как для вызова команды.  <xref:System.Windows.Input.ICommandSource> Интерфейс предоставляет три члена: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, и <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> — Это команда, которая будет вызываться. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — Это тип пользовательских данных, который передается из источника команды методу, который обрабатывает команду. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — Это объект, для которого выполняется команда.  
+В этом примере показано, как создать источник команды путем реализации <xref:System.Windows.Input.ICommandSource>.  Источник команды — это объект, который знает, как вызывать команду.  Интерфейс <xref:System.Windows.Input.ICommandSource> предоставляет три члена: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>и <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> — команда, которая будет вызываться. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — это определяемый пользователем тип данных, который передается из источника команды в метод, обрабатывающий команду. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  
   
- В этом примере класс создается который подклассы <xref:System.Windows.Controls.Slider> управления и реализует <xref:System.Windows.Input.ICommandSource>.  
+ В этом примере создается класс, который подклассет <xref:System.Windows.Controls.Slider> элемент управления и реализует <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Пример  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд классов, которые реализуют <xref:System.Windows.Input.ICommandSource>, такие как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, и <xref:System.Windows.Controls.ListBoxItem>.  Источник команды определяет, как он вызывает команду.   <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.MenuItem> вызывают команду при щелчке.  Объект <xref:System.Windows.Controls.ListBoxItem> вызывает команду при его выборе. Эти классы становится только команды источнику их <xref:System.Windows.Input.ICommandSource.Command%2A> свойству.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд классов, реализующих <xref:System.Windows.Input.ICommandSource>, таких как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>и <xref:System.Windows.Controls.ListBoxItem>.  Источник команды определяет, как он вызывает команду.   <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.MenuItem> вызывать команду при их нажатии.  <xref:System.Windows.Controls.ListBoxItem> вызывает команду при двойном щелчке. Эти классы становятся источником команды только в том случае, если задано их свойство <xref:System.Windows.Input.ICommandSource.Command%2A>.  
   
- В этом примере команда будет вызываться при перемещении ползунка или, точнее говоря, при <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> изменении свойства.  
+ В этом примере мы будем вызывать команду при перемещении ползунка или точнее, при изменении свойства <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.  
   
  Ниже приведено определение класса.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- Следующим шагом является реализация <xref:System.Windows.Input.ICommandSource> членов.  В этом примере свойства реализуются как <xref:System.Windows.DependencyProperty> объектов.  Это включает свойства для использования привязки данных.  Дополнительные сведения о <xref:System.Windows.DependencyProperty> , представлена в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md).  Дополнительные сведения о привязке данных см. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md).  
+ Следующим шагом является реализация элементов <xref:System.Windows.Input.ICommandSource>.  В этом примере свойства реализуются как объекты <xref:System.Windows.DependencyProperty>.  Это позволяет свойствам использовать привязку данных.  Дополнительные сведения о классе <xref:System.Windows.DependencyProperty> см. в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md).  Дополнительные сведения о привязке данных см. в разделе [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md).  
   
- Только <xref:System.Windows.Input.ICommandSource.Command%2A> свойство показан здесь.  
+ Здесь показано только свойство <xref:System.Windows.Input.ICommandSource.Command%2A>.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
   
- Ниже приведен <xref:System.Windows.DependencyProperty> изменить обратного вызова.  
+ Ниже приведен <xref:System.Windows.DependencyProperty> обратный вызов изменения.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- Следующим шагом является добавление и удаление команды, связанный с источника команды.  <xref:System.Windows.Input.ICommandSource.Command%2A> Свойство не может просто быть перезаписан при добавлении новой команды, так как обработчики событий, связанные с предыдущей командой, если таковая имела место, сначала необходимо удалить.  
+ Следующим шагом является добавление и удаление команды, связанной с источником команды.  Свойство <xref:System.Windows.Input.ICommandSource.Command%2A> не может быть просто перезаписано при добавлении новой команды, так как обработчики событий, связанные с предыдущей командой (если таковой имеется), должны быть удалены первыми.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
- Последним шагом является создание логики для <xref:System.Windows.Input.ICommand.CanExecuteChanged> обработчика и <xref:System.Windows.Input.ICommand.Execute%2A> метод.  
+ Последним шагом является создание логики для обработчика <xref:System.Windows.Input.ICommand.CanExecuteChanged> и метода <xref:System.Windows.Input.ICommand.Execute%2A>.  
   
- <xref:System.Windows.Input.ICommand.CanExecuteChanged> Событие сообщает источнику команды, может измениться, возможность команды для выполнения на текущей цели команды.  При получении этого события источник команды обычно вызывает <xref:System.Windows.Input.ICommand.CanExecute%2A> метод о команде.  Если команда не может выполнить на текущей цели команды, источник команды обычно отключается.  Если команда может выполняться для текущего целевого объекта команды, источник команды обычно включает себя.  
+ Событие <xref:System.Windows.Input.ICommand.CanExecuteChanged> уведомляет источник команды о том, что возможность выполнения команды в текущем целевом объекте команды могла измениться.  Когда источник команды получает это событие, обычно он вызывает метод <xref:System.Windows.Input.ICommand.CanExecute%2A> для команды.  Если команда не может выполняться на текущем целевом объекте команды, источник команды обычно отключается.  Если команда может выполняться на текущем целевом объекте команды, источник команды обычно включает себя.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
   
- Последний шаг — <xref:System.Windows.Input.ICommand.Execute%2A> метод.  Если команда является <xref:System.Windows.Input.RoutedCommand>, <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> метод вызван; в противном случае — значение <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> вызывается метод.  
+ Последним шагом является метод <xref:System.Windows.Input.ICommand.Execute%2A>.  Если команда является <xref:System.Windows.Input.RoutedCommand>, вызывается метод <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A>. в противном случае вызывается метод <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A>.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  

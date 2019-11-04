@@ -2,12 +2,12 @@
 title: Операции, использующие квантификаторы (C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 4a0f5b2c90d4b71a945dee02a32cbe897818c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5899af79799d5b8404e60027d7ba1b005c4b1b79
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591474"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423366"
 ---
 # <a name="quantifier-operations-c"></a>Операции, использующие квантификаторы (C#)
 Квантификаторы возвращают значение <xref:System.Boolean>, которое указывает, удовлетворяют ли условию некоторые или все элементы в последовательности.  
@@ -30,5 +30,5 @@ ms.locfileid: "69591474"
 
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
-- [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

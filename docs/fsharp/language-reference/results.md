@@ -1,17 +1,17 @@
 ---
 title: Результаты
-description: Сведения об использовании F# введите «Результат», которые помогут вам создавать ошибкам кода.
+description: Узнайте, как использовать тип F# "Result" для написания отказоустойчивого кода.
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645323"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424851"
 ---
 # <a name="results"></a>Результаты
 
-Начиная с F# 4.1, имеется `Result<'T,'TFailure>` тип, который можно использовать для написания ошибкам код, который может быть задан.
+Начиная с F# 4,1 существует тип `Result<'T,'TFailure>`, который можно использовать для написания отказоустойчивого кода, который можно составить.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -20,20 +20,20 @@ ms.locfileid: "65645323"
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Обратите внимание, что тип результата — [размеченные объединения](discriminated-unions.md#struct-discriminated-unions), который впервые появился в еще одна функция F# 4.1.  Здесь применяется семантика структурного равенства.
+Обратите внимание, что тип результата — это [отличительное объединение структуры](discriminated-unions.md#struct-discriminated-unions), которое представляет собой еще F# один компонент, представленный в 4,1.  Семантика структурного равенства применяется здесь.
 
-`Result` Тип обычно используется в результата вычисления обработки ошибок, который часто называется [железнодорожных ориентированное программирование](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) в F# сообщества.  Ниже приведен упрощенный пример этот подход.
+Тип `Result` обычно используется в собственной обработке ошибок, которую часто называют [раилвай-ориентированным программированием](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) в F# сообществе.  Следующий тривиальный пример демонстрирует этот подход.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,7 +80,7 @@ let test() =
 test()
 ```
 
-Как вы видите, это довольно просто цепочку различные функции проверки, если можно сделать так, чтобы вернуть `Result`.  Это позволяет разделить функциональные возможности следующим образом на мелкие части, в которых сочетаются, как их быть при необходимости.  Кроме того, это преимущества *применение* использование [сопоставление шаблонов](pattern-matching.md) в конце цикла проверки, который, в обеспечивает более высокую степень корректности программ.
+Как видите, в цепочку можно легко объединить различные функции проверки, если вы принудительно возвращаете `Result`.  Это позволяет разбивать такие функциональные возможности на небольшие части, которые являются взаимокомпозициями по мере необходимости.  Это также имеет добавленное *значение применения* [сопоставления шаблонов](pattern-matching.md) в конце круга проверки, что в свою сторону принуждает к более высокой степени правильности программы.
 
 ## <a name="see-also"></a>См. также
 

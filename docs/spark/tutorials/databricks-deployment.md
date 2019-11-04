@@ -4,12 +4,12 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961091"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454273"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Учебник. Развертывание приложения .NET для Apache Spark в Databricks
 
@@ -18,10 +18,11 @@ ms.locfileid: "72961091"
 В этом руководстве вы узнаете, как:
 
 > [!div class="checklist"]
-> создание рабочей области Azure Databricks;
-> Опубликовать приложение .NET для Apache Spark.
-> Создать задание Spark и кластер Spark.
-> Запустить приложение в кластере Spark.
+>
+> - создание рабочей области Azure Databricks;
+> - Опубликовать приложение .NET для Apache Spark.
+> - Создать задание Spark и кластер Spark.
+> - Запустить приложение в кластере Spark.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -44,7 +45,7 @@ ms.locfileid: "72961091"
    ![Создание ресурса Azure Databricks на портале Azure](./media/databricks-deployment/create-databricks-resource.png)
 
 2. В разделе **службы Azure Databricks** укажите значения для создания рабочей области Databricks.
-    
+
     |Свойство.  |ОПИСАНИЕ  |
     |---------|---------|
     |**Имя рабочей области**     | Укажите имя рабочей области Databricks.        |
@@ -58,10 +59,10 @@ ms.locfileid: "72961091"
 
 ## <a name="install-azure-databricks-tools"></a>Установка средств Azure Databricks
 
-Для подключения к кластерам Azure Databricks и передачи файлов с локального компьютера можно использовать **интерфейс командной строки Databricks**. В кластерах Databricks доступ к файлам осуществляется через DBFS (файловая система Databricks). 
+Для подключения к кластерам Azure Databricks и передачи файлов с локального компьютера можно использовать **интерфейс командной строки Databricks**. В кластерах Databricks доступ к файлам осуществляется через DBFS (файловая система Databricks).
 
 1. Для работы интерфейса командной строки Databricks требуется Python 3.6 или более поздней версии. Если у вас уже установлен Python, можно перейти к следующему шагу.
- 
+
    **Для Windows:**
 
    [Загрузка Python для Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
@@ -106,14 +107,14 @@ ms.locfileid: "72961091"
 
 1. Microsoft.Spark.Worker помогает Apache Spark запускать ваше приложение, например пользовательские функции (UDF), которые вы написали. Загрузите [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
 
-2. *install-worker.sh* — это скрипт, который позволяет копировать зависимые файлы .NET для Apache Spark в узлы кластера. 
+2. *install-worker.sh* — это скрипт, который позволяет копировать зависимые файлы .NET для Apache Spark в узлы кластера.
 
-   Создайте новый файл с именем **install-worker.sh** на локальном компьютере и вставьте [содержимое файла install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh), расположенного на сайте GitHub. 
+   Создайте новый файл с именем **install-worker.sh** на локальном компьютере и вставьте [содержимое файла install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh), расположенного на сайте GitHub.
 
 3. *db-init.sh* — это скрипт, который устанавливает зависимости на кластер Databricks Spark.
 
-   Создайте новый файл с именем **db-init.sh** на локальном компьютере и вставьте [содержимое файла db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh), расположенного на сайте GitHub. 
-   
+   Создайте новый файл с именем **db-init.sh** на локальном компьютере и вставьте [содержимое файла db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh), расположенного на сайте GitHub.
+
    В только что созданном файле задайте для переменной `DOTNET_SPARK_RELEASE` значение `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`. Оставьте остальную часть файла *db-init.sh* без изменений.
 
 > [!Note]
@@ -121,7 +122,7 @@ ms.locfileid: "72961091"
 
 ## <a name="publish-your-app"></a>Публикация приложения
 
-Затем вы публикуете приложение *mySparkApp*, созданное в учебнике [.NET для Apache Spark — начало работы за 10 минут](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro), чтобы кластер Spark имел доступ ко всем файлам, которые необходимы для запуска приложения. 
+Затем вы публикуете приложение *mySparkApp*, созданное в учебнике [.NET для Apache Spark — начало работы за 10 минут](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro), чтобы кластер Spark имел доступ ко всем файлам, которые необходимы для запуска приложения.
 
 1. Для публикации *mySparkApp* выполните следующие команды:
 
@@ -163,13 +164,13 @@ ms.locfileid: "72961091"
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Выполните следующие команды, чтобы отправить оставшиеся файлы, необходимые кластеру для запуска приложения: ZIP-папку публикации, *input.txt* и *microsoft-spark-2.4.x-0.3.0.jar*. 
+2. Выполните следующие команды, чтобы отправить оставшиеся файлы, необходимые кластеру для запуска приложения: ZIP-папку публикации, *input.txt* и *microsoft-spark-2.4.x-0.3.0.jar*.
 
    ```console
-   cd mySparkApp 
+   cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
-   
-   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory
    databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
@@ -178,7 +179,7 @@ ms.locfileid: "72961091"
 
 Приложение выполняется на Azure Databricks с помощью задания, которое выполняет **spark-submit**. Это команда, используемая для запуска заданий .NET для Apache Spark.
 
-1. В рабочей области Azure Databricks нажмите на значок **Задания**, а затем **+ Создать задание**. 
+1. В рабочей области Azure Databricks нажмите на значок **Задания**, а затем **+ Создать задание**.
 
    ![Создание задания Azure Databricks](./media/databricks-deployment/create-job.png)
 
@@ -196,7 +197,7 @@ ms.locfileid: "72961091"
 
 1. Перейдите к своему заданию и выберите **Изменить**, чтобы настроить кластер задания.
 
-2. Выберите для кластера **Spark 2.4.1**. Затем выберите **Дополнительные параметры** > **Скрипты инициализации**. Введите следующий путь к скрипту инициализации: `dbfs:/spark-dotnet/db-init.sh`. 
+2. Выберите для кластера **Spark 2.4.1**. Затем выберите **Дополнительные параметры** > **Скрипты инициализации**. Введите следующий путь к скрипту инициализации: `dbfs:/spark-dotnet/db-init.sh`.
 
    ![Настройка кластера Spark в Azure Databricks](./media/databricks-deployment/cluster-config.png)
 
@@ -208,7 +209,7 @@ ms.locfileid: "72961091"
 
 2. Создание кластера задания может занять несколько минут. После создания задание будет отправлено, и вы сможете просмотреть выходные данные.
 
-3. Выберите **Кластеры** в меню слева, а затем имя и выполнение задания. 
+3. Выберите **Кластеры** в меню слева, а затем имя и выполнение задания.
 
 4. Выберите **Журналы драйверов**, чтобы просмотреть выходные данные задания. После выполнения приложения отображается та же таблица подсчета слов из локального запуска начального приложения, записанная на консоль стандартного потока вывода.
 

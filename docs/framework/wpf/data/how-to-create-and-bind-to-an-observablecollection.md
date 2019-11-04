@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание и привязка ObservableCollection
+title: Практическое руководство. Создание и привязка коллекции "ObservableCollection"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965468"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453518"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Практическое руководство. Создание и привязка ObservableCollection
-В этом примере показано, как создать и привязать коллекцию, производную от <xref:System.Collections.ObjectModel.ObservableCollection%601> класса, который представляет собой класс коллекции, который предоставляет уведомления при добавлении или удалении элементов.  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Практическое руководство. Создание и привязка коллекции "ObservableCollection"
+В этом примере показано, как создать и привязать коллекцию, производную от класса <xref:System.Collections.ObjectModel.ObservableCollection%601>, который представляет собой класс коллекции, который предоставляет уведомления при добавлении или удалении элементов.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана реализация коллекции `NameList`.  
@@ -136,14 +136,14 @@ End Class
  Определение `NameItemTemplate` здесь не показано.  
   
 > [!NOTE]
-> Объекты в коллекции должны удовлетворять требованиям, описанным в разделе [Общие сведения об источниках привязки](binding-sources-overview.md). В частности, если вы используете <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] например, хотите обновлять, когда исходные свойства изменяются динамически), необходимо реализовать подходящий механизм уведомления об изменении свойств, например <xref:System.ComponentModel.INotifyPropertyChanged>интерфейс.  
+> Объекты в коллекции должны удовлетворять требованиям, описанным в разделе [Общие сведения об источниках привязки](binding-sources-overview.md). В частности, если вы используете <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> (например, вы хотите, чтобы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновляться при динамическом изменении свойств источника), необходимо реализовать подходящий механизм уведомления об изменении свойств, например интерфейс <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
- Дополнительные сведения см. в разделе "Привязка к коллекциям" в разделе [Общие сведения о привязке данных](data-binding-overview.md).  
+ Дополнительные сведения см. в разделе "Привязка к коллекциям" в разделе [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Сортировка данных в представлении](how-to-sort-data-in-a-view.md)
 - [Фильтрация данных в представлении](how-to-filter-data-in-a-view.md)
 - [Сортировка и группировка данных с помощью представления в XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Разделы практического руководства](data-binding-how-to-topics.md)

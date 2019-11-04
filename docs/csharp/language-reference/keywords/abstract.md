@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606142"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422944"
 ---
 # <a name="abstract-c-reference"></a>abstract (Справочник по C#)
 Модификатор `abstract` указывает, что изменяемый элемент имеет отсутствующую или неполную реализацию. Модификатор abstract можно использовать с классами, методами, свойствами, индексаторами и событиями. Используйте модификатор `abstract` в объявлении класса, чтобы указать, что класс предназначен только для использования в качестве базового класса для других классов и не должен быть создан сам по себе. Элементы с пометкой abstract должны быть реализованы не абстрактными классами, производными от абстрактного класса.
@@ -85,7 +85,7 @@ BaseClass bc = new BaseClass();   // Error
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Модификаторы](./modifiers.md)
+- [Модификаторы](index.md)
 - [virtual](./virtual.md)
 - [override](./override.md)
 - [Ключевые слова в C#](./index.md)

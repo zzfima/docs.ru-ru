@@ -37,14 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132848"
 ---
 # <a name="net-class-library-overview"></a>Обзор библиотеки классов .NET
 
@@ -86,20 +84,20 @@ ms.locfileid: "65593508"
   
  В следующей таблице перечислены базовые типы, предоставляемые в .NET, кратко описывается каждый тип и указывается соответствующий тип в Visual Basic, C#, C++ и F#.  
   
-|Категория|Имя класса|Описание|Тип данных в Visual Basic|Тип данных в C#|Тип данных С++/CLI|Тип данных F#|  
+|Категория|Имя класса|ОПИСАНИЕ|Тип данных в Visual Basic|Тип данных в C#|Тип данных С++/CLI|Тип данных F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Целое число|<xref:System.Byte>|8-разрядное целое число без знака.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8-битовое целое число со знаком.<br /><br /> Не является CLS-совместимым.|**SByte**|**sbyte**|**char**<br /> - или -<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|8-битовое целое число со знаком.<br /><br /> Не является CLS-совместимым.|**SByte**|**sbyte**|**char**<br /> -или-<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|16-разрядное знаковое целое число.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32-разрядное знаковое целое число.|**Integer**|**int**|**int**<br /><br /> - или -<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32-разрядное знаковое целое число.|**Integer**|**int**|**int**<br /><br /> -или-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64-разрядное целое число со знаком.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|32-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UInteger**|**uint**|**unsigned int**<br /> - или -<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|32-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UInteger**|**uint**|**unsigned int**<br /> -или-<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |С плавающей запятой|<xref:System.Single>|Число с плавающей запятой с обычной точностью (32-разрядное).|**Single**|**float**|**float**|**float32**<br> или<br>**single**|  
 ||<xref:System.Double>|Число с плавающей запятой с двойной точностью (64-разрядное).|**Double**|**double**|**double**|**float**<br> или <br> **double**|  
 |Logical|<xref:System.Boolean>|Логическое значение (true или false).|**Boolean**|**bool**|**bool**|**bool**|  
-|Другое|<xref:System.Char>|Символ Юникода (16-разрядный).|**Char**|**char**|**wchar_t**|**char**|  
+|Другой|<xref:System.Char>|Символ Юникода (16-разрядный).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|128-разрядное десятичное значение.|**Decimal**|**decimal**|**Decimal**|**decimal**|  
 ||<xref:System.IntPtr>|Целое число со знаком, размер которого зависит от базовой платформы (32-разрядное значение при 32-разрядной платформе и 64-разрядное значение при 64-разрядной платформе).|**IntPtr**<br /><br /> Не является встроенным типом.|**IntPtr**<br /><br /> Не является встроенным типом.|**IntPtr**<br /><br /> Не является встроенным типом.|**unativeint**|  
 ||<xref:System.UIntPtr>|Целое число без знака, размер которого зависит от базовой платформы (32-разрядное значение при 32-разрядной платформе и 64-разрядное значение при 64-разрядной платформе).<br /><br /> Не является CLS-совместимым.|**UIntPtr**<br /><br /> Не является встроенным типом.|**UIntPtr**<br /><br /> Не является встроенным типом.|**UIntPtr**<br /><br /> Не является встроенным типом.|**unativeint**|  

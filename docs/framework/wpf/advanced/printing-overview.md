@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: b6de7aab77c168f353b39b44853fc224cbf0244d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0758a537ee457a8fe5a778e2a2c24a8ba13c263b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254081"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460865"
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
 С Microsoft .NET Framework разработчики приложений, использующие Windows Presentation Foundation (WPF), имеют богатый новый набор API-интерфейсов для управления печатью и системой печати. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. Основой этой новой функциональности является новый формат XPS-файла и путь печати XPS.  
@@ -29,25 +29,25 @@ ms.locfileid: "70254081"
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>О формате XPS  
- XPS — это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, в котором используется [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], Open Packaging Conventions (OPC) и другие отраслевые стандарты для создания кросс-платформенных документов. XPS упрощает процесс создания, совместного использования, печати, просмотра и архивации цифровых документов. Дополнительные сведения о XPS см. в статье [XPS-документы](/windows/desktop/printdocs/documents).  
+ XPS — это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, который использует [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], Open Packaging Conventions (OPC) и другие отраслевые стандарты для создания кросс-платформенных документов. XPS упрощает процесс создания, совместного использования, печати, просмотра и архивации цифровых документов. Дополнительные сведения о XPS см. в статье [XPS-документы](/windows/desktop/printdocs/documents).  
   
- Некоторые методы печати содержимого на основе XPS с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] демонстрируются в [программной печати XPS-файлов](how-to-programmatically-print-xps-files.md). Ссылки на эти примеры могут оказаться полезными при просмотре содержимого этого раздела. (Разработчики неуправляемого кода должны увидеть документацию по [функции MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms разработчики должны использовать API в <xref:System.Drawing.Printing> пространстве имен, который не поддерживает полный путь печати XPS, но поддерживает гибридный путь печати из GDI в XPS. См. раздел **Архитектура способа печати** ниже.)  
+ Некоторые методы печати содержимого на основе XPS с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] демонстрируются при [программной печати XPS-файлов](how-to-programmatically-print-xps-files.md). Ссылки на эти примеры могут оказаться полезными при просмотре содержимого этого раздела. (Разработчики неуправляемого кода должны увидеть документацию по [функции MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms разработчики должны использовать API в пространстве имен <xref:System.Drawing.Printing>, который не поддерживает полный путь печати XPS, но поддерживает гибридный путь печати с помощью GDI в XPS. См. раздел **Архитектура способа печати** ниже.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Способ печати XPS  
  Путь печати в формате XPS — это новая функция Windows, которая переопределяет способ обработки печати в приложениях Windows. Так как XPS может заменить язык представления документов (например, RTF), формат диспетчера очереди печати (например, WMF) и язык описания страницы (например, PCL или PostScript); новый способ печати сохраняет формат XPS от публикации приложения до финальной обработки в драйвере или устройстве печати.  
   
- Путь печати XPS основан на модели драйвера принтера XPS (XPSDrv), которая предоставляет несколько преимуществ для разработчиков, таких как [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] печать, улучшенная поддержка цветов и значительно улучшенная производительность печати. (Дополнительные сведения о XPSDrv см. в [документации к пакету драйверов Windows](/windows-hardware/drivers/).)  
+ Путь печати XPS основан на модели драйвера принтера XPS (XPSDrv), предоставляющей несколько преимуществ для разработчиков, таких как «то, что вы видите, это то, что вы получаете: «(WYSIWYG), улучшенная поддержка цвета и значительно улучшена производительность печати». (Дополнительные сведения о XPSDrv см. в [документации к пакету драйверов Windows](/windows-hardware/drivers/).)  
   
  Работа диспетчера очереди печати для документов XPS в основном такая же, как и в предыдущих версиях Windows. Однако он был усовершенствован для поддержки пути печати XPS в дополнение к существующему пути печати GDI. Новый способ печати изначально использует файл очереди XPS. Хотя драйверы принтера пользовательского режима, написанные для предыдущих версий Windows, продолжат работать, для использования пути печати XPS требуется драйвер принтера XPS (XPSDrv).  
   
  Преимущества пути печати XPS существенны и включают:  
   
-- Поддержка печати [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)]  
+- Поддержка печати в режиме WYSIWYG  
   
 - Встроенная поддержка дополнительных цветовых профилей, включая 32 бита на канал (bpc), CMYK, именованные цвета, n-краски и встроенную поддержку прозрачности и градиентов.  
   
-- Улучшенная производительность печати как для .NET Framework [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] , так и для приложений на основе.  
+- Улучшенная производительность печати для .NET Framework и [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]ных приложений.  
   
 - Стандартный промышленный формат XPS.  
   
@@ -60,25 +60,25 @@ ms.locfileid: "70254081"
 - Расширяемый конвейер фильтра. Конвейер фильтра драйвера принтера XPS (XPSDrv) был разработан так, чтобы обеспечить как прямую, так и масштабируемую печать документов XPS. Дополнительные сведения см. в разделе [драйверы принтера XPSDrv](/windows-hardware/drivers/print/xpsdrv-printer-drivers). 
   
 ### <a name="print-path-architecture"></a>Архитектура способа печати  
- Хотя и приложения, и .NET Framework поддерживают XPS [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] , и Windows Forms приложения используют преобразование GDI в XPS для создания содержимого в формате XPS для драйвера принтера XPS (XPSDrv). [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Эти приложения не обязаны использовать путь печати XPS и могут продолжать использовать распечатку на основе расширенного метафайла (EMF). Однако большинство функций и улучшений XPS доступны только для приложений, предназначенных для печати XPS.  
+ Хотя приложения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и .NET Framework поддерживают XPS, приложения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и Windows Forms используют преобразование GDI в XPS для создания содержимого в формате XPS для драйвера принтера XPS (XPSDrv). Эти приложения не обязаны использовать путь печати XPS и могут продолжать использовать распечатку на основе расширенного метафайла (EMF). Однако большинство функций и улучшений XPS доступны только для приложений, предназначенных для печати XPS.  
   
- Чтобы включить использование принтеров на основе XPSDrv в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и Windows Forms приложений, драйвер принтера XPS (XPSDrv) поддерживает преобразование из GDI в формат XPS. Модель XPSDrv также предоставляет конвертер для формата XPS в GDI, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] чтобы приложения могли печатать документы XPS. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений преобразование XPS в формат GDI выполняется автоматически <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> методами <xref:System.Windows.Xps.XpsDocumentWriter> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> класса, когда целевая очередь печати в операции записи не имеет драйвера XPSDrv. (Windows Forms приложения не могут печатать документы XPS.)  
+ Чтобы включить использование принтеров на основе XPSDrv, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и Windows Forms приложений, драйвер принтера XPS (XPSDrv) поддерживает преобразование из GDI в формат XPS. Модель XPSDrv также предоставляет конвертер для формата XPS в GDI, чтобы [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] приложения могли печатать XPS-документы. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений преобразование XPS в формат GDI выполняется автоматически методами <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> класса <xref:System.Windows.Xps.XpsDocumentWriter> каждый раз, когда в целевой очереди печати операции записи отсутствует драйвер XPSDrv. (Windows Forms приложения не могут печатать документы XPS.)  
   
  На следующем рисунке показана подсистема печати и определены части, предоставляемые корпорацией Майкрософт, а также части, определяемые поставщиками программного обеспечения и оборудования.  
   
  ![На снимке экрана показана система печати XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Базовая печать XPS  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]определяет как базовый, так и расширенный API. Для приложений, которые не нуждаются в расширенной настройке печати или доступе к полному набору функций XPS, доступна базовая поддержка печати. Базовая поддержка печати предоставляется с помощью элемента управления диалогового окна печати, который требует минимальной конфигурации и представляет знакомый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. При использовании этой упрощенной модели печати доступны многие функции XPS.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] определяет как базовый, так и расширенный API. Для приложений, которые не нуждаются в расширенной настройке печати или доступе к полному набору функций XPS, доступна базовая поддержка печати. Базовая поддержка печати предоставляется с помощью элемента управления диалогового окна печати, который требует минимальной конфигурации и представляет знакомый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. При использовании этой упрощенной модели печати доступны многие функции XPS.  
   
 #### <a name="printdialog"></a>PrintDialog  
- Элемент управления предоставляет единую точку входа для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], настройки и отправки задания XPS. <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Сведения о том, как создать и использовать элемент управления, см. в разделе [Вызов диалогового окна печати](how-to-invoke-a-print-dialog.md).  
+ Элемент управления <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> предоставляет единую точку входа для отправки заданий [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], конфигурации и XPS. Сведения о том, как создать и использовать элемент управления, см. в разделе [Вызов диалогового окна печати](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Расширенная печать XPS  
- Для доступа к полному набору функций XPS необходимо использовать расширенный API печати. Несколько соответствующих API подробно описаны ниже. Полный список API-интерфейсов пути печати XPS см. в <xref:System.Windows.Xps> разделе <xref:System.Printing> ссылки на пространства имен и.  
+ Для доступа к полному набору функций XPS необходимо использовать расширенный API печати. Несколько соответствующих API подробно описаны ниже. Полный список API-интерфейсов для печати в формате XPS см. в разделе ссылки на пространства имен <xref:System.Windows.Xps> и <xref:System.Printing>.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket и PrintCapabilities  
- Классы <xref:System.Printing.PrintTicket> и<xref:System.Printing.PrintCapabilities> являются основой расширенных функций XPS. Оба типа объектов представляют собой форматированные структуры [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] возможностей печати, таких как сортировка, двусторонняя печать, сшивание и т. д. Эти структуры определяются схемой печати. Объект <xref:System.Printing.PrintTicket> указывает принтеру, как обрабатывать задание печати. Класс <xref:System.Printing.PrintCapabilities> определяет возможности принтера. Запрашивая возможности принтера, можно создать <xref:System.Printing.PrintTicket>, который использует все преимущества поддерживаемых возможностей принтера. Аналогичным образом можно избежать неподдерживаемых функций.  
+ Классы <xref:System.Printing.PrintTicket> и <xref:System.Printing.PrintCapabilities> являются основой расширенных функций XPS. Оба типа объектов представляют собой [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] форматированные структуры, ориентированные на печать, такие как параметры сортировки, двусторонняя печать, сшивание и т. д. Эти структуры определяются схемой печати. Объект <xref:System.Printing.PrintTicket> указывает принтеру, как обрабатывать задание печати. Класс <xref:System.Printing.PrintCapabilities> определяет возможности принтера. Запрашивая возможности принтера, можно создать <xref:System.Printing.PrintTicket>, который использует все преимущества поддерживаемых возможностей принтера. Аналогичным образом можно избежать неподдерживаемых функций.  
   
  В следующем примере демонстрируется, как запрашивать <xref:System.Printing.PrintCapabilities> принтера и создавать <xref:System.Printing.PrintTicket> с помощью кода.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "70254081"
  [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
- Объект <xref:System.Windows.Xps.XpsDocumentWriter>с <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> <xref:System.Printing.PrintQueue>множеством методов и используется для записи XPS-документов в. <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> Например, <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> метод используется для вывода документа XPS и <xref:System.Printing.PrintTicket> синхронно. Метод используется для вывода документа XPS и <xref:System.Printing.PrintTicket> асинхронно. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29>  
+ <xref:System.Windows.Xps.XpsDocumentWriter>с множеством методов <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> используется для записи документов XPS в <xref:System.Printing.PrintQueue>. Например, метод <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> используется для вывода документа XPS и <xref:System.Printing.PrintTicket> синхронно. Метод <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> используется для вывода документа XPS и <xref:System.Printing.PrintTicket> асинхронно.  
   
  В следующем примере показывается, как создать <xref:System.Windows.Xps.XpsDocumentWriter> с помощью кода.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "70254081"
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>Способ печати GDI  
- Хотя [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения изначально поддерживают путь печати XPS, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] а Windows Forms приложения также могут воспользоваться преимуществами некоторых функций XPS. Драйвер принтера XPS (XPSDrv) может преобразовывать выходные данные на основе GDI в формат XPS. Для расширенных сценариев поддерживается настраиваемое преобразование содержимого с помощью [конвертера документов XPS (Майкрософт) (мксдк)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-). Аналогичным образом <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> <xref:System.Windows.Xps.XpsDocumentWriter> приложения также могут выводить данные в путь печати GDI путем вызова одного из методов или класса и назначения принтера без XPSDrv в качестве целевой очереди печати. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  
+ Хотя [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения изначально поддерживают путь печати XPS, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и Windows Forms приложения также могут воспользоваться преимуществами некоторых функций XPS. Драйвер принтера XPS (XPSDrv) может преобразовывать выходные данные на основе GDI в формат XPS. Для расширенных сценариев поддерживается настраиваемое преобразование содержимого с помощью [конвертера документов XPS (Майкрософт) (мксдк)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-). Аналогичным образом [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения также могут выводить путь печати GDI, вызывая один из методов <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> или <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> класса <xref:System.Windows.Xps.XpsDocumentWriter> и обозначающий принтер без XpsDrv в качестве целевой очереди печати.  
 
 Для приложений, не требующих функциональности или поддержки XPS, текущий путь печати GDI остается неизменным.  
   

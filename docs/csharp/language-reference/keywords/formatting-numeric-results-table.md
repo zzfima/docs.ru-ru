@@ -8,24 +8,24 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421970"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422753"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Таблица форматирования числовых результатов (справочник по C#)
 
 В следующей таблице приводятся описатели поддерживаемых форматов для форматирования числовых результатов. Форматированный результат в последнем столбце соответствует формату "en-US" (<xref:System.Globalization.CultureInfo>).
 
-|Описатель формата|Описание|Примеры|Результат|  
+|Описатель формата|ОПИСАНИЕ|Примеры|Результат|  
 |----------------------|-----------------|--------------|------------|  
 |C или c|Валюта|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
-|D или d|Десятичное число|`string s = $"{25:D5}";`|00025|  
+|D или d|Decimal|`string s = $"{25:D5}";`|00025|  
 |E или e|Экспоненциальный|`string s = $"{250000:E2}";`|2.50E+005|  
 |F или f|С фиксированной запятой|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
-|G или g|Общие|`string s = $"{2.5:G}";`|2.5|  
+|G или g|Общее|`string s = $"{2.5:G}";`|2.5|  
 |N или n|Numeric|`string s = $"{2500000:N}";`|2,500,000.00|  
 |P или p|Процент|`string s = $"{0.25:P}";`|25.00%|  
 |R или r|Приемо-передача|`string s = $"{2.5:R}";`|2.5|  
@@ -57,4 +57,4 @@ ms.locfileid: "66421970"
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)
 - [Составное форматирование](../../../standard/base-types/composite-formatting.md)
 - [Интерполяция строк](../tokens/interpolated.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)

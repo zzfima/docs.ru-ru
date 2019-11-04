@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: aef64f538aecb0fc5dadec850020d7c01d02ccbd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523547"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417593"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Использование типа dynamic (руководство по программированию на C#)
 
@@ -76,7 +76,7 @@ C# 4 включает несколько функций, улучшающих в
 
 |Заголовок|ОПИСАНИЕ|
 |-----------|-----------------|
-|[dynamic](../../language-reference/keywords/dynamic.md)|Описывает применение ключевого слова `dynamic`.|
+|[dynamic](../../language-reference/builtin-types/reference-types.md)|Описывает применение ключевого слова `dynamic`.|
 |[Общие сведения о среде DLR](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Содержит общие сведения о среде DLR — среде выполнения, которая добавляет в общую среду языковой среды исполнения (CLR) набор служб для динамических языков.|
 |[Пошаговое руководство: Создание и использование динамических объектов](walkthrough-creating-and-using-dynamic-objects.md)|Содержит пошаговые инструкции по созданию пользовательских динамических объектов и проекта, который обращается к библиотеке `IronPython`.|
 |[Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C#](../interop/how-to-access-office-onterop-objects.md)|Содержит сведения о создании проекта с использованием именованных и необязательных аргументов, типа `dynamic` и других усовершенствований, которые упрощают доступ к объектам Office API.|

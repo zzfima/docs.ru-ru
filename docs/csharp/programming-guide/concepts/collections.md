@@ -2,12 +2,12 @@
 title: Коллекции (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595293"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418696"
 ---
 # <a name="collections-c"></a>Коллекции (C#)
 
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Использование LINQ для доступа к коллекции
 
-Для доступа к коллекции можно использовать язык LINQ. Запросы LINQ обеспечивают возможности фильтрации, упорядочения и группировки. Дополнительные сведения см. в разделе [Приступая к работе с LINQ в C#](./linq/getting-started-with-linq.md).
+Для доступа к коллекции можно использовать язык LINQ. Запросы LINQ обеспечивают возможности фильтрации, упорядочения и группировки. Дополнительные сведения см. в разделе [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/).
 
 В приведенном ниже примере выполняется запрос LINQ применительно к универсальной коллекции `List`. Запрос LINQ возвращает другую коллекцию, содержащую результаты.
 
@@ -561,7 +561,7 @@ public class Color
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Итераторы
+## <a name="iterators"></a>Iterators
 
 *Итератор* используется для выполнения настраиваемого перебора коллекции. Итератор может быть методом или методом доступа `get`. Итератор использует оператор [yield return](../../language-reference/keywords/yield.md) для возврата всех элементов коллекции по одному за раз.
 

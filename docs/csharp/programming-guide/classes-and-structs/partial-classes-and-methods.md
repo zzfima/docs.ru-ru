@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596285"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419173"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Разделяемые классы и методы (Руководство по программированию в C#)
 
@@ -164,11 +164,11 @@ partial void onNameChanged()
 
 - Разделяемые методы могут быть универсальными. Ограничения налагаются на ту часть объявления разделяемого метода, где находится определение, и могут дополнительно повторяться в разделе реализации. Имена параметров и типов параметров необязательно должны совпадать в объявлении реализации и в объявлении определения.
 
-- Можно использовать [делегат](../../language-reference/keywords/delegate.md) в качестве определенного и реализованного разделяемого метода, но его нельзя использовать в качестве разделяемого метода, который только определен.
+- Можно использовать [делегат](../../language-reference/builtin-types/reference-types.md) в качестве определенного и реализованного разделяемого метода, но его нельзя использовать в качестве разделяемого метода, который только определен.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Разделяемые типы](~/_csharplang/spec/classes.md#partial-types) в [Спецификации языка C#](../../language-reference/language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе [Разделяемые типы](~/_csharplang/spec/classes.md#partial-types) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
 
 ## <a name="see-also"></a>См. также
 
