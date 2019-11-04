@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425275"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459767"
 ---
 # <a name="navigation-overview"></a>Общие сведения о переходах
 
@@ -742,7 +742,7 @@ URI фрагмента имеет следующий формат.
 
 ### <a name="navigating-to-custom-objects"></a>Переход к пользовательским объектам
 
-Если данные хранятся в виде пользовательских объектов, то один из способов отобразить эти данные — создать <xref:System.Windows.Controls.Page> с содержимым, привязанным к этим объектам (см. раздел [Общие сведения о привязке данных](../data/data-binding-overview.md)). Если не требуется создание всей страницы только для отображения объектов, то можно перейти непосредственно к ним.
+Если данные хранятся в виде пользовательских объектов, то один из способов отобразить эти данные — создать <xref:System.Windows.Controls.Page> с содержимым, привязанным к этим объектам (см. раздел [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)). Если не требуется создание всей страницы только для отображения объектов, то можно перейти непосредственно к ним.
 
 Рассмотрим класс `Person`, реализованный в следующем коде.
 

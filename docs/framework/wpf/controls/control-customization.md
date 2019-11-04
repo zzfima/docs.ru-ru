@@ -7,17 +7,17 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 946724cc388c9c9456973ef164b8b6f38fd85869
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017700"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460744"
 ---
 # <a name="control-customization"></a>Настройка элементов управления
-Эта категория охватывает различные базовые классы, интерфейсы и другие элементы и основные понятия, используемые при создании полнофункциональных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элемента управления.  
+В этой категории рассматриваются различные базовые классы, интерфейсы и другие элементы и понятия, используемые для создания полностью функционального [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] управления.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о разработке элементов управления](control-authoring-overview.md)  
  [Рекомендации по разработке элементов управления с возможностью использования стилей](guidelines-for-designing-stylable-controls.md)  
  [Декоративные элементы](adorners.md)  
@@ -26,4 +26,4 @@ ms.locfileid: "62017700"
   
 ## <a name="see-also"></a>См. также
 
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

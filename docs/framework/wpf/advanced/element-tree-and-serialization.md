@@ -8,23 +8,23 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962448"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460473"
 ---
 # <a name="element-tree-and-serialization"></a>Дерево элементов и сериализация
 Между элементами программирования WPF часто возникают отношения типа "дерево" в том или ином виде. Например, пользовательский интерфейс приложения, созданный в XAML, можно представить в виде дерева объектов. Дерево элементов можно разделить на два дискретных, но иногда существующих параллельно друг другу дерева: логическое дерево и визуальное дерево. Сериализация в WPF подразумевает сохранение состояния этих двух деревьев и состояния приложения и запись этих данных в файл (возможно, в формате XAML).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Деревья в WPF](trees-in-wpf.md)  
  [Ограничения сериализации в XamlWriter.Save](serialization-limitations-of-xamlwriter-save.md)  
  [Инициализация для объектных элементов, которые не находятся в дереве объектов](initialization-for-object-elements-not-in-an-object-tree.md)  
  [Разделы практического руководства](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
@@ -39,5 +39,5 @@ ms.locfileid: "61962448"
   [События](events-wpf.md)  
   [Ввод](input-wpf.md)  
   [Ресурсы](resources-wpf.md)  
-  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Потоковая модель](threading-model.md)

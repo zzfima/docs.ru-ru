@@ -10,15 +10,15 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017661"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460411"
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
-Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержит визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его нового и полного <xref:System.Windows.Controls.ControlTemplate>.  
+Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate>, который содержит визуальное дерево этого элемента управления. Структуру и внешний вид элемента управления можно изменить, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; чтобы изменить визуальное дерево элемента управления, необходимо задать для свойства <xref:System.Windows.Controls.Control.Template%2A> элемента управления его новое и полное <xref:System.Windows.Controls.ControlTemplate>.  
   
  Темы рабочего стола определяют, какой словарь ресурсов используется. Сведения о получении словарей ресурсов тем рабочего стола см. в разделе [Темы WPF по умолчанию](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62017661"
 |Royale.NormalColor.xaml|Тема по умолчанию в ОС Windows XP Media Center Edition.|  
 |Aero.NormalColor.xaml|Тема по умолчанию в ОС Windows Vista.|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Стили и шаблоны элемента Button](button-styles-and-templates.md)  
  [Стили и шаблоны элемента Calendar](calendar-styles-and-templates.md)  
  [Стили и шаблоны элемента CheckBox](checkbox-styles-and-templates.md)  
@@ -50,24 +50,24 @@ ms.locfileid: "62017661"
  [Стили и шаблоны элемента ListView](listview-styles-and-templates.md)  
  [Стили и шаблоны элемента Menu](menu-styles-and-templates.md)  
  [Стили и шаблоны элемента NavigationWindow](navigationwindow-styles-and-templates.md)  
- [PasswordBox стили и шаблоны](passwordbox-styles-and-templates.md)  
+ [Стили и шаблоны PasswordBox](passwordbox-styles-and-templates.md)  
  [Стили и шаблоны элемента ProgressBar](progressbar-styles-and-templates.md)  
  [Стили и шаблоны элемента RadioButton](radiobutton-styles-and-templates.md)  
- [RepeatButton стили и шаблоны](repeatbutton-styles-and-templates.md)  
+ [Стили и шаблоны RepeatButton](repeatbutton-styles-and-templates.md)  
  [Стили и шаблоны элемента ScrollBar](scrollbar-styles-and-templates.md)  
  [Стили и шаблоны элемента ScrollViewer](scrollviewer-styles-and-templates.md)  
  [Стили и шаблоны элемента Slider](slider-styles-and-templates.md)  
  [Стили и шаблоны элемента StatusBar](statusbar-styles-and-templates.md)  
  [Стили и шаблоны элемента TabControl](tabcontrol-styles-and-templates.md)  
  [Стили и шаблоны элемента TextBox](textbox-styles-and-templates.md)  
- [Бегунок стили и шаблоны](thumb-styles-and-templates.md)  
- [Элемент управления ToggleButton стили и шаблоны](togglebutton-styles-and-templates.md)  
+ [Стили и шаблоны Thumb](thumb-styles-and-templates.md)  
+ [Стили и шаблоны ToggleButton](togglebutton-styles-and-templates.md)  
  [Стили и шаблоны элемента ToolBar](toolbar-styles-and-templates.md)  
  [Стили и шаблоны элемента ToolTip](tooltip-styles-and-templates.md)  
  [Стили и шаблоны элемента TreeView](treeview-styles-and-templates.md)  
  [Стили и шаблоны элемента Window](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  
@@ -75,4 +75,4 @@ ms.locfileid: "62017661"
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие сведения о разработке элементов управления](control-authoring-overview.md)  
   
- [Использование стилей и шаблонов](styling-and-templating.md)
+ [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922529"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459251"
 ---
 # <a name="examples-of-xml-serialization"></a>Примеры сериализации XML
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Сериализация XmlElement и XmlNode
 
-Также можно сериализовать экземпляры <xref:System.Xml.XmlElement> или <xref:System.Xml.XmlNode> класса, как показано в следующем примере кода.
+Кроме того, можно сериализовать экземпляры класса <xref:System.Xml.XmlElement> или <xref:System.Xml.XmlNode>, как показано в следующем примере кода.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -192,11 +192,11 @@ public class Item
         <Item>
             <ItemID>aaa111</ItemID>
             <ItemPrice>34.22</ItemPrice>
-        <Item>
+        </Item>
         <Item>
             <ItemID>bbb222</ItemID>
             <ItemPrice>2.89</ItemPrice>
-        <Item>
+        </Item>
     </ItemsOrders>
 </PurchaseOrder>
 ```
@@ -370,7 +370,7 @@ public class Employee {
 
 Метод `CreatePO` создает `PurchaseOrder`, `Address` и объекты класса `OrderedItem` и задает значения открытых полей. Метод также создает экземпляр класса <xref:System.Xml.Serialization.XmlSerializer>, который используется для сериализации и десериализации `PurchaseOrder`. Обратите внимание, что код передает тип класса, который будет сериализован в конструктор. Код также создает `FileStream`, который используется для записи потока XML в документ XML.
 
-Метод `ReadPo` немного проще. Он всего лишь создает объекты для десериализации и считывает их значения. Как и в `CreatePo` метод, нужно сначала создать <xref:System.Xml.Serialization.XmlSerializer>, передав тип класса должны быть десериализованы в конструктор. Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>. Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента. Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`. Затем код считывает значения десериализуемого типа `PurchaseOrder`. Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.
+Метод `ReadPo` немного проще. Он всего лишь создает объекты для десериализации и считывает их значения. Как и в случае с методом `CreatePo`, необходимо сначала создать <xref:System.Xml.Serialization.XmlSerializer>, передав тип класса для десериализации в конструктор. Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>. Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента. Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`. Затем код считывает значения десериализуемого типа `PurchaseOrder`. Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.
 
 ```vb
 Imports System
@@ -771,9 +771,9 @@ public class Test
 
 ## <a name="see-also"></a>См. также
 
-- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [Введение в сериализацию XML](introducing-xml-serialization.md)
+- [Управление сериализацией XML с использованием атрибутов](controlling-xml-serialization-using-attributes.md)
+- [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
 - [Класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
-- [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
+- [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

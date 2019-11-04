@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual C#
+title: Пример. Наследование элементов управления форм Windows Forms с помощью Visual C#
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015664"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460592"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Пошаговое руководство. Наследование от элемента управления Windows Forms с помощью C\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Пошаговое руководство. наследование от Windows Formsного элемента управления с помощью C\#
 
-С помощью C#Visual можно создавать эффективные настраиваемые элементы управления спомощью наследования. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартного элемента управления <xref:System.Windows.Forms.Button> Windows Forms и предоставит настраиваемое свойство с именем. `ButtonValue`
+С помощью C#Visual можно создавать эффективные настраиваемые элементы управления с помощью *наследования*. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартного элемента управления <xref:System.Windows.Forms.Button> Windows Forms и предоставит настраиваемое свойство с именем `ButtonValue`.
 
 ## <a name="create-the-project"></a>Создание проекта
 
@@ -36,16 +36,16 @@ ms.locfileid: "70015664"
 
 3. В **обозревателе решений** щелкните правой кнопкой мыши файл **ValueButton.cs** и выберите команду **Просмотреть код**.
 
-4. Перейдите к строке `public partial class ValueButton` <xref:System.Windows.Forms.UserControl> <xref:System.Windows.Forms.Button>инструкции, и измените тип, от которого наследует этот элемент управления. `class` Это позволяет наследуемому элементу управления наследовать все функциональные <xref:System.Windows.Forms.Button> возможности элемента управления.
+4. Перейдите к строке оператора `class`, `public partial class ValueButton`и измените тип, от которого этот элемент управления наследуется от <xref:System.Windows.Forms.UserControl> до <xref:System.Windows.Forms.Button>. Это позволяет наследуемому элементу управления наследовать все функциональные возможности элемента управления <xref:System.Windows.Forms.Button>.
 
 5. В **обозревателе решений** откройте узел **ValueButton.cs**, чтобы отобразить сформированный конструктором файл кода **ValueButton.Designer.cs**. Откройте этот файл в **редакторе кода**.
 
-6. Укажите метод и удалите строку, которая назначает <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> свойство. `InitializeComponent` Это свойство не существует в <xref:System.Windows.Forms.Button> элементе управления.
+6. Укажите метод `InitializeComponent` и удалите строку, которая назначает свойство <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>. Это свойство не существует в элементе управления <xref:System.Windows.Forms.Button>.
 
 7. Сохраните проект, выбрав в меню **Файл** команду **Сохранить все**.
 
     > [!NOTE]
-    > Визуальный конструктор больше не доступен. <xref:System.Windows.Forms.Button> Поскольку элемент управления выполняет собственное рисование, изменить его внешний вид в конструкторе невозможно. Его визуальное представление будет точно таким же, как и у класса, от которого он наследуется ( <xref:System.Windows.Forms.Button>то есть), если только в коде не было изменено. В область конструктора по-прежнему можно добавлять компоненты, не имеющие элементов пользовательского интерфейса.
+    > Визуальный конструктор больше не доступен. Поскольку элемент управления <xref:System.Windows.Forms.Button> выполняет собственное рисование, изменить его внешний вид в конструкторе невозможно. Его визуальное представление будет точно таким же, как у класса, от которого он наследуется (то есть <xref:System.Windows.Forms.Button>), если только в коде не было изменено. В область конструктора по-прежнему можно добавлять компоненты, не имеющие элементов пользовательского интерфейса.
 
 ## <a name="add-a-property-to-your-inherited-control"></a>Добавление свойства в наследуемый элемент управления
 
@@ -117,7 +117,7 @@ ms.locfileid: "70015664"
 
 5. Задайте для свойства **буттонвалуе** значение **5**.
 
-6. На вкладке **все Windows Forms** **панели элементов**дважды щелкните <xref:System.Windows.Forms.Label> **подпись** , чтобы добавить элемент управления в форму.
+6. На вкладке **все Windows Forms** **панели элементов**дважды щелкните **надпись** , чтобы добавить в форму элемент управления <xref:System.Windows.Forms.Label>.
 
 7. Переместите метку в центр формы.
 
@@ -143,5 +143,5 @@ ms.locfileid: "70015664"
 
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Отображение элемента управления в диалоговом окне "Выбор элементов панели элементов"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Пошаговое руководство. Создание составного элемента управления с помощью C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
