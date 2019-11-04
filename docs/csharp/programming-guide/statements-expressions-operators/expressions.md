@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774179"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417697"
 ---
 # <a name="expressions-c-programming-guide"></a>Выражения (Руководство по программированию в C#)
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- Дополнительные сведения о литералах см. в разделе [Типы](../../language-reference/keywords/types.md).  
+ Дополнительные сведения о литералах см. в разделе [Типы](/dotnet/csharp/language-reference/keywords).  
   
  В предыдущем примере `i` и `s` являются простыми именами, которые определяют локальные переменные. При использовании таких переменных в выражениях результатом вычисления имени переменной является значение, которое в данное время хранится в расположении переменой в памяти. Это показано в следующем примере:  
   

@@ -16,14 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121677"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Использование класса StringBuilder в .NET
 Объект <xref:System.String> является неизменяемым. Каждый раз при использовании одного из методов в классе <xref:System.String?displayProperty=nameWithType> вы создаете объект строки в памяти, для которого требуется выделение нового пространства. В случаях, когда необходимо выполнять повторяющиеся изменения строки, издержки, связанные с созданием объекта <xref:System.String>, могут оказаться значительными. Чтобы изменять строку без создания нового объекта, можно использовать класс <xref:System.Text.StringBuilder?displayProperty=nameWithType>. Например, использование класса <xref:System.Text.StringBuilder> может повысить производительность при соединении большого количества строк в цикле.  
@@ -98,7 +96,7 @@ ms.locfileid: "54620062"
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Заменить  
+### <a name="replace"></a>Замените  
  Метод **Replace** можно использовать для замены символов в объекте <xref:System.Text.StringBuilder> другими указанными символами. В следующем примере метод **Replace** находит все экземпляры восклицательного знака (!) в объекте <xref:System.Text.StringBuilder> и заменяет их знаками вопроса (?).  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]

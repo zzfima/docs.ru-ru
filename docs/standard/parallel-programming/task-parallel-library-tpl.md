@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 962c89acf12595ca5b9f27fe411b31773cc5e0c2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139958"
 ---
 # <a name="task-parallel-library-tpl"></a>Библиотека параллельных задач (TPL)
 Библиотека параллельных задач (TPL) представляет собой набор открытых типов и API-интерфейсов в пространствах имен <xref:System.Threading?displayProperty=nameWithType> и <xref:System.Threading.Tasks?displayProperty=nameWithType>. Цель TPL — повышение производительности труда разработчиков за счет упрощения процедуры добавления параллелизма в приложения. TPL динамически масштабирует степень параллелизма для наиболее эффективного использования всех доступных процессоров. Кроме того, в библиотеке параллельных задач осуществляется секционирование работы, планирование потоков в пуле <xref:System.Threading.ThreadPool>, поддержка отмены, управление состоянием и выполняются другие низкоуровневые задачи. Используя библиотеку параллельных задач, можно повысить производительность кода, сосредоточившись на работе, для которой предназначена программа.  
@@ -23,7 +21,7 @@ ms.locfileid: "66456941"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|ОПИСАНИЕ|  
 |-|-|  
 |[Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Описание создания параллельных циклов `for` и `foreach` (`For` и `For Each` в Visual Basic).|  
 |[Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Описание создания и запуска задач неявно с использованием перегрузки <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> или явно с использованием объектов <xref:System.Threading.Tasks.Task> напрямую.|  

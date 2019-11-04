@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 4a30068293bef3adb9f58cc7f61e7e24e144f31b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395142"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039026"
 ---
 # <a name="equality-operators-c-reference"></a>Операторы равенства (справочник по C#)
 
@@ -41,7 +41,7 @@ ms.locfileid: "72395142"
 
 Два операнда одного типа [enum](../keywords/enum.md) равны, если равны соответствующие значения базового целочисленного типа.
 
-По умолчанию пользовательские типы [struct](../keywords/struct.md) не поддерживают оператор `==`. Чтобы поддерживать оператор `==`, пользовательская структура должна [перегружать](#operator-overloadability) его.
+По умолчанию пользовательские типы [struct](../keywords/struct.md) не поддерживают оператор `==`. Чтобы поддерживать оператор `==`, пользовательская структура должна [перегружать](operator-overloading.md) его.
 
 Начиная с версии C# 7.3 операторы `==` и `!=` поддерживаются [кортежами](../../tuples.md) C#. Дополнительные сведения см. в разделе [Равенство и кортежи](../../tuples.md#equality-and-tuples) статьи [Типы кортежей в C#](../../tuples.md).
 
@@ -55,7 +55,7 @@ ms.locfileid: "72395142"
 
 ### <a name="string-equality"></a>Равенство строк
 
-Два операнда [string](../keywords/string.md) равны, если они оба имеют значение `null` или оба экземпляра строки имеют одинаковую длину и идентичные символы в каждой позиции символа.
+Два операнда [string](../builtin-types/reference-types.md#the-string-type) равны, если они оба имеют значение `null` или оба экземпляра строки имеют одинаковую длину и идентичные символы в каждой позиции символа.
 
 [!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
 

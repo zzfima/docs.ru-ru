@@ -2,13 +2,14 @@
 title: Интерполяция строк в C#
 description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
 author: pkulikov
+ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
-ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252929"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039211"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк на C\#
 

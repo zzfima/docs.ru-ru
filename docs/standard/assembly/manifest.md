@@ -8,14 +8,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107156"
 ---
 # <a name="assembly-manifest"></a>Манифест сборки
 Любая сборка, статическая или динамическая, содержит коллекцию данных с описанием того, как ее элементы связаны друг с другом. Эти метаданные содержатся в манифесте сборки. Манифест сборки содержит все метаданные, необходимые для задания требований сборки к версиям и удостоверения безопасности, а также все метаданные, необходимые для определения области действия сборки и разрешения ссылок на ресурсы и классы. Манифест сборки может храниться в PE-файле (*EXE* или *DLL*) с кодом MSIL или же в отдельном PE-файле, содержащем только данные манифеста.  

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673747"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139998"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Потенциальные ошибки, связанные с PLINQ
 
@@ -46,7 +44,7 @@ ms.locfileid: "57673747"
 
 - Целевая система имеет достаточно процессоров для обработки того количества потоков, которое будет создано при параллелизации запроса в `cust.Orders`.
 
-В любом случае лучший способ определения оптимальной формы запроса — это проверка и измерение. Дополнительные сведения см. в разделе [Как Измерение производительности запросов PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
+В любом случае лучший способ определения оптимальной формы запроса — это проверка и измерение. Дополнительные сведения см. в разделе [Практическое руководство. Измерение производительности запросов PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
 
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>Избегайте вызова методов, небезопасных для потоков.
 

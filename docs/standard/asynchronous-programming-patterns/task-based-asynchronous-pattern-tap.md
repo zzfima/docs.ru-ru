@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f61ad49753da9d96e733ea667095722ddc238fe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377662"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121100"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Асинхронный шаблон, основанный на задачах (TAP)
 Асинхронная модель на основе задач (TAP) основана на типах <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> пространства имен <xref:System.Threading.Tasks?displayProperty=nameWithType>, которые используются для представления произвольных асинхронных операций. TAP — это рекомендуемый асинхронный шаблон для разработки новых компонентов.  
@@ -191,7 +189,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Модели асинхронного программирования](../../../docs/standard/asynchronous-programming-patterns/index.md)|Представляет три шаблона для выполнения асинхронных операций: асинхронную модель на основе задач (TAP), асинхронную модель программирования (APM) и асинхронную модель на основе событий (EAP).|  
 |[Реализация асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Описывает три способа реализации асинхронной модели на основе задач (TAP): с помощью компиляторов C# и Visual Basic в Visual Studio, вручную или путем сочетания этих методов.|  

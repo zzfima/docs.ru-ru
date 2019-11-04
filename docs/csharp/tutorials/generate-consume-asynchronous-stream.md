@@ -2,13 +2,14 @@
 title: Создание и использование асинхронных потоков
 description: Это расширенное руководство иллюстрирует сценарии, в которых создание и использование асинхронных потоков обеспечивает более естественный способ работы с последовательностями данных, которые могут создаваться асинхронно.
 ms.date: 02/10/2019
+ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579221"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039227"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Учебник. Создание и использование асинхронных потоков с использованием C# 8.0 и .NET Core 3.0
 

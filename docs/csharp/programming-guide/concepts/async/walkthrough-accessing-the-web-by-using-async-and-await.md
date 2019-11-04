@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168364"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195652"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)
 
@@ -62,7 +62,7 @@ ms.locfileid: "70168364"
 
 6. Поместите текстовое поле и кнопку так, чтобы оба элемента управления отображались в окне **MainWindow**.
 
-     Дополнительные сведения о конструкторе XAML WPF см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).
+     Дополнительные сведения о конструкторе XAML WPF см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio).
 
 ## <a name="add-a-reference"></a>Добавление ссылки
 

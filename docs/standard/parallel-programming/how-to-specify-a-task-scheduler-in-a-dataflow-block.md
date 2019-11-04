@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 681c0f1f918c8991ed2544189488d1ea25547834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122221"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Практическое руководство. Указание планировщика задач в блоке потока данных
 В этом документе приводятся способы привязки определенного планировщика задач при использовании потока данных в приложении. В этом пример используется класс <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> в приложении Windows Forms для указания того, когда активна задача чтения и когда активна задача записи. Здесь также используется метод <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>, чтобы позволить блоку потока данных выполняться в потоке пользовательского интерфейса.

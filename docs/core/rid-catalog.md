@@ -2,12 +2,12 @@
 title: Каталог идентификаторов сред выполнения (RID) в .NET Core
 description: Сведения об идентификаторах сред выполнения и их использовании в .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745746"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100924"
 ---
 # <a name="net-core-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
 
@@ -39,7 +39,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 
 ## <a name="rid-graph"></a>Схема RID
 
-Схема RID или резервная схема среды выполнения — это список идентификаторов RID, которые совместимы друг с другом. Идентификаторы RID определены в пакете [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/). Список поддерживаемых идентификаторов RID и схема RID содержатся в файле [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json), который находится в репозитории CoreFX. В этом файле можно увидеть, что все идентификаторы RID, кроме основного, содержат оператор `"#import"`. Эти операторы указывают совместимые RID.
+Схема RID или резервная схема среды выполнения — это список идентификаторов RID, которые совместимы друг с другом. Идентификаторы RID определены в пакете [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/). Список поддерживаемых идентификаторов RID и схема RID содержатся в файле [*runtime.json*](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json), который находится в репозитории CoreFX. В этом файле можно увидеть, что все идентификаторы RID, кроме основного, содержат оператор `"#import"`. Эти операторы указывают совместимые RID.
 
 Когда NuGet восстанавливает пакеты, он пытается найти точное совпадение для указанной среды выполнения.
 Если его не удается найти, NuGet проходит схему до тех пор, пока не найдет ближайшую совместимую систему в соответствии со схемой RID.
@@ -80,7 +80,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 ## <a name="using-rids"></a>Использование идентификаторов RID
 
 Для использования идентификаторов RID необходимо знать, какие идентификаторы RID существуют. В платформу регулярно добавляются новые идентификаторы.
-Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
+Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
 SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленные в граф RID, которые не привязаны к конкретной версии или дистрибутиву ОС и рекомендуются для использования с .NET Core 2.0 и более поздних версий. Они особенно удобны во время работы с несколькими дистрибутивами Linux, так как большинство идентификаторов RID дистрибутивов сопоставлено с переносными идентификаторами RID.
 
@@ -88,7 +88,7 @@ SDK для .NET Core 2.0 представляет концепцию перен
 
 ## <a name="windows-rids"></a>Идентификаторы RID для Windows
 
-Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
+Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
 - Переносные (.NET Core 2.0 или более поздние версии):
   - `win-x64`
@@ -112,7 +112,7 @@ SDK для .NET Core 2.0 представляет концепцию перен
 
 ## <a name="linux-rids"></a>Идентификаторы RID для Linux
 
-Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX. Устройства с дистрибутивами, не перечисленными ниже, могут работать с одним из переносных идентификаторов RID. Например, для устройств Raspberry Pi с дистрибутивом Linux, которого нет в списке, можно использовать `linux-arm`.
+Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX. Устройства с дистрибутивами, не перечисленными ниже, могут работать с одним из переносных идентификаторов RID. Например, для устройств Raspberry Pi с дистрибутивом Linux, которого нет в списке, можно использовать `linux-arm`.
 
 - Переносные (.NET Core 2.0 или более поздние версии):
   - `linux-x64` (большинство дистрибутивов для компьютеров, например CentOS, Debian, Fedora, Ubuntu и производные от них);
@@ -130,7 +130,7 @@ SDK для .NET Core 2.0 представляет концепцию перен
 
 ## <a name="macos-rids"></a>Относительные идентификаторы macOS
 
-Относительные идентификаторы macOS используют старую фирменную символику "OSX". Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
+Относительные идентификаторы macOS используют старую фирменную символику "OSX". Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
 - Переносные (.NET Core 2.0 или более поздние версии):
   - `osx-x64` (минимальная версия — macOS 10.12 Sierra).
@@ -149,4 +149,4 @@ SDK для .NET Core 2.0 представляет концепцию перен
 
 ## <a name="see-also"></a>См. также
 
-- [Идентификаторы среды выполнения](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [Идентификаторы среды выполнения](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

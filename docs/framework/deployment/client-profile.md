@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052203"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195180"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework (клиентский профиль)
 Клиентский профиль .NET — это подмножество платформы .NET Framework, которое предоставлялось с .NET Framework 4 и более ранними версиями и было оптимизировано для клиентских приложений. .NET Framework — это платформа разработки для Windows, Windows Phone и Microsoft Azure, которая включает в себя управляемую среду выполнения приложений и библиотеку классов .NET Framework. В .NET Framework 4 и более ранних версиях предоставлялось два варианта развертывания: полная платформа .NET Framework и клиентский профиль. Клиентский профиль позволял ускорить развертывание и уменьшить установочные пакеты приложений по сравнению с полной платформой .NET Framework.  
@@ -32,4 +32,4 @@ ms.locfileid: "71052203"
 - [Клиентский профиль .NET Framework (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Обзор настройки для различных версий в Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Практическое руководство. Определение целевой версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Практическое руководство. Определение целевой версии .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

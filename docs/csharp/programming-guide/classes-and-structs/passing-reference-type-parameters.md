@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: f4329c525995b8246427072d1f537d91d875ef95
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596264"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419045"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Передача параметров ссылочного типа (Руководство по программированию в C#)
 Переменная [ссылочного типа](../../language-reference/keywords/reference-types.md) содержит не сами данные, а ссылку на них. При передаче параметра ссылочного типа по значению можно изменять данные, относящиеся к объекту, на который указывает ссылка, например, значение члена класса. Тем не менее вы не можете изменить значение самой ссылки. Например, вы не можете использовать одну и ту же ссылку, чтобы выделить память для нового объекта и сохранить его вне этого метода. Для этого необходимо передать параметр с использованием ключевого слова [ref](../../language-reference/keywords/ref.md) или [out](../../language-reference/keywords/out-parameter-modifier.md). В следующих примерах мы для простоты используем `ref`.  
@@ -37,7 +37,7 @@ ms.locfileid: "69596264"
   
  В этом примере параметры должны передаваться по ссылке, чтобы обеспечить изменение переменных в вызывающей программе. Если удалить ключевое слово `ref` из заголовка и вызова метода, в вызывающей программе не будут выполнены никакие изменения.  
   
- Дополнительные сведения о строках см. в [этом разделе](../../language-reference/keywords/string.md).  
+ Дополнительные сведения о строках см. в [этом разделе](../../language-reference/builtin-types/reference-types.md).  
   
 ## <a name="see-also"></a>См. также
 

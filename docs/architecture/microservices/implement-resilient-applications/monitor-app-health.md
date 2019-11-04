@@ -2,12 +2,12 @@
 title: Мониторинг работоспособности
 description: Изучите один из способов реализации мониторинга работоспособности.
 ms.date: 01/07/2019
-ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094071"
 ---
 # <a name="health-monitoring"></a>Мониторинг работоспособности
 
@@ -110,7 +110,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     //…
     app.UseHealthChecks("/hc");
     //…
-} 
+}
 ```
 
 При вызове конечной точки `<yourmicroservice>/hc` она запускает все проверки работоспособности, которые были настроены в методе `AddHealthChecks()` в классе Startup, и показывает результат.

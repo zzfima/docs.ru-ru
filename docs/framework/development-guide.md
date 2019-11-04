@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122469"
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
@@ -65,7 +63,7 @@ ms.locfileid: "70779535"
  [Производительность](./performance/index.md)  
  Здесь приводятся сведения о кэшировании, отложенной инициализации, надежности и событиях трассировки событий Windows.  
  
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Предоставляет синтаксис, примеры кода и сведения об использовании для каждого класса, содержащегося в пространствах имен .NET Framework.  
   

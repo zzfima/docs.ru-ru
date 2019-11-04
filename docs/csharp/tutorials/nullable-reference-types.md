@@ -2,13 +2,14 @@
 title: Разработка с использованием ссылочных типов, допускающих значение null
 description: В этом расширенном руководстве содержатся общие сведения о ссылочных типах, допускающих значение null. Вы научитесь выражать проектный замысел относительно того, когда ссылочные значения могут иметь значение null, и используете компилятор, который будет применять соответствующее поведение, когда они не могут иметь значение null.
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e58f2bac23fabf734df93aa2a643106f1c1bd5f3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ee5e50cf889dd0e02bf58f1e3471fc709b729cd
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291387"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039713"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Учебник. Четкое выражение проектного замысла с помощью ссылочных типов, допускающих и не допускающих значение null
 

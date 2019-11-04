@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22d0f8abd1481bfd75a0d08f49b28cebf78bb4cb
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 58927803b741acf6c1964b35f6603e6901f9cbf1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169154"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139290"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Практическое руководство. Запись и чтение сообщений в блоке потока данных
 В этом документе описываются способы использования библиотеки потоков данных TPL для записи сообщений в блок потока данных и считывания сообщений из него. Библиотека потоков данных TPL предоставляет как синхронные, так и асинхронные методы для записи сообщений в блок потока данных и чтения сообщений из него. В этом документе используется класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> помещает сообщения в буфер и работает и в качестве источника сообщений, и как адресат сообщения.  

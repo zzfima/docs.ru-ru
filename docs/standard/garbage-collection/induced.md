@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492132"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120917"
 ---
 # <a name="induced-collections"></a>Индуцированные коллекции
 В большинстве случаев сборщик мусора может определить самое подходящее время для выполнения сборки мусора, поэтому следует дать ему возможность работать независимо. В очень редких случаях принудительная сборка мусора может улучшить производительность приложения. В этих случаях вы можете принудительно запустить сборку мусора с помощью метода <xref:System.GC.Collect%2A?displayProperty=nameWithType>.  
@@ -22,7 +20,7 @@ ms.locfileid: "54492132"
 ## <a name="gc-collection-mode"></a>Режим сборки мусора  
  Можно использовать одну из перегрузок метода <xref:System.GC.Collect%2A?displayProperty=nameWithType>, которая включает значение <xref:System.GCCollectionMode>, чтобы определить поведение принудительной сборки, как описано ниже.  
   
-|Значение`GCCollectionMode` |Описание|  
+|Значение`GCCollectionMode`|ОПИСАНИЕ|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Использует настройку сборки мусора по умолчанию для текущей версии .NET.|  
 |<xref:System.GCCollectionMode.Forced>|Вызывает немедленное выполнение принудительной сборки мусора. Это эквивалентно вызову перегрузки метода <xref:System.GC.Collect?displayProperty=nameWithType>. В результате образуется коллекция полной блокировки всех поколений.<br /><br /> Можно также сжать кучу больших объектов, установив для свойства <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> значение <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> перед запуском немедленной сборки мусора с полной блокировкой.|  

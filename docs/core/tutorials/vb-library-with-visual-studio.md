@@ -1,18 +1,16 @@
 ---
 title: Создание библиотеки классов Visual Basic .NET Standard в Visual Studio 2017
 description: Узнайте, как создать библиотеку классов .NET Standard, написанную на языке Visual Basic, с помощью Visual Studio 2017
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100868"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Создание библиотеки .NET Standard с помощью Visual Basic и пакета SDK для .NET Core в Visual Studio 2017
 
@@ -39,7 +37,7 @@ ms.locfileid: "59157304"
 
 1. В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
-1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Standard**, а затем — шаблон проекта **Библиотека классов (.NET Standard)**. В текстовом поле **Имя** введите имя проекта StringLibrary. Нажмите **ОК**, чтобы создать проект библиотеки классов.
+1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Standard**, а затем — шаблон проекта **Библиотека классов (.NET Standard)** . В текстовом поле **Имя** введите имя проекта StringLibrary. Нажмите **ОК**, чтобы создать проект библиотеки классов.
 
    ![Visual Studio создает диалоговое окно добавления нового проекта библиотеки](./media/vb-library-with-visual-studio/create-new-library-project.png)
 

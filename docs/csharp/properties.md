@@ -1,13 +1,14 @@
 ---
 title: Свойства
 description: Сведения о свойствах в C#, в том числе информация о функциях для проверки, вычисляемых значениях, отложенных вычислениях и уведомлениях об изменении свойств.
+ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587400"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039749"
 ---
 # <a name="properties"></a>Свойства
 

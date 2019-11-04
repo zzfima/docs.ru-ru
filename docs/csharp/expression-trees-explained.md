@@ -2,13 +2,14 @@
 title: Описание деревьев выражений
 description: Сведения о деревьях выражений и их использовании при преобразовании алгоритмов для выполнения кода во внешних средах и его проверки перед выполнением.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 12093e9c9246c87cc5ea3aedaca6ba34acacce4d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104798"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036995"
 ---
 # <a name="expression-trees-explained"></a>Описание деревьев выражений
 

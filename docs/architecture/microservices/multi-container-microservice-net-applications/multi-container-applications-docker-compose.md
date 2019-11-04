@@ -2,12 +2,12 @@
 title: Определение многоконтейнерного приложения с помощью docker-compose.yml
 description: Как указать композицию микрослужб для многоконтейнерного приложения с помощью docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039746"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416703"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml
 
@@ -467,7 +467,7 @@ ENTRYPOINT ["dotnet", "run"]
   <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **Создание образов Docker для приложений .NET Core**  
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]
 > [Назад](data-driven-crud-microservice.md)

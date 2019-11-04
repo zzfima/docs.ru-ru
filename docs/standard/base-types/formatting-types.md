@@ -25,14 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e9d53e7a75463e481b667a7ad84b68cb225e7f7c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141483"
 ---
 # <a name="format-types-in-net"></a>Форматирование типов в .NET
 
@@ -364,7 +362,7 @@ ms.locfileid: "72774324"
 |[Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)|Перечень разделов, содержащих пошаговые инструкции для выполнения конкретных операций форматирования.|
 |[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|Описание способов инициализации объектов со значениями, описанными строковыми представлениями этих объектов. Разбор является операцией, обратной форматированию.|
 
-## <a name="reference"></a>Справочник
+## <a name="reference"></a>Ссылка
 
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

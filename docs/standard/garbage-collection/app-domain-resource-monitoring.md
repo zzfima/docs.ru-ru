@@ -8,14 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c7b9d7c2297fe30b02dc9782002413e9f38dc98
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141379"
 ---
 # <a name="application-domain-resource-monitoring"></a>Отслеживание ресурсов домена приложения
 
@@ -51,7 +49,7 @@ ARM передает данные общего процессорного вре
 
   - События трассировки событий Windows: события `ThreadCreated`, `ThreadAppDomainEnter` и `ThreadTerminated`. Сведения о поставщиках и ключевые слова вы найдете в разделе о событиях ресурсов для доменов приложения в статье [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md) (События трассировки событий Windows в среде CLR).
 
-- **Общий объем выделенной управляемой памяти для домена приложения за все время его существования (в байтах)**. Общий объем выделенной памяти не всегда правильно отражает использование памяти доменом приложения, так как объекты могут выделяться на короткий промежуток времени. Но накладные расходы могут оказаться существенными, если приложение часто выделяет и освобождает большое количество объектов.
+- **Общий объем выделенной управляемой памяти для домена приложения за все время его существования (в байтах)** . Общий объем выделенной памяти не всегда правильно отражает использование памяти доменом приложения, так как объекты могут выделяться на короткий промежуток времени. Но накладные расходы могут оказаться существенными, если приложение часто выделяет и освобождает большое количество объектов.
 
   - Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.
 

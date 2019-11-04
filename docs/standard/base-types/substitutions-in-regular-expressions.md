@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968531"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122481"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Подстановки в регулярных выражениях
 <a name="Top"></a> Подстановки — это языковые элементы, которые распознаются только в шаблонах замены. Они используют шаблон регулярного выражения для определения всего текста или его части, предназначенной для замены совпадающего текста во входной строке. Шаблон замены может включать одну или несколько подстановок вместе с литеральными символами. Для перегруженных версий метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> , имеющих параметр `replacement` , и для метода <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> предоставляются шаблоны замены. Эти методы заменяют совпавший шаблон шаблоном, определенным параметром `replacement` .  

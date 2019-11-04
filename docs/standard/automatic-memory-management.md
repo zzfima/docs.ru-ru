@@ -12,14 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e80e524a8bac28195067ce6bd30504005fc4b5a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592540"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140569"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Для автоматического управления памятью используется одна из служб, которые среда CLR предоставляет при [управляемом выполнении](../../docs/standard/managed-execution-process.md). Сборщик мусора среды CLR управляет освобождением и выделением памяти для приложения. Для разработчиков это означает, что при разработке управляемого приложения не нужно писать код для управления памятью. Автоматическое управление памятью позволяет устранить распространенные проблемы, такие как не освобожденный по забывчивости объект, вызывающий утечку памяти, или попытки доступа к памяти для уже удаленного объекта. В этом разделе описано, каким образом сборщик мусора выделяет и освобождает память.  

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960383"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131500"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
 
@@ -44,7 +42,7 @@ ms.locfileid: "65960383"
 
 В приведенной ниже таблице показаны некоторые свойства <xref:System.Threading.Thread>.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Возвращает `true`, если поток был запущен и не был завершен нормально либо был прерван.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Возвращает или задает логическое значение, которое указывает, является ли поток фоновым потоком. Фоновые потоки отличаются от основных потоков лишь тем, что они не влияют на завершение процесса. Когда обработка всех основных потоков закончена, общеязыковая среда выполнения завершает процесс, применяя метод <xref:System.Threading.Thread.Abort%2A> к тем фоновым потокам, которые еще продолжают существовать. См. дополнительные сведения об [основных и фоновых потоках](foreground-and-background-threads.md).|  

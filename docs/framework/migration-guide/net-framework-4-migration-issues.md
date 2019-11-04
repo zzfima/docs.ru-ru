@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126046"
 ---
 # <a name="net-framework-4-migration-issues"></a>Проблемы при переходе на .NET Framework 4
 
@@ -133,7 +131,7 @@ ms.locfileid: "71699077"
 | **Вызов неуправляемого кода** | Чтобы улучшить производительность при взаимодействии с неуправляемым кодом, некорректные соглашения о вызовах в вызове неуправляемого кода теперь приводят к сбою приложения. В более ранних версиях слой маршалинга разрешал такие ошибки вверх по стеку. | При отладке приложений в Microsoft Visual Studio вы получите оповещения о таких ошибках и сможете исправить их.<br><br>Если у вас есть двоичные файлы, которые невозможно обновить, можно включить элемент [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) в файл конфигурации приложения, чтобы ошибки вызовов разрешались вверх по стеку, как в более ранних версиях. Однако это может повлиять на производительность приложения. |
 | **Удаленные интерфейсы** (неуправляемый интерфейс API) | Чтобы не вводить в заблуждение разработчиков, перечисленные ниже интерфейсы были удалены. Причина удаления в том, что они не обеспечивали никаких полезных сценариев времени выполнения и среда CLR не предоставляла и не принимала никаких реализаций.<br><br>* **INativeImageINativeImageDependency**<br>* **INativeImageInstallInfo**<br>* **INativeImageEvaluate**<br>* **INativeImageConverter**<br>* **ICorModule**<br>* **IMetaDataConverter** | Отсутствует. |
 
-## <a name="data"></a>Данные
+## <a name="data"></a>Data
 
 В этом разделе описаны проблемы с миграцией при использовании наборов данных и клиентов SQL, Entity Framework, LINQ to SQL и серверов данных WCF (ранее называвшихся службами данных ADO.NET).
 
