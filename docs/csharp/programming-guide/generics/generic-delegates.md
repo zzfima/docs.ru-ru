@@ -6,41 +6,41 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 31ab511bf88bfbc2134029564ecbf70aa75119d7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3c6f29ead76f2e835d78a15d782e1aaca28942c8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659853"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423265"
 ---
-# <a name="generic-delegates-c-programming-guide"></a><span data-ttu-id="0af79-102">Универсальные делегаты. (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="0af79-102">Generic Delegates (C# Programming Guide)</span></span>
-<span data-ttu-id="0af79-103">[Делегат](../../language-reference/keywords/delegate.md) может определять собственные параметры типа.</span><span class="sxs-lookup"><span data-stu-id="0af79-103">A [delegate](../../language-reference/keywords/delegate.md) can define its own type parameters.</span></span> <span data-ttu-id="0af79-104">В коде, который ссылается на универсальный делегат, можно указать аргумент типа для создания закрытого сконструированного типа. Это будет аналогично созданию экземпляра универсального класса или вызову универсального метода, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="0af79-104">Code that references the generic delegate can specify the type argument to create a closed constructed type, just like when instantiating a generic class or calling a generic method, as shown in the following example:</span></span>  
+# <a name="generic-delegates-c-programming-guide"></a><span data-ttu-id="17a02-102">Универсальные делегаты. (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="17a02-102">Generic Delegates (C# Programming Guide)</span></span>
+<span data-ttu-id="17a02-103">[Делегат](../../language-reference/builtin-types/reference-types.md) может определять собственные параметры типа.</span><span class="sxs-lookup"><span data-stu-id="17a02-103">A [delegate](../../language-reference/builtin-types/reference-types.md) can define its own type parameters.</span></span> <span data-ttu-id="17a02-104">В коде, который ссылается на универсальный делегат, можно указать аргумент типа для создания закрытого сконструированного типа. Это будет аналогично созданию экземпляра универсального класса или вызову универсального метода, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="17a02-104">Code that references the generic delegate can specify the type argument to create a closed constructed type, just like when instantiating a generic class or calling a generic method, as shown in the following example:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  
   
- <span data-ttu-id="0af79-105">В C# версии 2.0 представлена новая функция группового преобразования методов, которая применяется как к конкретным, так и к универсальным типам делегатов, и позволяет записать приведенную выше строку с использованием упрощенного синтаксиса:</span><span class="sxs-lookup"><span data-stu-id="0af79-105">C# version 2.0 has a new feature called method group conversion, which applies to concrete as well as generic delegate types, and enables you to write the previous line with this simplified syntax:</span></span>  
+ <span data-ttu-id="17a02-105">В C# версии 2.0 представлена новая функция группового преобразования методов, которая применяется как к конкретным, так и к универсальным типам делегатов, и позволяет записать приведенную выше строку с использованием упрощенного синтаксиса:</span><span class="sxs-lookup"><span data-stu-id="17a02-105">C# version 2.0 has a new feature called method group conversion, which applies to concrete as well as generic delegate types, and enables you to write the previous line with this simplified syntax:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#37)]  
   
- <span data-ttu-id="0af79-106">Делегаты, определенные в универсальном классе, могут использовать параметры класса универсального типа таким же образом, как это делают методы класса.</span><span class="sxs-lookup"><span data-stu-id="0af79-106">Delegates defined within a generic class can use the generic class type parameters in the same way that class methods do.</span></span>  
+ <span data-ttu-id="17a02-106">Делегаты, определенные в универсальном классе, могут использовать параметры класса универсального типа таким же образом, как это делают методы класса.</span><span class="sxs-lookup"><span data-stu-id="17a02-106">Delegates defined within a generic class can use the generic class type parameters in the same way that class methods do.</span></span>  
   
  [!code-csharp[csProgGuideGenerics#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#38)]  
   
- <span data-ttu-id="0af79-107">В коде, который ссылается на делегат, необходимо указать аргумент типа содержащего класса, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="0af79-107">Code that references the delegate must specify the type argument of the containing class, as follows:</span></span>  
+ <span data-ttu-id="17a02-107">В коде, который ссылается на делегат, необходимо указать аргумент типа содержащего класса, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="17a02-107">Code that references the delegate must specify the type argument of the containing class, as follows:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#39)]  
   
- <span data-ttu-id="0af79-108">Универсальные делегаты особенно полезны при определении событий, основанных на типовых шаблонах разработки, поскольку аргумент отправителя может быть строго типизирован и больше не требует приведения к <xref:System.Object> и из него.</span><span class="sxs-lookup"><span data-stu-id="0af79-108">Generic delegates are especially useful in defining events based on the typical design pattern because the sender argument can be strongly typed and no longer has to be cast to and from <xref:System.Object>.</span></span>  
+ <span data-ttu-id="17a02-108">Универсальные делегаты особенно полезны при определении событий, основанных на типовых шаблонах разработки, поскольку аргумент отправителя может быть строго типизирован и больше не требует приведения к <xref:System.Object> и из него.</span><span class="sxs-lookup"><span data-stu-id="17a02-108">Generic delegates are especially useful in defining events based on the typical design pattern because the sender argument can be strongly typed and no longer has to be cast to and from <xref:System.Object>.</span></span>  
   
  [!code-csharp[csProgGuideGenerics#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#40)]  
   
-## <a name="see-also"></a><span data-ttu-id="0af79-109">См. также</span><span class="sxs-lookup"><span data-stu-id="0af79-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17a02-109">См. также</span><span class="sxs-lookup"><span data-stu-id="17a02-109">See also</span></span>
 
 - <xref:System.Collections.Generic>
-- [<span data-ttu-id="0af79-110">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="0af79-110">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="0af79-111">Введение в универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="0af79-111">Introduction to Generics</span></span>](./index.md)
-- [<span data-ttu-id="0af79-112">Универсальные методы</span><span class="sxs-lookup"><span data-stu-id="0af79-112">Generic Methods</span></span>](./generic-methods.md)
-- [<span data-ttu-id="0af79-113">Универсальные классы</span><span class="sxs-lookup"><span data-stu-id="0af79-113">Generic Classes</span></span>](./generic-classes.md)
-- [<span data-ttu-id="0af79-114">Универсальные интерфейсы</span><span class="sxs-lookup"><span data-stu-id="0af79-114">Generic Interfaces</span></span>](./generic-interfaces.md)
-- [<span data-ttu-id="0af79-115">Делегаты</span><span class="sxs-lookup"><span data-stu-id="0af79-115">Delegates</span></span>](../delegates/index.md)
-- [<span data-ttu-id="0af79-116">Универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="0af79-116">Generics</span></span>](../../../standard/generics/index.md)
+- [<span data-ttu-id="17a02-110">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="17a02-110">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="17a02-111">Введение в универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="17a02-111">Introduction to Generics</span></span>](./index.md)
+- [<span data-ttu-id="17a02-112">Универсальные методы</span><span class="sxs-lookup"><span data-stu-id="17a02-112">Generic Methods</span></span>](./generic-methods.md)
+- [<span data-ttu-id="17a02-113">Универсальные классы</span><span class="sxs-lookup"><span data-stu-id="17a02-113">Generic Classes</span></span>](./generic-classes.md)
+- [<span data-ttu-id="17a02-114">Универсальные интерфейсы</span><span class="sxs-lookup"><span data-stu-id="17a02-114">Generic Interfaces</span></span>](./generic-interfaces.md)
+- [<span data-ttu-id="17a02-115">Делегаты</span><span class="sxs-lookup"><span data-stu-id="17a02-115">Delegates</span></span>](../delegates/index.md)
+- [<span data-ttu-id="17a02-116">Универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="17a02-116">Generics</span></span>](../../../standard/generics/index.md)
