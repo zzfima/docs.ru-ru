@@ -10,30 +10,30 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: fd63380e04eeb4b7ec7ed7d59032309ea7446507
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73e820845d040856a0ae367da8b9371ad6afa142
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593166"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423744"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях
-<xref:System.Drawing.Bitmap> Класс (который наследуется от <xref:System.Drawing.Image> класс) и <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функциональные возможности для получения и установки значения в пикселях. Можно использовать <xref:System.Drawing.Imaging.ImageAttributes> значений для изменения альфа-канал для всего изображения, или можно вызвать <xref:System.Drawing.Bitmap.SetPixel%2A> метод <xref:System.Drawing.Bitmap> класса для изменения значений отдельных пикселей.  
+Класс <xref:System.Drawing.Bitmap> (который наследует от класса <xref:System.Drawing.Image>) и класс <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функциональные возможности для получения и установки значений пикселей. Можно использовать класс <xref:System.Drawing.Imaging.ImageAttributes>, чтобы изменить альфа-значения для всего изображения, или можно вызвать метод <xref:System.Drawing.Bitmap.SetPixel%2A> класса <xref:System.Drawing.Bitmap>, чтобы изменить отдельные значения пикселей.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Drawing.Imaging.ImageAttributes> Класс имеет множество свойств, которые можно использовать для изменения образов во время отрисовки. В следующем примере <xref:System.Drawing.Imaging.ImageAttributes> объект используется для задания альфа-значения до 80 процентов от они были. Это делается путем инициализации матрицы цветов и альфа-канал, значение в матрице 0,8 масштабирования. Передается адрес цветовой матрице <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> метод <xref:System.Drawing.Imaging.ImageAttributes> объекта и <xref:System.Drawing.Imaging.ImageAttributes> объект передается <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> объекта.  
+ Класс <xref:System.Drawing.Imaging.ImageAttributes> имеет множество свойств, которые можно использовать для изменения изображений во время подготовки к просмотру. В следующем примере объект <xref:System.Drawing.Imaging.ImageAttributes> используется для установки всех альфа-значений равными 80 процентам от того, что они имели. Это делается путем инициализации матрицы цветов и установки значения масштабирования альфа в матрице в 0,8. Адрес матрицы цветов передается методу <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> объекта <xref:System.Drawing.Imaging.ImageAttributes>, а объект <xref:System.Drawing.Imaging.ImageAttributes> передается методу <xref:System.Drawing.Graphics.DrawString%2A> объекта <xref:System.Drawing.Graphics>.  
   
- Во время отрисовки, до 80 процентов от их первоначальных преобразуются альфа-значения в точечном рисунке. Результатом в образ, который смешивается с фоном. Как показано на следующем рисунке, растровое изображение выглядит прозрачным; Появится сплошная черная линия через него.  
+ Во время отрисовки альфа-значения в точечном рисунке преобразуются в 80 процентов от того, что они имели. В результате получается изображение, которое смешивается с фоном. Как показано на рисунке ниже, точечный рисунок выглядит прозрачным. можно увидеть сплошную черную линию.  
   
- ![Альфа-смешение цвета с помощью матрицы](./media/image2.png "изображение2")  
+ ![Снимок экрана альфа-смешения с использованием матрицы.](./media/how-to-use-a-color-matrix-to-set-alpha-values-in-images/alpha-blending-matrix.png "изображение 2")  
   
- Когда изображение на белой части в фоновом режиме, оно смешивается с белым цветом. Пересечения черная линия, изображение изображения смешивается с черным цветом.  
+ Когда изображение находится над белой частью фона, изображение смешивается с белым цветом. Когда изображение пересекает черную линию, изображение смешивается с черным цветом.  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+ Предыдущий пример предназначен для использования с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
 

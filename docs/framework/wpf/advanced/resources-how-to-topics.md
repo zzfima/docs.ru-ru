@@ -7,17 +7,17 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 568ff84c6de2d80527921fe6f3179e6bb123f72f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053487"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458719"
 ---
 # <a name="resources-how-to-topics"></a>Разделы руководства, посвященные ресурсам
-В этом разделе описываются способы использования ресурсов Windows Presentation Foundation (WPF).  
+В подразделах этого раздела описывается использование ресурсов Windows Presentation Foundation (WPF).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Определение и создание ссылки на ресурс](how-to-define-and-reference-a-resource.md)  
  [Использование ресурсов приложения](how-to-use-application-resources.md)  
  [Использование SystemFonts](how-to-use-systemfonts.md)  
@@ -25,7 +25,7 @@ ms.locfileid: "62053487"
  [Использование SystemParameters](how-to-use-systemparameters.md)  
  [Использование разделов системных параметров](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -35,4 +35,4 @@ ms.locfileid: "62053487"
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Ресурсы XAML](xaml-resources.md)
+ [Ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)

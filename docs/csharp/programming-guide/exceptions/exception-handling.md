@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 5013738e74aaa260ab6f5bcd4d73904cfbdcc3c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 895f561c15941d851980ea9b392d2e86db2462f3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590278"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423289"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Обработка исключений (Руководство по программированию на C#)
 Блок [try](../../language-reference/keywords/try-catch.md) используется программистами C# для разбиения на разделы кода, который может затрагиваться исключением. Связанные с ним блоки [catch](../../language-reference/keywords/try-catch.md) используются для обработки возможных исключений. Блок [finally](../../language-reference/keywords/try-finally.md) содержит код, выполняемый вне зависимости от того, вызывается ли исключение в блоке `try`, например для освобождения ресурсов, выделенных в блоке `try`. Блоку `try` требуется один или несколько связанных блоков `catch` или блок `finally` (либо и то, и другое).  
@@ -54,7 +54,7 @@ ms.locfileid: "69590278"
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
-Дополнительные сведения см. в разделах [Исключения](~/_csharplang/spec/exceptions.md) и [Оператор try](~/_csharplang/spec/statements.md#the-try-statement) в [Спецификации языка C#](../../language-reference/language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделах [Исключения](~/_csharplang/spec/exceptions.md) и [Оператор try](~/_csharplang/spec/statements.md#the-try-statement) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
 ## <a name="see-also"></a>См. также
 

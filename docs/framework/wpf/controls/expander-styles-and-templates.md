@@ -9,41 +9,41 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: c5f805c251d3f6b256035e568798cd6d252ea9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26989474f264161be12bcc14fed614fdc7f775b6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911742"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460325"
 ---
 # <a name="expander-styles-and-templates"></a>Стили и шаблоны элемента Expander
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Expander> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.Expander>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="expander-parts"></a>Расширитель частей  
- <xref:System.Windows.Controls.Expander> Управления не имеет частей с именами.  
+## <a name="expander-parts"></a>Части расширителя  
+ Элемент управления <xref:System.Windows.Controls.Expander> не имеет именованных частей.  
   
-## <a name="expander-states"></a>Расширитель состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Expander> элемента управления.  
+## <a name="expander-states"></a>Состояния расширителя  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.Expander>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  
-|Отключено|CommonStates|Элемент управления отключен.|  
+|Отключено.|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Разреженный|ExpansionStates|Элемент управления развернут.|  
-|Свернуто|ExpansionStates|Элемент управления не развернут.|  
-|ExpandDown|ExpandDirectionStates|Элемент управления расширяется вниз.|  
-|ExpandUp|ExpandDirectionStates|Элемент управления расширяется вверх.|  
-|ExpandLeft|ExpandDirectionStates|Элемент управления расширяется влево.|  
-|ExpandRight|ExpandDirectionStates|Элемент управления расширяется вправо.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Разреженный|експансионстатес|Элемент управления развернут.|  
+|Свернуто|експансионстатес|Элемент управления не разворачивается.|  
+|експанддовн|експанддиректионстатес|Элемент управления расширяется вниз.|  
+|експандуп|експанддиректионстатес|Элемент управления расширяется.|  
+|експандлефт|експанддиректионстатес|Элемент управления расширяется влево.|  
+|експандригхт|експанддиректионстатес|Элемент управления расширяется вправо.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="expander-controltemplate-example"></a>Пример шаблона элемента управления Expander  
- В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Expander> элемента управления.  
+## <a name="expander-controltemplate-example"></a>Пример ControlTemplate для расширения  
+ В следующем примере показано, как определить <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.Expander>.  
   
  [!code-xaml[ControlTemplateExamples#Expander](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
   
@@ -59,5 +59,5 @@ ms.locfileid: "61911742"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

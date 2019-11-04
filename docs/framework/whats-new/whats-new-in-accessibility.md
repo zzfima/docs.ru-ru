@@ -7,14 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cfea1d5ee19d9fb61094b60e0175ddfd2f120494
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774286"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454258"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
@@ -711,4 +709,4 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ## <a name="see-also"></a>См. также
 
-- [Новые возможности .NET Framework](whats-new.md)
+- [Новые возможности .NET Framework](index.md)

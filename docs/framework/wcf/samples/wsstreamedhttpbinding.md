@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: aa2acc7228f802f69e8692ed747af0382345c1d6
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: e684a5157d5510d22cfdd14d7b0d930c3b40c476
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016077"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423705"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -21,7 +21,7 @@ ms.locfileid: "70016077"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`
 
@@ -53,7 +53,7 @@ ms.locfileid: "70016077"
 
 2. Добавление поддержки конфигурации
 
-    Для предоставления транспорта через конфигурацию в образце реализуется два дополнительных класса -`WSStreamedHttpBindingConfigurationElement` и `WSStreamedHttpBindingSection`. Класс `WSStreamedHttpBindingSection` представляет собой <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> , который предоставляет `WSStreamedHttpBinding` системе конфигурации WCF. Основная часть реализации делегируется классу `WSStreamedHttpBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>. Класс `WSStreamedHttpBindingConfigurationElement` имеет свойства, соответствующие свойствам класса `WSStreamedHttpBinding`, и функции для сопоставления каждого элемента конфигурации привязке.
+    Для предоставления транспорта через конфигурацию в образце реализуется два дополнительных класса -`WSStreamedHttpBindingConfigurationElement` и `WSStreamedHttpBindingSection`. Класс `WSStreamedHttpBindingSection` — это <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, который предоставляет `WSStreamedHttpBinding` системе конфигурации WCF. Основная часть реализации делегируется классу `WSStreamedHttpBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>. Класс `WSStreamedHttpBindingConfigurationElement` имеет свойства, соответствующие свойствам класса `WSStreamedHttpBinding`, и функции для сопоставления каждого элемента конфигурации привязке.
 
     Зарегистрируйте обработчик в системе конфигурации, добавив в файл конфигурации службы следующий раздел.
 
@@ -89,7 +89,7 @@ ms.locfileid: "70016077"
 
 1. Установите ASP.NET 4,0 с помощью следующей команды.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -137,7 +137,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Образец клиента WSStreamedHttpBinding
 
-Клиент, используемый для взаимодействия со службой с помощью привязки `WSStreamedHttpBinding`, расположен в подкаталоге клиента. Поскольку сертификат, используемый в этом примере, является тестовым сертификатом, созданным с помощью Makecert. exe, оповещение системы безопасности отображается при попытке доступа к HTTPS- https://localhost/servicemodelsamples/service.svc адресу в браузере, например. Чтобы разрешить клиенту WCF работать с тестовым сертификатом, к клиенту был добавлен дополнительный код для подавления оповещения системы безопасности. При использовании рабочих сертификатов этот код и соответствующие классы не требуются.
+Клиент, используемый для взаимодействия со службой с помощью привязки `WSStreamedHttpBinding`, расположен в подкаталоге клиента. Поскольку сертификат, используемый в этом примере, является тестовым сертификатом, созданным с помощью Makecert. exe, оповещение системы безопасности отображается при попытке доступа к HTTPS-адресу в браузере, например https://localhost/servicemodelsamples/service.svc. Чтобы разрешить клиенту WCF работать с тестовым сертификатом, к клиенту был добавлен дополнительный код для подавления оповещения системы безопасности. При использовании рабочих сертификатов этот код и соответствующие классы не требуются.
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

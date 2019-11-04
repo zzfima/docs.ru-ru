@@ -4,16 +4,16 @@ description: Узнайте, как создавать библиотеки дл
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117422"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420457"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Разработка библиотек с помощью кроссплатформенных средств
 
-В этой статье рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки (CLI). CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](libraries-with-vs.md).
+В этой статье рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки (CLI). CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 

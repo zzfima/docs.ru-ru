@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394234"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422639"
 ---
 # <a name="override-c-reference"></a>override (Справочник по C#)
 
@@ -53,7 +53,7 @@ ms.locfileid: "70394234"
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Наследование](../../programming-guide/classes-and-structs/inheritance.md)
 - [Ключевые слова в C#](index.md)
-- [Модификаторы](modifiers.md)
+- [Модификаторы](index.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
 - [new (модификатор)](new-modifier.md)

@@ -3,12 +3,12 @@ title: Общие шаблоны делегатов
 description: Сведения об общих шаблонах, позволяющих использовать делегаты в коде и избежать возникновения сильных взаимозависимостей между компонентами.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095702"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454079"
 ---
 # <a name="common-patterns-for-delegates"></a>Общие шаблоны делегатов
 
@@ -58,7 +58,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 Приведенный выше статический класс содержит только самое необходимое для работы. Нам нужно создать единственную реализацию метода, который записывает сообщения в консоль. 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Наконец, необходимо подключить делегат к делегату WriteMessage, объявленному в средстве ведения журнала.
 
@@ -107,13 +107,13 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 Позднее вы можете удалить один из делегатов даже в том же приложении без каких-либо проблем для системы.
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>Рекомендации

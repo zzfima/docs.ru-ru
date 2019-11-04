@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594413"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418558"
 ---
 # <a name="c-features-that-support-linq"></a>Возможности C#, поддерживающие LINQ
 
@@ -26,7 +26,7 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Дополнительные сведения см. в разделе [Выражения запросов LINQ](../../linq-query-expressions/index.md).
+Дополнительные сведения см. в разделе [Выражения запросов LINQ](../../../linq/index.md).
 
 ## <a name="implicitly-typed-variables-var"></a>Неявно типизированные переменные (var)
 
@@ -66,7 +66,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Инициализаторы объектов и коллекций](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -92,7 +92,7 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Лямбда-выражение — это встроенная функция, которая использует оператор => для отделения входных параметров от тела функции и может быть преобразована во время компиляции в делегат или дерево выражения. В программировании [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] вы сталкиваетесь с лямбда-выражениями при выполнении прямых вызовов к стандартным операторам запросов.
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Анонимные функции](../../statements-expressions-operators/anonymous-functions.md)
 

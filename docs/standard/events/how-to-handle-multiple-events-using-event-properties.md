@@ -12,14 +12,12 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124767"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Практическое руководство. Обработка нескольких событий с помощью их свойств
 Чтобы использовать свойства событий, следует определить свойства событий в классе, который вызывает события, а затем задать делегаты для свойств событий в классах, обрабатывающих события. Для реализации нескольких свойств событий в классе класс должен хранить и обслуживать внутри себя делегата, определенного для каждого события. Типичная стратегия заключается в реализации коллекции делегатов, которая индексируется по ключу события.  

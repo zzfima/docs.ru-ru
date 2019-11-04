@@ -4,14 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f572f683511fe90951f841c80eae448a9cb6054b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785088"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455372"
 ---
 # <a name="local-functions-c-programming-guide"></a>Локальные функции (руководство по программированию на C#)
 
@@ -37,7 +35,7 @@ ms.locfileid: "70785088"
 
 Локальная функция определяется как вложенный метод внутри содержащего ее элемента. Ниже приведен синтаксис определения локальной функции:
 
-```txt
+```csharp
 <modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
 ```
 
@@ -55,7 +53,7 @@ ms.locfileid: "70785088"
  
 В следующем примере определяется локальная функция `AppendPathSeparator`, которая является частной для метода `GetText`:
    
-[!code-csharp[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+[!code-csharp[LocalFunctionExample](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
    
 ## <a name="local-functions-and-exceptions"></a>Локальные функции и исключения
 
@@ -63,21 +61,21 @@ ms.locfileid: "70785088"
 
 В следующем примере определяется метод `OddSequence`, который перечисляет нечетные числа в заданном диапазоне. Поскольку он передает в метод перечислителя `OddSequence` число больше 100, этот метод вызывает исключение <xref:System.ArgumentOutOfRangeException>. Как видно из выходных данных этого примера, исключение обрабатывается только в момент перебора чисел, а не при извлечении перечислителя.
 
-[!code-csharp[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
+[!code-csharp[LocalFunctionIterator1](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
 
 Вместо этого исключение может быть вызвано при выполнении проверки до того, как будет извлечен итератор, путем возврата итератора из локальной функции, как показано в следующем примере.
 
-[!code-csharp[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+[!code-csharp[LocalFunctionIterator2](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
 Локальные функции можно использовать аналогичным образом для обработки исключений вне асинхронной операции. Как правило, при возникновении исключения в асинхронном методе требуется проверить внутренние исключения в <xref:System.AggregateException>. Локальная функция реализует моментальный сбой кода, синхронно обеспечивая вызов исключения и наблюдение за ним.
 
 В следующем примере асинхронный метод `GetMultipleAsync` выполняет приостановку на указанное число секунд, возвращая значение, представляющее собой произведение случайного множителя на это число секунд. Максимальная задержка составляет 5 с. Результат <xref:System.ArgumentOutOfRangeException> возвращается в том случае, если значение больше 5. Как видно из следующего примера, исключение, которое возникает при передаче в метод `GetMultipleAsync` значения 6, инкапсулируется в <xref:System.AggregateException> после того, как начинается выполнение метода `GetMultipleAsync`.
 
-[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
+[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
 Как и в случае с итератором метода, можно выполнить рефакторинг кода из этого примера таким образом, чтобы реализовать проверку перед вызовом асинхронного метода. Как видно из результатов следующего примера, <xref:System.ArgumentOutOfRangeException> не инкапсулируется в <xref:System.AggregateException>.
 
-[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
+[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
 ## <a name="see-also"></a>См. также
 

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7becba9c7626e79f9d001a6a21ed92a336e9d11
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139736"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников
 В этом документе объясняется, как использовать класс <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> для выполнения операции, если данные доступны из нескольких источников. Также здесь показано, как использовать нежадный режим, чтобы разрешить нескольким блокам соединения совместно использовать источник данных более эффективно.

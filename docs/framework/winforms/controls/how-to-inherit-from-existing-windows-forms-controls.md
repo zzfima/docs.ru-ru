@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 063f5bb87b6348ee83573cf1506c9fabdaf651ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373234"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460565"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Практическое руководство. Наследование существующих элементов управления Windows Forms
 
-Чтобы расширить функциональные возможности существующего элемента управления, можно создать элемент управления, производный от существующего элемента управления, путем наследования. При наследовании из существующего элемента управления наследуются все его функциональные возможности и визуальные свойства. Например, если вы создаете элемент управления, наследуемый <xref:System.Windows.Forms.Button>от, новый элемент управления будет выглядеть и работать точно так же <xref:System.Windows.Forms.Button> , как стандартный элемент управления. После этого вы сможете расширить или изменить функциональность нового элемента управления, реализовав пользовательские методы и свойства. В некоторых элементах управления можно также изменить внешний вид наследуемого элемента управления, переопределив его <xref:System.Windows.Forms.Control.OnPaint%2A> метод.
+Чтобы расширить функциональные возможности существующего элемента управления, можно создать элемент управления, производный от существующего элемента управления, путем наследования. При наследовании из существующего элемента управления наследуются все его функциональные возможности и визуальные свойства. Например, если вы создавали элемент управления, наследуемый от <xref:System.Windows.Forms.Button>, новый элемент управления будет выглядеть и работать точно так же, как и стандартный элемент управления <xref:System.Windows.Forms.Button>. После этого вы сможете расширить или изменить функциональность нового элемента управления, реализовав пользовательские методы и свойства. В некоторых элементах управления можно также изменить внешний вид наследуемого элемента управления, переопределив его метод <xref:System.Windows.Forms.Control.OnPaint%2A>.
 
 ## <a name="to-create-an-inherited-control"></a>Создание наследуемого элемента управления
 
@@ -39,11 +39,11 @@ ms.locfileid: "70373234"
     - Visual Basic в верхней части **Обозреватель решений**щелкните " **отобразить все файлы**". Разверните папку CustomControl1.vb и откройте файл CustomControl1.Designer.vb в редакторе кода.
     - C#Откройте CustomControl1.cs в редакторе кода.
 
-1. Находите объявление класса, который наследует от <xref:System.Windows.Forms.Control>.
+1. Нахождение объявления класса, наследуемого от <xref:System.Windows.Forms.Control>.
 
 1. Измените базовый класс для элемента управления, который нужно использовать для наследования.
 
-     Например, если вы хотите наследовать от <xref:System.Windows.Forms.Button>, измените объявление класса следующим образом:
+     Например, если необходимо наследовать от <xref:System.Windows.Forms.Button>, измените объявление класса следующим образом:
 
     ```vb
     Partial Class CustomControl1
@@ -58,10 +58,10 @@ ms.locfileid: "70373234"
 
 1. Реализуйте необходимые пользовательские методы или свойства, которые будут входить в ваш элемент управления.
 
-1. Если необходимо изменить графический внешний вид элемента управления, переопределите <xref:System.Windows.Forms.Control.OnPaint%2A> метод.
+1. Если вы хотите изменить графический внешний вид элемента управления, переопределите метод <xref:System.Windows.Forms.Control.OnPaint%2A>.
 
     > [!NOTE]
-    > Переопределение <xref:System.Windows.Forms.Control.OnPaint%2A> не позволит изменять внешний вид всех элементов управления. Эти элементы управления, которые выполняются в Windows (например, <xref:System.Windows.Forms.TextBox>), никогда не вызывают свой <xref:System.Windows.Forms.Control.OnPaint%2A> метод и, таким образом, никогда не будут использовать пользовательский код. Чтобы узнать, доступен ли <xref:System.Windows.Forms.Control.OnPaint%2A> метод, обратитесь к справочной документации по конкретному элементу управления, который вы хотите изменить. Список всех элементов управления Windows Forms см. в разделе [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md). Если элемент управления не <xref:System.Windows.Forms.Control.OnPaint%2A> перечислен как метод-член, невозможно изменить его внешний вид, переопределив этот метод. Дополнительные сведения о пользовательском оформлении см. в разделе [Рисование и отрисовка пользовательского элемента управления](custom-control-painting-and-rendering.md).
+    > Переопределение <xref:System.Windows.Forms.Control.OnPaint%2A> не позволит изменять внешний вид всех элементов управления. Эти элементы управления, которые выполняются в Windows (например, <xref:System.Windows.Forms.TextBox>), никогда не вызывают свой метод <xref:System.Windows.Forms.Control.OnPaint%2A> и, таким образом, никогда не будут использовать пользовательский код. Чтобы узнать, доступен ли метод <xref:System.Windows.Forms.Control.OnPaint%2A>, обратитесь к справочной документации по конкретному элементу управления, который вы хотите изменить. Список всех элементов управления Windows Forms см. в разделе [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md). Если элемент управления не имеет <xref:System.Windows.Forms.Control.OnPaint%2A> указан как метод члена, его внешний вид нельзя изменить, переопределив этот метод. Дополнительные сведения о пользовательском оформлении см. в разделе [Рисование и отрисовка пользовательского элемента управления](custom-control-painting-and-rendering.md).
 
     ```vb
     Protected Overrides Sub OnPaint(ByVal e As _
@@ -88,8 +88,8 @@ ms.locfileid: "70373234"
 ## <a name="see-also"></a>См. также
 
 - [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
-- [Практическое руководство. Наследование от класса Control](how-to-inherit-from-the-control-class.md)
-- [Практическое руководство. Наследование от класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Практическое руководство. Создание элементов управления для Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Практическое руководство. Создание элементов управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Пошаговое руководство: Наследование от элемента управления Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Пошаговое руководство. наследование от элемента управления Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

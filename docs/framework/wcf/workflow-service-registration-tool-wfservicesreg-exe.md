@@ -2,23 +2,23 @@
 title: Программа регистрации служб WorkFlow (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916825"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425289"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Программа регистрации служб WorkFlow (WFServicesReg.exe)
 Средство регистрации служб Workflow Services (WFServicesReg.exe) - это автономное средство, которое можно использовать для добавления, удаления или восстановления элементов конфигурации для служб Windows Workflow Foundation.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Это средство можно найти в следующей папке установки [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]: %windir%\Microsoft.NET\Framework\v3.5 или %windir%\Microsoft.NET\Framework64\v3.5 на 64-разрядных компьютерах.  
   
  В следующей таблице представлены параметры, которые могут использоваться со средством регистрации служб Workflow Services (WFServicesReg.exe).  
@@ -56,11 +56,11 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Средство также регистрирует карты скриптов и обработчики XOML и RULES в метабазе IIS.  
   
- На [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] компьютерах [!INCLUDE[wxp](../../../includes/wxp-md.md)] и (IIS 5,1 и IIS 6,0) зарегистрирован один набор сценариев. XOML и Rules.  
+ На компьютерах [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 и IIS 6,0) регистрируется один набор сценариев. XOML и Rules.  
   
  На 64-разрядных компьютерах средство регистрирует карты скриптов режима WOW, если включен переключатель `Enable32BitAppOnWin64`, или собственные 64-разрядные карты скриптов, если переключатель `Enable32BitAppOnWin64` отключен.  
   
- На [!INCLUDE[wv](../../../includes/wv-md.md)] компьютерах и Windows Server 2008 (IIS 7,0 и более поздних версий) зарегистрированы два набора обработчиков. XOML и. rules: один для интегрированного режима и один для классического режима.  
+ На компьютерах [!INCLUDE[wv](../../../includes/wv-md.md)] и Windows Server 2008 (IIS 7,0 и более поздних версий) зарегистрированы два набора обработчиков. XOML и. rules: один для интегрированного режима и один для классического режима.  
   
  На 64-разрядных компьютерах регистрируется три набора обработчиков (независимо от состояния переключателя `Enable32BitAppOnWin64`): один для интегрированного режима, один для классического режима WOW и один для собственного 64-разрядного классического режима.  
   

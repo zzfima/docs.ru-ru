@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662733"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423038"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Очистка неуправляемых ресурсов
 
@@ -27,7 +25,7 @@ ms.locfileid: "67662733"
 
 Если ваши типы используют неуправляемые ресурсы, необходимо выполнить следующие действия:
 
-- Реализуйте [шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md). Это требует реализации <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> для детерминированного освобождения неуправляемых ресурсов. Объект-получатель типа вызывает метод <xref:System.IDisposable.Dispose%2A>, когда объект и используемые им ресурсы больше не нужны. Метод <xref:System.IDisposable.Dispose%2A> немедленно освобождает неуправляемые ресурсы.
+- Реализуйте [шаблон удаления](implementing-dispose.md). Это требует реализации <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> для детерминированного освобождения неуправляемых ресурсов. Объект-получатель типа вызывает метод <xref:System.IDisposable.Dispose%2A>, когда объект и используемые им ресурсы больше не нужны. Метод <xref:System.IDisposable.Dispose%2A> немедленно освобождает неуправляемые ресурсы.
 
 - Предусмотрите освобождение неуправляемых ресурсов, в случае если метод <xref:System.IDisposable.Dispose%2A> не будет вызван объектом-получателем. Это можно сделать двумя способами.
 
@@ -41,11 +39,11 @@ ms.locfileid: "67662733"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Реализация метода Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) — описание способа реализации [шаблона удаления](../../../docs/standard/design-guidelines/dispose-pattern.md) для освобождения неуправляемых ресурсов.
+[Реализация метода Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) — описание способа реализации [шаблона удаления](implementing-dispose.md) для освобождения неуправляемых ресурсов.
 
 [Использование объектов, реализующих IDisposable](../../../docs/standard/garbage-collection/using-objects.md) — описание того, как объекты-получатели типа обеспечивают вызов своей реализации метода <xref:System.IDisposable.Dispose%2A>. Для этого рекомендуется использовать оператор `using` (C# ) или `Using` (Visual Basic).
 
-## <a name="reference"></a>Справочники
+## <a name="reference"></a>Ссылка
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
 Определяет метод <xref:System.IDisposable.Dispose%2A> для освобождения неуправляемых ресурсов.

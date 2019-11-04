@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664004"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424867"
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
 
@@ -62,7 +62,7 @@ ms.locfileid: "67664004"
 
 [Варианты обработки XML-данных](../../../../docs/standard/data/xml/xml-processing-options.md) Обсуждаются параметры обработки XML-данных.
 
-[Обработка XML-данных в памяти](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Содержит обсуждение трех моделей обработки XML-данных в памяти: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) и [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), класс <xref:System.Xml.XmlDocument> (основанный на модели W3C DOM) и класс <xref:System.Xml.XPath.XPathDocument> (основанный на модели данных XPath).
+[Обработка XML-данных в памяти](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Содержит обсуждение трех моделей обработки XML-данных в памяти: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) и [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), класс <xref:System.Xml.XmlDocument> (основанный на модели W3C DOM) и класс <xref:System.Xml.XPath.XPathDocument> (основанный на модели данных XPath).
 
 [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)\
 Описывается, как использовать обработчик XSLT.

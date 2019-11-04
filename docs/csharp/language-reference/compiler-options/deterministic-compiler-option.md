@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202918"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455182"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -48,7 +46,7 @@ ms.locfileid: "70202918"
   - Дополнительные файлы, которые могут использоваться анализаторами
 - Текущий язык и региональные параметры (для языка сообщений о диагностике и исключениях).
 - Кодировка по умолчанию (или текущая кодовая страница), если кодировка не указана.
-- Наличие, отсутствие и содержимое файлов на пути поиска компилятора (задается, например, с помощью `/lib` или `/recurse`).
+- Наличие, отсутствие и содержимое файлов на пути поиска компилятора (задается, например, с помощью `-lib` или `-recurse`).
 - Платформа среды CLR, в которой выполняется компилятор.
 - Значение `%LIBPATH%`, которое может повлиять на загрузку зависимостей анализатора.
 

@@ -2,12 +2,12 @@
 title: Извлечение текста абзацев (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253061"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423330"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Извлечение текста абзацев (C#)
 Этот пример основан на предыдущем примере [Извлечение абзацев и стилей (C#)](./retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  
@@ -18,7 +18,7 @@ ms.locfileid: "70253061"
   
  Конечно, было бы возможным создать единичный запрос, который содержит функциональные возможности получать абзацы, стиль и текст каждого абзаца. Однако часто полезно разбить более сложный запрос на несколько запросов, поскольку при этом результирующий код выглядит более модульным и легким для поддержки. Более того, если потребуется повторно использовать часть запроса, будет легче выполнить оптимизацию кода.  
   
- Эти связанные в цепочку запросы используют модель обработки, подробно рассматриваемую в разделе [Учебник. Объединение запросов в цепочки (C#)](./tutorial-chaining-queries-together.md).  
+ Эти связанные в цепочку запросы используют модель обработки, подробно рассматриваемую в разделе [Учебник. Объединение запросов в цепочки (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="example"></a>Пример  
  В этом примере выполняется обработка документа WordprocessingML, определение узла элемента, имени стиля и текста каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Новый запрос выявляется в комментариях в нижеприведенном коде.  
@@ -144,5 +144,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого документа WordprocessingML (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Учебник. Обработка содержимого документа WordprocessingML (C#)](shape-of-wordprocessingml-documents.md)
 - [Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920212"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420639"
 ---
 # <a name="application-development"></a>Разработка приложений
 <a name="introduction"></a>Windows Presentation Foundation (WPF) — это структура представления, которую можно использовать для разработки приложений следующих типов:  
   
 - Автономные приложения (традиционные приложения Windows, созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (приложения, состоящие из страниц навигации, построенных как исполняемые сборки и размещенные в веб-браузерах, таких как Microsoft Internet Explorer или Mozilla Firefox).  
+- Приложения браузера XAML (XBAP) (приложения, состоящие из страниц навигации, построенных как исполняемые сборки и размещенные в веб-браузерах, таких как Microsoft Internet Explorer или Mozilla Firefox).  
   
 - пользовательские библиотеки элементов управления (неисполняемые сборки, содержащие многократно используемые элементы управления);  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920212"
   
 - управление окнами в автономных приложениях;  
   
-- отслеживание переходов в [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и отдельных приложениях с окнами переходов и фреймами.  
+- Отслеживание переходов в приложениях браузера XAML (XBAP) и автономных приложениях с окнами навигации и фреймами.  
   
  Эти возможности реализуются с помощью класса <xref:System.Windows.Application>, который добавляется в приложения с помощью *определения приложения*.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920212"
   
 - автономные страницы, размещенные в веб-браузере;  
   
-- страницы, скомпилированные в приложение [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], которое размещается в веб-браузере;  
+- Страницы, скомпилированные в XBAP, размещенные в веб-браузере.  
   
 - страницы, скомпилированные в автономном приложении и размещенные в окне навигации (<xref:System.Windows.Navigation.NavigationWindow>);  
   
-- страницы, размещенные во фрейме (<xref:System.Windows.Controls.Frame>), который может размещаться на отдельной странице или на странице, скомпилированной в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] или в автономное приложение.  
+- Страницы, размещенные на кадре (<xref:System.Windows.Controls.Frame>), которые могут размещаться на автономной странице, или на странице, скомпилированной в XBAP или в автономное приложение.  
   
  Для облегчения навигации [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует следующее:  
   
-- совместно используемый обработчик переходов <xref:System.Windows.Navigation.NavigationService> для обработки запросов перемещения, который используют <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] для поддержки переходов внутри приложения;  
+- <xref:System.Windows.Navigation.NavigationService>, общий механизм навигации для обработки запросов навигации, используемый <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>и XBAP для поддержки навигации внутри приложения.  
   
 - методы навигации для инициирования навигации;  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920212"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Размещение  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] могут размещаться в Microsoft Internet Explorer или Firefox. Каждая модель размещения имеет свой собственный набор разрешений и ограничений, которые рассматриваются в разделе [Размещение](hosting-wpf-applications.md).  
+ XBAP можно размещать в Microsoft Internet Explorer или Firefox. Каждая модель размещения имеет свой собственный набор разрешений и ограничений, которые рассматриваются в разделе [Размещение](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Построение и Развертывание  
@@ -124,7 +124,7 @@ ms.locfileid: "72920212"
 |[Общие сведения об управлении приложением](application-management-overview.md)|Общие сведения о классе <xref:System.Windows.Application>, включая управление временем существования приложения, окнами, ресурсами приложений и навигацией.|  
 |[Windows в WPF](windows-in-wpf-applications.md)|Сведения об управлении окнами в приложении, включая способы использования класса <xref:System.Windows.Window> и диалоговых окон.|  
 |[Общие сведения о переходах](navigation-overview.md)|Общие сведения об управлении навигацией по страницам приложения.|  
-|[Размещение](hosting-wpf-applications.md)|Предоставляет общие сведения о [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
+|[Размещение](hosting-wpf-applications.md)|Содержит общие сведения о приложениях браузера XAML (XBAP).|  
 |[Сборка и развертывание](building-and-deploying-wpf-applications.md)|Описание процесса сборки и развертывания приложения WPF.|  
 |[Введение в WPF в Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Описание основных возможностей WPF.|  
 |[Пошаговое руководство. Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Пошаговое руководство, в котором демонстрируется создание приложения WPF с использованием навигации по страницам, макета, элементов управления, изображений, стилей и привязок.|

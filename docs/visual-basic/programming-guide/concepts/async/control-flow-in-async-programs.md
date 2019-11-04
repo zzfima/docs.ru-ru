@@ -2,12 +2,12 @@
 title: Поток управления в асинхронных программах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 74942ec3d293485ea6aae3940d1715af8de67c90
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 69474b3c8d4ce08da46c9ba793da58786a607d91
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352117"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420120"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Поток управления в асинхронных программах (Visual Basic)
 
@@ -41,7 +41,7 @@ Class MainWindow
 
         ' SIX
         ResultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+            vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
     End Sub
 
@@ -256,7 +256,7 @@ Length of the downloaded string: 33946.
 
 В первых двух строках прослеживается путь по мере того, как метод `startButton_Click` вызывает `AccessTheWebAsync`, а `AccessTheWebAsync` вызывает асинхронный метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. Ниже показаны вызовы из метода в метод.
 
-![Шаги ONE (один) и TWO (два)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![Шаги один и два](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png ") Asynctrace — ОНЕТВО")
 
 Типом возвращаемого значения и для `AccessTheWebAsync`, и для `client.GetStringAsync` является <xref:System.Threading.Tasks.Task%601>. Для `AccessTheWebAsync` значение TResult является целым числом. Для `GetStringAsync` значение TResult является строкой. Дополнительные сведения о типах возвращаемых асинхронных методов см. в разделе [асинхронные типы возвращаемых данных (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
@@ -286,9 +286,9 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask
 ```
 
-На следующем рисунке показан поток управления от `client.GetStringAsync` до присваивания `getStringTask` и создания `getStringTask` в приложении оператора await.
+На следующем рисунке показан поток управления из `client.GetStringAsync` в назначение для `getStringTask` и из создания `getStringTask` в приложении оператора await.
 
-![Шаг THREE (три)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
+![Шаг 3](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png ") Asynctrace-три")
 
 Выражение await приостанавливает `AccessTheWebAsync` до возвращения результатов `client.GetStringAsync`. На это время управление возвращается вызывающему объекту метода `AccessTheWebAsync`, `startButton_Click`.
 
@@ -323,7 +323,7 @@ Dim contentLength As Integer = Await getLengthTask
 
 На следующем рисунке стрелками показан поток управления из выражения await в `AccessTheWebAsync` к назначению значения `getLengthTask`, за которым следует обычная обработка в методе `startButton_Click` до ожидания `getLengthTask`.
 
-![Шаг FOUR (четыре)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")
+![Шаг 4](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png ") Asynctrace — четыре")
 
 ### <a name="step-five"></a>Шаг ПЯТЬ
 
@@ -340,7 +340,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 На следующем рисунке показана передача управления после завершения `client.GetStringAsync` (и `getStringTask`).
 
-![Шаг FIVE (пять)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
+![Шаг 5](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png ") Asynctrace-5")
 
 `AccessTheWebAsync` выполняется до завершения, и управление возвращается к `startButton_Click`, который ожидает завершения.
 
@@ -365,11 +365,11 @@ Dim contentLength As Integer = Await getLengthTask
 
 На следующем рисунке показано возвращение управления от `AccessTheWebAsync` к `startButton_Click`.
 
-![Шаг SIX (шесть)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")
+![Шаг 6](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png ") Asynctrace-шесть")
 
 ## <a name="see-also"></a>См. также
 
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))
-- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Пример использования Async. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))
+- [Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

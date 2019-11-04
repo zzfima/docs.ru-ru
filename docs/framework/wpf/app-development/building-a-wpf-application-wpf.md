@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197791"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424439"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
 
@@ -136,13 +136,13 @@ End Sub
 
 После завершения процесса сборки, после того как все сборки приложения и файлы содержимого будут готовы, создаются манифесты ClickOnce для приложения.
 
-Файл манифеста развертывания описывает модель развертывания: текущую версию, поведение обновления и идентификатор издателя вместе с цифровой подписью. Этот манифест должен создаваться администраторами, управляющими развертыванием. Файл имеет расширение .xbap (для [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) и .application для установленных приложений. Первое диктуется свойством проекта `HostInBrowser`, и в результате манифест идентифицирует приложение как браузерное.
+Файл манифеста развертывания описывает модель развертывания: текущую версию, поведение обновления и идентификатор издателя вместе с цифровой подписью. Этот манифест должен создаваться администраторами, управляющими развертыванием. Расширение файла —. XBAP (для приложений браузера XAML (XBAP)) и приложения для установленных приложений. Первое диктуется свойством проекта `HostInBrowser`, и в результате манифест идентифицирует приложение как браузерное.
 
 Манифест приложения (файл .exe.manifest) описывает сборки приложения и зависимые библиотеки, а также перечисляет разрешения, необходимые для приложения. Этот файл должен быть создан разработчиком приложения. Чтобы запустить приложение ClickOnce, пользователь открывает файл манифеста развертывания приложения.
 
-Эти файлы манифеста всегда создаются для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Для установленных приложений они не создаются, если в файле проекта не будет задано свойство `GenerateManifests` со значением `true`.
+Эти файлы манифеста всегда создаются для XBAP. Для установленных приложений они не создаются, если в файле проекта не будет задано свойство `GenerateManifests` со значением `true`.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] получить два дополнительных разрешения выше и выше этих разрешений, назначенных типичным приложениям зоны Интернета: <xref:System.Security.Permissions.WebBrowserPermission> и <xref:System.Security.Permissions.MediaPermission>. Система сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] объявляет эти разрешения в манифесте приложения.
+XBAP получают два дополнительных разрешения в отношении и выше этих разрешений, назначенных типичным приложениям зоны Интернета: <xref:System.Security.Permissions.WebBrowserPermission> и <xref:System.Security.Permissions.MediaPermission>. Система сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] объявляет эти разрешения в манифесте приложения.
 
 <a name="Incremental_Build_Support"></a>
 

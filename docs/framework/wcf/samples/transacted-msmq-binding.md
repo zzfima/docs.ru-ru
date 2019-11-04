@@ -2,12 +2,12 @@
 title: Привязка MSMQ с поддержкой транзакций
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf93ba5b7497d30ff7efceea3bd7ca827d5b502
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759990"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423905"
 ---
 # <a name="transacted-msmq-binding"></a>Привязка MSMQ с поддержкой транзакций
 
@@ -50,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
-Служба является резидентной. При работе с транспортом MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код для проверки наличия очереди и ее создания, если очереди нет. Имя очереди считывается из файла конфигурации. Базовый адрес используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси для службы.
+Служба является резидентной. При работе с транспортом MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код для проверки наличия очереди и ее создания, если очереди нет. Имя очереди считывается из файла конфигурации. Базовый адрес используется [средством служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси-сервера для службы.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -90,7 +90,7 @@ public static void Main()
 ```
 
 > [!NOTE]
-> В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты. Конечная точка службы Windows Communication Foundation (WCF) использует адрес очереди со схемой net.msmq, использует «localhost» для обозначения локального компьютера и используются символы косой черты в пути.
+> В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты. Конечная точка Windows Communication Foundation (WCF) использует адрес очереди в схеме NET. MSMQ, использует "localhost" для обозначения локального компьютера и использует косую черту в пути.
 
 Клиент создает область транзакции. Связь с очередью происходит в области транзакции, поэтому она обрабатывается как единый модуль, в котором либо все сообщения отправляются в очередь, либо в очередь не отправляется ни одного сообщения. Транзакция фиксируется вызовом метода <xref:System.Transactions.TransactionScope.Complete%2A> для области транзакции.
 
@@ -144,7 +144,7 @@ Console.ReadLine();
 
 При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента. Можно видеть, как служба получает сообщения от клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент. Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно. Можно запустить клиент, выключить его, а затем запустить службу и все равно получить сообщения клиента.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -159,23 +159,23 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. При первом запуске служба проверит наличие очереди. Если очередь отсутствует, служба ее создаст. Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ. Чтобы создать очередь в Windows 2008, выполните следующие шаги.
 
-    1. Откройте диспетчер серверов в Visual Studio 2012.
+    1. Откройте диспетчер сервера в Visual Studio 2012.
 
-    2. Разверните **функции** вкладки.
+    2. Разверните вкладку **функции** .
 
-    3. Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.
+    3. Щелкните правой кнопкой мыши **частные очереди сообщений**и выберите **создать**, **Частная очередь**.
 
-    4. Проверьте **транзакционная** поле.
+    4. Установите флажок **транзакционная** .
 
-    5. Введите `ServiceModelSamplesTransacted` как имя новой очереди.
+    5. Введите `ServiceModelSamplesTransacted` в качестве имени новой очереди.
 
 3. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Имеется два соответствующих свойства для обеспечения безопасности транспорта MSMQ: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. По умолчанию задан режим проверки подлинности `Windows` и уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить этот образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.
 
@@ -235,6 +235,6 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

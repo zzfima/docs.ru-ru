@@ -2,19 +2,19 @@
 title: Пример автономного веб-канала диагностики
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 6b83bda154a76fe10487da00359e0ceace8ce8cb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8a64c209711734b4915f332e9242346e295ddea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044682"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417040"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Пример автономного веб-канала диагностики
 В этом примере показано, как создать канал RSS/Atom для синдикации с помощью Windows Communication Foundation (WCF). Это базовая программа "Hello World", которая показывает основы объектной модели и способ ее настройки в службе Windows Communication Foundation (WCF).  
   
- WCF моделирует веб-каналы синдикации как операции службы, возвращающие Специальный тип <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>данных. Экземпляры <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> могут сериализовать веб-канал в форматы RSS 2.0 и Atom 1.0. В следующем примере кода показан использованный контракт.  
+ WCF моделирует веб-каналы синдикации как операции службы, возвращающие Специальный тип данных <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Экземпляры <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> могут сериализовать веб-канал в форматы RSS 2.0 и Atom 1.0. В следующем примере кода показан использованный контракт.  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "")]  
     interface IDiagnosticsService  
     {  
@@ -32,11 +32,11 @@ ms.locfileid: "70044682"
     }  
 ```  
   
- Операция помечена <xref:System.ServiceModel.Web.WebGetAttribute> атрибутом, который позволяет управлять тем, как WCF отправляет HTTP-запросы GET к операциям службы и задает формат отправленных сообщений. `GetProcesses`  
+ Операция `GetProcesses` замечается атрибутом <xref:System.ServiceModel.Web.WebGetAttribute>, который позволяет управлять тем, как WCF отправляет HTTP-запросы GET к операциям службы и определяет формат отправленных сообщений.  
   
  Как и любая служба WCF, веб-каналы синдикации могут размещаться в любом управляемом приложении. Для правильной работы служб синдикации требуются особая привязка (<xref:System.ServiceModel.WebHttpBinding>) и специальное поведение конечной точки (<xref:System.ServiceModel.Description.WebHttpBehavior>). Новый класс <xref:System.ServiceModel.Web.WebServiceHost> обеспечивает удобный программный интерфейс для создания таких конечных точек без особой конфигурации.  
   
-```  
+```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
   
             //The WebServiceHost will automatically provide a default endpoint at the base address  
@@ -49,11 +49,11 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Поскольку эта служба получает запросы с использованием стандартного метода HTTP GET, для доступа к службе можно использовать любой клиент, поддерживающий RSS или ATOM. Например, можно просмотреть выходные данные этой службы, перейдя по `http://localhost:8000/diagnostics/feed/?format=atom` адресу или `http://localhost:8000/diagnostics/feed/?format=rss` в браузере, поддерживающем RSS.
+ Поскольку эта служба получает запросы с использованием стандартного метода HTTP GET, для доступа к службе можно использовать любой клиент, поддерживающий RSS или ATOM. Например, можно просмотреть выходные данные этой службы, перейдя к `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` в браузере, поддерживающем RSS.
   
  Вы также можете использовать [объектную модель синдикации WCF для сопоставления с Atom и RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) , чтобы считывать данные из синдикации и обрабатывать их с помощью императивного кода.  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
 new XmlReaderSettings()  
 {  
@@ -82,14 +82,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3. Запустите консольное приложение.  
   
-4. Во время работы консольного приложения перейдите к `http://localhost:8000/diagnostics/feed/?format=atom` браузеру, поддерживающему RSS, или `http://localhost:8000/diagnostics/feed/?format=rss` используйте его.  
+4. Во время работы консольного приложения перейдите к `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` с помощью браузера, поддерживающего RSS.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение объекта Freezable как доступного только для чтения
+title: Практическое руководство. сделать объект Freezable доступным только для чтения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,33 +7,33 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 5748b7929db18578bbe00e3217b1578ac5fbc0f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4185966d864be425bc631953461f6f27ab983bee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614590"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460069"
 ---
-# <a name="how-to-make-a-freezable-read-only"></a>Практическое руководство. Определение объекта Freezable как доступного только для чтения
-В этом примере показано, как сделать <xref:System.Windows.Freezable> только для чтения, вызвав его <xref:System.Windows.Freezable.Freeze%2A> метод.  
+# <a name="how-to-make-a-freezable-read-only"></a>Практическое руководство. сделать объект Freezable доступным только для чтения
+В этом примере показано, как сделать <xref:System.Windows.Freezable> только для чтения, вызвав его метод <xref:System.Windows.Freezable.Freeze%2A>.  
   
- Невозможно закрепить <xref:System.Windows.Freezable> объекта, если одно из следующих условий не `true` об объекте:  
+ Нельзя зафиксировать объект <xref:System.Windows.Freezable>, если одно из следующих условий `true` об объекте:  
   
-- Объект имеет анимированные или свойства с привязкой к данным.  
+- Он имеет анимированные или привязанные к данным свойства.  
   
-- Он имеет свойства, которые задаются динамический ресурс. Дополнительные сведения о динамических ресурсов, см. в разделе [ресурсы XAML](xaml-resources.md).  
+- Он имеет свойства, заданные динамическим ресурсом. Дополнительные сведения о динамических ресурсах см. в разделе [ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
-- Он содержит <xref:System.Windows.Freezable> вложенные объекты, которые нельзя зафиксировать.  
+- Он содержит <xref:System.Windows.Freezable> подобъекты, которые не могут быть заморожены.  
   
- Если эти условия выполняются `false` для вашей <xref:System.Windows.Freezable> объекта и вы не собираетесь изменять, можно зафиксировать, чтобы получить выигрыш в производительности.  
+ Если эти условия `false` для объекта <xref:System.Windows.Freezable> и вы не собираетесь его изменять, попробуйте заморозить его, чтобы получить выигрыш в производительности.  
   
 ## <a name="example"></a>Пример  
- В следующем примере фиксируется <xref:System.Windows.Media.SolidColorBrush>, который представляет собой разновидность <xref:System.Windows.Freezable> объекта.  
+ В следующем примере закрепляется <xref:System.Windows.Media.SolidColorBrush>, который является типом объекта <xref:System.Windows.Freezable>.  
   
  [!code-csharp[freezablesample_procedural#FreezeExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
  [!code-vb[freezablesample_procedural#FreezeExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
   
- Дополнительные сведения о <xref:System.Windows.Freezable> объектов, см. в разделе [Freezable Общие сведения об объектах](freezable-objects-overview.md).  
+ Дополнительные сведения о <xref:System.Windows.Freezable> объектах см. в разделе [Общие сведения об объектах Freezable](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>См. также
 
