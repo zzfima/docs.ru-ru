@@ -9,12 +9,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: e9e10957e7ebe93a6dea9bbb6233ca7733f68e20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df3df279d2dbdb59a0a94d9afad37d1a7ddf7b57
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633459"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422701"
 ---
 # <a name="let-clause-c-reference"></a>Предложение let (справочник по C#)
 
@@ -35,5 +35,5 @@ ms.locfileid: "65633459"
 - [Справочник по C#](../../language-reference/index.md)
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
 - [LINQ](../../linq/index.md)
-- [Приступая к работе с LINQ в C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)
 - [Обработка исключений в выражениях запросов](../../linq/handle-exceptions-in-query-expressions.md)

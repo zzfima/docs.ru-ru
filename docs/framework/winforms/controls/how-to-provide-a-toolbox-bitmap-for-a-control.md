@@ -9,25 +9,25 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e6da7318ba481af721a9220c8f71af2a18e764a3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 61f60aaeab904dff80408a1dc46c2882fb5e22b9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015789"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458312"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления
 
-Если требуется, чтобы на **панели элементов** Visual Studio отображался Специальный значок для элемента управления, можно указать конкретное изображение с помощью <xref:System.Drawing.ToolboxBitmapAttribute>. Он представляет собой *атрибут* — особый вид классов, который можно прикреплять к другим классам. Дополнительные сведения об атрибутах см. в разделе [Общие сведения о атрибутах (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) для Visual Basic C#или [атрибутов (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) для.
+Если требуется, чтобы на **панели элементов** Visual Studio отображался Специальный значок для элемента управления, можно указать конкретное изображение с помощью <xref:System.Drawing.ToolboxBitmapAttribute>. Он представляет собой *атрибут* — особый вид классов, который можно прикреплять к другим классам. Дополнительные сведения об атрибутах см. в разделе [Общие сведения о атрибутах (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) для Visual Basic C#или [атрибутовC#()](../../../csharp/programming-guide/concepts/attributes/index.md) для.
 
-<xref:System.Drawing.ToolboxBitmapAttribute>С помощью можно указать строку, которая указывает путь и имя файла для точечного рисунка размером 16 х 16 пикселей. Это изображение появится рядом с элементом управления при добавлении на **панель элементов**. Можно также указать <xref:System.Type>, в этом случае загружается точечный рисунок, связанный с этим типом. Если указать <xref:System.Type> и, и строку, элемент управления ищет ресурс изображения с именем, указанным в строковом параметре в сборке, содержащей тип, заданный <xref:System.Type> параметром.
+С помощью <xref:System.Drawing.ToolboxBitmapAttribute>можно указать строку, которая указывает путь и имя файла для точечного рисунка размером 16 х 16 пикселей. Это изображение появится рядом с элементом управления при добавлении на **панель элементов**. Можно также указать <xref:System.Type>, в этом случае загружается точечный рисунок, связанный с этим типом. Если указать и <xref:System.Type>, и строку, элемент управления будет искать ресурс изображения с именем, указанным в параметре строки в сборке, содержащей тип, заданный параметром <xref:System.Type>.
 
 ## <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Указание растрового изображения для отображения элемента управления на панели элементов
 
-1. Добавьте в <xref:System.Drawing.ToolboxBitmapAttribute> объявление класса элемента управления `Class` перед ключевым словом для Visual Basic, а также над объявлением класса для Visual. C#
+1. Добавьте <xref:System.Drawing.ToolboxBitmapAttribute> в объявление класса элемента управления перед ключевым словом `Class` для Visual Basic, а также над объявлением класса для Visual C#.
 
     ```vb
     ' Specifies the bitmap associated with the Button type.
@@ -65,12 +65,12 @@ ms.locfileid: "70015789"
 2. Перестройте проект.
 
     > [!NOTE]
-    > Для автоматически созданных элементов управления и компонентов растровое изображение на панели элементов не отображается. Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**. Дополнительные сведения см. в разделе [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
+    > Для автоматически созданных элементов управления и компонентов растровое изображение на панели элементов не отображается. Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**. Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)
 - [Общие сведения об атрибутах (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

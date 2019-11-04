@@ -8,16 +8,16 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133707"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417635"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Практическое руководство. Преобразование строки в число (руководство по программированию на C#)
 
-Вы можете преобразовывать [строку](../../language-reference/keywords/string.md) в число с помощью вызова метода `Parse` или `TryParse`, который можно найти в различных числовых типах (`int`, `long`, `double` и т. д.), или используя методы в классе <xref:System.Convert?displayProperty=nameWithType>.  
+Вы можете преобразовывать [строку](../../language-reference/builtin-types/reference-types.md) в число с помощью вызова метода `Parse` или `TryParse`, который можно найти в различных числовых типах (`int`, `long`, `double` и т. д.), или используя методы в классе <xref:System.Convert?displayProperty=nameWithType>.  
   
  Если имеется строка, то немного эффективнее и проще вызвать метод `TryParse` (например, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) или метод `Parse` (например, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  Использование метода <xref:System.Convert> более удобно для общих объектов, реализующих <xref:System.IConvertible>.  
   
