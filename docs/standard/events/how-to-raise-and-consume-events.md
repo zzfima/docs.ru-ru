@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов и прием событий
+title: Практическое руководство. Вызов и обработка событий
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73131584"
 ---
-# <a name="how-to-raise-and-consume-events"></a>Практическое руководство. Вызов и прием событий
+# <a name="how-to-raise-and-consume-events"></a>Практическое руководство. Вызов и обработка событий
 В примерах в этом разделе показано, как работать с событиями. Даны примеры делегата <xref:System.EventHandler>, делегата <xref:System.EventHandler%601> и пользовательского делегата, иллюстрирующие события как с данными, так и без.  
   
  В примерах используются понятия, описанные в руководстве по [событиям](../../../docs/standard/events/index.md).  
