@@ -9,37 +9,37 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0835c106ffbda86bca8e01bc61adebfc1ab0c2cb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911266"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459641"
 ---
 # <a name="groupbox-styles-and-templates"></a>Стили и шаблоны элемента GroupBox
-<a name="introduction"></a> В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.GroupBox> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+<a name="introduction"></a>В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.GroupBox>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 <a name="groupbox_parts"></a>   
-## <a name="groupbox-parts"></a>GroupBox частей  
- <xref:System.Windows.Controls.GroupBox> Управления не имеет частей с именами.  
+## <a name="groupbox-parts"></a>Части GroupBox  
+ Элемент управления <xref:System.Windows.Controls.GroupBox> не имеет именованных частей.  
   
 <a name="groupbox_states"></a>   
-## <a name="groupbox-states"></a>GroupBox состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.GroupBox> элемента управления.  
+## <a name="groupbox-states"></a>Состояния GroupBox  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.GroupBox>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
 <a name="groupbox_controltemplate_example"></a>   
-## <a name="groupbox-controltemplate-example"></a>Пример шаблона элемента управления GroupBox  
- В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.GroupBox> элемента управления.  
+## <a name="groupbox-controltemplate-example"></a>Пример объекта ControlTemplate для GroupBox  
+ В следующем примере показано, как определить <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.GroupBox>.  
   
  [!code-xaml[ControlTemplateExamples#GroupBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/groupbox.xaml#groupbox)]  
   
- <xref:System.Windows.Controls.ControlTemplate> Использует один или несколько из следующих ресурсов.  
+ <xref:System.Windows.Controls.ControlTemplate> использует один или несколько следующих ресурсов.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
@@ -51,5 +51,5 @@ ms.locfileid: "61911266"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

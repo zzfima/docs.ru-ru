@@ -8,22 +8,22 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981894"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458707"
 ---
 # <a name="resources-wpf"></a>Ресурсы WPF.
-Ресурс — это объект, который можно повторно использовать в разных местах приложения. WPF поддерживает различные типы ресурсов. Эти ресурсы являются в основном два типа ресурсов: Ресурсы XAML и файлы данных ресурсов. Примерами XAML ресурсов являются кисти и стили. Ресурс данных называются файлы неисполняемые данные, необходимые для приложения.  
+Ресурс — это объект, который можно повторно использовать в разных местах приложения. WPF поддерживает различные типы ресурсов. Эти ресурсы в основном являются двумя типами ресурсов: ресурсы XAML и файлы данных ресурсов. Примеры ресурсов XAML включают в себя кисти и стили. Файлы данных ресурсов являются неисполняемыми файлами данных, которые требуются приложению.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Ресурсы XAML](xaml-resources.md)  
- [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
+## <a name="in-this-section"></a>Содержание  
+ [Ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
+ [Файлы ресурсов, контента и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
  [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.ResourceDictionary>  
   
  [Расширение разметки StaticResource](staticresource-markup-extension.md)  

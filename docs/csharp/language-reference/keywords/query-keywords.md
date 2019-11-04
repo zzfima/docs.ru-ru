@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608452"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422541"
 ---
 # <a name="query-keywords-c-reference"></a>Ключевые слова запроса (Справочник по C#)
 
@@ -40,5 +40,5 @@ ms.locfileid: "69608452"
 
 - [Ключевые слова в C#](index.md)
 - [Встроенный язык запросов LINQ](../../programming-guide/concepts/linq/index.md)
-- [Выражения запросов LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Приступая к работе с LINQ в C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ в C#](../../linq/index.md)
+- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)

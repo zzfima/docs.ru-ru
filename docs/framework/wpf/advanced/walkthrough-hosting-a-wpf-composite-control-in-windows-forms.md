@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4a0b15ded5050833d4e87a30b977139834b624d4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197929"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458933"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако при наличии значительных инвестиций в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код может оказаться более эффективным, чтобы расширить имеющееся приложение [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], а не переписывать его с нуля. Распространенный сценарий заключается в том, что необходимо внедрить один или несколько элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF см. в разделе [Настройка элемента управления](../controls/control-customization.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "73197929"
 #### <a name="styling-the-ui-elements"></a>Создание стилей элементов пользовательского интерфейса  
  Многие элементы в форме для ввода данных имеют одинаковый внешний вид. Это означает, что они имеют одинаковые значения нескольких свойств. Вместо того чтобы задавать атрибуты каждого элемента отдельно, предыдущий XAML использует <xref:System.Windows.Style> элементы для определения стандартных настроек свойств для классов элементов. Такой подход упрощает элемент управления и позволяет изменять внешний вид нескольких элементов посредством одного атрибута стиля.  
   
- Элементы <xref:System.Windows.Style> содержатся в свойстве <xref:System.Windows.FrameworkElement.Resources%2A> элемента <xref:System.Windows.Controls.Grid>, поэтому они могут использоваться всеми элементами в элементе управления. Если стиль называется, его можно применить к элементу, добавив элемент <xref:System.Windows.Style>, которому присвоено имя стиля. Неименованные стили становятся стилями по умолчанию для элемента. Дополнительные сведения о стилях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделе [Стилизация и создание шаблонов](../controls/styling-and-templating.md).  
+ Элементы <xref:System.Windows.Style> содержатся в свойстве <xref:System.Windows.FrameworkElement.Resources%2A> элемента <xref:System.Windows.Controls.Grid>, поэтому они могут использоваться всеми элементами в элементе управления. Если стиль называется, его можно применить к элементу, добавив элемент <xref:System.Windows.Style>, которому присвоено имя стиля. Неименованные стили становятся стилями по умолчанию для элемента. Дополнительные сведения о стилях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделе [Стилизация и создание шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
  В следующем коде XAML показаны элементы <xref:System.Windows.Style> для составного элемента управления. Чтобы увидеть, как стили применяются к элементам, см. предыдущий код XAML. Например, последний элемент <xref:System.Windows.Controls.TextBlock> имеет стиль `inlineText`, а последний элемент <xref:System.Windows.Controls.TextBox> использует стиль по умолчанию.  
   

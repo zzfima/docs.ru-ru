@@ -7,21 +7,21 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b47b9b7091e5421278fe867f79eb8abc62588b93
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790914"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459059"
 ---
 # <a name="styles-and-templates"></a>Стили и шаблоны
-Windows Presentation Foundation (WPF) Стилизация и использование шаблонов относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют приложения, документа или конструктор пользовательских интерфейса (UI) для создания визуально привлекательных приложений, а также стандартизировать определенный внешний вид своих продуктов.  
+Стили и шаблоны Windows Presentation Foundation (WPF) относятся к набору функций (стилей, шаблонов, триггеров и раскадровок), которые позволяют приложению, документу или конструктору ПОЛЬЗОВАТЕЛЬСКОГО интерфейса создавать визуально привлекательные приложения и стандартизировать определенный вид для своего продукта.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Стилизация и использование шаблонов](styling-and-templating.md)  
-  [Практическое руководство. Найти, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a>Содержание  
+ [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [Поиск элемента, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  

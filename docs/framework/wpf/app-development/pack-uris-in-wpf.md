@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580623"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459668"
 ---
 # <a name="pack-uris-in-wpf"></a>URI типа "pack" в WPF
 
@@ -139,7 +139,7 @@ URI типа "Pack" для файла ресурсов, компилируемо
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Обратите внимание, что синтаксис URI типа "Pack" для файлов ресурсов сборки, на которые указывают ссылки, можно использовать только с центром application:///. Например, в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] не поддерживается следующее.
+Обратите внимание, что синтаксис URI типа "Pack" для файлов ресурсов сборки, на которые указывают ссылки, можно использовать только с центром application:///. Например, в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]не поддерживается следующее.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -188,7 +188,7 @@ URI типа "Pack" для файла исходного узла использ
 
 Файлы XAML, настроенные как MSBuild `Page` элементы, компилируются в сборки так же, как и файлы ресурсов. Следовательно, элементы `Page` MSBuild можно определить с помощью URI типа "Pack" для файлов ресурсов.
 
-Типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлов, которые обычно настраиваются как элементы `Page` MSBuild, имеют в качестве корневого элемента один из следующих элементов:
+Типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлов, которые обычно настраиваются как элементы`Page` MSBuild, имеют в качестве корневого элемента один из следующих элементов:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -397,7 +397,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 ### <a name="common-pack-uri-scenarios"></a>Типичные сценарии URI типа "pack"
 
-В предыдущих разделах обсуждалось создание URI типа "Pack" для указания файлов ресурсов, содержимого и исходного узла. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] эти конструкции используются различными способами, и в следующих разделах рассматриваются некоторые распространенные способы использования.
+В предыдущих разделах обсуждалось создание URI типа "Pack" для указания файлов ресурсов, содержимого и исходного узла. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]эти конструкции используются различными способами, и в следующих разделах рассматриваются некоторые распространенные способы использования.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
@@ -407,11 +407,11 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-Автономные приложения и [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] также могут указывать страницу в качестве начального пользовательского интерфейса, как показано в следующем примере.
+Автономные приложения и приложения браузера XAML (XBAP) также могут указывать страницу в качестве начального пользовательского интерфейса, как показано в следующем примере.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Если приложение является автономным и страница указана с помощью <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] открывает <xref:System.Windows.Navigation.NavigationWindow> для размещения страницы. Для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] страница отображается в браузере узла.
+Если приложение является автономным и страница указана с помощью <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] открывает <xref:System.Windows.Navigation.NavigationWindow> для размещения страницы. Для XBAP страница отображается в браузере узла.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Дополнительные сведения о различных способах перехода по [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] см. в разделе [Общие сведения о навигации](navigation-overview.md).
+Дополнительные сведения о различных способах перехода по [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]см. в разделе [Общие сведения о навигации](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -457,7 +457,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Общие сведения о темах в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] см. в разделе [Стилизация и создание шаблонов](../controls/styling-and-templating.md).
+Общие сведения о темах в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]см. в разделе [Стилизация и создание шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ## <a name="see-also"></a>См. также
 

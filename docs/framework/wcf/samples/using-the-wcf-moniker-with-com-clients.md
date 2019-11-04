@@ -2,12 +2,12 @@
 title: Использование моникера WCF с клиентами COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 2836b8c034a62602822ca629189e38eff818180a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 321d59285b0ef86e4631634d90229a0d8e79657b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038717"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424719"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Использование моникера WCF с клиентами COM
 В этом примере демонстрируется использование моникера службы Windows Communication Foundation (WCF) для интеграции веб-служб в среды разработки на основе COM, такие как Microsoft Office Visual Basic для приложений (Office VBA) или Visual Basic 6,0. Этот образец содержит клиент сервера скриптов Windows (VBS), поддерживающую библиотеку клиента (DLL) и библиотеку службы (DLL), размещенные службами IIS. Служба представляет собой службу калькулятора, а клиент COM вызывает для службы математические операции (сложение, вычитание, умножение и деление). Действия клиента отображаются в окнах сообщений.  
@@ -20,7 +20,7 @@ ms.locfileid: "70038717"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
@@ -70,7 +70,7 @@ regasm.exe /tlb:CalcProxy.tlb client.dll
   
  Создаваемую сборку следует добавить в глобальный кэш сборок. Хотя это не является строго обязательным, такая операция упростит процесс поиска сборки средой выполнения. Следующая команда добавляет сборку в глобальный кэш сборок.  
   
-```  
+```console  
 gacutil.exe /i client.dll  
 ```  
   
@@ -193,11 +193,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
     > [!NOTE]
     > Если используется [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 или Windows Server 2008 R2, командную строку необходимо запустить с привилегиями администратора.  
   
-4. Введите, `tlbexp.exe client.dll /out:CalcProxy.tlb` чтобы экспортировать библиотеку DLL в TLB-файл. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
+4. Введите `tlbexp.exe client.dll /out:CalcProxy.tlb`, чтобы экспортировать библиотеку DLL в TLB-файл. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
   
-5. Введите, `regasm.exe /tlb:CalcProxy.tlb client.dll` чтобы зарегистрировать типы в com. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
+5. Введите `regasm.exe /tlb:CalcProxy.tlb client.dll`, чтобы зарегистрировать типы в COM. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
   
-6. Введите, `gacutil.exe /i client.dll` чтобы добавить сборку в глобальный кэш сборок.  
+6. Введите `gacutil.exe /i client.dll`, чтобы добавить сборку в глобальный кэш сборок.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Запуск образца на одном компьютере  
   
@@ -223,11 +223,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 7. В командной строке перейдите в каталог назначения на клиентском компьютере. При использовании [!INCLUDE[wv](../../../../includes/wv-md.md)] или [!INCLUDE[lserver](../../../../includes/lserver-md.md)] обязательно запускайте командную строку от имени администратора.  
   
-8. Введите, `tlbexp.exe client.dll /out:CalcProxy.tlb` чтобы экспортировать библиотеку DLL в TLB-файл. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
+8. Введите `tlbexp.exe client.dll /out:CalcProxy.tlb`, чтобы экспортировать библиотеку DLL в TLB-файл. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
   
-9. Введите, `regasm.exe /tlb:CalcProxy.tlb client.dll` чтобы зарегистрировать типы в com. Убедитесь, что для пути задана папка, содержащая `regasm.exe` перед выполнением команды.  
+9. Введите `regasm.exe /tlb:CalcProxy.tlb client.dll`, чтобы зарегистрировать типы в COM. Убедитесь, что путь был задан для папки, содержащей `regasm.exe` перед выполнением команды.  
   
-10. Введите, `gacutil.exe /i client.dll` чтобы добавить сборку в глобальный кэш сборок. Убедитесь, что для пути задана папка, содержащая `gacutil.exe` перед выполнением команды.  
+10. Введите `gacutil.exe /i client.dll`, чтобы добавить сборку в глобальный кэш сборок. Убедитесь, что путь был задан для папки, содержащей `gacutil.exe` перед выполнением команды.  
   
 11. Убедитесь, что доступ к службе с клиентского компьютера можно получить из браузера.  
   
