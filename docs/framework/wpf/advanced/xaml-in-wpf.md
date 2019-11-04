@@ -7,18 +7,18 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672017"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459560"
 ---
 # <a name="xaml-in-wpf"></a>XAML в WPF
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]— Это язык разметки для декларативного программирования приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]реализует реализацию процессора XAML и обеспечивает поддержку языка XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Типы реализуются так, что они могут предоставлять требуемое резервное копирование для представления XAML. Как правило, большинство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пользовательских интерфейсов приложения можно создать в разметке XAML.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] — это язык разметки для декларативного программирования приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] реализует реализацию процессора XAML и обеспечивает поддержку языка XAML. Типы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализуются так, что они могут обеспечить резервное копирование требуемого типа для представления XAML. Как правило, большинство пользовательских интерфейсов приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] можно создать в разметке XAML.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
 
 [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)  
 [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)  
@@ -31,9 +31,9 @@ ms.locfileid: "68672017"
 [Обработка пробелов в XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
 [TypeConverters и XAML](typeconverters-and-xaml.md)  
 [Сущности знаков XML и XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[Пространство имен XAML (x:) Языковые возможности](../../xaml-services/xaml-namespace-x-language-features.md)  
+[Возможности пространства имен языка XAML (x:)](../../xaml-services/xaml-namespace-x-language-features.md)  
 [Расширения XAML WPF](wpf-xaml-extensions.md)  
-[Совместимость разметки (MC:) Языковые возможности](markup-compatibility-mc-language-features.md)  
+[Возможности языка: совместимость разметки (mc:)](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
 
@@ -44,5 +44,5 @@ ms.locfileid: "68672017"
 [События](events-wpf.md)  
 [Ввод](input-wpf.md)  
 [Ресурсы](resources-wpf.md)  
-[Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+[Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [Потоковая модель](threading-model.md)

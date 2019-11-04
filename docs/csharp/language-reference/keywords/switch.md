@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424125"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422300"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
@@ -44,7 +44,7 @@ ms.locfileid: "67424125"
 В C# 6 и более ранних версий выражение соответствия должно возвращать значение следующих типов:
 
 - [char](char.md);
-- [string](string.md);
+- [string](../builtin-types/reference-types.md);
 - [bool](bool.md);
 - целочисленное значение, например [int](../builtin-types/integral-numeric-types.md) или [long](../builtin-types/integral-numeric-types.md);
 - значение [enum](enum.md).
@@ -125,7 +125,7 @@ switch (caseSwitch)
 - имя объявленной переменной `const`;
 - константа перечисления;
 - литерал [char](char.md);
-- литерал [string](string.md).
+- литерал [string](../builtin-types/reference-types.md).
 
 Константное выражение вычисляется следующим образом.
 
@@ -195,7 +195,7 @@ case null:
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Оператор switch](~/_csharplang/spec/statements.md#the-switch-statement) в статье [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе [Оператор switch](~/_csharplang/spec/statements.md#the-switch-statement) в статье [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
 
 ## <a name="see-also"></a>См. также
 

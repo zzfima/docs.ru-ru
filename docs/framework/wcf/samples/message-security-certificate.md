@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 496589a0c1a5a0a029e464bfdd87caf8515bb9e3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bd84cb45de68ee86cb042e85695f4893c0ca6988
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044872"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424134"
 ---
 # <a name="message-security-certificate"></a>Сертификат безопасности сообщений
 В этом образце показано, как реализовать приложение, использующее протокол WS-Security и проверку подлинности с использованием сертификата X.509 v3 для клиента и требующее проверки подлинности сервера с использованием сертификата X.509 v3 сервера. В этом образце используются параметры по умолчанию, обеспечивающие подписывание и шифрование всех сообщений приложения, которыми обмениваются клиент и сервер. Этот пример основан на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) и состоит из клиентской консольной программы и библиотеки служб, размещенной службы IIS (IIS). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  
@@ -33,7 +33,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Служба предоставляет одну конечную точку для взаимодействия со службой и одну конечную точку для предоставления документа WSDL службы с использованием протокола WS-MetadataExchange, определенного с помощью файла конфигурации (Web.config). Конечная точка состоит из адреса, привязки и контракта. Привязка настроена с помощью стандартного [ \<элемента привязки wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) , который по умолчанию использует безопасность сообщений. В этом образце атрибуту `clientCredentialType` присваивается значение Certificate для запроса проверки подлинности клиента.  
+ Служба предоставляет одну конечную точку для взаимодействия со службой и одну конечную точку для предоставления документа WSDL службы с использованием протокола WS-MetadataExchange, определенного с помощью файла конфигурации (Web.config). Конечная точка состоит из адреса, привязки и контракта. Привязка настроена с помощью стандартного [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемента, который по умолчанию использует безопасность сообщений. В этом образце атрибуту `clientCredentialType` присваивается значение Certificate для запроса проверки подлинности клиента.  
   
 ```xml  
 <system.serviceModel>  
@@ -84,7 +84,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- Поведение задает учетные данные службы, используемые при проверке подлинности службы клиентом. Имя субъекта сертификата сервера указано в `findValue` атрибуте [ \<в элементе > ServiceCredentials](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) .  
+ Поведение задает учетные данные службы, используемые при проверке подлинности службы клиентом. Имя субъекта сертификата сервера указано в атрибуте `findValue` в элементе [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) .  
   
 ```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
@@ -193,7 +193,7 @@ client.Close();
   
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 CN=client.com  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
   
 - Установка сертификата клиента в хранилище доверенных сертификатов сервера.  
   
-     Следующая строка пакетного файла копирует сертификат клиента в хранилище TrustedPeople сервера, чтобы сервер мог принимать соответствующие решения о доверии или недоверии. Чтобы сертификат, установленный в хранилище TrustedPeople, был доверенным для службы Windows Communication Foundation (WCF), режим проверки сертификата клиента должен быть установлен в `PeerOrChainTrust` значение или. `PeerTrust` Чтобы узнать, как это сделать с помощью файла конфигурации, см. приведенный выше образец конфигурации службы.  
+     Следующая строка пакетного файла копирует сертификат клиента в хранилище TrustedPeople сервера, чтобы сервер мог принимать соответствующие решения о доверии или недоверии. Чтобы сертификат, установленный в хранилище TrustedPeople, был доверенным для службы Windows Communication Foundation (WCF), в качестве режима проверки сертификата клиента необходимо задать значение `PeerOrChainTrust` или `PeerTrust`. Чтобы узнать, как это сделать с помощью файла конфигурации, см. приведенный выше образец конфигурации службы.  
   
     ```bat
     echo ************  
@@ -246,7 +246,7 @@ Press <ENTER> to terminate client.
   
      Следующая строка копирует сертификат сервера в хранилище доверенных лиц клиента. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.  
   
-    ```  
+    ```console  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    > Если используется в англоязычном (не американском) выпуске Windows, необходимо изменить файл Setup.bat и заменить имя учетной записи «NT AUTHORITY\NETWORK SERVICE» своим региональным эквивалентом.  
+    > Если вы используете версию Windows, отличную от версии на английском языке, необходимо изменить файл Setup. bat и заменить имя учетной записи NT AUTHORITY\NETWORK SERVICE своим региональным эквивалентом.  
   
 > [!NOTE]
 > Средства, используемые в этом пакетном файле, расположены в каталоге C:\Program Files\Microsoft Visual Studio 8\Common7\tools или C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. Один из этих каталогов должен быть указан в системном пути. Если у вас установлена Visual Studio, самый простой способ получить этот каталог в пути — открыть Командная строка разработчика для Visual Studio. Нажмите кнопку **Пуск**и выберите **все программы**, **Visual Studio 2012**, **инструменты**. В командной строке уже должны быть настроены соответствующие пути. В противном случае необходимо вручную добавить соответствующий каталог в путь.  
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец находится в следующем каталоге:  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец находится в следующем каталоге:  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
@@ -311,7 +311,7 @@ Press <ENTER> to terminate client.
   
 5. На сервере запустите **службу Setup. bat** в Командная строка разработчика для Visual Studio с правами администратора. При запуске **программы Setup. bat** с аргументом **Service** создается сертификат службы с полным доменным именем компьютера и экспортируется сертификат службы в файл с именем Service. cer.  
   
-6. Измените файл Web. config, чтобы он отражал новое имя сертификата ( `findValue` в атрибуте [ \<в serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), совпадающее с полным доменным именем компьютера.  
+6. Измените файл Web. config в соответствии с новым именем сертификата (в атрибуте `findValue` в [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), который совпадает с полным доменным именем компьютера.  
   
 7. Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
@@ -332,4 +332,4 @@ Press <ENTER> to terminate client.
 - После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
   
     > [!NOTE]
-    > Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на нескольких компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы выполнили примеры Windows Communication Foundation (WCF), использующие сертификаты на нескольких компьютерах, обязательно очистите сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

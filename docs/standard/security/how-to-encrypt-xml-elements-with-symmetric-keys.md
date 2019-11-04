@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996ae7c1882107a829fb658cb8e5e0c49b555c44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b792fd6eea0a33b0143fafa03641a78947d7e127
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645308"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458070"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Практическое руководство. Шифрование XML-элементов с помощью симметричного ключа
-Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных позволяет хранить или передавать важные XML-данные, не беспокоясь о том, что они могут быть прочитаны.  Эта процедура выполняет расшифровку XML-элемента при помощи алгоритма AES, также известного как Rijndael.  
+Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных позволяет хранить или передавать важные XML-данные, не беспокоясь о том, что они могут быть прочитаны.  Эта процедура шифрует XML-элемент с помощью алгоритма AES (AES), также известного как Rijndael.  
   
- Сведения о способах расшифровки XML-элемента, зашифрованного с помощью этой процедуры см. в разделе [как: Расшифровка XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md).  
+ Дополнительные сведения о расшифровке XML-элемента, который был зашифрован с помощью этой процедуры, см. [в разделе как расшифровывать XML-элементы с симметричными ключами](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md).  
   
  При использовании симметричного алгоритма, такого как AES, для шифрования XML-данных необходимо использовать один и тот же ключ как для шифрования, так и для расшифровки XML-данных.  В этом примере предполагается, что зашифрованные XML-данные будут расшифровываться при помощи того же ключа и что стороны, выполняющие шифрование и расшифровку, согласуют между собой используемый алгоритм и ключ.  В этом примере ключ AES не сохраняется и не шифруется внутри зашифрованного XML-документа.  
   
@@ -104,4 +104,4 @@ ms.locfileid: "64645308"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Security.Cryptography.Xml>
-- [Практическое руководство. Расшифровка XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

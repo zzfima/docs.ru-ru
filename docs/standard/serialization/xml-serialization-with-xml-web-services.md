@@ -17,18 +17,18 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e4e848cb37ac1b2d147b570d98777a7beaf1bb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018076"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460256"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Сериализация XML с использованием XML-веб-служб
-Сериализация XML является базовым механизмом передачи, применяемом в архитектуре XML-веб-служб, и выполняется с использованием класса <xref:System.Xml.Serialization.XmlSerializer>. Для управления кодом XML, созданным XML-веб-службой, для классов, возвращаемых значений, параметров и полей файла, используемых для создания XML-веб-службы (файл ASMX), можно применять атрибуты, указанные в разделах [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md). Дополнительные сведения о создании XML-веб-службы см. в разделе [XML-веб-служб с помощью ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
+Сериализация XML является базовым механизмом передачи, применяемом в архитектуре XML-веб-служб, и выполняется с использованием класса <xref:System.Xml.Serialization.XmlSerializer>. Для управления кодом XML, созданным XML-веб-службой, для классов, возвращаемых значений, параметров и полей файла, используемых для создания XML-веб-службы (файл ASMX), можно применять атрибуты, указанные в разделах [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md). Дополнительные сведения о создании веб-службы XML см. в разделе [XML Web Services Using ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
   
 ## <a name="literal-and-encoded-styles"></a>Литеральный и кодированный стили  
- XML, созданным XML-веб-службой можно отформатировать двумя способами: литерально или кодировано; Подробнее см в [Настройка форматирования сообщения SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)). Поэтому для управления XML-сериализацией предусмотрено два набора атрибутов. Атрибуты, указанные в разделе [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md), предназначены для управления литеральным стилем XML. Атрибуты, указанные в разделе [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md), управляют кодированным стилем. Путем выборочного применения таких атрибутов можно настроить приложение на возврат одного или обоих стилей. Кроме того, эти атрибуты применимы (в соответствующих случаях) к возвращаемым значениям и параметрам.  
+ XML-код, создаваемый XML, можно отформатировать одним из двух способов: с помощью литерала или кодирования, как описано в разделах [Настройка форматирования сообщений SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)). Поэтому для управления XML-сериализацией предусмотрено два набора атрибутов. Атрибуты, указанные в разделе [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md), предназначены для управления литеральным стилем XML. Атрибуты, указанные в разделе [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md), управляют кодированным стилем. Путем выборочного применения таких атрибутов можно настроить приложение на возврат одного или обоих стилей. Кроме того, эти атрибуты применимы (в соответствующих случаях) к возвращаемым значениям и параметрам.  
   
 ### <a name="example-of-using-both-styles"></a>Пример использования обоих стилей.  
  При создании XML-веб-службы для методов можно использовать оба набора атрибутов. В следующем примере кода класс с именем `MyService` содержит два метода XML-веб-служб: `MyLiteralMethod` и `MyEncodedMethod`. Оба метода выполняют одну и ту же функцию: возвращение экземпляра класса `Order`. В классе `Order` оба атрибута <xref:System.Xml.Serialization.XmlTypeAttribute> и <xref:System.Xml.Serialization.SoapTypeAttribute> применяются к полю `OrderID`, и свойство `ElementName` обоих атрибутов имеет разные значения.  
@@ -232,21 +232,22 @@ public class Order {
   
  Результат применения `XmlTypeAttribute` и `SoapTypeAttribute` можно определить при анализе описания службы, см. пример кода ниже.  
   
-```xml  
-    <s:element name="BookOrderForm" type="s0:BigBookService" />   
-- <s:complexType name="BigBookService">  
-- <s:sequence>  
-    <s:element minOccurs="0" maxOccurs="1" name="LiteralOrderID" type="s:string" />   
-    </s:sequence>  
-  
-- <s:schema targetNamespace="http://tempuri.org/encodedTypes">  
-- <s:complexType name="SoapBookService">  
-- <s:sequence>  
-    <s:element minOccurs="1" maxOccurs="1" name="EncodedOrderID" type="s:string" />   
-    </s:sequence>  
-    </s:complexType>  
-    </s:schema>  
-```  
+```xml
+<s:element name="BookOrderForm" type="s0:BigBookService" />
+<s:complexType name="BigBookService">
+  <s:sequence>
+    <s:element minOccurs="0" maxOccurs="1" name="LiteralOrderID" type="s:string" />
+  </s:sequence>
+
+  <s:schema targetNamespace="http://tempuri.org/encodedTypes">
+    <s:complexType name="SoapBookService">
+      <s:sequence>
+        <s:element minOccurs="1" maxOccurs="1" name="EncodedOrderID" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:schema>
+</s:complexType>
+```
   
  Результат `XmlRootAttribute` можно увидеть в результатах HTTP GET и HTTP POST, см. ниже.  
   
@@ -259,10 +260,10 @@ public class Order {
   
 ## <a name="see-also"></a>См. также
 
-- [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [Практическое руководство. Сериализация объекта как Stream XML с кодировкой SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [Практическое руководство. Переопределение сериализации XML с кодировкой SOAP](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
-- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Сериализация XML и SOAP](xml-and-soap-serialization.md)
+- [Атрибуты управления сериализацией с кодировкой SOAP](attributes-that-control-encoded-soap-serialization.md)
+- [Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Практическое руководство. Переопределение сериализации XML с кодировкой SOAP](how-to-override-encoded-soap-xml-serialization.md)
+- [Введение в сериализацию XML](introducing-xml-serialization.md)
+- [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
+- [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

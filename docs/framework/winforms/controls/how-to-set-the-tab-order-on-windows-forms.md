@@ -10,17 +10,17 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8a0a1c76b996f10de0ca963c5d8bdc2325a3f6b6
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 026cff06a8d662cb40107fa76cf6d7989fe30cf1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987093"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458520"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Практическое руководство. Установить порядок табуляции на Windows Forms
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Как задать порядок табуляции на Windows Forms
 
 Порядок табуляции — это порядок, в котором пользователь перемещает фокус с одного элемента управления на другой, нажимая клавишу TAB. Каждая форма имеет собственный порядок табуляции. По умолчанию порядок табуляции совпадает с порядком, в котором были созданы элементы управления. Нумерация в порядке табуляции начинается с нуля.
 
@@ -28,7 +28,7 @@ ms.locfileid: "69987093"
 
 1. В Visual Studio в меню **вид** выберите **последовательность табуляции**.
 
-   Это активирует режим выбора порядка табуляции в форме. Число (представляющее <xref:System.Windows.Forms.Control.TabIndex%2A> свойство) отображается в левом верхнем углу каждого элемента управления.
+   Это активирует режим выбора порядка табуляции в форме. Число (представляющее свойство <xref:System.Windows.Forms.Control.TabIndex%2A>) отображается в левом верхнем углу каждого элемента управления.
 
 2. Последовательно щелкните элементы управления, чтобы установить нужный порядок табуляции.
 
@@ -38,22 +38,22 @@ ms.locfileid: "69987093"
 3. По завершении выберите в меню **вид** пункт **последовательность табуляции** , чтобы выйти из режима последовательности табуляции.
 
    > [!NOTE]
-   > Элементы управления, которые не могут получить фокус, а также отключенные и невидимые элементы управления <xref:System.Windows.Forms.Control.TabIndex%2A> , не имеют свойства и не включаются в последовательность табуляции. Когда пользователь нажимает клавишу TAB, эти элементы управления пропускаются.
+   > Элементы управления, которые не могут получить фокус, а также отключенные и невидимые элементы управления, не имеют свойства <xref:System.Windows.Forms.Control.TabIndex%2A> и не включаются в последовательность табуляции. Когда пользователь нажимает клавишу TAB, эти элементы управления пропускаются.
 
-Кроме того, можно задать порядок табуляции в окно свойств с помощью <xref:System.Windows.Forms.Control.TabIndex%2A> свойства. <xref:System.Windows.Forms.Control.TabIndex%2A> Свойство элемента управления определяет, где оно находится в последовательности табуляции. По умолчанию Первый рисуемый элемент управления имеет <xref:System.Windows.Forms.Control.TabIndex%2A> значение 0, второй <xref:System.Windows.Forms.Control.TabIndex%2A> — 1 и т. д.
+Кроме того, можно задать порядок табуляции в окно свойств с помощью свойства <xref:System.Windows.Forms.Control.TabIndex%2A>. Свойство <xref:System.Windows.Forms.Control.TabIndex%2A> элемента управления определяет, где оно находится в последовательности табуляции. По умолчанию Первый рисуемый элемент управления имеет <xref:System.Windows.Forms.Control.TabIndex%2A> значение 0, второй имеет <xref:System.Windows.Forms.Control.TabIndex%2A> 1 и т. д.
 
-Кроме того, по умолчанию <xref:System.Windows.Forms.GroupBox> элемент управления имеет собственное <xref:System.Windows.Forms.Control.TabIndex%2A> значение, которое является целым числом. Сам <xref:System.Windows.Forms.GroupBox> элемент управления не может иметь фокус во время выполнения. Таким словами, каждый элемент управления <xref:System.Windows.Forms.GroupBox> в имеет собственное десятичное <xref:System.Windows.Forms.Control.TabIndex%2A> значение, начиная с. 0. Естественно, по мере <xref:System.Windows.Forms.Control.TabIndex%2A> <xref:System.Windows.Forms.GroupBox> увеличения элемента управления элементы управления внутри него будут соответственно увеличены. Если изменить <xref:System.Windows.Forms.Control.TabIndex%2A> значение с 5 на 6 <xref:System.Windows.Forms.Control.TabIndex%2A> , значение первого элемента управления в группе автоматически изменится на 6,0 и т. д.
+Кроме того, по умолчанию элемент управления <xref:System.Windows.Forms.GroupBox> имеет собственное значение <xref:System.Windows.Forms.Control.TabIndex%2A>, которое является целым числом. Сам элемент управления <xref:System.Windows.Forms.GroupBox> не может иметь фокус во время выполнения. Таким же, каждый элемент управления в <xref:System.Windows.Forms.GroupBox> имеет собственное десятичное <xref:System.Windows.Forms.Control.TabIndex%2A> значение, начинающееся с. 0. Естественно, по мере увеличения <xref:System.Windows.Forms.Control.TabIndex%2A> элемента управления <xref:System.Windows.Forms.GroupBox> элементы управления внутри него будут соответственно увеличены. Если вы изменили значение <xref:System.Windows.Forms.Control.TabIndex%2A> с 5 на 6, <xref:System.Windows.Forms.Control.TabIndex%2A> значение первого элемента управления в группе автоматически изменится на 6,0 и т. д.
 
-Наконец, любой элемент управления множества в форме можно пропустить в последовательности табуляции. Как правило, при последовательном нажатии клавиши Tab во время выполнения выбирается каждый элемент управления в последовательности табуляции. Отключив <xref:System.Windows.Forms.Control.TabStop%2A> свойство, можно сделать элемент управления передаваться в порядке табуляции в форме.
+Наконец, любой элемент управления множества в форме можно пропустить в последовательности табуляции. Как правило, при последовательном нажатии клавиши Tab во время выполнения выбирается каждый элемент управления в последовательности табуляции. Отключив свойство <xref:System.Windows.Forms.Control.TabStop%2A>, можно сделать элемент управления передаваться в порядке табуляции в форме.
 
 ## <a name="to-remove-a-control-from-the-tab-order"></a>Удаление элемента управления из последовательности табуляции
 
-Присвойте <xref:System.Windows.Forms.Control.TabStop%2A> свойству элемента управления **значение false** в окне **Свойства** .
+Присвойте свойству <xref:System.Windows.Forms.Control.TabStop%2A> элемента управления **значение false** в окне **свойства** .
 
-Элемент управления, <xref:System.Windows.Forms.Control.TabStop%2A> свойство которого имеет `false` значение по-прежнему сохраняет свое расположение в последовательности табуляции, даже если элемент управления пропускается при переходе по элементам управления с помощью клавиши TAB.
+Элемент управления, свойство <xref:System.Windows.Forms.Control.TabStop%2A> которого имеет значение `false` по-прежнему сохраняет свое расположение в последовательности табуляции, даже если элемент управления пропускается при цикле по элементам управления с помощью клавиши TAB.
 
 > [!NOTE]
-> Группа переключателей содержит одну позицию табуляции во время выполнения. Для выбранной кнопки (т. е. для кнопки со <xref:System.Windows.Forms.RadioButton.Checked%2A> свойством, `true`для которой задано значение) <xref:System.Windows.Forms.Control.TabStop%2A> свойство `true`автоматически устанавливается <xref:System.Windows.Forms.Control.TabStop%2A> в значение, а для других кнопок свойство `false`имеет значение. Дополнительные сведения о группировании <xref:System.Windows.Forms.RadioButton> элементов управления см. [в разделе Группирование Windows Forms элементов управления RadioButton для функционирования в виде набора](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+> Группа переключателей содержит одну позицию табуляции во время выполнения. Для выбранной кнопки (т. е. для кнопки со свойством <xref:System.Windows.Forms.RadioButton.Checked%2A>, установленным в `true`) свойство <xref:System.Windows.Forms.Control.TabStop%2A> автоматически устанавливается в `true`, а для других кнопок свойство <xref:System.Windows.Forms.Control.TabStop%2A> имеет значение `false`. Дополнительные сведения о группировании элементов управления <xref:System.Windows.Forms.RadioButton> см. [в разделе группирование Windows Forms элементов управления RadioButton для работы в виде набора](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
 ## <a name="see-also"></a>См. также
 

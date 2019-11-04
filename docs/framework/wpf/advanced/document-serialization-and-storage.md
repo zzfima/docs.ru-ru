@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 7ddd887eefd67a3300795396dac26e855f30989e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254124"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424306"
 ---
 # <a name="document-serialization-and-storage"></a>Сериализация и хранение документов
 
@@ -49,19 +49,19 @@ Microsoft .NET Framework предоставляет мощную среду дл
 
 ## <a name="plug-in-serializers"></a>Подключаемые сериализаторы
 
-Интерфейсы API обеспечивают поддержку подключаемых сериализаторов и связанных сериализаторов, устанавливаемых отдельно от приложения, привязки во время выполнения и доступ к которым осуществляется с <xref:System.Windows.Documents.Serialization.SerializerProvider> помощью механизма обнаружения. <xref:System.Windows.Documents.Serialization>  Подключаемые сериализаторы обеспечивают расширенные преимущества для простоты развертывания и использования в масштабах системы.  Связанные сериализаторы также можно реализовать для сред с частичным доверием, таких как [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], где подключаемые сериализаторы недоступны.  Связанные сериализаторы, основанные на производной реализации <xref:System.Windows.Documents.Serialization.SerializerWriter> класса, компилируются и связываются непосредственно с приложением.  Подключаемые и связанные сериализаторы функционируют через идентичные открытые методы и события, упрощающие использование любого из этих типов сериализаторов (или обоих типов) в приложении.
+<xref:System.Windows.Documents.Serialization> интерфейсы API обеспечивают поддержку подключаемых сериализаторов и связанных сериализаторов, устанавливаемых отдельно от приложения, привязки во время выполнения и доступ к которым осуществляется с помощью механизма обнаружения <xref:System.Windows.Documents.Serialization.SerializerProvider>.  Подключаемые сериализаторы обеспечивают расширенные преимущества для простоты развертывания и использования в масштабах системы.  Связанные сериализаторы также могут быть реализованы для сред с частичным доверием, таких как приложения браузера XAML (XBAP), где недоступны подключаемые сериализаторы.  Связанные сериализаторы, основанные на производной реализации класса <xref:System.Windows.Documents.Serialization.SerializerWriter>, компилируются и связываются непосредственно с приложением.  Подключаемые и связанные сериализаторы функционируют через идентичные открытые методы и события, упрощающие использование любого из этих типов сериализаторов (или обоих типов) в приложении.
 
 Подключаемые сериализаторы помогают разработчикам приложений, обеспечивая расширяемость новых проектируемых систем хранения и файловых форматов и избавляя от необходимости создавать код напрямую для каждого потенциального формата во время создания.  Подключаемые сериализаторы помогают и сторонним разработчикам, предоставляя стандартизированные средства развертывания, установки и обновления доступных системе подключаемых модулей для пользовательских или собственных форматов файлов.
 
 ### <a name="using-a-plug-in-serializer"></a>Использование подключаемого сериализатора
 
-Использовать подключаемые сериализаторы достаточно просто.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Класс перечисляет<xref:System.Windows.Documents.Serialization.SerializerDescriptor> объект для каждого подключаемого модуля, установленного в системе.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Свойство фильтрует установленные подключаемые модули на основе текущей конфигурации и проверяет возможность загрузки и использования сериализатора приложением.  Также предоставляет другие свойства, такие как <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> и <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, которые приложение может использовать для запроса пользователя при выборе сериализатора для доступного формата вывода. <xref:System.Windows.Documents.Serialization.SerializerDescriptor>  Подключаемый модуль сериализатора по умолчанию для XPS предоставляется с .NET Framework и всегда перечисляется.  После того как пользователь выберет формат вывода, <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> метод используется для <xref:System.Windows.Documents.Serialization.SerializerWriter> создания для конкретного формата.  Языковой элемент <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Затем метод можно вызвать для вывода потока документа в хранилище данных.
+Использовать подключаемые сериализаторы достаточно просто.  Класс <xref:System.Windows.Documents.Serialization.SerializerProvider> перечисляет объект <xref:System.Windows.Documents.Serialization.SerializerDescriptor> для каждого подключаемого модуля, установленного в системе.  Свойство <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> фильтрует установленные подключаемые модули на основе текущей конфигурации и проверяет возможность загрузки и использования сериализатора приложением.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> также предоставляет другие свойства, такие как <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> и <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, которые приложение может использовать для запроса пользователя при выборе сериализатора для доступного формата вывода.  Подключаемый модуль сериализатора по умолчанию для XPS предоставляется с .NET Framework и всегда перечисляется.  После того как пользователь выберет формат вывода, метод <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> используется для создания <xref:System.Windows.Documents.Serialization.SerializerWriter> для конкретного формата.  Языковой элемент <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Затем метод можно вызвать для вывода потока документа в хранилище данных.
 
-В следующем примере показано приложение, использующее <xref:System.Windows.Documents.Serialization.SerializerProvider> метод в свойстве "плугинфилефилтер".  Плугинфилефилтер перечисляет установленные подключаемые модули и создает строку фильтра с доступными параметрами файла для <xref:Microsoft.Win32.SaveFileDialog>.
+В следующем примере показано приложение, использующее метод <xref:System.Windows.Documents.Serialization.SerializerProvider> в свойстве "Плугинфилефилтер".  Плугинфилефилтер перечисляет установленные подключаемые модули и создает строку фильтра с доступными параметрами файла для <xref:Microsoft.Win32.SaveFileDialog>.
 
 [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]
 
-После выбора имени выходного файла пользователем в следующем примере показано использование <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> метода для хранения заданного документа в указанном формате.
+После выбора имени выходного файла пользователем в следующем примере показано использование метода <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> для сохранения заданного документа в указанном формате.
 
 [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]
 
@@ -69,7 +69,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
 
 ### <a name="installing-plug-in-serializers"></a>Установка подключаемых сериализаторов
 
-<xref:System.Windows.Documents.Serialization.SerializerProvider> Класс предоставляет интерфейс приложения верхнего уровня для обнаружения подключаемого сериализатора и доступа к нему.  <xref:System.Windows.Documents.Serialization.SerializerProvider>находит и предоставляет приложению список сериализаторов, установленных и доступных в системе.  Особенности установленных сериализаторов определяются через параметры реестра.  Подключаемые сериализаторы можно добавлять в реестр с помощью <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> метода; если .NET Framework еще не установлен, сценарий установки подключаемого модуля может напрямую задать сами значения реестра.  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> Метод можно использовать для удаления ранее установленного подключаемого модуля, или параметры реестра можно сбросить аналогично сценарию удаления.
+Класс <xref:System.Windows.Documents.Serialization.SerializerProvider> предоставляет интерфейс приложения верхнего уровня для обнаружения подключаемого сериализатора и доступа к нему.  <xref:System.Windows.Documents.Serialization.SerializerProvider> находит и предоставляет приложению список сериализаторов, установленных и доступных в системе.  Особенности установленных сериализаторов определяются через параметры реестра.  Подключаемые сериализаторы можно добавлять в реестр с помощью метода <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A>. Если .NET Framework еще не установлен, сценарий установки подключаемого модуля может напрямую задать сами значения реестра.  Метод <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> можно использовать для удаления ранее установленного подключаемого модуля, или параметры реестра можно сбросить аналогично сценарию удаления.
 
 ### <a name="creating-a-plug-in-serializer"></a>Создание подключаемого сериализатора
 
@@ -77,7 +77,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
 
 1. Реализация и отладка сериализатора сначала в виде связанного сериализатора.  Изначально создание сериализатора, скомпилированного и связанного непосредственно в тестовом приложении, предоставляет полный доступ к точкам останова и другим полезным для тестирования отладочным службам.
 
-2. После полного тестирования <xref:System.Windows.Documents.Serialization.ISerializerFactory> сериализатора добавляется интерфейс для создания подключаемого модуля.  Интерфейс допускает полный доступ ко всем .NET Framework объектам, включающим логическое дерево, <xref:System.Windows.UIElement> объекты, <xref:System.Windows.Documents.IDocumentPaginatorSource>и <xref:System.Windows.Media.Visual> элементы. <xref:System.Windows.Documents.Serialization.ISerializerFactory>  Кроме <xref:System.Windows.Documents.Serialization.ISerializerFactory> того, предоставляет те же синхронные и асинхронные методы и события, которые используются связанными сериализаторами.  Поскольку на вывод крупных документов может потребоваться время, рекомендуется использовать асинхронные операции, чтобы сохранить возможность взаимодействия с пользователем и предоставить возможность отмены, если с источником данных произойдет проблема.
+2. После полного тестирования сериализатора добавляется интерфейс <xref:System.Windows.Documents.Serialization.ISerializerFactory> для создания подключаемого модуля.  Интерфейс <xref:System.Windows.Documents.Serialization.ISerializerFactory> допускает полный доступ ко всем .NET Framework объектам, включая логическое дерево, <xref:System.Windows.UIElement> объекты, <xref:System.Windows.Documents.IDocumentPaginatorSource>и <xref:System.Windows.Media.Visual> элементы.  Кроме того <xref:System.Windows.Documents.Serialization.ISerializerFactory> предоставляет одинаковые синхронные и асинхронные методы и события, используемые связанными сериализаторами.  Поскольку на вывод крупных документов может потребоваться время, рекомендуется использовать асинхронные операции, чтобы сохранить возможность взаимодействия с пользователем и предоставить возможность отмены, если с источником данных произойдет проблема.
 
 3. После создания подключаемого сериализатора сценарий установки реализуется для распространения и установки (и удаления) подключаемого модуля (см. [Установка подключаемых сериализаторов](#InstallingPluginSerializers) выше).
 
@@ -88,4 +88,4 @@ Microsoft .NET Framework предоставляет мощную среду дл
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)
-- [Спецификация XML Paper: обзор](https://go.microsoft.com/fwlink?LinkID=106246)
+- [Общие сведения о формате XPS (XML Paper Specification)](https://go.microsoft.com/fwlink?LinkID=106246)

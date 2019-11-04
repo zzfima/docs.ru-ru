@@ -6,17 +6,17 @@ helpviewer_keywords:
 - toolbars [WPF]
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-ms.openlocfilehash: 90ff02747d762b5853a1f60eb99be574503e27f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 78b9fc505c3c9045a0ca16ddaa1361c90bcc896a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640845"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459406"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>Практическое руководство. Определение стиля элементов управления на панели инструментов
-<xref:System.Windows.Controls.ToolBar> Определяет <xref:System.Windows.ResourceKey> объектов для задания стиля элементов управления в <xref:System.Windows.Controls.ToolBar>.  Для стиля элемента управления в <xref:System.Windows.Controls.ToolBar>, задайте `x:key` атрибута стиля для <xref:System.Windows.ResourceKey> определенные в <xref:System.Windows.Controls.ToolBar>.  
+<xref:System.Windows.Controls.ToolBar> определяет <xref:System.Windows.ResourceKey> объекты для указания стиля элементов управления в <xref:System.Windows.Controls.ToolBar>.  Чтобы задать стиль элемента управления в <xref:System.Windows.Controls.ToolBar>, задайте для атрибута `x:key` стиля значение <xref:System.Windows.ResourceKey>, определенное в <xref:System.Windows.Controls.ToolBar>.  
   
- <xref:System.Windows.Controls.ToolBar> Определяет следующие <xref:System.Windows.ResourceKey> объектов:  
+ <xref:System.Windows.Controls.ToolBar> определяет следующие объекты <xref:System.Windows.ResourceKey>:  
   
 - <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
@@ -35,11 +35,11 @@ ms.locfileid: "64640845"
 - <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
 ## <a name="example"></a>Пример  
- В следующем примере определяется стили для элементов управления в пределах <xref:System.Windows.Controls.ToolBar>.  
+ В следующем примере определяются стили для элементов управления в <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[ToolBar_snip#ToolBarAllStyles](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
 [!code-xaml[ToolBar_snip#ToolBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

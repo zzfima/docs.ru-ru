@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106891"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424332"
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
 Реализация метода <xref:System.IDisposable.Dispose%2A> необходима для освобождения неуправляемых ресурсов, которые использует ваше приложение. Сборщик мусора .NET не выделяет и не освобождает неуправляемую память.  
   
-Шаблон ликвидации объекта, именуемый также [шаблоном удаления](../../../docs/standard/design-guidelines/dispose-pattern.md), налагает определенные правила на время жизни объекта. Шаблон удаления используется только для объектов, осуществляющих доступ к неуправляемым ресурсам, таких как дескрипторы файлов и каналов, дескрипторы реестра, дескрипторы ожидания и указатели на блоки неуправляемой памяти. Это вызвано тем, что сборщик мусора очень эффективно удаляет неиспользуемые управляемые объекты, но не может удалить неуправляемые объекты.  
+Шаблон ликвидации объекта, именуемый также [шаблоном удаления](implementing-dispose.md), налагает определенные правила на время жизни объекта. Шаблон удаления используется только для объектов, осуществляющих доступ к неуправляемым ресурсам, таких как дескрипторы файлов и каналов, дескрипторы реестра, дескрипторы ожидания и указатели на блоки неуправляемой памяти. Это вызвано тем, что сборщик мусора очень эффективно удаляет неиспользуемые управляемые объекты, но не может удалить неуправляемые объекты.  
   
 Существует два варианта шаблона удаления:  
   
@@ -169,4 +167,4 @@ ms.locfileid: "70106891"
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Практическое руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Шаблон ликвидации](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Шаблон ликвидации](implementing-dispose.md)

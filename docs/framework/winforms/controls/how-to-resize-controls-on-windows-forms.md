@@ -9,19 +9,19 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e659bf02ea079afc10561e1d83f7ab7cef29a2e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987057"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459551"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Практическое руководство. Изменить размер элементов управления на Windows Forms
+# <a name="how-to-resize-controls-on-windows-forms"></a>Как изменить размер элементов управления на Windows Forms
 
-Можно изменить размер отдельных элементов управления, а также изменить размер различных элементов управления, например <xref:System.Windows.Forms.Button> элементов управления и. <xref:System.Windows.Forms.GroupBox>
+Можно изменить размер отдельных элементов управления, а также изменить размер нескольких элементов управления одного вида, например <xref:System.Windows.Forms.Button> и элементов управления <xref:System.Windows.Forms.GroupBox>.
 
 ## <a name="to-resize-a-control"></a>Изменение размера элемента управления
 
@@ -42,4 +42,4 @@ ms.locfileid: "69987057"
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
 - [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)
-- [Практическое руководство. Изменение размера Windows Forms с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Инструкции. изменение размера Windows Forms с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812682"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423978"
 ---
 # <a name="programming-in-visual-basic"></a>Программирование в Visual Basic
 В этом разделе рассматриваются задачи программирования, о которых вам может понадобиться дополнительная информация при создании приложения Visual Basic.  
@@ -34,7 +34,7 @@ ms.locfileid: "61812682"
  [Доступ к параметрам приложения](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Содержит документацию по доступу к настройкам приложения с помощью объекта `My.Settings`.  
   
- [Операции с дисками, каталогами и файлами](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ [Операции с дисками, каталогами и файлами](drives-directories-files/index.md)  
  Содержит документацию о том, как получить доступ к файловой системе с помощью объекта `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>См. также

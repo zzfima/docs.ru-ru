@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: bb784528226c706417166025a2469ed9f72f9cc2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588667"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423165"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#)
 Использовать лямбда-выражения непосредственно в синтаксисе запросов нельзя, однако их включают в вызовы методов, а те, в свою очередь, могут содержаться в выражениях запросов. Фактически некоторые операции запросов могут быть выражены только в синтаксисе методов. Дополнительные сведения о различиях между синтаксисом запросов и синтаксисом методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "69588667"
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить этот код, скопируйте и вставьте метод в `StudentClass`, описанный в практическом руководстве по [ созданию запроса коллекции объектов](../linq-query-expressions/how-to-query-a-collection-of-objects.md), и вызовите его из метода `Main`.  
+ Чтобы выполнить этот код, скопируйте и вставьте метод в `StudentClass`, описанный в практическом руководстве по [ созданию запроса коллекции объектов](../../linq/query-a-collection-of-objects.md), и вызовите его из метода `Main`.  
   
 ## <a name="see-also"></a>См. также
 

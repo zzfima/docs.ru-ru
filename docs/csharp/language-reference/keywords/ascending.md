@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 479e15b8c1103ea1e5fdd803812944d25d965a81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f0b183f9e7cf0997947e5a8cdd73fb90fd7e44ea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422918"
 ---
 # <a name="ascending-c-reference"></a>ascending (Справочник по C#)
 Контекстное ключевое слово `ascending` используется в [предложении orderby](./orderby-clause.md) в выражении запроса, задавая порядок сортировки от наименьшего значения к наибольшему. Поскольку порядок сортировки `ascending` используется по умолчанию, отдельно задавать его не нужно.  
@@ -26,5 +26,5 @@ ms.locfileid: "69602344"
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../index.md)
-- [Выражения запросов LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [LINQ в C#](../../linq/index.md)
 - [descending](./descending.md)

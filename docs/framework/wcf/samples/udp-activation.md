@@ -2,15 +2,15 @@
 title: Активация UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 13444ab1be440c8e1a5f945cd512afa33772ea57
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6e8d2f4428e85c71571021e2735f90e2e0a9d35a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044636"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424188"
 ---
 # <a name="udp-activation"></a>Активация UDP
-Этот пример основан на [транспорте: Пример](../../../../docs/framework/wcf/samples/transport-udp.md) протокола UDP. Он расширяет [транспорт: Пример](../../../../docs/framework/wcf/samples/transport-udp.md) UDP для поддержки активации процесса с помощью службы активации Windows (WAS).  
+Этот пример основан на образце [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) . Он расширяет пример [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) для поддержки активации процессов с помощью службы активации процессов Windows (WAS).  
   
  Образец состоит из трех основных частей:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70044636"
   
  При поступлении нового запроса, который является первым для приложения, адаптер прослушивателя вызывает `WebhostOpenListenerChannelInstance` в WAS, запуская рабочий процесс, если он еще не запущен. Затем загружаются обработчики протокола, и можно начинать обмен данными между адаптером прослушивателя и виртуальным приложением.  
   
- Адаптер прослушивателя регистрируется в%systemroot%\System32\inetsrv\ApplicationHost.config в разделе <`listenerAdapters`> следующим образом:  
+ Адаптер прослушивателя регистрируется в%SystemRoot%\System32\inetsrv\ApplicationHost.config в разделе <`listenerAdapters`> следующим образом:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
@@ -59,7 +59,7 @@ ms.locfileid: "70044636"
  В этом примере мы используем WCF для обмена данными между активатором и рабочим процессом WAS. Служба, находящаяся в активаторе, называется службой управления.  
   
 ## <a name="protocol-handlers"></a>Обработчики протоколов  
- После того как адаптер прослушивателя вызывает `WebhostOpenListenerChannelInstance`, диспетчер процесса WAS запускает рабочий процесс, если он еще не запущен. Затем диспетчер приложения внутри рабочего процесса загружает обработчик протокола процесса (PPH) UDP с запросом этого `ListenerChannelId`. PPH в включает вызовы `IAdphManager`.`StartAppDomainProtocolListenerChannel` запуск обработчика протокола домена приложения UDP (АДФ).  
+ После того как адаптер прослушивателя вызывает `WebhostOpenListenerChannelInstance`, диспетчер процесса WAS запускает рабочий процесс, если он еще не запущен. Затем диспетчер приложения внутри рабочего процесса загружает обработчик протокола процесса (PPH) UDP с запросом этого `ListenerChannelId`. PPH в выключает вызовы `IAdphManager`.`StartAppDomainProtocolListenerChannel` запуск обработчика протокола домена приложения UDP (АДФ).  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  Информация регистрируется в файле Web.config следующим образом:  
@@ -77,7 +77,7 @@ ms.locfileid: "70044636"
   
 1. Установите ASP.NET 4,0 с помощью следующей команды.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
@@ -103,13 +103,13 @@ ms.locfileid: "70044636"
 ## <a name="sample-usage"></a>Использование примера  
  После компиляции создаются четыре различных двоичных файла.  
   
-- Client.exe: Код клиента. Файл App.config компилируется в файл конфигурации клиента Client.exe.config.  
+- Client.exe: код клиента. Файл App.config компилируется в файл конфигурации клиента Client.exe.config.  
   
 - UDPActivation.dll: библиотека, содержащая все основные реализации UDP.  
   
-- Service. dll: Код службы. Он копируется в каталог \bin виртуального приложения ServiceModelSamples. Файл службы имеет имя Service.svc, а файл конфигурации - Web.config. После компиляции они копируются в следующее местоположение: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll: код службы. Он копируется в каталог \bin виртуального приложения ServiceModelSamples. Файл службы называется Service.svc, а файл конфигурации — Web.config. После компиляции они копируются в следующее расположение: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
-- Васнетактиватор: Программа активатора UDP.  
+- WasNetActivator: программа активатора UDP.  
   
 - Убедитесь, что все обязательные элементы правильно установлены. Следующие шаги показывают, как запустить образец:  
   
@@ -117,13 +117,13 @@ ms.locfileid: "70044636"
   
     - Служба активации Windows (WAS).  
   
-    - Службы IIS (IIS): W3SVC.  
+    - Службы IIS: W3SVC.  
   
 2. Затем запустите активатор WasNetActivator.exe. На вкладке **Активация** в раскрывающемся списке выбран единственный протокол **UDP**. Нажмите кнопку " **Пуск** ", чтобы запустить активатор.  
   
 3. После запуска активатора можно запустить код клиента, запустив файл Client.exe в командном окне. Далее приводится образец вывода:  
   
-    ```  
+    ```console  
     Testing Udp Activation.  
     Start the status service.  
     Sending UDP datagrams.  
@@ -158,6 +158,6 @@ ms.locfileid: "70044636"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

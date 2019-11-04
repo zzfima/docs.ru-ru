@@ -2,12 +2,12 @@
 title: Операции соединения (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592080"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423384"
 ---
 # <a name="join-operations-c"></a>Операции соединения (C#)
 *Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.  
@@ -34,11 +34,11 @@ ms.locfileid: "69592080"
 - [Анонимные типы](../../classes-and-structs/anonymous-types.md)
 - [Формулировка запросов-объединений и запросов векторного произведения](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [предложение join](../../../language-reference/keywords/join-clause.md)
-- [Практическое руководство. Соединение с помощью составных ключей](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [Практическое руководство. Соединение с помощью составных ключей](../../../linq/join-by-using-composite-keys.md)
 - [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [Практическое руководство. Упорядочение результатов предложения соединения](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Практическое руководство. Выполнение пользовательских операций соединения](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [Практическое руководство. Выполнение групповых соединений](../../linq-query-expressions/how-to-perform-grouped-joins.md)
-- [Практическое руководство. Выполнение внутренних соединений](../../linq-query-expressions/how-to-perform-inner-joins.md)
-- [Практическое руководство. Выполнение левых внешних соединений](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [Практическое руководство. Упорядочение результатов предложения соединения](../../../linq/order-the-results-of-a-join-clause.md)
+- [Практическое руководство. Выполнение пользовательских операций соединения](../../../linq/perform-custom-join-operations.md)
+- [Практическое руководство. Выполнение групповых соединений](../../../linq/perform-grouped-joins.md)
+- [Практическое руководство. Выполнение внутренних соединений](../../../linq/perform-inner-joins.md)
+- [Практическое руководство. Выполнение левых внешних соединений](../../../linq/perform-left-outer-joins.md)
 - [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

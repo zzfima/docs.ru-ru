@@ -8,30 +8,30 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c17e0b2d023ccf80b0d32301b7ee6765edcae9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723230"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424818"
 ---
 # <a name="how-to-load-and-display-metafiles"></a>Практическое руководство. Загрузка и отображение метафайлов
-<xref:System.Drawing.Imaging.Metafile> Класс, унаследованный от <xref:System.Drawing.Image> класса, предоставляет методы для записи, отображения и анализа векторных изображений.  
+Класс <xref:System.Drawing.Imaging.Metafile>, который наследует от класса <xref:System.Drawing.Image>, предоставляет методы для записи, отображения и проверки векторных изображений.  
   
 ## <a name="example"></a>Пример  
- Чтобы отобразить векторного изображения (метафайла) на экране, вам потребуется <xref:System.Drawing.Imaging.Metafile> объекта и <xref:System.Drawing.Graphics> объекта. Передать имя файла (или потока) <xref:System.Drawing.Imaging.Metafile> конструктор. После создания <xref:System.Drawing.Imaging.Metafile> , передать, <xref:System.Drawing.Imaging.Metafile> объект <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта.  
+ Для отображения векторного изображения (метафайла) на экране необходим объект <xref:System.Drawing.Imaging.Metafile> и объект <xref:System.Drawing.Graphics>. Передайте имя файла (или потока) в конструктор <xref:System.Drawing.Imaging.Metafile>. После создания объекта <xref:System.Drawing.Imaging.Metafile> передайте этот <xref:System.Drawing.Imaging.Metafile> объект в метод <xref:System.Drawing.Graphics.DrawImage%2A> объекта <xref:System.Drawing.Graphics>.  
   
- В примере создается <xref:System.Drawing.Imaging.Metafile> объект из файла EMF (расширенный метафайл) и затем рисует изображение с его верхнего левого угла в (60, 10).  
+ В примере создается объект <xref:System.Drawing.Imaging.Metafile> из файла EMF (расширенный метафайл), а затем изображение рисуется с помощью левого верхнего угла в точке (60, 10).  
   
- Ниже показан метафайла, содержащейся в указанном расположении.  
+ На следующем рисунке показан метафайл, рисуемый в указанном месте.  
   
- ![Положение изображения](./media/imageposition2.png "imageposition2")  
+ ![Снимок экрана, показывающий расположение изображения.](./media/how-to-load-and-display-metafiles/metafile-drawn-specified-location.png "imageposition2")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.WorkingWithImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
+ Предыдущий пример предназначен для использования с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика событий <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>См. также
 

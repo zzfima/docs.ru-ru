@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353754"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422203"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -54,7 +54,7 @@ ms.locfileid: "71353754"
 
 - Константные выражения, операнды которых являются константами простого типа, вычисляются во время компиляции.
 
-Дополнительные сведения см. в разделе [Простые типы](~/_csharplang/spec/types.md#simple-types) статьи [Предварительная спецификация C# 6.0](../language-specification/index.md).
+Дополнительные сведения см. в разделе [Простые типы](~/_csharplang/spec/types.md#simple-types) статьи [Предварительная спецификация C# 6.0](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="initializing-value-types"></a>Инициализация типов значений
 
@@ -107,6 +107,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Типы](types.md)
+- [Типы](/dotnet/csharp/language-reference/keywords)
 - [Ссылочные типы](reference-types.md)
 - [Типы значений, допускающие значение NULL](../../programming-guide/nullable-types/index.md)

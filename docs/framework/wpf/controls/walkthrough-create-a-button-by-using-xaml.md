@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920189"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458693"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Пошаговое руководство. Создание кнопки с помощью XAML
 
@@ -92,7 +92,7 @@ ms.locfileid: "72920189"
 
      ![Кнопки с шириной 90 и полем, равным 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     С помощью стилей можно выполнять множество других задач, в том числе различные способы точной настройки объектов, указания сложных значений свойств и даже использования стилей в качестве входных данных для других стилей. Более подробную информацию см. в разделе [Стилизация и использование шаблонов](styling-and-templating.md).
+     С помощью стилей можно выполнять множество других задач, в том числе различные способы точной настройки объектов, указания сложных значений свойств и даже использования стилей в качестве входных данных для других стилей. Более подробную информацию см. в разделе [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 3. **Задайте ресурсу значение свойства Style:** Ресурсы обеспечивают простой способ повторного использования часто заданных объектов и значений. Особенно полезно определить сложные значения с помощью ресурсов, чтобы сделать код более модульным. Добавьте следующую выделенную разметку в App. XAML.
 
@@ -439,7 +439,7 @@ ms.locfileid: "72920189"
 ## <a name="see-also"></a>См. также
 
 - [Создание кнопки с помощью Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md)
 - [Общие сведения о закраске сплошным цветом и градиентом](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [Общие сведения об эффектах для точечных рисунков](../graphics-multimedia/bitmap-effects-overview.md)

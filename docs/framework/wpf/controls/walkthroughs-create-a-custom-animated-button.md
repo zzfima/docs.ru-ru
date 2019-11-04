@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920173"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460062"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Пошаговые руководства: создание пользовательской анимированной кнопки
 Как видно из названия, Windows Presentation Foundation (WPF) отлично подходит для создания разнообразных возможностей представления для клиентов. В этих пошаговых руководствах показано, как настроить внешний вид и поведение кнопки (включая анимацию). Эта настройка выполняется с помощью стиля и шаблона, что позволяет легко применять эту настраиваемую кнопку к любым кнопкам в приложении. На следующем рисунке показана настраиваемая кнопка, которую вы создадите.
@@ -26,7 +26,7 @@ ms.locfileid: "72920173"
  [Создание кнопки с помощью XAML](walkthrough-create-a-button-by-using-xaml.md) Демонстрирует создание кнопок с настраиваемым поведением с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и Visual Studio.
 
 ## <a name="related-sections"></a>Связанные разделы
- [Стилизация и создание шаблонов](styling-and-templating.md) Описывает, как стили и шаблоны можно использовать для определения внешнего вида и поведения элементов управления.
+ [Стилизация и создание шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Описывает, как стили и шаблоны можно использовать для определения внешнего вида и поведения элементов управления.
 
  [Общие сведения об анимации](../graphics-multimedia/animation-overview.md) Описывает, как объекты могут быть анимированы с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] анимации и системы управления временем.
 

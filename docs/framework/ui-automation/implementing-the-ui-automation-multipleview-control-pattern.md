@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039501"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458191"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Реализация шаблона элемента управления MultipleView модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039501"
   
  Шаблон элемента управления <xref:System.Windows.Automation.MultipleViewPattern> используется для поддержки элементов управления, которые предоставляют несколько представлений одного набора сведений или дочерних элементов управления и способны переключаться между ними.  
   
- Примеры элементов управления, которые могут представлять несколько представлений, включают представление списка (которое может отображать его содержимое в виде эскизов, плиток, значков или сведений), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] диаграммы (круговые, линейные, линейчатые, значения ячеек с формулой), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] документы (обычные, веб-макеты, макеты печати, режим чтения, контур), календарь Microsoft Outlook (год, месяц, неделя, день) и обложки проигрывателя Microsoft Windows Media. Поддерживаемые представления определяются разработчиками элементов управления и относятся к конкретному элементу управления.  
+ Примеры элементов управления, которые могут представлять несколько представлений, включают представление списка (которое может отображать его содержимое как эскизы, плитки, значки или сведения), диаграммы Microsoft Excel (круговые, линейные, линейчатые, значения ячеек с формулой), документы Microsoft Word (обычные, веб-макеты, печать макет, макет для чтения, структура), календарь Microsoft Outlook (год, месяц, неделя, день) и обложки проигрывателя Microsoft Windows Media. Поддерживаемые представления определяются разработчиками элементов управления и относятся к конкретному элементу управления.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  

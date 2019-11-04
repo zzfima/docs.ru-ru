@@ -2,15 +2,15 @@
 title: Пример сериализации слабо типизированных данных JSON
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: f41a71641ca655d9bf95104643385a56792b41bc
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1450a0e46ade615769d7ffdc1006102772dbc977
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045419"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424542"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Пример сериализации слабо типизированных данных JSON
-При сериализации пользовательского типа в заданный формат передачи или при десериализации формата передачи в пользовательский тип заданный пользовательский тип должен быть доступен как службе, так и клиенту. Обычно для этого к пользовательским типам применяется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> , а к их членам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> . Этот механизм также применяется при работе с объектами нотация объектов JavaScript (JSON), как описано в разделе [как: Сериализация и десериализация данных](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)JSON.  
+При сериализации пользовательского типа в заданный формат передачи или при десериализации формата передачи в пользовательский тип заданный пользовательский тип должен быть доступен как службе, так и клиенту. Обычно для этого к пользовательским типам применяется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> , а к их членам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> . Этот механизм также применим при работе с объектами JSON, как описано в разделе [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  В некоторых сценариях служба Windows Communication Foundation (WCF) или клиент должны получить доступ к объектам JSON, созданным службой или клиентом, которые выходят за пределы элемента управления разработчика. По мере того, как другие веб-службы предоставляют доступ к API JSON, разработчику WCF может оказаться непрактичным создавать локальные определяемые пользователем типы, в которые десериализовать произвольные объекты JSON. Этот образец предоставляет механизм, позволяющий разработчикам WCF работать с десериализованными произвольными объектами JSON, не создавая определяемые пользователем типы. Он называется *слабо типизированной сериализацией* объектов JSON, поскольку тип, в который десериализуется объект JSON, во время компиляции неизвестен.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "70045419"
   
  Для десериализации этого объекта клиент WCF должен реализовать следующие определяемые пользователем типы.  
   
-```  
+```csharp  
 [DataContract]  
  public class MemberProfile  
  {  
@@ -58,9 +58,9 @@ ms.locfileid: "70045419"
   
  Эта задача может быть громоздкой, особенно если клиент должен обрабатывать более одного типа объектов JSON.  
   
- Тип `JsonObject` в этом образце является слабо типизированным представлением объекта JSON. `JsonObject`зависит от естественного сопоставления между объектами JSON и .NET Framework словарями, а также с сопоставлением между массивами JSON и .NET Framework массивами. В следующем примере кода демонстрируется тип `JsonObject` .  
+ Тип `JsonObject` в этом образце является слабо типизированным представлением объекта JSON. `JsonObject` зависит от естественного сопоставления между объектами JSON и .NET Framework словарями, а также с сопоставлением между массивами JSON и .NET Framework массивами. В следующем примере кода демонстрируется тип `JsonObject` .  
   
-```  
+```csharp  
 // Instantiation of JsonObject json omitted  
   
 string name = json["root"]["personal"]["name"];  
@@ -85,7 +85,7 @@ string[] favoriteBands = {
   
  Чтобы использовать тип `JsonObject` , контракт операции клиента должен использовать в качестве возвращаемого типа <xref:System.ServiceModel.Channels.Message> .  
   
-```  
+```csharp  
 [ServiceContract]  
     interface IClientSideProfileService  
     {  
@@ -100,7 +100,7 @@ string[] favoriteBands = {
   
  Объект `JsonObject` создается, как показано в следующем коде.  
   
-```  
+```csharp  
 // Code to instantiate IClientSideProfileService channel omitted…  
   
 // Make a request to the service and obtain the Json response  
@@ -114,7 +114,7 @@ JsonObject json = new JsonObject(reader);
   
  Программа выдает следующие результаты.  
   
-```  
+```console  
 Service listening at http://localhost:8000/.  
 To view the JSON output from the sample, navigate to http://localhost:8000/GetMemberProfile  
 This is Paul's page. I am 23 years old and I am 1.7 meters tall.  
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

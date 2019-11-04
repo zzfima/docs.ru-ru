@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 08e791c56582ecc2354696293cd5633051064848
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581929"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453877"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
 
@@ -44,7 +44,7 @@ ms.locfileid: "72581929"
 
 [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]
 
-@No__t_0 верхнего уровня имеет <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, поэтому все элементы, содержащиеся в нем, также наследуют тот же <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Чтобы элемент переопределял заданный <xref:System.Windows.FrameworkElement.FlowDirection%2A>, он должен добавить явное изменение направления, такое как второй <xref:System.Windows.Controls.TextBlock> в предыдущем примере, который изменяется на <xref:System.Windows.FlowDirection.LeftToRight>. Если <xref:System.Windows.FrameworkElement.FlowDirection%2A> не определено, применяется <xref:System.Windows.FlowDirection.LeftToRight> по умолчанию.
+<xref:System.Windows.Window> верхнего уровня имеет <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, поэтому все элементы, содержащиеся в нем, также наследуют тот же <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Чтобы элемент переопределял заданный <xref:System.Windows.FrameworkElement.FlowDirection%2A>, он должен добавить явное изменение направления, такое как второй <xref:System.Windows.Controls.TextBlock> в предыдущем примере, который изменяется на <xref:System.Windows.FlowDirection.LeftToRight>. Если <xref:System.Windows.FrameworkElement.FlowDirection%2A> не определено, применяется <xref:System.Windows.FlowDirection.LeftToRight> по умолчанию.
 
 На следующем рисунке показаны выходные данные предыдущего примера.
 
@@ -56,9 +56,9 @@ ms.locfileid: "72581929"
 
 Многие платформы разработки, такие как HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] и Java, обеспечивают специальную поддержку для разработки двунаправленного содержимого. Языки разметки, такие как HTML, предоставляют авторам содержимого необходимую разметку для вывода текста в любом требуемом направлении, например HTML 4,0, «dir», который принимает значения «RTL» или «LTR» в качестве значений. Этот тег похож на свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A>, но свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A> работает более продвинутым способом разметки текстового содержимого и может использоваться для содержимого, отличного от Text.
 
-В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Documents.FlowDocument> является универсальным элементом [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который может содержать сочетание текста, таблиц, изображений и других элементов. Этот элемент используется в примерах, описанных ниже.
+В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Documents.FlowDocument> является универсальным элементом [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который может содержать сочетание текста, таблиц, изображений и других элементов. Этот элемент используется в примерах, описанных ниже.
 
-Добавление текста в <xref:System.Windows.Documents.FlowDocument> может выполняться несколькими способами. Проще всего это сделать с помощью <xref:System.Windows.Documents.Paragraph>, который является элементом уровня блока, используемым для группировки содержимого, например текста. Чтобы добавить текст в элементы встроенного уровня, примеры используют <xref:System.Windows.Documents.Span> и <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> — это элемент содержимого потока встроенного уровня, используемый для группирования других встроенных элементов, а <xref:System.Windows.Documents.Run> — элемент содержимого потока встроенного уровня, предназначенный для хранения выполнения неформатированного текста. @No__t_0 может содержать несколько элементов <xref:System.Windows.Documents.Run>.
+Добавление текста в <xref:System.Windows.Documents.FlowDocument> может выполняться несколькими способами. Проще всего это сделать с помощью <xref:System.Windows.Documents.Paragraph>, который является элементом уровня блока, используемым для группировки содержимого, например текста. Чтобы добавить текст в элементы встроенного уровня, примеры используют <xref:System.Windows.Documents.Span> и <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> — это элемент содержимого потока встроенного уровня, используемый для группирования других встроенных элементов, а <xref:System.Windows.Documents.Run> — элемент содержимого потока встроенного уровня, предназначенный для хранения выполнения неформатированного текста. <xref:System.Windows.Documents.Span> может содержать несколько элементов <xref:System.Windows.Documents.Run>.
 
 В первом примере документа содержится документ с числом имен общих сетевых ресурсов. например `\\server1\folder\file.ext`. Независимо от того на каком языке написан документ, в котором содержится эта сетевая ссылка, на арабском или английском, нам хотелось бы, чтобы он выглядел всегда одинаково. На следующем рисунке показано использование элемента Span и отображение ссылки в документе на арабском <xref:System.Windows.FlowDirection.RightToLeft>:
 
@@ -136,7 +136,7 @@ ms.locfileid: "72581929"
 
 **Изображение**
 
-@No__t_0 представляет элемент управления, который отображает изображение. В XAML его можно использовать со свойством <xref:System.Windows.Controls.Image.Source%2A>, определяющим универсальный код ресурса (URI) отображаемого <xref:System.Windows.Controls.Image>.
+<xref:System.Windows.Controls.Image> представляет элемент управления, который отображает изображение. В XAML его можно использовать со свойством <xref:System.Windows.Controls.Image.Source%2A>, определяющим универсальный код ресурса (URI) отображаемого <xref:System.Windows.Controls.Image>.
 
 В отличие от других элементов [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], <xref:System.Windows.Controls.Image> не наследует <xref:System.Windows.FlowDirection> из контейнера. Однако если для <xref:System.Windows.FlowDirection> задано явное значение <xref:System.Windows.FlowDirection.RightToLeft>, <xref:System.Windows.Controls.Image> отображается горизонтально. Это сделано для удобства разработчиков двунаправленного содержимого. В некоторых случаях горизонтальным отражением достигается требуемый эффект.
 
@@ -166,7 +166,7 @@ ms.locfileid: "72581929"
 
 ![Рисунок, иллюстрирующий стрелки, рисуемые с помощью элемента Path.](./media/bidirectional-features-in-wpf-overview/arrows-drawn-path-element.png)
 
-@No__t_0 и <xref:System.Windows.Shapes.Path> являются двумя примерами того, как [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] использует <xref:System.Windows.FlowDirection>. При разметке [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов в определенном направлении в контейнере <xref:System.Windows.FlowDirection> можно использовать с такими элементами, как <xref:System.Windows.Controls.InkPresenter>, который визуализирует рукописный ввод на поверхности, <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>. Каждый раз, когда требуется поведение справа налево для содержимого, которое имитирует поведение слева направо или наоборот, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет эту возможность.
+<xref:System.Windows.Controls.Image> и <xref:System.Windows.Shapes.Path> являются двумя примерами того, как [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] использует <xref:System.Windows.FlowDirection>. При разметке [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов в определенном направлении в контейнере <xref:System.Windows.FlowDirection> можно использовать с такими элементами, как <xref:System.Windows.Controls.InkPresenter>, который визуализирует рукописный ввод на поверхности, <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>. Каждый раз, когда требуется поведение справа налево для содержимого, которое имитирует поведение слева направо или наоборот, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет эту возможность.
 
 <a name="NumberSubstitution"></a>
 
@@ -174,7 +174,7 @@ ms.locfileid: "72581929"
 
 Исторически система Windows поддерживала подстановку чисел, разрешая представление различных культурных форм для одних и тех же цифр и сохраняя внутреннее хранение этих цифр в унифицированных пределах разных национальных настроек, например числа хранятся в их хорошо известные шестнадцатеричные значения, 0x40, 0x41 влево, но отображаемые в соответствии с выбранным языком.
 
-Это позволяло приложениям обрабатывать числовые значения без необходимости преобразования их из одного языка в другой, например, пользователь может открыть [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]ную электронную таблицу в локализованных арабских окнах и увидеть цифры на арабском языке, но открыть ее в Европейской версии Windows и в формате Европейского представления одних и тех же чисел. Это также необходимо для других символов, например запятая или символ процента, так как они обычно сопровождают числа в одном документе.
+Это позволяло приложениям обрабатывать числовые значения без необходимости преобразования их из одного языка в другой, например, пользователь может открыть электронную таблицу Microsoft Excel в локализованных арабских окнах и увидеть цифры на арабском языке, но открыть в Европейская версия Windows, а также европейские представления одних и тех же чисел. Это также необходимо для других символов, например запятая или символ процента, так как они обычно сопровождают числа в одном документе.
 
 Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] продолжает эту традицию и добавляет новые возможности, позволяющие пользователю более точно определять, когда и как должна применяться подстановка. Эта функция может использоваться со всеми языками, но особенно полезна она в обработке двунаправленного содержимого, когда представление чисел для разных региональных стандартов становится проблемой для разработчиков приложений, предназначенных для использования в разных странах.
 
@@ -186,7 +186,7 @@ ms.locfileid: "72581929"
 
 - Переопределение: число языка и региональных параметров <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> свойства.
 
-- Text (текст). Региональный стандарт для чисел определяется по региональному стандарту фрагмента текста. В разметке это будет `xml:lang` или его псевдоним `Language` свойство (<xref:System.Windows.FrameworkElement.Language%2A> или <xref:System.Windows.FrameworkContentElement.Language%2A>). Кроме того, это значение по умолчанию для классов, производных от <xref:System.Windows.FrameworkContentElement>. К таким классам относятся <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> и т. д.
+- Text (текст). Региональный стандарт для чисел определяется по региональному стандарту фрагмента текста. В разметке это будет `xml:lang`или его псевдоним `Language` свойство (<xref:System.Windows.FrameworkElement.Language%2A> или <xref:System.Windows.FrameworkContentElement.Language%2A>). Кроме того, это значение по умолчанию для классов, производных от <xref:System.Windows.FrameworkContentElement>. К таким классам относятся <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> и т. д.
 
 - User (пользователь). Региональный стандарт для чисел определяется по региональному стандарту текущего потока. Это свойство является значением по умолчанию для всех подклассов <xref:System.Windows.FrameworkElement>, таких как <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> и <xref:System.Windows.Controls.TextBlock>.
 
@@ -220,7 +220,7 @@ ms.locfileid: "72581929"
 
 **Определение правил подстановки**
 
-В реальном приложении может возникнуть необходимость установить язык программным путем. Например, необходимо установить атрибут `xml:lang` так, чтобы он совпадал с именем, используемым [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] системы, или, возможно, изменить язык в зависимости от состояния приложения.
+В реальном приложении может возникнуть необходимость установить язык программным путем. Например, необходимо установить атрибут `xml:lang` так, чтобы он совпадал с именем, используемым [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]системы, или, возможно, изменить язык в зависимости от состояния приложения.
 
 Если вы хотите внести изменения в зависимости от состояния приложения, используйте другие функции, предоставляемые [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 

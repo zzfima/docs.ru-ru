@@ -2,12 +2,12 @@
 title: Управление версиями службы
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321487"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423685"
 ---
 # <a name="service-versioning"></a>Управление версиями службы
 После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб (и предоставляемых ими конечных точек). Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. В результате каждого изменения создается новая версия службы. В этом разделе объясняется, как рассмотреть управление версиями в Windows Communication Foundation (WCF).  
@@ -132,7 +132,7 @@ ms.locfileid: "72321487"
   
  Суть одного из таких механизмов заключается в использовании интерфейсов для определения членов каждого контракта данных и записи внутреннего кода реализации в терминах интерфейсов, а не классов контракта данных, которые реализуют интерфейсы. В следующем примере кода для версии 1 службы показан интерфейс `IPurchaseOrderV1` и `PurchaseOrderV1`.  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  Хотя операции контракта службы записываются в терминах `PurchaseOrderV1`, фактическая бизнес-логика создается в терминах `IPurchaseOrderV1`. Затем в версии 2 используется новый интерфейс `IPurchaseOrderV2` и новый класс `PurchaseOrderV2`, как показано в следующем примере кода.  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

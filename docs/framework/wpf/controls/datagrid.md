@@ -10,57 +10,57 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0887f36990de483139a9fde1472a78737cb7b72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912240"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460385"
 ---
 # <a name="datagrid"></a>DataGrid
-<xref:System.Windows.Controls.DataGrid> Элемент управления позволяет отображать и редактировать данные из множества различных источников, таких как базы данных SQL, LINQ-запрос или любой другой источник привязки данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../data/binding-sources-overview.md).  
+Элемент управления <xref:System.Windows.Controls.DataGrid> позволяет отображать и изменять данные из множества различных источников, например из базы данных SQL, запроса LINQ или любого другого источника данных, доступного для привязки. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../data/binding-sources-overview.md).  
   
- Столбцы могут отображать текст, элементы управления, такие как <xref:System.Windows.Controls.ComboBox>, или любое другое содержимое WPF, такие как изображения, кнопки или любое содержимое, содержащихся в шаблоне. Можно использовать <xref:System.Windows.Controls.DataGridTemplateColumn> для отображения данных, определенных в шаблоне. Ниже перечислены типы столбцов, которые предоставляются по умолчанию.  
+ Столбцы могут отображать текст, элементы управления, такие как <xref:System.Windows.Controls.ComboBox>, или любое другое содержимое WPF, например изображения, кнопки или любое содержимое, содержащееся в шаблоне. Для вывода данных, определенных в шаблоне, можно использовать <xref:System.Windows.Controls.DataGridTemplateColumn>. В следующей таблице перечислены типы столбцов, предоставляемые по умолчанию.  
   
-|Тип создаваемого столбца|Тип данных|  
+|Созданный тип столбца|Тип данных|  
 |---------------------------|---------------|  
 |<xref:System.Windows.Controls.DataGridTextColumn>|<xref:System.String>|  
 |<xref:System.Windows.Controls.DataGridCheckBoxColumn>|<xref:System.Boolean>|  
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid> можно настраивать внешний вид, например ячейки шрифт, цвет и размер. <xref:System.Windows.Controls.DataGrid> поддерживает все функциональные возможности стилизации и других элементов управления WPF. <xref:System.Windows.Controls.DataGrid> также включает по умолчанию и настраиваемые расширения функциональности для редактирования, сортировки и проверки.  
+ <xref:System.Windows.Controls.DataGrid> можно настроить по внешнему виду, например шрифту, цвету и размеру ячейки. <xref:System.Windows.Controls.DataGrid> поддерживает все функциональные возможности стилизации и создания шаблонов других элементов управления WPF. <xref:System.Windows.Controls.DataGrid> также включает настройки по умолчанию и настраиваемые поведения для редактирования, сортировки и проверки.  
   
- В следующей таблице перечислены некоторые из наиболее распространенных задач <xref:System.Windows.Controls.DataGrid> и способах их выполнения. Просматривая соответствующий API, можно найти дополнительные сведения и пример кода.  
+ В следующей таблице перечислены некоторые распространенные задачи для <xref:System.Windows.Controls.DataGrid> и способы их выполнения. Просмотрев связанный API, можно найти дополнительные сведения и пример кода.  
   
 |Сценарий|Подход|  
 |--------------|--------------|  
-|Чередующиеся фоновые цвета|Задайте <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> значение 2 или более, а затем назначьте <xref:System.Windows.Media.Brush> для <xref:System.Windows.Controls.DataGrid.RowBackground%2A> и <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> свойства.|  
-|Определение поведения выбора ячейки и строки|Задайте свойства <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> и <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A>.|  
-|Настройка внешнего вида заголовков, ячеек и строк|Применить новый <xref:System.Windows.Style> для <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, или <xref:System.Windows.Controls.DataGrid.RowStyle%2A> свойства.|  
-|Задание параметров изменения размера|Задайте <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, или <xref:System.Windows.FrameworkElement.MinWidth%2A> свойства. Дополнительные сведения см. в разделе [параметров изменения размеров элемента управления DataGrid](sizing-options-in-the-datagrid-control.md).|  
-|Доступ к выбранным элементам|Проверьте <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> свойство для получения выделенных ячеек и <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> свойства выбранных строк. Дополнительные сведения см. в разделе <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>.|  
-|Настройка взаимодействия|Задайте <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>, и <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> свойства.|  
-|Отменить или изменить автоматически созданных столбцов|Обрабатывать <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> событий.|  
-|Закрепить столбец|Задайте <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> свойство 1 и переместите столбец в крайней левой позиции, задав <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> значение 0.|  
-|Использование XML-данных в качестве источника данных|Привязать <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> на <xref:System.Windows.Controls.DataGrid> к запросу XPath, который представляет коллекцию элементов. Создайте каждый столбец в <xref:System.Windows.Controls.DataGrid>. Выполнить привязку каждого столбца, задав для привязки к запросу, который возвращает свойство источника элемента XPath. Пример см. в разделе <xref:System.Windows.Controls.DataGridTextColumn>.|  
+|Чередующиеся цвета фона|Задайте для свойства <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> значение 2 или более, а затем назначьте <xref:System.Windows.Media.Brush> свойствам <xref:System.Windows.Controls.DataGrid.RowBackground%2A> и <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A>.|  
+|Определение поведения выбора ячеек и строк|Задайте свойства <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> и <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A>.|  
+|Настройка внешнего вида заголовков, ячеек и строк|Примените новый <xref:System.Windows.Style> к свойствам <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>или <xref:System.Windows.Controls.DataGrid.RowStyle%2A>.|  
+|Задать параметры изменения размера|Задайте свойства <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>или <xref:System.Windows.FrameworkElement.MinWidth%2A>. Дополнительные сведения см. [в разделе Параметры изменения размера в элементе управления DataGrid](sizing-options-in-the-datagrid-control.md).|  
+|Доступ к выбранным элементам|Проверьте свойство <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>, чтобы получить выбранные ячейки, и свойство <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A>, чтобы получить выбранные строки. Для получения дополнительной информации см. <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>.|  
+|Настройка взаимодействия с конечным пользователем|Задайте свойства <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>и <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A>.|  
+|Отмена или изменение автоматически созданных столбцов|Обрабатывает событие <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn>.|  
+|Закрепить столбец|Присвойте свойству <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> значение 1 и переместите столбец в крайне левое положение, задав свойству <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> значение 0.|  
+|Использование XML-данных в качестве источника данных|Привяжите <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> к <xref:System.Windows.Controls.DataGrid> к запросу XPath, представляющему коллекцию элементов. Создайте каждый столбец в <xref:System.Windows.Controls.DataGrid>. Привяжите каждый столбец, задав XPath для привязки к запросу, который получает свойство в источнике элемента. Пример см. в разделе <xref:System.Windows.Controls.DataGridTextColumn>.|  
   
 ## <a name="related-topics"></a>См. также  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
-|[Пошаговое руководство: Отобразить данные из базы данных SQL Server в элементе управления DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Описывается, как настроить новый проект WPF, добавьте элемент Entity Framework, в качестве источника указывается и отображения данных в <xref:System.Windows.Controls.DataGrid>.|  
-|[Практическое руководство. Добавление сведений о строках в элемент управления DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Описывает способы создания сведений о строках для <xref:System.Windows.Controls.DataGrid>.|  
-|[Практическое руководство. Реализация проверки с помощью элемента управления DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Содержит описание способов проверки значений в <xref:System.Windows.Controls.DataGrid> ячеек и строк и отображения результатов проверки.|  
-|[Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Описывает способы взаимодействия с <xref:System.Windows.Controls.DataGrid> элемента управления с помощью клавиатуры и мыши.|  
-|[Практическое руководство. Группирования, сортировки и фильтрации данных в элементе управления DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Описывается, как просматривать данные в <xref:System.Windows.Controls.DataGrid> по-разному, группирования, сортировки и фильтрации данных.|  
-|[Параметры изменения размеров элемента управления DataGrid](sizing-options-in-the-datagrid-control.md)|Описывает управление абсолютными и автоматического изменения размера в <xref:System.Windows.Controls.DataGrid>.|  
+|[Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Описывает настройку нового проекта WPF, Добавление элемента Entity Framework, задание источника и отображение данных в <xref:System.Windows.Controls.DataGrid>.|  
+|[Добавление сведений о строках в элемент управления DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Описание создания сведений о строках для <xref:System.Windows.Controls.DataGrid>.|  
+|[Практическое руководство. реализация проверки с помощью элемента управления DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Описывает, как проверить значения в <xref:System.Windows.Controls.DataGrid> ячейках и строках, а затем отобразить отзыв о проверке.|  
+|[Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Описывает, как взаимодействовать с элементом управления <xref:System.Windows.Controls.DataGrid> с помощью клавиатуры и мыши.|  
+|[Практическое руководство. Группировка, сортировка и фильтрация данных в элементе управления DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Описание способов просмотра данных в <xref:System.Windows.Controls.DataGrid> различными способами путем группирования, сортировки и фильтрации данных.|  
+|[Параметры изменения размеров элемента управления DataGrid](sizing-options-in-the-datagrid-control.md)|Описывает, как управлять абсолютным и автоматическим изменением размеров в <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Controls.DataGrid>
 - [Стилизация и использование шаблонов](styling-and-templating.md)
-- [Общие сведения о привязке данных](../data/data-binding-overview.md)
+- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Общие сведения о шаблонах данных](../data/data-templating-overview.md)
 - [Элементы управления](index.md)
 - [Модель содержимого WPF](wpf-content-model.md)

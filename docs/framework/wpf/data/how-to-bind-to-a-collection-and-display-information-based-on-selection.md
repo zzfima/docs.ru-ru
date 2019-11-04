@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
+title: Практическое руководство. Выполнение привязки к коллекции и вывод сведений в зависимости от выделенного элемента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032a1d98e1aa80ea755f5922f79d43a796e9697e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967945"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459143"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
-В простом сценарии «основной-подробности», у вас есть привязкой к данным <xref:System.Windows.Controls.ItemsControl> например <xref:System.Windows.Controls.ListBox>. В зависимости от выбора пользователя можно отобразить дополнительные сведения о выбранном элементе. В этом примере показано, как реализовать этот сценарий.  
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Практическое руководство. Выполнение привязки к коллекции и вывод сведений в зависимости от выделенного элемента
+В простом сценарии "основной/подробности" имеется <xref:System.Windows.Controls.ItemsControl> с привязкой к данным, например <xref:System.Windows.Controls.ListBox>. На основе выбора пользователя отображаются дополнительные сведения о выбранном элементе. В этом примере показано, как реализовать этот сценарий.  
   
 ## <a name="example"></a>Пример  
- В этом примере `People` — <xref:System.Collections.ObjectModel.ObservableCollection%601> из `Person` классы. Это `Person` класс содержит три свойства: `FirstName`, `LastName`, и `HomeTown`, все типа `string`.  
+ В этом примере `People` является <xref:System.Collections.ObjectModel.ObservableCollection%601> классов `Person`. Этот `Person` класс содержит три свойства: `FirstName`, `LastName`и `HomeTown`, все типы `string`.  
   
  [!code-xaml[CollectionBinding#Source](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
 [!code-xaml[CollectionBinding#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
- <xref:System.Windows.Controls.ContentControl> Использует следующие <xref:System.Windows.DataTemplate> определяет, как данные `Person` представлены:  
+ <xref:System.Windows.Controls.ContentControl> использует следующие <xref:System.Windows.DataTemplate>, определяющие, каким образом отображаются сведения о `Person`.  
   
  [!code-xaml[CollectionBinding#DetailTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
- Ниже приведен снимок экрана примера. <xref:System.Windows.Controls.ContentControl> Показаны другие свойства выбранного лица.  
+ Ниже приведен снимок экрана, в котором создается пример. В <xref:System.Windows.Controls.ContentControl> отображаются другие свойства выбранного человека.  
   
  ![Привязка к коллекции](./media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
- В этом примере следует обратить внимание на два обстоятельства:  
+ В этом примере необходимо обратить внимание на два момента:  
   
-1. <xref:System.Windows.Controls.ListBox> И <xref:System.Windows.Controls.ContentControl> привязать к одному источнику. <xref:System.Windows.Data.Binding.Path%2A> Свойства обе привязки не заданы, так как оба элемента управления привязаны к всему объекту коллекции.  
+1. <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ContentControl> привязываются к одному и тому же источнику. Свойства <xref:System.Windows.Data.Binding.Path%2A> обеих привязок не указаны, так как оба элемента управления привязаны ко всему объекту коллекции.  
   
-2. Необходимо задать <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> свойства `true` для правильной работы. Задание этого свойства гарантирует, что выбранный элемент всегда задается как <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Кроме того Если <xref:System.Windows.Controls.ListBox> получает данные от <xref:System.Windows.Data.CollectionViewSource>, он автоматически синхронизирует Выбор и денежные единицы.  
+2. Чтобы это работало, необходимо задать для свойства <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> значение `true`. Задание этого свойства гарантирует, что выбранный элемент всегда будет установлен в качестве <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Кроме того, если <xref:System.Windows.Controls.ListBox> получает данные из <xref:System.Windows.Data.CollectionViewSource>, она автоматически синхронизирует выбор и валют.  
   
- Обратите внимание, что `Person` класса переопределения `ToString` метод следующим образом. По умолчанию <xref:System.Windows.Controls.ListBox> вызовы `ToString` и отображает строковое представление каждого объекта в привязанной коллекции. Вот почему каждый `Person` отображается как имя в <xref:System.Windows.Controls.ListBox>.  
+ Обратите внимание, что класс `Person` переопределяет метод `ToString` следующим образом. По умолчанию <xref:System.Windows.Controls.ListBox> вызывает `ToString` и отображает строковое представление каждого объекта в привязанной коллекции. Именно поэтому каждый `Person` отображается как имя в <xref:System.Windows.Controls.ListBox>.  
   
  [!code-csharp[CollectionBinding#ToString](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
@@ -49,6 +49,6 @@ ms.locfileid: "61967945"
 
 - [Использование шаблона "Основной/подробности" с иерархическими данными](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Использование шаблона "Основной/подробности" с иерархическими XML-данными](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Общие сведения о шаблонах данных](data-templating-overview.md)
 - [Разделы практического руководства](data-binding-how-to-topics.md)

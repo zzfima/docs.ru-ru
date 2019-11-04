@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: f736540a37d3226bccfc07749dcf06ca018663e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0806169b9b1c3521dcf89f5ea0fa5aec188030c2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694575"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422773"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (универсальный модификатор) (Справочник по C#)
 
@@ -46,4 +46,4 @@ ms.locfileid: "54694575"
 
 - [out](out-generic-modifier.md)
 - [Ковариация и контрвариантность](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [Модификаторы](modifiers.md)
+- [Модификаторы](index.md)

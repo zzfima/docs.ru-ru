@@ -2,13 +2,14 @@
 title: System.Delegate и ключевое слово `delegate`
 description: Сведения о классах в .NET Framework, поддерживающих делегаты, а также их сопоставление с ключевым словом delegate.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465780"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420371"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate и ключевое слово `delegate`
 
@@ -31,7 +32,7 @@ ms.locfileid: "58465780"
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Компилятор создает класс, производный от `System.Delegate`, соответствующий используемой сигнатуре (в данном случае — метод, который возвращает целое число и имеет два аргумента). Тип делегата — `Comparison`. Тип делегата `Comparison` является универсальным типом. Подробные сведения об универсальных типах см. [здесь](generics.md).
+Компилятор создает класс, производный от `System.Delegate`, соответствующий используемой сигнатуре (в данном случае — метод, который возвращает целое число и имеет два аргумента). Тип делегата — `Comparison`. Тип делегата `Comparison` является универсальным типом. Подробные сведения об универсальных типах см. [здесь](programming-guide/generics/index.md).
 
 Обратите внимание, что синтаксис может отображаться так, будто он объявляет переменную, но на самом деле он объявляет *тип*. Можно определить типы делегатов внутри классов, непосредственно внутри пространств имен или даже в глобальном пространстве имен.
 
