@@ -1,11 +1,11 @@
 - name: События
   href: index.md
   items:
-    - name: Практическое руководство. Вызов и прием событий
+    - name: Практическое руководство. Вызов и обработка событий
       href: how-to-raise-and-consume-events.md
-    - name: Практическое руководство. Обработка нескольких событий с помощью их свойств
+    - name: Практическое руководство. Обработка множества событий с помощью их свойств
       href: how-to-handle-multiple-events-using-event-properties.md
-    - name: Практическое руководство. Прием событий в приложениях веб-форм
+    - name: Практическое руководство. Обработка событий в приложении веб-форм
       href: how-to-consume-events-in-a-web-forms-application.md
     - name: Шаблон разработки Observer
       href: observer-design-pattern.md
